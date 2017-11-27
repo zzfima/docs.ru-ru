@@ -1,36 +1,34 @@
 ---
-title: "Отображение идентификаторов объектов на криптографические алгоритмы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "криптографические алгоритмы"
-  - "шифрование, сопоставление идентификаторов объекта"
-  - "цифровые подписи"
-  - "идентификаторы, сопоставление идентификаторов объекта"
-  - "сопоставление идентификаторов объекта"
+title: "Отображение идентификаторов объектов на криптографические алгоритмы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- digital signatures
+- identifiers, mapping object identifiers
+- cryptographic algorithms
+- mapping object identifiers
+- cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: dbfe394193925e38dad774d39d79ac813abef22a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Отображение идентификаторов объектов на криптографические алгоритмы
-Цифровая подпись гарантирует сохранность данных при их передаче между программами.  Обычно цифровая подпись вычисляется путем применения математической функции к хэш\-коду данных, к которым применяется подпись.  При форматировании подписываемого хэш\-кода некоторые алгоритмы цифровой подписи добавляют в операцию форматирования идентификатор объекта \(OID\) ASN.1.  OID идентифицирует алгоритм, использованный для вычисления хэш\-кода.  Для включения применения пользовательских алгоритмов в криптографический механизм можно сопоставить алгоритмы с идентификаторами объектов.  В следующем примере показан способ сопоставления идентификатора объекта с новым хэш\-алгоритмом.  
+# <a name="mapping-object-identifiers-to-cryptography-algorithms"></a><span data-ttu-id="8fde9-102">Отображение идентификаторов объектов на криптографические алгоритмы</span><span class="sxs-lookup"><span data-stu-id="8fde9-102">Mapping Object Identifiers to Cryptography Algorithms</span></span>
+<span data-ttu-id="8fde9-103">Цифровые подписи убедитесь, что данные не подделаны при отправке из одной программы в другую.</span><span class="sxs-lookup"><span data-stu-id="8fde9-103">Digital signatures ensure that data is not tampered with when it is sent from one program to another.</span></span> <span data-ttu-id="8fde9-104">Обычно цифровая подпись вычисляется путем применения математической функции к хэш данных должны быть подписаны.</span><span class="sxs-lookup"><span data-stu-id="8fde9-104">Typically the digital signature is computed by applying a mathematical function to the hash of the data to be signed.</span></span> <span data-ttu-id="8fde9-105">При форматировании хэш-значение подписываемых, некоторые алгоритмы цифровой подписи добавляют в операцию форматирования идентификатор объекта (OID) ASN.1.</span><span class="sxs-lookup"><span data-stu-id="8fde9-105">When formatting a hash value to be signed, some digital signature algorithms append an ASN.1 Object Identifier (OID) as part of the formatting operation.</span></span> <span data-ttu-id="8fde9-106">OID идентифицирует алгоритм, использованный для вычисления хэш-код.</span><span class="sxs-lookup"><span data-stu-id="8fde9-106">The OID identifies the algorithm that was used to compute the hash.</span></span> <span data-ttu-id="8fde9-107">Алгоритмы можно сопоставить с идентификаторами объектов расширения криптографического механизма для применения пользовательских алгоритмов.</span><span class="sxs-lookup"><span data-stu-id="8fde9-107">You can map algorithms to object identifiers to extend the cryptography mechanism to use custom algorithms.</span></span> <span data-ttu-id="8fde9-108">В следующем примере показано, как для сопоставления идентификатора объекта с новым хэш-алгоритмом.</span><span class="sxs-lookup"><span data-stu-id="8fde9-108">The following example shows how to map an object identifier to a new hash algorithm.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -50,8 +48,8 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- Элемент [\<oidEntry\>](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) содержит два атрибута.  Атрибут **OID** — это идентификатор объекта \(число\).  Атрибут **name** — это значение атрибута **name** из элемента [\<nameEntry\>](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  Перед сопоставлением идентификатора объекта с простым именем необходимо сопоставить имя алгоритма с классом.  
+ <span data-ttu-id="8fde9-109">[ \<OidEntry > элемент](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) содержит два атрибута.</span><span class="sxs-lookup"><span data-stu-id="8fde9-109">The [\<oidEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contains two attributes.</span></span> <span data-ttu-id="8fde9-110">**OID** атрибут является числовой идентификатор объекта.</span><span class="sxs-lookup"><span data-stu-id="8fde9-110">The **OID** attribute is the object identifier number.</span></span> <span data-ttu-id="8fde9-111">**Имя** атрибута является значение **имя** атрибута из [ \<nameEntry > элемент](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="8fde9-111">The **name** attribute is the value of the **name** attribute from the [\<nameEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span></span> <span data-ttu-id="8fde9-112">Перед идентификатором объекта могут сопоставляться с простым именем необходимо сопоставление имени алгоритма к классу.</span><span class="sxs-lookup"><span data-stu-id="8fde9-112">There must be a mapping from an algorithm name to a class before an object identifier can be mapped to a simple name.</span></span>  
   
-## См. также  
- [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
- [Службы криптографии](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="8fde9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="8fde9-113">See Also</span></span>  
+ [<span data-ttu-id="8fde9-114">Настройка криптографических классов</span><span class="sxs-lookup"><span data-stu-id="8fde9-114">Configuring Cryptography Classes</span></span>](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [<span data-ttu-id="8fde9-115">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="8fde9-115">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

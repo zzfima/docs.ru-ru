@@ -1,37 +1,40 @@
 ---
-title: "Неподдерживаемые функции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Неподдерживаемые функциональные возможности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6dd8ccebd278fdc36c536c49f7f1d4262b2de8c1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Неподдерживаемые функции
-В LINQ to SQL следующие функции SQL недоступны путем преобразования существующих конструкций среды CLR и .NET Framework.  
+# <a name="unsupported-functionality"></a><span data-ttu-id="d74c4-102">Неподдерживаемые функциональные возможности</span><span class="sxs-lookup"><span data-stu-id="d74c4-102">Unsupported Functionality</span></span>
+<span data-ttu-id="d74c4-103">В LINQ to SQL следующие функции SQL недоступны путем преобразования существующих конструкций среды CLR и .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d74c4-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  
   
 -   `STDDEV`  
   
 -   `LIKE`  
   
-     Хотя функция `LIKE` не поддерживается прямым преобразованием, аналогичная функция существует в классе <xref:System.Data.Linq.SqlClient.SqlMethods>.  Для получения дополнительной информации см. [M:System.Data.Linq.SqlClient.SqlMethods.Like\(System.String,System.String](assetId:///M:System.Data.Linq.SqlClient.SqlMethods.Like(System.String,System.String?qualifyHint=True&autoUpgrade=True).  
+     <span data-ttu-id="d74c4-104">Хотя функция `LIKE` не поддерживается прямым преобразованием, аналогичная функция существует в классе <xref:System.Data.Linq.SqlClient.SqlMethods>.</span><span class="sxs-lookup"><span data-stu-id="d74c4-104">Although `LIKE` is not supported through direct translation, similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span> <span data-ttu-id="d74c4-105">Для получения дополнительной информации см. <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d74c4-105">For more information, see <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span></span>  
   
 -   `DATEDIFF`  
   
-     В LINQ to SQL реализована ограниченная поддержка функции `DATEDIFF`.  Аналогичная функция существует в классе [SqlMethods](assetId:///T:System.Data.Linq.SqlClient.SqlMethods?qualifyHint=False&autoUpgrade=True).  
+     <span data-ttu-id="d74c4-106">В LINQ to SQL реализована ограниченная поддержка функции `DATEDIFF`.</span><span class="sxs-lookup"><span data-stu-id="d74c4-106">LINQ to SQL has limited support for `DATEDIFF`.</span></span> <span data-ttu-id="d74c4-107">Аналогичная функция существует в классе <xref:System.Data.Linq.SqlClient.SqlMethods>.</span><span class="sxs-lookup"><span data-stu-id="d74c4-107">Similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span>  
   
 -   `ROUND`  
   
-     В LINQ to SQL реализована ограниченная поддержка функции `ROUND`.  Для получения дополнительной информации см. [Методы System.Math](../Topic/System.Math%20Methods.md).  
+     <span data-ttu-id="d74c4-108">В LINQ to SQL реализована ограниченная поддержка функции `ROUND`.</span><span class="sxs-lookup"><span data-stu-id="d74c4-108">LINQ to SQL has limited support for `ROUND`.</span></span> <span data-ttu-id="d74c4-109">Дополнительные сведения см. в разделе [методы System.Math](system-math-methods.md).</span><span class="sxs-lookup"><span data-stu-id="d74c4-109">For more information, see [System.Math Methods](system-math-methods.md).</span></span>  
   
-## См. также  
- [Типы данных и функции](../Topic/Data%20Types%20and%20Functions.md)
+## <a name="see-also"></a><span data-ttu-id="d74c4-110">См. также</span><span class="sxs-lookup"><span data-stu-id="d74c4-110">See Also</span></span>  
+ [<span data-ttu-id="d74c4-111">Типы данных и функции</span><span class="sxs-lookup"><span data-stu-id="d74c4-111">Data Types and Functions</span></span>](data-types-and-functions.md)

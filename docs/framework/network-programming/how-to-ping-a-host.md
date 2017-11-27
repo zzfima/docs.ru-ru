@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Ping
+helpviewer_keywords: Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28c55a9e51b43fcc882ef98f6bad907d5d5c5301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-ping-a-host"></a>Практическое руководство. Проверка связи с узлом
-В этом примере показано, как проверить связь с удаленным узлом.  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="1f305-102">Практическое руководство. Проверка связи с узлом</span><span class="sxs-lookup"><span data-stu-id="1f305-102">How to: Ping a Host</span></span>
+<span data-ttu-id="1f305-103">В этом примере показано, как проверить связь с удаленным узлом.</span><span class="sxs-lookup"><span data-stu-id="1f305-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="1f305-104">Пример</span><span class="sxs-lookup"><span data-stu-id="1f305-104">Example</span></span>  
   
 ```  
 using System;  
@@ -135,8 +128,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="1f305-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="1f305-105">Compiling the Code</span></span>  
+ <span data-ttu-id="1f305-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="1f305-106">This example requires:</span></span>  
   
--   Ссылки на пространство имен **System.Net**.
-
+-   <span data-ttu-id="1f305-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="1f305-107">References to the **System.Net** namespace.</span></span>

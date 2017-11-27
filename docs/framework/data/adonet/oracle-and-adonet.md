@@ -1,30 +1,36 @@
 ---
-title: "Oracle и ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Oracle и ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle и ADO.NET
+# <a name="oracle-and-adonet"></a><span data-ttu-id="63edc-102">Oracle и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="63edc-102">Oracle and ADO.NET</span></span>
 > [!NOTE]
->  Типы в пространстве имен <xref:System.Data.OracleClient> считаются устаревшими.  Эти типы по\-прежнему поддерживаются в платформе .NET Framework текущей версии, однако будут удалены в следующем выпуске.  Корпорация Майкрософт рекомендует использовать поставщик Oracle, предоставляемый сторонними разработчиками.  
+>  <span data-ttu-id="63edc-103">Типы в пространстве имен <xref:System.Data.OracleClient> считаются устаревшими.</span><span class="sxs-lookup"><span data-stu-id="63edc-103">The types in <xref:System.Data.OracleClient> are deprecated.</span></span> <span data-ttu-id="63edc-104">Эти типы по-прежнему поддерживаются в платформе .NET Framework текущей версии, однако будут удалены в следующем выпуске.</span><span class="sxs-lookup"><span data-stu-id="63edc-104">The types remain supported in the current version of.NET Framework but will be removed in a future release.</span></span> <span data-ttu-id="63edc-105">Корпорация Майкрософт рекомендует использовать поставщик Oracle, предоставляемый сторонними разработчиками.</span><span class="sxs-lookup"><span data-stu-id="63edc-105">Microsoft recommends that you use a third-party Oracle provider.</span></span>  
   
- В этом разделе описаны функции и правила работы, характерные для поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle.  
+ <span data-ttu-id="63edc-106">В этом разделе описаны функции и правила работы, характерные для поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle.</span><span class="sxs-lookup"><span data-stu-id="63edc-106">This section describes features and behaviors that are specific to the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle.</span></span>  
   
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle обеспечивает доступ к базе данных Oracle, используя интерфейс Oracle Call \(OCI\), поставляемый в пакете клиентского программного обеспечения Oracle.  Функциональные возможности этого поставщика данных схожи с возможностями поставщиков данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB и ODBC.  
+ <span data-ttu-id="63edc-107">Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle обеспечивает доступ к базе данных Oracle, используя интерфейс Oracle Call (OCI), поставляемый в пакете клиентского программного обеспечения Oracle.</span><span class="sxs-lookup"><span data-stu-id="63edc-107">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle provides access to an Oracle database using the Oracle Call Interface (OCI) as provided by Oracle Client software.</span></span> <span data-ttu-id="63edc-108">Функциональные возможности этого поставщика данных схожи с возможностями поставщиков данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB и ODBC.</span><span class="sxs-lookup"><span data-stu-id="63edc-108">The functionality of the data provider is designed to be similar to that of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data providers for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB, and ODBC.</span></span>  
   
- Чтобы использовать поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle, приложение должно содержать ссылку на пространство имен <xref:System.Data.OracleClient> следующим образом:  
+ <span data-ttu-id="63edc-109">Чтобы использовать поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle, приложение должно содержать ссылку на пространство имен <xref:System.Data.OracleClient> следующим образом: </span><span class="sxs-lookup"><span data-stu-id="63edc-109">To use the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle, an application must reference the <xref:System.Data.OracleClient> namespace as follows:</span></span>  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -34,53 +40,53 @@ Imports System.Data.OracleClient
 using System.Data.OracleClient;  
 ```  
   
- Также при компиляции кода необходимо включить ссылку на библиотеку DLL.  Например, при компиляции программы C\# командная строка должна включать:  
+ <span data-ttu-id="63edc-110">Также при компиляции кода необходимо включить ссылку на библиотеку DLL.</span><span class="sxs-lookup"><span data-stu-id="63edc-110">You also must include a reference to the DLL when you compile your code.</span></span> <span data-ttu-id="63edc-111">Например, при компиляции программы C# командная строка должна включать:</span><span class="sxs-lookup"><span data-stu-id="63edc-111">For example, if you are compiling a C# program, your command line should include:</span></span>  
   
 ```  
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## В этом подразделе  
- [Требования к системе](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Содержит требования к использованию поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle и описывает многие проблемы, которые необходимо учитывать при его использовании.  
+## <a name="in-this-section"></a><span data-ttu-id="63edc-112">Содержание</span><span class="sxs-lookup"><span data-stu-id="63edc-112">In This Section</span></span>  
+ [<span data-ttu-id="63edc-113">Требования к системе</span><span class="sxs-lookup"><span data-stu-id="63edc-113">System Requirements</span></span>](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
+ <span data-ttu-id="63edc-114">Содержит требования к использованию поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для Oracle и описывает многие проблемы, которые необходимо учитывать при его использовании.</span><span class="sxs-lookup"><span data-stu-id="63edc-114">Describes requirements for using the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle, and describes a number of issues to be aware when using it.</span></span>  
   
- [BFILE в Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
- Описывает класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle BFILE.  
+ [<span data-ttu-id="63edc-115">BFILE в Oracle</span><span class="sxs-lookup"><span data-stu-id="63edc-115">Oracle BFILEs</span></span>](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
+ <span data-ttu-id="63edc-116">Описывает класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle BFILE.</span><span class="sxs-lookup"><span data-stu-id="63edc-116">Describes the <xref:System.Data.OracleClient.OracleBFile> class, which is used to work with the Oracle BFILE data type.</span></span>  
   
- [LOB\-объекты в Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
- Описывает класс <xref:System.Data.OracleClient.OracleLob>, который используется для работы с типом данных Oracle LOB.  
+ [<span data-ttu-id="63edc-117">Oracle больших объектов</span><span class="sxs-lookup"><span data-stu-id="63edc-117">Oracle LOBs</span></span>](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ <span data-ttu-id="63edc-118">Описывает класс <xref:System.Data.OracleClient.OracleLob>, который используется для работы с типом данных Oracle LOB.</span><span class="sxs-lookup"><span data-stu-id="63edc-118">Describes the <xref:System.Data.OracleClient.OracleLob> class, which is used to work with Oracle LOB data types.</span></span>  
   
- [Курсоры REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- Описывает поддержку для типа данных Oracle REF CURSOR.  
+ [<span data-ttu-id="63edc-119">REF CURSOR в Oracle</span><span class="sxs-lookup"><span data-stu-id="63edc-119">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ <span data-ttu-id="63edc-120">Описывает поддержку для типа данных Oracle REF CURSOR.</span><span class="sxs-lookup"><span data-stu-id="63edc-120">Describes support for the Oracle REF CURSOR data type.</span></span>  
   
- [Объекты OracleType](../../../../docs/framework/data/adonet/oracletypes.md)  
- Описывает структуры, которые можно использовать с типами данных Oracle, включая <xref:System.Data.OracleClient.OracleNumber> и <xref:System.Data.OracleClient.OracleString>.  
+ [<span data-ttu-id="63edc-121">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="63edc-121">OracleTypes</span></span>](../../../../docs/framework/data/adonet/oracletypes.md)  
+ <span data-ttu-id="63edc-122">Описывает структуры, которые можно использовать с типами данных Oracle, включая <xref:System.Data.OracleClient.OracleNumber> и <xref:System.Data.OracleClient.OracleString>.</span><span class="sxs-lookup"><span data-stu-id="63edc-122">Describes structures you can use to work with Oracle data types, including <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
   
- [Последовательности Oracle](../../../../docs/framework/data/adonet/oracle-sequences.md)  
- Описывает поддержку получения сформированного сервером ключа значений Oracle Sequence.  
+ [<span data-ttu-id="63edc-123">Последовательности Oracle</span><span class="sxs-lookup"><span data-stu-id="63edc-123">Oracle Sequences</span></span>](../../../../docs/framework/data/adonet/oracle-sequences.md)  
+ <span data-ttu-id="63edc-124">Описывает поддержку получения сформированного сервером ключа значений Oracle Sequence.</span><span class="sxs-lookup"><span data-stu-id="63edc-124">Describes support for retrieving the server-generated key Oracle Sequence values.</span></span>  
   
- [Сопоставления типов данных Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
- Перечисляет типы данных Oracle и их сопоставление с объектом <xref:System.Data.OracleClient.OracleDataReader>.  
+ [<span data-ttu-id="63edc-125">Сопоставления типов данных Oracle</span><span class="sxs-lookup"><span data-stu-id="63edc-125">Oracle Data Type Mappings</span></span>](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
+ <span data-ttu-id="63edc-126">Перечисляет типы данных Oracle и их сопоставление с объектом <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="63edc-126">Lists Oracle data types and their mappings to the <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
- [Распределенные транзакции Oracle](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
- Описывает автоматическое прикрепление объекта <xref:System.Data.OracleClient.OracleConnection> к существующей распределенной транзакции, если эта транзакция активна.  
+ [<span data-ttu-id="63edc-127">Распределенные транзакции Oracle</span><span class="sxs-lookup"><span data-stu-id="63edc-127">Oracle Distributed Transactions</span></span>](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
+ <span data-ttu-id="63edc-128">Описывает автоматическое прикрепление объекта <xref:System.Data.OracleClient.OracleConnection> к существующей распределенной транзакции, если эта транзакция активна.</span><span class="sxs-lookup"><span data-stu-id="63edc-128">Describes how the <xref:System.Data.OracleClient.OracleConnection> object automatically enlists in an existing distributed transaction if it determines that a transaction is active.</span></span>  
   
-## Связанные подразделы  
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Описывает приемы безопасного программирования при использовании [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="63edc-129">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="63edc-129">Related Sections</span></span>  
+ [<span data-ttu-id="63edc-130">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="63edc-130">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ <span data-ttu-id="63edc-131">Описывает приемы безопасного программирования при использовании [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="63edc-131">Describes secure coding practices when using [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
- [Объекты DataSet, DataTable и DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Описывает процесс создания и использования объектов `DataSets`, типизированных объектов `DataSets`, а также объектов `DataTables` и `DataViews`.  
+ [<span data-ttu-id="63edc-132">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="63edc-132">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="63edc-133">Описывает процесс создания и использования объектов `DataSets`, типизированных объектов `DataSets`, а также объектов `DataTables` и `DataViews`.</span><span class="sxs-lookup"><span data-stu-id="63edc-133">Describes how to create and use `DataSets`, typed `DataSets`, `DataTables`, and `DataViews`.</span></span>  
   
- [Получение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- Описывает работу с данными в ADO.NET.  
+ [<span data-ttu-id="63edc-134">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="63edc-134">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ <span data-ttu-id="63edc-135">Описывает работу с данными в ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="63edc-135">Describes how to work with data in ADO.NET.</span></span>  
   
- [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- Описывает процесс работы со специальными возможностями и функциями [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ [<span data-ttu-id="63edc-136">SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="63edc-136">SQL Server and ADO.NET</span></span>](../../../../docs/framework/data/adonet/sql/index.md)  
+ <span data-ttu-id="63edc-137">Описывает процесс работы со специальными возможностями и функциями [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="63edc-137">Describes how to work with features and functionality that are specific to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
- [Объекты DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- Описывает универсальные классы, позволяющие создавать независимый от поставщика код в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ [<span data-ttu-id="63edc-138">DbProviderFactories</span><span class="sxs-lookup"><span data-stu-id="63edc-138">DbProviderFactories</span></span>](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ <span data-ttu-id="63edc-139">Описывает универсальные классы, позволяющие создавать независимый от поставщика код в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="63edc-139">Describes generic classes that allow you to write provider-independent code in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
-## См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="63edc-140">См. также</span><span class="sxs-lookup"><span data-stu-id="63edc-140">See Also</span></span>  
+ [<span data-ttu-id="63edc-141">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="63edc-141">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="63edc-142">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="63edc-142">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

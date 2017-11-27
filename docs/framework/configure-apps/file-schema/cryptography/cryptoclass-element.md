@@ -1,67 +1,72 @@
 ---
-title: "Элемент &lt;cryptoClass&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClass"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoClass> - элемент"
-  - "cryptoClass - элемент"
+title: "&lt;cryptoClass&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClass
+helpviewer_keywords:
+- cryptoClass element
+- <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 448e2c83f6897fd876bb79dfb781bcf4ddd2252b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;cryptoClass&gt;
-Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
+# <a name="ltcryptoclassgt-element"></a><span data-ttu-id="26808-102">&lt;cryptoClass&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="26808-102">&lt;cryptoClass&gt; Element</span></span>
+<span data-ttu-id="26808-103">Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="26808-103">Contains a cryptography class that has a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="26808-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="26808-104">\<configuration></span></span>  
+<span data-ttu-id="26808-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="26808-105">\<mscorlib></span></span>  
+<span data-ttu-id="26808-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="26808-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="26808-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="26808-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="26808-108">\<cryptoClasses ></span><span class="sxs-lookup"><span data-stu-id="26808-108">\<cryptoClasses></span></span>  
+<span data-ttu-id="26808-109">\<cryptoClass ></span><span class="sxs-lookup"><span data-stu-id="26808-109">\<cryptoClass></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="26808-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="26808-110">Syntax</span></span>  
+  
+```xml  
 <cryptoClass customClassName="fully qualified type name" />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="26808-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="26808-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="26808-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="26808-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="26808-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="26808-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`customClassName`|Обязательный атрибут.<br /><br /> Содержит данные для криптографического класса.  Этот атрибут используется для предоставления краткого имени класса.  Можно задавать любую строку, отвечающую требованиям, описанным в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|<span data-ttu-id="26808-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="26808-114">Attribute</span></span>|<span data-ttu-id="26808-115">Описание</span><span class="sxs-lookup"><span data-stu-id="26808-115">Description</span></span>|  
+|---------------|-----------------|  
+|`customClassName`|<span data-ttu-id="26808-116">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="26808-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="26808-117">Содержит сведения для класса шифрования.</span><span class="sxs-lookup"><span data-stu-id="26808-117">Contains the information for the cryptography class.</span></span> <span data-ttu-id="26808-118">Этот атрибут используется для предоставления краткого имени класса.</span><span class="sxs-lookup"><span data-stu-id="26808-118">Use this attribute to provide a short name for your class.</span></span> <span data-ttu-id="26808-119">Необходимо указать строку, отвечающую требованиям, указанным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="26808-119">You must specify a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="26808-120">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="26808-120">Child Elements</span></span>  
+ <span data-ttu-id="26808-121">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="26808-121">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="26808-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="26808-122">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`cryptoClasses`|Содержит список криптографических классов, сопоставленных с понятными именами, указанным в элементе [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).|  
-|`cryptographySettings`|Этот элемент содержит параметры криптографии.|  
-|`cryptoNameMapping`|Сопоставление классов с понятными именами.|  
-|`mscorlib`|Содержит элемент [\<cryptographySettings\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).|  
+|<span data-ttu-id="26808-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="26808-123">Element</span></span>|<span data-ttu-id="26808-124">Описание</span><span class="sxs-lookup"><span data-stu-id="26808-124">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="26808-125">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="26808-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptoClasses`|<span data-ttu-id="26808-126">Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="26808-126">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="26808-127">Содержит параметры шифрования.</span><span class="sxs-lookup"><span data-stu-id="26808-127">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="26808-128">Содержит сопоставления классов с понятными именами.</span><span class="sxs-lookup"><span data-stu-id="26808-128">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="26808-129">Содержит элемент [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span><span class="sxs-lookup"><span data-stu-id="26808-129">Contains the [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) element.</span></span>|  
   
-## Пример  
- В следующем примере показано, как использовать элемент **\<cryptoClass\>**, чтобы ссылаться на криптографический класс и конфигурировать среду выполнения.  В этом случае можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для получения объекта `MyCryptoRSAClass`.  
+## <a name="example"></a><span data-ttu-id="26808-130">Пример</span><span class="sxs-lookup"><span data-stu-id="26808-130">Example</span></span>  
+ <span data-ttu-id="26808-131">Приведенный ниже показано, как использовать  **\<cryptoClass >** для ссылки на криптографический класс и настройки среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="26808-131">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="26808-132">Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.</span><span class="sxs-lookup"><span data-stu-id="26808-132">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -80,8 +85,8 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)   
- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="26808-133">См. также</span><span class="sxs-lookup"><span data-stu-id="26808-133">See Also</span></span>  
+ [<span data-ttu-id="26808-134">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="26808-134">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="26808-135">Схема параметров шифрования</span><span class="sxs-lookup"><span data-stu-id="26808-135">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="26808-136">Службы криптографии</span><span class="sxs-lookup"><span data-stu-id="26808-136">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="26808-137">Настройка криптографических классов</span><span class="sxs-lookup"><span data-stu-id="26808-137">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

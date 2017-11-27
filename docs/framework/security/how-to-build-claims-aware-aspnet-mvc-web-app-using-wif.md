@@ -5,83 +5,81 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7065455e3459ad37a8e296107ca8c6991334b328
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Практическое руководство. Создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с помощью WIF
-## <a name="applies-to"></a>Применение  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="8fdc7-102">Практическое руководство. Создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с помощью WIF</span><span class="sxs-lookup"><span data-stu-id="8fdc7-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="8fdc7-103">Применение</span><span class="sxs-lookup"><span data-stu-id="8fdc7-103">Applies To</span></span>  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+-   <span data-ttu-id="8fdc7-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="8fdc7-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   ASP.NET® MVC  
+-   <span data-ttu-id="8fdc7-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="8fdc7-105">ASP.NET® MVC</span></span>  
   
-## <a name="summary"></a>Сводка  
- В этом практическом руководстве представлены подробные пошаговые процедуры по созданию простого веб-приложения ASP.NET MVC с поддержкой утверждений. Также здесь приводятся инструкции по тестированию простого веб-приложения ASP.NET MVC с поддержкой утверждений для реализации проверки подлинности на основе утверждений. В этом практическом руководстве не приводятся подробные инструкции по созданию службы маркеров безопасности (STS) и подразумевается, что вы уже выполнили ее настройку.  
+## <a name="summary"></a><span data-ttu-id="8fdc7-106">Сводка</span><span class="sxs-lookup"><span data-stu-id="8fdc7-106">Summary</span></span>  
+ <span data-ttu-id="8fdc7-107">В этом практическом руководстве представлены подробные пошаговые процедуры по созданию простого веб-приложения ASP.NET MVC с поддержкой утверждений.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="8fdc7-108">Также здесь приводятся инструкции по тестированию простого веб-приложения ASP.NET MVC с поддержкой утверждений для реализации проверки подлинности на основе утверждений.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="8fdc7-109">В этом практическом руководстве не приводятся подробные инструкции по созданию службы маркеров безопасности (STS) и подразумевается, что вы уже выполнили ее настройку.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a>Описание  
+## <a name="contents"></a><span data-ttu-id="8fdc7-110">Описание</span><span class="sxs-lookup"><span data-stu-id="8fdc7-110">Contents</span></span>  
   
--   Цели  
+-   <span data-ttu-id="8fdc7-111">Цели</span><span class="sxs-lookup"><span data-stu-id="8fdc7-111">Objectives</span></span>  
   
--   Сводка действий  
+-   <span data-ttu-id="8fdc7-112">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="8fdc7-112">Summary of Steps</span></span>  
   
--   Шаг 1. Создание простого приложения ASP.NET MVC  
+-   <span data-ttu-id="8fdc7-113">Шаг 1. Создание простого приложения ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8fdc7-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+-   <span data-ttu-id="8fdc7-114">Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   Шаг 3. Тестирование решения  
+-   <span data-ttu-id="8fdc7-115">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="8fdc7-115">Step 3 – Test Your Solution</span></span>  
   
--   Связанные темы  
+-   <span data-ttu-id="8fdc7-116">Связанные темы</span><span class="sxs-lookup"><span data-stu-id="8fdc7-116">Related Items</span></span>  
   
-## <a name="objectives"></a>Цели  
+## <a name="objectives"></a><span data-ttu-id="8fdc7-117">Цели</span><span class="sxs-lookup"><span data-stu-id="8fdc7-117">Objectives</span></span>  
   
--   Настройка веб-приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+-   <span data-ttu-id="8fdc7-118">Настройка веб-приложения ASP.NET MVC для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
   
--   Тестирование веб-приложения ASP.NET MVC с поддержкой утверждений  
+-   <span data-ttu-id="8fdc7-119">Тестирование веб-приложения ASP.NET MVC с поддержкой утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
   
-## <a name="summary-of-steps"></a>Сводка действий  
+## <a name="summary-of-steps"></a><span data-ttu-id="8fdc7-120">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="8fdc7-120">Summary of Steps</span></span>  
   
--   Шаг 1. Создание простого приложения ASP.NET MVC  
+-   <span data-ttu-id="8fdc7-121">Шаг 1. Создание простого приложения ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8fdc7-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+-   <span data-ttu-id="8fdc7-122">Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   Шаг 3. Тестирование решения  
+-   <span data-ttu-id="8fdc7-123">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="8fdc7-123">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-simple-aspnet-mvc-application"></a>Шаг 1. Создание простого приложения ASP.NET MVC  
- На этом шаге создается новое приложение ASP.NET MVC.  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="8fdc7-124">Шаг 1. Создание простого приложения ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8fdc7-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+ <span data-ttu-id="8fdc7-125">На этом шаге создается новое приложение ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
   
-#### <a name="to-create-simple-aspnet-mvc-application"></a>Создание простого приложения ASP.NET MVC  
+#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="8fdc7-126">Создание простого приложения ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8fdc7-126">To create simple ASP.NET MVC application</span></span>  
   
-1.  Запустите Visual Studio и выберите **Файл**, **Создать** и затем **Проект**.  
+1.  <span data-ttu-id="8fdc7-127">Запустите Visual Studio и выберите **Файл**, **Создать** и затем **Проект**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  В окне **Новый проект** выберите **Веб-приложение ASP.NET MVC 3**.  
+2.  <span data-ttu-id="8fdc7-128">В окне **Новый проект** выберите **Веб-приложение ASP.NET MVC 3**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
   
-3.  В поле **Имя** введите `TestApp` и нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="8fdc7-129">В поле **Имя** введите `TestApp` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  В диалоговом окне **Создание проекта ASP.NET MVC 3** выберите шаблон **Интернет-приложение** в списке доступных. Затем убедитесь, что для параметра **Обработчик представлений** задано значение **Razor**, после чего нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="8fdc7-130">В диалоговом окне **Создание проекта ASP.NET MVC 3** выберите шаблон **Интернет-приложение** в списке доступных. Затем убедитесь, что для параметра **Обработчик представлений** задано значение **Razor**, после чего нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
   
-5.  После открытия нового проекта щелкните правой кнопкой мыши проект **TestApp** в **обозревателе решений** и выберите параметр **Свойства**.  
+5.  <span data-ttu-id="8fdc7-131">После открытия нового проекта щелкните правой кнопкой мыши проект **TestApp** в **обозревателе решений** и выберите параметр **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
   
-6.  На странице свойств проекта откройте вкладку **Интернет** слева и убедитесь, что выбран параметр **Использовать локальный веб-сервер IIS**.  
+6.  <span data-ttu-id="8fdc7-132">На странице свойств проекта откройте вкладку **Интернет** слева и убедитесь, что выбран параметр **Использовать локальный веб-сервер IIS**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
   
-## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
- На этом шаге в файл конфигурации *Web.config* веб-приложения ASP.NET MVC добавляются записи конфигурации, позволяющие реализовать поддержку утверждений.  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8fdc7-133">Шаг 2. Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="8fdc7-134">На этом шаге в файл конфигурации *Web.config* веб-приложения ASP.NET MVC добавляются записи конфигурации, позволяющие реализовать поддержку утверждений.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8fdc7-135">Настройка приложения ASP.NET MVC для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  Добавьте в файл конфигурации *Web.config* следующие определения разделов конфигурации. Они определяют разделы конфигурации, которые используются платформой Windows Identity Foundation. Определения необходимо добавлять непосредственно после открывающего элемента **\<configuration>**:  
+1.  <span data-ttu-id="8fdc7-136">Добавьте в файл конфигурации *Web.config* следующие определения разделов конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="8fdc7-137">Они определяют разделы конфигурации, которые используются платформой Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="8fdc7-138">Определения необходимо добавлять непосредственно после открывающего элемента **\<configuration>**:</span><span class="sxs-lookup"><span data-stu-id="8fdc7-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -90,7 +88,7 @@ ms.lasthandoff: 08/21/2017
     </configSections>  
     ```  
   
-2.  Добавьте элемент **\<location>**, который обеспечивает доступ к метаданным федерации приложения:  
+2.  <span data-ttu-id="8fdc7-139">Добавьте элемент **\<location>**, который обеспечивает доступ к метаданным федерации приложения:</span><span class="sxs-lookup"><span data-stu-id="8fdc7-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -102,7 +100,7 @@ ms.lasthandoff: 08/21/2017
     </location>  
     ```  
   
-3.  Добавьте следующие записи конфигурации в элементы **\<system.web>**, чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.  
+3.  <span data-ttu-id="8fdc7-140">Добавьте следующие записи конфигурации в элементы **\<system.web>**, чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -111,7 +109,7 @@ ms.lasthandoff: 08/21/2017
     <authentication mode="None" />  
     ```  
   
-4.  Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>**, атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>**. Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).  
+4.  <span data-ttu-id="8fdc7-141">Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>**, атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="8fdc7-142">Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).</span><span class="sxs-lookup"><span data-stu-id="8fdc7-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -135,16 +133,16 @@ ms.lasthandoff: 08/21/2017
     </system.identityModel.services>  
     ```  
   
-5.  Добавьте ссылку на сборку <xref:System.IdentityModel>.  
+5.  <span data-ttu-id="8fdc7-143">Добавьте ссылку на сборку <xref:System.IdentityModel>.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-6.  Скомпилируйте решение и убедитесь в отсутствии ошибок.  
+6.  <span data-ttu-id="8fdc7-144">Скомпилируйте решение и убедитесь в отсутствии ошибок.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-144">Compile the solution to make sure there are errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a>Шаг 3. Тестирование решения  
- На этом шаге выполняется тестирование веб-приложения ASP.NET MVC, настроенного для проверки подлинности на основе утверждений. Для базовой проверки необходимо добавить простой код, который отображает утверждения в маркере безопасности, выданном службой STS.  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="8fdc7-145">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="8fdc7-145">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="8fdc7-146">На этом шаге выполняется тестирование веб-приложения ASP.NET MVC, настроенного для проверки подлинности на основе утверждений.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="8fdc7-147">Для базовой проверки необходимо добавить простой код, который отображает утверждения в маркере безопасности, выданном службой STS.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Тестирование приложения ASP.NET MVC для проверки подлинности на основе утверждений  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8fdc7-148">Тестирование приложения ASP.NET MVC для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="8fdc7-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  В **обозревателе решений** разверните папку **Контроллеры** и откройте файл *HomeController.cs* в редакторе. Добавьте следующий код в метод **Index**:  
+1.  <span data-ttu-id="8fdc7-149">В **обозревателе решений** разверните папку **Контроллеры** и откройте файл *HomeController.cs* в редакторе.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="8fdc7-150">Добавьте следующий код в метод **Index**:</span><span class="sxs-lookup"><span data-stu-id="8fdc7-150">Add the following code to the **Index** method:</span></span>  
   
     ```csharp  
     public ActionResult Index()  
@@ -155,7 +153,7 @@ ms.lasthandoff: 08/21/2017
     }  
     ```  
   
-2.  В **обозревателе решений** разверните папки **Представления** и **Главная**, после чего откройте файл *Index.cshtml* в редакторе. Удалите его содержимое и добавьте следующую разметку:  
+2.  <span data-ttu-id="8fdc7-151">В **обозревателе решений** разверните папки **Представления** и **Главная**, после чего откройте файл *Index.cshtml* в редакторе.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="8fdc7-152">Удалите его содержимое и добавьте следующую разметку:</span><span class="sxs-lookup"><span data-stu-id="8fdc7-152">Delete its contents and add the following markup:</span></span>  
   
     ```html  
     @{  
@@ -223,11 +221,10 @@ ms.lasthandoff: 08/21/2017
     </table>  
     ```  
   
-3.  Запустите решение, нажав клавишу **F5**.  
+3.  <span data-ttu-id="8fdc7-153">Запустите решение, нажав клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-153">Run the solution by pressing the **F5** key.</span></span>  
   
-4.  Появится страница, на которой будут отображены утверждения в маркере безопасности, выданном службой маркеров безопасности.  
+4.  <span data-ttu-id="8fdc7-154">Появится страница, на которой будут отображены утверждения в маркере безопасности, выданном службой маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="8fdc7-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
   
-## <a name="related-items"></a>Связанные темы  
+## <a name="related-items"></a><span data-ttu-id="8fdc7-155">Связанные темы</span><span class="sxs-lookup"><span data-stu-id="8fdc7-155">Related Items</span></span>  
   
--   [Практическое руководство. Создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
-
+-   [<span data-ttu-id="8fdc7-156">Практическое руководство. Создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="8fdc7-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

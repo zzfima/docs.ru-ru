@@ -1,59 +1,57 @@
 ---
-title: "Правила разработки типов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "рекомендации по разработке типов"
-  - "правила разработки типов, о рекомендациях по разработке типов"
-  - "рекомендации по разработке библиотек [платформа .NET Framework] класса, рекомендации по разработке типов"
-  - "типы [платформа .NET Framework] рекомендации по проектированию"
+title: "Правила разработки типов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type design guidelines
+- type design guidelines, about type design guidelines
+- class library design guidelines [.NET Framework], type design guidelines
+- types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Правила разработки типов
-С точки зрения среды CLR, имеется только две категории типов — ссылочные типы и типы значений, но для целей обсуждения о разработке платформы, типы разделен на несколько логических групп, каждый из которых имеет свои собственные правила конкретного конструктора.  
+# <a name="type-design-guidelines"></a><span data-ttu-id="b19e0-102">Правила разработки типов</span><span class="sxs-lookup"><span data-stu-id="b19e0-102">Type Design Guidelines</span></span>
+<span data-ttu-id="b19e0-103">С точки зрения среды CLR, есть только две категории типов — ссылочные типы и типы значений, но с целью обсуждение разработки решений, типы разделен на несколько логических групп, каждая из которых собственные правила по разработке.</span><span class="sxs-lookup"><span data-stu-id="b19e0-103">From the CLR perspective, there are only two categories of types—reference types and value types—but for the purpose of a discussion about framework design, we divide types into more logical groups, each with its own specific design rules.</span></span>  
   
- Классы являются общем случае ссылочных типов. Они составляют большую часть типов в большинство платформ. Классы должны их популярность набор объектно ориентированные возможности, которые они поддерживают широкий набор функций и их общие применимости. Базовые классы и абстрактные классы являются специальные логические группы, связанные с расширяемости.  
+ <span data-ttu-id="b19e0-104">Классы являются общем случае ссылочных типов.</span><span class="sxs-lookup"><span data-stu-id="b19e0-104">Classes are the general case of reference types.</span></span> <span data-ttu-id="b19e0-105">Они составляют большую часть типов в большинстве платформ.</span><span class="sxs-lookup"><span data-stu-id="b19e0-105">They make up the bulk of types in the majority of frameworks.</span></span> <span data-ttu-id="b19e0-106">Классы причитающихся их популярность набор объектно ориентированные возможности, которые они поддерживают широкий набор функций и их общие применимости.</span><span class="sxs-lookup"><span data-stu-id="b19e0-106">Classes owe their popularity to the rich set of object-oriented features they support and to their general applicability.</span></span> <span data-ttu-id="b19e0-107">Базовые классы и абстрактные классы представляют собой специальные логические группы, относящиеся к расширяемости.</span><span class="sxs-lookup"><span data-stu-id="b19e0-107">Base classes and abstract classes are special logical groups related to extensibility.</span></span>  
   
- Интерфейсы — это типы, которые могут быть реализованы, ссылочные типы и типы значений. Таким образом они могут служить корни полиморфных иерархий ссылочных типов и типов значений. Кроме того можно использовать интерфейсы для имитации множественное наследование, который изначально не поддерживается средой CLR.  
+ <span data-ttu-id="b19e0-108">Интерфейсы — это типы, которые могут быть реализованы, ссылочные типы и типы значений.</span><span class="sxs-lookup"><span data-stu-id="b19e0-108">Interfaces are types that can be implemented by both reference types and value types.</span></span> <span data-ttu-id="b19e0-109">Таким образом они могут служить корни полиморфного иерархий ссылочных типов и типов значений.</span><span class="sxs-lookup"><span data-stu-id="b19e0-109">They can thus serve as roots of polymorphic hierarchies of reference types and value types.</span></span> <span data-ttu-id="b19e0-110">Кроме того интерфейсы могут использоваться для моделирования множественное наследование, который изначально не поддерживается средой CLR.</span><span class="sxs-lookup"><span data-stu-id="b19e0-110">In addition, interfaces can be used to simulate multiple inheritance, which is not natively supported by the CLR.</span></span>  
   
- Структуры являются общем случае типов значений и должны быть зарезервированы для небольших, простых типов, аналогично примитивы языка.  
+ <span data-ttu-id="b19e0-111">Структуры являются общем случае, когда типы значений и следует зарезервировать для маленькие, простые типы, аналогично примитивы языка.</span><span class="sxs-lookup"><span data-stu-id="b19e0-111">Structs are the general case of value types and should be reserved for small, simple types, similar to language primitives.</span></span>  
   
- Перечисления являются особым случаем типы значений, используемые для определения наборов коротких значений, таких как дни недели, цвета консоли и т. д.  
+ <span data-ttu-id="b19e0-112">Перечисления являются особым случаем типы значений, используемые для определения наборов коротких значений, таких как дни недели, цвета консоли и т. д.</span><span class="sxs-lookup"><span data-stu-id="b19e0-112">Enums are a special case of value types used to define short sets of values, such as days of the week, console colors, and so on.</span></span>  
   
- Статические классы — это типы, предназначенные для контейнеров для статических элементов. Они часто используются для предоставления сочетания клавиш для других операций.  
+ <span data-ttu-id="b19e0-113">Статические классы являются типами, которые предполагается использовать контейнеры для статических элементов.</span><span class="sxs-lookup"><span data-stu-id="b19e0-113">Static classes are types intended to be containers for static members.</span></span> <span data-ttu-id="b19e0-114">Обычно они используются для предоставления ярлыки для других операций.</span><span class="sxs-lookup"><span data-stu-id="b19e0-114">They are commonly used to provide shortcuts to other operations.</span></span>  
   
- Делегаты, исключения, атрибуты, массивов и коллекций являются все особые случаи ссылочные типы, предназначенные для конкретных целей, и рекомендации по их проектированию и использованию обсуждаемым ниже в этой книге.  
+ <span data-ttu-id="b19e0-115">Делегаты, исключения, атрибуты, массивы и коллекции являются все особых случаях ссылочных типов, предназначенных для конкретных целей, и рекомендации по их проектированию и использованию обсуждаются в другом месте в этой книге.</span><span class="sxs-lookup"><span data-stu-id="b19e0-115">Delegates, exceptions, attributes, arrays, and collections are all special cases of reference types intended for specific uses, and guidelines for their design and usage are discussed elsewhere in this book.</span></span>  
   
- **✓ сделать** убедитесь, что каждый тип строго определенный набор связанных элементов, не только случайных коллекции другие функции.  
+ <span data-ttu-id="b19e0-116">**✓ СДЕЛАТЬ** убедитесь, что каждый тип четко определенный набор связанных элементов не только случайных коллекции другие функции.</span><span class="sxs-lookup"><span data-stu-id="b19e0-116">**✓ DO** ensure that each type is a well-defined set of related members, not just a random collection of unrelated functionality.</span></span>  
   
-## В этом подразделе  
- [Выбор между классом и структурой](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
- [Разработка абстрактных классов](../../../docs/standard/design-guidelines/abstract-class.md)  
- [Разработка статичных классов](../../../docs/standard/design-guidelines/static-class.md)  
- [Разработка интерфейса](../../../docs/standard/design-guidelines/interface.md)  
- [Разработка структур](../../../docs/standard/design-guidelines/struct.md)  
- [Разработка перечислений](../../../docs/standard/design-guidelines/enum.md)  
- [Вложенные типы](../../../docs/standard/design-guidelines/nested-types.md)  
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+## <a name="in-this-section"></a><span data-ttu-id="b19e0-117">Содержание</span><span class="sxs-lookup"><span data-stu-id="b19e0-117">In This Section</span></span>  
+ [<span data-ttu-id="b19e0-118">Выбор между класса и структуры</span><span class="sxs-lookup"><span data-stu-id="b19e0-118">Choosing Between Class and Struct</span></span>](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [<span data-ttu-id="b19e0-119">Абстрактный класс конструирования</span><span class="sxs-lookup"><span data-stu-id="b19e0-119">Abstract Class Design</span></span>](../../../docs/standard/design-guidelines/abstract-class.md)  
+ [<span data-ttu-id="b19e0-120">Статический класс конструирования</span><span class="sxs-lookup"><span data-stu-id="b19e0-120">Static Class Design</span></span>](../../../docs/standard/design-guidelines/static-class.md)  
+ [<span data-ttu-id="b19e0-121">Разработка интерфейса</span><span class="sxs-lookup"><span data-stu-id="b19e0-121">Interface Design</span></span>](../../../docs/standard/design-guidelines/interface.md)  
+ [<span data-ttu-id="b19e0-122">Структура конструирования</span><span class="sxs-lookup"><span data-stu-id="b19e0-122">Struct Design</span></span>](../../../docs/standard/design-guidelines/struct.md)  
+ [<span data-ttu-id="b19e0-123">Перечисление разработки</span><span class="sxs-lookup"><span data-stu-id="b19e0-123">Enum Design</span></span>](../../../docs/standard/design-guidelines/enum.md)  
+ [<span data-ttu-id="b19e0-124">Вложенные типы</span><span class="sxs-lookup"><span data-stu-id="b19e0-124">Nested Types</span></span>](../../../docs/standard/design-guidelines/nested-types.md)  
+ <span data-ttu-id="b19e0-125">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="b19e0-125">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="b19e0-126">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="b19e0-126">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="b19e0-127">См. также</span><span class="sxs-lookup"><span data-stu-id="b19e0-127">See Also</span></span>  
+ [<span data-ttu-id="b19e0-128">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="b19e0-128">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

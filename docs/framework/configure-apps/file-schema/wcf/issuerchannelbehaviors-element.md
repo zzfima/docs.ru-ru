@@ -1,65 +1,75 @@
 ---
-title: "Элемент &lt;issuerChannelBehaviors&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;issuerChannelBehaviors&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 051525738f0138955358587a8fd25272dfdb9d28
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;issuerChannelBehaviors&gt;
-Содержит коллекцию поведений конечной точки клиента [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] \(определенных в конфигурации\) для использования при взаимодействии с заданными службами маркеров безопасности.  К определенным поведениям не относятся элементы [\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+# <a name="ltissuerchannelbehaviorsgt-element"></a><span data-ttu-id="396fb-102">Элемент &lt;issuerChannelBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="396fb-102">&lt;issuerChannelBehaviors&gt; Element</span></span>
+<span data-ttu-id="396fb-103">Содержит коллекцию поведений конечной точки клиента [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="396fb-103">Contains a collection of [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="396fb-104">Не могут содержать заданные поведения [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.</span><span class="sxs-lookup"><span data-stu-id="396fb-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="396fb-105">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="396fb-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="396fb-106">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="396fb-106">\<behaviors></span></span>  
+<span data-ttu-id="396fb-107">раздел endpointBehaviors</span><span class="sxs-lookup"><span data-stu-id="396fb-107">endpointBehaviors section</span></span>  
+<span data-ttu-id="396fb-108">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="396fb-108">\<behavior></span></span>  
+<span data-ttu-id="396fb-109">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="396fb-109">\<clientCredentials></span></span>  
+<span data-ttu-id="396fb-110">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="396fb-110">\<issuedToken></span></span>  
+<span data-ttu-id="396fb-111">\<issuerChannelBehaviors ></span><span class="sxs-lookup"><span data-stu-id="396fb-111">\<issuerChannelBehaviors></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="396fb-112">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="396fb-112">Syntax</span></span>  
   
+```xml  
 <issuerChannelBehaviors>  
       <add behaviorConfiguraton="string"  
                 issuerAddress="string" />  
 </issuerChannelBehaviors>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="396fb-113">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="396fb-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="396fb-114">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="396fb-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Отсутствует.  
+### <a name="attributes"></a><span data-ttu-id="396fb-115">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="396fb-115">Attributes</span></span>  
+ <span data-ttu-id="396fb-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="396fb-116">None.</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="396fb-117">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="396fb-117">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<добавление;\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Добавляет поведение в коллекцию.|  
+|<span data-ttu-id="396fb-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="396fb-118">Element</span></span>|<span data-ttu-id="396fb-119">Описание</span><span class="sxs-lookup"><span data-stu-id="396fb-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="396fb-120">\<add></span><span class="sxs-lookup"><span data-stu-id="396fb-120">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|<span data-ttu-id="396fb-121">Добавляет поведение в коллекцию.</span><span class="sxs-lookup"><span data-stu-id="396fb-121">Adds a behavior to the collection.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="396fb-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="396fb-122">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<issuedToken\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Задает пользовательский маркер, используемый для проверки подлинности клиента при подключении к службе.|  
+|<span data-ttu-id="396fb-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="396fb-123">Element</span></span>|<span data-ttu-id="396fb-124">Описание</span><span class="sxs-lookup"><span data-stu-id="396fb-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="396fb-125">\<issuedToken ></span><span class="sxs-lookup"><span data-stu-id="396fb-125">\<issuedToken></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|<span data-ttu-id="396fb-126">Задает пользовательский маркер, используемый для проверки подлинности клиента при подключении к службе.</span><span class="sxs-lookup"><span data-stu-id="396fb-126">Specifies a custom token used to authenticate a client to a service.</span></span>|  
   
-## Заметки  
- Этот элемент используется, когда для связи со службой необходимо любое поведение \(кроме поведений, в которые включаются элементы `<clientCredentials>`\).  Например, если необходимо включение элемента поведения [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md).  
+## <a name="remarks"></a><span data-ttu-id="396fb-127">Примечания</span><span class="sxs-lookup"><span data-stu-id="396fb-127">Remarks</span></span>  
+ <span data-ttu-id="396fb-128">Этот элемент используется, когда для связи со службой необходимо любое поведение (кроме поведений, в которые включаются элементы `<clientCredentials>`).</span><span class="sxs-lookup"><span data-stu-id="396fb-128">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="396fb-129">Например если [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) поведение элемент должен быть включен.</span><span class="sxs-lookup"><span data-stu-id="396fb-129">For example, if a [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) behavior element must be included.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>   
- <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>   
- <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>   
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>   
- [Идентификация и проверка подлинности службы](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)   
- [Как создавать федеративный клиент](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [Как настраивать локальный издатель](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)   
- [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a><span data-ttu-id="396fb-130">См. также</span><span class="sxs-lookup"><span data-stu-id="396fb-130">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  
+ <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>  
+ <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>  
+ <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>  
+ [<span data-ttu-id="396fb-131">Службы идентификации и проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="396fb-131">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="396fb-132">Поведения безопасности</span><span class="sxs-lookup"><span data-stu-id="396fb-132">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="396fb-133">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="396fb-133">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="396fb-134">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="396fb-134">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="396fb-135">Защита клиентов</span><span class="sxs-lookup"><span data-stu-id="396fb-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="396fb-136">Как: создание федеративного клиента</span><span class="sxs-lookup"><span data-stu-id="396fb-136">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="396fb-137">Как: Настройка локального издателя</span><span class="sxs-lookup"><span data-stu-id="396fb-137">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [<span data-ttu-id="396fb-138">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="396fb-138">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

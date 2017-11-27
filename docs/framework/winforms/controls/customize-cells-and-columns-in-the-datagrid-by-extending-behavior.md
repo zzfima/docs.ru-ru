@@ -1,86 +1,90 @@
 ---
-title: "Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ячейки, настройки в элементе управления DataGridView"
-  - "столбцы [Windows Forms], настройки в элементе управления DataGridView"
-  - "DataGridView - элемент управления [Windows Forms], настройка ячеек"
+title: "Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell customization
+- columns [Windows Forms], customizing in DataGridView control
+- cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a65d9abbd13c811c8796c2e5f57ed5d259ef57ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms
-Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами с помощью свойств, событий и классов\-компаньонов.  В ряде случаев к ячейкам могут предъявляться требования, когда этих функций будет недостаточно.  Вы можете создать пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> для расширения функциональных возможностей.  
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a><span data-ttu-id="4d00e-102">Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d00e-102">How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance</span></span>
+<span data-ttu-id="4d00e-103">Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами с помощью свойств, событий и классов-компаньонов.</span><span class="sxs-lookup"><span data-stu-id="4d00e-103">The <xref:System.Windows.Forms.DataGridView> control provides a number of ways to customize its appearance and behavior using properties, events, and companion classes.</span></span> <span data-ttu-id="4d00e-104">В ряде случаев к ячейкам могут предъявляться требования, когда этих функций будет недостаточно.</span><span class="sxs-lookup"><span data-stu-id="4d00e-104">Occasionally, you may have requirements for your cells that go beyond what these features can provide.</span></span> <span data-ttu-id="4d00e-105">Вы можете создать пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> для расширения функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="4d00e-105">You can create your own custom <xref:System.Windows.Forms.DataGridViewCell> class to provide extended functionality.</span></span>  
   
- Пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> создается как производный от базового класса <xref:System.Windows.Forms.DataGridViewCell> или одного из его производных классов.  Хотя любой тип ячейки можно отобразить в любом типе столбца, как правило, потребуется также создать пользовательский класс <xref:System.Windows.Forms.DataGridViewColumn>, специально предназначенный для отображения пользовательского типа ячейки.  Классы столбцов являются производными от <xref:System.Windows.Forms.DataGridViewColumn> или от одного из его производных типов.  
+ <span data-ttu-id="4d00e-106">Пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> создается как производный от базового класса <xref:System.Windows.Forms.DataGridViewCell> или одного из его производных классов.</span><span class="sxs-lookup"><span data-stu-id="4d00e-106">You create a custom <xref:System.Windows.Forms.DataGridViewCell> class by deriving from the <xref:System.Windows.Forms.DataGridViewCell> base class or one of its derived classes.</span></span> <span data-ttu-id="4d00e-107">Хотя любой тип ячейки можно отобразить в любом типе столбца, как правило, потребуется также создать пользовательский класс <xref:System.Windows.Forms.DataGridViewColumn>, специально предназначенный для отображения пользовательского типа ячейки.</span><span class="sxs-lookup"><span data-stu-id="4d00e-107">Although you can display any type of cell in any type of column, you will typically also create a custom <xref:System.Windows.Forms.DataGridViewColumn> class specialized for displaying your cell type.</span></span> <span data-ttu-id="4d00e-108">Классы столбцов являются производными от <xref:System.Windows.Forms.DataGridViewColumn> или от одного из его производных типов.</span><span class="sxs-lookup"><span data-stu-id="4d00e-108">Column classes derive from <xref:System.Windows.Forms.DataGridViewColumn> or one of its derived types.</span></span>  
   
- В примере кода ниже создается пользовательский класс ячейки с именем `DataGridViewRolloverCell`, который обнаруживает, когда указатель мыши пересекает границы ячейки.  Когда указатель мыши находится внутри границ ячейки, рисуется внутренняя рамка.  Этот новый тип является производным от <xref:System.Windows.Forms.DataGridViewTextBoxCell> и во всем остальном ведет себя так же, как и базовый класс.  Класс\-компаньон столбца имеет имя `DataGridViewRolloverColumn`.  
+ <span data-ttu-id="4d00e-109">В примере кода ниже создается пользовательский класс ячейки с именем `DataGridViewRolloverCell`, который обнаруживает, когда указатель мыши пересекает границы ячейки.</span><span class="sxs-lookup"><span data-stu-id="4d00e-109">In the following code example, you will create a custom cell class called `DataGridViewRolloverCell` that detects when the mouse enters and leaves the cell boundaries.</span></span> <span data-ttu-id="4d00e-110">Когда указатель мыши находится внутри границ ячейки, рисуется внутренняя рамка.</span><span class="sxs-lookup"><span data-stu-id="4d00e-110">While the mouse is within the cell's bounds, an inset rectangle is drawn.</span></span> <span data-ttu-id="4d00e-111">Этот новый тип является производным от <xref:System.Windows.Forms.DataGridViewTextBoxCell> и во всем остальном ведет себя так же, как и базовый класс.</span><span class="sxs-lookup"><span data-stu-id="4d00e-111">This new type derives from <xref:System.Windows.Forms.DataGridViewTextBoxCell> and behaves in all other respects as its base class.</span></span> <span data-ttu-id="4d00e-112">Класс-компаньон столбца имеет имя `DataGridViewRolloverColumn`.</span><span class="sxs-lookup"><span data-stu-id="4d00e-112">The companion column class is called `DataGridViewRolloverColumn`.</span></span>  
   
- Для использования этих классов необходимо создать форму, содержащую элемент управления <xref:System.Windows.Forms.DataGridView>, добавить один или несколько объектов `DataGridViewRolloverColumn` в коллекцию <xref:System.Windows.Forms.DataGridView.Columns%2A> и заполнить элемент управления строками со значениями.  
-  
-> [!NOTE]
->  Пример не будет работать правильно с пустыми строками.  Пустые строки создаются, например, при добавлении строк в элемент управления путем задания свойства <xref:System.Windows.Forms.DataGridView.RowCount%2A>.  Это происходит потому, что добавленные в этом случае строки автоматически становятся общими. Это означает, что экземпляры объектов `DataGridViewRolloverCell` не будут создаваться до тех пор, пока не будут нажаты отдельные ячейки, что отменяет блокирование связанных общих строк.  
-  
- Так как подобная настройка ячеек требует, чтобы строки не были общими, она не подходит для использования с большими наборами данных.  Подробнее о совместном использовании строк см. в разделе [Масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="4d00e-113">Для использования этих классов необходимо создать форму, содержащую элемент управления <xref:System.Windows.Forms.DataGridView>, добавить один или несколько объектов `DataGridViewRolloverColumn` в коллекцию <xref:System.Windows.Forms.DataGridView.Columns%2A> и заполнить элемент управления строками со значениями.</span><span class="sxs-lookup"><span data-stu-id="4d00e-113">To use these classes, create a form containing a <xref:System.Windows.Forms.DataGridView> control, add one or more `DataGridViewRolloverColumn` objects to the <xref:System.Windows.Forms.DataGridView.Columns%2A> collection, and populate the control with rows containing values.</span></span>  
   
 > [!NOTE]
->  При наследовании от класса <xref:System.Windows.Forms.DataGridViewCell> или <xref:System.Windows.Forms.DataGridViewColumn> и добавлении в производный класс новых свойств необходимо переопределить метод `Clone`, чтобы копировать новые свойства в ходе операций копирования.  Кроме того, необходимо вызвать метод `Clone` базового класса, чтобы свойства базового класса копировались в новую ячейку или столбец.  
+>  <span data-ttu-id="4d00e-114">Пример не будет работать правильно с пустыми строками.</span><span class="sxs-lookup"><span data-stu-id="4d00e-114">This example will not work correctly if you add empty rows.</span></span> <span data-ttu-id="4d00e-115">Пустые строки создаются, например, при добавлении строк в элемент управления путем задания свойства <xref:System.Windows.Forms.DataGridView.RowCount%2A>.</span><span class="sxs-lookup"><span data-stu-id="4d00e-115">Empty rows are created, for example, when you add rows to the control by setting the <xref:System.Windows.Forms.DataGridView.RowCount%2A> property.</span></span> <span data-ttu-id="4d00e-116">Это происходит потому, что добавленные в этом случае строки автоматически становятся общими. Это означает, что экземпляры объектов `DataGridViewRolloverCell` не будут создаваться до тех пор, пока не будут нажаты отдельные ячейки, что отменяет блокирование связанных общих строк.</span><span class="sxs-lookup"><span data-stu-id="4d00e-116">This is because the rows added in this case are automatically shared, which means that `DataGridViewRolloverCell` objects are not instantiated until you click on individual cells, thereby causing the associated rows to become unshared.</span></span>  
   
-### Настройка ячеек и столбцов в элементе управления DataGridView  
+ <span data-ttu-id="4d00e-117">Так как подобная настройка ячеек требует, чтобы строки не были общими, она не подходит для использования с большими наборами данных.</span><span class="sxs-lookup"><span data-stu-id="4d00e-117">Because this type of cell customization requires unshared rows, it is not appropriate for use with large data sets.</span></span> <span data-ttu-id="4d00e-118">Дополнительные сведения о совместном использовании строк см. в разделе [масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="4d00e-118">For more information about row sharing, see [Best Practices for Scaling the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).</span></span>  
   
-1.  Создайте класс ячейки с именем `DataGridViewRolloverCell`, производный от типа <xref:System.Windows.Forms.DataGridViewTextBoxCell>.  
+> [!NOTE]
+>  <span data-ttu-id="4d00e-119">При наследовании от <xref:System.Windows.Forms.DataGridViewCell> или <xref:System.Windows.Forms.DataGridViewColumn> и добавлении в производный класс новых свойств необходимо переопределить метод `Clone`, чтобы скопировать новые свойства в ходе операций копирования.</span><span class="sxs-lookup"><span data-stu-id="4d00e-119">When you derive from <xref:System.Windows.Forms.DataGridViewCell> or <xref:System.Windows.Forms.DataGridViewColumn> and add new properties to the derived class, be sure to override the `Clone` method to copy the new properties during cloning operations.</span></span> <span data-ttu-id="4d00e-120">Кроме того, необходимо вызвать метод `Clone` базового класса, чтобы свойства базового класса копировались в новую ячейку или столбец.</span><span class="sxs-lookup"><span data-stu-id="4d00e-120">You should also call the base class's `Clone` method so that the properties of the base class are copied to the new cell or column.</span></span>  
+  
+### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a><span data-ttu-id="4d00e-121">Настройка ячеек и столбцов в элементе управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="4d00e-121">To customize cells and columns in the DataGridView control</span></span>  
+  
+1.  <span data-ttu-id="4d00e-122">Создайте класс ячейки с именем `DataGridViewRolloverCell`, производный от типа <xref:System.Windows.Forms.DataGridViewTextBoxCell>.</span><span class="sxs-lookup"><span data-stu-id="4d00e-122">Derive a new cell class, called `DataGridViewRolloverCell`, from the <xref:System.Windows.Forms.DataGridViewTextBoxCell> type.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2.  Переопределите метод <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> в классе `DataGridViewRolloverCell`.  При переопределении сначала вызовите реализацию базового класса, которая отвечает за функциональные возможности размещенного текстового поля.  Затем с помощью метода <xref:System.Windows.Forms.Control.PointToClient%2A> элемента управления преобразуйте положение курсора \(в экранных координатах\) в координаты клиентской области <xref:System.Windows.Forms.DataGridView>.  Если координаты курсора попадают в границы ячейки, то рисуется внутренняя рамка.  
+2.  <span data-ttu-id="4d00e-123">Переопределите метод <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> в классе `DataGridViewRolloverCell`.</span><span class="sxs-lookup"><span data-stu-id="4d00e-123">Override the <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> method in the `DataGridViewRolloverCell` class.</span></span> <span data-ttu-id="4d00e-124">При переопределении сначала вызовите реализацию базового класса, которая отвечает за функциональные возможности размещенного текстового поля.</span><span class="sxs-lookup"><span data-stu-id="4d00e-124">In the override, first call the base class implementation, which handles the hosted text box functionality.</span></span> <span data-ttu-id="4d00e-125">Затем с помощью метода <xref:System.Windows.Forms.Control.PointToClient%2A> элемента управления преобразуйте положение курсора (в экранных координатах) в координаты клиентской области <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="4d00e-125">Then use the control's <xref:System.Windows.Forms.Control.PointToClient%2A> method to transform the cursor position (in screen coordinates) to the <xref:System.Windows.Forms.DataGridView> client area's coordinates.</span></span> <span data-ttu-id="4d00e-126">Если координаты курсора попадают в границы ячейки, то рисуется внутренняя рамка.</span><span class="sxs-lookup"><span data-stu-id="4d00e-126">If the mouse coordinates fall within the bounds of the cell, draw the inset rectangle.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3.  Переопределите методы <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> и <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> класса `DataGridViewRolloverCell`, чтобы ячейки отрисовывались повторно, когда указатель мыши пересекает их границы.  
+3.  <span data-ttu-id="4d00e-127">Переопределите методы <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> и <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> класса `DataGridViewRolloverCell`, чтобы ячейки отрисовывались повторно, когда указатель мыши пересекает их границы.</span><span class="sxs-lookup"><span data-stu-id="4d00e-127">Override the <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> and <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> methods in the `DataGridViewRolloverCell` class to force cells to repaint themselves when the mouse pointer enters or leaves them.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4.  Создайте класс с именем `DataGridViewRolloverCellColumn`, производный от типа <xref:System.Windows.Forms.DataGridViewColumn>.  В конструкторе назначьте новый объект `DataGridViewRolloverCell` его свойству <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A>.  
+4.  <span data-ttu-id="4d00e-128">Создайте класс с именем `DataGridViewRolloverCellColumn`, производный от типа <xref:System.Windows.Forms.DataGridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="4d00e-128">Derive a new class, called `DataGridViewRolloverCellColumn`, from the <xref:System.Windows.Forms.DataGridViewColumn> type.</span></span> <span data-ttu-id="4d00e-129">В конструкторе назначьте новый объект `DataGridViewRolloverCell` его свойству <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A>.</span><span class="sxs-lookup"><span data-stu-id="4d00e-129">In the constructor, assign a new `DataGridViewRolloverCell` object to its <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  
   
-## Пример  
- Полный пример кода включает небольшую тестовую форму, демонстрирующую поведение ячейки пользовательского типа.  
+## <a name="example"></a><span data-ttu-id="4d00e-130">Пример</span><span class="sxs-lookup"><span data-stu-id="4d00e-130">Example</span></span>  
+ <span data-ttu-id="4d00e-131">Полный пример кода включает небольшую тестовую форму, демонстрирующую поведение ячейки пользовательского типа.</span><span class="sxs-lookup"><span data-stu-id="4d00e-131">The complete code example includes a small test form that demonstrates the behavior of the custom cell type.</span></span>  
   
  [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#000)]  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="4d00e-132">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="4d00e-132">Compiling the Code</span></span>  
+ <span data-ttu-id="4d00e-133">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="4d00e-133">This example requires:</span></span>  
   
--   ссылки на сборки System, System.Windows.Forms и System.Drawing.  
+-   <span data-ttu-id="4d00e-134">ссылки на сборки System, System.Windows.Forms и System.Drawing.</span><span class="sxs-lookup"><span data-stu-id="4d00e-134">References to the System, System.Windows.Forms, and System.Drawing assemblies.</span></span>  
   
- Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) или [Построение из командной строки с помощью csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение скомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="4d00e-135">Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Построение из командной строки с помощью файла csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="4d00e-135">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="4d00e-136">Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="4d00e-136">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="4d00e-137">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="4d00e-137">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCell>   
- <xref:System.Windows.Forms.DataGridViewColumn>   
- [Настройка элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)   
- [Архитектура элементов управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)   
- [Типы столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)   
- [Масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="4d00e-138">См. также</span><span class="sxs-lookup"><span data-stu-id="4d00e-138">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCell>  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ [<span data-ttu-id="4d00e-139">Настройка элементов управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d00e-139">Customizing the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="4d00e-140">Архитектура элементов управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="4d00e-140">DataGridView Control Architecture</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [<span data-ttu-id="4d00e-141">Типы столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d00e-141">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="4d00e-142">Масштабирование элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d00e-142">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)

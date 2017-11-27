@@ -1,109 +1,108 @@
 ---
-title: "Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF, интеграция с COM+"
-  - "Windows Communication Foundation, интеграция с COM+"
+title: "Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, COM+ integration
+- WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f812beea611633fe1fa47ced5db46c462443f28
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe)
-Программа командной строки для настройки модели служб COM\+ \(ComSvcConfig.exe\) позволяет настраивать интерфейсы COM\+, которые нужно предоставить как веб\-службы.  
+# <a name="com-service-model-configuration-tool-comsvcconfigexe"></a><span data-ttu-id="cc8ef-102">Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="cc8ef-102">COM+ Service Model Configuration Tool (ComSvcConfig.exe)</span></span>
+<span data-ttu-id="cc8ef-103">Программа командной строки для настройки модели служб COM+ (ComSvcConfig.exe) позволяет настраивать интерфейсы COM+, которые нужно предоставить как веб-службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-103">The COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) enables you to configure COM+ interfaces to be exposed as Web services.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="cc8ef-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cc8ef-104">Syntax</span></span>  
   
 ```  
-  
 ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | ApplicationName>] [/contract:<ClassID | ProgID | *,InterfaceID | InterfaceName | *>] [/hosting:<complus | was>] [/webSite:<WebsiteName>] [/webDirectory:<WebDirectoryName>] [/mex] [/id] [/nologo] [/verbose] [/help] [/partial]  
 ```  
   
-## Заметки  
+## <a name="remarks"></a><span data-ttu-id="cc8ef-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="cc8ef-105">Remarks</span></span>  
   
 > [!NOTE]
->  Для использования ComSvcConfig.exe на компьютере под управлением ОС Windows Vista требуются права администратора.  
+>  <span data-ttu-id="cc8ef-106">Для использования ComSvcConfig.exe на компьютере под управлением ОС Windows Vista требуются права администратора.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-106">You must be an administrator on the local computer to use ComSvcConfig.exe.</span></span>  
   
- Это средство можно найти в следующей папке:  
+ <span data-ttu-id="cc8ef-107">Это средство можно найти в следующей папке:</span><span class="sxs-lookup"><span data-stu-id="cc8ef-107">The tool can be found in the following location</span></span>  
   
- %SystemRoot%\\Microsoft.Net\\Framework\\v3.0\\Windows Communication Foundation\\  
+ <span data-ttu-id="cc8ef-108">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\\</span><span class="sxs-lookup"><span data-stu-id="cc8ef-108">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\\</span></span>  
   
- Дополнительные сведения о ComSvcConfig.exe см. в разделе [Как использовать программу командной строки настройки модели служб COM\+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+ <span data-ttu-id="cc8ef-109">Дополнительные сведения о ComSvcConfig.exe см. в разделе [как: использование программы настройки модели служб COM +](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).</span><span class="sxs-lookup"><span data-stu-id="cc8ef-109">For more information about ComSvcConfig.exe, see [How to: Use the COM+ Service Model Configuration Tool](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).</span></span>  
   
- В следующей таблице представлены режимы, которые могут использоваться с ComSvcConfig.exe.  
+ <span data-ttu-id="cc8ef-110">В следующей таблице представлены режимы, которые могут использоваться с ComSvcConfig.exe.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-110">The following table describes the modes that can be used with ComSvcConfig.exe.</span></span>  
   
-|Параметр|Описание|  
-|--------------|--------------|  
-|`install`|Устанавливает конфигурацию для интерфейса COM\+ для интеграции Service Model.<br /><br /> Краткая форма: `/i`.|  
-|`uninstall`|Удаляет конфигурацию для интерфейса COM\+ из интеграции Service Model.<br /><br /> Краткая форма: `/u`.|  
-|`list`|Отображает сведения о приложениях и компонентах COM\+, которые имеют интерфейсы, настроенные для интеграции Service Model.<br /><br /> Краткая форма: `/l`.|  
+|<span data-ttu-id="cc8ef-111">Параметр</span><span class="sxs-lookup"><span data-stu-id="cc8ef-111">Option</span></span>|<span data-ttu-id="cc8ef-112">Описание</span><span class="sxs-lookup"><span data-stu-id="cc8ef-112">Description</span></span>|  
+|------------|-----------------|  
+|`install`|<span data-ttu-id="cc8ef-113">Устанавливает конфигурацию для интерфейса COM+ для интеграции Service Model.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-113">Installs a configuration for a COM+ interface for Service Model integration.</span></span><br /><br /> <span data-ttu-id="cc8ef-114">Краткая форма: `/i`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-114">Short form `/i`.</span></span>|  
+|`uninstall`|<span data-ttu-id="cc8ef-115">Удаляет конфигурацию для интерфейса COM+ из интеграции Service Model.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-115">Uninstalls a configuration for a COM+ interface from Service Model integration.</span></span><br /><br /> <span data-ttu-id="cc8ef-116">Краткая форма: `/u`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-116">Short form `/u`.</span></span>|  
+|`list`|<span data-ttu-id="cc8ef-117">Отображает сведения о приложениях и компонентах COM+, которые имеют интерфейсы, настроенные для интеграции Service Model.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-117">Lists information about COM+ applications and components that have interfaces that are configured for Service Model integration.</span></span><br /><br /> <span data-ttu-id="cc8ef-118">Краткая форма: `/l`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-118">Short form `/l`.</span></span>|  
   
- В следующей таблице представлены флаги, которые могут использоваться с ComSvcConfig.exe.  
+ <span data-ttu-id="cc8ef-119">В следующей таблице представлены флаги, которые могут использоваться с ComSvcConfig.exe.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-119">The following table describes the flags that can be used with ComSvcConfig.exe.</span></span>  
   
-|Параметр|Описание|  
-|--------------|--------------|  
-|`/application:<` *ApplicationID*  `&#124;`  *ApplicationName* `>`|Позволяет указать приложение COM\+ для настройки.<br /><br /> Краткая форма: `/a`.|  
-|`/contract:<` *ClassID*  `&#124;`  *ProgID*  `&#124; *,` *InterfaceID*  `&#124;`  *InterfaceName*  `&#124; *` `>`|Позволяет указать компонент и интерфейс COM\+, которые будут настроены в качестве контракта для службы.<br /><br /> Краткая форма: `/c`.<br /><br /> При задании имен компонента и интерфейса можно использовать символ\-шаблон \(\*\), однако делать это не рекомендуется, поскольку могут быть предоставлены интерфейсы, использование которых не планировалось.|  
-|`/hosting:<` *complus*  `&#124;`  *was* `>`|Позволяет указать необходимость использования режима размещения COM\+ или режима размещения на веб\-сервере.<br /><br /> Краткая форма: `/h`.<br /><br /> Для использования режима размещения COM\+ требуется явная активация приложения COM\+.Использование режима размещения на веб\-сервере позволяет автоматически активировать приложение COM\+ при необходимости.Если приложение COM\+ является библиотечным приложением, оно выполняется в процессе IIS.Если приложение COM\+ является серверным приложением, оно выполняется в процессе Dllhost.exe.|  
-|`/webSite:<` *WebsiteName* `>`|Позволяет указать веб\-сайт для размещения при использовании режима размещения на веб\-сервере \(см. флаг `/hosting`\).<br /><br /> Краткая форма: `/w`.<br /><br /> Если веб\-сайт не указан, используется веб\-сайт по умолчанию.|  
-|`/webDirectory:<` *WebDirectoryName* `>`|Позволяет указать виртуальный каталог для размещения при использовании режима размещения на веб\-сервере \(см. флаг `/hosting`\).<br /><br /> Краткая форма: `/d`.|  
-|`/mex`|Добавляет конечную точку службы обмена метаданными в конфигурацию службы по умолчанию для поддержки клиентов, которым требуется извлечь определение контракта из службы.<br /><br /> Краткая форма: `/x`.|  
-|`/id`|Отображает информацию о приложении, компоненте и интерфейсе в виде идентификаторов.<br /><br /> Краткая форма: `/k`.|  
-|`/nologo`|Подавляет отображение логотипа ComSvcConfig.exe.<br /><br /> Краткая форма: `/n`.|  
-|`/verbose`|Выводит все предупреждения или информационный текст в дополнение к любым обнаруженным ошибкам.<br /><br /> Краткая форма: `/v`.|  
-|`/help`|Отображает сообщение об использовании.<br /><br /> Краткая форма: `/?`.|  
-|`/partial`|Создает конфигурацию службы, если указанный интерфейс включает одну или несколько сигнатур метода, которые могут быть предоставлены для использования.Во время инициализации службы совместимые методы отображаются как операции над контрактом службы, а несовместимые методы игнорируются и исключаются из контракта службы.<br /><br /> Если данный флаг отсутствует, средство не создает конфигурацию службы, когда указанный интерфейс включает один или несколько несовместимых методов.|  
+|<span data-ttu-id="cc8ef-120">Параметр</span><span class="sxs-lookup"><span data-stu-id="cc8ef-120">Option</span></span>|<span data-ttu-id="cc8ef-121">Описание</span><span class="sxs-lookup"><span data-stu-id="cc8ef-121">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="cc8ef-122">`/application:`\< *ApplicationID* &#124; *ApplicationName*\></span><span class="sxs-lookup"><span data-stu-id="cc8ef-122">`/application:` \<*ApplicationID* &#124; *ApplicationName*\></span></span>|<span data-ttu-id="cc8ef-123">Позволяет указать приложение COM+ для настройки.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-123">Specifies the COM+ application to configure.</span></span><br /><br /> <span data-ttu-id="cc8ef-124">Краткая форма: `/a`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-124">Short form `/a`.</span></span>|  
+|<span data-ttu-id="cc8ef-125">`/contract:`\< *ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124;\*\></span><span class="sxs-lookup"><span data-stu-id="cc8ef-125">`/contract:` \<*ClassID*  &#124; *ProgID*  &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124; \*\></span></span>|<span data-ttu-id="cc8ef-126">Позволяет указать компонент и интерфейс COM+, которые будут настроены в качестве контракта для службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-126">Specifies the COM+ component and interface that will be configured as the contract for the service.</span></span><br /><br /> <span data-ttu-id="cc8ef-127">Краткая форма: `/c`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-127">Short form `/c`.</span></span><br /><br /> <span data-ttu-id="cc8ef-128">Хотя подстановочный знак (\*) может использоваться для указания имен компонента и интерфейса, мы рекомендуем не использовать его, поскольку могут быть предоставлены интерфейсы, которые не предназначены для.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-128">While the wildcard character (\*) can be used when you specify the component and interface names, we recommend that you do not use it, because you might expose interfaces that you did not intend to.</span></span>|  
+|<span data-ttu-id="cc8ef-129">`/hosting:`\< *complus* &#124; *был*\></span><span class="sxs-lookup"><span data-stu-id="cc8ef-129">`/hosting:` \<*complus*  &#124; *was*\></span></span>|<span data-ttu-id="cc8ef-130">Позволяет указать необходимость использования режима размещения COM+ или режима размещения на веб-сервере.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-130">Specifies whether to use the COM+ hosting mode or the Web hosting mode.</span></span><br /><br /> <span data-ttu-id="cc8ef-131">Краткая форма: `/h`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-131">Short form `/h`.</span></span><br /><br /> <span data-ttu-id="cc8ef-132">Для использования режима размещения COM+ требуется явная активация приложения COM+.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-132">Using the COM+ hosting mode requires explicit activation of the COM+ application.</span></span> <span data-ttu-id="cc8ef-133">Использование режима размещения на веб-сервере позволяет автоматически активировать приложение COM+ при необходимости.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-133">Using the Web hosting mode allows the COM+ application to be automatically activated as required.</span></span> <span data-ttu-id="cc8ef-134">Если приложение COM+ является библиотечным приложением, оно выполняется в процессе IIS.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-134">If the COM+ application is a library application, it runs in the Internet Information Services (IIS) process.</span></span> <span data-ttu-id="cc8ef-135">Если приложение COM+ является серверным приложением, оно выполняется в процессе Dllhost.exe.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-135">If the COM+ application is a server application, it runs in the Dllhost.exe process.</span></span>|  
+|<span data-ttu-id="cc8ef-136">`/webSite:`\< *WebsiteName*\></span><span class="sxs-lookup"><span data-stu-id="cc8ef-136">`/webSite:` \<*WebsiteName*\></span></span>|<span data-ttu-id="cc8ef-137">Позволяет указать веб-сайт для размещения при использовании режима размещения на веб-сервере (см. флаг `/hosting`).</span><span class="sxs-lookup"><span data-stu-id="cc8ef-137">Specifies the Web site for hosting when Web hosting mode is used (see the `/hosting` flag).</span></span><br /><br /> <span data-ttu-id="cc8ef-138">Краткая форма: `/w`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-138">Short form `/w`.</span></span><br /><br /> <span data-ttu-id="cc8ef-139">Если веб-сайт не указан, используется веб-сайт по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-139">If no Web site is specified, the default Web site is used.</span></span>|  
+|<span data-ttu-id="cc8ef-140">`/webDirectory:`\< *WebDirectoryName*\></span><span class="sxs-lookup"><span data-stu-id="cc8ef-140">`/webDirectory:` \<*WebDirectoryName*\></span></span>|<span data-ttu-id="cc8ef-141">Позволяет указать виртуальный каталог для размещения при использовании режима размещения на веб-сервере (см. флаг `/hosting`).</span><span class="sxs-lookup"><span data-stu-id="cc8ef-141">Specifies the virtual directory for hosting when Web hosting is used (see the `/hosting` flag).</span></span><br /><br /> <span data-ttu-id="cc8ef-142">Краткая форма: `/d`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-142">Short form `/d`.</span></span>|  
+|`/mex`|<span data-ttu-id="cc8ef-143">Добавляет конечную точку службы обмена метаданными в конфигурацию службы по умолчанию для поддержки клиентов, которым требуется извлечь определение контракта из службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-143">Adds a Metadata Exchange (MEX) service endpoint to the default service configuration to support clients that want to retrieve a contract definition from the service.</span></span><br /><br /> <span data-ttu-id="cc8ef-144">Краткая форма: `/x`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-144">Short form `/x`.</span></span>|  
+|`/id`|<span data-ttu-id="cc8ef-145">Отображает информацию о приложении, компоненте и интерфейсе в виде идентификаторов.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-145">Displays the application, component, and interface information as IDs.</span></span><br /><br /> <span data-ttu-id="cc8ef-146">Краткая форма: `/k`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-146">Short form `/k`.</span></span>|  
+|`/nologo`|<span data-ttu-id="cc8ef-147">Подавляет отображение логотипа ComSvcConfig.exe.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-147">Prevents ComSvcConfig.exe from displaying its logo.</span></span><br /><br /> <span data-ttu-id="cc8ef-148">Краткая форма: `/n`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-148">Short form `/n`.</span></span>|  
+|`/verbose`|<span data-ttu-id="cc8ef-149">Выводит все предупреждения или информационный текст в дополнение к любым обнаруженным ошибкам.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-149">Outputs all warnings or informational text in addition to any errors encountered.</span></span><br /><br /> <span data-ttu-id="cc8ef-150">Краткая форма: `/v`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-150">Short form `/v`.</span></span>|  
+|`/help`|<span data-ttu-id="cc8ef-151">Отображает сообщение об использовании.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-151">Displays the usage message.</span></span><br /><br /> <span data-ttu-id="cc8ef-152">Краткая форма: `/?`.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-152">Short form `/?`.</span></span>|  
+|`/partial`|<span data-ttu-id="cc8ef-153">Создает конфигурацию службы, если указанный интерфейс включает одну или несколько сигнатур метода, которые могут быть предоставлены для использования.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-153">Generates a service configuration when the specified interface includes one or more method signatures that can be exposed.</span></span> <span data-ttu-id="cc8ef-154">Во время инициализации службы совместимые методы отображаются как операции над контрактом службы, а несовместимые методы игнорируются и исключаются из контракта службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-154">At service initialization time, compatible methods appear as operations on the service contract, and non-compatible methods are ignored and absent from the service contract.</span></span><br /><br /> <span data-ttu-id="cc8ef-155">Если данный флаг отсутствует, средство не создает конфигурацию службы, когда указанный интерфейс включает один или несколько несовместимых методов.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-155">If this flag is missing, the tool will not generate a service configuration when the specified interface includes one or more incompatible methods.</span></span>|  
   
-## Примеры  
+## <a name="examples"></a><span data-ttu-id="cc8ef-156">Примеры</span><span class="sxs-lookup"><span data-stu-id="cc8ef-156">Examples</span></span>  
   
-### Описание  
- В следующем примере с помощью режима размещения COM\+ выполняется добавление интерфейса `IFinances` компонента `ItemOrders.IFinancial` \(из приложения COM\+ OnlineStore\) в набор интерфейсов, предоставляемых как веб\-службы.В дополнение к любым обнаруженным ошибкам выводятся все предупреждения.  
+### <a name="description"></a><span data-ttu-id="cc8ef-157">Описание</span><span class="sxs-lookup"><span data-stu-id="cc8ef-157">Description</span></span>  
+ <span data-ttu-id="cc8ef-158">В следующем примере с помощью режима размещения COM+ выполняется добавление интерфейса `IFinances` компонента `ItemOrders.IFinancial` (из приложения COM+ OnlineStore) в набор интерфейсов, предоставляемых как веб-службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-158">The following example adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that are exposed as Web services, using the COM+ hosting mode.</span></span> <span data-ttu-id="cc8ef-159">В дополнение к любым обнаруженным ошибкам выводятся все предупреждения.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-159">All warnings will be output in addition to any errors encountered.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="cc8ef-160">Код</span><span class="sxs-lookup"><span data-stu-id="cc8ef-160">Code</span></span>  
   
 ```  
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
-### Описание  
- В следующем примере с помощью режима размещения на веб\-сервере выполняется добавление интерфейса `IStockLevels` компонента `ItemInventory.Warehouse` \(из приложения COM\+ OnlineWarehouse\) в набор интерфейсов, предоставляемых как веб\-службы.Веб\-служба размещается в виртуальном каталоге OnlineWarehouse в IIS.  
+### <a name="description"></a><span data-ttu-id="cc8ef-161">Описание</span><span class="sxs-lookup"><span data-stu-id="cc8ef-161">Description</span></span>  
+ <span data-ttu-id="cc8ef-162">В следующем примере с помощью режима размещения на веб-сервере выполняется добавление интерфейса `IStockLevels` компонента `ItemInventory.Warehouse` (из приложения COM+ OnlineWarehouse) в набор интерфейсов, предоставляемых как веб-службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-162">The following example adds the `IStockLevels` interface of the `ItemInventory.Warehouse` component (from the OnlineWarehouse COM+ application) to the set of interfaces that are exposed as Web services, using the Web hosting mode.</span></span> <span data-ttu-id="cc8ef-163">Веб-служба размещается в виртуальном каталоге OnlineWarehouse в IIS.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-163">The Web service is Web hosted in the OnlineWarehouse virtual directory of IIS.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="cc8ef-164">Код</span><span class="sxs-lookup"><span data-stu-id="cc8ef-164">Code</span></span>  
   
 ```  
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
-### Описание  
- В следующем примере выполняется удаление интерфейса `IFinances` компонента `ItemOrders.Financial` \(из приложения COM\+ OnlineStore\) из набора интерфейсов, предоставляемых как веб\-службы.  
+### <a name="description"></a><span data-ttu-id="cc8ef-165">Описание</span><span class="sxs-lookup"><span data-stu-id="cc8ef-165">Description</span></span>  
+ <span data-ttu-id="cc8ef-166">В следующем примере выполняется удаление интерфейса `IFinances` компонента `ItemOrders.Financial` (из приложения COM+ OnlineStore) из набора интерфейсов, предоставляемых как веб-службы.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-166">The following example removes the `IFinances` interface of the `ItemOrders.Financial` component (from the OnlineStore COM+ application) from the set of interfaces that are exposed as Web services.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="cc8ef-167">Код</span><span class="sxs-lookup"><span data-stu-id="cc8ef-167">Code</span></span>  
   
 ```  
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
-### Описание  
- В следующем примере выводится список предоставляемых в данный момент интерфейсов, размещенных в COM\+, а также соответствующий адрес и сведения о привязке для приложения COM\+ OnlineStore на локальном компьютере.  
+### <a name="description"></a><span data-ttu-id="cc8ef-168">Описание</span><span class="sxs-lookup"><span data-stu-id="cc8ef-168">Description</span></span>  
+ <span data-ttu-id="cc8ef-169">В следующем примере выводится список предоставляемых в данный момент интерфейсов, размещенных в COM+, а также соответствующий адрес и сведения о привязке для приложения COM+ OnlineStore на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="cc8ef-169">The following example lists currently exposed COM+ hosted interfaces, along with the corresponding address and binding details, for the OnlineStore COM+ application on the local machine.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="cc8ef-170">Код</span><span class="sxs-lookup"><span data-stu-id="cc8ef-170">Code</span></span>  
   
 ```  
 ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
 ```  
   
-## См. также  
- [Как использовать программу командной строки настройки модели служб COM\+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a><span data-ttu-id="cc8ef-171">См. также</span><span class="sxs-lookup"><span data-stu-id="cc8ef-171">See Also</span></span>  
+ [<span data-ttu-id="cc8ef-172">Как: средство настройки модели служб COM +</span><span class="sxs-lookup"><span data-stu-id="cc8ef-172">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

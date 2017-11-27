@@ -1,110 +1,113 @@
 ---
-title: "Создание элемента управления рукописным вводом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "прием рукописного ввода"
-  - "DynamicRenderer - объекты"
-  - "элементы управления для рукописного ввода"
-  - "рукописный ввод, прием"
-  - "рукописный ввод, управление"
-  - "рукописный ввод, отрисовка"
-  - "ввод с мыши, прием"
-  - "управление рукописным вводом"
-  - "ввод мыши, прием"
-  - "отрисовка рукописных данных"
-  - "StylusPlugIn - объекты"
+title: "Создание элемента управления рукописным вводом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ink strokes [WPF], managing
+- managing ink strokes [WPF]
+- ink input control [WPF]
+- input from mouse [WPF], accepting
+- mouse input [WPF], accepting
+- ink [WPF], rendering
+- ink strokes [WPF], collecting
+- rendering ink [WPF]
+- collecting ink strokes [WPF]
+- DynamicRenderer objects [WPF]
+- StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание элемента управления рукописным вводом
-Можно создать настраиваемый элемент управления, динамически и статически отображающий рукописный ввод.  То есть рукописные данные отображаются при вводе пользователем штриха, визуально рукописный ввод "выплывает" из\-под пера планшета и отображается после того, как добавляется в элемент управления, либо с помощью пера планшета, из буфер обмена, либо при загрузке из файла.  Для динамического отображения рукописного ввода, элемент управления должен использовать <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Для статического отображения рукописных данных необходимо переопределить методы событий пера \(<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A> и <xref:System.Windows.UIElement.OnStylusUp%2A>\) для сбора данных <xref:System.Windows.Input.StylusPoint> и создания штрихов, и добавить их в <xref:System.Windows.Controls.InkPresenter> \(который отображает рукописные данные в элементе управления\).  
+# <a name="creating-an-ink-input-control"></a><span data-ttu-id="5be95-102">Создание элемента управления рукописным вводом</span><span class="sxs-lookup"><span data-stu-id="5be95-102">Creating an Ink Input Control</span></span>
+<span data-ttu-id="5be95-103">Можно создать пользовательский элемент управления, динамически и статически отображающий рукописный ввод.</span><span class="sxs-lookup"><span data-stu-id="5be95-103">You can create a custom control that dynamically and statically renders ink.</span></span> <span data-ttu-id="5be95-104">Отображения рукописного ввода, то есть, как пользователь штриха, вызывая рукописный ввод в «поток» из планшетное перо и после него отображается добавляется в элемент управления, либо с помощью пера, вставленный из буфера обмена или загрузке из файла.</span><span class="sxs-lookup"><span data-stu-id="5be95-104">That is, render ink as a user draws a stroke, causing the ink to appear to "flow" from the tablet pen, and display ink after it is added to the control, either via the tablet pen, pasted from the Clipboard, or loaded from a file.</span></span> <span data-ttu-id="5be95-105">Для динамического отображения рукописного ввода, необходимо использовать элемент управления <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span><span class="sxs-lookup"><span data-stu-id="5be95-105">To dynamically render ink, your control must use a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span> <span data-ttu-id="5be95-106">Для статического отображения рукописного ввода, необходимо переопределить методы событий пера (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, и <xref:System.Windows.UIElement.OnStylusUp%2A>) для сбора <xref:System.Windows.Input.StylusPoint> данных, создания штрихов и добавить их к <xref:System.Windows.Controls.InkPresenter> (который отображает рукописного текста на элементе управления).</span><span class="sxs-lookup"><span data-stu-id="5be95-106">To statically render ink, you must override the stylus event methods (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, and <xref:System.Windows.UIElement.OnStylusUp%2A>) to collect <xref:System.Windows.Input.StylusPoint> data, create strokes, and add them to an <xref:System.Windows.Controls.InkPresenter> (which renders the ink on the control).</span></span>  
   
- В этом разделе содержатся следующие подразделы:  
+ <span data-ttu-id="5be95-107">В этом разделе содержатся следующие подразделы:</span><span class="sxs-lookup"><span data-stu-id="5be95-107">This topic contains the following subsections:</span></span>  
   
--   [Практическое руководство. Сбор данных о точках пера и создание росчерков пера](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [<span data-ttu-id="5be95-108">Как: сбора данных точки пера и создания штрихов рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="5be95-108">How to: Collect Stylus Point Data and Create Ink Strokes</span></span>](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Практическое руководство. Включение приема элементом управления ввода при помощи мыши](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [<span data-ttu-id="5be95-109">Как: разрешить принимать входные данные от мыши элемента управления</span><span class="sxs-lookup"><span data-stu-id="5be95-109">How to: Enable Your Control to Accept Input from the Mouse</span></span>](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Сборка](#PuttingItTogether)  
+-   [<span data-ttu-id="5be95-110">Совместное размещение</span><span class="sxs-lookup"><span data-stu-id="5be95-110">Putting it together</span></span>](#PuttingItTogether)  
   
--   [Использование дополнительных подключаемых модулей и DynamicRenderer](#UsingAdditionalPluginsAndDynamicRenderers)  
+-   [<span data-ttu-id="5be95-111">С помощью дополнительные подключаемые модули и DynamicRenderers</span><span class="sxs-lookup"><span data-stu-id="5be95-111">Using Additional Plug-ins and DynamicRenderers</span></span>](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Заключение](#AdvancedInkHandling_Conclusion)  
+-   [<span data-ttu-id="5be95-112">Заключение</span><span class="sxs-lookup"><span data-stu-id="5be95-112">Conclusion</span></span>](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
-## Практическое руководство. Сбор данных о точках пера и создание росчерков пера  
- Для создания элемента управления, собирающего и управляющего штрихами рукописного ввода выполните следующие действия.  
+## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a><span data-ttu-id="5be95-113">Как: сбора данных точки пера и создания штрихов рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="5be95-113">How to: Collect Stylus Point Data and Create Ink Strokes</span></span>  
+ <span data-ttu-id="5be95-114">Чтобы создать элемент управления, который собирает и управляет рукописного ввода штрихов выполните следующее:</span><span class="sxs-lookup"><span data-stu-id="5be95-114">To create a control that collects and manages ink strokes do the following:</span></span>  
   
-1.  Создайте класс, производный от <xref:System.Windows.Controls.Control> или от одного из классов, производных от <xref:System.Windows.Controls.Control>, например, <xref:System.Windows.Controls.Label>.  
+1.  <span data-ttu-id="5be95-115">Производный класс <xref:System.Windows.Controls.Control> или одного из классов, производный от <xref:System.Windows.Controls.Control>, такие как <xref:System.Windows.Controls.Label>.</span><span class="sxs-lookup"><span data-stu-id="5be95-115">Derive a class from <xref:System.Windows.Controls.Control> or one of the classes derived from <xref:System.Windows.Controls.Control>, such as <xref:System.Windows.Controls.Label>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
     [!code-csharp[AdvancedInkTopicsSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
     [!code-csharp[AdvancedInkTopicsSamples#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
   
-2.  Добавьте <xref:System.Windows.Controls.InkPresenter> в класс и задайте свойству <xref:System.Windows.Controls.ContentControl.Content%2A> новое значение <xref:System.Windows.Controls.InkPresenter>.  
+2.  <span data-ttu-id="5be95-116">Добавить <xref:System.Windows.Controls.InkPresenter> класса и установите <xref:System.Windows.Controls.ContentControl.Content%2A> свойство к новому <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="5be95-116">Add an <xref:System.Windows.Controls.InkPresenter> to the class and set the <xref:System.Windows.Controls.ContentControl.Content%2A> property to the new <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
   
-3.  Присоедините <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> для <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> к <xref:System.Windows.Controls.InkPresenter>, вызвав метод <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A>, и добавьте <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> в коллекцию <xref:System.Windows.UIElement.StylusPlugIns%2A>.  Это позволит <xref:System.Windows.Controls.InkPresenter> отображать рукописные данные как данные точек пера, собираемые элементом управления.  
+3.  <span data-ttu-id="5be95-117">Присоединение <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> из <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> для <xref:System.Windows.Controls.InkPresenter> путем вызова <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> метода и добавьте <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> для <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекции.</span><span class="sxs-lookup"><span data-stu-id="5be95-117">Attach the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> of the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.Controls.InkPresenter> by calling the <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> method, and add the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection.</span></span> <span data-ttu-id="5be95-118">Это позволяет <xref:System.Windows.Controls.InkPresenter> для отображения рукописного ввода, так как происходит накопление данных точки пера элементом управления.</span><span class="sxs-lookup"><span data-stu-id="5be95-118">This allows the <xref:System.Windows.Controls.InkPresenter> to display the ink as the stylus point data is collected by your control.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
     [!code-csharp[AdvancedInkTopicsSamples#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
   
-4.  Переопределите метод <xref:System.Windows.UIElement.OnStylusDown%2A>.  В этом методе выполните перехват пера, вызвав <xref:System.Windows.Input.Stylus.Capture%2A>.  При перехвате пера элемент управления будет продолжать получать события <xref:System.Windows.UIElement.StylusMove> и <xref:System.Windows.UIElement.StylusUp> даже в том случае, если перо покидает границы элемента управления.  Это не является строго обязательным, но почти всегда желательно для повышения удобства работы пользователя.  Создайте новый объект <xref:System.Windows.Input.StylusPointCollection> для сбора данных <xref:System.Windows.Input.StylusPoint>.  Наконец, добавьте исходный набор данных <xref:System.Windows.Input.StylusPoint> в <xref:System.Windows.Input.StylusPointCollection>.  
+4.  <span data-ttu-id="5be95-119">Переопределите метод <xref:System.Windows.UIElement.OnStylusDown%2A>.</span><span class="sxs-lookup"><span data-stu-id="5be95-119">Override the <xref:System.Windows.UIElement.OnStylusDown%2A> method.</span></span>  <span data-ttu-id="5be95-120">В этом методе захвата пера вызовом <xref:System.Windows.Input.Stylus.Capture%2A>.</span><span class="sxs-lookup"><span data-stu-id="5be95-120">In this method, capture the stylus with a call to <xref:System.Windows.Input.Stylus.Capture%2A>.</span></span> <span data-ttu-id="5be95-121">При захвате пера, элемент управления будет продолжать получать <xref:System.Windows.UIElement.StylusMove> и <xref:System.Windows.UIElement.StylusUp> события даже в том случае, если перо покидает границы элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5be95-121">By capturing the stylus, your control will to continue to receive <xref:System.Windows.UIElement.StylusMove> and <xref:System.Windows.UIElement.StylusUp> events even if the stylus leaves the control's boundaries.</span></span> <span data-ttu-id="5be95-122">Это не является строго обязательным, но почти всегда желательно для удобства работы пользователей.</span><span class="sxs-lookup"><span data-stu-id="5be95-122">This is not strictly mandatory, but almost always desired for a good user experience.</span></span> <span data-ttu-id="5be95-123">Создайте новый <xref:System.Windows.Input.StylusPointCollection> для сбора <xref:System.Windows.Input.StylusPoint> данных.</span><span class="sxs-lookup"><span data-stu-id="5be95-123">Create a new <xref:System.Windows.Input.StylusPointCollection> to gather <xref:System.Windows.Input.StylusPoint> data.</span></span> <span data-ttu-id="5be95-124">Наконец, добавьте начальный набор <xref:System.Windows.Input.StylusPoint> данные <xref:System.Windows.Input.StylusPointCollection>.</span><span class="sxs-lookup"><span data-stu-id="5be95-124">Finally, add the initial set of <xref:System.Windows.Input.StylusPoint> data to the <xref:System.Windows.Input.StylusPointCollection>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
   
-5.  Переопределите метод <xref:System.Windows.UIElement.OnStylusMove%2A> и добавьте данные <xref:System.Windows.Input.StylusPoint> в созданный ранее объект <xref:System.Windows.Input.StylusPointCollection>.  
+5.  <span data-ttu-id="5be95-125">Переопределить <xref:System.Windows.UIElement.OnStylusMove%2A> метода и добавьте <xref:System.Windows.Input.StylusPoint> данные <xref:System.Windows.Input.StylusPointCollection> , созданного ранее.</span><span class="sxs-lookup"><span data-stu-id="5be95-125">Override the <xref:System.Windows.UIElement.OnStylusMove%2A> method and add the <xref:System.Windows.Input.StylusPoint> data to the <xref:System.Windows.Input.StylusPointCollection> object that you created earlier.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
   
-6.  Переопределите метод <xref:System.Windows.UIElement.OnStylusUp%2A> и создайте новый <xref:System.Windows.Ink.Stroke> с данными <xref:System.Windows.Input.StylusPointCollection>.  Добавьте новый созданный объект <xref:System.Windows.Ink.Stroke> в коллекцию <xref:System.Windows.Controls.InkPresenter.Strokes%2A> для <xref:System.Windows.Controls.InkPresenter> и освободите перо.  
+6.  <span data-ttu-id="5be95-126">Переопределить <xref:System.Windows.UIElement.OnStylusUp%2A> метод и создать новую <xref:System.Windows.Ink.Stroke> с <xref:System.Windows.Input.StylusPointCollection> данных.</span><span class="sxs-lookup"><span data-stu-id="5be95-126">Override the <xref:System.Windows.UIElement.OnStylusUp%2A> method and create a new <xref:System.Windows.Ink.Stroke> with the <xref:System.Windows.Input.StylusPointCollection> data.</span></span> <span data-ttu-id="5be95-127">Добавьте новые <xref:System.Windows.Ink.Stroke> созданной вами для <xref:System.Windows.Controls.InkPresenter.Strokes%2A> коллекцию <xref:System.Windows.Controls.InkPresenter> и освободить захват пера.</span><span class="sxs-lookup"><span data-stu-id="5be95-127">Add the new <xref:System.Windows.Ink.Stroke> you created to the <xref:System.Windows.Controls.InkPresenter.Strokes%2A> collection of the <xref:System.Windows.Controls.InkPresenter> and release stylus capture.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
-## Практическое руководство. Включение приема элементом управления ввода при помощи мыши  
- Если добавить предыдущий элемент управления в приложение, запустить его и использовать мышь в качестве устройства ввода, можно заметить, что штрихи не сохраняются.  Для сохранения штрихов при использовании мыши в качестве устройства ввода выполните следующие действия:  
+## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a><span data-ttu-id="5be95-128">Как: разрешить принимать входные данные от мыши элемента управления</span><span class="sxs-lookup"><span data-stu-id="5be95-128">How to: Enable Your Control to Accept Input from the Mouse</span></span>  
+ <span data-ttu-id="5be95-129">Если добавить предыдущий элемент управления в приложение, запустите его и использовать мышь в качестве устройства ввода, можно заметить, что штрихи не сохраняются.</span><span class="sxs-lookup"><span data-stu-id="5be95-129">If you add the preceding control to your application, run it, and use the mouse as an input device, you will notice that the strokes are not persisted.</span></span> <span data-ttu-id="5be95-130">Для сохранения штрихов рукописного ввода, когда указатель мыши используется как устройство ввода выполните следующее:</span><span class="sxs-lookup"><span data-stu-id="5be95-130">To persist the strokes when the mouse is used as the input device do the following:</span></span>  
   
-1.  Переопределите <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> и создайте новый объект <xref:System.Windows.Input.StylusPointCollection>. Получите координаты указателя мыши в момент возникновения события и создайте <xref:System.Windows.Input.StylusPoint>, используя данные точки, и добавьте <xref:System.Windows.Input.StylusPoint> в <xref:System.Windows.Input.StylusPointCollection>.  
+1.  <span data-ttu-id="5be95-131">Переопределить <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> и создайте новый <xref:System.Windows.Input.StylusPointCollection> получить позицию указателя мыши в момент возникновения события и создать <xref:System.Windows.Input.StylusPoint> с помощью точки данных и добавьте <xref:System.Windows.Input.StylusPoint> для <xref:System.Windows.Input.StylusPointCollection>.</span><span class="sxs-lookup"><span data-stu-id="5be95-131">Override the <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> and create a new <xref:System.Windows.Input.StylusPointCollection> Get the position of the mouse when the event occurred and create a <xref:System.Windows.Input.StylusPoint> using the point data and add the <xref:System.Windows.Input.StylusPoint> to the <xref:System.Windows.Input.StylusPointCollection>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
   
-2.  Переопределите метод <xref:System.Windows.UIElement.OnMouseMove%2A>.  При возникновении события получите положение указателя мыши и создайте <xref:System.Windows.Input.StylusPoint>, используя данные точки.  Добавьте <xref:System.Windows.Input.StylusPoint> в созданный ранее объект <xref:System.Windows.Input.StylusPointCollection>.  
+2.  <span data-ttu-id="5be95-132">Переопределите метод <xref:System.Windows.UIElement.OnMouseMove%2A>.</span><span class="sxs-lookup"><span data-stu-id="5be95-132">Override the <xref:System.Windows.UIElement.OnMouseMove%2A> method.</span></span> <span data-ttu-id="5be95-133">Получает позицию указателя мыши при возникновении события и создать <xref:System.Windows.Input.StylusPoint> с использованием точки данных.</span><span class="sxs-lookup"><span data-stu-id="5be95-133">Get the position of the mouse when the event occurred and create a <xref:System.Windows.Input.StylusPoint> using the point data.</span></span>  <span data-ttu-id="5be95-134">Добавить <xref:System.Windows.Input.StylusPoint> для <xref:System.Windows.Input.StylusPointCollection> объекта, которое было создано ранее.</span><span class="sxs-lookup"><span data-stu-id="5be95-134">Add the <xref:System.Windows.Input.StylusPoint> to the <xref:System.Windows.Input.StylusPointCollection> object that you created earlier.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
   
-3.  Переопределите метод <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>.  Создайте новый объект <xref:System.Windows.Ink.Stroke> с данными <xref:System.Windows.Input.StylusPointCollection> и добавьте новый созданный объект <xref:System.Windows.Ink.Stroke> в коллекцию <xref:System.Windows.Controls.InkPresenter.Strokes%2A> из <xref:System.Windows.Controls.InkPresenter>.  
+3.  <span data-ttu-id="5be95-135">Переопределите метод <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>.</span><span class="sxs-lookup"><span data-stu-id="5be95-135">Override the <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> method.</span></span>  <span data-ttu-id="5be95-136">Создайте новый <xref:System.Windows.Ink.Stroke> с <xref:System.Windows.Input.StylusPointCollection> данных и добавьте новые <xref:System.Windows.Ink.Stroke> созданной вами для <xref:System.Windows.Controls.InkPresenter.Strokes%2A> коллекцию <xref:System.Windows.Controls.InkPresenter>.</span><span class="sxs-lookup"><span data-stu-id="5be95-136">Create a new <xref:System.Windows.Ink.Stroke> with the <xref:System.Windows.Input.StylusPointCollection> data, and add the new <xref:System.Windows.Ink.Stroke> you created to the <xref:System.Windows.Controls.InkPresenter.Strokes%2A> collection of the <xref:System.Windows.Controls.InkPresenter>.</span></span>  
   
      [!code-csharp[AdvancedInkTopicsSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
   
 <a name="PuttingItTogether"></a>   
-## Сборка  
- В следующем примере представлен пользовательский элемент управления, собирающий рукописные данные, если пользователь использует мышь или перо.  
+## <a name="putting-it-together"></a><span data-ttu-id="5be95-137">Совместное размещение</span><span class="sxs-lookup"><span data-stu-id="5be95-137">Putting it together</span></span>  
+ <span data-ttu-id="5be95-138">Следующий пример является настраиваемым сбора данных рукописного ввода, когда пользователь использует перо или мышь.</span><span class="sxs-lookup"><span data-stu-id="5be95-138">The following example is a custom control that collects ink when the user uses either the mouse or the pen.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
 [!code-csharp[AdvancedInkTopicsSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#6)]  
   
 <a name="UsingAdditionalPluginsAndDynamicRenderers"></a>   
-## Использование дополнительных подключаемых модулей и DynamicRenderer  
- Как и InkCanvas, пользовательский элемент управления может иметь пользовательские объекты <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> и дополнительные объекты <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Добавьте эти объекты в коллекцию <xref:System.Windows.UIElement.StylusPlugIns%2A>.  Порядок объектов <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> влияет на внешний вид рукописных данных при их отображении.  Предположим, имеется <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> с именем `dynamicRenderer` и пользовательский <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> с именем `translatePlugin`, который смещает рукописный ввод, поступающий от планшетного пера.  Если `translatePlugin` является первым <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, а `dynamicRenderer` — вторым, рукописный ввод будет смещаться соответственно перемещениям мыши.  Если `dynamicRenderer` является первым, а `translatePlugin` — вторым, рукописные данные не будут смещаться до тех пор, пока пользователь не поднимет перо.  
+## <a name="using-additional-plug-ins-and-dynamicrenderers"></a><span data-ttu-id="5be95-139">С помощью дополнительные подключаемые модули и DynamicRenderers</span><span class="sxs-lookup"><span data-stu-id="5be95-139">Using Additional Plug-ins and DynamicRenderers</span></span>  
+ <span data-ttu-id="5be95-140">Как и InkCanvas, пользовательский элемент управления может иметь пользовательские <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> и дополнительные <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> объектов.</span><span class="sxs-lookup"><span data-stu-id="5be95-140">Like the InkCanvas, your custom control can have custom <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> and additional <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> objects.</span></span> <span data-ttu-id="5be95-141">Добавить их в <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекции.</span><span class="sxs-lookup"><span data-stu-id="5be95-141">Add these to the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection.</span></span> <span data-ttu-id="5be95-142">Порядок <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> объекты в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> влияет на внешний вид рукописного ввода при его отрисовке.</span><span class="sxs-lookup"><span data-stu-id="5be95-142">The order of the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> affects the appearance of the ink when it is rendered.</span></span> <span data-ttu-id="5be95-143">Предположим, что имеется <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> вызывается `dynamicRenderer` и пользовательское <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> вызывается `translatePlugin` , смещает рукописный ввод от пера.</span><span class="sxs-lookup"><span data-stu-id="5be95-143">Suppose you have a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> called `dynamicRenderer` and a custom <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> called `translatePlugin` that offsets the ink from the tablet pen.</span></span> <span data-ttu-id="5be95-144">Если `translatePlugin` является первым <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, и `dynamicRenderer` — вторым, будет перенесено рукописный ввод «потоки», при перемещении пера.</span><span class="sxs-lookup"><span data-stu-id="5be95-144">If `translatePlugin` is the first <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, and `dynamicRenderer` is the second, the ink that "flows" will be offset as the user moves the pen.</span></span> <span data-ttu-id="5be95-145">Если `dynamicRenderer` является первым, а `translatePlugin` — вторым, не будет перенесено рукописного ввода, пока пользователь отрывает перо.</span><span class="sxs-lookup"><span data-stu-id="5be95-145">If `dynamicRenderer` is first, and `translatePlugin` is second, the ink will not be offset until the user lifts the pen.</span></span>  
   
 <a name="AdvancedInkHandling_Conclusion"></a>   
-## Заключение  
- Можно создать элемент управления, который собирает и отображает рукописные данные, переопределяя методы событий пера.  Создав собственный элемент управления, собственные производные классы <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> и вставив их в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, можно виртуально реализовать любую возможную модель поведения цифрового рукописного ввода.  Имеется доступ к данным <xref:System.Windows.Input.StylusPoint> при их создании, благодаря чему приобретается возможность настроить ввод с помощью <xref:System.Windows.Input.Stylus> и отображать вводимые данные на экране так, как нужно в приложении.  Поскольку есть такой доступ низкого уровня к данным <xref:System.Windows.Input.StylusPoint>, можно реализовать коллекцию рукописного ввода и отображать ее с оптимальной для приложения производительностью.  
+## <a name="conclusion"></a><span data-ttu-id="5be95-146">Заключение</span><span class="sxs-lookup"><span data-stu-id="5be95-146">Conclusion</span></span>  
+ <span data-ttu-id="5be95-147">Можно создать элемент управления, который собирает и отображает рукописные данные путем переопределения методов событий пера.</span><span class="sxs-lookup"><span data-stu-id="5be95-147">You can create a control that collects and renders ink by overriding the stylus event methods.</span></span> <span data-ttu-id="5be95-148">Можно создать собственный элемент управления, создания своих собственных производных <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> классы и их вставка в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, можно реализовать поведение, практически для любых возможное сопоставление с рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="5be95-148">By creating your own control, deriving your own <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classes, and inserting them the into <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, you can implement virtually any behavior imaginable with digital ink.</span></span> <span data-ttu-id="5be95-149">У вас есть доступ к <xref:System.Windows.Input.StylusPoint> данных по мере доступными, предоставляя возможность настройки <xref:System.Windows.Input.Stylus> входные данные и отображать его на экране, в зависимости от приложения.</span><span class="sxs-lookup"><span data-stu-id="5be95-149">You have access to the <xref:System.Windows.Input.StylusPoint> data as it is generated, giving you the opportunity to  customize <xref:System.Windows.Input.Stylus> input and render it on the screen as appropriate for your application.</span></span> <span data-ttu-id="5be95-150">Если у вас такого низкоуровневого доступа к <xref:System.Windows.Input.StylusPoint> данных, можно реализовать коллекцию рукописного ввода и отображать ее с оптимальной производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="5be95-150">Because you have such low-level access to the <xref:System.Windows.Input.StylusPoint> data, you can implement ink collection and render it with optimal performance for your application.</span></span>  
   
-## См. также  
- [Дополнительная обработка рукописных данных](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)   
- [Accessing and Manipulating Pen Input](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="5be95-151">См. также</span><span class="sxs-lookup"><span data-stu-id="5be95-151">See Also</span></span>  
+ [<span data-ttu-id="5be95-152">Дополнительная обработка рукописных фрагментов</span><span class="sxs-lookup"><span data-stu-id="5be95-152">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [<span data-ttu-id="5be95-153">Доступ и управление ввода с помощью пера</span><span class="sxs-lookup"><span data-stu-id="5be95-153">Accessing and Manipulating Pen Input</span></span>](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

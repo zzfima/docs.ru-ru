@@ -1,43 +1,45 @@
 ---
-title: "Поставщики служб данных (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, поставщики"
+title: "Поставщики служб данных (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f794088f2494157e22b8551c6241786c7a73398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Поставщики служб данных (службы WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают несколько моделей поставщиков для предоставления данных в виде канала [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].  Этот раздел содержит сведения, позволяющие выбрать поставщик служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], наилучшим образом подходящий для имеющегося источника данных.  
+# <a name="data-services-providers-wcf-data-services"></a><span data-ttu-id="d16aa-102">Поставщики служб данных (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="d16aa-102">Data Services Providers (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="d16aa-103">поддерживает несколько моделей поставщиков для предоставления данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала.</span><span class="sxs-lookup"><span data-stu-id="d16aa-103"> supports multiple provider models for exposing data as an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed.</span></span> <span data-ttu-id="d16aa-104">Этот раздел содержит сведения, позволяющие выбрать поставщик служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], наилучшим образом подходящий для имеющегося источника данных.</span><span class="sxs-lookup"><span data-stu-id="d16aa-104">This topic provides information to enable you to select the best [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] provider for your data source.</span></span>  
   
-## Поставщики источников данных  
- Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают следующие поставщики для определения модели данных службы данных.  
+## <a name="data-source-providers"></a><span data-ttu-id="d16aa-105">Поставщики источников данных</span><span class="sxs-lookup"><span data-stu-id="d16aa-105">Data Source Providers</span></span>  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="d16aa-106">поддерживает следующие поставщики для определения модели данных службы данных.</span><span class="sxs-lookup"><span data-stu-id="d16aa-106"> supports the following providers for defining the data model of a data service.</span></span>  
   
-|Поставщик|Описание|  
-|---------------|--------------|  
-|Поставщик Entity Framework|Этот поставщик использует ADO.NET Entity Framework, позволяя использовать реляционные данные с помощью службы данных путем определения модели данных, сопоставленной с реляционными данными.  Источником данных может выступить SQL Server или любой другой источник данных с поддержкой Entity Framework от стороннего производителя.  Поставщик Entity Framework следует использовать при работе с реляционным источником данных, таким как база данных SQL Server.  Для получения дополнительной информации см. [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).|  
-|Поставщик отражения|Этот поставщик использует отражение, позволяя определить модель данных на основе существующих классов данных, предоставляемых как экземпляры интерфейса <xref:System.Linq.IQueryable%601>.  Обновления поддерживаются путем реализации интерфейса <xref:System.Data.Services.IUpdatable>.  Этот поставщик следует использовать, если имеются статические классы данных, сформированные во время выполнения, например формируемые LINQ to SQL или определяемые типизированным набором данных.  Для получения дополнительной информации см. [Поставщик отражения](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).|  
-|Специализированные поставщики служб данных|В состав служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] также включен набор поставщиков, позволяющий динамически определить модель данных на основе типов данных с поздним связыванием.  Эти интерфейсы следует реализовывать, если предоставляемые данные неизвестны на этапе разработки приложения или если использование Entity Framework или поставщиков отражения не является достаточным.  Для получения дополнительной информации см. [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
+|<span data-ttu-id="d16aa-107">Поставщик</span><span class="sxs-lookup"><span data-stu-id="d16aa-107">Provider</span></span>|<span data-ttu-id="d16aa-108">Описание</span><span class="sxs-lookup"><span data-stu-id="d16aa-108">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="d16aa-109">Поставщик Entity Framework</span><span class="sxs-lookup"><span data-stu-id="d16aa-109">Entity Framework provider</span></span>|<span data-ttu-id="d16aa-110">Этот поставщик использует ADO.NET Entity Framework, позволяя использовать реляционные данные с помощью службы данных путем определения модели данных, сопоставленной с реляционными данными.</span><span class="sxs-lookup"><span data-stu-id="d16aa-110">This provider uses the ADO.NET Entity Framework to enable you to use relational data with a data service by defining a data model that maps to relational data.</span></span> <span data-ttu-id="d16aa-111">Источником данных может выступить SQL Server или любой другой источник данных с поддержкой Entity Framework от стороннего производителя.</span><span class="sxs-lookup"><span data-stu-id="d16aa-111">Your data source can be SQL Server or any other data source with third-party provider support for the Entity Framework.</span></span> <span data-ttu-id="d16aa-112">Поставщик Entity Framework следует использовать при работе с реляционным источником данных, таким как база данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d16aa-112">You should use the Entity Framework provider when you have a relational data source, such as a SQL Server database.</span></span> <span data-ttu-id="d16aa-113">Дополнительные сведения см. в разделе [поставщика Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d16aa-113">For more information, see [Entity Framework Provider](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).</span></span>|  
+|<span data-ttu-id="d16aa-114">Поставщик отражения</span><span class="sxs-lookup"><span data-stu-id="d16aa-114">Reflection provider</span></span>|<span data-ttu-id="d16aa-115">Этот поставщик использует отражение, позволяя определить модель данных на основе существующих классов данных, предоставляемых как экземпляры интерфейса <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="d16aa-115">This provider uses reflection to enable you to define a data model based on existing data classes that can be exposed as instances of the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="d16aa-116">Обновления поддерживаются путем реализации интерфейса <xref:System.Data.Services.IUpdatable>.</span><span class="sxs-lookup"><span data-stu-id="d16aa-116">Updates are enabled by implementing the <xref:System.Data.Services.IUpdatable> interface.</span></span> <span data-ttu-id="d16aa-117">Этот поставщик следует использовать, если имеются статические классы данных, сформированные во время выполнения, например формируемые LINQ to SQL или определяемые типизированным набором данных.</span><span class="sxs-lookup"><span data-stu-id="d16aa-117">You should use this provider when you have static data classes that are defined at runtime, such as those generated by LINQ to SQL or defined by a typed DataSet.</span></span> <span data-ttu-id="d16aa-118">Дополнительные сведения см. в разделе [поставщик отражения](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d16aa-118">For more information, see [Reflection Provider](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).</span></span>|  
+|<span data-ttu-id="d16aa-119">Специализированные поставщики служб данных</span><span class="sxs-lookup"><span data-stu-id="d16aa-119">Custom Data Service Providers</span></span>|<span data-ttu-id="d16aa-120">В состав служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] также включен набор поставщиков, позволяющий динамически определить модель данных на основе типов данных с поздним связыванием.</span><span class="sxs-lookup"><span data-stu-id="d16aa-120">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] includes a set of providers that enable you to dynamically define a data model based on late-bound data types.</span></span> <span data-ttu-id="d16aa-121">Эти интерфейсы следует реализовывать, если предоставляемые данные неизвестны на этапе разработки приложения или если использование Entity Framework или поставщиков отражения не является достаточным.</span><span class="sxs-lookup"><span data-stu-id="d16aa-121">You should implement these interfaces when the data being exposed is not known when the application is being designed or when the Entity Framework or reflection providers are not sufficient.</span></span> <span data-ttu-id="d16aa-122">Дополнительные сведения см. в разделе [настраиваемых поставщиков данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d16aa-122">For more information, see [Custom Data Service Providers](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).</span></span>|  
   
-## Другие поставщики служб данных  
- Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] имеют следующие дополнительные поставщики служб данных, позволяющие повысить производительность источника данных, определенного с помощью одного из других поставщиков.  
+## <a name="other-data-service-providers"></a><span data-ttu-id="d16aa-123">Другие поставщики служб данных</span><span class="sxs-lookup"><span data-stu-id="d16aa-123">Other Data Service Providers</span></span>  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="d16aa-124">имеет следующие дополнительные поставщики служб данных, позволяющие повысить производительность источника данных, определенного с помощью одного из других поставщиков.</span><span class="sxs-lookup"><span data-stu-id="d16aa-124"> has the following additional data service provider that enhances the performance of a data source defined by using one of the other providers.</span></span>  
   
-|Поставщик|Описание|  
-|---------------|--------------|  
-|Потоковый поставщик|Этот поставщик позволяет предоставлять данные больших двоичных объектов с помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  Потоковый поставщик создается путем реализации интерфейса <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  Этот поставщик можно реализовать совместно с любым другим поставщиком источника данных.  Для получения дополнительной информации см. [Потоковый поставщик](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|<span data-ttu-id="d16aa-125">Поставщик</span><span class="sxs-lookup"><span data-stu-id="d16aa-125">Provider</span></span>|<span data-ttu-id="d16aa-126">Описание</span><span class="sxs-lookup"><span data-stu-id="d16aa-126">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="d16aa-127">Потоковый поставщик</span><span class="sxs-lookup"><span data-stu-id="d16aa-127">Streaming provider</span></span>|<span data-ttu-id="d16aa-128">Этот поставщик позволяет предоставлять данные больших двоичных объектов с помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d16aa-128">This provider enables you to expose binary large object data types by using [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span></span> <span data-ttu-id="d16aa-129">Потоковый поставщик создается путем реализации интерфейса <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.</span><span class="sxs-lookup"><span data-stu-id="d16aa-129">A streaming provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="d16aa-130">Этот поставщик можно реализовать совместно с любым другим поставщиком источника данных.</span><span class="sxs-lookup"><span data-stu-id="d16aa-130">This provider can be implemented together with any data source provider.</span></span> <span data-ttu-id="d16aa-131">Дополнительные сведения см. в разделе [потокового поставщика](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="d16aa-131">For more information, see [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span></span>|  
   
-## См. также  
- [Определение службы WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)   
- [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)   
- [Размещение службы данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="d16aa-132">См. также</span><span class="sxs-lookup"><span data-stu-id="d16aa-132">See Also</span></span>  
+ [<span data-ttu-id="d16aa-133">Определение служб данных WCF</span><span class="sxs-lookup"><span data-stu-id="d16aa-133">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [<span data-ttu-id="d16aa-134">Настройка службы данных</span><span class="sxs-lookup"><span data-stu-id="d16aa-134">Configuring the Data Service</span></span>](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
+ [<span data-ttu-id="d16aa-135">Размещение служб данных</span><span class="sxs-lookup"><span data-stu-id="d16aa-135">Hosting the Data Service</span></span>](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

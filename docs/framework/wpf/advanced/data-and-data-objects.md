@@ -1,101 +1,107 @@
 ---
-title: "Данные и объекты данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "передача данных [WPF], перетаскивание"
-  - "DataFormats - класс [WPF]"
-  - "DataObject - класс [WPF]"
+title: "Данные и объекты данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data transfer [WPF], drag-and-drop
+- DataFormats class [WPF]
+- DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fc5d5f8c2090f6abaa1157db2a92d2e689d7f216
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Данные и объекты данных
-Данные, которые передаются как часть операции перетаскивания, хранятся в объекте данных.  Концептуально объект данных состоит из одной или нескольких пар, перечисленных ниже.  
+# <a name="data-and-data-objects"></a><span data-ttu-id="3a916-102">Данные и объекты данных</span><span class="sxs-lookup"><span data-stu-id="3a916-102">Data and Data Objects</span></span>
+<span data-ttu-id="3a916-103">Данные, которые передаются как часть операции перетаскивания и вставки хранятся в объект данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-103">Data that is transferred as part of a drag-and-drop operation is stored in a data object.</span></span>  <span data-ttu-id="3a916-104">Концептуально объект данных состоит из одной или нескольких из следующих пар:</span><span class="sxs-lookup"><span data-stu-id="3a916-104">Conceptually, a data object consists of one or more of the following pairs:</span></span>  
   
--   Объект <xref:System.Object>, который содержит фактические данные.  
+-   <span data-ttu-id="3a916-105"><xref:System.Object> , Содержит фактические данные.</span><span class="sxs-lookup"><span data-stu-id="3a916-105">An <xref:System.Object> that contains the actual data.</span></span>  
   
--   Соответствующий идентификатор формата данных.  
+-   <span data-ttu-id="3a916-106">Соответствующий идентификатор формата данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-106">A corresponding data format identifier.</span></span>  
   
- Сами данные могут состоять из всего, что может быть представлено как базовый <xref:System.Object>.  Соответствующий формат данных является строкой или типом <xref:System.Type>, который предоставляет подсказку, в каком формате представлены данные.  Объекты данных поддерживают размещение нескольких пар "данные\-формат данных"; это позволяет одному объекту данных предоставлять данные в нескольких форматах.  
+ <span data-ttu-id="3a916-107">Сами данные могут состоять из всего, что может быть представлено как базовый <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="3a916-107">The data itself can consist of anything that can be represented as a base <xref:System.Object>.</span></span>  <span data-ttu-id="3a916-108">Соответствующий формат данных является строкой или <xref:System.Type> , предоставляющий возможности подсказку о формате.</span><span class="sxs-lookup"><span data-stu-id="3a916-108">The corresponding data format is a string or <xref:System.Type> that provides a hint about what format the data is in.</span></span>  <span data-ttu-id="3a916-109">Объекты данных поддерживают размещение нескольких пар данных и формата; Это позволяет один объект данных для предоставления данных в нескольких форматах.</span><span class="sxs-lookup"><span data-stu-id="3a916-109">Data objects support hosting multiple data/data format pairs; this enables a single data object to provide data in multiple formats.</span></span>  
   
 <a name="Data_and_Data_Objects"></a>   
-## Объекты данных  
- Все объекты данных должны реализовывать интерфейс <xref:System.Windows.IDataObject>, предоставляющий следующий стандартный набор методов для включения и упрощения передачи данных.  
+## <a name="data-objects"></a><span data-ttu-id="3a916-110">Объекты данных</span><span class="sxs-lookup"><span data-stu-id="3a916-110">Data Objects</span></span>  
+ <span data-ttu-id="3a916-111">Все объекты данных должны реализовывать <xref:System.Windows.IDataObject> интерфейс, который предоставляет следующий стандартный набор методов для включения и упрощения передачи данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-111">All data objects must implement the <xref:System.Windows.IDataObject> interface, which provides the following standard set of methods that enable and facilitate data transfer.</span></span>  
   
-|Метод|Сводка|  
-|-----------|------------|  
-|<xref:System.Windows.IDataObject.GetData%2A>|Извлекает объект данных в указанном формате данных.|  
-|<xref:System.Windows.IDataObject.GetDataPresent%2A>|Проверяет, доступны ли данные в указанном формате, или возможность их преобразования в указанный формат.|  
-|<xref:System.Windows.IDataObject.GetFormats%2A>|Возвращает список форматов, в которых данные хранятся в этом объекте данных или в которые их можно преобразовать.|  
-|<xref:System.Windows.IDataObject.SetData%2A>|Сохраняет указанные данные в объекте данных.|  
+|<span data-ttu-id="3a916-112">Метод</span><span class="sxs-lookup"><span data-stu-id="3a916-112">Method</span></span>|<span data-ttu-id="3a916-113">Сводка</span><span class="sxs-lookup"><span data-stu-id="3a916-113">Summary</span></span>|  
+|------------|-------------|  
+|<xref:System.Windows.IDataObject.GetData%2A>|<span data-ttu-id="3a916-114">Извлекает объект данных в указанном формате.</span><span class="sxs-lookup"><span data-stu-id="3a916-114">Retrieves a data object in a specified data format.</span></span>|  
+|<xref:System.Windows.IDataObject.GetDataPresent%2A>|<span data-ttu-id="3a916-115">Проверяет наличие данных в, или можно преобразовать в указанный формат.</span><span class="sxs-lookup"><span data-stu-id="3a916-115">Checks to see whether the data is available in, or can be converted to, a specified format.</span></span>|  
+|<xref:System.Windows.IDataObject.GetFormats%2A>|<span data-ttu-id="3a916-116">Возвращает список форматов, которые хранятся в данные в этом объекте данных или можно преобразовать.</span><span class="sxs-lookup"><span data-stu-id="3a916-116">Returns a list of formats that the data in this data object is stored in, or can be converted to.</span></span>|  
+|<xref:System.Windows.IDataObject.SetData%2A>|<span data-ttu-id="3a916-117">Сохраняет указанные данные в этом объекте данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-117">Stores the specified data in this data object.</span></span>|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет базовую реализацию интерфейса <xref:System.Windows.IDataObject> в классе <xref:System.Windows.DataObject>.  Для многих распространенных сценариев передачи данных достаточно автоматически инициализируемого класса <xref:System.Windows.DataObject>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="3a916-118">Предоставляет базовую реализацию <xref:System.Windows.IDataObject> в <xref:System.Windows.DataObject> класса.</span><span class="sxs-lookup"><span data-stu-id="3a916-118"> provides a basic implementation of <xref:System.Windows.IDataObject> in the <xref:System.Windows.DataObject> class.</span></span> <span data-ttu-id="3a916-119">Акции <xref:System.Windows.DataObject> класса является достаточным для многих распространенных сценариев передачи данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-119">The stock <xref:System.Windows.DataObject> class is sufficient for many common data transfer scenarios.</span></span>  
   
- Имеется несколько предварительно определенных форматов, таких как bitmap, CSV, file, HTML, RTF, string, text, и audio.  Сведения о предопределенных форматах данных, предоставляемых системой [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе с описанием класса <xref:System.Windows.DataFormats>.  
+ <span data-ttu-id="3a916-120">Существует несколько предварительно определенных форматов, например растрового изображения, CSV, файл, HTML, RTF, строки, текст и аудио.</span><span class="sxs-lookup"><span data-stu-id="3a916-120">There are several pre-defined formats, such as bitmap, CSV, file, HTML, RTF, string, text, and audio.</span></span> <span data-ttu-id="3a916-121">Сведения о предопределенных форматах данных предоставлены [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], в разделе <xref:System.Windows.DataFormats> класс справочном разделе.</span><span class="sxs-lookup"><span data-stu-id="3a916-121">For information about pre-defined data formats provided with [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see the <xref:System.Windows.DataFormats> class reference topic.</span></span>  
   
- Данные объекты обычно включают средства для автоматического преобразования данных, хранящихся в одном формате, в другой формат во время извлечения данных; их обычно называют средствами автоматического преобразования.  При запросе форматов данных, доступных в объекте данных, с помощью фильтрации можно отделить автоматически преобразуемые форматы данных от собственных форматов данных, вызвав метод <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> или <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> и задав для параметра `autoConvert` значение `false`.  При добавлении данных к объекту данных с помощью метода <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> автоматическое преобразование данных может быть запрещено путем задания значения `false` для параметра `autoConvert`.  
+ <span data-ttu-id="3a916-122">Объекты данных обычно включают средства для автоматического преобразования данных, хранящихся в одном формате, в другой формат при извлечении данных. Эта функция позволяет называть автоматического преобразования.</span><span class="sxs-lookup"><span data-stu-id="3a916-122">Data objects commonly include a facility for automatically converting data stored in one format to a different format while extracting data; this facility is referred to as auto-convert.</span></span> <span data-ttu-id="3a916-123">При запросе форматы данных, доступные в объекте данных, автоматически преобразуемые форматы данных могут быть отфильтрованы из собственные форматы данных путем вызова <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> или <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> метод и указывая `autoConvert` параметр как `false`.</span><span class="sxs-lookup"><span data-stu-id="3a916-123">When querying for the data formats available in a data object, auto-convertible data formats can be filtered from native data formats by calling the <xref:System.Windows.DataObject.GetFormats%28System.Boolean%29> or <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> method and specifying the `autoConvert` parameter as `false`.</span></span>  <span data-ttu-id="3a916-124">При добавлении данных в объект данных с <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> метод автоматическое преобразование данных может быть запрещено, задав `autoConvert` параметр `false`.</span><span class="sxs-lookup"><span data-stu-id="3a916-124">When adding data to a data object with the <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%2CSystem.Boolean%29> method, auto-conversion of data can be prohibited by setting the `autoConvert` parameter to `false`.</span></span>  
   
 <a name="Working_with_Data_Objects"></a>   
-## Работа с объектами данных  
- В этом разделе описаны общие методы создания и работы с объектами данных.  
+## <a name="working-with-data-objects"></a><span data-ttu-id="3a916-125">Работа с объектами данных</span><span class="sxs-lookup"><span data-stu-id="3a916-125">Working with Data Objects</span></span>  
+ <span data-ttu-id="3a916-126">В этом разделе описаны общие методы для создания и работы с объектами данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-126">This section describes common techniques for creating and working with data objects.</span></span>  
   
-### Создание новых объектов данных  
- Класс <xref:System.Windows.DataObject> предоставляет несколько перегруженных конструкторов, облегчающих заполнение нового экземпляра <xref:System.Windows.DataObject> одной парой "данные\-формат данных".  
+### <a name="creating-new-data-objects"></a><span data-ttu-id="3a916-127">Создание новых объектов данных</span><span class="sxs-lookup"><span data-stu-id="3a916-127">Creating New Data Objects</span></span>  
+ <span data-ttu-id="3a916-128"><xref:System.Windows.DataObject> Класс предоставляет несколько перегруженных конструкторов, облегчающих заполнение нового <xref:System.Windows.DataObject> экземпляра с парой формат одного данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-128">The <xref:System.Windows.DataObject> class provides several overloaded constructors that facilitate populating a new <xref:System.Windows.DataObject> instance with a single data/data format pair.</span></span>  
   
- В следующем примере создается новый объект данных и используется один из перегруженных конструкторов <xref:System.Windows.DataObject.%23ctor%2A>\(<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%29>\) для инициализации объекта данных строкой и указанным форматом данных.  В этом случае формат данных определяется строкой. Класс <xref:System.Windows.DataFormats> предоставляет набор строк предопределенных типов.  Автоматическое преобразование сохраненных данных по умолчанию разрешено.  
+ <span data-ttu-id="3a916-129">В следующем примере кода создается новый объект данных и использует один из перегруженных конструкторов <xref:System.Windows.DataObject.%23ctor%2A>(<xref:System.Windows.DataObject.%23ctor(System.String,System.Object)>) для инициализации объекта данных со строкой и указанного формата данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-129">The following example code creates a new data object and uses one of the overloaded constructors <xref:System.Windows.DataObject.%23ctor%2A>(<xref:System.Windows.DataObject.%23ctor(System.String,System.Object)>) to initialize the data object with a string and a specified data format.</span></span>  <span data-ttu-id="3a916-130">В этом случае формат данных определяется строкой. <xref:System.Windows.DataFormats> класс предоставляет набор строк предопределенных типов.</span><span class="sxs-lookup"><span data-stu-id="3a916-130">In this case, the data format is specified by a string; the <xref:System.Windows.DataFormats> class provides a set of pre-defined type strings.</span></span> <span data-ttu-id="3a916-131">По умолчанию разрешено автоматическое преобразование сохраненных данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-131">Auto-conversion of the stored data is allowed by default.</span></span>  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
- Дополнительные примеры кода, создающего объект данных см. в разделе [Создание объекта данных](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md).  
+ <span data-ttu-id="3a916-132">Дополнительные примеры кода, создающего объект данных см. в разделе [создать объект данных](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md).</span><span class="sxs-lookup"><span data-stu-id="3a916-132">For more examples of code that creates a data object, see [Create a Data Object](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md).</span></span>  
   
-### Хранение данных в нескольких форматах  
- В одном объекте данных могут храниться данные в нескольких форматах.  Использование нескольких форматов данных внутри одного объекта делает объект данных более доступным для различных приемников, в отличие от представления данных в одном формате.  Обратите внимание, что в общем случае источник перетаскивания должен знать о форматах данных, которые потенциально поддерживаются приемником.  
+### <a name="storing-data-in-multiple-formats"></a><span data-ttu-id="3a916-133">Хранение данных в нескольких форматах</span><span class="sxs-lookup"><span data-stu-id="3a916-133">Storing Data in Multiple Formats</span></span>  
+ <span data-ttu-id="3a916-134">Один объект данных может сохранять данные в нескольких форматах.</span><span class="sxs-lookup"><span data-stu-id="3a916-134">A single data object is able to store data in multiple formats.</span></span>   <span data-ttu-id="3a916-135">Стратегического использования данных в нескольких форматах в один объект данных потенциально делает объект данных к использованию для более широкого мест перетаскивания, чем если только может быть представлен только один формат данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-135">Strategic use of multiple data formats within a single data object potentially makes the data object consumable by a wider variety of drop targets than if only a single data format could be represented.</span></span>  <span data-ttu-id="3a916-136">Обратите внимание, что, как правило, источником перетаскивания должны быть независимыми о форматах данных, которые могут использоваться потенциальных перетаскивания.</span><span class="sxs-lookup"><span data-stu-id="3a916-136">Note that, in general, a drag source must be agnostic about the data formats that are consumable by potential drop targets.</span></span>  
   
- В следующем примере показано использование метода <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> для добавления данных в нескольких форматах в объект данных.  
+ <span data-ttu-id="3a916-137">В следующем примере показано, как использовать <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> метод для добавления данных в объект данных в нескольких форматах.</span><span class="sxs-lookup"><span data-stu-id="3a916-137">The following example shows how to use the <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> method to add data to a data object in multiple formats.</span></span>  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_storemultipleformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_StoreMultipleFormats](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_storemultipleformats)]  
   
-### Запрос к объекту данных для получения доступных форматов  
- Поскольку один объект данных может содержать произвольное число форматов данных, объекты данных включают средства для получения списка доступных форматов данных.  
+### <a name="querying-a-data-object-for-available-formats"></a><span data-ttu-id="3a916-138">Опрашивается объект данных для доступных форматов</span><span class="sxs-lookup"><span data-stu-id="3a916-138">Querying a Data Object for Available Formats</span></span>  
+ <span data-ttu-id="3a916-139">Так как один объект данных может содержать произвольное число форматов данных, объекты данных включают средства для получения списка доступных форматов данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-139">Because a single data object can contain an arbitrary number of data formats, data objects include facilities for retrieving a list of available data formats.</span></span>  
   
- В следующем примере кода используется перегрузка <xref:System.Windows.DataObject.GetFormats%2A> для получения массива строк, обозначающих все форматы данных, доступные в объекте данных \(как собственные, так и автоматически преобразуемые\).  
+ <span data-ttu-id="3a916-140">В следующем примере кода используется <xref:System.Windows.DataObject.GetFormats%2A> перегрузку, чтобы получить массив строк, обозначающих все форматы данных, доступные в объекте данных (собственный и с автоматическим преобразованием).</span><span class="sxs-lookup"><span data-stu-id="3a916-140">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting all data formats available in a data object (both native and by auto-convert).</span></span>  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
   
- Дополнительные примеры кода, которые запрашивают доступные форматы данных у объекта данных см. в разделе [Перечисление форматов данных в объекте данных](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).  Примеры запросов объектов данных на наличие определенного формата см. в разделе [Определение присутствия формата данных в объекте данных](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).  
+ <span data-ttu-id="3a916-141">Дополнительные примеры кода, который запрашивает объект данных для доступных форматов данных см. в разделе [перечисление форматов данных в объекте данных](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).</span><span class="sxs-lookup"><span data-stu-id="3a916-141">For more examples of code that queries a data object for available data formats, see [List the Data Formats in a Data Object](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md).</span></span>  <span data-ttu-id="3a916-142">Примеры запросов объектов данных на наличие определенного формата см. в разделе [определить, если формат данных, присутствует в объекте данных](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).</span><span class="sxs-lookup"><span data-stu-id="3a916-142">For examples of querying a data object for the presence of a particular data format, see [Determine if a Data Format is Present in a Data Object](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md).</span></span>  
   
-### Извлечение данных из объекта данных  
- Для извлечения данных в определенном формате из объекта данных необходимо просто вызвать один из методов <xref:System.Windows.DataObject.GetData%2A> и задать необходимый формат данных.  Один из методов <xref:System.Windows.DataObject.GetDataPresent%2A> можно использовать для проверки наличия определенного формата данных.  Метод <xref:System.Windows.DataObject.GetData%2A> возвращает данные объекта <xref:System.Object>. В зависимости от формата данных, этот объект может быть приведен к контейнеру определенного типа.  
+### <a name="retrieving-data-from-a-data-object"></a><span data-ttu-id="3a916-143">Извлечение данных из объекта данных</span><span class="sxs-lookup"><span data-stu-id="3a916-143">Retrieving Data from a Data Object</span></span>  
+ <span data-ttu-id="3a916-144">Извлечение данных из объекта данных в определенном формате просто вызвать один из <xref:System.Windows.DataObject.GetData%2A> методы и указав требуемый формат данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-144">Retrieving data from a data object in a particular format simply involves calling one of the <xref:System.Windows.DataObject.GetData%2A> methods and specifying the desired data format.</span></span>  <span data-ttu-id="3a916-145">Один из <xref:System.Windows.DataObject.GetDataPresent%2A> методы можно использовать для проверки на наличие определенного формата данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-145">One of the <xref:System.Windows.DataObject.GetDataPresent%2A> methods can be used to check for the presence of a particular data format.</span></span>  <span data-ttu-id="3a916-146"><xref:System.Windows.DataObject.GetData%2A>Возвращает данные в <xref:System.Object>; в зависимости от формата данных, этот объект может быть приведен к контейнеру определенного типа.</span><span class="sxs-lookup"><span data-stu-id="3a916-146"><xref:System.Windows.DataObject.GetData%2A> returns the data in an <xref:System.Object>; depending on the data format, this object can be cast to a type-specific container.</span></span>  
   
- В следующем примере кода используется перегрузка <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> для проверки доступности указанного формата данных \(собственного или автоматически преобразованного\).  Если указанный формат доступен, в примере извлекаются данные с помощью метода <xref:System.Windows.DataObject.GetData%28System.String%29>.  
+ <span data-ttu-id="3a916-147">В следующем примере кода используется <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> перегрузку, чтобы определить доступность указанного формата данных (встроенный или с автоматическим преобразованием).</span><span class="sxs-lookup"><span data-stu-id="3a916-147">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload to check if a specified data format is available (native or by auto-convert).</span></span> <span data-ttu-id="3a916-148">Если указанный формат доступен, данные извлекаются с помощью <xref:System.Windows.DataObject.GetData%28System.String%29> метод.</span><span class="sxs-lookup"><span data-stu-id="3a916-148">If the specified format is available, the example retrieves the data by using the <xref:System.Windows.DataObject.GetData%28System.String%29> method.</span></span>  
   
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat)]  
   
- Дополнительные примеры кода, которые извлекают данные из объекта данных, см. в разделе [Извлечение данных в определенном формате данных](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md).  
+ <span data-ttu-id="3a916-149">Дополнительные примеры кода, который извлекает данные из объекта данных см. в разделе [извлечения данных в определенном формате данных](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md).</span><span class="sxs-lookup"><span data-stu-id="3a916-149">For more examples of code that retrieves data from a data object, see [Retrieve Data in a Particular Data Format](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md).</span></span>  
   
-### Удаление данных из объекта данных  
- Данные не могут быть удалены напрямую из объекта данных.  Для эффективного удаления данных из объекта данных выполните следующие действия.  
+### <a name="removing-data-from-a-data-object"></a><span data-ttu-id="3a916-150">Удаление данных из объекта данных</span><span class="sxs-lookup"><span data-stu-id="3a916-150">Removing Data From a Data Object</span></span>  
+ <span data-ttu-id="3a916-151">Невозможно непосредственно удалять данные из объекта данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-151">Data cannot be directly removed from a data object.</span></span>  <span data-ttu-id="3a916-152">Для эффективного удаления данных из объекта данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="3a916-152">To effectively remove data from a data object, follow these steps:</span></span>  
   
-1.  Создайте новый объект данных, который будет содержать только данные, которые требуется сохранить.  
+1.  <span data-ttu-id="3a916-153">Создайте новый объект данных, который будет содержать только данные, которые требуется сохранить.</span><span class="sxs-lookup"><span data-stu-id="3a916-153">Create a new data object that will contain only the data you want to retain.</span></span>  
   
-2.  Скопируйте необходимые данные из старых объектов данных в новый объект данных \(с помощью команды "Копировать"\).  Чтобы скопировать данные, следует использовать один из методов <xref:System.Windows.DataObject.GetData%2A> для извлечения <xref:System.Object>, содержащего фрагмент данных, и один из методов <xref:System.Windows.DataObject.SetData%2A> для добавления данных в новый объект данных.  
+2.  <span data-ttu-id="3a916-154">«Копировать» необходимые данные из старых объектов данных в новый объект данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-154">"Copy" the desired data from the old data object to the new data object.</span></span>  <span data-ttu-id="3a916-155">Чтобы скопировать данные, используйте один из <xref:System.Windows.DataObject.GetData%2A> методы для получения <xref:System.Object> , содержащий необработанные данные и затем использовать одну из <xref:System.Windows.DataObject.SetData%2A> методы для добавления данных в новый объект данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-155">To copy the data, use one of the <xref:System.Windows.DataObject.GetData%2A> methods to retrieve an <xref:System.Object> that contains the raw data, and then use one of the <xref:System.Windows.DataObject.SetData%2A> methods to add the data to the new data object.</span></span>  
   
-3.  Замените старый объект данных новым.  
+3.  <span data-ttu-id="3a916-156">Замените старый объект данных новым.</span><span class="sxs-lookup"><span data-stu-id="3a916-156">Replace the old data object with the new one.</span></span>  
   
 > [!NOTE]
->  Методы <xref:System.Windows.DataObject.SetData%2A> только добавляют данные к объекту данных. Они не заменяют данные даже при их совпадении с данными и форматом данных в предыдущем вызове.  Двукратный вызов метода <xref:System.Windows.DataObject.SetData%2A> для одной пары "данные\-формат данных" приведет к повторяющемуся отображению данных и формата данных в объекте.
+>  <span data-ttu-id="3a916-157"><xref:System.Windows.DataObject.SetData%2A> Методы только добавить данные к объекту данных; они не заменять данные, даже если данные и формат данных одинаковы, как в предыдущем вызове.</span><span class="sxs-lookup"><span data-stu-id="3a916-157">The <xref:System.Windows.DataObject.SetData%2A> methods only add data to a data object; they do not replace data, even if the data and data format are exactly the same as a previous call.</span></span> <span data-ttu-id="3a916-158">Вызов <xref:System.Windows.DataObject.SetData%2A> дважды для тем же данным и данным формат приведет к их присутствия дважды в объекте данных формат данных или данных.</span><span class="sxs-lookup"><span data-stu-id="3a916-158">Calling <xref:System.Windows.DataObject.SetData%2A> twice for the same data and data format will result in the data/data format being present twice in the data object.</span></span>

@@ -5,100 +5,96 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a91c74cf6734776fd6356c201e6754f34a8fbcf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 157d157eceaa83893df3acf5efc9a8d4c1b27200
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="marshaling-different-types-of-arrays"></a>Маршалинг различных типов массивов
-Массив является ссылочным типом в управляемом коде, содержащим один или несколько элементов одного и того же типа. Несмотря на то, что массивы являются ссылочными типами, они передаются в неуправляемые функции в виде параметров In. Это поведение не согласуется со способом передачи управляемых массивов в управляемые объекты в виде параметров In/Out. Подробнее см. в разделе [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md).  
+# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="515d4-102">Маршалинг различных типов массивов</span><span class="sxs-lookup"><span data-stu-id="515d4-102">Marshaling Different Types of Arrays</span></span>
+<span data-ttu-id="515d4-103">Массив является ссылочным типом в управляемом коде, содержащим один или несколько элементов одного и того же типа.</span><span class="sxs-lookup"><span data-stu-id="515d4-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="515d4-104">Несмотря на то, что массивы являются ссылочными типами, они передаются в неуправляемые функции в виде параметров In.</span><span class="sxs-lookup"><span data-stu-id="515d4-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="515d4-105">Это поведение не согласуется со способом передачи управляемых массивов в управляемые объекты в виде параметров In/Out.</span><span class="sxs-lookup"><span data-stu-id="515d4-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="515d4-106">Подробнее см. в разделе [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md).</span><span class="sxs-lookup"><span data-stu-id="515d4-106">For additional details, see [Copying and Pinning](../../../docs/framework/interop/copying-and-pinning.md).</span></span>  
   
- В таблице ниже перечислены параметры маршалинга для массивов и описывается их использование.  
+ <span data-ttu-id="515d4-107">В таблице ниже перечислены параметры маршалинга для массивов и описывается их использование.</span><span class="sxs-lookup"><span data-stu-id="515d4-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
   
-|Массив|Описание|  
+|<span data-ttu-id="515d4-108">Массив</span><span class="sxs-lookup"><span data-stu-id="515d4-108">Array</span></span>|<span data-ttu-id="515d4-109">Описание</span><span class="sxs-lookup"><span data-stu-id="515d4-109">Description</span></span>|  
 |-----------|-----------------|  
-|Целые числа по значению.|Передает массив целых чисел в виде параметра In.|  
-|Целые числа по ссылке.|Передает массив целых чисел в виде параметра In/Out.|  
-|Целые числа по значению (двухмерный массив).|Передает матрицу целых чисел в виде параметра In.|  
-|Строки по значению.|Передает массив строк в виде параметра In.|  
-|Структуры с целыми числами.|Передает массив структур, содержащих целые числа, в виде параметра In/Out.|  
-|Структуры со строками.|Передает массив структур, содержащих только целые числа, в виде параметра In или Out. Элементы массива можно изменять.|  
+|<span data-ttu-id="515d4-110">Целые числа по значению.</span><span class="sxs-lookup"><span data-stu-id="515d4-110">Of integers by value.</span></span>|<span data-ttu-id="515d4-111">Передает массив целых чисел в виде параметра In.</span><span class="sxs-lookup"><span data-stu-id="515d4-111">Passes an array of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="515d4-112">Целые числа по ссылке.</span><span class="sxs-lookup"><span data-stu-id="515d4-112">Of integers by reference.</span></span>|<span data-ttu-id="515d4-113">Передает массив целых чисел в виде параметра In/Out.</span><span class="sxs-lookup"><span data-stu-id="515d4-113">Passes an array of integers as an In/Out parameter.</span></span>|  
+|<span data-ttu-id="515d4-114">Целые числа по значению (двухмерный массив).</span><span class="sxs-lookup"><span data-stu-id="515d4-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="515d4-115">Передает матрицу целых чисел в виде параметра In.</span><span class="sxs-lookup"><span data-stu-id="515d4-115">Passes a matrix of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="515d4-116">Строки по значению.</span><span class="sxs-lookup"><span data-stu-id="515d4-116">Of strings by value.</span></span>|<span data-ttu-id="515d4-117">Передает массив строк в виде параметра In.</span><span class="sxs-lookup"><span data-stu-id="515d4-117">Passes an array of strings as an In parameter.</span></span>|  
+|<span data-ttu-id="515d4-118">Структуры с целыми числами.</span><span class="sxs-lookup"><span data-stu-id="515d4-118">Of structures with integers.</span></span>|<span data-ttu-id="515d4-119">Передает массив структур, содержащих целые числа, в виде параметра In/Out.</span><span class="sxs-lookup"><span data-stu-id="515d4-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
+|<span data-ttu-id="515d4-120">Структуры со строками.</span><span class="sxs-lookup"><span data-stu-id="515d4-120">Of structures with strings.</span></span>|<span data-ttu-id="515d4-121">Передает массив структур, содержащих только целые числа, в виде параметра In или Out.</span><span class="sxs-lookup"><span data-stu-id="515d4-121">Passes an array of structures that contain only integers as an In/Out parameter.</span></span> <span data-ttu-id="515d4-122">Элементы массива можно изменять.</span><span class="sxs-lookup"><span data-stu-id="515d4-122">Members of the array can be changed.</span></span>|  
   
-## <a name="example"></a>Пример  
- В этом примере показаны способы передачи массивов следующих типов:  
+## <a name="example"></a><span data-ttu-id="515d4-123">Пример</span><span class="sxs-lookup"><span data-stu-id="515d4-123">Example</span></span>  
+ <span data-ttu-id="515d4-124">В этом примере показаны способы передачи массивов следующих типов:</span><span class="sxs-lookup"><span data-stu-id="515d4-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
   
--   массив целых чисел по значению;  
+-   <span data-ttu-id="515d4-125">массив целых чисел по значению;</span><span class="sxs-lookup"><span data-stu-id="515d4-125">Array of integers by value.</span></span>  
   
--   массив целых чисел, размер которого может быть изменен, по ссылке;  
+-   <span data-ttu-id="515d4-126">массив целых чисел, размер которого может быть изменен, по ссылке;</span><span class="sxs-lookup"><span data-stu-id="515d4-126">Array of integers by reference, which can be resized.</span></span>  
   
--   многомерный массив (матрица) целых чисел по значению;  
+-   <span data-ttu-id="515d4-127">многомерный массив (матрица) целых чисел по значению;</span><span class="sxs-lookup"><span data-stu-id="515d4-127">Multidimensional array (matrix) of integers by value.</span></span>  
   
--   массив строк по значению;  
+-   <span data-ttu-id="515d4-128">массив строк по значению;</span><span class="sxs-lookup"><span data-stu-id="515d4-128">Array of strings by value.</span></span>  
   
--   массив структур с целыми числами;  
+-   <span data-ttu-id="515d4-129">массив структур с целыми числами;</span><span class="sxs-lookup"><span data-stu-id="515d4-129">Array of structures with integers.</span></span>  
   
--   массив структур со строками.  
+-   <span data-ttu-id="515d4-130">массив структур со строками.</span><span class="sxs-lookup"><span data-stu-id="515d4-130">Array of structures with strings.</span></span>  
   
- Если маршалинг массива по ссылке не выполняется явным образом, то по умолчанию он осуществляется в виде параметра In. Это поведение можно изменить, применив явным образом атрибуты <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute> .  
+ <span data-ttu-id="515d4-131">Если маршалинг массива по ссылке не выполняется явным образом, то по умолчанию он осуществляется в виде параметра In.</span><span class="sxs-lookup"><span data-stu-id="515d4-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="515d4-132">Это поведение можно изменить, применив явным образом атрибуты <xref:System.Runtime.InteropServices.InAttribute> и <xref:System.Runtime.InteropServices.OutAttribute> .</span><span class="sxs-lookup"><span data-stu-id="515d4-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
   
- В этом примере используются перечисленные ниже неуправляемые функции, показанные со своими исходными объявлениями.  
+ <span data-ttu-id="515d4-133">В этом примере используются перечисленные ниже неуправляемые функции, показанные со своими исходными объявлениями.</span><span class="sxs-lookup"><span data-stu-id="515d4-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
   
--   Функция**TestArrayOfInts** , экспортированная из PinvokeLib.dll.  
+-   <span data-ttu-id="515d4-134">Функция**TestArrayOfInts** , экспортированная из PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="515d4-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   Функция**TestRefArrayOfInts** , экспортированная из PinvokeLib.dll.  
+-   <span data-ttu-id="515d4-135">Функция**TestRefArrayOfInts** , экспортированная из PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="515d4-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   Функция**TestMatrixOfInts** , экспортированная из PinvokeLib.dll.  
+-   <span data-ttu-id="515d4-136">Функция**TestMatrixOfInts** , экспортированная из PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="515d4-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   Функция**TestArrayOfStrings** , экспортированная из PinvokeLib.dll.  
+-   <span data-ttu-id="515d4-137">Функция**TestArrayOfStrings** , экспортированная из PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="515d4-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   Функция**TestArrayOfStructs** , экспортированная из PinvokeLib.dll.  
+-   <span data-ttu-id="515d4-138">Функция**TestArrayOfStructs** , экспортированная из PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="515d4-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   Функция**TestArrayOfStructs2** , экспортированная из PinvokeLib.dll.  
+-   <span data-ttu-id="515d4-139">Функция**TestArrayOfStructs2** , экспортированная из PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="515d4-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) — это пользовательская неуправляемая библиотека, содержащая реализации ранее описанных функций и две переменные структуры: **MYPOINT** и **MYPERSON**. Структуры содержат следующие элементы:  
+ <span data-ttu-id="515d4-140">[PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) — это пользовательская неуправляемая библиотека, содержащая реализации ранее описанных функций и две переменные структуры: **MYPOINT** и **MYPERSON**.</span><span class="sxs-lookup"><span data-stu-id="515d4-140">[PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="515d4-141">Структуры содержат следующие элементы:</span><span class="sxs-lookup"><span data-stu-id="515d4-141">The structures contain the following elements:</span></span>  
   
 ```  
 typedef struct _MYPOINT  
@@ -114,18 +110,19 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- В этом примере структуры `MyPoint` и `MyPerson` содержат внедренные типы. Чтобы гарантировать последовательное размещение членов в памяти в порядке их появления, применяется атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> .  
+ <span data-ttu-id="515d4-142">В этом примере структуры `MyPoint` и `MyPerson` содержат внедренные типы.</span><span class="sxs-lookup"><span data-stu-id="515d4-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="515d4-143">Чтобы гарантировать последовательное размещение членов в памяти в порядке их появления, применяется атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute> .</span><span class="sxs-lookup"><span data-stu-id="515d4-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
   
- Класс `LibWrap` содержит набор методов, вызываемых классом `App` . Конкретные сведения о передаче массивов см. в комментариях к приведенному ниже примеру. Массив, который является ссылочным типом, по умолчанию передается в виде параметра In. Чтобы вызывающий объект мог получать результаты, необходимо явным образом применить атрибуты **InAttribute** и **OutAttribute** к аргументу, содержащему массив.  
+ <span data-ttu-id="515d4-144">Класс `LibWrap` содержит набор методов, вызываемых классом `App` .</span><span class="sxs-lookup"><span data-stu-id="515d4-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="515d4-145">Конкретные сведения о передаче массивов см. в комментариях к приведенному ниже примеру.</span><span class="sxs-lookup"><span data-stu-id="515d4-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="515d4-146">Массив, который является ссылочным типом, по умолчанию передается в виде параметра In.</span><span class="sxs-lookup"><span data-stu-id="515d4-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="515d4-147">Чтобы вызывающий объект мог получать результаты, необходимо явным образом применить атрибуты **InAttribute** и **OutAttribute** к аргументу, содержащему массив.</span><span class="sxs-lookup"><span data-stu-id="515d4-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
   
-### <a name="declaring-prototypes"></a>Объявление прототипов  
- [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)] [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
+### <a name="declaring-prototypes"></a><span data-ttu-id="515d4-148">Объявление прототипов</span><span class="sxs-lookup"><span data-stu-id="515d4-148">Declaring Prototypes</span></span>  
+ [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
+ [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
-### <a name="calling-functions"></a>Вызов функций  
- [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)] [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
+### <a name="calling-functions"></a><span data-ttu-id="515d4-149">Вызов функций</span><span class="sxs-lookup"><span data-stu-id="515d4-149">Calling Functions</span></span>  
+ [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
+ [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>См. также  
- [Маршалинг массивов типов](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)   
- [Типы данных в вызове неуправляемого кода](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)   
- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-
+## <a name="see-also"></a><span data-ttu-id="515d4-150">См. также</span><span class="sxs-lookup"><span data-stu-id="515d4-150">See Also</span></span>  
+ [<span data-ttu-id="515d4-151">Маршалинг массивов типов</span><span class="sxs-lookup"><span data-stu-id="515d4-151">Marshaling Arrays of Types</span></span>](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
+ [<span data-ttu-id="515d4-152">Типы данных вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="515d4-152">Platform Invoke Data Types</span></span>](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [<span data-ttu-id="515d4-153">Создание прототипов в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="515d4-153">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

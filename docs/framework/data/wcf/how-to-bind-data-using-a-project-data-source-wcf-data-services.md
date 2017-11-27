@@ -1,125 +1,131 @@
 ---
-title: "Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка данных, Службы WCF Data Services"
-  - "Службы WCF Data Services, привязка данных"
+title: "Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data binding, WCF Data Services
+- WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b56fecef5ace38f728d8cc68df4dcfeb71bfedf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services)
-Существует возможность создания источников данных на основе объектов данных, формируемых клиентским приложением [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  При добавлении ссылки на службу данных с использованием диалогового окна **Добавить ссылку на службу** наряду с созданными классами данных клиента создается источник данных проекта. Для каждого набора сущностей создается по одному источнику данных, доступ к которому предоставляет служба данных.  Формы для отображения данных службы данных можно создать путем перетаскивания этих элементов источника данных из окна **Источники данных** на окно конструктора.  Эти элементы становятся элементами управления, привязанными к источнику данных.  Во время выполнения источник данных привязывается к экземпляру класса <xref:System.Data.Services.Client.DataServiceCollection%601>, который заполняется объектами, возвращаемыми в ответ на запрос к службе данных.  Для получения дополнительной информации см. [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a><span data-ttu-id="9f0fc-102">Как привязать данные с помощью источника данных проекта (службы данных WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="9f0fc-102">How to: Bind Data Using a Project Data Source (WCF Data Services)</span></span>
+<span data-ttu-id="9f0fc-103">Существует возможность создания источников данных на основе объектов данных, формируемых клиентским приложением [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9f0fc-103">You can create data sources that are based on the generated data objects in an [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client application.</span></span> <span data-ttu-id="9f0fc-104">При добавлении ссылки на службу данных с помощью **добавить ссылку на службу** диалогового окна, вместе с сформированных клиентских классов данных создается источник данных проекта.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-104">When you add a reference to a data service by using the **Add Service Reference** dialog, a project data source is created along with the generated client data classes.</span></span> <span data-ttu-id="9f0fc-105">Для каждого набора сущностей, предоставляемого службой данных, создается один источник данных.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-105">One data source is created for each entity set that the data service exposes.</span></span> <span data-ttu-id="9f0fc-106">Можно создавать формы для отображения данных из службы, перетащив этих элементов источника данных из **источники данных** на окно конструктора.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-106">You can create forms that display data from the service by dragging these data source items from the **Data Sources** window onto the designer.</span></span> <span data-ttu-id="9f0fc-107">Эти элементы становятся элементами управления, привязанными к источнику данных.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-107">These items become controls that are bound to the data source.</span></span> <span data-ttu-id="9f0fc-108">Во время выполнения, этот источник данных привязывается к экземпляру <xref:System.Data.Services.Client.DataServiceCollection%601> класс, который заполняется с помощью объектов, возвращенных запросом к службе данных.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-108">During execution, this data source is bound to an instance of the <xref:System.Data.Services.Client.DataServiceCollection%601> class, which is filled with objects that are returned by a query to the data service.</span></span> <span data-ttu-id="9f0fc-109">Дополнительные сведения см. в разделе [привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="9f0fc-109">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).</span></span>  
   
- Примеры в этом разделе используют образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.  Эта служба и клиентские классы данных создаются после выполнения действий, описанных в разделе [Краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ <span data-ttu-id="9f0fc-110">Примеры в этом разделе используют образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-110">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="9f0fc-111">Эта служба и клиентские классы данных создаются после выполнения [краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="9f0fc-111">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### Использование источника данных проекта в окне WPF  
+### <a name="to-use-a-project-data-source-in-a-wpf-window"></a><span data-ttu-id="9f0fc-112">Использование источника данных проекта в окне WPF</span><span class="sxs-lookup"><span data-stu-id="9f0fc-112">To use a project data source in a WPF window</span></span>  
   
-1.  Добавьте в проект WPF ссылку на службу данных Northwind.  Для получения дополнительной информации см. [Как добавить ссылку на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
+1.  <span data-ttu-id="9f0fc-113">Добавьте в проект WPF ссылку на службу данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-113">In a WPF project, add a reference to the Northwind data service.</span></span> <span data-ttu-id="9f0fc-114">Дополнительные сведения см. в разделе [как: Добавление ссылки на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="9f0fc-114">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span>  
   
-2.  Разверните в окне **Источники данных** узел `Customers` в источнике данных проекта **NorthwindEntities**.  
+2.  <span data-ttu-id="9f0fc-115">В **источники данных** окна, разверните `Customers` узел в **NorthwindEntities** источник данных проекта.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-115">In the **Data Sources** window, expand the `Customers` node in the **NorthwindEntities** project data source.</span></span>  
   
-3.  Щелкните элемент **CustomerID**, выберите из списка элемент **ComboBox** и перетащите элемент **CustomerID** из узла **Customers** в конструктор.  
+3.  <span data-ttu-id="9f0fc-116">Нажмите кнопку **CustomerID** элемента, выберите **ComboBox** в списке и перетащите **CustomerID** элемента из **клиентов** узел конструктор.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-116">Click the **CustomerID** item, select **ComboBox** from the list, and drag the **CustomerID** item from the **Customers** node to the designer.</span></span>  
   
-     При этом в файле XAML для данного окна будут созданы следующие элементы объектов:  
+     <span data-ttu-id="9f0fc-117">При этом в файле XAML для данного окна будут созданы следующие элементы объектов:</span><span class="sxs-lookup"><span data-stu-id="9f0fc-117">This creates the following object elements in the XAML file for the window:</span></span>  
   
-    -   Элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersViewSource`.  Свойству <xref:System.Windows.FrameworkElement.DataContext%2A> элемента объекта верхнего уровня <xref:System.Windows.Controls.Grid> присваивается значение нового объекта <xref:System.Windows.Data.CollectionViewSource>.  
+    -   <span data-ttu-id="9f0fc-118">Элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersViewSource`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-118">A <xref:System.Windows.Data.CollectionViewSource> element named `customersViewSource`.</span></span> <span data-ttu-id="9f0fc-119">Свойству <xref:System.Windows.FrameworkElement.DataContext%2A> элемента объекта верхнего уровня <xref:System.Windows.Controls.Grid> присваивается значение нового объекта <xref:System.Windows.Data.CollectionViewSource>.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-119">The <xref:System.Windows.FrameworkElement.DataContext%2A> property of the top-level <xref:System.Windows.Controls.Grid> object element is set to this new <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
   
-    -   Привязанный к данным элемент <xref:System.Windows.Controls.ComboBox> с именем `CustomerID`.  
+    -   <span data-ttu-id="9f0fc-120">Привязанный к данным элемент <xref:System.Windows.Controls.ComboBox> с именем `CustomerID`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-120">A data-bound <xref:System.Windows.Controls.ComboBox> named `CustomerID`.</span></span>  
   
-    -   Объект <xref:System.Windows.Controls.Label>.  
+    -   <span data-ttu-id="9f0fc-121">Объект <xref:System.Windows.Controls.Label>.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-121">A <xref:System.Windows.Controls.Label>.</span></span>  
   
-4.  Перетащите в окно конструктора навигационное свойство **Orders**.  
+4.  <span data-ttu-id="9f0fc-122">Перетащите **заказов** свойство навигации в конструктор.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-122">Drag the **Orders** navigation property to the designer.</span></span>  
   
-     При этом в файле XAML для данного окна будут созданы следующие дополнительные элементы объектов:  
+     <span data-ttu-id="9f0fc-123">При этом в файле XAML для данного окна будут созданы следующие дополнительные элементы объектов:</span><span class="sxs-lookup"><span data-stu-id="9f0fc-123">This creates the following additional object elements in the XAML file for the window:</span></span>  
   
-    -   Второй элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersOrdersViewSource`, источником для которого является объект `customerViewSource`.  
+    -   <span data-ttu-id="9f0fc-124">Второй элемент <xref:System.Windows.Data.CollectionViewSource> с именем `customersOrdersViewSource`, источником для которого является объект `customerViewSource`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-124">A second <xref:System.Windows.Data.CollectionViewSource> element named `customersOrdersViewSource`, the source of which is the `customerViewSource`.</span></span>  
   
-    -   Привязанный к данным элемент управления <xref:System.Windows.Controls.DataGrid> с именем `ordersDataGrid`.  
+    -   <span data-ttu-id="9f0fc-125">Привязанный к данным элемент управления <xref:System.Windows.Controls.DataGrid> с именем `ordersDataGrid`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-125">A data-bound <xref:System.Windows.Controls.DataGrid> control named `ordersDataGrid`.</span></span>  
   
-5.  Перетащите дополнительные элементы из узла **Customers** в конструктор. \(Необязательно.\)  
+5.  <span data-ttu-id="9f0fc-126">(Необязательно) Перетащите дополнительные элементы из **клиентов** в конструктор.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-126">(Optional) Drag additional items from the **Customers** node to the designer.</span></span>  
   
-6.  Откройте кодовую страницу формы и добавьте следующие инструкции `using` \(`Imports` в Visual Basic\):  
+6.  <span data-ttu-id="9f0fc-127">Откройте кодовую страницу формы и добавьте следующие инструкции `using` (`Imports` в Visual Basic):</span><span class="sxs-lookup"><span data-stu-id="9f0fc-127">Open the code page for the form and add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]  
   
-7.  В разделяемый класс, определяющий форму, добавьте следующий код, который создает экземпляр объекта <xref:System.Data.Objects.ObjectContext> и определяет константу `customerID`.  
+7.  <span data-ttu-id="9f0fc-128">В разделяемый класс, определяющий форму, добавьте следующий код, который создает экземпляр объекта <xref:System.Data.Objects.ObjectContext> и определяет константу `customerID`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-128">In the partial class that defines the form, add the following code that creates an <xref:System.Data.Objects.ObjectContext> instance and defines the `customerID` constant.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]  
   
-8.  В конструкторе выберите окно.  
+8.  <span data-ttu-id="9f0fc-129">В конструкторе выберите окно.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-129">In the designer, select the window.</span></span>  
   
     > [!NOTE]
-    >  Убедитесь, что выбрано само окно, а не содержимое этого окна.  Если окно выбрано, текстовое поле **Имя** в верхней части окна **Свойства** должно содержать имя окна.  
+    >  <span data-ttu-id="9f0fc-130">Убедитесь, что выбрано само окно, а не содержимое этого окна.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-130">Make sure that you select the window itself, rather than selecting content that is within the window.</span></span> <span data-ttu-id="9f0fc-131">Если окно выбрано, **имя** текстовое поле в верхней части **свойства** должно содержать имя окна.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-131">If the window is selected, the **Name** text box near the top of the **Properties** window should contain the name of the window.</span></span>  
   
-9. В окне **Свойства** нажмите кнопку **События**.  
+9. <span data-ttu-id="9f0fc-132">В **свойства** выберите **события** кнопки.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-132">In the **Properties** window, select the **Events** button.</span></span>  
   
-10. Найдите событие **Загружено**, затем дважды щелкните раскрывающийся список рядом с этим событием.  
+10. <span data-ttu-id="9f0fc-133">Найти **Loaded** событий, а затем в раскрывающемся списке рядом с этим событием.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-133">Find the **Loaded** event, and then double-click the drop-down list next to this event.</span></span>  
   
-     Visual Studio открывает файл с фоновым кодом для окна и формирует обработчик события <xref:System.Windows.FrameworkElement.Loaded>.  
+     <span data-ttu-id="9f0fc-134">Visual Studio открывает файл с фоновым кодом для окна и формирует обработчик события <xref:System.Windows.FrameworkElement.Loaded>.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-134">Visual Studio opens the code-behind file for the window and generates a <xref:System.Windows.FrameworkElement.Loaded> event handler.</span></span>  
   
-11. Скопируйте и вставьте во вновь созданный обработчик события <xref:System.Windows.FrameworkElement.Loaded> следующий код.  
+11. <span data-ttu-id="9f0fc-135">Скопируйте и вставьте во вновь созданный обработчик события <xref:System.Windows.FrameworkElement.Loaded> следующий код.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-135">In the newly created <xref:System.Windows.FrameworkElement.Loaded> event handler, copy and paste the following code.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]  
   
-12. Этот код создает экземпляр <xref:System.Data.Services.Client.DataServiceCollection%601> для типа `Customers` на основе выполнения запроса LINQ, который возвращает интерфейс <xref:System.Collections.Generic.IEnumerable%601> объекта `Customers` вместе со связанными объектами `Orders` из службы данных Northwind и привязывает его к объекту `customersViewSource`.  
+12. <span data-ttu-id="9f0fc-136">Этот код создает экземпляр <xref:System.Data.Services.Client.DataServiceCollection%601> для типа `Customers` на основе выполнения запроса LINQ, который возвращает интерфейс <xref:System.Collections.Generic.IEnumerable%601> объекта `Customers` вместе со связанными объектами `Orders` из службы данных Northwind и привязывает его к объекту `customersViewSource`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-136">This code creates an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> for the `Customers` type based on the execution of a LINQ query that returns an <xref:System.Collections.Generic.IEnumerable%601> of `Customers` along with related `Orders` objects from the Northwind data service and binds it to the `customersViewSource`.</span></span>  
   
-### Использование источника данных проекта в форме Windows  
+### <a name="to-use-a-project-data-source-in-a-windows-form"></a><span data-ttu-id="9f0fc-137">Использование источника данных проекта в форме Windows</span><span class="sxs-lookup"><span data-stu-id="9f0fc-137">To use a project data source in a Windows form</span></span>  
   
-1.  Разверните в окне **Источники данных** узел **Customers** в источнике данных проекта **NorthwindEntities**.  
+1.  <span data-ttu-id="9f0fc-138">В **источники данных** окна, разверните **клиентов** узел в **NorthwindEntities** источник данных проекта.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-138">In the **Data Sources** window, expand the **Customers** node in the **NorthwindEntities** project data source.</span></span>  
   
-2.  Щелкните элемент **CustomerID**, выберите из списка элемент **ComboBox** и перетащите элемент **CustomerID** из узла **Customers** в конструктор.  
+2.  <span data-ttu-id="9f0fc-139">Нажмите кнопку **CustomerID** элемента, выберите **ComboBox** в списке и перетащите **CustomerID** элемента из **клиентов** узел конструктор.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-139">Click the **CustomerID** item, select **ComboBox** from the list, and drag the **CustomerID** item from the **Customers** node to the designer.</span></span>  
   
-     Это приведет к созданию следующих элементов управления в форме:  
+     <span data-ttu-id="9f0fc-140">Это приведет к созданию следующих элементов управления в форме:</span><span class="sxs-lookup"><span data-stu-id="9f0fc-140">This creates the following controls on the form:</span></span>  
   
-    -   Экземпляр <xref:System.Windows.Forms.BindingSource> с именем `customersBindingSource`.  
+    -   <span data-ttu-id="9f0fc-141">Экземпляр <xref:System.Windows.Forms.BindingSource> с именем `customersBindingSource`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-141">An instance of <xref:System.Windows.Forms.BindingSource> named `customersBindingSource`.</span></span>  
   
-    -   Экземпляр <xref:System.Windows.Forms.BindingNavigator> с именем `customersBindingNavigator`.  Этот элемент управления можно удалить, так как он не понадобится.  
+    -   <span data-ttu-id="9f0fc-142">Экземпляр <xref:System.Windows.Forms.BindingNavigator> с именем `customersBindingNavigator`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-142">An instance of <xref:System.Windows.Forms.BindingNavigator> named `customersBindingNavigator`.</span></span> <span data-ttu-id="9f0fc-143">Этот элемент управления можно удалить, так как он не понадобится.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-143">You can delete this control as it will not be needed.</span></span>  
   
-    -   Привязанный к данным элемент <xref:System.Windows.Forms.ComboBox> с именем `CustomerID`.  
+    -   <span data-ttu-id="9f0fc-144">Привязанный к данным элемент <xref:System.Windows.Forms.ComboBox> с именем `CustomerID`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-144">A data-bound <xref:System.Windows.Forms.ComboBox> named `CustomerID`.</span></span>  
   
-    -   Объект <xref:System.Windows.Forms.Label>.  
+    -   <span data-ttu-id="9f0fc-145">Объект <xref:System.Windows.Forms.Label>.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-145">A <xref:System.Windows.Forms.Label>.</span></span>  
   
-3.  Перетащите в форму навигационное свойство **Orders**.  
+3.  <span data-ttu-id="9f0fc-146">Перетащите **заказов** свойство навигации к форме.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-146">Drag the **Orders** navigation property to the form.</span></span>  
   
-4.  Это приведет к созданию элемента управления `ordersBindingSource` и присваиванию свойству <xref:System.Windows.Forms.BindingSource.DataSource%2A> этого элемента управления значения `customersBindingSource`, а свойству <xref:System.Windows.Forms.BindingSource.DataMember%2A> — значения `Customers`.  Кроме того, в форме будет создан привязанный к данным элемент управления `ordersDataGridView` в сочетании с элементом управления меткой, имеющим соответствующий заголовок.  
+4.  <span data-ttu-id="9f0fc-147">Это приведет к созданию элемента управления `ordersBindingSource` и присваиванию свойству <xref:System.Windows.Forms.BindingSource.DataSource%2A> этого элемента управления значения `customersBindingSource`, а свойству <xref:System.Windows.Forms.BindingSource.DataMember%2A> — значения `Customers`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-147">This creates the `ordersBindingSource` control with the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property of the control set to the `customersBindingSource` and the <xref:System.Windows.Forms.BindingSource.DataMember%2A> property set to `Customers`.</span></span> <span data-ttu-id="9f0fc-148">Кроме того, в форме будет создан привязанный к данным элемент управления `ordersDataGridView` в сочетании с элементом управления меткой, имеющим соответствующий заголовок.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-148">It also creates the `ordersDataGridView` data-bound control on the form, accompanied by an appropriately titled label control.</span></span>  
   
-5.  Перетащите дополнительные элементы из узла **Customers** в конструктор. \(Необязательно.\)  
+5.  <span data-ttu-id="9f0fc-149">(Необязательно) Перетащите дополнительные элементы из **клиентов** в конструктор.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-149">(Optional) Drag additional items from the **Customers** node to the designer.</span></span>  
   
-6.  Откройте кодовую страницу формы и добавьте следующие инструкции `using` \(`Imports` в Visual Basic\):  
+6.  <span data-ttu-id="9f0fc-150">Откройте кодовую страницу формы и добавьте следующие инструкции `using` (`Imports` в Visual Basic):</span><span class="sxs-lookup"><span data-stu-id="9f0fc-150">Open the code page for the form and add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]  
   
-7.  В разделяемый класс, определяющий форму, добавьте следующий код, который создает экземпляр объекта <xref:System.Data.Objects.ObjectContext> и определяет константу `customerID`.  
+7.  <span data-ttu-id="9f0fc-151">В разделяемый класс, определяющий форму, добавьте следующий код, который создает экземпляр объекта <xref:System.Data.Objects.ObjectContext> и определяет константу `customerID`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-151">In the partial class that defines the form, add the following code that creates an <xref:System.Data.Objects.ObjectContext> instance and defines the `customerID` constant.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]  
   
-8.  В конструкторе форм дважды щелкните форму.  
+8.  <span data-ttu-id="9f0fc-152">В конструкторе форм дважды щелкните форму.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-152">In the form designer, double-click the form.</span></span>  
   
-     После этого будет открыта страница кода формы и создан метод обработчика события `Load` для этой формы.  
+     <span data-ttu-id="9f0fc-153">После этого будет открыта страница кода формы и создан метод обработчика события `Load` для этой формы.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-153">This opens the code page for the form and creates the method that handles the `Load` event for the form.</span></span>  
   
-9. Скопируйте и вставьте в обработчике события `Load` следующий код.  
+9. <span data-ttu-id="9f0fc-154">Скопируйте и вставьте в обработчике события `Load` следующий код.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-154">In the `Load` event handler, copy and paste the following code.</span></span>  
   
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabinding)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabinding)]  
   
-10. Этот код создает экземпляр <xref:System.Data.Services.Client.DataServiceCollection%601> для типа `Customers` на основе выполнения запроса <xref:System.Data.Services.Client.DataServiceQuery%601>, который возвращает интерфейс <xref:System.Collections.Generic.IEnumerable%601> объекта `Customers` из службы данных Northwind и привязывает его к объекту `customersBindingSource`.  
+10. <span data-ttu-id="9f0fc-155">Этот код создает экземпляр <xref:System.Data.Services.Client.DataServiceCollection%601> для типа `Customers` на основе выполнения запроса <xref:System.Data.Services.Client.DataServiceQuery%601>, который возвращает интерфейс <xref:System.Collections.Generic.IEnumerable%601> объекта `Customers` из службы данных Northwind и привязывает его к объекту `customersBindingSource`.</span><span class="sxs-lookup"><span data-stu-id="9f0fc-155">This code creates an instance of <xref:System.Data.Services.Client.DataServiceCollection%601> for the `Customers` type based on the execution of a <xref:System.Data.Services.Client.DataServiceQuery%601> that returns an <xref:System.Collections.Generic.IEnumerable%601> of `Customers` from the Northwind data service and binds it to the `customersBindingSource`.</span></span>  
   
-## См. также  
- [Клиентская библиотека служб WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)   
- [Как привязать данные к элементам Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="9f0fc-156">См. также</span><span class="sxs-lookup"><span data-stu-id="9f0fc-156">See Also</span></span>  
+ [<span data-ttu-id="9f0fc-157">Библиотека клиентов служб данных WCF</span><span class="sxs-lookup"><span data-stu-id="9f0fc-157">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [<span data-ttu-id="9f0fc-158">Практическое руководство. Привязка данных к элементам Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="9f0fc-158">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

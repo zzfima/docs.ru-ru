@@ -1,28 +1,36 @@
 ---
-title: "Элемент &lt;security&gt; &lt;ws2007FederationHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;security&gt; &lt;ws2007FederationHttpBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 79976b015f35bdd71a5f95a018d85c0ba41ce0b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;security&gt; &lt;ws2007FederationHttpBinding&gt;
-Определяет параметры безопасности для элемента [\<ws2007FederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md).  
+# <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a><span data-ttu-id="73de1-102">Элемент &lt;security&gt; &lt;ws2007FederationHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="73de1-102">&lt;security&gt; element of &lt;ws2007FederationHttpBinding&gt;</span></span>
+<span data-ttu-id="73de1-103">Определяет параметры безопасности [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="73de1-103">Defines the security settings of the [\<ws2007FederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) element.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="73de1-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="73de1-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="73de1-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="73de1-105">\<bindings></span></span>  
+<span data-ttu-id="73de1-106">\<ws2007FederationHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="73de1-106">\<ws2007FederationHttpBinding></span></span>  
+<span data-ttu-id="73de1-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="73de1-107">\<binding></span></span>  
+<span data-ttu-id="73de1-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="73de1-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="73de1-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="73de1-109">Syntax</span></span>  
   
+```xml  
 <ws2007FederationBinding>  
     <binding >  
         <security mode="None/Message/TransportWithMessageCredential">  
@@ -37,44 +45,44 @@ caps.handback.revision: 10
 </ws2007FederationBinding>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="73de1-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="73de1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="73de1-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="73de1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="73de1-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="73de1-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`mode`|Необязательно.  Задает тип применяемого механизма обеспечения безопасности.  Значение по умолчанию — `Message`.  Это атрибут типа <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|<span data-ttu-id="73de1-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="73de1-113">Attribute</span></span>|<span data-ttu-id="73de1-114">Описание</span><span class="sxs-lookup"><span data-stu-id="73de1-114">Description</span></span>|  
+|---------------|-----------------|  
+|`mode`|<span data-ttu-id="73de1-115">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="73de1-115">Optional.</span></span> <span data-ttu-id="73de1-116">Задает тип применяемого механизма обеспечения безопасности.</span><span class="sxs-lookup"><span data-stu-id="73de1-116">Specifies the type of security that is applied.</span></span> <span data-ttu-id="73de1-117">Значение по умолчанию — `Message`.</span><span class="sxs-lookup"><span data-stu-id="73de1-117">The default value is `Message`.</span></span> <span data-ttu-id="73de1-118">Это атрибут типа <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="73de1-118">This attribute is of type <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>|  
   
-## Атрибут mode  
+## <a name="mode-attribute"></a><span data-ttu-id="73de1-119">Атрибут mode</span><span class="sxs-lookup"><span data-stu-id="73de1-119">mode Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|Нет|Во время передачи сообщение SOAP не защищено.|  
-|Сообщение|Целостность, конфиденциальность, проверка подлинности сервера и проверка подлинности клиента обеспечиваются с помощью средств безопасности сообщений SOAP.  По умолчанию текст сообщений шифруется и подписывается.  Служба должна быть настроена с использованием сертификата.  Проверка подлинности клиента основана на маркере, выданного клиенту службой маркеров безопасности.|  
-|TransportWithMessageCredential|Целостность, конфиденциальность и проверка подлинности сервера обеспечиваются с помощью HTTPS.  Служба должна быть настроена с использованием сертификата.  Проверка подлинности клиента выполняется с помощью средств безопасности сообщений SOAP и основана на маркере, выданном клиенту службой маркеров безопасности.|  
+|<span data-ttu-id="73de1-120">Значение</span><span class="sxs-lookup"><span data-stu-id="73de1-120">Value</span></span>|<span data-ttu-id="73de1-121">Описание</span><span class="sxs-lookup"><span data-stu-id="73de1-121">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="73de1-122">Нет</span><span class="sxs-lookup"><span data-stu-id="73de1-122">None</span></span>|<span data-ttu-id="73de1-123">Во время передачи сообщение SOAP не защищено.</span><span class="sxs-lookup"><span data-stu-id="73de1-123">The SOAP message is not secure during transfer.</span></span>|  
+|<span data-ttu-id="73de1-124">Сообщение</span><span class="sxs-lookup"><span data-stu-id="73de1-124">Message</span></span>|<span data-ttu-id="73de1-125">Целостность, конфиденциальность, проверка подлинности сервера и проверка подлинности клиента обеспечиваются с помощью средств безопасности сообщений SOAP.</span><span class="sxs-lookup"><span data-stu-id="73de1-125">Integrity, confidentiality, server authentication and client authentication are provided using SOAP message security.</span></span> <span data-ttu-id="73de1-126">По умолчанию текст сообщений шифруется и подписывается.</span><span class="sxs-lookup"><span data-stu-id="73de1-126">By default, the body is encrypted and signed.</span></span> <span data-ttu-id="73de1-127">Служба должна быть настроена с использованием сертификата.</span><span class="sxs-lookup"><span data-stu-id="73de1-127">The service must be configured with a certificate.</span></span> <span data-ttu-id="73de1-128">Проверка подлинности клиента основана на маркере, выданного клиенту службой маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="73de1-128">Client authentication is based on the token issued to the client by a security token service.</span></span>|  
+|<span data-ttu-id="73de1-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="73de1-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="73de1-130">Целостность, конфиденциальность и проверка подлинности сервера обеспечиваются с помощью HTTPS.</span><span class="sxs-lookup"><span data-stu-id="73de1-130">Integrity, confidentiality and server authentication are provided by HTTPS.</span></span> <span data-ttu-id="73de1-131">Служба должна быть настроена с использованием сертификата.</span><span class="sxs-lookup"><span data-stu-id="73de1-131">The service must be configured with a certificate.</span></span> <span data-ttu-id="73de1-132">Проверка подлинности клиента выполняется с помощью средств безопасности сообщений SOAP и основана на маркере, выданном клиенту службой маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="73de1-132">Client authentication is provided by means of SOAP message security and is based on the token issued to the client by a security token service.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="73de1-133">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="73de1-133">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<сообщение\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Определяет параметры безопасности уровня сообщений.  Это элемент типа <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|<span data-ttu-id="73de1-134">Элемент</span><span class="sxs-lookup"><span data-stu-id="73de1-134">Element</span></span>|<span data-ttu-id="73de1-135">Описание</span><span class="sxs-lookup"><span data-stu-id="73de1-135">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="73de1-136">\<сообщение ></span><span class="sxs-lookup"><span data-stu-id="73de1-136">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|<span data-ttu-id="73de1-137">Определяет параметры безопасности уровня сообщений.</span><span class="sxs-lookup"><span data-stu-id="73de1-137">Defines the settings for the message-level security.</span></span> <span data-ttu-id="73de1-138">Это элемент типа <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.</span><span class="sxs-lookup"><span data-stu-id="73de1-138">This element is of type <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="73de1-139">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="73de1-139">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<привязка\>](../../../../../docs/framework/misc/binding.md)|Определяет все возможности привязки [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|<span data-ttu-id="73de1-140">Элемент</span><span class="sxs-lookup"><span data-stu-id="73de1-140">Element</span></span>|<span data-ttu-id="73de1-141">Описание</span><span class="sxs-lookup"><span data-stu-id="73de1-141">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="73de1-142">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="73de1-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="73de1-143">Определяет все возможности [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="73de1-143">Defines all binding capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.WSFederationHttpSecurity>   
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>   
- [Практическое руководство. Создание WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="73de1-144">См. также</span><span class="sxs-lookup"><span data-stu-id="73de1-144">See Also</span></span>  
+ <xref:System.ServiceModel.WSFederationHttpSecurity>  
+ <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
+ [<span data-ttu-id="73de1-145">Как: создание WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="73de1-145">How to: Create a WSFederationHttpBinding</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="73de1-146">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="73de1-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="73de1-147">При выборе типа учетных данных</span><span class="sxs-lookup"><span data-stu-id="73de1-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="73de1-148">Привязки</span><span class="sxs-lookup"><span data-stu-id="73de1-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="73de1-149">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="73de1-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="73de1-150">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="73de1-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="73de1-151">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="73de1-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

@@ -1,68 +1,75 @@
 ---
-title: "&lt;sqlWorkflowInstanceStore&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;sqlWorkflowInstanceStore&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b4b1903182cfa20944d919f57ff1e09e07953b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sqlWorkflowInstanceStore&gt;
-Поведение службы, которое позволяет настроить функцию <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, поддерживающую сохранение сведений о состоянии для экземпляров службы рабочего процесса в базе данных SQL Server 2005 или SQL Server 2008.  Дополнительные сведения об этой функции см. в разделе [Хранилище экземпляров рабочих процессов SQL](../../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md).  
+# <a name="ltsqlworkflowinstancestoregt"></a><span data-ttu-id="5b1d8-102">&lt;sqlWorkflowInstanceStore&gt;</span><span class="sxs-lookup"><span data-stu-id="5b1d8-102">&lt;sqlWorkflowInstanceStore&gt;</span></span>
+<span data-ttu-id="5b1d8-103">Поведение службы, можно настроить <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> функции, которая поддерживает сохранение сведений о состоянии экземплярами службы рабочего процесса в базу данных SQL Server 2005 или SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-103">A service behavior that allows you to configure the <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> feature, which supports persisting state information for workflow service instances into an SQL Server 2005 or SQL Server 2008 database.</span></span> <span data-ttu-id="5b1d8-104">Дополнительные сведения об этой функции см. в разделе [хранилище экземпляров рабочих процессов SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="5b1d8-104">For more information on this feature, see [SQL Workflow Instance Store](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span></span>  
   
-## Синтаксис  
+<span data-ttu-id="5b1d8-105">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="5b1d8-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5b1d8-106">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="5b1d8-106">\<behaviors></span></span>  
+<span data-ttu-id="5b1d8-107">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="5b1d8-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="5b1d8-108">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="5b1d8-108">\<behavior></span></span>  
+<span data-ttu-id="5b1d8-109">\<sqlWorkflowInstanceStore ></span><span class="sxs-lookup"><span data-stu-id="5b1d8-109">\<sqlWorkflowInstanceStore></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="5b1d8-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5b1d8-110">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <sqlWorkflowInstanceStore   
-          connectionStringName=”String”   
-          honstLockRenewalPeriod=”TimeSpan”  
-          instanceCompletionAction=”DeleteNothing/DeleteAll”  
-          instanceEncodingAction=”None/GZip”  
-          instanceLockedExceptionAction=”NoRetry/BasicRetry/AggressiveRetry”  
-          runnableInstancesDetectionPeriod=”TimeSpan” />  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <sqlWorkflowInstanceStore connectionStringName="String" 
+                                honstLockRenewalPeriod="TimeSpan" 
+                                instanceCompletionAction="DeleteNothing/DeleteAll" 
+                                instanceEncodingAction="None/GZip" 
+                                instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 
+                                runnableInstancesDetectionPeriod="TimeSpan" />
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5b1d8-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="5b1d8-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="5b1d8-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="5b1d8-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="5b1d8-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|connectionString|Строка, содержащая строку подключения, используемую для соединения с основной базой данной сохраняемости.|  
-|connectionStringName|Строка, содержащая именованную строку соединения с сервером базы данных.  Примером именованной строки соединения является «DefaultConnectionString».|  
-|honstLockRenewalPeriod|Значение Timespan, определяющее время, в течение которого узел должен обновить блокировку на экземпляре.  Если узел не возобновит блокировку в указанный период времени, то экземпляр будет разблокирован и может быть принят другим узлом.<br /><br /> При выгрузке рабочего процесса подразумевается, что было произведено его сохранение.  Если этот атрибут имеет нулевое значение, экземпляр рабочего процесса сохраняется и выгружается сразу после того, как становится неактивным.  Если задать этому атрибуту значение TimeSpan.MaxValue, операция выгрузки будет фактически отключена.  Простаивающие экземпляры рабочего процесса не выгружаются.|  
-|instanceCompletionAction|Значение, которое указывает, будут сохранены данные экземпляра рабочего процесса в хранилище сохраняемости после завершения работы экземпляра рабочего процесса или удалены на этом этапе.  Это значение имеет тип <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Перечисленные действия состоят из удаления данных экземпляра из хранилища сохраняемости или отказа от удаления данных после завершения операции экземпляром.<br /><br /> Если экземпляры сохраняются после завершения, то это вызывает быстрый рост базы данных постоянного хранения, что влияет на производительность базы данных.  Следует настроить политику очищения базы данных для периодического удаления этих записей, чтобы гарантировать уровень производительности базы данных, удовлетворяющий требованиям пользователя.|  
-|instanceEncodingOption|Необязательное значение, которое указывает, производится ли сжатие информации о состоянии экземпляра при использовании алгоритма GZip, прежде чем она будет сохранена в хранилище сохраняемости.  Это значение имеет тип <xref:System.Activities.DurableInstancing.InstanceEncodingAction>.  Возможные значения для этого свойства «None», что означает отсутствие сжатия, и «GZip», что означает, что данные экземпляра сжимаются с использованием алгоритма gzip.|  
-|instanceLockedExceptionAction|Значение, определяющее действие, которое возникает в ответ на исключение, если узел пытается заблокировать экземпляр, который в настоящий момент заблокирован другим узлом.  Это значение имеет тип <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.<br /><br /> Допустимые варианты для данного поля: Нет \(None\), простой повтор \(Basic Retry\) и агрессивный повтор \(Aggressive Retry\).  По умолчанию используется значение None.  В следующем списке приводятся описания этих трех вариантов.<br /><br /> -   Отсутствует.  Узел службы не пытается заблокировать экземпляр и передает исключение <xref:System.Runtime.Persistence.InstanceLockedException> вызывающему.<br />-   Простой повтор.  Узел службы повторно пытается заблокировать экземпляр с линейным интервалом повторений и передает исключение вызывающему в конце последовательности.<br />-   Агрессивный повтор.  Узел службы повторно пытается заблокировать экземпляр \(с экспоненциально увеличивающейся задержкой\) и передает исключение <xref:System.Runtime.Persistence.InstanceLockedException> вызывающему в конце последовательности.|  
-|runnableInstancesDetectionPeriod||  
+|<span data-ttu-id="5b1d8-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="5b1d8-114">Attribute</span></span>|<span data-ttu-id="5b1d8-115">Описание</span><span class="sxs-lookup"><span data-stu-id="5b1d8-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="5b1d8-116">connectionString</span><span class="sxs-lookup"><span data-stu-id="5b1d8-116">connectionString</span></span>|<span data-ttu-id="5b1d8-117">Строка, содержащая строку подключения, используемая для подключения к основной базе данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-117">A string that contains a connection string used to connect to an underlying persistence database.</span></span>|  
+|<span data-ttu-id="5b1d8-118">connectionStringName</span><span class="sxs-lookup"><span data-stu-id="5b1d8-118">connectionStringName</span></span>|<span data-ttu-id="5b1d8-119">Строка, содержащая именованную строку соединения для сервера базы данных.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-119">A string that contains a named connection string to the database server.</span></span> <span data-ttu-id="5b1d8-120">Примером именованной строки соединения является «DefaultConnectionString».</span><span class="sxs-lookup"><span data-stu-id="5b1d8-120">An example of a named connection string is "DefaultConnectionString".</span></span>|  
+|<span data-ttu-id="5b1d8-121">honstLockRenewalPeriod</span><span class="sxs-lookup"><span data-stu-id="5b1d8-121">honstLockRenewalPeriod</span></span>|<span data-ttu-id="5b1d8-122">Значение Timespan, определяющее время, в течение которого узел должен обновить блокировку на экземпляре.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-122">A Timespan value that specifies the time period in which the host must renew the lock on an instance.</span></span> <span data-ttu-id="5b1d8-123">Если узел не возобновит блокировку в указанный период времени, то экземпляр будет разблокирован и может быть принят другим узлом.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-123">If the host does not renew the lock in the specified time period, the instance is unlocked and may be picked up by another host.</span></span><br /><br /> <span data-ttu-id="5b1d8-124">При выгрузке рабочего процесса подразумевается, что было произведено его сохранение.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-124">Unloading a workflow implies that it is also persisted.</span></span> <span data-ttu-id="5b1d8-125">Если этот атрибут имеет значение ноль, экземпляр рабочего процесса сохраняется и выгружается сразу после рабочий процесс становится неактивным.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-125">If this attribute is set to zero the workflow instance is persisted and unloaded immediately after the workflow becomes idle.</span></span> <span data-ttu-id="5b1d8-126">Задав этому атрибуту значение TimeSpan.MaxValue фактически операция выгрузки будет отключена.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-126">Setting this attribute to TimeSpan.MaxValue effectively disables the unload operation.</span></span> <span data-ttu-id="5b1d8-127">Простаивающие экземпляры рабочего процесса не выгружаются.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-127">Idle workflow instances are never unloaded.</span></span>|  
+|<span data-ttu-id="5b1d8-128">instanceCompletionAction</span><span class="sxs-lookup"><span data-stu-id="5b1d8-128">instanceCompletionAction</span></span>|<span data-ttu-id="5b1d8-129">Значение, которое указывает, будут сохранены данные экземпляра рабочего процесса в хранилище сохраняемости после завершения работы экземпляра рабочего процесса или удалены на этом этапе.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-129">A value that specifies whether workflow instance data is kept in the persistence store after the workflow instance completes or if it is deleted at that point.</span></span> <span data-ttu-id="5b1d8-130">Это значение имеет тип <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-130">This value is of type <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.</span></span><br /><br /> <span data-ttu-id="5b1d8-131">Перечисленные действия состоят из удаления данных экземпляра из хранилища сохраняемости или отказа от удаления данных после завершения операции экземпляром.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-131">The enumerated actions consist of deleting the instance data from the persistence store or not deleting the instance data from the persistence store, when the instance has completed its operation.</span></span><br /><br /> <span data-ttu-id="5b1d8-132">Если экземпляры сохраняются после завершения, то это вызывает быстрый рост базы данных постоянного хранения, что влияет на производительность базы данных.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-132">Keeping instances after completion causes the persistence database to grow rapidly and this affects the performance of the database.</span></span> <span data-ttu-id="5b1d8-133">Следует настроить политику очищения базы данных для периодического удаления этих записей, чтобы гарантировать уровень производительности базы данных, удовлетворяющий требованиям пользователя.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-133">You should configure a database purge policy to delete these records periodically to ensure that the performance of the database is at the level that satisfy your performance requirements.</span></span>|  
+|<span data-ttu-id="5b1d8-134">instanceEncodingOption</span><span class="sxs-lookup"><span data-stu-id="5b1d8-134">instanceEncodingOption</span></span>|<span data-ttu-id="5b1d8-135">Необязательное значение, которое указывает, производится ли сжатие информации о состоянии экземпляра при использовании алгоритма GZip, прежде чем она будет сохранена в хранилище сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-135">An optional value that specifies  whether the instance state information is compressed using the GZip algorithm before the information is saved in the persistence store..</span></span> <span data-ttu-id="5b1d8-136">Это значение имеет тип `System.Activities.DurableInstancing.InstanceEncodingAction`.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-136">This value is of type `System.Activities.DurableInstancing.InstanceEncodingAction`.</span></span> <span data-ttu-id="5b1d8-137">Допустимые значения для этого свойства — «Нет», который указывает на отсутствие сжатия и «GZip», который указывает этот экземпляр данных сжат и с использованием алгоритма gzip.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-137">Possible values for this property are "None", which specifies no compression, and "GZip", which specifies that instance data is compressed and uses the gzip algorithm.</span></span>|  
+|<span data-ttu-id="5b1d8-138">instanceLockedExceptionAction</span><span class="sxs-lookup"><span data-stu-id="5b1d8-138">instanceLockedExceptionAction</span></span>|<span data-ttu-id="5b1d8-139">Значение, определяющее действие, которое возникает в ответ на исключение, если узел пытается заблокировать экземпляр, который в настоящий момент заблокирован другим узлом.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-139">A value that specifies the action that occurs in response to an exception that is thrown when the host tries to lock an instance because the instance is currently locked by another host.</span></span> <span data-ttu-id="5b1d8-140">Это значение имеет тип <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-140">This value is of type <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.</span></span><br /><br /> <span data-ttu-id="5b1d8-141">Допустимые варианты для данного поля: Нет (None), простой повтор (Basic Retry) и агрессивный повтор (Aggressive Retry).</span><span class="sxs-lookup"><span data-stu-id="5b1d8-141">The options allowed for this field are: None, Basic Retry, and Aggressive Retry.</span></span> <span data-ttu-id="5b1d8-142">По умолчанию используется значение None.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-142">The default value is None.</span></span> <span data-ttu-id="5b1d8-143">В следующем списке приводятся описания этих трех вариантов.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-143">The following list provides you with the descriptions for these three options:</span></span><br /><br /> <span data-ttu-id="5b1d8-144">— Нет.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-144">-   None.</span></span> <span data-ttu-id="5b1d8-145">Узел службы не пытается заблокировать экземпляр и передает исключение <xref:System.Runtime.DurableInstancing.InstanceLockedException> вызывающему.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-145">The service host does not attempt to lock the instance and passes the <xref:System.Runtime.DurableInstancing.InstanceLockedException> to the caller.</span></span><br /><span data-ttu-id="5b1d8-146">-Простой повтор.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-146">-   Basic Retry.</span></span> <span data-ttu-id="5b1d8-147">Узел службы повторно пытается заблокировать экземпляр с линейным интервалом повторений и передает исключение вызывающему в конце последовательности.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-147">The service host reattempts to lock the instance with a linear retry interval and passes the exception to the caller at the end of the sequence.</span></span><br /><span data-ttu-id="5b1d8-148">-Агрессивный повтор.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-148">-   Aggressive Retry.</span></span> <span data-ttu-id="5b1d8-149">Узел службы повторно пытается заблокировать экземпляр (с экспоненциально увеличивающейся задержкой) и передает исключение <xref:System.Runtime.DurableInstancing.InstanceLockedException> вызывающему в конце последовательности.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-149">The service host reattempts to lock the instance with an exponentially increasing delay and passes the <xref:System.Runtime.DurableInstancing.InstanceLockedException> to the caller at the end of the sequence.</span></span>|  
+|<span data-ttu-id="5b1d8-150">runnableInstancesDetectionPeriod</span><span class="sxs-lookup"><span data-stu-id="5b1d8-150">runnableInstancesDetectionPeriod</span></span>||  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="5b1d8-151">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="5b1d8-151">Child Elements</span></span>  
+ <span data-ttu-id="5b1d8-152">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-152">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="5b1d8-153">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="5b1d8-153">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<behavior\> для \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|<span data-ttu-id="5b1d8-154">Элемент</span><span class="sxs-lookup"><span data-stu-id="5b1d8-154">Element</span></span>|<span data-ttu-id="5b1d8-155">Описание</span><span class="sxs-lookup"><span data-stu-id="5b1d8-155">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="5b1d8-156">\<поведение > из \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="5b1d8-156">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="5b1d8-157">Указывает элемент поведения.</span><span class="sxs-lookup"><span data-stu-id="5b1d8-157">Specifies a behavior element.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>   
- <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>   
- <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>   
- [Хранилище экземпляров рабочих процессов SQL](../../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md)
+## <a name="see-also"></a><span data-ttu-id="5b1d8-158">См. также</span><span class="sxs-lookup"><span data-stu-id="5b1d8-158">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>  
+ <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>  
+ <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>  
+ [<span data-ttu-id="5b1d8-159">Хранилище экземпляров рабочих процессов SQL</span><span class="sxs-lookup"><span data-stu-id="5b1d8-159">SQL Workflow Instance Store</span></span>](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)

@@ -1,65 +1,73 @@
 ---
-title: "&lt;claimsAuthorizationManager&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimsAuthorizationManager&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4b4d86204d5f7225f167be125ce017488c851e98
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimsAuthorizationManager&gt;
-Регистрирует диспетчер авторизации заявок для входящих утверждений.  
+# <a name="ltclaimsauthorizationmanagergt"></a><span data-ttu-id="f59f2-102">&lt;claimsAuthorizationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="f59f2-102">&lt;claimsAuthorizationManager&gt;</span></span>
+<span data-ttu-id="f59f2-103">Регистрирует диспетчера авторизации утверждений для входящих утверждений.</span><span class="sxs-lookup"><span data-stu-id="f59f2-103">Registers a claims authorization manager for the incoming claims.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="f59f2-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="f59f2-104">\<system.identityModel></span></span>  
+<span data-ttu-id="f59f2-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="f59f2-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="f59f2-106">\<claimsAuthorizationManager ></span><span class="sxs-lookup"><span data-stu-id="f59f2-106">\<claimsAuthorizationManager></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="f59f2-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f59f2-107">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimsAuthorizationManager type = xs:string>  
-      <optionalConfigurationElements />  
-    </claimsAuthorizationManager>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type = xs:string>  
+      <optionalConfigurationElements />  
+    </claimsAuthorizationManager>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f59f2-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f59f2-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f59f2-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f59f2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="f59f2-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f59f2-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|type|Пользовательский тип, производный от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса.  Дополнительные сведения об указании `type` атрибута см [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|<span data-ttu-id="f59f2-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f59f2-111">Attribute</span></span>|<span data-ttu-id="f59f2-112">Описание</span><span class="sxs-lookup"><span data-stu-id="f59f2-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="f59f2-113">type</span><span class="sxs-lookup"><span data-stu-id="f59f2-113">type</span></span>|<span data-ttu-id="f59f2-114">Пользовательский тип, который является производным от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса.</span><span class="sxs-lookup"><span data-stu-id="f59f2-114">A custom type that derives from the <xref:System.Security.Claims.ClaimsAuthorizationManager> class.</span></span> <span data-ttu-id="f59f2-115">Дополнительные сведения о способах указания `type` см. в разделе [ссылок на пользовательские типы](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span><span class="sxs-lookup"><span data-stu-id="f59f2-115">For more information about how to specify the `type` attribute, see [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span>|  
   
-### Дочерние элементы  
- Если не `type` атрибут, или, если `type` атрибут ссылки на <xref:System.Security.Claims.ClaimsAuthenticationManager> класс, `<claimsAuthorizationManager>` элемент не принимает дочерние элементы; Тем не менее, классы, производные от <xref:System.Security.Claims.ClaimsAuthorizationManager> можно определить дочерние элементы конфигурации.  
+### <a name="child-elements"></a><span data-ttu-id="f59f2-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f59f2-116">Child Elements</span></span>  
+ <span data-ttu-id="f59f2-117">При наличии не `type` атрибут, или если `type` ссылки на атрибуты <xref:System.Security.Claims.ClaimsAuthenticationManager> класса `<claimsAuthorizationManager>` элемент не принимает дочерних элементов; Однако классы, производные от <xref:System.Security.Claims.ClaimsAuthorizationManager> можно определить дочерние элементы конфигурации.</span><span class="sxs-lookup"><span data-stu-id="f59f2-117">If there is no `type` attribute, or if the `type` attribute references the <xref:System.Security.Claims.ClaimsAuthenticationManager> class, the `<claimsAuthorizationManager>` element does not take child elements; however, classes derived from <xref:System.Security.Claims.ClaimsAuthorizationManager> can define child configuration elements.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="f59f2-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f59f2-118">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Задает параметры уровня службы удостоверений.|  
+|<span data-ttu-id="f59f2-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="f59f2-119">Element</span></span>|<span data-ttu-id="f59f2-120">Описание</span><span class="sxs-lookup"><span data-stu-id="f59f2-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="f59f2-121">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="f59f2-121">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="f59f2-122">Указывает параметры уровня службы удостоверений.</span><span class="sxs-lookup"><span data-stu-id="f59f2-122">Specifies service-level identity settings.</span></span>|  
   
-## Заметки  
- Поведение по умолчанию, предоставляемые через <xref:System.Security.Claims.ClaimsAuthorizationManager> класса всегда выполняет авторизацию входящих утверждений.  Если не `type` указанный атрибут или, если `type` атрибут указывает, <xref:System.Security.Claims.ClaimsAuthorizationManager> класс, `<claimsAuthorizationManager>` дочерние элементы элемента не принимает.  Можно указать `type` атрибут, чтобы зарегистрировать тип производным от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса, чтобы реализовать пользовательское поведение.  Производные классы поддерживают настройку с помощью дочерних элементов `<claimsAuthorizationManager>` элемент, переопределяя <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> метод для обработки этих элементов.  Схемы, определенные для дочерних элементов — конструктор класса.  
+## <a name="remarks"></a><span data-ttu-id="f59f2-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="f59f2-123">Remarks</span></span>  
+ <span data-ttu-id="f59f2-124">Поведение по умолчанию, предоставленные с помощью <xref:System.Security.Claims.ClaimsAuthorizationManager> класса всегда разрешает входящие утверждения.</span><span class="sxs-lookup"><span data-stu-id="f59f2-124">The default behavior provided through the <xref:System.Security.Claims.ClaimsAuthorizationManager> class always authorizes the incoming claims.</span></span> <span data-ttu-id="f59f2-125">Если не `type` указан атрибут или если `type` атрибут задает <xref:System.Security.Claims.ClaimsAuthorizationManager> класса, `<claimsAuthorizationManager>` элемент не принимает дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="f59f2-125">If no `type` attribute is specified or if the `type` attribute specifies the <xref:System.Security.Claims.ClaimsAuthorizationManager> class, the `<claimsAuthorizationManager>` element does not take child elements.</span></span> <span data-ttu-id="f59f2-126">Можно указать `type` атрибут, чтобы зарегистрировать тип производным от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса, чтобы реализовать пользовательское поведение.</span><span class="sxs-lookup"><span data-stu-id="f59f2-126">You can specify the `type` attribute to register a type derived from the <xref:System.Security.Claims.ClaimsAuthorizationManager> class to implement custom behavior.</span></span> <span data-ttu-id="f59f2-127">Производные классы могут поддерживать конфигурацию с помощью дочерних элементов `<claimsAuthorizationManager>` элемент путем переопределения <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> метод для обработки этих элементов.</span><span class="sxs-lookup"><span data-stu-id="f59f2-127">Derived classes can support configuration through child elements of the `<claimsAuthorizationManager>` element by overriding the <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> method to handle these elements.</span></span> <span data-ttu-id="f59f2-128">Схемы, определенных для дочерних элементов зависит от конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="f59f2-128">The schema defined for the child elements is up to the designer of the class.</span></span>  
   
 > [!IMPORTANT]
->  При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе заявок в коде конфигурации identity, на который ссылается `<federationConfiguration>` элемент настраивает диспетчер авторизации заявок и политики, который используется для принятия решения об авторизации.  Это верно даже в ситуациях, которые не являются пассивный веб\-сценариев, например приложения Windows Communication Foundation \(WCF\) или приложение, которое не является веб.  Если приложение не является пассивным веб\-приложения `<claimsAuthorizationManager>` элемент \(и политики его дочерних элементов, если они есть\) являются только параметры, применяемые конфигурации указанного удостоверения.  Другие параметры не обрабатываются.  Дополнительные сведения см. в описании элемента [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).  
+>  <span data-ttu-id="f59f2-129">При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений в коде, на который ссылается конфигурация удостоверений `<federationConfiguration>` элемент настраивает диспетчера авторизации утверждений и политики, которая используется, чтобы сделать решения об авторизации.</span><span class="sxs-lookup"><span data-stu-id="f59f2-129">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the identity configuration that is referenced by the `<federationConfiguration>` element configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="f59f2-130">Это верно даже в случаях, не пассивный сценариях веб-, например приложений Windows Communication Foundation (WCF) или приложение, которое не является веб сервера.</span><span class="sxs-lookup"><span data-stu-id="f59f2-130">This is true, even in scenarios that are not passive Web scenarios, for example Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="f59f2-131">Если приложение не пассивное веб-приложение `<claimsAuthorizationManager>` элемент (и политики его дочерние элементы, если он имеется) указанное удостоверение конфигурации являются только параметры, применяемые.</span><span class="sxs-lookup"><span data-stu-id="f59f2-131">If the application is not a passive Web application, the `<claimsAuthorizationManager>` element (and its child policy elements, if present) of the referenced identity configuration are the only settings applied.</span></span> <span data-ttu-id="f59f2-132">Все остальные параметры игнорируются.</span><span class="sxs-lookup"><span data-stu-id="f59f2-132">All other settings are ignored.</span></span> <span data-ttu-id="f59f2-133">Дополнительные сведения см. в разделе [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="f59f2-133">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
   
- Этот элемент задает <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=fullName> свойства.  
+ <span data-ttu-id="f59f2-134">Этот элемент задает <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> свойства.</span><span class="sxs-lookup"><span data-stu-id="f59f2-134">This element sets the <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> property.</span></span>  
   
-## Пример  
- Следующий код XML показывает конфигурацию для утверждения авторизации диспетчер, который реализует политику состоят из пар ресурса действие каждый из которых задает логические сочетания утверждений, запрашивающая сторона должен обладать действие на ресурс.  Код, реализующий диспетчер авторизации заявок, может использовать эту политику можно найти в `ClaimsBasedAuthorization` образца.  
+## <a name="example"></a><span data-ttu-id="f59f2-135">Пример</span><span class="sxs-lookup"><span data-stu-id="f59f2-135">Example</span></span>  
+ <span data-ttu-id="f59f2-136">Следующий код XML показывает конфигурацию для авторизации утверждений диспетчер, который реализует политики состоит из пары действие ресурса, каждый из которых определяет логическое сочетания утверждения, запрашивающая сторона должна иметь для выполнения действия с ресурсом.</span><span class="sxs-lookup"><span data-stu-id="f59f2-136">The following XML shows the configuration for a claims authorization manager that implements policy composed of resource-action pairs each of which specifies boolean combinations of the claims that a requestor must possess to perform the action on the resource.</span></span> <span data-ttu-id="f59f2-137">Код, который реализует диспетчера авторизации утверждений, может использовать эту политику можно найти в `ClaimsBasedAuthorization` образца.</span><span class="sxs-lookup"><span data-stu-id="f59f2-137">The code that implements the claims authorization manager capable of using this policy can be found in the `ClaimsBasedAuthorization` sample.</span></span>  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration>  
       <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  

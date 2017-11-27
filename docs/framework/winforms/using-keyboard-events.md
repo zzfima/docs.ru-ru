@@ -1,53 +1,54 @@
 ---
-title: "Using Keyboard Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "KeyPress event"
-  - "keyboards, keyboard events"
-  - "KeyUp event"
-  - "KeyDown event"
-  - "keyboard events"
-  - "events [Windows Forms], keyboard"
+title: "Использование событий клавиатуры"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- KeyPress event [Windows Forms]
+- keyboards [Windows Forms], keyboard events
+- KeyUp event
+- KeyDown event
+- keyboard events
+- events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 19bad48188a039baeeb6365a2cd38671f83fca4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Using Keyboard Events
-В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры.  В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  См. также [Обзор обработчиков событий \(Windows Forms\)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)) и [Общие сведения о событиях \(Windows Forms\)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+# <a name="using-keyboard-events"></a><span data-ttu-id="6218d-102">Использование событий клавиатуры</span><span class="sxs-lookup"><span data-stu-id="6218d-102">Using Keyboard Events</span></span>
+<span data-ttu-id="6218d-103">В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры.</span><span class="sxs-lookup"><span data-stu-id="6218d-103">Most Windows Forms programs process keyboard input by handling the keyboard events.</span></span> <span data-ttu-id="6218d-104">В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.</span><span class="sxs-lookup"><span data-stu-id="6218d-104">This topic provides an overview of the keyboard events, including details on when to use each event and the data that is supplied for each event.</span></span>  <span data-ttu-id="6218d-105">См. также [Обзор обработчиков событий (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="6218d-105">Also see [Event Handlers Overview (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).</span></span>  
   
-## События клавиатуры  
- Windows Forms содержит два события, которые возникают при нажатии пользователем клавиши клавиатуры, и одно событие, которое возникает при отпускании пользователем клавиши.  
+## <a name="keyboard-events"></a><span data-ttu-id="6218d-106">События клавиатуры</span><span class="sxs-lookup"><span data-stu-id="6218d-106">Keyboard Events</span></span>  
+ <span data-ttu-id="6218d-107">Windows Forms содержит два события, которые возникают при нажатии пользователем клавиши клавиатуры, и одно событие, которое возникает при отпускании пользователем клавиши.</span><span class="sxs-lookup"><span data-stu-id="6218d-107">Windows Forms provides two events that occur when a user presses a keyboard key and one event when a user releases a keyboard key:</span></span>  
   
--   Событие <xref:System.Windows.Forms.Control.KeyDown> возникает один раз  
+-   <span data-ttu-id="6218d-108">Событие <xref:System.Windows.Forms.Control.KeyDown> возникает один раз</span><span class="sxs-lookup"><span data-stu-id="6218d-108">The <xref:System.Windows.Forms.Control.KeyDown> event occurs once</span></span>  
   
--   Событие <xref:System.Windows.Forms.Control.KeyPress>, которое может встречаться несколько раз, если пользователь удерживает нажатую клавишу.  
+-   <span data-ttu-id="6218d-109">Событие <xref:System.Windows.Forms.Control.KeyPress>, которое может встречаться несколько раз, если пользователь удерживает нажатую клавишу.</span><span class="sxs-lookup"><span data-stu-id="6218d-109">The <xref:System.Windows.Forms.Control.KeyPress> event, which can occur multiple times when a user holds down the same key.</span></span>  
   
--   Событие <xref:System.Windows.Forms.Control.KeyUp> возникает один раз при отпускании клавиши.  
+-   <span data-ttu-id="6218d-110">Событие <xref:System.Windows.Forms.Control.KeyUp> возникает один раз при отпускании клавиши.</span><span class="sxs-lookup"><span data-stu-id="6218d-110">The <xref:System.Windows.Forms.Control.KeyUp> event occurs once when a user releases a key.</span></span>  
   
- Когда пользователь нажимает клавишу, Windows Forms определяет, какое событие вызвать в зависимости от того, на что указывает сообщение клавиатуры — на клавишу с символом или на физическую клавишу.  Дополнительные сведения о символьных и физических клавишах см. в разделе [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+ <span data-ttu-id="6218d-111">Когда пользователь нажимает клавишу, Windows Forms определяет, какое событие вызвать в зависимости от того, на что указывает сообщение клавиатуры — на клавишу с символом или на физическую клавишу.</span><span class="sxs-lookup"><span data-stu-id="6218d-111">When a user presses a key, Windows Forms determines which event to raise based on whether the keyboard message specifies a character key or a physical key.</span></span> <span data-ttu-id="6218d-112">Дополнительные сведения о символьных и физических клавишах см. в разделе [принцип работы ввода с клавиатуры](../../../docs/framework/winforms/how-keyboard-input-works.md).</span><span class="sxs-lookup"><span data-stu-id="6218d-112">For more information about character and physical keys, see [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).</span></span>  
   
- В следующей таблице описаны указанные три метода.  
+ <span data-ttu-id="6218d-113">В следующей таблице описаны указанные три метода.</span><span class="sxs-lookup"><span data-stu-id="6218d-113">The following table describes the three keyboard events.</span></span>  
   
-|События клавиатуры|Описание|Результаты|  
-|------------------------|--------------|----------------|  
-|<xref:System.Windows.Forms.Control.KeyDown>|Это событие возникает, когда пользователь нажимает физическую клавишу.|Обработчик <xref:System.Windows.Forms.Control.KeyDown> получает:<br /><br /> <ul><li>Параметр <xref:System.Windows.Forms.KeyEventArgs>, который предоставляет свойство <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> \(указывающее на физическую клавишу клавиатуры\).</li><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> \(SHIFT, CTRL или ALT\).</li><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> \(которое объединяет код клавиши и модификатор\).  Параметр <xref:System.Windows.Forms.KeyEventArgs> также предоставляет:<br /><br /> <ul><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>, которое может быть задано для предотвращения получения кода клавиши базовым элементом управления.</li><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A>, которое может использоваться для подавления событий <xref:System.Windows.Forms.Control.KeyPress> и <xref:System.Windows.Forms.Control.KeyUp> для данного нажатия клавиши.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|Это событие возникает если в результате нажатия клавиши или клавиш получается символ.  Например, пользователь нажимает клавиши SHIFT и строчную "a", в результате получается символ заглавной буквы "A".|<xref:System.Windows.Forms.Control.KeyPress> возникает после <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>Обработчик <xref:System.Windows.Forms.Control.KeyPress> получает:</li><li>Параметр <xref:System.Windows.Forms.KeyPressEventArgs>, который содержит код символа нажатой клавиши.  Этот код является уникальным для каждой комбинации клавиш символа и модификатора.<br /><br />     Например клавиша "A" создаст<br /><br /> <ul><li>код символа 65, если она нажата при нажатой клавише "SHIFT"</li><li>Или клавиша CAPS LOCK вернет код 97, если она нажата сама по себе,</li><li>И код 1, если она нажата совместно с клавишей CTRL.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyUp>|Это событие возникает, когда пользователь отпускает физическую клавишу.|Обработчик <xref:System.Windows.Forms.Control.KeyUp> получает:<br /><br /> <ul><li>Параметр <xref:System.Windows.Forms.KeyEventArgs>,<br /><br /> <ul><li>который предоставляет свойство <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> \(указывающее на физическую клавишу клавиатуры\).</li><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> \(SHIFT, CTRL или ALT\).</li><li>Свойство <xref:System.Globalization.SortKey.KeyData%2A> \(которое объединяет код клавиши и модификатор\).</li></ul></li></ul>|  
+|<span data-ttu-id="6218d-114">События клавиатуры</span><span class="sxs-lookup"><span data-stu-id="6218d-114">Keyboard event</span></span>|<span data-ttu-id="6218d-115">Описание</span><span class="sxs-lookup"><span data-stu-id="6218d-115">Description</span></span>|<span data-ttu-id="6218d-116">Результаты</span><span class="sxs-lookup"><span data-stu-id="6218d-116">Results</span></span>|  
+|--------------------|-----------------|-------------|  
+|<xref:System.Windows.Forms.Control.KeyDown>|<span data-ttu-id="6218d-117">Это событие возникает, когда пользователь нажимает физическую клавишу.</span><span class="sxs-lookup"><span data-stu-id="6218d-117">This event is raised when a user presses a physical key.</span></span>|<span data-ttu-id="6218d-118">Обработчик <xref:System.Windows.Forms.Control.KeyDown> получает:</span><span class="sxs-lookup"><span data-stu-id="6218d-118">The handler for <xref:System.Windows.Forms.Control.KeyDown> receives:</span></span><br /><br /> <ul><li><span data-ttu-id="6218d-119">Параметр <xref:System.Windows.Forms.KeyEventArgs>, который предоставляет свойство <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (указывающее на физическую клавишу клавиатуры).</span><span class="sxs-lookup"><span data-stu-id="6218d-119">A <xref:System.Windows.Forms.KeyEventArgs> parameter, which provides the <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> property (which specifies a physical keyboard button).</span></span></li><li><span data-ttu-id="6218d-120">Свойство <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (SHIFT, CTRL или ALT).</span><span class="sxs-lookup"><span data-stu-id="6218d-120">The <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property (SHIFT, CTRL, or ALT).</span></span></li><li><span data-ttu-id="6218d-121">Свойство <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> (которое объединяет код клавиши и модификатор).</span><span class="sxs-lookup"><span data-stu-id="6218d-121">The <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> property (which combines the key code and modifier).</span></span> <span data-ttu-id="6218d-122">Параметр <xref:System.Windows.Forms.KeyEventArgs> также предоставляет:</span><span class="sxs-lookup"><span data-stu-id="6218d-122">The <xref:System.Windows.Forms.KeyEventArgs> parameter also provides:</span></span><br /><br /> <ul><li><span data-ttu-id="6218d-123">Свойство <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>, которое может быть задано для предотвращения получения кода клавиши базовым элементом управления.</span><span class="sxs-lookup"><span data-stu-id="6218d-123">The <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> property, which can be set to prevent the underlying control from receiving the key.</span></span></li><li><span data-ttu-id="6218d-124">Свойство <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A>, которое может использоваться для подавления событий <xref:System.Windows.Forms.Control.KeyPress> и <xref:System.Windows.Forms.Control.KeyUp> для данного нажатия клавиши.</span><span class="sxs-lookup"><span data-stu-id="6218d-124">The <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> property, which can be used to suppress the <xref:System.Windows.Forms.Control.KeyPress> and <xref:System.Windows.Forms.Control.KeyUp> events for that keystroke.</span></span></li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|<span data-ttu-id="6218d-125">Это событие возникает если в результате нажатия клавиши или клавиш получается символ.</span><span class="sxs-lookup"><span data-stu-id="6218d-125">This event is raised when the key or keys pressed result in a character.</span></span> <span data-ttu-id="6218d-126">Например, пользователь нажимает клавиши SHIFT и строчную "a", в результате получается символ заглавной буквы "A".</span><span class="sxs-lookup"><span data-stu-id="6218d-126">For example, a user presses SHIFT and the lowercase "a" keys, which result in a capital letter "A" character.</span></span>|<span data-ttu-id="6218d-127"><xref:System.Windows.Forms.Control.KeyPress> возникает после <xref:System.Windows.Forms.Control.KeyDown>.</span><span class="sxs-lookup"><span data-stu-id="6218d-127"><xref:System.Windows.Forms.Control.KeyPress> is raised after <xref:System.Windows.Forms.Control.KeyDown>.</span></span><br /><br /> <ul><li><span data-ttu-id="6218d-128">Обработчик <xref:System.Windows.Forms.Control.KeyPress> получает:</span><span class="sxs-lookup"><span data-stu-id="6218d-128">The handler for <xref:System.Windows.Forms.Control.KeyPress> receives:</span></span></li><li><span data-ttu-id="6218d-129">Параметр <xref:System.Windows.Forms.KeyPressEventArgs>, который содержит код символа нажатой клавиши.</span><span class="sxs-lookup"><span data-stu-id="6218d-129">A <xref:System.Windows.Forms.KeyPressEventArgs> parameter, which contains the character code of the key that was pressed.</span></span> <span data-ttu-id="6218d-130">Этот код является уникальным для каждой комбинации клавиш символа и модификатора.</span><span class="sxs-lookup"><span data-stu-id="6218d-130">This character code is unique for every combination of a character key and a modifier key.</span></span><br /><br />     <span data-ttu-id="6218d-131">Например клавиша "A" создаст </span><span class="sxs-lookup"><span data-stu-id="6218d-131">For example, the "A" key will generate:</span></span><br /><br /> <ul><li><span data-ttu-id="6218d-132">код символа 65, если она нажата при нажатой клавише "SHIFT"</span><span class="sxs-lookup"><span data-stu-id="6218d-132">The character code 65, if it is pressed with the SHIFT key</span></span></li><li><span data-ttu-id="6218d-133">Или клавиша CAPS LOCK вернет код 97, если она нажата сама по себе,</span><span class="sxs-lookup"><span data-stu-id="6218d-133">Or the CAPS LOCK key, 97 if it is pressed by itself,</span></span></li><li><span data-ttu-id="6218d-134">И код 1, если она нажата совместно с клавишей CTRL.</span><span class="sxs-lookup"><span data-stu-id="6218d-134">And 1, if it is pressed with the CTRL key.</span></span></li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyUp>|<span data-ttu-id="6218d-135">Это событие возникает, когда пользователь отпускает физическую клавишу.</span><span class="sxs-lookup"><span data-stu-id="6218d-135">This event is raised when a user releases a physical key.</span></span>|<span data-ttu-id="6218d-136">Обработчик <xref:System.Windows.Forms.Control.KeyUp> получает:</span><span class="sxs-lookup"><span data-stu-id="6218d-136">The handler for <xref:System.Windows.Forms.Control.KeyUp> receives:</span></span><br /><br /> <ul><li><span data-ttu-id="6218d-137">Параметр <xref:System.Windows.Forms.KeyEventArgs>,</span><span class="sxs-lookup"><span data-stu-id="6218d-137">A <xref:System.Windows.Forms.KeyEventArgs> parameter:</span></span><br /><br /> <ul><li><span data-ttu-id="6218d-138">который предоставляет свойство <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (указывающее на физическую клавишу клавиатуры).</span><span class="sxs-lookup"><span data-stu-id="6218d-138">Which provides the <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> property (which specifies a physical keyboard button).</span></span></li><li><span data-ttu-id="6218d-139">Свойство <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (SHIFT, CTRL или ALT).</span><span class="sxs-lookup"><span data-stu-id="6218d-139">The <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property (SHIFT, CTRL, or ALT).</span></span></li><li><span data-ttu-id="6218d-140">Свойство <xref:System.Globalization.SortKey.KeyData%2A> (которое объединяет код клавиши и модификатор).</span><span class="sxs-lookup"><span data-stu-id="6218d-140">The <xref:System.Globalization.SortKey.KeyData%2A> property (which combines the key code and modifier).</span></span></li></ul></li></ul>|  
   
-## См. также  
- [Keyboard Input in a Windows Forms Application](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md)   
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="6218d-141">См. также</span><span class="sxs-lookup"><span data-stu-id="6218d-141">See Also</span></span>  
+ [<span data-ttu-id="6218d-142">Ввод с клавиатуры в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6218d-142">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="6218d-143">Принцип работы ввода с клавиатуры</span><span class="sxs-lookup"><span data-stu-id="6218d-143">How Keyboard Input Works</span></span>](../../../docs/framework/winforms/how-keyboard-input-works.md)  
+ [<span data-ttu-id="6218d-144">Ввод данных мышью в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6218d-144">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

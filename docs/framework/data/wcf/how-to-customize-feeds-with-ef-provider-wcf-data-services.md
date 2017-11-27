@@ -1,51 +1,54 @@
 ---
-title: "Как настроить каналы с помощью поставщика Entity Framework (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, настройка"
-  - "Службы WCF Data Services, настройка каналов"
+title: "Практическое руководство. Настройка каналов с использованием поставщика Entity Framework (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, customizing
+- WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 44dfa0a8371ff8184462e15da71f8a9f0f9767d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как настроить каналы с помощью поставщика Entity Framework (службы WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub.  Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework.  Для получения дополнительной информации см. [Настройка канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a><span data-ttu-id="27a7b-102">Практическое руководство. Настройка каналов с использованием поставщика Entity Framework (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="27a7b-102">How to: Customize Feeds with the Entity Framework Provider (WCF Data Services)</span></span>
+<span data-ttu-id="27a7b-103">Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub.</span><span class="sxs-lookup"><span data-stu-id="27a7b-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="27a7b-104">Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="27a7b-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined in an .edmx file by using the Entity Framework provider.</span></span> <span data-ttu-id="27a7b-105">Дополнительные сведения см. в разделе [настройки веб-канал](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="27a7b-105">For more information, see [Feed Customization](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).</span></span>  
   
- В этом разделе мы вручную изменим сформированный программой файл EDMX, содержащий модель данных.  Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать этот файл.  Дополнительные сведения о файле EDMX, порождаемом инструментальными средствами модели EDM, см. в разделе [.edmx File Overview](http://msdn.microsoft.com/ru-ru/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.  Эта служба и клиентские классы данных создаются после выполнения действий, описанных в разделе [Краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ <span data-ttu-id="27a7b-106">В этом разделе мы вручную изменим сформированный программой файл EDMX, содержащий модель данных.</span><span class="sxs-lookup"><span data-stu-id="27a7b-106">In this topic you will manually modify the tool-generated .edmx file that contains the data model.</span></span> <span data-ttu-id="27a7b-107">Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать этот файл.</span><span class="sxs-lookup"><span data-stu-id="27a7b-107">You must manually modify the file because extensions to the data model are not supported by the Entity Designer.</span></span> <span data-ttu-id="27a7b-108">Дополнительные сведения о EDMX-файл, создаваемый средства модели EDM см. в разделе [.edmx Обзор файла](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span><span class="sxs-lookup"><span data-stu-id="27a7b-108">For more information about the .edmx file that the Entity Data Model tools generate, see [.edmx File Overview](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).</span></span> <span data-ttu-id="27a7b-109">Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.</span><span class="sxs-lookup"><span data-stu-id="27a7b-109">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="27a7b-110">Эта служба и клиентские классы данных создаются после выполнения [краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="27a7b-110">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-### Изменение файла Northwind.edmx вручную для добавления атрибутов настройки каналов  
+### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a><span data-ttu-id="27a7b-111">Изменение файла Northwind.edmx вручную для добавления атрибутов настройки каналов</span><span class="sxs-lookup"><span data-stu-id="27a7b-111">To manually modify the Northwind.edmx file to add feed customization attributes</span></span>  
   
-1.  В окне **Обозреватель решений** щелкните правой кнопкой мыши файл `Northwind.edmx` и выберите команду **Открыть с помощью**.  
+1.  <span data-ttu-id="27a7b-112">В **обозревателе решений**, щелкните правой кнопкой мыши `Northwind.edmx` файла и нажмите кнопку **открыть с помощью**.</span><span class="sxs-lookup"><span data-stu-id="27a7b-112">In **Solution Explorer**, right-click the `Northwind.edmx` file, and then click **Open with**.</span></span>  
   
-2.  В диалоговом окне **Открыть с помощью — Northwind.edmx** выберите **Редактор XML** и нажмите кнопку **ОК**.  
+2.  <span data-ttu-id="27a7b-113">В **открыть с помощью — Northwind.edmx** выберите **редактора XML**, а затем нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="27a7b-113">In the **Open With - Northwind.edmx** dialog box, select **XML Editor**, and then click **OK**.</span></span>  
   
-3.  Найдите элемент `ConceptualModels` и замените имеющийся тип сущности `Customers` на элемент, содержащий атрибуты сопоставления для настройки канала.  
+3.  <span data-ttu-id="27a7b-114">Найдите элемент `ConceptualModels` и замените имеющийся тип сущности `Customers` на элемент, содержащий атрибуты сопоставления для настройки канала.</span><span class="sxs-lookup"><span data-stu-id="27a7b-114">Locate the `ConceptualModels` element and replace the existing `Customers` entity type with the following element that contains feed customization mapping attributes:</span></span>  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  Сохраните изменения и закройте файл Northwind.edmx.  
+4.  <span data-ttu-id="27a7b-115">Сохраните изменения и закройте файл Northwind.edmx.</span><span class="sxs-lookup"><span data-stu-id="27a7b-115">Save changes and close the Northwind.edmx file.</span></span>  
   
-5.  Щелкните файл Northwind.edmx правой кнопкой мыши и выберите команду **Пользовательское средство**. \(Необязательно.\)  
+5.  <span data-ttu-id="27a7b-116">(Необязательно) Щелкните правой кнопкой мыши файл Northwind.edmx и нажмите кнопку **запустить пользовательский инструмент**.</span><span class="sxs-lookup"><span data-stu-id="27a7b-116">(Optional) Right-click the Northwind.edmx file and then click **Run Custom Tool**.</span></span>  
   
-     При этом будет повторно сформирован файл уровня объектов, который может потребоваться.  
+     <span data-ttu-id="27a7b-117">При этом будет повторно сформирован файл уровня объектов, который может потребоваться.</span><span class="sxs-lookup"><span data-stu-id="27a7b-117">This regenerates the object layer file, which may be required.</span></span>  
   
-6.  Перекомпилируйте проект.  
+6.  <span data-ttu-id="27a7b-118">Перекомпилируйте проект.</span><span class="sxs-lookup"><span data-stu-id="27a7b-118">Recompile the project.</span></span>  
   
-## Пример  
- Предыдущий пример возвращает следующий результат для URI `http://myservice/` `Northwind.svc/Customers('ALFKI')`.  
+## <a name="example"></a><span data-ttu-id="27a7b-119">Пример</span><span class="sxs-lookup"><span data-stu-id="27a7b-119">Example</span></span>  
+ <span data-ttu-id="27a7b-120">Предыдущий пример возвращает следующий результат для URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span><span class="sxs-lookup"><span data-stu-id="27a7b-120">The previous example returns the following result for the URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.</span></span>  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## См. также  
- [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="27a7b-121">См. также</span><span class="sxs-lookup"><span data-stu-id="27a7b-121">See Also</span></span>  
+ [<span data-ttu-id="27a7b-122">Поставщик Entity Framework</span><span class="sxs-lookup"><span data-stu-id="27a7b-122">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

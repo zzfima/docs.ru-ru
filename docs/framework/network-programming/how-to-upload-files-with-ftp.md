@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b90049c11e8eb1113155a400b7af159f2b6938ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 08002bf223d96d49cffb67ec744659747fa49e26
+ms.sourcegitcommit: 32f5e1db8755ed7dfac0b4ec764fa809e5a7548c
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/25/2017
 ---
-# <a name="how-to-upload-files-with-ftp"></a>Практическое руководство. Отправка файлов с использованием FTP
-В этом примере показано, как отправить файл на FTP-сервер.  
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="0224f-102">Практическое руководство. Отправка файлов с использованием FTP</span><span class="sxs-lookup"><span data-stu-id="0224f-102">How to: Upload Files with FTP</span></span>
+<span data-ttu-id="0224f-103">В этом примере показано, как отправить файл на FTP-сервер.</span><span class="sxs-lookup"><span data-stu-id="0224f-103">This sample shows how to upload a file to an FTP server.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="0224f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="0224f-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -63,18 +57,16 @@ namespace Examples.System.Net
             Console.WriteLine("Upload File Complete, status {0}", response.StatusDescription);  
   
             response.Close();  
-            }  
         }  
     }  
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="0224f-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="0224f-105">Compiling the Code</span></span>  
+ <span data-ttu-id="0224f-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="0224f-106">This example requires:</span></span>  
   
--   Ссылки на пространство имен **System.Net**.  
+-   <span data-ttu-id="0224f-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="0224f-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a>Отказоустойчивость  
+## <a name="robust-programming"></a><span data-ttu-id="0224f-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="0224f-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework
-
+## <a name="net-framework-security"></a><span data-ttu-id="0224f-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0224f-109">.NET Framework Security</span></span>

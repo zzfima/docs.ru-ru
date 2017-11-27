@@ -1,43 +1,44 @@
 ---
-title: "Поддержка специальных возможностей в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms — элементы управления, специальные возможности"
-  - "специальные возможности, элементы управления Windows Forms"
+title: "Поддержка специальных возможностей в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, accessibility
+- accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 94296e623407aad2fecb52b9e6ece7500778931b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Поддержка специальных возможностей в Windows Forms
-Специальные возможности Windows Forms позволяют вам сделать приложение доступным самым разным пользователям.  
+# <a name="windows-forms-accessibility"></a><span data-ttu-id="48dbd-102">Поддержка специальных возможностей в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="48dbd-102">Windows Forms Accessibility</span></span>
+<span data-ttu-id="48dbd-103">Специальные возможности Windows Forms позволяют вам сделать приложение доступным самым разным пользователям.</span><span class="sxs-lookup"><span data-stu-id="48dbd-103">The accessibility functionality of Windows Forms allows you to make your application available to a wide variety of users.</span></span>  
   
-## В этом подразделе  
- [Пошаговое руководство. Создание Windows\-приложения с поддержкой специальных возможностей](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
- Описывает все функции, которые вам следует поддерживать для предоставления специальных возможностей.  
+## <a name="in-this-section"></a><span data-ttu-id="48dbd-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="48dbd-104">In This Section</span></span>  
+ [<span data-ttu-id="48dbd-105">Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей</span><span class="sxs-lookup"><span data-stu-id="48dbd-105">Walkthrough: Creating an Accessible Windows-based Application</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
+ <span data-ttu-id="48dbd-106">Описывает все функции, которые вам следует поддерживать для предоставления специальных возможностей.</span><span class="sxs-lookup"><span data-stu-id="48dbd-106">Describes all of the features you should support to increase accessibility.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="48dbd-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="48dbd-107">Reference</span></span>  
  <xref:Accessibility>  
- Пространство имен, содержащее набор классов, связанных со специальными возможностями.  
+ <span data-ttu-id="48dbd-108">Пространство имен, содержащее набор классов, связанных со специальными возможностями.</span><span class="sxs-lookup"><span data-stu-id="48dbd-108">A namespace containing a number of classes related to accessibility.</span></span>  
   
  <xref:System.Windows.Forms.AccessibleObject>  
- Предоставляет сведения, которые приложения, предоставляющие специальные возможности, используют при настройке пользовательского интерфейса приложения для пользователей с ограниченными возможностями.  
+ <span data-ttu-id="48dbd-109">Предоставляет сведения, которые приложения, предоставляющие специальные возможности, используют при настройке пользовательского интерфейса приложения для пользователей с ограниченными возможностями.</span><span class="sxs-lookup"><span data-stu-id="48dbd-109">Provides information that accessibility applications use to adjust an application's user interface (UI) for users with impairments.</span></span>  
   
-## Связанные подразделы  
- [Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Описывает, как предоставить сведения, которые элементы управления Windows Forms могут использовать для помощи людям с ограниченными возможностями.  
+## <a name="related-sections"></a><span data-ttu-id="48dbd-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="48dbd-110">Related Sections</span></span>  
+ [<span data-ttu-id="48dbd-111">Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="48dbd-111">Providing Accessibility Information for Controls on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ <span data-ttu-id="48dbd-112">Описывает, как предоставить сведения, которые элементы управления Windows Forms могут использовать для помощи людям с ограниченными возможностями.</span><span class="sxs-lookup"><span data-stu-id="48dbd-112">Describes how to supply information that Windows Forms controls can use to assist users with impairments.</span></span>  
   
- [Automatic Scaling in Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
- Описывает, как заставить приложение Windows Forms реагировать на изменение размера шрифта в системе.
+ [<span data-ttu-id="48dbd-113">Автоматическое масштабирование в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="48dbd-113">Automatic Scaling in Windows Forms</span></span>](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
+ <span data-ttu-id="48dbd-114">Описывает, как заставить приложение Windows Forms реагировать на изменение размера шрифта в системе.</span><span class="sxs-lookup"><span data-stu-id="48dbd-114">Describes how to make your Windows Forms application react to changes in the system font size.</span></span>

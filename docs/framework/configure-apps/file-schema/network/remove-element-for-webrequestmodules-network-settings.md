@@ -1,80 +1,82 @@
 ---
-title: "Элемент &lt;remove&gt; для webRequestModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> - элемент, webRequestModules"
-  - "<webRequestModules>, remove - элемент"
-  - "remove - элемент, webRequestModules"
-  - "webRequestModules, remove - элемент"
+title: "&lt;Удалить&gt; элемент для webRequestModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- remove element, webRequestModules
+- webRequestModules, remove element
+- <remove> element, webRequestModules
+- <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 43f0d30f8c18c4755f31d0c851c773207bc15b78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;remove&gt; для webRequestModules (параметры сети)
-Удаляет из приложения пользовательский модуль веб\-запросов.  
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="f6e03-102">&lt;Удалить&gt; элемент для webRequestModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="f6e03-102">&lt;remove&gt; Element for webRequestModules (Network Settings)</span></span>
+<span data-ttu-id="f6e03-103">Удаляет пользовательский модуль веб-запросов из приложения.</span><span class="sxs-lookup"><span data-stu-id="f6e03-103">Removes a custom Web request module from the application.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="f6e03-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f6e03-104">\<configuration></span></span>  
+<span data-ttu-id="f6e03-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="f6e03-105">\<system.net></span></span>  
+<span data-ttu-id="f6e03-106">\<webRequestModules ></span><span class="sxs-lookup"><span data-stu-id="f6e03-106">\<webRequestModules></span></span>  
+<span data-ttu-id="f6e03-107">\<Удалите ></span><span class="sxs-lookup"><span data-stu-id="f6e03-107">\<remove></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="f6e03-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f6e03-108">Syntax</span></span>  
   
-      <remove   
-  name = "URI prefix"   
+```xml  
+<remove   
+  prefix="URI prefix"   
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f6e03-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f6e03-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f6e03-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f6e03-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="f6e03-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f6e03-111">Attributes</span></span>  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`name`|Префикс URI для запросов, обрабатываемых данным модулем веб\-запросов.|  
+|<span data-ttu-id="f6e03-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="f6e03-112">**Attribute**</span></span>|<span data-ttu-id="f6e03-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="f6e03-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`prefix`|<span data-ttu-id="f6e03-114">Префикс URI для запросов, обрабатываемых этот модуль веб-запросов.</span><span class="sxs-lookup"><span data-stu-id="f6e03-114">The URI prefix for requests handled by this Web request module.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="f6e03-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f6e03-115">Child Elements</span></span>  
+ <span data-ttu-id="f6e03-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="f6e03-116">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="f6e03-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f6e03-117">Parent Elements</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
+|<span data-ttu-id="f6e03-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="f6e03-118">**Element**</span></span>|<span data-ttu-id="f6e03-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="f6e03-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="f6e03-120">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="f6e03-120">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="f6e03-121">Задает модули, используемые для запроса данных от сетевых узлов.</span><span class="sxs-lookup"><span data-stu-id="f6e03-121">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## Заметки  
- Элемент `remove` удаляет зарегистрированный модуль веб\-запросов для заданного префикса URI.  
+## <a name="remarks"></a><span data-ttu-id="f6e03-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="f6e03-122">Remarks</span></span>  
+ <span data-ttu-id="f6e03-123">`remove` Элемент удаляет зарегистрированный модуль веб-запросов для заданного префикса URI.</span><span class="sxs-lookup"><span data-stu-id="f6e03-123">The `remove` element removes the registered Web request module for the specified URI prefix.</span></span>  
   
- Значением атрибута `prefix` должны быть первые символы действительного URI, например "http" или "http:\/\/www.contoso.com".  
+ <span data-ttu-id="f6e03-124">Значение для `prefix` атрибут должен иметь первые символы допустимый URI — например, «http» или «http://www.contoso.com».</span><span class="sxs-lookup"><span data-stu-id="f6e03-124">The value for the `prefix` attribute should be the leading characters of a valid URI -- for example, "http", or "http://www.contoso.com".</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="f6e03-125">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="f6e03-125">Configuration Files</span></span>  
+ <span data-ttu-id="f6e03-126">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="f6e03-126">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- В следующем примере кода удаляется имеющийся модуль веб\-запросов для протокола HTTP и затем регистрируется новый пользовательский модуль веб\-запросов для HTTP\-запросов к веб\-узлу www.contoso.com.  
+## <a name="example"></a><span data-ttu-id="f6e03-127">Пример</span><span class="sxs-lookup"><span data-stu-id="f6e03-127">Example</span></span>  
+ <span data-ttu-id="f6e03-128">Следующий пример удаляет существующий модуль веб-запросов для HTTP, а затем выполняется регистрация нового пользовательского модуля для HTTP-запросов к www.contoso.com.</span><span class="sxs-lookup"><span data-stu-id="f6e03-128">The following example removes the existing Web request module for HTTP and then registers a new custom Web request module for HTTP requests to www.contoso.com.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
-      <remove prefix = "http">  
+      <remove prefix="http">  
       <add prefix="http"  
            type="System.Net.HttpRequestCreator, System, Version=2.0.3600.0,  
            Culture=neutral, PublicKeyToken=b77a5c561934e089"  
@@ -84,6 +86,6 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebRequest>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="f6e03-129">См. также</span><span class="sxs-lookup"><span data-stu-id="f6e03-129">See Also</span></span>  
+ <xref:System.Net.WebRequest>  
+ [<span data-ttu-id="f6e03-130">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="f6e03-130">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,40 +1,43 @@
 ---
-title: "Ведение журнала сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ведение журналов сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 04e1b881d9aab1c35195794394cddf5172288cc1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Ведение журнала сообщений
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предоставляет возможность записи входящих и исходящих сообщений в журнал для автономного использования.Ведение журнала сообщений позволяет увидеть, что представляет собой сообщение и тело сообщения.Этот тип ведения журнала особенно полезен, поскольку он позволяет узнать, какие аргументы были переданы и как они, выраженные в формате XML, были отображены в принимающей конечной точке.Кроме того, запись сообщения в том виде, в котором оно было получено, позволяет выполнять диагностику неправильно сформированных сообщений, а также узнать порядок поступления сообщения.Также предусмотрена возможность проверки маркеров безопасности, зашифрованных и подписанных частей, и частей, которые остались без изменений.  
+# <a name="message-logging"></a><span data-ttu-id="01b8d-102">Ведение журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="01b8d-102">Message Logging</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="01b8d-103"> предоставляет возможность записи входящих и исходящих сообщений в журнал для автономного использования.</span><span class="sxs-lookup"><span data-stu-id="01b8d-103"> provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="01b8d-104">Ведение журнала сообщений позволяет увидеть, что представляет собой сообщение и тело сообщения.</span><span class="sxs-lookup"><span data-stu-id="01b8d-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="01b8d-105">Этот тип ведения журнала особенно полезен, поскольку он позволяет узнать, какие аргументы были переданы и как они, выраженные в формате XML, были отображены в принимающей конечной точке.</span><span class="sxs-lookup"><span data-stu-id="01b8d-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="01b8d-106">Кроме того, запись сообщения в том виде, в котором оно было получено, позволяет выполнять диагностику неправильно сформированных сообщений, а также узнать порядок поступления сообщения.</span><span class="sxs-lookup"><span data-stu-id="01b8d-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="01b8d-107">Также предусмотрена возможность проверки маркеров безопасности, зашифрованных и подписанных частей, и частей, которые остались без изменений.</span><span class="sxs-lookup"><span data-stu-id="01b8d-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о потоках сообщений](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="01b8d-108">Содержание</span><span class="sxs-lookup"><span data-stu-id="01b8d-108">In This Section</span></span>  
+ [<span data-ttu-id="01b8d-109">Общие сведения о потоке сообщений</span><span class="sxs-lookup"><span data-stu-id="01b8d-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- В этом разделе описывается соответствие сообщений журнала событий событиям клиента и службы.  
+ <span data-ttu-id="01b8d-110">В этом разделе описывается соответствие сообщений журнала событий событиям клиента и службы.</span><span class="sxs-lookup"><span data-stu-id="01b8d-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [Настройка ведения журнала сообщений](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="01b8d-111">Настройка ведения журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="01b8d-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- В этом разделе описывается, как настроить ведение журнала сообщений для различных сценариев.  
+ <span data-ttu-id="01b8d-112">В этом разделе описывается, как настроить ведение журнала сообщений для различных сценариев.</span><span class="sxs-lookup"><span data-stu-id="01b8d-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [Просмотр журналов сообщений](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="01b8d-113">Просмотр журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="01b8d-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- В этом разделе описывается порядок просмотра журналов сообщений.  
+ <span data-ttu-id="01b8d-114">В этом разделе описывается порядок просмотра журналов сообщений.</span><span class="sxs-lookup"><span data-stu-id="01b8d-114">This topic describes how you can view message logs.</span></span>  
   
- [Проблемы безопасности при ведении журналов сообщений](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="01b8d-115">Вопросы безопасности для ведения журнала сообщений</span><span class="sxs-lookup"><span data-stu-id="01b8d-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.  
+ <span data-ttu-id="01b8d-116">В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="01b8d-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## См. также  
- [Администрирование и диагностика](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="01b8d-117">См. также</span><span class="sxs-lookup"><span data-stu-id="01b8d-117">See Also</span></span>  
+ [<span data-ttu-id="01b8d-118">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="01b8d-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

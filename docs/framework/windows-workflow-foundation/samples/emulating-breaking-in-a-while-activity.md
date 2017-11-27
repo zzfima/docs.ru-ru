@@ -1,34 +1,38 @@
 ---
-title: "Эмуляция прерывания в действии While | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Эмуляция прерывания в действии While"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4417f4225200f01f23d753f6b7aa52ebc69cab4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Эмуляция прерывания в действии While
-Этот образец показывает, как прервать циклический механизм следующих действий: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> и <xref:System.Activities.Statements.ParallelForEach%601>.  
+# <a name="emulating-breaking-in-a-while-activity"></a><span data-ttu-id="05e57-102">Эмуляция прерывания в действии While</span><span class="sxs-lookup"><span data-stu-id="05e57-102">Emulating breaking in a While activity</span></span>
+<span data-ttu-id="05e57-103">Этот образец показывает, как прервать циклический механизм следующих действий: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> и <xref:System.Activities.Statements.ParallelForEach%601>.</span><span class="sxs-lookup"><span data-stu-id="05e57-103">This sample demonstrates how to break the looping mechanism of the following activities: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, and <xref:System.Activities.Statements.ParallelForEach%601>.</span></span>  
   
- Это может быть полезно, поскольку в [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания выполнения этих циклов.  
+ <span data-ttu-id="05e57-104">Это может быть полезно, поскольку в [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания выполнения этих циклов.</span><span class="sxs-lookup"><span data-stu-id="05e57-104">This is useful because [!INCLUDE[wf](../../../../includes/wf-md.md)] does not include any activity to break the execution of these loops.</span></span>  
   
-## Сценарий  
- Образец находит первого надежного поставщика из списка поставщиков \(экземпляры класса `Vendor`\).Каждый поставщик имеет `ID`, `Name` и числовое значение надежности, определяющее, насколько на его продукцию можно положиться.Образец создает пользовательское действие с именем `FindReliableVendor`, получающее два входных параметра \(список поставщиков и минимальное значение надежности\) и возвращает первого поставщика из списка, соответствующего предоставленным критериям.  
+## <a name="scenario"></a><span data-ttu-id="05e57-105">Сценарий</span><span class="sxs-lookup"><span data-stu-id="05e57-105">Scenario</span></span>  
+ <span data-ttu-id="05e57-106">Образец находит первого надежного поставщика из списка поставщиков (экземпляры класса `Vendor`).</span><span class="sxs-lookup"><span data-stu-id="05e57-106">The sample finds the first reliable vendor from a list of vendors (instances of the `Vendor` class).</span></span> <span data-ttu-id="05e57-107">Каждый поставщик имеет `ID`, `Name` и числовое значение надежности, определяющее, насколько на его продукцию можно положиться.</span><span class="sxs-lookup"><span data-stu-id="05e57-107">Each vendor has an `ID`, a `Name` and a numeric reliability value that determines how dependable the vendor is.</span></span> <span data-ttu-id="05e57-108">Образец создает пользовательское действие с именем `FindReliableVendor`, получающее два входных параметра (список поставщиков и минимальное значение надежности) и возвращает первого поставщика из списка, соответствующего предоставленным критериям.</span><span class="sxs-lookup"><span data-stu-id="05e57-108">The sample creates a custom activity called `FindReliableVendor` that receives two input parameters (a list of vendors and a minimum reliability value) and returns the first vendor of the list that matches the supplied criteria.</span></span>  
   
-## Прерывание цикла  
- В [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания цикла.Образец кода выполняет прерывание цикла с помощью действия <xref:System.Activities.Statements.If> и нескольких переменных.В этом образце действие <xref:System.Activities.Statements.While> прерывается, если переменной `reliableVendor` присваивается значение, отличное от `null`.  
+## <a name="breaking-a-loop"></a><span data-ttu-id="05e57-109">Прерывание цикла</span><span class="sxs-lookup"><span data-stu-id="05e57-109">Breaking a Loop</span></span>  
+ <span data-ttu-id="05e57-110">В [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания цикла.</span><span class="sxs-lookup"><span data-stu-id="05e57-110">[!INCLUDE[wf](../../../../includes/wf-md.md)] does not include an activity to break a loop.</span></span> <span data-ttu-id="05e57-111">Образец кода выполняет прерывание цикла с помощью действия <xref:System.Activities.Statements.If> и нескольких переменных.</span><span class="sxs-lookup"><span data-stu-id="05e57-111">The code sample accomplishes breaking a loop by using an <xref:System.Activities.Statements.If> activity and several variables.</span></span> <span data-ttu-id="05e57-112">В этом образце действие <xref:System.Activities.Statements.While> прерывается, если переменной `reliableVendor` присваивается значение, отличное от `null`.</span><span class="sxs-lookup"><span data-stu-id="05e57-112">In the sample, the <xref:System.Activities.Statements.While> activity is broken once the `reliableVendor` variable is assigned a value other than `null`.</span></span>  
   
- Следующий пример кода демонстрирует, как этот образец прерывает цикл while.  
+ <span data-ttu-id="05e57-113">Следующий пример кода демонстрирует, как этот образец прерывает цикл while.</span><span class="sxs-lookup"><span data-stu-id="05e57-113">The following code example demonstrates how the sample breaks a while loop.</span></span>  
   
 ```csharp  
-// Iterates while the “i” variable is lower than the size of the list   
+// Iterates while the "i" variable is lower than the size of the list   
 // and any reliable Vendor is found.        
 new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(env) == null)  
 {  
@@ -67,24 +71,23 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
         }  
     }  
 }  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="05e57-114">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="05e57-114">To use this sample</span></span>  
   
-1.  Откройте файл решения EmulatingBreakInWhile.sln с помощью [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="05e57-115">Откройте файл решения EmulatingBreakInWhile.sln с помощью [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="05e57-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the EmulatingBreakInWhile.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="05e57-116">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="05e57-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="05e57-117">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="05e57-117">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="05e57-118">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="05e57-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="05e57-119">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="05e57-119">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="05e57-120">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="05e57-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="05e57-121">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="05e57-121">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="05e57-122">См. также</span><span class="sxs-lookup"><span data-stu-id="05e57-122">See Also</span></span>

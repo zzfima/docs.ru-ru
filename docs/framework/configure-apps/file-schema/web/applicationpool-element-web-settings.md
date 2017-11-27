@@ -1,88 +1,90 @@
 ---
-title: "Элемент &lt;applicationPool&gt; (Веб-параметры) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<applicationPool> - элемент"
-  - "applicationPool - элемент"
+title: "&lt;пул приложений&gt; элемент (веб-параметров)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applicationPool element
+- <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент &lt;applicationPool&gt; (Веб-параметры)
-Задает параметры конфигурации, используемые ASP.NET для управления поведением на уровне процессов, когда приложение ASP.NET выполняется в интегрированном режиме в [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
+# <a name="ltapplicationpoolgt-element-web-settings"></a><span data-ttu-id="e1f20-102">&lt;пул приложений&gt; элемент (веб-параметров)</span><span class="sxs-lookup"><span data-stu-id="e1f20-102">&lt;applicationPool&gt; Element (Web Settings)</span></span>
+<span data-ttu-id="e1f20-103">Задает параметры конфигурации, используемого ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="e1f20-103">Specifies configuration settings that are used by ASP.NET to manage process-wide behavior when an ASP.NET application is running in Integrated mode on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version.</span></span>  
   
 > [!IMPORTANT]
->  Этот элемент и поддерживаемая им функция работают только в том случае, если приложение ASP.NET размещено в [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  
+>  <span data-ttu-id="e1f20-104">Этот элемент и компонент поддерживает работает только если приложение ASP.NET размещается на [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="e1f20-104">This element and the feature it supports only work if your ASP.NET application is hosted on [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or later versions.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="e1f20-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e1f20-105">\<configuration></span></span>  
+<span data-ttu-id="e1f20-106">\<System.Web > элемент (веб-параметров)</span><span class="sxs-lookup"><span data-stu-id="e1f20-106">\<system.web> Element (Web Settings)</span></span>  
+<span data-ttu-id="e1f20-107">\<пул приложений > элемент (веб-параметров)</span><span class="sxs-lookup"><span data-stu-id="e1f20-107">\<applicationPool> Element (Web Settings)</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e1f20-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e1f20-108">Syntax</span></span>  
+  
+```xml  
 <applicationPool   
-    maxConcurrentRequestsPerCPU="5000"   
-    maxConcurrentThreadsPerCPU="0"   
-    requestQueueLimit="5000" />  
+    maxConcurrentRequestsPerCPU="5000"   
+    maxConcurrentThreadsPerCPU="0"   
+    requestQueueLimit="5000" />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e1f20-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e1f20-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e1f20-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e1f20-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="e1f20-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e1f20-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`maxConcurrentRequestsPerCPU`|Задает, сколько одновременных запросов ASP.NET разрешает для каждого ЦП.|  
-|`maxConcurrentThreadsPerCPU`|Задает, сколько потоков могут одновременно выполняться для пула приложений для каждого ЦП.  Это обеспечивает альтернативный способ управления параллелизмом ASP.NET, так как позволяет ограничить количество управляемых потоков, которые могут использоваться на каждом ЦП для обслуживания запросов.  По умолчанию для этого параметра задано значение 0, означающее, что ASP.NET не ограничивает количество потоков, которые могут быть созданы для каждого ЦП, хотя количество создаваемых потоков также ограничивается пулом потоков среды CLR.|  
-|`requestQueueLimit`|Задает максимальное число запросов, которые могут помещаться в очередь для ASP.NET в одном процессе.  Когда два или более приложений ASP.NET выполняются в одном пуле приложений, этот параметр относится к общему набору запросов, создаваемых всеми приложениями из пула приложений.|  
+|<span data-ttu-id="e1f20-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e1f20-112">Attribute</span></span>|<span data-ttu-id="e1f20-113">Описание</span><span class="sxs-lookup"><span data-stu-id="e1f20-113">Description</span></span>|  
+|---------------|-----------------|  
+|`maxConcurrentRequestsPerCPU`|<span data-ttu-id="e1f20-114">Указывает, сколько одновременных запросов ASP.NET разрешает для каждого ЦП.</span><span class="sxs-lookup"><span data-stu-id="e1f20-114">Specifies how many simultaneous requests ASP.NET allows per CPU.</span></span>|  
+|`maxConcurrentThreadsPerCPU`|<span data-ttu-id="e1f20-115">Указывает, сколько одновременных потоков могут одновременно выполняться для пула приложений для каждого ЦП.</span><span class="sxs-lookup"><span data-stu-id="e1f20-115">Specifies how many simultaneous threads can be running for an application pool for each CPU.</span></span> <span data-ttu-id="e1f20-116">Это обеспечивает альтернативный способ управления параллелизмом ASP.NET, так как можно ограничить число управляемых потоков, которые могут использоваться для обслуживания запросов на один ЦП.</span><span class="sxs-lookup"><span data-stu-id="e1f20-116">This provides an alternative way to control ASP.NET concurrency, because you can limit the number of managed threads that can be used per CPU to serve requests.</span></span> <span data-ttu-id="e1f20-117">По умолчанию этот параметр является 0, означающее, что ASP.NET не ограничивает количество потоков, которые могут быть созданы на ЦП, несмотря на то, что пул потоков CLR также ограничивает количество потоков, которые могут быть созданы.</span><span class="sxs-lookup"><span data-stu-id="e1f20-117">By default this setting is 0, which means that ASP.NET does not limit the number of threads that can be created per CPU, although the CLR thread pool also limits the number of threads that can be created.</span></span>|  
+|`requestQueueLimit`|<span data-ttu-id="e1f20-118">Указывает максимальное число запросов, которые могут быть поставлены в очередь для ASP.NET в одном процессе.</span><span class="sxs-lookup"><span data-stu-id="e1f20-118">Specifies the maximum number of requests that can be queued for ASP.NET in a single process.</span></span> <span data-ttu-id="e1f20-119">Когда два или более приложений ASP.NET выполняются в один пул приложений, этот параметр относится к общему набору запросы, выполняемые для любого приложения в пуле приложений.</span><span class="sxs-lookup"><span data-stu-id="e1f20-119">When two or more ASP.NET applications run in a single application pool, the cumulative set of requests being made to any application in the application pool is subject to this setting.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="e1f20-120">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e1f20-120">Child Elements</span></span>  
+ <span data-ttu-id="e1f20-121">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="e1f20-121">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="e1f20-122">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e1f20-122">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<system.web\>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Содержит сведения о том, как ASP.NET взаимодействует с ведущим приложением.|  
+|<span data-ttu-id="e1f20-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="e1f20-123">Element</span></span>|<span data-ttu-id="e1f20-124">Описание</span><span class="sxs-lookup"><span data-stu-id="e1f20-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e1f20-125">\<system.web></span><span class="sxs-lookup"><span data-stu-id="e1f20-125">\<system.web></span></span>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|<span data-ttu-id="e1f20-126">Содержит сведения о том, как ASP.NET взаимодействует с ведущим приложением.</span><span class="sxs-lookup"><span data-stu-id="e1f20-126">Contains information about how ASP.NET interacts with a host application.</span></span>|  
   
-## Заметки  
- При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в интегрированном режиме это сочетание элементов позволяет настроить, как ASP.NET управляет потоками и как помещает запросы в очередь, когда приложение размещено в пуле приложений IIS.  При использовании IIS 6 или при использовании [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] в классическом режиме либо режиме ISAPI эти параметры игнорируются.  
+## <a name="remarks"></a><span data-ttu-id="e1f20-127">Примечания</span><span class="sxs-lookup"><span data-stu-id="e1f20-127">Remarks</span></span>  
+ <span data-ttu-id="e1f20-128">При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии в интегрированном режиме это сочетание элементов позволяет настроить, как ASP.NET управляет потоков и очереди запросов, если приложение размещено в пуле приложений IIS.</span><span class="sxs-lookup"><span data-stu-id="e1f20-128">When you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] or a later version in Integrated mode, this element combination lets you configure how ASP.NET manages threads and queues requests when the application is hosted in an IIS application pool.</span></span> <span data-ttu-id="e1f20-129">При использовании IIS 6 или при использовании [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] в классическом режиме или режиме ISAPI эти параметры игнорируются.</span><span class="sxs-lookup"><span data-stu-id="e1f20-129">If you run IIS 6 or you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] in Classic mode or in ISAPI mode, these settings are ignored.</span></span>  
   
- Параметры `applicationPool` применяются ко всем пулам приложений, работающим в конкретной версии платформы .NET Framework.  Эти параметры содержатся в файле aspnet.config.  Существует версия этого файла для платформы .NET Framework версий 2.0 и 4. \(В версиях 3.0 и 3.5 платформы .NET Framework используется файл aspnet.config версии 2.0.\)  
+ <span data-ttu-id="e1f20-130">`applicationPool` Параметры применяются для всех пулов приложений, работающих на определенной версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e1f20-130">The `applicationPool` settings apply to all application pools that run on a particular version of the .NET Framework.</span></span> <span data-ttu-id="e1f20-131">Параметры, содержащиеся в файле aspnet.config.</span><span class="sxs-lookup"><span data-stu-id="e1f20-131">The settings are contained in an aspnet.config file.</span></span> <span data-ttu-id="e1f20-132">Это версия этого файла для версий 2.0 и 4.0 платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e1f20-132">There is a version of this file for versions 2.0 and 4.0 of the .NET Framework.</span></span> <span data-ttu-id="e1f20-133">(Версии 3.0 и 3.5 платформы .NET Framework, используют файл aspnet.config с версии 2.0.)</span><span class="sxs-lookup"><span data-stu-id="e1f20-133">(Versions 3.0 and 3.5 of the .NET Framework share the aspnet.config file with version 2.0.)</span></span>  
   
 > [!IMPORTANT]
->  При использовании [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] в [!INCLUDE[win7](../../../../../includes/win7-md.md)] можно настроить отдельные файлы aspnet.config для каждого пула приложений.  Это позволяет настраивать производительностью потоков для каждого пула приложений.  
+>  <span data-ttu-id="e1f20-134">При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] на [!INCLUDE[win7](../../../../../includes/win7-md.md)], можно настроить отдельные файлы ASPNET.config для каждого пула приложений.</span><span class="sxs-lookup"><span data-stu-id="e1f20-134">If you run [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] on [!INCLUDE[win7](../../../../../includes/win7-md.md)], you can configure a separate aspnet.config file for every application pool.</span></span> <span data-ttu-id="e1f20-135">Это позволяет настраивать производительностью потоков для каждого пула приложений.</span><span class="sxs-lookup"><span data-stu-id="e1f20-135">This lets you tailor the performance of the threads for each application pool.</span></span>  
   
- Значение по умолчанию "5000" параметра `maxConcurrentRequestsPerCPU` в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] эффективно отключает регулирование запросов, управляемое ASP.NET, кроме случаев, когда для каждого ЦП действительно имеется 5000 или более запросов.  Вместо этого при значении по умолчанию автоматическое управление параллелизмом для каждого ЦП осуществляется пулом потоков среды CLR.  Приложения, широко использующие асинхронную обработку запросов или имеющие много долговременных запросов, заблокированных в сетевых операциях ввода\-вывода, выигрывают от увеличения предельного значения по умолчанию в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  При установке для параметра `maxConcurrentRequestsPerCPU` нулевого значения использование управляемых потоков для обработки запросов ASP.NET отключается.  Если приложение выполняется в пуле приложений IIS, запросы остаются в потоке ввода\-вывода IIS и, следовательно, параллелизм регулируется параметрами потоков IIS.  
+ <span data-ttu-id="e1f20-136">Для `maxConcurrentRequestsPerCPU` параметр, значение по умолчанию «5000» в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] эффективно отключает регулирование запросов, управляемое ASP.NET, если не требуется фактически 5000 или более запросов на один ЦП.</span><span class="sxs-lookup"><span data-stu-id="e1f20-136">For the `maxConcurrentRequestsPerCPU` setting, the default setting of "5000" in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] effectively turns off request throttling that is controlled by ASP.NET, unless you actually have 5000 or more requests per CPU.</span></span> <span data-ttu-id="e1f20-137">Значение по умолчанию вместо зависит от пула потоков CLR автоматическое управление параллелизмом для каждого ЦП.</span><span class="sxs-lookup"><span data-stu-id="e1f20-137">The default setting depends instead on the CLR thread-pool to automatically manage concurrency per CPU.</span></span> <span data-ttu-id="e1f20-138">Приложения, предусматривают широкое использование обработку асинхронного запроса или в которых много долго выполняющихся запросов, заблокированных в сетевых операций ввода-вывода, будет обеспечен предел увеличения по умолчанию в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e1f20-138">Applications that make extensive use of asynchronous request processing, or that have many long-running requests blocked on network I/O, will benefit from the increased default limit in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="e1f20-139">Параметр `maxConcurrentRequestsPerCPU` ноль отключается использование управляемых потоков для обработки запросов ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="e1f20-139">Setting `maxConcurrentRequestsPerCPU` to zero turns off the use of managed threads for processing ASP.NET requests.</span></span> <span data-ttu-id="e1f20-140">Если приложение выполняется в пуле приложений IIS, запросы остаются в потоке ввода-вывода в IIS, и таким образом, параллелизм регулируется параметрами потоков IIS.</span><span class="sxs-lookup"><span data-stu-id="e1f20-140">When an application runs in an IIS application pool, requests stay on the IIS I/O thread and therefore concurrency is throttled by IIS thread settings.</span></span>  
   
- Параметр `requestQueueLimit` работает таким же образом, как атрибут `requestQueueLimit` элемента [processModel](http://msdn.microsoft.com/ru-ru/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d), который задается в файлах Web.config для приложений ASP.NET.  Однако параметр `requestQueueLimit` в файле aspnet.config переопределяет параметр `requestQueueLimit` в файле Web.config.  Другими словами, если заданы оба атрибута \(по умолчанию этот так\), приоритет имеет параметр `requestQueueLimit` из файла aspnet.config.  
+ <span data-ttu-id="e1f20-141">`requestQueueLimit` Параметр работает так же, как `requestQueueLimit` атрибут [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) элемент, который задается в файлах Web.config для приложений ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="e1f20-141">The `requestQueueLimit` setting works the same way as the `requestQueueLimit` attribute of the [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) element, which is set in the Web.config files for ASP.NET applications.</span></span> <span data-ttu-id="e1f20-142">Тем не менее `requestQueueLimit` переопределяет параметр в файле aspnet.config `requestQueueLimit` в файле Web.config.</span><span class="sxs-lookup"><span data-stu-id="e1f20-142">However, the `requestQueueLimit` setting in an aspnet.config file overrides the `requestQueueLimit` setting in a Web.config file.</span></span> <span data-ttu-id="e1f20-143">Другими словами Если заданы оба атрибута (по умолчанию это значение true), `requestQueueLimit` приоритет имеет параметр в файле aspnet.config.</span><span class="sxs-lookup"><span data-stu-id="e1f20-143">In other words, if both attributes are set (by default, this is true), the `requestQueueLimit` setting in the aspnet.config file takes precedence.</span></span>  
   
-## Пример  
- В приведенном ниже примере показано, как настроить в файле aspnet.config поведение ASP.NET на уровне всего процесса при следующих условиях:  
+## <a name="example"></a><span data-ttu-id="e1f20-144">Пример</span><span class="sxs-lookup"><span data-stu-id="e1f20-144">Example</span></span>  
+ <span data-ttu-id="e1f20-145">В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="e1f20-145">The following example shows how to configure ASP.NET process-wide behavior in the aspnet.config file in the following circumstances:</span></span>  
   
--   Приложение размещено в пуле приложений [!INCLUDE[iisver](../../../../../includes/iisver-md.md)].  
+-   <span data-ttu-id="e1f20-146">Приложение размещается в [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] пула приложений.</span><span class="sxs-lookup"><span data-stu-id="e1f20-146">The application is hosted in an [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] application pool.</span></span>  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] работает в интегрированном режиме.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]<span data-ttu-id="e1f20-147">работает в интегрированном режиме.</span><span class="sxs-lookup"><span data-stu-id="e1f20-147"> is running in Integrated mode.</span></span>  
   
--   Приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более позднюю версию.  
+-   <span data-ttu-id="e1f20-148">Приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="e1f20-148">The application is using the [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] or a later version.</span></span>  
   
- Значения, указанные в примере, являются значениями по умолчанию.  
+ <span data-ttu-id="e1f20-149">В примере используются значения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e1f20-149">The values in the example are the default values.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <applicationPool   
@@ -93,14 +95,14 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## Сведения об элементе  
+## <a name="element-information"></a><span data-ttu-id="e1f20-150">Сведения об элементе</span><span class="sxs-lookup"><span data-stu-id="e1f20-150">Element Information</span></span>  
   
 |||  
 |-|-|  
-|Пространство имен||  
-|Имя схемы||  
-|Файл проверки||  
-|Может быть пустым||  
+|<span data-ttu-id="e1f20-151">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="e1f20-151">Namespace</span></span>||  
+|<span data-ttu-id="e1f20-152">Имя схемы</span><span class="sxs-lookup"><span data-stu-id="e1f20-152">Schema Name</span></span>||  
+|<span data-ttu-id="e1f20-153">Файл проверки</span><span class="sxs-lookup"><span data-stu-id="e1f20-153">Validation File</span></span>||  
+|<span data-ttu-id="e1f20-154">Может быть пустым</span><span class="sxs-lookup"><span data-stu-id="e1f20-154">Can be Empty</span></span>||  
   
-## См. также  
- [Элемент \<system.web\> \(Веб\-параметры\)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+## <a name="see-also"></a><span data-ttu-id="e1f20-155">См. также</span><span class="sxs-lookup"><span data-stu-id="e1f20-155">See Also</span></span>  
+ [<span data-ttu-id="e1f20-156">Элемент \<system.web> (веб-параметры)</span><span class="sxs-lookup"><span data-stu-id="e1f20-156">\<system.web> Element (Web Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

@@ -5,35 +5,31 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>Пример COM-взаимодействия. COM-клиент и сервер .NET
-В этом примере демонстрируется взаимодействие [клиента COM](#cpconcominteropsamplecomclientnetserveranchor1) и [сервера .NET](#cpconcominteropsamplecomclientnetserveranchor2), в рамках которого рассчитывается величина выплат по ипотечному кредиту. В этом примере клиент создает и вызывает экземпляр управляемого класса `Loan`, передает в экземпляр четыре аргумента (один из этих аргументов равен нулю) и отображает результаты вычислений. Примеры кода из этого образца используются в рамках всего этого раздела.  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="40fe9-102">Пример COM-взаимодействия. COM-клиент и сервер .NET</span><span class="sxs-lookup"><span data-stu-id="40fe9-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="40fe9-103">В этом примере демонстрируется взаимодействие [клиента COM](#cpconcominteropsamplecomclientnetserveranchor1) и [сервера .NET](#cpconcominteropsamplecomclientnetserveranchor2), в рамках которого рассчитывается величина выплат по ипотечному кредиту.</span><span class="sxs-lookup"><span data-stu-id="40fe9-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="40fe9-104">В этом примере клиент создает и вызывает экземпляр управляемого класса `Loan`, передает в экземпляр четыре аргумента (один из этих аргументов равен нулю) и отображает результаты вычислений.</span><span class="sxs-lookup"><span data-stu-id="40fe9-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="40fe9-105">Примеры кода из этого образца используются в рамках всего этого раздела.</span><span class="sxs-lookup"><span data-stu-id="40fe9-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## <a name="com-client"></a>Клиент COM  
+## <a name="com-client"></a><span data-ttu-id="40fe9-106">Клиент COM</span><span class="sxs-lookup"><span data-stu-id="40fe9-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -100,7 +96,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## <a name="net-server"></a>Сервер .NET  
+## <a name="net-server"></a><span data-ttu-id="40fe9-107">Сервер .NET</span><span class="sxs-lookup"><span data-stu-id="40fe9-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -401,6 +397,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-
+## <a name="see-also"></a><span data-ttu-id="40fe9-108">См. также</span><span class="sxs-lookup"><span data-stu-id="40fe9-108">See Also</span></span>  
+ [<span data-ttu-id="40fe9-109">Предоставление компонентов .NET Framework клиентам COM</span><span class="sxs-lookup"><span data-stu-id="40fe9-109">Exposing .NET Framework Components to COM</span></span>](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

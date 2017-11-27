@@ -1,32 +1,36 @@
 ---
-title: "Опрос в приложениях командной строки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выполнение опросов в консольных приложениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Опрос в приложениях командной строки
-Асинхронные операции в ADO.NET позволяют запускать трудоемкие операции базы данных в одном потоке, а остальные задачи выполнять в другом потоке.  Однако в большинстве сценариев в конечном итоге достигается положение, в котором не следует продолжать работу приложения, пока не завершится операция базы данных.  В таких случаях полезно опросить асинхронную операцию, чтобы определить, завершена ли эта операция.  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="30197-102">Выполнение опросов в консольных приложениях</span><span class="sxs-lookup"><span data-stu-id="30197-102">Polling in Console Applications</span></span>
+<span data-ttu-id="30197-103">Асинхронные операции в ADO.NET позволяют запускать трудоемкие операции базы данных в одном потоке, а остальные задачи выполнять в другом потоке.</span><span class="sxs-lookup"><span data-stu-id="30197-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="30197-104">Однако в большинстве сценариев в конечном итоге достигается положение, в котором не следует продолжать работу приложения, пока не завершится операция базы данных.</span><span class="sxs-lookup"><span data-stu-id="30197-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="30197-105">В таких случаях полезно опросить асинхронную операцию, чтобы определить, завершена ли эта операция.</span><span class="sxs-lookup"><span data-stu-id="30197-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- Для выяснения того, завершена ли операция, можно использовать свойство <xref:System.IAsyncResult.IsCompleted%2A>.  
+ <span data-ttu-id="30197-106">Для выяснения того, завершена ли операция, можно использовать свойство <xref:System.IAsyncResult.IsCompleted%2A>.</span><span class="sxs-lookup"><span data-stu-id="30197-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## Пример  
- В следующем приложении командной строки происходит асинхронное обновление данных в образце базы данных **AdventureWorks**.  Для моделирования длительного процесса в данном примере в текст команды вставлена инструкция WAITFOR.  Обычно замедление выполнения команд не производится, однако в данном случае это упрощает демонстрацию асинхронного поведения.  
+## <a name="example"></a><span data-ttu-id="30197-107">Пример</span><span class="sxs-lookup"><span data-stu-id="30197-107">Example</span></span>  
+ <span data-ttu-id="30197-108">Следующее консольное приложение обновляет данные в **AdventureWorks** образца базы данных, выполняет асинхронное.</span><span class="sxs-lookup"><span data-stu-id="30197-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="30197-109">Для моделирования длительного процесса в данном примере в текст команды вставлена инструкция WAITFOR.</span><span class="sxs-lookup"><span data-stu-id="30197-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="30197-110">Обычно замедление выполнения команд не производится, однако в данном случае это упрощает демонстрацию асинхронного поведения.</span><span class="sxs-lookup"><span data-stu-id="30197-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## См. также  
- [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="30197-111">См. также</span><span class="sxs-lookup"><span data-stu-id="30197-111">See Also</span></span>  
+ [<span data-ttu-id="30197-112">Асинхронные операции</span><span class="sxs-lookup"><span data-stu-id="30197-112">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [<span data-ttu-id="30197-113">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="30197-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

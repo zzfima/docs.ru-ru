@@ -1,84 +1,86 @@
 ---
-title: "Элемент &lt;disableCachingBindingFailures&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableCachingBindingFailures> - элемент"
-  - "сборки [платформа .NET Framework], кэширование привязки ошибок"
-  - "кэширование ошибок привязки сборок"
-  - "disableCachingBindingFailures - элемент"
+title: "&lt;disableCachingBindingFailures&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCachingBindingFailures
+helpviewer_keywords:
+- assemblies [.NET Framework],caching binding failures
+- caching assembly binding failures
+- <disableCachingBindingFailures> element
+- disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 25d504afd7945718f08dd5f2bf92d7ea33037a11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;disableCachingBindingFailures&gt;
-Указывает, следует ли отключать кэширование ошибок привязки, возникающих из\-за того, что при проверке сборка не найдена.  
+# <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="fbc25-102">&lt;disableCachingBindingFailures&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="fbc25-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
+<span data-ttu-id="fbc25-103">Указывает, следует ли отключить кэширование привязки ошибок, возникающих при проверке сборка не найдена.</span><span class="sxs-lookup"><span data-stu-id="fbc25-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="fbc25-104">\<Конфигурация > элемент</span><span class="sxs-lookup"><span data-stu-id="fbc25-104">\<configuration> Element</span></span>  
+<span data-ttu-id="fbc25-105">\<Среда выполнения > элемент</span><span class="sxs-lookup"><span data-stu-id="fbc25-105">\<runtime> Element</span></span>  
+<span data-ttu-id="fbc25-106">\<disableCachingBindingFailures ></span><span class="sxs-lookup"><span data-stu-id="fbc25-106">\<disableCachingBindingFailures></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="fbc25-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fbc25-107">Syntax</span></span>  
+  
+```xml  
 <disableCachingBindingFailures enabled="0|1"/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fbc25-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="fbc25-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="fbc25-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="fbc25-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="fbc25-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="fbc25-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|enabled|Обязательный атрибут.<br /><br /> Указывает, следует ли отключать кэширование ошибок привязки, возникающих из\-за того, что при проверке сборка не найдена.|  
+|<span data-ttu-id="fbc25-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="fbc25-111">Attribute</span></span>|<span data-ttu-id="fbc25-112">Описание</span><span class="sxs-lookup"><span data-stu-id="fbc25-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="fbc25-113">enabled</span><span class="sxs-lookup"><span data-stu-id="fbc25-113">enabled</span></span>|<span data-ttu-id="fbc25-114">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="fbc25-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="fbc25-115">Указывает, следует ли отключить кэширование привязки ошибок, возникающих при проверке сборка не найдена.</span><span class="sxs-lookup"><span data-stu-id="fbc25-115">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="fbc25-116">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="fbc25-116">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|0|Не отключайте кэширование ошибок привязки, возникающих из\-за того, что при проверке сборка не найдена.  Этот порядок привязки используется по умолчанию в платформе .NET Framework, начиная с версии 2.0.|  
-|1|Отключите кэширование ошибок привязки, возникающих из\-за того, что при проверке сборка не найдена.  Эта настройка изменяет порядок кэширования привязки ошибок на заданный в .NET Framework версии 1.1.|  
+|<span data-ttu-id="fbc25-117">Значение</span><span class="sxs-lookup"><span data-stu-id="fbc25-117">Value</span></span>|<span data-ttu-id="fbc25-118">Описание</span><span class="sxs-lookup"><span data-stu-id="fbc25-118">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="fbc25-119">0</span><span class="sxs-lookup"><span data-stu-id="fbc25-119">0</span></span>|<span data-ttu-id="fbc25-120">Не отключайте кэширование привязки ошибок, возникающих при проверке сборка не найдена.</span><span class="sxs-lookup"><span data-stu-id="fbc25-120">Do not disable the caching of binding failures that occur because the assembly was not found by probing.</span></span> <span data-ttu-id="fbc25-121">Это поведение по умолчанию привязки, начиная с .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="fbc25-121">This is the default binding behavior starting with the .NET Framework version 2.0.</span></span>|  
+|<span data-ttu-id="fbc25-122">1</span><span class="sxs-lookup"><span data-stu-id="fbc25-122">1</span></span>|<span data-ttu-id="fbc25-123">Отключите кэширование привязки ошибок, возникающих при проверке сборка не найдена.</span><span class="sxs-lookup"><span data-stu-id="fbc25-123">Disable the caching of binding failures that occur because the assembly was not found by probing.</span></span> <span data-ttu-id="fbc25-124">Этот параметр возвращается к поведение привязки для .NET Framework версии 1.1.</span><span class="sxs-lookup"><span data-stu-id="fbc25-124">This setting reverts to the binding behavior of the .NET Framework version 1.1.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="fbc25-125">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fbc25-125">Child Elements</span></span>  
+ <span data-ttu-id="fbc25-126">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fbc25-126">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="fbc25-127">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="fbc25-127">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|<span data-ttu-id="fbc25-128">Элемент</span><span class="sxs-lookup"><span data-stu-id="fbc25-128">Element</span></span>|<span data-ttu-id="fbc25-129">Описание</span><span class="sxs-lookup"><span data-stu-id="fbc25-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="fbc25-130">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fbc25-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="fbc25-131">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="fbc25-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Заметки  
- Начиная с .NET Framework версии 2.0, по умолчанию при загрузке сборок все привязки и сбои загрузки кэшируются.  Таким образом, неудачная попытка загрузить сборку приводит к сбоям последующих запросов загрузки, и попытки поиска сборки не предпринимаются.  Этот элемент отключает подобное поведение по умолчанию для ошибок привязки, возникающих в случае, если сборку не удалось найти в пути поиска сборок.  При этих ошибках порождается исключение <xref:System.IO.FileNotFoundException>.  
+## <a name="remarks"></a><span data-ttu-id="fbc25-132">Примечания</span><span class="sxs-lookup"><span data-stu-id="fbc25-132">Remarks</span></span>  
+ <span data-ttu-id="fbc25-133">Начиная с .NET Framework версии 2.0, поведение по умолчанию для загрузки сборок является все привязки и сбои загрузки.</span><span class="sxs-lookup"><span data-stu-id="fbc25-133">Starting with the .NET Framework version 2.0, the default behavior for loading assemblies is to cache all binding and loading failures.</span></span> <span data-ttu-id="fbc25-134">То есть при неудачной попытке загрузить сборку, последующие запросы на загрузку той же сборке сбоем немедленно, без любая попытка найти сборку.</span><span class="sxs-lookup"><span data-stu-id="fbc25-134">That is, if an attempt to load an assembly fails, subsequent requests to load the same assembly fail immediately, without any attempt to locate the assembly.</span></span> <span data-ttu-id="fbc25-135">Этот элемент отключает поведение по умолчанию для ошибок привязки, возникающих, так как не удалось найти сборку в путь поиска сборок.</span><span class="sxs-lookup"><span data-stu-id="fbc25-135">This element disables that default behavior for binding failures that occur because the assembly could not be found in the probing path.</span></span> <span data-ttu-id="fbc25-136">Эти ошибки throw <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="fbc25-136">These failures throw <xref:System.IO.FileNotFoundException>.</span></span>  
   
- Этот элемент не влияет на некоторые привязки и сбои при загрузке, которые всегда кэшируются.  Эти сбои возникают из\-за того, что найденную сборку не удалось загрузить.  Они создают <xref:System.BadImageFormatException> или <xref:System.IO.FileLoadException>.  Ниже приведены некоторые примеры таких сбоев.  
+ <span data-ttu-id="fbc25-137">Некоторые привязки и сбои при загрузке не затрагиваются этим элементом и всегда кэшируются.</span><span class="sxs-lookup"><span data-stu-id="fbc25-137">Some binding and loading failures are not affected by this element, and are always cached.</span></span> <span data-ttu-id="fbc25-138">Эти сбои возникают, поскольку сборка найдена, но не может быть загружена.</span><span class="sxs-lookup"><span data-stu-id="fbc25-138">These failures occur because the assembly was found but could not be loaded.</span></span> <span data-ttu-id="fbc25-139">Они создают <xref:System.BadImageFormatException> или <xref:System.IO.FileLoadException>.</span><span class="sxs-lookup"><span data-stu-id="fbc25-139">They throw <xref:System.BadImageFormatException> or <xref:System.IO.FileLoadException>.</span></span> <span data-ttu-id="fbc25-140">Ниже приведены некоторые примеры таких сбоев.</span><span class="sxs-lookup"><span data-stu-id="fbc25-140">The following list includes some examples of such failures.</span></span>  
   
--   При попытке загрузить файл, который не является допустимой сборкой, последующие попытки загрузить сборку будут неудачными, даже если неверный файл будет заменен правильной сборкой.  
+-   <span data-ttu-id="fbc25-141">При попытке загрузить файл не является допустимой сборкой, последующие попытки загрузить сборку завершится ошибкой, даже если неверный файл заменяется правильную сборку.</span><span class="sxs-lookup"><span data-stu-id="fbc25-141">If you attempt to load a file is not a valid assembly, subsequent attempts to load the assembly will fail even if the bad file is replaced with the correct assembly.</span></span>  
   
--   При попытке загрузить сборку, заблокированную файловой системой, последующие попытки загрузить сборку будут неудачными даже после освобождения сборки файловой системой.  
+-   <span data-ttu-id="fbc25-142">При попытке загрузить сборку, заблокированную файловой системой, последующие попытки загрузить сборку не удастся даже после освобождения сборки файловой системой.</span><span class="sxs-lookup"><span data-stu-id="fbc25-142">If you attempt to load an assembly that is locked by the file system, subsequent attempts to load the assembly will fail even after the assembly is released by the file system.</span></span>  
   
--   Если в проверяемом пути находятся одна или несколько версий загружаемой сборки, но конкретная запрашиваемая версия среди них отсутствует, то последующие попытки загрузки этой версии будут неудачны, даже если правильная версия будет перемещена в проверяемый путь.  
+-   <span data-ttu-id="fbc25-143">Если один или несколько версий сборки, который вы пытаетесь загрузить в путь поиска сборок, но между ними не конкретной версии, запрашиваемый, последующие попытки загрузить эту версию завершится ошибкой, даже если правильная версия перемещается в путь поиска сборок.</span><span class="sxs-lookup"><span data-stu-id="fbc25-143">If one or more versions of the assembly that you are attempting to load is in the probing path, but the specific version you are requesting is not among them, subsequent attempts to load that version will fail even if the correct version is moved into the probing path.</span></span>  
   
-## Пример  
- В следующем примере кода показано, как отключить кэширование ошибок привязки сборки, возникающих из\-за того, что при проверке не удается найти сборку.  
+## <a name="example"></a><span data-ttu-id="fbc25-144">Пример</span><span class="sxs-lookup"><span data-stu-id="fbc25-144">Example</span></span>  
+ <span data-ttu-id="fbc25-145">В следующем примере показано, как отключить кэширование ошибок привязки сборок, возникающих при проверке сборка не найдена.</span><span class="sxs-lookup"><span data-stu-id="fbc25-145">The following example shows how to disable the caching of assembly binding failures that occur because the assembly was not found by probing.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableCachingBindingFailures enabled="1" />  
@@ -86,7 +88,7 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Обнаружение сборок в среде выполнения](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="fbc25-146">См. также</span><span class="sxs-lookup"><span data-stu-id="fbc25-146">See Also</span></span>  
+ [<span data-ttu-id="fbc25-147">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="fbc25-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="fbc25-148">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="fbc25-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="fbc25-149">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="fbc25-149">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -1,82 +1,92 @@
 ---
-title: "Рекомендации по работе с надежными сеансами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Рекомендации по работе с надежными сеансами"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6e20b5cf02e7aef31127bb88e27e21965a192a6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Рекомендации по работе с надежными сеансами
-В этом разделе приводятся рекомендации по работе с надежными сеансами.  
-  
-## Установка MaxTransferWindowSize  
- Надежные сеансы в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используют окно передачи для хранения сообщений в клиенте или в службе.  Настраиваемое свойство <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> указывает количество сообщений, которое может храниться в окне передачи.  
-  
- На стороне отправителя оно указывает количество сообщений, которое может храниться в окне передачи во время ожидания подтверждения. На стороне получателя оно указывает количество сообщений для буферизации в службе.  
-  
- Выбор правильного размера влияет на эффективность использования сети и оптимальную производительность, с которой выполняется служба.  В следующих разделах приводятся подробные сведения о том, что необходимо учитывать при выборе значения для этого свойства, и о влиянии этого значения.  
-  
- Размер окна передачи по умолчанию составляет 8 сообщений.  
-  
-### Эффективное использование сети  
- В данном случае термин *сеть* соответствует всему, что используется в качестве основы связи между клиентом \(отправителем\) и службой \(получателем\).  Сюда входят подключения транспорта и любые промежуточные компоненты или мосты между ними, включая маршрутизаторы SOAP, прокси\-серверы HTTP или брандмауэры.  
-  
- Эффективное использование сети обеспечивает максимальные возможности сети.  На эффективность использования сети влияет как объем данных, который может быть передан в секунду по сети \(называемый *скоростью передачи данных*\), так и время, затрачиваемое на передачу данных от отправителя к получателю \(называемое *задержкой*\).  
-  
- На стороне отправителя свойство <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> указывает количество сообщений, которое может храниться в его окне передачи во время ожидания подтверждения.  Таким образом, при высокой задержке сети для обеспечения ответа отправителя и эффективного использования сети необходимо увеличить размер окна передачи.  
-  
- Например, даже если отправитель поддерживает скорость передачи данных, задержка может быть высокой, если между отправителем и получателем существует несколько посредников, либо в случае промежуточных компонентов или сетей с потерями.  Таким образом, отправитель должен ждать подтверждения сообщений, находящихся в его окне передачи, прежде чем принять новые сообщения для отправки по сети.  Чем меньше буфер при высокой задержке, тем меньше эффективность использования сети.  С другой стороны, слишком большой размер окна передачи может повлиять на службу, поскольку ей может потребоваться поддерживать высокую скорость передачи данных от клиента.  
-  
-### Выполнение службы с оптимальной производительностью  
- Как бы эффективно ни использовалась сеть, в идеальном случае требуется, чтобы служба также выполнялась с максимальной производительностью.  Свойство размера окна передачи на стороне получателя указывает количество сообщений, которое получатель может поместить в буфер.  Такая буферизация сообщений помогает не только управлять потоком в сети, но и обеспечивает выполнение службы с максимальной производительностью.  Например, если буфер 1, а скорость поступления сообщений выше скорости их обработки службой, сообщения в сети могут быть удалены, и емкость сети может использоваться напрасно или неполностью.  
-  
- При использовании буфера повышается доступность службы, поскольку она одновременно получает и отправляет в буфер сообщение во время обработки полученных ранее сообщений.  
-  
- Рекомендуется использовать одинаковый размер окна передачи `MaxTransferWindowSize` как со стороны отправителя, так и со стороны получателя.  
-  
-### Включение управления потоком  
- Управление потоком \- это механизм, обеспечивающий одинаковую скорость работы отправителя и получателя, т. е. сообщения принимаются и обрабатываются с той же скоростью, с какой создаются.  Размер окна передачи со стороны клиента и службы гарантирует, что отправитель и получатель находятся в разумном окне синхронизации.  
-  
- Настоятельно рекомендуется присвоить свойству <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> значение true при установке надежного сеанса между клиентом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
-  
-## Установка MaxPendingChannels  
- При записи службы, обеспечивающей надежный сеанс передачи данных от разных клиентов, можно задать многим клиентам установить надежный сеанс с одной службой одновременно.  Ответ службы в таких ситуациях зависит от свойства `MaxPendingChannels`.  
-  
- Когда отправитель создает канал надежного сеанса для связи с получателем, после подтверждения между ними устанавливается надежный сеанс.  После установки надежного сеанса канал помещается в очередь ожидающих каналов для принятия службой.  Свойство `MaxPendingChannels` указывает количество каналов, которые могут находиться в этом состоянии.  
-  
- Служба может находиться в состоянии, в котором она больше не может принимать каналы.  Если очередь заполнена, попытка установки надежного сеанса отклоняется, и клиент должен повторить попытку.  
-  
- Также возможна ситуация, когда ожидающие каналы в очереди остаются в ней слишком долго.  Между тем, время ожидания простоя в надежном сеансе может закончиться, в результате чего канал перейдет в состояние сбоя.  
-  
- Следовательно, при записи службы, обслуживающей несколько клиентов одновременно, необходимо задать подходящее значение.  Если задать слишком высокое значение для свойства `MaxPendingChannels`, это отрицательно повлияет на рабочий набор.  
-  
- Значение по умолчанию для <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> равно 4.  
-  
-## Надежные сеансы и размещение  
- При размещении на веб\-сервере службы, использующей надежные сеансы, необходимо помнить о следующем.  
-  
--   В надежных сеансах можно отследить состояние, которое поддерживается в домене приложения.  Это значит, что все сообщения, являющиеся частью надежного сеанса, необходимо обрабатывать в том же домене приложения.  Веб\-фермы и веб\-сады с размером фермы или сада \> 1 не могут гарантировать соблюдение этого ограничения.  
-  
--   Для надежных сеансов, использующих двунаправленные каналы HTTP \(например, использующие `WsDualHttpBinding`\) могут потребоваться дополнительные HTTP\-соединения помимо 2 соединений по умолчанию на одного клиента.  Это значит, что для дуплексного надежного сеанса требуется до 2 соединений в каждую сторону, поскольку сообщения приложения и протокола могут одновременно передаваться в каждую сторону в любой момент.  Это значит, что при определенных условиях, в зависимости от шаблона обмена сообщениями службы, можно взаимозаблокировать службу, размещенную на веб\-сервере, с помощью двойных каналов HTTP и надежных сеансов.  Чтобы увеличить количество допустимых HTTP\-соединений на клиента, добавьте следующее в соответствующий файл конфигурации \(например, файл web.config данной службы.\)  
-  
-```  
-<configuration>  
-   <system.net>  
-      <connectionManagement>  
-         <add name = "*" maxconnection = "XX" />  
-      </connectionManagement>  
-   </system.net>  
-</configuration>  
-```  
-  
- Где "XX" \- количество требуемых соединений.  В этом случае минимальное количество должно составлять 4.
+# <a name="best-practices-for-reliable-sessions"></a><span data-ttu-id="70a16-102">Рекомендации по работе с надежными сеансами</span><span class="sxs-lookup"><span data-stu-id="70a16-102">Best Practices for Reliable Sessions</span></span>
+
+<span data-ttu-id="70a16-103">В этом разделе приводятся рекомендации для надежных сеансов.</span><span class="sxs-lookup"><span data-stu-id="70a16-103">This topic discusses best practices for reliable sessions.</span></span>
+
+## <a name="setting-maxtransferwindowsize"></a><span data-ttu-id="70a16-104">Установка MaxTransferWindowSize</span><span class="sxs-lookup"><span data-stu-id="70a16-104">Setting MaxTransferWindowSize</span></span>
+
+<span data-ttu-id="70a16-105">Надежные сеансы в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] используют окно передачи для хранения сообщений в клиенте или в службе.</span><span class="sxs-lookup"><span data-stu-id="70a16-105">Reliable sessions in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] use a transfer window to hold messages on the client and service.</span></span> <span data-ttu-id="70a16-106">Настраиваемое свойство <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> указывает количество сообщений, которое может храниться в окне передачи.</span><span class="sxs-lookup"><span data-stu-id="70a16-106">The configurable property <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indicates how many messages the transfer window can hold.</span></span>
+
+<span data-ttu-id="70a16-107">На стороне отправителя это указывает количество сообщений, которые могут храниться в окне передачи во время ожидания подтверждения; на стороне получателя оно указывает количество сообщений в буфер для службы.</span><span class="sxs-lookup"><span data-stu-id="70a16-107">On the sender, this indicates how many messages the transfer window can hold while waiting for acknowledgements; on the receiver, it indicates how many messages to buffer for the service.</span></span>
+
+<span data-ttu-id="70a16-108">Выбор правильного размера влияет на эффективность работы сети и оптимальную производительность службы.</span><span class="sxs-lookup"><span data-stu-id="70a16-108">Choosing the right size impacts the efficiency of the network and the optimal capacity of the service.</span></span> <span data-ttu-id="70a16-109">В следующих разделах подробно, что следует учитывать при выборе значения для этого свойства, а также влияние значения.</span><span class="sxs-lookup"><span data-stu-id="70a16-109">The following sections detail what to consider when choosing a value for this property and the impact of the value.</span></span>
+
+<span data-ttu-id="70a16-110">Размер окна передачи по умолчанию — восемь сообщения.</span><span class="sxs-lookup"><span data-stu-id="70a16-110">The default transfer window size is eight messages.</span></span>
+
+### <a name="efficient-use-of-the-network"></a><span data-ttu-id="70a16-111">Эффективное использование сети</span><span class="sxs-lookup"><span data-stu-id="70a16-111">Efficient use of the network</span></span>
+
+<span data-ttu-id="70a16-112">В этом контексте термин *сети* соответствует всему, что используется в качестве основы связи между клиентом (отправителем) и службой (получателем).</span><span class="sxs-lookup"><span data-stu-id="70a16-112">In this context, the term *network* corresponds to everything used as the basis of communication between a client (sender) and a service (receiver).</span></span> <span data-ttu-id="70a16-113">Сюда входят подключения транспорта и любые посредника или мосты между ними, включая маршрутизаторы SOAP или HTTP-прокси-серверы или брандмауэры.</span><span class="sxs-lookup"><span data-stu-id="70a16-113">This includes the transport connections and any intermediary or bridges in between, including SOAP routers or HTTP proxies/firewalls.</span></span>
+
+<span data-ttu-id="70a16-114">Эффективное использование сети обеспечивает максимальные возможности сети.</span><span class="sxs-lookup"><span data-stu-id="70a16-114">Efficient use of the network ensures that network capacity is fully used.</span></span> <span data-ttu-id="70a16-115">Объем данных, передаваемых по сети в секунду (*скорость передачи данных*) и время, необходимое для передачи данных от отправителя к получателю (*задержки*) повлиять на эффективность сети используется.</span><span class="sxs-lookup"><span data-stu-id="70a16-115">Both the amount of data that can be transferred per second over the network (*data rate*) and the time it takes to transfer data from the sender to the receiver (*latency*) impact how effectively the network is utilized.</span></span>
+
+<span data-ttu-id="70a16-116">На стороне отправителя свойство <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> указывает количество сообщений, которое может храниться в его окне передачи во время ожидания подтверждения.</span><span class="sxs-lookup"><span data-stu-id="70a16-116">On the sender, the property <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indicates how many messages its transfer window can hold while waiting for acknowledgements.</span></span> <span data-ttu-id="70a16-117">Если Высокая задержка сети и для обеспечения ответа отправителя и эффективного использования сети, следует увеличить размер окна передачи.</span><span class="sxs-lookup"><span data-stu-id="70a16-117">If the network latency is high and in order to ensure a responsive sender and effective network utilization, you should increase the transfer window size.</span></span>
+
+<span data-ttu-id="70a16-118">Например даже, если отправитель поддерживает скорость передачи данных, задержка может быть высокой, если существует несколько посредников между отправителем и получателем, или необходимо передать данные через посредника потерь или сеть.</span><span class="sxs-lookup"><span data-stu-id="70a16-118">For example even if the sender keeps up with data rate, latency could be high if several intermediaries exist between the sender and receiver or the data must pass through a lossy intermediary or network.</span></span> <span data-ttu-id="70a16-119">Таким образом отправитель должен ждать подтверждения сообщений в его окне передачи, прежде чем принимать новые сообщения для отправки по сети.</span><span class="sxs-lookup"><span data-stu-id="70a16-119">Thus, the sender has to wait for acknowledgements for the messages in its transfer window before accepting new messages to send on the wire.</span></span> <span data-ttu-id="70a16-120">Чем меньше буфер с большой задержкой, тем менее эффективными использования сети.</span><span class="sxs-lookup"><span data-stu-id="70a16-120">The smaller the buffer with high latency, the less effective the network utilization.</span></span> <span data-ttu-id="70a16-121">С другой стороны слишком большой размер окна передачи может повлиять службы, так как служба может потребоваться Догнать высокую скорость данных, отправленных клиентом.</span><span class="sxs-lookup"><span data-stu-id="70a16-121">On the other hand, too high a transfer window size may impact the service because the service may need to catch up to the high rate of data sent by the client.</span></span>
+
+### <a name="running-the-service-to-capacity"></a><span data-ttu-id="70a16-122">Выполнение службы с оптимальной производительностью</span><span class="sxs-lookup"><span data-stu-id="70a16-122">Running the service to capacity</span></span>
+
+<span data-ttu-id="70a16-123">Настолько, насколько эффективно ни использовалась сеть, в идеальном случае требуется выполнение службы с максимальной производительностью.</span><span class="sxs-lookup"><span data-stu-id="70a16-123">As much as the network is used efficiently, ideally you also want the service to run at optimal capacity.</span></span> <span data-ttu-id="70a16-124">Свойство размера окна передачи на стороне получателя указывает количество сообщений, которое получатель может поместить в буфер.</span><span class="sxs-lookup"><span data-stu-id="70a16-124">The transfer window size property on the receiver indicates how many messages the receiver can buffer.</span></span> <span data-ttu-id="70a16-125">Такая буферизация сообщений помогает не только управлять потоком в сети, но и обеспечивает выполнение службы с максимальной производительностью.</span><span class="sxs-lookup"><span data-stu-id="70a16-125">This message buffering helps not only the network flow control but also enables the service to run to full capacity.</span></span> <span data-ttu-id="70a16-126">Например, если буфер одно сообщение, а сообщения прибывают быстрее, чем их обработки службой затем сети могут удалять сообщения и емкости может напрасно или неполностью.</span><span class="sxs-lookup"><span data-stu-id="70a16-126">For example if the buffer is one message and messages arrive faster than the service can process them, then the network might drop messages and capacity might be wasted or underutilized.</span></span>
+
+<span data-ttu-id="70a16-127">При использовании буфера повышается доступность службы, как она одновременно получает и помещает в буфер сообщение во время обработки полученных ранее сообщений.</span><span class="sxs-lookup"><span data-stu-id="70a16-127">Using a buffer increases the availability of the service as it concurrently receives and buffers a message while processing the previously received messages.</span></span>
+
+<span data-ttu-id="70a16-128">Рекомендуется использовать одинаковый `MaxTransferWindowSize` на отправителя и получателя.</span><span class="sxs-lookup"><span data-stu-id="70a16-128">We recommended that you use the same `MaxTransferWindowSize` on both the sender and receiver.</span></span>
+
+### <a name="enabling-flow-control"></a><span data-ttu-id="70a16-129">Включение управления потоком</span><span class="sxs-lookup"><span data-stu-id="70a16-129">Enabling flow control</span></span>
+
+<span data-ttu-id="70a16-130">*Поток управления* — это механизм, который гарантирует, что отправитель и получатель не отставать друг с другом, т. е. сообщения принимаются и ответных быстрое время они созданы.</span><span class="sxs-lookup"><span data-stu-id="70a16-130">*Flow control* is a mechanism that ensures that the sender and receiver keep pace with each other, that is, the messages are consumed and acted upon as fast as they're produced.</span></span> <span data-ttu-id="70a16-131">Размер окна передачи со стороны клиента и службы гарантирует, что отправитель и получатель находятся в разумном окне синхронизации.</span><span class="sxs-lookup"><span data-stu-id="70a16-131">The transfer window size on the client and service ensures that the sender and receiver are within a reasonable window of synchronization.</span></span>
+
+<span data-ttu-id="70a16-132">Настоятельно рекомендуется задать для свойства <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> для `true` при использовании надежного сеанса между [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.</span><span class="sxs-lookup"><span data-stu-id="70a16-132">We highly recommended that you set the property <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> to `true` when you're using a reliable session between a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client and a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>
+
+## <a name="setting-maxpendingchannels"></a><span data-ttu-id="70a16-133">Установка MaxPendingChannels</span><span class="sxs-lookup"><span data-stu-id="70a16-133">Setting MaxPendingChannels</span></span>
+
+<span data-ttu-id="70a16-134">При написании службы, обеспечивающей надежный сеанс передачи данных от разных клиентов, можно задать многим клиентам установить надежный сеанс к службе, в то же время.</span><span class="sxs-lookup"><span data-stu-id="70a16-134">When writing a service that enables reliable session communication from different clients, it's possible to have many clients establish a reliable session to the service at the same time.</span></span> <span data-ttu-id="70a16-135">Ответ службы в таких ситуациях зависит от свойства `MaxPendingChannels`.</span><span class="sxs-lookup"><span data-stu-id="70a16-135">The response of the service in these situations depends on the `MaxPendingChannels` property.</span></span>
+
+<span data-ttu-id="70a16-136">Когда отправитель создает канал надежного сеанса для связи с получателем, после подтверждения между ними устанавливается надежный сеанс.</span><span class="sxs-lookup"><span data-stu-id="70a16-136">When the sender creates a reliable session channel to a receiver, a handshake between them establishes a reliable session.</span></span> <span data-ttu-id="70a16-137">После установки надежного сеанса канал помещается в очередь ожидающих каналов для принятия службой.</span><span class="sxs-lookup"><span data-stu-id="70a16-137">After the reliable session is established, the channel is put in a pending channel queue for acceptance by the service.</span></span> <span data-ttu-id="70a16-138">Свойство `MaxPendingChannels` указывает количество каналов, которые могут находиться в этом состоянии.</span><span class="sxs-lookup"><span data-stu-id="70a16-138">The `MaxPendingChannels` property indicates how many channels can be in this state.</span></span>
+
+<span data-ttu-id="70a16-139">Это служба может находиться в состоянии, где он не может принимать несколько каналов.</span><span class="sxs-lookup"><span data-stu-id="70a16-139">It's possible for the service to be in a state where it can't accept more channels.</span></span> <span data-ttu-id="70a16-140">Если очередь заполнена, попытка установки надежного сеанса отклоняется и клиент должен повторить попытку.</span><span class="sxs-lookup"><span data-stu-id="70a16-140">If the queue is full, an attempt to establish a reliable session is rejected, and the client must retry.</span></span>
+
+<span data-ttu-id="70a16-141">Можно также, когда ожидающие каналы в очереди остаются в очереди длительный срок.</span><span class="sxs-lookup"><span data-stu-id="70a16-141">It's also possible that the pending channels in the queue remain in the queue for a longer duration.</span></span> <span data-ttu-id="70a16-142">В то же время ожидания простоя в надежного сеанса может возникнуть, вызывает канал перейдет в состояние сбоя.</span><span class="sxs-lookup"><span data-stu-id="70a16-142">In the meantime, an inactivity timeout on the reliable session may occur, causing the channel to transition to a faulted state.</span></span>
+
+<span data-ttu-id="70a16-143">При написании службы, обслуживающей несколько клиентов одновременно, необходимо задать значение, которая подходит для потребностей.</span><span class="sxs-lookup"><span data-stu-id="70a16-143">When writing a service that services multiple clients simultaneously, you should set a value that's suitable for your needs.</span></span> <span data-ttu-id="70a16-144">Слишком большое значение для параметра `MaxPendingChannels` свойство влияет на рабочее множество.</span><span class="sxs-lookup"><span data-stu-id="70a16-144">Setting too high a value for the `MaxPendingChannels` property impacts your working set.</span></span>
+
+<span data-ttu-id="70a16-145">Значение по умолчанию <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> — четыре канала.</span><span class="sxs-lookup"><span data-stu-id="70a16-145">The default value for <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxPendingChannels%2A> is four channels.</span></span>
+
+## <a name="reliable-sessions-and-hosting"></a><span data-ttu-id="70a16-146">Надежные сеансы и размещение</span><span class="sxs-lookup"><span data-stu-id="70a16-146">Reliable sessions and hosting</span></span>
+
+<span data-ttu-id="70a16-147">При веб-службой, использующей надежные сеансы, вам необходимо учитывать следующие важные вопросы:</span><span class="sxs-lookup"><span data-stu-id="70a16-147">When web hosting a service that uses reliable sessions, you should keep the following important considerations in mind:</span></span>
+
+- <span data-ttu-id="70a16-148">В надежных сеансах можно отследить состояние, которое поддерживается в домене приложения.</span><span class="sxs-lookup"><span data-stu-id="70a16-148">Reliable sessions are stateful, and state is maintained in the AppDomain.</span></span> <span data-ttu-id="70a16-149">Это значит, что все сообщения, являющиеся частью надежного сеанса, необходимо обрабатывать в том же домене приложения.</span><span class="sxs-lookup"><span data-stu-id="70a16-149">This means that all messages that are part of a reliable session must be processed in the same AppDomain.</span></span> <span data-ttu-id="70a16-150">Веб-фермы и веб-садов, где размер фермы или сада больше, чем один узел не может гарантировать это ограничение.</span><span class="sxs-lookup"><span data-stu-id="70a16-150">Web farms and web gardens where the size of the farm or garden is greater than one node can't guarantee this constraint.</span></span>
+
+- <span data-ttu-id="70a16-151">Надежные сеансы, использующих двунаправленные каналы HTTP (например, с помощью `WsDualHttpBinding`) может потребовать более чем по умолчанию два HTTP соединений на одного клиента.</span><span class="sxs-lookup"><span data-stu-id="70a16-151">Reliable sessions using dual HTTP channels (for example, using `WsDualHttpBinding`) can require more than the default of two HTTP connections per-client.</span></span> <span data-ttu-id="70a16-152">Это означает, что дуплексного надежного сеанса может потребоваться до двух соединений в каждую сторону, так как параллельные приложения и протокола сообщений может передачи каждую сторону в любой момент времени.</span><span class="sxs-lookup"><span data-stu-id="70a16-152">This means a duplex reliable session can require up to two connections each way because concurrent application and protocol messages may be transferring each way at any given time.</span></span> <span data-ttu-id="70a16-153">При определенных условиях, в зависимости от шаблона обмена сообщениями службы это означает, что можно взаимозаблокировать службу веб сервере, с помощью двойных каналов HTTP и надежных сеансов.</span><span class="sxs-lookup"><span data-stu-id="70a16-153">Under certain conditions depending on the message exchange pattern of the service, this means that it's possible to deadlock a web-hosted service using dual HTTP and reliable sessions.</span></span> <span data-ttu-id="70a16-154">Чтобы увеличить число допустимых HTTP-соединений на одного клиента, добавьте следующее в соответствующий файл конфигурации (например, *web.config* рассматриваемой службы):</span><span class="sxs-lookup"><span data-stu-id="70a16-154">To increase the number of allowable HTTP connections per client, add the following to the relevant configuration file (for example, *web.config* of the service in question):</span></span>
+
+  ```xml
+  <configuration>
+    <system.net>
+      <connectionManagement>
+        <add name="*" maxconnection="4" />
+      </connectionManagement>
+    </system.net>
+  </configuration>
+  ```
+
+  <span data-ttu-id="70a16-155">Значение `maxconnection` атрибута является число подключений.</span><span class="sxs-lookup"><span data-stu-id="70a16-155">The value of the `maxconnection` attribute is the number of connections needed.</span></span> <span data-ttu-id="70a16-156">В этом случае минимальное должно быть четыре подключения.</span><span class="sxs-lookup"><span data-stu-id="70a16-156">The minimum in this case should be four connections.</span></span>

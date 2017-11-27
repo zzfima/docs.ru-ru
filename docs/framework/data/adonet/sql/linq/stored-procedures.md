@@ -1,51 +1,54 @@
 ---
-title: "Хранимые процедуры | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Хранимые процедуры"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1cf8d155dd04cd4f7b3f860186428c14ce4e462e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Хранимые процедуры
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует методы в объектной модели для представления хранимых процедур в базе данных.  Чтобы задать методы в качестве хранимых процедур, следует применить атрибут <xref:System.Data.Linq.Mapping.FunctionAttribute> и, где необходимо, атрибут <xref:System.Data.Linq.Mapping.ParameterAttribute>.  Дополнительные сведения см. в разделе [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+# <a name="stored-procedures"></a><span data-ttu-id="db860-102">Хранимые процедуры</span><span class="sxs-lookup"><span data-stu-id="db860-102">Stored Procedures</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="db860-103">использует методы в объектной модели для представления хранимых процедур в базе данных.</span><span class="sxs-lookup"><span data-stu-id="db860-103"> uses methods in your object model to represent stored procedures in the database.</span></span> <span data-ttu-id="db860-104">Чтобы задать методы в качестве хранимых процедур, следует применить атрибут <xref:System.Data.Linq.Mapping.FunctionAttribute> и, где необходимо, атрибут <xref:System.Data.Linq.Mapping.ParameterAttribute>.</span><span class="sxs-lookup"><span data-stu-id="db860-104">You designate methods as stored procedures by applying the <xref:System.Data.Linq.Mapping.FunctionAttribute> attribute and, where required, the <xref:System.Data.Linq.Mapping.ParameterAttribute> attribute.</span></span> <span data-ttu-id="db860-105">Дополнительные сведения см. в разделе [LINQ to SQL модель объектов](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).</span><span class="sxs-lookup"><span data-stu-id="db860-105">For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).</span></span>  
   
- Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], как правило, пользуются конструктором [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для сопоставления хранимых процедур. В темах данного раздела показано формирование и вызов этих методов в приложении при самостоятельном написании кода.  
+ <span data-ttu-id="db860-106">Разработчики, использующие [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] обычно используется [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для сопоставления хранимых процедур.</span><span class="sxs-lookup"><span data-stu-id="db860-106">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] would typically use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to map stored procedures.</span></span> <span data-ttu-id="db860-107">В темах данного раздела показано формирование и вызов этих методов в приложении при самостоятельном написании кода.</span><span class="sxs-lookup"><span data-stu-id="db860-107">The topics in this section show how to form and call these methods in your application if you write the code yourself.</span></span>  
   
-## В этом подразделе  
- [Как использовать хранимые процедуры для возвращения](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  
- Содержит сведения о возвращении строк данных и об использовании входного параметра.  
+## <a name="in-this-section"></a><span data-ttu-id="db860-108">Содержание</span><span class="sxs-lookup"><span data-stu-id="db860-108">In This Section</span></span>  
+ [<span data-ttu-id="db860-109">Как: возврат наборов строк</span><span class="sxs-lookup"><span data-stu-id="db860-109">How to: Return Rowsets</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  
+ <span data-ttu-id="db860-110">Содержит сведения о возвращении строк данных и об использовании входного параметра.</span><span class="sxs-lookup"><span data-stu-id="db860-110">Describes how to return rows of data and shows how to use an input parameter.</span></span>  
   
- [Как использовать хранимые процедуры, принимающие параметры](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-that-take-parameters.md)  
- Содержит сведения об использовании входных и выходных параметров.  
+ [<span data-ttu-id="db860-111">Как: использовать хранимые процедуры, которые принимают параметры</span><span class="sxs-lookup"><span data-stu-id="db860-111">How to: Use Stored Procedures that Take Parameters</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-that-take-parameters.md)  
+ <span data-ttu-id="db860-112">Содержит сведения об использовании входных и выходных параметров.</span><span class="sxs-lookup"><span data-stu-id="db860-112">Describes how to use input and output parameters.</span></span>  
   
- [Как использовать хранимые процедуры, сопоставленные с несколькими результирующими формами](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)  
- Содержит сведения о предоставлении возвратов нескольких фигур в одной хранимой процедуре.  
+ [<span data-ttu-id="db860-113">Как: использование хранимых процедур, сопоставленных для нескольких форм результатов</span><span class="sxs-lookup"><span data-stu-id="db860-113">How to: Use Stored Procedures Mapped for Multiple Result Shapes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)  
+ <span data-ttu-id="db860-114">Содержит сведения о предоставлении возвратов нескольких фигур в одной хранимой процедуре.</span><span class="sxs-lookup"><span data-stu-id="db860-114">Describes how to provide for returns of multiple shapes in the same stored procedure.</span></span>  
   
- [Как использовать хранимые процедуры, сопоставленные с последовательными результирующими формами](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)  
- Содержит сведения о предоставлении нескольких фигур при наличии известной возвращаемой последовательности.  
+ [<span data-ttu-id="db860-115">Как: использование хранимых процедур, сопоставленных для последовательных форм результатов</span><span class="sxs-lookup"><span data-stu-id="db860-115">How to: Use Stored Procedures Mapped for Sequential Result Shapes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)  
+ <span data-ttu-id="db860-116">Содержит сведения о предоставлении нескольких фигур при наличии известной возвращаемой последовательности.</span><span class="sxs-lookup"><span data-stu-id="db860-116">Describes how to provide for multiple shapes where the return sequence is known.</span></span>  
   
- [Настройка операций с помощью хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)  
- Содержит описание использования хранимых процедур для выполнения операций вставки, обновления и удаления.  
+ [<span data-ttu-id="db860-117">Настройка операций с помощью хранимых процедур</span><span class="sxs-lookup"><span data-stu-id="db860-117">Customizing Operations By Using Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)  
+ <span data-ttu-id="db860-118">Содержит описание использования хранимых процедур для выполнения операций вставки, обновления и удаления.</span><span class="sxs-lookup"><span data-stu-id="db860-118">Describes how to use stored procedures to implement insert, update, and delete operations.</span></span>  
   
- [Настройка операций с использованием только хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures-exclusively.md)  
- Содержит описание использования только хранимых процедур для выполнения операций вставки, обновления и удаления.  
+ [<span data-ttu-id="db860-119">Настройка операций с использованием только хранимых процедур</span><span class="sxs-lookup"><span data-stu-id="db860-119">Customizing Operations by Using Stored Procedures Exclusively</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures-exclusively.md)  
+ <span data-ttu-id="db860-120">Содержит описание использования только хранимых процедур для выполнения операций вставки, обновления и удаления.</span><span class="sxs-lookup"><span data-stu-id="db860-120">Describes how to use nothing but stored procedures to implement insert, update, and delete operations.</span></span>  
   
-## Связанные подразделы  
- [Руководство по программированию](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- Содержит сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="db860-121">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="db860-121">Related Sections</span></span>  
+ [<span data-ttu-id="db860-122">Руководство по программированию</span><span class="sxs-lookup"><span data-stu-id="db860-122">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ <span data-ttu-id="db860-123">Содержит сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="db860-123">Provides information about how to create and use your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model.</span></span>  
   
- [Пошаговое руководство. Применение только хранимых процедур \(Visual Basic\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)  
- Содержит процедуры, в которых показано использование хранимых процедур в Visual Basic.  
+ [<span data-ttu-id="db860-124">Пошаговое руководство: Применение только хранимых процедур (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db860-124">Walkthrough: Using Only Stored Procedures (Visual Basic)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)  
+ <span data-ttu-id="db860-125">Содержит процедуры, в которых показано использование хранимых процедур в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="db860-125">Includes procedures that illustrate how to use stored procedures in Visual Basic.</span></span>  
   
- [Пошаговое руководство. Использование только хранимых процедур \(C\#\)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
- Содержит процедуры, в которых показано использование хранимых процедур в C\#.
+ [<span data-ttu-id="db860-126">Пошаговое руководство: Применение только хранимых процедур (C#)</span><span class="sxs-lookup"><span data-stu-id="db860-126">Walkthrough: Using Only Stored Procedures (C#)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
+ <span data-ttu-id="db860-127">Содержит процедуры, в которых показано использование хранимых процедур в C#.</span><span class="sxs-lookup"><span data-stu-id="db860-127">Includes procedures that illustrate how to use stored procedures in C#.</span></span>

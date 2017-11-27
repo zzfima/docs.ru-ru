@@ -1,77 +1,79 @@
 ---
-title: "Элемент &lt;PreferComInsteadOfManagedRemoting&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<PreferComInsteadOfManagedRemoting> - элемент"
-  - "PreferComInsteadOfManagedRemoting - элемент"
+title: "&lt;PreferComInsteadOfManagedRemoting&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <PreferComInsteadOfManagedRemoting> element
+- PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;PreferComInsteadOfManagedRemoting&gt;
-Задает, будет ли среда выполнения использовать COM\-взаимодействие вместо удаленного взаимодействия для всех вызовов за пределами границ домена приложения.  
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="82086-102">&lt;PreferComInsteadOfManagedRemoting&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="82086-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
+<span data-ttu-id="82086-103">Указывает, использует ли среда выполнения COM-взаимодействие вместо удаленного взаимодействия для всех вызовов через границы домена приложения.</span><span class="sxs-lookup"><span data-stu-id="82086-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="82086-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="82086-104">\<configuration></span></span>  
+<span data-ttu-id="82086-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="82086-105">\<runtime></span></span>  
+<span data-ttu-id="82086-106">\<PreferComInsteadOfManagedRemoting ></span><span class="sxs-lookup"><span data-stu-id="82086-106">\<PreferComInsteadOfManagedRemoting></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="82086-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="82086-107">Syntax</span></span>  
+  
+```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="82086-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="82086-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="82086-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="82086-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="82086-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="82086-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, будет ли среда выполнения использовать COM\-взаимодействие вместо удаленного взаимодействия за пределами границ домена приложения.|  
+|<span data-ttu-id="82086-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="82086-111">Attribute</span></span>|<span data-ttu-id="82086-112">Описание</span><span class="sxs-lookup"><span data-stu-id="82086-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="82086-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="82086-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="82086-114">Указывает, использует ли среда выполнения COM-взаимодействия вместо удаленное взаимодействие через границы домена приложения.</span><span class="sxs-lookup"><span data-stu-id="82086-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="82086-115">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="82086-115">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|За пределами границ домена приложения среда выполнения будет использовать удаленное взаимодействие.  Это значение по умолчанию.|  
-|`true`|За пределами границ домена приложения среда выполнения будет использовать COM\-взаимодействие.|  
+|<span data-ttu-id="82086-116">Значение</span><span class="sxs-lookup"><span data-stu-id="82086-116">Value</span></span>|<span data-ttu-id="82086-117">Описание</span><span class="sxs-lookup"><span data-stu-id="82086-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="82086-118">Среда выполнения будет использовать удаленное взаимодействие через границы домена приложения.</span><span class="sxs-lookup"><span data-stu-id="82086-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="82086-119">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="82086-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="82086-120">Среда выполнения будет использовать COM-взаимодействие через границы домена приложения.</span><span class="sxs-lookup"><span data-stu-id="82086-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="82086-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="82086-121">Child Elements</span></span>  
+ <span data-ttu-id="82086-122">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="82086-122">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="82086-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="82086-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|<span data-ttu-id="82086-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="82086-124">Element</span></span>|<span data-ttu-id="82086-125">Описание</span><span class="sxs-lookup"><span data-stu-id="82086-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="82086-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="82086-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="82086-127">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="82086-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Заметки  
- Если для атрибута `enabled` задано значение `true`, среда выполнения ведет себя следующим образом:  
+## <a name="remarks"></a><span data-ttu-id="82086-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="82086-128">Remarks</span></span>  
+ <span data-ttu-id="82086-129">При задании `enabled` атрибут `true`, среда выполнения ведет себя следующим образом:</span><span class="sxs-lookup"><span data-stu-id="82086-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
   
--   Среда выполнения не вызывает [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) для интерфейса [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md), если интерфейс [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) входит в домен через интерфейс модели COM.  Вместо этого она создает вокруг объекта оболочку [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) \(вызываемая оболочка времени выполнения\).  
+-   <span data-ttu-id="82086-130">Среда выполнения не вызывает [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) для [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) интерфейс при [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) интерфейс входит в домен через COM-интерфейса.</span><span class="sxs-lookup"><span data-stu-id="82086-130">The runtime does not call [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="82086-131">Вместо этого она создает [вызываемой оболочки времени выполнения](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (времени выполнения RCW) для объекта.</span><span class="sxs-lookup"><span data-stu-id="82086-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
   
--   Среда выполнения возвращает E\_NOINTERFACE, когда она получает вызов `QueryInterface` для интерфейса [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md) для любой оболочки [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) \(вызываемая оболочка COM\), которая была создана в этом домене.  
+-   <span data-ttu-id="82086-132">Среда выполнения возвращает E_NOINTERFACE при получении `QueryInterface` вызова для [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) интерфейс для любого [вызываемая оболочка COM](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW), будет создана в этом домене.</span><span class="sxs-lookup"><span data-stu-id="82086-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
   
- Эти два поведения гарантируют, что все вызовы через COM\-интерфейсы между управляемыми объектами через границы домена приложения используют модель COM и COM\-взаимодействие, а не удаленное взаимодействие.  
+ <span data-ttu-id="82086-133">Эти два поведения гарантируют, что все вызовы через COM-интерфейсы между управляемыми объектами через границы домена приложения используют COM и COM-взаимодействие вместо удаленного взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="82086-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
   
-## Пример  
- В следующем примере показано, как указать, что среда выполнения должна использовать COM\-взаимодействие вместо изоляции.  
+## <a name="example"></a><span data-ttu-id="82086-134">Пример</span><span class="sxs-lookup"><span data-stu-id="82086-134">Example</span></span>  
+ <span data-ttu-id="82086-135">В следующем примере показано, как указать, что среда выполнения должна использовать COM взаимодействия через границы изоляции:</span><span class="sxs-lookup"><span data-stu-id="82086-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <PreferComInsteadOfManagedRemoting enabled="true"/>  
@@ -79,6 +81,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="82086-136">См. также</span><span class="sxs-lookup"><span data-stu-id="82086-136">See Also</span></span>  
+ [<span data-ttu-id="82086-137">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="82086-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="82086-138">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="82086-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

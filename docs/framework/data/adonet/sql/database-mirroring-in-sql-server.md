@@ -1,50 +1,56 @@
 ---
-title: "Зеркальное отображение базы данных в SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Зеркальное отображение баз данных в SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0ec0b25976b1b54c91fcdebbc80bc048d2b48823
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Зеркальное отображение базы данных в SQL Server
-Зеркальное отображение базы данных в SQL Server позволяет сохранять копию или зеркальную копию базы данных SQL Server на резервном сервере.  Зеркальное отображение гарантирует постоянное существование двух отдельных копий данных, обеспечивая тем самым высокий уровень доступности и полную избыточность данных.  Поставщик данных .NET для SQL Server предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не надо предпринимать никаких действий или писать код, если он настроен для работы с базой данных SQL Server.  Кроме того, объект <xref:System.Data.SqlClient.SqlConnection> поддерживает режим явного подключения, в котором в строке подключения <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> можно указать имя резервного сервера\-участника.  
+# <a name="database-mirroring-in-sql-server"></a><span data-ttu-id="00de0-102">Зеркальное отображение баз данных в SQL Server</span><span class="sxs-lookup"><span data-stu-id="00de0-102">Database Mirroring in SQL Server</span></span>
+<span data-ttu-id="00de0-103">Зеркальное отображение базы данных в SQL Server позволяет сохранять копию или зеркальную копию базы данных SQL Server на резервном сервере.</span><span class="sxs-lookup"><span data-stu-id="00de0-103">Database mirroring in SQL Server allows you to keep a copy, or mirror, of a SQL Server database on a standby server.</span></span> <span data-ttu-id="00de0-104">Зеркальное отображение гарантирует постоянное существование двух отдельных копий данных, обеспечивая тем самым высокий уровень доступности и полную избыточность данных.</span><span class="sxs-lookup"><span data-stu-id="00de0-104">Mirroring ensures that two separate copies of the data exist at all times, providing high availability and complete data redundancy.</span></span> <span data-ttu-id="00de0-105">Поставщик данных .NET для SQL Server предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не надо предпринимать никаких действий или писать код, если он настроен для работы с базой данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="00de0-105">The .NET Data Provider for SQL Server provides implicit support for database mirroring, so that the developer does not need to take any action or write any code once it has been configured for a SQL Server database.</span></span> <span data-ttu-id="00de0-106">Кроме того, объект <xref:System.Data.SqlClient.SqlConnection> поддерживает режим явного подключения, в котором в строке подключения <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> можно указать имя резервного сервера-участника.</span><span class="sxs-lookup"><span data-stu-id="00de0-106">In addition, the <xref:System.Data.SqlClient.SqlConnection> object supports an explicit connection mode that allows supplying the name of a failover partner server in the <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
- Приведенная ниже упрощенная последовательность событий возникает для объекта <xref:System.Data.SqlClient.SqlConnection>, связанного с базой данных, которая настроена на зеркальное отображение.  
+ <span data-ttu-id="00de0-107">Приведенная ниже упрощенная последовательность событий возникает для объекта <xref:System.Data.SqlClient.SqlConnection>, связанного с базой данных, которая настроена на зеркальное отображение.</span><span class="sxs-lookup"><span data-stu-id="00de0-107">The following simplified sequence of events occurs for a <xref:System.Data.SqlClient.SqlConnection> object that targets a database configured for mirroring:</span></span>  
   
-1.  Клиентское приложение успешно соединяется с основной базой данных, и сервер возвращает имя сервера\-участника, которое затем кэшируется на клиенте.  
+1.  <span data-ttu-id="00de0-108">Клиентское приложение успешно соединяется с основной базой данных, и сервер возвращает имя сервера-участника, которое затем кэшируется на клиенте.</span><span class="sxs-lookup"><span data-stu-id="00de0-108">The client application successfully connects to the principal database, and the server sends back the name of the partner server, which is then cached on the client.</span></span>  
   
-2.  В случае выхода из строя или разрыва соединения с сервером, содержащим основную базу данных, состояние соединения и транзакции теряется.  Клиентское приложение предпринимает безуспешную попытку повторно установить соединение с основной базой данных.  
+2.  <span data-ttu-id="00de0-109">В случае выхода из строя или разрыва соединения с сервером, содержащим основную базу данных, состояние соединения и транзакции теряется.</span><span class="sxs-lookup"><span data-stu-id="00de0-109">If the server containing the principal database fails or connectivity is interrupted, connection and transaction state is lost.</span></span> <span data-ttu-id="00de0-110">Клиентское приложение предпринимает безуспешную попытку повторно установить соединение с основной базой данных.</span><span class="sxs-lookup"><span data-stu-id="00de0-110">The client application attempts to re-establish a connection to the principal database and fails.</span></span>  
   
-3.  Затем клиентское приложение пытается явным образом установить соединение с зеркальной базой данных на сервере\-участнике.  В случае успеха соединение перенаправляется в зеркальную базу данных, которая становится новой основной базой данных.  
+3.  <span data-ttu-id="00de0-111">Затем клиентское приложение пытается явным образом установить соединение с зеркальной базой данных на сервере-участнике.</span><span class="sxs-lookup"><span data-stu-id="00de0-111">The client application then transparently attempts to establish a connection to the mirror database on the partner server.</span></span> <span data-ttu-id="00de0-112">В случае успеха соединение перенаправляется в зеркальную базу данных, которая становится новой основной базой данных.</span><span class="sxs-lookup"><span data-stu-id="00de0-112">If it succeeds, the connection is redirected to the mirror database, which then becomes the new principal database.</span></span>  
   
-## Указание резервного участника в строке подключения  
- При указании в строке подключения имени резервного сервера\-участника клиент прозрачным образом попытается установить соединение с резервным участником, если основная база данных будет недоступна при первом подключении клиентского приложения.  
+## <a name="specifying-the-failover-partner-in-the-connection-string"></a><span data-ttu-id="00de0-113">Указание резервного участника в строке подключения</span><span class="sxs-lookup"><span data-stu-id="00de0-113">Specifying the Failover Partner in the Connection String</span></span>  
+ <span data-ttu-id="00de0-114">При указании в строке подключения имени резервного сервера-участника клиент прозрачным образом попытается установить соединение с резервным участником, если основная база данных будет недоступна при первом подключении клиентского приложения.</span><span class="sxs-lookup"><span data-stu-id="00de0-114">If you supply the name of a failover partner server in the connection string, the client will transparently attempt a connection with the failover partner if the principal database is unavailable when the client application first connects.</span></span>  
   
 ```  
 ";Failover Partner=PartnerServerName"  
 ```  
   
- Если имя резервного сервера\-участника не указано, а основная база данных недоступна при первом подключении клиентского приложения, вызывается исключение <xref:System.Data.SqlClient.SqlException>.  
+ <span data-ttu-id="00de0-115">Если имя резервного сервера-участника не указано, а основная база данных недоступна при первом подключении клиентского приложения, вызывается исключение <xref:System.Data.SqlClient.SqlException>.</span><span class="sxs-lookup"><span data-stu-id="00de0-115">If you omit the name of the failover partner server and the principal database is unavailable when the client application first connects then a <xref:System.Data.SqlClient.SqlException> is raised.</span></span>  
   
- При успешном открытии подключения <xref:System.Data.SqlClient.SqlConnection>, имя резервного партнера\-участника возвращается сервером и замещает все значения, указанные в строке подключения.  
+ <span data-ttu-id="00de0-116">При успешном открытии подключения <xref:System.Data.SqlClient.SqlConnection>, имя резервного партнера-участника возвращается сервером и замещает все значения, указанные в строке подключения.</span><span class="sxs-lookup"><span data-stu-id="00de0-116">When a <xref:System.Data.SqlClient.SqlConnection> is successfully opened, the failover partner name is returned by the server and supersedes any values supplied in the connection string.</span></span>  
   
 > [!NOTE]
->  При зеркальном отображении базы данных в строке подключения необходимо явным образом указать исходный каталог или имя базы данных.  Если клиент получает сведения о переходе на другой ресурс во время соединения, для которого явным образом не указан исходный каталог или база данных, эти сведения не кэшируются и приложение не пытается перейти на другой ресурс в случае выхода из строя основного сервера.  Если в строке подключения указан резервный партнер, но не указан исходный каталог или база данных, вызывается исключение `InvalidArgumentException`.  
+>  <span data-ttu-id="00de0-117">При зеркальном отображении базы данных в строке подключения необходимо явным образом указать исходный каталог или имя базы данных.</span><span class="sxs-lookup"><span data-stu-id="00de0-117">You must explicitly specify the initial catalog or database name in the connection string for database mirroring scenarios.</span></span> <span data-ttu-id="00de0-118">Если клиент получает сведения о переходе на другой ресурс во время соединения, для которого явным образом не указан исходный каталог или база данных, эти сведения не кэшируются и приложение не пытается перейти на другой ресурс в случае выхода из строя основного сервера.</span><span class="sxs-lookup"><span data-stu-id="00de0-118">If the client receives failover information on a connection that doesn't have an explicitly specified initial catalog or database, the failover information is not cached and the application does not attempt to fail over if the principal server fails.</span></span> <span data-ttu-id="00de0-119">Если в строке подключения указан резервный партнер, но не указан исходный каталог или база данных, вызывается исключение `InvalidArgumentException`.</span><span class="sxs-lookup"><span data-stu-id="00de0-119">If a connection string has a value for the failover partner, but no value for the initial catalog or database, an `InvalidArgumentException` is raised.</span></span>  
   
-## Получение текущего имени сервера  
- При помощи свойства <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> объекта <xref:System.Data.SqlClient.SqlConnection> в случае перехода на другой ресурс можно получить имя сервера, с которым установлено текущее соединение.  Следующий фрагмент кода получает имя активного сервера, предполагая, что переменная connection ссылается на открытое соединение <xref:System.Data.SqlClient.SqlConnection>.  
+## <a name="retrieving-the-current-server-name"></a><span data-ttu-id="00de0-120">Получение текущего имени сервера</span><span class="sxs-lookup"><span data-stu-id="00de0-120">Retrieving the Current Server Name</span></span>  
+ <span data-ttu-id="00de0-121">При помощи свойства <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> объекта <xref:System.Data.SqlClient.SqlConnection> в случае перехода на другой ресурс можно получить имя сервера, с которым установлено текущее соединение.</span><span class="sxs-lookup"><span data-stu-id="00de0-121">In the event of a failover, you can retrieve the name of the server to which the current connection is actually connected by using the <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> property of a <xref:System.Data.SqlClient.SqlConnection> object.</span></span> <span data-ttu-id="00de0-122">Следующий фрагмент кода получает имя активного сервера, предполагая, что переменная connection ссылается на открытое соединение <xref:System.Data.SqlClient.SqlConnection>.</span><span class="sxs-lookup"><span data-stu-id="00de0-122">The following code fragment retrieves the name of the active server, assuming that the connection variable references an open <xref:System.Data.SqlClient.SqlConnection>.</span></span>  
   
- Свойство **DataSource** обновляется для отражения имени зеркала при возникновении события перехода на другой ресурс и переключении соединения на зеркальный сервер.  
+ <span data-ttu-id="00de0-123">При возникновении события перехода на другой ресурс и переключении соединения на зеркальный сервер **DataSource** свойство обновляется для отражения имени зеркала.</span><span class="sxs-lookup"><span data-stu-id="00de0-123">When a failover event occurs and the connection is switched to the mirror server, the **DataSource** property is updated to reflect the mirror name.</span></span>  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -54,18 +60,18 @@ Dim activeServer As String = connection.DataSource
 string activeServer = connection.DataSource;  
 ```  
   
-## Поведение SqlClient при зеркальном отображении  
- Клиент всегда пытается соединиться с текущим основным сервером.  В случае сбоя он пытается соединиться с резервным участником.  Если зеркальная база данных уже была переключена на основную роль на сервере\-участнике, то соединение устанавливается успешно и новое сопоставление «основная\-зеркальная» отправляется клиенту и кэшируется на время существования домена приложения <xref:System.AppDomain>.  Оно не сохраняется в постоянном хранилище и недоступно для последующих соединений в другом домене приложения **AppDomain** или процессе.  Однако оно доступно для последующих соединений внутри того же домена приложения **AppDomain**.  Обратите внимание, что другой домен приложения **AppDomain** или процесс, выполняемый на том же или другом компьютере, всегда имеет свой пул соединений и эти соединения не сбрасываются.  В этом случае, если база данных\-источник выходит из строя, каждый процесс или домен приложения **AppDomain** заканчивается ошибкой и пул автоматически очищается.  
+## <a name="sqlclient-mirroring-behavior"></a><span data-ttu-id="00de0-124">Поведение SqlClient при зеркальном отображении</span><span class="sxs-lookup"><span data-stu-id="00de0-124">SqlClient Mirroring Behavior</span></span>  
+ <span data-ttu-id="00de0-125">Клиент всегда пытается соединиться с текущим основным сервером.</span><span class="sxs-lookup"><span data-stu-id="00de0-125">The client always tries to connect to the current principal server.</span></span> <span data-ttu-id="00de0-126">В случае сбоя он пытается соединиться с резервным участником.</span><span class="sxs-lookup"><span data-stu-id="00de0-126">If it fails, it tries the failover partner.</span></span> <span data-ttu-id="00de0-127">Если зеркальная база данных уже была переключена на основную роль на сервере-участнике, то соединение устанавливается успешно и новое сопоставление «основная-зеркальная» отправляется клиенту и кэшируется на время существования домена приложения <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="00de0-127">If the mirror database has already been switched to the principal role on the partner server, the connection succeeds and the new principal-mirror mapping is sent to the client and cached for the lifetime of the calling <xref:System.AppDomain>.</span></span> <span data-ttu-id="00de0-128">Он не сохраняется в постоянном хранилище и недоступно для последующих соединений в другом **AppDomain** или процесса.</span><span class="sxs-lookup"><span data-stu-id="00de0-128">It is not stored in persistent storage and is not available for subsequent connections in a different **AppDomain** or process.</span></span> <span data-ttu-id="00de0-129">Однако он доступен для последующих соединений внутри того же **AppDomain**.</span><span class="sxs-lookup"><span data-stu-id="00de0-129">However, it is available for subsequent connections within the same **AppDomain**.</span></span> <span data-ttu-id="00de0-130">Обратите внимание что другой **AppDomain** или процесс, выполняемый на том же или другом компьютере, всегда имеет свой пул соединений и эти соединения не сбрасываются.</span><span class="sxs-lookup"><span data-stu-id="00de0-130">Note that another **AppDomain** or process running on the same or a different computer always has its pool of connections, and those connections are not reset.</span></span> <span data-ttu-id="00de0-131">В этом случае, если база данных-источник выходит из строя, каждый процесс или **AppDomain** заканчивается ошибкой и пул автоматически очищается.</span><span class="sxs-lookup"><span data-stu-id="00de0-131">In that case, if the primary database goes down, each process or **AppDomain** fails once, and the pool is automatically cleared.</span></span>  
   
 > [!NOTE]
->  Поддержка зеркального отображения на сервере настраивается отдельно для каждой базы данных.  Если операции по обработке данных, выполняемые в других базах данных, не включаются в основной или зеркальный набор вследствие использования многокомпонентных имен либо из\-за изменения текущей базы данных, то в случае сбоя изменения в эти базы данных не распространяются.  При изменении данных в базе данных, которая не была зеркально отображена, ошибка не выдается.  Разработчик должен оценить возможное последствие таких операций.  
+>  <span data-ttu-id="00de0-132">Поддержка зеркального отображения на сервере настраивается отдельно для каждой базы данных.</span><span class="sxs-lookup"><span data-stu-id="00de0-132">Mirroring support on the server is configured on a per-database basis.</span></span> <span data-ttu-id="00de0-133">Если операции по обработке данных, выполняемые в других базах данных, не включаются в основной или зеркальный набор вследствие использования многокомпонентных имен либо из-за изменения текущей базы данных, то в случае сбоя изменения в эти базы данных не распространяются.</span><span class="sxs-lookup"><span data-stu-id="00de0-133">If data manipulation operations are executed against other databases not included in the principal/mirror set, either by using multipart names or by changing the current database, the changes to these other databases do not propagate in the event of failure.</span></span> <span data-ttu-id="00de0-134">При изменении данных в базе данных, которая не была зеркально отображена, ошибка не выдается.</span><span class="sxs-lookup"><span data-stu-id="00de0-134">No error is generated when data is modified in a database that is not mirrored.</span></span> <span data-ttu-id="00de0-135">Разработчик должен оценить возможное последствие таких операций.</span><span class="sxs-lookup"><span data-stu-id="00de0-135">The developer must evaluate the possible impact of such operations.</span></span>  
   
-## Ресурсы, посвященные зеркальному отображению баз данных  
- Документацию и сведения о настройке, развертывании и администрировании зеркального подключения см. в приведенных ниже ресурсах электронной документации по SQL Server.  
+## <a name="database-mirroring-resources"></a><span data-ttu-id="00de0-136">Ресурсы, посвященные зеркальному отображению баз данных</span><span class="sxs-lookup"><span data-stu-id="00de0-136">Database Mirroring Resources</span></span>  
+ <span data-ttu-id="00de0-137">Документацию и сведения о настройке, развертывании и администрировании зеркального подключения см. в приведенных ниже ресурсах электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="00de0-137">For conceptual documentation and information on configuring, deploying and administering mirroring, see the following resources in SQL Server Books Online.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Зеркальное отображение баз данных](http://msdn.microsoft.com/library/bb934127.aspx) в электронной документации по SQL Server|Описывается установка и настройка зеркального отображения в SQL Server.|  
+|<span data-ttu-id="00de0-138">Ресурс</span><span class="sxs-lookup"><span data-stu-id="00de0-138">Resource</span></span>|<span data-ttu-id="00de0-139">Описание</span><span class="sxs-lookup"><span data-stu-id="00de0-139">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="00de0-140">[Зеркальное отображение базы данных](http://msdn.microsoft.com/library/bb934127.aspx) в электронной документации по SQL Server</span><span class="sxs-lookup"><span data-stu-id="00de0-140">[Database Mirroring](http://msdn.microsoft.com/library/bb934127.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="00de0-141">Описывается установка и настройка зеркального отображения в SQL Server.</span><span class="sxs-lookup"><span data-stu-id="00de0-141">Describes how to set up and configure mirroring in SQL Server.</span></span>|  
   
-## См. также  
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="00de0-142">См. также</span><span class="sxs-lookup"><span data-stu-id="00de0-142">See Also</span></span>  
+ [<span data-ttu-id="00de0-143">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="00de0-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

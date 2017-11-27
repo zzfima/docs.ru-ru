@@ -1,84 +1,90 @@
 ---
-title: "Создание DataTable на основе запроса (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание таблицы данных из запроса (LINQ to DataSet)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5be353d76f921edd730d46907096abe8a2a1188f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание DataTable на основе запроса (LINQ to DataSet)
-Объект <xref:System.Data.DataTable> часто используется для привязки данных.  Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> принимает результаты запроса и копирует данные в <xref:System.Data.DataTable>, которую в дальнейшем можно использовать для связывания с данными.  После выполнения операций с данными происходит слияние нового объекта <xref:System.Data.DataTable> с исходным объектом <xref:System.Data.DataTable>.  
+# <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a><span data-ttu-id="ca55b-102">Создание таблицы данных из запроса (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="ca55b-102">Creating a DataTable From a Query (LINQ to DataSet)</span></span>
+<span data-ttu-id="ca55b-103">Объект <xref:System.Data.DataTable> часто используется для привязки данных.</span><span class="sxs-lookup"><span data-stu-id="ca55b-103">Data binding is a common use of <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="ca55b-104">Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> принимает результаты запроса и копирует данные в <xref:System.Data.DataTable>, которую в дальнейшем можно использовать для связывания с данными.</span><span class="sxs-lookup"><span data-stu-id="ca55b-104">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method takes the results of a query and copies the data into a <xref:System.Data.DataTable>, which can then be used for data binding.</span></span> <span data-ttu-id="ca55b-105">После выполнения операций с данными происходит слияние нового объекта <xref:System.Data.DataTable> с исходным объектом <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-105">When the data operations have been performed, the new <xref:System.Data.DataTable> is merged back into the source <xref:System.Data.DataTable>.</span></span>  
   
- Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> использует для создания объекта <xref:System.Data.DataTable> на основе запроса следующий процесс.  
+ <span data-ttu-id="ca55b-106">Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> использует для создания объекта <xref:System.Data.DataTable> на основе запроса следующий процесс.</span><span class="sxs-lookup"><span data-stu-id="ca55b-106">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method uses the following process to create a <xref:System.Data.DataTable> from a query:</span></span>  
   
-1.  Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> клонирует объект <xref:System.Data.DataTable> из исходной таблицы \(объект <xref:System.Data.DataTable>, реализующий интерфейс <xref:System.Linq.IQueryable%601>\).  Источник <xref:System.Collections.IEnumerable> обычно создается из выражения [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] или запроса метода.  
+1.  <span data-ttu-id="ca55b-107">Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> клонирует объект <xref:System.Data.DataTable> из исходной таблицы (объект <xref:System.Data.DataTable>, реализующий интерфейс <xref:System.Linq.IQueryable%601>).</span><span class="sxs-lookup"><span data-stu-id="ca55b-107">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method clones a <xref:System.Data.DataTable> from the source table (a <xref:System.Data.DataTable> object that implements the <xref:System.Linq.IQueryable%601> interface).</span></span> <span data-ttu-id="ca55b-108">Источник <xref:System.Collections.IEnumerable> обычно создается из выражения [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] или запроса метода.</span><span class="sxs-lookup"><span data-stu-id="ca55b-108">The <xref:System.Collections.IEnumerable> source has generally originated from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] expression or method query.</span></span>  
   
-2.  Схема клонированного объекта <xref:System.Data.DataTable> строится на основе столбцов первого перечисленного объекта <xref:System.Data.DataRow> в исходной таблице, а клонированной таблице присваивается имя исходной таблицы с добавлением слова «query».  
+2.  <span data-ttu-id="ca55b-109">Схема клонированного объекта <xref:System.Data.DataTable> строится на основе столбцов первого перечисленного объекта <xref:System.Data.DataRow> в исходной таблице, а клонированной таблице присваивается имя исходной таблицы с добавлением слова «query».</span><span class="sxs-lookup"><span data-stu-id="ca55b-109">The schema of the cloned <xref:System.Data.DataTable> is built from the columns of the first enumerated <xref:System.Data.DataRow> object in the source table and the name of the cloned table is the name of the source table with the word "query" appended to it.</span></span>  
   
-3.  Содержимое каждой строки исходной таблицы копируется в новый объект <xref:System.Data.DataRow>, который затем вставляется в клонированную таблицу.  Свойства <xref:System.Data.DataRow.RowState%2A> и <xref:System.Data.DataRow.RowError%2A> сохраняются на протяжении операции копирования.  Исключение <xref:System.ArgumentException> возникает, если объекты <xref:System.Data.DataRow> в источнике происходят из разных таблиц.  
+3.  <span data-ttu-id="ca55b-110">Содержимое каждой строки исходной таблицы копируется в новый объект <xref:System.Data.DataRow>, который затем вставляется в клонированную таблицу.</span><span class="sxs-lookup"><span data-stu-id="ca55b-110">For each row in the source table, the content of the row is copied into a new <xref:System.Data.DataRow> object, which is then inserted into the cloned table.</span></span> <span data-ttu-id="ca55b-111">Свойства <xref:System.Data.DataRow.RowState%2A> и <xref:System.Data.DataRow.RowError%2A> сохраняются на протяжении операции копирования.</span><span class="sxs-lookup"><span data-stu-id="ca55b-111">The <xref:System.Data.DataRow.RowState%2A> and <xref:System.Data.DataRow.RowError%2A> properties are preserved across the copy operation.</span></span> <span data-ttu-id="ca55b-112">Исключение <xref:System.ArgumentException> возникает, если объекты <xref:System.Data.DataRow> в источнике происходят из разных таблиц.</span><span class="sxs-lookup"><span data-stu-id="ca55b-112">An <xref:System.ArgumentException> is thrown if the <xref:System.Data.DataRow> objects in the source are from different tables.</span></span>  
   
-4.  Клонированный объект <xref:System.Data.DataTable> возвращается после копирования всех объектов <xref:System.Data.DataRow> в запрашиваемой входной таблице.  Если исходная последовательность не содержит объектов <xref:System.Data.DataRow>, метод возвращает пустой объект <xref:System.Data.DataTable>.  
+4.  <span data-ttu-id="ca55b-113">Клонированный объект <xref:System.Data.DataTable> возвращается после копирования всех объектов <xref:System.Data.DataRow> в запрашиваемой входной таблице.</span><span class="sxs-lookup"><span data-stu-id="ca55b-113">The cloned <xref:System.Data.DataTable> is returned after all <xref:System.Data.DataRow> objects in the input queryable table have been copied.</span></span> <span data-ttu-id="ca55b-114">Если исходная последовательность не содержит объектов <xref:System.Data.DataRow>, метод возвращает пустой объект <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-114">If the source sequence does not contain any <xref:System.Data.DataRow> objects, the method returns an empty <xref:System.Data.DataTable>.</span></span>  
   
- Следует иметь в виду, что при вызове метода <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> выполняющийся запрос привязывается к исходной таблице.  
+ <span data-ttu-id="ca55b-115">Следует иметь в виду, что при вызове метода <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> выполняющийся запрос привязывается к исходной таблице.</span><span class="sxs-lookup"><span data-stu-id="ca55b-115">Note that calling the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method will cause the query bound to the source table to execute.</span></span>  
   
- Когда метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> встречает ссылку NULL или тип значения, допускающий значение NULL, в строке исходной таблицы, это значение будет заменено на <xref:System.DBNull.Value>.  Таким образом, значения NULL обрабатываются правильно в возвращаемой таблице <xref:System.Data.DataTable>.  
+ <span data-ttu-id="ca55b-116">Когда метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> встречает ссылку NULL или тип значения, допускающий значение NULL, в строке исходной таблицы, это значение будет заменено на <xref:System.DBNull.Value>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-116">When the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method encounters either a null reference or nullable value type in a row in the source table, it replaces the value with <xref:System.DBNull.Value>.</span></span> <span data-ttu-id="ca55b-117">Таким образом, значения NULL обрабатываются правильно в возвращаемой таблице <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-117">This way, null values are handled correctly in the returned <xref:System.Data.DataTable>.</span></span>  
   
- Примечание. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> в качестве входных данных принимает запрос, который может возвращать строки из нескольких объектов <xref:System.Data.DataTable> или <xref:System.Data.DataSet>.  Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> копирует данные из исходных объектов <xref:System.Data.DataTable> и <xref:System.Data.DataSet> в возвращаемую таблицу <xref:System.Data.DataTable>, но не копирует свойства.  Необходимо вручную явно установить свойства возвращаемой таблицы <xref:System.Data.DataTable>, например <xref:System.Data.DataTable.Locale%2A> и <xref:System.Data.DataTable.TableName%2A>.  
+ <span data-ttu-id="ca55b-118">Примечание. Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> в качестве входных данных принимает запрос, который может возвращать строки из нескольких объектов <xref:System.Data.DataTable> или <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-118">Note: The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method accepts as input a query that can return rows from multiple <xref:System.Data.DataTable> or <xref:System.Data.DataSet> objects.</span></span> <span data-ttu-id="ca55b-119">Метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> копирует данные из исходных объектов <xref:System.Data.DataTable> и <xref:System.Data.DataSet> в возвращаемую таблицу <xref:System.Data.DataTable>, но не копирует свойства.</span><span class="sxs-lookup"><span data-stu-id="ca55b-119">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method will copy the data but not the properties from the source <xref:System.Data.DataTable> or <xref:System.Data.DataSet> objects to the returned <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="ca55b-120">Необходимо вручную явно установить свойства возвращаемой таблицы <xref:System.Data.DataTable>, например <xref:System.Data.DataTable.Locale%2A> и <xref:System.Data.DataTable.TableName%2A>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-120">You will need to explicitly set the properties on the returned <xref:System.Data.DataTable>, such as <xref:System.Data.DataTable.Locale%2A> and <xref:System.Data.DataTable.TableName%2A>.</span></span>  
   
- В следующем примере выполняется запрос к таблице SalesOrderHeader и возвращаются заказы, сделанные после 8 августа 2001 года, а метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> применяется для создания объекта <xref:System.Data.DataTable> на основе этого запроса.  Затем объект <xref:System.Data.DataTable> привязывается к источнику <xref:System.Windows.Forms.BindingSource>, который является посредником для объекта <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="ca55b-121">В следующем примере выполняется запрос к таблице SalesOrderHeader и возвращаются заказы, сделанные после 8 августа 2001 года, а метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> применяется для создания объекта <xref:System.Data.DataTable> на основе этого запроса.</span><span class="sxs-lookup"><span data-stu-id="ca55b-121">The following example queries the SalesOrderHeader table for orders after August 8, 2001 and uses the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method to create a <xref:System.Data.DataTable> from that query.</span></span> <span data-ttu-id="ca55b-122">Затем объект <xref:System.Data.DataTable> привязывается к источнику <xref:System.Windows.Forms.BindingSource>, который является посредником для объекта <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-122">The <xref:System.Data.DataTable> is then bound to a <xref:System.Windows.Forms.BindingSource>, which acts as proxy for a <xref:System.Windows.Forms.DataGridView>.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## Создание пользовательского метода CopyToDataTable\<T\>  
- Существующие методы <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> работают только с источником <xref:System.Collections.Generic.IEnumerable%601>, где общий параметр `T` принадлежит к типу <xref:System.Data.DataRow>.  Хотя это и полезно, это не позволяет создавать таблицы из последовательности скалярных типов, из запросов, возвращающих анонимные типы, или из запросов, выполняющих соединение таблиц.  Пример применения двух пользовательских методов `CopyToDataTable`, загружающих таблицу из последовательности скалярных или анонимных типов, см. в разделе [Как реализовать метод CopyToDataTable\<T\>, если универсальный тип T не является DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md).  
+## <a name="creating-a-custom-copytodatatablet-method"></a><span data-ttu-id="ca55b-123">Создание пользовательских CopyToDataTable\<T > метод</span><span class="sxs-lookup"><span data-stu-id="ca55b-123">Creating a Custom CopyToDataTable\<T> Method</span></span>  
+ <span data-ttu-id="ca55b-124">Существующие методы <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> работают только с источником <xref:System.Collections.Generic.IEnumerable%601>, где общий параметр `T` принадлежит к типу <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="ca55b-124">The existing <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> methods only operate on an <xref:System.Collections.Generic.IEnumerable%601> source where the generic parameter `T` is of type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="ca55b-125">Хотя это и полезно, это не позволяет создавать таблицы из последовательности скалярных типов, из запросов, возвращающих анонимные типы, или из запросов, выполняющих соединение таблиц.</span><span class="sxs-lookup"><span data-stu-id="ca55b-125">Although this is useful, it does not allow tables to be created from a sequence of scalar types, from queries that return anonymous types, or from queries that perform table joins.</span></span> <span data-ttu-id="ca55b-126">Пример реализации пользовательских `CopyToDataTable` методов для загрузки таблицы из последовательности скалярных или анонимных типов, см. [как: реализовать CopyToDataTable\<T > где универсальный тип T не совпадает DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.</span><span class="sxs-lookup"><span data-stu-id="ca55b-126">For an example of how to implement two custom `CopyToDataTable` methods that load a table from a sequence of scalar or anonymous types, see [How to: Implement CopyToDataTable\<T> Where the Generic Type T Is Not a DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.</span></span>  
   
- В примерах, приведенных в этом разделе, используются следующие пользовательские типы:  
+ <span data-ttu-id="ca55b-127">В примерах, приведенных в этом разделе, используются следующие пользовательские типы:</span><span class="sxs-lookup"><span data-stu-id="ca55b-127">The examples in this section use the following custom types:</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#itemclass)]
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
-### Пример  
- В этом примере выполняется соединение в таблицах `SalesOrderHeader` и `SalesOrderDetail` для получения совершенных через Интернет заказов начиная с августа и на основе этого запроса создается таблица.  
+### <a name="example"></a><span data-ttu-id="ca55b-128">Пример</span><span class="sxs-lookup"><span data-stu-id="ca55b-128">Example</span></span>  
+ <span data-ttu-id="ca55b-129">В этом примере выполняется соединение в таблицах `SalesOrderHeader` и `SalesOrderDetail` для получения совершенных через Интернет заказов начиная с августа и на основе этого запроса создается таблица.</span><span class="sxs-lookup"><span data-stu-id="ca55b-129">This example performs a join over the `SalesOrderHeader` and `SalesOrderDetail` tables to get online orders from the month of August and creates a table from the query.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
-### Пример  
- В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99 доллара США, и на основе результатов этого запроса создается таблица.  
+### <a name="example"></a><span data-ttu-id="ca55b-130">Пример</span><span class="sxs-lookup"><span data-stu-id="ca55b-130">Example</span></span>  
+ <span data-ttu-id="ca55b-131">В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99 доллара США, и на основе результатов этого запроса создается таблица.</span><span class="sxs-lookup"><span data-stu-id="ca55b-131">The following example queries a collection for items of price greater than $9.99 and creates a table from the query results.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
-### Пример  
- В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99, и результаты запроса проецируются.  Возвращаемая последовательность анонимных типов загружается в существующую таблицу.  
+### <a name="example"></a><span data-ttu-id="ca55b-132">Пример</span><span class="sxs-lookup"><span data-stu-id="ca55b-132">Example</span></span>  
+ <span data-ttu-id="ca55b-133">В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99, и результаты запроса проецируются.</span><span class="sxs-lookup"><span data-stu-id="ca55b-133">The following example queries a collection for items of price greater than 9.99 and projects the results.</span></span> <span data-ttu-id="ca55b-134">Возвращаемая последовательность анонимных типов загружается в существующую таблицу.</span><span class="sxs-lookup"><span data-stu-id="ca55b-134">The returned sequence of anonymous types is loaded into an existing table.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
-### Пример  
- В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99 доллара США, и результаты запроса проецируются.  Возвращаемая последовательность анонимных типов загружается в существующую таблицу.  Схема таблицы автоматически расширяется, так как типы `Book` и `Movies` являются производными от типа `Item`.  
+### <a name="example"></a><span data-ttu-id="ca55b-135">Пример</span><span class="sxs-lookup"><span data-stu-id="ca55b-135">Example</span></span>  
+ <span data-ttu-id="ca55b-136">В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99 доллара США, и результаты запроса проецируются.</span><span class="sxs-lookup"><span data-stu-id="ca55b-136">The following example queries a collection for items of price greater than $9.99 and projects the results.</span></span> <span data-ttu-id="ca55b-137">Возвращаемая последовательность анонимных типов загружается в существующую таблицу.</span><span class="sxs-lookup"><span data-stu-id="ca55b-137">The returned sequence of anonymous types is loaded into an existing table.</span></span> <span data-ttu-id="ca55b-138">Схема таблицы автоматически расширяется, так как типы `Book` и `Movies` являются производными от типа `Item`.</span><span class="sxs-lookup"><span data-stu-id="ca55b-138">The table schema is automatically expanded because the `Book` and `Movies` types are derived from the `Item` type.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
-### Пример  
- В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99 доллара США, и возвращаемая последовательность значений типа <xref:System.Double> загружается в новую таблицу.  
+### <a name="example"></a><span data-ttu-id="ca55b-139">Пример</span><span class="sxs-lookup"><span data-stu-id="ca55b-139">Example</span></span>  
+ <span data-ttu-id="ca55b-140">В следующем примере выполняется запрос к коллекции для получения элементов, цена которых составляет больше 9,99 доллара США, и возвращаемая последовательность значений типа <xref:System.Double> загружается в новую таблицу.</span><span class="sxs-lookup"><span data-stu-id="ca55b-140">The following example queries a collection for items of price greater than $9.99 and returns a sequence of <xref:System.Double>, which is loaded into a new table.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## См. также  
- [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)   
- [Универсальные методы Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)   
- [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="ca55b-141">См. также</span><span class="sxs-lookup"><span data-stu-id="ca55b-141">See Also</span></span>  
+ [<span data-ttu-id="ca55b-142">Руководство по программированию</span><span class="sxs-lookup"><span data-stu-id="ca55b-142">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="ca55b-143">Методы универсального Field и SetField</span><span class="sxs-lookup"><span data-stu-id="ca55b-143">Generic Field and SetField Methods</span></span>](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
+ [<span data-ttu-id="ca55b-144">Примеры LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="ca55b-144">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

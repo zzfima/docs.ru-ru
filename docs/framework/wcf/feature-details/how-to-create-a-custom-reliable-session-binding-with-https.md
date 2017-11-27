@@ -1,81 +1,84 @@
 ---
-title: "Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6e891f266a8159a6367a0a936d6ba11197484267
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS
-В этом разделе рассматривается использование механизма обеспечения безопасности транспорта через протокол SSL и надежные сеансы.  Для использования надежных сеансов через протокол HTTPS требуется создать пользовательскую привязку, использующую надежный сеанс и транспорт HTTPS.  Разрешить надежный сеанс можно принудительно \(в коде\) или декларативно \(в файле конфигурации\).  В этой процедуре для разрешения надежного сеанса используются файлы конфигурации клиента и службы и элемент [\<httpsTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md).  
-  
- Ключевой момент данной процедуры заключается том, что элемент конфигурации `endpoint` содержит атрибут `bindingConfiguration`, ссылающийся на конфигурацию пользовательской привязки с именем "reliableSessionOverHttps".  Элемент конфигурации [\<привязка\>](../../../../docs/framework/misc/binding.md) может затем ссылаться на это имя, чтобы указать, что используются надежный сеанс и транспорт HTTPS, так как включены элементы `reliableSession` и `httpsTransport`.  
-  
- Копию исходного кода этого примера см. в разделе [Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).  
-  
-### Настройка использования надежного сеанса и HTTPS службой с привязкой CustomBinding  
-  
-1.  Определите контракт службы для данного типа службы.  
-  
-     [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]  
-  
-2.  Реализуйте контракт службы в классе службы.  Обратите внимание, что информация об адресе или привязке не указывается внутри реализации службы.  Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
-  
-     [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]  
-  
-3.  Создайте файл Web.config, чтобы настроить использование пользовательской привязки "reliableSessionOverHttps", использующей надежный сеанс и транспорт HTTPS, с конечной точкой службы `CalculatorService`.  
-  
-     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
-  
-4.  Создайте файл Service.svc, содержащий строку:  
-  
-    ```  
-    <%@ServiceHost language=c# Service="CalculatorService" %>   
-    ```  
-  
-5.  Поместите файл Service.svc в виртуальный каталог IIS.  
-  
-### Настройка использования надежного сеанса и HTTPS клиентом с привязкой CustomBinding  
-  
-1.  Из командной строки запустите программу [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), чтобы создать код из метаданных службы.  
-  
-    ```  
-    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
-    ```  
-  
-2.  Создаваемый клиент содержит интерфейс `ICalculator`, определяющий контракт службы, которому должна удовлетворять реализация клиента.  
-  
-     [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]  
-  
-3.  Созданное клиентское приложение также содержит реализацию `ClientCalculator`.  Обратите внимание, что информация об адресе и привязке нигде внутри реализации службы не указывается.  Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
-  
-     [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]  
-  
-4.  Задайте пользовательской привязке "reliableSessionOverHttps" использовать транспорт HTTPS и надежные сеансы.  
-  
-     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
-  
-5.  Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
-  
-     [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]  
-  
-6.  Скомпилируйте и запустите клиент.  
-  
-## Пример  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
-## Безопасность платформы .NET Framework  
- При попытке доступа к адресу HTTPS, такому как https:\/\/localhost\/servicemodelsamples\/service.svc, через браузер, возникает предупреждение системы безопасности, так как сертификат, используемый в этом примере, является тестовым сертификатом, созданным Makecert.exe.  
-  
-## См. также  
- [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a><span data-ttu-id="b58ef-102">Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS</span><span class="sxs-lookup"><span data-stu-id="b58ef-102">How to: Create a Custom Reliable Session Binding with HTTPS</span></span>
+
+<span data-ttu-id="b58ef-103">В этом разделе рассматривается использование механизма обеспечения безопасности транспорта через протокол SSL и надежные сеансы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-103">This topic demonstrates the use of Secure Sockets Layer (SSL) transport security with reliable sessions.</span></span> <span data-ttu-id="b58ef-104">Для использования надежных сеансов через протокол HTTPS требуется создать пользовательскую привязку, использующую надежный сеанс и транспорт HTTPS.</span><span class="sxs-lookup"><span data-stu-id="b58ef-104">To use a reliable session over HTTPS, you must create a custom binding that uses a reliable session and the HTTPS transport.</span></span> <span data-ttu-id="b58ef-105">Разрешить надежный сеанс можно принудительно с помощью кода или декларативно в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b58ef-105">You enable the reliable session either imperatively by using code or declaratively in the configuration file.</span></span> <span data-ttu-id="b58ef-106">Эта процедура использует файлы конфигурации клиента и службы для включения надежного сеанса и [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="b58ef-106">This procedure uses the client and service configuration files to enable the reliable session and the [**\<httpsTransport>**](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) element.</span></span>
+
+<span data-ttu-id="b58ef-107">Ключевой момент данной процедуры заключается том  **\<endpoint >** элемент конфигурации содержит `bindingConfiguration` атрибут, ссылающийся на конфигурацию пользовательской привязки с именем `reliableSessionOverHttps`.</span><span class="sxs-lookup"><span data-stu-id="b58ef-107">The key part of this procedure is that the **\<endpoint>** configuration element contain a `bindingConfiguration` attribute that references a custom binding configuration named `reliableSessionOverHttps`.</span></span> <span data-ttu-id="b58ef-108">[  **\<Привязки >** ](../../../../docs/framework/misc/binding.md) элемент конфигурации ссылается на это имя, чтобы указать, использовать надежный сеанс и транспорт HTTPS, включая  **\< reliableSession >** и  **\<httpsTransport >** элементов.</span><span class="sxs-lookup"><span data-stu-id="b58ef-108">The [**\<binding>**](../../../../docs/framework/misc/binding.md) configuration element references this name to specify that a reliable session and the HTTPS transport are used by including **\<reliableSession>** and **\<httpsTransport>** elements.</span></span>
+
+<span data-ttu-id="b58ef-109">Исходная копия в этом примере в разделе [пользовательские привязки надежного сеанса через протокол HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).</span><span class="sxs-lookup"><span data-stu-id="b58ef-109">For the source copy of this example, see [Custom Binding Reliable Session over HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md).</span></span>
+
+### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="b58ef-110">Настройка службы с привязкой CustomBinding использования надежного сеанса и HTTPS</span><span class="sxs-lookup"><span data-stu-id="b58ef-110">Configure the service with a CustomBinding to use a reliable session with HTTPS</span></span>
+
+1. <span data-ttu-id="b58ef-111">Определите контракт службы для данного типа службы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-111">Define a service contract for the type of service.</span></span>
+
+   [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1121)]
+
+1. <span data-ttu-id="b58ef-112">Реализуйте контракт службы в классе службы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-112">Implement the service contract in a service class.</span></span> <span data-ttu-id="b58ef-113">Обратите внимание, что информация об адресе или привязке не указывается внутри реализации службы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-113">Note that the address or binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="b58ef-114">Не требуется писать код, чтобы получить сведения о адресе или привязке в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b58ef-114">You aren't required to write code to retrieve the address or binding information from the configuration file.</span></span>
+
+   [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
+
+1. <span data-ttu-id="b58ef-115">Создание *Web.config* файл, чтобы настроить конечную точку для `CalculatorService` для пользовательской привязки с именем `reliableSessionOverHttps` , использующий надежный сеанс и транспорт HTTPS.</span><span class="sxs-lookup"><span data-stu-id="b58ef-115">Create a *Web.config* file to configure an endpoint for the `CalculatorService` with a custom binding named `reliableSessionOverHttps` that uses a reliable session and the HTTPS transport.</span></span>
+
+   [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
+
+1. <span data-ttu-id="b58ef-116">Создание *Service.svc* файл, содержащий строку:</span><span class="sxs-lookup"><span data-stu-id="b58ef-116">Create a *Service.svc* file that contains the line:</span></span>
+
+   ```
+   <%@ServiceHost language=c# Service="CalculatorService" %>
+   ```
+
+1. <span data-ttu-id="b58ef-117">Место *Service.svc* файл в виртуальный каталог Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="b58ef-117">Place the *Service.svc* file in your Internet Information Services (IIS) virtual directory.</span></span>
+
+### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a><span data-ttu-id="b58ef-118">Настройка клиента с привязкой CustomBinding использования надежного сеанса и HTTPS</span><span class="sxs-lookup"><span data-stu-id="b58ef-118">Configure the client with a CustomBinding to use a reliable session with HTTPS</span></span>
+
+1. <span data-ttu-id="b58ef-119">Используйте [ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из командной строки для создания кода из метаданных службы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-119">Use the [ServiceModel Metadata Utility Tool (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from the command line to generate code from service metadata.</span></span>
+
+   ```console
+   Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
+   ```
+
+1. <span data-ttu-id="b58ef-120">Создаваемый клиент содержит `ICalculator` интерфейс, определяющий контракт службы, которому должна удовлетворять реализация клиента.</span><span class="sxs-lookup"><span data-stu-id="b58ef-120">The client that's generated contains the `ICalculator` interface that defines the service contract that the client implementation must satisfy.</span></span>
+
+   [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1221)]
+
+1. <span data-ttu-id="b58ef-121">Созданное клиентское приложение также содержит реализацию `ClientCalculator`.</span><span class="sxs-lookup"><span data-stu-id="b58ef-121">The generated client application also contains the implementation of the `ClientCalculator`.</span></span> <span data-ttu-id="b58ef-122">Обратите внимание, что информация об адресе и привязке не указывается внутри реализации службы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-122">Note that the address and binding information isn't specified inside the implementation of the service.</span></span> <span data-ttu-id="b58ef-123">Не требуется писать код для извлечения информации адрес и привязку из файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b58ef-123">You aren't required to write code to retrieve the address and binding information from the configuration file.</span></span>
+
+   [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1222)]
+
+1. <span data-ttu-id="b58ef-124">Настроить пользовательскую привязку с именем `reliableSessionOverHttps` использовать транспорт HTTPS и надежные сеансы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-124">Configure a custom binding named `reliableSessionOverHttps` to use the HTTPS transport and reliable sessions.</span></span>
+
+   [!code-xml[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]
+
+1. <span data-ttu-id="b58ef-125">Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.</span><span class="sxs-lookup"><span data-stu-id="b58ef-125">Create an instance of the `ClientCalculator` in an application and then call the service operations.</span></span>
+
+   [!code-csharp[C_HowTo_CreateReliableSessionHTTPS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/client.cs#1223)]
+
+1. <span data-ttu-id="b58ef-126">Скомпилируйте и запустите клиент.</span><span class="sxs-lookup"><span data-stu-id="b58ef-126">Compile and run the client.</span></span>  
+
+## <a name="net-framework-security"></a><span data-ttu-id="b58ef-127">безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b58ef-127">.NET Framework security</span></span>
+
+<span data-ttu-id="b58ef-128">Так как сертификат, используемый в этом примере является тестовый сертификат, созданный с *Makecert.exe*, появляется предупреждение системы безопасности при попытке доступа к адресу HTTPS, такие как `https://localhost/servicemodelsamples/service.svc`, через браузер.</span><span class="sxs-lookup"><span data-stu-id="b58ef-128">Because the certificate used in this sample is a test certificate created with *Makecert.exe*, a security alert appears when you try to access an HTTPS address, such as `https://localhost/servicemodelsamples/service.svc`, from your browser.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="b58ef-129">См. также</span><span class="sxs-lookup"><span data-stu-id="b58ef-129">See also</span></span>
+
+[<span data-ttu-id="b58ef-130">Надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="b58ef-130">Reliable Sessions</span></span>](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

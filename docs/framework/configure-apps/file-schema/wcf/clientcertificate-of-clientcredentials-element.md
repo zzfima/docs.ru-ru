@@ -1,28 +1,37 @@
 ---
-title: "&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 961e745f15b4c7b7ae489a8b2b3128c1a64c6eab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;
-Определяет сертификат X.509, используемый для проверки подлинности клиента при подключении к службе.  
+# <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="a1e4d-102">&lt;clientCertificate&gt; элемента &lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="a1e4d-102">&lt;clientCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
+<span data-ttu-id="a1e4d-103">Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-103">Defines an X.509 certificate used to authenticate a client to a service.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="a1e4d-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a1e4d-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-105">\<behaviors></span></span>  
+<span data-ttu-id="a1e4d-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="a1e4d-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-107">\<behavior></span></span>  
+<span data-ttu-id="a1e4d-108">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-108">\<clientCredentials></span></span>  
+<span data-ttu-id="a1e4d-109">\<clientCertificate ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-109">\<clientCertificate></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a1e4d-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a1e4d-110">Syntax</span></span>  
   
+```xml  
 <clientCertificate findValue="String"   
     storeLocation="LocalMachine/CurrentUser"  
     storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
@@ -30,39 +39,39 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описываются атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a1e4d-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="a1e4d-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="a1e4d-112">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="a1e4d-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a1e4d-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`findValue`|Строка, содержащая значение для поиска в хранилище сертификатов X.509.  Тип, указанный в атрибуте, должен отвечать требованиям к значению атрибута `X509FindType`.  Значение по умолчанию \- пустая строка.|  
-|`storeLocation`|Указывает расположение сертификата X.509, который клиент использует для подтверждения подлинности при взаимодействии со службой.  Допустимы следующие значения:<br /><br /> -   LocalMachine: хранилище сертификатов, назначенное локальному компьютеру.<br />-   CurrentUser: хранилище сертификатов, назначенное текущему пользователю.<br /><br /> Значение по умолчанию \- LocalMachine.  Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|`storeName`|Задает имя хранилища сертификатов X.509 для поиска.  Допустимы следующие значения:<br /><br /> -   AddressBook: хранилище сертификатов для других пользователей.<br />-   AuthRoot: хранилище сертификатов для сторонних центров сертификации \(ЦС\).<br />-   CertificateAuthority: хранилище сертификатов для промежуточных центров сертификации \(ЦС\).<br />-   Disallowed: хранилище сертификатов для отозванных сертификатов.<br />-   My: хранилище сертификатов для личных сертификатов.<br />-   Root: хранилище сертификатов для доверенных корневых центров сертификации \(ЦС\).<br />-   TrustedPeople: хранилище сертификатов для непосредственно доверенных лиц и ресурсов.<br />-   TrustedPublisher: хранилище сертификатов для непосредственно доверенных издателей.<br /><br /> Значение по умолчанию \- My.  Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Определяет тип поиска сертификата X.509.  Тип, указанный в атрибуте `findValue`, должен отвечать требованиям этого атрибута.  Допустимы следующие значения:<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> Значение по умолчанию \- FindBySubjectDistinguishedName.  Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|<span data-ttu-id="a1e4d-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="a1e4d-114">Attribute</span></span>|<span data-ttu-id="a1e4d-115">Описание</span><span class="sxs-lookup"><span data-stu-id="a1e4d-115">Description</span></span>|  
+|---------------|-----------------|  
+|`findValue`|<span data-ttu-id="a1e4d-116">Строка, содержащая значение для поиска в хранилище сертификатов X.509.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-116">A string that contains the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="a1e4d-117">Тип, указанный в атрибуте, должен отвечать требованиям к значению атрибута `X509FindType`.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-117">The type contained in the attribute must satisfy the requirements of the `X509FindType` attribute value.</span></span> <span data-ttu-id="a1e4d-118">Значение по умолчанию - пустая строка.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-118">The default is an empty string.</span></span>|  
+|`storeLocation`|<span data-ttu-id="a1e4d-119">Указывает расположение сертификата X.509, который клиент использует для подтверждения подлинности при взаимодействии со службой.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-119">Specifies the location of the X.509 certificate that the client uses to authenticate itself to the service.</span></span> <span data-ttu-id="a1e4d-120">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="a1e4d-120">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="a1e4d-121">-LocalMachine: хранилище сертификатов, назначенные на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-121">-   LocalMachine: the certificate store assigned to the local machine.</span></span><br /><span data-ttu-id="a1e4d-122">-CurrentUser: хранилище сертификатов, назначенные текущему пользователю.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-122">-   CurrentUser: the certificate store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="a1e4d-123">Значение по умолчанию - LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-123">The default is LocalMachine.</span></span> <span data-ttu-id="a1e4d-124">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-124">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
+|`storeName`|<span data-ttu-id="a1e4d-125">Задает имя хранилища сертификатов X.509 для поиска.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-125">Specifies the name of the X.509 certificate store to search.</span></span> <span data-ttu-id="a1e4d-126">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="a1e4d-126">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="a1e4d-127">-AddressBook: Хранилище сертификатов для других пользователей.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-127">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="a1e4d-128">-AuthRoot: Хранилище сертификатов для сторонних центров сертификации (ЦС).</span><span class="sxs-lookup"><span data-stu-id="a1e4d-128">-   AuthRoot: Certificate store for third-party certificate authorities (CAs).</span></span><br /><span data-ttu-id="a1e4d-129">-CertificateAuthority: Хранилище сертификатов для промежуточных центров сертификации (ЦС).</span><span class="sxs-lookup"><span data-stu-id="a1e4d-129">-   CertificateAuthority: Certificate store for intermediate certificate authorities (CAs).</span></span><br /><span data-ttu-id="a1e4d-130">-Disallowed: Хранилище сертификатов для отозванных сертификатов.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-130">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="a1e4d-131">-My: Хранилище сертификатов для личных сертификатов.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-131">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="a1e4d-132">-Root: Хранилище сертификатов для доверенных корневых центров сертификации (ЦС).</span><span class="sxs-lookup"><span data-stu-id="a1e4d-132">-   Root: Certificate store for trusted root certificate authorities (CAs).</span></span><br /><span data-ttu-id="a1e4d-133">-TrustedPeople: Хранилище сертификатов для непосредственно доверенных лиц и ресурсов.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-133">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="a1e4d-134">-TrustedPublisher: Хранилище сертификатов для непосредственно доверенных издателей.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-134">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="a1e4d-135">Значение по умолчанию - My.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-135">The default is My.</span></span> <span data-ttu-id="a1e4d-136">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-136">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span></span>|  
+|<span data-ttu-id="a1e4d-137">X509FindType</span><span class="sxs-lookup"><span data-stu-id="a1e4d-137">X509FindType</span></span>|<span data-ttu-id="a1e4d-138">Определяет тип поиска сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-138">Defines the type of X.509 search to be executed.</span></span> <span data-ttu-id="a1e4d-139">Тип, указанный в атрибуте `findValue`, должен отвечать требованиям этого атрибута.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-139">The type contained in the `findValue` attribute must satisfy the requirements of this attribute.</span></span> <span data-ttu-id="a1e4d-140">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="a1e4d-140">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="a1e4d-141">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="a1e4d-141">-   FindByThumbPrint</span></span><br /><span data-ttu-id="a1e4d-142">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="a1e4d-142">-   FindBySubjectName</span></span><br /><span data-ttu-id="a1e4d-143">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="a1e4d-143">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="a1e4d-144">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="a1e4d-144">-   FindByIssuerName</span></span><br /><span data-ttu-id="a1e4d-145">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="a1e4d-145">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="a1e4d-146">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="a1e4d-146">-   FindBySerialNumber</span></span><br /><span data-ttu-id="a1e4d-147">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="a1e4d-147">-   FindByTimeValid</span></span><br /><span data-ttu-id="a1e4d-148">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="a1e4d-148">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="a1e4d-149">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="a1e4d-149">-   FindByTemplateName</span></span><br /><span data-ttu-id="a1e4d-150">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="a1e4d-150">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="a1e4d-151">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="a1e4d-151">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="a1e4d-152">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="a1e4d-152">-   FindByExtension</span></span><br /><span data-ttu-id="a1e4d-153">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="a1e4d-153">-   FindByKeyUsage</span></span><br /><span data-ttu-id="a1e4d-154">-FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="a1e4d-154">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="a1e4d-155">Значение по умолчанию - FindBySubjectDistinguishedName.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-155">The default value is FindBySubjectDistinguishedName.</span></span> <span data-ttu-id="a1e4d-156">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-156">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="a1e4d-157">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a1e4d-157">Child Elements</span></span>  
+ <span data-ttu-id="a1e4d-158">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-158">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="a1e4d-159">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a1e4d-159">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
+|<span data-ttu-id="a1e4d-160">Элемент</span><span class="sxs-lookup"><span data-stu-id="a1e4d-160">Element</span></span>|<span data-ttu-id="a1e4d-161">Описание</span><span class="sxs-lookup"><span data-stu-id="a1e4d-161">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a1e4d-162">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="a1e4d-162">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="a1e4d-163">Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-163">Specifies the credentials used to authenticate the client to a service.</span></span>|  
   
-## Заметки  
- Этот элемент конфигурации указывает сертификат, используемый для проверки подлинности клиента с помощью этого элемента.  [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Практическое руководство. Задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+## <a name="remarks"></a><span data-ttu-id="a1e4d-164">Примечания</span><span class="sxs-lookup"><span data-stu-id="a1e4d-164">Remarks</span></span>  
+ <span data-ttu-id="a1e4d-165">Этот элемент конфигурации указывает сертификат, используемый для проверки подлинности клиента с помощью этого элемента.</span><span class="sxs-lookup"><span data-stu-id="a1e4d-165">This configuration element specifies the certificate used to authenticate the client with this element.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="a1e4d-166">[Как: укажите значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).</span><span class="sxs-lookup"><span data-stu-id="a1e4d-166"> [How to: Specify Client Credential Values](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>   
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>   
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>   
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Практическое руководство. Задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)   
- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)   
- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="a1e4d-167">См. также</span><span class="sxs-lookup"><span data-stu-id="a1e4d-167">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>  
+ <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
+ <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>  
+ [<span data-ttu-id="a1e4d-168">Поведения безопасности</span><span class="sxs-lookup"><span data-stu-id="a1e4d-168">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="a1e4d-169">Практическое руководство. Указание значений учетных данных клиента</span><span class="sxs-lookup"><span data-stu-id="a1e4d-169">How to: Specify Client Credential Values</span></span>](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
+ [<span data-ttu-id="a1e4d-170">Защита клиентов</span><span class="sxs-lookup"><span data-stu-id="a1e4d-170">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="a1e4d-171">Работа с сертификатами</span><span class="sxs-lookup"><span data-stu-id="a1e4d-171">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="a1e4d-172">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="a1e4d-172">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
