@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 966bc0883cf29774ab6f52f6f3207241c129159c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Указание полных имен типов
-Для выполнения различных операций отражения необходимо задавать имена типов. Полное имя типа состоит из спецификации имени сборки, спецификации пространства имен и имени типа. Спецификации имен типов используются такими методами, как <xref:System.Type.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> и <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>.  
+Для выполнения различных операций отражения необходимо задавать имена типов. Полное имя типа состоит из спецификации имени сборки, спецификации пространства имен и имени типа. Спецификации имен типов используются такими методами, как <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> и <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
 ## <a name="backus-naur-form-grammar-for-type-names"></a>Форма Бэкуса-Наура для имен типов  
  Форма Бэкуса-Наура (БНФ) определяет синтаксис формальных языков. Приведенная ниже таблица содержит список лексических правил БНФ, описывающих порядок распознавания допустимых входных данных. Терминальные слова (элементы, дальнейшее сокращение которых невозможно) отображаются прописными буквами. Нетерминальные слова (допускающие сокращение) содержат прописные буквы вместе со строчными или заключены в одинарные кавычки, причем одинарные кавычки (') не являются частью синтаксиса. Символ вертикальной черты (&#124;) обозначает правила, у которых есть подправила.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 07/28/2017
   
  Следует заметить, что для всех компонентов спецификации TypeSpec, кроме AssemblyNameSpec, пробелы существенны. В AssemblyNameSpec пробелы перед разделителем "," существенны, а пробелы после "," игнорируются.  
   
- Классы отражения, такие как <xref:System.Type.FullName%2A?displayProperty=fullName>, возвращают искаженное имя, которое можно использовать при вызове метода <xref:System.Type.GetType%2A>, например `MyType.GetType(myType.FullName)`.  
+ Классы отражения, такие как <xref:System.Type.FullName%2A?displayProperty=nameWithType>, возвращают искаженное имя, которое можно использовать при вызове метода <xref:System.Type.GetType%2A>, например `MyType.GetType(myType.FullName)`.  
   
  Например, полное имя типа может иметь следующий вид: `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.  
   
@@ -136,7 +134,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  Спецификация SimpleTypeSpec & представляет управляемый указатель или ссылку. Например, для получения ссылки на тип MyType можно использовать вызов `Type.GetType("MyType &")`. Обратите внимание, что ссылки, в отличие от указателей, ограничены одним уровнем.  
   
 ## <a name="specifying-arrays"></a>Указание массивов  
- В БНФ спецификация ReflectionEmitDimension применяется только в отношении неполных определений типов, полученных с использованием метода <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName>. К неполным определениям типов относятся объекты <xref:System.Reflection.Emit.TypeBuilder>, созданные с помощью метода <xref:System.Reflection.Emit?displayProperty=fullName>, но для которых не был выполнен вызов <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=fullName>. Спецификацию ReflectionDimension можно использовать для получения любого полного определения типа, то есть типа, который уже загружен.  
+ В БНФ спецификация ReflectionEmitDimension применяется только в отношении неполных определений типов, полученных с использованием метода <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>. К неполным определениям типов относятся объекты <xref:System.Reflection.Emit.TypeBuilder>, созданные с помощью метода <xref:System.Reflection.Emit?displayProperty=nameWithType>, но для которых не был выполнен вызов <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>. Спецификацию ReflectionDimension можно использовать для получения любого полного определения типа, то есть типа, который уже загружен.  
   
  Доступ к массиву при отражении осуществляется путем указания размерности массива:  
   
@@ -153,11 +151,10 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  Для метода **ModuleBuilder.GetType** `MyArray[0..5]` указывает одномерный массив размером 6 с нижней границей 0. `MyArray[4…]` указывает одномерный массив неизвестного размера с нижней границей 4.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection.AssemblyName>   
- <xref:System.Reflection.Emit.ModuleBuilder>   
- <xref:System.Reflection.Emit.TypeBuilder>   
- <xref:System.Type.FullName%2A?displayProperty=fullName>   
- <xref:System.Type.GetType%2A?displayProperty=fullName>   
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
+ <xref:System.Reflection.AssemblyName>  
+ <xref:System.Reflection.Emit.ModuleBuilder>  
+ <xref:System.Reflection.Emit.TypeBuilder>  
+ <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
+ <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
+ <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
  [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-

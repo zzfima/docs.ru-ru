@@ -1,30 +1,21 @@
 ---
 title: "Сериализация (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2eefd71abf07a96bb99b256571e6ac4529fb277d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-c-"></a>Сериализация (C#)
 Сериализация — это процесс преобразования объекта в поток байтов для сохранения или передачи в память, в базу данных или в файл. Эта операция предназначена для того, чтобы сохранить состояния объекта для последующего воссоздания при необходимости. Обратный процесс называется десериализацией.  
@@ -84,4 +75,3 @@ ms.lasthandoff: 07/28/2017
   
  [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
  Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.
-

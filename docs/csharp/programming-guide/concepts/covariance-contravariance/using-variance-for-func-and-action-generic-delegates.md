@@ -1,30 +1,21 @@
 ---
 title: "Использование вариативности в универсальных методах-делегатах Func и Action (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1b12a08579f70a07ebb90bfe723209b9f03460e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 976057252a6cfa378008e9508145be7bc330fdc8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Использование вариативности в универсальных методах-делегатах Func и Action (C#)
 Эти примеры показывают, как обеспечить возможность многократного использования методов и сделать код более гибким, используя ковариацию и контравариацию в универсальных методах-делегатах `Func` и `Action`.  
@@ -99,6 +90,5 @@ class Program
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Ковариация и контравариантность (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)   
+ [Covariance and Contravariance (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контрвариантность (C#))  
  [Универсальные шаблоны](~/docs/standard/generics/index.md)
-

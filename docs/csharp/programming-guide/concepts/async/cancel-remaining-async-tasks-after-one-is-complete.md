@@ -1,33 +1,24 @@
 ---
 title: "Отмена оставшихся асинхронных задач после завершения одной из них (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fe65f81af28509c577e014353c43b72d34375459
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 23e68327cfc52845b203acdf5f69253de746d566
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Отмена оставшихся асинхронных задач после завершения одной из них (C#)
-Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> вместе с <xref:System.Threading.CancellationToken>, можно отменить все оставшиеся задачи после выполнения отдельной задачи. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.  
+Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> вместе с <xref:System.Threading.CancellationToken>, можно отменить все оставшиеся задачи после выполнения отдельной задачи. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.  
   
  В этом примере показано, как использовать маркер отмены в сочетании с `WhenAny` для приостановки завершения первой задачи из коллекции задач и отмены оставшихся задач. Каждая задача загружает содержимое веб-сайта. Пример отображает длину содержимого первой завершаемой загрузки и отменяет другие загрузки.  
   
@@ -103,7 +94,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
     ```  
   
-5.  В этом примере нас интересует только та задача, которая завершается первой. Таким образом, используйте <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> для отмены оставшихся задач.  
+5.  В этом примере нас интересует только та задача, которая завершается первой. Таким образом, используйте <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отмены оставшихся задач.  
   
     ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
@@ -275,8 +266,7 @@ namespace CancelAfterOneTask
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
-
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)  
+ [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Пример использования async. Тонкая настройка асинхронного приложения)

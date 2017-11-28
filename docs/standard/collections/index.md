@@ -1,12 +1,8 @@
 ---
 title: "Коллекции и структуры данных"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - grouping data in collections
@@ -16,19 +12,18 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 106ab093a277645dd54e39686a7dd5fa5c0e029e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2538f300ef2af6051c2750e749674c8ea7145530
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="collections-and-data-structures"></a>Коллекции и структуры данных
-Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=fullName> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  
+Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=nameWithType> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  
   
  Существует два основных типа коллекций — универсальные и неуниверсальные коллекции. Универсальные коллекции были добавлены в платформе .NET Framework 2.0 и являются строготипизированными во время компиляции. Таким образом, универсальные коллекции обычно обеспечивают более высокую производительность. Универсальные коллекции принимают параметр типа во время создания и не требуют приведение в тип <xref:System.Object> и из него при добавлении или удалении элементов.  Кроме того, большая часть универсальных коллекций поддерживается в приложениях [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Неуниверсальные коллекции хранят такие элементы, как <xref:System.Object>, требуют приведения. Большая их часть не поддерживается для разработки приложений [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Однако неуниверсальные коллекции можно наблюдать в старом коде.  
   
@@ -41,7 +36,7 @@ ms.lasthandoff: 07/28/2017
   
 -   **Возможность перечисления коллекции**  
   
-     Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=fullName>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Оператор [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) использует итератор, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и скрывает сложность работы с итератором. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>, считается *запрашиваемым типом*, и к ней можно создавать запросы LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в статьях [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) и [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=nameWithType>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Оператор [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) использует итератор, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и скрывает сложность работы с итератором. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, считается *запрашиваемым типом*, и к ней можно создавать запросы LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в статьях [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) и [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **Возможность копирования содержимого коллекции в массив**  
   
@@ -59,7 +54,7 @@ ms.lasthandoff: 07/28/2017
   
 -   **Согласованная нижняя граница**  
   
-     Нижняя граница коллекции — это индекс ее первого элемента. Все индексированные коллекции в пространствах имен <xref:System.Collections> имеют нижнюю границу, равную нулю. Класс <xref:System.Array> по умолчанию имеет нижнюю границу, равную нулю, но при создании экземпляра класса **Array** с помощью <xref:System.Array.CreateInstance%2A?displayProperty=fullName> может быть задана другая нижняя граница.  
+     Нижняя граница коллекции — это индекс ее первого элемента. Все индексированные коллекции в пространствах имен <xref:System.Collections> имеют нижнюю границу, равную нулю. Класс <xref:System.Array> по умолчанию имеет нижнюю границу, равную нулю, но при создании экземпляра класса **Array** с помощью <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> может быть задана другая нижняя граница.  
   
 -   **Синхронизация для доступа из нескольких потоков** (только классы <xref:System.Collections>).  
   
@@ -71,14 +66,14 @@ ms.lasthandoff: 07/28/2017
 <!-- todo: All code-formatted API refs in the table need to be changed into links -->  
 |Действие|Возможности универсальной коллекции|Возможности неуниверсальной коллекции|Возможности потокобезопасной и неизменяемой коллекции|  
 |-|-|-|-|  
-|Хранение элементов в виде пар "ключ-значение" для быстрого поиска по ключу|<xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>|<xref:System.Collections.Hashtable><br /><br /> (Коллекция пар "ключ-значение", которые упорядочены по хэш-коду ключа.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=fullName><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
-|Доступ к элементам по индексу|<xref:System.Collections.Generic.List%601?displayProperty=fullName>|<xref:System.Array?displayProperty=fullName><br /><br /> <xref:System.Collections.ArrayList?displayProperty=fullName>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
-|Использование элементов по принципу FIFO|<xref:System.Collections.Generic.Queue%601?displayProperty=fullName>|<xref:System.Collections.Queue?displayProperty=fullName>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName><br /><br /> `ImmutableQueue(T) Class`|  
-|Использование данных по принципу LIFO|<xref:System.Collections.Generic.Stack%601?displayProperty=fullName>|<xref:System.Collections.Stack?displayProperty=fullName>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName><br /><br /> `ImmutableStack(T) Class`|  
-|Последовательный доступ к элементам|<xref:System.Collections.Generic.LinkedList%601?displayProperty=fullName>|Рекомендации отсутствуют|Рекомендации отсутствуют|  
-|Получение уведомлений при удалении элементов из коллекции или добавлении элементов в коллекцию. (реализует <xref:System.ComponentModel.INotifyPropertyChanged> и <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=fullName>)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName>|Рекомендации отсутствуют|Рекомендации отсутствуют|  
-|Отсортированная коллекция|<xref:System.Collections.Generic.SortedList%602?displayProperty=fullName>|<xref:System.Collections.SortedList?displayProperty=fullName>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
-|Набор для математических функций|<xref:System.Collections.Generic.HashSet%601?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=fullName>|Рекомендации отсутствуют|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|Хранение элементов в виде пар "ключ-значение" для быстрого поиска по ключу|<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>|<xref:System.Collections.Hashtable><br /><br /> (Коллекция пар "ключ-значение", которые упорядочены по хэш-коду ключа.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
+|Доступ к элементам по индексу|<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>|<xref:System.Array?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ArrayList?displayProperty=nameWithType>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
+|Использование элементов по принципу FIFO|<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>|<xref:System.Collections.Queue?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType><br /><br /> `ImmutableQueue(T) Class`|  
+|Использование данных по принципу LIFO|<xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>|<xref:System.Collections.Stack?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType><br /><br /> `ImmutableStack(T) Class`|  
+|Последовательный доступ к элементам|<xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>|Рекомендации отсутствуют|Рекомендации отсутствуют|  
+|Получение уведомлений при удалении элементов из коллекции или добавлении элементов в коллекцию. (реализует <xref:System.ComponentModel.INotifyPropertyChanged> и <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>|Рекомендации отсутствуют|Рекомендации отсутствуют|  
+|Отсортированная коллекция|<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>|<xref:System.Collections.SortedList?displayProperty=nameWithType>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|Набор для математических функций|<xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>|Рекомендации отсутствуют|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
   
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>Связанные разделы  
@@ -86,27 +81,20 @@ ms.lasthandoff: 07/28/2017
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Выбор класса коллекции](../../../docs/standard/collections/selecting-a-collection-class.md)|Описывает различные коллекций и содержит сведения по выбору коллекции, соответствующей сценарию пользователя.|  
-|[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Описывает часто используемые типы универсальных и неуниверсальных коллекций, таких как <xref:System.Array?displayProperty=fullName>, <xref:System.Collections.Generic.List%601?displayProperty=fullName> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>.|  
+|[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Описывает часто используемые типы универсальных и неуниверсальных коллекций, таких как <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
 |[Когда следует использовать универсальные коллекции](../../../docs/standard/collections/when-to-use-generic-collections.md)|Рассматривает использование типов универсальных коллекций.|  
 |[Сравнение и сортировка в коллекциях](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Описывает использование проверок равенства и сортировки в коллекциях.|  
 |[Отсортированные типы коллекций](../../../docs/standard/collections/sorted-collection-types.md)|Описывает производительность и характеристики отсортированных коллекций.|  
 |[Типы коллекций Hashtable и Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Описывает возможности универсальных и неуниверсальных типов словарей на основе хэша.|  
-|[Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md)|Описывает типы коллекций, такие как <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> и <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>, поддерживающие безопасный и эффективный одновременный доступ из нескольких потоков.|  
+|[Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md)|Описывает типы коллекций, такие как <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> и <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>, поддерживающие безопасный и эффективный одновременный доступ из нескольких потоков.|  
 |System.Collections.Immutable|Приводятся вводные сведения о неизменяемых коллекциях и ссылки на типы коллекций.|  
   
 <a name="BKMK_Reference"></a>   
-## <a name="reference"></a>Ссылка  
- <xref:System.Array?displayProperty=fullName>  
-  
- <xref:System.Collections?displayProperty=fullName>  
-  
- <xref:System.Collections.Concurrent?displayProperty=fullName>  
-  
- <xref:System.Collections.Generic?displayProperty=fullName>  
-  
- <xref:System.Collections.Specialized?displayProperty=fullName>  
-  
- <xref:System.Linq?displayProperty=fullName>  
-  
- System.Collections.Immutable
-
+## <a name="reference"></a>Ссылки  
+ <xref:System.Array?displayProperty=nameWithType>  
+ <xref:System.Collections?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
+ <xref:System.Collections.Specialized?displayProperty=nameWithType>  
+ <xref:System.Linq?displayProperty=nameWithType>  
+ <xref:System.Collections.Immutable>

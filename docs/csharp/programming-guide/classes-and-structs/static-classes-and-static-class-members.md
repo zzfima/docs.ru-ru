@@ -1,12 +1,9 @@
 ---
 title: "Статические классы и члены статических классов (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Статические классы и члены статических классов (Руководство по программированию в C#)
 [Статический](../../../csharp/language-reference/keywords/static.md) класс в основном такой же, как и нестатический класс, но имеется одно отличие: нельзя создавать экземпляры статического класса. Другими словами, нельзя использовать ключевое слово [new](../../../csharp/language-reference/keywords/new.md) для создания переменной типа класса. Поскольку нет переменной экземпляра, доступ к членам статического класса осуществляется с использованием самого имени класса. Например, если имеется статический класс, называемый `UtilityClass`, имеющий открытый метод с именем `MethodA`, вызов метода выполняется, как показано в следующем примере:  
@@ -45,7 +27,7 @@ ms.lasthandoff: 07/28/2017
 UtilityClass.MethodA();  
 ```  
   
- Статический класс может использоваться как обычный контейнер для наборов методов, работающих на входных параметрах, и не должен возвращать или устанавливать каких-либо внутренних полей экземпляра. Например, в библиотеке классов .NET Framework статический класс <xref:System.Math?displayProperty=fullName> содержит методы, выполняющие математические операции, без требования сохранять или извлекать данные, уникальные для конкретного экземпляра класса <xref:System.Math>. Это значит, что члены класса применяются путем задания имени класса и имени метода, как показано в следующем примере.  
+ Статический класс может использоваться как обычный контейнер для наборов методов, работающих на входных параметрах, и не должен возвращать или устанавливать каких-либо внутренних полей экземпляра. Например, в библиотеке классов .NET Framework статический класс <xref:System.Math?displayProperty=nameWithType> содержит методы, выполняющие математические операции, без требования сохранять или извлекать данные, уникальные для конкретного экземпляра класса <xref:System.Math>. Это значит, что члены класса применяются путем задания имени класса и имени метода, как показано в следующем примере.  
   
 ```csharp  
 double dub = -3.14;  
@@ -81,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>Пример  
  Ниже приведен пример статического класса, содержащего два метода, преобразующих температуру по Цельсию в температуру по Фаренгейту и наоборот.  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## <a name="static-members"></a>Статический члены  
  Нестатический класс может содержать статические методы, поля, свойства или события. Статический член вызывается для класса даже в том случае, если не создан экземпляр класса. Доступ к статическому члены всегда выполняется по имени класса, а не экземпляра. Существует только одна копия статического члена, независимо от того, сколько создано экземпляров класса. Статические методы и свойства не могут обращаться к нестатическим полям и событиям в их содержащем типе, и они не могут обращаться к переменной экземпляра объекта, если он не передается явно в параметре метода.  
@@ -96,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Для объявления статических методов класса используется ключевое слово `static` перед возвращаемым типом члена, как показано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  Статические члены инициализируются перед первым доступом к статическому члену и перед вызовом статического конструктора, если таковой имеется. Для доступа к члену статического класса следует использовать имя класса, а не имя переменной, указывая расположение члена, как показано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  Если класс содержит статические поля, должен быть указан статический конструктор, который инициализирует эти поля при загрузке класса.  
   
@@ -110,10 +92,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
+ [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
-

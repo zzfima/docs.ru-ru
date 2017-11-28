@@ -1,39 +1,21 @@
 ---
 title: "Полиморфизм (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c278a6a931154af97cab5b1ff33124dd31a3fa2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
 Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
@@ -50,7 +32,7 @@ ms.lasthandoff: 07/28/2017
   
  Для начала создайте базовый класс с именем `Shape` и производные классы, например `Rectangle`, `Circle` и `Triangle`. Присвойте классу `Shape` виртуальный метод с именем `Draw` и переопределите его в каждом производном классе для рисования конкретной фигуры, которую этот класс представляет. Создайте объект `List<Shape>` и добавьте в него круг, треугольник и прямоугольник. Для обновления поверхности рисования используйте цикл [foreach](../../../csharp/language-reference/keywords/foreach-in.md), чтобы выполнить итерацию списка и вызвать метод `Draw` на каждом объекте `Shape` в списке. Несмотря на то, что каждый объект в списке имеет объявленный тип `Shape`, вызывать будет тип во время выполнения (переопределенная версия метода в каждом производном классе).  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
  В C# каждый тип является полиморфным, так как все типы, включая пользовательские, наследуют <xref:System.Object>.  
   
@@ -67,42 +49,42 @@ ms.lasthandoff: 07/28/2017
   
  Производный класс может переопределить член базового класса, только если последний будет объявлен [виртуальным](../../../csharp/language-reference/keywords/virtual.md) или [абстрактным](../../../csharp/language-reference/keywords/abstract.md). Производный член должен использовать ключевое слово [override](../../../csharp/language-reference/keywords/override.md), указывающее, что метод предназначен для участия в виртуальном вызове. Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
  Поля не могут быть виртуальными. Виртуальными могут быть только методы, свойства, события и индексаторы. Когда производный класс переопределяет виртуальный член, он вызывается даже в то случае, если доступ к экземпляру этого класса осуществляется в качестве экземпляра базового класса. Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
  Виртуальные методы и свойства позволяют производным классам расширять базовый класс без необходимости использовать реализацию базового класса метода. Дополнительные сведения см. в разделе [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Еще одну возможность определения метода или набора методов, реализация которых оставлена производным классам, дает интерфейс. Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Сокрытие членов базового класса новыми членами  
  Если вам нужно, чтобы производный член имел такое же имя, как и член в базовом классе, но вы не хотите, чтобы он участвовал в виртуальном вызове, используйте ключевое слово [new](../../../csharp/language-reference/keywords/new.md). Ключевое слово `new` вставляется перед типом возвращаемого значения замещаемого члена класса. Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Пример:  
+ Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Например:  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
 ### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Защита виртуальных членов от переопределения производными классами  
  Виртуальные члены остаются виртуальными на неограниченный срок независимо от количества классов, объявленных между виртуальным членом и классом, который объявил его изначально. Если класс А объявляет виртуальный член, класс В производится из класса А, а класс С — из класса В, то класс С наследует виртуальный член и получает возможность переопределить его независимо от того, объявляет ли класс В переопределение этого члена. Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
  Производный класс может остановить виртуальное наследование, объявив переопределение как [запечатанное](../../../csharp/language-reference/keywords/sealed.md). Для этого в объявление члена класса необходимо вставить ключевое слово `sealed` перед ключевым словом `override`. Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
  В предыдущем примере метод `DoWork` больше не является виртуальным для любого класса, производного от C. Он по-прежнему будет виртуальным для экземпляров C, даже если они будут приведены к типу B или A. Запечатанные методы можно заменить производными классами с помощью ключевого слова `new`, как показано в следующем примере:  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
  В этом случае, если `DoWork` вызывается на D с помощью переменной типа D, вызывается новый `DoWork`. Если переменная типа C, B или A используется для доступа к экземпляру D, вызов `DoWork` будет выполняться по правилам виртуального наследования и направлять эти вызовы на реализацию `DoWork` на классе C.  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Доступ к виртуальным членам базового класса из производных классов  
  Производный класс, который заменил или переопределил метод или свойство, может получить доступ к методу или свойству на базовом классе с помощью базового ключевого слова. Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
  Дополнительные сведения см. в разделе [base](../../../csharp/language-reference/keywords/base.md).  
   
@@ -118,13 +100,12 @@ ms.lasthandoff: 07/28/2017
 -   [Практическое руководство. Переопределение метода ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [События](../../../csharp/programming-guide/events/index.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [События](../../../csharp/programming-guide/events/index.md)  
+ [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
  [Типы](../../../csharp/programming-guide/types/index.md)
-

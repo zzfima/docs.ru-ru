@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
+ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-telemetry"></a>Телеметрия средств интерфейса командной строки для .NET Core
 
 [Пакет SDK для .NET Core](index.md) включает в себя [функцию телеметрии](https://github.com/dotnet/cli/pull/2145), которая собирает сведения об использовании. Команде разработчиков .NET важно знать, как используются эти средства, чтобы иметь возможность улучшить их. Дополнительные сведения см. в разделе [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
@@ -39,6 +37,7 @@ ms.lasthandoff: 08/12/2017
 - `dotnet pack`
 - `dotnet restore`
 - `dotnet run`
+
 
 ## <a name="behavior"></a>Поведение
 
@@ -135,4 +134,3 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
 [Справочные материалы по телеметрии (репозиторий dotnet/cli; ветвь release/2.0.0)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
 [Данные по использованию пакета SDK для .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
-

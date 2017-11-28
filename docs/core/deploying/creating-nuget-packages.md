@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
+ms.openlocfilehash: a5738a4f3755a959660db4be683677673af61ef9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Создание пакета NuGet с помощью кроссплатформенных средств
 
 > [!NOTE]
@@ -28,6 +26,9 @@ ms.lasthandoff: 07/28/2017
 Представим, что вы только что создали полезную библиотеку, которую хотите распространить через NuGet.  Для этого можно создать пакет NuGet с помощью кроссплатформенных средств.  В приведенном ниже примере используется библиотека **SuperAwesomeLibrary**, предназначенная для `netstandard1.0`.
 
 Если у вас есть транзитивные зависимости, то есть проекты, которые зависят от других проектов, необходимо обязательно восстановить пакеты для всего решения с помощью команды `dotnet restore`, прежде чем создавать пакет NuGet.  Если не сделать этого, команда `dotnet pack` будет работать неправильно.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 
 Восстановив пакеты, можно перейти в каталог, где находится библиотека:
 
@@ -66,4 +67,3 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Не путайте команду `dotnet pack` с командой `dotnet publish`.
 
 Важно заметить, что команда `dotnet publish` в этом процессе не применяется.  Команда `dotnet publish` предназначена для развертывания приложений со всеми зависимостями в одном пакете, а не для создания пакета NuGet, который будет распространяться и использоваться посредством NuGet.
-

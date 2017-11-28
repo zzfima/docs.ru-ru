@@ -1,30 +1,21 @@
 ---
 title: "Включение источника данных для запросов LINQ1"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 86818768e01574bc9a3aebcd09b8e282c92ec18d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Включение источника данных для запросов LINQ
 Существуют различные способы расширения [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для поддержки запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к любому источнику данных. Источник данных может быть, например, структурой данных, веб-службой, файловой системой или базой данных. Шаблон [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощает для клиентов осуществление запросов к источникам данных, для которых задействована поддержка запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], поскольку синтаксис и шаблон запроса не меняется. Далее перечислены способы, с помощью которых [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] может быть расширен для этих источников данных.  
@@ -57,9 +48,8 @@ ms.lasthandoff: 07/28/2017
  Сложный поставщик `IQueryable`, например поставщик [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], может переводить завершенные запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на выразительный язык запросов, например SQL. Сложные поставщики более общие, чем менее сложные, поскольку они могут обрабатывать более широкий диапазон вопросов в запросе. Он также имеет открытую систему типов и поэтому должен содержать расширяемую инфраструктуру для сопоставления определяемых пользователем типов. Разработка сложного поставщика требует значительных усилий.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq.IQueryable%601>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- <xref:System.Linq.Enumerable>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq.IQueryable%601>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ <xref:System.Linq.Enumerable>  
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

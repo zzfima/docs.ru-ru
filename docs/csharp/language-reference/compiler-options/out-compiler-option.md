@@ -1,42 +1,23 @@
 ---
 title: "-out (параметры компилятора C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /out
-dev_langs:
-- CSharp
+f1_keywords: /out
 helpviewer_keywords:
 - /out compiler option [C#]
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6db728bc98f5223fc35268a1cce41021ff530cc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="out-c-compiler-options"></a>/out (параметры компилятора C#)
 Параметр **/out** задает имя выходного файла.  
@@ -66,9 +47,9 @@ ms.lasthandoff: 07/28/2017
   
  При создании нескольких выходных файлов путем компиляции из командной строки имейте в виду, что среди выходных файлов только один может быть сборкой. При этом сборкой может быть только первый выходной файл, явно или неявно заданный с помощью параметра **/out**.  
   
- Все модули, созданные в процессе компиляции, будут связаны со сборкой, полученной в результате этого процесса. С помощью [ildasm.exe](https://msdn.microsoft.com/library/f7dy01k1) можно просмотреть связанные файлы в манифесте сборки.  
+ Все модули, созданные в процессе компиляции, будут связаны со сборкой, полученной в результате этого процесса. С помощью [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) можно просмотреть связанные файлы в манифесте сборки.  
   
- Параметр компилятора /out обязателен, если требуется установить EXE-файл в качестве целевого для дружественной сборки. Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Параметр компилятора /out обязателен, если требуется установить EXE-файл в качестве целевого для дружественной сборки. Дополнительные сведения см. в разделе [Дружественные сборки](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
@@ -88,7 +69,6 @@ csc t.cs /out:mymodule.netmodule /target:module t2.cs
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+ [Дружественные сборки](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-

@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
 Консольные приложения используются во многих целях: от простых запросов состояния до затратных по времени задач по обработке изображений документов. В любом случае возможность запуска и масштабирования этих приложений сопряжена с определенными ограничениями, связанными с необходимым оборудованием, временем запуска или запуском нескольких экземпляров.
@@ -145,4 +143,3 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>Сводка
 С помощью простого добавления Dockerfile и публикации консольное приложение .NET Framework можно поместить в контейнер и запускать несколько экземпляров, выполнять чистые запуск и завершение работы и использовать многие другие возможности Windows Server 2016 без какого-либо изменения кода приложения.
-

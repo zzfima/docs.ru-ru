@@ -1,27 +1,18 @@
 ---
 title: "Отражение (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f567eb47d93fcd95e5895b4b44e1c89fb0b901b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa0aee4a0580ea28e3f0c70528dabaaf6f635f71
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-c"></a>Отражение (C#)
 Механизм отражения позволяет получать объекты (типа <xref:System.Type>), которые описывают сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение обеспечивает доступ к ним. Дополнительные сведения см. в разделе [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c).  
@@ -79,6 +70,5 @@ System.Console.WriteLine(info);
 -   [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)
-

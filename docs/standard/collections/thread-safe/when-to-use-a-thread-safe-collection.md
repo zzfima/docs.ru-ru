@@ -8,19 +8,17 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, when to upgrade
+helpviewer_keywords: thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0bfb5ef2679c4e20e99a10dcf82a251673811b41
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5166b7b7be38fae9bf809cb0b3aa79b76efd41ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Преимущества использования потокобезопасных коллекций
 В [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] представлено пять новых типов коллекций, специально разработанных для поддержки многопотоковых операций добавления и удаления. Для достижения потокобезопасности эти новые типы используют различные типы эффективных механизмов синхронизации с блокировкой и без блокировки. Синхронизация добавляет к операции издержки. Значения издержек зависят от используемого типа синхронизации, выполняемого типа операции и других факторов, например количества потоков, которые одновременно пытаются получить доступ к коллекции.  
@@ -42,36 +40,35 @@ ms.lasthandoff: 07/28/2017
  Увеличение в производительности, которое пропорционально числу ядер в компьютере. Масштабируемый алгоритм выполняется быстрее на компьютере, у которого восемь ядер, чем на компьютере, у которого два ядра.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) и Queue(T)  
- В чистых сценариях "производитель-получатель", когда время обработки каждого элемента очень мало (несколько инструкций), класс <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName> может дать незначительный рост производительности по сравнению с классом <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>, который использует внешнюю блокировку. В этом сценарии класс <xref:System.Collections.Concurrent.ConcurrentQueue%601> выполняется лучше, когда один выделенный поток помещается в очередь, а другой выделенный поток удаляется из очереди. Если это правило не применяется, класс <xref:System.Collections.Generic.Queue%601> может даже выполняться немного быстрее, чем класс <xref:System.Collections.Concurrent.ConcurrentQueue%601> на компьютерах с многоядерными процессорами.  
+ В чистых сценариях "производитель-получатель", когда время обработки каждого элемента очень мало (несколько инструкций), класс <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> может дать незначительный рост производительности по сравнению с классом <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, который использует внешнюю блокировку. В этом сценарии класс <xref:System.Collections.Concurrent.ConcurrentQueue%601> выполняется лучше, когда один выделенный поток помещается в очередь, а другой выделенный поток удаляется из очереди. Если это правило не применяется, класс <xref:System.Collections.Generic.Queue%601> может даже выполняться немного быстрее, чем класс <xref:System.Collections.Concurrent.ConcurrentQueue%601> на компьютерах с многоядерными процессорами.  
   
  Когда время обработки составляет 500 FLOPS (операций с плавающей запятой) или больше, то правило двух потоков не применяется к классу <xref:System.Collections.Concurrent.ConcurrentQueue%601>, который имеет очень хорошую масштабируемость. <xref:System.Collections.Generic.Queue%601> в этой ситуации не обладает хорошей масштабируемостью.  
   
  В смешанных сценариях "производитель-получатель", когда время обработки очень мало, класс <xref:System.Collections.Generic.Queue%601>, который имеет внешнюю блокировку, масштабируется лучше, чем класс<xref:System.Collections.Concurrent.ConcurrentQueue%601>. Однако, если время обработки имеет значение приблизительно равное 500 FLOPS и выше, то класс <xref:System.Collections.Concurrent.ConcurrentQueue%601> масштабируется лучше.  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack и Стек  
- В чистых сценариях "производитель-получатель", когда время обработки каждого элемента очень мало, класс <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> и класс <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>, который использует внешнюю блокировку, обычно выполняются с одинаковой скоростью при одном выделенном потоке на добавление и одном выделенном потоке на извлечение. Однако по мере увеличения числа потоков производительность снижается у обоих типов, так как увеличивается число конфликтных ситуаций, и класс <xref:System.Collections.Generic.Stack%601> может выполняться лучше, чем класс <xref:System.Collections.Concurrent.ConcurrentStack%601>. Если время обработки имеет значение приблизительно равное 500 FLOPS и выше, то оба типа масштабируются примерно одинаково.  
+ В чистых сценариях "производитель-получатель", когда время обработки каждого элемента очень мало, класс <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> и класс <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>, который использует внешнюю блокировку, обычно выполняются с одинаковой скоростью при одном выделенном потоке на добавление и одном выделенном потоке на извлечение. Однако по мере увеличения числа потоков производительность снижается у обоих типов, так как увеличивается число конфликтных ситуаций, и класс <xref:System.Collections.Generic.Stack%601> может выполняться лучше, чем класс <xref:System.Collections.Concurrent.ConcurrentStack%601>. Если время обработки имеет значение приблизительно равное 500 FLOPS и выше, то оба типа масштабируются примерно одинаково.  
   
  В смешанных сценариях "производитель-получатель" класс <xref:System.Collections.Concurrent.ConcurrentStack%601> имеет большее ускорение для небольших и больших рабочих нагрузок.  
   
  Использование методов <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> и <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> может значительно снизить время доступа.  
   
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary и Словарь  
- Как правило, лучше использовать класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> в любой ситуации, когда вы одновременно добавляете и обновляете ключи или значения из множества потоков. В сценариях, которые включают частные операции обновления и относительно редкие операции чтения, класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, в общем случае, обеспечивает немного лучшую производительность. В сценариях, которые включают частные операции чтения и относительно редкие операции обновления, класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, в общем случае, имеет значительно большее ускорение на компьютерах с многоядерными процессорами.  
+ Как правило, лучше использовать класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> в любой ситуации, когда вы одновременно добавляете и обновляете ключи или значения из множества потоков. В сценариях, которые включают частные операции обновления и относительно редкие операции чтения, класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, в общем случае, обеспечивает немного лучшую производительность. В сценариях, которые включают частные операции чтения и относительно редкие операции обновления, класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, в общем случае, имеет значительно большее ускорение на компьютерах с многоядерными процессорами.  
   
  В сценариях, которые включают частые обновления, можно увеличить степень параллелизма в классе <xref:System.Collections.Concurrent.ConcurrentDictionary%602> и затем провести оценку, чтобы увидеть, увеличилась ли производительность на компьютерах с многоядерными процессорами. При изменении уровня параллелизма исключите, насколько это возможно, глобальные операции.  
   
  Если выполняются только операции чтения ключа или значений, класс <xref:System.Collections.Generic.Dictionary%602> работает быстрее, так как он не требует синхронизации, пока словарь не изменяется каким-либо потоком.  
   
 ## <a name="concurrentbag"></a>ConcurrentBag  
- В чистых сценариях "производитель — получатель" класс <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName> может выполняться более медленно, чем другие типы параллельных коллекций.  
+ В чистых сценариях "производитель — получатель" класс <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> может выполняться более медленно, чем другие типы параллельных коллекций.  
   
  В смешанных сценариях "производитель-получатель" класс <xref:System.Collections.Concurrent.ConcurrentBag%601> в общем случае имеет большее ускорение и большую масштабируемость, чем все остальные типы параллельных коллекций для небольших и больших рабочих нагрузок.  
   
 ## <a name="blockingcollection"></a>BlockingCollection  
- Если вы хотите использовать семантику границ и блокировок, класс <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> может работать быстрее, чем любые пользовательские реализации. Он также поддерживает гибкую обработку исключений и операций отмены, перечисления.  
+ Если вы хотите использовать семантику границ и блокировок, класс <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> может работать быстрее, чем любые пользовательские реализации. Он также поддерживает гибкую обработку исключений и операций отмены, перечисления.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)  
  [Параллельное программирование](../../../../docs/standard/parallel-programming/index.md)
-

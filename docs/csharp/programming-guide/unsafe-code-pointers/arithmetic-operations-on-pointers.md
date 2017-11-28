@@ -1,38 +1,19 @@
 ---
 title: "Арифметические операции над указателями (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- pointers [C#], arithmetic operations
+helpviewer_keywords: pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 54c439aab8b6cd34a796db8d31f9eabeefddf9f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d40d44f8be590a909ff059b0fa84efb598fcf263
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Арифметические операции над указателями (Руководство по программированию в C#)
 В этом разделе рассматривается использование арифметических операторов `+` и **-** для управления указателями.  
@@ -51,22 +32,21 @@ ms.lasthandoff: 09/25/2017
  Исключения не создаются, если арифметическая операция переполняет домен указателя, а результат зависит от реализации.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csProgGuidePointers#14](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_1.cs)]  
+ [!code-csharp[csProgGuidePointers#14](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_1.cs)]  
   
- [!code-cs[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
+ [!code-csharp[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)   
- [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)   
- [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [Типы](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [Выражения указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
+ [Обработка указателей](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+ [Типы](../../../csharp/language-reference/keywords/types.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
-

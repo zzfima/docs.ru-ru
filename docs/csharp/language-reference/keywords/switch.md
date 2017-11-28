@@ -18,24 +18,24 @@ ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="switch-c-reference"></a>switch (Справочник по C#)
 `switch` — это оператор выбора, который выбирает для выполнения один *раздел switch* из списка кандидатов, сравнивая их с *выражением соответствия*. 
   
- [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+ [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
 Оператор `switch` часто используется вместо конструкции [if-else](if-else.md), если одно выражение проверяется на соответствие трем или больше условиям. Например, следующий оператор `switch` определяет, имеет ли переменная типа `Color` одно из трех значений: 
 
-[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
 
 Это эквивалентно следующему примеру, в котором используется конструкция `if` - `else`. 
 
-[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
 
 ## <a name="the-match-expression"></a>Выражение соответствия
 
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/02/2017
  
   Оператор `switch` может содержать любое количество разделов switch, а каждый раздел может иметь одну или несколько меток case (как показано в следующем примере). Однако две метки case не могут содержать одно и то же выражение.  
 
- [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+ [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
 
- Выполняет только раздел switch в операторе switch. C# не позволяет продолжить выполнение следующего раздела switch после выполнения предыдущего раздела. В связи с этим приведенный ниже код создает ошибку компилятора CS0163: "Управление не может передаваться вниз от одной метки case (<case label>) к другой".   
+ Выполняет только раздел switch в операторе switch. C# не позволяет продолжить выполнение следующего раздела switch после выполнения предыдущего раздела. В связи с этим приведенный ниже код создает ошибку компилятора CS0163: "Управление не может передаваться вниз от одной метки case (<case label>) к другой".  
 
 ```csharp  
 switch (caseSwitch)  
@@ -79,7 +79,7 @@ switch (caseSwitch)
 ```  
 Обычно для соблюдения этого требования выполняется явный выход из раздела switch с использованием оператора [break](break.md), [goto](goto.md) или [return](return.md). При этом допустим также следующий код, поскольку он гарантирует, что управление программой не будет передано дальше, в раздел switch `default`.
   
- [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
+ [!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
  Выполнение списка операторов в разделе switch с меткой case, соответствующей выражению сопоставления, начинается с первого оператора и продолжается по списку, обычно до достижения оператора перехода, такого как `break`, `goto case`, `goto label`, `return` или `throw`. В этой точке управление передается за пределы оператора `switch` или к другой метке case. Оператор `goto`, если он используется, должен передать управление константе типа метки. Это ограничение является обязательным, поскольку попытка передачи управления переменной типа метки может иметь нежелательные побочные эффекты, такие передача управления в непредусмотренное расположение в коде или создание бесконечного цикла.
 
@@ -95,7 +95,7 @@ switch (caseSwitch)
 
  В следующем примере демонстрируется оператор `switch` с использованием различных не взаимоисключающих шаблонов. Если раздел switch `case 0:` перемещается и перестает быть первым разделом в операторе `switch`, C# выдает ошибку компилятора, поскольку целое число с нулевым значением представляет собой подмножество всех целых чисел — этот шаблон определен оператором `case int val`.
 
- [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+ [!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
 
 Устранить эту проблему и предупреждение компилятора можно одним из двух способов:
 
@@ -138,11 +138,11 @@ switch (caseSwitch)
 
 В следующем примере шаблон константы используется для того, чтобы определить, выпадает ли определенная дата на выходные, первый или последний рабочий день недели либо середину недели. Он сравнивает свойство <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> текущего дня с членами перечисления <xref:System.DayOfWeek>. 
 
-[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 В следующем примере шаблон констант используется для обработки данных, введенных пользователем в консольное приложение, имитирующее кофейный автомат.
   
- [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+ [!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
 
 ### <a name="type-pattern"></a>Шаблон типа
 
@@ -173,11 +173,11 @@ case null:
  
 В следующем примере шаблон типа используется для предоставления сведений о различные видах коллекций типов.
 
-[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Без сопоставления шаблонов этот код может быть написан следующим образом. При использовании шаблона типа создается более лаконичный и удобочитаемый код, причем проверять результат преобразования (`null`) или выполнять повторное приведение не требуется.  
 
-[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="the-case-statement-and-the-when-clause"></a>Оператор `case` и предложение `when`
 
@@ -185,7 +185,7 @@ case null:
 
  В следующем примере определяется базовый класс `Shape`, класс `Rectangle`, производный от `Shape`, и класс `Square`, производный от `Rectangle`. Предложение `when` используется в нем для того, чтобы `ShowShapeInfo` обрабатывал объект `Rectangle`, которому назначена такая же длина и ширина, как у объекта `Square`, даже если экземпляр для него не создается как объект `Square`. Метод не пытается отобразить сведения ни об объекте со значением `null`, ни о форме с нулевой областью. 
 
-[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
   
 Обратите внимание на то, что предложение `when` в этом примере, проверяющее, имеет ли объект `Shape` значение `null`, не выполняется. Правильный шаблон пути для проверки на наличие значения `null` — `case null:`.
 
@@ -194,11 +194,11 @@ case null:
   
 ## <a name="see-also"></a>См. также  
 
- [Справочник по C#](../index.md)   
- [Руководство по программированию на C#](../../programming-guide/index.md)   
- [Ключевые слова в C#](index.md)   
- [if-else](if-else.md)   
- [Соответствие шаблону](../../pattern-matching.md)   
+ [Справочник по C#](../index.md)  
+ [Руководство по программированию на C#](../../programming-guide/index.md)  
+ [Ключевые слова в C#](index.md)  
+ [if-else](if-else.md)  
+ [Соответствие шаблону](../../pattern-matching.md)  
  
 
  

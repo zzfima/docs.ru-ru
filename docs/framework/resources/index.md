@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resources-in-desktop-apps"></a>Ресурсы в приложениях для настольных систем
 Практически любое высококачественное приложение должно использовать ресурсы. Ресурс представляет собой любые неисполняемые данные, которые логически развертываются вместе с приложением. Ресурсы могут отображаться в приложении в виде сообщений об ошибках либо как часть интерфейса пользователя. Ресурсы могут содержать данные различных видов, включая символьные строки, изображения и объекты. (Для записи сохраняемых объектов в файл ресурсов объекты должны быть сериализуемыми.) Благодаря хранению данных в файле ресурсов сами данные можно изменять без перекомпиляции всего приложения. Это также позволяет хранить данные в одном месте и исключает необходимость в использовании жестко закодированных данных, которые хранятся в нескольких местах.  
@@ -51,17 +49,17 @@ ms.lasthandoff: 09/05/2017
  Дополнительные сведения см. в статье [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Извлечение ресурсов  
- Приложение во время выполнения загружает соответствующие локализованные ресурсы отдельно для каждого потока на основе языка и региональных параметров, которые заданы свойством <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. Значение этого свойства формируется следующим образом:  
+ Приложение во время выполнения загружает соответствующие локализованные ресурсы отдельно для каждого потока на основе языка и региональных параметров, которые заданы свойством <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Значение этого свойства формируется следующим образом:  
   
--   Присвоением свойству <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> объекта <xref:System.Globalization.CultureInfo>, который представляет локализованные значения языка и региональных параметров.  
+-   Присвоением свойству <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> объекта <xref:System.Globalization.CultureInfo>, который представляет локализованные значения языка и региональных параметров.  
   
--   Если язык и региональные параметры не заданы явным образом, соответствующие значения по умолчанию для пользовательского интерфейса каждого потока извлекаются из свойства <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
+-   Если язык и региональные параметры не заданы явным образом, соответствующие значения по умолчанию для пользовательского интерфейса каждого потока извлекаются из свойства <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
 -   Если заданные по умолчанию язык и региональные параметры пользовательского интерфейса для потоков явно не назначены, путем получения языка и региональных параметров для текущего пользователя на локальном компьютере путем вызова функции Windows `GetUserDefaultUILanguage`.  
   
- Дополнительные сведения об указании языка и региональных параметров для пользовательского интерфейса см. в разделах справки <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Дополнительные сведения об указании языка и региональных параметров для пользовательского интерфейса см. в разделах справки <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=fullName>. Хотя класс <xref:System.Resources.ResourceManager> чаще всего используется для получения ресурсов в настольных приложениях, пространство имен приложение <xref:System.Resources?displayProperty=fullName> содержит дополнительные типы, которые также можно использовать для получения ресурсов. К ним относятся следующие методы.  
+ Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Хотя класс <xref:System.Resources.ResourceManager> чаще всего используется для получения ресурсов в настольных приложениях, пространство имен приложение <xref:System.Resources?displayProperty=nameWithType> содержит дополнительные типы, которые также можно использовать для получения ресурсов. К ним относятся следующие методы.  
   
 -   Класс <xref:System.Resources.ResourceReader>, который позволяет перечислять ресурсы, встроенные в сборку или хранящиеся в отдельном двоичном RESOURCES-файле. Это удобно, когда точные имена ресурсов, доступных во время выполнения, неизвестны.  
   
@@ -72,11 +70,10 @@ ms.lasthandoff: 09/05/2017
 -   Класс <xref:System.Resources.ResXResourceSet>, который позволяет получить в память все элементы из XML-файла ресурсов.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- [Основные сведения о приложениях](../../../docs/standard/application-essentials.md)   
- [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
+ [.NET Framework Application Essentials](../../../docs/standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)  
+ [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Извлечение ресурсов](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
-

@@ -1,38 +1,19 @@
 ---
 title: "Универсальные типы во время выполнения (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], at run time
+helpviewer_keywords: generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5ef0b63b293ec277ebf9331e8f282ce2c1692d31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 661dff2d8ec2e12ab6a459660a5378f74e93b9c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Универсальные типы во время выполнения (Руководство по программированию в C#)
 Универсальный тип или метод, компилируемый на языке MSIL, будет содержать метаданные, определяющие наличие в нем параметров типа. Способ использования MSIL для универсального типа зависит от того, является ли предоставленный параметр типа ссылочным типом или типом значения.  
@@ -41,11 +22,11 @@ ms.lasthandoff: 07/28/2017
   
  Допустим, в коде программы объявляется стек, состоящий из целых чисел:  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
  В этой точке среда выполнения создает специальную версию класса <xref:System.Collections.Generic.Stack%601>, параметр которого будет соответствующим образом заменяться целым числом. После этого каждый раз, когда в коде программы используется стек целых чисел, среда выполнения обращается к созданному специальному классу <xref:System.Collections.Generic.Stack%601>. В следующем примере создаются два экземпляра стека целых чисел, которые совместно используют один экземпляр кода `Stack<int>`:  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
  Допустим, в другой точке кода создается другой класс <xref:System.Collections.Generic.Stack%601>, в качестве параметра которого используется другой тип значения, например `long`, или определяемая пользователем структура. В результате среда выполнения создает другую версию универсального типа и заменяет `long` в соответствующих местах кода MSIL. Преобразования больше не требуются, поскольку каждый специальный универсальный класс содержит собственный тип значения.  
   
@@ -53,25 +34,24 @@ ms.lasthandoff: 07/28/2017
   
  Допустим, у вас есть два ссылочных типа (классы `Customer` и `Order`) и вы создаете стек типов `Customer`:  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
  В этой точке среда выполнения создает специальную версию класса <xref:System.Collections.Generic.Stack%601>, содержащую ссылки на объекты, которые не хранят данные и будут заполнены позднее. Допустим, в следующей строке кода создается стек другого ссылочного типа с именем `Order`:  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
  В отличие от типов значений, в этом случае не создается другая специальная версия класса <xref:System.Collections.Generic.Stack%601> для типа `Order`. Вместо этого создается экземпляр специальной версии класса <xref:System.Collections.Generic.Stack%601> и задается переменная `orders`, ссылающаяся на него. Предположим, далее встречается строка кода, в которой создается стек типа `Customer`:  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
  Как и в случае предшествующего использования класса <xref:System.Collections.Generic.Stack%601>, созданного с помощью типа `Order`, создается другой специальный экземпляр класса <xref:System.Collections.Generic.Stack%601>. Содержащиеся в нем указатели будут ссылаться на область памяти с размером типа `Customer`. Поскольку число ссылок в разных программах может значительно различаться, реализация C# на основе универсальных шаблонов позволяет значительно сократить объем кода за счет того, что компилятор создает для универсальных классов ссылочных типов только один специальный класс.  
   
  Кроме того, при создании экземпляра универсального класса C# с использованием параметра типа значения или ссылочного типа копия может выполнять запросы к нему во время выполнения, и при этом могут быть установлены его фактический тип и параметр типа.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
+ <xref:System.Collections.Generic>  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [Универсальные шаблоны](~/docs/standard/generics/index.md)
-

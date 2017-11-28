@@ -8,15 +8,13 @@ ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
-ms.devlang: vb
+dev_langs: vb
+ms.openlocfilehash: 6572f35b1e2b652c9f2ff5448165ece104f0bdf6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: a933e1eef6e4e9814aeba4206469a64563a7e91d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017
 
 *Библиотека классов* определяет типы и методы, которые могут быть вызваны из любого приложения. Библиотеку классов, предназначенную для .NET Standard 2.0, можно вызывать из любой реализации .NET, которая поддерживает эту версию .NET Standard. Когда вы завершите создание библиотеки классов, вы сможете по своему усмотрению распространять ее как независимый компонент или включить в состав одного или нескольких приложений.
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/12/2017
 
   [!CODE-vb[ClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/stringlibrary.vb)]
 
-   Библиотека классов (`UtilityLibraries.StringLibrary`) содержит метод с именем `StartsWithUpper`, который возвращает значение <xref:System.Boolean>. Это значение указывает, является ли первым символом текущего экземпляра строки символ верхнего регистра. Символы верхнего регистра определяются по стандарту Юникод. Метод <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> возвращает `true`, если символ является символом верхнего регистра.
+   Библиотека классов (`UtilityLibraries.StringLibrary`) содержит метод с именем `StartsWithUpper`, который возвращает значение <xref:System.Boolean>. Это значение указывает, является ли первым символом текущего экземпляра строки символ верхнего регистра. Символы верхнего регистра определяются по стандарту Юникод. Метод <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> возвращает `true`, если символ является символом верхнего регистра.
 
 1. В строке меню выберите **Сборка** > **Собрать решение**. Проект должен скомпилироваться без ошибок.
 
@@ -71,4 +69,3 @@ ms.lasthandoff: 08/12/2017
 ## <a name="next-step"></a>Дальнейшие действия
 
 Итак, вы успешно создали библиотеку. Пока вы еще не вызывали ее методов, поэтому нельзя быть уверенным, что все работает так, как ожидалось. Следующий шаг в разработке библиотеки — тестирование с помощью [проекта модульного теста](testing-library-with-visual-studio.md).
-

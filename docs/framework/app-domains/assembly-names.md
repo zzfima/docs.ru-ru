@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 624cc6ad264f32b9a43917d9bae751f57b4421a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7029fb2b436c9ba49f2dfd3da07c5147222fbeaf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-names"></a>Имена сборок
 Имя сборки хранится в метаданных и в значительной степени влияет на ее область определения и использование в приложениях. Сборки со строгим именем имеют полное имя, в состав которого входит имя сборки, язык и региональные параметры, открытый ключ и номер версии. Оно часто называется отображаемым именем; у загружаемых сборок его можно получить через свойство <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -34,7 +32,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  Для поддержки сборок, привязанных к конкретным процессорам, в идентификации сборки в платформе .NET Framework версии 2.0 указывается архитектура процессора. Можно создавать версии сборок, идентификации которых различаются только архитектурой процессора — например 32-разрядные и 64-разрядные версии. При строгом именовании указывать архитектуру процессора не требуется. Для получения дополнительной информации см. <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>.  
+>  Для поддержки сборок, привязанных к конкретным процессорам, в идентификации сборки в платформе .NET Framework версии 2.0 указывается архитектура процессора. Можно создавать версии сборок, идентификации которых различаются только архитектурой процессора — например 32-разрядные и 64-разрядные версии. При строгом именовании указывать архитектуру процессора не требуется. Для получения дополнительной информации см. <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  В этом примере полное имя указывает, что у сборки `myTypes` имеется строгое имя с маркером общего ключа, значение языка и региональных параметров "Английский (США)" и номер версии 1.0.1234.0. Архитектурой процессора является "msil", что означает, что должна выполняться JIT-компиляция в 32- или 64-разрядный код в зависимости от операционной системы и процессора.  
   
@@ -60,7 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="naming-application-components"></a>Правила именования компонентов приложений  
  При определении идентификации сборки среда выполнения не учитывает имя файла. Удостоверение сборки, которое состоит из ее имени, версии, языка и региональных параметров, а также строгого имени, должно восприниматься средой выполнения однозначно.  
   
- Если, к примеру, сборка с именем myAssembly.exe ссылается на сборку с именем myAssembly.dll, то при вызове myAssembly.exe привязка пройдет корректно. Тем не менее, если другое приложение вызовет myAssembly.exe с помощью метода <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, при обработке запроса на привязку к сборке "myAssembly", поступившего от myAssembly.exe, среда выполнения определит, что сборка с именем "myAssembly" уже загружена. В этом случае сборка myAssembly.dll загружаться не будет. Так как запрашиваемый тип отсутствует в myAssembly.exe, то возникнет исключение <xref:System.TypeLoadException>.  
+ Если, к примеру, сборка с именем myAssembly.exe ссылается на сборку с именем myAssembly.dll, то при вызове myAssembly.exe привязка пройдет корректно. Тем не менее, если другое приложение вызовет myAssembly.exe с помощью метода <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, при обработке запроса на привязку к сборке "myAssembly", поступившего от myAssembly.exe, среда выполнения определит, что сборка с именем "myAssembly" уже загружена. В этом случае сборка myAssembly.dll загружаться не будет. Так как запрашиваемый тип отсутствует в myAssembly.exe, то возникнет исключение <xref:System.TypeLoadException>.  
   
  Во избежание этой проблемы необходимо следить за тем, чтобы сборки, составляющие приложение, имели разные имена, а сборки с одинаковыми именами располагались бы в разных каталогах.  
   
@@ -68,10 +66,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Если сборка со строгим именем помещается в глобальный кэш сборок, то имя файла сборки должно соответствовать имени сборки (без учета расширения файла — например EXE или DLL). Так, если имя файла сборки — myAssembly.dll, то именем сборки должно быть myAssembly. Имена закрытых сборок, развертываемых только в корневом каталоге приложения, могут отличаться от соответствующих файловых имен.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)   
- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
+ [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "Пошаговое руководство. Сохранение объекта в Visual Studio (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Пошаговое руководство. Сохранение объекта в Visual Studio (C#)
 Несмотря на то, что во время разработки свойствам объекта можно задать значения по умолчанию, любые значения, введенные во время выполнения, будут потеряны при уничтожении объекта. С помощью сериализации можно сохранить данные объекта между экземплярами, что позволит сохранять значения и извлекать их при следующем создании экземпляра объекта.  
@@ -230,6 +221,5 @@ ms.lasthandoff: 07/28/2017
  Теперь можно снова собрать и запустить приложение. Первоначально в текстовых полях отображаются значения по умолчанию. Попробуйте изменить их и ввести имя в четвертое текстовое поле. Закройте приложение, а затем снова запустите его. Обратите внимание, что теперь в текстовых полях отображаются новые значения.  
   
 ## <a name="see-also"></a>См. также  
- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
-

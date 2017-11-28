@@ -1,45 +1,26 @@
 ---
 title: "string (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
 - string_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - strings [C#], reference
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 56847aad4cb8b0427594a299df2306d21675506b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="string-c-reference"></a>string (Справочник по C#)
 Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` — это псевдоним для <xref:System.String> в .NET Framework.  
@@ -118,20 +99,19 @@ Console.WriteLine(a);
  Дополнительные сведения о строках в С# см. в разделе [Строки](../../../csharp/programming-guide/strings/index.md).  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Рекомендации по использованию строк](../../../standard/base-types/best-practices-strings.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)   
- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)   
- [Базовые операции со строками](../../../standard/base-types/basic-string-operations.md)   
- [Создание новых строк](../../../standard/base-types/creating-new.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Рекомендации по использованию строк](../../../standard/base-types/best-practices-strings.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
+ [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
+ [Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)  
+ [Создание строк](../../../standard/base-types/creating-new.md)  
  [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
-

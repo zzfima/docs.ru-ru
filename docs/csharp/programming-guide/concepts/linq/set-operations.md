@@ -1,30 +1,21 @@
 ---
 title: "Операции над множествами (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b5b546d9df8752fd7afd6e0db4525bc923a74bbb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 121dcd4d41dcfea332c45031a5fbed594e2f1e3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-operations-c"></a>Операции над множествами (C#)
 Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).  
@@ -35,25 +26,25 @@ ms.lasthandoff: 07/28/2017
   
 |Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Distinct|Удаляет повторяющиеся значения из коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName>|  
-|Исключения|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
-|Пересечение|Возвращает пересечение множеств, т. е. элементы, присутствующие в каждой из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
-|Объединение|Возвращает объединение множеств, т. е. уникальные элементы, присутствующие в одной из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
+|Distinct|Удаляет повторяющиеся значения из коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
+|Исключения|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
+|Пересечение|Возвращает пересечение множеств, т. е. элементы, присутствующие в каждой из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
+|Объединение|Возвращает объединение множеств, т. е. уникальные элементы, присутствующие в одной из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
 ## <a name="comparison-of-set-operations"></a>Сравнение операций над множествами  
   
 ### <a name="distinct"></a>Distinct  
- На следующем рисунке показано поведение метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> применительно к последовательности символов. Возвращаемая последовательность содержит уникальные элементы из входной последовательности.  
+ На следующем рисунке показано поведение метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> применительно к последовательности символов. Возвращаемая последовательность содержит уникальные элементы из входной последовательности.  
   
  ![График, демонстрирующий поведение Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
   
 ### <a name="except"></a>Исключения  
- На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
+ На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
   
  ![График, отображающий действие Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
   
 ### <a name="intersect"></a>Пересечение  
- На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
+ На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
   
  ![График, отображающий пересечение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
   
@@ -63,8 +54,7 @@ ms.lasthandoff: 07/28/2017
  ![График, показывающий объединение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
+ <xref:System.Linq>  
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
  [Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
-

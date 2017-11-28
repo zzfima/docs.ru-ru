@@ -1,12 +1,9 @@
 ---
 title: "Ограничение доступности методов доступа (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -15,34 +12,19 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 347fffa4f612c5cb674a6529e46c0b1785670c95
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ограничение доступности методов доступа (Руководство по программированию на C#)
 Выражения [get](../../../csharp/language-reference/keywords/get.md) и [set](../../../csharp/language-reference/keywords/set.md) свойства или индексатора называются *методами доступа*. По умолчанию они имеют такие же уровни видимости или доступа, что и свойство или индексатор, которым они принадлежат. Дополнительные сведения см. в разделе [Уровни доступа](../../../csharp/language-reference/keywords/accessibility-levels.md). Тем не менее в некоторых случаях рекомендуется ограничить уровни доступа для этих методов. Как правило, в этом случае ограничивается уровень доступа для метода `set`, тогда как метод `get` остается общедоступным. Пример:  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  В этом примере свойство `Name` определяет методы доступа `get` и `set`. Метод доступа `get` получает уровень доступа самого свойства (в этом случае `public`), а к методу `set` явным образом применяется модификатор доступа [protected](../../../csharp/language-reference/keywords/protected.md).  
   
@@ -60,12 +42,12 @@ ms.lasthandoff: 07/28/2017
 ## <a name="access-modifiers-on-overriding-accessors"></a>Модификаторы доступа при переопределении методов доступа  
  При переопределении свойства или индексатора переопределенные методы доступа должны быть доступны коду переопределения. Кроме того, уровни доступа свойства/индексатора и соответствующих методов доступа должны совпадать с уровнями переопределенных свойства/индексатора и методов доступа. Пример:  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## <a name="implementing-interfaces"></a>Реализация интерфейсов  
  Методы доступа, которые используются для реализации интерфейса, не могут иметь модификаторы доступа. Тем не менее при реализации интерфейса с использованием одного метода доступа (например, `get`) другой метод доступа может иметь модификатор доступа, как показано в следующем примере:  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## <a name="accessor-accessibility-domain"></a>Домен доступности для метода доступа  
  При использовании модификатора доступа для метода доступа этот модификатор определяет [домен доступности](../../../csharp/language-reference/keywords/accessibility-domain.md) для такого метода.  
@@ -77,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  В этом примере также демонстрируется, что ограничивающий модификатор доступа (`private` или `protected`) для метода доступа `set` свойства `Name` в классе `DerivedClass` запрещает доступ к этому методу и при попытке присвоить ему значение возвращает ошибку.  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## <a name="comments"></a>Комментарии  
  Обратите внимание, что если заменить объявление `new private string Id` на `new public string Id`, будут получены следующие выходные данные:  
@@ -87,8 +69,7 @@ ms.lasthandoff: 07/28/2017
  `Name and ID in the derived class: John, John123`  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
  [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-

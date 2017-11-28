@@ -1,5 +1,5 @@
 ---
-title: "Обзор .NET | Документация Майкрософт"
+title: "Обзор .NET"
 description: "Обзор некоторых важных функций .NET."
 keywords: ".NET, .NET Core, обзор, языки программирования, небезопасный, управление памятью, безопасность типа, асинхронный"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>Обзор .NET
 
 .NET — это платформа разработки общего назначения. Она включает несколько основных функций (к примеру, поддержку нескольких языков программирования, модели асинхронного и параллельного программирования и взаимодействие на уровне машинного кода), благодаря которым на различных платформах доступно множество разнообразных сценариев.
@@ -149,4 +147,3 @@ LINQ — это эффективный набор функций для C# и V
 Если вы хотите приступить к написанию собственного кода, ознакомьтесь с [руководством по началу работы](get-started.md).
 
 Дополнительные сведения о важных [компонентах архитектуры .NET](components.md).
-

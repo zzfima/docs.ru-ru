@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework, development guide
+helpviewer_keywords: .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 07/28/2017
  Здесь приводится описание способов использования Windows Communication Foundation (WCF) для сборки безопасных и надежных сервисноориентированных приложений.  
   
  [Построение рабочих процессов в .NET Framework](windows-workflow-foundation/index.md)     
- Здесь приводятся сведения о модели программирования и средствах Windows Workflow Foundation (WF), а также примеры.   
+ Здесь приводятся сведения о модели программирования и средствах Windows Workflow Foundation (WF), а также примеры.  
 
  [Приложения служб Windows](../../docs/framework/windows-services/index.md)  
  Здесь поясняется, как можно использовать Visual Studio и .NET Framework для создания приложения, которое устанавливается в качестве службы, а также запускать его, останавливать и иными способами управлять его поведением.  
@@ -94,4 +91,3 @@ ms.lasthandoff: 07/28/2017
   
  [Примеры по платформе .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Здесь содержатся ссылки на приложения в галерее примеров кода MSDN, демонстрирующие технологии .NET Framework.
-

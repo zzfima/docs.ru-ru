@@ -1,40 +1,21 @@
 ---
 title: "Разработка приложений в Visual Basic"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3752d99e3e9860d5cac2996bb412fdb6c30b5af1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0dee8a19d22eb9b483a2d17fad43830971a8ab0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-applications-with-visual-basic"></a>Разработка приложений в Visual Basic
 В этом разделе приведена основная документация по языку Visual Basic.  
@@ -47,7 +28,7 @@ ms.lasthandoff: 07/28/2017
  Описана новая функция под названием `My`, которая дает доступ к сведениям и экземплярам объектов по умолчанию, связанным с приложением и его окружением времени выполнения.  
   
  [Доступ к данным в приложениях на Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
- Справка по доступу к данным в приложениях на Visual Basic.   
+ Справка по доступу к данным в приложениях на Visual Basic.  
   
  [Создание и использование компонентов в Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Здесь определяется термин *компонент* и описывается, как и когда следует создавать компоненты.  
@@ -67,4 +48,3 @@ ms.lasthandoff: 07/28/2017
   
  [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
  Содержит справочную документацию по языку Visual Basic.
-

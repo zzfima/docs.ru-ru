@@ -8,22 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, concurrent dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1c034b656cf7a953ae532c12640b5916001764c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
-В этом примере показано, как добавлять, получать, обновлять и удалять элементы класса <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>. Этот класс коллекций является потокобезопасной реализацией. Рекомендуется использовать его каждый раз, когда множество потоков одновременно могут пытаться получить доступ к элементам.  
+В этом примере показано, как добавлять, получать, обновлять и удалять элементы класса <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Этот класс коллекций является потокобезопасной реализацией. Рекомендуется использовать его каждый раз, когда множество потоков одновременно могут пытаться получить доступ к элементам.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> предоставляет несколько удобных способов, которые позволяют обойтись без первоначальной проверки существования ключа перед добавлением или удалением данных. В таблице ниже перечислены эти удобные методы и приводится описание их использования.  
   
@@ -54,6 +55,5 @@ ms.lasthandoff: 09/19/2017
  Поэтому нет гарантии, что данные, возвращаемые методом <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, будут данными, созданными делегатом valueFactory потока. Аналогичная последовательность событий может иметь место при вызове метода <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)
-

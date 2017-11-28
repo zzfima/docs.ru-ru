@@ -1,43 +1,24 @@
 ---
 title: "Оператор [] (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '[]_CSharpKeyword'
-dev_langs:
-- CSharp
+f1_keywords: '[]_CSharpKeyword'
 helpviewer_keywords:
 - subscript operator [C#]
 - square brackets [ ] operator [C#]
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 03664f5604bb7d7dce9e8ae2ff0ec045c6a203b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b49d41af0dd4dc34b1b74c62ce8779aa31d69f77
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>Оператор [] (Справочник по C#)
 Квадратные скобки (`[]`) используются для массивов, индексаторов и атрибутов. Кроме того, их можно использовать с указателями.  
@@ -45,11 +26,11 @@ ms.lasthandoff: 09/25/2017
 ## <a name="remarks"></a>Примечания  
  Тип массива указывается перед оператором `[]`:  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
+ [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  Для доступа к элементу массива его индекс необходимо заключить в скобки:  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
+ [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  Если индекс массива выходит за границы диапазона, создается исключение.  
   
@@ -57,15 +38,15 @@ ms.lasthandoff: 09/25/2017
   
  Например, в платформе .NET Framework определен тип `Hashtable`, связывающий ключи и значения произвольного типа.  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
+ [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  Кроме того, квадратные скобки используются для определения [атрибутов](../../../csharp/programming-guide/concepts/attributes/index.md):  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
+ [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  Квадратные скобки можно использовать для создания индекса на основе указателя:  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
+ [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  Проверка границ не выполняется.  
   
@@ -73,11 +54,10 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)   
- [Массивы](../../../csharp/programming-guide/arrays/index.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
+ [Массивы](../../../csharp/programming-guide/arrays/index.md)  
+ [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
  [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
-

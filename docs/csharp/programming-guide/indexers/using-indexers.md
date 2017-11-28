@@ -1,38 +1,19 @@
 ---
 title: "Использование индексаторов (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- indexers [C#], about indexers
+helpviewer_keywords: indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ac8990fa2efb1a2ea24497a3a5de3649795c7b23
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-indexers-c-programming-guide"></a>Использование индексаторов (Руководство по программированию в C#)
 Применение индексаторов упрощает работу с синтаксисом, позволяя создавать [классы](../../../csharp/language-reference/keywords/class.md), [структуры](../../../csharp/language-reference/keywords/struct.md) и [интерфейсы](../../../csharp/language-reference/keywords/interface.md), к которым клиентские приложения могут обращаться так же, как к массиву. Индексаторы чаще всего реализуются в типах, предназначенных преимущественно для инкапсуляции внутренней коллекции или массива. Допустим, у вас есть класс TempRecord, представляющий журнал с 10 измерениями температуры по шкале Фаренгейта за 24 часа. В этом классе содержится массив temps типа float, представляющий значения температуры, а также <xref:System.DateTime>, содержащий даты соответствующих измерений. Реализация индексатора в этом классе позволит клиентам получать доступ к значениям температуры в экземпляре TempRecord, используя синтаксис `float temp = tr[4]` вместо `float temp = tr.temps[4]`. Это позволяет не только упростить синтаксис клиентских приложений, но и облегчить понимание кода класса и его предназначения другими разработчиками.  
@@ -74,7 +55,7 @@ public int this [int index]   // Indexer declaration
  Обратите внимание, что при определении прав доступа индексатора, например в инструкции `Console.Write`, вызывается метод доступа [get](../../../csharp/language-reference/keywords/get.md). Таким образом, если метод доступа `get` отсутствует, возникает ошибка времени компиляции.  
   
 ### <a name="code"></a>Код  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## <a name="indexing-using-other-values"></a>Индексирование с использованием других значений  
  В C# тип индекса не ограничивается целочисленными значениями. Например, в качестве индексатора могут использоваться строки. Такой индексатор можно реализовать путем поиска строки в коллекции с возвратом соответствующего значения. Поскольку методы доступа можно перегружать, строковые и целочисленные версии могут сосуществовать.  
@@ -85,7 +66,7 @@ public int this [int index]   // Indexer declaration
  В этом примере объявляется класс, в котором хранятся дни недели. Также объявляется метод доступа `get`, который принимает название дня и возвращает соответствующее ему целое число. Например, для воскресенья будет возвращаться значение 0, для понедельника 1 и т. д.  
   
 ### <a name="code"></a>Код  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Повысить безопасность и надежность индексаторов можно двумя способами:  
@@ -95,7 +76,6 @@ public int this [int index]   // Indexer declaration
 -   Настройте максимально ограничивающие уровни доступа для методов `get` и [set](../../../csharp/language-reference/keywords/set.md). Особенно важно сделать это для метода доступа `set`. Дополнительные сведения см. в разделе [Доступность методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
  [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
-

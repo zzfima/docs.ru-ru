@@ -1,30 +1,21 @@
 ---
 title: "Пример XML-файла. Объединенные заказы на покупку2"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a6cf08959792e2d491ee6aede59abeeac50e1700
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81699b266e67c006a707a3941349a41189a3b442
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Пример XML-файла. Объединенные заказы на покупку
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл представляет собой набор заказов на покупку в различных формах от нескольких компаний. Заказы на покупку от каждой компании располагаются в отдельном пространстве имен.  
@@ -163,4 +154,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
-

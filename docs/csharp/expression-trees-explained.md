@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>Описание деревьев выражений
 
 [Предыдущий раздел: "Обзор"](expression-trees.md)
@@ -50,7 +48,7 @@ var sum = 1 + 2;
 
 Это может показаться сложным, но это очень удобно. Тем же самым образом можно раскладывать на составные части гораздо более сложные выражения. Рассмотрим следующее выражение:
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ var finalAnswer = this.SecretSauceFuncion(
 Единственное, чего нельзя сделать, — это изменить дерево выражения.  Деревья выражений являются неизменяемыми структурами данных. Если необходимо изменить дерево выражения, следует создать копию исходного дерева и внести в нее требуемые изменения. 
 
 [Следующий раздел: "Типы платформ, поддерживающие деревья выражений"](expression-classes.md)
-

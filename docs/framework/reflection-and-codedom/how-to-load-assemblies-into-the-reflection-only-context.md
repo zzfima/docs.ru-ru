@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection, reflection-only loader context
 - assemblies [.NET Framework], loading for reflection
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения
 Контекст загрузки, предназначенный только для отражения, позволяет просматривать сборки, скомпилированные для других платформ или для других версий .NET Framework. Код, загруженный в этот контекст, может быть просмотрен, но не может быть выполнен. Это означает, что объекты не могут быть созданы, так как невозможно будет запустить конструкторы. Так как код не может быть выполнен, зависимости не будут загружены автоматически. Если следует их просмотреть, придется загрузить их самостоятельно.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  Определите, загружена ли сборка в контекст, предназначенный только для отражения, с помощью свойства сборки <xref:System.Reflection.Assembly.ReflectionOnly%2A>.  
   
-4.  Если атрибуты были применены к сборке или к типам сборки, просмотрите эти атрибуты с помощью класса <xref:System.Reflection.CustomAttributeData>, чтобы убедиться в отсутствии попыток выполнения кода в контексте, предназначенном только для отражения. Используйте соответствующую перегрузку метода <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> для получения объектов <xref:System.Reflection.CustomAttributeData>, представляющих атрибуты, применимые к сборке, элементу, модулю или параметру.  
+4.  Если атрибуты были применены к сборке или к типам сборки, просмотрите эти атрибуты с помощью класса <xref:System.Reflection.CustomAttributeData>, чтобы убедиться в отсутствии попыток выполнения кода в контексте, предназначенном только для отражения. Используйте соответствующую перегрузку метода <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> для получения объектов <xref:System.Reflection.CustomAttributeData>, представляющих атрибуты, применимые к сборке, элементу, модулю или параметру.  
   
     > [!NOTE]
     >  Атрибуты, применяемые к сборке или ее содержимому, могут быть определены в сборке или в другой сборке, загруженной в контекст, предназначенный только для отражения. Невозможно заведомо узнать, где определены атрибуты.  
@@ -54,10 +56,11 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  Чтобы упростить этот пример кода, сборка сама себя загружает и просматривает. Как правило, одна сборка не загружается одновременно в контекст выполнения и в контекст, предназначенный только для отражения.  
   
- [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)] [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)] [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+ [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
+ <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+ <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
  <xref:System.Reflection.CustomAttributeData>
-

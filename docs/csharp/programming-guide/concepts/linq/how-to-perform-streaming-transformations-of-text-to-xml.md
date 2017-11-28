@@ -1,25 +1,21 @@
 ---
 title: "Практическое руководство. Выполнение потоковых преобразований текста в XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 03c5ed5ef66db311ade751b5aad21de70b78f063
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3351f88bb27807714b3566992242e72a5d03ac14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Практическое руководство. Выполнение потоковых преобразований текста в XML (C#)
 Одним из вариантов обработки текстового файла является написание метода расширения, который обрабатывает текстовый файл построчно при помощи конструкции `yield return`. Затем можно будет написать запрос LINQ, обрабатывающий текстовый файл в отложенной манере. При использовании объекта <xref:System.Xml.Linq.XStreamingElement> для формирования выходного потока можно создать преобразование из текстового файла в XML, которое будет использовать минимальный объем памяти независимо от размера исходного текстового файла.  
@@ -99,6 +95,5 @@ class Program
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XStreamingElement>   
+ <xref:System.Xml.Linq.XStreamingElement>  
  [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

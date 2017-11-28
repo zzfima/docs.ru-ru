@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
+ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="expressions"></a>Выражения
 
 *Выражения* создаются из *операндов* и *операторов*. Операторы в выражении указывают, какие действия нужно применить к операндам. Примеры операторов: `+`, `-`, `*`, `/` и `new`. Операндами могут являться литералы, поля, локальные переменные, выражения и т. п.
@@ -45,7 +43,7 @@ ms.lasthandoff: 07/28/2017
     - `new T(...){...}`. Создание объекта с инициализатором
     - `new {...}`. Анонимный инициализатор объекта
     - `new T[...]`. Создание массива
-    - `typeof(T)`: Получение @System.Type для объекта `T`
+    - `typeof(T)`: Получение <xref:System.Type> для объекта `T`
     - `checked(x)`. Вычисление выражения в проверенном контексте
     - `unchecked(x)`. Вычисление выражения в непроверенном контексте
     - `default(T)`. Получение значения по умолчанию для типа `T`
@@ -102,4 +100,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [Назад](types-and-variables.md)
 [Вперед](statements.md)
-

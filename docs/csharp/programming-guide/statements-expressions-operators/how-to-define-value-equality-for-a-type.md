@@ -1,12 +1,9 @@
 ---
 title: "Практическое руководство. Определение равенства значений для типа (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 933be6aa27b5720a9a9d8d7b45e1eed73f9cd60b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e008be022765ff7d2bb440f0a37193b882038b76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Практическое руководство. Определение равенства значений для типа (Руководство по программированию на C#)
 При определении класса или структуры необходимо решить, имеет ли смысл создавать пользовательское определение равенства значений (или эквивалентности) для этого типа. Обычно правила определения равенства реализуются, если объекты этого типа будут добавляться в коллекции или если они в первую очередь предназначены для хранения набора полей или свойств. В основу определения равенства значений можно положить сравнение всех полей и свойств в типе или только их части. Но в любом случае (как для классов, так и для структур) реализация должна соответствовать следующим пяти гарантиям равенства.  
@@ -51,17 +33,17 @@ ms.lasthandoff: 07/28/2017
   
 5.  x.`Equals`(null) возвращает значение `false`. Однако null.Equals(null) вызывает исключение. Эта инструкция не удовлетворяет приведенному выше правилу номер 2.  
   
- Любая определяемая вами структура имеет заданную по умолчанию реализацию равенства значений, которая наследуется от переопределения <xref:System.ValueType?displayProperty=fullName> метода <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>. Эта реализация использует отражение для проверки всех полей и свойств в типе. Хотя эта реализация возвращает верный результат, она отличается невысокой скоростью по сравнению с пользовательской реализацией, которую можно написать специально для конкретного типа.  
+ Любая определяемая вами структура имеет заданную по умолчанию реализацию равенства значений, которая наследуется от переопределения <xref:System.ValueType?displayProperty=nameWithType> метода <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Эта реализация использует отражение для проверки всех полей и свойств в типе. Хотя эта реализация возвращает верный результат, она отличается невысокой скоростью по сравнению с пользовательской реализацией, которую можно написать специально для конкретного типа.  
   
  Детали реализации равенства значений для классов и структур различаются. Однако для реализации равенства как для классов, так и для структур, необходимо выполнить одни и те же базовые действия.  
   
-1.  Переопределите [виртуальный](../../../csharp/language-reference/keywords/virtual.md) метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>. В большинстве случаев пользовательская реализация `bool Equals( object obj )` должна вызывать относящийся к конкретному типу метод `Equals`, который является реализацией интерфейса <xref:System.IEquatable%601?displayProperty=fullName>. (См. шаг 2.)  
+1.  Переопределите [виртуальный](../../../csharp/language-reference/keywords/virtual.md) метод <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. В большинстве случаев пользовательская реализация `bool Equals( object obj )` должна вызывать относящийся к конкретному типу метод `Equals`, который является реализацией интерфейса <xref:System.IEquatable%601?displayProperty=nameWithType>. (См. шаг 2.)  
   
-2.  Реализуйте интерфейс <xref:System.IEquatable%601?displayProperty=fullName>, предоставив метод `Equals` для конкретного типа. Именно на этом этапе происходит фактическое сравнение значений. Например, функцию равенства можно определить путем сравнения только одного из двух полей в типе. Не вызывайте исключения из `Equals`. Только для классов: этот метод должен проверять только те поля, которые объявлены в классе. Он должен вызывать метод `base.Equals` для проверки полей в базовом классе. (Не делайте этого, если тип наследуется напрямую от <xref:System.Object>, поскольку реализация <xref:System.Object> для <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> выполняет проверку равенства ссылок.)  
+2.  Реализуйте интерфейс <xref:System.IEquatable%601?displayProperty=nameWithType>, предоставив метод `Equals` для конкретного типа. Именно на этом этапе происходит фактическое сравнение значений. Например, функцию равенства можно определить путем сравнения только одного из двух полей в типе. Не вызывайте исключения из `Equals`. Только для классов: этот метод должен проверять только те поля, которые объявлены в классе. Он должен вызывать метод `base.Equals` для проверки полей в базовом классе. (Не делайте этого, если тип наследуется напрямую от <xref:System.Object>, поскольку реализация <xref:System.Object> для <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> выполняет проверку равенства ссылок.)  
   
 3.  Рекомендуется (хотя это и не обязательно) перегрузить операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) и [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
   
-4.  Переопределите <xref:System.Object.GetHashCode%2A?displayProperty=fullName> таким образом, чтобы два объекта с равными значениями создавали одинаковый хэш-код.  
+4.  Переопределите <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> таким образом, чтобы два объекта с равными значениями создавали одинаковый хэш-код.  
   
 5.  Необязательно. Для поддержки определений "больше" и "меньше" реализуйте для типа интерфейс <xref:System.IComparable%601>, а также перегрузите операторы [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) и [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
@@ -70,22 +52,21 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>Пример  
  В следующем примере показана реализация равенства значений в классе (ссылочный тип).  
   
- [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
- В классах (ссылочных типах) реализация по умолчанию обоих методов <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> выполняет проверку равенства ссылок, а не значений. Когда разработчик переопределяет виртуальный метод, его задача заключается в том, чтобы реализовать семантику равенства значений.  
+ В классах (ссылочных типах) реализация по умолчанию обоих методов <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> выполняет проверку равенства ссылок, а не значений. Когда разработчик переопределяет виртуальный метод, его задача заключается в том, чтобы реализовать семантику равенства значений.  
   
  К объектам класса можно применять операторы `==` и `!=`, даже если они не были перегружены в классе. Однако по умолчанию они служат для проверки равенства ссылок. При перегрузке в классе метода `Equals` необходимо перегрузить операторы `==` и `!=`, но это необязательно.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана реализация равенства значений в структуре (тип значения).  
   
- [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
- Для структур реализация по умолчанию <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> (представляет собой переопределенную версию в <xref:System.ValueType?displayProperty=fullName>) выполняет проверку равенства значений посредством отражения, сравнивая значения каждого поля в типе. Когда разработчик переопределяет виртуальный метод `Equals` в структуре, его задача состоит в том, чтобы найти более эффективный способ проверки равенства значений и, если это возможно, реализовать сравнение только на основании части полей или свойств структуры.  
+ Для структур реализация по умолчанию <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (представляет собой переопределенную версию в <xref:System.ValueType?displayProperty=nameWithType>) выполняет проверку равенства значений посредством отражения, сравнивая значения каждого поля в типе. Когда разработчик переопределяет виртуальный метод `Equals` в структуре, его задача состоит в том, чтобы найти более эффективный способ проверки равенства значений и, если это возможно, реализовать сравнение только на основании части полей или свойств структуры.  
   
  Операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) и [!=](../../../csharp/language-reference/operators/not-equal-operator.md) нельзя применять к структурам, если только они не были явным образом перегружены для конкретной структуры.  
   
 ## <a name="see-also"></a>См. также  
- [Сравнения на равенство](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)   
+ [Сравнения на равенство](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-

@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 4165d968ff347dd9af3bff755be22484debc23c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02a79ff2d198149b51edb3765805f2614adb2483
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="strong-named-assemblies"></a>Сборки со строгими именами
 При задании строгого имени для сборки для нее создается уникальный идентификатор, что позволяет избежать конфликтов сборок.  
@@ -53,8 +51,7 @@ ms.lasthandoff: 07/28/2017
  Если вы являетесь разработчиком открытого кода и хотите воспользоваться преимуществами идентификации, которые обеспечивают сборки со строгими именами, рекомендуется возвращать закрытый ключ, связанный со сборкой, в систему управления версиями.  
   
 ## <a name="see-also"></a>См. также  
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)   
- [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
+ [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

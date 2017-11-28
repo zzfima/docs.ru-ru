@@ -1,33 +1,24 @@
 ---
 title: "Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bf70bd5e79e962d8edaea2dc037f191707f4e047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
-С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
+С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
   
  В следующем примере используется запрос для создания коллекции задач. Каждая задача загружает содержимое указанного веб-сайта. В каждой итерации цикла while ожидаемый вызов `WhenAny` возвращает задачу из коллекции задач, которая первой завершает свою загрузку. Эта задача удаляется из коллекции и обрабатывается. Цикл выполняется до тех пор, пока в коллекции еще есть задачи.  
   
@@ -67,7 +58,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  В файле MainWindow.xaml.cs проекта внесите следующие изменения в метод `AccessTheWebAsync`.  
   
--   Выполните запрос, применяя <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> вместо <xref:System.Linq.Enumerable.ToArray%2A>.  
+-   Выполните запрос, применяя <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> вместо <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -243,8 +234,7 @@ namespace ProcessTasksAsTheyFinish
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
-
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)  
+ [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Пример использования async. Тонкая настройка асинхронного приложения)

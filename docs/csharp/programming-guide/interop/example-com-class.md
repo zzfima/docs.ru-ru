@@ -1,39 +1,21 @@
 ---
 title: "Пример COM-класса (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ad14b414c037d38da55ce0ec82685b790cc46d2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a759a7dcd211207c8740dd99d592daa509ddec47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-com-class-c-programming-guide"></a>Пример COM-класса (Руководство по программированию на C#)
 Далее приведен пример класса, который можно предоставить в качестве COM-объекта. После помещения этого кода в CS-файл и добавления в проект свойства **Регистрация для COM-взаимодействия** необходимо присвоить значение **Истина**. Дополнительные сведения см. в разделе [Практическое руководство. Регистрация компонента для COM-взаимодействия](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e).  
@@ -57,10 +39,9 @@ ms.lasthandoff: 07/28/2017
  Класс реализует интерфейс класса; он может реализовывать несколько интерфейсов, но первой реализацией будет интерфейс класса по умолчанию. Реализуйте методы и свойства, доступные модели COM здесь. Они должны быть помечены как открытые и соответствовать объявлениям в интерфейсе класса. Кроме того, объявите здесь события, инициируемые классом. Они должны быть помечены как открытые и соответствовать объявлениям в интерфейсе событий.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
+ [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Взаимодействие](../../../csharp/programming-guide/interop/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Взаимодействие](../../../csharp/programming-guide/interop/index.md)  
  [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-

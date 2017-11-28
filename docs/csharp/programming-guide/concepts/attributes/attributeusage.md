@@ -1,30 +1,21 @@
 ---
 title: AttributeUsage (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c008c1a696e93bc3b756a926a046aa5a6942bc10
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 Определяет, как можно использовать пользовательский класс атрибутов. Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута. При явном применении параметры по умолчанию выглядят следующим образом:  
@@ -154,12 +145,11 @@ A2
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Attribute>   
- <xref:System.Reflection>   
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)   
- [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Атрибуты](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+ [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
+ [Атрибуты](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
  [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

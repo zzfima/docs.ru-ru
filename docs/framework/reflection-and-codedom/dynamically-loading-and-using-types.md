@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - late binding, about late binding
 - early binding
@@ -16,21 +19,20 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64abd2832ad14f09a8e3079818bddf78c32ee13d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>Динамическая загрузка и использование типов
 Отражение предоставляет инфраструктуру, с помощью которой компиляторы различных языков, таких как [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] и JScript, реализуют позднее связывание. Привязка — это процесс поиска объявления (то есть реализации), которое соответствует уникально определенному типу. Если этот процесс происходит во время выполнения, а не во время компиляции, он называется поздним связыванием. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] позволяет использовать неявное позднее связывание в коде; компилятор Visual Basic вызывает вспомогательный метод, который использует отражение для получения типа объекта. Аргументы, передаваемые вспомогательному методу, приводят к вызову соответствующего метода во время выполнения. Эти аргументы определяют экземпляр (объект), для которого вызывается метод, имя вызываемого метода (строка) и аргументы, передаваемые в вызываемый метод (массив объектов).  
   
- В следующем примере компилятор Visual Basic неявно использует отражение для вызова метода объекта, тип которого неизвестен во время компиляции. Класс **HelloWorld** содержит метод **PrintHello**, который выводит строку "Hello World" с некоторым текстом, который передается в метод **PrintHello**. Метод **PrintHello**, вызываемый в этом примере, на самом деле представляет собой <xref:System.Type.InvokeMember%2A?displayProperty=fullName>; код Visual Basic позволяет вызывать метод **PrintHello** так, как если бы тип объекта (helloObj) был известен уже во время компиляции (ранняя привязка), а не только во время выполнения (позднее связывание).  
+ В следующем примере компилятор Visual Basic неявно использует отражение для вызова метода объекта, тип которого неизвестен во время компиляции. Класс **HelloWorld** содержит метод **PrintHello**, который выводит строку "Hello World" с некоторым текстом, который передается в метод **PrintHello**. Метод **PrintHello**, вызываемый в этом примере, на самом деле представляет собой <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; код Visual Basic позволяет вызывать метод **PrintHello** так, как если бы тип объекта (helloObj) был известен уже во время компиляции (ранняя привязка), а не только во время выполнения (позднее связывание).  
   
 ```  
 Imports System  
@@ -56,20 +58,24 @@ End Module
   
  Ниже приведен простой пользовательский класс привязки без преобразования типов аргументов. Код `Simple_Type.dll` приведен перед основным примером. Соберите `Simple_Type.dll`, а затем включите в проект ссылку на него во время сборки.  
   
- [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)] [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)] [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
+ [!code-cpp[Conceptual.Types.Dynamic#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source1.cpp#1)]
+ [!code-csharp[Conceptual.Types.Dynamic#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source1.cs#1)]
+ [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember и CreateInstance  
- Используйте <xref:System.Type.InvokeMember%2A?displayProperty=fullName> для вызова члена типа. Методы **CreateInstance** различных классов, таких как <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> и <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=fullName>, представляют собой специализированные варианты метода **InvokeMember**, которые создают новые экземпляры указанного типа. Класс **Binder** используется для разрешения перегрузки и приведения аргументов в этих методах.  
+ Используйте <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> для вызова члена типа. Методы **CreateInstance** различных классов, таких как <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> и <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>, представляют собой специализированные варианты метода **InvokeMember**, которые создают новые экземпляры указанного типа. Класс **Binder** используется для разрешения перегрузки и приведения аргументов в этих методах.  
   
  В следующем примере показаны три возможных сочетания приведения аргументов (преобразования типов) и выбора членов. В первом случае ни приведение аргументов, ни выбор членов не требуются. Во втором случае требуется только выбор членов. В третьем случае требуется только приведение аргументов.  
   
- [!code-cpp[Conceptual.Types.Dynamic#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source2.cpp#2)] [!code-csharp[Conceptual.Types.Dynamic#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source2.cs#2)] [!code-vb[Conceptual.Types.Dynamic#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source2.vb#2)]  
+ [!code-cpp[Conceptual.Types.Dynamic#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.dynamic/cpp/source2.cpp#2)]
+ [!code-csharp[Conceptual.Types.Dynamic#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.dynamic/cs/source2.cs#2)]
+ [!code-vb[Conceptual.Types.Dynamic#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source2.vb#2)]  
   
- Разрешение перегрузки необходимо, если существует несколько членов с одинаковыми именами. Методы <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=fullName> и <xref:System.Reflection.Binder.BindToField%2A?displayProperty=fullName> используются для разрешения привязки к одному члену. Метод **Binder.BindToMethod** также обеспечивает разрешение свойств с помощью методов доступа к свойствам **get** и **set**.  
+ Разрешение перегрузки необходимо, если существует несколько членов с одинаковыми именами. Методы <xref:System.Reflection.Binder.BindToMethod%2A?displayProperty=nameWithType> и <xref:System.Reflection.Binder.BindToField%2A?displayProperty=nameWithType> используются для разрешения привязки к одному члену. Метод **Binder.BindToMethod** также обеспечивает разрешение свойств с помощью методов доступа к свойствам **get** и **set**.  
   
  Метод **BindToMethod** возвращает вызывающему объекту <xref:System.Reflection.MethodBase> или пустую ссылку (в Visual Basic **не возвращает ничего**), если такой вызов невозможен. Возвращаемое значение метода **MethodBase** не обязательно должно содержаться в параметре *match*, хотя обычно это имеет место.  
   
- При наличии аргументов ByRef может потребоваться вернуть их для вызывающего объекта. Таким образом, класс **Binder** позволяет клиенту вернуть массив аргументов в исходную форму, если метод **BindToMethod** изменил массив аргументов. Для этого необходимо гарантировать вызывающему объекту, что порядок аргументов не изменяется. Если аргументы передаются по имени, класс **Binder** изменяет порядок аргументов в массиве, и это видит вызывающий объект. Для получения дополнительной информации см. <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=fullName>.  
+ При наличии аргументов ByRef может потребоваться вернуть их для вызывающего объекта. Таким образом, класс **Binder** позволяет клиенту вернуть массив аргументов в исходную форму, если метод **BindToMethod** изменил массив аргументов. Для этого необходимо гарантировать вызывающему объекту, что порядок аргументов не изменяется. Если аргументы передаются по имени, класс **Binder** изменяет порядок аргументов в массиве, и это видит вызывающий объект. Для получения дополнительной информации см. <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  В набор доступных членов входят члены, которые определены в типе или любом базовом типе. Если указан параметр <xref:System.Reflection.BindingFlags>, в наборе будут возвращены члены с любым уровнем доступности. Если параметр **BindingFlags.NonPublic** не указан, модуль привязки должен применить правила доступа. Если указан флаг привязки **Public** или **NonPublic**, необходимо также указать флаг привязки **Instance** или **Static**, в противном случае ни одного члена не будет возвращено.  
   
@@ -99,11 +105,10 @@ End Module
 |Single|Double|  
 |Нессылочный тип|Ссылочный тип|  
   
- Класс <xref:System.Type> содержит методы **Get**, которые используют параметры типа **Binder**, чтобы разрешить ссылки на конкретный член. Методы <xref:System.Type.GetConstructor%2A?displayProperty=fullName>, <xref:System.Type.GetMethod%2A?displayProperty=fullName> и <xref:System.Type.GetProperty%2A?displayProperty=fullName> выполняют поиск определенного члена текущего типа по сведениям о подписи для этого члена. Методы <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=fullName> и <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=fullName> используются в качестве методов обратного вызова для выбора заданных сведений о подписи для соответствующих методов.  
+ Класс <xref:System.Type> содержит методы **Get**, которые используют параметры типа **Binder**, чтобы разрешить ссылки на конкретный член. Методы <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> и <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> выполняют поиск определенного члена текущего типа по сведениям о подписи для этого члена. Методы <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> и <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> используются в качестве методов обратного вызова для выбора заданных сведений о подписи для соответствующих методов.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Type.InvokeMember%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
+ <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+ [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
  [Преобразование типов в .NET Framework](../../../docs/standard/base-types/type-conversion.md)
-

@@ -1,27 +1,18 @@
 ---
 title: "Итераторы (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iterators-c"></a>Итераторы (C#)
 *Итератор* можно использовать для прохода по коллекции, такой как список или массив.  
@@ -366,7 +357,7 @@ public class Stack<T> : IEnumerable<T>
   
  В каждой последовательной итерации цикла `foreach` (или непосредственном вызове метода `IEnumerator.MoveNext`) код тела следующего итератора возобновляет выполнение после предыдущего оператора `yield return`. Затем он выполняется до следующего оператора `yield return` до тех пор, пока не будет достигнут конец тела итератора или пока не будет обнаружен оператор `yield break`.  
   
- Итераторы не поддерживают метод <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>. Для повторной итерации сначала необходимо получить новый итератор.  
+ Итераторы не поддерживают метод <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>. Для повторной итерации сначала необходимо получить новый итератор.  
   
  Дополнительные сведения см. в [спецификации языка C#](../../../csharp/language-reference/language-specification/index.md).  
   
@@ -380,10 +371,9 @@ public class Stack<T> : IEnumerable<T>
 -   Инкапсулирование построения списка в итераторе. В методе итератора можно построить список, а затем выдавать каждый результат в цикле.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [Использование оператора foreach с массивами](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
+ [Использование оператора foreach с массивами](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
-

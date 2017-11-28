@@ -1,52 +1,33 @@
 ---
 title: "Операторы (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
   
  Следующая строка кода C# содержит один унарный оператор и еще один операнд. Оператор инкремента `++`изменяет значение операнда `y`.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  Следующая строка кода C# содержит два бинарных оператора с двумя операндами в каждом. Оператор присваивания `=`содержит в качестве операндов целочисленную переменную `y` и выражение `2 + 3` . Выражение `2 + 3` состоит из оператора сложения и двух операндов — `2` и `3`.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>Операторы, вычисление выражений и приоритет операторов  
  Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений. В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью*и скобками.  
@@ -193,6 +174,5 @@ a = (b = c);
  Дополнительные сведения см. в разделах [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md) и [Операторы C#](../../../csharp/language-reference/operators/index.md).  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-

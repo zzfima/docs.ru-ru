@@ -1,40 +1,22 @@
 ---
 title: "Практическое руководство. Создание раздела в реестре (Visual C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f6cc79a8a914d3ef5b7c496db4dc0d2b3eb17768
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Практическое руководство. Создание раздела в реестре (Visual C#)
 Код в этом примере добавляет в раздел Names реестра текущего пользователя пару значений — Name и Isabella.  
@@ -79,8 +61,7 @@ key.Close();
  Небезопасно хранить секретные данные (например, пароли) в реестре как обычный текст, даже если раздел реестра защищен с помощью списков управления доступом (ACL).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.IO?displayProperty=fullName>   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)   
+ <xref:System.IO?displayProperty=nameWithType>  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)  
  [Чтение, запись и удаление данных реестра с помощью C#](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
-

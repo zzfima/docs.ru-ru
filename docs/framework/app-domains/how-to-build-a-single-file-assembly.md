@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
 - library assemblies
@@ -18,16 +20,15 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Практическое руководство. Построение однофайловой сборки
 Однофайловая сборка, являясь простейшим типом сборки, содержит данные о типе и реализации, а также [манифест сборки](../../../docs/framework/app-domains/assembly-manifest.md). Для создания однофайловой сборки можно использовать компиляторы командной строки или [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]. По умолчанию компилятор создает файл сборки с расширением .exe.  
@@ -95,8 +96,7 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)   
- [Многофайловые сборки](../../../docs/framework/app-domains/multifile-assemblies.md)   
- [Практическое руководство. Создание многофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Многофайловые сборки](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [Практическое руководство. Создание многофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

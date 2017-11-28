@@ -1,38 +1,19 @@
 ---
 title: "Оператор new (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- new operator keyword [C#]
+helpviewer_keywords: new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 59e1cc2006548df9a7a10283a34044040e5c2fef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="new-operator-c-reference"></a>Оператор new (Справочник по C#)
 Применяется для создания объектов и вызова конструкторов. Например:  
@@ -73,7 +54,7 @@ int i = 0;
 ## <a name="example"></a>Пример  
  В следующем примере создаются объект `struct` и объект класса, которые инициализируются с помощью оператора `new`, после чего им присваиваются значения. Отображаются заданные по умолчанию и присвоенные значения.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  Обратите внимание, что в примере строка имеет значение по умолчанию `null`. Поэтому она не отображается.  
   
@@ -81,10 +62,9 @@ int i = 0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-

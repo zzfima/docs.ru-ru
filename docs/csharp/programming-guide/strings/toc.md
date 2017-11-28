@@ -7,5 +7,3 @@
 ## [Практическое руководство. Поиск строк с помощью регулярных выражений](how-to-search-strings-using-regular-expressions.md)
 ## [Практическое руководство. Определение представления числового значения в строке](how-to-determine-whether-a-string-represents-a-numeric-value.md)
 ## [Практическое руководство. Преобразование строки в значение типа "DateTime"](how-to-convert-a-string-to-a-datetime.md)
-## [Практическое руководство. Преобразование из устаревших кодировок в Юникод](how-to-convert-between-legacy-encodings-and-unicode.md)
-## [Практическое руководство. Преобразование формата RTF в обычный текст](how-to-convert-rtf-to-plain-text.md)

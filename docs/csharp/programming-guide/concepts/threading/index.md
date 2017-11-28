@@ -1,30 +1,21 @@
 ---
 title: "Работа с потоками (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 633fe784b98bf67086581b82fb4b00cff28d5f5a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 45ffa38254717c9aee29c3922bf801f6a90c716e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="threading-c"></a>Работа с потоками (C#)
 Потоки позволяют программе на C# осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
@@ -48,7 +39,7 @@ ms.lasthandoff: 07/28/2017
  Все классы или некоторые из них можно использовать для синхронизации работы нескольких потоков, но некоторые функции для потоков поддерживаются также и языком C#. Например [оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md) дает возможность синхронизации за счет неявного использования класса <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> и <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=fullName> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](https://msdn.microsoft.com/library/dd460693).  
+>  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](https://msdn.microsoft.com/library/dd460693).  
   
 ## <a name="related-topics"></a>См. также  
   
@@ -62,4 +53,3 @@ ms.lasthandoff: 07/28/2017
 |[Группировка потоков в пул (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Описание использования пула рабочих потоков, управляемых системой.|  
 |[Практическое руководство. Использование пула потоков (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Демонстрация синхронизированного использования нескольких потоков в пуле.|  
 |[Работа с потоками](https://msdn.microsoft.com/library/3e8s7xdd)|Описание реализации работы с потоками на платформе .NET Framework.|
-

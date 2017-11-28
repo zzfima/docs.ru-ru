@@ -2,8 +2,7 @@
 title: "Создание и использование сборок со строгими именами"
 ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
 ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Создание и использование сборок со строгими именами
 <a name="top"></a> Строгое имя состоит из удостоверения сборки, включающего ее простое текстовое имя, номер версии и сведения о языке и региональных параметрах (если они имеются), а также открытый ключ и цифровую подпись. Оно создается из файла сборки с использованием соответствующего закрытого ключа. (В файле сборки содержится манифест сборки, в котором указаны имена и хэши всех файлов, составляющих эту сборку.)  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/02/2017
 |[Практическое руководство. Использование задержки при подписи сборки в Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Содержит инструкции по подписи сборки строгим именем после создания сборки.|  
 |[Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Описывает средство в составе .NET Framework, которое помогает создавать сборки со строгими именами. Это средство предусматривает параметры для управления ключами, генерации подписи и ее проверки.|  
 |[Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Описывает средство, включенное в .NET Framework, которое создает файл с манифестом сборки из модулей или файлов ресурсов.|
-

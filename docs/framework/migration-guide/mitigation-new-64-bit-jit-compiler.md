@@ -15,16 +15,15 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 091b83cc0d7829c8ff078e6397aa480895b7a115
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Устранение рисков. Новый 64-разрядный JIT-компилятор
 Начиная с .NET Framework 4.6 среда выполнения включает в себя новый 64-разрядный JIT-компилятор. Это изменение не влияет на компиляцию с помощью 32-разрядного JIT-компилятора.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
 -   При определенных условиях сравнение значений <xref:System.UInt16> с установленным старшим битом выполняется неверно, если включена оптимизация.  
   
--   При определенных условиях, особенно при инициализации значений массивов, инициализация памяти инструкцией <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL может инициализировать память неправильным значением. Это может привести либо к необработанному исключению, либо к неправильным выходным данным.  
+-   При определенных условиях, особенно при инициализации значений массивов, инициализация памяти инструкцией <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> IL может инициализировать память неправильным значением. Это может привести либо к необработанному исключению, либо к неправильным выходным данным.  
   
 -   В некоторых редких случаях условная поразрядная проверка может возвращать неверное значение типа <xref:System.Boolean> или вызывать исключение, если включены оптимизации компилятора.  
   
@@ -81,6 +80,5 @@ ms.lasthandoff: 07/28/2017
  Можно также сообщить нам об обнаруженной проблеме, обратившись в службу [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>См. также  
- [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  [Элемент \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
-

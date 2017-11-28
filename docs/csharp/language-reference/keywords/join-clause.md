@@ -1,42 +1,24 @@
 ---
 title: "Предложение join (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-clause-c-reference"></a>Предложение join (Справочник по C#)
 Предложение `join` удобно для связывания элементов из разных исходных последовательностей, не имеющих прямых связей в объектной модели. Единственное требование заключается в том, что у элементов в каждом источнике должно быть общим некоторое значение, которое может быть проверено на равенство. Например, у дистрибьютора может быть список поставщиков определенного продукта и список покупателей. Предложение `join` может использоваться, например, для создания списка поставщиков и покупателей этого продукта, которые находятся в одном заданном регионе.  
@@ -52,14 +34,14 @@ ms.lasthandoff: 07/28/2017
 ## <a name="inner-join"></a>Внутреннее соединение  
  В следующем примере показано простое внутреннее эквисоединение. По этому запросу создается прямая последовательность пар "название продукта/категория". Одна и та же строка, обозначающая категорию, будет присутствовать в нескольких элементах. Если для элемента из `categories` нет соответствующего элемента в `products`, эта категория не будет отображаться в результатах.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение внутренних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
 ## <a name="group-join"></a>Group Join  
  Предложение `join` с выражением `into` называется групповым соединением.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  Групповое соединение создает иерархическую последовательность результатов, которая связывает элементы в левой исходной последовательности с одним или несколькими соответствующими элементами в правой исходной последовательности. Групповое соединение не имеет эквивалента в терминах реляционной базы данных. По сути это последовательность массивов объектов.  
   
@@ -69,14 +51,14 @@ ms.lasthandoff: 07/28/2017
   
  Кроме того, результаты группового соединения можно использовать как генераторы других вложенных запросов:  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение групповых соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## <a name="left-outer-join"></a>Left Outer Join  
  В левом внешнем соединении возвращаются все элементы в левой исходной последовательности, даже если в правой последовательности нет соответствующих элементов. Для выполнения левого внешнего соединения в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] используйте метод `DefaultIfEmpty` в сочетании с групповым соединением для указания правого элемента по умолчанию, создаваемого, если левый элемент не имеет совпадений. `null` можно использовать как значение по умолчанию для любого ссылочного типа, кроме того, можно указать определенный пользователем тип по умолчанию. В следующем примере показан определяемый пользователем тип по умолчанию:  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение левых внешних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
@@ -97,20 +79,19 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>Пример  
  В следующем примере сравниваются результаты внутреннего соединения, группового соединения и левого внешнего соединения для одних и тех же исходных данных с использованием одинаковых совпадающих ключей. В эти примеры для уточнения результатов в окне консоли добавлен дополнительный код.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>Примечания  
  Предложение `join`, за которым не следует `into`, преобразуется в вызов метода <xref:System.Linq.Enumerable.Join%2A>. Предложение `join`, за которым следует `into`, преобразуется в вызов метода <xref:System.Linq.Enumerable.GroupJoin%2A>.  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые слова запроса (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Операции соединения](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   
- [Предложение group](../../../csharp/language-reference/keywords/group-clause.md)   
- [Практическое руководство. Выполнение левых внешних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [Практическое руководство. Выполнение внутренних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Практическое руководство. Выполнение групповых соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Практическое руководство. Упорядочение результатов предложения соединения](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Практическое руководство. Соединение с помощью составных ключей](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Практическое руководство. Установка образцов баз данных](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
-
+ [Ключевые слова запроса (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [Операции соединения](../../programming-guide/concepts/linq/join-operations.md)  
+ [предложение group](../../../csharp/language-reference/keywords/group-clause.md)  
+ [Практическое руководство. Выполнение левых внешних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [Практическое руководство. Выполнение внутренних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [Практическое руководство. Выполнение групповых соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [Практическое руководство. Упорядочение результатов предложения соединения](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [Практическое руководство. Соединение с помощью составных ключей](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [Практическое руководство. Установка образцов баз данных](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

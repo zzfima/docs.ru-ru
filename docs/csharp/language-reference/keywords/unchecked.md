@@ -1,48 +1,29 @@
 ---
 title: "unchecked (справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - unchecked_CSharpKeyword
 - unchecked
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- unchecked keyword [C#]
+helpviewer_keywords: unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c05e7cb742d8e8f5a7804656a5ec13548d0498b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5878a2412e6c85da85b1a3b8c2a8255b51e67137
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="unchecked-c-reference"></a>unchecked (справочник по C#)
 Ключевое слово `unchecked` позволяет предотвратить проверку переполнения при выполнении арифметических операций и преобразований с данными целого типа.  
   
  В непроверенном контексте перегрузка не помечается, если результат выражения выходит за допустимые пределы значений конечного типа. Например, в связи с тем, что вычисление в приведенном выше примере выполняется в блоке или выражении `unchecked`, тот факт, что результат слишком велик для целого числа, игнорируется, а `int1` присваивается значение -2,147,483,639.  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
+ [!code-csharp[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  При удалении среды `unchecked` возникает ошибка компиляции. Во время компиляции может быть обнаружено переполнение, поскольку все члены данного выражения являются константами.  
   
@@ -53,15 +34,14 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>Пример  
  В этом примере демонстрируется применение ключевого слова `unchecked`.  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
+ [!code-csharp[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
  [checked](../../../csharp/language-reference/keywords/checked.md)
-

@@ -1,42 +1,23 @@
 ---
 title: "async (справочник по C#)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="async-c-reference"></a>async (справочник по C#)
 Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*. Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`: 
@@ -48,7 +29,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Следующий код размещается внутри асинхронного метода и вызывает метод <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName>: 
+Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Следующий код размещается внутри асинхронного метода и вызывает метод <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>: 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -82,7 +63,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - Вставьте этот код в класс `MainPage` в MainPage.xaml.cs.  
 - Добавьте директивы using для System.Net.Http и System.Threading.Tasks.  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
 >  Дополнительные сведения о задачах и коде, который выполняется во время ожидания задачи, см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Полный пример приложения WPF, в котором используются аналогичные элементы, см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
@@ -106,8 +87,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [await](../../../csharp/language-reference/keywords/await.md)  
+ [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md)
-

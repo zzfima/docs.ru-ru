@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Обнаружение сборок в среде выполнения
 Для успешного развертывания приложения .NET Framework необходимо понимать, как среда CLR обнаруживает сборки, из которых состоит приложение, и выполняет привязку к ним. По умолчанию среда выполнения пытается выполнить привязку к той самой версии сборки, с помощью которой было создано приложение. Это поведение по умолчанию можно переопределить с помощью параметров файла конфигурации.  
@@ -263,6 +256,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Например, если сборка Assembly1 ссылается на сборку Assembly2 и сборка Assembly1 была скачана с адреса http://www.code.microsoft.com/utils, это расположение считается подсказкой для поиска Assembly2.dll. Затем среда выполнения проверяет наличие сборки по пути http://www.code.microsoft.com/utils/Assembly2.dll и http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Если сборка Assembly2 не обнаружена ни в одном из этих расположений, среда выполнения отправляет запрос установщику Windows.  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+ [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [Развертывание](../../../docs/framework/deployment/index.md)
-

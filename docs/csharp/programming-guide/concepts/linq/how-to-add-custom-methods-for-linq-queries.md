@@ -1,30 +1,21 @@
 ---
 title: "Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 01617ec2583361099eb5afb7957960ba39812680
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c1a7ec7c5c719839d7a1a63568541a26a8216377
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)
 Вы можете расширить набор методов, которые можно использовать для запросов LINQ, путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Например, помимо стандартных операций вычисления среднего или максимального значения, можно создать настраиваемый метод агрегирования для вычисления одного значения на основе последовательности значений. Также можно создать метод, который работает как настраиваемый фильтр или особое преобразование данных для последовательности значений и возвращает новую последовательность. Примерами таких методов являются <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Reverse%2A>.  
@@ -223,6 +214,5 @@ foreach (var element in query)
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic.IEnumerable%601>   
+ <xref:System.Collections.Generic.IEnumerable%601>  
  [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-

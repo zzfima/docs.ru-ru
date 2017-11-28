@@ -1,30 +1,21 @@
 ---
 title: "Группирование данных (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4aef8d10eaffb384fe919ffa6a1e742cb837f540
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2cf1b228a5ff4120bdf3b97a7ec9308f11d7b8ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="grouping-data-c"></a>Группирование данных (C#)
 Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
@@ -77,12 +68,11 @@ foreach (var group in query)
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Предложение group](../../../../csharp/language-reference/keywords/group-clause.md)   
- [Практическое руководство. Создание вложенной группы](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
- [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)   
- [Практическое руководство. Группировка результатов запросов](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
- [Практическое руководство. Вложенный запрос в операции группирования](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)   
+ <xref:System.Linq>  
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [предложение group](../../../../csharp/language-reference/keywords/group-clause.md)  
+ [Практическое руководство. Создание вложенной группы](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
+ [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ [Практическое руководство. Группировка результатов запросов](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
+ [Практическое руководство. Вложенный запрос в операции группирования](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
  [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
-

@@ -1,43 +1,24 @@
 ---
 title: "-win32res (параметры компилятора C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32res
-dev_langs:
-- CSharp
+f1_keywords: /win32res
 helpviewer_keywords:
 - win32res compiler option
 - /win32res compiler option [C#]
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4552b526767584e62106b2b10f8a1e6394a23b46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32res-c-compiler-options"></a>/win32res (параметры компилятора C#)
 Параметр **/win32res** вставляет файл ресурсов Win32 в выходной файл.  
@@ -53,7 +34,7 @@ ms.lasthandoff: 07/28/2017
  Файл ресурсов, который требуется добавить в выходной файл.  
   
 ## <a name="remarks"></a>Примечания  
- Файл ресурсов Win32 можно создать с помощью [компилятора ресурсов](http://go.microsoft.com/fwlink/?LinkId=148370). Компилятор ресурсов вызывается при компиляции программы Visual C++; RES-файл создается из RC-файла.  
+ Файл ресурсов Win32 можно создать с помощью [компилятора ресурсов](../../language-reference/compiler-options/resource-compiler-option.md). Компилятор ресурсов вызывается при компиляции программы Visual C++; RES-файл создается из RC-файла.  
   
  Ресурс Win32 может содержать сведения о версии или точечный рисунок (значок) для упрощения идентификации приложения в проводнике. Если параметр **/win32res** не задан, компилятор будет создавать сведения о версии на основе версии сборки.  
   
@@ -75,6 +56,5 @@ csc /win32res:rf.res in.cs
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
  [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-

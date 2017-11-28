@@ -1,45 +1,26 @@
 ---
 title: "Введение в запросы LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - deferred execution [LINQ]
 - LINQ, queries
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ae7a2d03859e95d939ff4c62fa33e07917a873a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8427a0f439516cbba0b38db25f48b0083a337b1b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introduction-to-linq-queries-c"></a>Введение в запросы LINQ (C#)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов. Со временем для различных типов источников данных, например SQL для реляционных баз данных и XQuery для XML, были разработаны разные языки. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных или формата данных, для которых они должны обеспечить поддержку. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощает ситуацию, реализуя согласованную модель работы с данными для различных типов источников данных и форматов данных. В запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] вы всегда работаете с объектами. Одинаковые базовые шаблоны кода используются для запроса и преобразования данных в XML-документах, базах данных SQL, наборах данных [!INCLUDE[vstecado](~/includes/vstecado-md.md)], коллекциях .NET и любых других форматах, для которых доступен поставщик [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
@@ -55,7 +36,7 @@ ms.lasthandoff: 07/28/2017
   
  В следующем примере показано, как эти три части операции запроса выражаются в исходном коде. В этом примере для удобства используется массив целых чисел в качестве источника данных. Тем не менее те же принципы применимы к другим источникам данных. Остальные процедуры этого раздела содержат ссылки на этот пример.  
   
- [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
  На следующем рисунке показана полная операция запроса. В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] выполнение запроса отличается от самого запроса; другими словами, вы не получаете данные, просто создав переменную запроса.  
   
@@ -66,7 +47,7 @@ ms.lasthandoff: 07/28/2017
   
  Запрашиваемый тип не требует внесения изменений или специальной обработки, чтобы служить источником данных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Если источник данных не находится в памяти в качестве запрашиваемого типа, поставщик [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] должен представить его как таковой. Например, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] загружает XML-документ в запрашиваемый тип <xref:System.Xml.Linq.XElement>:  
   
- [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
  В [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] сначала необходимо создать объектно-реляционное сопоставление во время разработки вручную либо с помощью [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Вы создаете запросы к объектам, а [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] во время выполнения обрабатывает взаимодействие с базой данных. В следующем примере `Customers` представляет собой определенную таблицу в базе данных, а тип результата запроса (<xref:System.Linq.IQueryable%601>) является производным от <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -98,7 +79,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>Отложенное выполнение  
  Как уже говорилось ранее, сама переменная запроса хранит команды запроса. Фактическое выполнение запроса откладывается до тех пор, пока переменная запроса не будет обработана в операторе `foreach`. Эта концепция называется *отложенным выполнением* и демонстрируется в следующем примере:  
   
- [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
  Оператор `foreach` также является частью кода, в которой извлекаются результаты запроса. Например, в предыдущем запросе переменная итерации `num` содержит каждое значение (по одному за раз) в возвращенной последовательности.  
   
@@ -107,19 +88,18 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>Принудительное немедленное выполнение  
  Запросы, выполняющие статистические функции для диапазона исходных элементов, сначала должны выполнить итерацию по этим элементам. Примерами таких запросов являются `Count`, `Max`, `Average` и `First`. Они выполняются без явного оператора `foreach`, поскольку сам запрос должен использовать `foreach` для возвращения результата. Обратите внимание, что такие типы запросов возвращают одно значение, а не коллекцию `IEnumerable`. Следующий запрос возвращает количество четных чисел в исходном массиве:  
   
- [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
  Чтобы принудительно вызвать немедленное выполнение любого запроса и кэшировать его результаты, вы можете вызвать методы <xref:System.Linq.Enumerable.ToList%2A> или <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
  Принудительно вызвать выполнение также можно, поместив цикл `foreach` сразу после выражения запроса. При этом путем вызова `ToList` или `ToArray` можно также кэшировать все данные в одном объекте коллекции.  
   
 ## <a name="see-also"></a>См. также  
- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
+ [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
  [Ключевые слова запроса (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
-

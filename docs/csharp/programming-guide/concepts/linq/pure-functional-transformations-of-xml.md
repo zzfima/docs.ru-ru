@@ -1,25 +1,21 @@
 ---
 title: "Чистые функциональные преобразования XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 32259e0b75d8c098663b589f33e2f36344fb15cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee60c400bb9bff719f818ab5a5a0a3c667a1b412
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Чистые функциональные преобразования XML (C#)
 В этом разделе приведен учебник по функциональным преобразованиям для XML. В учебнике разъясняются основные принципы и языковые конструкции, которые необходимо понять, чтобы использовать функциональные преобразования. В нем также рассказывается об использовании функциональных преобразований для обработки XML-документа. Несмотря на то что в этом учебнике приведены примеры кода LINQ to XML, все базовые принципы также применяются и к другим технологиям LINQ.  
@@ -40,4 +36,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
-

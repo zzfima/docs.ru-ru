@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>Различия между делегатами и событиями
 
 [Назад](modern-events.md)
@@ -55,4 +53,3 @@ ms.lasthandoff: 07/28/2017
 ## <a name="evaluate-carefully"></a>Тщательно оценивайте ситуацию
 
 Приведенные выше указания не являются строгими правилами. Они представляют собой лишь рекомендации, которые могут помочь вам выбрать правильный вариант в конкретном случае. Так как эти механизмы схожи, вы можете смоделировать и тот и другой, чтобы проверить, какой из них окажется естественнее. Оба они хорошо подходят для сценариев с поздним связыванием. Используйте тот механизм, который лучше соответствует вашим требованиям.
-

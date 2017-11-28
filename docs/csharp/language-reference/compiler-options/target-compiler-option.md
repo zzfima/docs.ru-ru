@@ -1,43 +1,24 @@
 ---
 title: "-target (параметры компилятора C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /target
-dev_langs:
-- CSharp
+f1_keywords: /target
 helpviewer_keywords:
 - target compiler options [C#]
 - /target compiler options [C#]
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="target-c-compiler-options"></a>/target (параметры компилятора C#)
 Параметр компилятора **/target** можно задать в одной из четырех форм:  
@@ -60,7 +41,7 @@ ms.lasthandoff: 07/28/2017
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  Создание промежуточного WINMDOBJ-файла.  
   
- Если **/target:module** не указан, **/target** вызывает размещение манифеста сборки .NET Framework в выходном файле. Дополнительные сведения см. в разделах [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81) и [Общие атрибуты](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b).  
+ Если **/target:module** не указан, **/target** вызывает размещение манифеста сборки .NET Framework в выходном файле. Дополнительные сведения см. в разделах [Сборки в среде CLR](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) и [Общие атрибуты](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  Манифест сборки помещается в первый выходной файл EXE в компиляции или в первый файл DLL, если выходной файл EXE не существует. Например, в следующей командной строке манифест будут помещен в `1.exe`:  
   
@@ -86,7 +67,6 @@ public class TestClass
  Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)  
  [/subsystemversion (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
-

@@ -1,42 +1,23 @@
 ---
 title: "is (Справочник по C#)"
 keywords: "ключевое слово is(C#), is (C#)"
-ms.date: 2017-02-17
+ms.date: 02/17/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - is_CSharpKeyword
 - is
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- is keyword [C#]
+helpviewer_keywords: is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 5aeb29a799ba24b5ab7db3eca62a91035b25b8f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="is-c-reference"></a>is (Справочник по C#) #
 
@@ -54,7 +35,7 @@ ms.lasthandoff: 09/25/2017
 
 Например, следующий код определяет, может ли `obj` быть приведен к экземпляру типа `Person`:
 
-[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
+[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
 Оператор `is` принимает значение true, если:
 
@@ -68,14 +49,14 @@ ms.lasthandoff: 09/25/2017
 
 В следующем примере показано, что выражение `is` принимает значение `true` для каждого из этих преобразований.
 
-[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
+[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
 Ключевое слово `is` создает предупреждение во время компиляции, если известно, что выражение всегда будет иметь значение `true` или `false`. Оно рассматривает только преобразование ссылок, упаковки-преобразования и распаковки-преобразования. Определенные пользователем преобразования или преобразования, определенные с помощью операторов [implicit](implicit.md) и [explicit](explicit.md) типа не учитываются. Следующий пример создает предупреждения, так как результат преобразования известен во время компиляции. Обратите внимание, что выражение `is` для преобразований из `int` в `long` и `double` возвращает значение false, так как эти преобразования обрабатываются оператором [implicit](implicit.md).
 
-[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
+[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
 `expr` может быть любым выражением, возвращающим значение, за исключением анонимных методов и лямбда-выражений. В следующем примере используется `is` для определения возвращаемого значения вызова метода.   
-[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
+[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 Начиная с C# 7 можно использовать сопоставление шаблонов с [шаблоном типа](#type), чтобы создавать лаконичный код, использующий оператор `is`.
 
@@ -113,19 +94,19 @@ ms.lasthandoff: 09/25/2017
 
 В следующем примере используется шаблон типа `is`, который обеспечивает реализацию метода <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> типа.
 
-[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
+[!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
 Без сопоставления шаблонов этот код может быть написан следующим образом. При использовании шаблона типа создается более лаконичный и удобочитаемый код, причем проверять результат преобразования (`null`) не требуется.  
 
-[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
+[!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
 Шаблон типа `is` также позволяет создавать более компактный код при определении типа для типа значения. В следующем примере используется шаблон типа `is`, чтобы определить, является ли объект экземпляром `Person` или `Dog` перед отображением значения соответствующего свойства. 
 
-[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
+[!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
 Для эквивалентного кода без сопоставления шаблонов требуется отдельное назначение, которое включает явное приведение.
 
-[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
+[!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Шаблон константы ###
 
@@ -151,7 +132,7 @@ ms.lasthandoff: 09/25/2017
 
 В следующем примере шаблон типа и шаблон константы объединяются для проверки того, является ли объект экземпляром `Dice` и, если это так, определяют, равно ли 6 значение броска кости.
 
-[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+[!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
 ### <a name="var" /> Шаблон переменной </a>
 
@@ -163,7 +144,7 @@ ms.lasthandoff: 09/25/2017
 
 где значение *expr* всегда назначается локальной переменной с именем *varname*. *varname* является статической переменной того же типа, что и *expr*. В следующем примере шаблон переменной используется для назначения выражения переменной с именем `obj`. Затем отображается значение и тип `obj`.
 
-[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+[!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
 Обратите внимание, что если *expr* — `null`, `is` выражение, по-прежнему имеет значение true и назначает `null` для *varname*. 
 
@@ -172,9 +153,8 @@ ms.lasthandoff: 09/25/2017
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
  [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)
-

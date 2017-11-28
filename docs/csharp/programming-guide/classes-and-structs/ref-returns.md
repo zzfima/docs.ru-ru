@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>Возвращаемые ссылочные значения и ссылочные локальные переменные
 
@@ -86,15 +85,14 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 В следующем примере определяется класс `NumberStore`, в котором хранится массив целочисленных значений. Метод `FindNumber` возвращает по ссылке первое число, которое не меньше переданного в аргументе значения. Если такое число не найдено, метод возвращает число с индексом 0. 
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 В следующем примере вызывается метод `NumberStore.FindNumber`, который извлекает первое значение не меньше 16. После этого вызывающий объект удваивает значение, возвращаемое методом. Как видно из выходных данных этого примера, изменение отражается в значении элементов массива в экземпляре `NumberStore`.
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 Без использования возвращаемых ссылочных значений такая операция обычно выполняется путем возврата индекса элемента массива вместе с его значением. После этого вызывающий объект использует индекс для изменения значения в отдельном вызове метода. Тем не менее вызывающий объект также может изменить индекс для доступа к другим значениям массива и их изменения.  
  
 ## <a name="see-also"></a>См. также
 
 [Ключевое слово ref](../../language-reference/keywords/ref.md)
-

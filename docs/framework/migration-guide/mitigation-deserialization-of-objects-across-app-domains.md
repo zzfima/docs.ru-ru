@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f86ddcb86f3361665498ca0e34bf9147338551
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Устранение рисков: десериализация объектов между доменами приложений
 В некоторых случаях, когда приложение использует два или большее количество доменов с разными базовыми папками приложения, при попытке выполнить десериализацию объектов в логическом контексте вызова между доменами приложения возникнет исключение.  
@@ -29,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  Приложение использует два или большее количество доменов приложений с разными базовыми папками приложения.  
   
-2.  Некоторые типы явно добавляются в <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> путем вызова метода, например <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> или <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Эти типы не отмечены как сериализуемые и не сохраняются в глобальном кэше сборок.  
+2.  Некоторые типы явно добавляются в <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> путем вызова метода, например <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> или <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>. Эти типы не отмечены как сериализуемые и не сохраняются в глобальном кэше сборок.  
   
 3.  Затем код, выполняющийся в домене приложения не по умолчанию, пытается считать значение из файла конфигурации или использовать XML для десериализации объекта.  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
-

@@ -1,41 +1,22 @@
 ---
 title: "when (справочник по C#)"
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - when_CSharpKeyword
 - when
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- when keyword [C#]
+helpviewer_keywords: when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f453d9f4b443d7adeeb0ab628b4ddad1a0116e49
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae869fa04d2dfb963694f258624c5cd594ff1184
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
  # <a name="when-c-reference"></a>when (справочник по C#)
 
@@ -53,9 +34,9 @@ catch ExceptionType [e] when (expr)
 ```
 здесь *expr* представляет собой выражение, которое оценивает значение типа Boolean. Если он возвращает `true`, обработчик исключений выполняется, а если `false`, то нет. 
 
-В следующем примере используется ключевое слово `when`, которое позволяет условно выполнять обработчики для @System.Net.HttpRequestException в зависимости от того, какой текст содержит сообщение об исключении.
+В следующем примере используется ключевое слово `when`, которое позволяет условно выполнять обработчики для <xref:System.Net.Http.HttpRequestException> в зависимости от того, какой текст содержит сообщение об исключении.
 
- [!code-cs[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
+ [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
   
 ## <a name="when-in-a-switch-statement"></a>`when` в операторе `switch`
 
@@ -68,11 +49,10 @@ case (expr) when (when-condition):
 
 В следующем примере ключевое слово `when` используется для проверки объектов `Shape`, которые имеют нулевую область, а также для проверки различных объектов `Shape` с областью больше нуля. 
 
- [!code-cs[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+ [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
 
 ## <a name="see-also"></a>См. также 
   [Оператор switch](switch.md)  
   [Оператор try-catch](try-catch.md)  
   [Оператор try/catch/finally](try-catch-finally.md) 
-
 

@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
+ms.openlocfilehash: 0c28c85bf933a411403aefcb91801d28fe1c268e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-left-outer-joins"></a>Выполнение левых внешних соединений
 Левое внешнее соединение — это соединение, при котором каждый элемент первой коллекции возвращается независимо от наличия взаимосвязанных элементов во второй коллекции. LINQ можно использовать для левого внешнего соединения, вызвав метод <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> на основании результатов группового соединения.  
@@ -31,13 +29,12 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  Значение по умолчанию для ссылочного типа — `null`, поэтому в примере проверяется пустая ссылка перед доступом к каждому элементу в каждой коллекции `Pet`.  
   
- [!code-cs[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
  
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Выполнение внутренних соединений](perform-inner-joins.md)   
- [Выполнение групповых соединений](perform-grouped-joins.md)   
- [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [Выполнение внутренних соединений](perform-inner-joins.md)  
+ [Выполнение групповых соединений](perform-grouped-joins.md)  
+ [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

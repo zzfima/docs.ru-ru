@@ -1,39 +1,21 @@
 ---
 title: "Выражения (Руководство по программированию в C#)"
-ms.date: 2017-05-11
+ms.date: 05/11/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 579851b8c72595ffa5b4cf8267fdc73cd2823d0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9cfefe047805282ea682e127ffb56528fda48c0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="expressions-c-programming-guide"></a>Выражения (Руководство по программированию в C#)
 *Выражение* представляет собой последовательность из одного или нескольких операндов и от нуля до нескольких операторов, которую можно вычислить, получив в результате одно значение, объект, метод или пространство имен. Выражение может состоять из литерала, вызова метода, оператора или его операндов, а также из *простого имени*. Простые имена могут быть именами переменной, элемента типа, параметра метода, пространства имен или типа.  
@@ -47,7 +29,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Значения выражений  
- В большинстве контекстов, в которых используются выражения, например, в операторах или в параметрах методов, предполагается, что результатом вычисления выражения будет какое-то значение. Если x и y — целые числа, результатом вычисления выражения `x + y` будет числовое значение. Результатом вычисления выражения `new MyClass()` будет ссылка на новый экземпляр объекта `MyClass`. Результатом вычисления выражения `myClass.ToString()` является строка, так как она является возвращаемым типом метода. Однако хотя имя пространства имен классифицируется как выражение, значение не будет результатом его вычисления и поэтому никогда не станет конечным результатом какого-либо выражения. Имя пространства имен нельзя передать параметру метода, или использовать его в новом выражении, или присвоить его переменной. Его можно использовать только как часть выражения в более крупном выражении. Это также относится к типам (в отличие от объектов <xref:System.Type?displayProperty=fullName>), именам групп методов (в отличие от отдельных методов) и к методам доступа к событиям [add](../../../csharp/language-reference/keywords/add.md) и [remove](../../../csharp/language-reference/keywords/remove.md).  
+ В большинстве контекстов, в которых используются выражения, например, в операторах или в параметрах методов, предполагается, что результатом вычисления выражения будет какое-то значение. Если x и y — целые числа, результатом вычисления выражения `x + y` будет числовое значение. Результатом вычисления выражения `new MyClass()` будет ссылка на новый экземпляр объекта `MyClass`. Результатом вычисления выражения `myClass.ToString()` является строка, так как она является возвращаемым типом метода. Однако хотя имя пространства имен классифицируется как выражение, значение не будет результатом его вычисления и поэтому никогда не станет конечным результатом какого-либо выражения. Имя пространства имен нельзя передать параметру метода, или использовать его в новом выражении, или присвоить его переменной. Его можно использовать только как часть выражения в более крупном выражении. Это также относится к типам (в отличие от объектов <xref:System.Type?displayProperty=nameWithType>), именам групп методов (в отличие от отдельных методов) и к методам доступа к событиям [add](../../../csharp/language-reference/keywords/add.md) и [remove](../../../csharp/language-reference/keywords/remove.md).  
   
  У каждого значения есть связанный с ним тип. Например, если x и y — переменные типа `int`, значение выражения `x + y` также типизируется как `int`. Если значение присвоено переменной другого типа или x и y принадлежат к разным типам, то применяются правила преобразования типов. Дополнительные сведения о работе таких преобразований см. в разделе [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   
@@ -62,13 +44,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Литералы и простые имена  
  Двумя наиболее простыми типами выражений являются литералы и простые имена. Литерал представляет собой постоянное значение, у которого нет имени. Например, в следующем примере `5` и `"Hello World"` являются литералами.  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  Дополнительные сведения о литералах см. в разделе [Типы](../../../csharp/language-reference/keywords/types.md).  
   
  В предыдущем примере `i` и `s` являются простыми именами, которые определяют локальные переменные. При использовании таких переменных в выражениях результатом вычисления имени переменной является значение, которое в данное время хранится в расположении переменой в памяти. Это показано в следующем примере:  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
 ## <a name="invocation-expressions"></a>Выражения вызова  
  В следующем примере кода вызов метода `DoWork` является выражением вызова.  
   
@@ -95,10 +77,9 @@ C# поддерживает *элементы, воплощающие выраж
  Если в выражении присутствует переменная, свойство объекта или индексатор объекта, для вычисления выражения используется значение этого элемента. В C# выражение можно использовать везде, где требуется значение или объект, если результат вычисления выражения соответствует требуемому типу.  
 
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Methods (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Методы (руководство по программированию на C#)  
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)   
- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
- [Типы](../../../csharp/programming-guide/types/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
+ [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+ [Типы](../../../csharp/programming-guide/types/index.md)  
  [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

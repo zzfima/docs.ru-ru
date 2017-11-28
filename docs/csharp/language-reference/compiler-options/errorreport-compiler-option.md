@@ -1,42 +1,23 @@
 ---
 title: "-errorreport (параметры компилятора C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (параметры компилятора C#)
 Этот параметр предоставляет удобный способ для сообщения о внутренней ошибке компилятора C# в корпорацию Майкрософт.  
@@ -62,9 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  **send**  
  Отчеты о внутренних ошибках компилятора автоматически отправляются в Майкрософт. Чтобы включить этот параметр, необходимо сначала согласиться с политикой сбора данных Майкрософт. При первом указании параметра **/errorreport:send** на компьютере отобразится сообщение компилятора с ссылкой на веб-сайт, на котором содержится политика сбора данных Майкрософт.  
-  
- Этот параметр зависит от параметров реестра. Сведения о задании соответствующих значений в реестре см. на странице [Включение автоматического формирования отчетов в средствах командной строки Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=184695) на веб-сайте MSDN.  
-  
+    
 ## <a name="remarks"></a>Примечания  
  Внутренние ошибки компилятора происходят, когда компилятору не удается обработать файл исходного кода. При возникновении внутренней ошибки компилятор не создает выходной файл и не предоставляет никакой полезной диагностической информации для исправления кода.  
   
@@ -88,4 +67,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-

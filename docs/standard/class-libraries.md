@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-class-libraries"></a>Библиотеки классов .NET
 
 Библиотеки классов воплощают понятие [общей библиотеки](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) в .NET. Они позволяют помещать полезные функции в модули, которые могут использоваться разными приложениями. Они также могут использоваться для подключения функций, которые не были нужны или не были известны во время запуска приложения. Библиотеки классов описываются в [формате файла сборки .NET](assembly-format.md).
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/21/2017
 ### <a name="mono-class-libraries"></a>Библиотеки классов Mono
 
 Библиотеки классов поддерживаются в Mono, включая три типа библиотек, описанных выше. Mono часто рассматривалась (обоснованно) как кроссплатформенная реализация платформы Microsoft .NET Framework. В частности, это было обусловлено тем, что специфические для платформы библиотеки .NET Framework могли запускаться в среде выполнения Mono без изменения или перекомпиляции. Эта особенность имелась до создания переносимых библиотек классов, поэтому было очевидным решением реализовать переносимость двоичного кода между .NET Framework и Mono (несмотря на то, что она работает только в одном направлении).
-

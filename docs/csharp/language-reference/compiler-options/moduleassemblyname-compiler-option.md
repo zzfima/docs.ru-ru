@@ -1,42 +1,23 @@
 ---
 title: "-moduleassemblyname (параметры компилятора C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /moduleassemblyname
-dev_langs:
-- CSharp
+f1_keywords: /moduleassemblyname
 helpviewer_keywords:
 - moduleassemblyname compiler option [C#]
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (параметры компилятора C#)
 Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  Дополнительные сведения о построении файлов .netmodule см. в разделе [/target:module (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Дополнительные сведения см. в разделе [Дружественные сборки](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
  Этот параметр недоступен в среде разработки и может использоваться только при компиляции из командной строки.  
   
@@ -116,8 +97,7 @@ class A {
 }  
 ```  
   
- **Вызывается An_Internal_Class.Test**   
+ **Вызывается An_Internal_Class.Test**  
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
  [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-

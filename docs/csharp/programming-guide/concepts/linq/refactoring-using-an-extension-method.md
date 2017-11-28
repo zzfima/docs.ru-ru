@@ -1,25 +1,21 @@
 ---
 title: "Рефакторинг с использованием метода расширения (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 52972d1fbc951a379b4ce754a47143a15c672cfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4145e38a6fc49d53d274520dd155cffb5e7f9d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Рефакторинг с использованием метода расширения (C#)
 Этот пример основан на предыдущем примере, [Извлечение текста абзацев (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), и в нем применяется оптимизация кода объединения строк с помощью чистой функции, которая реализуется в виде метода расширения.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 07/28/2017
   
  Инструкции по созданию исходного документа для данного примера можно найти в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.  
+ В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -259,6 +255,5 @@ StyleName:Code >Hello World<
 -   [Рефакторинг с использованием чистых функций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
-

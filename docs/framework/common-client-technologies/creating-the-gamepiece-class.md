@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 989883034b30c3ec67f5441c5512418643546519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-the-gamepiece-class"></a>Создание класса GamePiece
 Класс **GamePiece** инкапсулирует все функциональные возможности, необходимые для загрузки изображения элемента игры Microsoft XNA, отслеживания состояния мыши относительно элемента игры, захвата мыши, обеспечения обработки манипуляции и инерции, а также обеспечения возможности возвращения, когда элемент игры достигнет ограничений порта просмотра.  
@@ -110,8 +108,7 @@ ms.lasthandoff: 07/28/2017
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
 ## <a name="see-also"></a>См. также  
- [Манипуляции и инерция](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [Использование манипуляций и инерции в приложении XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [Создание класса GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
+ [Манипуляции и инерция](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [Использование манипуляций и инерции в приложении XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Создание класса GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Создание класса Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
-

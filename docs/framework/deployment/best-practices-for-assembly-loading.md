@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies,binding
 - LoadFrom method
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 302be9cafc0fd2ef327767cbf1178d4927757d2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fe9ae599f8a8470a85000bc23823d66ef0c8ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="best-practices-for-assembly-loading"></a>Рекомендации для загрузки сборок
 В этой статье рассматриваются способы избежания проблем с идентификацией типов, способных привести к исключениям <xref:System.InvalidCastException>, <xref:System.MissingMethodException> и другим ошибкам. В статье рассматриваются следующие рекомендации:  
@@ -57,7 +50,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Контекст загрузки по умолчанию содержит сборки, обнаруженные в результате поиска в глобальном кэше сборок, в хранилище сборок главного узла, если среда выполнения является размещенной (например, в SQL Server), либо в свойствах <xref:System.AppDomainSetup.ApplicationBase%2A> и <xref:System.AppDomainSetup.PrivateBinPath%2A> домена приложения. В большинстве перегруженных версий метода <xref:System.Reflection.Assembly.Load%2A> сборки загружаются именно в этот контекст.  
   
--   Контекст, из которого ведется загрузка, содержит сборки из расположений, в которых загрузчик не ведет поиск. Например, надстройки могут устанавливаться в каталоге, не относящемся к пути приложения. К примерам методов, которые выполняют загрузку по указанному пути, относятся методы <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=fullName> и <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>.  
+-   Контекст, из которого ведется загрузка, содержит сборки из расположений, в которых загрузчик не ведет поиск. Например, надстройки могут устанавливаться в каталоге, не относящемся к пути приложения. К примерам методов, которые выполняют загрузку по указанному пути, относятся методы <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> и <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>.  
   
 -   Контекст только для отражения содержит сборки, загружаемые с помощью методов <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> и <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Код, загруженный в этом контексте, не может быть выполнен, поэтому далее он не рассматривается. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
@@ -77,7 +70,7 @@ ms.lasthandoff: 07/28/2017
 ### <a name="load-from-context"></a>Контекст, из которого ведется загрузка  
  Контекст, из которого ведется загрузка, позволяет загрузить сборку, путь которой не относится к пути приложения и, соответственно, не включается в область поиска. Это позволяет находить и загружать требуемые сборки, расположенные по этому пути, так как сведения о пути хранятся в контексте. Кроме того, сборки в этом контексте могут использовать необходимые сборки, загруженные в контекст загрузки по умолчанию.  
   
- Загрузка сборок с помощью метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> или другого метода, использующего для загрузки путь, имеет следующие недостатки:  
+ Загрузка сборок с помощью метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> или другого метода, использующего для загрузки путь, имеет следующие недостатки:  
   
 -   Если сборка с тем же идентификатором уже загружена, метод <xref:System.Reflection.Assembly.LoadFrom%2A> возвращает загруженную сборку даже в том случае, если был задан другой путь.  
   
@@ -85,7 +78,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Если сборка загружена с использованием метода <xref:System.Reflection.Assembly.LoadFrom%2A>, но путь поиска сборок включает сборку с тем же идентификатором, находящуюся в другом расположении, то может возникнуть исключение <xref:System.InvalidCastException>, <xref:System.MissingMethodException> или другое непредусмотренное поведение.  
   
--   Метод <xref:System.Reflection.Assembly.LoadFrom%2A> требует наличия флагов <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=fullName> или <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=fullName> либо наличия объекта <xref:System.Net.WebPermission> для заданного пути.  
+-   Метод <xref:System.Reflection.Assembly.LoadFrom%2A> требует наличия флагов <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> или <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> либо наличия объекта <xref:System.Net.WebPermission> для заданного пути.  
   
 -   Если для сборки существует машинный образ, то он не используется.  
   
@@ -100,9 +93,9 @@ ms.lasthandoff: 07/28/2017
   
  Загрузка сборок без контекста имеет следующие недостатки:  
   
--   Другие сборки не могут привязываться к сборкам, загруженным без контекста, если только приложение не обрабатывает событие <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   Другие сборки не могут привязываться к сборкам, загруженным без контекста, если только приложение не обрабатывает событие <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
--   Зависимости не загружаются автоматически. Их можно предварительно загрузить без контекста, загрузить в контексте загрузки по умолчанию или загрузить их в обработчике событий <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   Зависимости не загружаются автоматически. Их можно предварительно загрузить без контекста, загрузить в контексте загрузки по умолчанию или загрузить их в обработчике событий <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
 -   Загрузка нескольких сборок с одним и тем же идентификатором без контекста может привести к проблемам с идентификацией типов, аналогичным тем, что возникают при загрузке сборок с одним и тем же идентификатором в нескольких контекстах. См. раздел [Избежание загрузки сборок в нескольких контекстах](#avoid_loading_into_multiple_contexts).  
   
@@ -114,11 +107,11 @@ ms.lasthandoff: 07/28/2017
   
 <a name="avoid_partial_names"></a>   
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Избежание привязки к частичным именам сборок  
- Частичная привязка имен происходит при указании лишь одной из частей отображаемого имени сборки (<xref:System.Reflection.Assembly.FullName%2A>) при ее загрузке. Например, метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> можно вызвать с простым именем сборки, не указывая ее версию, язык и региональные параметры, а также маркер открытого ключа. Также можно вызвать метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>, который сначала вызывает метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, а затем, если ему не удалось найти сборку, проводит поиск по глобальному кэшу сборок и загружает последнюю версию сборки из доступных.  
+ Частичная привязка имен происходит при указании лишь одной из частей отображаемого имени сборки (<xref:System.Reflection.Assembly.FullName%2A>) при ее загрузке. Например, метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> можно вызвать с простым именем сборки, не указывая ее версию, язык и региональные параметры, а также маркер открытого ключа. Также можно вызвать метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>, который сначала вызывает метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, а затем, если ему не удалось найти сборку, проводит поиск по глобальному кэшу сборок и загружает последнюю версию сборки из доступных.  
   
  Частичная привязка имен может вызывать самые разнообразные проблемы, включая следующие:  
   
--   Метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName> может загрузить другую сборку с тем же простым именем. Например, два приложения могут установить в глобальном кэше сборок две разные сборки с простым именем `GraphicsLibrary`.  
+-   Метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> может загрузить другую сборку с тем же простым именем. Например, два приложения могут установить в глобальном кэше сборок две разные сборки с простым именем `GraphicsLibrary`.  
   
 -   Фактически загружаемая сборка может быть несовместимой с предыдущими версиями. Например, не указав версию, можно загрузить более позднюю версию сборки, на использование которой программа не рассчитана. Изменения в более поздних версиях сборки могут вызывать ошибки приложения.  
   
@@ -128,7 +121,7 @@ ms.lasthandoff: 07/28/2017
   
 -   При загрузке необходимых сборок может возникать непредвиденное поведение. Загрузка двух сборок, совместно зависящих от одной сборки, с использованием частичной привязки имен может привести к тому, что одна из сборок будет использовать компонент, с которым она не строилась и не тестировалась.  
   
- Ввиду потенциальных проблем метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A> был помечен как устаревший. Вместо него рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, указывая полные отображаемые имена сборок. См. разделы [Понимание преимуществ и недостатков контекстов загрузки](#load_contexts) и [Рассмотрение возможности перехода в контекст загрузки по умолчанию](#switch_to_default).  
+ Ввиду потенциальных проблем метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A> был помечен как устаревший. Вместо него рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, указывая полные отображаемые имена сборок. См. разделы [Понимание преимуществ и недостатков контекстов загрузки](#load_contexts) и [Рассмотрение возможности перехода в контекст загрузки по умолчанию](#switch_to_default).  
   
  Если вы хотите использовать метод <xref:System.Reflection.Assembly.LoadWithPartialName%2A>, потому что он упрощает загрузку сборок, учтите, что сбой приложения с сообщением, содержащим полный идентификатор необходимой сборки, — это лучше для пользователя, чем автоматическое использование неизвестной версии сборки, способной вызвать непредвиденное поведение и бреши в системе безопасности.  
   
@@ -140,7 +133,7 @@ ms.lasthandoff: 07/28/2017
   
  Теперь подумаем о том, что произойдет при запуске программы. Сборки, на которые ссылается программа, будут загружены в контексте загрузки по умолчанию. Если загрузить целевую сборку по идентификатору с помощью метода <xref:System.Reflection.Assembly.Load%2A>, то она попадет в контекст загрузки по умолчанию вместе со сборками, от которых она зависит. Как программа, так и целевая сборка будут использовать сборку `Utility`.  
   
- Предположим теперь, что целевая сборка загружается по файловому пути с помощью метода <xref:System.Reflection.Assembly.LoadFile%2A>. В этом случае сборка загружается без контекста, поэтому необходимые для нее сборки не будут загружены автоматически. Можно создать обработчик событий <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>, разрешающий подобные зависимости; он может загрузить сборку `Utility` без контекста с помощью метода <xref:System.Reflection.Assembly.LoadFile%2A>. В этом случае при создании экземпляра типа, содержащегося в целевой сборке, и попытке его присвоения переменной типа `ICommunicate` будет порождено исключение <xref:System.InvalidCastException>, так как среда выполнения рассматривает интерфейсы `ICommunicate` в двух копиях сборки `Utility` как разные типы.  
+ Предположим теперь, что целевая сборка загружается по файловому пути с помощью метода <xref:System.Reflection.Assembly.LoadFile%2A>. В этом случае сборка загружается без контекста, поэтому необходимые для нее сборки не будут загружены автоматически. Можно создать обработчик событий <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>, разрешающий подобные зависимости; он может загрузить сборку `Utility` без контекста с помощью метода <xref:System.Reflection.Assembly.LoadFile%2A>. В этом случае при создании экземпляра типа, содержащегося в целевой сборке, и попытке его присвоения переменной типа `ICommunicate` будет порождено исключение <xref:System.InvalidCastException>, так как среда выполнения рассматривает интерфейсы `ICommunicate` в двух копиях сборки `Utility` как разные типы.  
   
  Существует множество других сценариев, в которых сборка может загружаться в нескольких контекстах. Оптимальный подход состоит в устранении потенциальных конфликтов путем перемещения целевой сборки в путь приложения и использования метода <xref:System.Reflection.Assembly.Load%2A> с полным отображаемым именем. При этом сборка будет загружаться в контексте загрузки по умолчанию, и обе сборки будут использовать одну и ту же копию сборки `Utility`.  
   
@@ -154,13 +147,13 @@ ms.lasthandoff: 07/28/2017
   
  Предположим, программа загружает одну версию сборки `Utility` напрямую, а потом загружает другую версию сборки `Utility`. Приложение также может загрузить две разные версии сборки, если в коде приложения имеется ошибка.  
   
- В контексте загрузки по умолчанию эта проблема может возникать при использовании метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> с указанием полных отображаемых имен сборок, включающих разные версии. В случае загрузки сборок вне контекста проблема может возникать, если метод <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName> используется для загрузки одной и той же сборки по нескольким путям. Среда выполнения считает две сборки, загруженные из разных путей, разными, даже если они имеют одинаковые идентификаторы.  
+ В контексте загрузки по умолчанию эта проблема может возникать при использовании метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> с указанием полных отображаемых имен сборок, включающих разные версии. В случае загрузки сборок вне контекста проблема может возникать, если метод <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> используется для загрузки одной и той же сборки по нескольким путям. Среда выполнения считает две сборки, загруженные из разных путей, разными, даже если они имеют одинаковые идентификаторы.  
   
  Помимо проблем с идентификацией типов, наличие нескольких версий сборки может привести к исключению <xref:System.MissingMethodException>, если тип, загруженный из одной версии сборки, передается в код, ожидающий тип из другой версии сборки. Например, код может рассчитывать на метод, добавленный в более поздней версии.  
   
  Если поведение типа меняется от версии к версии, также могут возникать менее заметные ошибки. К примеру, метод может породить непредвиденное исключение или вернуть непредвиденное значение.  
   
- Тщательно проанализируйте свой код и убедитесь, что загружается только одна версия сборки. В любой момент времени можно использовать метод <xref:System.AppDomain.GetAssemblies%2A?displayProperty=fullName> для определения фактически загруженных сборок.  
+ Тщательно проанализируйте свой код и убедитесь, что загружается только одна версия сборки. В любой момент времени можно использовать метод <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> для определения фактически загруженных сборок.  
   
 <a name="switch_to_default"></a>   
 ## <a name="consider-switching-to-the-default-load-context"></a>Возможность перехода к использованию контекста загрузки по умолчанию  
@@ -175,14 +168,13 @@ ms.lasthandoff: 07/28/2017
  Разместив сборки в глобальном кэше сборок, можно использовать общий путь для сборок, находящихся вне базовой папки приложения, не теряя преимуществ контекста загрузки по умолчанию и не сталкиваясь с недостатками других контекстов.  
   
 ### <a name="consider-using-application-domains"></a>Использование доменов приложений  
- Если выяснится, что некоторые сборки нельзя разместить в пути поиска сборок приложения, подумайте, нельзя ли создать для них отдельный домен приложения. Используйте тип <xref:System.AppDomainSetup> для создания нового домена приложения и укажите с помощью свойства <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName> путь, по которому расположены сборки, которые требуется загрузить. При наличии нескольких таких каталогов можно задать в <xref:System.AppDomainSetup.ApplicationBase%2A> корневой каталог и использовать свойство <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=fullName> для указания подкаталогов, в которых нужно вести поиск. Также можно создать несколько доменов приложения и задать в свойстве <xref:System.AppDomainSetup.ApplicationBase%2A> каждого из них необходимый путь для соответствующих сборок.  
+ Если выяснится, что некоторые сборки нельзя разместить в пути поиска сборок приложения, подумайте, нельзя ли создать для них отдельный домен приложения. Используйте тип <xref:System.AppDomainSetup> для создания нового домена приложения и укажите с помощью свойства <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> путь, по которому расположены сборки, которые требуется загрузить. При наличии нескольких таких каталогов можно задать в <xref:System.AppDomainSetup.ApplicationBase%2A> корневой каталог и использовать свойство <xref:System.AppDomainSetup.PrivateBinPath%2A?displayProperty=nameWithType> для указания подкаталогов, в которых нужно вести поиск. Также можно создать несколько доменов приложения и задать в свойстве <xref:System.AppDomainSetup.ApplicationBase%2A> каждого из них необходимый путь для соответствующих сборок.  
   
- Обратите внимание, что для загрузки таких сборок можно использовать метод <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>. Так как они теперь расположены в пути поиска, они будут загружены в контексте загрузки по умолчанию, а не в контексте, из которого ведется загрузка. Тем не менее рекомендуется перейти к использованию метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> и полных отображаемых имен сборок, чтобы гарантировать, что всегда используются только правильные их версии.  
+ Обратите внимание, что для загрузки таких сборок можно использовать метод <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Так как они теперь расположены в пути поиска, они будут загружены в контексте загрузки по умолчанию, а не в контексте, из которого ведется загрузка. Тем не менее рекомендуется перейти к использованию метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> и полных отображаемых имен сборок, чтобы гарантировать, что всегда используются только правильные их версии.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>   
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName>   
- <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>   
+ <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+ <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
  [Надстройки и расширения среды](../../../docs/framework/add-ins/index.md)
-

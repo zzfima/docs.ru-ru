@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-patterns-for-delegates"></a>Общие шаблоны делегатов
 
 [Назад](delegates-strongly-typed.md)
@@ -245,4 +243,3 @@ public static void LogMessage(string msg)
 В класс Logger можно вносить любое количество улучшений и изменений без серьезной модификации. Открытый интерфейс API, как и любой другой класс, нельзя модифицировать без риска внесения существенных изменений. Но так как взаимосвязь между средством ведения журнала и модулями вывода осуществляется только посредством делегата, другие типы (например, интерфейсы или базовые классы) не затрагиваются. Взаимосвязь минимальна.
 
 [Далее](events-overview.md)
-

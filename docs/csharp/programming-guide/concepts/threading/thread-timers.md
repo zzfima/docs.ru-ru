@@ -1,33 +1,24 @@
 ---
 title: "Таймеры потоков (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 52ed71e8-4fd9-43a4-ae40-04cce7cff23f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9702360408340b28fcdcc8f197467a002f77ee51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-timers-c"></a>Таймеры потоков (C#)
-Класс <xref:System.Threading.Timer?displayProperty=fullName> полезно использовать для периодического выполнения задачи в отдельном потоке. Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.  
+Класс <xref:System.Threading.Timer?displayProperty=nameWithType> полезно использовать для периодического выполнения задачи в отдельном потоке. Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.  
   
 ## <a name="thread-timer-example"></a>Пример таймера потока  
  В следующем примере задача запускается каждые две секунды и использует флаг для инициализации метода <xref:System.IDisposable.Dispose%2A>, который останавливает таймер. В этом примере сведения о состояния отображаются в окне вывода.  
@@ -84,9 +75,8 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- Таймеры потоков особенно полезны в случае отсутствия доступа к объекту <xref:System.Windows.Forms.Timer?displayProperty=fullName>, например при разработке консольных приложений.  
+ Таймеры потоков особенно полезны в случае отсутствия доступа к объекту <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>, например при разработке консольных приложений.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading>   
+ <xref:System.Threading>  
  [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
-

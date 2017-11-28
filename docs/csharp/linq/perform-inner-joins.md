@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-inner-joins"></a>Выполнение внутренних соединений
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="simple-key-join-example"></a>Пример соединения по простому ключу  
  В следующем примере создаются две коллекции, содержащие объекты двух определяемых пользователем типов, `Person` и `Pet`. Запрос включает предложение `join` в C# для сопоставления объектов `Person` с объектами `Pet`, где `Owner` — это `Person`. Предложение `select` в C# определяет, как будут выглядеть результирующие объекты. В этом примере результирующие объекты — это анонимные типы, состоящие из имени владельца и его домашнего животного.  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
  Обратите внимание на то, что объект `Person`, параметр `LastName` которого имеет значение "Huff", не отображается в результирующем наборе, поскольку нет объекта `Pet`, параметр `Pet.Owner` которого совпадает с этим объектом `Person`.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  В следующем примере на основе списка объектов `Employee` и списка объектов `Student` определяется, какие работники также являются студентами. Оба этих типа имеют свойства `FirstName` и `LastName` типа <xref:System.String>. Функции, создающие ключи соединения из каждого элемента в списке, возвращают анонимный тип, состоящий из свойств `FirstName` и `LastName` каждого элемента. Операция соединения сравнивает эти составные ключи на предмет равенства и возвращает пары объектов из каждого списка, в которых имя и фамилия совпадают.  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
 ## <a name="example"></a>Пример  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  Второе предложение `join` в C# сопоставляет анонимные типы, возвращаемые первым соединением, с объектами `Dog` в предоставленном списке собак на основе ключа, состоящего из свойства `Owner` типа `Person` и первой буквы имени животного. Оно возвращает последовательность анонимных типов, содержащих свойства `Cat.Name` и `Dog.Name` из каждой совпадающей пары. Поскольку это внутреннее соединение, возвращаются только объекты из первого источника данных, имеющие соответствие во втором источнике данных.  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
 ## <a name="example"></a>Пример  
   
@@ -74,13 +72,12 @@ ms.lasthandoff: 07/28/2017
   
  Результат `query1` эквивалентен результирующему набору, который можно было бы получить, выполнив внутреннее соединение с помощью предложения `join` без предложения `into`. Переменная `query2` демонстрирует этот эквивалентный запрос.  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Выполнение групповых соединений](perform-grouped-joins.md)   
- [Выполнение левых внешних соединений](perform-left-outer-joins.md)   
- [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [Выполнение групповых соединений](perform-grouped-joins.md)  
+ [Выполнение левых внешних соединений](perform-left-outer-joins.md)  
+ [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

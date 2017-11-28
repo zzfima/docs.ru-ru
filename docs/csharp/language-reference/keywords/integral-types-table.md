@@ -1,41 +1,23 @@
 ---
 title: "Таблица целых типов (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 663ea9a64284c25999564eca9ea5ccec861e9662
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2932d0b7c8e1b01a4965b29d90bdd5711ddb5dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="integral-types-table-c-reference"></a>Таблица целых типов (Справочник по C#)
 В следующей таблице приводятся сведения о размерах и диапазонах для целочисленных типов, которые составляют подмножество простых типов.  
@@ -55,11 +37,11 @@ ms.lasthandoff: 07/28/2017
  Если значение, представленное целочисленным литералом, выходит за пределы диапазона значений типа `ulong`, происходит ошибка компиляции.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица типов с плавающей запятой](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Таблица типов с плавающей запятой](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
  [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)

@@ -1,15 +1,12 @@
 ---
 title: "Преобразования данных с помощью LINQ (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -19,30 +16,14 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f77bd40ea8ec0745dda3d40eee273d9e7338263b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-transformations-with-linq-c"></a>Преобразования данных с помощью LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] предназначен не только для получения данных. Это эффективный инструмент для их преобразования. С помощью запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] можно использовать исходную последовательность в качестве входных данных и изменять ее различными способами для создания новой выходной последовательности. Можно изменить саму последовательность, не изменяя элементы, с помощью сортировки и группировки. Однако самой интересной функцией запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] можно назвать возможность создания новых типов. Это выполняется в предложении [select](../../../../csharp/language-reference/keywords/select-clause.md). Например, можно выполнить следующие задачи.  
@@ -60,11 +41,11 @@ ms.lasthandoff: 07/28/2017
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Объединение нескольких входных последовательностей в одну выходную  
  Запрос [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] можно использовать для создания выходной последовательности, содержащей элементы из нескольких входных последовательностей. Следующий пример демонстрирует объединение двух структур данных в памяти, однако те же принципы могут применяться для объединения данных из источников XML, SQL или DataSet. Рассмотрим следующие два типа классов:  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  В следующем примере показан запрос:  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  Дополнительные сведения см. в разделе [Предложение join](../../../../csharp/language-reference/keywords/join-clause.md) и [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -90,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="transforming-in-memory-objects-into-xml"></a>Преобразование объектов в памяти в XML  
  Запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощают преобразование данных между структурами данных в памяти, базах данных SQL, наборах данных [!INCLUDE[vstecado](~/includes/vstecado-md.md)] и XML-потоках или XML-документах. В следующем примере объекты в структуре данных в памяти преобразуются в XML-элементы.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  Этот код создает следующий выходные данные XML:  
   
@@ -122,13 +103,12 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  Вызов методов в выражениях запросов не поддерживается, если запрос будет преобразован в некоторую другую область. Например, невозможно вызвать обычный метод C# в [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], так как в SQL Server для него отсутствует контекст. Тем не менее можно сопоставить хранимые процедуры методов и вызвать их. Дополнительные сведения см. в разделе [Хранимые процедуры](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## <a name="see-also"></a>См. также  
- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [предложение select](../../../../csharp/language-reference/keywords/select-clause.md)
-

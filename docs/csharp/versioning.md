@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>Управление версиями в C# #
 
 В этом учебнике вы получите представление об управлении версиями в .NET. Кроме того, вы узнаете, какие факторы следует учитывать при управлении версиями библиотеки и обновлении до ее новой версии.
@@ -89,7 +87,7 @@ ms.lasthandoff: 07/28/2017
 
 Рассмотрим следующий пример:
 
-[!code-csharp[Пример использования модификатора new](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
 **Вывод**
 
@@ -107,7 +105,7 @@ A derived method
 
 Модификатор `override` означает, что производная реализация расширяет реализацию члена базового класса, а не скрывает его. К члену базового класса должен быть применен модификатор `virtual`.
 
-[!code-csharp[Пример использования модификатора override](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **Вывод**
 
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 Модификатор `override` оценивается во время компиляции, и компилятор выдаст ошибку, если ему не удастся найти виртуальный член для переопределения.
 
 Знание рассмотренных приемов и ситуаций, в которых их следует применять, поможет вам значительно упростить переход с одной версии библиотеки на другую.
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
 ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-in-depth"></a>Подробный обзор асинхронного программирования
 
 Писать асинхронный код, связанный с операциями ввода-вывода и задействованием ЦП, очень просто с помощью асинхронной модели .NET на базе класса Task. Эта модель основывается на типах `Task` и `Task<T>` и ключевых словах `async` и `await` в C# и Visual Basic. (Ресурсы, связанные с определенным языком, см. в разделе [См. также](#see-also).) В этой статье описывается использование асинхронного кода в .NET и объясняется базовая асинхронная платформа.
@@ -154,4 +152,3 @@ public async Task<int> CalculateResult(InputData data)
 [Асинхронное программирование на C#](~/docs/csharp/async.md)   
 [Асинхронное программирование на F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
 [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

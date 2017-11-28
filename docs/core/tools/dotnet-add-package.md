@@ -7,12 +7,11 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -29,6 +28,8 @@ ms.lasthandoff: 08/14/2017
 ## <a name="description"></a>Описание
 
 Команда `dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта. После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что пакет совместим со всеми платформами в проекте. Если проверка проходит успешно, в файл проекта добавляется элемент `<PackageReference>` и выполняется команда [dotnet restore](dotnet-restore.md).
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Например, при добавлении `Newtonsoft.Json` в *ToDo.csproj* создаются выходные данные примерно следующего вида:
 
@@ -97,4 +98,3 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 Добавление пакета с помощью определенного источника NuGet:
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
-

@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
+ms.openlocfilehash: 21f8a4f4862cabd21ab9017056f3f71706e8e9a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="developing-libraries-with-cross-platform-tools"></a>Разработка библиотек с помощью кроссплатформенных средств
 
 В этой статье рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки (CLI). CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](libraries-with-vs.md).
@@ -260,6 +258,8 @@ netstandard1.4/
    dotnet build
    ```
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. Убедитесь, что xUnit запущен, выполнив команду `dotnet test`. Если вы решили использовать MSTest, запустите средство запуска консоли MSTest вместо xUnit.
     
 Вот и все! Теперь вы можете протестировать библиотеку для всех платформ с помощью средств командной строки. Теперь, когда все настроено, протестировать библиотеку очень легко:
@@ -342,4 +342,3 @@ $ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ### <a name="structuring-a-solution"></a>Структурирование решения
 
 Еще один важный аспект решений с несколькими проектами — правильное формирование общей структуры. Код можно упорядочить так, как вам удобно. Если каждый проект связан с файлом решения с помощью `dotnet sln add`, вы сможете запускать команды `dotnet restore` и `dotnet build` на уровне проекта.
-

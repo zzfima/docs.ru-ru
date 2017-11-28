@@ -1,39 +1,19 @@
 ---
 title: "Сравнения на равенство (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- object equality [C#]
+helpviewer_keywords: object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Сравнения на равенство (Руководство по программированию на C#)
 Иногда возникает необходимость проверить равенство двух значений. В некоторых случаях проверяется *равенство значений*, которое также называют их *эквивалентностью*, что означает, что содержащиеся в двух переменных значения равны. В других случаях требуется определить, ссылаются ли две переменные на один и тот же объект в памяти. Такой тип равенства называется *равенством ссылок* или *идентичностью*. В этом разделе описаны эти два типа равенства и приведены ссылки на разделы, содержащие дополнительные сведения.  
@@ -41,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="reference-equality"></a>Равенство ссылок  
  Равенство ссылок означает, что два объекта ссылаются на один и тот же объект. Это может произойти при простом присваивании, как показано в следующем примере.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  В этом фрагменте кода создается два объекта, но после инструкции присваивания они оба ссылаются на один и тот же объект. Поэтому между ними устанавливается равенство ссылок. Метод <xref:System.Object.ReferenceEquals%2A> позволяет определить, ссылаются ли две ссылки на один и тот же объект.  
   
@@ -66,7 +46,7 @@ if( b == a)
  Однако общего требования о том, что равенство должно определяться на основе всех полей в типе, нет. Оно может определяться и на основе части полей. При сравнении значений типов сторонних разработчиков необходимо понимать, как именно реализовано равенство для таких типов. Для получения дополнительных сведений об определении равенства значений в собственных классах и структурах см. [Практическое руководство. Определение равенства значений для типа](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Равенство значений с плавающей запятой  
- Проверка равенства значений с плавающей запятой ([double](../../../csharp/language-reference/keywords/double.md) и [float](../../../csharp/language-reference/keywords/float.md)) представляет проблему из-за неточности арифметических операций с плавающей запятой на двоичных компьютерах. Дополнительные сведения можно найти в заметках в разделе <xref:System.Double?displayProperty=fullName>.  
+ Проверка равенства значений с плавающей запятой ([double](../../../csharp/language-reference/keywords/double.md) и [float](../../../csharp/language-reference/keywords/float.md)) представляет проблему из-за неточности арифметических операций с плавающей запятой на двоичных компьютерах. Дополнительные сведения можно найти в заметках в разделе <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Связанные разделы  
   
@@ -79,4 +59,3 @@ if( b == a)
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-

@@ -1,23 +1,19 @@
 ---
 title: "Члены, воплощающие выражения (руководство по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d12f9f3af9a57e142311f6d1676b5f97e8b60d19
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Члены, воплощающие выражения (руководство по программированию на C#)
 Определения тела выражений позволяют предоставлять реализацию члена самым быстрым и удобочитаемым способом. Определение тела выражения можно использовать, когда логика для любого поддерживаемого члена, такого как метод или свойство, состоит из одного выражения. Определение тела выражения имеет следующий общий синтаксис:
@@ -45,7 +41,7 @@ member => expression;
 
 В следующем примере определяется класс `Person`, который переопределяет метод <xref:System.Object.ToString%2A> с помощью определения тела выражения. Он также определяет метод `Show`, который отображает имя в консоли. Обратите внимание, что ключевое слово `return` не используется в определении тела выражения `ToString`.
 
-[!code-cs[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
+[!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
 Дополнительные сведения см. в разделе [Методы (руководство по программированию на C#)](../classes-and-structs/methods.md).
  
@@ -55,7 +51,7 @@ member => expression;
 
 В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*. Определение тела выражения присваивает аргумент свойству `Name`.
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 Дополнительные сведения см. в разделе [Конструкторы (руководство по программированию на C#)](../classes-and-structs/constructors.md).
 
@@ -65,7 +61,7 @@ member => expression;
 
 В следующем примере определяется метод завершения, который использует определение тела выражения для указания того, что был вызван метод завершения.
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+[!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
 
 Дополнительные сведения см. в разделе [Методы завершения (руководство по программированию на C#)](../classes-and-structs/destructors.md).
 
@@ -75,7 +71,7 @@ member => expression;
 
 В следующем примере определяется свойство `Location.Name`, метод доступа Property Get которого возвращает значение закрытого поля `locationName`, поддерживающего свойство. 
 
-[!code-cs[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 Свойства только для чтения, использующие определение тела выражения, можно реализовать без явного оператора `set`. Синтаксис выглядит следующим образом.
 
@@ -85,7 +81,7 @@ PropertyName => returnValue;
 
 В следующем примере определяется класс `Location`, свойство `Name` только для чтения которого реализуется как определение тела выражения, возвращающее значение закрытого поля `locationName`.
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
+[!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
 
 Дополнительные сведения см. в разделе [Свойства (руководство по программированию на C#)](../classes-and-structs/properties.md).
 
@@ -95,7 +91,7 @@ PropertyName => returnValue;
 
 В следующем примере определяется свойство `Location.Name`, метод доступа Property Set которого присваивает входной аргумент закрытому полю `locationName`, поддерживающему свойство.
 
-[!code-cs[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+[!code-csharp[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 Дополнительные сведения см. в разделе [Свойства (руководство по программированию на C#)](../classes-and-structs/properties.md).
 
@@ -105,8 +101,7 @@ PropertyName => returnValue;
 
 В следующем примере определяется класс с именем `Sports`, включающий внутренний массив <xref:System.String>, который содержит названия нескольких видов спорта. Методы доступа get и set индексатора реализуются как определения тела выражений.
 
-[!code-cs[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
+[!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
 
 Дополнительные сведения см. в разделе [Индексаторы (руководство по программированию на C#)](../indexers/index.md).
-
 

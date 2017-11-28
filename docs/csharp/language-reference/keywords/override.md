@@ -1,41 +1,22 @@
 ---
 title: "override (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - override
 - override_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- override keyword [C#]
+helpviewer_keywords: override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 807fae02ca4e6f616c77877cc8815405baaf8428
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f5a87eaa5894b61187c379c92ad785336aa79b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="override-c-reference"></a>override (Справочник по C#)
 Модификатор `override` требуется для расширения или изменения абстрактной или виртуальной реализации унаследованного метода, свойства, индексатора или события.  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>Пример  
  В этом примере класс `Square` должен предоставить переопределенную реализацию `Area`, так как `Area` является унаследованным от абстрактного класса `ShapesClass`.  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  Метод `override` предоставляет новую реализацию члена, унаследованного от базового класса. Метод, переопределенный объявлением `override`, называется переопределенным базовым методом. Переопределенный базовый метод должен иметь ту же сигнатуру, что и метод `override`. Дополнительные сведения о наследовании см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -60,19 +41,18 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>Пример  
  В этом примере определяется базовый класс с именем `Employee` и производный класс с именем `SalesEmployee`. Класс `SalesEmployee` включает дополнительное свойство `salesbonus`, для использования которого переопределяется метод `CalculatePay`.  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
- [abstract](../../../csharp/language-reference/keywords/abstract.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)
-

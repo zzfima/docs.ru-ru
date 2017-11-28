@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>Интерполяция строк в C# #
 
 Интерполяция строк — это процесс замены заполнителей в строке значениями строковой переменной. До версии C# 6 для этого приходилось применять метод `System.String.Format`. Он работает нормально, но использует только нумерованные заполнители, что порой затрудняет восприятие синтаксических конструкций и усложняет их.
@@ -46,23 +44,27 @@ dotnet new console
 
 Эта команда создает скелет проекта .NET Core: файл проекта *interpolated.csproj* и файл исходного кода *Program.cs*. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Чтобы выполнить программу, используйте `dotnet run`. Она выведет в консоль сообщение "Hello, World".
+
+
 
 ## <a name="intro-to-string-interpolation"></a>Знакомство с интерполяцией строк
 
 При использовании `System.String.Format` в строку включаются специальные местозаполнители, которые заменяются параметрами, переданными вслед за строкой. Например:
 
-[!code-csharp[Пример использования метода String.Format](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 Этот код выводит строку "My name is Matt Groves".
 
 В C# 6 вы теперь можете обойтись без `String.Format`. Определите интерполируемую строку, указав перед ней символ `$`, а затем просто используйте переменные прямо в этой строке. Например:
 
-[!code-csharp[Пример интерполяции](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 Можно использовать не только переменные. В фигурных скобках можно указать любое допустимое выражение. Например:
 
-[!code-csharp[Пример выражения в интерполяции](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 Этот пример кода выведет данные:
 
@@ -80,7 +82,7 @@ This is line number 5
 
 Например, можно добавить отбивку и форматирование чисел:
 
-[!code-csharp[Пример интерполяции с форматированием](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 Приведенный выше пример выведет примерно следующее:
 
@@ -118,9 +120,8 @@ Console.WriteLine(localizeMe);
 
 Например:
 
-[!code-csharp[Пример интерполяции с интернационализацией](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Заключение 
 
 В этом руководстве вы узнали, как использовать функции интерполяции строк в C# 6. По сути это упрощенная запись обычной инструкции `String.Format`, допускающая несколько более сложных вариантов использования.
-

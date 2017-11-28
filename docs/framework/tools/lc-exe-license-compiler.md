@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Lc.exe
 - .licx file
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: e0175b14f556a68f9c289d84d79ce10a6982ffb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f65212d9f62d090cd0c16e15b6678e21b00f235
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (компилятор лицензий)
 Компилятор лицензий считывает текстовые файлы, содержащие сведения о лицензиях, и создает двоичный файл, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.  
@@ -110,7 +103,6 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
+ [Инструменты](../../../docs/framework/tools/index.md)  
+ [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

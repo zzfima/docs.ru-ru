@@ -1,30 +1,21 @@
 ---
 title: "Синхронизация потоков (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2b51775eac5221ec8c723d89323d1f4f542d2453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df4093d4bf777f904aa8ce376cd164ed822350a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-synchronization-c"></a>Синхронизация потоков (C#)
 В следующих разделах описаны функции и классы, которые можно использовать для синхронизации доступа к ресурсам в многопоточных приложениях.  
@@ -73,7 +64,7 @@ public class TestThreading
   
 -   [Оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md)  
   
--   @System.Threading.Monitor  
+-   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>Мониторы  
  Как и ключевое слово `lock`, мониторы не допускают одновременное выполнение несколькими потоками одних и тех же блоков кода. Метод <xref:System.Threading.Monitor.Enter%2A> позволяет переходить к последующим операторам только одному потоку; все прочие потоки будут заблокированы, пока выполняемый поток не вызовет <xref:System.Threading.Monitor.Exit%2A>. Это аналогично использованию ключевого слова `lock`. Пример:  
@@ -107,7 +98,7 @@ finally
   
  События синхронизации делятся на два типа: <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent>. Отличие только одно: при каждой активации потока <xref:System.Threading.AutoResetEvent> автоматически переходит из состояния с сигналом в состояние без сигнала. <xref:System.Threading.ManualResetEvent>, наоборот, допускает активацию любого количества потоков при переходе в состояние с сигналом и возвращается в состояние без сигнала только при вызове метода <xref:System.Threading.EventWaitHandle.Reset%2A>.  
   
- Для того чтобы потоки ожидали событий, можно вызвать один из методов ожидания, таких как <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> или <xref:System.Threading.WaitHandle.WaitAll%2A>. Метод <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> заставляет поток дожидаться сигнала о единичном событии, метод <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> блокирует поток до получения сигналов об одном или нескольких указанных событиях, а метод <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> блокирует поток до тех пор, пока не будут получены сигналы обо всех указанных событиях. Сигнал о событии подается, когда вызывается его метод <xref:System.Threading.EventWaitHandle.Set%2A>.  
+ Для того чтобы потоки ожидали событий, можно вызвать один из методов ожидания, таких как <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> или <xref:System.Threading.WaitHandle.WaitAll%2A>. Метод <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType> заставляет поток дожидаться сигнала о единичном событии, метод <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> блокирует поток до получения сигналов об одном или нескольких указанных событиях, а метод <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> блокирует поток до тех пор, пока не будут получены сигналы обо всех указанных событиях. Сигнал о событии подается, когда вызывается его метод <xref:System.Threading.EventWaitHandle.Set%2A>.  
   
  В следующем примере поток создается и запускается функцией `Main`. Новый поток ожидает события за счет метода <xref:System.Threading.WaitHandle.WaitOne%2A>. Выполнение потока приостанавливается до получения сигнала от события основным потоком, выполняющим функцию `Main`. После получения сигнала возвращается дополнительный поток. Поскольку в этом случае событие используется для активации только одного потока, можно использовать либо класс <xref:System.Threading.AutoResetEvent>, либо класс <xref:System.Threading.ManualResetEvent>.  
   
@@ -160,27 +151,26 @@ class ThreadingExample
  В многопоточных приложениях не обойтись без синхронизации потоков, однако всегда существует опасность создания `deadlock`, когда несколько потоков ожидают друг друга, и приложение зависает. Взаимоблокировка аналогична ситуации, в которой автомобили останавливаются на перекрестке и каждый водитель ожидает, пока проедет другой. Важно исключить возможность взаимоблокировок путем тщательного планирования. Взаимоблокировки часто можно предвидеть еще до написания кода, построив диаграмму многопотокового приложения.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading.Thread>   
- <xref:System.Threading.WaitHandle.WaitOne%2A>   
- <xref:System.Threading.WaitHandle.WaitAny%2A>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.Thread.Join%2A>   
- <xref:System.Threading.Thread.Start%2A>   
- <xref:System.Threading.Thread.Sleep%2A>   
- <xref:System.Threading.Monitor>   
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.Interlocked>   
- <xref:System.Threading.WaitHandle>   
- <xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [Объекты Mutex](../../../../standard/threading/mutexes.md)   
- @System.Threading.Monitor   
- [Блокируемые операции](../../../../standard/threading/interlocked-operations.md)   
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>  
+ <xref:System.Threading.WaitHandle.WaitAny%2A>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.Thread.Join%2A>  
+ <xref:System.Threading.Thread.Start%2A>  
+ <xref:System.Threading.Thread.Sleep%2A>  
+ <xref:System.Threading.Monitor>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.Monitor>  
+ [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [Оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md)  
+ [Мьютексы](../../../../standard/threading/mutexes.md)  
+ [Блокируемые операции](../../../../standard/threading/interlocked-operations.md)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
  [Синхронизация данных для многопоточности](../../../../standard/threading/synchronizing-data-for-multithreading.md)
-

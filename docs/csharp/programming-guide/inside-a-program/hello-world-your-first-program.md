@@ -1,42 +1,24 @@
 ---
 title: "Hello World – Создаем первую программу (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
-ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Создаем первую программу (Руководство по программированию на C#)
 В следующей процедуре создается версия традиционной программы "Hello World!" в C#. Программа отображает строку `Hello World!`  
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/31/2017
   
 6.  Замените содержимое Program.cs кодом из этого примера.  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  Нажмите клавишу F5, чтобы запустить проект. Откроется окно командной строки, содержащее строку `Hello World!`  
   
@@ -72,11 +54,11 @@ ms.lasthandoff: 07/31/2017
 ## <a name="comments"></a>Комментарии  
  Первая строка содержит комментарий. Символы `//` преобразуют остальную часть строки в комментарий.  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
+ [!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  Вы можете также закомментировать блок текста, заключив его между символами `/*` и `*/`. Эти действия показаны в следующем примере.  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
+ [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Метод Main  
  Консольное приложение C# должно содержать метод `Main`, в котором начинается и заканчивается управление. В методе `Main` создаются объекты и выполняются другие методы.  
@@ -85,19 +67,19 @@ ms.lasthandoff: 07/31/2017
   
 -   Он может возвращать значение `void`.  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   Он также может возвращать целое число.  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   С любым из типов возвращаемых значений он может принимать аргументы.  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      -или-  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы. В отличие от C++, массив не содержит имя исполняемого файла (EXE).  
   
@@ -108,9 +90,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="input-and-output"></a>Ввод и вывод  
  Программы на C#, как правило, используют службы ввода-вывода, предоставляемые библиотекой времени выполнения в .NET Framework. Инструкция `System.Console.WriteLine("Hello World!");` использует метод <xref:System.Console.WriteLine%2A>. Это один из методов вывода класса <xref:System.Console> в библиотеке времени выполнения. Он отображает свой строковый параметр в стандартном потоке вывода, за которым следует новая строка. Существуют и другие методы <xref:System.Console> для разных операций ввода и вывода. Если вы добавите в начало программы директиву `using System;`, классы и методы <xref:System> можно использовать напрямую, не указывая их полные имена. Например, можно вызвать `Console.WriteLine` вместо `System.Console.WriteLine`:  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
+ [!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  Дополнительные сведения о методах ввода-вывода см. в описании <xref:System.IO>.  
   
@@ -150,11 +132,10 @@ ms.lasthandoff: 07/31/2017
  Дополнительные сведения о компиляторе C# и его параметрах см. в разделе [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md).
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)   
- [Строки](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover>Примеры приложений Visual C++](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [Строки](../../../csharp/programming-guide/strings/index.md)  
+ [\<paveover>Примеры приложений на C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: af9bacb4ba64fb4e51b6e05b3636226274c28703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 93447e46eccc6753191a2311400f4597c549ac90
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deploying-net-framework-applications"></a>Развертывание приложений .NET Framework
 Этот раздел документации по платформе .NET Framework содержит общие сведения о развертывании приложений платформы .NET Framework, включая рекомендации по загрузке сборок, разрешению ссылок на сборки и повышению производительности приложения при помощи генерации образа в машинном коде.  
@@ -41,4 +34,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Руководство по разработке](../../../docs/framework/development-guide.md)
-

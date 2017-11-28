@@ -1,44 +1,25 @@
 ---
 title: "Фильтрация вывода My.Application.Log (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
 В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями. Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.  
@@ -162,7 +143,7 @@ ms.lasthandoff: 07/28/2017
 9. Измените значение атрибута `value` снова на "Информация".  
   
     > [!NOTE]
-    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName> он не влияет.  
+    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> и <xref:System.Diagnostics.Debug?displayProperty=nameWithType> он не влияет.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Отдельная фильтрация прослушивателей My.Application.Log  
  В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`. В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала. По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.  
@@ -275,10 +256,9 @@ ms.lasthandoff: 07/28/2017
  Дополнительные сведения об изменении параметров журнала после развертывания см. в разделе [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [Пошаговое руководство. Создание пользовательских прослушивателей журнала](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Переключатели трассировки](../../../../framework/debug-trace-profile/trace-switches.md)   
+ [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [Пошаговое руководство. Создание пользовательских прослушивателей журнала](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Переключатели трассировки](../../../../framework/debug-trace-profile/trace-switches.md)  
  [Запись сведений в журнал из приложения](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

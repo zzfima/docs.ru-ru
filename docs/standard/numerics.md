@@ -17,16 +17,15 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 087c1cc56abf2a00544e22023ce72fae670df369
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>Числовые значения в платформе .NET Framework
 Платформа .NET Framework поддерживает стандартные числовые примитивные типы (целочисленные и с плавающей запятой), а также <xref:System.Numerics.BigInteger> (целочисленный тип, не имеющий теоретических верхних и нижних границ), <xref:System.Numerics.Complex> (тип для представления комплексных чисел), а также набор векторных типов с поддержкой SIMD в пространстве имен <xref:System.Numerics>.  
@@ -38,14 +37,14 @@ ms.lasthandoff: 08/21/2017
   
 |Тип|Со знаком или без|Размер (в байтах)|Минимальное значение|Максимальное значение|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
-|<xref:System.Byte?displayProperty=fullName>|Без знака|1|0|255|  
-|<xref:System.Int16?displayProperty=fullName>|Подписанный|2|–32 768|32 767|  
-|<xref:System.Int32?displayProperty=fullName>|Подписанный|4|–2 147 483 648|2 147 483 647|  
-|<xref:System.Int64?displayProperty=fullName>|Подписанный|8|–9 223 372 036 854 775 808|9 223 372 036 854 775 807|  
-|<xref:System.SByte?displayProperty=fullName>|Подписанный|1|–128|127|  
-|<xref:System.UInt16?displayProperty=fullName>|Без знака|2|0|65 535|  
-|<xref:System.UInt32?displayProperty=fullName>|Без знака|4|0|4 294 967 295|  
-|<xref:System.UInt64?displayProperty=fullName>|Без знака|8|0|18 446 744 073 709 551 615|  
+|<xref:System.Byte?displayProperty=nameWithType>|Без знака|1|0|255|  
+|<xref:System.Int16?displayProperty=nameWithType>|Подписанный|2|–32 768|32 767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Подписанный|4|–2 147 483 648|2 147 483 647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Подписанный|8|–9 223 372 036 854 775 808|9 223 372 036 854 775 807|  
+|<xref:System.SByte?displayProperty=nameWithType>|Подписанный|1|–128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Без знака|2|0|65 535|  
+|<xref:System.UInt32?displayProperty=nameWithType>|Без знака|4|0|4 294 967 295|  
+|<xref:System.UInt64?displayProperty=nameWithType>|Без знака|8|0|18 446 744 073 709 551 615|  
   
  Каждый целочисленный тип поддерживает стандартный набор арифметических операторов, операторов сравнения, равенства, явного и неявного преобразования. Каждый целочисленный тип также имеет методы для выполнения сравнения на равенство и относительного сравнения, преобразования строкового представления числа в данный целочисленный тип и преобразования целого числа в строковое представление. Некоторые дополнительные математические операции, помимо обеспечиваемых стандартными операторами, такие как округление и определение меньшего или большего из двух целых чисел, доступны посредством класса <xref:System.Math>. Вы также можете работать с отдельными битами целочисленного значения с помощью класса <xref:System.BitConverter>.  
   
@@ -56,16 +55,16 @@ ms.lasthandoff: 08/21/2017
   
 |Тип|Размер (в байтах)|Минимум|Максимум|  
 |----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=fullName>|8|–1,79769313486232e308|1,79769313486232e308|  
-|<xref:System.Single?displayProperty=fullName>|4|–3,402823e38|3,402823e38|  
-|<xref:System.Decimal?displayProperty=fullName>|16|–79 228 162 514 264 337 593 543 950 335|79 228 162 514 264 337 593 543 950 335|  
+|<xref:System.Double?displayProperty=nameWithType>|8|–1,79769313486232e308|1,79769313486232e308|  
+|<xref:System.Single?displayProperty=nameWithType>|4|–3,402823e38|3,402823e38|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|–79 228 162 514 264 337 593 543 950 335|79 228 162 514 264 337 593 543 950 335|  
   
- Каждый тип с плавающей запятой поддерживает стандартный набор арифметических операторов, операторов сравнения, равенства, явного и неявного преобразования. Каждый тип также имеет методы для выполнения сравнения на равенство и относительного сравнения, преобразования строкового представления числа с плавающей запятой в данный тип и преобразования числа с плавающей запятой в строковое представление. Некоторые дополнительные математические, алгебраические и тригонометрические операции доступны посредством класса <xref:System.Math>. Вы также можете работать с отдельными битами значений типа <xref:System.Double> и <xref:System.Single> с помощью класса <xref:System.BitConverter>. Структура <xref:System.Decimal?displayProperty=fullName> имеет собственные методы, <xref:System.Decimal.GetBits%2A?displayProperty=fullName> и <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=fullName>, для работы с отдельными битами десятичного значения, а также собственный набор методов для выполнения некоторых дополнительных математических операций.  
+ Каждый тип с плавающей запятой поддерживает стандартный набор арифметических операторов, операторов сравнения, равенства, явного и неявного преобразования. Каждый тип также имеет методы для выполнения сравнения на равенство и относительного сравнения, преобразования строкового представления числа с плавающей запятой в данный тип и преобразования числа с плавающей запятой в строковое представление. Некоторые дополнительные математические, алгебраические и тригонометрические операции доступны посредством класса <xref:System.Math>. Вы также можете работать с отдельными битами значений типа <xref:System.Double> и <xref:System.Single> с помощью класса <xref:System.BitConverter>. Структура <xref:System.Decimal?displayProperty=nameWithType> имеет собственные методы, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> и <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, для работы с отдельными битами десятичного значения, а также собственный набор методов для выполнения некоторых дополнительных математических операций.  
   
- Типы <xref:System.Double> и <xref:System.Single> предназначены для значений, которые по своему характеру являются неточными (например, расстояние между двумя звездами в солнечной системе), и для случаев, когда высокая степень точности и малая погрешность округления не требуются. Тип <xref:System.Decimal?displayProperty=fullName> следует использовать в случаях, когда требуется большая точность и погрешность округления нежелательна.  
+ Типы <xref:System.Double> и <xref:System.Single> предназначены для значений, которые по своему характеру являются неточными (например, расстояние между двумя звездами в солнечной системе), и для случаев, когда высокая степень точности и малая погрешность округления не требуются. Тип <xref:System.Decimal?displayProperty=nameWithType> следует использовать в случаях, когда требуется большая точность и погрешность округления нежелательна.  
   
 ## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=fullName> является неизменяемым типом, представляющим произвольно большое целое число, значение которого теоретически не имеет верхней или нижней границы. Методы типа <xref:System.Numerics.BigInteger> во многом повторяют методы других целочисленных типов.  
+ <xref:System.Numerics.BigInteger?displayProperty=nameWithType> является неизменяемым типом, представляющим произвольно большое целое число, значение которого теоретически не имеет верхней или нижней границы. Методы типа <xref:System.Numerics.BigInteger> во многом повторяют методы других целочисленных типов.  
   
 ## <a name="complex"></a>Complex  
  Тип <xref:System.Numerics.Complex> представляет комплексное число, то есть число, имеющее вещественную и мнимую части. Он поддерживает стандартный набор арифметических операторов, операторов сравнения, равенства, явного и неявного преобразования, а также математические, алгебраические и тригонометрические методы.  
@@ -87,4 +86,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>См. также  
  [.NET Framework Application Essentials](../../docs/standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)
-

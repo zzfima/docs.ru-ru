@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
+ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 47e895274f6d400639878e0bd5c700e04b554ce5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-assembly-file-format"></a>Формат файла сборки .NET
 
 В .NET определяется формат двоичного файла, "сборки", которая используется для полного описания и размещения программ .NET. Сборки используются для самих программ, а также всех зависимых библиотек. Программа .NET может выполняться в виде одной сборки или нескольких, без других необходимых артефактов, помимо соответствующей реализации .NET. Внутренние зависимости, включая API операционной системы, — это отдельный вопрос, они не входят в формат сборки .NET, хотя иногда описываются в этом формате (например, WinRT).
@@ -40,5 +38,4 @@ ms.lasthandoff: 08/21/2017
 
 ## <a name="processing-the-assemblies"></a>Обработка сборок
 
-Можно создавать средства или API для обработки сборок. Сведения о сборке позволяют принимать программные решения во время выполнения, перезаписывать сборки, предоставляя API IntelliSense в редакторе и формируя документацию. <xref:System.Reflection?displayProperty=fullName> и [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) — это хорошие примеры средств, которые часто используются для этой цели.
-
+Можно создавать средства или API для обработки сборок. Сведения о сборке позволяют принимать программные решения во время выполнения, перезаписывать сборки, предоставляя API IntelliSense в редакторе и формируя документацию. <xref:System.Reflection?displayProperty=nameWithType> и [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) — это хорошие примеры средств, которые часто используются для этой цели.

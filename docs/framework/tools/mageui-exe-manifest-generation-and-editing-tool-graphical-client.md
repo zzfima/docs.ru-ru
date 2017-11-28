@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (средство создания и редактирования манифестов, графический клиент)
 Средство MageUI.exe поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, но имеет пользовательский интерфейс Windows. С его помощью можно создавать, редактировать и подписывать манифесты развертывания и приложения. Целевой платформой новых манифестов, созданных с помощью MageUI.exe, является [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Для предыдущих версий .NET Framework следует использовать предыдущие версии MageUI.exe. При добавлении и удалении сборок из манифеста, а также повторной подписи существующих манифестов MageUI.exe не обновляет манифест, чтобы его целевой платформой стала [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Дополнительные сведения см. в разделе [Mage.exe (средство создания и редактирования манифеста)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -207,7 +200,6 @@ ms.lasthandoff: 09/25/2017
 |**Выбрать манифест**|Позволяет выбрать манифест приложения. Остальные поля на этой странице заполняются при выборе манифеста приложения.|  
   
 ## <a name="see-also"></a>См. также  
- [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
- [Пошаговое руководство. Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe (средство создания и редактирования манифеста)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-

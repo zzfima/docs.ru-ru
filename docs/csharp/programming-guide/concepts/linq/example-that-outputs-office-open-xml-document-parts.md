@@ -1,25 +1,21 @@
 ---
 title: "Пример, выводящий части документа в формате Office Open XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 42265df3bdaae7835cfd44346d78b3df212c8dfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e7b2135a0894e1fa5a553552fa128809d740dea2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Пример, выводящий части документа в формате Office Open XML (C#)
 В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.  
@@ -27,7 +23,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>Пример  
  В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.  
+ В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -80,4 +76,3 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
   
 ## <a name="see-also"></a>См. также  
  [Сведения о документах WordprocessingML в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
-

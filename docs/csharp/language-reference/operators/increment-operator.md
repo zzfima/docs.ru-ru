@@ -1,42 +1,22 @@
 ---
 title: "Оператор ++ (справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- ++_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: ++_CSharpKeyword
 helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6deb2f772fefc93020e7eaaed6be35e48b11df7a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f481dbe2437495b109d6d41cd24c8b4bb5b6a5b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>Оператор ++ (справочник по C#)
 Оператор инкремента (`++`) увеличивает операнд на 1. Оператор инкремента может находиться перед своим операндом или после него: `++variable` и `variable++`.  
@@ -49,10 +29,9 @@ ms.lasthandoff: 07/28/2017
  Числовые типы и типы перечислений имеют предварительно определенные операторы инкремента. Определяемые пользователем типы могут перегружать оператор `++` . Операции с целыми типами обычно разрешены и для перечислений.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
+ [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Операторы в C#](../../../csharp/language-reference/operators/index.md)
-

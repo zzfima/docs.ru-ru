@@ -1,48 +1,30 @@
 ---
 title: "Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - RegistryKey.CreateSubKey
 - RegistryKey.SetValue
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, creating
-- registry, adding values
-- registry, adding keys
-- registry keys, setting values
+- registry keys [Visual Basic], creating
+- registry [Visual Basic], adding values
+- registry [Visual Basic], adding keys
+- registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106a98a1b15c37eb2cac05e1a681bf7dfed3543d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
 Метод `CreateSubKey` объекта `My.Computer.Registry` можно использовать для создания раздела реестра.  
@@ -97,9 +79,8 @@ ms.lasthandoff: 07/28/2017
  Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8).  
   
 ## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [Чтение данных из реестра и запись в реестр (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
+ <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
+ [Чтение данных из реестра и запись в реестр](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
  [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8)
-

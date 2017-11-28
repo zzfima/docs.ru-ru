@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
 
 Первый этап процесса переноса — анализ зависимостей сторонних разработчиков.  Необходимо выяснить, есть ли среди них такие, которые не выполняются в .NET Core, и разработать для них план на непредвиденные случаи.
@@ -97,4 +95,3 @@ dotnet5.5
 ## <a name="next-steps"></a>Следующие шаги
 
 Если вы переносите библиотеку, обратитесь к разделу о [переносе библиотек](libraries.md).
-

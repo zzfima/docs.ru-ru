@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
+ms.openlocfilehash: c4c26e2b7b0693ec940958a9b7d2d306001090e7
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da116ce67428e9349e03dea60b35abd52dcffee2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
 
 Аббревиатура LINQ обозначает целый набор технологий, создающих и использующих возможности интеграции запросов непосредственно в язык C#. Традиционно запросы к данным выражаются в виде простых строк без проверки типов при компиляции или поддержки IntelliSense. Кроме того, разработчику приходится изучать различные языки запросов для каждого типа источников данных: баз данных SQL, XML-документов, различных веб-служб и т. д. Технологии LINQ превращают запросы в удобную языковую конструкцию, которая применяется аналогично классам, методам и событиям.
@@ -26,7 +24,7 @@ ms.lasthandoff: 07/28/2017
 
 В следующем примере показан полный пример использования запроса. Полная операция сначала создает источник данных, затем определяет выражение запроса и выполняет этот запрос в инструкции `foreach`.
 
-[!code-cs[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>Описание выражения запроса
 
@@ -58,6 +56,5 @@ ms.lasthandoff: 07/28/2017
 Чтобы глубже разобраться в базовой концепции LINQ изучите [статью о LINQ в C#](linq-in-csharp.md).
 
 Чтобы быстрее приступить к работе с LINQ в C#, переходите к руководству [Working with LINQ](../tutorials/working-with-linq.md) (Работа с LINQ).
-
 
 

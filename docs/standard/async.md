@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-overview"></a>Обзор асинхронной модели
 
 Не так давно ускорение работы приложений обеспечивалось простой покупкой нового ПК или сервера, однако со временем эта тенденция сошла на нет. Более того, она обернулась вспять. Появились мобильные телефоны с процессорами ARM с частотой каждого ядра 1 ГГц, а серверные рабочие нагрузки были перенесены в виртуальные машины. Пользователи по-прежнему хотят иметь быстрый и отзывчивый интерфейс, а деловые пользователи хотят, чтобы их серверы масштабировались с ростом их бизнеса. Переход на мобильные и облачные решения 3 миллиарда подключенных к Интернету пользователей привели к появлению нового набора шаблонов ПО. 
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="whats-next"></a>Что дальше?
 
 Основные понятия и методы асинхронного программирования подробно рассматриваются в статьях [Подробный обзор асинхронного программирования](async-in-depth.md) и [Task-based asynchronous programming](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md) (Асинхронное программирование на основе задач).
-

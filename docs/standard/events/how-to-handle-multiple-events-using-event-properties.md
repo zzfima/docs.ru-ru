@@ -1,34 +1,41 @@
 ---
-title: "Практическое руководство. Обработка нескольких событий с помощью их свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обработка событий [платформа .NET Framework], с несколькими событиями"
-  - "свойства события [платформа .NET Framework]"
-  - "события [платформа .NET Framework], несколько"
-  - "несколько событий [платформа .NET Framework]"
+title: "Практическое руководство. Обработка нескольких событий с помощью их свойств"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- event properties [.NET Framework]
+- multiple events [.NET Framework]
+- event handling [.NET Framework], with multiple events
+- events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c16918e715a93de8fdf164e75ce7be81511b71b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Обработка нескольких событий с помощью их свойств
-Чтобы использовать свойства событий, следует определить свойства событий в классе, который вызывает события, а затем задать делегаты для свойств событий в классах, обрабатывающих события.  Для реализации нескольких свойств событий в классе класс должен хранить и обслуживать внутри себя делегата, определенного для каждого события.  Типичная стратегия заключается в реализации коллекции делегатов, которая индексируется по ключу события.  
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Практическое руководство. Обработка нескольких событий с помощью их свойств
+Чтобы использовать свойства событий, следует определить свойства событий в классе, который вызывает события, а затем задать делегаты для свойств событий в классах, обрабатывающих события. Для реализации нескольких свойств событий в классе класс должен хранить и обслуживать внутри себя делегата, определенного для каждого события. Типичная стратегия заключается в реализации коллекции делегатов, которая индексируется по ключу события.  
   
- Для сохранения делегатов для каждого события можно воспользоваться классом <xref:System.ComponentModel.EventHandlerList> или реализовать собственную коллекцию.  Класс коллекции должен предоставить методы для установки, извлечения делегата обработчика событий и доступа к нему по ключу события.  Например, можно использовать класс <xref:System.Collections.Hashtable> или извлечь пользовательский класс от класса <xref:System.Collections.DictionaryBase>.  Сведения о реализации коллекции делегатов не обязательно предоставлять за пределами класса.  
+ Для сохранения делегатов для каждого события можно воспользоваться классом <xref:System.ComponentModel.EventHandlerList> или реализовать собственную коллекцию. Класс коллекции должен предоставить методы для установки, извлечения делегата обработчика событий и доступа к нему по ключу события. Например, можно использовать класс <xref:System.Collections.Hashtable> или извлечь пользовательский класс от класса <xref:System.Collections.DictionaryBase>. Сведения о реализации коллекции делегатов не обязательно предоставлять за пределами класса.  
   
- Каждое свойство события внутри класса определяет метод доступа add и remove.  Метод доступа add для свойства события добавляет входной экземпляр делегата в коллекцию.  Метод доступа remove для свойства события удаляет входной экземпляр делегата из коллекции.  Методы доступа к свойствам событий используют предопределенный ключ для свойства события, чтобы добавлять экземпляры в коллекцию делегатов и удалять их из нее.  
+ Каждое свойство события внутри класса определяет метод доступа add и remove. Метод доступа add для свойства события добавляет входной экземпляр делегата в коллекцию. Метод доступа remove для свойства события удаляет входной экземпляр делегата из коллекции. Методы доступа к свойствам событий используют предопределенный ключ для свойства события, чтобы добавлять экземпляры в коллекцию делегатов и удалять их из нее.  
   
-### Обработка нескольких событий с помощью их свойств  
+### <a name="to-handle-multiple-events-using-event-properties"></a>Обработка нескольких событий с помощью их свойств  
   
 1.  Определите коллекцию делегатов внутри класса, который вызывает события.  
   
@@ -40,8 +47,8 @@ caps.handback.revision: 15
   
 5.  Используйте открытые свойства событий делегатов обработчика событий добавления и удаления в классах, обрабатывающих эти события.  
   
-## Пример  
- В следующем примере C\# реализуются свойства событий `MouseDown` и `MouseUp` с использованием объекта <xref:System.ComponentModel.EventHandlerList> для хранения делегата каждого события.  Ключевые слова для конструкции свойств событий выделены жирным шрифтом.  
+## <a name="example"></a>Пример  
+ В следующем примере C# реализуются свойства событий `MouseDown` и `MouseUp` с использованием объекта <xref:System.ComponentModel.EventHandlerList> для хранения делегата каждого события. Ключевые слова для конструкции свойств событий выделены жирным шрифтом.  
   
 > [!NOTE]
 >  Свойства события не поддерживаются в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)].  
@@ -50,8 +57,8 @@ caps.handback.revision: 15
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## См. также  
- <xref:System.ComponentModel.EventHandlerList?displayProperty=fullName>   
- [События](../../../docs/standard/events/index.md)   
- [System.Web.UI.Control.Events](frlrfSystemWebUIControlClassEventsTopic)   
- [Практическое руководство. Объявление пользовательских событий для экономии памяти](../Topic/How%20to:%20Declare%20Custom%20Events%20To%20Conserve%20Memory%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
+ [События](../../../docs/standard/events/index.md)  
+ <xref:System.Web.UI.Control.Events%2A>  
+ [Практическое руководство. Объявление пользовательских событий для экономии памяти](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

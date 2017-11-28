@@ -1,44 +1,26 @@
 ---
 title: "Модификаторы (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e2e7e5e3907ac9bb66676e749ddd55a8ac4836c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="modifiers-c-reference"></a>Модификаторы (Справочник по C#)
 Модификаторы служат для изменения объявлений типов и их членов. В этом разделе описаны модификаторы C#.  
   
-|Модификатор|Цель|  
+|Модификатор|Назначение|  
 |--------------|-------------|  
 |[Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)<br /><br /> -   [public](../../../csharp/language-reference/keywords/public.md)<br />-   [private](../../../csharp/language-reference/keywords/private.md)<br />-   [internal](../../../csharp/language-reference/keywords/internal.md)<br />-   [protected](../../../csharp/language-reference/keywords/protected.md)|Задает уровень доступа к типам и их членам.|  
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|Указывает на то, что класс предназначен только для использования в качестве базового класса других классов.|  
@@ -57,7 +39,6 @@ ms.lasthandoff: 07/28/2017
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|Указывает на то, что поле может быть изменено в программе операционной системой, оборудованием, параллельным потоком и т. д.|  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-

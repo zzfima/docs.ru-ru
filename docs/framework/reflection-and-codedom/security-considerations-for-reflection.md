@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 653b91f899da5962132577fba0df6ecfcdfde4ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 Отражение дает возможность получать информацию о типах и членах, а также обращаться к членам (то есть вызывать методы и конструкторы для получения и задания значений свойств, добавления и удаления обработчиков событий и т. д.). Использование отражения для получения информации о типах и членах не ограничено. В любом коде отражение можно использовать для выполнения следующих задач:  
@@ -52,9 +50,9 @@ ms.lasthandoff: 07/28/2017
   
  Например, для кода, выполняемого в изолированном домене приложения, доступ ограничен видами, перечисленными в этом списке, пока домену приложения не будут предоставлены дополнительные разрешения.  
   
- Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] при попытке доступа к членам, которые обычно недоступны, создается запрос набора прав для целевого объекта и разрешения <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>. Код, выполняемый с полным доверием (например, код в приложении, которое запускается из командной строки), может всегда удовлетворять этим разрешениям. (К нему применяются ограничения доступа к членам, критическим с точки зрения безопасности, описанные ниже в данном разделе.)  
+ Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] при попытке доступа к членам, которые обычно недоступны, создается запрос набора прав для целевого объекта и разрешения <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>. Код, выполняемый с полным доверием (например, код в приложении, которое запускается из командной строки), может всегда удовлетворять этим разрешениям. (К нему применяются ограничения доступа к членам, критическим с точки зрения безопасности, описанные ниже в данном разделе.)  
   
- При необходимости изолированный домен приложения может предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>, как описано в разделе [Доступ к обычно недоступным членам](#accessingNormallyInaccessible) далее в этой статье.  
+ При необходимости изолированный домен приложения может предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>, как описано в разделе [Доступ к обычно недоступным членам](#accessingNormallyInaccessible) далее в этой статье.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Доступ к членам, критическим с точки зрения безопасности  
@@ -87,21 +85,21 @@ ms.lasthandoff: 07/28/2017
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>Доступ к обычно недоступным членам  
  Чтобы использовать отражение для вызова членов, которые недоступны в соответствии с правилами доступности среды CLR, коду необходимо предоставить одно из двух разрешений.  
   
--   Чтобы разрешить коду вызывать любой закрытый член, ему нужно предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName>.  
+-   Чтобы разрешить коду вызывать любой закрытый член, ему нужно предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  По умолчанию политика безопасности отказывает в предоставлении этого разрешения коду, полученному из Интернета. Это разрешение ни в коем случае нельзя предоставлять коду, источником которого является Интернет.  
   
--   Чтобы разрешить коду вызывать любой закрытый член, только если набор прав сборки, содержащей вызываемый член, идентичен набору прав сборки, содержащей вызывающий код, или является его подмножеством, коду необходимо предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>.  
+-   Чтобы разрешить коду вызывать любой закрытый член, только если набор прав сборки, содержащей вызываемый член, идентичен набору прав сборки, содержащей вызывающий код, или является его подмножеством, коду необходимо предоставить разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
- Предположим, вы предоставляете домену приложения разрешения на доступ к Интернету плюс разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>, а затем запускаете веб-приложение с двумя сборками, A и B.  
+ Предположим, вы предоставляете домену приложения разрешения на доступ к Интернету плюс разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, а затем запускаете веб-приложение с двумя сборками, A и B.  
   
 -   Сборка A может использовать отражение для доступа к закрытым членам сборки B, так как набор прав сборки B не включает какие-либо разрешения, которые не предоставлены сборке A.  
   
 -   Сборка A не может использовать отражение для доступа к закрытым членам сборок [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], таких как mscorlib.dll, так как сборка mscorlib.dll является полностью доверенной и поэтому обладает разрешениями, которые не были предоставлены сборке A. Когда управление доступом для кода обращается к стеку во время выполнения, выдается исключение <xref:System.MemberAccessException>.  
   
 ## <a name="serialization"></a>Сериализация  
- Что касается сериализации, разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=fullName> предоставляет возможность получать и задавать члены сериализуемых типов независимо от доступности. Это разрешение позволяет коду обнаруживать и изменять закрытое состояние экземпляра. (Помимо наличия соответствующих разрешений тип должен быть [помечен](../../../docs/standard/attributes/applying-attributes.md) как сериализуемый в метаданных.)  
+ Что касается сериализации, разрешение <xref:System.Security.Permissions.SecurityPermission> с флагом <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> предоставляет возможность получать и задавать члены сериализуемых типов независимо от доступности. Это разрешение позволяет коду обнаруживать и изменять закрытое состояние экземпляра. (Помимо наличия соответствующих разрешений тип должен быть [помечен](../../../docs/standard/attributes/applying-attributes.md) как сериализуемый в метаданных.)  
   
 ## <a name="parameters-of-type-methodinfo"></a>Параметры типа MethodInfo  
  Избегайте написания открытых членов, принимающих параметры <xref:System.Reflection.MethodInfo>, особенно для доверенного кода. Такие члены могут оказаться более уязвимыми для вредоносного кода. Например, рассмотрим открытый член в коде с высоким уровнем доверия, принимающий параметр <xref:System.Reflection.MethodInfo>. Предположим, что открытый член косвенно вызывает метод <xref:System.Reflection.MethodBase.Invoke%2A> для предоставленного параметра. Если открытый член не выполняет необходимые проверки разрешений, вызов метода <xref:System.Reflection.MethodBase.Invoke%2A> всегда будет успешным, так как система безопасности определяет, что вызывающий объект является полностью доверенным. Даже если вредоносный код не имеет разрешения на прямой вызов метода, он по-прежнему может сделать это косвенным образом, вызвав открытый член.  
@@ -110,18 +108,17 @@ ms.lasthandoff: 07/28/2017
   
 -   Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] прозрачный код не может использовать отражение для доступа к членам, критическим с точки зрения безопасности.  
   
--   В [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=fullName>. В более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=fullName> требуется для кода, который использует отражение для доступа к закрытым членам. Это разрешение, которое ни в коем случае нельзя предоставлять коду с частичным доверием.  
+-   В [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] появился флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. В более ранних версиях [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] флаг <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> требуется для кода, который использует отражение для доступа к закрытым членам. Это разрешение, которое ни в коем случае нельзя предоставлять коду с частичным доверием.  
   
--   Начиная с версии [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=fullName>.  
+-   Начиная с версии [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>   
- <xref:System.Security.Permissions.ReflectionPermission>   
- <xref:System.Security.Permissions.SecurityPermission>   
- [Изменения системы безопасности](../../../docs/framework/security/security-changes.md)   
- [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)   
- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
- [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
- [Применение атрибутов](../../../docs/standard/attributes/applying-attributes.md)   
+ <xref:System.Security.Permissions.ReflectionPermissionFlag>  
+ <xref:System.Security.Permissions.ReflectionPermission>  
+ <xref:System.Security.Permissions.SecurityPermission>  
+ [Изменения системы безопасности](../../../docs/framework/security/security-changes.md)  
+ [Управление доступом для кода](../../../docs/framework/misc/code-access-security.md)  
+ [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
+ [Применение атрибутов](../../../docs/standard/attributes/applying-attributes.md)  
  [Доступ к пользовательским атрибутам](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
-

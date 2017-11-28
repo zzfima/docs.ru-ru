@@ -16,19 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Типы коллекций Hashtable и Dictionary
-Класс <xref:System.Collections.Hashtable?displayProperty=fullName> и универсальные классы <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=fullName>. Универсальный класс <xref:System.Collections.Generic.Dictionary%602> также реализует универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>. Таким образом, каждый элемент в этих коллекциях является парой "ключ-значение".  
+Класс <xref:System.Collections.Hashtable?displayProperty=nameWithType> и универсальные классы <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Универсальный класс <xref:System.Collections.Generic.Dictionary%602> также реализует универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>. Таким образом, каждый элемент в этих коллекциях является парой "ключ-значение".  
   
  Объект <xref:System.Collections.Hashtable> состоит из контейнеров, содержащих элементы коллекции. Контейнер — это виртуальная подгруппа элементов внутри объекта <xref:System.Collections.Hashtable>, которая обеспечивает более простой и быстрый поиск и извлечение, чем в большинстве коллекций. Каждый контейнер связан с хэш-кодом, который создается с помощью хэш-функции и основан на ключе элемента.  
   
@@ -45,11 +44,10 @@ ms.lasthandoff: 09/06/2017
  Классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602> имеют ту же функциональность, что и класс <xref:System.Collections.Hashtable>. Объект <xref:System.Collections.Generic.Dictionary%602> конкретного типа (отличного от <xref:System.Object>) обеспечивает лучшую производительность, чем <xref:System.Collections.Hashtable> для типов значений. Это происходит потому, что элементы <xref:System.Collections.Hashtable> относятся к типу <xref:System.Object>, поэтому при сохранении или извлечении типа значения происходит упаковка или распаковка. Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> следует использовать в случае, когда к коллекции могут обращаться несколько потоков одновременно.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
  [Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)
-

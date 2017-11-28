@@ -1,40 +1,19 @@
 ---
 title: Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.assetid: 5cc578fe-d9e5-4015-937d-b34b83207072
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
-ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-guide"></a>Руководство по Visual Basic
 
@@ -42,10 +21,10 @@ Visual Basic предназначен для эффективного созда
   
  Современное поколение Visual Basic поддерживает традиции, предоставляя возможность легко и быстро создавать приложения на основе платформы .NET Framework.  
   
- Если у вас нет Visual Basic, вы можете получить версию Visual Studio с бесплатным Visual Basic на сайте [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs) .  
+ Если у вас нет Visual Basic, вы можете получить версию Visual Studio с бесплатным Visual Basic на сайте [Visual Studio](https://www.visualstudio.com/products/downloads) .  
   
 ## <a name="in-this-section"></a>Содержание  
- [Начало работы](../visual-basic/getting-started/index.md)   
+ [Начало работы](../visual-basic/getting-started/index.md)  
  Помогает приступить к работе и содержит список новых возможностей и возможностей, доступных в различных выпусках продукта.  
    
  [Основные понятия программирования](../visual-basic/programming-guide/concepts/index.md) Основные понятия языка Visual Basic, которые наиболее важны для программистов.
@@ -77,4 +56,3 @@ Visual Basic предназначен для эффективного созда
   
  [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
-

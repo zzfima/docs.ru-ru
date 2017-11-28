@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
-ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Использование библиотеки классов для .NET Core в Visual Studio 2017
 
 Итак, вы создали библиотеку классов, проделав шаги, описанные в статье [Создание библиотеки классов на C# с помощью .NET Core в Visual Studio 2017](./library-with-visual-studio.md) или [Создание библиотеки классов на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md), протестировали ее, выполнив шаги в статье [Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017](testing-library-with-visual-studio.md), а затем создали версию выпуска этой библиотеки. Теперь пора предоставить ее для использования вызывающим объектам. Для этого существуют два способа:
@@ -104,4 +105,3 @@ ms.lasthandoff: 09/08/2017
    > Если каталог, содержащий *dotnet.exe*, не находится в системном пути, найдите расположение этого файла, введя `where dotnet.exe` в окне консоли.
 
 Дополнительные сведения о создании пакетов NuGet см. в статье [How to Create a NuGet Package with Cross Platform Tools](../../core/deploying/creating-nuget-packages.md) (Создание пакета NuGet с помощью кроссплатформенных средств).
-

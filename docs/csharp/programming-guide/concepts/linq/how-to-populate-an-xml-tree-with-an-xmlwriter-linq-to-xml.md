@@ -1,30 +1,21 @@
 ---
 title: "Практическое руководство. Заполнение дерева XML с помощью XmlWriter (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2df0626d0376973aeaa09876c6737c93dd671da4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9d74e6bd3d8454f5ed37fa8d190beb0c44399fa7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Практическое руководство. Заполнение дерева XML с помощью XmlWriter (LINQ to XML) (C#)
 Одним из вариантов заполнения XML-дерева является использование <xref:System.Xml.Linq.XContainer.CreateWriter%2A> для создания объекта <xref:System.Xml.XmlWriter>, а затем запись в объект <xref:System.Xml.XmlWriter>. XML-дерево заполняется всеми узлами, которые записаны в объект <xref:System.Xml.XmlWriter>.  
@@ -80,8 +71,7 @@ Console.WriteLine(newTree);
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>   
- <xref:System.Xml.XmlWriter>   
- <xref:System.Xml.Xsl.XslCompiledTransform>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
+ <xref:System.Xml.XmlWriter>  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
  [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-

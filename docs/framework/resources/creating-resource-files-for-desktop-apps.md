@@ -5,26 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - resource files, .resources files
 - .resources files
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Создание файлов ресурсов для приложений для настольных систем
 Ресурсы, такие как строки, изображения или данные объектов, можно включать в файлы ресурсов, чтобы сделать их легко доступными для приложения. В платформе .NET Framework предлагается пять способов создания файлов ресурсов.  
@@ -65,7 +66,7 @@ name2=value2
   
  Форматы TXT- и RESTEXT-файлов ресурсов идентичны. Расширение файла RESTEX служит для того, чтобы текстовые файлы сразу опознавались как файлы ресурсов на основе текста.  
   
- Строковые ресурсы представляются в виде пар *имя/значение*, где *имя* — строка, определяющая ресурс, а *значение* — строка ресурса, которая возвращается при передаче *имени* методу извлечения ресурсов, например, <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>. *Имя* и *значение* должны быть разделены знаком равенства (=). Пример:  
+ Строковые ресурсы представляются в виде пар *имя/значение*, где *имя* — строка, определяющая ресурс, а *значение* — строка ресурса, которая возвращается при передаче *имени* методу извлечения ресурсов, например, <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *Имя* и *значение* должны быть разделены знаком равенства (=). Пример:  
   
 ```  
 FileMenuName=File  
@@ -77,7 +78,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  Не следует использовать файлы ресурсов для хранения паролей, конфиденциальной информации или личных данных.  
   
- В текстовых файлах допускаются пустые строки (то есть, ресурсы, значение которых равно <xref:System.String.Empty?displayProperty=fullName>). Пример:  
+ В текстовых файлах допускаются пустые строки (то есть, ресурсы, значение которых равно <xref:System.String.Empty?displayProperty=nameWithType>). Пример:  
   
 ```  
 EmptyString=  
@@ -123,7 +124,8 @@ greeting=Hello, {0}!
   
  В следующем примере показан исходный код для консольного приложения, которое получает сообщения из RESOURCES-файла и выводит их на экран.  
   
- [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)] [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
+ [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)]
+ [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
   
  Если вы используете Visual Basic и файл с исходным кодом называется Greeting.vb, используйте следующую команду для создания исполняемого файла, содержащего внедренный RESOURCES-файл:  
   
@@ -174,20 +176,21 @@ greeting=Hello, {0}!
   
 <a name="ResourcesFiles"></a>   
 ## <a name="resources-in-resources-files"></a>Ресурсы в RESOURCES-файлах  
- Для программного создания двоичного файла ресурсов (RESOURCES-файла) непосредственно из кода можно использовать класс <xref:System.Resources.ResourceWriter?displayProperty=fullName>. Для создания RESOURCES-файла из текстового файла или RESX-файла можно также использовать [генератор файлов ресурсов (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Помимо строковых данных, RESOURCES-файл может содержать двоичные данные (массивы байтов) и данные объектов. Для программного создания RESOURCES-файла необходимо выполнить следующие действия.  
+ Для программного создания двоичного файла ресурсов (RESOURCES-файла) непосредственно из кода можно использовать класс <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>. Для создания RESOURCES-файла из текстового файла или RESX-файла можно также использовать [генератор файлов ресурсов (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Помимо строковых данных, RESOURCES-файл может содержать двоичные данные (массивы байтов) и данные объектов. Для программного создания RESOURCES-файла необходимо выполнить следующие действия.  
   
 1.  Создайте объект <xref:System.Resources.ResourceWriter> с уникальным именем файла. Это можно сделать, указав имя файла или файловый поток для конструктора класса <xref:System.Resources.ResourceWriter>.  
   
-2.  Вызовите одну из перегрузок метода <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=fullName> для каждого именованного ресурса, который требуется добавить в файл. Ресурсом может быть строка, объект или коллекция двоичных данных (массив байтов).  
+2.  Вызовите одну из перегрузок метода <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType> для каждого именованного ресурса, который требуется добавить в файл. Ресурсом может быть строка, объект или коллекция двоичных данных (массив байтов).  
   
-3.  Вызовете метод <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=fullName>, чтобы записать ресурсы в файл и закрыть объект <xref:System.Resources.ResourceWriter>.  
+3.  Вызовете метод <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=nameWithType>, чтобы записать ресурсы в файл и закрыть объект <xref:System.Resources.ResourceWriter>.  
   
 > [!NOTE]
 >  Не следует использовать файлы ресурсов для хранения паролей, конфиденциальной информации или личных данных.  
   
  В следующем примере программным способом создается RESOURCES-файл с именем CarResources.resources, в котором хранятся шесть строк, значок и два объекта, определяемые приложением (два объекта `Automobile`). Обратите внимание, что класс `Automobile`, определенный и созданный в этом примере, отмечен атрибутом <xref:System.SerializableAttribute>, который позволяет ему сохраняться модулем форматирования при двоичной сериализации.  
   
- [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)] [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
+ [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
   
  После создания RESOURCES-файла его можно внедрить в исполняемый файл среды выполнения или библиотеку, используя параметр `/resource` компилятора языка, или во вспомогательную сборку с помощью [компоновщик сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -200,7 +203,6 @@ greeting=Hello, {0}!
  Во время компиляции среда Visual Studio сначала преобразует RESX-файлы проекта в двоичные файлы ресурсов (RESOURCES-файлы) и сохраняет их в подкаталоге каталога obj проекта. Visual Studio внедряет любые файлы ресурсов, не содержащие локализованные ресурсы, в основную сборку, созданную проектом. Если в каких-либо файлах ресурсов есть локализованные ресурсы, Visual Studio внедряет их в отдельные вспомогательные сборки для каждого локализованного языка и региональных параметров. Затем Visual Studio сохраняет каждую вспомогательную сборку в каталоге, имя которого соответствует локализованному языку и региональным параметрам. Например, локализованные ресурсы английского языка (США) сохраняются во вспомогательной сборке в подкаталоге en-US.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Resources>   
- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)   
+ <xref:System.Resources>  
+ [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)  
  [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-manifest"></a>Манифест сборки
 Любая сборка, статическая или динамическая, содержит коллекцию данных с описанием того, как ее элементы связаны друг с другом. Эти метаданные содержатся в манифесте сборки. Манифест сборки содержит все метаданные, необходимые для задания требований сборки к версиям и удостоверения безопасности, а также все метаданные, необходимые для определения области действия сборки и разрешения ссылок на ресурсы и классы. Манифест сборки может храниться в PE-файле (EXE или DLL) с кодом MSIL или же в отдельном PE-файле, содержащем только данные манифеста.  
@@ -65,8 +63,7 @@ ms.lasthandoff: 07/28/2017
  С помощью задания атрибутов сборки в коде можно добавить или изменить некоторые данные в манифесте сборки. Можно изменить данные о версии и информационные атрибуты, включая сведения о товарном знаке, авторском праве, продукте, компании и информационной версии. Полный список атрибутов сборки см. в разделе [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое сборок](../../../docs/framework/app-domains/assembly-contents.md)   
- [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ [Содержимое сборок](../../../docs/framework/app-domains/assembly-contents.md)  
+ [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

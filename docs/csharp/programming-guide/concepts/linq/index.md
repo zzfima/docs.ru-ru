@@ -5,28 +5,18 @@ ms.date: 02-02-2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 40567576716b5ae665f176677fc877db38370a9c
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e81eb0717dc60f6b4a9df26eedbbe8a3d2ff1ccd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
 
 Аббревиатура LINQ обозначает целый набор технологий, создающих и использующих возможности интеграции запросов непосредственно в язык C#. Традиционно запросы к данным выражаются в виде простых строк без проверки типов при компиляции или поддержки IntelliSense. Кроме того, разработчику приходится изучать различные языки запросов для каждого типа источников данных: баз данных SQL, XML-документов, различных веб-служб и т. д. Технологии LINQ превращают запросы в удобную языковую конструкцию, которая применяется аналогично классам, методам и событиям.
@@ -35,7 +25,7 @@ ms.lasthandoff: 07/28/2017
 
 В следующем примере показан полный пример использования запроса. Полная операция сначала создает источник данных, затем определяет выражение запроса и выполняет этот запрос в инструкции `foreach`.
 
-[!code-cs[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](../../../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>Описание выражения запроса
 
@@ -53,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных предложений выражения для запросов и должны выражаться как вызовы методов. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
   
--   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражения. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
+-   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
@@ -67,7 +57,6 @@ ms.lasthandoff: 07/28/2017
 Чтобы глубже разобраться в базовой концепции LINQ изучите [статью о LINQ в C#](../../../linq/linq-in-csharp.md).
 
 Чтобы быстрее приступить к работе с LINQ в C#, переходите к руководству [Working with LINQ](../../../tutorials/working-with-linq.md) (Работа с LINQ).
-
 
 
 

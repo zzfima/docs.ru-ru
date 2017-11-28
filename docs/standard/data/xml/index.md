@@ -8,22 +8,16 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
 Платформа .NET Framework имеет всеобъемлющий и интегрированный набор классов, с помощью которых можно легко создавать приложения, использующие XML. Классы из следующих пространств имен поддерживают синтаксический анализ и запись XML-кода, изменение XML-данных в памяти, проверку данных и преобразование XSLT.  
@@ -42,13 +36,13 @@ ms.lasthandoff: 09/05/2017
   
  Классы из этих пространств имен поддерживают рекомендации W3C. Пример:  
   
--   Класс <xref:System.Xml.XmlDocument?displayProperty=fullName> реализует рекомендации модели W3C [DOM базового уровня 1](http://www.w3.org/TR/REC-DOM-Level-1/) и [DOM базового уровня 2](http://www.w3.org/TR/DOM-Level-2-Core/).  
+-   Класс <xref:System.Xml.XmlDocument?displayProperty=nameWithType> реализует рекомендации модели W3C [DOM базового уровня 1](http://www.w3.org/TR/REC-DOM-Level-1/) и [DOM базового уровня 2](http://www.w3.org/TR/DOM-Level-2-Core/).  
   
--   Классы <xref:System.Xml.XmlReader?displayProperty=fullName> и <xref:System.Xml.XmlWriter?displayProperty=fullName> поддерживают рекомендации [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) и [Пространства имен в XML](http://www.w3.org/TR/REC-xml-names/).  
+-   Классы <xref:System.Xml.XmlReader?displayProperty=nameWithType> и <xref:System.Xml.XmlWriter?displayProperty=nameWithType> поддерживают рекомендации [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) и [Пространства имен в XML](http://www.w3.org/TR/REC-xml-names/).  
   
--   Схемы из класса <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> поддерживают рекомендации W3C [Схема XML. Часть 1. Структуры](http://www.w3.org/TR/xmlschema-1/) и [Схема XML. Часть 2. Типы данных](http://www.w3.org/TR/xmlschema-2/).  
+-   Схемы из класса <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> поддерживают рекомендации W3C [Схема XML. Часть 1. Структуры](http://www.w3.org/TR/xmlschema-1/) и [Схема XML. Часть 2. Типы данных](http://www.w3.org/TR/xmlschema-2/).  
   
--   Классы в пространстве имен <xref:System.Xml.Xsl?displayProperty=fullName> поддерживают преобразования XSLT, соответствующие рекомендациям [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
+-   Классы в пространстве имен <xref:System.Xml.Xsl?displayProperty=nameWithType> поддерживают преобразования XSLT, соответствующие рекомендациям [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
   
  Классы XML в платформе .NET Framework предоставляют следующие преимущества.  
   
@@ -101,4 +95,3 @@ ms.lasthandoff: 09/05/2017
   
  [Центр разработчиков XML](http://go.microsoft.com/fwlink/?linkid=42458)  
  Предоставляет дополнительные технические сведения, загрузки, группы новостей и другие ресурсы для разработчиков XML.
-

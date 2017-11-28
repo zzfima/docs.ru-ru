@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f5aa4b8fa5422ae126a6027c5fe3358925873782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-assemblies"></a>Создание сборок
 Можно создать однофайловую или многофайловую сборку с помощью интегрированной среды разработки IDE, такой как [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], или с помощью компиляторов и средств, предоставляемых [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Простейшая сборка представляет собой один файл, имеющий простое имя и загружаемый в единственный домен приложения. На эту сборку нельзя ссылаться из других сборок, находящихся вне папки приложения; кроме того, к ней неприменим механизм проверки версий. Для удаления приложения, состоящего из сборки, достаточно просто удалить папку, в которой оно располагается. Для большинства разработчиков сборки с такими возможностями достаточно для развертывания приложения.  
@@ -56,10 +54,9 @@ ms.lasthandoff: 07/28/2017
  Необходимо обратить особое внимание при предоставлении доступа к сборкам среды CLR из неуправляемых COM-приложений. Дополнительные сведения о работе с неуправляемым кодом содержатся в разделе [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).  
   
 ## <a name="see-also"></a>См. также  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Практическое руководство. Построение однофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
- [Практическое руководство. Создание многофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [Практическое руководство. Построение однофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+ [Практическое руководство. Создание многофайловой сборки](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Многофайловые сборки](../../../docs/framework/app-domains/multifile-assemblies.md)
-

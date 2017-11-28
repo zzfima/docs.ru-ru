@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
 ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
 В состав [пакета SDK для .NET Core](https://www.microsoft.com/net/download/core) входит множество готовых шаблонов, предназначенных для использования с [командой `dotnet new`](dotnet-new.md). Начиная с версии .NET Core 2.0, можно создавать собственные шаблоны для проектов любого типа, например приложений, служб, средств или библиотек классов. Можно также создать шаблон, формирующий один или несколько отдельных файлов, например файл конфигурации.
@@ -164,4 +162,3 @@ dotnet new <TEMPLATE>
 [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)  
 [Создание собственных шаблонов для команды dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 [Схема *template.json* в хранилище схем JSON](http://json.schemastore.org/template)  
-

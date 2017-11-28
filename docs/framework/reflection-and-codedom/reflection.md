@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +28,18 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf8d583b3e65c80f2c0eef1f6b3e32befe00c3fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>Отражение в .NET Framework
-Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=fullName> позволяют получить информацию о загруженных [сборках](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [интерфейсы](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) и [типы значений](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.  
+Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [интерфейсы](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5) и [типы значений](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.  
   
  Загрузчик [среды CLR](../../../docs/standard/clr.md) управляет [доменами приложений](../../../docs/framework/app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
   
@@ -94,10 +92,9 @@ ms.lasthandoff: 07/28/2017
 |[Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Объясняется, как создавать динамические сборки и динамические методы.|  
   
 ## <a name="reference"></a>Ссылка  
- <xref:System.Type?displayProperty=fullName>  
+ <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
-

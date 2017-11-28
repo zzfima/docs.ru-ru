@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
 При разработке платформы .NET Core учитывались возможности тестирования, поэтому создавать модульные тесты для приложений стало еще проще. В этой статье вкратце рассматриваются модульные тесты (и то, чем они отличаются от других типов тестов). В связанных ресурсах демонстрируется, как добавить тестовый проект в решение и как затем выполнять модульные тесты с помощью командной строки или Visual Studio.
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/14/2017
 * Если вы используете Visual Studio, см. сведения о [Live Unit Testing в .NET Core](/visualstudio/test/live-unit-testing).
 * Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в руководстве по [выполнению выборочных модульных тестов](selective-unit-tests.md) и [включению и исключению тестов с помощью Visual Studio](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods).
 * Команда разработчиков XUnit разработала учебник, в котором показано, как [использовать xUnit с .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-

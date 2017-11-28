@@ -1,41 +1,23 @@
 ---
 title: "Пошаговые руководства для Visual Basic"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, walkthroughs
 - examples [Visual Basic]
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b4e9eba6d086d0094c8368d7c3d67c676fe0bd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -105,4 +87,3 @@ ms.lasthandoff: 07/28/2017
   
  [Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  В этом пошаговом руководстве описывается разработка типа "Сначала тест", при которой разработчик сначала пишет модульные тесты, а затем исходный код для их успешного выполнения.
-

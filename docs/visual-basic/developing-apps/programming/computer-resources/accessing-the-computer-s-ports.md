@@ -1,42 +1,24 @@
 ---
 title: "Доступ к портам компьютера (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - serial ports
-- My.Computer.Ports object, tasks
+- My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e71e70734de24dab62f7fbad4359e3040d1cba51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: db4fdbea07000ab92d5329f53d68c61db9d0547d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
 Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.  
@@ -65,9 +47,8 @@ ms.lasthandoff: 07/28/2017
  Описание свойства `SerialPortNames`, которое получает коллекцию имен последовательных портов на компьютере.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Описывает метод `OpenSerialPort`, который создает и открывает объект <xref:System.IO.Ports.SerialPort?displayProperty=fullName>.  
+ Описывает метод `OpenSerialPort`, который создает и открывает объект <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  <xref:System.IO.Ports.SerialPort>  
  Описывает класс <xref:System.IO.Ports.SerialPort> платформы .NET Framework.
-

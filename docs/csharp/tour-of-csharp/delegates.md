@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: bb304b2e5c762a44aab931b5e8f7fe9c99805eba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates"></a>Делегаты
 
 ***Тип delegate*** представляет ссылки на методы с конкретным списком параметров и типом возвращаемого значения. Делегаты позволяют использовать методы как сущности, сохраняя их в переменные и передавая в качестве параметров. Принцип работы делегатов близок к указателям функций из некоторых языков, но в отличие от указателей функций делегаты являются объектно-ориентированными и строго типизированными.
@@ -39,4 +37,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [Назад](enums.md)
 [Вперед](attributes.md)
-

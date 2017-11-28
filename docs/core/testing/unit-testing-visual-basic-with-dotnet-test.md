@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.topic: article
+dev_langs: vb
 ms.prod: .net-core
+ms.openlocfilehash: 3aa6e11ae14eecef1d291f7edc1fb9a27b49861e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: aa501a4223472bd0430955512a266754bd71a885
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и xUnit
 
@@ -143,4 +143,3 @@ if candidate < 2
 Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке. В результате вы получите [готовую версию тестов](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) и [полную реализацию библиотеки](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-dotnet-test/PrimeService/PrimeService.vb).
 
 Вы создали небольшую библиотеку и набор модульных тестов для нее. Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью обычного рабочего процесса и получить возможность сосредоточиться на задачах приложения.
-

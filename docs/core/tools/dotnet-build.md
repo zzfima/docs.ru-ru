@@ -7,12 +7,11 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: b2b625729b5db22bc7b69194f20963857004e3e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 9a5495220a95d0e2b0018f08617bbb41485fe96f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -43,6 +42,8 @@ dotnet build [-h|--help]
 Если проект имеет зависимости от сторонних компонентов, таких как библиотеки из NuGet, они разрешаются из кэша NuGet и недоступны в выходных данных сборки проекта. Учитывая это, продукт `dotnet build` не готов к переносу на другой компьютер для выполнения. Это отличается от поведения в .NET Framework, где сборка исполняемого проекта (приложения) создает выходные данные, которые можно запустить на любом компьютере с установленной платформой .NET Framework. Чтобы обеспечить аналогичное поведение в .NET Core, необходимо использовать команду [dotnet publish](dotnet-publish.md). Дополнительные сведения см. в разделе [Развертывание приложений .NET Core](../deploying/index.md).
 
 Для сборки нужен файл *project.assets.json*, содержащий список зависимостей приложения. Он создается при выполнении команды [`dotnet restore`](dotnet-restore.md). Без файла ресурсов инструментарий не способен разрешать базовые сборки, что приводит к ошибкам. При использовании пакета SDK для .NET Core 1.x необходимо было явным образом выполнять команду `dotnet restore` перед выполнением `dotnet build`. Начиная с версии SDK для .NET Core 2.0 команда `dotnet restore` выполняется автоматически при выполнении `dotnet build`. Чтобы отключить неявное восстановление при выполнении команды сборки, можно передать параметр `--no-restore`.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 `dotnet build` использует MSBuild для сборки проекта, поддерживая при этом как параллельные, так и инкрементные сборки. Дополнительные сведения см. в разделе [Инкрементные сборки](/visualstudio/msbuild/incremental-builds).
 

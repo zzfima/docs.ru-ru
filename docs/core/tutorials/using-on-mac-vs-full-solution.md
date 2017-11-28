@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
 Visual Studio для Mac предоставляет полнофункциональную интегрированную среду для разработки приложений .NET Core. Этот раздел описывает, как сборку решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
@@ -25,7 +23,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
 > [!NOTE]
 > Ваш отзыв очень важен. Вы можете отправить отзыв о Visual Studio для Mac команде разработчиков двумя способами.
-> * В Visual Studio для Mac выберите пункт **Справка** > **Сообщить о проблеме** в меню или элемент **Сообщить о проблеме** на экране приветствия. При этом открывается окно для заполнения отчета об ошибках. Отслеживать свои отзывы можно на портале [сообщества разработчиков](https://developercommunity.visualstudio.com/spaces/41/index.html) .
+> * В Visual Studio для Mac выберите пункт **Справка** > **Сообщить о проблеме** в меню или элемент **Сообщить о проблеме** на экране приветствия. При этом открывается окно для заполнения отчета об ошибках. Отслеживать свои отзывы можно на портале [сообщества разработчиков](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > * Чтобы внести предложение, выберите пункт **Справка** > **Отправить предложение** в меню или элемент **Отправить предложение** на экране приветствия. Откроется [веб-страница UserVoice Visual Studio для Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -199,4 +197,3 @@ Visual Studio для Mac предоставляет полнофункциона
 ## <a name="see-also"></a>См. также
 
 [Заметки о выпуске Visual Studio 2017 для Mac](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
-

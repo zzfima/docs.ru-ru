@@ -1,40 +1,21 @@
 ---
 title: "Методы (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="methods-c-programming-guide"></a>Методы (Руководство по программированию на C#)
 Метод — это блок кода, содержащий ряд инструкций. Программа инициирует выполнение инструкций, вызывая метод и указывая все аргументы, необходимые для этого метода. В C# все инструкции выполняются в контексте метода. Метод Main является точкой входа для каждого приложения C#, и он вызывается общеязыковой средой выполнения (CLR) при запуске программы.  
@@ -50,17 +31,17 @@ ms.lasthandoff: 09/25/2017
   
  Параметры метода заключаются в скобки и разделяются запятыми. Пустые скобки указывают, что параметры методу не требуются. Этот класс содержит три следующих метода.  
   
- [!code-cs[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
 ## <a name="method-access"></a>Метод доступа  
  Вызов метода в объекте аналогичен доступу к полю. После имени объекта добавьте точку, имя метода и круглые скобки. Аргументы перечисляются в этих скобках и разделяются запятыми. Таким образом, методы класса `Motorcycle` могут вызываться, как показано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Параметры методов и Аргументы  
  Определение метода задает имена и типы всех необходимых параметров. Когда вызывающий код вызывает метод, он предоставляет конкретные значения, называемые аргументами, для каждого параметра. Аргументы должны быть совместимы с типом параметра, но имя аргумента (если есть), используемое в вызывающем коде, не обязательно должно совпадать с именем параметра, указанным в методе. Пример:  
   
- [!code-cs[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Передача по ссылке и передача по значению  
  По умолчанию при передаче в метод типа значения вместо самого объекта передается его копия. Поэтому изменения в аргументе не оказывают влияния на исходную копию в вызывающем методе. Вы можете передавать тип значения по ссылке с помощью ключевого слова ref. Дополнительные сведения см. в разделе [Передача параметров типа значения](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Список встроенных типов значений см. в разделе [Таблица типов значений](../../../csharp/language-reference/keywords/value-types-table.md).  
@@ -69,11 +50,11 @@ ms.lasthandoff: 09/25/2017
   
  Ссылочный тип создается с помощью ключевого слова `class` , как показано в следующем примере.  
   
- [!code-cs[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
   
  Теперь, если передать объект, основанный на этом типе, в метод, то будет передана ссылка на объект. В следующем примере объект типа `SampleRefType` передается в метод `ModifyObject`.  
   
- [!code-cs[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
   
  В этом примере, в сущности, делается то же, что и в предыдущем примере, — аргумент по значению передается в метод. Но поскольку здесь используется ссылочный тип, результат будет другим. В данном случае в методе `ModifyObject` изменено поле `value` параметра `obj`, а также изменено поле `value` аргумента, `rt`в методе `TestRefType` . В качестве выходных данных метод `TestRefType` отображает 33.  
   
@@ -93,13 +74,13 @@ public ref double GetEstimatedDistance()
 
 Ключевое слове `return` также останавливает выполнение метода. Если тип возврата — `void`, инструкцию `return` без значения по-прежнему можно использовать для завершения выполнения метода. Без ключевого слова `return` этот метод будет останавливать выполнение при достижении конца блока кода. Методы с типом возврата, отличным от void, должны использовать ключевое слово `return` для возврата значения. Например, в следующих двух методах ключевое слово `return` используется для возврата целочисленных значений.  
   
- [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
  Чтобы использовать значение, возвращаемое из метода, вызывающий метод может применять сам вызов метода везде, где будет достаточно значения того же типа. Можно также назначить возвращаемое значение переменной. Например, следующие два примера кода достигают одной и той же цели.  
   
- [!code-cs[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
   
- [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  Использование локальной переменной, в данном случае `result`, для сохранения значения является необязательным. Это может улучшить читаемость кода или может оказаться необходимым, если нужно сохранить исходное значение аргумента для всей области метода.  
 
@@ -147,7 +128,7 @@ static void Main(string[] args)
   
  В следующем примере метод `startButton_Click` служит примером асинхронного метода с типом возврата void. Поскольку `DoSomethingAsync` является асинхронным методом, задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показывает следующая инструкция: `await DoSomethingAsync();`. Метод `startButton_Click` должен быть определен с модификатором `async` , так как этот метод имеет выражение `await` .  
   
- [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
  Асинхронный метод не может объявить все параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md) , но может вызывать методы, которые имеют такие параметры.  
   
@@ -180,15 +161,14 @@ public Customer this[long id] => store.LookupCustomer(id);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](index.md)   
- [Модификаторы доступа](access-modifiers.md)   
- [Статические классы и члены статических классов](static-classes-and-static-class-members.md)   
- [Наследование](inheritance.md)   
- [Абстрактные и запечатанные классы и члены классов](abstract-and-sealed-classes-and-class-members.md)   
- [params](../../../csharp/language-reference/keywords/params.md)   
- [return](../../../csharp/language-reference/keywords/return.md)   
- [out](../../../csharp/language-reference/keywords/out.md)   
- [ref](../../../csharp/language-reference/keywords/ref.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Классы и структуры](index.md)  
+ [Модификаторы доступа](access-modifiers.md)  
+ [Статические классы и члены статических классов](static-classes-and-static-class-members.md)  
+ [Наследование](inheritance.md)  
+ [Абстрактные и запечатанные классы и члены классов](abstract-and-sealed-classes-and-class-members.md)  
+ [params](../../../csharp/language-reference/keywords/params.md)  
+ [return](../../../csharp/language-reference/keywords/return.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
  [Передача параметров](passing-parameters.md)
-

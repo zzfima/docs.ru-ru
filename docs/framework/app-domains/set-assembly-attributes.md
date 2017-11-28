@@ -5,25 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0683ee1e79d9e5fd9bef7af3b6b85dd5a58c3845
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="setting-assembly-attributes"></a>Настройка атрибутов сборки
 Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Атрибуты разделяются на следующие группы.  
@@ -45,11 +47,13 @@ ms.lasthandoff: 07/28/2017
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|Перечислимое поле, указывающее язык и региональные параметры, поддерживаемые сборкой. В сборке можно также указать независимость от языка и региональных параметров, чтобы указать, что сборка содержит ресурсы для языка и региональных параметров по умолчанию. **Примечание.** Среда выполнения рассматривает любую сборку, у которой для атрибута языка и региональных параметров не задано значение NULL, в качестве вспомогательной сборки. Такие сборки подчиняются правилам привязки вспомогательных сборок. Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Значение, задающее атрибуты сборки: например, может ли сборка выполняться параллельно.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Числовое значение в формате *основной_номер*.*дополнительный_номер*.*номер_сборки*.*номер_редакции* (например, 2.4.0.0). Среда CLR использует это значение для выполнения операций привязки в сборках со строгими именами. **Примечание.** Если атрибут <xref:System.Reflection.AssemblyInformationalVersionAttribute> не применен к сборке, то номер версии, задаваемый атрибутом <xref:System.Reflection.AssemblyVersionAttribute>, используется свойствами <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName>.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Числовое значение в формате *основной_номер*.*дополнительный_номер*.*номер_сборки*.*номер_редакции* (например, 2.4.0.0). Среда CLR использует это значение для выполнения операций привязки в сборках со строгими именами. **Примечание.** Если атрибут <xref:System.Reflection.AssemblyInformationalVersionAttribute> не применен к сборке, то номер версии, задаваемый атрибутом <xref:System.Reflection.AssemblyVersionAttribute>, используется свойствами <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
   
  В следующем примере кода показано, как применить атрибуты версии и языка и региональных параметров сборки.  
   
- [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)] [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)] [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
+ [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)]
+ [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)]
+ [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
   
 ## <a name="informational-attributes"></a>Информационные атрибуты  
  Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице описаны информационные атрибуты, которые можно применить к сборке.  
@@ -59,7 +63,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Строковое значение, содержащее название компании.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Строковое значение, содержащее сведения об авторских правах.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Строковое значение, содержащее номер версии файла Win32. Обычно по умолчанию здесь используется версия сборки.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Строковое значение, содержащее сведения о версии, которые не используются средой CLR, например полный номер версии продукта. **Примечание.** Если этот атрибут применен к сборке, указываемую им строку можно получить во время выполнения с помощью свойства <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>. Эта строка также используется в пути и разделе реестра, предоставляемых свойствами <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName>.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Строковое значение, содержащее сведения о версии, которые не используются средой CLR, например полный номер версии продукта. **Примечание.** Если этот атрибут применен к сборке, указываемую им строку можно получить во время выполнения с помощью свойства <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. Эта строка также используется в пути и разделе реестра, предоставляемых свойствами <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Строковое значение, содержащее сведения о продукте.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Строковое значение, содержащее сведения о товарном знаке.|  
   
@@ -86,9 +90,10 @@ ms.lasthandoff: 07/28/2017
   
  В следующем примере кода показаны атрибуты, применяемые при использовании отложенной подписи для создания сборки со строгим именем с помощью файла открытого ключа `myKey.snk`.  
   
- [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)] [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)] [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+ [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+ [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+ [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>См. также  
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)   
+ [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

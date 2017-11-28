@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (редактор ресурсов Windows Forms)
 Редактор ресурсов Windows Forms (Winres.exe) — это программа визуальной разметки, используемая при локализации ресурсов пользовательского интерфейса Windows Forms. Файлы RESX и RESOURCES, используемые как входные для программы Winres.exe, могут быть созданы с использованием среды визуального проектирования, такой как Microsoft Visual Studio. Информацию о развертывании ресурсов в приложениях .NET Framework см. в разделе [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md).  
@@ -149,12 +142,11 @@ winres /?
 5.  Выберите нужный язык и файловый режим и нажмите кнопку **ОК**. Программа сохранит файл, используя правила присвоения имен, которые среда выполнения требует применять к локализованным файлам ресурсов. Например, при локализации файла `TestApp.resources` на немецкий язык (Германия) этот файл будет сохранен как `TestApp.de-DE.resources`. При локализации файла `TestApp.resx` на немецкий язык (Германия) файл сохраняется как `TestApp.de-DE.resx`. Подробнее о соглашениях об именовании ресурсов см. в разделе [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Список предварительно определенных названий языков, используемых средой выполнения, см. в разделе о классе <xref:System.Globalization.CultureInfo>.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.LocalizableAttribute>   
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Resources.ResourceManager>   
- <xref:System.Resources.ResourceReader>   
- <xref:System.Resources.ResourceWriter>   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)   
+ <xref:System.ComponentModel.LocalizableAttribute>  
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Resources.ResourceManager>  
+ <xref:System.Resources.ResourceReader>  
+ <xref:System.Resources.ResourceWriter>  
+ [Инструменты](../../../docs/framework/tools/index.md)  
+ [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)  
  [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
-

@@ -8,12 +8,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -44,6 +43,8 @@ dotnet restore [-h|--help]
 ## <a name="description"></a>Описание
 
 Команда `dotnet restore` использует NuGet для восстановления зависимостей, а также связанных с проектом средств, которые указаны в файле проекта. По умолчанию восстановление зависимостей и средств производится параллельно.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Для восстановления зависимостей NuGet требуются каналы, где находятся пакеты. Каналы обычно предоставляются посредством файла конфигурации *NuGet.config*. Файл конфигурации по умолчанию предоставляется при установке средств CLI. Вы можете указать дополнительные веб-каналы, создав собственный файл *NuGet.config* в каталоге проекта. Можно также указать дополнительные веб-каналы на вызов из командной строки.
 
@@ -170,4 +171,3 @@ dotnet restore [-h|--help]
 Восстановление зависимостей и средств для проекта в текущем каталоге с выводом минимального объема выходных данных:
 
 `dotnet restore --verbosity minimal`
-

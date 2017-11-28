@@ -1,15 +1,12 @@
 ---
 title: "Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
 - file attributes, determining
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  
@@ -126,8 +107,7 @@ ms.lasthandoff: 09/25/2017
  Компонент <xref:System.IO.FileSystemWatcher> позволяет наблюдать за изменениями в файлах и каталогах в локальной системе или на любом компьютере, к которому имеется доступ по сети. Например, при изменении файла можно отправить пользователю соответствующее оповещение. При внесении изменений выдается одно или несколько событий, которые сохраняются в буфере и передаются в компонент <xref:System.IO.FileSystemWatcher> для обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Составление потоков](https://msdn.microsoft.com/library/e4y2dch9)   
- [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)   
- [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)   
+ [Составление потоков](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)  
+ [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)  
  [Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
-

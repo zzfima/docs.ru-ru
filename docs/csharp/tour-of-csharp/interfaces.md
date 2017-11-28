@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 673ac56f3f5732fcda02d313b6f4273708ae365f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interfaces"></a>Интерфейсы
 
 ***Интерфейс*** определяет контракт, который может быть реализован классами и структурами. Интерфейс может содержать методы, свойства, события и индексаторы. Интерфейс не предоставляет реализацию членов, которые в нем определены. Он лишь перечисляет члены, которые должны быть определены в классах или структурах, реализующих этот интерфейс.
@@ -49,4 +47,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [Назад](arrays.md)
 [Вперед](enums.md)
-

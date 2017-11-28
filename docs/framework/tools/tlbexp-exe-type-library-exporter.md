@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aca6756baf6ee4673e73876d9c95f007fbe01b48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (программа экспорта библиотек типов)
 Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
@@ -145,10 +138,9 @@ tlbexp Sample.dll
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.TypeLibExporterFlags>   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   
- [Общие сведения о преобразовании сборки в библиотеку типов](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)   
- [Tlbimp.exe (программа импорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
+ <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
+ [Инструменты](../../../docs/framework/tools/index.md)  
+ [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
+ [Общие сведения о преобразовании сборки в библиотеку типов](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

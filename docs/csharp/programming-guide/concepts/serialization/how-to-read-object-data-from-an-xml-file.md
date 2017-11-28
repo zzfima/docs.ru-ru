@@ -1,30 +1,21 @@
 ---
 title: "Практическое руководство. Чтение данных объекта из XML-файла (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6a3389de2f3272a546a7380ef386f5d88666e6d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02ff7a209cd78c70c6e3c443105d27b33c6f0af4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Практическое руководство. Чтение данных объекта из XML-файла (C#)
 В этом примере демонстрируется считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -79,8 +70,7 @@ public void ReadXML()
  Всегда проверяйте входные данные и никогда не десериализуйте данные из непроверенных источников. Созданный заново объект выполняется на локальном компьютере с разрешениями кода, который его десериализовал. Следует проверять все входные данные перед использованием их в приложении.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.IO.StreamWriter>   
- [Практическое руководство. Запись данных объекта в XML-файл (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)   
- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ <xref:System.IO.StreamWriter>  
+ [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
+ [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
-

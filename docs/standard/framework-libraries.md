@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
+ms.openlocfilehash: 6851e7059ca60430e761cebed4fd5040a6a3ee08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="framework-libraries"></a>Библиотеки платформы
 
 Платформа .NET имеет обширный стандартный набор библиотек классов, которые называются библиотеками базовых классов (базовый набор) или библиотеками классов платформы (полный набор). Эти библиотеки предоставляют реализации для многих общих и зависящих от приложений типов, алгоритмы, а также функциональные возможности. Как коммерческие библиотеки, так и библиотеки, предоставленные сообществом, основаны на библиотеках классов платформы, что позволяет получить удобные готовые библиотеки для обширного набора вычислительных задач.
@@ -32,15 +30,15 @@ ms.lasthandoff: 08/21/2017
 
 .NET включает набор типов-примитивов, которые (в разной степени) используются во всех приложениях. Эти типы содержат данные, например числа, строки, байты и произвольные объекты. Язык C# содержит ключевые слова для таких типов. Ниже приведен некоторый набор этих типов с соответствующими ключевыми словами C#.
 
-* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)) — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
-* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)) — 16-разрядный целочисленный тип со знаком. Также имеется и <xref:System.UInt16> без знака.
-* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](../csharp/language-reference/keywords/uint.md) без знака.
-* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)) — 32-разрядный тип с плавающей запятой.
-* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)) — 128-разрядный десятичный тип.
-* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)) — 8-разрядное целое число без знака, которое представляет байт памяти.
-* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)) — логический тип, представляющий `true` или `false`.
-* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
-* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)) — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)) — 16-разрядный целочисленный тип со знаком. Также имеется и <xref:System.UInt16> без знака.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](../csharp/language-reference/keywords/uint.md) без знака.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)) — 32-разрядный тип с плавающей запятой.
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)) — 128-разрядный десятичный тип.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)) — 8-разрядное целое число без знака, которое представляет байт памяти.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — логический тип, представляющий `true` или `false`.
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
 
 ## <a name="data-structures"></a>Структуры данных
 
@@ -65,4 +63,3 @@ ms.lasthandoff: 08/21/2017
 Существует множество моделей приложений от разных компаний, которые можно использовать с платформой .NET.
 
 *   [ASP.NET](http://asp.net) — предоставляет веб-платформу для создания веб-сайтов и служб. Поддерживается в Windows, Linux и macOS (зависит от версии ASP.NET).
-

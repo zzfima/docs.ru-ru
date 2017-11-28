@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Развертывание приложений .NET Core с помощью Visual Studio
 
 Приложение .NET Core можно развернуть как *развертывание, зависящее от платформы*, которое содержит двоичные файлы приложений, но зависит от наличия .NET Core в целевой системе, или как *автономное развертывание*, которое содержит и приложение, и двоичные файлы .NET Core. Общие сведения о развертывании приложений .NET Core см. в разделе [Развертывание приложений .NET Core](index.md).
@@ -42,7 +40,7 @@ ms.lasthandoff: 09/12/2017
 
    Откройте файл *Program.cs* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Создайте отладочную сборку приложения.
 
@@ -92,7 +90,7 @@ ms.lasthandoff: 09/12/2017
 
    Откройте файл *Program.cs* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Определите платформы, для которых будет предназначено приложение.
 
@@ -189,4 +187,3 @@ ms.lasthandoff: 09/12/2017
 # <a name="see-also"></a>См. также
 [Развертывание приложений .NET Core](index.md)   
 [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)   
-
