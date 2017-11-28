@@ -1,66 +1,47 @@
 ---
 title: "Анонимные функции (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#], as anonymus functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 888743bb1c49df123b57b4d09e0251dbe1e049d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f0105ad5ee5a97243e9aeda42c9b1842ec15d0e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="anonymous-functions-c-programming-guide"></a>Анонимные функции (Руководство по программированию на C#)
-Анонимная функция — это "встроенный" оператор или выражение, которое может использоваться, когда тип делегата неизвестен. Ее можно использовать для инициализации именованного делегата или передать вместо типа именованного делегата в качестве параметра метода.  
+# <a name="anonymous-functions-c-programming-guide"></a><span data-ttu-id="8c3f7-102">Анонимные функции (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="8c3f7-102">Anonymous Functions (C# Programming Guide)</span></span>
+<span data-ttu-id="8c3f7-103">Анонимная функция — это "встроенный" оператор или выражение, которое может использоваться, когда тип делегата неизвестен.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-103">An anonymous function is an "inline" statement or expression that can be used wherever a delegate type is expected.</span></span> <span data-ttu-id="8c3f7-104">Ее можно использовать для инициализации именованного делегата или передать вместо типа именованного делегата в качестве параметра метода.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-104">You can use it to initialize a named delegate or pass it instead of a named delegate type as a method parameter.</span></span>  
   
- Существует два типа анонимных функций, которые по отдельности рассматриваются в следующих разделах:  
+ <span data-ttu-id="8c3f7-105">Существует два типа анонимных функций, которые по отдельности рассматриваются в следующих разделах:</span><span class="sxs-lookup"><span data-stu-id="8c3f7-105">There are two kinds of anonymous functions, which are discussed individually in the following topics:</span></span>  
   
--   [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+-   <span data-ttu-id="8c3f7-106">[Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="8c3f7-106">[Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
   
--   [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+-   [<span data-ttu-id="8c3f7-107">Анонимные методы</span><span class="sxs-lookup"><span data-stu-id="8c3f7-107">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
     > [!NOTE]
-    >  Лямбда-выражения могут быть привязаны к деревьям выражений и к делегатам.  
+    >  <span data-ttu-id="8c3f7-108">Лямбда-выражения могут быть привязаны к деревьям выражений и к делегатам.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-108">Lambda expressions can be bound to expression trees and also to delegates.</span></span>  
   
-## <a name="the-evolution-of-delegates-in-c"></a>Эволюция делегатов в C#  
- В C# 1.0 экземпляр делегата создавался путем его явной инициализации с помощью метода, который был определен в другом месте кода. В C# 2.0 введена концепция анонимных методов как способа написания неименованных встроенных блоков операторов, которые могут быть выполнены в вызове делегата. В C# 3.0 введены лямбда-выражения, по сути аналогичные анонимным методам, но более выразительные и четкие. Эти две функции собирательно называют *анонимными функциями*. Как правило, в приложениях, предназначенных для [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 и более поздних версий, следует использовать лямбда-выражения.  
+## <a name="the-evolution-of-delegates-in-c"></a><span data-ttu-id="8c3f7-109">Эволюция делегатов в C#</span><span class="sxs-lookup"><span data-stu-id="8c3f7-109">The Evolution of Delegates in C#</span></span>  
+ <span data-ttu-id="8c3f7-110">В C# 1.0 экземпляр делегата создавался путем его явной инициализации с помощью метода, который был определен в другом месте кода.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-110">In C# 1.0, you created an instance of a delegate by explicitly initializing it with a method that was defined elsewhere in the code.</span></span> <span data-ttu-id="8c3f7-111">В C# 2.0 введена концепция анонимных методов как способа написания неименованных встроенных блоков операторов, которые могут быть выполнены в вызове делегата.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-111">C# 2.0 introduced the concept of anonymous methods as a way to write unnamed inline statement blocks that can be executed in a delegate invocation.</span></span> <span data-ttu-id="8c3f7-112">В C# 3.0 введены лямбда-выражения, по сути аналогичные анонимным методам, но более выразительные и четкие.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-112">C# 3.0 introduced lambda expressions, which are similar in concept to anonymous methods but more expressive and concise.</span></span> <span data-ttu-id="8c3f7-113">Эти две функции собирательно называют *анонимными функциями*.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-113">These two features are known collectively as *anonymous functions*.</span></span> <span data-ttu-id="8c3f7-114">Как правило, в приложениях, предназначенных для [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 и более поздних версий, следует использовать лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="8c3f7-114">In general, applications that target version 3.5 and later of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] should use lambda expressions.</span></span>  
   
- В следующем примере демонстрируется эволюция создания делегата от C# 1.0 до C# 3.0:  
+ <span data-ttu-id="8c3f7-115">В следующем примере демонстрируется эволюция создания делегата от C# 1.0 до C# 3.0:</span><span class="sxs-lookup"><span data-stu-id="8c3f7-115">The following example demonstrates the evolution of delegate creation from C# 1.0 to C# 3.0:</span></span>  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="8c3f7-116">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="8c3f7-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)   
- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)   
- [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
-
+## <a name="see-also"></a><span data-ttu-id="8c3f7-117">См. также</span><span class="sxs-lookup"><span data-stu-id="8c3f7-117">See Also</span></span>  
+ [<span data-ttu-id="8c3f7-118">Инструкции, выражения и операторы</span><span class="sxs-lookup"><span data-stu-id="8c3f7-118">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+ [<span data-ttu-id="8c3f7-119">Лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="8c3f7-119">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [<span data-ttu-id="8c3f7-120">Делегаты</span><span class="sxs-lookup"><span data-stu-id="8c3f7-120">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
+ [<span data-ttu-id="8c3f7-121">Деревья выражений</span><span class="sxs-lookup"><span data-stu-id="8c3f7-121">Expression Trees</span></span>](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)

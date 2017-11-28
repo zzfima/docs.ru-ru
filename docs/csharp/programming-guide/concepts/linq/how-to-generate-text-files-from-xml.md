@@ -1,33 +1,29 @@
 ---
 title: "Практическое руководство. Создание текстовых файлов из XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 12f248da356621cb4918d2599468688e5856952c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d476851e73f412ba4ca1a111655ca0397dcbbbc1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Практическое руководство. Создание текстовых файлов из XML (C#)
-В этом примере показано, как создавать файл с разделителями-запятыми (csv) из XML-файла.  
+# <a name="how-to-generate-text-files-from-xml-c"></a><span data-ttu-id="67228-102">Практическое руководство. Создание текстовых файлов из XML (C#)</span><span class="sxs-lookup"><span data-stu-id="67228-102">How to: Generate Text Files from XML (C#)</span></span>
+<span data-ttu-id="67228-103">В этом примере показано, как создавать файл с разделителями-запятыми (csv) из XML-файла.</span><span class="sxs-lookup"><span data-stu-id="67228-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a>Пример  
- Приведенная версия этого примера на C# использует синтаксис метода и оператор `Aggregate` для создания файла CSV из XML-документа в одном выражении. Дополнительные сведения см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+## <a name="example"></a><span data-ttu-id="67228-104">Пример</span><span class="sxs-lookup"><span data-stu-id="67228-104">Example</span></span>  
+ <span data-ttu-id="67228-105">Приведенная версия этого примера на C# использует синтаксис метода и оператор `Aggregate` для создания файла CSV из XML-документа в одном выражении.</span><span class="sxs-lookup"><span data-stu-id="67228-105">The C# version of this example uses method syntax and the `Aggregate` operator to generate a CSV file from an XML document in a single expression.</span></span> <span data-ttu-id="67228-106">Дополнительные сведения см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span><span class="sxs-lookup"><span data-stu-id="67228-106">For more information, see [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).</span></span>  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ <span data-ttu-id="67228-107">В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="67228-107">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -56,7 +52,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="67228-108">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="67228-108">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -65,6 +61,5 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Проекции и преобразования (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="67228-109">См. также</span><span class="sxs-lookup"><span data-stu-id="67228-109">See Also</span></span>  
+ [<span data-ttu-id="67228-110">Проекции и преобразования (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="67228-110">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

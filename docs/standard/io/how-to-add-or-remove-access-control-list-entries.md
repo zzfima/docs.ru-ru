@@ -1,50 +1,57 @@
 ---
-title: "Практическое руководство. Добавление или удаление записей списка управления доступом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "записи управления доступом [платформа .NET Framework]"
-  - "списки управления доступом [платформа .NET Framework]"
-  - "ACE - записи [платформа .NET Framework]"
-  - "ACL - списки [платформа .NET Framework]"
-  - "ввод-вывод [платформа .NET Framework], записи списка управления доступом"
+title: "Практическое руководство. Добавление или удаление записей списка управления доступом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ACEs [.NET Framework]
+- ACLs [.NET Framework]
+- access control entries [.NET Framework]
+- I/O [.NET Framework], access control list entries
+- access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 16038ffbe090cfd8d2c0578f75e66db3b021cb9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Добавление или удаление записей списка управления доступом
-Для добавления записей списка управления доступом \(ACL\) в файл или удаления из него необходимо получить объект <xref:System.Security.AccessControl.FileSecurity> или <xref:System.Security.AccessControl.DirectorySecurity> из файла или каталога, изменить его и затем применить обратно к файлу или каталогу.  
+# <a name="how-to-add-or-remove-access-control-list-entries"></a><span data-ttu-id="172ad-102">Практическое руководство. Добавление или удаление записей списка управления доступом</span><span class="sxs-lookup"><span data-stu-id="172ad-102">How to: Add or Remove Access Control List Entries</span></span>
+<span data-ttu-id="172ad-103">Для добавления записей списка управления доступом (ACL) в файл или удаления из него необходимо получить объект <xref:System.Security.AccessControl.FileSecurity> или <xref:System.Security.AccessControl.DirectorySecurity> из файла или каталога, изменить его и затем применить обратно к файлу или каталогу.</span><span class="sxs-lookup"><span data-stu-id="172ad-103">To add or remove Access Control List (ACL) entries to or from a file, the <xref:System.Security.AccessControl.FileSecurity> or <xref:System.Security.AccessControl.DirectorySecurity> object must be obtained from the file or directory, modified, and then applied back to the file or directory.</span></span>  
   
-### Добавление или удаление элемента списка ACL из файла  
+### <a name="to-add-or-remove-an-acl-entry-from-a-file"></a><span data-ttu-id="172ad-104">Добавление или удаление элемента списка ACL из файла</span><span class="sxs-lookup"><span data-stu-id="172ad-104">To add or remove an ACL entry from a File</span></span>  
   
-1.  Вызовите метод <xref:System.IO.File.GetAccessControl%2A> для получения объекта <xref:System.Security.AccessControl.FileSecurity>, содержащего текущие элементы списка ACL файла.  
+1.  <span data-ttu-id="172ad-105">Вызовите метод <xref:System.IO.File.GetAccessControl%2A> для получения объекта <xref:System.Security.AccessControl.FileSecurity>, содержащего текущие элементы списка ACL файла.</span><span class="sxs-lookup"><span data-stu-id="172ad-105">Call the <xref:System.IO.File.GetAccessControl%2A> method to get a <xref:System.Security.AccessControl.FileSecurity> object that contains the current ACL entries of a file.</span></span>  
   
-2.  Добавьте и удалите элементы списка ACL из объекта <xref:System.Security.AccessControl.FileSecurity>, возвращенного в шаге 1.  
+2.  <span data-ttu-id="172ad-106">Добавьте и удалите элементы списка ACL из объекта <xref:System.Security.AccessControl.FileSecurity>, возвращенного в шаге 1.</span><span class="sxs-lookup"><span data-stu-id="172ad-106">Add or remove ACL entries from the <xref:System.Security.AccessControl.FileSecurity> object returned from step 1.</span></span>  
   
-3.  Передайте объект <xref:System.Security.AccessControl.FileSecurity> в метод <xref:System.IO.File.SetAccessControl%2A>, чтобы применить изменения.  
+3.  <span data-ttu-id="172ad-107">Передайте объект <xref:System.Security.AccessControl.FileSecurity> в метод <xref:System.IO.File.SetAccessControl%2A>, чтобы применить изменения.</span><span class="sxs-lookup"><span data-stu-id="172ad-107">Pass the <xref:System.Security.AccessControl.FileSecurity> object to the <xref:System.IO.File.SetAccessControl%2A> method to apply the changes.</span></span>  
   
-### Добавление или удаление элемента списка ACL из каталога  
+### <a name="to-add-or-remove-an-acl-entry-from-a-directory"></a><span data-ttu-id="172ad-108">Добавление или удаление элемента списка ACL из каталога</span><span class="sxs-lookup"><span data-stu-id="172ad-108">To add or remove an ACL entry from a Directory</span></span>  
   
-1.  Вызовите метод <xref:System.IO.Directory.GetAccessControl%2A> для получения объекта <xref:System.Security.AccessControl.DirectorySecurity>, содержащего текущие элементы списка ACL каталога.  
+1.  <span data-ttu-id="172ad-109">Вызовите метод <xref:System.IO.Directory.GetAccessControl%2A> для получения объекта <xref:System.Security.AccessControl.DirectorySecurity>, содержащего текущие элементы списка ACL каталога.</span><span class="sxs-lookup"><span data-stu-id="172ad-109">Call the <xref:System.IO.Directory.GetAccessControl%2A> method to get a <xref:System.Security.AccessControl.DirectorySecurity> object that contains the current ACL entries of a directory.</span></span>  
   
-2.  Добавьте и удалите элементы списка ACL из объекта <xref:System.Security.AccessControl.DirectorySecurity>, возвращенного в шаге 1.  
+2.  <span data-ttu-id="172ad-110">Добавьте и удалите элементы списка ACL из объекта <xref:System.Security.AccessControl.DirectorySecurity>, возвращенного в шаге 1.</span><span class="sxs-lookup"><span data-stu-id="172ad-110">Add or remove ACL entries from the <xref:System.Security.AccessControl.DirectorySecurity> object returned from step 1.</span></span>  
   
-3.  Передайте объект <xref:System.Security.AccessControl.DirectorySecurity> в метод <xref:System.IO.Directory.SetAccessControl%2A>, чтобы применить изменения.  
+3.  <span data-ttu-id="172ad-111">Передайте объект <xref:System.Security.AccessControl.DirectorySecurity> в метод <xref:System.IO.Directory.SetAccessControl%2A>, чтобы применить изменения.</span><span class="sxs-lookup"><span data-stu-id="172ad-111">Pass the <xref:System.Security.AccessControl.DirectorySecurity> object to the <xref:System.IO.Directory.SetAccessControl%2A> method to apply the changes.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="172ad-112">Пример</span><span class="sxs-lookup"><span data-stu-id="172ad-112">Example</span></span>  
  [!code-cpp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/cpp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/cpp/sample.cpp#1)]
  [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
  [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
   
-## Компиляция кода  
- Для выполнения этого примера необходимо указать допустимую учетную запись пользователя или группы.  В этом примере используется объект <xref:System.IO.File>; однако та же самая процедура используется для классов <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>.
+## <a name="compiling-the-code"></a><span data-ttu-id="172ad-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="172ad-113">Compiling the Code</span></span>  
+ <span data-ttu-id="172ad-114">Для выполнения этого примера необходимо указать допустимую учетную запись пользователя или группы.</span><span class="sxs-lookup"><span data-stu-id="172ad-114">You must supply a valid user or group account to run this example.</span></span> <span data-ttu-id="172ad-115">В этом примере используется объект <xref:System.IO.File>; однако та же самая процедура используется для классов <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>.</span><span class="sxs-lookup"><span data-stu-id="172ad-115">This example uses a <xref:System.IO.File> object; however, the same procedure is used for the <xref:System.IO.FileInfo>, <xref:System.IO.Directory>, and <xref:System.IO.DirectoryInfo> classes.</span></span>

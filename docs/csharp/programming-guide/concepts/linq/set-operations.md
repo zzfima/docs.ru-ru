@@ -1,70 +1,60 @@
 ---
 title: "Операции над множествами (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b5b546d9df8752fd7afd6e0db4525bc923a74bbb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 121dcd4d41dcfea332c45031a5fbed594e2f1e3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="set-operations-c"></a>Операции над множествами (C#)
-Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).  
+# <a name="set-operations-c"></a><span data-ttu-id="d1d09-102">Операции над множествами (C#)</span><span class="sxs-lookup"><span data-stu-id="d1d09-102">Set Operations (C#)</span></span>
+<span data-ttu-id="d1d09-103">Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).</span><span class="sxs-lookup"><span data-stu-id="d1d09-103">Set operations in LINQ refer to query operations that produce a result set that is based on the presence or absence of equivalent elements within the same or separate collections (or sets).</span></span>  
   
- Методы стандартных операторов запросов, которые выполняют операции над множествами, перечислены в следующем разделе.  
+ <span data-ttu-id="d1d09-104">Методы стандартных операторов запросов, которые выполняют операции над множествами, перечислены в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="d1d09-104">The standard query operator methods that perform set operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Методы  
+## <a name="methods"></a><span data-ttu-id="d1d09-105">Методы</span><span class="sxs-lookup"><span data-stu-id="d1d09-105">Methods</span></span>  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|<span data-ttu-id="d1d09-106">Имя метода</span><span class="sxs-lookup"><span data-stu-id="d1d09-106">Method Name</span></span>|<span data-ttu-id="d1d09-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d1d09-107">Description</span></span>|<span data-ttu-id="d1d09-108">Синтаксис выражения запроса C#</span><span class="sxs-lookup"><span data-stu-id="d1d09-108">C# Query Expression Syntax</span></span>|<span data-ttu-id="d1d09-109">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="d1d09-109">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Distinct|Удаляет повторяющиеся значения из коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName>|  
-|Исключения|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
-|Пересечение|Возвращает пересечение множеств, т. е. элементы, присутствующие в каждой из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
-|Объединение|Возвращает объединение множеств, т. е. уникальные элементы, присутствующие в одной из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
+|<span data-ttu-id="d1d09-110">Distinct</span><span class="sxs-lookup"><span data-stu-id="d1d09-110">Distinct</span></span>|<span data-ttu-id="d1d09-111">Удаляет повторяющиеся значения из коллекции.</span><span class="sxs-lookup"><span data-stu-id="d1d09-111">Removes duplicate values from a collection.</span></span>|<span data-ttu-id="d1d09-112">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="d1d09-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d1d09-113">Исключения</span><span class="sxs-lookup"><span data-stu-id="d1d09-113">Except</span></span>|<span data-ttu-id="d1d09-114">Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.</span><span class="sxs-lookup"><span data-stu-id="d1d09-114">Returns the set difference, which means the elements of one collection that do not appear in a second collection.</span></span>|<span data-ttu-id="d1d09-115">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="d1d09-115">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d1d09-116">Пересечение</span><span class="sxs-lookup"><span data-stu-id="d1d09-116">Intersect</span></span>|<span data-ttu-id="d1d09-117">Возвращает пересечение множеств, т. е. элементы, присутствующие в каждой из двух коллекций.</span><span class="sxs-lookup"><span data-stu-id="d1d09-117">Returns the set intersection, which means elements that appear in each of two collections.</span></span>|<span data-ttu-id="d1d09-118">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="d1d09-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="d1d09-119">Объединение</span><span class="sxs-lookup"><span data-stu-id="d1d09-119">Union</span></span>|<span data-ttu-id="d1d09-120">Возвращает объединение множеств, т. е. уникальные элементы, присутствующие в одной из двух коллекций.</span><span class="sxs-lookup"><span data-stu-id="d1d09-120">Returns the set union, which means unique elements that appear in either of two collections.</span></span>|<span data-ttu-id="d1d09-121">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="d1d09-121">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
-## <a name="comparison-of-set-operations"></a>Сравнение операций над множествами  
+## <a name="comparison-of-set-operations"></a><span data-ttu-id="d1d09-122">Сравнение операций над множествами</span><span class="sxs-lookup"><span data-stu-id="d1d09-122">Comparison of Set Operations</span></span>  
   
-### <a name="distinct"></a>Distinct  
- На следующем рисунке показано поведение метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> применительно к последовательности символов. Возвращаемая последовательность содержит уникальные элементы из входной последовательности.  
+### <a name="distinct"></a><span data-ttu-id="d1d09-123">Distinct</span><span class="sxs-lookup"><span data-stu-id="d1d09-123">Distinct</span></span>  
+ <span data-ttu-id="d1d09-124">На следующем рисунке показано поведение метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> применительно к последовательности символов.</span><span class="sxs-lookup"><span data-stu-id="d1d09-124">The following illustration depicts the behavior of the <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> method on a sequence of characters.</span></span> <span data-ttu-id="d1d09-125">Возвращаемая последовательность содержит уникальные элементы из входной последовательности.</span><span class="sxs-lookup"><span data-stu-id="d1d09-125">The returned sequence contains the unique elements from the input sequence.</span></span>  
   
- ![График, демонстрирующий поведение Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ <span data-ttu-id="d1d09-126">![График, демонстрирующий поведение Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")</span><span class="sxs-lookup"><span data-stu-id="d1d09-126">![Graphic showing the behavior of Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")</span></span>  
   
-### <a name="except"></a>Исключения  
- На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
+### <a name="except"></a><span data-ttu-id="d1d09-127">Исключения</span><span class="sxs-lookup"><span data-stu-id="d1d09-127">Except</span></span>  
+ <span data-ttu-id="d1d09-128">На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1d09-128">The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d1d09-129">Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.</span><span class="sxs-lookup"><span data-stu-id="d1d09-129">The returned sequence contains only the elements from the first input sequence that are not in the second input sequence.</span></span>  
   
- ![График, отображающий действие Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ <span data-ttu-id="d1d09-130">![График, отображающий действие Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")</span><span class="sxs-lookup"><span data-stu-id="d1d09-130">![Graphic showing the action of Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")</span></span>  
   
-### <a name="intersect"></a>Пересечение  
- На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
+### <a name="intersect"></a><span data-ttu-id="d1d09-131">Пересечение</span><span class="sxs-lookup"><span data-stu-id="d1d09-131">Intersect</span></span>  
+ <span data-ttu-id="d1d09-132">На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1d09-132">The following illustration depicts the behavior of <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d1d09-133">Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.</span><span class="sxs-lookup"><span data-stu-id="d1d09-133">The returned sequence contains the elements that are common to both of the input sequences.</span></span>  
   
- ![График, отображающий пересечение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
+ <span data-ttu-id="d1d09-134">![График, отображающий пересечение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")</span><span class="sxs-lookup"><span data-stu-id="d1d09-134">![Graphic showing the intersection of two sequences.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")</span></span>  
   
-### <a name="union"></a>Объединение  
- На следующем рисунке показана операция объединения двух последовательностей символов. Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.  
+### <a name="union"></a><span data-ttu-id="d1d09-135">Объединение</span><span class="sxs-lookup"><span data-stu-id="d1d09-135">Union</span></span>  
+ <span data-ttu-id="d1d09-136">На следующем рисунке показана операция объединения двух последовательностей символов.</span><span class="sxs-lookup"><span data-stu-id="d1d09-136">The following illustration depicts a union operation on two sequences of characters.</span></span> <span data-ttu-id="d1d09-137">Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.</span><span class="sxs-lookup"><span data-stu-id="d1d09-137">The returned sequence contains the unique elements from both input sequences.</span></span>  
   
- ![График, показывающий объединение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
+ <span data-ttu-id="d1d09-138">![График, показывающий объединение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")</span><span class="sxs-lookup"><span data-stu-id="d1d09-138">![Graphic showing the union of two sequences.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
- [Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="d1d09-139">См. также</span><span class="sxs-lookup"><span data-stu-id="d1d09-139">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="d1d09-140">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="d1d09-140">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="d1d09-141">Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d1d09-141">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
+ [<span data-ttu-id="d1d09-142">Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d1d09-142">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

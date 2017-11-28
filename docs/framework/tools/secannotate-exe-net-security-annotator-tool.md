@@ -5,69 +5,61 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f7051e753c324933828e2447752f9c5ea13ed9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (средство создания заметок безопасности .NET)
-Средство создания заметок безопасности .NET Security Annotator (SecAnnotate.exe) — это приложение командной строки, определяющее части `SecurityCritical` и `SecuritySafeCritical` одной или нескольких сборок.  
+# <a name="secannotateexe-net-security-annotator-tool"></a><span data-ttu-id="1a2e0-102">SecAnnotate.exe (средство создания заметок безопасности .NET)</span><span class="sxs-lookup"><span data-stu-id="1a2e0-102">SecAnnotate.exe (.NET Security Annotator Tool)</span></span>
+<span data-ttu-id="1a2e0-103">Средство создания заметок безопасности .NET Security Annotator (SecAnnotate.exe) — это приложение командной строки, определяющее части `SecurityCritical` и `SecuritySafeCritical` одной или нескольких сборок.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-103">The .NET Security Annotator tool (SecAnnotate.exe) is a command-line application that identifies the `SecurityCritical` and `SecuritySafeCritical` portions of one or more assemblies.</span></span>  
   
- Расширение Visual Studio [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007) обеспечивает графический пользовательский интерфейс для программы SecAnnotate.exe и позволяет запускать эту программу из Visual Studio.  
+ <span data-ttu-id="1a2e0-104">Расширение Visual Studio [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007) обеспечивает графический пользовательский интерфейс для программы SecAnnotate.exe и позволяет запускать эту программу из Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-104">A Visual Studio extension, [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007), provides a graphical user interface to SecAnnotate.exe and enables you to run the tool from Visual Studio.</span></span>  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="1a2e0-105">Эта программа автоматически устанавливается вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-105">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="1a2e0-106">Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7).</span><span class="sxs-lookup"><span data-stu-id="1a2e0-106">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="1a2e0-107">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="1a2e0-107">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующий текст, где *параметры* описаны в следующем разделе, а *сборки* состоят из одного имени сборок или нескольких, разделенных пробелами.  
+ <span data-ttu-id="1a2e0-108">В командной строке введите следующий текст, где *параметры* описаны в следующем разделе, а *сборки* состоят из одного имени сборок или нескольких, разделенных пробелами.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-108">At the command prompt, type the following, where *parameters* are described in the following section, and *assemblies* consist of one or more assembly names separated by blanks:</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="1a2e0-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1a2e0-109">Syntax</span></span>  
   
 ```  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="1a2e0-110">Параметры</span><span class="sxs-lookup"><span data-stu-id="1a2e0-110">Parameters</span></span>  
   
-|Параметр|Описание|  
+|<span data-ttu-id="1a2e0-111">Параметр</span><span class="sxs-lookup"><span data-stu-id="1a2e0-111">Option</span></span>|<span data-ttu-id="1a2e0-112">Описание</span><span class="sxs-lookup"><span data-stu-id="1a2e0-112">Description</span></span>|  
 |------------|-----------------|  
-|`/a`<br /><br /> или<br /><br /> `/showstatistics`|Показывает статистику использования прозрачности в анализируемых сборках.|  
-|`/d:` *каталог*<br /><br /> или<br /><br /> `/referencedir:` *каталог*|Указывает каталог для поиска зависимых сборок во время создания заметок.|  
-|`/i`<br /><br /> или<br /><br /> `/includesignatures`|Включает данные расширенной подписи в файл отчетов аннотирования.|  
-|`/n`<br /><br /> или<br /><br /> `/nogac`|Отключает поиск сборок в глобальном кэше сборок, на которые указывают ссылки.|  
-|`/o:` *output.xml*<br /><br /> или<br /><br /> `/out:` *output.xml*|Указывает выходной файл аннотаций.|  
-|`/p:` *макс_число_проходов*<br /><br /> или<br /><br /> `/maximumpasses:` *макс_число_проходов*|Задает максимальное число проходов аннотирования, выполняемых для сборок до прекращения создания новых заметок.|  
-|`/q`<br /><br /> или<br /><br /> `/quiet`|Задает тихий режим, при котором средство создания заметок безопасности не выводит сообщения о состоянии, а выводит только сведения об ошибке.|  
-|`/r:` *сборка*<br /><br /> или<br /><br /> `/referenceassembly:` *сборка*|Включает указанную сборку при разрешении зависимых сборок во время аннотирования. Ссылается на сборки, получающие приоритет над сборками, которые находятся по пути для ссылок.|  
-|`/s:` *имя_правила*<br /><br /> или<br /><br /> `/suppressrule:` *имя_правила*|Запрещает выполнение указанного правила прозрачности для входных сборок.|  
-|`/t`<br /><br /> или<br /><br /> `/forcetransparent`|Включает режим, при котором средство создания заметок безопасности принудительно считает все сборки, не имеющие никаких заметок о прозрачности, полностью прозрачными.|  
-|`/t`:*сборка*<br /><br /> или<br /><br /> `/forcetransparent`:*сборка*|Указанная сборка будет считаться прозрачной независимо от текущих заметок на уровне сборки.|  
+|`/a`<br /><br /> <span data-ttu-id="1a2e0-113">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-113">or</span></span><br /><br /> `/showstatistics`|<span data-ttu-id="1a2e0-114">Показывает статистику использования прозрачности в анализируемых сборках.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-114">Shows statistics about the use of transparency in assemblies that are being analyzed.</span></span>|  
+|<span data-ttu-id="1a2e0-115">`/d:` *каталог*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-115">`/d:` *directory*</span></span><br /><br /> <span data-ttu-id="1a2e0-116">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-116">or</span></span><br /><br /> <span data-ttu-id="1a2e0-117">`/referencedir:` *каталог*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-117">`/referencedir:` *directory*</span></span>|<span data-ttu-id="1a2e0-118">Указывает каталог для поиска зависимых сборок во время создания заметок.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-118">Specifies a directory to search for dependent assemblies during annotation.</span></span>|  
+|`/i`<br /><br /> <span data-ttu-id="1a2e0-119">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-119">or</span></span><br /><br /> `/includesignatures`|<span data-ttu-id="1a2e0-120">Включает данные расширенной подписи в файл отчетов аннотирования.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-120">Includes extended signature information in the annotation report file.</span></span>|  
+|`/n`<br /><br /> <span data-ttu-id="1a2e0-121">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-121">or</span></span><br /><br /> `/nogac`|<span data-ttu-id="1a2e0-122">Отключает поиск сборок в глобальном кэше сборок, на которые указывают ссылки.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-122">Suppresses searching for referenced assemblies in the global assembly cache.</span></span>|  
+|<span data-ttu-id="1a2e0-123">`/o:` *output.xml*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-123">`/o:` *output.xml*</span></span><br /><br /> <span data-ttu-id="1a2e0-124">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-124">or</span></span><br /><br /> <span data-ttu-id="1a2e0-125">`/out:` *output.xml*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-125">`/out:` *output.xml*</span></span>|<span data-ttu-id="1a2e0-126">Указывает выходной файл аннотаций.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-126">Specifies the output annotation file.</span></span>|  
+|<span data-ttu-id="1a2e0-127">`/p:` *макс_число_проходов*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-127">`/p:` *maxpasses*</span></span><br /><br /> <span data-ttu-id="1a2e0-128">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-128">or</span></span><br /><br /> <span data-ttu-id="1a2e0-129">`/maximumpasses:` *макс_число_проходов*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-129">`/maximumpasses:` *maxpasses*</span></span>|<span data-ttu-id="1a2e0-130">Задает максимальное число проходов аннотирования, выполняемых для сборок до прекращения создания новых заметок.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-130">Specifies the maximum number of annotation passes to make on assemblies before stopping the generation of new annotations.</span></span>|  
+|`/q`<br /><br /> <span data-ttu-id="1a2e0-131">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-131">or</span></span><br /><br /> `/quiet`|<span data-ttu-id="1a2e0-132">Задает тихий режим, при котором средство создания заметок безопасности не выводит сообщения о состоянии, а выводит только сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-132">Specifies quiet mode, in which the annotator does not output status messages; it outputs only error information.</span></span>|  
+|<span data-ttu-id="1a2e0-133">`/r:` *сборка*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-133">`/r:` *assembly*</span></span><br /><br /> <span data-ttu-id="1a2e0-134">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-134">or</span></span><br /><br /> <span data-ttu-id="1a2e0-135">`/referenceassembly:` *сборка*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-135">`/referenceassembly:` *assembly*</span></span>|<span data-ttu-id="1a2e0-136">Включает указанную сборку при разрешении зависимых сборок во время аннотирования.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-136">Includes the specified assembly when resolving dependent assemblies during annotation.</span></span> <span data-ttu-id="1a2e0-137">Ссылается на сборки, получающие приоритет над сборками, которые находятся по пути для ссылок.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-137">Reference assemblies are given priority over assemblies that are found in the reference path.</span></span>|  
+|<span data-ttu-id="1a2e0-138">`/s:` *имя_правила*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-138">`/s:` *rulename*</span></span><br /><br /> <span data-ttu-id="1a2e0-139">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-139">or</span></span><br /><br /> <span data-ttu-id="1a2e0-140">`/suppressrule:` *имя_правила*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-140">`/suppressrule:` *rulename*</span></span>|<span data-ttu-id="1a2e0-141">Запрещает выполнение указанного правила прозрачности для входных сборок.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-141">Suppresses running the specified transparency rule on the input assemblies.</span></span>|  
+|`/t`<br /><br /> <span data-ttu-id="1a2e0-142">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-142">or</span></span><br /><br /> `/forcetransparent`|<span data-ttu-id="1a2e0-143">Включает режим, при котором средство создания заметок безопасности принудительно считает все сборки, не имеющие никаких заметок о прозрачности, полностью прозрачными.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-143">Forces the Annotator tool to treat all assemblies that do not have any transparency annotations as if they were entirely transparent.</span></span>|  
+|<span data-ttu-id="1a2e0-144">`/t`:*сборка*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-144">`/t`:*assembly*</span></span><br /><br /> <span data-ttu-id="1a2e0-145">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-145">or</span></span><br /><br /> <span data-ttu-id="1a2e0-146">`/forcetransparent`:*сборка*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-146">`/forcetransparent`:*assembly*</span></span>|<span data-ttu-id="1a2e0-147">Указанная сборка будет считаться прозрачной независимо от текущих заметок на уровне сборки.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-147">Force the given assembly to be transparent, regardless of its current assembly-level annotations.</span></span>|  
 |||  
-|`/v`<br /><br /> или<br /><br /> `/verify`|Проверяет только правильность заметок сборки, не выполняет несколько проходов для нахождения всех требуемых заметок, если сборка не проверяется.|  
-|`/x`<br /><br /> или<br /><br /> `/verbose`|Задает подробный вывод при создании заметок.|  
-|`/y:` *каталог*<br /><br /> или<br /><br /> `/symbolpath:` *каталог*|Включает указанный каталог при поиске файлов символов во время аннотирования.|  
+|`/v`<br /><br /> <span data-ttu-id="1a2e0-148">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-148">or</span></span><br /><br /> `/verify`|<span data-ttu-id="1a2e0-149">Проверяет только правильность заметок сборки, не выполняет несколько проходов для нахождения всех требуемых заметок, если сборка не проверяется.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-149">Verifies only that an assembly's annotations are correct; does not attempt to make multiple passes to find all required annotations if the assembly does not verify.</span></span>|  
+|`/x`<br /><br /> <span data-ttu-id="1a2e0-150">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-150">or</span></span><br /><br /> `/verbose`|<span data-ttu-id="1a2e0-151">Задает подробный вывод при создании заметок.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-151">Specifies verbose output while annotating.</span></span>|  
+|<span data-ttu-id="1a2e0-152">`/y:` *каталог*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-152">`/y:` *directory*</span></span><br /><br /> <span data-ttu-id="1a2e0-153">или</span><span class="sxs-lookup"><span data-stu-id="1a2e0-153">or</span></span><br /><br /> <span data-ttu-id="1a2e0-154">`/symbolpath:` *каталог*</span><span class="sxs-lookup"><span data-stu-id="1a2e0-154">`/symbolpath:` *directory*</span></span>|<span data-ttu-id="1a2e0-155">Включает указанный каталог при поиске файлов символов во время аннотирования.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-155">Includes the specified directory when searching for symbol files during annotation.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Параметры и сборки также могут предоставляться в файле ответов, указанном в командной строке с префиксом в виде знака "@". Каждая строка в файле ответов должна содержать один параметр или имя сборки.  
+## <a name="remarks"></a><span data-ttu-id="1a2e0-156">Примечания</span><span class="sxs-lookup"><span data-stu-id="1a2e0-156">Remarks</span></span>  
+ <span data-ttu-id="1a2e0-157">Параметры и сборки также могут предоставляться в файле ответов, указанном в командной строке с префиксом в виде знака "@".</span><span class="sxs-lookup"><span data-stu-id="1a2e0-157">Parameters and assemblies may also be provided in a response file that is specified on the command line and prefixed with an at sign (@).</span></span> <span data-ttu-id="1a2e0-158">Каждая строка в файле ответов должна содержать один параметр или имя сборки.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-158">Each line in the response file should contain a single parameter or assembly name.</span></span>  
   
- Дополнительные сведения о .NET Security Annotator см. в записи [Использование SecAnnotate для анализа сборок на наличие нарушений прозрачности](http://go.microsoft.com/fwlink/?LinkId=187648) в блоге .NET Security.  
+ <span data-ttu-id="1a2e0-159">Дополнительные сведения о .NET Security Annotator см. в записи [Использование SecAnnotate для анализа сборок на наличие нарушений прозрачности](http://go.microsoft.com/fwlink/?LinkId=187648) в блоге .NET Security.</span><span class="sxs-lookup"><span data-stu-id="1a2e0-159">For more information about the .NET Security Annotator, see the entry [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](http://go.microsoft.com/fwlink/?LinkId=187648) in the .NET Security blog.</span></span>  
   
-## <a name="examples"></a>Примеры
-
+## <a name="examples"></a><span data-ttu-id="1a2e0-160">Примеры</span><span class="sxs-lookup"><span data-stu-id="1a2e0-160">Examples</span></span>

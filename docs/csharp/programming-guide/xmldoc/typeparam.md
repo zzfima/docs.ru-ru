@@ -1,70 +1,50 @@
 ---
 title: "&lt;typeparam&gt; (руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- typeparam
-dev_langs:
-- CSharp
+f1_keywords: typeparam
 helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6b9b81883d6d8abb960eda54f5c435acab6310b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8bb1d13976cf2cc9df4f573702168c6abdfff3d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt; (руководство по программированию на C#)
-## <a name="syntax"></a>Синтаксис  
+# <a name="lttypeparamgt-c-programming-guide"></a><span data-ttu-id="87152-102">&lt;typeparam&gt; (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="87152-102">&lt;typeparam&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="87152-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="87152-103">Syntax</span></span>  
   
 ```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="87152-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="87152-104">Parameters</span></span>  
  `name`  
- Имя параметра типа. Имя заключается в двойные кавычки (" ").  
+ <span data-ttu-id="87152-105">Имя параметра типа.</span><span class="sxs-lookup"><span data-stu-id="87152-105">The name of the type parameter.</span></span> <span data-ttu-id="87152-106">Имя заключается в двойные кавычки (" ").</span><span class="sxs-lookup"><span data-stu-id="87152-106">Enclose the name in double quotation marks (" ").</span></span>  
   
  `description`  
- Описание параметра типа.  
+ <span data-ttu-id="87152-107">Описание параметра типа.</span><span class="sxs-lookup"><span data-stu-id="87152-107">A description for the type parameter.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Тег `<typeparam>` следует использовать в комментариях к объявлению универсального типа или метода для описания параметра типа. Добавьте такой тег для каждого параметра типа универсального типа или метода.  
+## <a name="remarks"></a><span data-ttu-id="87152-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="87152-108">Remarks</span></span>  
+ <span data-ttu-id="87152-109">Тег `<typeparam>` следует использовать в комментариях к объявлению универсального типа или метода для описания параметра типа.</span><span class="sxs-lookup"><span data-stu-id="87152-109">The `<typeparam>` tag should be used in the comment for a generic type or method declaration to describe a type parameter.</span></span> <span data-ttu-id="87152-110">Добавьте такой тег для каждого параметра типа универсального типа или метода.</span><span class="sxs-lookup"><span data-stu-id="87152-110">Add a tag for each type parameter of the generic type or method.</span></span>  
   
- Дополнительные сведения см. в статье [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md).  
+ <span data-ttu-id="87152-111">Дополнительные сведения см. в разделе [Универсальные типы](../../../csharp/programming-guide/generics/index.md).</span><span class="sxs-lookup"><span data-stu-id="87152-111">For more information, see [Generics](../../../csharp/programming-guide/generics/index.md).</span></span>  
   
- Текст тега `<typeparam>` будет отображаться в IntelliSense, (веб-отчет по комментариям к коду в [окне обозревателя объектов](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda)).  
+ <span data-ttu-id="87152-112">Текст тега `<typeparam>` будет отображаться в IntelliSense, (веб-отчет по комментариям к коду в [окне обозревателя объектов](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda)).</span><span class="sxs-lookup"><span data-stu-id="87152-112">The text for the `<typeparam>` tag will be displayed in IntelliSense, the [Object Browser Window](http://msdn.microsoft.com/en-us/3c7f1673-1f0d-41b1-94ca-a3dcfcb82cda) code comment web report.</span></span>  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  
+ <span data-ttu-id="87152-113">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="87152-113">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-cs[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
+## <a name="example"></a><span data-ttu-id="87152-114">Пример</span><span class="sxs-lookup"><span data-stu-id="87152-114">Example</span></span>  
+ [!code-csharp[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparam_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="87152-115">См. также</span><span class="sxs-lookup"><span data-stu-id="87152-115">See Also</span></span>  
+ [<span data-ttu-id="87152-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="87152-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="87152-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="87152-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="87152-118">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="87152-118">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

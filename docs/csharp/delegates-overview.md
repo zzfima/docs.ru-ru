@@ -10,49 +10,46 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: dd4c68fb4f960d0c2d5cbdc9e699650070cacaf1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="introduction-to-delegates"></a><span data-ttu-id="d834e-104">Общие сведения о делегатах</span><span class="sxs-lookup"><span data-stu-id="d834e-104">Introduction to Delegates</span></span>
 
-# <a name="introduction-to-delegates"></a>Общие сведения о делегатах
+[<span data-ttu-id="d834e-105">Назад</span><span class="sxs-lookup"><span data-stu-id="d834e-105">Previous</span></span>](delegates-events.md)
 
-[Назад](delegates-events.md)
+<span data-ttu-id="d834e-106">Делегаты предоставляют механизм *позднего связывания* в .NET.</span><span class="sxs-lookup"><span data-stu-id="d834e-106">Delegates provide a *late binding* mechanism in .NET.</span></span> <span data-ttu-id="d834e-107">Позднее связывание означает, что создается алгоритм, где вызывающий объект также предоставляет по крайней мере один метод, который реализует часть алгоритма.</span><span class="sxs-lookup"><span data-stu-id="d834e-107">Late Binding means that you create an algorithm where the caller also supplies at least one method that implements part of the algorithm.</span></span>
 
-Делегаты предоставляют механизм *позднего связывания* в .NET. Позднее связывание означает, что создается алгоритм, где вызывающий объект также предоставляет по крайней мере один метод, который реализует часть алгоритма.
+<span data-ttu-id="d834e-108">Например, рассмотрим сортировку списка звезд в астрономическом приложении.</span><span class="sxs-lookup"><span data-stu-id="d834e-108">For example, consider sorting a list of stars in an astronomy application.</span></span>
+<span data-ttu-id="d834e-109">Можно отсортировать звезды по расстоянию от Земли, по величине или по воспринимаемой яркости.</span><span class="sxs-lookup"><span data-stu-id="d834e-109">You may choose to sort those stars by their distance from the earth, or the magnitude of the star, or their perceived brightness.</span></span>
 
-Например, рассмотрим сортировку списка звезд в астрономическом приложении.
-Можно отсортировать звезды по расстоянию от Земли, по величине или по воспринимаемой яркости.
+<span data-ttu-id="d834e-110">Во всех этих случаях метод Sort() выполняет, по сути, одно и то же: упорядочивает элементы в списке на основе некоего сравнения.</span><span class="sxs-lookup"><span data-stu-id="d834e-110">In all those cases, the Sort() method does essentially the same thing: arranges the items in the list based on some comparison.</span></span> <span data-ttu-id="d834e-111">Для каждого порядка сортировки используется разный код, сравнивающий две звезды.</span><span class="sxs-lookup"><span data-stu-id="d834e-111">The code that compares two stars is different for each of the sort orderings.</span></span>
 
-Во всех этих случаях метод Sort() выполняет, по сути, одно и то же: упорядочивает элементы в списке на основе некоего сравнения. Для каждого порядка сортировки используется разный код, сравнивающий две звезды.
+<span data-ttu-id="d834e-112">Такого рода решения использовались в программном обеспечении в течение полувека.</span><span class="sxs-lookup"><span data-stu-id="d834e-112">These kinds of solutions have been used in software for half a century.</span></span>
+<span data-ttu-id="d834e-113">Концепция использования делегатов в языке C# обеспечивает первоклассную поддержку языка и безопасность типов.</span><span class="sxs-lookup"><span data-stu-id="d834e-113">The C# language delegate concept provides first class language support, and type safety around the concept.</span></span>
 
-Такого рода решения использовались в программном обеспечении в течение полувека.
-Концепция использования делегатов в языке C# обеспечивает первоклассную поддержку языка и безопасность типов.
+<span data-ttu-id="d834e-114">Как вы увидите далее в этой серии статей, код C#, создаваемый для подобных алгоритмов, является строго типизированным и использует язык и компилятор для соответствия типов аргументам и возвращаемым типам.</span><span class="sxs-lookup"><span data-stu-id="d834e-114">As you'll see later in this series, the C# code you write for algorithms like this is type safe, and leverages the language and the compiler to ensure that the types match for arguments and return types.</span></span>
 
-Как вы увидите далее в этой серии статей, код C#, создаваемый для подобных алгоритмов, является строго типизированным и использует язык и компилятор для соответствия типов аргументам и возвращаемым типам.
+## <a name="language-design-goals-for-delegates"></a><span data-ttu-id="d834e-115">Цели разработки языка для делегатов</span><span class="sxs-lookup"><span data-stu-id="d834e-115">Language Design Goals for Delegates</span></span>
 
-## <a name="language-design-goals-for-delegates"></a>Цели разработки языка для делегатов
+<span data-ttu-id="d834e-116">Разработчики, использующие язык, определили несколько целей для функций, которые в итоге стали делегатами.</span><span class="sxs-lookup"><span data-stu-id="d834e-116">The language designers enumerated several goals for the feature that eventually became delegates.</span></span>
 
-Разработчики, использующие язык, определили несколько целей для функций, которые в итоге стали делегатами.
+<span data-ttu-id="d834e-117">Группе разработчиков требовалась общая языковая конструкция, которую можно было бы использовать для любых алгоритмов позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="d834e-117">The team wanted a common language construct that could be used for any late binding algorithms.</span></span> <span data-ttu-id="d834e-118">Разработчикам удалось изучить одну концепцию и применить ее для решения многих самых разных проблем программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="d834e-118">That enables developers to learn one concept, and use that same concept across many different software problems.</span></span>
 
-Группе разработчиков требовалась общая языковая конструкция, которую можно было бы использовать для любых алгоритмов позднего связывания. Разработчикам удалось изучить одну концепцию и применить ее для решения многих самых разных проблем программного обеспечения.
+<span data-ttu-id="d834e-119">Во-вторых, группе разработчиков была нужна поддержка одно- и многоадресных вызовов методов.</span><span class="sxs-lookup"><span data-stu-id="d834e-119">Second, the team wanted to support both single and multi-cast method calls.</span></span> <span data-ttu-id="d834e-120">(Многоадресные делегаты — это делегаты, где несколько методов связаны друг с другом.)</span><span class="sxs-lookup"><span data-stu-id="d834e-120">(Multicast delegates are delegates where multiple methods have been chained together.</span></span> <span data-ttu-id="d834e-121">Вы увидите примеры [далее в этой серии материалов](delegate-class.md).</span><span class="sxs-lookup"><span data-stu-id="d834e-121">You'll see examples [later in this series](delegate-class.md).</span></span> 
 
-Во-вторых, группе разработчиков была нужна поддержка одно- и многоадресных вызовов методов. (Многоадресные делегаты — это делегаты, где несколько методов связаны друг с другом.) Вы увидите примеры [далее в этой серии материалов](delegate-class.md). 
+<span data-ttu-id="d834e-122">Группа разработчиков хотела, чтобы делегаты поддерживали ту же безопасность типа, ожидаемую от всех конструкций C#.</span><span class="sxs-lookup"><span data-stu-id="d834e-122">The team wanted delegates to support the same type safety that developers expect from all C# constructs.</span></span> 
 
-Группа разработчиков хотела, чтобы делегаты поддерживали ту же безопасность типа, ожидаемую от всех конструкций C#. 
+<span data-ttu-id="d834e-123">И, наконец, группа пришла к выводу, что шаблон событий является определенным шаблоном, где использование делегатов (или любого алгоритма позднего связывания) очень эффективно.</span><span class="sxs-lookup"><span data-stu-id="d834e-123">Finally, the team recognized that an event pattern is one specific pattern where delegates, or any late binding algorithm) is very useful.</span></span> <span data-ttu-id="d834e-124">Группе разработчиков требовалось, чтобы код для делегатов служил основой для шаблона событий .NET.</span><span class="sxs-lookup"><span data-stu-id="d834e-124">The team wanted to ensure that the code for delegates could provide the basis for the .NET event pattern.</span></span>
 
-И, наконец, группа пришла к выводу, что шаблон событий является определенным шаблоном, где использование делегатов (или любого алгоритма позднего связывания) очень эффективно. Группе разработчиков требовалось, чтобы код для делегатов служил основой для шаблона событий .NET.
+<span data-ttu-id="d834e-125">Результатом всей этой работы стала поддержка делегатов и событий в C# и .NET.</span><span class="sxs-lookup"><span data-stu-id="d834e-125">The result of all that work was the delegate and event support in C# and .NET.</span></span> <span data-ttu-id="d834e-126">В оставшихся статьях в этом разделе будут рассматриваться возможности языка, поддержка библиотек и стандартные практики, которые применяются при работе с делегатами.</span><span class="sxs-lookup"><span data-stu-id="d834e-126">The remaining articles in this section will cover the language features, the library support, and the common idioms that are used when you work with delegates.</span></span>
 
-Результатом всей этой работы стала поддержка делегатов и событий в C# и .NET. В оставшихся статьях в этом разделе будут рассматриваться возможности языка, поддержка библиотек и стандартные практики, которые применяются при работе с делегатами.
+<span data-ttu-id="d834e-127">Вы узнаете о ключевом слове `delegate` и коде, который он создает.</span><span class="sxs-lookup"><span data-stu-id="d834e-127">You'll learn about the `delegate` keyword and what code it generates.</span></span> <span data-ttu-id="d834e-128">Вы узнаете о функциях в классе `System.Delegate` и их использовании.</span><span class="sxs-lookup"><span data-stu-id="d834e-128">You'll learn about the features in the `System.Delegate` class, and how those features are used.</span></span> <span data-ttu-id="d834e-129">Вы научитесь создавать типобезопасные делегаты и ознакомитесь со способами создания методов, которые можно вызывать с помощью делегатов.</span><span class="sxs-lookup"><span data-stu-id="d834e-129">You'll learn how to create type safe delegates, and how to create methods that can be invoked through delegates.</span></span> <span data-ttu-id="d834e-130">Вы также узнаете, как работать с делегатами и событиями с помощью лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="d834e-130">You'll also learn how to work with delegates and events by using Lambda expressions.</span></span> <span data-ttu-id="d834e-131">Вы увидите, каким образом делегаты становятся одними из стандартных блоков для LINQ.</span><span class="sxs-lookup"><span data-stu-id="d834e-131">You'll see where delegates become one of the building blocks for LINQ.</span></span> <span data-ttu-id="d834e-132">Вы узнаете, что делегаты являются основой для шаблона событий .NET, и определите их отличия.</span><span class="sxs-lookup"><span data-stu-id="d834e-132">You'll learn how delegates are the basis for the .NET event pattern, and how they are different.</span></span>
 
-Вы узнаете о ключевом слове `delegate` и коде, который он создает. Вы узнаете о функциях в классе `System.Delegate` и их использовании. Вы научитесь создавать типобезопасные делегаты и ознакомитесь со способами создания методов, которые можно вызывать с помощью делегатов. Вы также узнаете, как работать с делегатами и событиями с помощью лямбда-выражения. Вы увидите, каким образом делегаты становятся одними из стандартных блоков для LINQ. Вы узнаете, что делегаты являются основой для шаблона событий .NET, и определите их отличия.
+<span data-ttu-id="d834e-133">В целом вы получите представление о том, что делегаты являются неотъемлемой частью программирования в .NET и работы с API платформы.</span><span class="sxs-lookup"><span data-stu-id="d834e-133">Overall, you'll see how delegates are an integral part of programming in .NET and working with the framework APIs.</span></span>
 
-В целом вы получите представление о том, что делегаты являются неотъемлемой частью программирования в .NET и работы с API платформы.
+<span data-ttu-id="d834e-134">Итак, начнем.</span><span class="sxs-lookup"><span data-stu-id="d834e-134">Let's get started.</span></span>
 
-Итак, начнем.
-
-[Далее](delegate-class.md)
-
+[<span data-ttu-id="d834e-135">Далее</span><span class="sxs-lookup"><span data-stu-id="d834e-135">Next</span></span>](delegate-class.md)

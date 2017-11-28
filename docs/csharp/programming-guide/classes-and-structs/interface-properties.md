@@ -1,68 +1,50 @@
 ---
 title: "Свойства интерфейса (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1da48adf73cccb28d9cff641948db52b40b8c1bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b76cdc4e8419b08dcd95c3711eaead5513ae1d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="interface-properties-c-programming-guide"></a>Свойства интерфейса (Руководство по программированию на C#)
-Свойства можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md). Ниже показан пример метода доступа индексатора для интерфейса:  
+# <a name="interface-properties-c-programming-guide"></a><span data-ttu-id="c8a50-102">Свойства интерфейса (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="c8a50-102">Interface Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="c8a50-103">Свойства можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md).</span><span class="sxs-lookup"><span data-stu-id="c8a50-103">Properties can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="c8a50-104">Ниже показан пример метода доступа индексатора для интерфейса:</span><span class="sxs-lookup"><span data-stu-id="c8a50-104">The following is an example of an interface indexer accessor:</span></span>  
   
- [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
+ [!code-csharp[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
- Метод доступа свойства интерфейса не имеет тела. Таким образом, методы доступа нужны, чтобы указать, доступно ли свойство для чтения и записи, только для чтения или только для записи.  
+ <span data-ttu-id="c8a50-105">Метод доступа свойства интерфейса не имеет тела.</span><span class="sxs-lookup"><span data-stu-id="c8a50-105">The accessor of an interface property does not have a body.</span></span> <span data-ttu-id="c8a50-106">Таким образом, методы доступа нужны, чтобы указать, доступно ли свойство для чтения и записи, только для чтения или только для записи.</span><span class="sxs-lookup"><span data-stu-id="c8a50-106">Thus, the purpose of the accessors is to indicate whether the property is read-write, read-only, or write-only.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере интерфейс `IEmployee` содержит доступное для чтения и записи свойство `Name`, а также свойство `Counter`, предназначенное только для чтения. Класс `Employee` реализует интерфейс `IEmployee` и использует эти два свойства. Программа считывает имя нового сотрудника и текущее число сотрудников, после чего отображает имя сотрудника и его рассчитанный номер.  
+## <a name="example"></a><span data-ttu-id="c8a50-107">Пример</span><span class="sxs-lookup"><span data-stu-id="c8a50-107">Example</span></span>  
+ <span data-ttu-id="c8a50-108">В этом примере интерфейс `IEmployee` содержит доступное для чтения и записи свойство `Name`, а также свойство `Counter`, предназначенное только для чтения.</span><span class="sxs-lookup"><span data-stu-id="c8a50-108">In this example, the interface `IEmployee` has a read-write property, `Name`, and a read-only property, `Counter`.</span></span> <span data-ttu-id="c8a50-109">Класс `Employee` реализует интерфейс `IEmployee` и использует эти два свойства.</span><span class="sxs-lookup"><span data-stu-id="c8a50-109">The class `Employee` implements the `IEmployee` interface and uses these two properties.</span></span> <span data-ttu-id="c8a50-110">Программа считывает имя нового сотрудника и текущее число сотрудников, после чего отображает имя сотрудника и его рассчитанный номер.</span><span class="sxs-lookup"><span data-stu-id="c8a50-110">The program reads the name of a new employee and the current number of employees and displays the employee name and the computed employee number.</span></span>  
   
- Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член. Пример:  
+ <span data-ttu-id="c8a50-111">Вы можете использовать полное имя свойства, которое ссылается на интерфейс, где был объявлен член.</span><span class="sxs-lookup"><span data-stu-id="c8a50-111">You could use the fully qualified name of the property, which references the interface in which the member is declared.</span></span> <span data-ttu-id="c8a50-112">Пример:</span><span class="sxs-lookup"><span data-stu-id="c8a50-112">For example:</span></span>  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
- Это называется [явной реализацией интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md). Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых содержат свойство `Name`, потребуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление свойства:  
+ <span data-ttu-id="c8a50-113">Это называется [явной реализацией интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).</span><span class="sxs-lookup"><span data-stu-id="c8a50-113">This is called [Explicit Interface Implementation](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).</span></span> <span data-ttu-id="c8a50-114">Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых содержат свойство `Name`, потребуется явная реализация члена интерфейса.</span><span class="sxs-lookup"><span data-stu-id="c8a50-114">For example, if the class `Employee` is implementing two interfaces `ICitizen` and `IEmployee` and both interfaces have the `Name` property, the explicit interface member implementation will be necessary.</span></span> <span data-ttu-id="c8a50-115">Это значит, что потребуется следующее объявление свойства:</span><span class="sxs-lookup"><span data-stu-id="c8a50-115">That is, the following property declaration:</span></span>  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
- реализует свойство `Name` в интерфейсе `IEmployee`, тогда как следующее объявление:  
+ <span data-ttu-id="c8a50-116">реализует свойство `Name` в интерфейсе `IEmployee`, тогда как следующее объявление:</span><span class="sxs-lookup"><span data-stu-id="c8a50-116">implements the `Name` property on the `IEmployee` interface, while the following declaration:</span></span>  
   
- [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
+ [!code-csharp[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
- реализует свойство `Name` в интерфейсе `ICitizen`.  
+ <span data-ttu-id="c8a50-117">реализует свойство `Name` в интерфейсе `ICitizen`.</span><span class="sxs-lookup"><span data-stu-id="c8a50-117">implements the `Name` property on the `ICitizen` interface.</span></span>  
   
- [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
+ [!code-csharp[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   
   **`210 Hazem Abolrous`**    
-## <a name="sample-output"></a>Пример результатов выполнения  
+## <a name="sample-output"></a><span data-ttu-id="c8a50-118">Пример результатов выполнения</span><span class="sxs-lookup"><span data-stu-id="c8a50-118">Sample Output</span></span>  
  `Enter number of employees: 210`  
   
  `Enter the name of the new employee: Hazem Abolrous`  
@@ -73,11 +55,10 @@ ms.lasthandoff: 07/28/2017
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="c8a50-119">См. также</span><span class="sxs-lookup"><span data-stu-id="c8a50-119">See Also</span></span>  
+ [<span data-ttu-id="c8a50-120">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c8a50-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c8a50-121">Свойства</span><span class="sxs-lookup"><span data-stu-id="c8a50-121">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="c8a50-122">Использование свойств</span><span class="sxs-lookup"><span data-stu-id="c8a50-122">Using Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [<span data-ttu-id="c8a50-123">Сравнение свойств и индексаторов</span><span class="sxs-lookup"><span data-stu-id="c8a50-123">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+ [<span data-ttu-id="c8a50-124">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="c8a50-124">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="c8a50-125">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="c8a50-125">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)

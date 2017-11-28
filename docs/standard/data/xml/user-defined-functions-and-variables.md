@@ -1,59 +1,60 @@
 ---
-title: "Определяемые пользователем функции и переменные | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Определяемые пользователем функции и переменные"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e1327ac2a3df7a84c157e4bf60d2ad63d69b1677
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Определяемые пользователем функции и переменные
-Класс <xref:System.Xml.XPath.XPathNavigator> содержит ряд методов, используемых для взаимодействия с данными <xref:System.Xml.XPath.XPathDocument>.  Можно дополнить стандартные функции XPath, реализовав функции и переменные расширения для использования в выражениях запросов XPath.  Метод <xref:System.Xml.XPath.XPathExpression.SetContext%2A> может принимать определяемый пользователем контекст, производный от <xref:System.Xml.Xsl.XsltContext>.  Определяемые пользователем функции разрешаются в пользовательском контексте.  
+# <a name="user-defined-functions-and-variables"></a><span data-ttu-id="82579-102">Определяемые пользователем функции и переменные</span><span class="sxs-lookup"><span data-stu-id="82579-102">User Defined Functions and Variables</span></span>
+<span data-ttu-id="82579-103">Класс <xref:System.Xml.XPath.XPathNavigator> содержит ряд методов, используемых для взаимодействия с данными <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="82579-103">The <xref:System.Xml.XPath.XPathNavigator> class provides a set of methods that are used to interact with <xref:System.Xml.XPath.XPathDocument> data.</span></span> <span data-ttu-id="82579-104">Можно дополнить стандартные функции XPath, реализовав функции и переменные расширения для использования в выражениях запросов XPath.</span><span class="sxs-lookup"><span data-stu-id="82579-104">You can supplement the standard XPath functions by implementing extension functions and variables for use by XPath query expressions.</span></span> <span data-ttu-id="82579-105">Метод <xref:System.Xml.XPath.XPathExpression.SetContext%2A> может принимать определяемый пользователем контекст, производный от <xref:System.Xml.Xsl.XsltContext>.</span><span class="sxs-lookup"><span data-stu-id="82579-105">The <xref:System.Xml.XPath.XPathExpression.SetContext%2A> method can accept a user defined context derived from <xref:System.Xml.Xsl.XsltContext>.</span></span> <span data-ttu-id="82579-106">Определяемые пользователем функции разрешаются в пользовательском контексте.</span><span class="sxs-lookup"><span data-stu-id="82579-106">User defined functions are resolved by the custom context.</span></span>  
   
- Функции и переменные расширения полезны для предотвращения атак путем внедрения XML\-кода.  В таких сценариях вводимые пользователем данные помещаются в пользовательские переменные и обрабатываются функциями расширения, в отличие от исходных данных, объединяемых с инструкциями по обработке.  Функции и переменные расширения хранят вводимые пользователем данные, чтобы они работали с XML\-данными только так, как планировалось разработчиком.  
+ <span data-ttu-id="82579-107">Функции и переменные расширения полезны для предотвращения атак путем внедрения XML-кода.</span><span class="sxs-lookup"><span data-stu-id="82579-107">Extension functions and variables can be useful in prevention of XML injection attacks.</span></span> <span data-ttu-id="82579-108">В таких сценариях вводимые пользователем данные помещаются в пользовательские переменные и обрабатываются функциями расширения, в отличие от исходных данных, объединяемых с инструкциями по обработке.</span><span class="sxs-lookup"><span data-stu-id="82579-108">In these scenarios user input is assigned to custom variables and processed by extension functions, not as raw input concatenated with processing instructions.</span></span> <span data-ttu-id="82579-109">Функции и переменные расширения хранят вводимые пользователем данные, чтобы они работали с XML-данными только так, как планировалось разработчиком.</span><span class="sxs-lookup"><span data-stu-id="82579-109">Extension functions and variables contain user input so that it only acts on XML data as intended by the designer.</span></span>  
   
- Для использования расширений реализуется пользовательский класс <xref:System.Xml.Xsl.XsltContext> вместе с интерфейсами <xref:System.Xml.Xsl.IXsltContextFunction> и <xref:System.Xml.Xsl.IXsltContextVariable>, которые поддерживают функции и переменные расширения.  Объект <xref:System.Xml.XPath.XPathExpression> добавляет вводимые пользователем данные вместе со списком <xref:System.Xml.Xsl.XsltArgumentList> к пользовательскому объекту <xref:System.Xml.Xsl.XsltContext>.  
+ <span data-ttu-id="82579-110">Для использования расширений реализуется пользовательский класс <xref:System.Xml.Xsl.XsltContext> вместе с интерфейсами <xref:System.Xml.Xsl.IXsltContextFunction> и <xref:System.Xml.Xsl.IXsltContextVariable>, которые поддерживают функции и переменные расширения.</span><span class="sxs-lookup"><span data-stu-id="82579-110">To use extensions you implement a custom <xref:System.Xml.Xsl.XsltContext> class along with the interfaces <xref:System.Xml.Xsl.IXsltContextFunction> and <xref:System.Xml.Xsl.IXsltContextVariable> that support extension functions and variables.</span></span> <span data-ttu-id="82579-111">Объект <xref:System.Xml.XPath.XPathExpression> добавляет вводимые пользователем данные вместе со списком <xref:System.Xml.Xsl.XsltArgumentList> к пользовательскому объекту <xref:System.Xml.Xsl.XsltContext>.</span><span class="sxs-lookup"><span data-stu-id="82579-111">An <xref:System.Xml.XPath.XPathExpression> adds user input with its <xref:System.Xml.Xsl.XsltArgumentList> to the custom <xref:System.Xml.Xsl.XsltContext>.</span></span>  
   
- Объект <xref:System.Xml.XPath.XPathExpression> представляет скомпилированный запрос, с помощью которого <xref:System.Xml.XPath.XPathNavigator> выполняет поиск и обработку узлов, определяемых выражением.  
+ <span data-ttu-id="82579-112">Объект <xref:System.Xml.XPath.XPathExpression> представляет скомпилированный запрос, с помощью которого <xref:System.Xml.XPath.XPathNavigator> выполняет поиск и обработку узлов, определяемых выражением.</span><span class="sxs-lookup"><span data-stu-id="82579-112">The <xref:System.Xml.XPath.XPathExpression> represents a compiled query that <xref:System.Xml.XPath.XPathNavigator> uses to find and process the nodes identified by the expression.</span></span>  
   
- В следующем примере показана реализация пользовательского класса контекста, производного от <xref:System.Xml.Xsl.XsltContext>.  В комментариях к коду описываются члены класса и их использование в пользовательских функциях.  За этим сегментом кода следуют реализации функций и переменных, а также пример приложения, в котором используются эти реализации.  
+ <span data-ttu-id="82579-113">В следующем примере показана реализация пользовательского класса контекста, производного от <xref:System.Xml.Xsl.XsltContext>.</span><span class="sxs-lookup"><span data-stu-id="82579-113">The following example shows implementation of a custom context class derived from <xref:System.Xml.Xsl.XsltContext>.</span></span> <span data-ttu-id="82579-114">В комментариях к коду описываются члены класса и их использование в пользовательских функциях.</span><span class="sxs-lookup"><span data-stu-id="82579-114">Comments in the code describe class members and their use in custom functions.</span></span> <span data-ttu-id="82579-115">За этим сегментом кода следуют реализации функций и переменных, а также пример приложения, в котором используются эти реализации.</span><span class="sxs-lookup"><span data-stu-id="82579-115">Function and variable implementations and a sample application that uses these implementations follow this code segment.</span></span>  
   
  [!code-csharp[XPathExtensionFunctions#2](../../../../samples/snippets/csharp/VS_Snippets_Data/xpathextensionfunctions/cs/xpathextensionfunctions.cs#2)]
  [!code-vb[XPathExtensionFunctions#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/xpathextensionfunctions/vb/xpathextensionfunctions.vb#2)]  
   
- В следующем коде реализуется функция <xref:System.Xml.Xsl.IXsltContextFunction>.  Класс, в котором реализуется <xref:System.Xml.Xsl.IXsltContextFunction>, разрешает и выполняет определяемые пользователем функции.  В этом примере используется функция, определяемая объявлением `private int CountChar(string title, char charTocount)`.  
+ <span data-ttu-id="82579-116">В следующем коде реализуется функция <xref:System.Xml.Xsl.IXsltContextFunction>.</span><span class="sxs-lookup"><span data-stu-id="82579-116">The following code implements <xref:System.Xml.Xsl.IXsltContextFunction>.</span></span> <span data-ttu-id="82579-117">Класс, в котором реализуется <xref:System.Xml.Xsl.IXsltContextFunction>, разрешает и выполняет определяемые пользователем функции.</span><span class="sxs-lookup"><span data-stu-id="82579-117">The class that implements <xref:System.Xml.Xsl.IXsltContextFunction> resolves and executes user-defined functions.</span></span> <span data-ttu-id="82579-118">В этом примере используется функция, определяемая объявлением `private int CountChar(string title, char charTocount)`.</span><span class="sxs-lookup"><span data-stu-id="82579-118">This example uses the function identified by the declaration: `private int CountChar(string title, char charTocount)`.</span></span>  
   
- В комментариях к коду описываются члены класса.  
+ <span data-ttu-id="82579-119">В комментариях к коду описываются члены класса.</span><span class="sxs-lookup"><span data-stu-id="82579-119">Code comments describe class members.</span></span>  
   
  [!code-csharp[XPathExtensionFunctions#3](../../../../samples/snippets/csharp/VS_Snippets_Data/xpathextensionfunctions/cs/xpathextensionfunctions.cs#3)]
  [!code-vb[XPathExtensionFunctions#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/xpathextensionfunctions/vb/xpathextensionfunctions.vb#3)]  
   
- В следующем коде реализуется функция <xref:System.Xml.Xsl.IXsltContextVariable>.  Этот класс разрешает ссылки на определяемые пользователем переменные в выражениях запросов XPath во время выполнения.  Экземпляр этого класса создается и возвращается переопределенным методом <xref:System.Xml.Xsl.XsltContext.ResolveVariable%2A> пользовательского класса <xref:System.Xml.Xsl.XsltContext>.  
+ <span data-ttu-id="82579-120">В следующем коде реализуется функция <xref:System.Xml.Xsl.IXsltContextVariable>.</span><span class="sxs-lookup"><span data-stu-id="82579-120">The following code implements <xref:System.Xml.Xsl.IXsltContextVariable>.</span></span> <span data-ttu-id="82579-121">Этот класс разрешает ссылки на определяемые пользователем переменные в выражениях запросов XPath во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="82579-121">This class resolves references to user-defined variables in XPath query expressions at run time.</span></span> <span data-ttu-id="82579-122">Экземпляр этого класса создается и возвращается переопределенным методом <xref:System.Xml.Xsl.XsltContext.ResolveVariable%2A> пользовательского класса <xref:System.Xml.Xsl.XsltContext>.</span><span class="sxs-lookup"><span data-stu-id="82579-122">An instance of this class is created and returned by the overridden <xref:System.Xml.Xsl.XsltContext.ResolveVariable%2A> method of the custom <xref:System.Xml.Xsl.XsltContext> class.</span></span>  
   
- В комментариях к коду описываются члены класса.  
+ <span data-ttu-id="82579-123">В комментариях к коду описываются члены класса.</span><span class="sxs-lookup"><span data-stu-id="82579-123">Code comments describe the class members.</span></span>  
   
  [!code-csharp[XPathExtensionFunctions#4](../../../../samples/snippets/csharp/VS_Snippets_Data/xpathextensionfunctions/cs/xpathextensionfunctions.cs#4)]
  [!code-vb[XPathExtensionFunctions#4](../../../../samples/snippets/visualbasic/VS_Snippets_Data/xpathextensionfunctions/vb/xpathextensionfunctions.vb#4)]  
   
- В области предыдущих определений классов следующий код использует пользовательскую функцию для подсчета символов в элементах документа `Tasks.xml`.  В комментариях к коду описывается код, который компилирует пользовательскую функцию и выполняет ее в документе `Tasks.xml`.  
+ <span data-ttu-id="82579-124">В области предыдущих определений классов следующий код использует пользовательскую функцию для подсчета символов в элементах документа `Tasks.xml`.</span><span class="sxs-lookup"><span data-stu-id="82579-124">With the previous class definitions in scope, the following code uses the custom function to count characters in the elements of the `Tasks.xml` document.</span></span> <span data-ttu-id="82579-125">В комментариях к коду описывается код, который компилирует пользовательскую функцию и выполняет ее в документе `Tasks.xml`.</span><span class="sxs-lookup"><span data-stu-id="82579-125">Comments in the code describe the code that compiles the custom function and runs it against the `Tasks.xml` document.</span></span>  
   
  [!code-csharp[XPathExtensionFunctions#1](../../../../samples/snippets/csharp/VS_Snippets_Data/xpathextensionfunctions/cs/xpathextensionfunctions.cs#1)]
  [!code-vb[XPathExtensionFunctions#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/xpathextensionfunctions/vb/xpathextensionfunctions.vb#1)]  
   
- В этом примере используются следующие XML\-данные.  
+ <span data-ttu-id="82579-126">В этом примере используются следующие XML-данные.</span><span class="sxs-lookup"><span data-stu-id="82579-126">This example uses the following XML data.</span></span>  
   
  [!code-xml[XPathExtensionFunctions#5](../../../../samples/snippets/xml/VS_Snippets_Data/xpathextensionfunctions/XML/tasks.xml#5)]

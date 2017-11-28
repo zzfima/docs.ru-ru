@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -21,80 +15,79 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aca6756baf6ee4673e73876d9c95f007fbe01b48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (программа экспорта библиотек типов)
-Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
+# <a name="tlbexpexe-type-library-exporter"></a><span data-ttu-id="b7a13-102">Tlbexp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="b7a13-102">Tlbexp.exe (Type Library Exporter)</span></span>
+<span data-ttu-id="b7a13-103">Программа экспорта библиотек типов создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.</span><span class="sxs-lookup"><span data-stu-id="b7a13-103">The Type Library Exporter generates a type library that describes the types defined in a common language runtime assembly.</span></span>  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="b7a13-104">Эта программа автоматически устанавливается вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b7a13-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="b7a13-105">Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7).</span><span class="sxs-lookup"><span data-stu-id="b7a13-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="b7a13-106">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="b7a13-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующее.  
+ <span data-ttu-id="b7a13-107">В командной строке введите следующее.</span><span class="sxs-lookup"><span data-stu-id="b7a13-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="b7a13-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b7a13-108">Syntax</span></span>  
   
 ```  
 tlbexp assemblyName [options]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="b7a13-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="b7a13-109">Parameters</span></span>  
   
-|Аргумент|Описание|  
+|<span data-ttu-id="b7a13-110">Аргумент</span><span class="sxs-lookup"><span data-stu-id="b7a13-110">Argument</span></span>|<span data-ttu-id="b7a13-111">Описание</span><span class="sxs-lookup"><span data-stu-id="b7a13-111">Description</span></span>|  
 |--------------|-----------------|  
-|*имя_сборки*|Сборка, для которой экспортируется библиотека типов.|  
+|<span data-ttu-id="b7a13-112">*имя_сборки*</span><span class="sxs-lookup"><span data-stu-id="b7a13-112">*assemblyName*</span></span>|<span data-ttu-id="b7a13-113">Сборка, для которой экспортируется библиотека типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-113">The assembly for which to export a type library.</span></span>|  
   
-|Параметр|Описание|  
+|<span data-ttu-id="b7a13-114">Параметр</span><span class="sxs-lookup"><span data-stu-id="b7a13-114">Option</span></span>|<span data-ttu-id="b7a13-115">Описание</span><span class="sxs-lookup"><span data-stu-id="b7a13-115">Description</span></span>|  
 |------------|-----------------|  
-|**/asmpath:** *directory*|Задает место поиска сборок. При использовании этого параметра необходимо явно указать места поиска указанных сборок, включая текущий каталог.<br /><br /> При использовании параметра **asmpath** программа экспорта библиотек типов не будет искать сборку в глобальном кэше сборок.|  
-|**/help**|Отображает синтаксис команд и параметров программы.|  
-|**/names:** *filename*|Определяет регистр букв имен в библиотеке типов. Аргумент *filename* задает текстовый файл. Каждая строка файла определяет регистр букв одного имени в библиотеке типов.|  
-|**/nologo**|Отключает отображение эмблемы Майкрософт при запуске.|  
-|**/oldnames**|Задает принудительный экспорт внутренних имен типов программой Tlbexp.exe в случае конфликта имен типов. Следует иметь в виду, что такой режим использовался по умолчанию в версиях .NET Framework, предшествующих версии 2.0.|  
-|**/out:** *file*|Задает имя создаваемого файла библиотеки типов. Если этот параметр не задан, программа Tlbexp.exe создает библиотеку типов с именем, совпадающим с именем сборки (фактическим именем сборки, которое необязательно должно совпадать с именем файла, содержащего сборку), и расширением TLB.|  
-|**/silence:** `warningnumber`|Отключает отображение конкретного предупреждения. Этот параметр невозможно использовать с параметром **/silent**.|  
-|**/silent**|Запрещает отображение сообщений об успешно выполненных операциях. Этот параметр невозможно использовать с параметром **/silence**.|  
-|**/tlbreference:** *typelibraryname*|Задает принудительное явное разрешение ссылок на библиотеки типов программой Tlbexp.exe без обращений к реестру. Например, если сборка B указывает на сборку A, с помощью данного параметра можно предоставить явную ссылку на библиотеку типов, а не использовать указанную в реестре библиотеку типов. Программа Tlbexp.exe выполняет проверку версий, чтобы версия библиотеки типов соответствовала версии сборки; в противном случае выдается ошибка.<br /><br /> Следует иметь в виду, что параметр **tlbreference** не отменяет обращения к реестру в тех случаях, когда атрибут <xref:System.Runtime.InteropServices.ComImportAttribute> применяется к интерфейсу, который впоследствии реализуется другим типом.|  
-|**/tlbrefpath:** *path*|Полный путь к указанной библиотеке типов.|  
-|**/win32**|При компиляции на 64-разрядном компьютере данный параметр программы Tlbexp.exe задает создание 32-разрядной библиотеки типов.|  
-|**/win64**|При компиляции на 32-разрядном компьютере этот параметр указывает, что средство Tlbexp.exe должно создать 64-разрядную библиотеку типов.|  
-|**/verbose**|Задает режим подробного вывода информации и отображает список всех сборок, на которые есть ссылки и для которых необходимо создать библиотеку типов.|  
-|**/?**|Отображает синтаксис команд и параметров программы.|  
+|<span data-ttu-id="b7a13-116">**/asmpath:** *directory*</span><span class="sxs-lookup"><span data-stu-id="b7a13-116">**/asmpath:** *directory*</span></span>|<span data-ttu-id="b7a13-117">Задает место поиска сборок.</span><span class="sxs-lookup"><span data-stu-id="b7a13-117">Specifies the location to search for assemblies.</span></span> <span data-ttu-id="b7a13-118">При использовании этого параметра необходимо явно указать места поиска указанных сборок, включая текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="b7a13-118">If you use this option, you must explicitly specify the locations to search for referenced assemblies, including the current directory.</span></span><br /><br /> <span data-ttu-id="b7a13-119">При использовании параметра **asmpath** программа экспорта библиотек типов не будет искать сборку в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="b7a13-119">When you use the **asmpath** option, the Type Library Exporter will not look for an assembly in the global assembly cache (GAC).</span></span>|  
+|<span data-ttu-id="b7a13-120">**/help**</span><span class="sxs-lookup"><span data-stu-id="b7a13-120">**/help**</span></span>|<span data-ttu-id="b7a13-121">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="b7a13-121">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="b7a13-122">**/names:** *filename*</span><span class="sxs-lookup"><span data-stu-id="b7a13-122">**/names:** *filename*</span></span>|<span data-ttu-id="b7a13-123">Определяет регистр букв имен в библиотеке типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-123">Specifies the capitalization of names in a type library.</span></span> <span data-ttu-id="b7a13-124">Аргумент *filename* задает текстовый файл.</span><span class="sxs-lookup"><span data-stu-id="b7a13-124">The *filename* argument is a text file.</span></span> <span data-ttu-id="b7a13-125">Каждая строка файла определяет регистр букв одного имени в библиотеке типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-125">Each line in the file specifies the capitalization of one name in the type library.</span></span>|  
+|<span data-ttu-id="b7a13-126">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="b7a13-126">**/nologo**</span></span>|<span data-ttu-id="b7a13-127">Отключает отображение эмблемы Майкрософт при запуске.</span><span class="sxs-lookup"><span data-stu-id="b7a13-127">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="b7a13-128">**/oldnames**</span><span class="sxs-lookup"><span data-stu-id="b7a13-128">**/oldnames**</span></span>|<span data-ttu-id="b7a13-129">Задает принудительный экспорт внутренних имен типов программой Tlbexp.exe в случае конфликта имен типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-129">Forces Tlbexp.exe to export decorated type names if there is a type name conflict.</span></span> <span data-ttu-id="b7a13-130">Следует иметь в виду, что такой режим использовался по умолчанию в версиях .NET Framework, предшествующих версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="b7a13-130">Note that this was the default behavior in versions prior to the .NET Framework version 2.0.</span></span>|  
+|<span data-ttu-id="b7a13-131">**/out:** *file*</span><span class="sxs-lookup"><span data-stu-id="b7a13-131">**/out:** *file*</span></span>|<span data-ttu-id="b7a13-132">Задает имя создаваемого файла библиотеки типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-132">Specifies the name of the type library file to generate.</span></span> <span data-ttu-id="b7a13-133">Если этот параметр не задан, программа Tlbexp.exe создает библиотеку типов с именем, совпадающим с именем сборки (фактическим именем сборки, которое необязательно должно совпадать с именем файла, содержащего сборку), и расширением TLB.</span><span class="sxs-lookup"><span data-stu-id="b7a13-133">If you omit this option, Tlbexp.exe generates a type library with the same name as the assembly (the actual assembly name, which might not necessarily be the same as the file containing the assembly) and a .tlb extension.</span></span>|  
+|<span data-ttu-id="b7a13-134">**/silence:** `warningnumber`</span><span class="sxs-lookup"><span data-stu-id="b7a13-134">**/silence:** `warningnumber`</span></span>|<span data-ttu-id="b7a13-135">Отключает отображение конкретного предупреждения.</span><span class="sxs-lookup"><span data-stu-id="b7a13-135">Suppresses the display of the specified warning.</span></span> <span data-ttu-id="b7a13-136">Этот параметр невозможно использовать с параметром **/silent**.</span><span class="sxs-lookup"><span data-stu-id="b7a13-136">This option cannot be used with **/silent**.</span></span>|  
+|<span data-ttu-id="b7a13-137">**/silent**</span><span class="sxs-lookup"><span data-stu-id="b7a13-137">**/silent**</span></span>|<span data-ttu-id="b7a13-138">Запрещает отображение сообщений об успешно выполненных операциях.</span><span class="sxs-lookup"><span data-stu-id="b7a13-138">Suppresses the display of success messages.</span></span> <span data-ttu-id="b7a13-139">Этот параметр невозможно использовать с параметром **/silence**.</span><span class="sxs-lookup"><span data-stu-id="b7a13-139">This option cannot be used with **/silence**.</span></span>|  
+|<span data-ttu-id="b7a13-140">**/tlbreference:** *typelibraryname*</span><span class="sxs-lookup"><span data-stu-id="b7a13-140">**/tlbreference:** *typelibraryname*</span></span>|<span data-ttu-id="b7a13-141">Задает принудительное явное разрешение ссылок на библиотеки типов программой Tlbexp.exe без обращений к реестру.</span><span class="sxs-lookup"><span data-stu-id="b7a13-141">Forces Tlbexp.exe to explicitly resolve type library references without consulting the registry.</span></span> <span data-ttu-id="b7a13-142">Например, если сборка B указывает на сборку A, с помощью данного параметра можно предоставить явную ссылку на библиотеку типов, а не использовать указанную в реестре библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-142">For example, if assembly B references assembly A, you can use this option to provide an explicit type library reference, rather than relying on the type library specified in the registry.</span></span> <span data-ttu-id="b7a13-143">Программа Tlbexp.exe выполняет проверку версий, чтобы версия библиотеки типов соответствовала версии сборки; в противном случае выдается ошибка.</span><span class="sxs-lookup"><span data-stu-id="b7a13-143">Tlbexp.exe performs a version check to ensure that the type library version matches the assembly version; otherwise, it generates an error.</span></span><br /><br /> <span data-ttu-id="b7a13-144">Следует иметь в виду, что параметр **tlbreference** не отменяет обращения к реестру в тех случаях, когда атрибут <xref:System.Runtime.InteropServices.ComImportAttribute> применяется к интерфейсу, который впоследствии реализуется другим типом.</span><span class="sxs-lookup"><span data-stu-id="b7a13-144">Note that the **tlbreference** option still consults the registry in cases where the <xref:System.Runtime.InteropServices.ComImportAttribute> attribute is applied to an interface that is then implemented by another type.</span></span>|  
+|<span data-ttu-id="b7a13-145">**/tlbrefpath:** *path*</span><span class="sxs-lookup"><span data-stu-id="b7a13-145">**/tlbrefpath:** *path*</span></span>|<span data-ttu-id="b7a13-146">Полный путь к указанной библиотеке типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-146">Fully qualified path to a referenced type library.</span></span>|  
+|<span data-ttu-id="b7a13-147">**/win32**</span><span class="sxs-lookup"><span data-stu-id="b7a13-147">**/win32**</span></span>|<span data-ttu-id="b7a13-148">При компиляции на 64-разрядном компьютере данный параметр программы Tlbexp.exe задает создание 32-разрядной библиотеки типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-148">When compiling on a 64-bit computer, this option specifies that Tlbexp.exe generates a 32-bit type library.</span></span>|  
+|<span data-ttu-id="b7a13-149">**/win64**</span><span class="sxs-lookup"><span data-stu-id="b7a13-149">**/win64**</span></span>|<span data-ttu-id="b7a13-150">При компиляции на 32-разрядном компьютере этот параметр указывает, что средство Tlbexp.exe должно создать 64-разрядную библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-150">When compiling on a 32-bit computer, this option specifies that Tlbexp.exe generates a 64-bit type library.</span></span>|  
+|<span data-ttu-id="b7a13-151">**/verbose**</span><span class="sxs-lookup"><span data-stu-id="b7a13-151">**/verbose**</span></span>|<span data-ttu-id="b7a13-152">Задает режим подробного вывода информации и отображает список всех сборок, на которые есть ссылки и для которых необходимо создать библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-152">Specifies verbose mode; displays a list of any referenced assemblies for which a type library needs to be generated.</span></span>|  
+|<span data-ttu-id="b7a13-153">**/?**</span><span class="sxs-lookup"><span data-stu-id="b7a13-153">**/?**</span></span>|<span data-ttu-id="b7a13-154">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="b7a13-154">Displays command syntax and options for the tool.</span></span>|  
   
 > [!NOTE]
->  В параметрах командной строки для программы Tlbexp.exe не учитывается регистр, и такие параметры могут задаваться в любом порядке. Можно вводить только часть имени параметра, достаточную для его однозначной идентификации. Например, **/n** эквивалентно **/nologo**, а **/o:** *outfile.tlb* эквивалентно **/out:** *outfile.tlb*.  
+>  <span data-ttu-id="b7a13-155">В параметрах командной строки для программы Tlbexp.exe не учитывается регистр, и такие параметры могут задаваться в любом порядке.</span><span class="sxs-lookup"><span data-stu-id="b7a13-155">The command-line options for Tlbexp.exe are case-insensitive and can be supplied in any order.</span></span> <span data-ttu-id="b7a13-156">Можно вводить только часть имени параметра, достаточную для его однозначной идентификации.</span><span class="sxs-lookup"><span data-stu-id="b7a13-156">You only need to specify enough of the option to uniquely identify it.</span></span> <span data-ttu-id="b7a13-157">Например, **/n** эквивалентно **/nologo**, а **/o:** *outfile.tlb* эквивалентно **/out:** *outfile.tlb*.</span><span class="sxs-lookup"><span data-stu-id="b7a13-157">For example, **/n** is equivalent to **/nologo**, and **/o:** *outfile.tlb* is equivalent to **/out:** *outfile.tlb*.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Программа Tlbexp.exe создает библиотеку типов, содержащую определения типов, заданных в сборке. Приложения, такие как Visual Basic 6.0, могут использовать созданную библиотеку типов для связывания с типами .NET, определенными в сборке.  
+## <a name="remarks"></a><span data-ttu-id="b7a13-158">Примечания</span><span class="sxs-lookup"><span data-stu-id="b7a13-158">Remarks</span></span>  
+ <span data-ttu-id="b7a13-159">Программа Tlbexp.exe создает библиотеку типов, содержащую определения типов, заданных в сборке.</span><span class="sxs-lookup"><span data-stu-id="b7a13-159">Tlbexp.exe generates a type library that contains definitions of the types defined in the assembly.</span></span> <span data-ttu-id="b7a13-160">Приложения, такие как Visual Basic 6.0, могут использовать созданную библиотеку типов для связывания с типами .NET, определенными в сборке.</span><span class="sxs-lookup"><span data-stu-id="b7a13-160">Applications such as Visual Basic 6.0 can use the generated type library to bind to the .NET types defined in the assembly.</span></span>  
   
 > [!IMPORTANT]
->  Программу Tlbexp.exe нельзя использовать для экспорта файлов метаданных Windows (WINMD). Экспорт сборок среды выполнения Windows не поддерживается.  
+>  <span data-ttu-id="b7a13-161">Программу Tlbexp.exe нельзя использовать для экспорта файлов метаданных Windows (WINMD).</span><span class="sxs-lookup"><span data-stu-id="b7a13-161">You cannot use Tlbexp.exe to export Windows metadata (.winmd) files.</span></span> <span data-ttu-id="b7a13-162">Экспорт сборок среды выполнения Windows не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="b7a13-162">Exporting Windows Runtime assemblies is not supported.</span></span>  
   
- Вся сборка преобразуется целиком. Программу Tlbexp.exe нельзя использовать с целью генерации сведений о типах для подмножества типов, определенных в сборке.  
+ <span data-ttu-id="b7a13-163">Вся сборка преобразуется целиком.</span><span class="sxs-lookup"><span data-stu-id="b7a13-163">The entire assembly is converted at once.</span></span> <span data-ttu-id="b7a13-164">Программу Tlbexp.exe нельзя использовать с целью генерации сведений о типах для подмножества типов, определенных в сборке.</span><span class="sxs-lookup"><span data-stu-id="b7a13-164">You cannot use Tlbexp.exe to generate type information for a subset of the types defined in an assembly.</span></span>  
   
- Программа Tlbexp.exe не может использоваться для создания библиотеки типов из сборки, импортированной с помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Вместо этого следует указать исходную библиотеку типов, импортированную с помощью программы Tlbimp.exe. Библиотеку типов можно экспортировать из сборки, содержащей ссылки на сборки, импортированные с помощью программы Tlbimp.exe. См. раздел примеров ниже.  
+ <span data-ttu-id="b7a13-165">Программа Tlbexp.exe не может использоваться для создания библиотеки типов из сборки, импортированной с помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="b7a13-165">You cannot use Tlbexp.exe to produce a type library from an assembly that was imported using the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="b7a13-166">Вместо этого следует указать исходную библиотеку типов, импортированную с помощью программы Tlbimp.exe.</span><span class="sxs-lookup"><span data-stu-id="b7a13-166">Instead, you should refer to the original type library that was imported with Tlbimp.exe.</span></span> <span data-ttu-id="b7a13-167">Библиотеку типов можно экспортировать из сборки, содержащей ссылки на сборки, импортированные с помощью программы Tlbimp.exe.</span><span class="sxs-lookup"><span data-stu-id="b7a13-167">You can export a type library from an assembly that references assemblies that were imported using Tlbimp.exe.</span></span> <span data-ttu-id="b7a13-168">См. раздел примеров ниже.</span><span class="sxs-lookup"><span data-stu-id="b7a13-168">See the examples section below.</span></span>  
   
- Программа Tlbexp.exe размещает созданные библиотеки типов в текущем рабочем каталоге или каталоге, заданном для выходного файла. Из одной сборки можно создать несколько библиотек типов.  
+ <span data-ttu-id="b7a13-169">Программа Tlbexp.exe размещает созданные библиотеки типов в текущем рабочем каталоге или каталоге, заданном для выходного файла.</span><span class="sxs-lookup"><span data-stu-id="b7a13-169">Tlbexp.exe places generated type libraries in the current working directory or the directory specified for the output file.</span></span> <span data-ttu-id="b7a13-170">Из одной сборки можно создать несколько библиотек типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-170">A single assembly might cause several type libraries to be generated.</span></span>  
   
- Программа Tlbexp.exe создает библиотеки типов, но не регистрирует их. В этом состоит ее отличие от [программы регистрации сборок (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), которая и создает библиотеку типов, и регистрирует ее. Чтобы создать и зарегистрировать библиотеку типов в COM, используйте программу Regasm.exe.  
+ <span data-ttu-id="b7a13-171">Программа Tlbexp.exe создает библиотеки типов, но не регистрирует их.</span><span class="sxs-lookup"><span data-stu-id="b7a13-171">Tlbexp.exe generates a type library but does not register it.</span></span> <span data-ttu-id="b7a13-172">В этом состоит ее отличие от [программы регистрации сборок (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), которая и создает библиотеку типов, и регистрирует ее.</span><span class="sxs-lookup"><span data-stu-id="b7a13-172">This is in contrast to the [Assembly Registration tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), which both generates and registers a type library.</span></span> <span data-ttu-id="b7a13-173">Чтобы создать и зарегистрировать библиотеку типов в COM, используйте программу Regasm.exe.</span><span class="sxs-lookup"><span data-stu-id="b7a13-173">To generate and register a type library with COM, use Regasm.exe.</span></span>  
   
- Если параметры `/win32` и `/win64` не заданы, программа Tlbexp.exe создает 32-разрядную или 64-разрядную библиотеку типов в соответствии с типом компьютера, на котором выполняется компиляция (32-разрядный или 64-разрядный компьютер). Для перекрестной компиляции можно задать параметр `/win64` на 32-разрядном компьютере, чтобы создать 64-разрядную библиотеку типов, или параметр `/win32` на 64-разрядном компьютере, чтобы создать 32-разрядную библиотеки типов. В 32-разрядных библиотеках типов значение <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> задается как <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>. В 64-разрядных библиотеках типов значение параметра <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> равно <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>. Все преобразования типов данных (например, типы данных с размером указателя, такие как `IntPtr` и `UIntPtr`) производятся соответствующим образом.  
+ <span data-ttu-id="b7a13-174">Если параметры `/win32` и `/win64` не заданы, программа Tlbexp.exe создает 32-разрядную или 64-разрядную библиотеку типов в соответствии с типом компьютера, на котором выполняется компиляция (32-разрядный или 64-разрядный компьютер).</span><span class="sxs-lookup"><span data-stu-id="b7a13-174">If you do not specify either the `/win32` or `/win64` option, Tlbexp.exe generates a 32-bit or 64-bit type library that corresponds to the type of computer on which you are performing the compilation (32-bit or 64-bit computer).</span></span> <span data-ttu-id="b7a13-175">Для перекрестной компиляции можно задать параметр `/win64` на 32-разрядном компьютере, чтобы создать 64-разрядную библиотеку типов, или параметр `/win32` на 64-разрядном компьютере, чтобы создать 32-разрядную библиотеки типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-175">For cross-compilation purposes, you can use the `/win64` option on a 32-bit computer to generate a 64-bit type library and you can use the `/win32` option on a 64-bit computer to generate a 32-bit type library.</span></span> <span data-ttu-id="b7a13-176">В 32-разрядных библиотеках типов значение <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> задается как <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>.</span><span class="sxs-lookup"><span data-stu-id="b7a13-176">In 32-bit type libraries, the <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> value is set to <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>.</span></span> <span data-ttu-id="b7a13-177">В 64-разрядных библиотеках типов значение параметра <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> равно <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>.</span><span class="sxs-lookup"><span data-stu-id="b7a13-177">In 64-bit type libraries, the <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> value is set to <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>.</span></span> <span data-ttu-id="b7a13-178">Все преобразования типов данных (например, типы данных с размером указателя, такие как `IntPtr` и `UIntPtr`) производятся соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="b7a13-178">All data type transformations (for example, pointer-sized data types such as `IntPtr` and `UIntPtr`) are converted appropriately.</span></span>  
   
- Если с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute> в качестве значения поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> задается `VT_UNKOWN` или `VT_DISPATCH`, программа Tlbexp.exe игнорирует все последующие случаи использования поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>. Например, для следующих подписей:  
+ <span data-ttu-id="b7a13-179">Если с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute> в качестве значения поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> задается `VT_UNKOWN` или `VT_DISPATCH`, программа Tlbexp.exe игнорирует все последующие случаи использования поля <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.</span><span class="sxs-lookup"><span data-stu-id="b7a13-179">If you use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify a <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> value of `VT_UNKOWN` or `VT_DISPATCH`, Tlbexp.exe ignores any subsequent use of the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> field.</span></span> <span data-ttu-id="b7a13-180">Например, для следующих подписей:</span><span class="sxs-lookup"><span data-stu-id="b7a13-180">For example, given the following signatures:</span></span>  
   
 ```  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
- создается следующая библиотека типов.  
+ <span data-ttu-id="b7a13-181">создается следующая библиотека типов.</span><span class="sxs-lookup"><span data-stu-id="b7a13-181">the following type library is generated:</span></span>  
   
 ```  
 [id(0x60020004)]  
@@ -103,52 +96,51 @@ HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);
 HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);  
 ```  
   
- Обратите внимание, что программа Tlbexp.exe игнорирует поле <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.  
+ <span data-ttu-id="b7a13-182">Обратите внимание, что программа Tlbexp.exe игнорирует поле <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.</span><span class="sxs-lookup"><span data-stu-id="b7a13-182">Note that Tlbexp.exe ignores the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> field.</span></span>  
   
- Так как библиотеки типов не могут разместить все данные, найденные в сборке, программа Tlbexp.exe может пропустить некоторые данные в процессе экспорта. Описание процесса преобразования и определения для источников каждого элемента данных, передаваемого в библиотеку типов, см. в разделе [Общие сведения о преобразовании сборки в библиотеку типов](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ <span data-ttu-id="b7a13-183">Так как библиотеки типов не могут разместить все данные, найденные в сборке, программа Tlbexp.exe может пропустить некоторые данные в процессе экспорта.</span><span class="sxs-lookup"><span data-stu-id="b7a13-183">Because type libraries cannot accommodate all the information found in assemblies, Tlbexp.exe might discard some data during the export process.</span></span> <span data-ttu-id="b7a13-184">Описание процесса преобразования и определения для источников каждого элемента данных, передаваемого в библиотеку типов, см. в разделе [Общие сведения о преобразовании сборки в библиотеку типов](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).</span><span class="sxs-lookup"><span data-stu-id="b7a13-184">For an explanation of the transformation process and identification of the source of each piece of information emitted to a type library, see the [Assembly to Type Library Conversion Summary](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).</span></span>  
   
- Следует иметь в виду, что программа экспорта библиотек типов экспортирует методы, для которых в качестве параметра <xref:System.TypedReference> задано `VARIANT`, несмотря на то что объект <xref:System.TypedReference> теряет смысл в неуправляемом коде. При экспорте методов с параметрами <xref:System.TypedReference> программа экспорта библиотек типов не выдает предупреждение или сообщение об ошибке, и неуправляемый код, в котором используется полученная библиотека типов, будет выполняться неправильно.  
+ <span data-ttu-id="b7a13-185">Следует иметь в виду, что программа экспорта библиотек типов экспортирует методы, для которых в качестве параметра <xref:System.TypedReference> задано `VARIANT`, несмотря на то что объект <xref:System.TypedReference> теряет смысл в неуправляемом коде.</span><span class="sxs-lookup"><span data-stu-id="b7a13-185">Note that the Type Library Exporter exports methods that have <xref:System.TypedReference> parameters as `VARIANT`, even though the <xref:System.TypedReference> object has no meaning in unmanaged code.</span></span> <span data-ttu-id="b7a13-186">При экспорте методов с параметрами <xref:System.TypedReference> программа экспорта библиотек типов не выдает предупреждение или сообщение об ошибке, и неуправляемый код, в котором используется полученная библиотека типов, будет выполняться неправильно.</span><span class="sxs-lookup"><span data-stu-id="b7a13-186">When you export methods that have <xref:System.TypedReference> parameters, the Type Library Exporter will not generate a warning or error and unmanaged code that uses the resulting type library will not run properly.</span></span>  
   
- Программа экспорта библиотек типов поддерживается в Microsoft Windows 2000 и более поздних версиях.  
+ <span data-ttu-id="b7a13-187">Программа экспорта библиотек типов поддерживается в Microsoft Windows 2000 и более поздних версиях.</span><span class="sxs-lookup"><span data-stu-id="b7a13-187">The Type Library Exporter is supported on Microsoft Windows 2000 and later.</span></span>  
   
-## <a name="examples"></a>Примеры  
- Следующая команда создает библиотеку типов с таким же именем, что и у сборки, найденной в `myTest.dll`.  
+## <a name="examples"></a><span data-ttu-id="b7a13-188">Примеры</span><span class="sxs-lookup"><span data-stu-id="b7a13-188">Examples</span></span>  
+ <span data-ttu-id="b7a13-189">Следующая команда создает библиотеку типов с таким же именем, что и у сборки, найденной в `myTest.dll`.</span><span class="sxs-lookup"><span data-stu-id="b7a13-189">The following command generates a type library with the same name as the assembly found in `myTest.dll`.</span></span>  
   
 ```  
 tlbexp myTest.dll  
 ```  
   
- Следующая команда создает библиотеку типов с именем `clipper.tlb`.  
+ <span data-ttu-id="b7a13-190">Следующая команда создает библиотеку типов с именем `clipper.tlb`.</span><span class="sxs-lookup"><span data-stu-id="b7a13-190">The following command generates a type library with the name `clipper.tlb`.</span></span>  
   
 ```  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
- В следующем примере показано использование программы Tlbexp.exe для экспорта библиотеки типов из сборки, на которую ссылаются сборки, импортированные с помощью программы Tlbimp.exe.  
+ <span data-ttu-id="b7a13-191">В следующем примере показано использование программы Tlbexp.exe для экспорта библиотеки типов из сборки, на которую ссылаются сборки, импортированные с помощью программы Tlbimp.exe.</span><span class="sxs-lookup"><span data-stu-id="b7a13-191">The following example illustrates using Tlbexp.exe to export a type library from an assembly that references assemblies that were imported using Tlbimp.exe.</span></span>  
   
- Сначала с помощью программы Tlbimp.exe импортируйте библиотеку типов `myLib.tlb` и сохраните ее как `myLib.dll`.  
+ <span data-ttu-id="b7a13-192">Сначала с помощью программы Tlbimp.exe импортируйте библиотеку типов `myLib.tlb` и сохраните ее как `myLib.dll`.</span><span class="sxs-lookup"><span data-stu-id="b7a13-192">First use Tlbimp.exe to import the type library `myLib.tlb` and save it as `myLib.dll`.</span></span>  
   
 ```  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
- Следующая команда использует компилятор C# для компиляции библиотеки `Sample.dll,`, которая ссылается на библиотеку `myLib.dll`, созданную в предыдущем примере.  
+ <span data-ttu-id="b7a13-193">Следующая команда использует компилятор C# для компиляции библиотеки `Sample.dll,`, которая ссылается на библиотеку `myLib.dll`, созданную в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="b7a13-193">The following command uses the C# compiler to compile the `Sample.dll,` which references `myLib.dll` created in the previous example.</span></span>  
   
 ```  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
- Следующая команда создает библиотеку типов для файла `Sample.dll`, ссылающегося на `myLib.dll`.  
+ <span data-ttu-id="b7a13-194">Следующая команда создает библиотеку типов для файла `Sample.dll`, ссылающегося на `myLib.dll`.</span><span class="sxs-lookup"><span data-stu-id="b7a13-194">The following command generates a type library for `Sample.dll` that references `myLib.dll`.</span></span>  
   
 ```  
 tlbexp Sample.dll  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.TypeLibExporterFlags>   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   
- [Общие сведения о преобразовании сборки в библиотеку типов](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)   
- [Tlbimp.exe (программа импорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="b7a13-195">См. также</span><span class="sxs-lookup"><span data-stu-id="b7a13-195">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
+ [<span data-ttu-id="b7a13-196">Инструменты</span><span class="sxs-lookup"><span data-stu-id="b7a13-196">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="b7a13-197">Regasm.exe (средство регистрации сборок)</span><span class="sxs-lookup"><span data-stu-id="b7a13-197">Regasm.exe (Assembly Registration Tool)</span></span>](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
+ [<span data-ttu-id="b7a13-198">Общие сведения о преобразовании сборки в библиотеку типов</span><span class="sxs-lookup"><span data-stu-id="b7a13-198">Assembly to Type Library Conversion Summary</span></span>](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [<span data-ttu-id="b7a13-199">Tlbimp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="b7a13-199">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [<span data-ttu-id="b7a13-200">Командные строки</span><span class="sxs-lookup"><span data-stu-id="b7a13-200">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

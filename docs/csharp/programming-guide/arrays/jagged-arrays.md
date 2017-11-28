@@ -1,94 +1,75 @@
 ---
 title: "Массивы массивов (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f74eaf5334e8e2198f7a058717a4eb2ff0c1e775
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb6c0823af37924235dba7daa20e607cb8402a79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="jagged-arrays-c-programming-guide"></a>Массивы массивов (Руководство по программированию на C#)
-Массив массивов — это массив, элементы которого сами являются массивами. Элементы массива массивов могут иметь различные измерения и размеры. Массив массивов иногда называется нерегулярным массивом. В следующих примерах показано, как объявлять и инициализировать массивы массивов, а также получать доступ к ним.  
+# <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="b5e98-102">Массивы массивов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="b5e98-102">Jagged Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="b5e98-103">Массив массивов — это массив, элементы которого сами являются массивами.</span><span class="sxs-lookup"><span data-stu-id="b5e98-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="b5e98-104">Элементы массива массивов могут иметь различные измерения и размеры.</span><span class="sxs-lookup"><span data-stu-id="b5e98-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="b5e98-105">Массив массивов иногда называется нерегулярным массивом.</span><span class="sxs-lookup"><span data-stu-id="b5e98-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="b5e98-106">В следующих примерах показано, как объявлять и инициализировать массивы массивов, а также получать доступ к ним.</span><span class="sxs-lookup"><span data-stu-id="b5e98-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  
   
- Ниже объявляется одномерный массив из трех элементов, каждый из которых является одномерным массивом целых чисел:  
+ <span data-ttu-id="b5e98-107">Ниже объявляется одномерный массив из трех элементов, каждый из которых является одномерным массивом целых чисел:</span><span class="sxs-lookup"><span data-stu-id="b5e98-107">The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional array of integers:</span></span>  
   
- [!code-cs[csProgGuideArrays#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_1.cs)]  
+ [!code-csharp[csProgGuideArrays#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_1.cs)]  
   
- Прежде чем использовать `jaggedArray`, его элементы необходимо инициализировать. Это можно сделать следующим образом:  
+ <span data-ttu-id="b5e98-108">Прежде чем использовать `jaggedArray`, его элементы необходимо инициализировать.</span><span class="sxs-lookup"><span data-stu-id="b5e98-108">Before you can use `jaggedArray`, its elements must be initialized.</span></span> <span data-ttu-id="b5e98-109">Это можно сделать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="b5e98-109">You can initialize the elements like this:</span></span>  
   
- [!code-cs[csProgGuideArrays#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_2.cs)]  
+ [!code-csharp[csProgGuideArrays#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_2.cs)]  
   
- Каждый элемент представляет собой одномерный массив целых чисел. Первый из них содержит 5 целых чисел, второй — 4, а третий — 2.  
+ <span data-ttu-id="b5e98-110">Каждый элемент представляет собой одномерный массив целых чисел.</span><span class="sxs-lookup"><span data-stu-id="b5e98-110">Each of the elements is a single-dimensional array of integers.</span></span> <span data-ttu-id="b5e98-111">Первый из них содержит 5 целых чисел, второй — 4, а третий — 2.</span><span class="sxs-lookup"><span data-stu-id="b5e98-111">The first element is an array of 5 integers, the second is an array of 4 integers, and the third is an array of 2 integers.</span></span>  
   
- Кроме того, с помощью инициализаторов можно заполнять элементы массива значениями (при этом вам не потребуется знать размер массива). Пример:  
+ <span data-ttu-id="b5e98-112">Кроме того, с помощью инициализаторов можно заполнять элементы массива значениями (при этом вам не потребуется знать размер массива).</span><span class="sxs-lookup"><span data-stu-id="b5e98-112">It is also possible to use initializers to fill the array elements with values, in which case you do not need the array size.</span></span> <span data-ttu-id="b5e98-113">Пример:</span><span class="sxs-lookup"><span data-stu-id="b5e98-113">For example:</span></span>  
   
- [!code-cs[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
+ [!code-csharp[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
   
- Также массив можно инициализировать при объявлении, как показано ниже:  
+ <span data-ttu-id="b5e98-114">Также массив можно инициализировать при объявлении, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="b5e98-114">You can also initialize the array upon declaration like this:</span></span>  
   
- [!code-cs[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
+ [!code-csharp[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
   
- Можно использовать следующую краткую форму. Обратите внимание, что при инициализации элементов нельзя опускать оператор `new`, поскольку механизм инициализации по умолчанию для них не предусмотрен:  
+ <span data-ttu-id="b5e98-115">Можно использовать следующую краткую форму.</span><span class="sxs-lookup"><span data-stu-id="b5e98-115">You can use the following shorthand form.</span></span> <span data-ttu-id="b5e98-116">Обратите внимание, что при инициализации элементов нельзя опускать оператор `new`, поскольку механизм инициализации по умолчанию для них не предусмотрен:</span><span class="sxs-lookup"><span data-stu-id="b5e98-116">Notice that you cannot omit the `new` operator from the elements initialization because there is no default initialization for the elements:</span></span>  
   
- [!code-cs[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
   
- В массиве массивов элементы являются ссылочными типами и инициализируются значением `null`.  
+ <span data-ttu-id="b5e98-117">В массиве массивов элементы являются ссылочными типами и инициализируются значением `null`.</span><span class="sxs-lookup"><span data-stu-id="b5e98-117">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
- Доступ к отдельным элементам массива можно получить способами, показанными в следующих примерах:  
+ <span data-ttu-id="b5e98-118">Доступ к отдельным элементам массива можно получить способами, показанными в следующих примерах:</span><span class="sxs-lookup"><span data-stu-id="b5e98-118">You can access individual array elements like these examples:</span></span>  
   
- [!code-cs[csProgGuideArrays#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_6.cs)]  
+ [!code-csharp[csProgGuideArrays#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_6.cs)]  
   
- Массивы массивов и многомерные массивы можно смешивать. Ниже показаны объявление и инициализация одномерного массива массивов, элементами которого являются двухмерные массивы разного размера. Дополнительные сведения о двумерных массивах см. в разделе [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).  
+ <span data-ttu-id="b5e98-119">Массивы массивов и многомерные массивы можно смешивать.</span><span class="sxs-lookup"><span data-stu-id="b5e98-119">It is possible to mix jagged and multidimensional arrays.</span></span> <span data-ttu-id="b5e98-120">Ниже показаны объявление и инициализация одномерного массива массивов, элементами которого являются двухмерные массивы разного размера.</span><span class="sxs-lookup"><span data-stu-id="b5e98-120">The following is a declaration and initialization of a single-dimensional jagged array that contains three two-dimensional array elements of different sizes.</span></span> <span data-ttu-id="b5e98-121">Дополнительные сведения о двумерных массивах см. в разделе [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="b5e98-121">For more information about two-dimensional arrays, see [Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span></span>  
   
- [!code-cs[csProgGuideArrays#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_7.cs)]  
+ [!code-csharp[csProgGuideArrays#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_7.cs)]  
   
- В этом примере демонстрируется доступ к отдельным элементам, для чего отображается значение элемента `[1,0]` первого массива (`5`):  
+ <span data-ttu-id="b5e98-122">В этом примере демонстрируется доступ к отдельным элементам, для чего отображается значение элемента `[1,0]` первого массива (`5`):</span><span class="sxs-lookup"><span data-stu-id="b5e98-122">You can access individual elements as shown in this example, which displays the value of the element `[1,0]` of the first array (value `5`):</span></span>  
   
- [!code-cs[csProgGuideArrays#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_8.cs)]  
+ [!code-csharp[csProgGuideArrays#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_8.cs)]  
   
- Метод `Length` возвращает число массивов, содержащихся в массиве массивов. Допустим, предыдущий массив был объявлен с использованием следующей строки:  
+ <span data-ttu-id="b5e98-123">Метод `Length` возвращает число массивов, содержащихся в массиве массивов.</span><span class="sxs-lookup"><span data-stu-id="b5e98-123">The method `Length` returns the number of arrays contained in the jagged array.</span></span> <span data-ttu-id="b5e98-124">Допустим, предыдущий массив был объявлен с использованием следующей строки:</span><span class="sxs-lookup"><span data-stu-id="b5e98-124">For example, assuming you have declared the previous array, this line:</span></span>  
   
- [!code-cs[csProgGuideArrays#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_9.cs)]  
+ [!code-csharp[csProgGuideArrays#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_9.cs)]  
   
- возвращает значение 3.  
+ <span data-ttu-id="b5e98-125">возвращает значение 3.</span><span class="sxs-lookup"><span data-stu-id="b5e98-125">returns a value of 3.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере создается массив, элементы которого являются массивами. Все элементы массива имеют разный размер.  
+## <a name="example"></a><span data-ttu-id="b5e98-126">Пример</span><span class="sxs-lookup"><span data-stu-id="b5e98-126">Example</span></span>  
+ <span data-ttu-id="b5e98-127">В этом примере создается массив, элементы которого являются массивами.</span><span class="sxs-lookup"><span data-stu-id="b5e98-127">This example builds an array whose elements are themselves arrays.</span></span> <span data-ttu-id="b5e98-128">Все элементы массива имеют разный размер.</span><span class="sxs-lookup"><span data-stu-id="b5e98-128">Each one of the array elements has a different size.</span></span>  
   
- [!code-cs[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
+ [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Array>   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Массивы](../../../csharp/programming-guide/arrays/index.md)   
- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
-
+## <a name="see-also"></a><span data-ttu-id="b5e98-129">См. также</span><span class="sxs-lookup"><span data-stu-id="b5e98-129">See Also</span></span>  
+ <xref:System.Array>  
+ [<span data-ttu-id="b5e98-130">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="b5e98-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b5e98-131">Массивы</span><span class="sxs-lookup"><span data-stu-id="b5e98-131">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
+ [<span data-ttu-id="b5e98-132">Одномерные массивы</span><span class="sxs-lookup"><span data-stu-id="b5e98-132">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+ [<span data-ttu-id="b5e98-133">Многомерные массивы</span><span class="sxs-lookup"><span data-stu-id="b5e98-133">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

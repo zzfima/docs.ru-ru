@@ -1,72 +1,53 @@
 ---
 title: "Использование исключений (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 55c2cc0c6a1f852bd286b98927cc69f81119aeee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96fc082d135d38f521429de7b4e9a668773982ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-exceptions-c-programming-guide"></a>Использование исключений (Руководство по программированию на C#)
-В C# ошибки в программе в среде выполнения передаются через программу с помощью механизма, который называется исключениями. Исключения вызываются кодом, который встречает ошибку, и перехватываются кодом, который может ее исправить. Исключения могут вызываться средой CLR .NET Framework или кодом в программе. Вызванное исключение передается вверх по стеку вызовов, пока не будет найден соответствующий оператор `catch`. Не перехваченные исключения обрабатываются универсальным обработчиком исключений, предоставляемым системой, которая отображает диалоговое окно.  
+# <a name="using-exceptions-c-programming-guide"></a><span data-ttu-id="2bd75-102">Использование исключений (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="2bd75-102">Using Exceptions (C# Programming Guide)</span></span>
+<span data-ttu-id="2bd75-103">В C# ошибки в программе в среде выполнения передаются через программу с помощью механизма, который называется исключениями.</span><span class="sxs-lookup"><span data-stu-id="2bd75-103">In C#, errors in the program at run time are propagated through the program by using a mechanism called exceptions.</span></span> <span data-ttu-id="2bd75-104">Исключения вызываются кодом, который встречает ошибку, и перехватываются кодом, который может ее исправить.</span><span class="sxs-lookup"><span data-stu-id="2bd75-104">Exceptions are thrown by code that encounters an error and caught by code that can correct the error.</span></span> <span data-ttu-id="2bd75-105">Исключения могут вызываться средой CLR .NET Framework или кодом в программе.</span><span class="sxs-lookup"><span data-stu-id="2bd75-105">Exceptions can be thrown by the .NET Framework common language runtime (CLR) or by code in a program.</span></span> <span data-ttu-id="2bd75-106">Вызванное исключение передается вверх по стеку вызовов, пока не будет найден соответствующий оператор `catch`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-106">Once an exception is thrown, it propagates up the call stack until a `catch` statement for the exception is found.</span></span> <span data-ttu-id="2bd75-107">Не перехваченные исключения обрабатываются универсальным обработчиком исключений, предоставляемым системой, которая отображает диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="2bd75-107">Uncaught exceptions are handled by a generic exception handler provided by the system that displays a dialog box.</span></span>  
   
- Исключения представляются классами, производными от <xref:System.Exception>. Этот класс определяет тип исключения и содержит свойства с подробными сведениями об исключении. При вызове исключения создается экземпляр производного класса, а также могут настраиваться свойства исключения. После этого с помощью ключевого слова `throw` вызывается объект. Пример:  
+ <span data-ttu-id="2bd75-108">Исключения представляются классами, производными от <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="2bd75-108">Exceptions are represented by classes derived from <xref:System.Exception>.</span></span> <span data-ttu-id="2bd75-109">Этот класс определяет тип исключения и содержит свойства с подробными сведениями об исключении.</span><span class="sxs-lookup"><span data-stu-id="2bd75-109">This class identifies the type of exception and contains properties that have details about the exception.</span></span> <span data-ttu-id="2bd75-110">При вызове исключения создается экземпляр производного класса, а также могут настраиваться свойства исключения. После этого с помощью ключевого слова `throw` вызывается объект.</span><span class="sxs-lookup"><span data-stu-id="2bd75-110">Throwing an exception involves creating an instance of an exception-derived class, optionally configuring properties of the exception, and then throwing the object by using the `throw` keyword.</span></span> <span data-ttu-id="2bd75-111">Пример:</span><span class="sxs-lookup"><span data-stu-id="2bd75-111">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- После выдачи исключения среда выполнения проверяет, входит ли текущий оператор в блок `try`. Если да, она проверяет, может ли какой-либо из блоков `catch`, связанных с блоком `try`, перехватить исключение. Блоки `Catch` обычно задают типы исключений; если тип блока `catch` совпадает с типом или базовым классом исключения, блок `catch` может обработать этот метод. Например:  
+ <span data-ttu-id="2bd75-112">После выдачи исключения среда выполнения проверяет, входит ли текущий оператор в блок `try`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-112">After an exception is thrown, the runtime checks the current statement to see whether it is within a `try` block.</span></span> <span data-ttu-id="2bd75-113">Если да, она проверяет, может ли какой-либо из блоков `catch`, связанных с блоком `try`, перехватить исключение.</span><span class="sxs-lookup"><span data-stu-id="2bd75-113">If it is, any `catch` blocks associated with the `try` block are checked to see whether they can catch the exception.</span></span> <span data-ttu-id="2bd75-114">Блоки `Catch` обычно задают типы исключений; если тип блока `catch` совпадает с типом или базовым классом исключения, блок `catch` может обработать этот метод.</span><span class="sxs-lookup"><span data-stu-id="2bd75-114">`Catch` blocks typically specify exception types; if the type of the `catch` block is the same type as the exception, or a base class of the exception, the `catch` block can handle the method.</span></span> <span data-ttu-id="2bd75-115">Пример:</span><span class="sxs-lookup"><span data-stu-id="2bd75-115">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
- Если оператор, который вызывает исключение, не находится в блоке `try` или блок `try`, в который он входит, не имеет соответствующего блока `catch`, среда выполнения проверяет вызывающий метод на наличие оператора `try` и блоков `catch`. Среда выполнения продолжает перебирать стек вызовов в поиска подходящего блока `catch`. После того как блок `catch` будет найден и выполнен, управление передается оператору, следующему после блока `catch`.  
+ <span data-ttu-id="2bd75-116">Если оператор, который вызывает исключение, не находится в блоке `try` или блок `try`, в который он входит, не имеет соответствующего блока `catch`, среда выполнения проверяет вызывающий метод на наличие оператора `try` и блоков `catch`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-116">If the statement that throws an exception is not within a `try` block or if the `try` block that encloses it has no matching `catch` block, the runtime checks the calling method for a `try` statement and `catch` blocks.</span></span> <span data-ttu-id="2bd75-117">Среда выполнения продолжает перебирать стек вызовов в поиска подходящего блока `catch`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-117">The runtime continues up the calling stack, searching for a compatible `catch` block.</span></span> <span data-ttu-id="2bd75-118">После того как блок `catch` будет найден и выполнен, управление передается оператору, следующему после блока `catch`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-118">After the `catch` block is found and executed, control is passed to the next statement after that `catch` block.</span></span>  
   
- Оператор `try` может содержать не один блок `catch`. Выполняется первый оператор `catch`, который может обработать исключение; все последующие операторы `catch` игнорируются, даже если они совместимы. В связи с этим блоки catch следует располагать в порядке от наиболее конкретных (наиболее производных) до наименее конкретных. Пример:  
+ <span data-ttu-id="2bd75-119">Оператор `try` может содержать не один блок `catch`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-119">A `try` statement can contain more than one `catch` block.</span></span> <span data-ttu-id="2bd75-120">Выполняется первый оператор `catch`, который может обработать исключение; все последующие операторы `catch` игнорируются, даже если они совместимы.</span><span class="sxs-lookup"><span data-stu-id="2bd75-120">The first `catch` statement that can handle the exception is executed; any following `catch` statements, even if they are compatible, are ignored.</span></span> <span data-ttu-id="2bd75-121">В связи с этим блоки catch следует располагать в порядке от наиболее конкретных (наиболее производных) до наименее конкретных.</span><span class="sxs-lookup"><span data-stu-id="2bd75-121">Therefore, catch blocks should always be ordered from most specific (or most-derived) to least specific.</span></span> <span data-ttu-id="2bd75-122">Пример:</span><span class="sxs-lookup"><span data-stu-id="2bd75-122">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Прежде чем выполнять блок `catch`, среда выполнения проверяет наличие блоков `finally`. Блоки `Finally` позволяют программисту удалить любое неоднозначное состояние, которое может остаться после прерванного блока `try`, а также освободить любые внешние ресурсы (включая обработчики графики, соединители баз данных или файловые потоки), не дожидаясь, пока сборщик мусора в среде выполнения завершит объекты. Пример:  
+ <span data-ttu-id="2bd75-123">Прежде чем выполнять блок `catch`, среда выполнения проверяет наличие блоков `finally`.</span><span class="sxs-lookup"><span data-stu-id="2bd75-123">Before the `catch` block is executed, the runtime checks for `finally` blocks.</span></span> <span data-ttu-id="2bd75-124">Блоки `Finally` позволяют программисту удалить любое неоднозначное состояние, которое может остаться после прерванного блока `try`, а также освободить любые внешние ресурсы (включая обработчики графики, соединители баз данных или файловые потоки), не дожидаясь, пока сборщик мусора в среде выполнения завершит объекты.</span><span class="sxs-lookup"><span data-stu-id="2bd75-124">`Finally` blocks enable the programmer to clean up any ambiguous state that could be left over from an aborted `try` block, or to release any external resources (such as graphics handles, database connections or file streams) without waiting for the garbage collector in the runtime to finalize the objects.</span></span> <span data-ttu-id="2bd75-125">Пример:</span><span class="sxs-lookup"><span data-stu-id="2bd75-125">For example:</span></span>  
   
- [!code-cs[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
+ [!code-csharp[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
- Если `WriteByte()` выдает исключение, код во втором блоке `try`, который пытается открыть файл повторно, завершается ошибкой, если `file.Close()` не вызывается, а файл остается заблокированным. Поскольку блоки `finally` выполняются, даже если выдается исключение, блок `finally` в предыдущем примере обеспечивает правильное закрытие файла и помогает избежать ошибки.  
+ <span data-ttu-id="2bd75-126">Если `WriteByte()` выдает исключение, код во втором блоке `try`, который пытается открыть файл повторно, завершается ошибкой, если `file.Close()` не вызывается, а файл остается заблокированным.</span><span class="sxs-lookup"><span data-stu-id="2bd75-126">If `WriteByte()` threw an exception, the code in the second `try` block that tries to reopen the file would fail if `file.Close()` is not called, and the file would remain locked.</span></span> <span data-ttu-id="2bd75-127">Поскольку блоки `finally` выполняются, даже если выдается исключение, блок `finally` в предыдущем примере обеспечивает правильное закрытие файла и помогает избежать ошибки.</span><span class="sxs-lookup"><span data-stu-id="2bd75-127">Because `finally` blocks are executed even if an exception is thrown, the `finally` block in the previous example allows for the file to be closed correctly and helps avoid an error.</span></span>  
   
- Если после выдачи исключения обнаружить совместимый блок `catch` в стеке вызовов не удается, происходит одно из трех:  
+ <span data-ttu-id="2bd75-128">Если после выдачи исключения обнаружить совместимый блок `catch` в стеке вызовов не удается, происходит одно из трех:</span><span class="sxs-lookup"><span data-stu-id="2bd75-128">If no compatible `catch` block is found on the call stack after an exception is thrown, one of three things occurs:</span></span>  
   
--   Если исключение возникает в методе завершения, он прерывается, и вызывается базовый метод завершения (если есть).  
+-   <span data-ttu-id="2bd75-129">Если исключение возникает в методе завершения, он прерывается, и вызывается базовый метод завершения (если есть).</span><span class="sxs-lookup"><span data-stu-id="2bd75-129">If the exception is within a finalizer, the finalizer is aborted and the base finalizer, if any, is called.</span></span>  
   
--   Если стек вызовов содержит статический конструктор или инициализатор статического поля, выдается исключение <xref:System.TypeInitializationException>, а исходное исключение назначается свойству <xref:System.Exception.InnerException%2A> нового исключения.  
+-   <span data-ttu-id="2bd75-130">Если стек вызовов содержит статический конструктор или инициализатор статического поля, выдается исключение <xref:System.TypeInitializationException>, а исходное исключение назначается свойству <xref:System.Exception.InnerException%2A> нового исключения.</span><span class="sxs-lookup"><span data-stu-id="2bd75-130">If the call stack contains a static constructor, or a static field initializer, a <xref:System.TypeInitializationException> is thrown, with the original exception assigned to the <xref:System.Exception.InnerException%2A> property of the new exception.</span></span>  
   
--   Как только достигается начало потока, он прерывается.  
+-   <span data-ttu-id="2bd75-131">Как только достигается начало потока, он прерывается.</span><span class="sxs-lookup"><span data-stu-id="2bd75-131">If the start of the thread is reached, the thread is terminated.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="2bd75-132">См. также</span><span class="sxs-lookup"><span data-stu-id="2bd75-132">See Also</span></span>  
+ [<span data-ttu-id="2bd75-133">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="2bd75-133">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2bd75-134">Исключения и обработка исключений</span><span class="sxs-lookup"><span data-stu-id="2bd75-134">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)

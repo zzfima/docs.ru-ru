@@ -1,76 +1,55 @@
 ---
 title: "Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- registry, Visual Basic
+helpviewer_keywords: registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 462cc5c3854035cfc04c7c5df6905c2cfbd486ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cefde5317b2ed2bc0a2834224b1475e8020f7f25
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic)
-Хотя `My.Computer.Registry` должно хватать для удовлетворения основных потребностей при программировании в реестре, можно также использовать классы <xref:Microsoft.Win32.Registry> и <xref:Microsoft.Win32.RegistryKey> в пространстве имен <xref:Microsoft.Win32> платформы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+# <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a><span data-ttu-id="01806-102">Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01806-102">Reading from and Writing to the Registry Using the Microsoft.Win32 Namespace (Visual Basic)</span></span>
+<span data-ttu-id="01806-103">Хотя `My.Computer.Registry` должно хватать для удовлетворения основных потребностей при программировании в реестре, можно также использовать классы <xref:Microsoft.Win32.Registry> и <xref:Microsoft.Win32.RegistryKey> в пространстве имен <xref:Microsoft.Win32> платформы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="01806-103">Although `My.Computer.Registry` should cover your basic needs when programming against the registry, you can also use the <xref:Microsoft.Win32.Registry> and <xref:Microsoft.Win32.RegistryKey> classes in the <xref:Microsoft.Win32> namespace of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
-## <a name="keys-in-the-registry-class"></a>Разделы в классе Registry  
- Класс <xref:Microsoft.Win32.Registry> предоставляет основные разделы реестра, которые можно использовать для доступа к подразделам и их значениям. Сами основные разделы доступны только для чтения. В следующей таблице перечислены и описаны семь разделов, предоставляемых классом <xref:Microsoft.Win32.Registry>.  
+## <a name="keys-in-the-registry-class"></a><span data-ttu-id="01806-104">Разделы в классе Registry</span><span class="sxs-lookup"><span data-stu-id="01806-104">Keys in the Registry Class</span></span>  
+ <span data-ttu-id="01806-105">Класс <xref:Microsoft.Win32.Registry> предоставляет основные разделы реестра, которые можно использовать для доступа к подразделам и их значениям.</span><span class="sxs-lookup"><span data-stu-id="01806-105">The <xref:Microsoft.Win32.Registry> class supplies the base registry keys that can be used to access subkeys and their values.</span></span> <span data-ttu-id="01806-106">Сами основные разделы доступны только для чтения.</span><span class="sxs-lookup"><span data-stu-id="01806-106">The base keys themselves are read-only.</span></span> <span data-ttu-id="01806-107">В следующей таблице перечислены и описаны семь разделов, предоставляемых классом <xref:Microsoft.Win32.Registry>.</span><span class="sxs-lookup"><span data-stu-id="01806-107">The following table lists and describes the seven keys exposed by the <xref:Microsoft.Win32.Registry> class.</span></span>  
   
-|**Key**|**Описание**|  
+|<span data-ttu-id="01806-108">**Key**</span><span class="sxs-lookup"><span data-stu-id="01806-108">**Key**</span></span>|<span data-ttu-id="01806-109">**Описание**</span><span class="sxs-lookup"><span data-stu-id="01806-109">**Description**</span></span>|  
 |-------------|---------------------|  
-|<xref:Microsoft.Win32.Registry.ClassesRoot>|Определяет типы документов и свойства, связанные с этими типами.|  
-|<xref:Microsoft.Win32.Registry.CurrentConfig>|Содержит сведения о конфигурации оборудования, не относящиеся к пользователю.|  
-|<xref:Microsoft.Win32.Registry.CurrentUser>|Содержит сведения о текущих настройках пользователя, таких как переменные среды.|  
-|<xref:Microsoft.Win32.Registry.DynData>|Содержит динамические данные реестра, например, используемые драйверами виртуальных устройств.|  
-|<xref:Microsoft.Win32.Registry.LocalMachine>|Включает в себя пять подразделов (оборудование, SAM, безопасность, программное обеспечение и система), содержащих данные о конфигурации для локального компьютера.|  
-|<xref:Microsoft.Win32.Registry.PerformanceData>|Содержит сведения о производительности для компонентов программного обеспечения.|  
-|<xref:Microsoft.Win32.Registry.Users>|Содержит сведения о настройках пользователя по умолчанию.|  
+|<xref:Microsoft.Win32.Registry.ClassesRoot>|<span data-ttu-id="01806-110">Определяет типы документов и свойства, связанные с этими типами.</span><span class="sxs-lookup"><span data-stu-id="01806-110">Defines the types of documents and the properties associated with those types.</span></span>|  
+|<xref:Microsoft.Win32.Registry.CurrentConfig>|<span data-ttu-id="01806-111">Содержит сведения о конфигурации оборудования, не относящиеся к пользователю.</span><span class="sxs-lookup"><span data-stu-id="01806-111">Contains hardware configuration information that is not user-specific.</span></span>|  
+|<xref:Microsoft.Win32.Registry.CurrentUser>|<span data-ttu-id="01806-112">Содержит сведения о текущих настройках пользователя, таких как переменные среды.</span><span class="sxs-lookup"><span data-stu-id="01806-112">Contains information about the current user preferences, such as environmental variables.</span></span>|  
+|<xref:Microsoft.Win32.Registry.DynData>|<span data-ttu-id="01806-113">Содержит динамические данные реестра, например, используемые драйверами виртуальных устройств.</span><span class="sxs-lookup"><span data-stu-id="01806-113">Contains dynamic registry data, such as that used by Virtual Device Drivers.</span></span>|  
+|<xref:Microsoft.Win32.Registry.LocalMachine>|<span data-ttu-id="01806-114">Включает в себя пять подразделов (оборудование, SAM, безопасность, программное обеспечение и система), содержащих данные о конфигурации для локального компьютера.</span><span class="sxs-lookup"><span data-stu-id="01806-114">Contains five subkeys (Hardware, SAM, Security, Software, and System) that hold the configuration data for the local computer.</span></span>|  
+|<xref:Microsoft.Win32.Registry.PerformanceData>|<span data-ttu-id="01806-115">Содержит сведения о производительности для компонентов программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="01806-115">Contains performance information for software components.</span></span>|  
+|<xref:Microsoft.Win32.Registry.Users>|<span data-ttu-id="01806-116">Содержит сведения о настройках пользователя по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="01806-116">Contains information about the default user preferences.</span></span>|  
   
 > [!IMPORTANT]
->  Безопаснее записывать данные для текущего пользователя (<xref:Microsoft.Win32.Registry.CurrentUser>), чем для локального компьютера (<xref:Microsoft.Win32.Registry.LocalMachine>). Условие, которое обычно называют "захватом", возникает, если создаваемый вами раздел уже был создан другим, возможно вредоносным, процессом. Чтобы предотвратить это, используйте такой метод, как <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, который возвращает `Nothing`, если ключ еще не существует.  
+>  <span data-ttu-id="01806-117">Безопаснее записывать данные для текущего пользователя (<xref:Microsoft.Win32.Registry.CurrentUser>), чем для локального компьютера (<xref:Microsoft.Win32.Registry.LocalMachine>).</span><span class="sxs-lookup"><span data-stu-id="01806-117">It is more secure to write data to the current user (<xref:Microsoft.Win32.Registry.CurrentUser>) than to the local computer (<xref:Microsoft.Win32.Registry.LocalMachine>).</span></span> <span data-ttu-id="01806-118">Условие, которое обычно называют "захватом", возникает, если создаваемый вами раздел уже был создан другим, возможно вредоносным, процессом.</span><span class="sxs-lookup"><span data-stu-id="01806-118">A condition that's typically referred to as "squatting" occurs when the key you are creating was previously created by another, possibly malicious, process.</span></span> <span data-ttu-id="01806-119">Чтобы предотвратить это, используйте такой метод, как <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, который возвращает `Nothing`, если ключ еще не существует.</span><span class="sxs-lookup"><span data-stu-id="01806-119">To prevent this from occurring, use a method, such as <xref:Microsoft.Win32.RegistryKey.GetValue%2A>, that returns `Nothing` if the key does not already exist.</span></span>  
   
-## <a name="reading-a-value-from-the-registry"></a>Чтение значения из реестра  
- В следующем коде показано, как считать строку из раздела HKEY_CURRENT_USER.  
+## <a name="reading-a-value-from-the-registry"></a><span data-ttu-id="01806-120">Чтение значения из реестра</span><span class="sxs-lookup"><span data-stu-id="01806-120">Reading a Value from the Registry</span></span>  
+ <span data-ttu-id="01806-121">В следующем коде показано, как считать строку из раздела HKEY_CURRENT_USER.</span><span class="sxs-lookup"><span data-stu-id="01806-121">The following code shows how to read a string from HKEY_CURRENT_USER.</span></span>  
   
  [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_1.vb)]  
   
- Следующий код считывает, увеличивает, а затем записывает строку в раздел HKEY_CURRENT_USER.  
+ <span data-ttu-id="01806-122">Следующий код считывает, увеличивает, а затем записывает строку в раздел HKEY_CURRENT_USER.</span><span class="sxs-lookup"><span data-stu-id="01806-122">The following code reads, increments, and then writes a string to HKEY_CURRENT_USER.</span></span>  
   
  [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.SystemException>   
- <xref:System.ApplicationException>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- [Оператор Try... Catch... Finally (Visual Basic)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Чтение данных из реестра и запись в реестр (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
- [Безопасность и реестр](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
-
+## <a name="see-also"></a><span data-ttu-id="01806-123">См. также</span><span class="sxs-lookup"><span data-stu-id="01806-123">See Also</span></span>  
+ <xref:System.SystemException>  
+ <xref:System.ApplicationException>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ [<span data-ttu-id="01806-124">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="01806-124">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [<span data-ttu-id="01806-125">Чтение данных из реестра и запись в реестр</span><span class="sxs-lookup"><span data-stu-id="01806-125">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
+ [<span data-ttu-id="01806-126">Безопасность и реестр</span><span class="sxs-lookup"><span data-stu-id="01806-126">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)

@@ -1,99 +1,79 @@
 ---
 title: "Классы (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 37e810fc5a5397a6b9240346ac28505b11b1e817
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
-*Класс* — это конструкция, которая позволяет создавать собственные настраиваемые типы путем группирования переменных других типов, методов и событий. Класс похож на проект. Он определяет данные и поведение типа. Если класс не объявлен как статический, клиентский код может использовать его, создавая *объекты* или *экземпляры*, назначенные переменной. Переменная остается в памяти до тех пор, пока все ссылки на нее не выйдут из области. В этот момент среда CLR помечает ее пригодной для сборки мусора. Если класс объявляется как [статический](../../../csharp/language-reference/keywords/static.md), то в памяти существует только одна копия, и клиентский код может получать к ней доступ только через сам класс, а не *переменную экземпляра*. Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+# <a name="classes-c-programming-guide"></a><span data-ttu-id="22570-102">Классы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="22570-102">Classes (C# Programming Guide)</span></span>
+<span data-ttu-id="22570-103">*Класс* — это конструкция, которая позволяет создавать собственные настраиваемые типы путем группирования переменных других типов, методов и событий.</span><span class="sxs-lookup"><span data-stu-id="22570-103">A *class* is a construct that enables you to create your own custom types by grouping together variables of other types, methods and events.</span></span> <span data-ttu-id="22570-104">Класс похож на проект.</span><span class="sxs-lookup"><span data-stu-id="22570-104">A class is like a blueprint.</span></span> <span data-ttu-id="22570-105">Он определяет данные и поведение типа.</span><span class="sxs-lookup"><span data-stu-id="22570-105">It defines the data and behavior of a type.</span></span> <span data-ttu-id="22570-106">Если класс не объявлен как статический, клиентский код может использовать его, создавая *объекты* или *экземпляры*, назначенные переменной.</span><span class="sxs-lookup"><span data-stu-id="22570-106">If the class is not declared as static, client code can use it by creating *objects* or *instances* which are assigned to a variable.</span></span> <span data-ttu-id="22570-107">Переменная остается в памяти до тех пор, пока все ссылки на нее не выйдут из области.</span><span class="sxs-lookup"><span data-stu-id="22570-107">The variable remains in memory until all references to it go out of scope.</span></span> <span data-ttu-id="22570-108">В этот момент среда CLR помечает ее пригодной для сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="22570-108">At that time, the CLR marks it as eligible for garbage collection.</span></span> <span data-ttu-id="22570-109">Если класс объявляется как [статический](../../../csharp/language-reference/keywords/static.md), то в памяти существует только одна копия, и клиентский код может получать к ней доступ только через сам класс, а не *переменную экземпляра*.</span><span class="sxs-lookup"><span data-stu-id="22570-109">If the class is declared as [static](../../../csharp/language-reference/keywords/static.md), then only one copy exists in memory and client code can only access it through the class itself, not an *instance variable*.</span></span> <span data-ttu-id="22570-110">Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="22570-110">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- В отличие от структур, классы поддерживают *наследование*, фундаментальную характеристику объектно-ориентированного программирования. Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
+ <span data-ttu-id="22570-111">В отличие от структур, классы поддерживают *наследование*, фундаментальную характеристику объектно-ориентированного программирования.</span><span class="sxs-lookup"><span data-stu-id="22570-111">Unlike structs, classes support *inheritance*, a fundamental characteristic of object-oriented programming.</span></span> <span data-ttu-id="22570-112">Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="22570-112">For more information, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span>  
   
-## <a name="declaring-classes"></a>Объявление классов  
- Классы объявляются с помощью ключевого слова [class](../../../csharp/language-reference/keywords/class.md), как показано в следующем примере:  
+## <a name="declaring-classes"></a><span data-ttu-id="22570-113">Объявление классов</span><span class="sxs-lookup"><span data-stu-id="22570-113">Declaring Classes</span></span>  
+ <span data-ttu-id="22570-114">Классы объявляются с помощью ключевого слова [class](../../../csharp/language-reference/keywords/class.md), как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="22570-114">Classes are declared by using the [class](../../../csharp/language-reference/keywords/class.md) keyword, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
+ [!code-csharp[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
- Ключевому слову `class` предшествует уровень доступа. Поскольку в этом случае используется открытый класс ([public](../../../csharp/language-reference/keywords/public.md)), любой пользователь может создавать объекты из этого класса. За именем класса следует ключевое слово `class`. Оставшаяся часть определения — это тело класса, в котором задаются данные и поведение. Поля, свойства, методы и события в классе собирательно называются *членами класса*.  
+ <span data-ttu-id="22570-115">Ключевому слову `class` предшествует уровень доступа.</span><span class="sxs-lookup"><span data-stu-id="22570-115">The `class` keyword is preceded by the access level.</span></span> <span data-ttu-id="22570-116">Поскольку в этом случае используется открытый класс ([public](../../../csharp/language-reference/keywords/public.md)), любой пользователь может создавать объекты из этого класса.</span><span class="sxs-lookup"><span data-stu-id="22570-116">Because [public](../../../csharp/language-reference/keywords/public.md) is used in this case, anyone can create objects from this class.</span></span> <span data-ttu-id="22570-117">За именем класса следует ключевое слово `class`.</span><span class="sxs-lookup"><span data-stu-id="22570-117">The name of the class follows the `class` keyword.</span></span> <span data-ttu-id="22570-118">Оставшаяся часть определения — это тело класса, в котором задаются данные и поведение.</span><span class="sxs-lookup"><span data-stu-id="22570-118">The remainder of the definition is the class body, where the behavior and data are defined.</span></span> <span data-ttu-id="22570-119">Поля, свойства, методы и события в классе собирательно называются *членами класса*.</span><span class="sxs-lookup"><span data-stu-id="22570-119">Fields, properties, methods, and events on a class are collectively referred to as *class members*.</span></span>  
   
-## <a name="creating-objects"></a>Создание объектов  
- Несмотря на то, что они иногда взаимозаменяемы, класс и объект — разные вещи. Класс определяет тип объекта, но не является объектом. Объект — это конкретная сущность, основанная на классе, которую иногда называют экземпляром класса.  
+## <a name="creating-objects"></a><span data-ttu-id="22570-120">Создание объектов</span><span class="sxs-lookup"><span data-stu-id="22570-120">Creating Objects</span></span>  
+ <span data-ttu-id="22570-121">Несмотря на то, что они иногда взаимозаменяемы, класс и объект — разные вещи.</span><span class="sxs-lookup"><span data-stu-id="22570-121">Although they are sometimes used interchangeably, a class and an object are different things.</span></span> <span data-ttu-id="22570-122">Класс определяет тип объекта, но не является объектом.</span><span class="sxs-lookup"><span data-stu-id="22570-122">A class defines a type of object, but it is not an object itself.</span></span> <span data-ttu-id="22570-123">Объект — это конкретная сущность, основанная на классе, которую иногда называют экземпляром класса.</span><span class="sxs-lookup"><span data-stu-id="22570-123">An object is a concrete entity based on a class, and is sometimes referred to as an instance of a class.</span></span>  
   
- Объекты можно создавать с помощью ключевого слова [new](../../../csharp/language-reference/keywords/new.md), за которым следует имя класса, на котором будет основан объект, например следующим образом:  
+ <span data-ttu-id="22570-124">Объекты можно создавать с помощью ключевого слова [new](../../../csharp/language-reference/keywords/new.md), за которым следует имя класса, на котором будет основан объект, например следующим образом:</span><span class="sxs-lookup"><span data-stu-id="22570-124">Objects can be created by using the [new](../../../csharp/language-reference/keywords/new.md) keyword followed by the name of the class that the object will be based on, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
+ [!code-csharp[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
- При создании экземпляра класса ссылка на объект передается программисту. В предыдущем примере `object1` представляет собой ссылку на объект, который основан на `Customer`. Эта ссылка указывает на новый объект, но не содержит данные этого объекта. Фактически, можно создать ссылку на объект без создания собственно объекта:  
+ <span data-ttu-id="22570-125">При создании экземпляра класса ссылка на объект передается программисту.</span><span class="sxs-lookup"><span data-stu-id="22570-125">When an instance of a class is created, a reference to the object is passed back to the programmer.</span></span> <span data-ttu-id="22570-126">В предыдущем примере `object1` представляет собой ссылку на объект, который основан на `Customer`.</span><span class="sxs-lookup"><span data-stu-id="22570-126">In the previous example, `object1` is a reference to an object that is based on `Customer`.</span></span> <span data-ttu-id="22570-127">Эта ссылка указывает на новый объект, но не содержит данные этого объекта.</span><span class="sxs-lookup"><span data-stu-id="22570-127">This reference refers to the new object but does not contain the object data itself.</span></span> <span data-ttu-id="22570-128">Фактически, можно создать ссылку на объект без создания собственно объекта:</span><span class="sxs-lookup"><span data-stu-id="22570-128">In fact, you can create an object reference without creating an object at all:</span></span>  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
+ [!code-csharp[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
- Создание таких ссылок, которые не указывают на объект, не рекомендуется, так как попытка доступа к объекту по такой ссылке приведет к сбою во время выполнения. Однако такую ссылку можно сделать указывающей на объект, создав новый объект или назначив ее существующему объекту, как показано далее:  
+ <span data-ttu-id="22570-129">Создание таких ссылок, которые не указывают на объект, не рекомендуется, так как попытка доступа к объекту по такой ссылке приведет к сбою во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="22570-129">We don't recommend creating object references such as this one that don't refer to an object because trying to access an object through such a reference will fail at run time.</span></span> <span data-ttu-id="22570-130">Однако такую ссылку можно сделать указывающей на объект, создав новый объект или назначив ее существующему объекту, как показано далее:</span><span class="sxs-lookup"><span data-stu-id="22570-130">However, such a reference can be made to refer to an object, either by creating a new object, or by assigning it to an existing object, such as this:</span></span>  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
+ [!code-csharp[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
- В этом коде создаются две ссылки на объект, которые указывают на один и тот же объект. Таким образом, любые изменения объекта, выполненные посредством `object3`, будут отражены при последующем использовании `object4`. Поскольку на объекты, основанные на классах, указывают ссылки, классы называют ссылочными типами.  
+ <span data-ttu-id="22570-131">В этом коде создаются две ссылки на объект, которые указывают на один и тот же объект.</span><span class="sxs-lookup"><span data-stu-id="22570-131">This code creates two object references that both refer to the same object.</span></span> <span data-ttu-id="22570-132">Таким образом, любые изменения объекта, выполненные посредством `object3`, будут отражены при последующем использовании `object4`.</span><span class="sxs-lookup"><span data-stu-id="22570-132">Therefore, any changes to the object made through `object3` will be reflected in subsequent uses of `object4`.</span></span> <span data-ttu-id="22570-133">Поскольку на объекты, основанные на классах, указывают ссылки, классы называют ссылочными типами.</span><span class="sxs-lookup"><span data-stu-id="22570-133">Because objects that are based on classes are referred to by reference, classes are known as reference types.</span></span>  
   
-## <a name="class-inheritance"></a>Наследование классов  
- При наследовании создается *производный* класс, то есть класс объявляется с помощью *базового класса*, от которого он наследует данные и поведение. Базовый класс задается добавлением после имени производного класса двоеточия и имени базового класса, как показано далее:  
+## <a name="class-inheritance"></a><span data-ttu-id="22570-134">Наследование классов</span><span class="sxs-lookup"><span data-stu-id="22570-134">Class Inheritance</span></span>  
+ <span data-ttu-id="22570-135">При наследовании создается *производный* класс, то есть класс объявляется с помощью *базового класса*, от которого он наследует данные и поведение.</span><span class="sxs-lookup"><span data-stu-id="22570-135">Inheritance is accomplished by using a *derivation*, which means a class is declared by using a *base class* from which it inherits data and behavior.</span></span> <span data-ttu-id="22570-136">Базовый класс задается добавлением после имени производного класса двоеточия и имени базового класса, как показано далее:</span><span class="sxs-lookup"><span data-stu-id="22570-136">A base class is specified by appending a colon and the name of the base class following the derived class name, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
+ [!code-csharp[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
- Когда класс объявляет базовый класс, он наследует все члены базового класса, за исключением конструкторов.  
+ <span data-ttu-id="22570-137">Когда класс объявляет базовый класс, он наследует все члены базового класса, за исключением конструкторов.</span><span class="sxs-lookup"><span data-stu-id="22570-137">When a class declares a base class, it inherits all the members of the base class except the constructors.</span></span>  
   
- В отличие от C++, класс в C# может только напрямую наследовать от одного базового класса. Тем не менее, поскольку базовый класс может сам наследовать от другого класса, класс может косвенно наследовать от нескольких базовых классов. Кроме того, класс может напрямую реализовать несколько интерфейсов. Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
+ <span data-ttu-id="22570-138">В отличие от C++, класс в C# может только напрямую наследовать от одного базового класса.</span><span class="sxs-lookup"><span data-stu-id="22570-138">Unlike C++, a class in C# can only directly inherit from one base class.</span></span> <span data-ttu-id="22570-139">Тем не менее, поскольку базовый класс может сам наследовать от другого класса, класс может косвенно наследовать от нескольких базовых классов.</span><span class="sxs-lookup"><span data-stu-id="22570-139">However, because a base class may itself inherit from another class, a class may indirectly inherit multiple base classes.</span></span> <span data-ttu-id="22570-140">Кроме того, класс может напрямую реализовать несколько интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="22570-140">Furthermore, a class can directly implement more than one interface.</span></span> <span data-ttu-id="22570-141">Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="22570-141">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
- Класс может быть объявлен [абстрактным](../../../csharp/language-reference/keywords/abstract.md). Абстрактный класс содержит абстрактные методы, которые имеют определение сигнатуры, но не имеют реализации. Нельзя создавать экземпляры абстрактных классов. Они могут использоваться только через производные классы, реализующие абстрактные методы. И наоборот, [запечатанный](../../../csharp/language-reference/keywords/sealed.md) класс не позволяет другим классам быть от него производными. Дополнительные сведения см. в статье [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ <span data-ttu-id="22570-142">Класс может быть объявлен [абстрактным](../../../csharp/language-reference/keywords/abstract.md).</span><span class="sxs-lookup"><span data-stu-id="22570-142">A class can be declared [abstract](../../../csharp/language-reference/keywords/abstract.md).</span></span> <span data-ttu-id="22570-143">Абстрактный класс содержит абстрактные методы, которые имеют определение сигнатуры, но не имеют реализации.</span><span class="sxs-lookup"><span data-stu-id="22570-143">An abstract class contains abstract methods that have a signature definition but no implementation.</span></span> <span data-ttu-id="22570-144">Нельзя создавать экземпляры абстрактных классов.</span><span class="sxs-lookup"><span data-stu-id="22570-144">Abstract classes cannot be instantiated.</span></span> <span data-ttu-id="22570-145">Они могут использоваться только через производные классы, реализующие абстрактные методы.</span><span class="sxs-lookup"><span data-stu-id="22570-145">They can only be used through derived classes that implement the abstract methods.</span></span> <span data-ttu-id="22570-146">И наоборот, [запечатанный](../../../csharp/language-reference/keywords/sealed.md) класс не позволяет другим классам быть от него производными.</span><span class="sxs-lookup"><span data-stu-id="22570-146">By contrast, a [sealed](../../../csharp/language-reference/keywords/sealed.md) class does not allow other classes to derive from it.</span></span> <span data-ttu-id="22570-147">Дополнительные сведения см. в статье [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="22570-147">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- Определения классов можно разделить между различными исходными файлами. Дополнительные сведения см. в разделе [Разделяемые классы и методы](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
+ <span data-ttu-id="22570-148">Определения классов можно разделить между различными исходными файлами.</span><span class="sxs-lookup"><span data-stu-id="22570-148">Class definitions can be split between different source files.</span></span> <span data-ttu-id="22570-149">Дополнительные сведения см. в разделе [Разделяемые классы и методы](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span><span class="sxs-lookup"><span data-stu-id="22570-149">For more information, see [Partial Classes and Methods](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>  
   
-## <a name="description"></a>Описание  
- В следующем примере определяется открытый класс, содержащий одно поле, метод и специальный метод, вызывающий конструктор. Дополнительные сведения см. в разделе [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md). Затем создается экземпляр этого класса с помощью ключевого слова `new`.  
+## <a name="description"></a><span data-ttu-id="22570-150">Описание</span><span class="sxs-lookup"><span data-stu-id="22570-150">Description</span></span>  
+ <span data-ttu-id="22570-151">В следующем примере определяется открытый класс, содержащий одно поле, метод и специальный метод, вызывающий конструктор.</span><span class="sxs-lookup"><span data-stu-id="22570-151">In the following example, a public class that contains a single field, a method, and a special method called a constructor is defined.</span></span> <span data-ttu-id="22570-152">Дополнительные сведения см. в разделе [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="22570-152">For more information, see [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span> <span data-ttu-id="22570-153">Затем создается экземпляр этого класса с помощью ключевого слова `new`.</span><span class="sxs-lookup"><span data-stu-id="22570-153">The class is then instantiated with the `new` keyword.</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
+## <a name="example"></a><span data-ttu-id="22570-154">Пример</span><span class="sxs-lookup"><span data-stu-id="22570-154">Example</span></span>  
+ [!code-csharp[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="22570-155">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="22570-155">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Объектно-ориентированное программирование](../concepts/object-oriented-programming.md)   
- [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [Члены](../../../csharp/programming-guide/classes-and-structs/members.md)   
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Объекты](../../../csharp/programming-guide/classes-and-structs/objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="22570-156">См. также</span><span class="sxs-lookup"><span data-stu-id="22570-156">See Also</span></span>  
+ [<span data-ttu-id="22570-157">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="22570-157">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="22570-158">Объектно-ориентированное программирование</span><span class="sxs-lookup"><span data-stu-id="22570-158">Object-Oriented Programming</span></span>](../concepts/object-oriented-programming.md)  
+ [<span data-ttu-id="22570-159">Полиморфизм</span><span class="sxs-lookup"><span data-stu-id="22570-159">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [<span data-ttu-id="22570-160">Члены</span><span class="sxs-lookup"><span data-stu-id="22570-160">Members</span></span>](../../../csharp/programming-guide/classes-and-structs/members.md)  
+ [<span data-ttu-id="22570-161">Методы</span><span class="sxs-lookup"><span data-stu-id="22570-161">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="22570-162">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="22570-162">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="22570-163">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="22570-163">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="22570-164">Объекты</span><span class="sxs-lookup"><span data-stu-id="22570-164">Objects</span></span>](../../../csharp/programming-guide/classes-and-structs/objects.md)

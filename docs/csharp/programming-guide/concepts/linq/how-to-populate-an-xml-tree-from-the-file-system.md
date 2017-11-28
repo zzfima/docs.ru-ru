@@ -1,31 +1,27 @@
 ---
 title: "Практическое руководство. Заполнение дерева XML из файловой системы (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: b3537a63f6fd39b3c1216190b24ca0e8c654e2f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2a25025c97575d4631ba2f55f72a31386619ead
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Практическое руководство. Заполнение дерева XML из файловой системы (C#)
-Распространенным и полезным применением XML-деревьев является использование их в качестве иерархической структуры для хранения данных с именем и значением. Можно заполнить дерево XML-данными, распределенными внутри иерархии, после чего выполнять по нему запросы, преобразования и, если необходимо, сериализацию. В следующем сценарии многие виды семантических конструкций, присущих XML, например пространства имен и обработка пробельных символов, неважны. Вместо этого XML-дерево используется как небольшая иерархическая база данных для одного пользователя, которая находится в памяти.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="4457e-102">Практическое руководство. Заполнение дерева XML из файловой системы (C#)</span><span class="sxs-lookup"><span data-stu-id="4457e-102">How to: Populate an XML Tree from the File System (C#)</span></span>
+<span data-ttu-id="4457e-103">Распространенным и полезным применением XML-деревьев является использование их в качестве иерархической структуры для хранения данных с именем и значением.</span><span class="sxs-lookup"><span data-stu-id="4457e-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="4457e-104">Можно заполнить дерево XML-данными, распределенными внутри иерархии, после чего выполнять по нему запросы, преобразования и, если необходимо, сериализацию.</span><span class="sxs-lookup"><span data-stu-id="4457e-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="4457e-105">В следующем сценарии многие виды семантических конструкций, присущих XML, например пространства имен и обработка пробельных символов, неважны.</span><span class="sxs-lookup"><span data-stu-id="4457e-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="4457e-106">Вместо этого XML-дерево используется как небольшая иерархическая база данных для одного пользователя, которая находится в памяти.</span><span class="sxs-lookup"><span data-stu-id="4457e-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере происходит заполнение XML-дерева из локальной файловой системы при помощи рекурсии. Затем выполняется запрос по дереву и вычисляется общий размер всех файлов в дереве.  
+## <a name="example"></a><span data-ttu-id="4457e-107">Пример</span><span class="sxs-lookup"><span data-stu-id="4457e-107">Example</span></span>  
+ <span data-ttu-id="4457e-108">В следующем примере происходит заполнение XML-дерева из локальной файловой системы при помощи рекурсии.</span><span class="sxs-lookup"><span data-stu-id="4457e-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="4457e-109">Затем выполняется запрос по дереву и вычисляется общий размер всех файлов в дереве.</span><span class="sxs-lookup"><span data-stu-id="4457e-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -58,7 +54,7 @@ class Program
 }  
 ```  
   
- Этот пример выводит данные примерно так:  
+ <span data-ttu-id="4457e-110">Этот пример выводит данные примерно так:</span><span class="sxs-lookup"><span data-stu-id="4457e-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -128,6 +124,5 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="4457e-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4457e-111">See Also</span></span>  
+ [<span data-ttu-id="4457e-112">Дополнительные способы создания запросов (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4457e-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

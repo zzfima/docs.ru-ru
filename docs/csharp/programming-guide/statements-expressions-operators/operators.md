@@ -1,157 +1,138 @@
 ---
 title: "Операторы (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
-В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
+# <a name="operators-c-programming-guide"></a><span data-ttu-id="de28d-102">Операторы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="de28d-102">Operators (C# Programming Guide)</span></span>
+<span data-ttu-id="de28d-103">В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции.</span><span class="sxs-lookup"><span data-stu-id="de28d-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="de28d-104">Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* .</span><span class="sxs-lookup"><span data-stu-id="de28d-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="de28d-105">Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* .</span><span class="sxs-lookup"><span data-stu-id="de28d-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="de28d-106">Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.</span><span class="sxs-lookup"><span data-stu-id="de28d-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  
   
- Следующая строка кода C# содержит один унарный оператор и еще один операнд. Оператор инкремента `++`изменяет значение операнда `y`.  
+ <span data-ttu-id="de28d-107">Следующая строка кода C# содержит один унарный оператор и еще один операнд.</span><span class="sxs-lookup"><span data-stu-id="de28d-107">The following C# statement contains a single unary operator and a single operand.</span></span> <span data-ttu-id="de28d-108">Оператор инкремента `++`изменяет значение операнда `y`.</span><span class="sxs-lookup"><span data-stu-id="de28d-108">The increment operator, `++`, modifies the value of the operand `y`.</span></span>  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
- Следующая строка кода C# содержит два бинарных оператора с двумя операндами в каждом. Оператор присваивания `=`содержит в качестве операндов целочисленную переменную `y` и выражение `2 + 3` . Выражение `2 + 3` состоит из оператора сложения и двух операндов — `2` и `3`.  
+ <span data-ttu-id="de28d-109">Следующая строка кода C# содержит два бинарных оператора с двумя операндами в каждом.</span><span class="sxs-lookup"><span data-stu-id="de28d-109">The following C# statement contains two binary operators, each with two operands.</span></span> <span data-ttu-id="de28d-110">Оператор присваивания `=`содержит в качестве операндов целочисленную переменную `y` и выражение `2 + 3` .</span><span class="sxs-lookup"><span data-stu-id="de28d-110">The assignment operator, `=`, has the integer variable `y` and the expression `2 + 3` as operands.</span></span> <span data-ttu-id="de28d-111">Выражение `2 + 3` состоит из оператора сложения и двух операндов — `2` и `3`.</span><span class="sxs-lookup"><span data-stu-id="de28d-111">The expression `2 + 3` itself consists of the addition operator and two operands, `2` and `3`.</span></span>  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Операторы, вычисление выражений и приоритет операторов  
- Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений. В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью*и скобками.  
+## <a name="operators-evaluation-and-operator-precedence"></a><span data-ttu-id="de28d-112">Операторы, вычисление выражений и приоритет операторов</span><span class="sxs-lookup"><span data-stu-id="de28d-112">Operators, Evaluation, and Operator Precedence</span></span>  
+ <span data-ttu-id="de28d-113">Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений.</span><span class="sxs-lookup"><span data-stu-id="de28d-113">An operand can be a valid expression that is composed of any length of code, and it can comprise any number of sub expressions.</span></span> <span data-ttu-id="de28d-114">В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью*и скобками.</span><span class="sxs-lookup"><span data-stu-id="de28d-114">In an expression that contains multiple operators, the order in which the operators are applied is determined by *operator precedence*, *associativity*, and parentheses.</span></span>  
   
- Каждый оператор имеет определенный приоритет. В выражении, содержащем несколько операторов с разными уровнями приоритета, порядок вычисления операторов определяется их приоритетом. Например, в следующем операторе переменной `n1`присваивается значение 3.  
+ <span data-ttu-id="de28d-115">Каждый оператор имеет определенный приоритет.</span><span class="sxs-lookup"><span data-stu-id="de28d-115">Each operator has a defined precedence.</span></span> <span data-ttu-id="de28d-116">В выражении, содержащем несколько операторов с разными уровнями приоритета, порядок вычисления операторов определяется их приоритетом.</span><span class="sxs-lookup"><span data-stu-id="de28d-116">In an expression that contains multiple operators that have different precedence levels, the precedence of the operators determines the order in which the operators are evaluated.</span></span> <span data-ttu-id="de28d-117">Например, в следующем операторе переменной `n1`присваивается значение 3.</span><span class="sxs-lookup"><span data-stu-id="de28d-117">For example, the following statement assigns 3 to `n1`.</span></span>  
   
  `n1 = 11 - 2 * 4;`  
   
- Сначала выполняется умножение, так как оно имеет приоритет над вычитанием.  
+ <span data-ttu-id="de28d-118">Сначала выполняется умножение, так как оно имеет приоритет над вычитанием.</span><span class="sxs-lookup"><span data-stu-id="de28d-118">The multiplication is executed first because multiplication takes precedence over subtraction.</span></span>  
   
- В следующей таблице операторы разделены на категории на основе типа выполняемых операций. Категории указаны в порядке приоритета.  
+ <span data-ttu-id="de28d-119">В следующей таблице операторы разделены на категории на основе типа выполняемых операций.</span><span class="sxs-lookup"><span data-stu-id="de28d-119">The following table separates the operators into categories based on the type of operation they perform.</span></span> <span data-ttu-id="de28d-120">Категории указаны в порядке приоритета.</span><span class="sxs-lookup"><span data-stu-id="de28d-120">The categories are listed in order of precedence.</span></span>  
   
- **Основные операторы**  
+ <span data-ttu-id="de28d-121">**Основные операторы**</span><span class="sxs-lookup"><span data-stu-id="de28d-121">**Primary Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-122">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-122">Expression</span></span>|<span data-ttu-id="de28d-123">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-123">Description</span></span>|  
 |----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Доступ к членам<br /><br /> Условный доступ к членам|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Вызов метода и делегата|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Доступ к массиву и индексатору<br /><br /> Условный доступ к массиву и индексатору|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|Постфиксный инкремент|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|Постфиксный декремент|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Создание объекта и делегата|  
-|`new` T(...){...}|Создание объекта с инициализатором. См. раздел [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
-|`new` {...}|Анонимный инициализатор объекта. См. раздел [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T[...]|Создание массива. См. раздел [Массивы](../../../csharp/programming-guide/arrays/index.md).|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|Получение объекта System.Type для T|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|Вычисление выражения в проверенном контексте|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|Вычисление выражения в непроверенном контексте|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|Получение значения по умолчанию для типа T|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|Анонимная функция (анонимный метод)|  
+|<span data-ttu-id="de28d-124">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span><span class="sxs-lookup"><span data-stu-id="de28d-124">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span></span><br /><br /> <span data-ttu-id="de28d-125">x?.y</span><span class="sxs-lookup"><span data-stu-id="de28d-125">x?.y</span></span>|<span data-ttu-id="de28d-126">Доступ к членам</span><span class="sxs-lookup"><span data-stu-id="de28d-126">Member access</span></span><br /><br /> <span data-ttu-id="de28d-127">Условный доступ к членам</span><span class="sxs-lookup"><span data-stu-id="de28d-127">Conditional member access</span></span>|  
+|<span data-ttu-id="de28d-128">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-128">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span></span>|<span data-ttu-id="de28d-129">Вызов метода и делегата</span><span class="sxs-lookup"><span data-stu-id="de28d-129">Method and delegate invocation</span></span>|  
+|<span data-ttu-id="de28d-130">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-130">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span></span><br /><br /> <span data-ttu-id="de28d-131">a?[x]</span><span class="sxs-lookup"><span data-stu-id="de28d-131">a?[x]</span></span>|<span data-ttu-id="de28d-132">Доступ к массиву и индексатору</span><span class="sxs-lookup"><span data-stu-id="de28d-132">Array and indexer access</span></span><br /><br /> <span data-ttu-id="de28d-133">Условный доступ к массиву и индексатору</span><span class="sxs-lookup"><span data-stu-id="de28d-133">Conditional array and indexer access</span></span>|  
+|<span data-ttu-id="de28d-134">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-134">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span></span>|<span data-ttu-id="de28d-135">Постфиксный инкремент</span><span class="sxs-lookup"><span data-stu-id="de28d-135">Post-increment</span></span>|  
+|<span data-ttu-id="de28d-136">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-136">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span></span>|<span data-ttu-id="de28d-137">Постфиксный декремент</span><span class="sxs-lookup"><span data-stu-id="de28d-137">Post-decrement</span></span>|  
+|<span data-ttu-id="de28d-138">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span><span class="sxs-lookup"><span data-stu-id="de28d-138">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span></span>|<span data-ttu-id="de28d-139">Создание объекта и делегата</span><span class="sxs-lookup"><span data-stu-id="de28d-139">Object and delegate creation</span></span>|  
+|<span data-ttu-id="de28d-140">`new` T(...){...}</span><span class="sxs-lookup"><span data-stu-id="de28d-140">`new` T(...){...}</span></span>|<span data-ttu-id="de28d-141">Создание объекта с инициализатором.</span><span class="sxs-lookup"><span data-stu-id="de28d-141">Object creation with initializer.</span></span> <span data-ttu-id="de28d-142">См. раздел [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span><span class="sxs-lookup"><span data-stu-id="de28d-142">See [Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>|  
+|<span data-ttu-id="de28d-143">`new` {...}</span><span class="sxs-lookup"><span data-stu-id="de28d-143">`new` {...}</span></span>|<span data-ttu-id="de28d-144">Анонимный инициализатор объекта.</span><span class="sxs-lookup"><span data-stu-id="de28d-144">Anonymous object initializer.</span></span> <span data-ttu-id="de28d-145">См. раздел [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="de28d-145">See [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>|  
+|<span data-ttu-id="de28d-146">`new` T[...]</span><span class="sxs-lookup"><span data-stu-id="de28d-146">`new` T[...]</span></span>|<span data-ttu-id="de28d-147">Создание массива.</span><span class="sxs-lookup"><span data-stu-id="de28d-147">Array creation.</span></span> <span data-ttu-id="de28d-148">См. раздел [Массивы](../../../csharp/programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="de28d-148">See [Arrays](../../../csharp/programming-guide/arrays/index.md).</span></span>|  
+|<span data-ttu-id="de28d-149">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span><span class="sxs-lookup"><span data-stu-id="de28d-149">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span></span>|<span data-ttu-id="de28d-150">Получение объекта System.Type для T</span><span class="sxs-lookup"><span data-stu-id="de28d-150">Obtain System.Type object for T</span></span>|  
+|<span data-ttu-id="de28d-151">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="de28d-151">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span></span>|<span data-ttu-id="de28d-152">Вычисление выражения в проверенном контексте</span><span class="sxs-lookup"><span data-stu-id="de28d-152">Evaluate expression in checked context</span></span>|  
+|<span data-ttu-id="de28d-153">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="de28d-153">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span></span>|<span data-ttu-id="de28d-154">Вычисление выражения в непроверенном контексте</span><span class="sxs-lookup"><span data-stu-id="de28d-154">Evaluate expression in unchecked context</span></span>|  
+|<span data-ttu-id="de28d-155">[default](../../../csharp/language-reference/keywords/default.md) (T)</span><span class="sxs-lookup"><span data-stu-id="de28d-155">[default](../../../csharp/language-reference/keywords/default.md) (T)</span></span>|<span data-ttu-id="de28d-156">Получение значения по умолчанию для типа T</span><span class="sxs-lookup"><span data-stu-id="de28d-156">Obtain default value of type T</span></span>|  
+|<span data-ttu-id="de28d-157">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span><span class="sxs-lookup"><span data-stu-id="de28d-157">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span></span>|<span data-ttu-id="de28d-158">Анонимная функция (анонимный метод)</span><span class="sxs-lookup"><span data-stu-id="de28d-158">Anonymous function (anonymous method)</span></span>|  
   
- **Унарные операторы**  
+ <span data-ttu-id="de28d-159">**Унарные операторы**</span><span class="sxs-lookup"><span data-stu-id="de28d-159">**Unary Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-160">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-160">Expression</span></span>|<span data-ttu-id="de28d-161">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-161">Description</span></span>|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|Удостоверение|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Отрицание|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Логическое отрицание|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Поразрядное отрицание|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|Префиксный инкремент|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Префиксный декремент|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Явное преобразование x в тип T|  
+|<span data-ttu-id="de28d-162">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-162">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span></span>|<span data-ttu-id="de28d-163">Удостоверение</span><span class="sxs-lookup"><span data-stu-id="de28d-163">Identity</span></span>|  
+|<span data-ttu-id="de28d-164">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-164">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span></span>|<span data-ttu-id="de28d-165">Отрицание</span><span class="sxs-lookup"><span data-stu-id="de28d-165">Negation</span></span>|  
+|[!]<span data-ttu-id="de28d-166">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-166">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span></span>|<span data-ttu-id="de28d-167">Логическое отрицание</span><span class="sxs-lookup"><span data-stu-id="de28d-167">Logical negation</span></span>|  
+|<span data-ttu-id="de28d-168">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-168">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span></span>|<span data-ttu-id="de28d-169">Поразрядное отрицание</span><span class="sxs-lookup"><span data-stu-id="de28d-169">Bitwise negation</span></span>|  
+|<span data-ttu-id="de28d-170">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-170">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span></span>|<span data-ttu-id="de28d-171">Префиксный инкремент</span><span class="sxs-lookup"><span data-stu-id="de28d-171">Pre-increment</span></span>|  
+|<span data-ttu-id="de28d-172">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-172">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span></span>|<span data-ttu-id="de28d-173">Префиксный декремент</span><span class="sxs-lookup"><span data-stu-id="de28d-173">Pre-decrement</span></span>|  
+|<span data-ttu-id="de28d-174">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="de28d-174">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span></span>|<span data-ttu-id="de28d-175">Явное преобразование x в тип T</span><span class="sxs-lookup"><span data-stu-id="de28d-175">Explicitly convert x to type T</span></span>|  
   
- **Мультипликативные операторы**  
+ <span data-ttu-id="de28d-176">**Мультипликативные операторы**</span><span class="sxs-lookup"><span data-stu-id="de28d-176">**Multiplicative Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-177">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-177">Expression</span></span>|<span data-ttu-id="de28d-178">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-178">Description</span></span>|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Умножение|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|Деление|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|Остаток|  
+|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|<span data-ttu-id="de28d-179">Умножение</span><span class="sxs-lookup"><span data-stu-id="de28d-179">Multiplication</span></span>|  
+|[/](../../../csharp/language-reference/operators/division-operator.md)|<span data-ttu-id="de28d-180">Деление</span><span class="sxs-lookup"><span data-stu-id="de28d-180">Division</span></span>|  
+|[%](../../../csharp/language-reference/operators/modulus-operator.md)|<span data-ttu-id="de28d-181">Остаток</span><span class="sxs-lookup"><span data-stu-id="de28d-181">Remainder</span></span>|  
   
- **Аддитивные операторы**  
+ <span data-ttu-id="de28d-182">**Аддитивные операторы**</span><span class="sxs-lookup"><span data-stu-id="de28d-182">**Additive Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-183">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-183">Expression</span></span>|<span data-ttu-id="de28d-184">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-184">Description</span></span>|  
 |----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Сложение, объединение строк, объединение делегатов|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Вычитание, удаление делегатов|  
+|<span data-ttu-id="de28d-185">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-185">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span></span>|<span data-ttu-id="de28d-186">Сложение, объединение строк, объединение делегатов</span><span class="sxs-lookup"><span data-stu-id="de28d-186">Addition, string concatenation, delegate combination</span></span>|  
+|<span data-ttu-id="de28d-187">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-187">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span></span>|<span data-ttu-id="de28d-188">Вычитание, удаление делегатов</span><span class="sxs-lookup"><span data-stu-id="de28d-188">Subtraction, delegate removal</span></span>|  
   
- **Операторы сдвига**  
+ <span data-ttu-id="de28d-189">**Операторы сдвига**</span><span class="sxs-lookup"><span data-stu-id="de28d-189">**Shift Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-190">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-190">Expression</span></span>|<span data-ttu-id="de28d-191">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-191">Description</span></span>|  
 |----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Сдвиг влево|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Сдвиг вправо|  
+|<span data-ttu-id="de28d-192">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-192">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span></span>|<span data-ttu-id="de28d-193">Сдвиг влево</span><span class="sxs-lookup"><span data-stu-id="de28d-193">Shift left</span></span>|  
+|<span data-ttu-id="de28d-194">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-194">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span></span>|<span data-ttu-id="de28d-195">Сдвиг вправо</span><span class="sxs-lookup"><span data-stu-id="de28d-195">Shift right</span></span>|  
   
- **Относительные операторы и операторы типов**  
+ <span data-ttu-id="de28d-196">**Относительные операторы и операторы типов**</span><span class="sxs-lookup"><span data-stu-id="de28d-196">**Relational and Type Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-197">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-197">Expression</span></span>|<span data-ttu-id="de28d-198">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-198">Description</span></span>|  
 |----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Меньше|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Больше|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Меньше или равно|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|Больше или равно|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|Возвращает значение true, если x относится к типу T, в противном случае возвращает значение false|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|Возвращает x типа T или значение NULL, если x не относится к типу T|  
+|<span data-ttu-id="de28d-199">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-199">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span></span>|<span data-ttu-id="de28d-200">Меньше</span><span class="sxs-lookup"><span data-stu-id="de28d-200">Less than</span></span>|  
+|<span data-ttu-id="de28d-201">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-201">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span></span>|<span data-ttu-id="de28d-202">Больше</span><span class="sxs-lookup"><span data-stu-id="de28d-202">Greater than</span></span>|  
+|<span data-ttu-id="de28d-203">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-203">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span></span>|<span data-ttu-id="de28d-204">Меньше или равно</span><span class="sxs-lookup"><span data-stu-id="de28d-204">Less than or equal</span></span>|  
+|<span data-ttu-id="de28d-205">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-205">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span></span>|<span data-ttu-id="de28d-206">Больше или равно</span><span class="sxs-lookup"><span data-stu-id="de28d-206">Greater than or equal</span></span>|  
+|<span data-ttu-id="de28d-207">x [is](../../../csharp/language-reference/keywords/is.md) T</span><span class="sxs-lookup"><span data-stu-id="de28d-207">x [is](../../../csharp/language-reference/keywords/is.md) T</span></span>|<span data-ttu-id="de28d-208">Возвращает значение true, если x относится к типу T, в противном случае возвращает значение false</span><span class="sxs-lookup"><span data-stu-id="de28d-208">Return true if x is a T, false otherwise</span></span>|  
+|<span data-ttu-id="de28d-209">x [as](../../../csharp/language-reference/keywords/as.md) T</span><span class="sxs-lookup"><span data-stu-id="de28d-209">x [as](../../../csharp/language-reference/keywords/as.md) T</span></span>|<span data-ttu-id="de28d-210">Возвращает x типа T или значение NULL, если x не относится к типу T</span><span class="sxs-lookup"><span data-stu-id="de28d-210">Return x typed as T, or null if x is not a T</span></span>|  
   
- **Операторы равенства**  
+ <span data-ttu-id="de28d-211">**Операторы равенства**</span><span class="sxs-lookup"><span data-stu-id="de28d-211">**Equality Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-212">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-212">Expression</span></span>|<span data-ttu-id="de28d-213">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-213">Description</span></span>|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Равно|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Не равно|  
+|<span data-ttu-id="de28d-214">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-214">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span></span>|<span data-ttu-id="de28d-215">Равно</span><span class="sxs-lookup"><span data-stu-id="de28d-215">Equal</span></span>|  
+|<span data-ttu-id="de28d-216">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-216">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span></span>|<span data-ttu-id="de28d-217">Не равно</span><span class="sxs-lookup"><span data-stu-id="de28d-217">Not equal</span></span>|  
   
- **Логические, условные операторы и NULL-операторы**  
+ <span data-ttu-id="de28d-218">**Логические, условные операторы и NULL-операторы**</span><span class="sxs-lookup"><span data-stu-id="de28d-218">**Logical, Conditional, and Null Operators**</span></span>  
   
-|Категория|Выражение|Описание|  
+|<span data-ttu-id="de28d-219">Категория</span><span class="sxs-lookup"><span data-stu-id="de28d-219">Category</span></span>|<span data-ttu-id="de28d-220">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-220">Expression</span></span>|<span data-ttu-id="de28d-221">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-221">Description</span></span>|  
 |--------------|----------------|-----------------|  
-|Логическое И|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Поразрядное И для операндов целочисленного типа, логическое И для операндов логического типа|  
-|Логическое исключающее ИЛИ|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Поразрядное исключающее ИЛИ для операндов целочисленного типа, логическое исключающее ИЛИ для операндов логического типа|  
-|Логическое ИЛИ|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Поразрядное ИЛИ для операндов целочисленного типа, логическое ИЛИ для операндов логического типа|  
-|Условное И|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Равно y, только если x имеет значение true|  
-|Условное ИЛИ|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Равно y, только если x имеет значение false|  
-|Объединение со значением NULL|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) Y|Равно y, если x имеет значение NULL, в противном случае равно x|  
-|Условие|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Равно y, если x имеет значение true, и z, если x имеет значение false|  
+|<span data-ttu-id="de28d-222">Логическое И</span><span class="sxs-lookup"><span data-stu-id="de28d-222">Logical AND</span></span>|<span data-ttu-id="de28d-223">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-223">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span></span>|<span data-ttu-id="de28d-224">Поразрядное И для операндов целочисленного типа, логическое И для операндов логического типа</span><span class="sxs-lookup"><span data-stu-id="de28d-224">Integer bitwise AND, Boolean logical AND</span></span>|  
+|<span data-ttu-id="de28d-225">Логическое исключающее ИЛИ</span><span class="sxs-lookup"><span data-stu-id="de28d-225">Logical XOR</span></span>|<span data-ttu-id="de28d-226">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-226">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span></span>|<span data-ttu-id="de28d-227">Поразрядное исключающее ИЛИ для операндов целочисленного типа, логическое исключающее ИЛИ для операндов логического типа</span><span class="sxs-lookup"><span data-stu-id="de28d-227">Integer bitwise XOR, boolean logical XOR</span></span>|  
+|<span data-ttu-id="de28d-228">Логическое ИЛИ</span><span class="sxs-lookup"><span data-stu-id="de28d-228">Logical OR</span></span>|<span data-ttu-id="de28d-229">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-229">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span></span>|<span data-ttu-id="de28d-230">Поразрядное ИЛИ для операндов целочисленного типа, логическое ИЛИ для операндов логического типа</span><span class="sxs-lookup"><span data-stu-id="de28d-230">Integer bitwise OR, boolean logical OR</span></span>|  
+|<span data-ttu-id="de28d-231">Условное И</span><span class="sxs-lookup"><span data-stu-id="de28d-231">Conditional AND</span></span>|<span data-ttu-id="de28d-232">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-232">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span></span>|<span data-ttu-id="de28d-233">Равно y, только если x имеет значение true</span><span class="sxs-lookup"><span data-stu-id="de28d-233">Evaluates y only if x is true</span></span>|  
+|<span data-ttu-id="de28d-234">Условное ИЛИ</span><span class="sxs-lookup"><span data-stu-id="de28d-234">Conditional OR</span></span>|<span data-ttu-id="de28d-235">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-235">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span></span>|<span data-ttu-id="de28d-236">Равно y, только если x имеет значение false</span><span class="sxs-lookup"><span data-stu-id="de28d-236">Evaluates y only if x is false</span></span>|  
+|<span data-ttu-id="de28d-237">Объединение со значением NULL</span><span class="sxs-lookup"><span data-stu-id="de28d-237">Null coalescing</span></span>|<span data-ttu-id="de28d-238">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-238">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span></span> <span data-ttu-id="de28d-239">Y</span><span class="sxs-lookup"><span data-stu-id="de28d-239">y</span></span>|<span data-ttu-id="de28d-240">Равно y, если x имеет значение NULL, в противном случае равно x</span><span class="sxs-lookup"><span data-stu-id="de28d-240">Evaluates to y if x is null, to x otherwise</span></span>|  
+|<span data-ttu-id="de28d-241">Условие</span><span class="sxs-lookup"><span data-stu-id="de28d-241">Conditional</span></span>|<span data-ttu-id="de28d-242">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-242">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span></span> <span data-ttu-id="de28d-243">y : z</span><span class="sxs-lookup"><span data-stu-id="de28d-243">y : z</span></span>|<span data-ttu-id="de28d-244">Равно y, если x имеет значение true, и z, если x имеет значение false</span><span class="sxs-lookup"><span data-stu-id="de28d-244">Evaluates to y if x is true, z if x is false</span></span>|  
   
- **Операторы присваивания и анонимные операторы**  
+ <span data-ttu-id="de28d-245">**Операторы присваивания и анонимные операторы**</span><span class="sxs-lookup"><span data-stu-id="de28d-245">**Assignment and Anonymous Operators**</span></span>  
   
-|Выражение|Описание|  
+|<span data-ttu-id="de28d-246">Выражение</span><span class="sxs-lookup"><span data-stu-id="de28d-246">Expression</span></span>|<span data-ttu-id="de28d-247">Описание</span><span class="sxs-lookup"><span data-stu-id="de28d-247">Description</span></span>|  
 |----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
-|x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Анонимная функция (лямбда-выражение)|  
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|<span data-ttu-id="de28d-248">Назначение</span><span class="sxs-lookup"><span data-stu-id="de28d-248">Assignment</span></span>|  
+|<span data-ttu-id="de28d-249">x op= y</span><span class="sxs-lookup"><span data-stu-id="de28d-249">x op= y</span></span>|<span data-ttu-id="de28d-250">Составное присваивание.</span><span class="sxs-lookup"><span data-stu-id="de28d-250">Compound assignment.</span></span> <span data-ttu-id="de28d-251">Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="de28d-251">Supports these operators: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="de28d-252">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="de28d-252">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span></span>|<span data-ttu-id="de28d-253">Анонимная функция (лямбда-выражение)</span><span class="sxs-lookup"><span data-stu-id="de28d-253">Anonymous function (lambda expression)</span></span>|  
   
-## <a name="associativity"></a>ассоциативностью  
- Когда выражение содержит два или более операторов с одинаковым приоритетом, они вычисляются на основе ассоциативности. Операторы с левой ассоциативностью вычисляются слева направо. Например, выражение `x * y / z` вычисляется как `(x * y) / z`. Операторы с правой ассоциативностью вычисляются справа налево. Например, оператор присваивания имеет правую ассоциативность. Если бы это было не так, следующий код вызвал бы ошибку.  
+## <a name="associativity"></a><span data-ttu-id="de28d-254">ассоциативностью</span><span class="sxs-lookup"><span data-stu-id="de28d-254">Associativity</span></span>  
+ <span data-ttu-id="de28d-255">Когда выражение содержит два или более операторов с одинаковым приоритетом, они вычисляются на основе ассоциативности.</span><span class="sxs-lookup"><span data-stu-id="de28d-255">When two or more operators that have the same precedence are present in an expression, they are evaluated based on associativity.</span></span> <span data-ttu-id="de28d-256">Операторы с левой ассоциативностью вычисляются слева направо.</span><span class="sxs-lookup"><span data-stu-id="de28d-256">Left-associative operators are evaluated in order from left to right.</span></span> <span data-ttu-id="de28d-257">Например, выражение `x * y / z` вычисляется как `(x * y) / z`.</span><span class="sxs-lookup"><span data-stu-id="de28d-257">For example, `x * y / z` is evaluated as `(x * y) / z`.</span></span> <span data-ttu-id="de28d-258">Операторы с правой ассоциативностью вычисляются справа налево.</span><span class="sxs-lookup"><span data-stu-id="de28d-258">Right-associative operators are evaluated in order from right to left.</span></span> <span data-ttu-id="de28d-259">Например, оператор присваивания имеет правую ассоциативность.</span><span class="sxs-lookup"><span data-stu-id="de28d-259">For example, the assignment operator is right associative.</span></span> <span data-ttu-id="de28d-260">Если бы это было не так, следующий код вызвал бы ошибку.</span><span class="sxs-lookup"><span data-stu-id="de28d-260">If it were not, the following code would result in an error.</span></span>  
   
 ```csharp  
 int a, b, c;  
@@ -164,35 +145,34 @@ a = (b = c);
 //(a = b) = c;  
 ```  
   
- Другим примером оператора с правой ассоциативностью является троичный оператор ([?:](../../../csharp/language-reference/operators/conditional-operator.md)). Большинство двоичных операторов имеют левую ассоциативность.  
+ <span data-ttu-id="de28d-261">Другим примером оператора с правой ассоциативностью является троичный оператор ([?:](../../../csharp/language-reference/operators/conditional-operator.md)).</span><span class="sxs-lookup"><span data-stu-id="de28d-261">As another example the ternary operator ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) is right associative.</span></span> <span data-ttu-id="de28d-262">Большинство двоичных операторов имеют левую ассоциативность.</span><span class="sxs-lookup"><span data-stu-id="de28d-262">Most binary operators are left associative.</span></span>  
   
- Независимо от того, какую ассоциативность (левую или правую) имеют операторы в выражении, сначала вычисляются операнды каждого выражения — слева направо. В следующих примерах иллюстрируется порядок вычисления операторов и операндов.  
+ <span data-ttu-id="de28d-263">Независимо от того, какую ассоциативность (левую или правую) имеют операторы в выражении, сначала вычисляются операнды каждого выражения — слева направо.</span><span class="sxs-lookup"><span data-stu-id="de28d-263">Whether the operators in an expression are left associative or right associative, the operands of each expression are evaluated first, from left to right.</span></span> <span data-ttu-id="de28d-264">В следующих примерах иллюстрируется порядок вычисления операторов и операндов.</span><span class="sxs-lookup"><span data-stu-id="de28d-264">The following examples illustrate the order of evaluation of operators and operands.</span></span>  
   
-|Оператор|Порядок вычислений|  
+|<span data-ttu-id="de28d-265">Оператор</span><span class="sxs-lookup"><span data-stu-id="de28d-265">Statement</span></span>|<span data-ttu-id="de28d-266">Порядок вычислений</span><span class="sxs-lookup"><span data-stu-id="de28d-266">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = b`|a, b, =|  
-|`a = b + c`|a, b, c, +, =|  
-|`a = b + c * d`|a, b, c, d, *, +, =|  
-|`a = b * c + d`|a, b, c, *, d, +, =|  
-|`a = b - c + d`|a, b, c, -, d, +, =|  
-|`a += b -= c`|a, b, c, -=, +=|  
+|`a = b`|<span data-ttu-id="de28d-267">a, b, =</span><span class="sxs-lookup"><span data-stu-id="de28d-267">a, b, =</span></span>|  
+|`a = b + c`|<span data-ttu-id="de28d-268">a, b, c, +, =</span><span class="sxs-lookup"><span data-stu-id="de28d-268">a, b, c, +, =</span></span>|  
+|`a = b + c * d`|<span data-ttu-id="de28d-269">a, b, c, d, *, +, =</span><span class="sxs-lookup"><span data-stu-id="de28d-269">a, b, c, d, *, +, =</span></span>|  
+|`a = b * c + d`|<span data-ttu-id="de28d-270">a, b, c, *, d, +, =</span><span class="sxs-lookup"><span data-stu-id="de28d-270">a, b, c, *, d, +, =</span></span>|  
+|`a = b - c + d`|<span data-ttu-id="de28d-271">a, b, c, -, d, +, =</span><span class="sxs-lookup"><span data-stu-id="de28d-271">a, b, c, -, d, +, =</span></span>|  
+|`a += b -= c`|<span data-ttu-id="de28d-272">a, b, c, -=, +=</span><span class="sxs-lookup"><span data-stu-id="de28d-272">a, b, c, -=, +=</span></span>|  
   
-## <a name="adding-parentheses"></a>Добавление скобок  
- Порядок, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок. Например, выражение `2 + 3 * 2` в обычном случае будет иметь значение 8, поскольку операторы умножения выполняются раньше операторов сложения. Однако если выражение записано в форме `(2 + 3) * 2`, сложение выполняется перед умножением и в результате получается 10. В следующих примерах иллюстрируется порядок вычисления выражений в скобках. Как и в предыдущих примерах, перед применением оператора вычисляются операнды.  
+## <a name="adding-parentheses"></a><span data-ttu-id="de28d-273">Добавление скобок</span><span class="sxs-lookup"><span data-stu-id="de28d-273">Adding Parentheses</span></span>  
+ <span data-ttu-id="de28d-274">Порядок, определяемый приоритетом и ассоциативностью операторов, можно изменить с помощью скобок.</span><span class="sxs-lookup"><span data-stu-id="de28d-274">You can change the order imposed by operator precedence and associativity by using parentheses.</span></span> <span data-ttu-id="de28d-275">Например, выражение `2 + 3 * 2` в обычном случае будет иметь значение 8, поскольку операторы умножения выполняются раньше операторов сложения.</span><span class="sxs-lookup"><span data-stu-id="de28d-275">For example, `2 + 3 * 2` ordinarily evaluates to 8, because multiplicative operators take precedence over additive operators.</span></span> <span data-ttu-id="de28d-276">Однако если выражение записано в форме `(2 + 3) * 2`, сложение выполняется перед умножением и в результате получается 10.</span><span class="sxs-lookup"><span data-stu-id="de28d-276">However, if you write the expression as `(2 + 3) * 2`, the addition is evaluated before the multiplication, and the result is 10.</span></span> <span data-ttu-id="de28d-277">В следующих примерах иллюстрируется порядок вычисления выражений в скобках.</span><span class="sxs-lookup"><span data-stu-id="de28d-277">The following examples illustrate the order of evaluation in parenthesized expressions.</span></span> <span data-ttu-id="de28d-278">Как и в предыдущих примерах, перед применением оператора вычисляются операнды.</span><span class="sxs-lookup"><span data-stu-id="de28d-278">As in previous examples, the operands are evaluated before the operator is applied.</span></span>  
   
-|Оператор|Порядок вычислений|  
+|<span data-ttu-id="de28d-279">Оператор</span><span class="sxs-lookup"><span data-stu-id="de28d-279">Statement</span></span>|<span data-ttu-id="de28d-280">Порядок вычислений</span><span class="sxs-lookup"><span data-stu-id="de28d-280">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = (b + c) * d`|a, b, c, +, d, *, =|  
-|`a = b - (c + d)`|a, b, c, d, +, -, =|  
-|`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
+|`a = (b + c) * d`|<span data-ttu-id="de28d-281">a, b, c, +, d, *, =</span><span class="sxs-lookup"><span data-stu-id="de28d-281">a, b, c, +, d, *, =</span></span>|  
+|`a = b - (c + d)`|<span data-ttu-id="de28d-282">a, b, c, d, +, -, =</span><span class="sxs-lookup"><span data-stu-id="de28d-282">a, b, c, d, +, -, =</span></span>|  
+|`a = (b + c) * (d - e)`|<span data-ttu-id="de28d-283">a, b, c, +, d, e, -, *, =</span><span class="sxs-lookup"><span data-stu-id="de28d-283">a, b, c, +, d, e, -, *, =</span></span>|  
   
-## <a name="operator-overloading"></a>Перегрузка операторов  
- Поведение операторов для пользовательских классов и структур можно изменить. Такой процесс называется *перегрузкой операторов*. Дополнительные сведения см. в разделе [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).  
+## <a name="operator-overloading"></a><span data-ttu-id="de28d-284">Перегрузка операторов</span><span class="sxs-lookup"><span data-stu-id="de28d-284">Operator Overloading</span></span>  
+ <span data-ttu-id="de28d-285">Поведение операторов для пользовательских классов и структур можно изменить.</span><span class="sxs-lookup"><span data-stu-id="de28d-285">You can change the behavior of operators for custom classes and structs.</span></span> <span data-ttu-id="de28d-286">Такой процесс называется *перегрузкой операторов*.</span><span class="sxs-lookup"><span data-stu-id="de28d-286">This process is referred to as *operator overloading*.</span></span> <span data-ttu-id="de28d-287">Дополнительные сведения см. в разделе [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span><span class="sxs-lookup"><span data-stu-id="de28d-287">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- Дополнительные сведения см. в разделах [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md) и [Операторы C#](../../../csharp/language-reference/operators/index.md).  
+## <a name="related-sections"></a><span data-ttu-id="de28d-288">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="de28d-288">Related Sections</span></span>  
+ <span data-ttu-id="de28d-289">Дополнительные сведения см. в разделах [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md) и [Операторы C#](../../../csharp/language-reference/operators/index.md).</span><span class="sxs-lookup"><span data-stu-id="de28d-289">For more information, see [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md) and [C# Operators](../../../csharp/language-reference/operators/index.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="de28d-290">См. также</span><span class="sxs-lookup"><span data-stu-id="de28d-290">See Also</span></span>  
+ [<span data-ttu-id="de28d-291">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="de28d-291">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="de28d-292">Инструкции, выражения и операторы</span><span class="sxs-lookup"><span data-stu-id="de28d-292">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)

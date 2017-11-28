@@ -1,80 +1,60 @@
 ---
 title: "Практическое руководство. Удаление раздела реестра в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.DeleteSetting
-dev_langs:
-- VB
+f1_keywords: vb.DeleteSetting
 helpviewer_keywords:
-- GetSetting function
-- registry, deleting values
+- GetSetting function [Visual Basic]
+- registry [Visual Basic], deleting values
 - GetAllSettings function
-- registry keys, deleting
-- registry, deleting keys
+- registry keys [Visual Basic], deleting
+- registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0cb98c02531bac133b9dc37a92f75d5c0418dc7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0fc37aff9f6a0ae3a7953377ebf95179d01bb693
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Практическое руководство. Удаление раздела реестра в Visual Basic
-Методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> можно использовать для удаления разделов реестра.  
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="3b059-102">Практическое руководство. Удаление раздела реестра в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3b059-102">How to: Delete a Registry Key in Visual Basic</span></span>
+<span data-ttu-id="3b059-103">Методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> можно использовать для удаления разделов реестра.</span><span class="sxs-lookup"><span data-stu-id="3b059-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
   
-## <a name="procedure"></a>Процедура  
+## <a name="procedure"></a><span data-ttu-id="3b059-104">Процедура</span><span class="sxs-lookup"><span data-stu-id="3b059-104">Procedure</span></span>  
   
-#### <a name="to-delete-a-registry-key"></a>Удаление раздела реестра  
+#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="3b059-105">Удаление раздела реестра</span><span class="sxs-lookup"><span data-stu-id="3b059-105">To delete a registry key</span></span>  
   
--   Для удаления раздела реестра используйте метод `DeleteSubKey`. В этом примере удаляется раздел Software/TestApp в кусте CurrentUser. Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.  
+-   <span data-ttu-id="3b059-106">Для удаления раздела реестра используйте метод `DeleteSubKey`.</span><span class="sxs-lookup"><span data-stu-id="3b059-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="3b059-107">В этом примере удаляется раздел Software/TestApp в кусте CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="3b059-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="3b059-108">Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.</span><span class="sxs-lookup"><span data-stu-id="3b059-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
   
      [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
-## <a name="robust-programming"></a>Отказоустойчивость  
- Метод `DeleteSubKey` возвратит пустую строку, если пара "раздел-значение" не существует.  
+## <a name="robust-programming"></a><span data-ttu-id="3b059-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="3b059-109">Robust Programming</span></span>  
+ <span data-ttu-id="3b059-110">Метод `DeleteSubKey` возвратит пустую строку, если пара "раздел-значение" не существует.</span><span class="sxs-lookup"><span data-stu-id="3b059-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
   
- При следующих условиях возможно возникновение исключения:  
+ <span data-ttu-id="3b059-111">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="3b059-111">The following conditions may cause an exception:</span></span>  
   
--   Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="3b059-112">Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="3b059-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="3b059-113">У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="3b059-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
--   Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="3b059-114">Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="3b059-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
--   Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="3b059-115">Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="3b059-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Обращение к реестру невозможно, если не предоставлены достаточные разрешения времени выполнения (<xref:System.Security.Permissions.RegistryPermission>) или у пользователя нет надлежащих прав доступа (определенных списками управления доступом) для создания или записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы.  
+## <a name="net-framework-security"></a><span data-ttu-id="3b059-116">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3b059-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="3b059-117">Обращение к реестру невозможно, если не предоставлены достаточные разрешения времени выполнения (<xref:System.Security.Permissions.RegistryPermission>) или у пользователя нет надлежащих прав доступа (определенных списками управления доступом) для создания или записи параметров.</span><span class="sxs-lookup"><span data-stu-id="3b059-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="3b059-118">Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы.</span><span class="sxs-lookup"><span data-stu-id="3b059-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- <xref:Microsoft.Win32.RegistryKey>   
- [Безопасность и реестр](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)   
- [Чтение данных из реестра и запись в реестр](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-
+## <a name="see-also"></a><span data-ttu-id="3b059-119">См. также</span><span class="sxs-lookup"><span data-stu-id="3b059-119">See Also</span></span>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ <xref:Microsoft.Win32.RegistryKey>  
+ [<span data-ttu-id="3b059-120">Безопасность и реестр</span><span class="sxs-lookup"><span data-stu-id="3b059-120">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
+ [<span data-ttu-id="3b059-121">Чтение данных из реестра и запись в реестр</span><span class="sxs-lookup"><span data-stu-id="3b059-121">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

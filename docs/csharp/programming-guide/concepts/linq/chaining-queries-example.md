@@ -1,31 +1,27 @@
 ---
 title: "Пример связывания запросов (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 74d3dcaca686487d79a90f28faf4d9c00218f6a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70179c93c48f56614bd7c8b648f73e86ebe26ff4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="chaining-queries-example-c"></a>Пример связывания запросов (C#)
-Этот пример основан на предыдущем примере и показывает, что происходит при соединении в цепочку двух запросов, использующих отложенное выполнение и отложенное вычисление.  
+# <a name="chaining-queries-example-c"></a><span data-ttu-id="dd0c7-102">Пример связывания запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="dd0c7-102">Chaining Queries Example (C#)</span></span>
+<span data-ttu-id="dd0c7-103">Этот пример основан на предыдущем примере и показывает, что происходит при соединении в цепочку двух запросов, использующих отложенное выполнение и отложенное вычисление.</span><span class="sxs-lookup"><span data-stu-id="dd0c7-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере представлен другой метод расширения, `AppendString`, который добавляет указанную строку в каждую строку исходной коллекции, а затем выдает новые строки.  
+## <a name="example"></a><span data-ttu-id="dd0c7-104">Пример</span><span class="sxs-lookup"><span data-stu-id="dd0c7-104">Example</span></span>  
+ <span data-ttu-id="dd0c7-105">В этом примере представлен другой метод расширения, `AppendString`, который добавляет указанную строку в каждую строку исходной коллекции, а затем выдает новые строки.</span><span class="sxs-lookup"><span data-stu-id="dd0c7-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -74,7 +70,7 @@ class Program
 }  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="dd0c7-106">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="dd0c7-106">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -90,14 +86,13 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- В этом примере видно, что каждый метод расширения работает поочередно с каждым элементом исходной коллекции.  
+ <span data-ttu-id="dd0c7-107">В этом примере видно, что каждый метод расширения работает поочередно с каждым элементом исходной коллекции.</span><span class="sxs-lookup"><span data-stu-id="dd0c7-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
   
- Этот пример показывает, что даже при соединении в цепочку двух запросов, формирующих коллекции, промежуточные коллекции не материализуются. Вместо этого каждый элемент передается от одного отложенного метода к другому. Это приводит к использованию намного меньшего объема памяти, чем при подходе, который сначала принимает один массив строк, затем создает второй массив строк, преобразованных в символы верхнего регистра, и наконец создает третий массив строк, где каждая строка имеет добавленные к ней восклицательные знаки.  
+ <span data-ttu-id="dd0c7-108">Этот пример показывает, что даже при соединении в цепочку двух запросов, формирующих коллекции, промежуточные коллекции не материализуются.</span><span class="sxs-lookup"><span data-stu-id="dd0c7-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="dd0c7-109">Вместо этого каждый элемент передается от одного отложенного метода к другому.</span><span class="sxs-lookup"><span data-stu-id="dd0c7-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="dd0c7-110">Это приводит к использованию намного меньшего объема памяти, чем при подходе, который сначала принимает один массив строк, затем создает второй массив строк, преобразованных в символы верхнего регистра, и наконец создает третий массив строк, где каждая строка имеет добавленные к ней восклицательные знаки.</span><span class="sxs-lookup"><span data-stu-id="dd0c7-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
   
- Следующий раздел учебника иллюстрирует промежуточную материализацию:  
+ <span data-ttu-id="dd0c7-111">Следующий раздел учебника иллюстрирует промежуточную материализацию:</span><span class="sxs-lookup"><span data-stu-id="dd0c7-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
   
--   [Промежуточная материализация (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+-   [<span data-ttu-id="dd0c7-112">Промежуточная материализация (C#)</span><span class="sxs-lookup"><span data-stu-id="dd0c7-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
+## <a name="see-also"></a><span data-ttu-id="dd0c7-113">См. также</span><span class="sxs-lookup"><span data-stu-id="dd0c7-113">See Also</span></span>  
+ [<span data-ttu-id="dd0c7-114">Учебник. Объединение запросов в цепочки (C#)</span><span class="sxs-lookup"><span data-stu-id="dd0c7-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

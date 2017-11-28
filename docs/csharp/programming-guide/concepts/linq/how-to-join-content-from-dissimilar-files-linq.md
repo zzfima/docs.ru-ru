@@ -1,37 +1,28 @@
 ---
 title: "Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ac5c9f2037e3254c6262efe00fcbff31664dcd70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95b2ff43ff5f14e2e3be40bee5463ed648c4c940
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
-В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="d829b-102">Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d829b-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+<span data-ttu-id="d829b-103">В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа.</span><span class="sxs-lookup"><span data-stu-id="d829b-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="d829b-104">Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл.</span><span class="sxs-lookup"><span data-stu-id="d829b-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="d829b-105">Можно изменить пример для обработки любого типа структурированного текста.</span><span class="sxs-lookup"><span data-stu-id="d829b-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Создание файлов данных  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="d829b-106">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="d829b-106">To create the data files</span></span>  
   
-1.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта. Этот файл представляет данные электронной таблицы. Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.  
+1.  <span data-ttu-id="d829b-107">Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="d829b-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="d829b-108">Этот файл представляет данные электронной таблицы.</span><span class="sxs-lookup"><span data-stu-id="d829b-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="d829b-109">Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.</span><span class="sxs-lookup"><span data-stu-id="d829b-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +39,7 @@ ms.lasthandoff: 07/28/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  Скопируйте следующие строки в файл с именем names.csv и сохраните его в папке проекта. Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.  
+2.  <span data-ttu-id="d829b-110">Скопируйте следующие строки в файл с именем names.csv и сохраните его в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="d829b-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="d829b-111">Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.</span><span class="sxs-lookup"><span data-stu-id="d829b-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -65,7 +56,7 @@ ms.lasthandoff: 07/28/2017
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="d829b-112">Пример</span><span class="sxs-lookup"><span data-stu-id="d829b-112">Example</span></span>  
   
 ```csharp  
 class JoinStrings  
@@ -136,10 +127,9 @@ Zabokritski, 96, 85, 91, 60
  */  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="d829b-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="d829b-113">Compiling the Code</span></span>  
+ <span data-ttu-id="d829b-114">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="d829b-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="d829b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="d829b-115">See Also</span></span>  
+ [<span data-ttu-id="d829b-116">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="d829b-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="d829b-117">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="d829b-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

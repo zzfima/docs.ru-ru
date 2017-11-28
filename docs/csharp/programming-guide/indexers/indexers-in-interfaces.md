@@ -1,61 +1,43 @@
 ---
 title: "Индексаторы в интерфейсах (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 304f2e037d8df025376d06f229ddd1584f8713b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2715602dadea40324f613bb07b5dd332ed18c25c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="indexers-in-interfaces-c-programming-guide"></a>Индексаторы в интерфейсах (Руководство по программированию в C#)
-Индексаторы можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md). Методы доступа индексаторов интерфейса отличаются от методов доступа индексаторов [класса](../../../csharp/language-reference/keywords/class.md) следующим образом:  
+# <a name="indexers-in-interfaces-c-programming-guide"></a><span data-ttu-id="77c0a-102">Индексаторы в интерфейсах (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="77c0a-102">Indexers in Interfaces (C# Programming Guide)</span></span>
+<span data-ttu-id="77c0a-103">Индексаторы можно объявлять для [интерфейса](../../../csharp/language-reference/keywords/interface.md).</span><span class="sxs-lookup"><span data-stu-id="77c0a-103">Indexers can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="77c0a-104">Методы доступа индексаторов интерфейса отличаются от методов доступа индексаторов [класса](../../../csharp/language-reference/keywords/class.md) следующим образом:</span><span class="sxs-lookup"><span data-stu-id="77c0a-104">Accessors of interface indexers differ from the accessors of [class](../../../csharp/language-reference/keywords/class.md) indexers in the following ways:</span></span>  
   
--   Методы доступа интерфейса не используют модификаторы.  
+-   <span data-ttu-id="77c0a-105">Методы доступа интерфейса не используют модификаторы.</span><span class="sxs-lookup"><span data-stu-id="77c0a-105">Interface accessors do not use modifiers.</span></span>  
   
--   Метод доступа интерфейса не имеет тела.  
+-   <span data-ttu-id="77c0a-106">Метод доступа интерфейса не имеет тела.</span><span class="sxs-lookup"><span data-stu-id="77c0a-106">An interface accessor does not have a body.</span></span>  
   
- Таким образом, методы доступа нужны, чтобы указать, доступен ли индексатор для чтения и записи, только для чтения или только для записи.  
+ <span data-ttu-id="77c0a-107">Таким образом, методы доступа нужны, чтобы указать, доступен ли индексатор для чтения и записи, только для чтения или только для записи.</span><span class="sxs-lookup"><span data-stu-id="77c0a-107">Thus, the purpose of the accessor is to indicate whether the indexer is read-write, read-only, or write-only.</span></span>  
   
- Ниже показан пример метода доступа индексатора для интерфейса:  
+ <span data-ttu-id="77c0a-108">Ниже показан пример метода доступа индексатора для интерфейса:</span><span class="sxs-lookup"><span data-stu-id="77c0a-108">The following is an example of an interface indexer accessor:</span></span>  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
- Сигнатура индексатора должна отличаться от сигнатур любых других индексаторов, объявленных в том же интерфейсе.  
+ <span data-ttu-id="77c0a-109">Сигнатура индексатора должна отличаться от сигнатур любых других индексаторов, объявленных в том же интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="77c0a-109">The signature of an indexer must differ from the signatures of all other indexers declared in the same interface.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует реализацию индексаторов интерфейса.  
+## <a name="example"></a><span data-ttu-id="77c0a-110">Пример</span><span class="sxs-lookup"><span data-stu-id="77c0a-110">Example</span></span>  
+ <span data-ttu-id="77c0a-111">Следующий пример демонстрирует реализацию индексаторов интерфейса.</span><span class="sxs-lookup"><span data-stu-id="77c0a-111">The following example shows how to implement interface indexers.</span></span>  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
- В приведенном выше примере можно использовать явную реализацию члена интерфейса с помощью полного имени члена интерфейса. Например:  
+ <span data-ttu-id="77c0a-112">В приведенном выше примере можно использовать явную реализацию члена интерфейса с помощью полного имени члена интерфейса.</span><span class="sxs-lookup"><span data-stu-id="77c0a-112">In the preceding example, you could use the explicit interface member implementation by using the fully qualified name of the interface member.</span></span> <span data-ttu-id="77c0a-113">Например:</span><span class="sxs-lookup"><span data-stu-id="77c0a-113">For example:</span></span>  
   
 ```  
 public string ISomeInterface.this   
@@ -63,7 +45,7 @@ public string ISomeInterface.this
 }   
 ```  
   
- Тем не менее полное имя требуется только в целях устранения неоднозначности, если класс реализует более одного интерфейса с одинаковой сигнатурой индексатора. Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых имеют одинаковую сигнатуру индексатора, требуется явная реализация члена интерфейса. Это значит, что потребуется следующее объявление индексатора:  
+ <span data-ttu-id="77c0a-114">Тем не менее полное имя требуется только в целях устранения неоднозначности, если класс реализует более одного интерфейса с одинаковой сигнатурой индексатора.</span><span class="sxs-lookup"><span data-stu-id="77c0a-114">However, the fully qualified name is only needed to avoid ambiguity when the class is implementing more than one interface with the same indexer signature.</span></span> <span data-ttu-id="77c0a-115">Например, если класс `Employee` реализует два интерфейса (`ICitizen` и `IEmployee`), оба из которых имеют одинаковую сигнатуру индексатора, требуется явная реализация члена интерфейса.</span><span class="sxs-lookup"><span data-stu-id="77c0a-115">For example, if an `Employee` class is implementing two interfaces, `ICitizen` and `IEmployee`, and both interfaces have the same indexer signature, the explicit interface member implementation is necessary.</span></span> <span data-ttu-id="77c0a-116">Это значит, что потребуется следующее объявление индексатора:</span><span class="sxs-lookup"><span data-stu-id="77c0a-116">That is, the following indexer declaration:</span></span>  
   
 ```  
 public string IEmployee.this   
@@ -71,7 +53,7 @@ public string IEmployee.this
 }   
 ```  
   
- реализует индексатор в интерфейсе `IEmployee`, тогда как следующее объявление:  
+ <span data-ttu-id="77c0a-117">реализует индексатор в интерфейсе `IEmployee`, тогда как следующее объявление:</span><span class="sxs-lookup"><span data-stu-id="77c0a-117">implements the indexer on the `IEmployee` interface, while the following declaration:</span></span>  
   
 ```  
 public string ICitizen.this   
@@ -79,11 +61,10 @@ public string ICitizen.this
 }   
 ```  
   
- реализует индексатор в интерфейсе `ICitizen`.  
+ <span data-ttu-id="77c0a-118">реализует индексатор в интерфейсе `ICitizen`.</span><span class="sxs-lookup"><span data-stu-id="77c0a-118">implements the indexer on the `ICitizen` interface.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="77c0a-119">См. также</span><span class="sxs-lookup"><span data-stu-id="77c0a-119">See Also</span></span>  
+ [<span data-ttu-id="77c0a-120">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="77c0a-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="77c0a-121">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="77c0a-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="77c0a-122">Свойства</span><span class="sxs-lookup"><span data-stu-id="77c0a-122">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="77c0a-123">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="77c0a-123">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)

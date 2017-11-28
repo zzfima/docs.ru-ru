@@ -17,6 +17,3 @@
 ### [Практическое руководство. Доступ к дочерним XML-элементам](how-to-access-xml-child-elements.md)
 ### [Практическое руководство. Доступ к XML-атрибутам](how-to-access-xml-attributes.md)
 ### [Практическое руководство. Объявление и использование префиксов пространств имен XML](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [XML IntelliSense](xml-intellisense.md)
-### [Практическое руководство. Включение XML IntelliSense](how-to-enable-xml-intellisense.md)
-### [Мастер построения схемы на основе кода XML](xml-to-schema-wizard.md)

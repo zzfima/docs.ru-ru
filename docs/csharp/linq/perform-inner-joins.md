@@ -7,80 +7,77 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="perform-inner-joins"></a>Выполнение внутренних соединений
+# <a name="perform-inner-joins"></a><span data-ttu-id="d60fb-104">Выполнение внутренних соединений</span><span class="sxs-lookup"><span data-stu-id="d60fb-104">Perform inner joins</span></span>
 
-В терминах реляционных баз данных *внутреннее соединение* формирует результирующий набор, в котором каждый элемент первой коллекции отображается по одному разу для каждого соответствующего элемента во второй коллекции. Если для элемента в первой коллекции нет соответствующих элементов, он не отображается в результирующем наборе. Метод <xref:System.Linq.Enumerable.Join%2A>, который вызывается предложением `join` в C#, реализует внутреннее соединение.  
+<span data-ttu-id="d60fb-105">В терминах реляционных баз данных *внутреннее соединение* формирует результирующий набор, в котором каждый элемент первой коллекции отображается по одному разу для каждого соответствующего элемента во второй коллекции.</span><span class="sxs-lookup"><span data-stu-id="d60fb-105">In relational database terms, an *inner join* produces a result set in which each element of the first collection appears one time for every matching element in the second collection.</span></span> <span data-ttu-id="d60fb-106">Если для элемента в первой коллекции нет соответствующих элементов, он не отображается в результирующем наборе.</span><span class="sxs-lookup"><span data-stu-id="d60fb-106">If an element in the first collection has no matching elements, it does not appear in the result set.</span></span> <span data-ttu-id="d60fb-107">Метод <xref:System.Linq.Enumerable.Join%2A>, который вызывается предложением `join` в C#, реализует внутреннее соединение.</span><span class="sxs-lookup"><span data-stu-id="d60fb-107">The <xref:System.Linq.Enumerable.Join%2A> method, which is called by the `join` clause in C#, implements an inner join.</span></span>  
   
- В этом разделе показано выполнение четырех видов внутреннего соединения:  
+ <span data-ttu-id="d60fb-108">В этом разделе показано выполнение четырех видов внутреннего соединения:</span><span class="sxs-lookup"><span data-stu-id="d60fb-108">This topic shows you how to perform four variations of an inner join:</span></span>  
   
--   Простое внутреннее соединение, сопоставляющее элементы из двух источников данных на основе простого ключа.  
+-   <span data-ttu-id="d60fb-109">Простое внутреннее соединение, сопоставляющее элементы из двух источников данных на основе простого ключа.</span><span class="sxs-lookup"><span data-stu-id="d60fb-109">A simple inner join that correlates elements from two data sources based on a simple key.</span></span>  
   
--   Внутреннее соединение, сопоставляющее элементы из двух источников данных на основе *составного* ключа. Составной ключ — это ключ, который состоит из нескольких значений, позволяющих сопоставлять элементы на основе сразу нескольких свойств.  
+-   <span data-ttu-id="d60fb-110">Внутреннее соединение, сопоставляющее элементы из двух источников данных на основе *составного* ключа.</span><span class="sxs-lookup"><span data-stu-id="d60fb-110">An inner join that correlates elements from two data sources based on a *composite* key.</span></span> <span data-ttu-id="d60fb-111">Составной ключ — это ключ, который состоит из нескольких значений, позволяющих сопоставлять элементы на основе сразу нескольких свойств.</span><span class="sxs-lookup"><span data-stu-id="d60fb-111">A composite key, which is a key that consists of more than one value, enables you to correlate elements based on more than one property.</span></span>  
   
--   *Множественное соединение*, при котором несколько последовательных операций соединения добавляются друг к другу.  
+-   <span data-ttu-id="d60fb-112">*Множественное соединение*, при котором несколько последовательных операций соединения добавляются друг к другу.</span><span class="sxs-lookup"><span data-stu-id="d60fb-112">A *multiple join* in which successive join operations are appended to each other.</span></span>  
   
--   Внутреннее соединение, реализуемое с помощью группового соединения.  
+-   <span data-ttu-id="d60fb-113">Внутреннее соединение, реализуемое с помощью группового соединения.</span><span class="sxs-lookup"><span data-stu-id="d60fb-113">An inner join that is implemented by using a group join.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="d60fb-114">Пример</span><span class="sxs-lookup"><span data-stu-id="d60fb-114">Example</span></span>  
   
-## <a name="simple-key-join-example"></a>Пример соединения по простому ключу  
- В следующем примере создаются две коллекции, содержащие объекты двух определяемых пользователем типов, `Person` и `Pet`. Запрос включает предложение `join` в C# для сопоставления объектов `Person` с объектами `Pet`, где `Owner` — это `Person`. Предложение `select` в C# определяет, как будут выглядеть результирующие объекты. В этом примере результирующие объекты — это анонимные типы, состоящие из имени владельца и его домашнего животного.  
+## <a name="simple-key-join-example"></a><span data-ttu-id="d60fb-115">Пример соединения по простому ключу</span><span class="sxs-lookup"><span data-stu-id="d60fb-115">Simple key join example</span></span>  
+ <span data-ttu-id="d60fb-116">В следующем примере создаются две коллекции, содержащие объекты двух определяемых пользователем типов, `Person` и `Pet`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-116">The following example creates two collections that contain objects of two user-defined types, `Person` and `Pet`.</span></span> <span data-ttu-id="d60fb-117">Запрос включает предложение `join` в C# для сопоставления объектов `Person` с объектами `Pet`, где `Owner` — это `Person`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-117">The query uses the `join` clause in C# to match `Person` objects with `Pet` objects whose `Owner` is that `Person`.</span></span> <span data-ttu-id="d60fb-118">Предложение `select` в C# определяет, как будут выглядеть результирующие объекты.</span><span class="sxs-lookup"><span data-stu-id="d60fb-118">The `select` clause in C# defines how the resulting objects will look.</span></span> <span data-ttu-id="d60fb-119">В этом примере результирующие объекты — это анонимные типы, состоящие из имени владельца и его домашнего животного.</span><span class="sxs-lookup"><span data-stu-id="d60fb-119">In this example the resulting objects are anonymous types that consist of the owner's first name and the pet's name.</span></span>  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
- Обратите внимание на то, что объект `Person`, параметр `LastName` которого имеет значение "Huff", не отображается в результирующем наборе, поскольку нет объекта `Pet`, параметр `Pet.Owner` которого совпадает с этим объектом `Person`.  
+ <span data-ttu-id="d60fb-120">Обратите внимание на то, что объект `Person`, параметр `LastName` которого имеет значение "Huff", не отображается в результирующем наборе, поскольку нет объекта `Pet`, параметр `Pet.Owner` которого совпадает с этим объектом `Person`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-120">Note that the `Person` object whose `LastName` is "Huff" does not appear in the result set because there is no `Pet` object that has `Pet.Owner` equal to that `Person`.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="d60fb-121">Пример</span><span class="sxs-lookup"><span data-stu-id="d60fb-121">Example</span></span>  
   
-## <a name="composite-key-join-example"></a>Пример соединения по составному ключу  
- Вместо сопоставления элементов по одному единственному свойству можно воспользоваться составным ключом и сравнить элементы по нескольким свойствам. Для этого задайте функцию селектора ключа для каждой коллекции, чтобы вернуть анонимный тип, состоящий из свойств, которые вы хотите сравнить. Если свойства помечаются, они должны иметь одинаковую метку в анонимном типе каждого ключа. Кроме того, свойства должны отображаться в одинаковом порядке.  
+## <a name="composite-key-join-example"></a><span data-ttu-id="d60fb-122">Пример соединения по составному ключу</span><span class="sxs-lookup"><span data-stu-id="d60fb-122">Composite key join example</span></span>  
+ <span data-ttu-id="d60fb-123">Вместо сопоставления элементов по одному единственному свойству можно воспользоваться составным ключом и сравнить элементы по нескольким свойствам.</span><span class="sxs-lookup"><span data-stu-id="d60fb-123">Instead of correlating elements based on just one property, you can use a composite key to compare elements based on multiple properties.</span></span> <span data-ttu-id="d60fb-124">Для этого задайте функцию селектора ключа для каждой коллекции, чтобы вернуть анонимный тип, состоящий из свойств, которые вы хотите сравнить.</span><span class="sxs-lookup"><span data-stu-id="d60fb-124">To do this, specify the key selector function for each collection to return an anonymous type that consists of the properties you want to compare.</span></span> <span data-ttu-id="d60fb-125">Если свойства помечаются, они должны иметь одинаковую метку в анонимном типе каждого ключа.</span><span class="sxs-lookup"><span data-stu-id="d60fb-125">If you label the properties, they must have the same label in each key's anonymous type.</span></span> <span data-ttu-id="d60fb-126">Кроме того, свойства должны отображаться в одинаковом порядке.</span><span class="sxs-lookup"><span data-stu-id="d60fb-126">The properties must also appear in the same order.</span></span>  
   
- В следующем примере на основе списка объектов `Employee` и списка объектов `Student` определяется, какие работники также являются студентами. Оба этих типа имеют свойства `FirstName` и `LastName` типа <xref:System.String>. Функции, создающие ключи соединения из каждого элемента в списке, возвращают анонимный тип, состоящий из свойств `FirstName` и `LastName` каждого элемента. Операция соединения сравнивает эти составные ключи на предмет равенства и возвращает пары объектов из каждого списка, в которых имя и фамилия совпадают.  
+ <span data-ttu-id="d60fb-127">В следующем примере на основе списка объектов `Employee` и списка объектов `Student` определяется, какие работники также являются студентами.</span><span class="sxs-lookup"><span data-stu-id="d60fb-127">The following example uses a list of `Employee` objects and a list of `Student` objects to determine which employees are also students.</span></span> <span data-ttu-id="d60fb-128">Оба этих типа имеют свойства `FirstName` и `LastName` типа <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="d60fb-128">Both of these types have a `FirstName` and a `LastName` property of type <xref:System.String>.</span></span> <span data-ttu-id="d60fb-129">Функции, создающие ключи соединения из каждого элемента в списке, возвращают анонимный тип, состоящий из свойств `FirstName` и `LastName` каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="d60fb-129">The functions that create the join keys from each list's elements return an anonymous type that consists of the `FirstName` and `LastName` properties of each element.</span></span> <span data-ttu-id="d60fb-130">Операция соединения сравнивает эти составные ключи на предмет равенства и возвращает пары объектов из каждого списка, в которых имя и фамилия совпадают.</span><span class="sxs-lookup"><span data-stu-id="d60fb-130">The join operation compares these composite keys for equality and returns pairs of objects from each list where both the first name and the last name match.</span></span>  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="d60fb-131">Пример</span><span class="sxs-lookup"><span data-stu-id="d60fb-131">Example</span></span>  
   
-## <a name="multiple-join-example"></a>Пример множественного соединения  
- Для выполнения множественного соединения можно соединять друг с другом любое количество операций соединения. Каждое предложение `join` в C# сопоставляет указанный источник данных с результатами предыдущего соединения.  
+## <a name="multiple-join-example"></a><span data-ttu-id="d60fb-132">Пример множественного соединения</span><span class="sxs-lookup"><span data-stu-id="d60fb-132">Multiple join example</span></span>  
+ <span data-ttu-id="d60fb-133">Для выполнения множественного соединения можно соединять друг с другом любое количество операций соединения.</span><span class="sxs-lookup"><span data-stu-id="d60fb-133">Any number of join operations can be appended to each other to perform a multiple join.</span></span> <span data-ttu-id="d60fb-134">Каждое предложение `join` в C# сопоставляет указанный источник данных с результатами предыдущего соединения.</span><span class="sxs-lookup"><span data-stu-id="d60fb-134">Each `join` clause in C# correlates a specified data source with the results of the previous join.</span></span>  
   
- В следующем примере создаются три коллекции: список объектов `Person`, список объектов `Cat` и список объектов `Dog`.  
+ <span data-ttu-id="d60fb-135">В следующем примере создаются три коллекции: список объектов `Person`, список объектов `Cat` и список объектов `Dog`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-135">The following example creates three collections: a list of `Person` objects, a list of `Cat` objects, and a list of `Dog` objects.</span></span>  
   
- Первое предложение `join` в C# сопоставляет людей и кошек, сравнивая объекты `Person` `Cat.Owner`. Оно возвращает последовательность анонимных типов, содержащих объект `Person` и `Cat.Name`.  
+ <span data-ttu-id="d60fb-136">Первое предложение `join` в C# сопоставляет людей и кошек, сравнивая объекты `Person` `Cat.Owner`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-136">The first `join` clause in C# matches people and cats based on a `Person` object matching `Cat.Owner`.</span></span> <span data-ttu-id="d60fb-137">Оно возвращает последовательность анонимных типов, содержащих объект `Person` и `Cat.Name`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-137">It returns a sequence of anonymous types that contain the `Person` object and `Cat.Name`.</span></span>  
   
- Второе предложение `join` в C# сопоставляет анонимные типы, возвращаемые первым соединением, с объектами `Dog` в предоставленном списке собак на основе ключа, состоящего из свойства `Owner` типа `Person` и первой буквы имени животного. Оно возвращает последовательность анонимных типов, содержащих свойства `Cat.Name` и `Dog.Name` из каждой совпадающей пары. Поскольку это внутреннее соединение, возвращаются только объекты из первого источника данных, имеющие соответствие во втором источнике данных.  
+ <span data-ttu-id="d60fb-138">Второе предложение `join` в C# сопоставляет анонимные типы, возвращаемые первым соединением, с объектами `Dog` в предоставленном списке собак на основе ключа, состоящего из свойства `Owner` типа `Person` и первой буквы имени животного.</span><span class="sxs-lookup"><span data-stu-id="d60fb-138">The second `join` clause in C# correlates the anonymous types returned by the first join with `Dog` objects in the supplied list of dogs, based on a composite key that consists of the `Owner` property of type `Person`, and the first letter of the animal's name.</span></span> <span data-ttu-id="d60fb-139">Оно возвращает последовательность анонимных типов, содержащих свойства `Cat.Name` и `Dog.Name` из каждой совпадающей пары.</span><span class="sxs-lookup"><span data-stu-id="d60fb-139">It returns a sequence of anonymous types that contain the `Cat.Name` and `Dog.Name` properties from each matching pair.</span></span> <span data-ttu-id="d60fb-140">Поскольку это внутреннее соединение, возвращаются только объекты из первого источника данных, имеющие соответствие во втором источнике данных.</span><span class="sxs-lookup"><span data-stu-id="d60fb-140">Because this is an inner join, only those objects from the first data source that have a match in the second data source are returned.</span></span>  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="d60fb-141">Пример</span><span class="sxs-lookup"><span data-stu-id="d60fb-141">Example</span></span>  
   
-## <a name="inner-join-by-using-grouped-join-example"></a>Пример внутреннего соединения с использованием группового соединения  
- В следующем примере показано, как реализовать внутреннее соединение с помощью группового соединения.  
+## <a name="inner-join-by-using-grouped-join-example"></a><span data-ttu-id="d60fb-142">Пример внутреннего соединения с использованием группового соединения</span><span class="sxs-lookup"><span data-stu-id="d60fb-142">Inner join by using grouped join example</span></span>  
+ <span data-ttu-id="d60fb-143">В следующем примере показано, как реализовать внутреннее соединение с помощью группового соединения.</span><span class="sxs-lookup"><span data-stu-id="d60fb-143">The following example shows you how to implement an inner join by using a group join.</span></span>  
   
- В `query1` список объектов `Person` группируется со списком объектов `Pet` на основе сравнения свойства объекта `Person` со свойством `Pet.Owner`. Групповое соединение создает коллекцию промежуточных групп, где каждая группа состоит из объекта `Person` и последовательности соответствующих ему объектов `Pet`.  
+ <span data-ttu-id="d60fb-144">В `query1` список объектов `Person` группируется со списком объектов `Pet` на основе сравнения свойства объекта `Person` со свойством `Pet.Owner`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-144">In `query1`, the list of `Person` objects is group-joined to the list of `Pet` objects based on the `Person` matching the `Pet.Owner` property.</span></span> <span data-ttu-id="d60fb-145">Групповое соединение создает коллекцию промежуточных групп, где каждая группа состоит из объекта `Person` и последовательности соответствующих ему объектов `Pet`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-145">The group join creates a collection of intermediate groups, where each group consists of a `Person` object and a sequence of matching `Pet` objects.</span></span>  
   
- Если в запрос добавляется второе предложение `from`, этот ряд последовательностей объединяется (или сводится) в одну более длинную последовательность. Тип элементов конечной последовательности определяется предложением `select`. В данном примере этот тип является анонимным и состоит из свойств `Person.FirstName` и `Pet.Name` для каждой совпадающей пары.  
+ <span data-ttu-id="d60fb-146">Если в запрос добавляется второе предложение `from`, этот ряд последовательностей объединяется (или сводится) в одну более длинную последовательность.</span><span class="sxs-lookup"><span data-stu-id="d60fb-146">By adding a second `from` clause to the query, this sequence of sequences is combined (or flattened) into one longer sequence.</span></span> <span data-ttu-id="d60fb-147">Тип элементов конечной последовательности определяется предложением `select`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-147">The type of the elements of the final sequence is specified by the `select` clause.</span></span> <span data-ttu-id="d60fb-148">В данном примере этот тип является анонимным и состоит из свойств `Person.FirstName` и `Pet.Name` для каждой совпадающей пары.</span><span class="sxs-lookup"><span data-stu-id="d60fb-148">In this example, that type is an anonymous type that consists of the `Person.FirstName` and `Pet.Name` properties for each matching pair.</span></span>  
   
- Результат `query1` эквивалентен результирующему набору, который можно было бы получить, выполнив внутреннее соединение с помощью предложения `join` без предложения `into`. Переменная `query2` демонстрирует этот эквивалентный запрос.  
+ <span data-ttu-id="d60fb-149">Результат `query1` эквивалентен результирующему набору, который можно было бы получить, выполнив внутреннее соединение с помощью предложения `join` без предложения `into`.</span><span class="sxs-lookup"><span data-stu-id="d60fb-149">The result of `query1` is equivalent to the result set that would have been obtained by using the `join` clause without the `into` clause to perform an inner join.</span></span> <span data-ttu-id="d60fb-150">Переменная `query2` демонстрирует этот эквивалентный запрос.</span><span class="sxs-lookup"><span data-stu-id="d60fb-150">The `query2` variable demonstrates this equivalent query.</span></span>  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [Выполнение групповых соединений](perform-grouped-joins.md)   
- [Выполнение левых внешних соединений](perform-left-outer-joins.md)   
- [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)   
+## <a name="see-also"></a><span data-ttu-id="d60fb-151">См. также</span><span class="sxs-lookup"><span data-stu-id="d60fb-151">See also</span></span>  
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [<span data-ttu-id="d60fb-152">Выполнение групповых соединений</span><span class="sxs-lookup"><span data-stu-id="d60fb-152">Perform grouped joins</span></span>](perform-grouped-joins.md)  
+ [<span data-ttu-id="d60fb-153">Выполнение левых внешних соединений</span><span class="sxs-lookup"><span data-stu-id="d60fb-153">Perform left outer joins</span></span>](perform-left-outer-joins.md)  
+ [<span data-ttu-id="d60fb-154">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="d60fb-154">Anonymous types</span></span>](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

@@ -1,130 +1,111 @@
 ---
 title: "Полиморфизм (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c278a6a931154af97cab5b1ff33124dd31a3fa2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
-Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
+# <a name="polymorphism-c-programming-guide"></a><span data-ttu-id="62fff-102">Полиморфизм (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="62fff-102">Polymorphism (C# Programming Guide)</span></span>
+<span data-ttu-id="62fff-103">Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования.</span><span class="sxs-lookup"><span data-stu-id="62fff-103">Polymorphism is often referred to as the third pillar of object-oriented programming, after encapsulation and inheritance.</span></span> <span data-ttu-id="62fff-104">Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.</span><span class="sxs-lookup"><span data-stu-id="62fff-104">Polymorphism is a Greek word that means "many-shaped" and it has two distinct aspects:</span></span>  
   
--   Во время выполнения объекты производного класса могут обрабатываться как объекты базового класса в таких местах, как параметры метода и коллекции или массивы. Когда это происходит, объявленный тип объекта перестает соответствовать своему типу во время выполнения.  
+-   <span data-ttu-id="62fff-105">Во время выполнения объекты производного класса могут обрабатываться как объекты базового класса в таких местах, как параметры метода и коллекции или массивы.</span><span class="sxs-lookup"><span data-stu-id="62fff-105">At run time, objects of a derived class may be treated as objects of a base class in places such as method parameters and collections or arrays.</span></span> <span data-ttu-id="62fff-106">Когда это происходит, объявленный тип объекта перестает соответствовать своему типу во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="62fff-106">When this occurs, the object's declared type is no longer identical to its run-time type.</span></span>  
   
--   Базовые классы могут определять и реализовывать [виртуальные](../../../csharp/language-reference/keywords/virtual.md) *методы*, а производные классы — [переопределять](../../../csharp/language-reference/keywords/override.md) их, т. е. предоставлять свое собственное определение и реализацию. Во время выполнения, когда клиент вызывает метод, CLR выполняет поиск типа объекта во время выполнения и вызывает перезапись виртуального метода. Таким образом, в исходном коде можно вызвать метод на базовом классе и привести версию производного класса метода, который необходимо выполнить.  
+-   <span data-ttu-id="62fff-107">Базовые классы могут определять и реализовывать [виртуальные](../../../csharp/language-reference/keywords/virtual.md) *методы*, а производные классы — [переопределять](../../../csharp/language-reference/keywords/override.md) их, т. е. предоставлять свое собственное определение и реализацию.</span><span class="sxs-lookup"><span data-stu-id="62fff-107">Base classes may define and implement [virtual](../../../csharp/language-reference/keywords/virtual.md) *methods*, and derived classes can [override](../../../csharp/language-reference/keywords/override.md) them, which means they provide their own definition and implementation.</span></span> <span data-ttu-id="62fff-108">Во время выполнения, когда клиент вызывает метод, CLR выполняет поиск типа объекта во время выполнения и вызывает перезапись виртуального метода.</span><span class="sxs-lookup"><span data-stu-id="62fff-108">At run-time, when client code calls the method, the CLR looks up the run-time type of the object, and invokes that override of the virtual method.</span></span> <span data-ttu-id="62fff-109">Таким образом, в исходном коде можно вызвать метод на базовом классе и привести версию производного класса метода, который необходимо выполнить.</span><span class="sxs-lookup"><span data-stu-id="62fff-109">Thus in your source code you can call a method on a base class, and cause a derived class's version of the method to be executed.</span></span>  
   
- Виртуальные методы позволяют работать с группами связанных объектов универсальным способом. Представим, например, приложение, позволяющее пользователю создавать различные виды фигур на поверхности для рисования. Во время компиляции вы еще не знаете, какие именно виды фигур создаст пользователь. При этом приложению необходимо отслеживать все различные типы создаваемых фигур и обновлять их в ответ на движения мыши. Для решения этой проблемы можно использовать полиморфизм, выполнив два основных действия.  
+ <span data-ttu-id="62fff-110">Виртуальные методы позволяют работать с группами связанных объектов универсальным способом.</span><span class="sxs-lookup"><span data-stu-id="62fff-110">Virtual methods enable you to work with groups of related objects in a uniform way.</span></span> <span data-ttu-id="62fff-111">Представим, например, приложение, позволяющее пользователю создавать различные виды фигур на поверхности для рисования.</span><span class="sxs-lookup"><span data-stu-id="62fff-111">For example, suppose you have a drawing application that enables a user to create various kinds of shapes on a drawing surface.</span></span> <span data-ttu-id="62fff-112">Во время компиляции вы еще не знаете, какие именно виды фигур создаст пользователь.</span><span class="sxs-lookup"><span data-stu-id="62fff-112">You do not know at compile time which specific types of shapes the user will create.</span></span> <span data-ttu-id="62fff-113">При этом приложению необходимо отслеживать все различные типы создаваемых фигур и обновлять их в ответ на движения мыши.</span><span class="sxs-lookup"><span data-stu-id="62fff-113">However, the application has to keep track of all the various types of shapes that are created, and it has to update them in response to user mouse actions.</span></span> <span data-ttu-id="62fff-114">Для решения этой проблемы можно использовать полиморфизм, выполнив два основных действия.</span><span class="sxs-lookup"><span data-stu-id="62fff-114">You can use polymorphism to solve this problem in two basic steps:</span></span>  
   
-1.  Создать иерархию классов, в которой каждый отдельный класс фигур является производным из общего базового класса.  
+1.  <span data-ttu-id="62fff-115">Создать иерархию классов, в которой каждый отдельный класс фигур является производным из общего базового класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-115">Create a class hierarchy in which each specific shape class derives from a common base class.</span></span>  
   
-2.  Применить виртуальный метод для вызова соответствующего метода на любой производный класс через единый вызов в метод базового класса.  
+2.  <span data-ttu-id="62fff-116">Применить виртуальный метод для вызова соответствующего метода на любой производный класс через единый вызов в метод базового класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-116">Use a virtual method to invoke the appropriate method on any derived class through a single call to the base class method.</span></span>  
   
- Для начала создайте базовый класс с именем `Shape` и производные классы, например `Rectangle`, `Circle` и `Triangle`. Присвойте классу `Shape` виртуальный метод с именем `Draw` и переопределите его в каждом производном классе для рисования конкретной фигуры, которую этот класс представляет. Создайте объект `List<Shape>` и добавьте в него круг, треугольник и прямоугольник. Для обновления поверхности рисования используйте цикл [foreach](../../../csharp/language-reference/keywords/foreach-in.md), чтобы выполнить итерацию списка и вызвать метод `Draw` на каждом объекте `Shape` в списке. Несмотря на то, что каждый объект в списке имеет объявленный тип `Shape`, вызывать будет тип во время выполнения (переопределенная версия метода в каждом производном классе).  
+ <span data-ttu-id="62fff-117">Для начала создайте базовый класс с именем `Shape` и производные классы, например `Rectangle`, `Circle` и `Triangle`.</span><span class="sxs-lookup"><span data-stu-id="62fff-117">First, create a base class called `Shape`, and derived classes such as `Rectangle`, `Circle`, and `Triangle`.</span></span> <span data-ttu-id="62fff-118">Присвойте классу `Shape` виртуальный метод с именем `Draw` и переопределите его в каждом производном классе для рисования конкретной фигуры, которую этот класс представляет.</span><span class="sxs-lookup"><span data-stu-id="62fff-118">Give the `Shape` class a virtual method called `Draw`, and override it in each derived class to draw the particular shape that the class represents.</span></span> <span data-ttu-id="62fff-119">Создайте объект `List<Shape>` и добавьте в него круг, треугольник и прямоугольник.</span><span class="sxs-lookup"><span data-stu-id="62fff-119">Create a `List<Shape>` object and add a Circle, Triangle and Rectangle to it.</span></span> <span data-ttu-id="62fff-120">Для обновления поверхности рисования используйте цикл [foreach](../../../csharp/language-reference/keywords/foreach-in.md), чтобы выполнить итерацию списка и вызвать метод `Draw` на каждом объекте `Shape` в списке.</span><span class="sxs-lookup"><span data-stu-id="62fff-120">To update the drawing surface, use a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) loop to iterate through the list and call the `Draw` method on each `Shape` object in the list.</span></span> <span data-ttu-id="62fff-121">Несмотря на то, что каждый объект в списке имеет объявленный тип `Shape`, вызывать будет тип во время выполнения (переопределенная версия метода в каждом производном классе).</span><span class="sxs-lookup"><span data-stu-id="62fff-121">Even though each object in the list has a declared type of `Shape`, it is the run-time type (the overridden version of the method in each derived class) that will be invoked.</span></span>  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
- В C# каждый тип является полиморфным, так как все типы, включая пользовательские, наследуют <xref:System.Object>.  
+ <span data-ttu-id="62fff-122">В C# каждый тип является полиморфным, так как все типы, включая пользовательские, наследуют <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="62fff-122">In C#, every type is polymorphic because all types, including user-defined types, inherit from <xref:System.Object>.</span></span>  
   
-## <a name="polymorphism-overview"></a>Обзор полиморфизма  
+## <a name="polymorphism-overview"></a><span data-ttu-id="62fff-123">Обзор полиморфизма</span><span class="sxs-lookup"><span data-stu-id="62fff-123">Polymorphism Overview</span></span>  
   
-### <a name="virtual-members"></a>Виртуальные члены  
- Если производный класс наследуется из базового, он получает все методы, поля, свойства и события базового класса. Разработчик производного класса может выбрать следующее:  
+### <a name="virtual-members"></a><span data-ttu-id="62fff-124">Виртуальные члены</span><span class="sxs-lookup"><span data-stu-id="62fff-124">Virtual Members</span></span>  
+ <span data-ttu-id="62fff-125">Если производный класс наследуется из базового, он получает все методы, поля, свойства и события базового класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-125">When a derived class inherits from a base class, it gains all the methods, fields, properties and events of the base class.</span></span> <span data-ttu-id="62fff-126">Разработчик производного класса может выбрать следующее:</span><span class="sxs-lookup"><span data-stu-id="62fff-126">The designer of the derived class can choose whether to</span></span>  
   
--   переопределение виртуальных членов в базовом классе;  
+-   <span data-ttu-id="62fff-127">переопределение виртуальных членов в базовом классе;</span><span class="sxs-lookup"><span data-stu-id="62fff-127">override virtual members in the base class,</span></span>  
   
--   наследование метода ближайшего базового класса без переопределения;  
+-   <span data-ttu-id="62fff-128">наследование метода ближайшего базового класса без переопределения;</span><span class="sxs-lookup"><span data-stu-id="62fff-128">inherit the closest base class method without overriding it</span></span>  
   
--   определение новой, невиртуальной реализации тех членов, которые скрывают реализации базового класса.  
+-   <span data-ttu-id="62fff-129">определение новой, невиртуальной реализации тех членов, которые скрывают реализации базового класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-129">define new non-virtual implementation of those members that hide the base class implementations</span></span>  
   
- Производный класс может переопределить член базового класса, только если последний будет объявлен [виртуальным](../../../csharp/language-reference/keywords/virtual.md) или [абстрактным](../../../csharp/language-reference/keywords/abstract.md). Производный член должен использовать ключевое слово [override](../../../csharp/language-reference/keywords/override.md), указывающее, что метод предназначен для участия в виртуальном вызове. Примером является следующий код:  
+ <span data-ttu-id="62fff-130">Производный класс может переопределить член базового класса, только если последний будет объявлен [виртуальным](../../../csharp/language-reference/keywords/virtual.md) или [абстрактным](../../../csharp/language-reference/keywords/abstract.md).</span><span class="sxs-lookup"><span data-stu-id="62fff-130">A derived class can override a base class member only if the base class member is declared as [virtual](../../../csharp/language-reference/keywords/virtual.md) or [abstract](../../../csharp/language-reference/keywords/abstract.md).</span></span> <span data-ttu-id="62fff-131">Производный член должен использовать ключевое слово [override](../../../csharp/language-reference/keywords/override.md), указывающее, что метод предназначен для участия в виртуальном вызове.</span><span class="sxs-lookup"><span data-stu-id="62fff-131">The derived member must use the [override](../../../csharp/language-reference/keywords/override.md) keyword to explicitly indicate that the method is intended to participate in virtual invocation.</span></span> <span data-ttu-id="62fff-132">Примером является следующий код:</span><span class="sxs-lookup"><span data-stu-id="62fff-132">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
- Поля не могут быть виртуальными. Виртуальными могут быть только методы, свойства, события и индексаторы. Когда производный класс переопределяет виртуальный член, он вызывается даже в то случае, если доступ к экземпляру этого класса осуществляется в качестве экземпляра базового класса. Примером является следующий код:  
+ <span data-ttu-id="62fff-133">Поля не могут быть виртуальными. Виртуальными могут быть только методы, свойства, события и индексаторы.</span><span class="sxs-lookup"><span data-stu-id="62fff-133">Fields cannot be virtual; only methods, properties, events and indexers can be virtual.</span></span> <span data-ttu-id="62fff-134">Когда производный класс переопределяет виртуальный член, он вызывается даже в то случае, если доступ к экземпляру этого класса осуществляется в качестве экземпляра базового класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-134">When a derived class overrides a virtual member, that member is called even when an instance of that class is being accessed as an instance of the base class.</span></span> <span data-ttu-id="62fff-135">Примером является следующий код:</span><span class="sxs-lookup"><span data-stu-id="62fff-135">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
- Виртуальные методы и свойства позволяют производным классам расширять базовый класс без необходимости использовать реализацию базового класса метода. Дополнительные сведения см. в разделе [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Еще одну возможность определения метода или набора методов, реализация которых оставлена производным классам, дает интерфейс. Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
+ <span data-ttu-id="62fff-136">Виртуальные методы и свойства позволяют производным классам расширять базовый класс без необходимости использовать реализацию базового класса метода.</span><span class="sxs-lookup"><span data-stu-id="62fff-136">Virtual methods and properties enable derived classes to extend a base class without needing to use the base class implementation of a method.</span></span> <span data-ttu-id="62fff-137">Дополнительные сведения см. в разделе [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="62fff-137">For more information, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md).</span></span> <span data-ttu-id="62fff-138">Еще одну возможность определения метода или набора методов, реализация которых оставлена производным классам, дает интерфейс.</span><span class="sxs-lookup"><span data-stu-id="62fff-138">An interface provides another way to define a method or set of methods whose implementation is left to derived classes.</span></span> <span data-ttu-id="62fff-139">Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="62fff-139">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
-### <a name="hiding-base-class-members-with-new-members"></a>Сокрытие членов базового класса новыми членами  
- Если вам нужно, чтобы производный член имел такое же имя, как и член в базовом классе, но вы не хотите, чтобы он участвовал в виртуальном вызове, используйте ключевое слово [new](../../../csharp/language-reference/keywords/new.md). Ключевое слово `new` вставляется перед типом возвращаемого значения замещаемого члена класса. Примером является следующий код:  
+### <a name="hiding-base-class-members-with-new-members"></a><span data-ttu-id="62fff-140">Сокрытие членов базового класса новыми членами</span><span class="sxs-lookup"><span data-stu-id="62fff-140">Hiding Base Class Members with New Members</span></span>  
+ <span data-ttu-id="62fff-141">Если вам нужно, чтобы производный член имел такое же имя, как и член в базовом классе, но вы не хотите, чтобы он участвовал в виртуальном вызове, используйте ключевое слово [new](../../../csharp/language-reference/keywords/new.md).</span><span class="sxs-lookup"><span data-stu-id="62fff-141">If you want your derived member to have the same name as a member in a base class, but you do not want it to participate in virtual invocation, you can use the [new](../../../csharp/language-reference/keywords/new.md) keyword.</span></span> <span data-ttu-id="62fff-142">Ключевое слово `new` вставляется перед типом возвращаемого значения замещаемого члена класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-142">The `new` keyword is put before the return type of a class member that is being replaced.</span></span> <span data-ttu-id="62fff-143">Примером является следующий код:</span><span class="sxs-lookup"><span data-stu-id="62fff-143">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса. Пример:  
+ <span data-ttu-id="62fff-144">Доступ к скрытым членам базового класса можно по-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-144">Hidden base class members can still be accessed from client code by casting the instance of the derived class to an instance of the base class.</span></span> <span data-ttu-id="62fff-145">Например:</span><span class="sxs-lookup"><span data-stu-id="62fff-145">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
-### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>Защита виртуальных членов от переопределения производными классами  
- Виртуальные члены остаются виртуальными на неограниченный срок независимо от количества классов, объявленных между виртуальным членом и классом, который объявил его изначально. Если класс А объявляет виртуальный член, класс В производится из класса А, а класс С — из класса В, то класс С наследует виртуальный член и получает возможность переопределить его независимо от того, объявляет ли класс В переопределение этого члена. Примером является следующий код:  
+### <a name="preventing-derived-classes-from-overriding-virtual-members"></a><span data-ttu-id="62fff-146">Защита виртуальных членов от переопределения производными классами</span><span class="sxs-lookup"><span data-stu-id="62fff-146">Preventing Derived Classes from Overriding Virtual Members</span></span>  
+ <span data-ttu-id="62fff-147">Виртуальные члены остаются виртуальными на неограниченный срок независимо от количества классов, объявленных между виртуальным членом и классом, который объявил его изначально.</span><span class="sxs-lookup"><span data-stu-id="62fff-147">Virtual members remain virtual indefinitely, regardless of how many classes have been declared between the virtual member and the class that originally declared it.</span></span> <span data-ttu-id="62fff-148">Если класс А объявляет виртуальный член, класс В производится из класса А, а класс С — из класса В, то класс С наследует виртуальный член и получает возможность переопределить его независимо от того, объявляет ли класс В переопределение этого члена.</span><span class="sxs-lookup"><span data-stu-id="62fff-148">If class A declares a virtual member, and class B derives from A, and class C derives from B, class C inherits the virtual member, and has the option to override it, regardless of whether class B declared an override for that member.</span></span> <span data-ttu-id="62fff-149">Примером является следующий код:</span><span class="sxs-lookup"><span data-stu-id="62fff-149">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
- Производный класс может остановить виртуальное наследование, объявив переопределение как [запечатанное](../../../csharp/language-reference/keywords/sealed.md). Для этого в объявление члена класса необходимо вставить ключевое слово `sealed` перед ключевым словом `override`. Примером является следующий код:  
+ <span data-ttu-id="62fff-150">Производный класс может остановить виртуальное наследование, объявив переопределение как [запечатанное](../../../csharp/language-reference/keywords/sealed.md).</span><span class="sxs-lookup"><span data-stu-id="62fff-150">A derived class can stop virtual inheritance by declaring an override as [sealed](../../../csharp/language-reference/keywords/sealed.md).</span></span> <span data-ttu-id="62fff-151">Для этого в объявление члена класса необходимо вставить ключевое слово `sealed` перед ключевым словом `override`.</span><span class="sxs-lookup"><span data-stu-id="62fff-151">This requires putting the `sealed` keyword before the `override` keyword in the class member declaration.</span></span> <span data-ttu-id="62fff-152">Примером является следующий код:</span><span class="sxs-lookup"><span data-stu-id="62fff-152">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
- В предыдущем примере метод `DoWork` больше не является виртуальным для любого класса, производного от C. Он по-прежнему будет виртуальным для экземпляров C, даже если они будут приведены к типу B или A. Запечатанные методы можно заменить производными классами с помощью ключевого слова `new`, как показано в следующем примере:  
+ <span data-ttu-id="62fff-153">В предыдущем примере метод `DoWork` больше не является виртуальным для любого класса, производного от C. Он по-прежнему будет виртуальным для экземпляров C, даже если они будут приведены к типу B или A. Запечатанные методы можно заменить производными классами с помощью ключевого слова `new`, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="62fff-153">In the previous example, the method `DoWork` is no longer virtual to any class derived from C. It is still virtual for instances of C, even if they are cast to type B or type A. Sealed methods can be replaced by derived classes by using the `new` keyword, as the following example shows:</span></span>  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
- В этом случае, если `DoWork` вызывается на D с помощью переменной типа D, вызывается новый `DoWork`. Если переменная типа C, B или A используется для доступа к экземпляру D, вызов `DoWork` будет выполняться по правилам виртуального наследования и направлять эти вызовы на реализацию `DoWork` на классе C.  
+ <span data-ttu-id="62fff-154">В этом случае, если `DoWork` вызывается на D с помощью переменной типа D, вызывается новый `DoWork`.</span><span class="sxs-lookup"><span data-stu-id="62fff-154">In this case, if `DoWork` is called on D using a variable of type D, the new `DoWork` is called.</span></span> <span data-ttu-id="62fff-155">Если переменная типа C, B или A используется для доступа к экземпляру D, вызов `DoWork` будет выполняться по правилам виртуального наследования и направлять эти вызовы на реализацию `DoWork` на классе C.</span><span class="sxs-lookup"><span data-stu-id="62fff-155">If a variable of type C, B, or A is used to access an instance of D, a call to `DoWork` will follow the rules of virtual inheritance, routing those calls to the implementation of `DoWork` on class C.</span></span>  
   
-### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Доступ к виртуальным членам базового класса из производных классов  
- Производный класс, который заменил или переопределил метод или свойство, может получить доступ к методу или свойству на базовом классе с помощью базового ключевого слова. Примером является следующий код:  
+### <a name="accessing-base-class-virtual-members-from-derived-classes"></a><span data-ttu-id="62fff-156">Доступ к виртуальным членам базового класса из производных классов</span><span class="sxs-lookup"><span data-stu-id="62fff-156">Accessing Base Class Virtual Members from Derived Classes</span></span>  
+ <span data-ttu-id="62fff-157">Производный класс, который заменил или переопределил метод или свойство, может получить доступ к методу или свойству на базовом классе с помощью базового ключевого слова.</span><span class="sxs-lookup"><span data-stu-id="62fff-157">A derived class that has replaced or overridden a method or property can still access the method or property on the base class using the base keyword.</span></span> <span data-ttu-id="62fff-158">Примером является следующий код:</span><span class="sxs-lookup"><span data-stu-id="62fff-158">The following code provides an example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
- Дополнительные сведения см. в разделе [base](../../../csharp/language-reference/keywords/base.md).  
+ <span data-ttu-id="62fff-159">Дополнительные сведения см. в разделе [base](../../../csharp/language-reference/keywords/base.md).</span><span class="sxs-lookup"><span data-stu-id="62fff-159">For more information, see [base](../../../csharp/language-reference/keywords/base.md).</span></span>  
   
 > [!NOTE]
->  Рекомендуется, чтобы виртуальные члены использовали `base` для вызова реализации базового класса этого члена в их собственной реализации. Разрешение поведения базового класса позволяет производному классу концентрироваться на реализации поведения, характерного для производного класса. Если реализация базового класса не вызывается, производный класс сопоставляет свое поведение с поведением базового класса по своему усмотрению.  
+>  <span data-ttu-id="62fff-160">Рекомендуется, чтобы виртуальные члены использовали `base` для вызова реализации базового класса этого члена в их собственной реализации.</span><span class="sxs-lookup"><span data-stu-id="62fff-160">It is recommended that virtual members use `base` to call the base class implementation of that member in their own implementation.</span></span> <span data-ttu-id="62fff-161">Разрешение поведения базового класса позволяет производному классу концентрироваться на реализации поведения, характерного для производного класса.</span><span class="sxs-lookup"><span data-stu-id="62fff-161">Letting the base class behavior occur enables the derived class to concentrate on implementing behavior specific to the derived class.</span></span> <span data-ttu-id="62fff-162">Если реализация базового класса не вызывается, производный класс сопоставляет свое поведение с поведением базового класса по своему усмотрению.</span><span class="sxs-lookup"><span data-stu-id="62fff-162">If the base class implementation is not called, it is up to the derived class to make their behavior compatible with the behavior of the base class.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a><span data-ttu-id="62fff-163">Содержание</span><span class="sxs-lookup"><span data-stu-id="62fff-163">In This Section</span></span>  
   
--   [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [<span data-ttu-id="62fff-164">Управление версиями с помощью ключевых слов Override и New</span><span class="sxs-lookup"><span data-stu-id="62fff-164">Versioning with the Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+-   [<span data-ttu-id="62fff-165">Использование ключевых слов Override и New</span><span class="sxs-lookup"><span data-stu-id="62fff-165">Knowing When to Use Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Практическое руководство. Переопределение метода ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [<span data-ttu-id="62fff-166">Практическое руководство. Переопределение метода ToString</span><span class="sxs-lookup"><span data-stu-id="62fff-166">How to: Override the ToString Method</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [События](../../../csharp/programming-guide/events/index.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [Типы](../../../csharp/programming-guide/types/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="62fff-167">См. также</span><span class="sxs-lookup"><span data-stu-id="62fff-167">See Also</span></span>  
+ [<span data-ttu-id="62fff-168">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="62fff-168">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="62fff-169">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="62fff-169">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="62fff-170">Наследование</span><span class="sxs-lookup"><span data-stu-id="62fff-170">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="62fff-171">Абстрактные и запечатанные классы и члены классов</span><span class="sxs-lookup"><span data-stu-id="62fff-171">Abstract and Sealed Classes and Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [<span data-ttu-id="62fff-172">Методы</span><span class="sxs-lookup"><span data-stu-id="62fff-172">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="62fff-173">События</span><span class="sxs-lookup"><span data-stu-id="62fff-173">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="62fff-174">Свойства</span><span class="sxs-lookup"><span data-stu-id="62fff-174">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="62fff-175">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="62fff-175">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="62fff-176">Типы</span><span class="sxs-lookup"><span data-stu-id="62fff-176">Types</span></span>](../../../csharp/programming-guide/types/index.md)

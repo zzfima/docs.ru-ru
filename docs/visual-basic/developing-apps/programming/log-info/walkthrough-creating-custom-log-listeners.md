@@ -1,139 +1,120 @@
 ---
 title: "Создание пользовательских прослушивателей журнала (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 307af0767d57612d8996f75c2f8814a83f20baf2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc6fde8dcbb27157f3fd180ad393bb406222195e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)
-В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
+# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a><span data-ttu-id="67b4f-102">Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="67b4f-102">Walkthrough: Creating Custom Log Listeners (Visual Basic)</span></span>
+<span data-ttu-id="67b4f-103">В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="67b4f-103">This walkthrough demonstrates how to create a custom log listener and configure it to listen to the output of the `My.Application.Log` object.</span></span>  
   
-## <a name="getting-started"></a>Начало работы  
- Прослушиватели журналов должны наследовать от класса <xref:System.Diagnostics.TraceListener>.  
+## <a name="getting-started"></a><span data-ttu-id="67b4f-104">Начало работы</span><span class="sxs-lookup"><span data-stu-id="67b4f-104">Getting Started</span></span>  
+ <span data-ttu-id="67b4f-105">Прослушиватели журналов должны наследовать от класса <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="67b4f-105">Log listeners must inherit from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
-#### <a name="to-create-the-listener"></a>Создание прослушивателя  
+#### <a name="to-create-the-listener"></a><span data-ttu-id="67b4f-106">Создание прослушивателя</span><span class="sxs-lookup"><span data-stu-id="67b4f-106">To create the listener</span></span>  
   
--   В приложении создайте класс с именем `SimpleListener`, который наследует от класса <xref:System.Diagnostics.TraceListener>.  
+-   <span data-ttu-id="67b4f-107">В приложении создайте класс с именем `SimpleListener`, который наследует от класса <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="67b4f-107">In your application, create a class named `SimpleListener` that inherits from <xref:System.Diagnostics.TraceListener>.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     Методы <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A>, которые нужны для базового класса, используют `MsgBox` для отображения входных данных.  
+     <span data-ttu-id="67b4f-108">Методы <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A>, которые нужны для базового класса, используют `MsgBox` для отображения входных данных.</span><span class="sxs-lookup"><span data-stu-id="67b4f-108">The <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods, required by the base class, call `MsgBox` to display their input.</span></span>  
   
-     К методам <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A> применяется атрибут <xref:System.Security.Permissions.HostProtectionAttribute>, чтобы их атрибуты соответствовали методы базового класса. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, проверять наличие в коде синхронизации защиты узла.  
+     <span data-ttu-id="67b4f-109">К методам <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A> применяется атрибут <xref:System.Security.Permissions.HostProtectionAttribute>, чтобы их атрибуты соответствовали методы базового класса.</span><span class="sxs-lookup"><span data-stu-id="67b4f-109">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is applied to the <xref:System.Diagnostics.TraceListener.Write%2A> and <xref:System.Diagnostics.TraceListener.WriteLine%2A> methods so that their attributes match the base class methods.</span></span> <span data-ttu-id="67b4f-110">Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, проверять наличие в коде синхронизации защиты узла.</span><span class="sxs-lookup"><span data-stu-id="67b4f-110">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute allows the host that runs the code to determine that the code exposes host-protection synchronization.</span></span>  
   
     > [!NOTE]
-    >  Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и реализована защита узлов, например для SQL Server.  
+    >  <span data-ttu-id="67b4f-111">Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и реализована защита узлов, например для SQL Server.</span><span class="sxs-lookup"><span data-stu-id="67b4f-111">The <xref:System.Security.Permissions.HostProtectionAttribute> attribute is effective only on unmanaged applications that host the common language runtime and that implement host protection, such as SQL Server.</span></span>  
   
- Чтобы объект `My.Application.Log` использовал прослушиватель журнала, следует присвоить строгое имя сборке, содержащей прослушиватель журнала.  
+ <span data-ttu-id="67b4f-112">Чтобы объект `My.Application.Log` использовал прослушиватель журнала, следует присвоить строгое имя сборке, содержащей прослушиватель журнала.</span><span class="sxs-lookup"><span data-stu-id="67b4f-112">To ensure that `My.Application.Log` uses your log listener, you should strongly name the assembly that contains your log listener.</span></span>  
   
- В следующей процедуре показано несколько простых шагов по созданию сборки прослушивателя журнала со строгим именем. Дополнительные сведения см. в разделе [Создание и использование сборок со строгими именами](https://msdn.microsoft.com/library/xwb8f617).  
+ <span data-ttu-id="67b4f-113">В следующей процедуре показано несколько простых шагов по созданию сборки прослушивателя журнала со строгим именем.</span><span class="sxs-lookup"><span data-stu-id="67b4f-113">The next procedure provides some simple steps for creating a strongly named log-listener assembly.</span></span> <span data-ttu-id="67b4f-114">Дополнительные сведения см. в разделе [Создание и использование сборок со строгими именами](https://msdn.microsoft.com/library/xwb8f617).</span><span class="sxs-lookup"><span data-stu-id="67b4f-114">For more information, see [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617).</span></span>  
   
-#### <a name="to-strongly-name-the-log-listener-assembly"></a>Задание строгого имени сборке прослушивателя журнала  
+#### <a name="to-strongly-name-the-log-listener-assembly"></a><span data-ttu-id="67b4f-115">Задание строгого имени сборке прослушивателя журнала</span><span class="sxs-lookup"><span data-stu-id="67b4f-115">To strongly name the log-listener assembly</span></span>  
   
-1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**. Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  <span data-ttu-id="67b4f-116">Выберите проект в **Обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="67b4f-117">В меню **Проект** выберите пункт **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-117">On the **Project** menu, choose **Properties**.</span></span> <span data-ttu-id="67b4f-118">Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span><span class="sxs-lookup"><span data-stu-id="67b4f-118">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  Откройте вкладку **Подписывание**.  
+2.  <span data-ttu-id="67b4f-119">Откройте вкладку **Подписывание**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-119">Click the **Signing** tab.</span></span>  
   
-3.  Выберите поле **Подписать сборку**.  
+3.  <span data-ttu-id="67b4f-120">Выберите поле **Подписать сборку**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-120">Select the **Sign the assembly** box.</span></span>  
   
-4.  В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>**.  
+4.  <span data-ttu-id="67b4f-121">В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-121">Select **\<New>** from the **Choose a strong name key file** drop-down list.</span></span>  
   
-     Откроется диалоговое окно **Создание ключа строгого имени**.  
+     <span data-ttu-id="67b4f-122">Откроется диалоговое окно **Создание ключа строгого имени**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-122">The **Create Strong Name Key** dialog box opens.</span></span>  
   
-5.  Укажите имя для файла ключа в поле **Имя файла ключа**.  
+5.  <span data-ttu-id="67b4f-123">Укажите имя для файла ключа в поле **Имя файла ключа**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-123">Provide a name for the key file in the **Key file name** box.</span></span>  
   
-6.  Введите пароль в поля **Введите пароль** и **Подтверждение пароля**.  
+6.  <span data-ttu-id="67b4f-124">Введите пароль в поля **Введите пароль** и **Подтверждение пароля**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-124">Enter a password in the **Enter password** and **Confirm password** boxes.</span></span>  
   
-7.  Нажмите кнопку **ОК**.  
+7.  <span data-ttu-id="67b4f-125">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-125">Click **OK**.</span></span>  
   
-8.  Перестройте приложение.  
+8.  <span data-ttu-id="67b4f-126">Перестройте приложение.</span><span class="sxs-lookup"><span data-stu-id="67b4f-126">Rebuild the application.</span></span>  
   
-## <a name="adding-the-listener"></a>Добавление прослушивателя  
- Теперь, когда сборка имеет строгое имя, необходимо определить строгое имя прослушивателя, чтобы объект `My.Application.Log` использовал прослушиватель журнала.  
+## <a name="adding-the-listener"></a><span data-ttu-id="67b4f-127">Добавление прослушивателя</span><span class="sxs-lookup"><span data-stu-id="67b4f-127">Adding the Listener</span></span>  
+ <span data-ttu-id="67b4f-128">Теперь, когда сборка имеет строгое имя, необходимо определить строгое имя прослушивателя, чтобы объект `My.Application.Log` использовал прослушиватель журнала.</span><span class="sxs-lookup"><span data-stu-id="67b4f-128">Now that the assembly has a strong name, you need to determine the strong name of the listener so that `My.Application.Log` uses your log listener.</span></span>  
   
- Тип со строгим именем имеет следующий формат:  
+ <span data-ttu-id="67b4f-129">Тип со строгим именем имеет следующий формат:</span><span class="sxs-lookup"><span data-stu-id="67b4f-129">The format of a strongly named type is as follows.</span></span>  
   
- \<имя типа>, \<имя сборки>, \<номер версии>, \<язык>, \<строгое имя>  
+ <span data-ttu-id="67b4f-130">\<имя типа>, \<имя сборки>, \<номер версии>, \<язык>, \<строгое имя></span><span class="sxs-lookup"><span data-stu-id="67b4f-130">\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name></span></span>  
   
-#### <a name="to-determine-the-strong-name-of-the-listener"></a>Определение строгого имени прослушивателя  
+#### <a name="to-determine-the-strong-name-of-the-listener"></a><span data-ttu-id="67b4f-131">Определение строгого имени прослушивателя</span><span class="sxs-lookup"><span data-stu-id="67b4f-131">To determine the strong name of the listener</span></span>  
   
--   В следующем коде показано, как определить строгое имя типа для `SimpleListener`.  
+-   <span data-ttu-id="67b4f-132">В следующем коде показано, как определить строгое имя типа для `SimpleListener`.</span><span class="sxs-lookup"><span data-stu-id="67b4f-132">The following code shows how to determine the strongly named type name for `SimpleListener`.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
   
-     Строгое имя типа зависит от проекта.  
+     <span data-ttu-id="67b4f-133">Строгое имя типа зависит от проекта.</span><span class="sxs-lookup"><span data-stu-id="67b4f-133">The strong name of the type depends on your project.</span></span>  
   
- Можно добавить прослушиватель со строгим именем в коллекцию прослушивателей журнала `My.Application.Log`.  
+ <span data-ttu-id="67b4f-134">Можно добавить прослушиватель со строгим именем в коллекцию прослушивателей журнала `My.Application.Log`.</span><span class="sxs-lookup"><span data-stu-id="67b4f-134">With the strong name, you can add the listener to the `My.Application.Log` log-listener collection.</span></span>  
   
-#### <a name="to-add-the-listener-to-myapplicationlog"></a>Добавление прослушивателя в My.Application.Log  
+#### <a name="to-add-the-listener-to-myapplicationlog"></a><span data-ttu-id="67b4f-135">Добавление прослушивателя в My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="67b4f-135">To add the listener to My.Application.Log</span></span>  
   
-1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
+1.  <span data-ttu-id="67b4f-136">Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-136">Right-click on app.config in the **Solution Explorer** and choose **Open**.</span></span>  
   
-     -или-  
+     <span data-ttu-id="67b4f-137">-или-</span><span class="sxs-lookup"><span data-stu-id="67b4f-137">-or-</span></span>  
   
-     Если есть файл app.config:  
+     <span data-ttu-id="67b4f-138">Если есть файл app.config:</span><span class="sxs-lookup"><span data-stu-id="67b4f-138">If there is an app.config file:</span></span>  
   
-    1.  В меню **Проект** выберите пункт **Добавить новый элемент**.  
+    1.  <span data-ttu-id="67b4f-139">В меню **Проект** выберите пункт **Добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-139">On the **Project** menu, choose **Add New Item**.</span></span>  
   
-    2.  В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.  
+    2.  <span data-ttu-id="67b4f-140">В диалоговом окне **Добавление нового элемента** выберите элемент **Файл конфигурации приложения**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-140">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
   
-    3.  Нажмите кнопку **Добавить**.  
+    3.  <span data-ttu-id="67b4f-141">Нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="67b4f-141">Click **Add**.</span></span>  
   
-2.  Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name` , равным DefaultSource, в разделе `<sources>` . Раздел `<sources>` находится в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
+2.  <span data-ttu-id="67b4f-142">Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name` , равным DefaultSource, в разделе `<sources>` .</span><span class="sxs-lookup"><span data-stu-id="67b4f-142">Locate the `<listeners>` section, in the `<source>` section with the `name` attribute "DefaultSource", located in the `<sources>` section.</span></span> <span data-ttu-id="67b4f-143">Раздел `<sources>` находится в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="67b4f-143">The `<sources>` section is located in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-3.  Добавьте этот элемент в раздел `<listeners>`:  
+3.  <span data-ttu-id="67b4f-144">Добавьте этот элемент в раздел `<listeners>`:</span><span class="sxs-lookup"><span data-stu-id="67b4f-144">Add this element to the `<listeners>` section:</span></span>  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Найдите раздел `<sharedListeners>` в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
+4.  <span data-ttu-id="67b4f-145">Найдите раздел `<sharedListeners>` в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="67b4f-145">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
   
-5.  Добавьте в этот раздел `<sharedListeners>` следующий элемент:  
+5.  <span data-ttu-id="67b4f-146">Добавьте в этот раздел `<sharedListeners>` следующий элемент:</span><span class="sxs-lookup"><span data-stu-id="67b4f-146">Add this element to that `<sharedListeners>` section:</span></span>  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   
-     Изменить значение `SimpleLogStrongName` на строгое имя прослушивателя.  
+     <span data-ttu-id="67b4f-147">Изменить значение `SimpleLogStrongName` на строгое имя прослушивателя.</span><span class="sxs-lookup"><span data-stu-id="67b4f-147">Change the value of `SimpleLogStrongName` to be the strong name of the listener.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [Практическое руководство. Запись в журнал сведений об исключениях](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
- [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-
+## <a name="see-also"></a><span data-ttu-id="67b4f-148">См. также</span><span class="sxs-lookup"><span data-stu-id="67b4f-148">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ [<span data-ttu-id="67b4f-149">Работа с журналами приложения</span><span class="sxs-lookup"><span data-stu-id="67b4f-149">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [<span data-ttu-id="67b4f-150">Практическое руководство. Запись в журнал сведений об исключениях</span><span class="sxs-lookup"><span data-stu-id="67b4f-150">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [<span data-ttu-id="67b4f-151">Практическое руководство. Запись сообщений в журнал</span><span class="sxs-lookup"><span data-stu-id="67b4f-151">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="67b4f-152">Пошаговое руководство. Изменение места записи сведений для My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="67b4f-152">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

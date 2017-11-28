@@ -1,56 +1,46 @@
 ---
 title: "Операции агрегирования (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f3bb029d2b7f9115d1c68db2844127329d34fe2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6c453bdccdb3af026fe4f4fb79c6e33e44e7a8f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="aggregation-operations-c"></a>Операции агрегирования (C#)
-Статистическая операция вычисляет одно значение по коллекции значений. Например, статистической обработкой является вычисление средней дневной температуры с использованием значений дневной температуры за месяц.  
+# <a name="aggregation-operations-c"></a><span data-ttu-id="77090-102">Операции агрегирования (C#)</span><span class="sxs-lookup"><span data-stu-id="77090-102">Aggregation Operations (C#)</span></span>
+<span data-ttu-id="77090-103">Статистическая операция вычисляет одно значение по коллекции значений.</span><span class="sxs-lookup"><span data-stu-id="77090-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="77090-104">Например, статистической обработкой является вычисление средней дневной температуры с использованием значений дневной температуры за месяц.</span><span class="sxs-lookup"><span data-stu-id="77090-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  
   
- На приведенном ниже рисунке показаны результаты двух различных операций агрегирования с последовательностью чисел. Первая операция суммирует числа. Вторая операция возвращает максимальное значение в последовательности.  
+ <span data-ttu-id="77090-105">На приведенном ниже рисунке показаны результаты двух различных операций агрегирования с последовательностью чисел.</span><span class="sxs-lookup"><span data-stu-id="77090-105">The following illustration shows the results of two different aggregation operations on a sequence of numbers.</span></span> <span data-ttu-id="77090-106">Первая операция суммирует числа.</span><span class="sxs-lookup"><span data-stu-id="77090-106">The first operation sums the numbers.</span></span> <span data-ttu-id="77090-107">Вторая операция возвращает максимальное значение в последовательности.</span><span class="sxs-lookup"><span data-stu-id="77090-107">The second operation returns the maximum value in the sequence.</span></span>  
   
- ![Операции агрегирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ <span data-ttu-id="77090-108">![Операции агрегирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")</span><span class="sxs-lookup"><span data-stu-id="77090-108">![LINQ Aggregation Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")</span></span>  
   
- В следующем разделе перечислены методы стандартных операторов запросов, которые выполняют операции агрегирования.  
+ <span data-ttu-id="77090-109">В следующем разделе перечислены методы стандартных операторов запросов, которые выполняют операции агрегирования.</span><span class="sxs-lookup"><span data-stu-id="77090-109">The standard query operator methods that perform aggregation operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Методы  
+## <a name="methods"></a><span data-ttu-id="77090-110">Методы</span><span class="sxs-lookup"><span data-stu-id="77090-110">Methods</span></span>  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|<span data-ttu-id="77090-111">Имя метода</span><span class="sxs-lookup"><span data-stu-id="77090-111">Method Name</span></span>|<span data-ttu-id="77090-112">Описание</span><span class="sxs-lookup"><span data-stu-id="77090-112">Description</span></span>|<span data-ttu-id="77090-113">Синтаксис выражения запроса C#</span><span class="sxs-lookup"><span data-stu-id="77090-113">C# Query Expression Syntax</span></span>|<span data-ttu-id="77090-114">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="77090-114">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Статистическое выражение|Выполняет пользовательскую операцию агрегирования со значениями коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
-|Среднее значение|Вычисляет среднее значение коллекции значений.|Неприменимо.|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
-|Счетчик|Подсчитывает число элементов в коллекции (при необходимости только те элементы, которые удовлетворяют функции предиката).|Неприменимо.|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
-|LongCount|Подсчитывает число элементов в большой коллекции (при необходимости только те элементы, которые удовлетворяют функции предиката).|Неприменимо.|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
-|Макс|Определяет максимальное значение в коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
-|мин.|Определяет минимальное значение в коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
-|Sum|Вычисляет сумму значений в коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-115">Статистическое выражение</span><span class="sxs-lookup"><span data-stu-id="77090-115">Aggregate</span></span>|<span data-ttu-id="77090-116">Выполняет пользовательскую операцию агрегирования со значениями коллекции.</span><span class="sxs-lookup"><span data-stu-id="77090-116">Performs a custom aggregation operation on the values of a collection.</span></span>|<span data-ttu-id="77090-117">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-117">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-118">Метод Average</span><span class="sxs-lookup"><span data-stu-id="77090-118">Average</span></span>|<span data-ttu-id="77090-119">Вычисляет среднее значение коллекции значений.</span><span class="sxs-lookup"><span data-stu-id="77090-119">Calculates the average value of a collection of values.</span></span>|<span data-ttu-id="77090-120">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-120">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-121">Счетчик</span><span class="sxs-lookup"><span data-stu-id="77090-121">Count</span></span>|<span data-ttu-id="77090-122">Подсчитывает число элементов в коллекции (при необходимости только те элементы, которые удовлетворяют функции предиката).</span><span class="sxs-lookup"><span data-stu-id="77090-122">Counts the elements in a collection, optionally only those elements that satisfy a predicate function.</span></span>|<span data-ttu-id="77090-123">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-123">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-124">LongCount</span><span class="sxs-lookup"><span data-stu-id="77090-124">LongCount</span></span>|<span data-ttu-id="77090-125">Подсчитывает число элементов в большой коллекции (при необходимости только те элементы, которые удовлетворяют функции предиката).</span><span class="sxs-lookup"><span data-stu-id="77090-125">Counts the elements in a large collection, optionally only those elements that satisfy a predicate function.</span></span>|<span data-ttu-id="77090-126">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-126">Not applicable.</span></span>|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-127">Максимум</span><span class="sxs-lookup"><span data-stu-id="77090-127">Max</span></span>|<span data-ttu-id="77090-128">Определяет максимальное значение в коллекции.</span><span class="sxs-lookup"><span data-stu-id="77090-128">Determines the maximum value in a collection.</span></span>|<span data-ttu-id="77090-129">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-130">Минимум</span><span class="sxs-lookup"><span data-stu-id="77090-130">Min</span></span>|<span data-ttu-id="77090-131">Определяет минимальное значение в коллекции.</span><span class="sxs-lookup"><span data-stu-id="77090-131">Determines the minimum value in a collection.</span></span>|<span data-ttu-id="77090-132">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-132">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="77090-133">Sum</span><span class="sxs-lookup"><span data-stu-id="77090-133">Sum</span></span>|<span data-ttu-id="77090-134">Вычисляет сумму значений в коллекции.</span><span class="sxs-lookup"><span data-stu-id="77090-134">Calculates the sum of the values in a collection.</span></span>|<span data-ttu-id="77090-135">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="77090-135">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)   
- [Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)   
- [Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="77090-136">См. также</span><span class="sxs-lookup"><span data-stu-id="77090-136">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="77090-137">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="77090-137">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="77090-138">Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="77090-138">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
+ [<span data-ttu-id="77090-139">Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="77090-139">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)  
+ [<span data-ttu-id="77090-140">Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="77090-140">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

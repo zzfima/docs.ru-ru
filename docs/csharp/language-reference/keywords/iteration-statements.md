@@ -1,58 +1,39 @@
 ---
 title: "Операторы перебора (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6977248fecb61944fac95e4f2bdf976308566f1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae023712a2b299ea66ff8034d3677c44a37426f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="iteration-statements-c-reference"></a>Операторы перебора (Справочник по C#)
-При помощи операторов итерации можно создавать циклы. Операторы итерации могут инициировать многократное выполнение встроенных операторов на основании условия прекращения цикла. Эти операторы выполняются по порядку, если только не встречается [оператор jump](../../../csharp/language-reference/keywords/jump-statements.md).  
+# <a name="iteration-statements-c-reference"></a><span data-ttu-id="3a620-102">Операторы перебора (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3a620-102">Iteration Statements (C# Reference)</span></span>
+<span data-ttu-id="3a620-103">При помощи операторов итерации можно создавать циклы.</span><span class="sxs-lookup"><span data-stu-id="3a620-103">You can create loops by using the iteration statements.</span></span> <span data-ttu-id="3a620-104">Операторы итерации могут инициировать многократное выполнение встроенных операторов на основании условия прекращения цикла.</span><span class="sxs-lookup"><span data-stu-id="3a620-104">Iteration statements cause embedded statements to be executed a number of times, subject to the loop-termination criteria.</span></span> <span data-ttu-id="3a620-105">Эти операторы выполняются по порядку, если только не встречается [оператор jump](../../../csharp/language-reference/keywords/jump-statements.md).</span><span class="sxs-lookup"><span data-stu-id="3a620-105">These statements are executed in order, except when a [jump statement](../../../csharp/language-reference/keywords/jump-statements.md) is encountered.</span></span>  
   
- В операторах итерации могут использоваться следующие ключевые слова:  
+ <span data-ttu-id="3a620-106">В операторах итерации могут использоваться следующие ключевые слова:</span><span class="sxs-lookup"><span data-stu-id="3a620-106">The following keywords are used in iteration statements:</span></span>  
   
--   [do](../../../csharp/language-reference/keywords/do.md)  
+-   [<span data-ttu-id="3a620-107">do</span><span class="sxs-lookup"><span data-stu-id="3a620-107">do</span></span>](../../../csharp/language-reference/keywords/do.md)  
   
--   [for](../../../csharp/language-reference/keywords/for.md)  
+-   [<span data-ttu-id="3a620-108">for</span><span class="sxs-lookup"><span data-stu-id="3a620-108">for</span></span>](../../../csharp/language-reference/keywords/for.md)  
   
--   [foreach](../../../csharp/language-reference/keywords/foreach-in.md)  
+-   [<span data-ttu-id="3a620-109">foreach</span><span class="sxs-lookup"><span data-stu-id="3a620-109">foreach</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
   
--   [in](../../../csharp/language-reference/keywords/foreach-in.md)  
+-   [<span data-ttu-id="3a620-110">in</span><span class="sxs-lookup"><span data-stu-id="3a620-110">in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
   
--   [while](../../../csharp/language-reference/keywords/while.md)  
+-   [<span data-ttu-id="3a620-111">while</span><span class="sxs-lookup"><span data-stu-id="3a620-111">while</span></span>](../../../csharp/language-reference/keywords/while.md)  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Ключевые слова операторов](../../../csharp/language-reference/keywords/statement-keywords.md)
-
+## <a name="see-also"></a><span data-ttu-id="3a620-112">См. также</span><span class="sxs-lookup"><span data-stu-id="3a620-112">See Also</span></span>  
+ [<span data-ttu-id="3a620-113">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="3a620-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3a620-114">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="3a620-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3a620-115">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="3a620-115">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="3a620-116">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="3a620-116">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)

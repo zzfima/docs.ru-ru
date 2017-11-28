@@ -1,159 +1,141 @@
 ---
 title: "Разделяемые классы и методы (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41b07af83faa6af23695f3719aae29183c35a417
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="partial-classes-and-methods-c-programming-guide"></a>Разделяемые классы и методы (Руководство по программированию в C#)
-Можно разделить определение [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md), [интерфейса](../../../csharp/language-reference/keywords/interface.md) или метода между двумя или более исходными файлами. Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.  
+# <a name="partial-classes-and-methods-c-programming-guide"></a><span data-ttu-id="ba40d-102">Разделяемые классы и методы (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="ba40d-102">Partial Classes and Methods (C# Programming Guide)</span></span>
+<span data-ttu-id="ba40d-103">Можно разделить определение [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md), [интерфейса](../../../csharp/language-reference/keywords/interface.md) или метода между двумя или более исходными файлами.</span><span class="sxs-lookup"><span data-stu-id="ba40d-103">It is possible to split the definition of a [class](../../../csharp/language-reference/keywords/class.md) or a [struct](../../../csharp/language-reference/keywords/struct.md), an [interface](../../../csharp/language-reference/keywords/interface.md) or a method over two or more source files.</span></span> <span data-ttu-id="ba40d-104">Каждый исходный файл содержит часть определения класса или метода, а во время компиляции приложения все части объединяются.</span><span class="sxs-lookup"><span data-stu-id="ba40d-104">Each source file contains a section of the type or method definition, and all parts are combined when the application is compiled.</span></span>  
   
-## <a name="partial-classes"></a>Разделяемые классы  
- Существует несколько ситуаций, когда желательно разделение определения класса.  
+## <a name="partial-classes"></a><span data-ttu-id="ba40d-105">Разделяемые классы</span><span class="sxs-lookup"><span data-stu-id="ba40d-105">Partial Classes</span></span>  
+ <span data-ttu-id="ba40d-106">Существует несколько ситуаций, когда желательно разделение определения класса.</span><span class="sxs-lookup"><span data-stu-id="ba40d-106">There are several situations when splitting a class definition is desirable:</span></span>  
   
--   При работе над большими проектами распределение класса между различными файлами позволяет нескольким программистам работать с ним одновременно.  
+-   <span data-ttu-id="ba40d-107">При работе над большими проектами распределение класса между различными файлами позволяет нескольким программистам работать с ним одновременно.</span><span class="sxs-lookup"><span data-stu-id="ba40d-107">When working on large projects, spreading a class over separate files enables multiple programmers to work on it at the same time.</span></span>  
   
--   При работе с использованием автоматически создаваемого источника код можно добавлять в класс без повторного создания файла источника. Visual Studio использует этот подход при создании форм Windows Forms, кода оболочки веб-службы и т. д. Можно создать код, который использует эти классы, без необходимости изменения файла, созданного в Visual Studio.  
+-   <span data-ttu-id="ba40d-108">При работе с использованием автоматически создаваемого источника код можно добавлять в класс без повторного создания файла источника.</span><span class="sxs-lookup"><span data-stu-id="ba40d-108">When working with automatically generated source, code can be added to the class without having to recreate the source file.</span></span> <span data-ttu-id="ba40d-109">Visual Studio использует этот подход при создании форм Windows Forms, кода оболочки веб-службы и т. д.</span><span class="sxs-lookup"><span data-stu-id="ba40d-109">Visual Studio uses this approach when it creates Windows Forms, Web service wrapper code, and so on.</span></span> <span data-ttu-id="ba40d-110">Можно создать код, который использует эти классы, без необходимости изменения файла, созданного в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ba40d-110">You can create code that uses these classes without having to modify the file created by Visual Studio.</span></span>  
   
--   Чтобы разделить определение класса, используйте модификатор ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), как показано ниже:  
+-   <span data-ttu-id="ba40d-111">Чтобы разделить определение класса, используйте модификатор ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="ba40d-111">To split a class definition, use the [partial](../../../csharp/language-reference/keywords/partial-type.md) keyword modifier, as shown here:</span></span>  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
- Ключевое слово `partial` указывает, что другие части класса, структуры или интерфейса могут быть определены в пространстве имен. Все части должны использовать ключевое слово `partial`. Для формирования окончательного типа все части должны быть доступны во время компиляции. Все части должны иметь одинаковые модификаторы доступа, например `public`, `private` и т. д.  
+ <span data-ttu-id="ba40d-112">Ключевое слово `partial` указывает, что другие части класса, структуры или интерфейса могут быть определены в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="ba40d-112">The `partial` keyword indicates that other parts of the class, struct, or interface can be defined in the namespace.</span></span> <span data-ttu-id="ba40d-113">Все части должны использовать ключевое слово `partial`.</span><span class="sxs-lookup"><span data-stu-id="ba40d-113">All the parts must use the `partial` keyword.</span></span> <span data-ttu-id="ba40d-114">Для формирования окончательного типа все части должны быть доступны во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="ba40d-114">All the parts must be available at compile time to form the final type.</span></span> <span data-ttu-id="ba40d-115">Все части должны иметь одинаковые модификаторы доступа, например `public`, `private` и т. д.</span><span class="sxs-lookup"><span data-stu-id="ba40d-115">All the parts must have the same accessibility, such as `public`, `private`, and so on.</span></span>  
   
- Если какая-либо из частей объявлена абстрактной, то весь тип будет считаться абстрактным. Если какая-либо из частей объявлена запечатанной, то весь тип будет считаться запечатанным. Если какая-либо из частей объявляет базовый тип, то весь тип будет наследовать данный класс.  
+ <span data-ttu-id="ba40d-116">Если какая-либо из частей объявлена абстрактной, то весь тип будет считаться абстрактным.</span><span class="sxs-lookup"><span data-stu-id="ba40d-116">If any part is declared abstract, then the whole type is considered abstract.</span></span> <span data-ttu-id="ba40d-117">Если какая-либо из частей объявлена запечатанной, то весь тип будет считаться запечатанным.</span><span class="sxs-lookup"><span data-stu-id="ba40d-117">If any part is declared sealed, then the whole type is considered sealed.</span></span> <span data-ttu-id="ba40d-118">Если какая-либо из частей объявляет базовый тип, то весь тип будет наследовать данный класс.</span><span class="sxs-lookup"><span data-stu-id="ba40d-118">If any part declares a base type, then the whole type inherits that class.</span></span>  
   
- Все части, указывающие базовый класс, должны быть согласованы друг с другом, а части, не использующие базовый класс, все равно наследуют базовый тип. Части могут указывать различные базовые интерфейсы, и окончательный тип будет реализовывать все интерфейсы, перечисленные во всех разделяемых объявлениях. Любые члены класса, структуры или интерфейса, объявленные в разделяемом объявлении, доступны для всех остальных частей. Окончательный тип представляет собой комбинацию всех частей, выполненную во время компиляции.  
+ <span data-ttu-id="ba40d-119">Все части, указывающие базовый класс, должны быть согласованы друг с другом, а части, не использующие базовый класс, все равно наследуют базовый тип.</span><span class="sxs-lookup"><span data-stu-id="ba40d-119">All the parts that specify a base class must agree, but parts that omit a base class still inherit the base type.</span></span> <span data-ttu-id="ba40d-120">Части могут указывать различные базовые интерфейсы, и окончательный тип будет реализовывать все интерфейсы, перечисленные во всех разделяемых объявлениях.</span><span class="sxs-lookup"><span data-stu-id="ba40d-120">Parts can specify different base interfaces, and the final type implements all the interfaces listed by all the partial declarations.</span></span> <span data-ttu-id="ba40d-121">Любые члены класса, структуры или интерфейса, объявленные в разделяемом объявлении, доступны для всех остальных частей.</span><span class="sxs-lookup"><span data-stu-id="ba40d-121">Any class, struct, or interface members declared in a partial definition are available to all the other parts.</span></span> <span data-ttu-id="ba40d-122">Окончательный тип представляет собой комбинацию всех частей, выполненную во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="ba40d-122">The final type is the combination of all the parts at compile time.</span></span>  
   
 > [!NOTE]
->  Модификатор `partial` недоступен в объявлениях делегатов или перечислений.  
+>  <span data-ttu-id="ba40d-123">Модификатор `partial` недоступен в объявлениях делегатов или перечислений.</span><span class="sxs-lookup"><span data-stu-id="ba40d-123">The `partial` modifier is not available on delegate or enumeration declarations.</span></span>  
   
- В следующем примере показано, что вложенные типы могут быть разделяемыми, даже если тип, в который они вложены, не является разделяемым.  
+ <span data-ttu-id="ba40d-124">В следующем примере показано, что вложенные типы могут быть разделяемыми, даже если тип, в который они вложены, не является разделяемым.</span><span class="sxs-lookup"><span data-stu-id="ba40d-124">The following example shows that nested types can be partial, even if the type they are nested within is not partial itself.</span></span>  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
- Во время компиляции атрибуты определений разделяемого типа объединяются. В качестве примера рассмотрим следующие объявления:  
+ <span data-ttu-id="ba40d-125">Во время компиляции атрибуты определений разделяемого типа объединяются.</span><span class="sxs-lookup"><span data-stu-id="ba40d-125">At compile time, attributes of partial-type definitions are merged.</span></span> <span data-ttu-id="ba40d-126">В качестве примера рассмотрим следующие объявления:</span><span class="sxs-lookup"><span data-stu-id="ba40d-126">For example, consider the following declarations:</span></span>  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
- Они эквивалентны следующим объявлениям:  
+ <span data-ttu-id="ba40d-127">Они эквивалентны следующим объявлениям:</span><span class="sxs-lookup"><span data-stu-id="ba40d-127">They are equivalent to the following declarations:</span></span>  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
- Следующие элементы объединяются из всех определений разделяемого типа:  
+ <span data-ttu-id="ba40d-128">Следующие элементы объединяются из всех определений разделяемого типа:</span><span class="sxs-lookup"><span data-stu-id="ba40d-128">The following are merged from all the partial-type definitions:</span></span>  
   
--   XML-комментарии  
+-   <span data-ttu-id="ba40d-129">XML-комментарии</span><span class="sxs-lookup"><span data-stu-id="ba40d-129">XML comments</span></span>  
   
--   интерфейсы  
+-   <span data-ttu-id="ba40d-130">интерфейсы</span><span class="sxs-lookup"><span data-stu-id="ba40d-130">interfaces</span></span>  
   
--   атрибуты параметров универсального параметра  
+-   <span data-ttu-id="ba40d-131">атрибуты параметров универсального параметра</span><span class="sxs-lookup"><span data-stu-id="ba40d-131">generic-type parameter attributes</span></span>  
   
--   атрибуты классов  
+-   <span data-ttu-id="ba40d-132">атрибуты классов</span><span class="sxs-lookup"><span data-stu-id="ba40d-132">class attributes</span></span>  
   
--   члены  
+-   <span data-ttu-id="ba40d-133">члены</span><span class="sxs-lookup"><span data-stu-id="ba40d-133">members</span></span>  
   
- В качестве примера рассмотрим следующие объявления:  
+ <span data-ttu-id="ba40d-134">В качестве примера рассмотрим следующие объявления:</span><span class="sxs-lookup"><span data-stu-id="ba40d-134">For example, consider the following declarations:</span></span>  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
- Они эквивалентны следующим объявлениям:  
+ <span data-ttu-id="ba40d-135">Они эквивалентны следующим объявлениям:</span><span class="sxs-lookup"><span data-stu-id="ba40d-135">They are equivalent to the following declarations:</span></span>  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
-### <a name="restrictions"></a>Ограничения  
- Имеется несколько правил, которые необходимо выполнять при работе с определениями разделяемого класса.  
+### <a name="restrictions"></a><span data-ttu-id="ba40d-136">Ограничения</span><span class="sxs-lookup"><span data-stu-id="ba40d-136">Restrictions</span></span>  
+ <span data-ttu-id="ba40d-137">Имеется несколько правил, которые необходимо выполнять при работе с определениями разделяемого класса.</span><span class="sxs-lookup"><span data-stu-id="ba40d-137">There are several rules to follow when you are working with partial class definitions:</span></span>  
   
--   Все определения разделяемого типа, являющиеся частями одного типа, должны изменяться с использованием типа `partial`. Например, следующие объявления класса приведут к появлению ошибки:  
+-   <span data-ttu-id="ba40d-138">Все определения разделяемого типа, являющиеся частями одного типа, должны изменяться с использованием типа `partial`.</span><span class="sxs-lookup"><span data-stu-id="ba40d-138">All partial-type definitions meant to be parts of the same type must be modified with `partial`.</span></span> <span data-ttu-id="ba40d-139">Например, следующие объявления класса приведут к появлению ошибки:</span><span class="sxs-lookup"><span data-stu-id="ba40d-139">For example, the following class declarations generate an error:</span></span>  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
--   Модификатор `partial` должен находиться непосредственно перед ключевыми словами `class`, `struct` или `interface`.  
+-   <span data-ttu-id="ba40d-140">Модификатор `partial` должен находиться непосредственно перед ключевыми словами `class`, `struct` или `interface`.</span><span class="sxs-lookup"><span data-stu-id="ba40d-140">The `partial` modifier can only appear immediately before the keywords `class`, `struct`, or `interface`.</span></span>  
   
--   В определениях разделяемого типа могут присутствовать вложенные разделяемые типы, что показано в следующем примере:  
+-   <span data-ttu-id="ba40d-141">В определениях разделяемого типа могут присутствовать вложенные разделяемые типы, что показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="ba40d-141">Nested partial types are allowed in partial-type definitions as illustrated in the following example:</span></span>  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
--   Все определения разделяемого типа, являющиеся частями одного и того же типа, должны быть определены в одной сборке и в одном модуле (EXE-файл или DLL-файл). Разделяемые определения не могут находиться в разных модулях.  
+-   <span data-ttu-id="ba40d-142">Все определения разделяемого типа, являющиеся частями одного и того же типа, должны быть определены в одной сборке и в одном модуле (EXE-файл или DLL-файл).</span><span class="sxs-lookup"><span data-stu-id="ba40d-142">All partial-type definitions meant to be parts of the same type must be defined in the same assembly and the same module (.exe or .dll file).</span></span> <span data-ttu-id="ba40d-143">Разделяемые определения не могут находиться в разных модулях.</span><span class="sxs-lookup"><span data-stu-id="ba40d-143">Partial definitions cannot span multiple modules.</span></span>  
   
--   Имя класса и параметры универсального типа должны соответствовать всем определениям разделяемого типа. Универсальные типы могут быть разделяемыми. Все объявления разделяемого типа должны использовать одинаковые имена параметров в одном и том же порядке.  
+-   <span data-ttu-id="ba40d-144">Имя класса и параметры универсального типа должны соответствовать всем определениям разделяемого типа.</span><span class="sxs-lookup"><span data-stu-id="ba40d-144">The class name and generic-type parameters must match on all partial-type definitions.</span></span> <span data-ttu-id="ba40d-145">Универсальные типы могут быть разделяемыми.</span><span class="sxs-lookup"><span data-stu-id="ba40d-145">Generic types can be partial.</span></span> <span data-ttu-id="ba40d-146">Все объявления разделяемого типа должны использовать одинаковые имена параметров в одном и том же порядке.</span><span class="sxs-lookup"><span data-stu-id="ba40d-146">Each partial declaration must use the same parameter names in the same order.</span></span>  
   
--   Приведенные ниже ключевые слова необязательно должны присутствовать в определении разделяемого типа, но если они присутствуют в одном определении разделяемого типа, то не должны конфликтовать с ключевыми словами, указанными в других определениях того же разделяемого типа.  
+-   <span data-ttu-id="ba40d-147">Приведенные ниже ключевые слова необязательно должны присутствовать в определении разделяемого типа, но если они присутствуют в одном определении разделяемого типа, то не должны конфликтовать с ключевыми словами, указанными в других определениях того же разделяемого типа.</span><span class="sxs-lookup"><span data-stu-id="ba40d-147">The following keywords on a partial-type definition are optional, but if present on one partial-type definition, cannot conflict with the keywords specified on another partial definition for the same type:</span></span>  
   
-    -   [public](../../../csharp/language-reference/keywords/public.md)  
+    -   [<span data-ttu-id="ba40d-148">public</span><span class="sxs-lookup"><span data-stu-id="ba40d-148">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
   
-    -   [private](../../../csharp/language-reference/keywords/private.md)  
+    -   [<span data-ttu-id="ba40d-149">private</span><span class="sxs-lookup"><span data-stu-id="ba40d-149">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
+    -   [<span data-ttu-id="ba40d-150">protected</span><span class="sxs-lookup"><span data-stu-id="ba40d-150">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
   
-    -   [internal](../../../csharp/language-reference/keywords/internal.md)  
+    -   [<span data-ttu-id="ba40d-151">internal</span><span class="sxs-lookup"><span data-stu-id="ba40d-151">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)  
   
-    -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+    -   [<span data-ttu-id="ba40d-152">abstract</span><span class="sxs-lookup"><span data-stu-id="ba40d-152">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
   
-    -   [sealed](../../../csharp/language-reference/keywords/sealed.md)  
+    -   [<span data-ttu-id="ba40d-153">sealed</span><span class="sxs-lookup"><span data-stu-id="ba40d-153">sealed</span></span>](../../../csharp/language-reference/keywords/sealed.md)  
   
-    -   базовый класс  
+    -   <span data-ttu-id="ba40d-154">базовый класс</span><span class="sxs-lookup"><span data-stu-id="ba40d-154">base class</span></span>  
   
-    -   модификатор [new](../../../csharp/language-reference/keywords/new.md) (вложенные части)  
+    -   <span data-ttu-id="ba40d-155">модификатор [new](../../../csharp/language-reference/keywords/new.md) (вложенные части)</span><span class="sxs-lookup"><span data-stu-id="ba40d-155">[new](../../../csharp/language-reference/keywords/new.md) modifier (nested parts)</span></span>  
   
-    -   универсальные ограничения  
+    -   <span data-ttu-id="ba40d-156">универсальные ограничения</span><span class="sxs-lookup"><span data-stu-id="ba40d-156">generic constraints</span></span>  
   
-         Дополнительные сведения см. в разделе [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+         <span data-ttu-id="ba40d-157">Дополнительные сведения см. в разделе [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="ba40d-157">For more information, see [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).</span></span>  
   
-## <a name="example-1"></a>Пример 1  
+## <a name="example-1"></a><span data-ttu-id="ba40d-158">Пример 1</span><span class="sxs-lookup"><span data-stu-id="ba40d-158">Example 1</span></span>  
   
-### <a name="description"></a>Описание  
- В следующем примере поля и конструктор класса `CoOrds` объявлены в одном определении разделяемого класса, а член `PrintCoOrds` — в другом определении разделяемого класса.  
+### <a name="description"></a><span data-ttu-id="ba40d-159">Описание</span><span class="sxs-lookup"><span data-stu-id="ba40d-159">Description</span></span>  
+ <span data-ttu-id="ba40d-160">В следующем примере поля и конструктор класса `CoOrds` объявлены в одном определении разделяемого класса, а член `PrintCoOrds` — в другом определении разделяемого класса.</span><span class="sxs-lookup"><span data-stu-id="ba40d-160">In the following example, the fields and the constructor of the class, `CoOrds`, are declared in one partial class definition, and the member, `PrintCoOrds`, is declared in another partial class definition.</span></span>  
   
-### <a name="code"></a>Код  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+### <a name="code"></a><span data-ttu-id="ba40d-161">Код</span><span class="sxs-lookup"><span data-stu-id="ba40d-161">Code</span></span>  
+ [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
-## <a name="example-2"></a>Пример 2  
+## <a name="example-2"></a><span data-ttu-id="ba40d-162">Пример 2</span><span class="sxs-lookup"><span data-stu-id="ba40d-162">Example 2</span></span>  
   
-### <a name="description"></a>Описание  
- В следующем примере показано, что можно также разработать разделяемые структуры и интерфейсы.  
+### <a name="description"></a><span data-ttu-id="ba40d-163">Описание</span><span class="sxs-lookup"><span data-stu-id="ba40d-163">Description</span></span>  
+ <span data-ttu-id="ba40d-164">В следующем примере показано, что можно также разработать разделяемые структуры и интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="ba40d-164">The following example shows that you can also develop partial structs and interfaces.</span></span>  
   
-### <a name="code"></a>Код  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+### <a name="code"></a><span data-ttu-id="ba40d-165">Код</span><span class="sxs-lookup"><span data-stu-id="ba40d-165">Code</span></span>  
+ [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
-## <a name="partial-methods"></a>Разделяемые методы  
- Разделяемый класс или структура могут содержать разделяемый метод. Одна часть класса содержит сигнатуру метода. В той же или в другой части можно определить дополнительную реализацию. Если реализация не предоставлена, метод и все вызовы метода удаляются во время компиляции.  
+## <a name="partial-methods"></a><span data-ttu-id="ba40d-166">Разделяемые методы</span><span class="sxs-lookup"><span data-stu-id="ba40d-166">Partial Methods</span></span>  
+ <span data-ttu-id="ba40d-167">Разделяемый класс или структура могут содержать разделяемый метод.</span><span class="sxs-lookup"><span data-stu-id="ba40d-167">A partial class or struct may contain a partial method.</span></span> <span data-ttu-id="ba40d-168">Одна часть класса содержит сигнатуру метода.</span><span class="sxs-lookup"><span data-stu-id="ba40d-168">One part of the class contains the signature of the method.</span></span> <span data-ttu-id="ba40d-169">В той же или в другой части можно определить дополнительную реализацию.</span><span class="sxs-lookup"><span data-stu-id="ba40d-169">An optional implementation may be defined in the same part or another part.</span></span> <span data-ttu-id="ba40d-170">Если реализация не предоставлена, метод и все вызовы метода удаляются во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="ba40d-170">If the implementation is not supplied, then the method and all calls to the method are removed at compile time.</span></span>  
   
- Разделяемые методы позволяют разработчику одной части класса определить метод, схожий с событием. Разработчик другой части класса может решить, реализовывать этот метод или нет. Если метод не реализован, то компилятор удаляет сигнатуру метода и все вызовы этого метода. Вызовы метода, включая любые результаты, которые могли бы произойти от оценки аргументов в вызовах, не имеют эффекта во время выполнения. Таким образом, любой код в разделяемом классе может свободно использовать разделяемый метод, даже если реализация не предоставлена. Во время компиляции и выполнения программы не возникнут никакие ошибки, если метод будет вызван, но не реализован.  
+ <span data-ttu-id="ba40d-171">Разделяемые методы позволяют разработчику одной части класса определить метод, схожий с событием.</span><span class="sxs-lookup"><span data-stu-id="ba40d-171">Partial methods enable the implementer of one part of a class to define a method, similar to an event.</span></span> <span data-ttu-id="ba40d-172">Разработчик другой части класса может решить, реализовывать этот метод или нет.</span><span class="sxs-lookup"><span data-stu-id="ba40d-172">The implementer of the other part of the class can decide whether to implement the method or not.</span></span> <span data-ttu-id="ba40d-173">Если метод не реализован, то компилятор удаляет сигнатуру метода и все вызовы этого метода.</span><span class="sxs-lookup"><span data-stu-id="ba40d-173">If the method is not implemented, then the compiler removes the method signature and all calls to the method.</span></span> <span data-ttu-id="ba40d-174">Вызовы метода, включая любые результаты, которые могли бы произойти от оценки аргументов в вызовах, не имеют эффекта во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ba40d-174">The calls to the method, including any results that would occur from evaluation of arguments in the calls, have no effect at run time.</span></span> <span data-ttu-id="ba40d-175">Таким образом, любой код в разделяемом классе может свободно использовать разделяемый метод, даже если реализация не предоставлена.</span><span class="sxs-lookup"><span data-stu-id="ba40d-175">Therefore, any code in the partial class can freely use a partial method, even if the implementation is not supplied.</span></span> <span data-ttu-id="ba40d-176">Во время компиляции и выполнения программы не возникнут никакие ошибки, если метод будет вызван, но не реализован.</span><span class="sxs-lookup"><span data-stu-id="ba40d-176">No compile-time or run-time errors will result if the method is called but not implemented.</span></span>  
   
- Разделяемые методы особенно полезны для настройки автоматически созданного кода. Они позволяют зарезервировать имя и сигнатуру метода, чтобы автоматически созданный код мог вызвать метод, а разработчик мог сам решить, реализовывать этот метод или нет. Как и разделяемые классы, разделяемые методы позволяют организовать совместную работу автоматически созданного кода и кода, созданного человеком, без дополнительных затрат во время выполнения.  
+ <span data-ttu-id="ba40d-177">Разделяемые методы особенно полезны для настройки автоматически созданного кода.</span><span class="sxs-lookup"><span data-stu-id="ba40d-177">Partial methods are especially useful as a way to customize generated code.</span></span> <span data-ttu-id="ba40d-178">Они позволяют зарезервировать имя и сигнатуру метода, чтобы автоматически созданный код мог вызвать метод, а разработчик мог сам решить, реализовывать этот метод или нет.</span><span class="sxs-lookup"><span data-stu-id="ba40d-178">They allow for a method name and signature to be reserved, so that generated code can call the method but the developer can decide whether to implement the method.</span></span> <span data-ttu-id="ba40d-179">Как и разделяемые классы, разделяемые методы позволяют организовать совместную работу автоматически созданного кода и кода, созданного человеком, без дополнительных затрат во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ba40d-179">Much like partial classes, partial methods enable code created by a code generator and code created by a human developer to work together without run-time costs.</span></span>  
   
- Объявление разделяемого метода состоит из двух частей: определения и реализации. Они могут находиться в разных частях или в одной и той же части разделяемого класса. Если объявление реализации отсутствует, то компилятор оптимизирует код, удаляя как объявление определения, так и все вызовы метода.  
+ <span data-ttu-id="ba40d-180">Объявление разделяемого метода состоит из двух частей: определения и реализации.</span><span class="sxs-lookup"><span data-stu-id="ba40d-180">A partial method declaration consists of two parts: the definition, and the implementation.</span></span> <span data-ttu-id="ba40d-181">Они могут находиться в разных частях или в одной и той же части разделяемого класса.</span><span class="sxs-lookup"><span data-stu-id="ba40d-181">These may be in separate parts of a partial class, or in the same part.</span></span> <span data-ttu-id="ba40d-182">Если объявление реализации отсутствует, то компилятор оптимизирует код, удаляя как объявление определения, так и все вызовы метода.</span><span class="sxs-lookup"><span data-stu-id="ba40d-182">If there is no implementation declaration, then the compiler optimizes away both the defining declaration and all calls to the method.</span></span>  
   
 ```  
 // Definition in file1.cs  
@@ -166,27 +148,26 @@ partial void onNameChanged()
 }  
 ```  
   
--   Объявления разделяемого метода должны начинаться с контекстно-зависимого ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), а метод должен возвращать значение типа [void](../../../csharp/language-reference/keywords/void.md).  
+-   <span data-ttu-id="ba40d-183">Объявления разделяемого метода должны начинаться с контекстно-зависимого ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), а метод должен возвращать значение типа [void](../../../csharp/language-reference/keywords/void.md).</span><span class="sxs-lookup"><span data-stu-id="ba40d-183">Partial method declarations must begin with the contextual keyword [partial](../../../csharp/language-reference/keywords/partial-type.md) and the method must return [void](../../../csharp/language-reference/keywords/void.md).</span></span>  
   
--   Разделяемые методы могут иметь параметры [ref](../../../csharp/language-reference/keywords/ref.md), но не могут иметь параметры [out](../../../csharp/language-reference/keywords/out.md).  
+-   <span data-ttu-id="ba40d-184">Разделяемые методы могут иметь параметры [ref](../../../csharp/language-reference/keywords/ref.md), но не могут иметь параметры [out](../../../csharp/language-reference/keywords/out.md).</span><span class="sxs-lookup"><span data-stu-id="ba40d-184">Partial methods can have [ref](../../../csharp/language-reference/keywords/ref.md) but not [out](../../../csharp/language-reference/keywords/out.md) parameters.</span></span>  
   
--   Разделяемые методы неявно имеют модификатор [private](../../../csharp/language-reference/keywords/private.md) и поэтому не могут иметь модификатор [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+-   <span data-ttu-id="ba40d-185">Разделяемые методы неявно имеют модификатор [private](../../../csharp/language-reference/keywords/private.md) и поэтому не могут иметь модификатор [virtual](../../../csharp/language-reference/keywords/virtual.md).</span><span class="sxs-lookup"><span data-stu-id="ba40d-185">Partial methods are implicitly [private](../../../csharp/language-reference/keywords/private.md), and therefore they cannot be [virtual](../../../csharp/language-reference/keywords/virtual.md).</span></span>  
   
--   Разделяемые методы не могут иметь модификатор [extern](../../../csharp/language-reference/keywords/extern.md), поскольку наличие тела определяет, выполняется ли их определение или реализация.  
+-   <span data-ttu-id="ba40d-186">Разделяемые методы не могут иметь модификатор [extern](../../../csharp/language-reference/keywords/extern.md), поскольку наличие тела определяет, выполняется ли их определение или реализация.</span><span class="sxs-lookup"><span data-stu-id="ba40d-186">Partial methods cannot be [extern](../../../csharp/language-reference/keywords/extern.md), because the presence of the body determines whether they are defining or implementing.</span></span>  
   
--   Разделяемые методы могут иметь модификаторы [static](../../../csharp/language-reference/keywords/static.md) и [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
+-   <span data-ttu-id="ba40d-187">Разделяемые методы могут иметь модификаторы [static](../../../csharp/language-reference/keywords/static.md) и [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="ba40d-187">Partial methods can have [static](../../../csharp/language-reference/keywords/static.md) and [unsafe](../../../csharp/language-reference/keywords/unsafe.md) modifiers.</span></span>  
   
--   Разделяемые методы могут быть универсальными. Ограничения налагаются на ту часть объявления разделяемого метода, где находится определение, и могут дополнительно повторяться в разделе реализации. Имена параметров и типов параметров необязательно должны совпадать в объявлении реализации и в объявлении определения.  
+-   <span data-ttu-id="ba40d-188">Разделяемые методы могут быть универсальными.</span><span class="sxs-lookup"><span data-stu-id="ba40d-188">Partial methods can be generic.</span></span> <span data-ttu-id="ba40d-189">Ограничения налагаются на ту часть объявления разделяемого метода, где находится определение, и могут дополнительно повторяться в разделе реализации.</span><span class="sxs-lookup"><span data-stu-id="ba40d-189">Constraints are put on the defining partial method declaration, and may optionally be repeated on the implementing one.</span></span> <span data-ttu-id="ba40d-190">Имена параметров и типов параметров необязательно должны совпадать в объявлении реализации и в объявлении определения.</span><span class="sxs-lookup"><span data-stu-id="ba40d-190">Parameter and type parameter names do not have to be the same in the implementing declaration as in the defining one.</span></span>  
   
--   Можно использовать [делегат](../../../csharp/language-reference/keywords/delegate.md) в качестве определенного и реализованного разделяемого метода, но его нельзя использовать в качестве разделяемого метода, который только определен.  
+-   <span data-ttu-id="ba40d-191">Можно использовать [делегат](../../../csharp/language-reference/keywords/delegate.md) в качестве определенного и реализованного разделяемого метода, но его нельзя использовать в качестве разделяемого метода, который только определен.</span><span class="sxs-lookup"><span data-stu-id="ba40d-191">You can make a [delegate](../../../csharp/language-reference/keywords/delegate.md) to a partial method that has been defined and implemented, but not to a partial method that has only been defined.</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="ba40d-192">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="ba40d-192">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)   
- [partial (тип)](../../../csharp/language-reference/keywords/partial-type.md)
-
+## <a name="see-also"></a><span data-ttu-id="ba40d-193">См. также</span><span class="sxs-lookup"><span data-stu-id="ba40d-193">See Also</span></span>  
+ [<span data-ttu-id="ba40d-194">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="ba40d-194">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="ba40d-195">Классы</span><span class="sxs-lookup"><span data-stu-id="ba40d-195">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [<span data-ttu-id="ba40d-196">Структуры</span><span class="sxs-lookup"><span data-stu-id="ba40d-196">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [<span data-ttu-id="ba40d-197">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="ba40d-197">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)  
+ [<span data-ttu-id="ba40d-198">partial (тип)</span><span class="sxs-lookup"><span data-stu-id="ba40d-198">partial (Type)</span></span>](../../../csharp/language-reference/keywords/partial-type.md)

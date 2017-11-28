@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Regsvcs.exe
 - .NET Services Installation tool
@@ -22,31 +16,30 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 931fc9ee10762485f8fc4da906109023f15e09f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (программа установки служб .NET)
-Программа установки служб .NET выполняет следующие действия.  
+# <a name="regsvcsexe-net-services-installation-tool"></a><span data-ttu-id="2a324-102">Regsvcs.exe (программа установки служб .NET)</span><span class="sxs-lookup"><span data-stu-id="2a324-102">Regsvcs.exe (.NET Services Installation Tool)</span></span>
+<span data-ttu-id="2a324-103">Программа установки служб .NET выполняет следующие действия.</span><span class="sxs-lookup"><span data-stu-id="2a324-103">The .NET Services Installation tool performs the following actions:</span></span>  
   
--   Загружает и регистрирует сборку.  
+-   <span data-ttu-id="2a324-104">Загружает и регистрирует сборку.</span><span class="sxs-lookup"><span data-stu-id="2a324-104">Loads and registers an assembly.</span></span>  
   
--   Создает, регистрирует и устанавливает библиотеку типов в указанное приложение COM+.  
+-   <span data-ttu-id="2a324-105">Создает, регистрирует и устанавливает библиотеку типов в указанное приложение COM+.</span><span class="sxs-lookup"><span data-stu-id="2a324-105">Generates, registers, and installs a type library into a specified COM+ application.</span></span>  
   
--   Настраивает службы, которые были программно добавлены в создаваемый класс.  
+-   <span data-ttu-id="2a324-106">Настраивает службы, которые были программно добавлены в создаваемый класс.</span><span class="sxs-lookup"><span data-stu-id="2a324-106">Configures services that you have added programmatically to your class.</span></span>  
   
- Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="2a324-107">Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7).</span><span class="sxs-lookup"><span data-stu-id="2a324-107">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="2a324-108">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="2a324-108">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующее.  
+ <span data-ttu-id="2a324-109">В командной строке введите следующее.</span><span class="sxs-lookup"><span data-stu-id="2a324-109">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="2a324-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2a324-110">Syntax</span></span>  
   
 ```  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
@@ -54,55 +47,54 @@ ms.lasthandoff: 07/28/2017
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="2a324-111">Параметры</span><span class="sxs-lookup"><span data-stu-id="2a324-111">Parameters</span></span>  
   
-|Аргумент|Описание|  
+|<span data-ttu-id="2a324-112">Аргумент</span><span class="sxs-lookup"><span data-stu-id="2a324-112">Argument</span></span>|<span data-ttu-id="2a324-113">Описание</span><span class="sxs-lookup"><span data-stu-id="2a324-113">Description</span></span>|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|Исходный файл сборки. Сборка должна быть подписана с использованием строгого имени. Дополнительные сведения см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|<span data-ttu-id="2a324-114">*assemblyFile.dll*</span><span class="sxs-lookup"><span data-stu-id="2a324-114">*assemblyFile.dll*</span></span>|<span data-ttu-id="2a324-115">Исходный файл сборки.</span><span class="sxs-lookup"><span data-stu-id="2a324-115">The source assembly file.</span></span> <span data-ttu-id="2a324-116">Сборка должна быть подписана с использованием строгого имени.</span><span class="sxs-lookup"><span data-stu-id="2a324-116">The assembly must be signed with a strong name.</span></span> <span data-ttu-id="2a324-117">Дополнительные сведения см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span><span class="sxs-lookup"><span data-stu-id="2a324-117">For more information, see [Signing an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span>|  
   
-|Параметр|Описание|  
+|<span data-ttu-id="2a324-118">Параметр</span><span class="sxs-lookup"><span data-stu-id="2a324-118">Option</span></span>|<span data-ttu-id="2a324-119">Описание</span><span class="sxs-lookup"><span data-stu-id="2a324-119">Description</span></span>|  
 |------------|-----------------|  
-|**/appdir:** *path*|Определяет корневой каталог приложения.|  
-|**/appname:** *applicationName*|Задает имя приложения COM+, которое следует найти или создать.|  
-|**/c**|Создает конечное приложение.|  
-|**/componly**|Выполняет только конфигурирование компонентов, методы и интерфейсы игнорируются.|  
-|**/exapp**|Указывает, что программа будет работать с существующим приложением.|  
-|**/extlb**|Использует существующую библиотеку типов.|  
-|**/fc**|Находит или создает конечное приложение.|  
-|**/help**|Отображает синтаксис команд и параметров программы.|  
-|**/noreconfig**|Запрещает изменять конфигурации существующего конечного приложения.|  
-|**/nologo**|Отключает отображение эмблемы Майкрософт при запуске.|  
-|**/parname:** *name*|Задает имя или идентификатор приложения COM+, которое следует найти или создать.|  
-|**/reconfig**|Изменяет конфигурацию существующего конечного приложения. Это значение по умолчанию.|  
-|**/tlb:** *typelibraryfile*|Задает устанавливаемый файл библиотеки типов.|  
-|**/u**|Удаляет конечное приложение.|  
-|**/quiet**|Задает тихий режим, логотип и сообщения об успешном завершении операций не отображаются.|  
-|**/?**|Отображает синтаксис команд и параметров программы.|  
+|<span data-ttu-id="2a324-120">**/appdir:** *path*</span><span class="sxs-lookup"><span data-stu-id="2a324-120">**/appdir:** *path*</span></span>|<span data-ttu-id="2a324-121">Определяет корневой каталог приложения.</span><span class="sxs-lookup"><span data-stu-id="2a324-121">Specifies the root directory of the application.</span></span>|  
+|<span data-ttu-id="2a324-122">**/appname:** *applicationName*</span><span class="sxs-lookup"><span data-stu-id="2a324-122">**/appname:** *applicationName*</span></span>|<span data-ttu-id="2a324-123">Задает имя приложения COM+, которое следует найти или создать.</span><span class="sxs-lookup"><span data-stu-id="2a324-123">Specifies the name of the COM+ application to either find or create.</span></span>|  
+|<span data-ttu-id="2a324-124">**/c**</span><span class="sxs-lookup"><span data-stu-id="2a324-124">**/c**</span></span>|<span data-ttu-id="2a324-125">Создает конечное приложение.</span><span class="sxs-lookup"><span data-stu-id="2a324-125">Creates the target application.</span></span>|  
+|<span data-ttu-id="2a324-126">**/componly**</span><span class="sxs-lookup"><span data-stu-id="2a324-126">**/componly**</span></span>|<span data-ttu-id="2a324-127">Выполняет только конфигурирование компонентов, методы и интерфейсы игнорируются.</span><span class="sxs-lookup"><span data-stu-id="2a324-127">Configures components only; ignores methods and interfaces.</span></span>|  
+|<span data-ttu-id="2a324-128">**/exapp**</span><span class="sxs-lookup"><span data-stu-id="2a324-128">**/exapp**</span></span>|<span data-ttu-id="2a324-129">Указывает, что программа будет работать с существующим приложением.</span><span class="sxs-lookup"><span data-stu-id="2a324-129">Specifies to the tool to expect an existing application.</span></span>|  
+|<span data-ttu-id="2a324-130">**/extlb**</span><span class="sxs-lookup"><span data-stu-id="2a324-130">**/extlb**</span></span>|<span data-ttu-id="2a324-131">Использует существующую библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="2a324-131">Uses an existing type library.</span></span>|  
+|<span data-ttu-id="2a324-132">**/fc**</span><span class="sxs-lookup"><span data-stu-id="2a324-132">**/fc**</span></span>|<span data-ttu-id="2a324-133">Находит или создает конечное приложение.</span><span class="sxs-lookup"><span data-stu-id="2a324-133">Finds or creates the target application.</span></span>|  
+|<span data-ttu-id="2a324-134">**/help**</span><span class="sxs-lookup"><span data-stu-id="2a324-134">**/help**</span></span>|<span data-ttu-id="2a324-135">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="2a324-135">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="2a324-136">**/noreconfig**</span><span class="sxs-lookup"><span data-stu-id="2a324-136">**/noreconfig**</span></span>|<span data-ttu-id="2a324-137">Запрещает изменять конфигурации существующего конечного приложения.</span><span class="sxs-lookup"><span data-stu-id="2a324-137">Does not reconfigure an existing target application.</span></span>|  
+|<span data-ttu-id="2a324-138">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="2a324-138">**/nologo**</span></span>|<span data-ttu-id="2a324-139">Отключает отображение эмблемы Майкрософт при запуске.</span><span class="sxs-lookup"><span data-stu-id="2a324-139">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="2a324-140">**/parname:** *name*</span><span class="sxs-lookup"><span data-stu-id="2a324-140">**/parname:** *name*</span></span>|<span data-ttu-id="2a324-141">Задает имя или идентификатор приложения COM+, которое следует найти или создать.</span><span class="sxs-lookup"><span data-stu-id="2a324-141">Specifies the name or id of the COM+ application to either find or create.</span></span>|  
+|<span data-ttu-id="2a324-142">**/reconfig**</span><span class="sxs-lookup"><span data-stu-id="2a324-142">**/reconfig**</span></span>|<span data-ttu-id="2a324-143">Изменяет конфигурацию существующего конечного приложения.</span><span class="sxs-lookup"><span data-stu-id="2a324-143">Reconfigures an existing target application.</span></span> <span data-ttu-id="2a324-144">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2a324-144">This is the default.</span></span>|  
+|<span data-ttu-id="2a324-145">**/tlb:** *typelibraryfile*</span><span class="sxs-lookup"><span data-stu-id="2a324-145">**/tlb:** *typelibraryfile*</span></span>|<span data-ttu-id="2a324-146">Задает устанавливаемый файл библиотеки типов.</span><span class="sxs-lookup"><span data-stu-id="2a324-146">Specifies the type library file to install.</span></span>|  
+|<span data-ttu-id="2a324-147">**/u**</span><span class="sxs-lookup"><span data-stu-id="2a324-147">**/u**</span></span>|<span data-ttu-id="2a324-148">Удаляет конечное приложение.</span><span class="sxs-lookup"><span data-stu-id="2a324-148">Uninstalls the target application.</span></span>|  
+|<span data-ttu-id="2a324-149">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="2a324-149">**/quiet**</span></span>|<span data-ttu-id="2a324-150">Задает тихий режим, логотип и сообщения об успешном завершении операций не отображаются.</span><span class="sxs-lookup"><span data-stu-id="2a324-150">Specifies quiet mode; suppresses the logo and success message display.</span></span>|  
+|<span data-ttu-id="2a324-151">**/?**</span><span class="sxs-lookup"><span data-stu-id="2a324-151">**/?**</span></span>|<span data-ttu-id="2a324-152">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="2a324-152">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Программе Regsvcs.exe требуется исходный файл сборки, заданный библиотекой *assemblyFile.dll*. Эта сборка должна быть подписана с использованием строгого имени. Дополнительные сведения о подписи с использованием строгого имени см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Имена конечного приложения и файла библиотеки типов не являются обязательными. Аргумент *applicationName* может быть создан из исходного файла сборки, и в случае его отсутствия он будет создан программой Regsvcs.exe. Аргумент *typelibraryfile* может задавать имя библиотеки типов. Если имя библиотеки типов не указано, программа Regsvcs.exe по умолчанию использует имя сборки.  
+## <a name="remarks"></a><span data-ttu-id="2a324-153">Примечания</span><span class="sxs-lookup"><span data-stu-id="2a324-153">Remarks</span></span>  
+ <span data-ttu-id="2a324-154">Программе Regsvcs.exe требуется исходный файл сборки, заданный библиотекой *assemblyFile.dll*.</span><span class="sxs-lookup"><span data-stu-id="2a324-154">Regsvcs.exe requires a source assembly file specified by *assemblyFile.dll*.</span></span> <span data-ttu-id="2a324-155">Эта сборка должна быть подписана с использованием строгого имени.</span><span class="sxs-lookup"><span data-stu-id="2a324-155">This assembly must be signed with a strong name.</span></span> <span data-ttu-id="2a324-156">Дополнительные сведения о подписи с использованием строгого имени см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span><span class="sxs-lookup"><span data-stu-id="2a324-156">For more information on strong name signing, see [Signing an Assembly with a Strong Name](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).</span></span> <span data-ttu-id="2a324-157">Имена конечного приложения и файла библиотеки типов не являются обязательными.</span><span class="sxs-lookup"><span data-stu-id="2a324-157">The names of the target application and the type library file are optional.</span></span> <span data-ttu-id="2a324-158">Аргумент *applicationName* может быть создан из исходного файла сборки, и в случае его отсутствия он будет создан программой Regsvcs.exe.</span><span class="sxs-lookup"><span data-stu-id="2a324-158">The *applicationName* argument can be generated from the source assembly file and will be created by Regsvcs.exe, if it does not already exist.</span></span> <span data-ttu-id="2a324-159">Аргумент *typelibraryfile* может задавать имя библиотеки типов.</span><span class="sxs-lookup"><span data-stu-id="2a324-159">The *typelibraryfile* argument can specify a type library name.</span></span> <span data-ttu-id="2a324-160">Если имя библиотеки типов не указано, программа Regsvcs.exe по умолчанию использует имя сборки.</span><span class="sxs-lookup"><span data-stu-id="2a324-160">If you do not specify a type library name, Regsvcs.exe uses the assembly name as the default.</span></span>  
   
- Когда программа Regsvcs.exe регистрирует методы компонента, к ней применяются [требования](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) и [требования ссылки](../../../docs/framework/misc/link-demands.md) для этих методов. Поскольку эта программа выполняется в полностью доверенной среде, большинство требований на получение разрешения удовлетворяется. Однако программа Regsvcs.exe не может регистрировать компоненты с помощью методов, защищенных требованием или требованием связи для <xref:System.Security.Permissions.StrongNameIdentityPermission> или <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ <span data-ttu-id="2a324-161">Когда программа Regsvcs.exe регистрирует методы компонента, к ней применяются [требования](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) и [требования ссылки](../../../docs/framework/misc/link-demands.md) для этих методов.</span><span class="sxs-lookup"><span data-stu-id="2a324-161">When Regsvcs.exe registers a component's methods, it is subject to the [demands](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) and [link demands](../../../docs/framework/misc/link-demands.md) on those methods.</span></span> <span data-ttu-id="2a324-162">Поскольку эта программа выполняется в полностью доверенной среде, большинство требований на получение разрешения удовлетворяется.</span><span class="sxs-lookup"><span data-stu-id="2a324-162">Because the tool executes in a fully-trusted environment, most demands for a permission succeed.</span></span> <span data-ttu-id="2a324-163">Однако программа Regsvcs.exe не может регистрировать компоненты с помощью методов, защищенных требованием или требованием связи для <xref:System.Security.Permissions.StrongNameIdentityPermission> или <xref:System.Security.Permissions.PublisherIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="2a324-163">However, Regsvcs.exe cannot register components with methods protected by a demand or link demand for the <xref:System.Security.Permissions.StrongNameIdentityPermission> or the <xref:System.Security.Permissions.PublisherIdentityPermission>.</span></span>  
   
- Для работы с программой Regsvcs.exe требуются права администратора на локальном компьютере.  
+ <span data-ttu-id="2a324-164">Для работы с программой Regsvcs.exe требуются права администратора на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="2a324-164">You must have administrative privileges on the local computer to use Regsvcs.exe.</span></span>  
   
- Если программа Regsvcs.exe не может выполнить какие-либо из этих действий, на экран выводится соответствующее сообщение об ошибке.  
+ <span data-ttu-id="2a324-165">Если программа Regsvcs.exe не может выполнить какие-либо из этих действий, на экран выводится соответствующее сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="2a324-165">If Regsvcs.exe fails while performing any of these actions, it displays corresponding error messages.</span></span>  
   
-## <a name="examples"></a>Примеры  
- Следующая команда добавляет все открытые классы, содержащиеся в `myTest.dll`, в `myTargetApp` (существующее приложение COM+) и создает библиотеку типов `myTest.tlb`.  
+## <a name="examples"></a><span data-ttu-id="2a324-166">Примеры</span><span class="sxs-lookup"><span data-stu-id="2a324-166">Examples</span></span>  
+ <span data-ttu-id="2a324-167">Следующая команда добавляет все открытые классы, содержащиеся в `myTest.dll`, в `myTargetApp` (существующее приложение COM+) и создает библиотеку типов `myTest.tlb`.</span><span class="sxs-lookup"><span data-stu-id="2a324-167">The following command adds all public classes contained in `myTest.dll` to `myTargetApp` (an existing COM+ application) and produces the `myTest.tlb` type library.</span></span>  
   
 ```  
 regsvcs /appname:myTargetApp myTest.dll  
 ```  
   
- Следующая команда добавляет все открытые классы, содержащиеся в `myTest.dll`, в `myTargetApp` (существующее приложение COM+) и создает библиотеку типов `newTest.tlb`.  
+ <span data-ttu-id="2a324-168">Следующая команда добавляет все открытые классы, содержащиеся в `myTest.dll`, в `myTargetApp` (существующее приложение COM+) и создает библиотеку типов `newTest.tlb`.</span><span class="sxs-lookup"><span data-stu-id="2a324-168">The following command adds all public classes contained in `myTest.dll` to `myTargetApp` (an existing COM+ application) and produces the `newTest.tlb` type library.</span></span>  
   
 ```  
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="2a324-169">См. также</span><span class="sxs-lookup"><span data-stu-id="2a324-169">See Also</span></span>  
+ [<span data-ttu-id="2a324-170">Инструменты</span><span class="sxs-lookup"><span data-stu-id="2a324-170">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="2a324-171">Практическое руководство. Подписание сборки строгим именем</span><span class="sxs-lookup"><span data-stu-id="2a324-171">How to: Sign an Assembly with a Strong Name</span></span>](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [<span data-ttu-id="2a324-172">Командные строки</span><span class="sxs-lookup"><span data-stu-id="2a324-172">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -1,180 +1,160 @@
 ---
 title: "is (Справочник по C#)"
 keywords: "ключевое слово is(C#), is (C#)"
-ms.date: 2017-02-17
+ms.date: 02/17/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - is_CSharpKeyword
 - is
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- is keyword [C#]
+helpviewer_keywords: is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 5aeb29a799ba24b5ab7db3eca62a91035b25b8f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="is-c-reference"></a>is (Справочник по C#) #
+# <a name="is-c-reference"></a><span data-ttu-id="dde43-103">is (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="dde43-103">is (C# Reference)</span></span> #
 
-Проверяет совместимость объекта с заданным типом или (начиная с C# 7) проверяет выражение на соответствие шаблону.
+<span data-ttu-id="dde43-104">Проверяет совместимость объекта с заданным типом или (начиная с C# 7) проверяет выражение на соответствие шаблону.</span><span class="sxs-lookup"><span data-stu-id="dde43-104">Checks if an object is compatible with a given type, or (starting with C# 7) tests an expression against a pattern.</span></span>
 
-## <a name="testing-for-type-compatibility"></a>Тестирование на совместимость типов ##
+## <a name="testing-for-type-compatibility"></a><span data-ttu-id="dde43-105">Тестирование на совместимость типов</span><span class="sxs-lookup"><span data-stu-id="dde43-105">Testing for type compatibility</span></span> ##
 
-Ключевое слово `is` оценивает совместимость типов во время выполнения. Оно определяет, может ли экземпляр объекта или результат выражения быть преобразован в указанный тип. Он имеет следующий синтаксис:
+<span data-ttu-id="dde43-106">Ключевое слово `is` оценивает совместимость типов во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="dde43-106">The `is` keyword evaluates type compatibility at runtime.</span></span> <span data-ttu-id="dde43-107">Оно определяет, может ли экземпляр объекта или результат выражения быть преобразован в указанный тип.</span><span class="sxs-lookup"><span data-stu-id="dde43-107">It determines whether an object instance or the result of an expression can be converted to a specified type.</span></span> <span data-ttu-id="dde43-108">Он имеет следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="dde43-108">It has the syntax</span></span>
 
 ```csharp
    expr is type
 ```
 
-где *expr* — это выражение, значением которого является экземпляр какого-либо типа, а *type* — это имя типа, в который должен быть преобразован результат *expr*. Оператор `is` принимает значение `true`, если выражение *expr* отлично от NULL и объект, являющийся результатом вычисления выражения, может быть преобразован в тип *type*. В противном случае возвращается `false`.
+<span data-ttu-id="dde43-109">где *expr* — это выражение, значением которого является экземпляр какого-либо типа, а *type* — это имя типа, в который должен быть преобразован результат *expr*.</span><span class="sxs-lookup"><span data-stu-id="dde43-109">where *expr* is an expression that evaluates to an instance of some type, and *type* is the name of the type to which the result of *expr* is to be converted.</span></span> <span data-ttu-id="dde43-110">Оператор `is` принимает значение `true`, если выражение *expr* отлично от NULL и объект, являющийся результатом вычисления выражения, может быть преобразован в тип *type*. В противном случае возвращается `false`.</span><span class="sxs-lookup"><span data-stu-id="dde43-110">The `is` statement is `true` if *expr* is non-null and the object that results from evaluating the expression can be converted to *type*; otherwise, it returns `false`.</span></span>
 
-Например, следующий код определяет, может ли `obj` быть приведен к экземпляру типа `Person`:
+<span data-ttu-id="dde43-111">Например, следующий код определяет, может ли `obj` быть приведен к экземпляру типа `Person`:</span><span class="sxs-lookup"><span data-stu-id="dde43-111">For example, the following code determines if `obj` can be cast to an instance of the `Person` type:</span></span>
 
-[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
+[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
-Оператор `is` принимает значение true, если:
+<span data-ttu-id="dde43-112">Оператор `is` принимает значение true, если:</span><span class="sxs-lookup"><span data-stu-id="dde43-112">The `is` statement is true if:</span></span>
 
-- *expr* представляет собой экземпляр того же типа, что и *type*;
+- <span data-ttu-id="dde43-113">*expr* представляет собой экземпляр того же типа, что и *type*;</span><span class="sxs-lookup"><span data-stu-id="dde43-113">*expr* is an instance of the same type as *type*.</span></span>
 
-- *expr* является экземпляром типа, производного от *type*. Другими словами, результат *expr* может быть приведен с повышением к экземпляру *type*.
+- <span data-ttu-id="dde43-114">*expr* является экземпляром типа, производного от *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-114">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="dde43-115">Другими словами, результат *expr* может быть приведен с повышением к экземпляру *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-115">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- *expr* имеет тип времени компиляции, который является базовым классом для *type*, и *expr* имеет тип среды выполнения, который является *type* или производным от *type*. *Тип времени компиляции* переменной представляет собой тип переменной, как определено в объявлении. *Тип среды выполнения* переменной представляет собой тип экземпляра, назначенный этой переменной.
+- <span data-ttu-id="dde43-116">*expr* имеет тип времени компиляции, который является базовым классом для *type*, и *expr* имеет тип среды выполнения, который является *type* или производным от *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-116">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="dde43-117">*Тип времени компиляции* переменной представляет собой тип переменной, как определено в объявлении.</span><span class="sxs-lookup"><span data-stu-id="dde43-117">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="dde43-118">*Тип среды выполнения* переменной представляет собой тип экземпляра, назначенный этой переменной.</span><span class="sxs-lookup"><span data-stu-id="dde43-118">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- *expr* является экземпляром типа, который реализует интерфейс *type*.
+- <span data-ttu-id="dde43-119">*expr* является экземпляром типа, который реализует интерфейс *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-119">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-В следующем примере показано, что выражение `is` принимает значение `true` для каждого из этих преобразований.
+<span data-ttu-id="dde43-120">В следующем примере показано, что выражение `is` принимает значение `true` для каждого из этих преобразований.</span><span class="sxs-lookup"><span data-stu-id="dde43-120">The following example shows that the `is` expression evaluates to `true` for each of these conversions.</span></span>
 
-[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
+[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-Ключевое слово `is` создает предупреждение во время компиляции, если известно, что выражение всегда будет иметь значение `true` или `false`. Оно рассматривает только преобразование ссылок, упаковки-преобразования и распаковки-преобразования. Определенные пользователем преобразования или преобразования, определенные с помощью операторов [implicit](implicit.md) и [explicit](explicit.md) типа не учитываются. Следующий пример создает предупреждения, так как результат преобразования известен во время компиляции. Обратите внимание, что выражение `is` для преобразований из `int` в `long` и `double` возвращает значение false, так как эти преобразования обрабатываются оператором [implicit](implicit.md).
+<span data-ttu-id="dde43-121">Ключевое слово `is` создает предупреждение во время компиляции, если известно, что выражение всегда будет иметь значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="dde43-121">The `is` keyword generates a compile-time warning if the expression is known to always be either `true` or `false`.</span></span> <span data-ttu-id="dde43-122">Оно рассматривает только преобразование ссылок, упаковки-преобразования и распаковки-преобразования. Определенные пользователем преобразования или преобразования, определенные с помощью операторов [implicit](implicit.md) и [explicit](explicit.md) типа не учитываются.</span><span class="sxs-lookup"><span data-stu-id="dde43-122">It only considers reference conversions, boxing conversions, and unboxing conversions; it does not consider user-defined conversions or conversions defined by a type's [implicit](implicit.md) and [explicit](explicit.md) operators.</span></span> <span data-ttu-id="dde43-123">Следующий пример создает предупреждения, так как результат преобразования известен во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="dde43-123">The following example generates warnings because the result of the conversion is known at compile-time.</span></span> <span data-ttu-id="dde43-124">Обратите внимание, что выражение `is` для преобразований из `int` в `long` и `double` возвращает значение false, так как эти преобразования обрабатываются оператором [implicit](implicit.md).</span><span class="sxs-lookup"><span data-stu-id="dde43-124">Note that the `is` expression for conversions from `int` to `long` and `double` return false, since these conversions are handled by the [implicit](implicit.md) operator.</span></span>
 
-[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
+[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` может быть любым выражением, возвращающим значение, за исключением анонимных методов и лямбда-выражений. В следующем примере используется `is` для определения возвращаемого значения вызова метода.   
-[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
+<span data-ttu-id="dde43-125">`expr` может быть любым выражением, возвращающим значение, за исключением анонимных методов и лямбда-выражений.</span><span class="sxs-lookup"><span data-stu-id="dde43-125">`expr` can be any expression that returns a value, with the exception of anonymous methods and lambda expressions.</span></span> <span data-ttu-id="dde43-126">В следующем примере используется `is` для определения возвращаемого значения вызова метода.</span><span class="sxs-lookup"><span data-stu-id="dde43-126">The following example uses  `is` to evaluate the return value of a method call.</span></span>   
+[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-Начиная с C# 7 можно использовать сопоставление шаблонов с [шаблоном типа](#type), чтобы создавать лаконичный код, использующий оператор `is`.
+<span data-ttu-id="dde43-127">Начиная с C# 7 можно использовать сопоставление шаблонов с [шаблоном типа](#type), чтобы создавать лаконичный код, использующий оператор `is`.</span><span class="sxs-lookup"><span data-stu-id="dde43-127">Starting with C# 7, you can use pattern matching with the [type pattern](#type) to write more concise code that uses the `is` statement.</span></span>
 
-## <a name="pattern-matching-with-is"></a>Сопоставление шаблонов с `is` ##
+## <a name="pattern-matching-with-is"></a><span data-ttu-id="dde43-128">Сопоставление шаблонов с `is`</span><span class="sxs-lookup"><span data-stu-id="dde43-128">Pattern matching with `is`</span></span> ##
 
-Начиная с C# 7 операторы `is` и [switch](../../../csharp/language-reference/keywords/switch.md) поддерживают сопоставление шаблонов. Ключевое слово `is` поддерживает следующие шаблоны:
+<span data-ttu-id="dde43-129">Начиная с C# 7 операторы `is` и [switch](../../../csharp/language-reference/keywords/switch.md) поддерживают сопоставление шаблонов.</span><span class="sxs-lookup"><span data-stu-id="dde43-129">Starting with C# 7, the `is` and [switch](../../../csharp/language-reference/keywords/switch.md) statements support pattern matching.</span></span> <span data-ttu-id="dde43-130">Ключевое слово `is` поддерживает следующие шаблоны:</span><span class="sxs-lookup"><span data-stu-id="dde43-130">The `is` keyword supports the following patterns:</span></span>
 
-- [Шаблон типа](#type), который проверяет, можно ли преобразовать выражение в указанный тип и, если можно, приводит его к переменной этого типа.
+- <span data-ttu-id="dde43-131">[Шаблон типа](#type), который проверяет, можно ли преобразовать выражение в указанный тип и, если можно, приводит его к переменной этого типа.</span><span class="sxs-lookup"><span data-stu-id="dde43-131">[Type pattern](#type),  which tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span>
 
-- [Шаблон константы](#constant), который проверяет, получает ли выражение указанное постоянное значение.
+- <span data-ttu-id="dde43-132">[Шаблон константы](#constant), который проверяет, получает ли выражение указанное постоянное значение.</span><span class="sxs-lookup"><span data-stu-id="dde43-132">[Constant pattern](#constant), which tests whether an expression evaluates to a specified constant value.</span></span>
 
-- [Шаблон переменной](#var) — совпадение всегда является успешным и привязывает значение выражения к новой локальной переменной. 
+- <span data-ttu-id="dde43-133">[Шаблон переменной](#var) — совпадение всегда является успешным и привязывает значение выражения к новой локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="dde43-133">[var pattern](#var), a match that always succeeds and binds the value of an expression to a new local variable.</span></span> 
 
-### <a name="type" /> Шаблон типа </a>
+### <span data-ttu-id="dde43-134"><a name="type" /> Шаблон типа </a></span><span class="sxs-lookup"><span data-stu-id="dde43-134"><a name="type" /> Type pattern </a></span></span>
 
-При использовании шаблона типа для сопоставления шаблонов `is` проверяет, можно ли преобразовать выражение в указанный тип и, если это возможно, приводит его к переменной этого типа. Это просто расширение оператора `is`, для краткого определения и преобразования типа. Шаблон типа `is` имеет следующий общий вид:
+<span data-ttu-id="dde43-135">При использовании шаблона типа для сопоставления шаблонов `is` проверяет, можно ли преобразовать выражение в указанный тип и, если это возможно, приводит его к переменной этого типа.</span><span class="sxs-lookup"><span data-stu-id="dde43-135">When using the type pattern to perform pattern matching, `is` tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span> <span data-ttu-id="dde43-136">Это просто расширение оператора `is`, для краткого определения и преобразования типа.</span><span class="sxs-lookup"><span data-stu-id="dde43-136">It is a straightforward extension of the `is` statement that enables concise type evaluation and conversion.</span></span> <span data-ttu-id="dde43-137">Шаблон типа `is` имеет следующий общий вид:</span><span class="sxs-lookup"><span data-stu-id="dde43-137">The general form of the `is` type pattern is:</span></span>
 
 ```csharp
    expr is type varname 
 ```
 
-где *expr* — это выражение, значением которого является экземпляр какого-либо типа, *type* — это имя типа, в который должен быть преобразован результат *expr*, *varname* — это объект, в который преобразуется результат *expr*, если проверка `is` возвращает значение `true`. 
+<span data-ttu-id="dde43-138">где *expr* — это выражение, значением которого является экземпляр какого-либо типа, *type* — это имя типа, в который должен быть преобразован результат *expr*, *varname* — это объект, в который преобразуется результат *expr*, если проверка `is` возвращает значение `true`.</span><span class="sxs-lookup"><span data-stu-id="dde43-138">where *expr* is an expression that evaluates to an instance of some type, *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the `is` test is `true`.</span></span> 
 
-Выражение `is` имеет значение `true`, если выполняется одно из следующих условий:
+<span data-ttu-id="dde43-139">Выражение `is` имеет значение `true`, если выполняется одно из следующих условий:</span><span class="sxs-lookup"><span data-stu-id="dde43-139">The `is` expression is `true` if any of the following is true:</span></span>
 
-- *expr* представляет собой экземпляр того же типа, что и *type*;
+- <span data-ttu-id="dde43-140">*expr* представляет собой экземпляр того же типа, что и *type*;</span><span class="sxs-lookup"><span data-stu-id="dde43-140">*expr* is an instance of the same type as *type*.</span></span>
 
-- *expr* является экземпляром типа, производного от *type*. Другими словами, результат *expr* может быть приведен с повышением к экземпляру *type*.
+- <span data-ttu-id="dde43-141">*expr* является экземпляром типа, производного от *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-141">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="dde43-142">Другими словами, результат *expr* может быть приведен с повышением к экземпляру *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-142">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- *expr* имеет тип времени компиляции, который является базовым классом для *type*, и *expr* имеет тип среды выполнения, который является *type* или производным от *type*. *Тип времени компиляции* переменной представляет собой тип переменной, как определено в объявлении. *Тип среды выполнения* переменной представляет собой тип экземпляра, назначенный этой переменной.
+- <span data-ttu-id="dde43-143">*expr* имеет тип времени компиляции, который является базовым классом для *type*, и *expr* имеет тип среды выполнения, который является *type* или производным от *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-143">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="dde43-144">*Тип времени компиляции* переменной представляет собой тип переменной, как определено в объявлении.</span><span class="sxs-lookup"><span data-stu-id="dde43-144">The *compile-time type* of a variable is the variable's type as defined in its declaration.</span></span> <span data-ttu-id="dde43-145">*Тип среды выполнения* переменной представляет собой тип экземпляра, назначенный этой переменной.</span><span class="sxs-lookup"><span data-stu-id="dde43-145">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- *expr* является экземпляром типа, который реализует интерфейс *type*.
+- <span data-ttu-id="dde43-146">*expr* является экземпляром типа, который реализует интерфейс *type*.</span><span class="sxs-lookup"><span data-stu-id="dde43-146">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-Если *exp* имеет значение `true` и `is` используется с оператором `if`, назначается *varname* и получает локальную область видимости в пределах только оператора `if`.
+<span data-ttu-id="dde43-147">Если *exp* имеет значение `true` и `is` используется с оператором `if`, назначается *varname* и получает локальную область видимости в пределах только оператора `if`.</span><span class="sxs-lookup"><span data-stu-id="dde43-147">If *exp* is `true` and `is` is used with an `if` statement, *varname* is assigned and has local scope within the `if` statement only.</span></span>
 
-В следующем примере используется шаблон типа `is`, который обеспечивает реализацию метода <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> типа.
+<span data-ttu-id="dde43-148">В следующем примере используется шаблон типа `is`, который обеспечивает реализацию метода <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> типа.</span><span class="sxs-lookup"><span data-stu-id="dde43-148">The following example uses the `is` type pattern to provide the implementation of a type's <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> method.</span></span>
 
-[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
+[!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
-Без сопоставления шаблонов этот код может быть написан следующим образом. При использовании шаблона типа создается более лаконичный и удобочитаемый код, причем проверять результат преобразования (`null`) не требуется.  
+<span data-ttu-id="dde43-149">Без сопоставления шаблонов этот код может быть написан следующим образом.</span><span class="sxs-lookup"><span data-stu-id="dde43-149">Without pattern matching, this code might be written as follows.</span></span> <span data-ttu-id="dde43-150">При использовании шаблона типа создается более лаконичный и удобочитаемый код, причем проверять результат преобразования (`null`) не требуется.</span><span class="sxs-lookup"><span data-stu-id="dde43-150">The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null`.</span></span>  
 
-[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
+[!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
-Шаблон типа `is` также позволяет создавать более компактный код при определении типа для типа значения. В следующем примере используется шаблон типа `is`, чтобы определить, является ли объект экземпляром `Person` или `Dog` перед отображением значения соответствующего свойства. 
+<span data-ttu-id="dde43-151">Шаблон типа `is` также позволяет создавать более компактный код при определении типа для типа значения.</span><span class="sxs-lookup"><span data-stu-id="dde43-151">The `is` type pattern also produces more compact code when determining the type of a value type.</span></span> <span data-ttu-id="dde43-152">В следующем примере используется шаблон типа `is`, чтобы определить, является ли объект экземпляром `Person` или `Dog` перед отображением значения соответствующего свойства.</span><span class="sxs-lookup"><span data-stu-id="dde43-152">The following example uses the `is` type pattern to determine whether an object is a `Person` or a `Dog` instance before displaying the value of an appropriate property.</span></span> 
 
-[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
+[!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
-Для эквивалентного кода без сопоставления шаблонов требуется отдельное назначение, которое включает явное приведение.
+<span data-ttu-id="dde43-153">Для эквивалентного кода без сопоставления шаблонов требуется отдельное назначение, которое включает явное приведение.</span><span class="sxs-lookup"><span data-stu-id="dde43-153">The equivalent code without pattern matching requires a separate assignment that includes an explicit cast.</span></span>
 
-[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
+[!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Шаблон константы ###
+### <a name="a-nameconstant--constant-pattern"></a><span data-ttu-id="dde43-154"><a name="constant" /> Шаблон константы</span><span class="sxs-lookup"><span data-stu-id="dde43-154"><a name="constant" /> Constant pattern</span></span> ###
 
-При выполнении сопоставления с шаблоном константы `is` проверяет, равно ли выражение указанной константе. В C# 6 и более ранних версиях шаблон константы поддерживается оператором [switch](switch.md). Начиная с C# 7 он поддерживается и оператором `is`. Он имеет следующий синтаксис:
+<span data-ttu-id="dde43-155">При выполнении сопоставления с шаблоном константы `is` проверяет, равно ли выражение указанной константе.</span><span class="sxs-lookup"><span data-stu-id="dde43-155">When performing pattern matching with the constant pattern, `is` tests whether an expression equals a specified constant.</span></span> <span data-ttu-id="dde43-156">В C# 6 и более ранних версиях шаблон константы поддерживается оператором [switch](switch.md).</span><span class="sxs-lookup"><span data-stu-id="dde43-156">In C# 6 and earlier versions, the constant pattern is supported by the [switch](switch.md) statement.</span></span> <span data-ttu-id="dde43-157">Начиная с C# 7 он поддерживается и оператором `is`.</span><span class="sxs-lookup"><span data-stu-id="dde43-157">Starting with C# 7, it is supported by the `is` statement as well.</span></span> <span data-ttu-id="dde43-158">Он имеет следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="dde43-158">Its syntax is:</span></span>
 
 ```csharp
    expr is constant
 ```
 
-где *expr* — это выражение для вычисления, а *constant* — это значение, которое нужно проверить. *constant* может быть любой из следующих константных выражений: 
+<span data-ttu-id="dde43-159">где *expr* — это выражение для вычисления, а *constant* — это значение, которое нужно проверить.</span><span class="sxs-lookup"><span data-stu-id="dde43-159">where *expr* is the expression to evaluate, and *constant* is the value to test for.</span></span> <span data-ttu-id="dde43-160">*constant* может быть любой из следующих константных выражений:</span><span class="sxs-lookup"><span data-stu-id="dde43-160">*constant* can be any of the following constant expressions:</span></span> 
 
-- литеральное значение;
+- <span data-ttu-id="dde43-161">литеральное значение;</span><span class="sxs-lookup"><span data-stu-id="dde43-161">A literal value.</span></span>
 
-- имя объявленной переменной `const`;
+- <span data-ttu-id="dde43-162">имя объявленной переменной `const`;</span><span class="sxs-lookup"><span data-stu-id="dde43-162">The name of a declared `const` variable.</span></span>
 
-- константа перечисления.
+- <span data-ttu-id="dde43-163">константа перечисления.</span><span class="sxs-lookup"><span data-stu-id="dde43-163">An enumeration constant.</span></span>
 
-Константное выражение вычисляется следующим образом.
+<span data-ttu-id="dde43-164">Константное выражение вычисляется следующим образом.</span><span class="sxs-lookup"><span data-stu-id="dde43-164">The constant expression is evaluated as follows:</span></span>
 
-- Если *expr* и *constant* являются целочисленными типами, оператор равенства C# определяет, возвращает ли выражение `true` (то есть выполняется ли условие `expr == constant`).
+- <span data-ttu-id="dde43-165">Если *expr* и *constant* являются целочисленными типами, оператор равенства C# определяет, возвращает ли выражение `true` (то есть выполняется ли условие `expr == constant`).</span><span class="sxs-lookup"><span data-stu-id="dde43-165">If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).</span></span>
 
-- В противном случае значение выражения определяется с помощью вызова статического метода [Object.Equals (expr, constant)](xref:System.Object.Equals(System.Object,System.Object)).  
+- <span data-ttu-id="dde43-166">В противном случае значение выражения определяется с помощью вызова статического метода [Object.Equals (expr, constant)](xref:System.Object.Equals(System.Object,System.Object)).</span><span class="sxs-lookup"><span data-stu-id="dde43-166">Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.</span></span>  
 
-В следующем примере шаблон типа и шаблон константы объединяются для проверки того, является ли объект экземпляром `Dice` и, если это так, определяют, равно ли 6 значение броска кости.
+<span data-ttu-id="dde43-167">В следующем примере шаблон типа и шаблон константы объединяются для проверки того, является ли объект экземпляром `Dice` и, если это так, определяют, равно ли 6 значение броска кости.</span><span class="sxs-lookup"><span data-stu-id="dde43-167">The following example combines the type and constant patterns to test whether an object is a `Dice` instance and, if it is, to determine whether the value of a dice roll is 6.</span></span>
 
-[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+[!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
-### <a name="var" /> Шаблон переменной </a>
+### <span data-ttu-id="dde43-168"><a name="var" /> Шаблон переменной </a></span><span class="sxs-lookup"><span data-stu-id="dde43-168"><a name="var" /> var pattern </a></span></span>
 
-Сопоставление шаблону переменной всегда завершается успешно. Оно имеет следующий синтаксис:
+<span data-ttu-id="dde43-169">Сопоставление шаблону переменной всегда завершается успешно.</span><span class="sxs-lookup"><span data-stu-id="dde43-169">A pattern match with the var pattern always succeeds.</span></span> <span data-ttu-id="dde43-170">Оно имеет следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="dde43-170">Its syntax is</span></span>
 
 ```csharp 
    expr is var varname
 ```
 
-где значение *expr* всегда назначается локальной переменной с именем *varname*. *varname* является статической переменной того же типа, что и *expr*. В следующем примере шаблон переменной используется для назначения выражения переменной с именем `obj`. Затем отображается значение и тип `obj`.
+<span data-ttu-id="dde43-171">где значение *expr* всегда назначается локальной переменной с именем *varname*.</span><span class="sxs-lookup"><span data-stu-id="dde43-171">where the value of *expr* is always assigned to a local variable named *varname*.</span></span> <span data-ttu-id="dde43-172">*varname* является статической переменной того же типа, что и *expr*.</span><span class="sxs-lookup"><span data-stu-id="dde43-172">*varname* is a static variable of the same type as *expr*.</span></span> <span data-ttu-id="dde43-173">В следующем примере шаблон переменной используется для назначения выражения переменной с именем `obj`.</span><span class="sxs-lookup"><span data-stu-id="dde43-173">The following example uses the var pattern to assign an expression to a variable named `obj`.</span></span> <span data-ttu-id="dde43-174">Затем отображается значение и тип `obj`.</span><span class="sxs-lookup"><span data-stu-id="dde43-174">It then displays the value and the type of `obj`.</span></span>
 
-[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+[!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-Обратите внимание, что если *expr* — `null`, `is` выражение, по-прежнему имеет значение true и назначает `null` для *varname*. 
+<span data-ttu-id="dde43-175">Обратите внимание, что если *expr* — `null`, `is` выражение, по-прежнему имеет значение true и назначает `null` для *varname*.</span><span class="sxs-lookup"><span data-stu-id="dde43-175">Note that if *expr* is `null`, the `is` expression still is true and assigns `null` to *varname*.</span></span> 
 
-# <a name="c-language-specification"></a>Спецификация языка C#
+# <a name="c-language-specification"></a><span data-ttu-id="dde43-176">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="dde43-176">C# Language Specification</span></span>
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
- [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)
-
+## <a name="see-also"></a><span data-ttu-id="dde43-177">См. также</span><span class="sxs-lookup"><span data-stu-id="dde43-177">See also</span></span>  
+ [<span data-ttu-id="dde43-178">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="dde43-178">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="dde43-179">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="dde43-179">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="dde43-180">typeof</span><span class="sxs-lookup"><span data-stu-id="dde43-180">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
+ [<span data-ttu-id="dde43-181">as</span><span class="sxs-lookup"><span data-stu-id="dde43-181">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
+ [<span data-ttu-id="dde43-182">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="dde43-182">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)

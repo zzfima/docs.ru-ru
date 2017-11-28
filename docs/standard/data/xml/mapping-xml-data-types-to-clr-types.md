@@ -1,36 +1,34 @@
 ---
-title: "Сопоставление типов XML-данных с типами CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Сопоставление типов XML-данных с типами CLR"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3b6e67d27de33e61f5d5190249e90ac48e1aaaec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сопоставление типов XML-данных с типами CLR
-В следующей таблице описывается сопоставление по умолчанию между типами данных XML и типами данных среды CLR.  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="1972d-102">Сопоставление типов XML-данных с типами CLR</span><span class="sxs-lookup"><span data-stu-id="1972d-102">Mapping XML Data Types to CLR Types</span></span>
+<span data-ttu-id="1972d-103">В следующей таблице описывается сопоставление по умолчанию между типами данных XML и типами данных среды CLR.</span><span class="sxs-lookup"><span data-stu-id="1972d-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
   
-## В следующей таблице описывается сопоставление по умолчанию между типами данных XML и типами CLR.  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="1972d-104">В следующей таблице описывается сопоставление по умолчанию между типами данных XML и типами CLR.</span><span class="sxs-lookup"><span data-stu-id="1972d-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
   
 > [!NOTE]
->  Префиксы `xs` и `xdt` сопоставляются с URI\-кодами пространств имен http:\/\/www.w3.org\/2001\/XMLSchema и http:\/\/www.w3.org\/2003\/05\/xpath\-datatypes соответственно.  
+>  <span data-ttu-id="1972d-105">Префиксы `xs` и `xdt` сопоставляются с URI-кодами пространств имен http://www.w3.org/2001/XMLSchema и http://www.w3.org/2003/05/xpath-datatypes соответственно.</span><span class="sxs-lookup"><span data-stu-id="1972d-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
   
-|Тип XML|Тип CLR|  
-|-------------|-------------|  
+|<span data-ttu-id="1972d-106">Тип XML</span><span class="sxs-lookup"><span data-stu-id="1972d-106">XML Type</span></span>|<span data-ttu-id="1972d-107">Тип CLR</span><span class="sxs-lookup"><span data-stu-id="1972d-107">CLR Type</span></span>|  
+|--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
 |`xs:boolean`|<xref:System.Boolean>|  
@@ -80,13 +78,13 @@ caps.handback.revision: 2
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|Узел документа|<xref:System.Xml.XPath.XPathNavigator>|  
-|Узел элемента|<xref:System.Xml.XPath.XPathNavigator>|  
-|Узел атрибута|<xref:System.Xml.XPath.XPathNavigator>|  
-|Узел пространства имен|<xref:System.Xml.XPath.XPathNavigator>|  
-|Текстовый узел|<xref:System.Xml.XPath.XPathNavigator>|  
-|Узел комментария|<xref:System.Xml.XPath.XPathNavigator>|  
-|Узел инструкции по обработке|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-108">Узел документа</span><span class="sxs-lookup"><span data-stu-id="1972d-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-109">Узел элемента</span><span class="sxs-lookup"><span data-stu-id="1972d-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-110">Узел атрибута</span><span class="sxs-lookup"><span data-stu-id="1972d-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-111">Узел пространства имен</span><span class="sxs-lookup"><span data-stu-id="1972d-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-112">Текстовый узел</span><span class="sxs-lookup"><span data-stu-id="1972d-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-113">Узел комментария</span><span class="sxs-lookup"><span data-stu-id="1972d-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="1972d-114">Узел инструкции по обработке</span><span class="sxs-lookup"><span data-stu-id="1972d-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## См. также  
- [Поддержка типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a><span data-ttu-id="1972d-115">См. также</span><span class="sxs-lookup"><span data-stu-id="1972d-115">See Also</span></span>  
+ [<span data-ttu-id="1972d-116">Поддержка типов в классах System.Xml</span><span class="sxs-lookup"><span data-stu-id="1972d-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

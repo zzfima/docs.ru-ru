@@ -1,98 +1,79 @@
 ---
 title: "Пошаговые руководства по C#"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="c-walkthroughs"></a>Пошаговые руководства по C#
-В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
+# <a name="c-walkthroughs"></a><span data-ttu-id="44b66-102">Пошаговые руководства по C#</span><span class="sxs-lookup"><span data-stu-id="44b66-102">C# Walkthroughs</span></span>
+<span data-ttu-id="44b66-103">В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.</span><span class="sxs-lookup"><span data-stu-id="44b66-103">Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.</span></span>  
   
- В этом разделе содержатся ссылки на пошаговые руководства по программированию на C#.  
+ <span data-ttu-id="44b66-104">В этом разделе содержатся ссылки на пошаговые руководства по программированию на C#.</span><span class="sxs-lookup"><span data-stu-id="44b66-104">This section contains links to C# programming walkthroughs.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a><span data-ttu-id="44b66-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="44b66-105">In This Section</span></span>  
 
- [Доступ к Интернету с помощью модификатора Async и оператора Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../csharp/language-reference/keywords/async.md) и [Await](../csharp/language-reference/keywords/await.md).  
+ [<span data-ttu-id="44b66-106">Доступ к Интернету с помощью модификатора Async и оператора Await</span><span class="sxs-lookup"><span data-stu-id="44b66-106">Accessing the Web by Using Async and Await</span></span>](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ <span data-ttu-id="44b66-107">Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../csharp/language-reference/keywords/async.md) и [Await](../csharp/language-reference/keywords/await.md).</span><span class="sxs-lookup"><span data-stu-id="44b66-107">Shows how to create an asynchronous solution by using [async](../csharp/language-reference/keywords/async.md) and [await](../csharp/language-reference/keywords/await.md).</span></span>  
   
- [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
- Описание процесса создания типа [!INCLUDE[wrt](~/includes/wrt-md.md)], его упаковки в компонент [!INCLUDE[wrt](~/includes/wrt-md.md)] и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  
+ [<span data-ttu-id="44b66-108">Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript</span><span class="sxs-lookup"><span data-stu-id="44b66-108">Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript</span></span>](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ <span data-ttu-id="44b66-109">Описание процесса создания типа [!INCLUDE[wrt](~/includes/wrt-md.md)], его упаковки в компонент [!INCLUDE[wrt](~/includes/wrt-md.md)] и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.</span><span class="sxs-lookup"><span data-stu-id="44b66-109">Shows how to create a [!INCLUDE[wrt](~/includes/wrt-md.md)] type, package it in a [!INCLUDE[wrt](~/includes/wrt-md.md)] component, and then call the component from a [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app that's built for Windows by using JavaScript.</span></span>  
   
- [Программирование для Office (C# и Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
- Описание процесса создания книги Excel и документа Word с помощью C# и Visual Basic.  
+ [<span data-ttu-id="44b66-110">Программирование для Office (C# и Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44b66-110">Office Programming (C# and Visual Basic)</span></span>](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ <span data-ttu-id="44b66-111">Описание процесса создания книги Excel и документа Word с помощью C# и Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="44b66-111">Shows how to create an Excel workbook and a Word document by using C# and Visual Basic.</span></span>  
   
- [Создание и использование динамических объектов (C# и Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- Описание процесса создания пользовательского объекта, который динамически предоставляет содержимое текстового файла, и создание проекта, использующего библиотеку `IronPython`.  
+ [<span data-ttu-id="44b66-112">Создание и использование динамических объектов (C# и Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44b66-112">Creating and Using Dynamic Objects (C# and Visual Basic)</span></span>](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ <span data-ttu-id="44b66-113">Описание процесса создания пользовательского объекта, который динамически предоставляет содержимое текстового файла, и создание проекта, использующего библиотеку `IronPython`.</span><span class="sxs-lookup"><span data-stu-id="44b66-113">Shows how to create a custom object that dynamically exposes the contents of a text file, and how to create a project that uses the `IronPython` library.</span></span>  
    
- [Создание составного элемента управления с помощью C#](https://msdn.microsoft.com/library/a6h7e207.aspx)  
- Описание процесса создания простого составного элемента управления и расширение его функциональных возможностей через наследование.  
+ [<span data-ttu-id="44b66-114">Создание составного элемента управления с помощью C#</span><span class="sxs-lookup"><span data-stu-id="44b66-114">Authoring a Composite Control with Visual C#</span></span>](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ <span data-ttu-id="44b66-115">Описание процесса создания простого составного элемента управления и расширение его функциональных возможностей через наследование.</span><span class="sxs-lookup"><span data-stu-id="44b66-115">Demonstrates creating a simple composite control and extending its functionality through inheritance.</span></span>  
   
- [Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](https://msdn.microsoft.com/library/35ea88wb.aspx)  
- Описание создания пользовательского конструктора для пользовательского элемента управления.  
+ [<span data-ttu-id="44b66-116">Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки</span><span class="sxs-lookup"><span data-stu-id="44b66-116">Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features</span></span>](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ <span data-ttu-id="44b66-117">Описание создания пользовательского конструктора для пользовательского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="44b66-117">Illustrates how to create a custom designer for a custom control.</span></span>  
   
- [Наследование элементов управления Windows Forms с помощью Visual C#](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
- Описание способа создания простого наследуемого элемента управления Button. Эта кнопка наследует функциональные возможности от стандартной кнопки Windows Forms и предоставляет настраиваемый элемент.  
+ [<span data-ttu-id="44b66-118">Наследование элементов управления Windows Forms с помощью Visual C#</span><span class="sxs-lookup"><span data-stu-id="44b66-118">Inheriting from a Windows Forms Control with Visual C#</span></span>](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ <span data-ttu-id="44b66-119">Описание способа создания простого наследуемого элемента управления Button.</span><span class="sxs-lookup"><span data-stu-id="44b66-119">Demonstrates creating a simple inherited button control.</span></span> <span data-ttu-id="44b66-120">Эта кнопка наследует функциональные возможности от стандартной кнопки Windows Forms и предоставляет настраиваемый элемент.</span><span class="sxs-lookup"><span data-stu-id="44b66-120">This button inherits functionality from the standard Windows Forms button and exposes a custom member.</span></span>  
   
- [Отладка пользовательских элементов управления Windows Forms во время разработки](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
- Описание процедуры отладки поведения пользовательского элемента управления во время разработки.
+ [<span data-ttu-id="44b66-121">Отладка пользовательских элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="44b66-121">Debugging Custom Windows Forms Controls at Design Time</span></span>](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ <span data-ttu-id="44b66-122">Описание процедуры отладки поведения пользовательского элемента управления во время разработки.</span><span class="sxs-lookup"><span data-stu-id="44b66-122">Describes how to debug the design-time behavior of your custom control.</span></span>
 
- [Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms](https://msdn.microsoft.com/library/xhz359sc.aspx)  
- Описание некоторых наиболее типичных задач, таких как добавление или удаление вкладки в элементе управления `TabControl`, закрепление элемента управления в родительском элементе и изменение ориентации элемента управления `SplitContainer`.  
+ [<span data-ttu-id="44b66-123">Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="44b66-123">Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ <span data-ttu-id="44b66-124">Описание некоторых наиболее типичных задач, таких как добавление или удаление вкладки в элементе управления `TabControl`, закрепление элемента управления в родительском элементе и изменение ориентации элемента управления `SplitContainer`.</span><span class="sxs-lookup"><span data-stu-id="44b66-124">Demonstrates some of the commonly performed tasks such as adding or removing a tab on a `TabControl`, docking a control to its parent, and changing the orientation of a `SplitContainer` control.</span></span>  
   
- [Написание запросов на C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ [<span data-ttu-id="44b66-125">Написание запросов на C# (LINQ)</span><span class="sxs-lookup"><span data-stu-id="44b66-125">Writing Queries in C# (LINQ)</span></span>](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ <span data-ttu-id="44b66-126">Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="44b66-126">Demonstrates the C# language features that are used to write [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span>  
   
- [Обработка данных (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
- Описание сценария [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для добавления, изменения и удаления данных в базе данных.  
+ [<span data-ttu-id="44b66-127">Обработка данных (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="44b66-127">Manipulating Data (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb386927.aspx)  
+ <span data-ttu-id="44b66-128">Описание сценария [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для добавления, изменения и удаления данных в базе данных.</span><span class="sxs-lookup"><span data-stu-id="44b66-128">Describes a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span>  
   
- [Простая модель объектов и простой запрос (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
- Описание процесса создания класса сущностей и простого запроса для фильтрации класса сущностей.  
+ [<span data-ttu-id="44b66-129">Простая модель объектов и простой запрос (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="44b66-129">Simple Object Model and Query (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb386940.aspx)  
+ <span data-ttu-id="44b66-130">Описание процесса создания класса сущностей и простого запроса для фильтрации класса сущностей.</span><span class="sxs-lookup"><span data-stu-id="44b66-130">Demonstrates how to create an entity class and a simple query to filter the entity class.</span></span>  
   
- [Применение только хранимых процедур (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
- Описание процесса использования LINQ to SQL для доступа к данным только с помощью хранимых процедур.  
+ [<span data-ttu-id="44b66-131">Применение только хранимых процедур (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="44b66-131">Using Only Stored Procedures (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb399407.aspx)  
+ <span data-ttu-id="44b66-132">Описание процесса использования LINQ to SQL для доступа к данным только с помощью хранимых процедур.</span><span class="sxs-lookup"><span data-stu-id="44b66-132">Demonstrates how to use LINQ to SQL to access data by executing only stored procedures.</span></span>  
   
- [Запросы по связям (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
- Описание процесса использования сопоставлений [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для представления связей внешних ключей в базе данных.  
+ [<span data-ttu-id="44b66-133">Запросы по связям (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="44b66-133">Querying Across Relationships (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb386951.aspx)  
+ <span data-ttu-id="44b66-134">Описание процесса использования сопоставлений [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для представления связей внешних ключей в базе данных.</span><span class="sxs-lookup"><span data-stu-id="44b66-134">Demonstrates the use of [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] associations to represent foreign-key relationships in a database.</span></span>  
 
- [Написание визуализатора на C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
- Описание процесса написания простого визуализатора на C#.  
+ [<span data-ttu-id="44b66-135">Написание визуализатора на C#</span><span class="sxs-lookup"><span data-stu-id="44b66-135">Writing a Visualizer in C#</span></span>](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ <span data-ttu-id="44b66-136">Описание процесса написания простого визуализатора на C#.</span><span class="sxs-lookup"><span data-stu-id="44b66-136">Shows how to write a simple visualizer by using C#.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Примеры и пошаговые руководства по развертыванию](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
- Пошаговое описание примеров распространенных скриптов развертывания.  
+## <a name="related-sections"></a><span data-ttu-id="44b66-137">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="44b66-137">Related Sections</span></span>  
+ [<span data-ttu-id="44b66-138">Примеры и пошаговые руководства по развертыванию</span><span class="sxs-lookup"><span data-stu-id="44b66-138">Deployment Samples and Walkthroughs</span></span>](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ <span data-ttu-id="44b66-139">Пошаговое описание примеров распространенных скриптов развертывания.</span><span class="sxs-lookup"><span data-stu-id="44b66-139">Provides step-by-step examples of common deployment scenarios.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../csharp/programming-guide/index.md)   
- [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)
-
+## <a name="see-also"></a><span data-ttu-id="44b66-140">См. также</span><span class="sxs-lookup"><span data-stu-id="44b66-140">See Also</span></span>  
+ [<span data-ttu-id="44b66-141">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="44b66-141">C# Programming Guide</span></span>](../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="44b66-142">Примеры Visual Studio</span><span class="sxs-lookup"><span data-stu-id="44b66-142">Visual Studio Samples</span></span>](/visualstudio/ide/visual-studio-samples)

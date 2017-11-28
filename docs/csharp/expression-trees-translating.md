@@ -10,28 +10,26 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="translating-expression-trees"></a><span data-ttu-id="06685-104">Преобразование деревьев выражений</span><span class="sxs-lookup"><span data-stu-id="06685-104">Translating Expression Trees</span></span>
 
-# <a name="translating-expression-trees"></a>Преобразование деревьев выражений
+[<span data-ttu-id="06685-105">Предыдущий раздел — "Построение выражений"</span><span class="sxs-lookup"><span data-stu-id="06685-105">Previous -- Building Expressions</span></span>](expression-trees-building.md)
 
-[Предыдущий раздел — "Построение выражений"](expression-trees-building.md)
+<span data-ttu-id="06685-106">В этом заключительном разделе вы узнаете, как перейти к каждому узлу в дереве выражения при создании измененной копии этого дерева выражений.</span><span class="sxs-lookup"><span data-stu-id="06685-106">In this final section, you'll learn how to visit each node in an expression tree while building a modified copy of that expression tree.</span></span> <span data-ttu-id="06685-107">В разделе представлены методы, которые будут использоваться в двух важных сценариях.</span><span class="sxs-lookup"><span data-stu-id="06685-107">These are the techniques that you will use in two important scenarios.</span></span> <span data-ttu-id="06685-108">Первый — понимание алгоритмов, выраженных деревом выражения, для преобразования в другую среду.</span><span class="sxs-lookup"><span data-stu-id="06685-108">The first is to understand the algorithms expressed by an expression tree so that it can be translated into another environment.</span></span> <span data-ttu-id="06685-109">Второй — необходимость изменить созданный алгоритм.</span><span class="sxs-lookup"><span data-stu-id="06685-109">The second is when you want to change the algorithm that has been created.</span></span> <span data-ttu-id="06685-110">Сюда можно отнести необходимость добавить ведение журнала и осуществлять перехват вызовов методов и отслеживать их, а также другие задачи.</span><span class="sxs-lookup"><span data-stu-id="06685-110">This might be to add logging, intercept method calls and track them, or other purposes.</span></span>
 
-В этом заключительном разделе вы узнаете, как перейти к каждому узлу в дереве выражения при создании измененной копии этого дерева выражений. В разделе представлены методы, которые будут использоваться в двух важных сценариях. Первый — понимание алгоритмов, выраженных деревом выражения, для преобразования в другую среду. Второй — необходимость изменить созданный алгоритм. Сюда можно отнести необходимость добавить ведение журнала и осуществлять перехват вызовов методов и отслеживать их, а также другие задачи.
+## <a name="translating-is-visiting"></a><span data-ttu-id="06685-111">Преобразование — это обход</span><span class="sxs-lookup"><span data-stu-id="06685-111">Translating is Visiting</span></span>
 
-## <a name="translating-is-visiting"></a>Преобразование — это обход
+<span data-ttu-id="06685-112">Код, создаваемый для преобразования дерева выражения, является расширением кода, который используется для обхода всех узлов в дереве.</span><span class="sxs-lookup"><span data-stu-id="06685-112">The code you build to translate an expression tree is an extension of what you've already seen to visit all the nodes in a tree.</span></span> <span data-ttu-id="06685-113">Во время преобразования дерева выражения вы выполняете обход всех узлов и, таким образом, построение нового дерева.</span><span class="sxs-lookup"><span data-stu-id="06685-113">When you translate an expression tree, you visit all the nodes, and while visiting them, build the new tree.</span></span> <span data-ttu-id="06685-114">Новое дерево может содержать ссылки на исходные узлы или новые узлы, которые были помещены в дерево.</span><span class="sxs-lookup"><span data-stu-id="06685-114">The new tree may contain references to the original nodes, or new nodes that you have placed in the tree.</span></span>
 
-Код, создаваемый для преобразования дерева выражения, является расширением кода, который используется для обхода всех узлов в дереве. Во время преобразования дерева выражения вы выполняете обход всех узлов и, таким образом, построение нового дерева. Новое дерево может содержать ссылки на исходные узлы или новые узлы, которые были помещены в дерево.
+<span data-ttu-id="06685-115">Рассмотрим это на примере, выполнив обход дерева выражения и создав новое дерево, заменяя в нем несколько узлов.</span><span class="sxs-lookup"><span data-stu-id="06685-115">Let's see this in action by visiting an expression tree, and creating a new tree with some replacement nodes.</span></span> <span data-ttu-id="06685-116">В этом примере мы заменим любую константу константой, которая в десять раз больше.</span><span class="sxs-lookup"><span data-stu-id="06685-116">In this example, let's replace any constant with a constant that is ten times larger.</span></span>
+<span data-ttu-id="06685-117">В противном случае мы оставим дерево выражения без изменений.</span><span class="sxs-lookup"><span data-stu-id="06685-117">Otherwise, we'll leave the expression tree intact.</span></span> <span data-ttu-id="06685-118">Вместо того чтобы считывать значение константы и заменять ее новой константой, мы осуществим такую подстановку, заменив узел константы новым узлом, который выполняет умножение.</span><span class="sxs-lookup"><span data-stu-id="06685-118">Rather than reading the value of the constant, and replacing it with a new constant, we'll make this replacement by replacing the constant node with a new node that performs the multiplication.</span></span>
 
-Рассмотрим это на примере, выполнив обход дерева выражения и создав новое дерево, заменяя в нем несколько узлов. В этом примере мы заменим любую константу константой, которая в десять раз больше.
-В противном случае мы оставим дерево выражения без изменений. Вместо того чтобы считывать значение константы и заменять ее новой константой, мы осуществим такую подстановку, заменив узел константы новым узлом, который выполняет умножение.
-
-Итак, вы находите узел константы, создаете новый узел умножения, дочерний элемент которого является исходной константой, и константу `10`:
+<span data-ttu-id="06685-119">Итак, вы находите узел константы, создаете новый узел умножения, дочерний элемент которого является исходной константой, и константу `10`:</span><span class="sxs-lookup"><span data-stu-id="06685-119">Here, once you find a constant node, you create a new multiplication node whose children are the original constant, and the constant `10`:</span></span>
 
 ```csharp
 private static Expression ReplaceNodes(Expression original)
@@ -51,7 +49,7 @@ private static Expression ReplaceNodes(Expression original)
 }
 ```
 
-При замене исходного узла новым узлом формируется новое дерево, содержащее наши изменения. Мы можем проверить это, скомпилировав и выполнив измененное дерево.
+<span data-ttu-id="06685-120">При замене исходного узла новым узлом формируется новое дерево, содержащее наши изменения.</span><span class="sxs-lookup"><span data-stu-id="06685-120">By replacing the original node with the substitute, a new tree is formed that contains our modifications.</span></span> <span data-ttu-id="06685-121">Мы можем проверить это, скомпилировав и выполнив измененное дерево.</span><span class="sxs-lookup"><span data-stu-id="06685-121">We can verify that by compiling and executing the replaced tree.</span></span>
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -65,14 +63,14 @@ var answer = func();
 Console.WriteLine(answer);
 ```
 
-Создание нового дерева представляет собой сочетание обхода узлов в существующем дереве и создания новых узлов и вставки их в дерево.
+<span data-ttu-id="06685-122">Создание нового дерева представляет собой сочетание обхода узлов в существующем дереве и создания новых узлов и вставки их в дерево.</span><span class="sxs-lookup"><span data-stu-id="06685-122">Building a new tree is a combination of visiting the nodes in the existing tree, and creating new nodes and inserting them into the tree.</span></span>
 
-Этот пример демонстрирует значимость неизменяемых деревьев выражений. Обратите внимание, что созданное нами новое дерево содержит сочетание вновь созданных узлов и узлов из существующего дерева. Это безопасно, поскольку узлы в существующем дереве изменить нельзя. Это позволяет существенно сократить потребление памяти.
-Одни и те же узлы можно использовать в одном дереве или в нескольких деревьях выражений. Поскольку узлы нельзя изменить, один узел можно при необходимости использовать повторно.
+<span data-ttu-id="06685-123">Этот пример демонстрирует значимость неизменяемых деревьев выражений.</span><span class="sxs-lookup"><span data-stu-id="06685-123">This example shows the importance of expression trees being immutable.</span></span> <span data-ttu-id="06685-124">Обратите внимание, что созданное нами новое дерево содержит сочетание вновь созданных узлов и узлов из существующего дерева.</span><span class="sxs-lookup"><span data-stu-id="06685-124">Notice that the new tree created above contains a mixture of newly created nodes, and nodes from the existing tree.</span></span> <span data-ttu-id="06685-125">Это безопасно, поскольку узлы в существующем дереве изменить нельзя.</span><span class="sxs-lookup"><span data-stu-id="06685-125">That's safe, because the nodes in the existing tree cannot be modified.</span></span> <span data-ttu-id="06685-126">Это позволяет существенно сократить потребление памяти.</span><span class="sxs-lookup"><span data-stu-id="06685-126">This can result in significant memory efficiencies.</span></span>
+<span data-ttu-id="06685-127">Одни и те же узлы можно использовать в одном дереве или в нескольких деревьях выражений.</span><span class="sxs-lookup"><span data-stu-id="06685-127">The same nodes can be used throughout a tree, or in multiple expression trees.</span></span> <span data-ttu-id="06685-128">Поскольку узлы нельзя изменить, один узел можно при необходимости использовать повторно.</span><span class="sxs-lookup"><span data-stu-id="06685-128">Since nodes can't be modified, the same node can be reused whenever its needed.</span></span>
 
-## <a name="traversing-and-executing-an-addition"></a>Обход и выполнение добавления
+## <a name="traversing-and-executing-an-addition"></a><span data-ttu-id="06685-129">Обход и выполнение добавления</span><span class="sxs-lookup"><span data-stu-id="06685-129">Traversing and Executing an Addition</span></span>
 
-Давайте проверим это, создав второй посетитель, который обходит дерево дополнительных узлов и вычисляет результат. Для этого вы можете просто внести пару изменений в уже готовый посетитель. В этой новой версии посетитель вернет частичную сумму операции сложения до этой точки. Для константного выражения это будет просто значением константного выражения. Для выражения добавления результатом будет сумма левого и правого операндов, поскольку выполняется обход этих деревьев.
+<span data-ttu-id="06685-130">Давайте проверим это, создав второй посетитель, который обходит дерево дополнительных узлов и вычисляет результат.</span><span class="sxs-lookup"><span data-stu-id="06685-130">Let's verify this by building a second visitor that walks the tree of addition nodes and computes the result.</span></span> <span data-ttu-id="06685-131">Для этого вы можете просто внести пару изменений в уже готовый посетитель.</span><span class="sxs-lookup"><span data-stu-id="06685-131">You can do this by making a couple modifications to the vistor that you've seen so far.</span></span> <span data-ttu-id="06685-132">В этой новой версии посетитель вернет частичную сумму операции сложения до этой точки.</span><span class="sxs-lookup"><span data-stu-id="06685-132">In this new version, the visitor will return the partial sum of the addition operation up to this point.</span></span> <span data-ttu-id="06685-133">Для константного выражения это будет просто значением константного выражения.</span><span class="sxs-lookup"><span data-stu-id="06685-133">For a constant expression, that is simply the value of the constant expression.</span></span> <span data-ttu-id="06685-134">Для выражения добавления результатом будет сумма левого и правого операндов, поскольку выполняется обход этих деревьев.</span><span class="sxs-lookup"><span data-stu-id="06685-134">For an addition expression, the result is the sum of the left and right operands, once those trees have been traversed.</span></span>
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -97,11 +95,11 @@ var theSum = aggregate(sum);
 Console.WriteLine(theSum);
 ```
 
-Нам потребуется написать небольшой фрагмент кода, однако основные принципы очень просты.
-Этот код обходит дочерние элементы при поиске в глубину. При обнаружении узла константы посетитель возвращает значение этой константы. После обхода обоих дочерних элементов для них вычисляется сумма, вычисляемая для этого поддерева. Теперь добавленный узел может вычислить свою сумму.
-После обхода всех узлов в дереве выражений будут вычислена сумма. Вы можете отслеживать выполнение, запустив пример в отладчике с трассировкой выполнения.
+<span data-ttu-id="06685-135">Нам потребуется написать небольшой фрагмент кода, однако основные принципы очень просты.</span><span class="sxs-lookup"><span data-stu-id="06685-135">There's quite a bit of code here, but the concepts are very approachable.</span></span>
+<span data-ttu-id="06685-136">Этот код обходит дочерние элементы при поиске в глубину.</span><span class="sxs-lookup"><span data-stu-id="06685-136">This code visits children in a depth first search.</span></span> <span data-ttu-id="06685-137">При обнаружении узла константы посетитель возвращает значение этой константы.</span><span class="sxs-lookup"><span data-stu-id="06685-137">When it encounters a constant node, the visitor returns the value of the constant.</span></span> <span data-ttu-id="06685-138">После обхода обоих дочерних элементов для них вычисляется сумма, вычисляемая для этого поддерева.</span><span class="sxs-lookup"><span data-stu-id="06685-138">After the visitor has visited both children, those children will have computed the sum computed for that sub-tree.</span></span> <span data-ttu-id="06685-139">Теперь добавленный узел может вычислить свою сумму.</span><span class="sxs-lookup"><span data-stu-id="06685-139">The addition node can now compute its sum.</span></span>
+<span data-ttu-id="06685-140">После обхода всех узлов в дереве выражений будут вычислена сумма.</span><span class="sxs-lookup"><span data-stu-id="06685-140">Once all the nodes in the expression tree have been visited, the sum will have been computed.</span></span> <span data-ttu-id="06685-141">Вы можете отслеживать выполнение, запустив пример в отладчике с трассировкой выполнения.</span><span class="sxs-lookup"><span data-stu-id="06685-141">You can trace the execution by running the sample in the debugger and tracing the execution.</span></span>
 
-Мы можем упростить трассировку анализа узлов и вычисления суммы путем обхода дерева. Вот обновленная версия метода агрегирования, который включает совсем немного данных трассировки:
+<span data-ttu-id="06685-142">Мы можем упростить трассировку анализа узлов и вычисления суммы путем обхода дерева.</span><span class="sxs-lookup"><span data-stu-id="06685-142">Let's make it easier to trace how the nodes are analyzed and how the sum is computed by travsersing the tree.</span></span> <span data-ttu-id="06685-143">Вот обновленная версия метода агрегирования, который включает совсем немного данных трассировки:</span><span class="sxs-lookup"><span data-stu-id="06685-143">Here's an updated version of the Aggregate method that includes quite a bit of tracing information:</span></span>
 
 ```csharp
 private static int Aggregate(Expression exp)
@@ -130,7 +128,7 @@ private static int Aggregate(Expression exp)
 }
 ```
 
-Если выполнить его в том же выражении, получаются следующие выходные данные:
+<span data-ttu-id="06685-144">Если выполнить его в том же выражении, получаются следующие выходные данные:</span><span class="sxs-lookup"><span data-stu-id="06685-144">Running it on the same expression yields the following output:</span></span>
 
 ```
 10
@@ -159,15 +157,15 @@ Computed sum: 10
 10
 ```
 
-Проследите выходные данные по приведенному выше коду. Вы наверняка поймете, каким образом код обходит каждый узел и вычисляет сумму по мере обхода дерева и нахождения суммы.
+<span data-ttu-id="06685-145">Проследите выходные данные по приведенному выше коду.</span><span class="sxs-lookup"><span data-stu-id="06685-145">Trace the output and follow along in the code above.</span></span> <span data-ttu-id="06685-146">Вы наверняка поймете, каким образом код обходит каждый узел и вычисляет сумму по мере обхода дерева и нахождения суммы.</span><span class="sxs-lookup"><span data-stu-id="06685-146">You should be able to work out how the code visits each node and computes the sum as it goes through the tree and finds the sum.</span></span>
 
-Теперь рассмотрим другое выполнение, где выражение задается объектом `sum1`:
+<span data-ttu-id="06685-147">Теперь рассмотрим другое выполнение, где выражение задается объектом `sum1`:</span><span class="sxs-lookup"><span data-stu-id="06685-147">Now, let's look at a different run, with the expression given by `sum1`:</span></span>
 
 ```csharp
 Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 ```
 
-Ниже вы видите выходные данные проверки этого выражения:
+<span data-ttu-id="06685-148">Ниже вы видите выходные данные проверки этого выражения:</span><span class="sxs-lookup"><span data-stu-id="06685-148">Here's the output from examining this expression:</span></span>
 
 ```
 Found Addition Expression
@@ -195,14 +193,13 @@ Computed sum: 10
 10
 ```
 
-Хотя окончательный ответ совпадает, способ обхода дерева совершенно другой. Узлы обходятся в другом порядке, так как дерево было создано с помощью других начальных операций.
+<span data-ttu-id="06685-149">Хотя окончательный ответ совпадает, способ обхода дерева совершенно другой.</span><span class="sxs-lookup"><span data-stu-id="06685-149">While the final answer is the same, the tree traversal is completely different.</span></span> <span data-ttu-id="06685-150">Узлы обходятся в другом порядке, так как дерево было создано с помощью других начальных операций.</span><span class="sxs-lookup"><span data-stu-id="06685-150">The nodes are traveled in a different order, because the tree was constructed with different operations occurring first.</span></span>
 
-## <a name="learning-more"></a>Получение дополнительных сведений
+## <a name="learning-more"></a><span data-ttu-id="06685-151">Получение дополнительных сведений</span><span class="sxs-lookup"><span data-stu-id="06685-151">Learning More</span></span>
 
-В этом примере показана малая часть кода, который необходимо создать для обхода и интерпретации алгоритмов, представляемых деревом выражения. Более полное рассмотрение всех действий, необходимых для создания библиотеки общего назначения, которая преобразует деревья выражений в другой язык, см. в [этой серии публикаций](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) Мэтта Уоррена (Matt Warren). Здесь преобразование кода, который можно найти в дереве выражения, рассматривается гораздо подробнее.
+<span data-ttu-id="06685-152">В этом примере показана малая часть кода, который необходимо создать для обхода и интерпретации алгоритмов, представляемых деревом выражения.</span><span class="sxs-lookup"><span data-stu-id="06685-152">This sample shows a small subset of the code you would build to traverse and interpret the algorithms represented by an expression tree.</span></span> <span data-ttu-id="06685-153">Более полное рассмотрение всех действий, необходимых для создания библиотеки общего назначения, которая преобразует деревья выражений в другой язык, см. в [этой серии публикаций](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) Мэтта Уоррена (Matt Warren).</span><span class="sxs-lookup"><span data-stu-id="06685-153">For a complete discussion of all the work necessary to build a general purpose library that translates expression trees into another language, please read [this series](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) by Matt Warren.</span></span> <span data-ttu-id="06685-154">Здесь преобразование кода, который можно найти в дереве выражения, рассматривается гораздо подробнее.</span><span class="sxs-lookup"><span data-stu-id="06685-154">It goes into great detail on how to translate any of the code you might find in an expression tree.</span></span>
 
-Надеюсь, теперь вы оценили эффективность и удобство деревьев выражений.
-Вы можете проверить фрагмент кода, внести в него необходимые изменения и выполнить измененную версию. Поскольку деревья выражений являются неизменяемыми, вы можете создавать новые деревья на основе компонентов существующих деревьев. Это позволяет свести к минимуму потребление памяти для создания измененных деревьев выражений.
+<span data-ttu-id="06685-155">Надеюсь, теперь вы оценили эффективность и удобство деревьев выражений.</span><span class="sxs-lookup"><span data-stu-id="06685-155">I hope you've now seen the true power of expression trees.</span></span>
+<span data-ttu-id="06685-156">Вы можете проверить фрагмент кода, внести в него необходимые изменения и выполнить измененную версию.</span><span class="sxs-lookup"><span data-stu-id="06685-156">You can examine a set of code, make any changes you'd like to that code, and execute the changed version.</span></span> <span data-ttu-id="06685-157">Поскольку деревья выражений являются неизменяемыми, вы можете создавать новые деревья на основе компонентов существующих деревьев.</span><span class="sxs-lookup"><span data-stu-id="06685-157">Because the expression trees are immutable, you can create new trees by using the components of existing trees.</span></span> <span data-ttu-id="06685-158">Это позволяет свести к минимуму потребление памяти для создания измененных деревьев выражений.</span><span class="sxs-lookup"><span data-stu-id="06685-158">This minimizes the amount of memory needed to create modified expression trees.</span></span>
 
-[Далее — "Заключение"](expression-trees-summary.md)
-
+[<span data-ttu-id="06685-159">Далее — "Заключение"</span><span class="sxs-lookup"><span data-stu-id="06685-159">Next -- Summing up</span></span>](expression-trees-summary.md)

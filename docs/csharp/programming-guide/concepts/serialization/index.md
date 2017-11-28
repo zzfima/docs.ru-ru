@@ -1,87 +1,77 @@
 ---
 title: "Сериализация (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2eefd71abf07a96bb99b256571e6ac4529fb277d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serialization-c-"></a>Сериализация (C#)
-Сериализация — это процесс преобразования объекта в поток байтов для сохранения или передачи в память, в базу данных или в файл. Эта операция предназначена для того, чтобы сохранить состояния объекта для последующего воссоздания при необходимости. Обратный процесс называется десериализацией.  
+# <a name="serialization-c-"></a><span data-ttu-id="b437e-102">Сериализация (C#)</span><span class="sxs-lookup"><span data-stu-id="b437e-102">Serialization (C# )</span></span>
+<span data-ttu-id="b437e-103">Сериализация — это процесс преобразования объекта в поток байтов для сохранения или передачи в память, в базу данных или в файл.</span><span class="sxs-lookup"><span data-stu-id="b437e-103">Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file.</span></span> <span data-ttu-id="b437e-104">Эта операция предназначена для того, чтобы сохранить состояния объекта для последующего воссоздания при необходимости.</span><span class="sxs-lookup"><span data-stu-id="b437e-104">Its main purpose is to save the state of an object in order to be able to recreate it when needed.</span></span> <span data-ttu-id="b437e-105">Обратный процесс называется десериализацией.</span><span class="sxs-lookup"><span data-stu-id="b437e-105">The reverse process is called deserialization.</span></span>  
   
-## <a name="how-serialization-works"></a>Как работает сериализация  
- На этом рисунке показан общий процесс сериализации.  
+## <a name="how-serialization-works"></a><span data-ttu-id="b437e-106">Как работает сериализация</span><span class="sxs-lookup"><span data-stu-id="b437e-106">How Serialization Works</span></span>  
+ <span data-ttu-id="b437e-107">На этом рисунке показан общий процесс сериализации.</span><span class="sxs-lookup"><span data-stu-id="b437e-107">This illustration shows the overall process of serialization.</span></span>  
   
- ![Схема сериализации](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "Сериализация")  
+ <span data-ttu-id="b437e-108">![Схема сериализации](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "Сериализация")</span><span class="sxs-lookup"><span data-stu-id="b437e-108">![Serialization Graphic](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "serialization")</span></span>  
   
- Объект сериализуется в поток, который содержит не только данные, но и сведения о типе объекта, например номер версии, язык и региональные параметры, имя сборки. В этом формате потока объект можно сохранить в базе данных, файле или памяти.  
+ <span data-ttu-id="b437e-109">Объект сериализуется в поток, который содержит не только данные, но и сведения о типе объекта, например номер версии, язык и региональные параметры, имя сборки.</span><span class="sxs-lookup"><span data-stu-id="b437e-109">The object is serialized to a stream, which carries not just the data, but information about the object's type, such as its version, culture, and assembly name.</span></span> <span data-ttu-id="b437e-110">В этом формате потока объект можно сохранить в базе данных, файле или памяти.</span><span class="sxs-lookup"><span data-stu-id="b437e-110">From that stream, it can be stored in a database, a file, or memory.</span></span>  
   
-### <a name="uses-for-serialization"></a>Применение сериализации  
- Сериализация позволяет разработчику сохранять состояние объекта и воссоздавать его при необходимости. Это полезно для длительного хранения объектов или для обмена данными. Используя сериализацию, разработчик может, например, отправить объект удаленному приложению через веб-службу, передать объект из одного домена в другой, передать объект через брандмауэр в виде XML-строки, обеспечить защиту или сохранность сведений о пользователях в разных приложениях.  
+### <a name="uses-for-serialization"></a><span data-ttu-id="b437e-111">Применение сериализации</span><span class="sxs-lookup"><span data-stu-id="b437e-111">Uses for Serialization</span></span>  
+ <span data-ttu-id="b437e-112">Сериализация позволяет разработчику сохранять состояние объекта и воссоздавать его при необходимости. Это полезно для длительного хранения объектов или для обмена данными.</span><span class="sxs-lookup"><span data-stu-id="b437e-112">Serialization allows the developer to save the state of an object and recreate it as needed, providing storage of objects as well as data exchange.</span></span> <span data-ttu-id="b437e-113">Используя сериализацию, разработчик может, например, отправить объект удаленному приложению через веб-службу, передать объект из одного домена в другой, передать объект через брандмауэр в виде XML-строки, обеспечить защиту или сохранность сведений о пользователях в разных приложениях.</span><span class="sxs-lookup"><span data-stu-id="b437e-113">Through serialization, a developer can perform actions like sending the object to a remote application by means of a Web Service, passing an object from one domain to another, passing an object through a firewall as an XML string, or maintaining security or user-specific information across applications.</span></span>  
   
-### <a name="making-an-object-serializable"></a>Превращение объекта в сериализуемый  
- Чтобы сериализовать объект, вам нужен сам этот объект, поток, который будет содержать объект, и класс <xref:System.Runtime.Serialization.Formatter>. Классы для сериализации и десериализации объектов содержатся в <xref:System.Runtime.Serialization>.  
+### <a name="making-an-object-serializable"></a><span data-ttu-id="b437e-114">Превращение объекта в сериализуемый</span><span class="sxs-lookup"><span data-stu-id="b437e-114">Making an Object Serializable</span></span>  
+ <span data-ttu-id="b437e-115">Чтобы сериализовать объект, вам нужен сам этот объект, поток, который будет содержать объект, и класс <xref:System.Runtime.Serialization.Formatter>.</span><span class="sxs-lookup"><span data-stu-id="b437e-115">To serialize an object, you need the object to be serialized, a stream to contain the serialized object, and a <xref:System.Runtime.Serialization.Formatter>.</span></span> <span data-ttu-id="b437e-116">Классы для сериализации и десериализации объектов содержатся в <xref:System.Runtime.Serialization>.</span><span class="sxs-lookup"><span data-stu-id="b437e-116"><xref:System.Runtime.Serialization> contains the classes necessary for serializing and deserializing objects.</span></span>  
   
- Примените к типу атрибут <xref:System.SerializableAttribute>, чтобы указать возможность сериализации экземпляров этого типа. Если в типе нет атрибута <xref:System.SerializableAttribute> при попытке сериализации, выдается исключение <xref:System.Runtime.Serialization.SerializationException>.  
+ <span data-ttu-id="b437e-117">Примените к типу атрибут <xref:System.SerializableAttribute>, чтобы указать возможность сериализации экземпляров этого типа.</span><span class="sxs-lookup"><span data-stu-id="b437e-117">Apply the <xref:System.SerializableAttribute> attribute to a type to indicate that instances of this type can be serialized.</span></span> <span data-ttu-id="b437e-118">Если в типе нет атрибута <xref:System.SerializableAttribute> при попытке сериализации, выдается исключение <xref:System.Runtime.Serialization.SerializationException>.</span><span class="sxs-lookup"><span data-stu-id="b437e-118">A <xref:System.Runtime.Serialization.SerializationException> exception is thrown if you attempt to serialize but the type does not have the <xref:System.SerializableAttribute> attribute.</span></span>  
   
- Если вы не хотите, чтобы поле в классе было сериализуемым, примените атрибут <xref:System.NonSerializedAttribute>. Если поле сериализуемого типа содержит указатель, дескриптор или специальные структуры данных для определенной среды, и содержимое этого поле невозможно разумно воссоздать в другой среде, такое поле лучше сделать несериализуемым.  
+ <span data-ttu-id="b437e-119">Если вы не хотите, чтобы поле в классе было сериализуемым, примените атрибут <xref:System.NonSerializedAttribute>.</span><span class="sxs-lookup"><span data-stu-id="b437e-119">If you do not want a field within your class to be serializable, apply the <xref:System.NonSerializedAttribute> attribute.</span></span> <span data-ttu-id="b437e-120">Если поле сериализуемого типа содержит указатель, дескриптор или специальные структуры данных для определенной среды, и содержимое этого поле невозможно разумно воссоздать в другой среде, такое поле лучше сделать несериализуемым.</span><span class="sxs-lookup"><span data-stu-id="b437e-120">If a field of a serializable type contains a pointer, a handle, or some other data structure that is specific to a particular environment, and the field cannot be meaningfully reconstituted in a different environment, then you may want to make it nonserializable.</span></span>  
   
- Если сериализуемый класс содержит ссылки на объекты других классов, имеющие пометку <xref:System.SerializableAttribute>, эти объекты тоже будут сериализованы.  
+ <span data-ttu-id="b437e-121">Если сериализуемый класс содержит ссылки на объекты других классов, имеющие пометку <xref:System.SerializableAttribute>, эти объекты тоже будут сериализованы.</span><span class="sxs-lookup"><span data-stu-id="b437e-121">If a serialized class contains references to objects of other classes that are marked <xref:System.SerializableAttribute>, those objects will also be serialized.</span></span>  
   
-## <a name="binary-and-xml-serialization"></a>Двоичная сериализация и сериализация XML  
- Вы можете использовать двоичную сериализацию или XML-сериализацию. Процесс двоичной сериализации сериализует все элементы, даже доступные только для чтения. Также этот вариант имеет более высокую производительность. XML-сериализация создает более удобочитаемый код и предоставляет больше возможностей для совместного доступа к объектам и использования объектов в процессах взаимодействия.  
+## <a name="binary-and-xml-serialization"></a><span data-ttu-id="b437e-122">Двоичная сериализация и сериализация XML</span><span class="sxs-lookup"><span data-stu-id="b437e-122">Binary and XML Serialization</span></span>  
+ <span data-ttu-id="b437e-123">Вы можете использовать двоичную сериализацию или XML-сериализацию.</span><span class="sxs-lookup"><span data-stu-id="b437e-123">Either binary or XML serialization can be used.</span></span> <span data-ttu-id="b437e-124">Процесс двоичной сериализации сериализует все элементы, даже доступные только для чтения. Также этот вариант имеет более высокую производительность.</span><span class="sxs-lookup"><span data-stu-id="b437e-124">In binary serialization, all members, even those that are read-only, are serialized, and performance is enhanced.</span></span> <span data-ttu-id="b437e-125">XML-сериализация создает более удобочитаемый код и предоставляет больше возможностей для совместного доступа к объектам и использования объектов в процессах взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="b437e-125">XML serialization provides more readable code, as well as greater flexibility of object sharing and usage for interoperability purposes.</span></span>  
   
-### <a name="binary-serialization"></a>Двоичная сериализация  
- Двоичная сериализация использует двоичное кодирование, создавая компактные потоки для хранения или передачи через сетевые сокеты.  
+### <a name="binary-serialization"></a><span data-ttu-id="b437e-126">Двоичная сериализация</span><span class="sxs-lookup"><span data-stu-id="b437e-126">Binary Serialization</span></span>  
+ <span data-ttu-id="b437e-127">Двоичная сериализация использует двоичное кодирование, создавая компактные потоки для хранения или передачи через сетевые сокеты.</span><span class="sxs-lookup"><span data-stu-id="b437e-127">Binary serialization uses binary encoding to produce compact serialization for uses such as storage or socket-based network streams.</span></span>  
   
-### <a name="xml-serialization"></a>XML-сериализация  
- При XML-сериализации все открытые поля и свойства объекта (или параметры и возвращаемые значения метода) сериализуются в XML-поток по правилам определенного документа XSD (язык определения схемы XML). XML-сериализация создает строго типизированные классы с открытыми свойствами и полями, которые преобразуются в формат XML. Пространство имен <xref:System.Xml.Serialization> содержит классы, которые нужны для сериализации и десериализации XML.  
+### <a name="xml-serialization"></a><span data-ttu-id="b437e-128">XML-сериализация</span><span class="sxs-lookup"><span data-stu-id="b437e-128">XML Serialization</span></span>  
+ <span data-ttu-id="b437e-129">При XML-сериализации все открытые поля и свойства объекта (или параметры и возвращаемые значения метода) сериализуются в XML-поток по правилам определенного документа XSD (язык определения схемы XML).</span><span class="sxs-lookup"><span data-stu-id="b437e-129">XML serialization serializes the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document.</span></span> <span data-ttu-id="b437e-130">XML-сериализация создает строго типизированные классы с открытыми свойствами и полями, которые преобразуются в формат XML.</span><span class="sxs-lookup"><span data-stu-id="b437e-130">XML serialization results in strongly typed classes with public properties and fields that are converted to XML.</span></span> <span data-ttu-id="b437e-131">Пространство имен <xref:System.Xml.Serialization> содержит классы, которые нужны для сериализации и десериализации XML.</span><span class="sxs-lookup"><span data-stu-id="b437e-131"><xref:System.Xml.Serialization> contains the classes necessary for serializing and deserializing XML.</span></span>  
   
- Чтобы контролировать сериализацию и десериализацию экземпляров класса, осуществляемую <xref:System.Xml.Serialization.XmlSerializer>, вы можете применять к классам и их членам специальные атрибуты.  
+ <span data-ttu-id="b437e-132">Чтобы контролировать сериализацию и десериализацию экземпляров класса, осуществляемую <xref:System.Xml.Serialization.XmlSerializer>, вы можете применять к классам и их членам специальные атрибуты.</span><span class="sxs-lookup"><span data-stu-id="b437e-132">You can apply attributes to classes and class members in order to control the way the <xref:System.Xml.Serialization.XmlSerializer> serializes or deserializes an instance of the class.</span></span>  
   
-## <a name="basic-and-custom-serialization"></a>Базовая и пользовательская сериализация  
- Существует два способа выполнить сериализацию — базовый и пользовательский. Базовая сериализация использует платформу .NET Framework для автоматической сериализации объекта.  
+## <a name="basic-and-custom-serialization"></a><span data-ttu-id="b437e-133">Базовая и пользовательская сериализация</span><span class="sxs-lookup"><span data-stu-id="b437e-133">Basic and Custom Serialization</span></span>  
+ <span data-ttu-id="b437e-134">Существует два способа выполнить сериализацию — базовый и пользовательский.</span><span class="sxs-lookup"><span data-stu-id="b437e-134">Serialization can be performed in two ways, basic and custom.</span></span> <span data-ttu-id="b437e-135">Базовая сериализация использует платформу .NET Framework для автоматической сериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="b437e-135">Basic serialization uses the .NET Framework to automatically serialize the object.</span></span>  
   
-### <a name="basic-serialization"></a>Базовая сериализация  
- Единственное условие для выполнения базовой сериализации — наличие атрибута <xref:System.SerializableAttribute> у сериализуемого объекта. Атрибут <xref:System.NonSerializedAttribute> также можно использовать для исключения из сериализации определенных полей.  
+### <a name="basic-serialization"></a><span data-ttu-id="b437e-136">Базовая сериализация</span><span class="sxs-lookup"><span data-stu-id="b437e-136">Basic Serialization</span></span>  
+ <span data-ttu-id="b437e-137">Единственное условие для выполнения базовой сериализации — наличие атрибута <xref:System.SerializableAttribute> у сериализуемого объекта.</span><span class="sxs-lookup"><span data-stu-id="b437e-137">The only requirement in basic serialization is that the object has the <xref:System.SerializableAttribute> attribute applied.</span></span> <span data-ttu-id="b437e-138">Атрибут <xref:System.NonSerializedAttribute> также можно использовать для исключения из сериализации определенных полей.</span><span class="sxs-lookup"><span data-stu-id="b437e-138">The <xref:System.NonSerializedAttribute> can be used to keep specific fields from being serialized.</span></span>  
   
- При использовании базовой сериализации возможны проблемы с управлением версиями объектов. Если для вас это важно, рассмотрите вариант пользовательской сериализации. Базовая сериализация является самым простым способом сериализации, но не дает почти никакого контроля над процессом.  
+ <span data-ttu-id="b437e-139">При использовании базовой сериализации возможны проблемы с управлением версиями объектов. Если для вас это важно, рассмотрите вариант пользовательской сериализации.</span><span class="sxs-lookup"><span data-stu-id="b437e-139">When you use basic serialization, the versioning of objects may create problems, in which case custom serialization may be preferable.</span></span> <span data-ttu-id="b437e-140">Базовая сериализация является самым простым способом сериализации, но не дает почти никакого контроля над процессом.</span><span class="sxs-lookup"><span data-stu-id="b437e-140">Basic serialization is the easiest way to perform serialization, but it does not provide much control over the process.</span></span>  
   
-### <a name="custom-serialization"></a>Пользовательская сериализация  
- Используя пользовательскую сериализацию, вы можете точно указать, какие объекты и как будут сериализованы. Класс должен иметь отметку <xref:System.SerializableAttribute> и реализовывать интерфейс <xref:System.Runtime.Serialization.ISerializable>.  
+### <a name="custom-serialization"></a><span data-ttu-id="b437e-141">Пользовательская сериализация</span><span class="sxs-lookup"><span data-stu-id="b437e-141">Custom Serialization</span></span>  
+ <span data-ttu-id="b437e-142">Используя пользовательскую сериализацию, вы можете точно указать, какие объекты и как будут сериализованы.</span><span class="sxs-lookup"><span data-stu-id="b437e-142">In custom serialization, you can specify exactly which objects will be serialized and how it will be done.</span></span> <span data-ttu-id="b437e-143">Класс должен иметь отметку <xref:System.SerializableAttribute> и реализовывать интерфейс <xref:System.Runtime.Serialization.ISerializable>.</span><span class="sxs-lookup"><span data-stu-id="b437e-143">The class must be marked <xref:System.SerializableAttribute> and implement the <xref:System.Runtime.Serialization.ISerializable> interface.</span></span>  
   
- Если вы хотите настраивать и десериализацию объекта, необходимо использовать пользовательский конструктор.  
+ <span data-ttu-id="b437e-144">Если вы хотите настраивать и десериализацию объекта, необходимо использовать пользовательский конструктор.</span><span class="sxs-lookup"><span data-stu-id="b437e-144">If you want your object to be deserialized in a custom manner as well, you must use a custom constructor.</span></span>  
   
-## <a name="designer-serialization"></a>Сериализация конструктора  
- Сериализация конструктора — это особая форма сериализации, при которой применяется способ постоянного хранения объектов, обычно используемый в средствах разработки. Сериализация конструктора выполняет преобразование графа объекта в файл исходного кода, с помощью которого впоследствии можно восстановить граф объекта. Этот файл исходного кода может содержать программный код, разметку или даже информацию из таблицы SQL.  
+## <a name="designer-serialization"></a><span data-ttu-id="b437e-145">Сериализация конструктора</span><span class="sxs-lookup"><span data-stu-id="b437e-145">Designer Serialization</span></span>  
+ <span data-ttu-id="b437e-146">Сериализация конструктора — это особая форма сериализации, при которой применяется способ постоянного хранения объектов, обычно используемый в средствах разработки.</span><span class="sxs-lookup"><span data-stu-id="b437e-146">Designer serialization is a special form of serialization that involves the kind of object persistence usually associated with development tools.</span></span> <span data-ttu-id="b437e-147">Сериализация конструктора выполняет преобразование графа объекта в файл исходного кода, с помощью которого впоследствии можно восстановить граф объекта.</span><span class="sxs-lookup"><span data-stu-id="b437e-147">Designer serialization is the process of converting an object graph into a source file that can later be used to recover the object graph.</span></span> <span data-ttu-id="b437e-148">Этот файл исходного кода может содержать программный код, разметку или даже информацию из таблицы SQL.</span><span class="sxs-lookup"><span data-stu-id="b437e-148">A source file can contain code, markup, or even SQL table information.</span></span>  
   
-##  <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры  
- [Walkthrough: Persisting an Object in Visual Studio (C#)](../../../../csharp/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md) (Пошаговое руководство. Сохранение объекта в Visual Studio (C#))  
- Демонстрирует, как с помощью сериализации сохранить данные объекта между экземплярами, чтобы сохранять значения и извлекать их при следующем создании экземпляра объекта.  
+##  <span data-ttu-id="b437e-149"><a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры</span><span class="sxs-lookup"><span data-stu-id="b437e-149"><a name="BKMK_RelatedTopics"></a> Related Topics and Examples</span></span>  
+ <span data-ttu-id="b437e-150">[Walkthrough: Persisting an Object in Visual Studio (C#)](../../../../csharp/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md) (Пошаговое руководство. Сохранение объекта в Visual Studio (C#))</span><span class="sxs-lookup"><span data-stu-id="b437e-150">[Walkthrough: Persisting an Object in Visual Studio (C#)](../../../../csharp/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)</span></span>  
+ <span data-ttu-id="b437e-151">Демонстрирует, как с помощью сериализации сохранить данные объекта между экземплярами, чтобы сохранять значения и извлекать их при следующем создании экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="b437e-151">Demonstrates how serialization can be used to persist an object's data between instances, allowing you to store values and retrieve them the next time the object is instantiated.</span></span>  
   
- [How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (C#))  
- Показывает считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
+ <span data-ttu-id="b437e-152">[How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (C#))</span><span class="sxs-lookup"><span data-stu-id="b437e-152">[How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)</span></span>  
+ <span data-ttu-id="b437e-153">Показывает считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b437e-153">Shows how to read object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
- Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.
-
+ <span data-ttu-id="b437e-154">[How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))</span><span class="sxs-lookup"><span data-stu-id="b437e-154">[How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)</span></span>  
+ <span data-ttu-id="b437e-155">Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b437e-155">Shows how to write the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>

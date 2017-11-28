@@ -1,41 +1,32 @@
 ---
 title: "Сведения о вызывающем объекте (C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="caller-information-c"></a>Сведения о вызывающем объекте (C#)
-С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта. Эти сведения полезны для трассировки, отладки и создания средств диагностики.  
+# <a name="caller-information-c"></a><span data-ttu-id="d9312-102">Сведения о вызывающем объекте (C#)</span><span class="sxs-lookup"><span data-stu-id="d9312-102">Caller Information (C#)</span></span>
+<span data-ttu-id="d9312-103">С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода.</span><span class="sxs-lookup"><span data-stu-id="d9312-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="d9312-104">Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="d9312-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="d9312-105">Эти сведения полезны для трассировки, отладки и создания средств диагностики.</span><span class="sxs-lookup"><span data-stu-id="d9312-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  
   
- Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам, каждый из которых имеет значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ <span data-ttu-id="d9312-106">Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам, каждый из которых имеет значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d9312-106">To obtain this information, you use attributes that are applied to optional parameters, each of which has a default value.</span></span> <span data-ttu-id="d9312-107">В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="d9312-107">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
   
-|Атрибут|Описание|Тип|  
+|<span data-ttu-id="d9312-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="d9312-108">Attribute</span></span>|<span data-ttu-id="d9312-109">Описание</span><span class="sxs-lookup"><span data-stu-id="d9312-109">Description</span></span>|<span data-ttu-id="d9312-110">Тип</span><span class="sxs-lookup"><span data-stu-id="d9312-110">Type</span></span>|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь к файлу во время компиляции.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, в которой вызывается метод.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. См. подраздел [Имена членов](#MEMBERNAMES) ниже.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|<span data-ttu-id="d9312-111">Полный путь исходного файла, содержащего вызывающий объект.</span><span class="sxs-lookup"><span data-stu-id="d9312-111">Full path of the source file that contains the caller.</span></span> <span data-ttu-id="d9312-112">Это путь к файлу во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="d9312-112">This is the file path at compile time.</span></span>|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|<span data-ttu-id="d9312-113">Номер строки в исходном файле, в которой вызывается метод.</span><span class="sxs-lookup"><span data-stu-id="d9312-113">Line number in the source file at which the method is called.</span></span>|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|<span data-ttu-id="d9312-114">Имя свойства или метода вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="d9312-114">Method or property name of the caller.</span></span> <span data-ttu-id="d9312-115">См. подраздел [Имена членов](#MEMBERNAMES) ниже.</span><span class="sxs-lookup"><span data-stu-id="d9312-115">See [Member Names](#MEMBERNAMES) later in this topic.</span></span>|`String`|  
   
-## <a name="example"></a>Пример  
- В следующем примере показано, как использовать информационные атрибуты вызывающего объекта. При каждом вызове метода `TraceMessage` сведения о вызывающем объекте подставляются в качестве аргументов необязательных параметров.  
+## <a name="example"></a><span data-ttu-id="d9312-116">Пример</span><span class="sxs-lookup"><span data-stu-id="d9312-116">Example</span></span>  
+ <span data-ttu-id="d9312-117">В следующем примере показано, как использовать информационные атрибуты вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="d9312-117">The following example shows how to use Caller Info attributes.</span></span> <span data-ttu-id="d9312-118">При каждом вызове метода `TraceMessage` сведения о вызывающем объекте подставляются в качестве аргументов необязательных параметров.</span><span class="sxs-lookup"><span data-stu-id="d9312-118">On each call to the `TraceMessage` method, the caller information is substituted as arguments to the optional parameters.</span></span>  
   
 ```csharp  
 public void DoProcessing()  
@@ -61,37 +52,36 @@ public void TraceMessage(string message,
 //  source line number: 31  
 ```  
   
-## <a name="remarks"></a>Заметки  
- Для каждого необязательного параметра необходимо указать явное значение по умолчанию. Нельзя применять информационные атрибуты вызывающего объекта к параметрам, которые не были указаны как необязательные.  
+## <a name="remarks"></a><span data-ttu-id="d9312-119">Заметки</span><span class="sxs-lookup"><span data-stu-id="d9312-119">Remarks</span></span>  
+ <span data-ttu-id="d9312-120">Для каждого необязательного параметра необходимо указать явное значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d9312-120">You must specify an explicit default value for each optional parameter.</span></span> <span data-ttu-id="d9312-121">Нельзя применять информационные атрибуты вызывающего объекта к параметрам, которые не были указаны как необязательные.</span><span class="sxs-lookup"><span data-stu-id="d9312-121">You can't apply Caller Info attributes to parameters that aren't specified as optional.</span></span>  
   
- Информационные атрибуты вызывающего объекта не делают параметр необязательным. Вместо этого они влияют на значение по умолчанию, которое передается, если аргумент был опущен.  
+ <span data-ttu-id="d9312-122">Информационные атрибуты вызывающего объекта не делают параметр необязательным.</span><span class="sxs-lookup"><span data-stu-id="d9312-122">The Caller Info attributes don't make a parameter optional.</span></span> <span data-ttu-id="d9312-123">Вместо этого они влияют на значение по умолчанию, которое передается, если аргумент был опущен.</span><span class="sxs-lookup"><span data-stu-id="d9312-123">Instead, they affect the default value that's passed in when the argument is omitted.</span></span>  
   
- Информационные значения вызывающего объекта передаются как литералы в IL во время компиляции. В отличие от результатов свойства <xref:System.Exception.StackTrace%2A> для исключений, результаты не затрагиваются запутыванием кода.  
+ <span data-ttu-id="d9312-124">Информационные значения вызывающего объекта передаются как литералы в IL во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="d9312-124">Caller Info values are emitted as literals into the Intermediate Language (IL) at compile time.</span></span> <span data-ttu-id="d9312-125">В отличие от результатов свойства <xref:System.Exception.StackTrace%2A> для исключений, результаты не затрагиваются запутыванием кода.</span><span class="sxs-lookup"><span data-stu-id="d9312-125">Unlike the results of the <xref:System.Exception.StackTrace%2A> property for exceptions, the results aren't affected by obfuscation.</span></span>  
   
- Можно явно передать необязательные аргументы, чтобы управлять сведениями о вызывающем объекте или скрывать сведения о вызывающем объекте.  
+ <span data-ttu-id="d9312-126">Можно явно передать необязательные аргументы, чтобы управлять сведениями о вызывающем объекте или скрывать сведения о вызывающем объекте.</span><span class="sxs-lookup"><span data-stu-id="d9312-126">You can explicitly supply the optional arguments to control the caller information or to hide caller information.</span></span>  
   
-###  <a name="MEMBERNAMES"></a> Имена членов  
- Можно использовать атрибут `CallerMemberName`, чтобы не указывать имя члена в виде аргумента `String` вызываемому методу. Этот прием позволяет избежать проблемы, заключающейся в том, что **операция рефакторинга и переименования** не изменяет значений `String`. Это особенно полезно при выполнении следующих задач:  
+###  <span data-ttu-id="d9312-127"><a name="MEMBERNAMES"></a> Имена членов</span><span class="sxs-lookup"><span data-stu-id="d9312-127"><a name="MEMBERNAMES"></a> Member Names</span></span>  
+ <span data-ttu-id="d9312-128">Можно использовать атрибут `CallerMemberName`, чтобы не указывать имя члена в виде аргумента `String` вызываемому методу.</span><span class="sxs-lookup"><span data-stu-id="d9312-128">You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method.</span></span> <span data-ttu-id="d9312-129">Этот прием позволяет избежать проблемы, заключающейся в том, что **операция рефакторинга и переименования** не изменяет значений `String`.</span><span class="sxs-lookup"><span data-stu-id="d9312-129">By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values.</span></span> <span data-ttu-id="d9312-130">Это особенно полезно при выполнении следующих задач:</span><span class="sxs-lookup"><span data-stu-id="d9312-130">This benefit is especially useful for the following tasks:</span></span>  
   
--   Использование процедур трассировки и диагностики.  
+-   <span data-ttu-id="d9312-131">Использование процедур трассировки и диагностики.</span><span class="sxs-lookup"><span data-stu-id="d9312-131">Using tracing and diagnostic routines.</span></span>  
   
--   Реализация интерфейса <xref:System.ComponentModel.INotifyPropertyChanged> при привязке данных. Этот интерфейс позволяет свойству объекта уведомлять связанный элемент управления об изменении свойства, чтобы элемент управления мог отображать обновленные сведения. Если атрибут `CallerMemberName` не используется, необходимо указать имя свойства как литерал.  
+-   <span data-ttu-id="d9312-132">Реализация интерфейса <xref:System.ComponentModel.INotifyPropertyChanged> при привязке данных.</span><span class="sxs-lookup"><span data-stu-id="d9312-132">Implementing the <xref:System.ComponentModel.INotifyPropertyChanged> interface when binding data.</span></span> <span data-ttu-id="d9312-133">Этот интерфейс позволяет свойству объекта уведомлять связанный элемент управления об изменении свойства, чтобы элемент управления мог отображать обновленные сведения.</span><span class="sxs-lookup"><span data-stu-id="d9312-133">This interface allows the property of an object to notify a bound control that the property has changed, so that the control can display the updated information.</span></span> <span data-ttu-id="d9312-134">Если атрибут `CallerMemberName` не используется, необходимо указать имя свойства как литерал.</span><span class="sxs-lookup"><span data-stu-id="d9312-134">Without the `CallerMemberName` attribute, you must specify the property name as a literal.</span></span>  
   
- В следующей таблице представлены имена членов, возвращаемых при использовании атрибута `CallerMemberName`.  
+ <span data-ttu-id="d9312-135">В следующей таблице представлены имена членов, возвращаемых при использовании атрибута `CallerMemberName`.</span><span class="sxs-lookup"><span data-stu-id="d9312-135">The following chart shows the member names that are returned when you use the `CallerMemberName` attribute.</span></span>  
   
-|Фрагмент кода, в пределах которого происходит вызов|Результат имени члена|  
+|<span data-ttu-id="d9312-136">Фрагмент кода, в пределах которого происходит вызов</span><span class="sxs-lookup"><span data-stu-id="d9312-136">Calls occurs within</span></span>|<span data-ttu-id="d9312-137">Результат имени члена</span><span class="sxs-lookup"><span data-stu-id="d9312-137">Member name result</span></span>|  
 |-------------------------|------------------------|  
-|Метод, свойство или событие|Имя метода, свойства или события, из которого происходил вызов.|  
-|Конструктор|Строка ".ctor"|  
-|Статический конструктор|Строка ".cctor"|  
-|Деструктор|Строка "Finalize"|  
-|Определяемые пользователем операторы и преобразования|Созданное имя члена, например, "op_Addition".|  
-|Конструктора атрибута|Имя члена, к которому применяется атрибут. Если атрибут — любой элемент внутри члена (например, параметр, возвращаемое значение или параметр универсального типа), то результат — имя члена, который связан с этим элементом.|  
-|Нет содержащего члена (например, уровень сборки или атрибуты, примененные к типам)|Значение необязательного параметра по умолчанию.|  
+|<span data-ttu-id="d9312-138">Метод, свойство или событие</span><span class="sxs-lookup"><span data-stu-id="d9312-138">Method, property, or event</span></span>|<span data-ttu-id="d9312-139">Имя метода, свойства или события, из которого происходил вызов.</span><span class="sxs-lookup"><span data-stu-id="d9312-139">The name of the method, property, or event from which the call originated.</span></span>|  
+|<span data-ttu-id="d9312-140">Конструктор</span><span class="sxs-lookup"><span data-stu-id="d9312-140">Constructor</span></span>|<span data-ttu-id="d9312-141">Строка ".ctor"</span><span class="sxs-lookup"><span data-stu-id="d9312-141">The string ".ctor"</span></span>|  
+|<span data-ttu-id="d9312-142">Статический конструктор</span><span class="sxs-lookup"><span data-stu-id="d9312-142">Static constructor</span></span>|<span data-ttu-id="d9312-143">Строка ".cctor"</span><span class="sxs-lookup"><span data-stu-id="d9312-143">The string ".cctor"</span></span>|  
+|<span data-ttu-id="d9312-144">Деструктор</span><span class="sxs-lookup"><span data-stu-id="d9312-144">Destructor</span></span>|<span data-ttu-id="d9312-145">Строка "Finalize"</span><span class="sxs-lookup"><span data-stu-id="d9312-145">The string "Finalize"</span></span>|  
+|<span data-ttu-id="d9312-146">Определяемые пользователем операторы и преобразования</span><span class="sxs-lookup"><span data-stu-id="d9312-146">User-defined operators or conversions</span></span>|<span data-ttu-id="d9312-147">Созданное имя члена, например, "op_Addition".</span><span class="sxs-lookup"><span data-stu-id="d9312-147">The generated name for the member, for example, "op_Addition".</span></span>|  
+|<span data-ttu-id="d9312-148">Конструктора атрибута</span><span class="sxs-lookup"><span data-stu-id="d9312-148">Attribute constructor</span></span>|<span data-ttu-id="d9312-149">Имя члена, к которому применяется атрибут.</span><span class="sxs-lookup"><span data-stu-id="d9312-149">The name of the member to which the attribute is applied.</span></span> <span data-ttu-id="d9312-150">Если атрибут — любой элемент внутри члена (например, параметр, возвращаемое значение или параметр универсального типа), то результат — имя члена, который связан с этим элементом.</span><span class="sxs-lookup"><span data-stu-id="d9312-150">If the attribute is any element within a member (such as a parameter, a return value, or a generic type parameter), this result is the name of the member that's associated with that element.</span></span>|  
+|<span data-ttu-id="d9312-151">Нет содержащего члена (например, уровень сборки или атрибуты, примененные к типам)</span><span class="sxs-lookup"><span data-stu-id="d9312-151">No containing member (for example, assembly-level or attributes that are applied to types)</span></span>|<span data-ttu-id="d9312-152">Значение необязательного параметра по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d9312-152">The default value of the optional parameter.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Общие атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [Основные понятия программирования (C#)](../../../csharp/programming-guide/concepts/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d9312-153">См. также</span><span class="sxs-lookup"><span data-stu-id="d9312-153">See Also</span></span>  
+ [<span data-ttu-id="d9312-154">Атрибуты (C#)</span><span class="sxs-lookup"><span data-stu-id="d9312-154">Attributes (C#)</span></span>](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [<span data-ttu-id="d9312-155">Общие атрибуты (C#)</span><span class="sxs-lookup"><span data-stu-id="d9312-155">Common Attributes (C#)</span></span>](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [<span data-ttu-id="d9312-156">Именованные и необязательные аргументы</span><span class="sxs-lookup"><span data-stu-id="d9312-156">Named and Optional Arguments</span></span>](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [<span data-ttu-id="d9312-157">Основные понятия программирования (C#)</span><span class="sxs-lookup"><span data-stu-id="d9312-157">Programming Concepts (C#)</span></span>](../../../csharp/programming-guide/concepts/index.md)

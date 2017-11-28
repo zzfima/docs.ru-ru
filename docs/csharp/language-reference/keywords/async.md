@@ -1,45 +1,26 @@
 ---
 title: "async (справочник по C#)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="async-c-reference"></a>async (справочник по C#)
-Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*. Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`: 
+# <a name="async-c-reference"></a><span data-ttu-id="4b04b-102">async (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="4b04b-102">async (C# Reference)</span></span>
+<span data-ttu-id="4b04b-103">Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным.</span><span class="sxs-lookup"><span data-stu-id="4b04b-103">Use the `async` modifier to specify that a method, [lambda expression](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), or [anonymous method](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) is asynchronous.</span></span> <span data-ttu-id="4b04b-104">Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*.</span><span class="sxs-lookup"><span data-stu-id="4b04b-104">If you use this modifier on a method or expression, it's referred to as an *async method*.</span></span> <span data-ttu-id="4b04b-105">Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`:</span><span class="sxs-lookup"><span data-stu-id="4b04b-105">The following example defines an async method named `ExampleMethodAsync`:</span></span> 
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -48,22 +29,22 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Следующий код размещается внутри асинхронного метода и вызывает метод <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName>: 
+<span data-ttu-id="4b04b-106">Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="4b04b-106">If you're new to asynchronous programming or do not understand how an async method uses the `await` keyword to do potentially long-running work without blocking the caller’s thread, read the introduction in [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md).</span></span> <span data-ttu-id="4b04b-107">Следующий код размещается внутри асинхронного метода и вызывает метод <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="4b04b-107">The following code is found inside an async method and calls the <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> method:</span></span> 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
 ```  
   
-Асинхронный метод выполняется синхронным образом до тех пор, пока не будет достигнуто первое выражение `await`, после чего метод приостанавливается, пока не будет завершена ожидаемая задача. В то же время управление возвращается в вызывающий объект метода, как показано в примере в следующем разделе.  
+<span data-ttu-id="4b04b-108">Асинхронный метод выполняется синхронным образом до тех пор, пока не будет достигнуто первое выражение `await`, после чего метод приостанавливается, пока не будет завершена ожидаемая задача.</span><span class="sxs-lookup"><span data-stu-id="4b04b-108">An async method runs synchronously until it reaches its first `await` expression, at which point the method is suspended until the awaited task is complete.</span></span> <span data-ttu-id="4b04b-109">В то же время управление возвращается в вызывающий объект метода, как показано в примере в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="4b04b-109">In the meantime, control returns to the caller of the method, as the example in the next section shows.</span></span>  
   
-Если метод, который изменяется ключевым словом `async`, не содержит выражения или оператора `await`, метод выполняется синхронно. Компилятор выводит предупреждения обо всех асинхронных методах, не содержащих операторы `await`, поскольку такая ситуация может указывать на ошибку. См. раздел [Предупреждение компилятора (уровень 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).  
+<span data-ttu-id="4b04b-110">Если метод, который изменяется ключевым словом `async`, не содержит выражения или оператора `await`, метод выполняется синхронно.</span><span class="sxs-lookup"><span data-stu-id="4b04b-110">If the method that the `async` keyword modifies doesn't contain an `await` expression or statement, the method executes synchronously.</span></span> <span data-ttu-id="4b04b-111">Компилятор выводит предупреждения обо всех асинхронных методах, не содержащих операторы `await`, поскольку такая ситуация может указывать на ошибку.</span><span class="sxs-lookup"><span data-stu-id="4b04b-111">A compiler warning alerts you to any async methods that don't contain `await` statements, because that situation might indicate an error.</span></span> <span data-ttu-id="4b04b-112">См. раздел [Предупреждение компилятора (уровень 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).</span><span class="sxs-lookup"><span data-stu-id="4b04b-112">See [Compiler Warning (level 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).</span></span>  
   
- Ключевое слово `async` — это контекстно-зависимо ключевое слово, которое является ключевым словом, когда оно изменяет метод, лямбда-выражение или анонимный метод. Во всех других контекстах он интерпретируется как идентификатор.  
+ <span data-ttu-id="4b04b-113">Ключевое слово `async` — это контекстно-зависимо ключевое слово, которое является ключевым словом, когда оно изменяет метод, лямбда-выражение или анонимный метод.</span><span class="sxs-lookup"><span data-stu-id="4b04b-113">The `async` keyword is contextual in that it's a keyword only when it modifies a method, a lambda expression, or an anonymous method.</span></span> <span data-ttu-id="4b04b-114">Во всех других контекстах он интерпретируется как идентификатор.</span><span class="sxs-lookup"><span data-stu-id="4b04b-114">In all other contexts, it's interpreted as an identifier.</span></span>  
   
-## <a name="example"></a>Пример  
-В следующем примере показана структура и поток управления между обработчиком асинхронных событий `StartButton_Click` и асинхронным методом `ExampleMethodAsync`. В результате выполнения этого асинхронного метода возвращается число символов на веб-странице. Код подходит для приложения Windows Presentation Foundation (WPF) или приложения для Магазина Windows Presentation Foundation (WPF), которые создаются в Visual Studio; см. комментарии к коду для настройки приложения.  
+## <a name="example"></a><span data-ttu-id="4b04b-115">Пример</span><span class="sxs-lookup"><span data-stu-id="4b04b-115">Example</span></span>  
+<span data-ttu-id="4b04b-116">В следующем примере показана структура и поток управления между обработчиком асинхронных событий `StartButton_Click` и асинхронным методом `ExampleMethodAsync`.</span><span class="sxs-lookup"><span data-stu-id="4b04b-116">The following example shows the structure and flow of control between an async event handler, `StartButton_Click`, and an async method, `ExampleMethodAsync`.</span></span> <span data-ttu-id="4b04b-117">В результате выполнения этого асинхронного метода возвращается число символов на веб-странице.</span><span class="sxs-lookup"><span data-stu-id="4b04b-117">The result from the async method is the number of characters of a web page.</span></span> <span data-ttu-id="4b04b-118">Код подходит для приложения Windows Presentation Foundation (WPF) или приложения для Магазина Windows Presentation Foundation (WPF), которые создаются в Visual Studio; см. комментарии к коду для настройки приложения.</span><span class="sxs-lookup"><span data-stu-id="4b04b-118">The code is suitable for a Windows Presentation Foundation (WPF) app or Windows Store app that you create in Visual Studio; see the code comments for setting up the app.</span></span>  
 
-Этот код можно выполнить в Visual Studio как приложение Windows Presentation Foundation (WPF) или приложение Магазина Windows. Вам понадобятся элементы управления типа "Кнопка" (`StartButton`) и "Текстовое поле" (`ResultsTextBox`). Не забудьте задать имена и обработчик, чтобы получить код следующего вида:  
+<span data-ttu-id="4b04b-119">Этот код можно выполнить в Visual Studio как приложение Windows Presentation Foundation (WPF) или приложение Магазина Windows.</span><span class="sxs-lookup"><span data-stu-id="4b04b-119">You can run this code in Visual Studio as a Windows Presentation Foundation (WPF) app or a Windows Store app.</span></span> <span data-ttu-id="4b04b-120">Вам понадобятся элементы управления типа "Кнопка" (`StartButton`) и "Текстовое поле" (`ResultsTextBox`).</span><span class="sxs-lookup"><span data-stu-id="4b04b-120">You need a Button control named `StartButton` and a Textbox control named `ResultsTextBox`.</span></span> <span data-ttu-id="4b04b-121">Не забудьте задать имена и обработчик, чтобы получить код следующего вида:</span><span class="sxs-lookup"><span data-stu-id="4b04b-121">Remember to set the names and handler so that you have something like this:</span></span>  
 
 ```xaml
 <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
@@ -72,42 +53,41 @@ string contents = await httpClient.GetStringAsync(requestUrl);
          Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
 ```
   
-Выполнение кода в виде приложения WPF:  
+<span data-ttu-id="4b04b-122">Выполнение кода в виде приложения WPF:</span><span class="sxs-lookup"><span data-stu-id="4b04b-122">To run the code as a WPF app:</span></span>  
 
-- Вставьте этот код в класс `MainWindow` в MainWindow.xaml.cs.  
-- Добавьте ссылку на System.Net.Http.  
-- Добавьте директиву `using` для System.Net.Http.  
+- <span data-ttu-id="4b04b-123">Вставьте этот код в класс `MainWindow` в MainWindow.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="4b04b-123">Paste this code into the `MainWindow` class in MainWindow.xaml.cs.</span></span>  
+- <span data-ttu-id="4b04b-124">Добавьте ссылку на System.Net.Http.</span><span class="sxs-lookup"><span data-stu-id="4b04b-124">Add a reference to System.Net.Http.</span></span>  
+- <span data-ttu-id="4b04b-125">Добавьте директиву `using` для System.Net.Http.</span><span class="sxs-lookup"><span data-stu-id="4b04b-125">Add a `using` directive for System.Net.Http.</span></span>  
   
-Выполнение кода в виде приложения Магазина Windows:  
-- Вставьте этот код в класс `MainPage` в MainPage.xaml.cs.  
-- Добавьте директивы using для System.Net.Http и System.Threading.Tasks.  
+<span data-ttu-id="4b04b-126">Выполнение кода в виде приложения Магазина Windows:</span><span class="sxs-lookup"><span data-stu-id="4b04b-126">To run the code as a Windows Store app:</span></span>  
+- <span data-ttu-id="4b04b-127">Вставьте этот код в класс `MainPage` в MainPage.xaml.cs.</span><span class="sxs-lookup"><span data-stu-id="4b04b-127">Paste this code into the `MainPage` class in MainPage.xaml.cs.</span></span>  
+- <span data-ttu-id="4b04b-128">Добавьте директивы using для System.Net.Http и System.Threading.Tasks.</span><span class="sxs-lookup"><span data-stu-id="4b04b-128">Add using directives for System.Net.Http and System.Threading.Tasks.</span></span>  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  Дополнительные сведения о задачах и коде, который выполняется во время ожидания задачи, см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Полный пример приложения WPF, в котором используются аналогичные элементы, см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+>  <span data-ttu-id="4b04b-129">Дополнительные сведения о задачах и коде, который выполняется во время ожидания задачи, см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="4b04b-129">For more information about tasks and the code that executes while waiting for a task, see [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md).</span></span> <span data-ttu-id="4b04b-130">Полный пример приложения WPF, в котором используются аналогичные элементы, см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span><span class="sxs-lookup"><span data-stu-id="4b04b-130">For a full WPF example that uses similar elements, see [Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
-Асинхронные методы могут иметь следующие типы возвращаемых значений:
+## <a name="return-types"></a><span data-ttu-id="4b04b-131">Типы возвращаемых значений</span><span class="sxs-lookup"><span data-stu-id="4b04b-131">Return Types</span></span>  
+<span data-ttu-id="4b04b-132">Асинхронные методы могут иметь следующие типы возвращаемых значений:</span><span class="sxs-lookup"><span data-stu-id="4b04b-132">An async method can have the following return types:</span></span>
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md): следует использовать только для обработчиков событий.
-- Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Одной из таких реализаций является тип `System.Threading.Tasks.ValueTask<TResult>`. Доступ к нему осуществляется посредством пакета NuGet `System.Threading.Tasks.Extensions`. 
+- <span data-ttu-id="4b04b-133">[void](../../../csharp/language-reference/keywords/void.md): следует использовать только для обработчиков событий.</span><span class="sxs-lookup"><span data-stu-id="4b04b-133">[void](../../../csharp/language-reference/keywords/void.md), which should only be used for event handlers.</span></span>
+- <span data-ttu-id="4b04b-134">Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`.</span><span class="sxs-lookup"><span data-stu-id="4b04b-134">Starting with C# 7, any type that has an accessible `GetAwaiter` method.</span></span> <span data-ttu-id="4b04b-135">Одной из таких реализаций является тип `System.Threading.Tasks.ValueTask<TResult>`.</span><span class="sxs-lookup"><span data-stu-id="4b04b-135">The `System.Threading.Tasks.ValueTask<TResult>` type is one such implementation.</span></span> <span data-ttu-id="4b04b-136">Доступ к нему осуществляется посредством пакета NuGet `System.Threading.Tasks.Extensions`.</span><span class="sxs-lookup"><span data-stu-id="4b04b-136">It is available by adding the NuGet package `System.Threading.Tasks.Extensions`.</span></span> 
 
-Асинхронный метод не может объявлять параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md), а также иметь <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->ссылочное возвращаемое значение, однако он может вызывать методы с такими параметрами.  
+<span data-ttu-id="4b04b-137">Асинхронный метод не может объявлять параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md), а также иметь <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->ссылочное возвращаемое значение, однако он может вызывать методы с такими параметрами.</span><span class="sxs-lookup"><span data-stu-id="4b04b-137">The async method can't declare any [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) parameters, nor can it have a <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->reference return value, but it can call methods that have such parameters.</span></span>  
   
-`Task<TResult>` указывается в качестве возвращаемого типа асинхронного метода, если оператор [return](../../../csharp/language-reference/keywords/return.md) метода задает операнд типа `TResult`. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. То есть вызов метода возвращает `Task`, однако когда `Task` завершен, любое выражение `await`, которое ожидает `Task`, возвращает значение `void`.  
+<span data-ttu-id="4b04b-138">`Task<TResult>` указывается в качестве возвращаемого типа асинхронного метода, если оператор [return](../../../csharp/language-reference/keywords/return.md) метода задает операнд типа `TResult`.</span><span class="sxs-lookup"><span data-stu-id="4b04b-138">You specify `Task<TResult>` as the return type of an async method if the [return](../../../csharp/language-reference/keywords/return.md) statement of the method specifies an operand of type `TResult`.</span></span> <span data-ttu-id="4b04b-139">Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении.</span><span class="sxs-lookup"><span data-stu-id="4b04b-139">You use `Task` if no meaningful value is returned when the method is completed.</span></span> <span data-ttu-id="4b04b-140">То есть вызов метода возвращает `Task`, однако когда `Task` завершен, любое выражение `await`, которое ожидает `Task`, возвращает значение `void`.</span><span class="sxs-lookup"><span data-stu-id="4b04b-140">That is, a call to the method returns a `Task`, but when the `Task` is completed, any `await` expression that's awaiting the `Task` evaluates to `void`.</span></span>  
   
-Возвращаемый тип `void` используется в основном для определения обработчиков событий, которые требуют этого возвращаемого типа. Вызывающий объект асинхронного метода, возвращающего `void`, не может ожидать его и перехватывать создаваемые методом исключения.  
+<span data-ttu-id="4b04b-141">Возвращаемый тип `void` используется в основном для определения обработчиков событий, которые требуют этого возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="4b04b-141">You use the `void` return type primarily to define event handlers, which require that return type.</span></span> <span data-ttu-id="4b04b-142">Вызывающий объект асинхронного метода, возвращающего `void`, не может ожидать его и перехватывать создаваемые методом исключения.</span><span class="sxs-lookup"><span data-stu-id="4b04b-142">The caller of a `void`-returning async method can't await it and can't catch exceptions that the method throws.</span></span>  
 
-Начиная с версии C# 7 возвращается другой тип, как правило, тип значений, с методом `GetAwaiter`, что позволяет свести к минимуму объем выделяемой памяти в разделах кода с критическими требованиями к производительности. 
+<span data-ttu-id="4b04b-143">Начиная с версии C# 7 возвращается другой тип, как правило, тип значений, с методом `GetAwaiter`, что позволяет свести к минимуму объем выделяемой памяти в разделах кода с критическими требованиями к производительности.</span><span class="sxs-lookup"><span data-stu-id="4b04b-143">Starting with C# 7, you return another type, typically a value type, that has a `GetAwaiter` method to miminize memory allocations in performance-critical sections of code.</span></span> 
 
-Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+<span data-ttu-id="4b04b-144">Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../csharp/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="4b04b-144">For more information and examples, see [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="4b04b-145">См. также</span><span class="sxs-lookup"><span data-stu-id="4b04b-145">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [<span data-ttu-id="4b04b-146">await</span><span class="sxs-lookup"><span data-stu-id="4b04b-146">await</span></span>](../../../csharp/language-reference/keywords/await.md)  
+ [<span data-ttu-id="4b04b-147">Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await</span><span class="sxs-lookup"><span data-stu-id="4b04b-147">Walkthrough: Accessing the Web by Using Async and Await</span></span>](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="4b04b-148">Асинхронное программирование с использованием ключевых слов async и await</span><span class="sxs-lookup"><span data-stu-id="4b04b-148">Asynchronous Programming with async and await</span></span>](../../../csharp/programming-guide/concepts/async/index.md)

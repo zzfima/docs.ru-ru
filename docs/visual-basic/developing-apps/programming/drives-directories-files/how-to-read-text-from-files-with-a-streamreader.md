@@ -1,69 +1,50 @@
 ---
 title: "Практическое руководство. Чтение текста из файлов с помощью StreamReader (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- reading files, text
+- reading files [Visual Basic], text
 - text, reading from files
-- reading text from files
-- files, reading
+- reading text from files [Visual Basic]
+- files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 834657f80a9f3841e8f30e457c373510dec6d17d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d895b32b1613462a6c8dedcc19040b5040f936ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Практическое руководство. Чтение текста из файлов с помощью StreamReader (Visual Basic)
-Объект `My.Computer.FileSystem` предоставляет методы для открытия <xref:System.IO.TextReader> и <xref:System.IO.TextWriter>. Методы `OpenTextFileWriter` и `OpenTextFileReader` являются дополнительными методами и отображаются в IntelliSense, только если выбрана вкладка **Все**.  
+# <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a><span data-ttu-id="65bff-102">Практическое руководство. Чтение текста из файлов с помощью StreamReader (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65bff-102">How to: Read Text from Files with a StreamReader (Visual Basic)</span></span>
+<span data-ttu-id="65bff-103">Объект `My.Computer.FileSystem` предоставляет методы для открытия <xref:System.IO.TextReader> и <xref:System.IO.TextWriter>.</span><span class="sxs-lookup"><span data-stu-id="65bff-103">The `My.Computer.FileSystem` object provides methods to open a <xref:System.IO.TextReader> and a <xref:System.IO.TextWriter>.</span></span> <span data-ttu-id="65bff-104">Методы `OpenTextFileWriter` и `OpenTextFileReader` являются дополнительными методами и отображаются в IntelliSense, только если выбрана вкладка **Все**.</span><span class="sxs-lookup"><span data-stu-id="65bff-104">These methods, `OpenTextFileWriter` and `OpenTextFileReader`, are advanced methods that do not appear in IntelliSense unless you select the **All** tab.</span></span>  
   
-### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Чтение строки из файла с помощью средства чтения текста  
+### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a><span data-ttu-id="65bff-105">Чтение строки из файла с помощью средства чтения текста</span><span class="sxs-lookup"><span data-stu-id="65bff-105">To read a line from a file with a text reader</span></span>  
   
--   Используйте `OpenTextFileReader` метод, чтобы открыть <xref:System.IO.TextReader>, указав файл. В этом примере открывается файл с именем `testfile.txt`, считывается строка из него и отображается в окне сообщения.  
+-   <span data-ttu-id="65bff-106">Используйте `OpenTextFileReader` метод, чтобы открыть <xref:System.IO.TextReader>, указав файл.</span><span class="sxs-lookup"><span data-stu-id="65bff-106">Use the `OpenTextFileReader` method to open the <xref:System.IO.TextReader>, specifying the file.</span></span> <span data-ttu-id="65bff-107">В этом примере открывается файл с именем `testfile.txt`, считывается строка из него и отображается в окне сообщения.</span><span class="sxs-lookup"><span data-stu-id="65bff-107">This example opens the file named `testfile.txt`, reads a line from it, and displays the line in a message box.</span></span>  
   
      [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
   
-## <a name="robust-programming"></a>Отказоустойчивость  
- Файл, который считывается, должен быть текстовым файлом.  
+## <a name="robust-programming"></a><span data-ttu-id="65bff-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="65bff-108">Robust Programming</span></span>  
+ <span data-ttu-id="65bff-109">Файл, который считывается, должен быть текстовым файлом.</span><span class="sxs-lookup"><span data-stu-id="65bff-109">The file that is read must be a text file.</span></span>  
   
- По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic.  
+ <span data-ttu-id="65bff-110">По имени файла не всегда можно с уверенностью судить о его содержимом.</span><span class="sxs-lookup"><span data-stu-id="65bff-110">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="65bff-111">Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="65bff-111">For example, the file Form1.vb may not be a Visual Basic source file.</span></span>  
   
- Следует проверять все входные данные перед использованием их в приложении. Содержимое файла может отличаться от ожидаемого, поэтому может не удаться прочесть файл с помощью методов чтения.  
+ <span data-ttu-id="65bff-112">Следует проверять все входные данные перед использованием их в приложении.</span><span class="sxs-lookup"><span data-stu-id="65bff-112">Verify all inputs before using the data in your application.</span></span> <span data-ttu-id="65bff-113">Содержимое файла может отличаться от ожидаемого, поэтому может не удаться прочесть файл с помощью методов чтения.</span><span class="sxs-lookup"><span data-stu-id="65bff-113">The contents of the file may not be what is expected, and methods to read from the file may fail.</span></span>  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Для чтения из файла сборке требуется уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.FileIOPermission>. Если код выполняется в контексте частичного доверия, исключение может возникнуть из-за недостатка прав доступа. Дополнительные сведения см. в разделе [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8). Пользователь также должен иметь доступ к файлу. Дополнительные сведения см. в разделе [Общие сведения о технологии ACL](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045).  
+## <a name="net-framework-security"></a><span data-ttu-id="65bff-114">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="65bff-114">.NET Framework Security</span></span>  
+ <span data-ttu-id="65bff-115">Для чтения из файла сборке требуется уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.FileIOPermission>.</span><span class="sxs-lookup"><span data-stu-id="65bff-115">To read from a file, your assembly requires a privilege level granted by the <xref:System.Security.Permissions.FileIOPermission> class.</span></span> <span data-ttu-id="65bff-116">Если код выполняется в контексте частичного доверия, исключение может возникнуть из-за недостатка прав доступа.</span><span class="sxs-lookup"><span data-stu-id="65bff-116">If you are running in a partial-trust context, the code might throw an exception due to insufficient privileges.</span></span> <span data-ttu-id="65bff-117">Дополнительные сведения см. в разделе [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8).</span><span class="sxs-lookup"><span data-stu-id="65bff-117">For more information, see [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8).</span></span> <span data-ttu-id="65bff-118">Пользователь также должен иметь доступ к файлу.</span><span class="sxs-lookup"><span data-stu-id="65bff-118">The user also needs access to the file.</span></span> <span data-ttu-id="65bff-119">Дополнительные сведения см. в разделе [Общие сведения о технологии ACL](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045).</span><span class="sxs-lookup"><span data-stu-id="65bff-119">For more information, see [ACL Technology Overview](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045).</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:System.Windows.Forms.OpenFileDialog>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>   
- [Компонент SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)   
- [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-
+## <a name="see-also"></a><span data-ttu-id="65bff-120">См. также</span><span class="sxs-lookup"><span data-stu-id="65bff-120">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:System.Windows.Forms.OpenFileDialog>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
+ [<span data-ttu-id="65bff-121">Компонент SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="65bff-121">SaveFileDialog Component</span></span>](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)  
+ [<span data-ttu-id="65bff-122">Чтение из файлов</span><span class="sxs-lookup"><span data-stu-id="65bff-122">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

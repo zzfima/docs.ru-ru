@@ -1,35 +1,26 @@
 ---
 title: "Пример XML-файла. Объединенные заказы на покупку2"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a6cf08959792e2d491ee6aede59abeeac50e1700
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81699b266e67c006a707a3941349a41189a3b442
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>Пример XML-файла. Объединенные заказы на покупку
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл представляет собой набор заказов на покупку в различных формах от нескольких компаний. Заказы на покупку от каждой компании располагаются в отдельном пространстве имен.  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="cd89f-102">Пример XML-файла. Объединенные заказы на покупку</span><span class="sxs-lookup"><span data-stu-id="cd89f-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="cd89f-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd89f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cd89f-104">Этот файл представляет собой набор заказов на покупку в различных формах от нескольких компаний.</span><span class="sxs-lookup"><span data-stu-id="cd89f-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="cd89f-105">Заказы на покупку от каждой компании располагаются в отдельном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="cd89f-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="cd89f-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="cd89f-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -161,6 +152,5 @@ ms.lasthandoff: 07/28/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="cd89f-107">См. также</span><span class="sxs-lookup"><span data-stu-id="cd89f-107">See Also</span></span>  
+ [<span data-ttu-id="cd89f-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cd89f-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

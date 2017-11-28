@@ -1,33 +1,29 @@
 ---
 title: "Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 215c32d0879f13ad4ec262bc916de5868ba030e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24a9eee962554ac6082dd4df5676d7e169912583
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (C#)
-В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>. Этот метод получает коллекцию дочерних элементов того или иного элемента.  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a><span data-ttu-id="a8326-102">Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a8326-102">How to: Retrieve a Collection of Elements (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="a8326-103">В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="a8326-103">This topic demonstrates the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="a8326-104">Этот метод получает коллекцию дочерних элементов того или иного элемента.</span><span class="sxs-lookup"><span data-stu-id="a8326-104">This method retrieves a collection of the child elements of an element.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере выполняется итерация по дочерним элементам элемента `purchaseOrder`.  
+## <a name="example"></a><span data-ttu-id="a8326-105">Пример</span><span class="sxs-lookup"><span data-stu-id="a8326-105">Example</span></span>  
+ <span data-ttu-id="a8326-106">В этом примере выполняется итерация по дочерним элементам элемента `purchaseOrder`.</span><span class="sxs-lookup"><span data-stu-id="a8326-106">This example iterates through the child elements of the `purchaseOrder` element.</span></span>  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ <span data-ttu-id="a8326-107">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="a8326-107">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -38,7 +34,7 @@ foreach (XElement el in childElements)
     Console.WriteLine("Name: " + el.Name);  
 ```  
   
- В этом примере формируются следующие данные:  
+ <span data-ttu-id="a8326-108">В этом примере формируются следующие данные:</span><span class="sxs-lookup"><span data-stu-id="a8326-108">This example produces the following output.</span></span>  
   
 ```  
 Name: Address  
@@ -47,6 +43,5 @@ Name: DeliveryNotes
 Name: Items  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-
+## <a name="see-also"></a><span data-ttu-id="a8326-109">См. также</span><span class="sxs-lookup"><span data-stu-id="a8326-109">See Also</span></span>  
+ [<span data-ttu-id="a8326-110">Оси LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a8326-110">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

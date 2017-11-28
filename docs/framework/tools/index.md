@@ -5,148 +5,140 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command line, .NET Framework tools
 - .NET Framework, tools
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 777c78a1ee296fd92d48547aeb53a083afa95b28
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bee585074a444e8df5d67e035d5e0b65d292f8ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="net-framework-tools"></a>Инструменты .NET Framework
-Назначение средств .NET Framework состоит в том, чтобы облегчить создание, развертывание и администрирование приложений и компонентов, предназначенных для .NET Framework.  
+# <a name="net-framework-tools"></a><span data-ttu-id="d42fd-102">Инструменты .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d42fd-102">.NET Framework Tools</span></span>
+<span data-ttu-id="d42fd-103">Назначение средств .NET Framework состоит в том, чтобы облегчить создание, развертывание и администрирование приложений и компонентов, предназначенных для .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d42fd-103">The .NET Framework tools make it easier for you to create, deploy, and manage applications and components that target the .NET Framework.</span></span>  
   
- Большинство инструментов .NET Framework, описание которых дано в этом разделе, устанавливаются автоматически вместе с Visual Studio. (Сведения об установке см. в разделе [Загрузки Visual Studio](http://go.microsoft.com/fwlink/?LinkID=325532).)  
+ <span data-ttu-id="d42fd-104">Большинство инструментов .NET Framework, описание которых дано в этом разделе, устанавливаются автоматически вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d42fd-104">Most of the .NET Framework tools described in this section are automatically installed with Visual Studio.</span></span> <span data-ttu-id="d42fd-105">(Сведения об установке см. в разделе [Загрузки Visual Studio](http://go.microsoft.com/fwlink/?LinkID=325532).)</span><span class="sxs-lookup"><span data-stu-id="d42fd-105">(For installation information , see the [Visual Studio Downloads](http://go.microsoft.com/fwlink/?LinkID=325532).)</span></span>  
   
- Все программы, за исключением средства просмотра кэша сборок (Shfusion.dll), запускаются из командной строки. Доступ к библиотеке "Shfusion.dll" осуществляется из проводника.  
+ <span data-ttu-id="d42fd-106">Все программы, за исключением средства просмотра кэша сборок (Shfusion.dll), запускаются из командной строки.</span><span class="sxs-lookup"><span data-stu-id="d42fd-106">You can run all the tools from the command line with the exception of the Assembly Cache Viewer (Shfusion.dll).</span></span> <span data-ttu-id="d42fd-107">Доступ к библиотеке "Shfusion.dll" осуществляется из проводника.</span><span class="sxs-lookup"><span data-stu-id="d42fd-107">You must access Shfusion.dll from File Explorer.</span></span>  
   
- Для запуска этих программ командной строки рекомендуется использовать командную строку разработчика для Visual Studio. Эти служебные программы позволяют запустить средства легко, без перемещения в папку установки. Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="d42fd-108">Для запуска этих программ командной строки рекомендуется использовать командную строку разработчика для Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d42fd-108">The best way to run the command-line tools is by using the Developer Command Prompt for Visual Studio.</span></span> <span data-ttu-id="d42fd-109">Эти служебные программы позволяют запустить средства легко, без перемещения в папку установки.</span><span class="sxs-lookup"><span data-stu-id="d42fd-109">These utilities enable you to run the tools easily, without navigating to the installation folder.</span></span> <span data-ttu-id="d42fd-110">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="d42fd-110">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
 > [!NOTE]
->  Некоторые средства относятся либо к 32-разрядным компьютерам, либо к 64-разрядным компьютерам. Обязательно проверьте, подходит ли запускаемая версия программы для локального компьютера.  
+>  <span data-ttu-id="d42fd-111">Некоторые средства относятся либо к 32-разрядным компьютерам, либо к 64-разрядным компьютерам.</span><span class="sxs-lookup"><span data-stu-id="d42fd-111">Some tools are specific to either 32-bit computers or 64-bit computers.</span></span> <span data-ttu-id="d42fd-112">Обязательно проверьте, подходит ли запускаемая версия программы для локального компьютера.</span><span class="sxs-lookup"><span data-stu-id="d42fd-112">Be sure to run the appropriate version of the tool for your computer.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- Создает файл, обладающий манифестом сборки из модулей или файлов ресурсов.  
+## <a name="in-this-section"></a><span data-ttu-id="d42fd-113">Содержание</span><span class="sxs-lookup"><span data-stu-id="d42fd-113">In This Section</span></span>  
+ [<span data-ttu-id="d42fd-114">Al.exe (компоновщик сборок)</span><span class="sxs-lookup"><span data-stu-id="d42fd-114">Al.exe (Assembly Linker)</span></span>](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ <span data-ttu-id="d42fd-115">Создает файл, обладающий манифестом сборки из модулей или файлов ресурсов.</span><span class="sxs-lookup"><span data-stu-id="d42fd-115">Generates a file that has an assembly manifest from modules or resource files.</span></span>  
   
- [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
- Преобразует определения типов для элемента управления ActiveX из библиотеки типов COM в элемент управления Windows Forms.  
+ [<span data-ttu-id="d42fd-116">Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d42fd-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ <span data-ttu-id="d42fd-117">Преобразует определения типов для элемента управления ActiveX из библиотеки типов COM в элемент управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="d42fd-117">Converts type definitions in a COM type library for an ActiveX control into a Windows Forms control.</span></span>  
   
- [Caspol.exe (средство настройки политики управления доступом для кода)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Позволяют просматривать и настраивать политику безопасности на уровне политики компьютера, пользователя и предприятия. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] и более поздних версиях эта программа не влияет на политику разграничения доступа кода, если только для элемента [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) не задано значение `true`. Дополнительные сведения см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
+ [<span data-ttu-id="d42fd-118">Caspol.exe (средство настройки политики управления доступом для кода)</span><span class="sxs-lookup"><span data-stu-id="d42fd-118">Caspol.exe (Code Access Security Policy Tool)</span></span>](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
+ <span data-ttu-id="d42fd-119">Позволяют просматривать и настраивать политику безопасности на уровне политики компьютера, пользователя и предприятия.</span><span class="sxs-lookup"><span data-stu-id="d42fd-119">Enables you to view and configure security policy for the machine policy level, the user policy level, and the enterprise policy level.</span></span> <span data-ttu-id="d42fd-120">В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] и более поздних версиях эта программа не влияет на политику разграничения доступа кода, если только для элемента [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) не задано значение `true`.</span><span class="sxs-lookup"><span data-stu-id="d42fd-120">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] and later, this tool does not affect code access security (CAS) policy unless the [\<legacyCasPolicy> element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) is set to `true`.</span></span> <span data-ttu-id="d42fd-121">Дополнительные сведения см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).</span><span class="sxs-lookup"><span data-stu-id="d42fd-121">For more information, see [Security Changes](../../../docs/framework/security/security-changes.md).</span></span>  
   
- [Cert2spc.exe (средство проверки сертификата издателя программного обеспечения)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
- Создает сертификат издателя программного обеспечения (SPC) из одного или более сертификатов X.509. Этот инструмент предназначен только для тестирования.  
+ [<span data-ttu-id="d42fd-122">Cert2spc.exe (средство проверки сертификата издателя программного обеспечения)</span><span class="sxs-lookup"><span data-stu-id="d42fd-122">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
+ <span data-ttu-id="d42fd-123">Создает сертификат издателя программного обеспечения (SPC) из одного или более сертификатов X.509.</span><span class="sxs-lookup"><span data-stu-id="d42fd-123">Creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="d42fd-124">Этот инструмент предназначен только для тестирования.</span><span class="sxs-lookup"><span data-stu-id="d42fd-124">This tool is for testing purposes only.</span></span>  
   
- [Certmgr.exe (средство диспетчера сертификатов)](../../../docs/framework/tools/certmgr-exe-certificate-manager-tool.md)  
- Управляет сертификатами, списками доверенных сертификатов (CTL) и списками отзыва сертификатов (CRL).  
+ [<span data-ttu-id="d42fd-125">Certmgr.exe (средство диспетчера сертификатов)</span><span class="sxs-lookup"><span data-stu-id="d42fd-125">Certmgr.exe (Certificate Manager Tool)</span></span>](../../../docs/framework/tools/certmgr-exe-certificate-manager-tool.md)  
+ <span data-ttu-id="d42fd-126">Управляет сертификатами, списками доверенных сертификатов (CTL) и списками отзыва сертификатов (CRL).</span><span class="sxs-lookup"><span data-stu-id="d42fd-126">Manages certificates, certificate trust lists (CTLs), and certificate revocation lists (CRLs).</span></span>  
   
- [Clrver.exe (средство проверки версий среды CLR)](../../../docs/framework/tools/clrver-exe-clr-version-tool.md)  
- Выводит отчет о всех установленных на компьютере версиях среды CLR.  
+ [<span data-ttu-id="d42fd-127">Clrver.exe (средство проверки версий среды CLR)</span><span class="sxs-lookup"><span data-stu-id="d42fd-127">Clrver.exe (CLR Version Tool)</span></span>](../../../docs/framework/tools/clrver-exe-clr-version-tool.md)  
+ <span data-ttu-id="d42fd-128">Выводит отчет о всех установленных на компьютере версиях среды CLR.</span><span class="sxs-lookup"><span data-stu-id="d42fd-128">reports all the installed versions of the common language runtime (CLR) on the computer.</span></span>  
   
- [CorFlags.exe (средство преобразования CorFlags)](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
- Позволяет настраивать раздел CorFlags заголовка переносимого исполняемого (PE) образа.  
+ [<span data-ttu-id="d42fd-129">CorFlags.exe (средство преобразования CorFlags)</span><span class="sxs-lookup"><span data-stu-id="d42fd-129">CorFlags.exe (CorFlags Conversion Tool)</span></span>](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
+ <span data-ttu-id="d42fd-130">Позволяет настраивать раздел CorFlags заголовка переносимого исполняемого (PE) образа.</span><span class="sxs-lookup"><span data-stu-id="d42fd-130">Lets you configure the CorFlags section of the header of a portable executable (PE) image.</span></span>  
   
- [Fuslogvw.exe (средство просмотра журнала привязки сборок)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
- Отображает сведения о привязках сборки, помогающие определить, почему платформа .NET Framework не может найти сборку во время выполнения.  
+ [<span data-ttu-id="d42fd-131">Fuslogvw.exe (средство просмотра журнала привязки сборок)</span><span class="sxs-lookup"><span data-stu-id="d42fd-131">Fuslogvw.exe (Assembly Binding Log Viewer)</span></span>](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
+ <span data-ttu-id="d42fd-132">Отображает сведения о привязках сборки, помогающие определить, почему платформа .NET Framework не может найти сборку во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="d42fd-132">Displays information about assembly binds to help you diagnose why the .NET Framework cannot locate an assembly at run time.</span></span>  
   
- [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- Позволяет просматривать содержимое глобального кэша сборок и кэша загрузки и выполнять различные операции с этим содержимым.  
+ [<span data-ttu-id="d42fd-133">Gacutil.exe (программа глобального кэша сборок)</span><span class="sxs-lookup"><span data-stu-id="d42fd-133">Gacutil.exe (Global Assembly Cache Tool)</span></span>](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
+ <span data-ttu-id="d42fd-134">Позволяет просматривать содержимое глобального кэша сборок и кэша загрузки и выполнять различные операции с этим содержимым.</span><span class="sxs-lookup"><span data-stu-id="d42fd-134">Lets you view and manipulate the contents of the global assembly cache and download cache.</span></span>  
   
- [Ilasm.exe (ассемблер IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- Создает переносимый исполняемый файл (PE) из файла промежуточного языка (IL). Можно запустить полученный исполняемый файл, чтобы проверить, выполняется ли код IL так, как ожидалось.  
+ [<span data-ttu-id="d42fd-135">Ilasm.exe (ассемблер IL)</span><span class="sxs-lookup"><span data-stu-id="d42fd-135">Ilasm.exe (IL Assembler)</span></span>](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+ <span data-ttu-id="d42fd-136">Создает переносимый исполняемый файл (PE) из файла промежуточного языка (IL).</span><span class="sxs-lookup"><span data-stu-id="d42fd-136">Generates a portable executable (PE) file from intermediate language (IL).</span></span> <span data-ttu-id="d42fd-137">Можно запустить полученный исполняемый файл, чтобы проверить, выполняется ли код IL так, как ожидалось.</span><span class="sxs-lookup"><span data-stu-id="d42fd-137">You can run the resulting executable to determine whether the IL performs as expected.</span></span>  
   
- [Ildasm.exe (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
- Принимает входной исполняемый файл (PE), содержащий код на языке IL, и создает на его основе текстовый файл, который может быть входным для ассемблера IL (Ilasm.exe).  
+ [<span data-ttu-id="d42fd-138">Ildasm.exe (дизассемблер IL)</span><span class="sxs-lookup"><span data-stu-id="d42fd-138">Ildasm.exe (IL Disassembler)</span></span>](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
+ <span data-ttu-id="d42fd-139">Принимает входной исполняемый файл (PE), содержащий код на языке IL, и создает на его основе текстовый файл, который может быть входным для ассемблера IL (Ilasm.exe).</span><span class="sxs-lookup"><span data-stu-id="d42fd-139">Takes a portable executable (PE) file that contains intermediate language (IL) code and creates a text file that can be input to the IL Assembler (Ilasm.exe).</span></span>  
   
- [Installutil.exe (инструмент для установки)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Позволяет устанавливать и удалять ресурсы сервера, выполняя компоненты установщика в указанной сборке. (Работает с классами в пространстве имен <xref:System.Configuration.Install>.) Позволяет устанавливать и удалять ресурсы сервера, выполняя компоненты установщика в указанной сборке. (Работает с классами в пространстве имен <xref:System.Configuration.Install>.)  
+ [<span data-ttu-id="d42fd-140">Installutil.exe (инструмент для установки)</span><span class="sxs-lookup"><span data-stu-id="d42fd-140">Installutil.exe (Installer Tool)</span></span>](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
+ <span data-ttu-id="d42fd-141">Позволяет устанавливать и удалять ресурсы сервера, выполняя компоненты установщика в указанной сборке.</span><span class="sxs-lookup"><span data-stu-id="d42fd-141">Enables you to install and uninstall server resources by executing the installer components in a specified assembly.</span></span> <span data-ttu-id="d42fd-142">(Работает с классами в пространстве имен <xref:System.Configuration.Install>.) Позволяет устанавливать и удалять ресурсы сервера, выполняя компоненты установщика в указанной сборке.</span><span class="sxs-lookup"><span data-stu-id="d42fd-142">(Works with classes in the <xref:System.Configuration.Install> namespace.) Enables you to install and uninstall server resources by executing the installer components in a specified assembly.</span></span> <span data-ttu-id="d42fd-143">(Работает с классами в пространстве имен <xref:System.Configuration.Install>.)</span><span class="sxs-lookup"><span data-stu-id="d42fd-143">(Works with classes in the <xref:System.Configuration.Install> namespace.)</span></span>  
   
- [Lc.exe (компилятор лицензий)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Считывает текстовые файлы, содержащие сведения о лицензиях, и создает файл .licenses, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса. Считывает текстовые файлы, содержащие сведения о лицензиях, и создает файл .licenses, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.  
+ [<span data-ttu-id="d42fd-144">Lc.exe (компилятор лицензий)</span><span class="sxs-lookup"><span data-stu-id="d42fd-144">Lc.exe (License Compiler)</span></span>](../../../docs/framework/tools/lc-exe-license-compiler.md)  
+ <span data-ttu-id="d42fd-145">Считывает текстовые файлы, содержащие сведения о лицензиях, и создает файл .licenses, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.</span><span class="sxs-lookup"><span data-stu-id="d42fd-145">Reads text files that contain licensing information and produces a .licenses file that can be embedded in a common language runtime executable as a resource.</span></span> <span data-ttu-id="d42fd-146">Считывает текстовые файлы, содержащие сведения о лицензиях, и создает файл .licenses, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.</span><span class="sxs-lookup"><span data-stu-id="d42fd-146">Reads text files that contain licensing information and produces a .licenses file that can be embedded in a common language runtime executable as a resource.</span></span>  
   
- [Mage.exe (средство создания и редактирования манифеста)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- Позволяет создавать, редактировать и подписывать манифесты приложения и развертывания. В качестве средства командной строки программа Mage.exe может выполняться как в пакетных скриптах, так и в других Windows-приложениях, включая приложения ASP.NET.  
+ [<span data-ttu-id="d42fd-147">Mage.exe (средство создания и редактирования манифеста)</span><span class="sxs-lookup"><span data-stu-id="d42fd-147">Mage.exe (Manifest Generation and Editing Tool)</span></span>](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ <span data-ttu-id="d42fd-148">Позволяет создавать, редактировать и подписывать манифесты приложения и развертывания.</span><span class="sxs-lookup"><span data-stu-id="d42fd-148">Lets you create, edit, and sign application and deployment manifests.</span></span> <span data-ttu-id="d42fd-149">В качестве средства командной строки программа Mage.exe может выполняться как в пакетных скриптах, так и в других Windows-приложениях, включая приложения ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="d42fd-149">As a command-line tool, Mage.exe can be run from both batch scripts and other Windows-based applications, including ASP.NET applications.</span></span>  
   
- [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
- Поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, однако использует интерфейс пользователя на основе Windows. Поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, однако использует интерфейс пользователя на основе Windows.  
+ [<span data-ttu-id="d42fd-150">MageUI.exe (средство создания и редактирования манифестов, графический клиент)</span><span class="sxs-lookup"><span data-stu-id="d42fd-150">MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)</span></span>](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+ <span data-ttu-id="d42fd-151">Поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, однако использует интерфейс пользователя на основе Windows.</span><span class="sxs-lookup"><span data-stu-id="d42fd-151">Supports the same functionality as the command-line tool Mage.exe, but uses a Windows-based user interface (UI).</span></span> <span data-ttu-id="d42fd-152">Поддерживает те же функциональные возможности, что и средство командной строки Mage.exe, однако использует интерфейс пользователя на основе Windows.</span><span class="sxs-lookup"><span data-stu-id="d42fd-152">Supports the same functionality as the command-line tool Mage.exe, but uses a Windows-based user interface (UI).</span></span>  
   
- [MDbg.exe (отладчик командной строки для .NET Framework)](../../../docs/framework/tools/mdbg-exe.md)  
- Помогает разработчикам программ и приложений в поиске и исправлении ошибок в программах, работающих в общеязыковой среде выполнения .NET Framework. Этот инструмент использует отладочный API-интерфейс среды выполнения.  
+ [<span data-ttu-id="d42fd-153">MDbg.exe (отладчик командной строки для .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="d42fd-153">MDbg.exe (.NET Framework Command-Line Debugger)</span></span>](../../../docs/framework/tools/mdbg-exe.md)  
+ <span data-ttu-id="d42fd-154">Помогает разработчикам программ и приложений в поиске и исправлении ошибок в программах, работающих в общеязыковой среде выполнения .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d42fd-154">Helps tools vendors and application developers find and fix bugs in programs that target the .NET Framework common language runtime.</span></span> <span data-ttu-id="d42fd-155">Этот инструмент использует отладочный API-интерфейс среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="d42fd-155">This tool uses the runtime debugging API to provide debugging services.</span></span>  
   
- [Mgmtclassgen.exe (генератор строго типизированных классов управления)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
- Позволяет создавать управляемый класс с ранней привязкой для заданного класса инструментария управления Windows (WMI).  
+ [<span data-ttu-id="d42fd-156">Mgmtclassgen.exe (генератор строго типизированных классов управления)</span><span class="sxs-lookup"><span data-stu-id="d42fd-156">Mgmtclassgen.exe (Management Strongly Typed Class Generator)</span></span>](../../../docs/framework/tools/mgmtclassgen-exe.md)  
+ <span data-ttu-id="d42fd-157">Позволяет создавать управляемый класс с ранней привязкой для заданного класса инструментария управления Windows (WMI).</span><span class="sxs-lookup"><span data-stu-id="d42fd-157">Enables you to generate an early-bound managed class for a specified Windows Management Instrumentation (WMI) class.</span></span>  
   
- [Mpgo.exe (управляемое средство профильной оптимизации)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
- Позволяет настроить сборки образов в машинном коде с помощью общих пользовательских сценариев. С помощью программы Mpgo.exe можно создавать и использовать данные профилирования для сборок приложения с образами в машинном коде (не сборок .NET Framework) с помощью сценариев обучения, выбранных разработчиком приложения.  
+ [<span data-ttu-id="d42fd-158">Mpgo.exe (управляемое средство профильной оптимизации)</span><span class="sxs-lookup"><span data-stu-id="d42fd-158">Mpgo.exe (Managed Profile Guided Optimization Tool)</span></span>](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  
+ <span data-ttu-id="d42fd-159">Позволяет настроить сборки образов в машинном коде с помощью общих пользовательских сценариев.</span><span class="sxs-lookup"><span data-stu-id="d42fd-159">Enables you to tune native image assemblies using common end-user scenarios.</span></span> <span data-ttu-id="d42fd-160">С помощью программы Mpgo.exe можно создавать и использовать данные профилирования для сборок приложения с образами в машинном коде (не сборок .NET Framework) с помощью сценариев обучения, выбранных разработчиком приложения.</span><span class="sxs-lookup"><span data-stu-id="d42fd-160">Mpgo.exe allows the generation and consumption of profile data for native image application assemblies (not the .NET Framework assemblies) using training scenarios selected by the application developer.</span></span>  
   
- [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- Повышает производительность управляемых приложений за счет использования образов в машинном коде (файлов, содержащих скомпилированный для конкретного процессора машинный код). Среда выполнения может использовать образы в машинном коде, находящиеся в кэше, вместо использования JIT-компилятора для компиляции исходной сборки.  
+ [<span data-ttu-id="d42fd-161">Ngen.exe (генератор образов в машинном коде)</span><span class="sxs-lookup"><span data-stu-id="d42fd-161">Ngen.exe (Native Image Generator)</span></span>](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ <span data-ttu-id="d42fd-162">Повышает производительность управляемых приложений за счет использования образов в машинном коде (файлов, содержащих скомпилированный для конкретного процессора машинный код).</span><span class="sxs-lookup"><span data-stu-id="d42fd-162">Improves the performance of managed applications through the use of native images (files containing compiled processor-specific machine code).</span></span> <span data-ttu-id="d42fd-163">Среда выполнения может использовать образы в машинном коде, находящиеся в кэше, вместо использования JIT-компилятора для компиляции исходной сборки.</span><span class="sxs-lookup"><span data-stu-id="d42fd-163">The runtime can use native images from the cache instead of using the just-in-time (JIT) compiler to compile the original assembly.</span></span>  
   
- [Peverify.exe (средство PEVerify)](../../../docs/framework/tools/peverify-exe-peverify-tool.md)  
- Помогает проверить, удовлетворяет ли код на языке MSIL и связанные с ним метаданные требованиям безопасности типа. Помогает проверить, удовлетворяет ли код на языке MSIL и связанные с ним метаданные требованиям безопасности типа.  
+ [<span data-ttu-id="d42fd-164">Peverify.exe (средство PEVerify)</span><span class="sxs-lookup"><span data-stu-id="d42fd-164">Peverify.exe (PEVerify Tool)</span></span>](../../../docs/framework/tools/peverify-exe-peverify-tool.md)  
+ <span data-ttu-id="d42fd-165">Помогает проверить, удовлетворяет ли код на языке MSIL и связанные с ним метаданные требованиям безопасности типа.</span><span class="sxs-lookup"><span data-stu-id="d42fd-165">Helps you verify whether your Microsoft intermediate language (MSIL) code and associated metadata meet type safety requirements.</span></span> <span data-ttu-id="d42fd-166">Помогает проверить, удовлетворяет ли код на языке MSIL и связанные с ним метаданные требованиям безопасности типа.</span><span class="sxs-lookup"><span data-stu-id="d42fd-166">Helps you verify whether your Microsoft intermediate language (MSIL) code and associated metadata meet type safety requirements.</span></span>  
   
- [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- Считывает метаданные из сборки и добавляет в реестр необходимые записи. Это позволяет COM-клиентам отображаться как классы платформы .NET Framework.  
+ [<span data-ttu-id="d42fd-167">Regasm.exe (средство регистрации сборок)</span><span class="sxs-lookup"><span data-stu-id="d42fd-167">Regasm.exe (Assembly Registration Tool)</span></span>](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
+ <span data-ttu-id="d42fd-168">Считывает метаданные из сборки и добавляет в реестр необходимые записи.</span><span class="sxs-lookup"><span data-stu-id="d42fd-168">Reads the metadata within an assembly and adds the necessary entries to the registry.</span></span> <span data-ttu-id="d42fd-169">Это позволяет COM-клиентам отображаться как классы платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d42fd-169">This enables COM clients to appear as .NET Framework classes.</span></span>  
   
- [Regsvcs.exe (программа установки служб .NET)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md)  
- Загружает и регистрирует сборку, создает и устанавливает библиотеку типов в заданное приложение COM+ версии 1.0, а также настраивает службы, программно добавленные вами в класс.  
+ [<span data-ttu-id="d42fd-170">Regsvcs.exe (программа установки служб .NET)</span><span class="sxs-lookup"><span data-stu-id="d42fd-170">Regsvcs.exe (.NET Services Installation Tool)</span></span>](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md)  
+ <span data-ttu-id="d42fd-171">Загружает и регистрирует сборку, создает и устанавливает библиотеку типов в заданное приложение COM+ версии 1.0, а также настраивает службы, программно добавленные вами в класс.</span><span class="sxs-lookup"><span data-stu-id="d42fd-171">Loads and registers an assembly, generates and installs a type library into a specified COM+ version 1.0 application, and configures services that you have added programmatically to a class.</span></span>  
   
- [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- Преобразует текстовые файлы (.txt или .restext) и файлы ресурсов на основе XML (.resx) в двоичные файлы среды CLR (.resources), которые могут быть внедрены в двоичный исполняемый файл среды выполнения или скомпилированы во вспомогательные сборки.  
+ [<span data-ttu-id="d42fd-172">Resgen.exe (генератор файлов ресурсов)</span><span class="sxs-lookup"><span data-stu-id="d42fd-172">Resgen.exe (Resource File Generator)</span></span>](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ <span data-ttu-id="d42fd-173">Преобразует текстовые файлы (.txt или .restext) и файлы ресурсов на основе XML (.resx) в двоичные файлы среды CLR (.resources), которые могут быть внедрены в двоичный исполняемый файл среды выполнения или скомпилированы во вспомогательные сборки.</span><span class="sxs-lookup"><span data-stu-id="d42fd-173">Converts text (.txt or .restext) files and XML-based resource format (.resx) files to common language runtime binary (.resources) files that can be embedded in a runtime binary executable or compiled into satellite assemblies.</span></span>  
   
- [SecAnnotate.exe (средство создания заметок безопасности .NET)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
- Идентифицирует части сборки SecurityCritical и SecuritySafeCritical. Идентифицирует части `SecurityCritical` и `SecuritySafeCritical` в сборке.  
+ [<span data-ttu-id="d42fd-174">SecAnnotate.exe (средство создания заметок безопасности .NET)</span><span class="sxs-lookup"><span data-stu-id="d42fd-174">SecAnnotate.exe (.NET Security Annotator Tool)</span></span>](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
+ <span data-ttu-id="d42fd-175">Идентифицирует части сборки SecurityCritical и SecuritySafeCritical.</span><span class="sxs-lookup"><span data-stu-id="d42fd-175">Identifies the SecurityCritical and SecuritySafeCritical portions of an assembly.</span></span> <span data-ttu-id="d42fd-176">Идентифицирует части `SecurityCritical` и `SecuritySafeCritical` в сборке.</span><span class="sxs-lookup"><span data-stu-id="d42fd-176">Identifies the `SecurityCritical` and `SecuritySafeCritical` portions of an assembly.</span></span>  
   
- [SignTool.exe (программа подписывания)](../../../docs/framework/tools/signtool-exe.md)  
- Добавляет в файлы цифровую подпись, проверяет подписи файлов и создает отметки времени для файлов.  
+ [<span data-ttu-id="d42fd-177">SignTool.exe (программа подписывания)</span><span class="sxs-lookup"><span data-stu-id="d42fd-177">SignTool.exe (Sign Tool)</span></span>](../../../docs/framework/tools/signtool-exe.md)  
+ <span data-ttu-id="d42fd-178">Добавляет в файлы цифровую подпись, проверяет подписи файлов и создает отметки времени для файлов.</span><span class="sxs-lookup"><span data-stu-id="d42fd-178">Digitally signs files, verifies signatures in files, and time-stamps files.</span></span>  
   
- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- Позволяет создавать сборки со строгими именами. Это средство предусматривает параметры для управления ключами, генерации подписи и ее проверки.  
+ [<span data-ttu-id="d42fd-179">Sn.exe (средство строгих имен)</span><span class="sxs-lookup"><span data-stu-id="d42fd-179">Sn.exe (Strong Name Tool)</span></span>](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ <span data-ttu-id="d42fd-180">Позволяет создавать сборки со строгими именами.</span><span class="sxs-lookup"><span data-stu-id="d42fd-180">Helps create assemblies with strong names.</span></span> <span data-ttu-id="d42fd-181">Это средство предусматривает параметры для управления ключами, генерации подписи и ее проверки.</span><span class="sxs-lookup"><span data-stu-id="d42fd-181">This tool provides options for key management, signature generation, and signature verification.</span></span>  
   
- [SOS.dll (расширение отладки SOS)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
- Помогает отлаживать управляемые программы в отладчике WinDbg.exe и в Visual Studio, предоставляя информацию о внутренней среде CLR.  
+ [<span data-ttu-id="d42fd-182">SOS.dll (расширение отладки SOS)</span><span class="sxs-lookup"><span data-stu-id="d42fd-182">SOS.dll (SOS Debugging Extension)</span></span>](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
+ <span data-ttu-id="d42fd-183">Помогает отлаживать управляемые программы в отладчике WinDbg.exe и в Visual Studio, предоставляя информацию о внутренней среде CLR.</span><span class="sxs-lookup"><span data-stu-id="d42fd-183">Helps you debug managed programs in the WinDbg.exe debugger and in Visual Studio by providing information about the internal common language runtime environment.</span></span>  
   
- [SqlMetal.exe (средство создания кода)](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- Создает код и сопоставление для компонента LINQ to SQL платформы .NET Framework.  
+ [<span data-ttu-id="d42fd-184">SqlMetal.exe (средство создания кода)</span><span class="sxs-lookup"><span data-stu-id="d42fd-184">SqlMetal.exe (Code Generation Tool)</span></span>](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
+ <span data-ttu-id="d42fd-185">Создает код и сопоставление для компонента LINQ to SQL платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d42fd-185">Generates code and mapping for the LINQ to SQL component of the .NET Framework.</span></span>  
   
- [Storeadm.exe (средство изолированного хранилища)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)  
- Управляет изолированным хранилищем; предоставляет возможности для получения списка пользовательских сохранений и их удаления.  
+ [<span data-ttu-id="d42fd-186">Storeadm.exe (средство изолированного хранилища)</span><span class="sxs-lookup"><span data-stu-id="d42fd-186">Storeadm.exe (Isolated Storage Tool)</span></span>](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md)  
+ <span data-ttu-id="d42fd-187">Управляет изолированным хранилищем; предоставляет возможности для получения списка пользовательских сохранений и их удаления.</span><span class="sxs-lookup"><span data-stu-id="d42fd-187">Manages isolated storage; provides options for listing the user's stores and deleting them.</span></span>  
   
- [Tlbexp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- Создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.  
+ [<span data-ttu-id="d42fd-188">Tlbexp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="d42fd-188">Tlbexp.exe (Type Library Exporter)</span></span>](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ <span data-ttu-id="d42fd-189">Создает библиотеку типов, описывающую типы, определенные в сборке среды CLR.</span><span class="sxs-lookup"><span data-stu-id="d42fd-189">Generates a type library that describes the types that are defined in a common language runtime assembly.</span></span>  
   
- [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- Выполняет преобразование определений типов, имеющихся в библиотеке типов COM, в эквивалентные определения сборки среды CLR.  
+ [<span data-ttu-id="d42fd-190">Tlbimp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="d42fd-190">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ <span data-ttu-id="d42fd-191">Выполняет преобразование определений типов, имеющихся в библиотеке типов COM, в эквивалентные определения сборки среды CLR.</span><span class="sxs-lookup"><span data-stu-id="d42fd-191">Converts the type definitions found in a COM type library into equivalent definitions in a common language runtime assembly.</span></span>  
   
- [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- Экспортирует сборку .NET Framework, скомпилированную как WINMDOBJ-файл, в компонент среды выполнения Windows, который упаковывается в WINMD-файл, содержащий и метаданные среды выполнения Windows, и информацию о реализации.  
+ [<span data-ttu-id="d42fd-192">Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)</span><span class="sxs-lookup"><span data-stu-id="d42fd-192">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ <span data-ttu-id="d42fd-193">Экспортирует сборку .NET Framework, скомпилированную как WINMDOBJ-файл, в компонент среды выполнения Windows, который упаковывается в WINMD-файл, содержащий и метаданные среды выполнения Windows, и информацию о реализации.</span><span class="sxs-lookup"><span data-stu-id="d42fd-193">Exports a .NET Framework assembly that is compiled as a .winmdobj file into a Windows Runtime component, which is packaged as a .winmd file that contains both Windows Runtime metadata and implementation information.</span></span>  
   
- [Winres.exe (редактор ресурсов Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
- Помогает производить локализацию ресурсов пользовательского интерфейса (файлы .resx или .resources), используемых формами Windows Forms. Можно перевести строки, а затем изменять размеры элементов управления, перемещать их и скрывать, чтобы вместить в них локализованные строки.  
+ [<span data-ttu-id="d42fd-194">Winres.exe (редактор ресурсов Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d42fd-194">Winres.exe (Windows Forms Resource Editor)</span></span>](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
+ <span data-ttu-id="d42fd-195">Помогает производить локализацию ресурсов пользовательского интерфейса (файлы .resx или .resources), используемых формами Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="d42fd-195">Helps you localize user interface (UI) resources (.resx or .resources files) that are used by Windows Forms.</span></span> <span data-ttu-id="d42fd-196">Можно перевести строки, а затем изменять размеры элементов управления, перемещать их и скрывать, чтобы вместить в них локализованные строки.</span><span class="sxs-lookup"><span data-stu-id="d42fd-196">You can translate strings, and then size, move, and hide controls to accommodate the localized strings.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Инструменты](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
- Включает такие инструменты, как средство соответствия isXPS (isXPS.exe) и средства профилирования производительности.  
+## <a name="related-sections"></a><span data-ttu-id="d42fd-197">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d42fd-197">Related Sections</span></span>  
+ [<span data-ttu-id="d42fd-198">Инструменты</span><span class="sxs-lookup"><span data-stu-id="d42fd-198">Tools</span></span>](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
+ <span data-ttu-id="d42fd-199">Включает такие инструменты, как средство соответствия isXPS (isXPS.exe) и средства профилирования производительности.</span><span class="sxs-lookup"><span data-stu-id="d42fd-199">Includes tools such as the isXPS Conformance tool (isXPS.exe) and performance profiling tools.</span></span>  
   
- [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
- Включает средства, упрощающие создание, развертывание и управление приложениями Windows Communication Foundation (WCF).
-
+ [<span data-ttu-id="d42fd-200">Средства Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d42fd-200">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
+ <span data-ttu-id="d42fd-201">Включает средства, упрощающие создание, развертывание и управление приложениями Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d42fd-201">Includes tools that make it easier for you to create, deploy, and manage Windows Communication Foundation (WCF) applications.</span></span>

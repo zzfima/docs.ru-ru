@@ -1,137 +1,143 @@
 ---
-title: "Конструкции изменения в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, конструкции изменения"
-  - "конструкции изменения"
-  - "шаблоны альтернативного соответствия"
-  - "конструкции, изменение"
-  - "сопоставление или/или"
-  - "шаблоны альтернативного соответствия"
-  - "регулярные выражения, конструкции изменения"
+title: "Конструкции изменения в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- either/or matching
+- alternative matching patterns
+- regular expressions, alternation constructs
+- alternation constructs
+- optional matching patterns
+- constructs, alternation
+- .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6ad632130b6f111ff863648b8b1a3b2835c27660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Конструкции изменения в регулярных выражениях
-<a name="top"></a> Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо\/или» или условное сопоставление. Платформа .NET Framework поддерживает три конструкции изменения.  
+# <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="d4443-102">Конструкции изменения в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="d4443-102">Alternation Constructs in Regular Expressions</span></span>
+<span data-ttu-id="d4443-103"><a name="top"></a> Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление.</span><span class="sxs-lookup"><span data-stu-id="d4443-103"><a name="top"></a> Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="d4443-104">Платформа .NET поддерживает три указанные далее конструкции изменения.</span><span class="sxs-lookup"><span data-stu-id="d4443-104">.NET supports three alternation constructs:</span></span>  
   
--   [Сопоставление шаблонов с &#124;](#Either_Or)  
+-   [<span data-ttu-id="d4443-105">Сопоставление шаблонов с помощью |</span><span class="sxs-lookup"><span data-stu-id="d4443-105">Pattern matching with &#124;</span></span>](#Either_Or)  
   
--   [Условное сопоставление с \(?\(expression\)yes&#124;no\)](#Conditional_Expr)  
+-   [<span data-ttu-id="d4443-106">Условное сопоставление (?(expression) yes|no)</span><span class="sxs-lookup"><span data-stu-id="d4443-106">Conditional matching with (?(expression)yes&#124;no)</span></span>](#Conditional_Expr)  
   
--   [Условное сопоставление на основе действительной захватываемой группы.](#Conditional_Group)  
+-   [<span data-ttu-id="d4443-107">Условное сопоставление на основе действительной захватываемой группы</span><span class="sxs-lookup"><span data-stu-id="d4443-107">Conditional matching based on a valid captured group</span></span>](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
-## Сопоставление шаблонов с &#124;  
- Можно использовать вертикальную черту \(`|`\) для сопоставления с любым набором шаблонов, где `|` отделяет каждый шаблон.  
+## <a name="pattern-matching-with-124"></a><span data-ttu-id="d4443-108">Сопоставление шаблонов с помощью |</span><span class="sxs-lookup"><span data-stu-id="d4443-108">Pattern Matching with &#124;</span></span>  
+ <span data-ttu-id="d4443-109">Вертикальную черту (`|`) можно использовать для сопоставления с любым набором шаблонов, в котором шаблоны разделяются с помощью символа `|`.</span><span class="sxs-lookup"><span data-stu-id="d4443-109">You can use the vertical bar (`|`) character to match any one of a series of patterns, where the `|` character separates each pattern.</span></span>  
   
- Как и класс положительных символов, символ `|` можно использовать для сопоставления с любым количеством отдельных символов. В следующем примере используется класс положительных символов и сопоставление с шаблоном либо\/или с символом `|` для обнаружения в строке всех вхождений слов gray или grey. В этом случае символ `|` создает регулярное выражение, которое является более подробным.  
+ <span data-ttu-id="d4443-110">Как и класс положительных символов, символ `|` можно использовать для сопоставления с любым количеством отдельных символов.</span><span class="sxs-lookup"><span data-stu-id="d4443-110">Like the positive character class, the `|` character can be used to match any one of a number of single characters.</span></span> <span data-ttu-id="d4443-111">В следующем примере используется класс положительных символов и сопоставление с шаблоном либо/или с символом `|` для обнаружения в строке всех вхождений слов gray или grey.</span><span class="sxs-lookup"><span data-stu-id="d4443-111">The following example uses both a positive character class and either/or pattern matching with the `|` character to locate occurrences of the words "gray" or "grey" in a string.</span></span> <span data-ttu-id="d4443-112">В этом случае символ `|` создает регулярное выражение, которое является более подробным.</span><span class="sxs-lookup"><span data-stu-id="d4443-112">In this case, the `|` character produces a regular expression that is more verbose.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
  [!code-vb[RegularExpressions.Language.Alternation#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]  
   
- Возможные интерпретации регулярного выражения, использующего символ `|`, `\bgr(a|e)y\b`, показаны в следующей таблице.  
+ <span data-ttu-id="d4443-113">Возможные интерпретации регулярного выражения, использующего символ `|` , `\bgr(a|e)y\b`, показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="d4443-113">The regular expression that uses the `|` character, `\bgr(a|e)y\b`, is interpreted as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`gr`|Соответствует символам gr.|  
-|`(a&#124;e)`|Соответствует букве "a" или "e".|  
-|`y\b`|Соответствует символу у на границе слова.|  
+|<span data-ttu-id="d4443-114">Шаблон</span><span class="sxs-lookup"><span data-stu-id="d4443-114">Pattern</span></span>|<span data-ttu-id="d4443-115">Описание</span><span class="sxs-lookup"><span data-stu-id="d4443-115">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="d4443-116">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-116">Start at a word boundary.</span></span>|  
+|`gr`|<span data-ttu-id="d4443-117">Соответствует символам gr.</span><span class="sxs-lookup"><span data-stu-id="d4443-117">Match the characters "gr".</span></span>|  
+|<code>(a&#124;e)</code>|<span data-ttu-id="d4443-118">Соответствует букве "a" или "e".</span><span class="sxs-lookup"><span data-stu-id="d4443-118">Match either an "a" or an "e".</span></span>|  
+|`y\b`|<span data-ttu-id="d4443-119">Соответствует символу у на границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-119">Match a "y" on a word boundary.</span></span>|  
   
- Символ `|` может также использоваться для выполнения сопоставления или\/либо с несколькими символами или частями выражения, которые могут включать любую комбинацию символьных литералов и элементов языка регулярных выражений. \(Класс символов не предоставляет эту функцию\). В следующем примере символ `|` используется для извлечения либо номера социального страхования США \(SSN\), который представляет собой 9\-значный номер в формате *ццц*\-*цц*\-*цццц* или номер идентификации работодателя США \(EIN\), который состоит из 9 цифр в формате *цц*\-*ццццццц*.  
+ <span data-ttu-id="d4443-120">С помощью символа `|` также можно выполнить сопоставление "или/либо" с несколькими символами или частями выражения, которые могут включать любую комбинацию символьных литералов и элементов языка регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="d4443-120">The `|` character can also be used to perform an either/or match with multiple characters or subexpressions, which can include any combination of character literals and regular expression language elements.</span></span> <span data-ttu-id="d4443-121">(Класс символов не предоставляет эту функцию). В следующем примере символ `|` используется для извлечения номера социального страхования США (SSN), который состоит из 9 цифр в формате *ddd*-*dd*-*dddd*, или номера идентификации работодателя США (EIN), который состоит из 9 цифр в формате *dd*-*ddddddd*.</span><span class="sxs-lookup"><span data-stu-id="d4443-121">(The character class does not provide this functionality.) The following example uses the `|` character to extract either a U.S. Social Security Number (SSN), which is a 9-digit number with the format *ddd*-*dd*-*dddd*, or a U.S. Employer Identification Number (EIN), which is a 9-digit number with the format *dd*-*ddddddd*.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
  [!code-vb[RegularExpressions.Language.Alternation#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
   
- Возможные интерпретации регулярного выражения `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.  
+ <span data-ttu-id="d4443-122">Возможные интерпретации регулярного выражения `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="d4443-122">The regular expression `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` is interpreted as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})`|Сопоставьте любые из следующих значений: два десятичных знака, за которыми следует дефис и еще семь десятичных знаков; или последовательность из трех десятичных знаков, дефиса, двух десятичных знаков, еще одного дефиса и четырех десятичных знаков.|  
-|`\d`|Совпадение должно заканчиваться на границе слова.|  
+|<span data-ttu-id="d4443-123">Шаблон</span><span class="sxs-lookup"><span data-stu-id="d4443-123">Pattern</span></span>|<span data-ttu-id="d4443-124">Описание</span><span class="sxs-lookup"><span data-stu-id="d4443-124">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="d4443-125">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-125">Start at a word boundary.</span></span>|  
+|<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|<span data-ttu-id="d4443-126">Сопоставьте любые из следующих значений: два десятичных знака, за которыми следует дефис и еще семь десятичных знаков; или последовательность из трех десятичных знаков, дефиса, двух десятичных знаков, еще одного дефиса и четырех десятичных знаков.</span><span class="sxs-lookup"><span data-stu-id="d4443-126">Match either of the following: two decimal digits followed by a hyphen followed by seven decimal digits; or three decimal digits, a hyphen, two decimal digits, another hyphen, and four decimal digits.</span></span>|  
+|`\d`|<span data-ttu-id="d4443-127">Совпадение должно заканчиваться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-127">End the match at a word boundary.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="d4443-128">К началу</span><span class="sxs-lookup"><span data-stu-id="d4443-128">Back to top</span></span>](#top)  
   
 <a name="Conditional_Expr"></a>   
-## Условное сопоставление с выражением  
- Этот элемент языка пытается сопоставить один из двух шаблонов в зависимости от того, может ли он сопоставить первоначальный шаблон. Он имеет следующий синтаксис:  
+## <a name="conditional-matching-with-an-expression"></a><span data-ttu-id="d4443-129">Условное сопоставление с выражением</span><span class="sxs-lookup"><span data-stu-id="d4443-129">Conditional Matching with an Expression</span></span>  
+ <span data-ttu-id="d4443-130">Этот элемент языка пытается сопоставить один из двух шаблонов в зависимости от того, может ли он сопоставить первоначальный шаблон.</span><span class="sxs-lookup"><span data-stu-id="d4443-130">This language element attempts to match one of two patterns depending on whether it can match an initial pattern.</span></span> <span data-ttu-id="d4443-131">Он имеет следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="d4443-131">Its syntax is:</span></span>  
   
- `(?(` *выражение* `)` *да* `|` *нет* `)`  
+ <span data-ttu-id="d4443-132">`(?(` *выражение* `)` *да* `|` *нет* `)`</span><span class="sxs-lookup"><span data-stu-id="d4443-132">`(?(` *expression* `)` *yes* `|` *no* `)`</span></span>  
   
- где *expression* — первый сопоставляемый шаблон, *yes* — шаблон, который необходимо сопоставить, если сопоставлен шаблон *expression*, а *no* — это дополнительный шаблон, который необходимо сопоставить, если *expression* не сопоставлен. Обработчик регулярных выражений рассматривает *expression* как утверждение нулевой ширины, то есть обработчик регулярных выражений не перемещается в потоке входных значений после оценки *expression*. Следовательно, эта конструкция эквивалентна следующему.  
+ <span data-ttu-id="d4443-133">где *expression* — первый сопоставляемый шаблон, *yes* — шаблон, который необходимо сопоставить, если сопоставлен шаблон *expression* , а *no* — это дополнительный шаблон, который необходимо сопоставить, если *expression* не сопоставлен.</span><span class="sxs-lookup"><span data-stu-id="d4443-133">where *expression* is the initial pattern to match, *yes* is the pattern to match if *expression* is matched, and *no* is the optional pattern to match if *expression* is not matched.</span></span> <span data-ttu-id="d4443-134">Обработчик регулярных выражений рассматривает *expression* как утверждение нулевой ширины, то есть обработчик регулярных выражений не перемещается в потоке входных значений после оценки *expression*.</span><span class="sxs-lookup"><span data-stu-id="d4443-134">The regular expression engine treats *expression* as a zero-width assertion; that is, the regular expression engine does not advance in the input stream after it evaluates *expression*.</span></span> <span data-ttu-id="d4443-135">Следовательно, эта конструкция эквивалентна следующему.</span><span class="sxs-lookup"><span data-stu-id="d4443-135">Therefore, this construct is equivalent to the following:</span></span>  
   
- `(?(?=` *выражение* `)` *да* `|` *нет* `)`  
+ <span data-ttu-id="d4443-136">`(?(?=` *выражение* `)` *да* `|` *нет* `)`</span><span class="sxs-lookup"><span data-stu-id="d4443-136">`(?(?=` *expression* `)` *yes* `|` *no* `)`</span></span>  
   
- где `(?=`*expression*`)` — это конструкция утверждения нулевой ширины. \(Дополнительные сведения см. в разделе [Конструкции группирования](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).\) Поскольку обработчик регулярных выражений интерпретирует *expression* как привязку \(утверждение нулевой ширины\), *expression* должно представлять собой утверждение нулевой ширины \(дополнительные сведения см. в статье [Привязки](../../../docs/standard/base-types/anchors-in-regular-expressions.md)\) или часть выражения, которая также содержится в *yes*. В противном случае шаблон *yes* сопоставить невозможно.  
+ <span data-ttu-id="d4443-137">Где `(?=`*expression*`)` — это проверочное утверждение нулевой ширины.</span><span class="sxs-lookup"><span data-stu-id="d4443-137">where `(?=`*expression*`)` is a zero-width assertion construct.</span></span> <span data-ttu-id="d4443-138">(Дополнительные сведения см. в разделе [Конструкции группировки](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Поскольку обработчик регулярных выражений интерпретирует *expression* как привязку (утверждение нулевой ширины), *expression* должно представлять собой утверждение нулевой ширины (дополнительные сведения см. в статье [Привязки](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) или часть выражения, которая также содержится в *yes*.</span><span class="sxs-lookup"><span data-stu-id="d4443-138">(For more information, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Because the regular expression engine interprets *expression* as an anchor (a zero-width assertion), *expression* must either be a zero-width assertion (for more information, see [Anchors](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) or a subexpression that is also contained in *yes*.</span></span> <span data-ttu-id="d4443-139">В противном случае шаблон *yes* сопоставить невозможно.</span><span class="sxs-lookup"><span data-stu-id="d4443-139">Otherwise, the *yes* pattern cannot be matched.</span></span>  
   
 > [!NOTE]
->  Если *expression* является именованной или нумерованной группой захвата, конструкция чередования интерпретируется как тест захвата. Дополнительные сведения см. в разделе [Условное сопоставление на основе действительной захватываемой группы](#Conditional_Group). Другими словами, обработчик регулярных выражений не пытается сопоставить захваченную часть строки, а вместо этого выполняет проверку на наличие или отсутствие группы.  
+>  <span data-ttu-id="d4443-140">Если *expression*является именованной или нумерованной группой захвата, конструкция чередования интерпретируется как тест захвата. Дополнительные сведения см. в разделе [Условное сопоставление на основе действительной захватываемой группы](#Conditional_Group).</span><span class="sxs-lookup"><span data-stu-id="d4443-140">If *expression*is a named or numbered capturing group, the alternation construct is interpreted as a capture test; for more information, see the next section, [Conditional Matching Based on a Valid Capture Group](#Conditional_Group).</span></span> <span data-ttu-id="d4443-141">Другими словами, обработчик регулярных выражений не пытается сопоставить захваченную часть строки, а вместо этого выполняет проверку на наличие или отсутствие группы.</span><span class="sxs-lookup"><span data-stu-id="d4443-141">In other words, the regular expression engine does not attempt to match the captured substring, but instead tests for the presence or absence of the group.</span></span>  
   
- Следующий пример является вариантом примера, который отображается в разделе [Сопоставление шаблонов «либо\/или» с &#124;](#Either_Or). Условное сопоставление используется, чтобы определить, являются ли первые три символа после границы слова двумя цифрами и дефисом. Если да, предпринимается попытка сопоставить Идентификационный номер работодателя США \(EIN\). Если нет, предпринимается попытка сопоставить Номер социального страхования США \(SSN\).  
+ <span data-ttu-id="d4443-142">Следующий пример является вариантом примера, который описан в разделе [Сопоставление шаблонов «либо/или» с помощью |](#Either_Or).</span><span class="sxs-lookup"><span data-stu-id="d4443-142">The following example is a variation of the example that appears in the [Either/Or Pattern Matching with &#124;](#Either_Or) section.</span></span> <span data-ttu-id="d4443-143">Условное сопоставление используется, чтобы определить, являются ли первые три символа после границы слова двумя цифрами и дефисом.</span><span class="sxs-lookup"><span data-stu-id="d4443-143">It uses conditional matching to determine whether the first three characters after a word boundary are two digits followed by a hyphen.</span></span> <span data-ttu-id="d4443-144">Если да, предпринимается попытка сопоставить Идентификационный номер работодателя США (EIN).</span><span class="sxs-lookup"><span data-stu-id="d4443-144">If they are, it attempts to match a U.S. Employer Identification Number (EIN).</span></span> <span data-ttu-id="d4443-145">Если нет, предпринимается попытка сопоставить Номер социального страхования США (SSN).</span><span class="sxs-lookup"><span data-stu-id="d4443-145">If not, it attempts to match a U.S. Social Security Number (SSN).</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
  [!code-vb[RegularExpressions.Language.Alternation#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]  
   
- Возможные интерпретации шаблона регулярного выражения `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.  
+ <span data-ttu-id="d4443-146">Возможные интерпретации шаблона регулярного выражения `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="d4443-146">The regular expression pattern `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` is interpreted as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`(?(\d{2}-)`|Определите, состоят ли следующие три символа из двух цифр, за которыми следуют дефис.|  
-|`\d{2}-\d{7}`|Если предыдущий шаблон сопоставлен, сопоставьте две цифры с дефисом, за которыми следуют еще семь цифр.|  
-|`\d{3}-\d{2}-\d{4}`|Если предыдущий шаблон не сопоставлен, сопоставьте три цифры, дефис, две цифры, еще один дефис и еще четыре цифры.|  
-|`\b`|Соответствует границе слова.|  
+|<span data-ttu-id="d4443-147">Шаблон</span><span class="sxs-lookup"><span data-stu-id="d4443-147">Pattern</span></span>|<span data-ttu-id="d4443-148">Описание</span><span class="sxs-lookup"><span data-stu-id="d4443-148">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="d4443-149">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-149">Start at a word boundary.</span></span>|  
+|`(?(\d{2}-)`|<span data-ttu-id="d4443-150">Определите, состоят ли следующие три символа из двух цифр, за которыми следуют дефис.</span><span class="sxs-lookup"><span data-stu-id="d4443-150">Determine whether the next three characters consist of two digits followed by a hyphen.</span></span>|  
+|`\d{2}-\d{7}`|<span data-ttu-id="d4443-151">Если предыдущий шаблон сопоставлен, сопоставьте две цифры с дефисом, за которыми следуют еще семь цифр.</span><span class="sxs-lookup"><span data-stu-id="d4443-151">If the previous pattern matches, match two digits followed by a hyphen followed by seven digits.</span></span>|  
+|`\d{3}-\d{2}-\d{4}`|<span data-ttu-id="d4443-152">Если предыдущий шаблон не сопоставлен, сопоставьте три цифры, дефис, две цифры, еще один дефис и еще четыре цифры.</span><span class="sxs-lookup"><span data-stu-id="d4443-152">If the previous pattern does not match, match three decimal digits, a hyphen, two decimal digits, another hyphen, and four decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="d4443-153">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-153">Match a word boundary.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="d4443-154">К началу</span><span class="sxs-lookup"><span data-stu-id="d4443-154">Back to top</span></span>](#top)  
   
 <a name="Conditional_Group"></a>   
-## Условное сопоставление на основе действительной захватываемой группы  
- Этот элемент языка пытается сопоставить один из двух шаблонов, в зависимости от того, соответствует ли он указанной группе записи. Он имеет следующий синтаксис:  
+## <a name="conditional-matching-based-on-a-valid-captured-group"></a><span data-ttu-id="d4443-155">Условное сопоставление на основе действительной захватываемой группы.</span><span class="sxs-lookup"><span data-stu-id="d4443-155">Conditional Matching Based on a Valid Captured Group</span></span>  
+ <span data-ttu-id="d4443-156">Этот элемент языка пытается сопоставить один из двух шаблонов, в зависимости от того, соответствует ли он указанной группе записи.</span><span class="sxs-lookup"><span data-stu-id="d4443-156">This language element attempts to match one of two patterns depending on whether it has matched a specified capturing group.</span></span> <span data-ttu-id="d4443-157">Он имеет следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="d4443-157">Its syntax is:</span></span>  
   
- `(?(` *имя* `)` *да* `|` *нет* `)`  
+ <span data-ttu-id="d4443-158">`(?(` *имя* `)` *да* `|` *нет* `)`</span><span class="sxs-lookup"><span data-stu-id="d4443-158">`(?(` *name* `)` *yes* `|` *no* `)`</span></span>  
   
- или  
+ <span data-ttu-id="d4443-159">или</span><span class="sxs-lookup"><span data-stu-id="d4443-159">or</span></span>  
   
- `(?(` *number* `)` *да* `|` *нет* `)`  
+ <span data-ttu-id="d4443-160">`(?(` *number* `)` *да* `|` *нет* `)`</span><span class="sxs-lookup"><span data-stu-id="d4443-160">`(?(` *number* `)` *yes* `|` *no* `)`</span></span>  
   
- где *name* — имя, а *number* — номер захватываемой группы, *yes* — сопоставляемое выражение, если для *name* или *number* имеется соответствие, а *no* — это дополнительное выражение для сопоставления при отсутствии соответствия.  
+ <span data-ttu-id="d4443-161">где *name* — имя, а *number* — номер захватываемой группы, *yes* — сопоставляемое выражение, если для *name* или *number* имеется соответствие, а *no* — это дополнительное выражение для сопоставления при отсутствии соответствия.</span><span class="sxs-lookup"><span data-stu-id="d4443-161">where *name* is the name and *number* is the number of a capturing group, *yes* is the expression to match if *name* or *number* has a match, and *no* is the optional expression to match if it does not.</span></span>  
   
- Если *name* не соответствует имени захватываемой группы, которая используется в шаблоне регулярного выражения, конструкция изменения интерпретируется как проверка выражения, как было описано в предыдущем разделе. Как правило, это означает, что *expression* имеет значение `false`. Если *number* не соответствует нумерованной группе захвата, используемой в шаблоне регулярного выражения, обработчик регулярных выражений создает исключение <xref:System.ArgumentException>.  
+ <span data-ttu-id="d4443-162">Если *name* не соответствует имени захватываемой группы, которая используется в шаблоне регулярного выражения, конструкция изменения интерпретируется как проверка выражения, как было описано в предыдущем разделе.</span><span class="sxs-lookup"><span data-stu-id="d4443-162">If *name* does not correspond to the name of a capturing group that is used in the regular expression pattern, the alternation construct is interpreted as an expression test, as explained in the previous section.</span></span> <span data-ttu-id="d4443-163">Как правило, это означает, что *expression* имеет значение `false`.</span><span class="sxs-lookup"><span data-stu-id="d4443-163">Typically, this means that *expression* evaluates to `false`.</span></span> <span data-ttu-id="d4443-164">Если *number* не соответствует нумерованной группе захвата, используемой в шаблоне регулярного выражения, обработчик регулярных выражений создает исключение <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="d4443-164">If *number* does not correspond to a numbered capturing group that is used in the regular expression pattern, the regular expression engine throws an <xref:System.ArgumentException>.</span></span>  
   
- Следующий пример является вариантом примера, который отображается в разделе [Сопоставление шаблонов «либо\/или» с &#124;](#Either_Or). В нем используется захватываемая группа с именем `n2`, которая состоит из двух цифр и дефиса. Конструкция изменения проверяет, сопоставлена ли эта группа захвата в строке ввода. Если да, конструкция изменения пытается сопоставить последние семь цифр девятизначного Идентификационный номер работодателя США \(EIN\). В противном случае она пытается сопоставить девятизначный Номер социального страхования США \(SSN\).  
+ <span data-ttu-id="d4443-165">Следующий пример является вариантом примера, который описан в разделе [Сопоставление шаблонов «либо/или» с помощью |](#Either_Or).</span><span class="sxs-lookup"><span data-stu-id="d4443-165">The following example is a variation of the example that appears in the [Either/Or Pattern Matching with &#124;](#Either_Or) section.</span></span> <span data-ttu-id="d4443-166">В нем используется захватываемая группа с именем `n2`, которая состоит из двух цифр и дефиса.</span><span class="sxs-lookup"><span data-stu-id="d4443-166">It uses a capturing group named `n2` that consists of two digits followed by a hyphen.</span></span> <span data-ttu-id="d4443-167">Конструкция изменения проверяет, сопоставлена ли эта группа захвата в строке ввода.</span><span class="sxs-lookup"><span data-stu-id="d4443-167">The alternation construct tests whether this capturing group has been matched in the input string.</span></span> <span data-ttu-id="d4443-168">Если да, конструкция изменения пытается сопоставить последние семь цифр девятизначного Идентификационный номер работодателя США (EIN).</span><span class="sxs-lookup"><span data-stu-id="d4443-168">If it has, the alternation construct attempts to match the last seven digits of a nine-digit U.S. Employer Identification Number (EIN).</span></span> <span data-ttu-id="d4443-169">В противном случае она пытается сопоставить девятизначный Номер социального страхования США (SSN).</span><span class="sxs-lookup"><span data-stu-id="d4443-169">If it has not, it attempts to match a nine-digit U.S. Social Security Number (SSN).</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Возможные интерпретации шаблона регулярного выражения `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.  
+ <span data-ttu-id="d4443-170">Возможные интерпретации шаблона регулярного выражения `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="d4443-170">The regular expression pattern `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` is interpreted as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`(?<n2>\d{2}-)*`|Сопоставьте нулевое или единичное вхождение двух цифр с дефисом. Установка для группы имени `n2`.|  
-|`(?(n2)`|Проверка наличия сопоставления `n2` во входной строке.|  
-|`)\d{7}`|Если есть сопоставление `n2`, сопоставляются семь десятичных цифр.|  
-|`&#124;\d{3}-\d{2}-\d{4}`|Если сопоставления нет `n2`, сопоставляются три десятичных цифры, дефис, две десятичных цифры, еще один дефис и четыре десятичных цифры.|  
-|`\b`|Соответствует границе слова.|  
+|<span data-ttu-id="d4443-171">Шаблон</span><span class="sxs-lookup"><span data-stu-id="d4443-171">Pattern</span></span>|<span data-ttu-id="d4443-172">Описание</span><span class="sxs-lookup"><span data-stu-id="d4443-172">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="d4443-173">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-173">Start at a word boundary.</span></span>|  
+|`(?<n2>\d{2}-)*`|<span data-ttu-id="d4443-174">Сопоставьте нулевое или единичное вхождение двух цифр с дефисом.</span><span class="sxs-lookup"><span data-stu-id="d4443-174">Match zero or one occurrence of two digits followed by a hyphen.</span></span> <span data-ttu-id="d4443-175">Установка для группы имени `n2`.</span><span class="sxs-lookup"><span data-stu-id="d4443-175">Name this capturing group `n2`.</span></span>|  
+|`(?(n2)`|<span data-ttu-id="d4443-176">Проверка наличия сопоставления `n2` во входной строке.</span><span class="sxs-lookup"><span data-stu-id="d4443-176">Test whether `n2` was matched in the input string.</span></span>|  
+|`)\d{7}`|<span data-ttu-id="d4443-177">Если есть сопоставление `n2` , сопоставляются семь десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="d4443-177">If `n2` was matched, match seven decimal digits.</span></span>|  
+|<code>&#124;\d{3}-\d{2}-\d{4}</code>|<span data-ttu-id="d4443-178">Если сопоставления нет `n2` , сопоставляются три десятичных цифры, дефис, две десятичных цифры, еще один дефис и четыре десятичных цифры.</span><span class="sxs-lookup"><span data-stu-id="d4443-178">If `n2` was not matched, match three decimal digits, a hyphen, two decimal digits, another hyphen, and four decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="d4443-179">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="d4443-179">Match a word boundary.</span></span>|  
   
- В следующем примере показана вариация этого примера, в котором вместо именованной группы используется нумерованная. Шаблон регулярного выражения выглядит следующим образом: `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`  
+ <span data-ttu-id="d4443-180">В следующем примере показана вариация этого примера, в котором вместо именованной группы используется нумерованная.</span><span class="sxs-lookup"><span data-stu-id="d4443-180">A variation of this example that uses a numbered group instead of a named group is shown in the following example.</span></span> <span data-ttu-id="d4443-181">Шаблон регулярного выражения выглядит следующим образом: `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`</span><span class="sxs-lookup"><span data-stu-id="d4443-181">Its regular expression pattern is `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
   
-## См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="d4443-182">См. также</span><span class="sxs-lookup"><span data-stu-id="d4443-182">See Also</span></span>  
+ [<span data-ttu-id="d4443-183">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="d4443-183">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

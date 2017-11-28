@@ -1,33 +1,29 @@
 ---
 title: "Практическое руководство. Написание метода оси LINQ to XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: f66dd689e31fa7688055721b52b30380327a4977
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2f931bf850b094cf35db7c88aaf7aba9910f8c94
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Практическое руководство. Написание метода оси LINQ to XML (C#)
-Можно написать свои собственные методы оси для получения коллекций из XML-дерева. Один из лучших способов выполнения этого состоит в написании метода расширения, возвращающего коллекцию элементов или атрибутов. Метод расширения можно написать для возврата указанных поднаборов элементов или атрибутов с учетом требований приложения.  
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="bbe3a-102">Практическое руководство. Написание метода оси LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="bbe3a-102">How to: Write a LINQ to XML Axis Method (C#)</span></span>
+<span data-ttu-id="bbe3a-103">Можно написать свои собственные методы оси для получения коллекций из XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="bbe3a-104">Один из лучших способов выполнения этого состоит в написании метода расширения, возвращающего коллекцию элементов или атрибутов.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="bbe3a-105">Метод расширения можно написать для возврата указанных поднаборов элементов или атрибутов с учетом требований приложения.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере используются два метода расширения. Первый метод расширения, `GetXPath`, действует применительно к <xref:System.Xml.Linq.XObject> и возвращает выражение XPath, которое после его вычисления возвращает узел или атрибут. Второй метод расширения, `Find`, применяется к <xref:System.Xml.Linq.XElement>. Он возвращает коллекцию объектов <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XElement>, содержащих некоторый указанный текст.  
+## <a name="example"></a><span data-ttu-id="bbe3a-106">Пример</span><span class="sxs-lookup"><span data-stu-id="bbe3a-106">Example</span></span>  
+ <span data-ttu-id="bbe3a-107">В следующем примере используются два метода расширения.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-107">The following example uses two extension methods.</span></span> <span data-ttu-id="bbe3a-108">Первый метод расширения, `GetXPath`, действует применительно к <xref:System.Xml.Linq.XObject> и возвращает выражение XPath, которое после его вычисления возвращает узел или атрибут.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-108">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="bbe3a-109">Второй метод расширения, `Find`, применяется к <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-109">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="bbe3a-110">Он возвращает коллекцию объектов <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XElement>, содержащих некоторый указанный текст.</span><span class="sxs-lookup"><span data-stu-id="bbe3a-110">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ <span data-ttu-id="bbe3a-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="bbe3a-111">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 public static class MyExtensions  
@@ -290,7 +286,7 @@ class Program
 }  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="bbe3a-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="bbe3a-112">This code produces the following output:</span></span>  
   
 ```  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
@@ -303,6 +299,5 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="bbe3a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="bbe3a-113">See Also</span></span>  
+ [<span data-ttu-id="bbe3a-114">Дополнительные способы создания запросов (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bbe3a-114">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
