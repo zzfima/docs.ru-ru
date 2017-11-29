@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/18/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-performance"></a>Производительность .NET Framework
 Если вы хотите создавать приложения, отличающиеся высокой производительностью, вам следует закладывать эту производительность при планировании и проектировании наравне с другими возможностями приложения. Вы можете использовать средства, предоставляемые корпорацией Майкрософт, для измерения уровня производительности приложения и внесения усовершенствований в использование памяти, пропускную способность кода и скорость реагирования. В этом разделе перечислены средства анализа производительности, предоставляемые корпорацией Майкрософт, и приведены ссылки на другие разделы, описывающие аспекты производительности для разных областей разработки.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/18/2017
 |[Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md)|Содержит описание способов инициализации объектов по мере необходимости для повышения производительности, особенно при запуске приложения.|  
 |[Надежность](../../../docs/framework/performance/reliability.md)|Содержит сведения о предотвращении асинхронных исключений в серверной среде.|  
 |[Разработка крупных приложений .NET Framework с высокой скоростью отклика](../../../docs/framework/performance/writing-large-responsive-apps.md)|Содержит советы по повышению производительности, выработанные во время перевода компиляторов C# и Visual Basic на управляемый код, и несколько реальных примеров из компилятора C#.|
-

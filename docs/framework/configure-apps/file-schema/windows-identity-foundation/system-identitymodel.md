@@ -1,57 +1,61 @@
 ---
-title: "&lt;system.identityModel&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;system.identityModel&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
-caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 356dd1531f093282a1a8463b7d697400f8b45862
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.identityModel&gt;
-Содержит настройки для включения параметров Foundation удостоверение Windows \(WIF\) в приложениях.  
+# <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
+Обеспечивает настройку для включения параметров Windows Identity Foundation (WIF) в приложениях.  
   
- \<system.identityModel\>  
+ \<system.identityModel >  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <system.identityModel>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- None  
+### <a name="attributes"></a>Атрибуты  
+ Нет  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Задает параметры уровня службы удостоверений.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`<configuration>`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы удостоверений.|  
   
-## Заметки  
- Добавить `<system.identityModel>` раздел файла конфигурации, чтобы настроить службу или приложение на использование Foundation удостоверение Windows \(WIF\).  `<system.identityModel>` Представленного элементом <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> класса.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-## Пример  
- В этом примере показано, как добавить `<system.identityModel>` раздел в файле конфигурации.  Необходимо сначала добавить объявление раздела и пространство имен конфигурации в разделе `<configSections>` элемент.  Затем можно добавить `<system.IdentityModel>` элемент в файле конфигурации, чтобы указать один или несколько идентификаторов конфигураций.  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|`<configuration>`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
-```  
+## <a name="remarks"></a>Примечания  
+ Добавить `<system.identityModel>` раздел в файл конфигурации для настройки службы или приложения для использования Windows Identity Foundation (WIF). `<system.identityModel>` Представлен <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> класса.  
+  
+## <a name="example"></a>Пример  
+ Следующий пример демонстрирует добавление `<system.identityModel>` раздела в файле конфигурации. Сначала необходимо добавить объявление раздела и пространство имен конфигурации в разделе `<configSections>` элемента. Затем можно добавить `<system.IdentityModel>` элемент в файл конфигурации, чтобы указать одну или несколько конфигураций удостоверения.  
+  
+```xml  
 <configuration>  
   <configSections>  
     <!--WIF 4.5 sections -->  
@@ -80,5 +84,5 @@ caps.handback.revision: 5
 </configuration>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

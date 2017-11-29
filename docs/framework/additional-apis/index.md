@@ -1,12 +1,11 @@
 ---
-title: "Дополнительные библиотеки классов и интерфейсы API | Документы Майкрософт"
+title: "Дополнительные библиотеки классов и интерфейсы API"
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,23 +14,21 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b53b8acc2a6c56db6a9d8a9b7c685a2d400a53e1
-ms.openlocfilehash: 34815268b707aa70d174a1bbc04c32276db8412d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 05/02/2017
-
+ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
 Платформа .NET Framework постоянно развивается. С целью совершенствования кроссплатформенной разработки и оперативного предоставления новых функциональных возможностей нашим клиентам мы выпускаем новые возможности в виде внештатных выпусков. В этом разделе перечислены внештатные проекты, для которых мы предоставляем документацию.  
   
-Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например, благодаря классу <xref:System.Text.CodePagesEncodingProvider> кодировки кодовых страниц становятся доступными для приложений UWP, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
+Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например <xref:System.Text.CodePagesEncodingProvider> класса делает доступными для приложений UWP, разработанных с помощью .NET Framework кодировок кодовых страниц. В этой статье эти библиотеки перечислены тоже.  
   
 ## <a name="oob-projects"></a>Встроенные проекты
   
@@ -46,19 +43,26 @@ ms.lasthandoff: 05/02/2017
   
 | Проект | Описание |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Расширяет класс <xref:System.Text.EncodingProvider>, чтобы сделать кодировки кодовых страниц доступными для приложений, предназначенных для универсальной платформы Windows. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Расширяет <xref:System.Text.EncodingProvider> класса, чтобы сделать доступными для приложений, предназначенных для универсальной платформы Windows кодировок кодовых страниц. |  
   
 ## <a name="private-apis"></a>Частные интерфейсы API  
 
 Эти API-интерфейсы используются для поддержки инфраструктуры продукта и не предназначены для использования непосредственно в коде.  
   
-| Имя API |  
-| -------- |  
-| [s_isDebuggerCheckDisabledForTestPurposes Field](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |  
-| [Класс DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |  
-| [Класс DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |  
+| Имя API |
+| -------- |
+| [Класс System.Net.Connection](../../../docs/framework/additional-apis/connection.md) |
+| [System.Net.Connection.m\_WriteList поля](../../../docs/framework/additional-apis/m_writelist.md) |
+| [Класс System.Net.ConnectionGroup](../../../docs/framework/additional-apis/connectiongroup.md) |
+| [System.Net.ConnectionGroup.m\_ConnectionList поля](../../../docs/framework/additional-apis/m_connectionlist.md) |
+| [System.Net.HttpWebRequest. \_HttpResponse поля](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [System.Net.HttpWebRequest. \_AutoRedirects поля](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [System.Net.ServicePoint.m\_ConnectionGroupList поля](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
+| [System.Net.ServicePointManager.s\_ServicePointTable поля](../../../docs/framework/additional-apis/s_servicepointtable.md) |
+| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes поля](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [Класс System.Windows.Forms.Design.DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
+| [Класс System.Windows.Forms.Design.DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>См. также
 
 [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
-
