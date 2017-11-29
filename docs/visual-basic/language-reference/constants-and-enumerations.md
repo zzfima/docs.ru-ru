@@ -1,106 +1,89 @@
 ---
-title: "Константы и перечисления (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Константы и перечисления (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - enumerations [Visual Basic]
-- constants
-- constants, list of
+- constants [Visual Basic]
+- constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e37ef2e3c51e96e85cb214054195016e69d52382
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="constants-and-enumerations-visual-basic"></a>Константы и перечисления (Visual Basic)
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет ряд предопределенных констант и перечислений для разработчиков. Константы хранят значения, которые остаются неизменными во время выполнения приложения. Перечисления предоставляют удобный способ работы с наборами связанных констант и связывания постоянных значений с именами.  
+# <a name="constants-and-enumerations-visual-basic"></a><span data-ttu-id="f68e6-102">Константы и перечисления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f68e6-102">Constants and Enumerations (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="f68e6-103">предоставляет ряд предопределенных констант и перечислений для разработчиков.</span><span class="sxs-lookup"><span data-stu-id="f68e6-103"> supplies a number of predefined constants and enumerations for developers.</span></span> <span data-ttu-id="f68e6-104">Константы хранят значения, которые остаются неизменными во время выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="f68e6-104">Constants store values that remain constant throughout the execution of an application.</span></span> <span data-ttu-id="f68e6-105">Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.</span><span class="sxs-lookup"><span data-stu-id="f68e6-105">Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.</span></span>  
   
-## <a name="constants"></a>Константы  
+## <a name="constants"></a><span data-ttu-id="f68e6-106">Константы</span><span class="sxs-lookup"><span data-stu-id="f68e6-106">Constants</span></span>  
   
-### <a name="conditional-compilation-constants"></a>Константы условной компиляции  
- В следующей таблице перечислены предопределенные константы, доступные для условной компиляции.  
+### <a name="conditional-compilation-constants"></a><span data-ttu-id="f68e6-107">Константы условной компиляции</span><span class="sxs-lookup"><span data-stu-id="f68e6-107">Conditional Compilation Constants</span></span>  
+ <span data-ttu-id="f68e6-108">В следующей таблице перечислены предопределенные константы, доступные для условной компиляции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-108">The following table lists the predefined constants available for conditional compilation.</span></span>  
   
-|**Константа**|**Описание**|  
+|<span data-ttu-id="f68e6-109">**Константа**</span><span class="sxs-lookup"><span data-stu-id="f68e6-109">**Constant**</span></span>|<span data-ttu-id="f68e6-110">**Описание**</span><span class="sxs-lookup"><span data-stu-id="f68e6-110">**Description**</span></span>|  
 |---|---|  
-|`CONFIG`|Строка, соответствующая текущей настройке **активная конфигурация решения** поле **Configuration Manager**.|  
-|`DEBUG`|Объект `Boolean` значение, которое может быть задано в **свойства проекта** диалоговое окно. По умолчанию конфигурация отладки для проекта определяет `DEBUG`. При `DEBUG` определяется, <xref:System.Diagnostics.Debug>методы класса выводят **вывода** окно.</xref:System.Diagnostics.Debug> Если она не определена, <xref:System.Diagnostics.Debug>методы класса не компилируются и не формирует выходные данные отладки.</xref:System.Diagnostics.Debug>|  
-|`TARGET`|Строка, представляющая тип выходных данных для проекта или параметр командной строки **/target-** параметр. Возможные значения `TARGET` являются:<br /><br /> -«winexe» для приложения Windows.<br />-«exe» для консольного приложения.<br />-«Библиотека» для библиотеки классов.<br />-«модуль» для модуля.<br />- **/Target-** может быть установлен [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] интегрированной среды разработки. Дополнительные сведения см. в разделе [/Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|Объект `Boolean` значение, которое может быть задано в **свойства проекта** диалоговое окно. По умолчанию все конфигурации для проекта определяют `TRACE`. При `TRACE` определяется, <xref:System.Diagnostics.Trace>методы класса выводят **вывода** окно.</xref:System.Diagnostics.Trace> Если она не определена, <xref:System.Diagnostics.Trace>класс, методы не компилируются и не `Trace` создаются выходные данные.</xref:System.Diagnostics.Trace>|  
-|`VBC_VER`|Число, представляющее [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] версии в *основных*.* вспомогательные* формат. Номер версии для [!INCLUDE[vbprvblong](../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)] 8.0.|  
+|`CONFIG`|<span data-ttu-id="f68e6-111">Строка, которая соответствует текущей настройке **активная конфигурация решения** поле **Configuration Manager**.</span><span class="sxs-lookup"><span data-stu-id="f68e6-111">A string that corresponds to the current setting of the **Active Solution Configuration** box in the **Configuration Manager**.</span></span>|  
+|`DEBUG`|<span data-ttu-id="f68e6-112">Объект `Boolean` значение, которое может быть задано в **свойства проекта** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="f68e6-112">A `Boolean` value that can be set in the **Project Properties** dialog box.</span></span> <span data-ttu-id="f68e6-113">По умолчанию конфигурация отладки для проекта определяет `DEBUG`.</span><span class="sxs-lookup"><span data-stu-id="f68e6-113">By default, the Debug configuration for a project defines `DEBUG`.</span></span> <span data-ttu-id="f68e6-114">Когда `DEBUG` определен, <xref:System.Diagnostics.Debug> методы класса выводят информацию в **вывода** окна.</span><span class="sxs-lookup"><span data-stu-id="f68e6-114">When `DEBUG` is defined, <xref:System.Diagnostics.Debug> class methods generate output to the **Output** window.</span></span> <span data-ttu-id="f68e6-115">Если она не определена, <xref:System.Diagnostics.Debug> методы класса не компилируются и не формирует выходные данные отладки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-115">When it is not defined, <xref:System.Diagnostics.Debug> class methods are not compiled and no Debug output is generated.</span></span>|  
+|`TARGET`|<span data-ttu-id="f68e6-116">Строка, представляющая тип выходных данных для проекта или параметр командной строки **/target-** параметр.</span><span class="sxs-lookup"><span data-stu-id="f68e6-116">A string representing the output type for the project or the setting of the command-line **/target** option.</span></span> <span data-ttu-id="f68e6-117">Возможные значения `TARGET` являются:</span><span class="sxs-lookup"><span data-stu-id="f68e6-117">The possible values of `TARGET` are:</span></span><br /><br /> <span data-ttu-id="f68e6-118">-«winexe» для приложения Windows.</span><span class="sxs-lookup"><span data-stu-id="f68e6-118">-   "winexe" for a Windows application.</span></span><br /><span data-ttu-id="f68e6-119">-«exe» для консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="f68e6-119">-   "exe" for a console application.</span></span><br /><span data-ttu-id="f68e6-120">-«Библиотека» для библиотеки классов.</span><span class="sxs-lookup"><span data-stu-id="f68e6-120">-   "library" for a class library.</span></span><br /><span data-ttu-id="f68e6-121">-«модуль» для модуля.</span><span class="sxs-lookup"><span data-stu-id="f68e6-121">-   "module" for a module.</span></span><br /><span data-ttu-id="f68e6-122">- **/Target-** может быть установлен [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] интегрированной среды разработки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-122">-   The **/target** option may be set in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment.</span></span> <span data-ttu-id="f68e6-123">Дополнительные сведения см. в разделе [/Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).</span><span class="sxs-lookup"><span data-stu-id="f68e6-123">For more information, see [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).</span></span>|  
+|`TRACE`|<span data-ttu-id="f68e6-124">Объект `Boolean` значение, которое может быть задано в **свойства проекта** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="f68e6-124">A `Boolean` value that can be set in the **Project Properties** dialog box.</span></span> <span data-ttu-id="f68e6-125">По умолчанию все конфигурации для проекта определяют `TRACE`.</span><span class="sxs-lookup"><span data-stu-id="f68e6-125">By default, all configurations for a project define `TRACE`.</span></span> <span data-ttu-id="f68e6-126">Когда `TRACE` определен, <xref:System.Diagnostics.Trace> методы класса выводят информацию в **вывода** окна.</span><span class="sxs-lookup"><span data-stu-id="f68e6-126">When `TRACE` is defined, <xref:System.Diagnostics.Trace> class methods generate output to the **Output** window.</span></span> <span data-ttu-id="f68e6-127">Если она не определена, <xref:System.Diagnostics.Trace> класс, методы не компилируются и нет `Trace` создаются выходные данные.</span><span class="sxs-lookup"><span data-stu-id="f68e6-127">When it is not defined, <xref:System.Diagnostics.Trace> class methods are not compiled and no `Trace` output is generated.</span></span>|  
+|`VBC_VER`|<span data-ttu-id="f68e6-128">Число, представляющее [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] версии в *основных*. *дополнительный номер* формат.</span><span class="sxs-lookup"><span data-stu-id="f68e6-128">A number representing the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] version, in *major*.*minor* format.</span></span> <span data-ttu-id="f68e6-129">Номер версии для [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0.</span><span class="sxs-lookup"><span data-stu-id="f68e6-129">The version number for [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] is 8.0.</span></span>|  
   
-### <a name="print-and-display-constants"></a>Константы печати и отображения  
- При вызове печати и отобразить функции, можно использовать следующие константы в коде вместо фактических значений.  
+### <a name="print-and-display-constants"></a><span data-ttu-id="f68e6-130">Константы печати и отображения</span><span class="sxs-lookup"><span data-stu-id="f68e6-130">Print and Display Constants</span></span>  
+ <span data-ttu-id="f68e6-131">При вызове печати и отобразить функции, можно использовать следующие константы в коде вместо фактических значений.</span><span class="sxs-lookup"><span data-stu-id="f68e6-131">When you call print and display functions, you can use the following constants in your code in place of the actual values.</span></span>  
   
-|**Константа**|**Описание**|  
+|<span data-ttu-id="f68e6-132">**Константа**</span><span class="sxs-lookup"><span data-stu-id="f68e6-132">**Constant**</span></span>|<span data-ttu-id="f68e6-133">**Описание**</span><span class="sxs-lookup"><span data-stu-id="f68e6-133">**Description**</span></span>|  
 |---|---|  
-|`vbCrLf`|Сочетание символов возврата каретки.|  
-|`vbCr`|Символ возврата каретки.|  
-|`vbLf`|Символ перевода строки.|  
-|`vbNewLine`|Символ новой строки.|  
-|`vbNullChar`|Символ NULL.|  
-|`vbNullString`|Не отличается от строки нулевой длины (»»); используется для вызова внешних процедур.|  
-|`vbObjectError`|Номер ошибки. Номера пользовательских ошибках должны быть больше, чем это значение. Пример:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
-|`vbTab`|Символ табуляции.|  
-|`vbBack`|Символ возврата каретки.|  
-|`vbFormFeed`|Не используется в Microsoft Windows.|  
-|`vbVerticalTab`|Не удобно использовать в Microsoft Windows.|  
+|`vbCrLf`|<span data-ttu-id="f68e6-134">Сочетание символов возврата каретки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-134">Carriage return/linefeed character combination.</span></span>|  
+|`vbCr`|<span data-ttu-id="f68e6-135">Символ возврата каретки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-135">Carriage return character.</span></span>|  
+|`vbLf`|<span data-ttu-id="f68e6-136">Символ перевода строки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-136">Linefeed character.</span></span>|  
+|`vbNewLine`|<span data-ttu-id="f68e6-137">Символ перевода строки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-137">Newline character.</span></span>|  
+|`vbNullChar`|<span data-ttu-id="f68e6-138">Символ NULL.</span><span class="sxs-lookup"><span data-stu-id="f68e6-138">Null character.</span></span>|  
+|`vbNullString`|<span data-ttu-id="f68e6-139">Не совпадает со значением строки нулевой длины (»»); используется для вызова внешних процедур.</span><span class="sxs-lookup"><span data-stu-id="f68e6-139">Not the same as a zero-length string (""); used for calling external procedures.</span></span>|  
+|`vbObjectError`|<span data-ttu-id="f68e6-140">Номер ошибки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-140">Error number.</span></span> <span data-ttu-id="f68e6-141">Номера пользовательских ошибках должны быть больше, чем это значение.</span><span class="sxs-lookup"><span data-stu-id="f68e6-141">User-defined error numbers should be greater than this value.</span></span> <span data-ttu-id="f68e6-142">Пример:</span><span class="sxs-lookup"><span data-stu-id="f68e6-142">For example:</span></span><br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbTab`|<span data-ttu-id="f68e6-143">Символ табуляции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-143">Tab character.</span></span>|  
+|`vbBack`|<span data-ttu-id="f68e6-144">Символ возврата каретки.</span><span class="sxs-lookup"><span data-stu-id="f68e6-144">Backspace character.</span></span>|  
+|`vbFormFeed`|<span data-ttu-id="f68e6-145">Не используется в Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="f68e6-145">Not used in Microsoft Windows.</span></span>|  
+|`vbVerticalTab`|<span data-ttu-id="f68e6-146">Не используется в Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="f68e6-146">Not useful in Microsoft Windows.</span></span>|  
   
-## <a name="enumerations"></a>Перечисления  
- В следующей таблице перечислены и описаны перечисления, предоставляемые [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+## <a name="enumerations"></a><span data-ttu-id="f68e6-147">Перечисления</span><span class="sxs-lookup"><span data-stu-id="f68e6-147">Enumerations</span></span>  
+ <span data-ttu-id="f68e6-148">В следующей таблице перечислены и описаны перечисления, предоставляемые [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f68e6-148">The following table lists and describes the enumerations provided by [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-|Перечисление|Описание|  
+|<span data-ttu-id="f68e6-149">Перечисление</span><span class="sxs-lookup"><span data-stu-id="f68e6-149">Enumeration</span></span>|<span data-ttu-id="f68e6-150">Описание</span><span class="sxs-lookup"><span data-stu-id="f68e6-150">Description</span></span>|  
 |---|---|  
-|<xref:Microsoft.VisualBasic.AppWinStyle></xref:Microsoft.VisualBasic.AppWinStyle>|Указывает стиль окна для использования вызванной программы при вызове <xref:Microsoft.VisualBasic.Interaction.Shell%2A>функция.</xref:Microsoft.VisualBasic.Interaction.Shell%2A>|  
-|<xref:Microsoft.VisualBasic.AudioPlayMode></xref:Microsoft.VisualBasic.AudioPlayMode>|Указывает, как воспроизводить звуки при вызове методов воспроизведения.|  
-|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole></xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|Указывает тип роли для проверки при вызове <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>метода.</xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
-|<xref:Microsoft.VisualBasic.CallType></xref:Microsoft.VisualBasic.CallType>|Указывает тип процедуры, вызываемой при вызове <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>функция.</xref:Microsoft.VisualBasic.Interaction.CallByName%2A>|  
-|<xref:Microsoft.VisualBasic.CompareMethod></xref:Microsoft.VisualBasic.CompareMethod>|Указывает, как сравнивать строки, вызывая функции сравнения.|  
-|<xref:Microsoft.VisualBasic.DateFormat></xref:Microsoft.VisualBasic.DateFormat>|Указывает, как отображать даты при вызове <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>функция.</xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|  
-|<xref:Microsoft.VisualBasic.DateInterval></xref:Microsoft.VisualBasic.DateInterval>|Указывает способ определения и форматирования интервалов дат при вызове функций для работы с датами.|  
-|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption></xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Указывает, какие действия должны выполняться, если удаляемый каталог содержит файлы или каталоги.|  
-|<xref:Microsoft.VisualBasic.DueDate></xref:Microsoft.VisualBasic.DueDate>|Указывает, когда должны осуществляться платежи при вызове финансовых методов.|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType></xref:Microsoft.VisualBasic.FileIO.FieldType>|Указывает ли текстовые поля являются разделителями или фиксированной ширины.|  
-|<xref:Microsoft.VisualBasic.FileAttribute></xref:Microsoft.VisualBasic.FileAttribute>|Указывает, что атрибуты файла для использования при вызове функций доступа к файлам.|  
-|<xref:Microsoft.VisualBasic.FirstDayOfWeek></xref:Microsoft.VisualBasic.FirstDayOfWeek>|Указывает первый день недели для использования при вызове функций работы с датами.|  
-|<xref:Microsoft.VisualBasic.FirstWeekOfYear></xref:Microsoft.VisualBasic.FirstWeekOfYear>|Указывает первую неделю года для использования при вызове функций работы с датами.|  
-|<xref:Microsoft.VisualBasic.MsgBoxResult></xref:Microsoft.VisualBasic.MsgBoxResult>|Указывает, какая кнопка была нажата в окне сообщения, возвращаемые <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>функция.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|<xref:Microsoft.VisualBasic.MsgBoxStyle></xref:Microsoft.VisualBasic.MsgBoxStyle>|Указывает, какие кнопки отображаются при вызове <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>функция.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|<xref:Microsoft.VisualBasic.OpenAccess></xref:Microsoft.VisualBasic.OpenAccess>|Указывает, как открыть файл при вызове функций доступа к файлам.|  
-|<xref:Microsoft.VisualBasic.OpenMode></xref:Microsoft.VisualBasic.OpenMode>|Указывает, как открыть файл при вызове функций доступа к файлам.|  
-|<xref:Microsoft.VisualBasic.OpenShare></xref:Microsoft.VisualBasic.OpenShare>|Указывает, как открыть файл при вызове функций доступа к файлам.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption></xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Указывает, удален без возможности восстановления или поместить в корзине файл.|  
-|<xref:Microsoft.VisualBasic.FileIO.SearchOption></xref:Microsoft.VisualBasic.FileIO.SearchOption>|Указывает, следует ли выполнять поиск всех или только каталоги верхнего уровня.|  
-|<xref:Microsoft.VisualBasic.TriState></xref:Microsoft.VisualBasic.TriState>|Указывает `Boolean` значение или должно ли использоваться значение по умолчанию при вызове функций форматирования чисел.|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption></xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Указывает, что следует сделать, если пользователь нажимает кнопку **отменить** во время выполнения операции.|  
-|<xref:Microsoft.VisualBasic.FileIO.UIOption></xref:Microsoft.VisualBasic.FileIO.UIOption>|Указывает, следует ли отображать диалоговое окно хода выполнения при копировании, удалении или перемещении файлов и каталогов.|  
-|<xref:Microsoft.VisualBasic.VariantType></xref:Microsoft.VisualBasic.VariantType>|Указывает тип объекта variant, возвращенные <xref:Microsoft.VisualBasic.Information.VarType%2A>функция.</xref:Microsoft.VisualBasic.Information.VarType%2A>|  
-|<xref:Microsoft.VisualBasic.VbStrConv></xref:Microsoft.VisualBasic.VbStrConv>|Указывает, какого типа преобразование необходимо выполнить при вызове <xref:Microsoft.VisualBasic.Strings.StrConv%2A>функция.</xref:Microsoft.VisualBasic.Strings.StrConv%2A>|  
+|<xref:Microsoft.VisualBasic.AppWinStyle>|<span data-ttu-id="f68e6-151">Указывает стиль окна для использования вызванной программы при вызове <xref:Microsoft.VisualBasic.Interaction.Shell%2A> функции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-151">Indicates the window style to use for the invoked program when calling the <xref:Microsoft.VisualBasic.Interaction.Shell%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.AudioPlayMode>|<span data-ttu-id="f68e6-152">Указывает, как воспроизводить звуки при вызове методов воспроизведения.</span><span class="sxs-lookup"><span data-stu-id="f68e6-152">Indicates how to play sounds when calling audio methods.</span></span>|  
+|<xref:Microsoft.VisualBasic.ApplicationServices.BuiltInRole>|<span data-ttu-id="f68e6-153">Указывает тип роли для проверки при вызове <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> метода.</span><span class="sxs-lookup"><span data-stu-id="f68e6-153">Indicates the type of role to check when calling the <xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A> method.</span></span>|  
+|<xref:Microsoft.VisualBasic.CallType>|<span data-ttu-id="f68e6-154">Указывает тип процедуры, вызываемой при вызове <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> функции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-154">Indicates the type of procedure being invoked when calling the <xref:Microsoft.VisualBasic.Interaction.CallByName%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.CompareMethod>|<span data-ttu-id="f68e6-155">Указывает, как сравнивать строки, вызывая функции сравнения.</span><span class="sxs-lookup"><span data-stu-id="f68e6-155">Indicates how to compare strings when calling comparison functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.DateFormat>|<span data-ttu-id="f68e6-156">Указывает способ отображения дат при вызове <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> функции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-156">Indicates how to display dates when calling the <xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.DateInterval>|<span data-ttu-id="f68e6-157">Указывает способ определения и форматирования интервалов дат при вызове функций для работы с датами.</span><span class="sxs-lookup"><span data-stu-id="f68e6-157">Indicates how to determine and format date intervals when calling date-related functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|<span data-ttu-id="f68e6-158">Указывает, какие действия должны выполняться, если каталог содержит файлы или каталоги.</span><span class="sxs-lookup"><span data-stu-id="f68e6-158">Specifies what should be done when a directory that is to be deleted contains files or directories.</span></span>|  
+|<xref:Microsoft.VisualBasic.DueDate>|<span data-ttu-id="f68e6-159">Указывает, когда должны осуществляться платежи при вызове финансовых методов.</span><span class="sxs-lookup"><span data-stu-id="f68e6-159">Indicates when payments are due when calling financial methods.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|<span data-ttu-id="f68e6-160">Указывает ли текстового поля с разделителями либо поле фиксированной длины.</span><span class="sxs-lookup"><span data-stu-id="f68e6-160">Indicates whether text fields are delimited or fixed-width.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileAttribute>|<span data-ttu-id="f68e6-161">Указывает атрибуты файла для использования при вызове функций доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="f68e6-161">Indicates the file attributes to use when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FirstDayOfWeek>|<span data-ttu-id="f68e6-162">Указывает первый день недели для использования при вызове функций работы с датами.</span><span class="sxs-lookup"><span data-stu-id="f68e6-162">Indicates the first day of the week to use when calling date-related functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FirstWeekOfYear>|<span data-ttu-id="f68e6-163">Указывает первую неделю года для использования при вызове функций работы с датами.</span><span class="sxs-lookup"><span data-stu-id="f68e6-163">Indicates the first week of the year to use when calling date-related functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.MsgBoxResult>|<span data-ttu-id="f68e6-164">Указывает, какая кнопка нажата в окне сообщения, возвращаемом функцией <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>.</span><span class="sxs-lookup"><span data-stu-id="f68e6-164">Indicates which button was pressed on a message box, returned by the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.MsgBoxStyle>|<span data-ttu-id="f68e6-165">Указывает, какие кнопки отображаются при вызове функции <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>.</span><span class="sxs-lookup"><span data-stu-id="f68e6-165">Indicates which buttons to display when calling the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.OpenAccess>|<span data-ttu-id="f68e6-166">Указывает, как открыть файл при вызове функций доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="f68e6-166">Indicates how to open a file when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.OpenMode>|<span data-ttu-id="f68e6-167">Указывает, как открыть файл при вызове функций доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="f68e6-167">Indicates how to open a file when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.OpenShare>|<span data-ttu-id="f68e6-168">Указывает, как открыть файл при вызове функций доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="f68e6-168">Indicates how to open a file when calling file-access functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|<span data-ttu-id="f68e6-169">Определяет, удалены без возможности восстановления или поместить в корзине файл.</span><span class="sxs-lookup"><span data-stu-id="f68e6-169">Specifies whether a file should be deleted permanently or placed in the Recycle Bin.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.SearchOption>|<span data-ttu-id="f68e6-170">Указывает, следует ли выполнять поиск всех или только каталоги верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="f68e6-170">Specifies whether to search all or only top-level directories.</span></span>|  
+|<xref:Microsoft.VisualBasic.TriState>|<span data-ttu-id="f68e6-171">Указывает `Boolean` значение или должно ли использоваться значение по умолчанию при вызове функций форматирования чисел.</span><span class="sxs-lookup"><span data-stu-id="f68e6-171">Indicates a `Boolean` value or whether the default should be used when calling number-formatting functions.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|<span data-ttu-id="f68e6-172">Указывает, что следует выполнить, если пользователь нажимает кнопку **отменить** во время выполнения операции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-172">Specifies what should be done if the user clicks **Cancel** during an operation.</span></span>|  
+|<xref:Microsoft.VisualBasic.FileIO.UIOption>|<span data-ttu-id="f68e6-173">Указывает, следует ли отображать диалоговое окно хода выполнения, когда копирование, удаление или перемещение файлов и каталогов.</span><span class="sxs-lookup"><span data-stu-id="f68e6-173">Specifies whether or not to show a progress dialog when copying, deleting, or moving files or directories.</span></span>|  
+|<xref:Microsoft.VisualBasic.VariantType>|<span data-ttu-id="f68e6-174">Указывает тип объекта variant, возвращенные <xref:Microsoft.VisualBasic.Information.VarType%2A> функции.</span><span class="sxs-lookup"><span data-stu-id="f68e6-174">Indicates the type of a variant object, returned by the <xref:Microsoft.VisualBasic.Information.VarType%2A> function.</span></span>|  
+|<xref:Microsoft.VisualBasic.VbStrConv>|<span data-ttu-id="f68e6-175">Указывает, преобразование какого типа следует выполнить при вызове функции <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.</span><span class="sxs-lookup"><span data-stu-id="f68e6-175">Indicates which type of conversion to perform when calling the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)   
- [Visual Basic](../../visual-basic/index.md)   
- [Общие сведения о константах](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Общие сведения о перечислениях](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f68e6-176">См. также</span><span class="sxs-lookup"><span data-stu-id="f68e6-176">See Also</span></span>  
+ [<span data-ttu-id="f68e6-177">Справочник по языку Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f68e6-177">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ [<span data-ttu-id="f68e6-178">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f68e6-178">Visual Basic</span></span>](../../visual-basic/index.md)  
+ [<span data-ttu-id="f68e6-179">Общие сведения о константах</span><span class="sxs-lookup"><span data-stu-id="f68e6-179">Constants Overview</span></span>](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [<span data-ttu-id="f68e6-180">Общие сведения о перечислениях</span><span class="sxs-lookup"><span data-stu-id="f68e6-180">Enumerations Overview</span></span>](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

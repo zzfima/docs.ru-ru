@@ -1,147 +1,150 @@
 ---
-title: "Общие сведения об объектах класса Freezable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы, Freezable"
-  - "Freezable - объекты, описание"
-  - "отмена фиксации объектов Freezable"
+title: "Общие сведения об объектах класса Freezable"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Freezable objects [WPF], description
+- unfreezing Freezable objects [WPF]
+- classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-caps.latest.revision: 30
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49778dc9551652ee4a4d36426b4b396652b9dcd2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об объектах класса Freezable
-В данном разделе описано, как эффективно использовать и создавать объекты <xref:System.Windows.Freezable>, которые обеспечивают специальные возможности, помогающие повысить производительность приложения.  Примерами объектов класса Freezable являются кисти, перья, преобразования, геометрия объектов и анимация.  
+# <a name="freezable-objects-overview"></a><span data-ttu-id="0a46f-102">Общие сведения об объектах класса Freezable</span><span class="sxs-lookup"><span data-stu-id="0a46f-102">Freezable Objects Overview</span></span>
+<span data-ttu-id="0a46f-103">Описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые обеспечивают специальные возможности, которые могут помочь повысить производительность приложения.</span><span class="sxs-lookup"><span data-stu-id="0a46f-103">This topic describes how to effectively use and create <xref:System.Windows.Freezable> objects, which provide special features that can help improve application performance.</span></span> <span data-ttu-id="0a46f-104">Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.</span><span class="sxs-lookup"><span data-stu-id="0a46f-104">Examples of freezable objects include brushes, pens, transformations, geometries, and animations.</span></span>  
   
- В этом разделе содержатся следующие подразделы.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="whatisafreezable"></a>   
-## Понятие объекта Freezable  
- <xref:System.Windows.Freezable> представляет сосбой особый тип объекта, имеющий два состояния: фиксированное и нефиксированное.  Незафиксированный объект <xref:System.Windows.Freezable> ведет себя как любой другой объект.  Зафиксированный объект <xref:System.Windows.Freezable> нельзя изменить.  
+## <a name="what-is-a-freezable"></a><span data-ttu-id="0a46f-105">Что такое Freezable?</span><span class="sxs-lookup"><span data-stu-id="0a46f-105">What Is a Freezable?</span></span>  
+ <span data-ttu-id="0a46f-106">Объект <xref:System.Windows.Freezable> — это специальный тип объекта, имеющего два состояния: зафиксирована и фиксации.</span><span class="sxs-lookup"><span data-stu-id="0a46f-106">A <xref:System.Windows.Freezable> is a special type of object that has two states: unfrozen and frozen.</span></span> <span data-ttu-id="0a46f-107">Незафиксированный <xref:System.Windows.Freezable> ведет себя как любой другой объект.</span><span class="sxs-lookup"><span data-stu-id="0a46f-107">When unfrozen, a <xref:System.Windows.Freezable> appears to behave like any other object.</span></span> <span data-ttu-id="0a46f-108">Зафиксированный <xref:System.Windows.Freezable> не может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="0a46f-108">When frozen, a <xref:System.Windows.Freezable> can no longer be modified.</span></span>  
   
- Класс <xref:System.Windows.Freezable> предоставляет событие <xref:System.Windows.Freezable.Changed> для уведомления наблюдающих объектов обо всех изменениях объекта.  Фиксация объекта <xref:System.Windows.Freezable> может повысить его производительность, поскольку больше не потребуется тратить ресурсы на уведомления об изменениях.  Зафиксированные объекты <xref:System.Windows.Freezable> также могут совместно использоваться потоками, в отличие от незафиксированных <xref:System.Windows.Freezable>.  
+ <span data-ttu-id="0a46f-109">Объект <xref:System.Windows.Freezable> предоставляет <xref:System.Windows.Freezable.Changed> событие для уведомления наблюдателей об каких-либо изменений объекта.</span><span class="sxs-lookup"><span data-stu-id="0a46f-109">A <xref:System.Windows.Freezable> provides a <xref:System.Windows.Freezable.Changed> event to notify observers of any modifications to the object.</span></span> <span data-ttu-id="0a46f-110">Замораживание <xref:System.Windows.Freezable> может повысить производительность, поскольку больше не требуется тратить ресурсы на уведомления об изменениях.</span><span class="sxs-lookup"><span data-stu-id="0a46f-110">Freezing a <xref:System.Windows.Freezable> can improve its performance, because it no longer needs to spend resources on change notifications.</span></span> <span data-ttu-id="0a46f-111">Зафиксированный <xref:System.Windows.Freezable> также могут совместно использоваться потоками, в отличие от незафиксированных <xref:System.Windows.Freezable> невозможно.</span><span class="sxs-lookup"><span data-stu-id="0a46f-111">A frozen <xref:System.Windows.Freezable> can also be shared across threads, while an unfrozen <xref:System.Windows.Freezable> cannot.</span></span>  
   
- Хотя класс <xref:System.Windows.Freezable> имеет много приложений, большинство объектов <xref:System.Windows.Freezable> в приложении [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] связаны с графической подсистемой.  
+ <span data-ttu-id="0a46f-112">Несмотря на то что <xref:System.Windows.Freezable> класс имеет множество применений наиболее <xref:System.Windows.Freezable> объекты в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] связаны с графической подсистемы.</span><span class="sxs-lookup"><span data-stu-id="0a46f-112">Although the <xref:System.Windows.Freezable> class has many applications, most <xref:System.Windows.Freezable> objects in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] are related to the graphics sub-system.</span></span>  
   
- Класс <xref:System.Windows.Freezable> упрощает использование определенных объектов графических систем и помогает повысить быстродействие приложения.  Примерами типов, наследуемых от класса <xref:System.Windows.Freezable>, являются классы <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform> и <xref:System.Windows.Media.Geometry>.  Так как они содержат неуправляемые ресурсы, система должна отслеживать изменения этих объектов и при наличии изменений исходного объекта обновлять соответствующие им неуправляемые ресурсы.  Даже если объект графической системы на самом деле не изменяется, то система все равно должна потратить ресурсы на наблюдение за объектом, если над ним выполняются некоторые действия.  
+ <span data-ttu-id="0a46f-113"><xref:System.Windows.Freezable> Класс упрощает использование определенных объектов графических систем и способствует повышению производительности приложения.</span><span class="sxs-lookup"><span data-stu-id="0a46f-113">The <xref:System.Windows.Freezable> class makes it easier to use certain graphics system objects and can help improve application performance.</span></span> <span data-ttu-id="0a46f-114">Примеры типов, которые наследуют от <xref:System.Windows.Freezable> включают <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform>, и <xref:System.Windows.Media.Geometry> классы.</span><span class="sxs-lookup"><span data-stu-id="0a46f-114">Examples of types that inherit from <xref:System.Windows.Freezable> include the <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform>, and <xref:System.Windows.Media.Geometry> classes.</span></span> <span data-ttu-id="0a46f-115">Так как они содержат неуправляемые ресурсы, система должна отслеживать изменения этих объектов и обновлять соответствующие им неуправляемые ресурсы при наличии изменений в исходный объект.</span><span class="sxs-lookup"><span data-stu-id="0a46f-115">Because they contain unmanaged resources, the system must monitor these objects for modifications, and then update their corresponding unmanaged resources when there is a change to the original object.</span></span> <span data-ttu-id="0a46f-116">Даже если вы не меняете фактически объект графической системы, системы необходимо по-прежнему тратить некоторые ресурсы наблюдения за объектом, в случае, если вы изменяете его.</span><span class="sxs-lookup"><span data-stu-id="0a46f-116">Even if you don't actually modify a graphics system object, the system must still spend some of its resources monitoring the object, in case you do change it.</span></span>  
   
- Например, при создании кисти <xref:System.Windows.Media.SolidColorBrush> и использовании ее для формирования фона кнопки.  
+ <span data-ttu-id="0a46f-117">Например, предположим, вы создаете <xref:System.Windows.Media.SolidColorBrush> кисти и использовать его в качестве фона кнопки.</span><span class="sxs-lookup"><span data-stu-id="0a46f-117">For example, suppose you create a <xref:System.Windows.Media.SolidColorBrush> brush and use it to paint the background of a button.</span></span>  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
- При прорисовке кнопки графическая подсистема [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует предоставленные пользователем сведения для закраски группы пикселей, чтобы задать внешний вид кнопки.  Хотя пользователь использует заливку сплошным цветом для описания внешнего вида кнопки, фактически не она выполняет закраску.  Графическая система создает быстрые низкоуровневые объекты для кнопки и кисти, и именно эти объекты фактически отображаются на экране.  
+ <span data-ttu-id="0a46f-118">При отображении кнопки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] графическая подсистема использует сведения, предоставленные закраски группы пикселей, чтобы задать внешний вид кнопки.</span><span class="sxs-lookup"><span data-stu-id="0a46f-118">When the button is rendered, the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics sub-system uses the information you provided to paint a group of pixels to create the appearance of a button.</span></span> <span data-ttu-id="0a46f-119">Несмотря на то, что вы использовали Одноцветная кисть для описания того, как должен быть окрашен кнопки, сплошной цвет кисти фактически не выполняет заливку.</span><span class="sxs-lookup"><span data-stu-id="0a46f-119">Although you used a solid color brush to describe how the button should be painted, your solid color brush doesn't actually do the painting.</span></span> <span data-ttu-id="0a46f-120">Графическая система создает быстрые низкоуровневые объекты для кнопки и кисти, а именно эти объекты, которые отображаются на экране.</span><span class="sxs-lookup"><span data-stu-id="0a46f-120">The graphics system generates fast, low-level objects for the button and the brush, and it is those objects that actually appear on the screen.</span></span>  
   
- При изменении кисти эти низкоуровневые объекты необходимо обновлять.  Именно класс Freezable дает кисти возможность найти соответствующие ей низкоуровневые объекты и обновить их, когда она изменяется.  Если эта возможность включена, кисть считается "незафиксированной".  
+ <span data-ttu-id="0a46f-121">В случае изменения кисти эти низкоуровневые объекты придется повторно создать.</span><span class="sxs-lookup"><span data-stu-id="0a46f-121">If you were to modify the brush, those low-level objects would have to be regenerated.</span></span> <span data-ttu-id="0a46f-122">Класс freezable является то, что дает возможность найти его соответствующий низкоуровневые объекты и обновить их, когда она изменяет кисти.</span><span class="sxs-lookup"><span data-stu-id="0a46f-122">The freezable class is what gives a brush the ability to find its corresponding generated, low-level objects and to update them when it changes.</span></span> <span data-ttu-id="0a46f-123">Если эта возможность включена, кисть считается «незафиксированной».</span><span class="sxs-lookup"><span data-stu-id="0a46f-123">When this ability is enabled, the brush is said to be "unfrozen."</span></span>  
   
- Метод Freezable <xref:System.Windows.Freezable.Freeze%2A> позволяет отключить данную возможность самостоятельного обновления.  Этот метод позволяет "зафиксировать" кисть, т.е. сделать ее неизменяемой.  
+ <span data-ttu-id="0a46f-124">Freezable <xref:System.Windows.Freezable.Freeze%2A> метод позволяет отключить данную возможность самостоятельного обновления.</span><span class="sxs-lookup"><span data-stu-id="0a46f-124">A freezable's <xref:System.Windows.Freezable.Freeze%2A> method enables you to disable this self-updating ability.</span></span> <span data-ttu-id="0a46f-125">Этот метод можно использовать для кисть «зафиксированной», и неизменяемым.</span><span class="sxs-lookup"><span data-stu-id="0a46f-125">You can use this method to make the brush become "frozen," or unmodifiable.</span></span>  
   
 > [!NOTE]
->  Не каждый объект Freezable может быть зафиксирован.  Чтобы избежать возникновения исключения <xref:System.InvalidOperationException>, перед фиксированием объекта необходимо предварительно проверить значение свойства <xref:System.Windows.Freezable.CanFreeze%2A> объекта Freezable, чтобы определить, может ли он быть зафиксирован.  
+>  <span data-ttu-id="0a46f-126">Не каждый объект Freezable может быть зафиксирован.</span><span class="sxs-lookup"><span data-stu-id="0a46f-126">Not every Freezable object can be frozen.</span></span> <span data-ttu-id="0a46f-127">Чтобы избежать возникновения <xref:System.InvalidOperationException>, проверьте значение объект Freezable <xref:System.Windows.Freezable.CanFreeze%2A> свойства, чтобы определить, является ли он быть зафиксирован перед фиксированием.</span><span class="sxs-lookup"><span data-stu-id="0a46f-127">To avoid throwing an <xref:System.InvalidOperationException>, check the value of the Freezable object's <xref:System.Windows.Freezable.CanFreeze%2A> property to determine whether it can be frozen before attempting to freeze it.</span></span>  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
- Когда больше не требуется изменять Freezable, фиксирование объекта дает выигрыш в производительности.  Если бы кисть в данном примере была зафиксирована, то графической системе больше не понадобилось бы отслеживать ее изменения.  Графическая система также может выполнять другие виды оптимизации, так как известно, что кисть не будет изменяться.  
+ <span data-ttu-id="0a46f-128">Когда больше не требуется изменять freezable, фиксирование объекта дает выигрыш в производительности.</span><span class="sxs-lookup"><span data-stu-id="0a46f-128">When you no longer need to modify a freezable, freezing it provides performance benefits.</span></span> <span data-ttu-id="0a46f-129">Если закрепить кисти в этом примере, графической системе больше не потребуется отслеживать ее изменения.</span><span class="sxs-lookup"><span data-stu-id="0a46f-129">If you were to freeze the brush in this example, the graphics system would no longer need to monitor it for changes.</span></span> <span data-ttu-id="0a46f-130">Графической системе также можно сделать другие виды оптимизации, так как известно, что кисть не будет изменяться.</span><span class="sxs-lookup"><span data-stu-id="0a46f-130">The graphics system can also make other optimizations, because it knows the brush won't change.</span></span>  
   
 > [!NOTE]
->  Для удобства объекты Freezable остаются незафиксированными, пока вы не зафиксируете их явным образом.  
+>  <span data-ttu-id="0a46f-131">Для удобства объекты freezable остаются незафиксированными, пока вы явным образом зафиксировать их.</span><span class="sxs-lookup"><span data-stu-id="0a46f-131">For convenience, freezable objects remain unfrozen unless you explicitly freeze them.</span></span>  
   
 <a name="frozenfreezables"></a>   
-## Использование объектов Freezable  
- Использование незафиксированного объекта Freezable аналогично использованию любого другого типа объектов.  В следующем примере цвет объекта <xref:System.Windows.Media.SolidColorBrush> изменяется с желтого на красный после того, как он используется для закраски фона кнопки.  Графическая система работает в фоновом режиме, чтобы автоматически изменить цвет кнопки с желтого на красный при следующем обновлении экрана.  
+## <a name="using-freezables"></a><span data-ttu-id="0a46f-132">С помощью объектов Freezable</span><span class="sxs-lookup"><span data-stu-id="0a46f-132">Using Freezables</span></span>  
+ <span data-ttu-id="0a46f-133">Использование незафиксированного объекта freezable аналогично использованию любого другого типа объекта.</span><span class="sxs-lookup"><span data-stu-id="0a46f-133">Using an unfrozen freezable is like using any other type of object.</span></span> <span data-ttu-id="0a46f-134">В следующем примере цвет <xref:System.Windows.Media.SolidColorBrush> изменяется с желтого на красный после его использования в качестве фона кнопки.</span><span class="sxs-lookup"><span data-stu-id="0a46f-134">In the following example, the color of a <xref:System.Windows.Media.SolidColorBrush> is changed from yellow to red after it's used to paint the background of a button.</span></span> <span data-ttu-id="0a46f-135">Графическая система работает в фоновом для автоматического изменения кнопки с желтого на красный при очередном обновлении экрана.</span><span class="sxs-lookup"><span data-stu-id="0a46f-135">The graphics system works behind the scenes to automatically change the button from yellow to red the next time the screen is refreshed.</span></span>  
   
  [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
  [!code-vb[freezablesample_procedural#UnFrozenExampleShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
-### Фиксация объекта класса Freezable  
- Чтобы сделать объект <xref:System.Windows.Freezable> неизменяемым, необходимо вызвать его метод <xref:System.Windows.Freezable.Freeze%2A>.  При фиксировании объекта, содержащего объекты Freezable, вложенные объекты также фиксируются.  Например, если зафиксировать объект <xref:System.Windows.Media.PathGeometry>, содержащиеся в нем фигуры и сегменты также будут зафиксированы.  
+### <a name="freezing-a-freezable"></a><span data-ttu-id="0a46f-136">Замораживание Freezable</span><span class="sxs-lookup"><span data-stu-id="0a46f-136">Freezing a Freezable</span></span>  
+ <span data-ttu-id="0a46f-137">Чтобы сделать <xref:System.Windows.Freezable> неизменяемым, необходимо вызвать его <xref:System.Windows.Freezable.Freeze%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-137">To make a <xref:System.Windows.Freezable> unmodifiable, you call its <xref:System.Windows.Freezable.Freeze%2A> method.</span></span> <span data-ttu-id="0a46f-138">Объект, содержащий объекты freezable замораживается, эти объекты также фиксируются.</span><span class="sxs-lookup"><span data-stu-id="0a46f-138">When you freeze an object that contains freezable objects, those objects are frozen as well.</span></span> <span data-ttu-id="0a46f-139">Например, если зафиксировать <xref:System.Windows.Media.PathGeometry>, фигуры и сегменты также будут зафиксированы.</span><span class="sxs-lookup"><span data-stu-id="0a46f-139">For example, if you freeze a <xref:System.Windows.Media.PathGeometry>, the figures and segments it contains would be frozen too.</span></span>  
   
- Freezable **нельзя** зафиксировать при выполнении одного из следующих условий:  
+ <span data-ttu-id="0a46f-140">Freezable **нельзя** зафиксировать при любой из следующих:</span><span class="sxs-lookup"><span data-stu-id="0a46f-140">A Freezable **can't** be frozen if any of the following are true:</span></span>  
   
--   Объект имеет свойства анимации или привязки данных.  
+-   <span data-ttu-id="0a46f-141">Объект имеет анимированные или свойства с привязкой к данным.</span><span class="sxs-lookup"><span data-stu-id="0a46f-141">It has animated or data bound properties.</span></span>  
   
--   У объекта есть свойства, заданные динамическим ресурсом.  Дополнительные сведения о динамических ресурсах см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   <span data-ttu-id="0a46f-142">Он имеет свойства, заданные на динамический ресурс.</span><span class="sxs-lookup"><span data-stu-id="0a46f-142">It has properties set by a dynamic resource.</span></span> <span data-ttu-id="0a46f-143">(См. [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) Дополнительные сведения о динамических ресурсах.)</span><span class="sxs-lookup"><span data-stu-id="0a46f-143">(See the [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for more information about dynamic resources.)</span></span>  
   
--   Он содержит подобъекты <xref:System.Windows.Freezable>, которые нельзя зафиксировать.  
+-   <span data-ttu-id="0a46f-144">Он содержит <xref:System.Windows.Freezable> подчиненных объектах, которые нельзя зафиксировать.</span><span class="sxs-lookup"><span data-stu-id="0a46f-144">It contains <xref:System.Windows.Freezable> sub-objects that can't be frozen.</span></span>  
   
- Если не выполняется ни одно из этих условий и не требуется изменять объект <xref:System.Windows.Freezable>, его стоит зафиксировать, чтобы получить описанный выше выигрыш в производительности.  
+ <span data-ttu-id="0a46f-145">Если эти условия имеют значение false, а не требуется изменять <xref:System.Windows.Freezable>, то стоит зафиксировать, чтобы получить выигрыш в производительности, описанных ранее.</span><span class="sxs-lookup"><span data-stu-id="0a46f-145">If these conditions are false, and you don't intend to modify the <xref:System.Windows.Freezable>, then you should freeze it to gain the performance benefits described earlier.</span></span>  
   
- Объект Freezable не может быть изменен после вызова его метода <xref:System.Windows.Freezable.Freeze%2A>.  При попытке изменения зафиксированного объекта возникает исключение <xref:System.InvalidOperationException>.  Следующий код вызывает исключение, поскольку выполняется попытка изменить кисть после того, как она была зафиксирована.  
+ <span data-ttu-id="0a46f-146">При вызове метода freezable <xref:System.Windows.Freezable.Freeze%2A> метода, не может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="0a46f-146">Once you call a freezable's <xref:System.Windows.Freezable.Freeze%2A> method, it can no longer be modified.</span></span> <span data-ttu-id="0a46f-147">Предпринимается попытка изменить зафиксированного объекта возникает <xref:System.InvalidOperationException> исключение.</span><span class="sxs-lookup"><span data-stu-id="0a46f-147">Attempting to modify a frozen object causes an <xref:System.InvalidOperationException> to be thrown.</span></span> <span data-ttu-id="0a46f-148">Следующий код создает исключение, так как выполняется попытка изменить кисть после была зафиксирована.</span><span class="sxs-lookup"><span data-stu-id="0a46f-148">The following code throws an exception, because we attempt to modify the brush after it's been frozen.</span></span>  
   
  [!code-csharp[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
  [!code-vb[freezablesample_procedural#ExceptionExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
- Чтобы избежать возникновения этого исключения, можно использовать метод <xref:System.Windows.Freezable.IsFrozen%2A>, чтобы определить, зафиксирован ли объект <xref:System.Windows.Freezable>.  
+ <span data-ttu-id="0a46f-149">Чтобы избежать возникновения этого исключения, можно использовать <xref:System.Windows.Freezable.IsFrozen%2A> метод, чтобы определить, является ли <xref:System.Windows.Freezable> заморожен.</span><span class="sxs-lookup"><span data-stu-id="0a46f-149">To avoid throwing this exception, you can use the <xref:System.Windows.Freezable.IsFrozen%2A> method to determine whether a <xref:System.Windows.Freezable> is frozen.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- В предыдущем примере кода с помощью метода <xref:System.Windows.Freezable.Clone%2A> была получена изменяемая копия зафиксированного объекта.  В следующем разделе клонирование рассматривается более подробно.  
+ <span data-ttu-id="0a46f-150">В предыдущем примере был сделан изменяемой копии зафиксированного объекта с помощью <xref:System.Windows.Freezable.Clone%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-150">In the preceding code example, a modifiable copy was made of a frozen object using the <xref:System.Windows.Freezable.Clone%2A> method.</span></span> <span data-ttu-id="0a46f-151">В следующем разделе описываются более подробно клонирования.</span><span class="sxs-lookup"><span data-stu-id="0a46f-151">The next section discusses cloning in more detail.</span></span>  
   
- **Замечание** Поскольку зафиксированный объект Freezable не может быть анимирован, система анимации автоматически создаст изменяемые копии зафиксированных объектов <xref:System.Windows.Freezable> при попытке их анимации с помощью <xref:System.Windows.Media.Animation.Storyboard>.  Чтобы снизить накладные расходы, связанные с клонированием, оставьте объект незафиксированным, если потребуется его анимировать.  Дополнительные сведения об анимации с помощью Storyboard см. в разделе [Общие сведения о Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ <span data-ttu-id="0a46f-152">**Примечание** из-за замороженный невозможно анимировать freezable, анимация система автоматически создает изменяемые клоны замороженный <xref:System.Windows.Freezable> объектов при попытке их с помощью анимации <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="0a46f-152">**Note** Because a frozen freezable cannot be animated, the animation system will automatically create modifiable clones of frozen <xref:System.Windows.Freezable> objects when you try to animate them with a <xref:System.Windows.Media.Animation.Storyboard>.</span></span> <span data-ttu-id="0a46f-153">Чтобы снизить накладные расходы, вызванные клонирования, оставьте объект незафиксированным, если для его анимации.</span><span class="sxs-lookup"><span data-stu-id="0a46f-153">To eliminate the performance overhead caused by cloning, leave an object unfrozen if you intend to animate it.</span></span> <span data-ttu-id="0a46f-154">Дополнительные сведения об анимации с помощью Storyboard см. в разделе [Общие](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span><span class="sxs-lookup"><span data-stu-id="0a46f-154">For more information about animating with storyboards, see the [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
-### Фиксирование объектов из разметки  
- Чтобы зафиксировать объект <xref:System.Windows.Freezable>, объявленный в разметке, используйте атрибут `PresentationOptions:Freeze`.  В следующем примере <xref:System.Windows.Media.SolidColorBrush> объявляется как ресурс страницы и фиксируется.  Затем она используется для задания фона кнопки.  
+### <a name="freezing-from-markup"></a><span data-ttu-id="0a46f-155">Фиксирование объектов из разметки</span><span class="sxs-lookup"><span data-stu-id="0a46f-155">Freezing from Markup</span></span>  
+ <span data-ttu-id="0a46f-156">Чтобы закрепить <xref:System.Windows.Freezable> объявленный в разметке, используется `PresentationOptions:Freeze` атрибута.</span><span class="sxs-lookup"><span data-stu-id="0a46f-156">To freeze a <xref:System.Windows.Freezable> object declared in markup, you use the `PresentationOptions:Freeze` attribute.</span></span> <span data-ttu-id="0a46f-157">В следующем примере <xref:System.Windows.Media.SolidColorBrush> объявляется как ресурс страницы и фиксации.</span><span class="sxs-lookup"><span data-stu-id="0a46f-157">In the following example, a <xref:System.Windows.Media.SolidColorBrush> is declared as a page resource and frozen.</span></span> <span data-ttu-id="0a46f-158">Затем используется для задания фона кнопки.</span><span class="sxs-lookup"><span data-stu-id="0a46f-158">It is then used to set the background of a button.</span></span>  
   
- [!code-xml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
+ [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Для использования атрибута `Freeze` необходимо сопоставить с параметрами представления пространство имен: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`.  `PresentationOptions` является рекомендуемым префиксом для сопоставления пространства имен:  
+ <span data-ttu-id="0a46f-159">Для использования `Freeze` атрибут, необходимо сопоставить с параметрами представления пространство имен: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`.</span><span class="sxs-lookup"><span data-stu-id="0a46f-159">To use the `Freeze` attribute, you must map to the presentation options namespace: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`.</span></span> <span data-ttu-id="0a46f-160">`PresentationOptions`— Это рекомендуемый префикс для сопоставления данного пространства имен:</span><span class="sxs-lookup"><span data-stu-id="0a46f-160">`PresentationOptions` is the recommended prefix for mapping this namespace:</span></span>  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- Так как не все средства чтения XAML распознают этот атрибут, рекомендуется использовать [Атрибут mc: Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md), чтобы пометить атрибут `Presentation:Freeze` как некритический:  
+ <span data-ttu-id="0a46f-161">Так как не все средства чтения XAML распознают этот атрибут, рекомендуется использовать [mc: Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) пометить `Presentation:Freeze` атрибута игнорируемый:</span><span class="sxs-lookup"><span data-stu-id="0a46f-161">Because not all XAML readers recognize this attribute, it's recommended that you use the [mc:Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) to mark the `Presentation:Freeze` attribute as ignorable:</span></span>  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- Дополнительные сведения см. на странице [Атрибут mc: Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md).  
+ <span data-ttu-id="0a46f-162">Дополнительные сведения см. в разделе [mc: Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) страницы.</span><span class="sxs-lookup"><span data-stu-id="0a46f-162">For more information, see the [mc:Ignorable Attribute](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) page.</span></span>  
   
-### Отмена фиксации объекта класса Freezable  
- После фиксации объект <xref:System.Windows.Freezable> нельзя изменить или снять состояние фиксации. Однако можно создать незафиксированную копию с помощью метода <xref:System.Windows.Freezable.Clone%2A> или метода <xref:System.Windows.Freezable.CloneCurrentValue%2A>.  
+### <a name="unfreezing-a-freezable"></a><span data-ttu-id="0a46f-163">«Размораживание» Freezable</span><span class="sxs-lookup"><span data-stu-id="0a46f-163">"Unfreezing" a Freezable</span></span>  
+ <span data-ttu-id="0a46f-164">После фиксации <xref:System.Windows.Freezable> никогда не может быть изменен или разморозить; Однако можно создать с помощью незафиксированную копию <xref:System.Windows.Freezable.Clone%2A> или <xref:System.Windows.Freezable.CloneCurrentValue%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-164">Once frozen, a <xref:System.Windows.Freezable> can never be modified or unfrozen; however, you can create an unfrozen clone using the <xref:System.Windows.Freezable.Clone%2A> or <xref:System.Windows.Freezable.CloneCurrentValue%2A> method.</span></span>  
   
- В следующем примере фон кнопки закрашивается кистью и затем кисть фиксируется.  Незафиксированная копия кисти получается с помощью метода <xref:System.Windows.Freezable.Clone%2A>.  Копия изменяется и используется для изменения фона кнопки с желтого на красный.  
+ <span data-ttu-id="0a46f-165">В следующем примере задаются кисть фона кнопки и затем, кисть фиксируется.</span><span class="sxs-lookup"><span data-stu-id="0a46f-165">In the following example, the button's background is set with a brush and that brush is then frozen.</span></span> <span data-ttu-id="0a46f-166">Незафиксированная копия кисти с использованием <xref:System.Windows.Freezable.Clone%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-166">An unfrozen copy is made of the brush using the <xref:System.Windows.Freezable.Clone%2A> method.</span></span> <span data-ttu-id="0a46f-167">Копия изменяется и используется для изменения фона кнопки с желтого на красный.</span><span class="sxs-lookup"><span data-stu-id="0a46f-167">The clone is modified and used to change the button's background from yellow to red.</span></span>  
   
  [!code-csharp[freezablesample_procedural#CloneExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
->  Вне зависимости от выбора метода клонирования, анимация никогда не копируется в новый объект <xref:System.Windows.Freezable>.  
+>  <span data-ttu-id="0a46f-168">Независимо от используемого метода клона анимации не копируются в новый <xref:System.Windows.Freezable>.</span><span class="sxs-lookup"><span data-stu-id="0a46f-168">Regardless of which clone method you use, animations are never copied to the new <xref:System.Windows.Freezable>.</span></span>  
   
- Методы <xref:System.Windows.Freezable.Clone%2A> и <xref:System.Windows.Freezable.CloneCurrentValue%2A> создают детальные копии объекта Freezable.  Если объект Freezable содержит другие зафиксированные объекты Freezable, они также копируются и становятся изменяемыми.  Например, если копировать зафиксированный объект <xref:System.Windows.Media.PathGeometry>, чтобы сделать его изменяемым, содержащиеся в этом объекте фигуры и сегменты также копируются и становятся изменяемыми.  
+ <span data-ttu-id="0a46f-169"><xref:System.Windows.Freezable.Clone%2A> И <xref:System.Windows.Freezable.CloneCurrentValue%2A> методы создания глубокой копии объекта freezable.</span><span class="sxs-lookup"><span data-stu-id="0a46f-169">The <xref:System.Windows.Freezable.Clone%2A> and <xref:System.Windows.Freezable.CloneCurrentValue%2A> methods produce deep copies of the freezable.</span></span> <span data-ttu-id="0a46f-170">Если объект freezable содержит другие зафиксированные объекты freezable, они также клонируются и становятся изменяемыми.</span><span class="sxs-lookup"><span data-stu-id="0a46f-170">If the freezable contains other frozen freezable objects, they are also cloned and made modifiable.</span></span> <span data-ttu-id="0a46f-171">Например, если копировать зафиксированный <xref:System.Windows.Media.PathGeometry> чтобы сделать его изменяемым фигуры и сегменты также копируются и становятся изменяемыми.</span><span class="sxs-lookup"><span data-stu-id="0a46f-171">For example, if you clone a frozen <xref:System.Windows.Media.PathGeometry> to make it modifiable, the figures and segments it contains are also copied and made modifiable.</span></span>  
   
 <a name="createyourownfreezableclass"></a>   
-## Создание собственного класса Freezable  
- Класс, производный от <xref:System.Windows.Freezable>, поддерживает следующие функции:  
+## <a name="creating-your-own-freezable-class"></a><span data-ttu-id="0a46f-172">Создание собственного класса Freezable</span><span class="sxs-lookup"><span data-stu-id="0a46f-172">Creating Your Own Freezable Class</span></span>  
+ <span data-ttu-id="0a46f-173">Класс, производный от <xref:System.Windows.Freezable> поддерживает следующие функции.</span><span class="sxs-lookup"><span data-stu-id="0a46f-173">A class that derives from <xref:System.Windows.Freezable> gains the following features.</span></span>  
   
--   Особые состояния: состояние только для чтения \(фиксированное\) и состояние только для записи.  
+-   <span data-ttu-id="0a46f-174">Особые состояния: только для чтения (зафиксирован) и состояние для записи.</span><span class="sxs-lookup"><span data-stu-id="0a46f-174">Special states: a read-only (frozen) and a writable state.</span></span>  
   
--   Потокобезопасность: фиксированный объект <xref:System.Windows.Freezable> можно использовать в нескольких потоках.  
+-   <span data-ttu-id="0a46f-175">Потокобезопасность: зафиксированный <xref:System.Windows.Freezable> может использоваться несколькими потоками.</span><span class="sxs-lookup"><span data-stu-id="0a46f-175">Thread safety: a frozen <xref:System.Windows.Freezable> can be shared across threads.</span></span>  
   
--   Подробные уведомления об изменениях: в отличие от других объектов <xref:System.Windows.DependencyObject>, объекты Freezable сообщают об изменениях, если изменяются значения вложенных свойств.  
+-   <span data-ttu-id="0a46f-176">Подробные уведомления об изменениях: в отличие от других <xref:System.Windows.DependencyObject>, объекты Freezable предоставляет уведомления об изменении при изменении значений вложенных свойств.</span><span class="sxs-lookup"><span data-stu-id="0a46f-176">Detailed change notification: Unlike other <xref:System.Windows.DependencyObject>s, Freezable objects provide change notifications when sub-property values change.</span></span>  
   
--   Удобное клонирование: класс Freezable включает несколько уже реализованных методов, которые обеспечивают большую глубину клонирования.  
+-   <span data-ttu-id="0a46f-177">Удобное клонирование: класс Freezable уже реализован несколько методов, которые обеспечивают большую глубину клонирования.</span><span class="sxs-lookup"><span data-stu-id="0a46f-177">Easy cloning: the Freezable class has already implemented several methods that produce deep clones.</span></span>  
   
- <xref:System.Windows.Freezable> представляет собой тип <xref:System.Windows.DependencyObject> и поэтому использует систему свойств зависимости.  Свойства класса не обязательно должны быть свойствами зависимости, но с помощью свойств зависимости объем кода, который нужно написать, сократится, так как класс <xref:System.Windows.Freezable> был разработан с учетом свойств зависимости.  Дополнительные сведения о системе свойств зависимости см. в разделе [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <span data-ttu-id="0a46f-178">Объект <xref:System.Windows.Freezable> — это тип <xref:System.Windows.DependencyObject>и поэтому используется в системе свойств зависимостей.</span><span class="sxs-lookup"><span data-stu-id="0a46f-178">A <xref:System.Windows.Freezable> is a type of <xref:System.Windows.DependencyObject>, and therefore uses the dependency property system.</span></span> <span data-ttu-id="0a46f-179">Свойства класса не обязательно должны быть свойств зависимостей, но с использованием свойств зависимостей позволяет снизить объем кода, необходимо написать, так как <xref:System.Windows.Freezable> класс был разработан с учетом свойств зависимостей.</span><span class="sxs-lookup"><span data-stu-id="0a46f-179">Your class properties don't have to be dependency properties, but using dependency properties will reduce the amount of code you have to write, because the <xref:System.Windows.Freezable> class was designed with dependency properties in mind.</span></span> <span data-ttu-id="0a46f-180">Дополнительные сведения о системе свойств зависимостей см. в разделе [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span><span class="sxs-lookup"><span data-stu-id="0a46f-180">For more information about the dependency property system, see the [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
- Каждый подкласс <xref:System.Windows.Freezable> должен переопределять метод <xref:System.Windows.Freezable.CreateInstanceCore%2A>.  Если класс использует свойства зависимости для всех своих данных, создание класса завершено.  
+ <span data-ttu-id="0a46f-181">Каждый <xref:System.Windows.Freezable> необходимо переопределить подкласс <xref:System.Windows.Freezable.CreateInstanceCore%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-181">Every <xref:System.Windows.Freezable> subclass must override the <xref:System.Windows.Freezable.CreateInstanceCore%2A> method.</span></span> <span data-ttu-id="0a46f-182">Если ваш класс использует свойства зависимостей для своих данных, все готово.</span><span class="sxs-lookup"><span data-stu-id="0a46f-182">If your class uses dependency properties for all its data, you're finished.</span></span>  
   
- Если класс содержит члены данных, не использующие свойство зависимости, необходимо также переопределить следующие методы:  
+ <span data-ttu-id="0a46f-183">Если класс содержит члены данных, не относящихся к зависимостям свойство, необходимо также переопределить следующие методы:</span><span class="sxs-lookup"><span data-stu-id="0a46f-183">If your class contains non-dependency property data members, you must also override the following methods:</span></span>  
   
 -   <xref:System.Windows.Freezable.CloneCore%2A>  
   
@@ -153,23 +156,23 @@ mc:Ignorable="PresentationOptions"
   
 -   <xref:System.Windows.Freezable.FreezeCore%2A>  
   
- Необходимо также соблюдать следующие правила для доступа и записи членов данных, которые не используют свойства зависимости:  
+ <span data-ttu-id="0a46f-184">Также необходимо соблюдать следующие правила для доступа и записи элементов данных, которые не являются свойствами зависимости.</span><span class="sxs-lookup"><span data-stu-id="0a46f-184">You must also observe the following rules for accessing and writing to data members that are not dependency properties:</span></span>  
   
--   В начале любого [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], считывающего члены данных, не использующих свойство зависимости, вызовите метод <xref:System.Windows.Freezable.ReadPreamble%2A>.  
+-   <span data-ttu-id="0a46f-185">В начале любого [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , осуществляющий чтение членов данных свойств не относящихся к зависимостям, вызовите метод <xref:System.Windows.Freezable.ReadPreamble%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-185">At the beginning of any [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] that reads non-dependency property data members, call the <xref:System.Windows.Freezable.ReadPreamble%2A> method.</span></span>  
   
--   В начале любого API, записывающего члены данных, не использующие свойство зависимости, вызовите метод <xref:System.Windows.Freezable.WritePreamble%2A>.  \(После вызова <xref:System.Windows.Freezable.WritePreamble%2A> в [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] не требуется дополнительный вызов <xref:System.Windows.Freezable.ReadPreamble%2A>, если также считываются члены данных, не использующие свойство зависимости.\)  
+-   <span data-ttu-id="0a46f-186">В начале любого API, который записывает членов данных свойств не относящихся к зависимостям, вызовите <xref:System.Windows.Freezable.WritePreamble%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0a46f-186">At the beginning of any API that writes non-dependency property data members, call the <xref:System.Windows.Freezable.WritePreamble%2A> method.</span></span> <span data-ttu-id="0a46f-187">(После вызова <xref:System.Windows.Freezable.WritePreamble%2A> в [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], не требуется дополнительный вызов к <xref:System.Windows.Freezable.ReadPreamble%2A> также считывать членов данных свойств не относящихся к зависимостям.)</span><span class="sxs-lookup"><span data-stu-id="0a46f-187">(Once you've called <xref:System.Windows.Freezable.WritePreamble%2A> in an [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], you don't need to make an additional call to <xref:System.Windows.Freezable.ReadPreamble%2A> if you also read non-dependency property data members.)</span></span>  
   
--   Вызовите метод <xref:System.Windows.Freezable.WritePostscript%2A> перед выходом из методов, которые записывают члены данных, не использующие свойство зависимости.  
+-   <span data-ttu-id="0a46f-188">Вызовите <xref:System.Windows.Freezable.WritePostscript%2A> метод перед выходом из методов, которые записывают членов данных свойств не относящихся к зависимостям.</span><span class="sxs-lookup"><span data-stu-id="0a46f-188">Call the <xref:System.Windows.Freezable.WritePostscript%2A> method before exiting methods that write to non-dependency property data members.</span></span>  
   
- Если класс содержит не поддерживающие свойство зависимости члены данных, являющиеся объектами <xref:System.Windows.DependencyObject>, нужно также вызывать метод <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> при каждом изменении их значений, даже если члену задается значение `null`.  
+ <span data-ttu-id="0a46f-189">Если класс содержит элементы данных зависимостей свойства, которые являются <xref:System.Windows.DependencyObject> объектов, необходимо также вызвать <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> метод каждый раз при изменении на их значений, даже если устанавливаемое члена `null`.</span><span class="sxs-lookup"><span data-stu-id="0a46f-189">If your class contains non-dependency-property data members that are <xref:System.Windows.DependencyObject> objects, you must also call the <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> method each time you change on of their values, even if you're setting the member to `null`.</span></span>  
   
 > [!NOTE]
->  Очень важно начинать каждый переопределяемый метод <xref:System.Windows.Freezable> с вызова базовой реализации.  
+>  <span data-ttu-id="0a46f-190">Очень важно запускать каждую <xref:System.Windows.Freezable> метода переопределения с помощью вызова к базовой реализации.</span><span class="sxs-lookup"><span data-stu-id="0a46f-190">It's very important that you begin each <xref:System.Windows.Freezable> method you override with a call to the base implementation.</span></span>  
   
- Пример пользовательского класса <xref:System.Windows.Freezable> см. на веб\-странице [Пример Custom Animation](http://go.microsoft.com/fwlink/?LinkID=159981).  
+ <span data-ttu-id="0a46f-191">Пример настраиваемого <xref:System.Windows.Freezable> см. в описании [пример пользовательского](http://go.microsoft.com/fwlink/?LinkID=159981).</span><span class="sxs-lookup"><span data-stu-id="0a46f-191">For an example of a custom <xref:System.Windows.Freezable> class, see the [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981).</span></span>  
   
-## См. также  
- <xref:System.Windows.Freezable>   
- [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981)   
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a><span data-ttu-id="0a46f-192">См. также</span><span class="sxs-lookup"><span data-stu-id="0a46f-192">See Also</span></span>  
+ <xref:System.Windows.Freezable>  
+ [<span data-ttu-id="0a46f-193">Пример пользовательской анимации</span><span class="sxs-lookup"><span data-stu-id="0a46f-193">Custom Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159981)  
+ [<span data-ttu-id="0a46f-194">Общие сведения о свойствах зависимости</span><span class="sxs-lookup"><span data-stu-id="0a46f-194">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="0a46f-195">Пользовательские свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="0a46f-195">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

@@ -7,45 +7,38 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11d20e346bba9ae6300f88c5d5bf48f99ec27904
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5b4bcf0a7a7d23dd54fad36b341e3ed241975b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="peer-names-and-pnrp-ids"></a>Одноранговые имена и идентификаторы PNRP
-Имя однорангового узла представляет конечную точку для взаимодействия, в качестве которой может выступать компьютер, пользователь, группа, служба или любой другой объект, связанный с одноранговым узлом, которую можно разрешить в IPv6-адрес. Протокол PNRP принимает статистически уникальное имя однорангового узла для создания идентификатора PNRP, который используется для идентификации членов облака.  
+# <a name="peer-names-and-pnrp-ids"></a><span data-ttu-id="90f01-102">Одноранговые имена и идентификаторы PNRP</span><span class="sxs-lookup"><span data-stu-id="90f01-102">Peer Names and PNRP IDs</span></span>
+<span data-ttu-id="90f01-103">Имя однорангового узла представляет конечную точку для взаимодействия, в качестве которой может выступать компьютер, пользователь, группа, служба или любой другой объект, связанный с одноранговым узлом, которую можно разрешить в IPv6-адрес.</span><span class="sxs-lookup"><span data-stu-id="90f01-103">A Peer Name represents an endpoint for communication, which can be a computer, a user, a group, a service, or anything associated with a Peer that can be resolved to an IPv6 address.</span></span> <span data-ttu-id="90f01-104">Протокол PNRP принимает статистически уникальное имя однорангового узла для создания идентификатора PNRP, который используется для идентификации членов облака.</span><span class="sxs-lookup"><span data-stu-id="90f01-104">The Peer Name Resolution Protocol (PNRP) takes the statistically unique Peer Name for the creation of a PNRP ID, which is used to identify cloud members.</span></span>  
   
-## <a name="peer-names"></a>Имена одноранговых узлов  
- Имена одноранговых узлов можно зарегистрировать как незащищенные или защищенные. Незащищенные имена представляют собой обычные текстовые строки, которые подвержены спуфингу, так как зарегистрировать повторяющееся имя может любой пользователь. Такие имена лучше всего использовать в частных или защищенных иным образом сетях. Безопасность защищенных имен обеспечивается благодаря применению сертификата и цифровой подписи. Подтвердить право владения защищенным именем может только его первоначальный издатель.  
+## <a name="peer-names"></a><span data-ttu-id="90f01-105">Имена одноранговых узлов</span><span class="sxs-lookup"><span data-stu-id="90f01-105">Peer Names</span></span>  
+ <span data-ttu-id="90f01-106">Имена одноранговых узлов можно зарегистрировать как незащищенные или защищенные.</span><span class="sxs-lookup"><span data-stu-id="90f01-106">Peer names can be registered as unsecured or secured.</span></span> <span data-ttu-id="90f01-107">Незащищенные имена представляют собой обычные текстовые строки, которые подвержены спуфингу, так как зарегистрировать повторяющееся имя может любой пользователь.</span><span class="sxs-lookup"><span data-stu-id="90f01-107">Unsecured names are just text strings that are subject to spoofing, as anyone can register a duplicate unsecured name.</span></span> <span data-ttu-id="90f01-108">Такие имена лучше всего использовать в частных или защищенных иным образом сетях.</span><span class="sxs-lookup"><span data-stu-id="90f01-108">Unsecured names are best used in private or otherwise protected networks.</span></span> <span data-ttu-id="90f01-109">Безопасность защищенных имен обеспечивается благодаря применению сертификата и цифровой подписи.</span><span class="sxs-lookup"><span data-stu-id="90f01-109">Secured names are protected with a certificate and a digital signature.</span></span> <span data-ttu-id="90f01-110">Подтвердить право владения защищенным именем может только его первоначальный издатель.</span><span class="sxs-lookup"><span data-stu-id="90f01-110">Only the original publisher will be able to prove ownership of a secured name.</span></span>  
   
- Достаточный уровень безопасности среды для одноранговых узлов, взаимодействующих по протоколу PNRP, обеспечивается за счет сочетания облака и области действия. Тем не менее применение защищенного имени однорангового узла не гарантирует общую безопасность сетевого приложения. Безопасность приложения зависит от его реализации.  
+ <span data-ttu-id="90f01-111">Достаточный уровень безопасности среды для одноранговых узлов, взаимодействующих по протоколу PNRP, обеспечивается за счет сочетания облака и области действия.</span><span class="sxs-lookup"><span data-stu-id="90f01-111">The combination of cloud and scope provides a reasonably secure environment for peers that participate in PNRP activity.</span></span> <span data-ttu-id="90f01-112">Тем не менее применение защищенного имени однорангового узла не гарантирует общую безопасность сетевого приложения.</span><span class="sxs-lookup"><span data-stu-id="90f01-112">However, using a secured peer name does not ensure the overall security of the networking application.</span></span> <span data-ttu-id="90f01-113">Безопасность приложения зависит от его реализации.</span><span class="sxs-lookup"><span data-stu-id="90f01-113">Security of the application is implementation-dependent.</span></span>  
   
- Защищенные имена одноранговых узлов регистрируются только их владельцем и защищаются посредством шифрования с открытым ключом. Защищенное имя однорангового узла считается принадлежащим сущности однорангового узла, которой принадлежит соответствующий закрытый ключ. Право владения может быть подтверждено сертифицированным адресом однорангового узла (CPA), который подписывается закрытым ключом. Не имея соответствующего закрытого ключа, злоумышленники не могут подделать право владения именем однорангового узла.  
+ <span data-ttu-id="90f01-114">Защищенные имена одноранговых узлов регистрируются только их владельцем и защищаются посредством шифрования с открытым ключом.</span><span class="sxs-lookup"><span data-stu-id="90f01-114">Secured peer names are only registered by their owner and are protected with public key cryptography.</span></span> <span data-ttu-id="90f01-115">Защищенное имя однорангового узла считается принадлежащим сущности однорангового узла, которой принадлежит соответствующий закрытый ключ.</span><span class="sxs-lookup"><span data-stu-id="90f01-115">A secured peer name is considered owned by the peer entity having the corresponding private key.</span></span> <span data-ttu-id="90f01-116">Право владения может быть подтверждено сертифицированным адресом однорангового узла (CPA), который подписывается закрытым ключом.</span><span class="sxs-lookup"><span data-stu-id="90f01-116">Ownership can be proved via the certified peer address (CPA), which is signed using the private key.</span></span> <span data-ttu-id="90f01-117">Не имея соответствующего закрытого ключа, злоумышленники не могут подделать право владения именем однорангового узла.</span><span class="sxs-lookup"><span data-stu-id="90f01-117">A malicious user cannot forge ownership of a peer name without the corresponding private key.</span></span>  
   
-## <a name="pnrp-ids"></a>Идентификаторы PNRP  
- ![Идентификатор PNRP](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+## <a name="pnrp-ids"></a><span data-ttu-id="90f01-118">Идентификаторы PNRP</span><span class="sxs-lookup"><span data-stu-id="90f01-118">PNRP IDs</span></span>  
+ <span data-ttu-id="90f01-119">![Идентификатор PNRP](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")</span><span class="sxs-lookup"><span data-stu-id="90f01-119">![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")</span></span>  
   
- Идентификаторы PNRP состоят из следующих компонентов:  
+ <span data-ttu-id="90f01-120">Идентификаторы PNRP состоят из следующих компонентов:</span><span class="sxs-lookup"><span data-stu-id="90f01-120">PNRP IDs are composed of the following:</span></span>  
   
--   Старшие 128 бит (идентификатор одноранговой сети) содержат хэш имени однорангового узла, назначенного конечной точке. Имя однорангового узла имеет следующий формат: *Authority.Classifier*. Для защищенных имен в качестве атрибута *Authority* используется хэш алгоритма SHA1 для открытого ключа имени однорангового узла в шестнадцатеричном формате. Для незащищенных имен атрибут *Authority* содержит единственный символ: "0". Атрибут *Classifier* содержит строку, которая определяет приложение. Длина классификатора имени однорангового узла не может превышать 149 символов, включая конечный символ `null`.  
+-   <span data-ttu-id="90f01-121">Старшие 128 бит (идентификатор одноранговой сети) содержат хэш имени однорангового узла, назначенного конечной точке.</span><span class="sxs-lookup"><span data-stu-id="90f01-121">The high-order 128 bits, known as the peer-to-peer (P2P) ID, are a hash of a peer name assigned to the endpoint.</span></span> <span data-ttu-id="90f01-122">Имя однорангового узла имеет следующий формат: *Authority.Classifier*.</span><span class="sxs-lookup"><span data-stu-id="90f01-122">The peer name has the following format: *Authority.Classifier*.</span></span> <span data-ttu-id="90f01-123">Для защищенных имен в качестве атрибута *Authority* используется хэш алгоритма SHA1 для открытого ключа имени однорангового узла в шестнадцатеричном формате.</span><span class="sxs-lookup"><span data-stu-id="90f01-123">For secured names, *Authority* is the Secure Hash Algorithm 1 (SHA1) hash of the public key of the peer name in hexadecimal characters.</span></span> <span data-ttu-id="90f01-124">Для незащищенных имен атрибут *Authority* содержит единственный символ: "0".</span><span class="sxs-lookup"><span data-stu-id="90f01-124">For unsecured names, the *Authority* is the single character "0".</span></span> <span data-ttu-id="90f01-125">Атрибут *Classifier* содержит строку, которая определяет приложение.</span><span class="sxs-lookup"><span data-stu-id="90f01-125">*Classifier* is a string that identifies the application.</span></span> <span data-ttu-id="90f01-126">Длина классификатора имени однорангового узла не может превышать 149 символов, включая конечный символ `null`.</span><span class="sxs-lookup"><span data-stu-id="90f01-126">No peer name classifier can be greater than 149 characters long, including the `null` terminator.</span></span>  
   
--   Младшие 128 бит используются для расположения службы и содержат число, которое идентифицирует другие экземпляры этого идентификатора одноранговой сети в том же облаке.  
+-   <span data-ttu-id="90f01-127">Младшие 128 бит используются для расположения службы и содержат число, которое идентифицирует другие экземпляры этого идентификатора одноранговой сети в том же облаке.</span><span class="sxs-lookup"><span data-stu-id="90f01-127">The low-order 128 bits are used for the Service Location, which is a generated number that identifies different instances of the same P2P ID in the same cloud.</span></span>  
   
- Такое сочетание идентификатора одноранговой сети и расположения службы позволяет регистрировать несколько идентификаторов PNRP с одного компьютера.  
+ <span data-ttu-id="90f01-128">Такое сочетание идентификатора одноранговой сети и расположения службы позволяет регистрировать несколько идентификаторов PNRP с одного компьютера.</span><span class="sxs-lookup"><span data-stu-id="90f01-128">This combination of P2P ID and Service Location allows multiple PNRP IDs to be registered from a single computer.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.PeerToPeer.PeerName>   
+## <a name="see-also"></a><span data-ttu-id="90f01-129">См. также</span><span class="sxs-lookup"><span data-stu-id="90f01-129">See Also</span></span>  
+ <xref:System.Net.PeerToPeer.PeerName>  
  <xref:System.Net.PeerToPeer>
-

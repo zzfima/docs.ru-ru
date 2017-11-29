@@ -1,55 +1,57 @@
 ---
-title: "Образец для начала работы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "простые образцы [WCF], начало работы"
+title: "Пример для начала работы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 60
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 60
+caps.latest.revision: "60"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dda172904f55330700d1cf3e6e5e2c3462118c91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Образец для начала работы
-В образце "Начало работы" показано, как с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализовать типовую службу и типовой клиент.Этот образец является основой для всех остальных базовых образцов технологий.  
+# <a name="getting-started-sample"></a><span data-ttu-id="c59ff-102">Пример для начала работы</span><span class="sxs-lookup"><span data-stu-id="c59ff-102">Getting Started Sample</span></span>
+<span data-ttu-id="c59ff-103">В образце "Начало работы" показано, как с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализовать типовую службу и типовой клиент.</span><span class="sxs-lookup"><span data-stu-id="c59ff-103">The Getting Started sample demonstrates how to implement a typical service and a typical client using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="c59ff-104">Этот образец является основой для всех остальных базовых образцов технологий.</span><span class="sxs-lookup"><span data-stu-id="c59ff-104">This sample is the basis for all other basic technology samples.</span></span>  
   
 > [!NOTE]
->  Процедура установки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="c59ff-105">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="c59ff-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="c59ff-106">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="c59ff-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="c59ff-107">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="c59ff-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="c59ff-108">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="c59ff-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c59ff-109">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="c59ff-109">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
- Служба описывает операции, выполняемые ею в контракте службы, который она открыто предоставляет как метаданные.Служба также содержит код для реализации операций.  
+ <span data-ttu-id="c59ff-110">Служба описывает операции, выполняемые ею в контракте службы, который она открыто предоставляет как метаданные.</span><span class="sxs-lookup"><span data-stu-id="c59ff-110">The service describes the operations it performs in a service contract that it exposes publicly as metadata.</span></span> <span data-ttu-id="c59ff-111">Служба также содержит код для реализации операций.</span><span class="sxs-lookup"><span data-stu-id="c59ff-111">The service also contains the code to implement the operations.</span></span>  
   
- Клиент содержит определение контракта службы и прокси\-класс для доступа к службе.Код прокси создается из метаданных службы с помощью [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ <span data-ttu-id="c59ff-112">Клиент содержит определение контракта службы и прокси-класс для доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="c59ff-112">The client contains a definition of the service contract and a proxy class for accessing the service.</span></span> <span data-ttu-id="c59ff-113">Код прокси-сервера, генерируется из метаданных службы с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c59ff-113">The proxy code is generated from the service metadata using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>  
   
- В [!INCLUDE[wv](../../../../includes/wv-md.md)] служба размещается в службе активации Windows \(WAS\).В [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] она размещается в службах IIS и ASP.NET.Размещение службы в IIS или WAS позволяет активировать службу автоматически при первом доступе к ней.  
+ <span data-ttu-id="c59ff-114">В [!INCLUDE[wv](../../../../includes/wv-md.md)] служба размещается в службе активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="c59ff-114">On [!INCLUDE[wv](../../../../includes/wv-md.md)], the service is hosted in the Windows Activation Service (WAS).</span></span> <span data-ttu-id="c59ff-115">В [!INCLUDE[wxp](../../../../includes/wxp-md.md)] и [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] она размещается в службах IIS и ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="c59ff-115">On [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], it is hosted by Internet Information Services (IIS) and ASP.NET.</span></span> <span data-ttu-id="c59ff-116">Размещение службы в IIS или WAS позволяет активировать службу автоматически при первом доступе к ней.</span><span class="sxs-lookup"><span data-stu-id="c59ff-116">Hosting a service in IIS or WAS allows the service to be activated automatically when it is accessed for the first time.</span></span>  
   
 > [!NOTE]
->  При желании начать работу с образца, размещающего службу в консольном приложении, а не в службах IIS, см. образец [Резидентное размещение](../../../../docs/framework/wcf/samples/self-host.md).  
+>  <span data-ttu-id="c59ff-117">Если вы предпочитаете начать работу с примером, на котором размещена служба в консольном приложении, а не IIS см. в разделе [резидентной](../../../../docs/framework/wcf/samples/self-host.md) образца.</span><span class="sxs-lookup"><span data-stu-id="c59ff-117">If you would prefer to get started with a sample that hosts the service in a console application instead of IIS, see the [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) sample.</span></span>  
   
- Служба и клиент указывают данные для доступа в параметрах файла конфигурации, что обеспечивает гибкость при развертывании.Эти данные включают определение конечной точки, задающей адрес, привязку и контракт.Привязка определяет транспорт и детали обеспечения безопасности, касающиеся доступа к службе.  
+ <span data-ttu-id="c59ff-118">Служба и клиент указывают данные для доступа в параметрах файла конфигурации, что обеспечивает гибкость при развертывании.</span><span class="sxs-lookup"><span data-stu-id="c59ff-118">The service and client specify access details in configuration file settings, which provide flexibility at the time of deployment.</span></span> <span data-ttu-id="c59ff-119">Эти данные включают определение конечной точки, задающей адрес, привязку и контракт.</span><span class="sxs-lookup"><span data-stu-id="c59ff-119">This includes an endpoint definition that specifies an address, binding, and contract.</span></span> <span data-ttu-id="c59ff-120">Привязка определяет транспорт и детали обеспечения безопасности, касающиеся доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="c59ff-120">The binding specifies transport and security details for how the service is to be accessed.</span></span>  
   
- Служба настраивает среду выполнения на публикацию ее метаданных.  
+ <span data-ttu-id="c59ff-121">Служба настраивает среду выполнения на публикацию ее метаданных.</span><span class="sxs-lookup"><span data-stu-id="c59ff-121">The service configures a run-time behavior to publish its metadata.</span></span>  
   
- Служба реализует контракт, определяющий шаблон взаимодействия "запрос\-ответ".Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции \(сложение, вычитание, умножение и деление\).Клиент осуществляет вызовы заданной математической операции, а служба отправляет в ответ результат.Служба реализует контракт `ICalculator`, определенный в следующем коде.  
+ <span data-ttu-id="c59ff-122">Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="c59ff-122">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="c59ff-123">Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (сложение, вычитание, умножение и деление).</span><span class="sxs-lookup"><span data-stu-id="c59ff-123">The contract is defined by the `ICalculator` interface, which exposes math operations (add, subtract, multiply, and divide).</span></span> <span data-ttu-id="c59ff-124">Клиент осуществляет вызовы заданной математической операции, а служба отправляет в ответ результат.</span><span class="sxs-lookup"><span data-stu-id="c59ff-124">The client makes requests to a given math operation and the service replies with the result.</span></span> <span data-ttu-id="c59ff-125">Служба реализует контракт `ICalculator`, определенный в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="c59ff-125">The service implements an `ICalculator` contract that is defined in the following code.</span></span>  
   
 ```vb  
 ' Define a service contract.  
@@ -64,7 +66,6 @@ caps.handback.revision: 60
         <OperationContract()>  
         Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
     End Interface  
-  
 ```  
   
 ```csharp  
@@ -81,10 +82,9 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);  
 }  
-  
 ```  
   
- Реализация службы вычисляет и возвращает соответствующий результат, как показано в следующем примере кода.  
+ <span data-ttu-id="c59ff-126">Реализация службы вычисляет и возвращает соответствующий результат, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="c59ff-126">The service implementation calculates and returns the appropriate result, as shown in the following example code.</span></span>  
   
 ```vb  
 ' Service class which implements the service contract.  
@@ -106,7 +106,6 @@ Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Impleme
 Return n1 / n2  
 End Function  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -130,10 +129,9 @@ public class CalculatorService : ICalculator
         return n1 / n2;  
     }  
 }  
-  
 ```  
   
- Служба предоставляет конечную точку для взаимодействия с ней; конечная точка определяется в файле конфигурации \(Web.config\). См. следующий образец конфигурации.  
+ <span data-ttu-id="c59ff-127">Служба предоставляет конечную точку для взаимодействия с ней; конечная точка определяется в файле конфигурации (Web.config). См. следующий образец конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c59ff-127">The service exposes an endpoint for communicating with the service, defined using a configuration file (Web.config), as shown in the following sample configuration.</span></span>  
   
 ```xaml  
 <services>  
@@ -148,14 +146,13 @@ public class CalculatorService : ICalculator
        ...  
     </service>  
 </services>  
-  
 ```  
   
- Служба предоставляет конечную точку по базовому адресу, который предоставляется узлом IIS или WAS.Привязка настраивается с использованием стандартного объекта <xref:System.ServiceModel.WSHttpBinding>, обеспечивающего взаимодействие по протоколу HTTP и стандартному протоколу веб\-служб для адресации и безопасности.Контрактом является интерфейс `ICalculator`, реализуемый службой.  
+ <span data-ttu-id="c59ff-128">Служба предоставляет конечную точку по базовому адресу, который предоставляется узлом IIS или WAS.</span><span class="sxs-lookup"><span data-stu-id="c59ff-128">The service exposes the endpoint at the base address provided by the IIS or WAS host.</span></span> <span data-ttu-id="c59ff-129">Привязка настраивается с использованием стандартного объекта <xref:System.ServiceModel.WSHttpBinding>, обеспечивающего взаимодействие по протоколу HTTP и стандартному протоколу веб-служб для адресации и безопасности.</span><span class="sxs-lookup"><span data-stu-id="c59ff-129">The binding is configured with a standard <xref:System.ServiceModel.WSHttpBinding>, which provides HTTP communication and standard Web service protocols for addressing and security.</span></span> <span data-ttu-id="c59ff-130">Контрактом является интерфейс `ICalculator`, реализуемый службой.</span><span class="sxs-lookup"><span data-stu-id="c59ff-130">The contract is the `ICalculator` implemented by the service.</span></span>  
   
- В соответствии с настройкой служба доступна по адресу http:\/\/localhost\/servicemodelsamples\/service.svc для клиента на этом же компьютере.Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.  
+ <span data-ttu-id="c59ff-131">В соответствии с настройкой служба доступна по адресу http://localhost/servicemodelsamples/service.svc для клиента на этом же компьютере.</span><span class="sxs-lookup"><span data-stu-id="c59ff-131">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.svc by a client on the same computer.</span></span> <span data-ttu-id="c59ff-132">Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.</span><span class="sxs-lookup"><span data-stu-id="c59ff-132">For clients on remote computersto access the service, a fully-qualified domain name must be specified instead of localhost.</span></span>  
   
- По умолчанию платформа не предоставляет никаких метаданных.Таким образом, служба включает поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и предоставляет конечную точку обмена метаданными по адресу http:\/\/localhost\/servicemodelsamples\/service.svc\/mex.Это демонстрируется в следующей конфигурации.  
+ <span data-ttu-id="c59ff-133">По умолчанию платформа не предоставляет никаких метаданных.</span><span class="sxs-lookup"><span data-stu-id="c59ff-133">The framework does not expose metadata by default.</span></span> <span data-ttu-id="c59ff-134">Таким образом, служба включает поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и предоставляет конечную точку обмена метаданными по адресу http://localhost/servicemodelsamples/service.svc/mex.</span><span class="sxs-lookup"><span data-stu-id="c59ff-134">As such, the service turns on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> and exposes a metadata exchange (MEX) endpoint at http://localhost/servicemodelsamples/service.svc/mex.</span></span> <span data-ttu-id="c59ff-135">Это демонстрируется в следующей конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c59ff-135">The following configuration demonstrates this.</span></span>  
   
 ```xaml  
 <system.serviceModel>  
@@ -185,19 +182,19 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Клиент взаимодействует по заданному контракту с помощью класса клиента, созданного средством [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).Этот созданный клиент содержится в файлах generatedClient.cs или generatedClient.vb.Это средство извлекает метаданные для заданной службы и создает клиент, который будет использоваться клиентским приложением для взаимодействия по заданному контракту.Размещенная служба должна быть доступна для создания кода клиента, поскольку служба используется для извлечения обновленных метаданных.  
+ <span data-ttu-id="c59ff-136">Клиент взаимодействует с помощью указанного типа контракта, используя класс клиента, созданного [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c59ff-136">The client communicates using a given contract type by using a client class that is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="c59ff-137">Этот созданный клиент содержится в файлах generatedClient.cs или generatedClient.vb.</span><span class="sxs-lookup"><span data-stu-id="c59ff-137">This generated client is contained in the file generatedClient.cs or generatedClient.vb.</span></span> <span data-ttu-id="c59ff-138">Это средство извлекает метаданные для заданной службы и создает клиент, который будет использоваться клиентским приложением для взаимодействия по заданному контракту.</span><span class="sxs-lookup"><span data-stu-id="c59ff-138">This utility retrieves metadata for a given service and generates a client for use by the client application to communicate using a given contract type.</span></span> <span data-ttu-id="c59ff-139">Размещенная служба должна быть доступна для создания кода клиента, поскольку служба используется для извлечения обновленных метаданных.</span><span class="sxs-lookup"><span data-stu-id="c59ff-139">The hosted service must be available to generate the client code, because the service is used to retrieve the updated metadata.</span></span>  
   
- Чтобы создать типизированный прокси, выполните следующую команду из командной строки SDK в каталоге клиента.  
+ <span data-ttu-id="c59ff-140">Чтобы создать типизированный прокси, выполните следующую команду из командной строки SDK в каталоге клиента.</span><span class="sxs-lookup"><span data-stu-id="c59ff-140">Run the following command from the SDK command prompt in the client directory to generate the typed proxy:</span></span>  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
 ```  
   
- Чтобы создать клиент на языке Visual Basic, введите следующую команду в командной строке SDK.  
+ <span data-ttu-id="c59ff-141">Чтобы создать клиент на языке Visual Basic, введите следующую команду в командной строке SDK.</span><span class="sxs-lookup"><span data-stu-id="c59ff-141">To generate client in Visual Basic type the following from the SDK command prompt:</span></span>  
   
  `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`  
   
- С помощью созданного клиента можно получить доступ к заданной конечной точке службы, настроив соответствующий адрес и привязку.Как и служба, клиент использует файл конфигурации \(App.config\), чтобы задать конечную точку для взаимодействия.Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта, как показано в следующем примере.  
+ <span data-ttu-id="c59ff-142">С помощью созданного клиента можно получить доступ к заданной конечной точке службы, настроив соответствующий адрес и привязку.</span><span class="sxs-lookup"><span data-stu-id="c59ff-142">By using the generated client, the client can access a given service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="c59ff-143">Как и служба, клиент использует файл конфигурации (App.config), чтобы задать конечную точку для взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="c59ff-143">Like the service, the client uses a configuration file (App.config) to specify the endpoint with which it wants to communicate.</span></span> <span data-ttu-id="c59ff-144">Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="c59ff-144">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following example.</span></span>  
   
 ```xaml  
 <client>  
@@ -206,10 +203,9 @@ svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
          binding="wsHttpBinding"   
          contract=" Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
-  
 ```  
   
- Реализация клиента создает клиент и использует интерфейс, чтобы начать взаимодействие со службой, как показано в следующем примере кода.  
+ <span data-ttu-id="c59ff-145">Реализация клиента создает клиент и использует интерфейс, чтобы начать взаимодействие со службой, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="c59ff-145">The client implementation instantiates the client and uses the typed interface to begin communicating with the service, as shown in the following example code.</span></span>  
   
 ```vb  
 ' Create a client  
@@ -240,7 +236,6 @@ result = client.Divide(value1, value2)
 Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)  
   
 'Closing the client gracefully closes the connection and cleans up resources  
-  
 ```  
   
 ```csharp  
@@ -273,10 +268,9 @@ Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
   
 //Closing the client releases all communication resources.  
 client.Close();  
-  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="c59ff-146">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="c59ff-146">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="c59ff-147">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="c59ff-147">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -285,19 +279,18 @@ Multiply(9,81.25) = 731.25
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- В образце "Начало работы" показан стандартный способ создания службы и клиента.Другие образцы, представленные в разделе [Basic](../../../../docs/framework/wcf/samples/basic-sample.md), основаны на данном образце и демонстрируют конкретные функции продукта.  
+ <span data-ttu-id="c59ff-148">В образце "Начало работы" показан стандартный способ создания службы и клиента.</span><span class="sxs-lookup"><span data-stu-id="c59ff-148">The Getting Started sample shows the standard way to create a service and client.</span></span> <span data-ttu-id="c59ff-149">Другой [основные](../../../../docs/framework/wcf/samples/basic-sample.md) сборки в этом примере для демонстрации возможностей конкретного продукта.</span><span class="sxs-lookup"><span data-stu-id="c59ff-149">The other [Basic](../../../../docs/framework/wcf/samples/basic-sample.md) build on this sample to demonstrate specific product features.</span></span>  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c59ff-150">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="c59ff-150">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="c59ff-151">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c59ff-151">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="c59ff-152">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c59ff-152">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы запустить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="c59ff-153">Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c59ff-153">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## См. также  
- [Как разместить службу WCF в управляемом приложении](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)   
- [Как разместить службу WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+## <a name="see-also"></a><span data-ttu-id="c59ff-154">См. также</span><span class="sxs-lookup"><span data-stu-id="c59ff-154">See Also</span></span>  
+ [<span data-ttu-id="c59ff-155">Практическое руководство. Размещение службы WCF в управляемом приложении</span><span class="sxs-lookup"><span data-stu-id="c59ff-155">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
+ [<span data-ttu-id="c59ff-156">Практическое руководство. Размещение службы WCF в IIS</span><span class="sxs-lookup"><span data-stu-id="c59ff-156">How to: Host a WCF Service in IIS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

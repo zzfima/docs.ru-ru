@@ -1,94 +1,92 @@
 ---
-title: "Строковые функции (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "строковые функции"
+title: "Строковые функции (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7672f03cda99aa0e1dcecd79b0358f9d5f16f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Строковые функции (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В следующей таблице перечислены имеющиеся в Visual Basic функции поиска в строках и работы с ними.  
+# <a name="string-functions-visual-basic"></a><span data-ttu-id="bf597-102">Строковые функции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf597-102">String Functions (Visual Basic)</span></span>
+<span data-ttu-id="bf597-103">Ниже перечислены функции, которые предоставляет Visual Basic для поиска и работы со строками.</span><span class="sxs-lookup"><span data-stu-id="bf597-103">The following table lists the functions that Visual Basic provides to search and manipulate strings.</span></span>  
   
-|Метод .NET Framework|Описание|  
-|--------------------------|--------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Возвращает значение типа `Integer`, представляющее код знака, соответствующий знаку.|  
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Возвращает знак, связанный с указанным кодом знака.|  
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Возвращает массив \(с индексацией от нуля\), который содержит подмножество массива типа `String`, выделяемое согласно указанным условиям фильтрации.|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Возвращает строку, отформатированную в соответствии с инструкциями, содержащимися в формате выражения `String`.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Возвращает выражение в формате денежной единицы с использованием символа денежной единицы, определенного в системной панели управления.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Возвращает строковое выражение, представляющее значение даты и времени.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Возвращает выражение в формате числа.|  
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Возвращает выражение в формате процента \(т. е. с коэффициентом 100\), в конец которого добавлен знак %.|  
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Возвращает целое число, указывающее начальную позицию первого вхождения одной строки в другую.|  
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Возвращает позицию первого вхождения одной строки в другую, начиная с правого конца строки.|  
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Возвращает строку, образуемую путем соединения нескольких подстрок, содержащихся в массиве.|  
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Возвращает строку или символ, преобразованные в нижний регистр.|  
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Возвращает строку, содержащую указанное число знаков с левой стороны строки.|  
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Возвращает целое число, показывающее число знаков в строке.|  
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Возвращает выровненную по левому краю строку запрашиваемой длины, содержащую указанную строку.|  
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Возвращает строку, содержащую копию указанной строки без пробелов в начале.|  
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Возвращает строку, содержащую указанное число знаков строки.|  
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Возвращает строку, в которой указанная подстрока заданное число раз заменена другой подстрокой.|  
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Возвращает строку, содержащую указанное число знаков с правой стороны строки.|  
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Возвращает выровненную по правому краю строку, содержащую указанную строку, настроенную под указанную длину.|  
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Возвращает строку, содержащую копию указанной строки без пробелов в конце.|  
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Возвращает строку, состоящую из указанного числа пробелов.|  
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Возвращает одномерный массив \(с индексацией от нуля\), содержащий указанное число подстрок.|  
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Возвращает \-1, 0 или 1 в зависимости от результата сравнения строк.|  
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Возвращает строку, преобразованную как указано.|  
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Возвращает строку или объект, состоящие из указанного знака, повторенного определенное количество раз.|  
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Возвращает строку, содержащую те же знаки, что и в заданной строке, но в противоположном порядке.|  
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Возвращает строку, содержащую копию указанной строки без пробелов в начале и конце.|  
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Возвращает строку или знак, содержащий указанную строку, преобразованную в верхний регистр.|  
+|<span data-ttu-id="bf597-104">Метод .NET framework</span><span class="sxs-lookup"><span data-stu-id="bf597-104">.NET Framework method</span></span>|<span data-ttu-id="bf597-105">Описание</span><span class="sxs-lookup"><span data-stu-id="bf597-105">Description</span></span>|  
+|---------------------------|-----------------|  
+|<span data-ttu-id="bf597-106"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="bf597-106"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|<span data-ttu-id="bf597-107">Возвращает `Integer` значение, представляющее код заданного символа.</span><span class="sxs-lookup"><span data-stu-id="bf597-107">Returns an `Integer` value representing the character code corresponding to a character.</span></span>|  
+|<span data-ttu-id="bf597-108"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="bf597-108"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|<span data-ttu-id="bf597-109">Возвращает символ, соответствующий заданному коду символа.</span><span class="sxs-lookup"><span data-stu-id="bf597-109">Returns the character associated with the specified character code.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|<span data-ttu-id="bf597-110">Возвращает отсчитываемый от нуля массив, содержащий подмножество `String` массива согласно указанным условиям фильтра.</span><span class="sxs-lookup"><span data-stu-id="bf597-110">Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|<span data-ttu-id="bf597-111">Возвращает строку, отформатированную в соответствии с инструкциями, содержащимися в формате `String` выражение.</span><span class="sxs-lookup"><span data-stu-id="bf597-111">Returns a string formatted according to instructions contained in a format `String` expression.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|<span data-ttu-id="bf597-112">Возвращает выражение, отформатированное как денежная сумма с символа валюты, определенного в системной панели управления.</span><span class="sxs-lookup"><span data-stu-id="bf597-112">Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|<span data-ttu-id="bf597-113">Возвращает строковое выражение, представляющее значение даты и времени.</span><span class="sxs-lookup"><span data-stu-id="bf597-113">Returns a string expression representing a date/time value.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|<span data-ttu-id="bf597-114">Возвращает выражение, отформатированное как число.</span><span class="sxs-lookup"><span data-stu-id="bf597-114">Returns an expression formatted as a number.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|<span data-ttu-id="bf597-115">Возвращает выражение в виде процента (умноженное на 100) с символом % в конце.</span><span class="sxs-lookup"><span data-stu-id="bf597-115">Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|<span data-ttu-id="bf597-116">Возвращает целое число, указывающее начальную позицию первого вхождения одной строки в другую.</span><span class="sxs-lookup"><span data-stu-id="bf597-116">Returns an integer specifying the start position of the first occurrence of one string within another.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|<span data-ttu-id="bf597-117">Возвращает позицию первого вхождения одной строки в другую, начиная с правой стороны строки.</span><span class="sxs-lookup"><span data-stu-id="bf597-117">Returns the position of the first occurrence of one string within another, starting from the right side of the string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|<span data-ttu-id="bf597-118">Возвращает строку, созданную путем объединения нескольких подстрок, содержащихся в массиве.</span><span class="sxs-lookup"><span data-stu-id="bf597-118">Returns a string created by joining a number of substrings contained in an array.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|<span data-ttu-id="bf597-119">Возвращает строку или символ, преобразованную в нижний регистр.</span><span class="sxs-lookup"><span data-stu-id="bf597-119">Returns a string or character converted to lowercase.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|<span data-ttu-id="bf597-120">Возвращает строку, содержащую указанное количество символов с левой стороны строки.</span><span class="sxs-lookup"><span data-stu-id="bf597-120">Returns a string containing a specified number of characters from the left side of a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|<span data-ttu-id="bf597-121">Возвращает целое число, которое содержит число символов в строке.</span><span class="sxs-lookup"><span data-stu-id="bf597-121">Returns an integer that contains the number of characters in a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|<span data-ttu-id="bf597-122">Возвращает строку по левому краю, содержащую указанную строку, приведенную к заданной длине.</span><span class="sxs-lookup"><span data-stu-id="bf597-122">Returns a left-aligned string containing the specified string adjusted to the specified length.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|<span data-ttu-id="bf597-123">Возвращает строку, содержащую копию указанной строки без начальных пробелов.</span><span class="sxs-lookup"><span data-stu-id="bf597-123">Returns a string containing a copy of a specified string with no leading spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|<span data-ttu-id="bf597-124">Возвращает строку, содержащую указанное число символов из строки.</span><span class="sxs-lookup"><span data-stu-id="bf597-124">Returns a string containing a specified number of characters from a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|<span data-ttu-id="bf597-125">Возвращает строку, в которой указанная подстрока заменена другой подстрокой заданное число раз.</span><span class="sxs-lookup"><span data-stu-id="bf597-125">Returns a string in which a specified substring has been replaced with another substring a specified number of times.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|<span data-ttu-id="bf597-126">Возвращает строку, содержащую указанное количество символов с правой стороны строки.</span><span class="sxs-lookup"><span data-stu-id="bf597-126">Returns a string containing a specified number of characters from the right side of a string.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|<span data-ttu-id="bf597-127">Возвращает строку с выравниванием по правому краю, содержащую указанную строку, приведенную к заданной длине.</span><span class="sxs-lookup"><span data-stu-id="bf597-127">Returns a right-aligned string containing the specified string adjusted to the specified length.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|<span data-ttu-id="bf597-128">Возвращает строку, содержащую копию указанной строки без конечных пробелов.</span><span class="sxs-lookup"><span data-stu-id="bf597-128">Returns a string containing a copy of a specified string with no trailing spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|<span data-ttu-id="bf597-129">Возвращает строку, состоящую из указанного числа пробелов.</span><span class="sxs-lookup"><span data-stu-id="bf597-129">Returns a string consisting of the specified number of spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|<span data-ttu-id="bf597-130">Возвращает отсчитываемый от нуля одномерный массив, содержащий указанное число подстрок.</span><span class="sxs-lookup"><span data-stu-id="bf597-130">Returns a zero-based, one-dimensional array containing a specified number of substrings.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|<span data-ttu-id="bf597-131">Возвращает значение -1, 0 или 1, в зависимости от результата сравнения строк.</span><span class="sxs-lookup"><span data-stu-id="bf597-131">Returns -1, 0, or 1, based on the result of a string comparison.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|<span data-ttu-id="bf597-132">Возвращает строку, преобразованную указанным образом.</span><span class="sxs-lookup"><span data-stu-id="bf597-132">Returns a string converted as specified.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|<span data-ttu-id="bf597-133">Возвращает строку или объект, состоящие из указанного знака, повторенного указанное число раз.</span><span class="sxs-lookup"><span data-stu-id="bf597-133">Returns a string or object consisting of the specified character repeated the specified number of times.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|<span data-ttu-id="bf597-134">Возвращает строку, в которой является обратным порядком символов в указанной строке.</span><span class="sxs-lookup"><span data-stu-id="bf597-134">Returns a string in which the character order of a specified string is reversed.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|<span data-ttu-id="bf597-135">Возвращает строку, содержащую копию указанной строки без начальных и конечных пробелов.</span><span class="sxs-lookup"><span data-stu-id="bf597-135">Returns a string containing a copy of a specified string with no leading or trailing spaces.</span></span>|  
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|<span data-ttu-id="bf597-136">Возвращает строку или символ, содержащий указанную строку, преобразованную в верхний регистр.</span><span class="sxs-lookup"><span data-stu-id="bf597-136">Returns a string or character containing the specified string converted to uppercase.</span></span>|  
   
- С помощью оператора [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) можно указать, следует ли выполнять сравнение строк с использованием порядка сортировки текста без учета регистра, определяемого языковым стандартом системы \(`Text`\), или же вести сортировку по внутренним двоичным представлениям знаков \(`Binary`\).  По умолчанию задан метод сравнения текста `Binary`.  
+ <span data-ttu-id="bf597-137">Можно использовать [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) инструкции, чтобы задать ли сравнения строк без учета регистра текста с помощью сортировка, определяемого языком системы (`Text`) или внутренних двоичных представлений символов ( `Binary`).</span><span class="sxs-lookup"><span data-stu-id="bf597-137">You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`).</span></span> <span data-ttu-id="bf597-138">Метод сравнения текста по умолчанию — `Binary`.</span><span class="sxs-lookup"><span data-stu-id="bf597-138">The default text comparison method is `Binary`.</span></span>  
   
-## Пример  
- В данном примере функция `UCase` используется для возврата строки в верхнем регистре.  
+## <a name="example"></a><span data-ttu-id="bf597-139">Пример</span><span class="sxs-lookup"><span data-stu-id="bf597-139">Example</span></span>  
+ <span data-ttu-id="bf597-140">В этом примере используется `UCase` функции для возврата версии строки в верхнем регистре.</span><span class="sxs-lookup"><span data-stu-id="bf597-140">This example uses the `UCase` function to return an uppercase version of a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
-## Пример  
- В данном примере функция `LTrim` используется, чтобы убрать пробелы в начале, а функция `RTrim` — чтобы убрать пробелы в конце строковой переменной.  Функция `Trim` в примере используется для удаления обоих типов пробелов.  
+## <a name="example"></a><span data-ttu-id="bf597-141">Пример</span><span class="sxs-lookup"><span data-stu-id="bf597-141">Example</span></span>  
+ <span data-ttu-id="bf597-142">В этом примере используется `LTrim` функцию для удаления начальных пробелов и `RTrim` функция, чтобы убрать замыкающие пробелы из строковой переменной.</span><span class="sxs-lookup"><span data-stu-id="bf597-142">This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable.</span></span> <span data-ttu-id="bf597-143">Она использует `Trim` функцию для удаления обоих типов пробелов.</span><span class="sxs-lookup"><span data-stu-id="bf597-143">It uses the `Trim` function to strip both types of spaces.</span></span>  
   
  [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
-## Пример  
- В данном примере функция `Mid` используется для возврата указанного числа знаков строки.  
+## <a name="example"></a><span data-ttu-id="bf597-144">Пример</span><span class="sxs-lookup"><span data-stu-id="bf597-144">Example</span></span>  
+ <span data-ttu-id="bf597-145">В этом примере используется `Mid` функция возвращает указанное количество символов из строки.</span><span class="sxs-lookup"><span data-stu-id="bf597-145">This example uses the `Mid` function to return a specified number of characters from a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
-## Пример  
- В данном примере `Len` используется для возврата числа знаков в строке.  
+## <a name="example"></a><span data-ttu-id="bf597-146">Пример</span><span class="sxs-lookup"><span data-stu-id="bf597-146">Example</span></span>  
+ <span data-ttu-id="bf597-147">В этом примере используется `Len` для возврата числа знаков в строке.</span><span class="sxs-lookup"><span data-stu-id="bf597-147">This example uses `Len` to return the number of characters in a string.</span></span>  
   
  [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
-## Пример  
- В данном примере функция `InStr` используется для возврата позиции первого вхождения одной строки в другую.  
+## <a name="example"></a><span data-ttu-id="bf597-148">Пример</span><span class="sxs-lookup"><span data-stu-id="bf597-148">Example</span></span>  
+ <span data-ttu-id="bf597-149">В этом примере используется `InStr` функция возвращает позицию первого вхождения одной строки в другую.</span><span class="sxs-lookup"><span data-stu-id="bf597-149">This example uses the `InStr` function to return the position of the first occurrence of one string within another.</span></span>  
   
  [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
-## Пример  
- В данном примере показаны различные способы использования функции `Format` для форматирования значений с применением как форматов `String`, так и определенных пользователем форматов.  Фактическое отображение системой разделителя даты \(`/`\), разделителя времени \(`:` и индикаторов AM\/PM \(`t` и `tt`\) зависит от региональных параметров, применяемых кодом.  При отображении времени и даты в среде разработки используется короткий формат времени и даты региональных установок кода.  
+## <a name="example"></a><span data-ttu-id="bf597-150">Пример</span><span class="sxs-lookup"><span data-stu-id="bf597-150">Example</span></span>  
+ <span data-ttu-id="bf597-151">В этом примере показаны различные способы использования `Format` функции для форматирования значений с помощью обоих `String` форматов и форматов, определенных пользователем.</span><span class="sxs-lookup"><span data-stu-id="bf597-151">This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats.</span></span> <span data-ttu-id="bf597-152">В качестве разделителя даты (`/`), разделитель компонентов времени (`:`) и индикаторов AM/PM (`t` и `tt`), Фактическое отображение системой зависит от параметров языкового стандарта, используя код.</span><span class="sxs-lookup"><span data-stu-id="bf597-152">For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using.</span></span> <span data-ttu-id="bf597-153">Если времени и даты будут выводиться в среде разработки, используются краткий формат даты и краткий формат код языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="bf597-153">When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.</span></span>  
   
 > [!NOTE]
->  Для языков, использующих 24\-часовой формат, индикаторы AM\/PM \(`t` и `tt`\) не отображаются.  
+>  <span data-ttu-id="bf597-154">Для языков, использующих 24-часовом формате, индикаторы AM/PM (`t` и `tt`) не отображаются.</span><span class="sxs-lookup"><span data-stu-id="bf597-154">For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.</span></span>  
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## См. также  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)   
- [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)   
- [Сводка по работе со строками](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a><span data-ttu-id="bf597-155">См. также</span><span class="sxs-lookup"><span data-stu-id="bf597-155">See Also</span></span>  
+ [<span data-ttu-id="bf597-156">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="bf597-156">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="bf597-157">Члены библиотеки времени выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bf597-157">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="bf597-158">Сводка по работе со строками</span><span class="sxs-lookup"><span data-stu-id="bf597-158">String Manipulation Summary</span></span>](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

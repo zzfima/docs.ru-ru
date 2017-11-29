@@ -1,76 +1,73 @@
 ---
-title: "Оператор If (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.IfOperator"
-  - "IfOperator"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "условное выполнение"
-  - "условный оператор [Visual Basic]"
-  - "if - выражения [Visual Basic]"
-  - "If - оператор [Visual Basic]"
-  - "тернарные операторы"
+title: "Оператор If (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.IfOperator
+- IfOperator
+helpviewer_keywords:
+- ternary operators [Visual Basic]
+- conditional execution
+- If expressions [Visual Basic]
+- conditional operator [Visual Basic]
+- If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор If (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Использует сокращенные вычисления, в зависимости от результата которых возвращает одно из двух значений.  Оператор `If` может быть вызван с тремя или с двумя аргументами.  
+# <a name="if-operator-visual-basic"></a><span data-ttu-id="cd022-102">Оператор If (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd022-102">If Operator (Visual Basic)</span></span>
+<span data-ttu-id="cd022-103">Использует сокращенные вычисления, в условно возвращает одно из двух значений.</span><span class="sxs-lookup"><span data-stu-id="cd022-103">Uses short-circuit evaluation to conditionally return one of two values.</span></span> <span data-ttu-id="cd022-104">`If` Оператор может вызываться с тремя или с двумя аргументами.</span><span class="sxs-lookup"><span data-stu-id="cd022-104">The `If` operator can be called with three arguments or with two arguments.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="cd022-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cd022-105">Syntax</span></span>  
   
 ```  
 If( [argument1,] argument2, argument3 )  
 ```  
   
-## Оператор If с тремя аргументами  
- При вызове `If` с тремя аргументами первый аргумент должен иметь значение, которое может быть приведено к `Boolean`.  Значение `Boolean` определит, какой из двух других аргументов будет вычислен и возвращен.  Следующий список относится только к вызову оператора `If` с тремя аргументами.  
+## <a name="if-operator-called-with-three-arguments"></a><span data-ttu-id="cd022-106">Оператор If с тремя аргументами</span><span class="sxs-lookup"><span data-stu-id="cd022-106">If Operator Called with Three Arguments</span></span>  
+ <span data-ttu-id="cd022-107">Когда `If` вызывается с тремя аргументами, первый аргумент должен иметь значение, может быть приведен как `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="cd022-107">When `If` is called by using three arguments, the first argument must evaluate to a value that can be cast as a `Boolean`.</span></span> <span data-ttu-id="cd022-108">Что `Boolean` значение будет определять, какой из двух других аргументов вычисляется и возвращается.</span><span class="sxs-lookup"><span data-stu-id="cd022-108">That `Boolean` value will determine which of the other two arguments is evaluated and returned.</span></span> <span data-ttu-id="cd022-109">Следующий список применяется, только если `If` оператор был вызван с помощью трех аргументов.</span><span class="sxs-lookup"><span data-stu-id="cd022-109">The following list applies only when the `If` operator is called by using three arguments.</span></span>  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="cd022-110">Части</span><span class="sxs-lookup"><span data-stu-id="cd022-110">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`argument1`|Обязательный.  `Boolean`.  . Определяет, какой из других аргументов будет вычислен и возвращен.|  
-|`argument2`|Обязательный.  `Object`.  Вычисляется и возвращается, если `argument1` принимает значение `True`.|  
-|`argument3`|Обязательный.  `Object`.  Вычисляется и возвращается, если `argument1` результатом которого является `False` или если `argument1` переменной, [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean`, результатом которого является значение [Nothing](../../../visual-basic/language-reference/nothing.md).|  
+|<span data-ttu-id="cd022-111">Термин</span><span class="sxs-lookup"><span data-stu-id="cd022-111">Term</span></span>|<span data-ttu-id="cd022-112">Определение</span><span class="sxs-lookup"><span data-stu-id="cd022-112">Definition</span></span>|  
+|---|---|  
+|`argument1`|<span data-ttu-id="cd022-113">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd022-113">Required.</span></span> <span data-ttu-id="cd022-114">`Boolean`.</span><span class="sxs-lookup"><span data-stu-id="cd022-114">`Boolean`.</span></span> <span data-ttu-id="cd022-115">Определяет, какие другие аргументы для вычисления и возврата.</span><span class="sxs-lookup"><span data-stu-id="cd022-115">Determines which of the other arguments to evaluate and return.</span></span>|  
+|`argument2`|<span data-ttu-id="cd022-116">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd022-116">Required.</span></span> <span data-ttu-id="cd022-117">`Object`.</span><span class="sxs-lookup"><span data-stu-id="cd022-117">`Object`.</span></span> <span data-ttu-id="cd022-118">Если вычисленное и возвращаются в `argument1` равен `True`.</span><span class="sxs-lookup"><span data-stu-id="cd022-118">Evaluated and returned if `argument1` evaluates to `True`.</span></span>|  
+|`argument3`|<span data-ttu-id="cd022-119">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd022-119">Required.</span></span> <span data-ttu-id="cd022-120">`Object`.</span><span class="sxs-lookup"><span data-stu-id="cd022-120">`Object`.</span></span> <span data-ttu-id="cd022-121">Если вычисленное и возвращаются в `argument1` равен `False` или если `argument1` — [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` переменной, результатом которого является [ничего не](../../../visual-basic/language-reference/nothing.md).</span><span class="sxs-lookup"><span data-stu-id="cd022-121">Evaluated and returned if `argument1` evaluates to `False` or if `argument1` is a [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)`Boolean` variable that evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md).</span></span>|  
   
- Оператор `If` с тремя аргументами работает подобно функции `IIf` за исключением того, что он использует сокращенные вычисления.  Функция `IIf` всегда вычисляет все три своих аргумента, а оператор `If` с тремя аргументами вычисляет только два из них.  Вычисляется первый аргумент `If` и результат имеет тип `Boolean`, а значение `True` или `False`.  Если значение равно `True`, то вычисляется и возвращается значение `argument2`, а `argument3` не вычисляется.  Если значение `Boolean` равно `False`, то вычисляется и возвращается значение `argument3`, а `argument2` не вычисляется.  Следующие примеры иллюстрируют использование `If` с тремя аргументами:  
+ <span data-ttu-id="cd022-122">`If` Оператор, который вызывается с тремя аргументами работает подобно `IIf` функции, за исключением того, что он использует сокращенные вычисления.</span><span class="sxs-lookup"><span data-stu-id="cd022-122">An `If` operator that is called with three arguments works like an `IIf` function except that it uses short-circuit evaluation.</span></span> <span data-ttu-id="cd022-123">`IIf` Функция всегда вычисляет все три аргументов, тогда как `If` с тремя аргументами вычисляет только два из них.</span><span class="sxs-lookup"><span data-stu-id="cd022-123">An `IIf` function always evaluates all three of its arguments, whereas an `If` operator that has three arguments evaluates only two of them.</span></span> <span data-ttu-id="cd022-124">Первый `If` аргумент вычисляется, и результат приводится к `Boolean` значение `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="cd022-124">The first `If` argument is evaluated and the result is cast as a `Boolean` value, `True` or `False`.</span></span> <span data-ttu-id="cd022-125">Если значение равно `True`, `argument2` — вычисляется и возвращается его значение, но `argument3` не вычисляется.</span><span class="sxs-lookup"><span data-stu-id="cd022-125">If the value is `True`, `argument2` is evaluated and its value is returned, but `argument3` is not evaluated.</span></span> <span data-ttu-id="cd022-126">Если значение `Boolean` выражение `False`, `argument3` — вычисляется и возвращается его значение, но `argument2` не вычисляется.</span><span class="sxs-lookup"><span data-stu-id="cd022-126">If the value of the `Boolean` expression is `False`, `argument3` is evaluated and its value is returned, but `argument2` is not evaluated.</span></span> <span data-ttu-id="cd022-127">Следующие примеры иллюстрируют использование `If` при использовании три аргумента:</span><span class="sxs-lookup"><span data-stu-id="cd022-127">The following examples illustrate the use of `If` when three arguments are used:</span></span>  
   
  [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
   
- В следующем примере показано значение сокращенного вычисления.  В примере показано две попытки деления переменной `number` на переменную `divisor`, за исключением случая, когда `divisor` равно нулю.  В этом случае должен быть возвращен 0 и не должно производиться деление, поскольку это вызвало бы ошибку во время выполнения.  Так как выражение `If` использует сокращенные вычисления, оно вычисляет или второй, или третий аргумент, в зависимости от значения первого аргумента.  Если первый аргумент имеет значение true, то делитель не ноль и вычисление второго аргумента и деление является безопасными.  Если первый аргумент имеет значение false, то вычисляется только третий аргумент и возвращается 0.  Таким образом, если делитель равен 0, то не производится попытка выполнить деление и ошибка не появляется.  Однако поскольку `IIf` не использует сокращенные вычисления, второй аргумент вычисляется, даже если первый аргумент равен false.  Это вызывает ошибку во время выполнения деления на ноль.  
+ <span data-ttu-id="cd022-128">В следующем примере показано значение сокращенным вычислением.</span><span class="sxs-lookup"><span data-stu-id="cd022-128">The following example illustrates the value of short-circuit evaluation.</span></span> <span data-ttu-id="cd022-129">В примере показано две попытки деления переменной `number` переменной `divisor` только если `divisor` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="cd022-129">The example shows two attempts to divide variable `number` by variable `divisor` except when `divisor` is zero.</span></span> <span data-ttu-id="cd022-130">В этом случае должно быть возвращено значение 0, и не должен быть предпринята попытка выполнить деление потому, что приведет к ошибке во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="cd022-130">In that case, a 0 should be returned, and no attempt should be made to perform the division because a run-time error would result.</span></span> <span data-ttu-id="cd022-131">Поскольку `If` выражение использует сокращенные вычисления, оно вычисляет второй или третий аргумент, в зависимости от значения первого аргумента.</span><span class="sxs-lookup"><span data-stu-id="cd022-131">Because the `If` expression uses short-circuit evaluation, it evaluates either the second or the third argument, depending on the value of the first argument.</span></span> <span data-ttu-id="cd022-132">Если первый аргумент имеет значение true, делитель не равна нулю и безопасно вычисления второго аргумента и деление.</span><span class="sxs-lookup"><span data-stu-id="cd022-132">If the first argument is true, the divisor is not zero and it is safe to evaluate the second argument and perform the division.</span></span> <span data-ttu-id="cd022-133">Если первый аргумент имеет значение false, только третий аргумент вычисляется и возвращается значение 0.</span><span class="sxs-lookup"><span data-stu-id="cd022-133">If the first argument is false, only the third argument is evaluated and a 0 is returned.</span></span> <span data-ttu-id="cd022-134">Таким образом Если делитель равен 0, не будет предпринята попытка выполнить деление и не приведет к ошибке.</span><span class="sxs-lookup"><span data-stu-id="cd022-134">Therefore, when the divisor is 0, no attempt is made to perform the division and no error results.</span></span> <span data-ttu-id="cd022-135">Тем не менее поскольку `IIf` не использует сокращенные вычисления, второй аргумент вычисляется, даже в том случае, если первый аргумент имеет значение false.</span><span class="sxs-lookup"><span data-stu-id="cd022-135">However, because `IIf` does not use short-circuit evaluation, the second argument is evaluated even when the first argument is false.</span></span> <span data-ttu-id="cd022-136">Это приводит к ошибке деления на ноль во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="cd022-136">This causes a run-time divide-by-zero error.</span></span>  
   
  [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
   
-## Оператор If с двумя аргументами  
- Первый аргумент `If` можно опустить.  Это позволяет вызвать оператор с использованием только двух аргументов.  Следующий список относится только к вызову оператора `If` с двумя аргументами.  
+## <a name="if-operator-called-with-two-arguments"></a><span data-ttu-id="cd022-137">Оператор If с двумя аргументами</span><span class="sxs-lookup"><span data-stu-id="cd022-137">If Operator Called with Two Arguments</span></span>  
+ <span data-ttu-id="cd022-138">Первый аргумент `If` можно опустить.</span><span class="sxs-lookup"><span data-stu-id="cd022-138">The first argument to `If` can be omitted.</span></span> <span data-ttu-id="cd022-139">Благодаря этому оператор вызываться с использованием только двух аргументов.</span><span class="sxs-lookup"><span data-stu-id="cd022-139">This enables the operator to be called by using only two arguments.</span></span> <span data-ttu-id="cd022-140">Следующий список применяется, только если `If` оператор был вызван с двумя аргументами.</span><span class="sxs-lookup"><span data-stu-id="cd022-140">The following list applies only when the `If` operator is called with two arguments.</span></span>  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="cd022-141">Части</span><span class="sxs-lookup"><span data-stu-id="cd022-141">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`argument2`|Обязательный.  `Object`.  Должен быть ссылкой или типом nullable.  Вычисляется и возвращается, если вычисленное значение отлично от `Nothing`.|  
-|`argument3`|Обязательный.  `Object`.  Вычисляется и возвращается, если `argument2` принимает значение `Nothing`.|  
+|<span data-ttu-id="cd022-142">Термин</span><span class="sxs-lookup"><span data-stu-id="cd022-142">Term</span></span>|<span data-ttu-id="cd022-143">Определение</span><span class="sxs-lookup"><span data-stu-id="cd022-143">Definition</span></span>|  
+|---|---|  
+|`argument2`|<span data-ttu-id="cd022-144">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd022-144">Required.</span></span> <span data-ttu-id="cd022-145">`Object`.</span><span class="sxs-lookup"><span data-stu-id="cd022-145">`Object`.</span></span> <span data-ttu-id="cd022-146">Должен быть ссылку или тип, допускающий значение NULL.</span><span class="sxs-lookup"><span data-stu-id="cd022-146">Must be a reference or nullable type.</span></span> <span data-ttu-id="cd022-147">Вычисляется и возвращается, если оно оценивается как-либо отличного от `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="cd022-147">Evaluated and returned when it evaluates to anything other than `Nothing`.</span></span>|  
+|`argument3`|<span data-ttu-id="cd022-148">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd022-148">Required.</span></span> <span data-ttu-id="cd022-149">`Object`.</span><span class="sxs-lookup"><span data-stu-id="cd022-149">`Object`.</span></span> <span data-ttu-id="cd022-150">Если вычисленное и возвращаются в `argument2` равен `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="cd022-150">Evaluated and returned if `argument2` evaluates to `Nothing`.</span></span>|  
   
- Если аргумент `Boolean` опущен, то первый аргумент должен быть ссылкой или типом nullable.  Если первый аргумент имеет значение `Nothing`, то возвращается значение второго аргумента.  Во всех остальных случаях возвращается значение первого аргумента.  В следующем примере показано, как работает это вычисление.  
+ <span data-ttu-id="cd022-151">Когда `Boolean` аргумент опущен, первый аргумент должен быть ссылкой или типом nullable.</span><span class="sxs-lookup"><span data-stu-id="cd022-151">When the `Boolean` argument is omitted, the first argument must be a reference or nullable type.</span></span> <span data-ttu-id="cd022-152">Если первый аргумент принимает значение `Nothing`, возвращается значение второго аргумента.</span><span class="sxs-lookup"><span data-stu-id="cd022-152">If the first argument evaluates to `Nothing`, the value of the second argument is returned.</span></span> <span data-ttu-id="cd022-153">Во всех остальных случаях возвращается значение первого аргумента.</span><span class="sxs-lookup"><span data-stu-id="cd022-153">In all other cases, the value of the first argument is returned.</span></span> <span data-ttu-id="cd022-154">В следующем примере показано, как работает это вычисление.</span><span class="sxs-lookup"><span data-stu-id="cd022-154">The following example illustrates how this evaluation works.</span></span>  
   
  [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Interaction.IIf%2A>   
- [Типы значения, допускающие Null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
- [Nothing](../../../visual-basic/language-reference/nothing.md)
+## <a name="see-also"></a><span data-ttu-id="cd022-155">См. также</span><span class="sxs-lookup"><span data-stu-id="cd022-155">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Interaction.IIf%2A>  
+ [<span data-ttu-id="cd022-156">Типы значений, допускающие значение NULL</span><span class="sxs-lookup"><span data-stu-id="cd022-156">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+ [<span data-ttu-id="cd022-157">Nothing</span><span class="sxs-lookup"><span data-stu-id="cd022-157">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)

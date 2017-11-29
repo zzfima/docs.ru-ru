@@ -1,104 +1,110 @@
 ---
-title: "Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "составные элементы управления, размещение WPF в"
-  - "размещение содержимого WPF в Windows Forms"
+title: "Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hosting WPF content in Windows Forms [WPF]
+- composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c5af705509d30f7dfd50ade0c07aca242deff4dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms
-Данный пример демонстрирует создание составного элемента управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и его размещения в элементах управления и формах [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] с помощью элемента управления <xref:System.Windows.Forms.Integration.ElementHost>.  
+# <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a><span data-ttu-id="3a554-102">Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3a554-102">Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms</span></span>
+<span data-ttu-id="3a554-103">В этом пошаговом руководстве показано, как можно создать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления и его размещения в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления и форм с помощью <xref:System.Windows.Forms.Integration.ElementHost> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a554-103">This walkthrough demonstrates how you can create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] composite control and host it in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls and forms by using the <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
   
- Данное пошаговое руководство реализует [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>, который содержит два дочерних элемента управления.  <xref:System.Windows.Controls.UserControl> отображает трехмерный \(3\-D\) конус.  Отрисовывать 3\-D объекты гораздо удобнее с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], нежели с [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Поэтому для создания 3\-D графики имеет смысл размещать класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+ <span data-ttu-id="3a554-104">В этом пошаговом руководстве будет реализовывать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> , содержащий два дочерних элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a554-104">In this walkthrough, you will implement a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> that contains two child controls.</span></span> <span data-ttu-id="3a554-105"><xref:System.Windows.Controls.UserControl> Отображает трехмерного конуса (трехмерные).</span><span class="sxs-lookup"><span data-stu-id="3a554-105">The <xref:System.Windows.Controls.UserControl> displays a three-dimensional (3-D) cone.</span></span> <span data-ttu-id="3a554-106">Подготовка к просмотру трехмерных объектов теперь гораздо проще с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] чем с [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a554-106">Rendering 3-D objects is much easier with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] than with [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span> <span data-ttu-id="3a554-107">Таким образом, имеет смысл узел [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> класс для создания трехмерной графики в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a554-107">Therefore, it makes sense to host a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> class to create 3-D graphics in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ <span data-ttu-id="3a554-108">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="3a554-108">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Создание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.  
+-   <span data-ttu-id="3a554-109">Создание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="3a554-109">Creating the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span></span>  
   
--   Создание проекта размещения Windows Forms  
+-   <span data-ttu-id="3a554-110">Создание базового проекта Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="3a554-110">Creating the Windows Forms host project.</span></span>  
   
--   Размещение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.  
+-   <span data-ttu-id="3a554-111">Размещение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span><span class="sxs-lookup"><span data-stu-id="3a554-111">Hosting the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.</span></span>  
   
- Полный листинг кода задач, приведенных в этом руководстве, см. в документе [Hosting a 3\-D WPF Composite Control in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=160001).  
+ <span data-ttu-id="3a554-112">Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [размещение трехмерных составного элемента управления WPF в Windows Forms образец](http://go.microsoft.com/fwlink/?LinkID=160001).</span><span class="sxs-lookup"><span data-stu-id="3a554-112">For a complete code listing of the tasks illustrated in this walkthrough, see [Hosting a 3-D WPF Composite Control in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=160001).</span></span>  
   
-## Обязательные компоненты  
- Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
+## <a name="prerequisites"></a><span data-ttu-id="3a554-113">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="3a554-113">Prerequisites</span></span>  
+ <span data-ttu-id="3a554-114">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="3a554-114">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="3a554-115">.</span><span class="sxs-lookup"><span data-stu-id="3a554-115">.</span></span>  
   
 <a name="To_Create_the_UserControl"></a>   
-## Создание UserControl  
+## <a name="creating-the-usercontrol"></a><span data-ttu-id="3a554-116">Создание пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="3a554-116">Creating the UserControl</span></span>  
   
-#### Для создания UserControl  
+#### <a name="to-create-the-usercontrol"></a><span data-ttu-id="3a554-117">Для создания пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="3a554-117">To create the UserControl</span></span>  
   
-1.  Создайте проект WPF User Control Library с именем `HostingWpfUserControlInWf`.  
+1.  <span data-ttu-id="3a554-118">Создайте проект библиотеки пользовательских элементов управления WPF с именем `HostingWpfUserControlInWf`.</span><span class="sxs-lookup"><span data-stu-id="3a554-118">Create a WPF User Control Library project named `HostingWpfUserControlInWf`.</span></span>  
   
-2.  Откройте файл UserControl1.xaml в конструкторе [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+2.  <span data-ttu-id="3a554-119">Откройте UserControl1.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3a554-119">Open UserControl1.xaml in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-3.  Замените сгенерированный код следующим:  
+3.  <span data-ttu-id="3a554-120">Замените созданный код следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="3a554-120">Replace the generated code with the following code.</span></span>  
   
-     Этот код определяет <xref:System.Windows.Controls.UserControl?displayProperty=fullName>, который содержит два дочерних элемента управления.  Первый дочерний элемент управления является элементом управления <xref:System.Windows.Controls.Label?displayProperty=fullName>, а второй является элементом управления <xref:System.Windows.Controls.Viewport3D>, отображающим 3\-D конус.  
+     <span data-ttu-id="3a554-121">Этот код определяет <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> , содержащий два дочерних элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a554-121">This code defines a <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> that contains two child controls.</span></span> <span data-ttu-id="3a554-122">Первый дочерний элемент управления является <xref:System.Windows.Controls.Label?displayProperty=nameWithType> управления; второй — <xref:System.Windows.Controls.Viewport3D> элемент управления, отображающий объемный вариант.</span><span class="sxs-lookup"><span data-stu-id="3a554-122">The first child control is a <xref:System.Windows.Controls.Label?displayProperty=nameWithType> control; the second is a <xref:System.Windows.Controls.Viewport3D> control that displays a 3-D cone.</span></span>  
   
-     [!code-xml[HostingWpfUserControlInWf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
+     [!code-xaml[HostingWpfUserControlInWf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>   
-## Создание ведущего проекта Windows Forms  
+## <a name="creating-the-windows-forms-host-project"></a><span data-ttu-id="3a554-123">Создание ведущего проекта Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3a554-123">Creating the Windows Forms Host Project</span></span>  
   
-#### Для создания ведущего проекта  
+#### <a name="to-create-the-host-project"></a><span data-ttu-id="3a554-124">Создание ведущего проекта</span><span class="sxs-lookup"><span data-stu-id="3a554-124">To create the host project</span></span>  
   
-1.  Добавьте в решение проект приложения Windows с именем `WpfUserControlHost`.  Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/ru-ru/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  <span data-ttu-id="3a554-125">Добавьте проект приложения Windows с именем `WpfUserControlHost` в решение.</span><span class="sxs-lookup"><span data-stu-id="3a554-125">Add a Windows application project named `WpfUserControlHost` to the solution.</span></span> <span data-ttu-id="3a554-126">Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span><span class="sxs-lookup"><span data-stu-id="3a554-126">For more information, see [How to: Create a New WPF Application Project](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).</span></span>  
   
-2.  В обозревателе решений добавьте ссылку на сборку "WindowsFormsIntegration", которая называется WindowsFormsIntegration.dll.  
+2.  <span data-ttu-id="3a554-127">В обозревателе решений добавьте ссылку на сборку WindowsFormsIntegration, которая называется WindowsFormsIntegration.dll.</span><span class="sxs-lookup"><span data-stu-id="3a554-127">In Solution Explorer, add a reference to the WindowsFormsIntegration assembly, which is named WindowsFormsIntegration.dll.</span></span>  
   
-3.  Добавьте ссылки на следующие сборки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+3.  <span data-ttu-id="3a554-128">Добавьте ссылки на следующие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] сборки:</span><span class="sxs-lookup"><span data-stu-id="3a554-128">Add references to the following [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies:</span></span>  
   
-    -   PresentationCore  
+    -   <span data-ttu-id="3a554-129">PresentationCore</span><span class="sxs-lookup"><span data-stu-id="3a554-129">PresentationCore</span></span>  
   
-    -   PresentationFramework  
+    -   <span data-ttu-id="3a554-130">PresentationFramework</span><span class="sxs-lookup"><span data-stu-id="3a554-130">PresentationFramework</span></span>  
   
-    -   WindowsBase  
+    -   <span data-ttu-id="3a554-131">WindowsBase</span><span class="sxs-lookup"><span data-stu-id="3a554-131">WindowsBase</span></span>  
   
-4.  Добавьте ссылку на проект `HostingWpfUserControlInWf`.  
+4.  <span data-ttu-id="3a554-132">Добавьте ссылку на проект `HostingWpfUserControlInWf`.</span><span class="sxs-lookup"><span data-stu-id="3a554-132">Add a reference to the `HostingWpfUserControlInWf` project.</span></span>  
   
-5.  В обозревателе решений назначьте проект `WpfUserControlHost` запускаемым проектом.  
+5.  <span data-ttu-id="3a554-133">В обозревателе решений задайте `WpfUserControlHost` как проект запуска.</span><span class="sxs-lookup"><span data-stu-id="3a554-133">In Solution Explorer, set the `WpfUserControlHost` project to be the startup project.</span></span>  
   
 <a name="To_Host_the_Windows_Presentation_Foundation"></a>   
-## Размещение UserControl Windows Presentation Foundation  
+## <a name="hosting-the-windows-presentation-foundation-usercontrol"></a><span data-ttu-id="3a554-134">Размещение пользовательского элемента управления Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="3a554-134">Hosting the Windows Presentation Foundation UserControl</span></span>  
   
-#### Для размещения UserControl  
+#### <a name="to-host-the-usercontrol"></a><span data-ttu-id="3a554-135">Размещение пользовательского элемента управления</span><span class="sxs-lookup"><span data-stu-id="3a554-135">To host the UserControl</span></span>  
   
-1.  В конструкторе Windows Forms откройте Form1.  
+1.  <span data-ttu-id="3a554-136">Откройте форму Form1 в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="3a554-136">In the Windows Forms Designer, open Form1.</span></span>  
   
-2.  В окне "Свойства" нажмите кнопку **События**, а затем дважды щелкните событие <xref:System.Windows.Forms.Form.Load>, чтобы создать обработчик событий.  
+2.  <span data-ttu-id="3a554-137">В окне «Свойства» щелкните **событий**, а затем дважды щелкните <xref:System.Windows.Forms.Form.Load> событие, чтобы создать обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="3a554-137">In the Properties window, click **Events**, and then double-click the <xref:System.Windows.Forms.Form.Load> event to create an event handler.</span></span>  
   
-     Редактор кода откроется на новом созданном обработчике событий `Form1_Load`.  
+     <span data-ttu-id="3a554-138">Открывается редактор кода в только что созданный `Form1_Load` обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="3a554-138">The Code Editor opens to the newly generated `Form1_Load` event handler.</span></span>  
   
-3.  Замените код в файле Form1.cs следующим кодом:  
+3.  <span data-ttu-id="3a554-139">Замените код в файле Form1.cs следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="3a554-139">Replace the code in Form1.cs with the following code.</span></span>  
   
-     Обработчик событий `Form1_Load` создает экземпляр `UserControl1` и добавляет его `` в коллекцию элемента управления <xref:System.Windows.Forms.Integration.ElementHost> дочерних элементов управления.  Элемент управления <xref:System.Windows.Forms.Integration.ElementHost> добавляется в коллекцию формы дочерних элементов управления.  
+     <span data-ttu-id="3a554-140">`Form1_Load` Обработчик событий создает экземпляр `UserControl1` и добавляет itto <xref:System.Windows.Forms.Integration.ElementHost> коллекцию дочерних элементов управления элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3a554-140">The `Form1_Load` event handler creates an instance of `UserControl1` and adds itto the <xref:System.Windows.Forms.Integration.ElementHost> control's collection of child controls.</span></span> <span data-ttu-id="3a554-141"><xref:System.Windows.Forms.Integration.ElementHost> Элемент управления добавляется в коллекцию дочерних элементов управления формы.</span><span class="sxs-lookup"><span data-stu-id="3a554-141">The <xref:System.Windows.Forms.Integration.ElementHost> control is added to the form's collection of child controls.</span></span>  
   
      [!code-csharp[HostingWpfUserControlInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
      [!code-vb[HostingWpfUserControlInWf#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]  
   
-4.  Нажмите клавишу F5 для построения и выполнения приложения.  
+4.  <span data-ttu-id="3a554-142">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="3a554-142">Press F5 to build and run the application.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [Hosting a WPF Composite Control in Windows Forms Sample](http://go.microsoft.com/fwlink/?LinkID=160001)
+## <a name="see-also"></a><span data-ttu-id="3a554-143">См. также</span><span class="sxs-lookup"><span data-stu-id="3a554-143">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="3a554-144">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="3a554-144">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [<span data-ttu-id="3a554-145">Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3a554-145">Walkthrough: Hosting a WPF Composite Control in Windows Forms</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [<span data-ttu-id="3a554-146">Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="3a554-146">Walkthrough: Hosting a Windows Forms Composite Control in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [<span data-ttu-id="3a554-147">Размещение составного элемента управления WPF в Windows Forms образца</span><span class="sxs-lookup"><span data-stu-id="3a554-147">Hosting a WPF Composite Control in Windows Forms Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160001)

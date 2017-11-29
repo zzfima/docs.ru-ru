@@ -1,44 +1,27 @@
 ---
-title: "Объект автоматизации не имеет значения по умолчанию | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Объект автоматизации не имеет значение по умолчанию"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID443
+f1_keywords: vbrID443
 ms.assetid: 162641f6-5a19-4c37-8c92-17929885e87e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e734c32052099e5d3ad8fe3466f103fc3dded5f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b1e141ed0868628adfa9201267275381a0be7e32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="automation-object-does-not-have-a-default-value"></a>Объект автоматизации не имеет значение по умолчанию
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]не удается определить элемент по умолчанию для указанного объекта.  
+# <a name="automation-object-does-not-have-a-default-value"></a><span data-ttu-id="4f2a4-102">Объект автоматизации не имеет значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="4f2a4-102">Automation object does not have a default value</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="4f2a4-103"> не удается определить элемент по умолчанию для указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="4f2a4-103"> cannot determine the default member for the specified object.</span></span>  
   
-### <a name="to-correct-the-error"></a>Исправление ошибки  
+### <a name="to-correct-the-error"></a><span data-ttu-id="4f2a4-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4f2a4-104">To correct the error</span></span>  
   
--   Просмотрите документацию объекта и введите явную спецификацию для свойства или метода.  
+-   <span data-ttu-id="4f2a4-105">Просмотрите документацию объекта и введите явную спецификацию для свойства или метода.</span><span class="sxs-lookup"><span data-stu-id="4f2a4-105">Check the object's documentation and give an explicit specification for the property or method.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Типы ошибок](../../visual-basic/programming-guide/language-features/error-types.md)   
- [PAVEOVER поддержка и продукта специальные возможности](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="4f2a4-106">См. также</span><span class="sxs-lookup"><span data-stu-id="4f2a4-106">See Also</span></span>  
+ [<span data-ttu-id="4f2a4-107">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="4f2a4-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [<span data-ttu-id="4f2a4-108">PAVEOVER Поддержка и специальные возможности продукта</span><span class="sxs-lookup"><span data-stu-id="4f2a4-108">PAVEOVER Product Support and Accessibility</span></span>](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)

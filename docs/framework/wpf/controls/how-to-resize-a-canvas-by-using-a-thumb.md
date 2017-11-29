@@ -1,57 +1,63 @@
 ---
-title: "Практическое руководство. Изменение размеров холста с помощью бегунка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Canvas - элемент управления"
-  - "элементы управления, Canvas"
-  - "элементы управления, Бегунок"
-  - "изменение размеров элемента управления Canvas"
-  - "Thumb - элемент управления"
+title: "Практическое руководство. Изменение размеров холста с помощью бегунка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- resizing Canvas control [WPF]
+- controls [WPF], Thumb
+- controls [WPF], Canvas
+- Thumb control [WPF]
+- Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 757745b24c8e9e281d243cd15a5351b01d3479ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение размеров холста с помощью бегунка
-В этом примере показано использование элемента управления <xref:System.Windows.Controls.Primitives.Thumb> для изменения размера элемента управления <xref:System.Windows.Controls.Canvas>.  
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a><span data-ttu-id="52e4f-102">Практическое руководство. Изменение размеров холста с помощью бегунка</span><span class="sxs-lookup"><span data-stu-id="52e4f-102">How to: Resize a Canvas by Using a Thumb</span></span>
+<span data-ttu-id="52e4f-103">В этом примере показано, как использовать <xref:System.Windows.Controls.Primitives.Thumb> изменение размера элемента управления <xref:System.Windows.Controls.Canvas> управления.</span><span class="sxs-lookup"><span data-stu-id="52e4f-103">This example shows how to use a <xref:System.Windows.Controls.Primitives.Thumb> control to resize a <xref:System.Windows.Controls.Canvas> control.</span></span>  
   
-## Пример  
- Элемент управления <xref:System.Windows.Controls.Primitives.Thumb> предоставляет функцию перетаскивания, которая может использоваться для перемещения или изменения размера элементов управления, отслеживая событий <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>, <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> и <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> элемента управления <xref:System.Windows.Controls.Primitives.Thumb>.  
+## <a name="example"></a><span data-ttu-id="52e4f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="52e4f-104">Example</span></span>  
+ <span data-ttu-id="52e4f-105"><xref:System.Windows.Controls.Primitives.Thumb> Управления предоставляет функцию перетаскивания, которая может использоваться для перемещения или изменения размеров элементов управления, отслеживая <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>, <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> и <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> события <xref:System.Windows.Controls.Primitives.Thumb>.</span><span class="sxs-lookup"><span data-stu-id="52e4f-105">The <xref:System.Windows.Controls.Primitives.Thumb> control provides drag functionality that can be used to move or resize controls by monitoring the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>, <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> and <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> events of the <xref:System.Windows.Controls.Primitives.Thumb>.</span></span>  
   
- Пользователь начинает операцию перетаскивания нажатием левой кнопки мыши при приостановке указателя мыши на элементе управления <xref:System.Windows.Controls.Primitives.Thumb>.  Операция перетаскивания продолжается до тех пор, пока левая кнопка мыши остается нажатой.  Во время операции перетаскивания <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> может происходить несколько раз.  При каждом его возникновении класс <xref:System.Windows.Controls.Primitives.DragDeltaEventArgs> предоставляет возможность изменения положения в соответствии с изменением положения курсора мыши.  Когда пользователь отпускает кнопку мыши, перетаскивание завершается.  Операция перетаскивания предоставляет только новые координаты; она автоматически не перемещает <xref:System.Windows.Controls.Primitives.Thumb>.  
+ <span data-ttu-id="52e4f-106">Пользователь начинает операцию перетаскивания нажатием левой кнопки мыши при наведении указателя мыши на <xref:System.Windows.Controls.Primitives.Thumb> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="52e4f-106">The user begins a drag operation by pressing the left mouse button when the mouse pointer is paused on the <xref:System.Windows.Controls.Primitives.Thumb> control.</span></span> <span data-ttu-id="52e4f-107">Операция перетаскивания продолжается до тех пор, пока остается нажатой левую кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="52e4f-107">The drag operation continues as long as the left mouse button remains pressed.</span></span> <span data-ttu-id="52e4f-108">Во время операции перетаскивания <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> может встречаться несколько раз.</span><span class="sxs-lookup"><span data-stu-id="52e4f-108">During the drag operation, the <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> can occur more than once.</span></span> <span data-ttu-id="52e4f-109">Каждом его обнаружении <xref:System.Windows.Controls.Primitives.DragDeltaEventArgs> класс предоставляет изменений в позиции, в соответствии с изменением положения курсора мыши.</span><span class="sxs-lookup"><span data-stu-id="52e4f-109">Each time it occurs, the <xref:System.Windows.Controls.Primitives.DragDeltaEventArgs> class provides the change in position that corresponds to the change in mouse position.</span></span> <span data-ttu-id="52e4f-110">Когда пользователь отпускает левую кнопку мыши, завершения операции перетаскивания.</span><span class="sxs-lookup"><span data-stu-id="52e4f-110">When the user releases the left mouse button, the drag operation is finished.</span></span> <span data-ttu-id="52e4f-111">Операция перетаскивания предоставляет только новые координаты; он автоматически не перемещает <xref:System.Windows.Controls.Primitives.Thumb>.</span><span class="sxs-lookup"><span data-stu-id="52e4f-111">The drag operation only provides new coordinates; it does not automatically reposition the <xref:System.Windows.Controls.Primitives.Thumb>.</span></span>  
   
- В следующем примере показан элемент управления <xref:System.Windows.Controls.Primitives.Thumb>, являющийся дочерним элементом элемента управления <xref:System.Windows.Controls.Canvas>.  Его обработчик событий <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> предоставляет логику перемещения <xref:System.Windows.Controls.Primitives.Thumb> и изменения размеров <xref:System.Windows.Controls.Canvas>.  Обработчики событий <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> и <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> изменяют цвет <xref:System.Windows.Controls.Primitives.Thumb> во время операции перетаскивания.  В следующем примере определяется <xref:System.Windows.Controls.Primitives.Thumb>.  
+ <span data-ttu-id="52e4f-112">В следующем примере показан <xref:System.Windows.Controls.Primitives.Thumb> управления, являющийся дочерним элементом элемента <xref:System.Windows.Controls.Canvas> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="52e4f-112">The following example shows a <xref:System.Windows.Controls.Primitives.Thumb> control that is the child element of a <xref:System.Windows.Controls.Canvas> control.</span></span> <span data-ttu-id="52e4f-113">Обработчик событий для его <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> предоставляет логику для перемещения <xref:System.Windows.Controls.Primitives.Thumb> и измените размер <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="52e4f-113">The event handler for its <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> event provides the logic to move the <xref:System.Windows.Controls.Primitives.Thumb> and resize the <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="52e4f-114">Обработчики событий для <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> и <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> событий изменения цвета <xref:System.Windows.Controls.Primitives.Thumb> во время операции перетаскивания.</span><span class="sxs-lookup"><span data-stu-id="52e4f-114">The event handlers for the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> and <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> event change the color of the <xref:System.Windows.Controls.Primitives.Thumb> during a drag operation.</span></span> <span data-ttu-id="52e4f-115">В следующем примере определяется <xref:System.Windows.Controls.Primitives.Thumb>.</span><span class="sxs-lookup"><span data-stu-id="52e4f-115">The following example defines the <xref:System.Windows.Controls.Primitives.Thumb>.</span></span>  
   
- [!code-xml[Thumb#thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
+ [!code-xaml[Thumb#thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
- В следующем примере показан обработчик событий <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>, который в ответ на движение мыши перемещает элемент <xref:System.Windows.Controls.Primitives.Thumb> и изменяет размеры элемента <xref:System.Windows.Controls.Canvas>.  
+ <span data-ttu-id="52e4f-116">В следующем примере показан <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> обработчик событий, который перемещает <xref:System.Windows.Controls.Primitives.Thumb> и изменять размеры <xref:System.Windows.Controls.Canvas> в ответ на движения мыши.</span><span class="sxs-lookup"><span data-stu-id="52e4f-116">The following example shows the <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> event handler that moves the <xref:System.Windows.Controls.Primitives.Thumb> and resizes the <xref:System.Windows.Controls.Canvas> in response to a mouse movement.</span></span>  
   
  [!code-csharp[Thumb#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
   
- В следующем примере показан обработчик событий <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>.  
+ <span data-ttu-id="52e4f-117">В следующем примере показан <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="52e4f-117">The following example shows the <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> event handler.</span></span>  
   
  [!code-csharp[Thumb#DragStartedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
  [!code-vb[Thumb#DragStartedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
   
- В следующем примере показан обработчик событий <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>.  
+ <span data-ttu-id="52e4f-118">В следующем примере показан <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="52e4f-118">The following example shows the <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> event handler.</span></span>  
   
  [!code-csharp[Thumb#DragCompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
  [!code-vb[Thumb#DragCompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
- Полный код примера см. на веб\-странице [Пример Thumb Drag Functionality](http://go.microsoft.com/fwlink/?LinkID=160042).  
+ <span data-ttu-id="52e4f-119">Полный пример см. в разделе [Пример перетаскивания бегунка](http://go.microsoft.com/fwlink/?LinkID=160042).</span><span class="sxs-lookup"><span data-stu-id="52e4f-119">For the complete sample, see [Thumb Drag Functionality Sample](http://go.microsoft.com/fwlink/?LinkID=160042).</span></span>  
   
-## См. также  
- <xref:System.Windows.Controls.Primitives.Thumb>   
- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>   
- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>   
+## <a name="see-also"></a><span data-ttu-id="52e4f-120">См. также</span><span class="sxs-lookup"><span data-stu-id="52e4f-120">See Also</span></span>  
+ <xref:System.Windows.Controls.Primitives.Thumb>  
+ <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
+ <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  
  <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>

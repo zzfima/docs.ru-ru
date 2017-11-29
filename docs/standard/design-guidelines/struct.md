@@ -1,62 +1,60 @@
 ---
-title: "Разработка структур | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Класс рекомендации по разработке библиотек [платформа .NET Framework] структуры"
-  - "освобождение структур"
-  - "Выделение структур"
-  - "типы значений, структуры"
-  - "Разработка структуры"
-  - "правила разработки типов, структуры"
-  - "структуры [платформа .NET Framework] рекомендации по проектированию"
+title: "Разработка структур"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- class library design guidelines [.NET Framework], structures
+- deallocating structures
+- allocating structures
+- value types, structures
+- structure design
+- type design guidelines, structures
+- structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d1566d2b67e1dda5b0b221a2c10affb6bdaea888
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Разработка структур
-Тип значения общего назначения наиболее часто называется структурой, его ключевого слова C\#. Рекомендации для разработки общие структуры.  
+# <a name="struct-design"></a><span data-ttu-id="55b72-102">Разработка структур</span><span class="sxs-lookup"><span data-stu-id="55b72-102">Struct Design</span></span>
+<span data-ttu-id="55b72-103">Тип значения общего назначения наиболее часто называется структурой зарезервированного слова C#.</span><span class="sxs-lookup"><span data-stu-id="55b72-103">The general-purpose value type is most often referred to as a struct, its C# keyword.</span></span> <span data-ttu-id="55b72-104">Этот раздел содержит рекомендации по общие структуры конструктора.</span><span class="sxs-lookup"><span data-stu-id="55b72-104">This section provides guidelines for general struct design.</span></span>  
   
- **X не** предоставлять конструктор по умолчанию для структуры.  
+ <span data-ttu-id="55b72-105">**X не** предоставляет конструктор по умолчанию для структуры.</span><span class="sxs-lookup"><span data-stu-id="55b72-105">**X DO NOT** provide a default constructor for a struct.</span></span>  
   
- Следование этой рекомендации позволяет массивы структур создается без запуска конструктора для каждого элемента массива. Обратите внимание, что C\# не допускает структуры могут иметь конструкторы по умолчанию.  
+ <span data-ttu-id="55b72-106">Следование этой рекомендации позволяет массивы структур создаваться без запуска конструктора для каждого элемента массива.</span><span class="sxs-lookup"><span data-stu-id="55b72-106">Following this guideline allows arrays of structs to be created without having to run the constructor on each item of the array.</span></span> <span data-ttu-id="55b72-107">Обратите внимание, что C# не позволяет структуры могут иметь конструкторы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="55b72-107">Notice that C# does not allow structs to have default constructors.</span></span>  
   
- **X не** определять типы изменяемого значения.  
+ <span data-ttu-id="55b72-108">**X не** определение изменяемого значения типов.</span><span class="sxs-lookup"><span data-stu-id="55b72-108">**X DO NOT** define mutable value types.</span></span>  
   
- Изменяемое значение типы имеют несколько проблем. Например когда свойства getter возвращает тип значения, вызывающий объект получит копию. Поскольку копия создается неявно, разработчикам может быть помнить, что они изменения копии, а не исходное значение. Кроме того некоторые языки \(динамических языков, в частности\) имеют проблемы с помощью типов изменяемого значения, так как локальные переменные, даже при разыменовании, привести к копии будут сделаны.  
+ <span data-ttu-id="55b72-109">Изменяемое значение типы имеют ряд проблем.</span><span class="sxs-lookup"><span data-stu-id="55b72-109">Mutable value types have several problems.</span></span> <span data-ttu-id="55b72-110">Например при возврате из метода получения свойства тип значения вызывающий объект получает копию.</span><span class="sxs-lookup"><span data-stu-id="55b72-110">For example, when a property getter returns a value type, the caller receives a copy.</span></span> <span data-ttu-id="55b72-111">Так как копия создается неявно, разработчики может оказаться помнить, что они изменения копии, а не исходное значение.</span><span class="sxs-lookup"><span data-stu-id="55b72-111">Because the copy is created implicitly, developers might not be aware that they are mutating the copy, and not the original value.</span></span> <span data-ttu-id="55b72-112">Кроме того некоторые языки (динамическими языками, в частности) имеют проблемы при использовании изменяемого значения типов, так как локальные переменные, даже при разыменовании, привести копирования должна быть выполнена.</span><span class="sxs-lookup"><span data-stu-id="55b72-112">Also, some languages (dynamic languages, in particular) have problems using mutable value types because even local variables, when dereferenced, cause a copy to be made.</span></span>  
   
- **✓ сделать** убедитесь, что состояние, в котором все данные экземпляра устанавливается равным нулю, false или null \(при необходимости\) является допустимым.  
+ <span data-ttu-id="55b72-113">**✓ СДЕЛАТЬ** убедитесь, что состояние, где все экземпляров данных устанавливается равным нулю, false или null (при необходимости) является допустимым.</span><span class="sxs-lookup"><span data-stu-id="55b72-113">**✓ DO** ensure that a state where all instance data is set to zero, false, or null (as appropriate) is valid.</span></span>  
   
- Это предотвращает случайное Создание недопустимые экземпляры, когда создается массив структур.  
+ <span data-ttu-id="55b72-114">Это предотвращает случайное Создание недопустимые экземпляры, когда создается массив структур.</span><span class="sxs-lookup"><span data-stu-id="55b72-114">This prevents accidental creation of invalid instances when an array of the structs is created.</span></span>  
   
- **✓ сделать** реализовать <xref:System.IEquatable%601> для типов значений.  
+ <span data-ttu-id="55b72-115">**СДЕЛАТЬ ✓** реализовать <xref:System.IEquatable%601> для типов значений.</span><span class="sxs-lookup"><span data-stu-id="55b72-115">**✓ DO** implement <xref:System.IEquatable%601> on value types.</span></span>  
   
- <xref:System.Object.Equals%2A?displayProperty=fullName> Упаковку\-преобразование вызывает метод для типов значений, и его реализация по умолчанию не очень эффективен, поскольку он использует отражение.<xref:System.IEquatable%601.Equals%2A> может быть гораздо более высокую производительность и могут быть реализованы, чтобы не вызовет упаковку\-преобразование.  
+ <span data-ttu-id="55b72-116"><xref:System.Object.Equals%2A?displayProperty=nameWithType> Упаковка-преобразование вызывает метод для типов значений, и его реализация по умолчанию не очень эффективна, так как он использует отражение.</span><span class="sxs-lookup"><span data-stu-id="55b72-116">The <xref:System.Object.Equals%2A?displayProperty=nameWithType> method on value types causes boxing, and its default implementation is not very efficient, because it uses reflection.</span></span> <span data-ttu-id="55b72-117"><xref:System.IEquatable%601.Equals%2A>может быть гораздо более высокую производительность и может быть реализовано так, чтобы упаковка-преобразование не будет.</span><span class="sxs-lookup"><span data-stu-id="55b72-117"><xref:System.IEquatable%601.Equals%2A> can have much better performance and can be implemented so that it will not cause boxing.</span></span>  
   
- **X не** явным образом увеличить <xref:System.ValueType>. На самом деле большинство языков отключены.  
+ <span data-ttu-id="55b72-118">**X не** явным образом увеличить <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="55b72-118">**X DO NOT** explicitly extend <xref:System.ValueType>.</span></span> <span data-ttu-id="55b72-119">На самом деле большинство языков отключены.</span><span class="sxs-lookup"><span data-stu-id="55b72-119">In fact, most languages prevent this.</span></span>  
   
- В общем случае структуры может быть полезным, но должен использоваться только для небольших, один постоянные значения, которые не должен быть упакован часто.  
+ <span data-ttu-id="55b72-120">В общем случае структуры может быть очень полезно, но можно использовать только для небольших, один постоянные значения, которые не должен быть упакован часто.</span><span class="sxs-lookup"><span data-stu-id="55b72-120">In general, structs can be very useful but should only be used for small, single, immutable values that will not be boxed frequently.</span></span>  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="55b72-121">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="55b72-121">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="55b72-122">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="55b72-122">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Правила разработки типов](../../../docs/standard/design-guidelines/type.md)   
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)   
- [Выбор между классом и структурой](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)
+## <a name="see-also"></a><span data-ttu-id="55b72-123">См. также</span><span class="sxs-lookup"><span data-stu-id="55b72-123">See Also</span></span>  
+ [<span data-ttu-id="55b72-124">Рекомендации по проектированию типа</span><span class="sxs-lookup"><span data-stu-id="55b72-124">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="55b72-125">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="55b72-125">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="55b72-126">Выбор между класса и структуры</span><span class="sxs-lookup"><span data-stu-id="55b72-126">Choosing Between Class and Struct</span></span>](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

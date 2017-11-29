@@ -1,75 +1,75 @@
 ---
-title: "Учебник по началу работы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "приступая к работе [WCF]"
-  - "WCF [WCF], начало работы"
-  - "Windows Communication Foundation [WCF], начало работы"
+title: "Приступая к работе Tutorial1 он"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], getting started
+- Windows Communication Foundation [WCF], getting started
+- getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: 47
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 47
+caps.latest.revision: "47"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5f34ac7ec2761efda640e3c4838a5f44f2e244e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Учебник по началу работы
-Содержащиеся в этом разделе подразделы призваны кратко познакомить читателя с процессом программирования в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы.  Прохождение этих занятий позволит получить базовое представление об этапах, которые необходимы для создания служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы.  *Конечная точка* службы задает адрес, по которому можно найти службу, привязку со сведениями о том, как клиент должен обмениваться данными со службой, и контракт, который определяет функциональность, предоставляемую службой клиентам.  
+# <a name="getting-started-tutorial"></a><span data-ttu-id="0f810-102">Учебник по началу работы</span><span class="sxs-lookup"><span data-stu-id="0f810-102">Getting Started Tutorial</span></span>
+<span data-ttu-id="0f810-103">Содержащиеся в этом разделе подразделы призваны кратко познакомить читателя с процессом программирования в [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f810-103">The topics contained in this section are intended to give you quick exposure to the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] programming experience.</span></span> <span data-ttu-id="0f810-104">Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы.</span><span class="sxs-lookup"><span data-stu-id="0f810-104">They are designed to be completed in the order of the list at the bottom of this topic.</span></span> <span data-ttu-id="0f810-105">Прохождение этих занятий позволит получить базовое представление об этапах, которые необходимы для создания служб и клиентских приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f810-105">Working through this tutorial gives you an introductory understanding of the steps required to create [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service and client applications.</span></span> <span data-ttu-id="0f810-106">Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-106">A service exposes one or more endpoints, each of which exposes one or more service operations.</span></span> <span data-ttu-id="0f810-107">*Конечная точка* службы задает адрес, где можно найти службу, привязку, которая содержит сведения, описывающие, как клиент должен обмениваться данными со службой и контракт, определяющий функцию предоставляемую службой клиентам.</span><span class="sxs-lookup"><span data-stu-id="0f810-107">The *endpoint* of a service specifies an address where the service can be found, a binding that contains the information that describes how a client must communicate with the service, and a contract that defines the functionality provided by the service to its clients.</span></span>  
   
- После изучения разделов этого учебника вы получите готовую службу и клиента, который может вызывать операции этой службы.  В первых трех разделах описано, как определить контракт службы, реализовать контракт службы и разместить службу.  Созданная служба является резидентной в консольном приложении.  Службы можно размещать в службах Internet Information Services \(IIS\).  [!INCLUDE[crabout](../../../includes/crabout-md.md)] том, как это сделать, см. в разделе [Как разместить службу WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  Эта служба настроена в коде, однако службы можно настраивать с помощью файла конфигурации.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] использовании файла конфигурации см. в разделе [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ <span data-ttu-id="0f810-108">После изучения разделов этого учебника вы получите готовую службу и клиента, который может вызывать операции этой службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-108">After you work through the sequence of topics in this tutorial, you will have a running service, and a client that calls the service.</span></span> <span data-ttu-id="0f810-109">В первых трех разделах описано, как определить контракт службы, реализовать контракт службы и разместить службу.</span><span class="sxs-lookup"><span data-stu-id="0f810-109">The first three topics describe how to define a service contract, how to implement the service contract, and how to host the service.</span></span> <span data-ttu-id="0f810-110">Созданная служба является резидентной в консольном приложении.</span><span class="sxs-lookup"><span data-stu-id="0f810-110">The service that is created is self-hosted within a console application.</span></span> <span data-ttu-id="0f810-111">Службы можно размещать в службах Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="0f810-111">Services can also be hosted under Internet Information Services (IIS).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="0f810-112">как это сделать, см. [как: размещение службы WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span><span class="sxs-lookup"><span data-stu-id="0f810-112"> how to do this, see [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span></span> <span data-ttu-id="0f810-113">Эта служба настроена в коде, однако службы можно настраивать с помощью файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0f810-113">The service is configured in code; however, services can also be configured within a configuration file.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="0f810-114">с помощью файла конфигурации в разделе [Настройка служб с помощью файла конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).</span><span class="sxs-lookup"><span data-stu-id="0f810-114"> using a configuration file see [Configuring Services Using Configuration Files](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).</span></span>  
   
- В следующих трех разделах описано, как создать клиентский прокси, настроить клиентское приложение и использовать клиентский прокси для вызова служебных действий, предоставляемых службой.  Службы публикуют доступные метаданные, определяющие сведения, необходимые клиентским приложениям для взаимодействия со службой.  [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] автоматизирует процесс доступа к этим метаданным и использует его для настройки клиентского приложения для службы.  Если вы не используете среду [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], то можете настроить клиентское приложение для службы с помощью программы [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ <span data-ttu-id="0f810-115">В следующих трех разделах описано, как создать клиентский прокси, настроить клиентское приложение и использовать клиентский прокси для вызова служебных действий, предоставляемых службой.</span><span class="sxs-lookup"><span data-stu-id="0f810-115">The next three topics describe how to create a client proxy, configure the client application, and use the client proxy to call service operation exposed by the service.</span></span> <span data-ttu-id="0f810-116">Службы публикуют доступные метаданные, определяющие сведения, необходимые клиентским приложениям для взаимодействия со службой.</span><span class="sxs-lookup"><span data-stu-id="0f810-116">Services publish metadata that define the information a client application needs to communicate with the service.</span></span> [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]<span data-ttu-id="0f810-117"> автоматизирует процесс доступа к этим метаданным и использует его для настройки клиентского приложения для службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-117"> automates the process of accessing this metadata and uses it to construct and configure the client application for the service.</span></span> <span data-ttu-id="0f810-118">Если вы не используете [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], можно использовать [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания и настройки клиентского приложения для службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-118">If you are not using [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], you can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to construct and configure the client application for the service.</span></span>  
   
- Все темы этого раздела предполагают, что в качестве среды разработки используется Visual Studio 2011.  Если используется другая среда разработки, игнорируйте инструкции, относящиеся только к [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  
+ <span data-ttu-id="0f810-119">Все темы этого раздела предполагают, что в качестве среды разработки используется Visual Studio 2011.</span><span class="sxs-lookup"><span data-stu-id="0f810-119">All of the topics in this section assume you are using Visual Studio 2011 as the development environment.</span></span> <span data-ttu-id="0f810-120">Если используется другая среда разработки, игнорируйте инструкции, относящиеся только к [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f810-120">If you are using another development environment, ignore the [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] specific instructions.</span></span>  
   
 > [!NOTE]
->  Если используется [!INCLUDE[wv](../../../includes/wv-md.md)] или более поздние версии операционной системы Windows, для запуска среды [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] необходимо перейти в меню «Пуск», щелкнуть Microsoft Visual Studio 2011 и выбрать пункт **Запуск от имени администратора**.  Чтобы всегда запускать Visual Studio 2011 от имени администратора, можно создать ярлык, щелкнуть его правой кнопкой мыши, выбрать пункт «Свойства», перейти на вкладку **«Совместимость»** и установить флажок **«Выполнять эту программу от имени администратора»**.  При запуске среды Visual Studio 2011 с помощью этого ярлыка, она будет выполняться от имени администратора.  
+>  <span data-ttu-id="0f810-121">Если вы используете [!INCLUDE[wv](../../../includes/wv-md.md)] или более поздних версиях операционной системы Windows, необходимо запустить [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] , перейдите в меню "Пуск" и щелкните правой кнопкой мыши Visual Studio 2011 и выбрав **Запуск от имени администратора**.</span><span class="sxs-lookup"><span data-stu-id="0f810-121">If you are running [!INCLUDE[wv](../../../includes/wv-md.md)] or later versions of the Windows operating system, you must start [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] by going to the Start menu and right clicking Visual Studio 2011 and selecting **Run as Administrator**.</span></span> <span data-ttu-id="0f810-122">Чтобы всегда запускать Visual Studio 2011 от имени администратора, можно создать ярлык, щелкните ярлык правой кнопкой мыши, выберите пункт Свойства, выберите **совместимости** и проверьте **запускать эту программу от имени администратора** флажок.</span><span class="sxs-lookup"><span data-stu-id="0f810-122">To always launch Visual Studio 2011 as an administrator you can create a short cut, right click the short cut, select properties, select the **Compatibility** tab, and check the **Run this program as an administrator** checkbox.</span></span> <span data-ttu-id="0f810-123">При запуске среды Visual Studio 2011 с помощью этого ярлыка, она будет выполняться от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="0f810-123">When you start Visual Studio 2011 with this shortcut, it will always run as administrator.</span></span>  
   
- Примеры приложений, которые можно загрузить на жесткий диск, см. в разделе [Windows Communication Foundation Samples](http://msdn.microsoft.com/ru-ru/8ec9d192-5d81-4f64-bfd3-90c5e5858c91).  В частности для этого раздела см. в разделе [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ <span data-ttu-id="0f810-124">Образцы приложений, которые можно загрузить на жесткий диск и запуска, см. в разделах [образцов Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91).</span><span class="sxs-lookup"><span data-stu-id="0f810-124">For sample applications that can be downloaded to your hard disk and run, see the topics in [Windows Communication Foundation Samples](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91).</span></span> <span data-ttu-id="0f810-125">Для этого раздела см. в разделе, в частности, [Приступая к работе](../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="0f810-125">For this topic, see, in particular, the [Getting Started](../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
- Более подробные сведения о создании служб и клиентов см. в разделе [Базовое программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
+ <span data-ttu-id="0f810-126">Более подробные сведения о создании служб и клиентов см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).</span><span class="sxs-lookup"><span data-stu-id="0f810-126">For more in-depth information about creating services and clients, see [Basic WCF Programming](../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  
   
-## В этом подразделе  
- [Как определить контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Создание контракта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с использованием определенного пользователем интерфейса.  Контракт определяет функциональные возможности, предоставляемые службой.  
+## <a name="in-this-section"></a><span data-ttu-id="0f810-127">Содержание</span><span class="sxs-lookup"><span data-stu-id="0f810-127">In This Section</span></span>  
+ [<span data-ttu-id="0f810-128">Практическое руководство. Определение контракта службы</span><span class="sxs-lookup"><span data-stu-id="0f810-128">How to: Define a Service Contract</span></span>](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ <span data-ttu-id="0f810-129">Создание контракта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с использованием определенного пользователем интерфейса.</span><span class="sxs-lookup"><span data-stu-id="0f810-129">Describes how to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contract using a user-defined interface.</span></span> <span data-ttu-id="0f810-130">Контракт определяет функциональные возможности, предоставляемые службой.</span><span class="sxs-lookup"><span data-stu-id="0f810-130">The contract defines the functionality exposed by the service.</span></span>  
   
- [Практическое руководство. Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
- Реализация контракта службы.  Контракт определяется один раз и должен быть реализован классом службы.  
+ [<span data-ttu-id="0f810-131">Практическое руководство. Реализация контракта службы</span><span class="sxs-lookup"><span data-stu-id="0f810-131">How to: Implement a Service Contract</span></span>](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ <span data-ttu-id="0f810-132">Реализация контракта службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-132">Describes how to implement a service contract.</span></span> <span data-ttu-id="0f810-133">Контракт определяется один раз и должен быть реализован классом службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-133">Once a contract is define, it must be implemented with a service class.</span></span>  
   
- [Как размещать и запускать базовую службу](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
- Настройка конечной точки службы в коде, ее размещение в консольном приложении и запуск службы.  Чтобы служба стала активной, ее необходимо настроить и разместить в среде выполнения.  Эта среда создает службу и управляет ее контекстом и временем существования.  
+ [<span data-ttu-id="0f810-134">Практическое руководство. Размещение и запуск базовой службы</span><span class="sxs-lookup"><span data-stu-id="0f810-134">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
+ <span data-ttu-id="0f810-135">Настройка конечной точки службы в коде, ее размещение в консольном приложении и запуск службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-135">Describes how to configure an endpoint for the service in code and how to host the service in a console application.</span></span> <span data-ttu-id="0f810-136">Чтобы служба стала активной, ее необходимо настроить и разместить в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="0f810-136">To become active, a service must be configured and hosted within a run-time environment.</span></span> <span data-ttu-id="0f810-137">Эта среда создает службу и управляет ее контекстом и временем существования.</span><span class="sxs-lookup"><span data-stu-id="0f810-137">This environment creates the service and controls its context and lifetime.</span></span>  
   
- [Как создать клиент](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Извлечение метаданных, которые служат для создания клиентского прокси\-класса [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] из службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  В этом процессе используется функция добавления ссылки на службу в среде Visual Studio 2011.  
+ [<span data-ttu-id="0f810-138">Практическое руководство. Создание клиента</span><span class="sxs-lookup"><span data-stu-id="0f810-138">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ <span data-ttu-id="0f810-139">Извлечение метаданных, которые служат для создания клиентского прокси-класса [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] из службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f810-139">Describes how to retrieve metadata used to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy from a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="0f810-140">В этом процессе используется функция добавления ссылки на службу в среде Visual Studio 2011.</span><span class="sxs-lookup"><span data-stu-id="0f810-140">This process uses the Add Service Reference functionality within Visual Studio 2011.</span></span>  
   
- [Практическое руководство. Настройка клиента](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
- Описывает, как настроить клиент WCF. Настройка клиента требует задания конечной точки, которую клиент использует для получения доступа к службе.  
+ [<span data-ttu-id="0f810-141">Практическое руководство. Настройка клиента</span><span class="sxs-lookup"><span data-stu-id="0f810-141">How to: Configure a Client</span></span>](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
+ <span data-ttu-id="0f810-142">Описывает, как настроить клиент WCF. Настройка клиента требует задания конечной точки, которую клиент использует для получения доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="0f810-142">Describes how to configure a WCF client Configuring the client requires specifying the endpoint that the client uses to access the service.</span></span>  
   
- [Практическое руководство. Использование клиента](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- Использование клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для вызова операций службы.  
+ [<span data-ttu-id="0f810-143">Практическое руководство. Использование клиента</span><span class="sxs-lookup"><span data-stu-id="0f810-143">How to: Use a Client</span></span>](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
+ <span data-ttu-id="0f810-144">Использование клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для вызова операций службы.</span><span class="sxs-lookup"><span data-stu-id="0f810-144">Describes how to use the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client proxy to invoke service operations.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="0f810-145">Ссылка</span><span class="sxs-lookup"><span data-stu-id="0f810-145">Reference</span></span>  
  <xref:System.ServiceModel.ServiceContractAttribute>  
   
  <xref:System.ServiceModel.OperationContractAttribute>  
   
-## Связанные подразделы  
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/ru-ru/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+## <a name="related-sections"></a><span data-ttu-id="0f810-146">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0f810-146">Related Sections</span></span>  
+ [<span data-ttu-id="0f810-147">Примеры Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="0f810-147">Windows Communication Foundation Samples</span></span>](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [<span data-ttu-id="0f810-148">Базовый жизненный цикл программирования</span><span class="sxs-lookup"><span data-stu-id="0f810-148">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
-## См. также  
- [Общие сведения об основных понятиях](../../../docs/framework/wcf/conceptual-overview.md)   
- [Руководство по работе с документацией](../../../docs/framework/wcf/guide-to-the-documentation.md)   
- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)   
- [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)
+## <a name="see-also"></a><span data-ttu-id="0f810-149">См. также</span><span class="sxs-lookup"><span data-stu-id="0f810-149">See Also</span></span>  
+ [<span data-ttu-id="0f810-150">Концептуальный обзор</span><span class="sxs-lookup"><span data-stu-id="0f810-150">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="0f810-151">Руководство по работе с документацией</span><span class="sxs-lookup"><span data-stu-id="0f810-151">Guide to the Documentation</span></span>](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ [<span data-ttu-id="0f810-152">Что такое Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="0f810-152">What Is Windows Communication Foundation</span></span>](../../../docs/framework/wcf/whats-wcf.md)  
+ [<span data-ttu-id="0f810-153">Подробные сведения о возможностях WCF</span><span class="sxs-lookup"><span data-stu-id="0f810-153">WCF Feature Details</span></span>](../../../docs/framework/wcf/feature-details/index.md)

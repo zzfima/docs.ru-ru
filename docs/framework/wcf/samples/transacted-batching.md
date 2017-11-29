@@ -1,61 +1,64 @@
 ---
-title: "Пакетирование с поддержкой транзакций | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пакетирование с поддержкой транзакций"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dbd11f3dad60463a5650d7aa6e53f9e8f3f5021e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пакетирование с поддержкой транзакций
-В этом образце показано, как пакетировать операции чтения с поддержкой транзакций с помощью очереди сообщений \(MSMQ\).  Пакетирование с поддержкой транзакций \- это функция оптимизации производительности для чтения с поддержкой транзакций при взаимодействии с использованием очередей.  
+# <a name="transacted-batching"></a><span data-ttu-id="da440-102">Пакетирование с поддержкой транзакций</span><span class="sxs-lookup"><span data-stu-id="da440-102">Transacted Batching</span></span>
+<span data-ttu-id="da440-103">В этом образце показано, как пакетировать операции чтения с поддержкой транзакций с помощью очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="da440-103">This sample demonstrates how to batch transacted reads by using Message Queuing (MSMQ).</span></span> <span data-ttu-id="da440-104">Пакетирование с поддержкой транзакций - это функция оптимизации производительности для чтения с поддержкой транзакций при взаимодействии с использованием очередей.</span><span class="sxs-lookup"><span data-stu-id="da440-104">Transacted Batching is a performance optimization feature for transacted reads in queued communication.</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="da440-105">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="da440-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- При использовании очередей клиент взаимодействует со службой посредством очереди.  Конкретно, клиент отправляет сообщения в очередь.  Служба получает сообщения из очереди.  Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.  
+ <span data-ttu-id="da440-106">При использовании очередей клиент взаимодействует со службой посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-106">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="da440-107">Конкретно, клиент отправляет сообщения в очередь.</span><span class="sxs-lookup"><span data-stu-id="da440-107">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="da440-108">Служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-108">The service receives messages from the queue.</span></span> <span data-ttu-id="da440-109">Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-109">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- В этом образце демонстрируется пакетирование с поддержкой транзакций.  Пакетирование с поддержкой транзакций \- это поведение, которое позволяет считывать несколько сообщений в очереди и обрабатывать их в рамках одной транзакции.  
+ <span data-ttu-id="da440-110">В этом образце демонстрируется пакетирование с поддержкой транзакций.</span><span class="sxs-lookup"><span data-stu-id="da440-110">This sample demonstrates transacted batching.</span></span> <span data-ttu-id="da440-111">Пакетирование с поддержкой транзакций - это поведение, которое позволяет считывать несколько сообщений в очереди и обрабатывать их в рамках одной транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-111">Transacted batching is a behavior that enables the use of a single transaction when reading many messages in the queue and processing them.</span></span>  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="da440-112">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="da440-112">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="da440-113">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="da440-113">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  При первом запуске служба проверит наличие очереди.  Если очередь отсутствует, служба ее создаст.  Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.  Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
+2.  <span data-ttu-id="da440-114">При первом запуске служба проверит наличие очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-114">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="da440-115">Если очередь отсутствует, служба ее создаст.</span><span class="sxs-lookup"><span data-stu-id="da440-115">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="da440-116">Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.</span><span class="sxs-lookup"><span data-stu-id="da440-116">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="da440-117">Чтобы создать очередь в Windows 2008, выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="da440-117">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="da440-118">Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="da440-118">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Разверните вкладку **Функции**.  
+    2.  <span data-ttu-id="da440-119">Разверните **функции** вкладки.</span><span class="sxs-lookup"><span data-stu-id="da440-119">Expand the **Features** tab.</span></span>  
   
-    3.  Щелкните правой кнопкой мыши узел **Очереди личных сообщений** и выберите пункты **Создать**, **Частная очередь**.  
+    3.  <span data-ttu-id="da440-120">Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.</span><span class="sxs-lookup"><span data-stu-id="da440-120">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Установите флажок **Транзакционная**.  
+    4.  <span data-ttu-id="da440-121">Проверьте **транзакций** поле.</span><span class="sxs-lookup"><span data-stu-id="da440-121">Check the **Transactional** box.</span></span>  
   
-    5.  В качестве имени новой очереди укажите `ServiceModelSamplesTransacted`.  
+    5.  <span data-ttu-id="da440-122">Введите `ServiceModelSamplesTransacted` качестве имени новой очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-122">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
     > [!NOTE]
-    >  В этом образце клиент отправляет в составе пакета сотни сообщений.  Естественно, что обработка в служебном приложении этих сообщений займет определенное время.  
+    >  <span data-ttu-id="da440-123">В этом образце клиент отправляет в составе пакета сотни сообщений.</span><span class="sxs-lookup"><span data-stu-id="da440-123">In this sample the client sends hundreds of messages as part of the batch.</span></span> <span data-ttu-id="da440-124">Естественно, что обработка в служебном приложении этих сообщений займет определенное время.</span><span class="sxs-lookup"><span data-stu-id="da440-124">It is normal for the service application to take some time to process these.</span></span>  
   
-3.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="da440-125">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="da440-125">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Чтобы запустить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="da440-126">Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="da440-126">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a><span data-ttu-id="da440-127">Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory</span><span class="sxs-lookup"><span data-stu-id="da440-127">To run the sample on a computer joined to a workgroup or without active directory integration</span></span>  
   
-1.  По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена.  Имеется два соответствующих свойства для обеспечения безопасности транспорта MSMQ: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` По умолчанию установлен режим проверки подлинности `Windows` и уровень защиты `Sign`.  Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена функция интеграции MSMQ со службой каталогов Active Directory.  Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
+1.  <span data-ttu-id="da440-128">По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена.</span><span class="sxs-lookup"><span data-stu-id="da440-128">By default with the <xref:System.ServiceModel.NetMsmqBinding>, transport security is enabled.</span></span> <span data-ttu-id="da440-129">Имеется два соответствующих свойства для обеспечения безопасности транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию имеет значение режима проверки подлинности `Windows` и устанавливается уровень защиты `Sign`.</span><span class="sxs-lookup"><span data-stu-id="da440-129">There are two relevant properties for MSMQ transport security, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> and <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="da440-130">Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory.</span><span class="sxs-lookup"><span data-stu-id="da440-130">For MSMQ to provide the authentication and signing feature, it must be part of a domain and the active directory integration option for MSMQ must be installed.</span></span> <span data-ttu-id="da440-131">Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.</span><span class="sxs-lookup"><span data-stu-id="da440-131">If you run this sample on a computer that does not satisfy these criteria you receive an error.</span></span>  
   
-2.  Если компьютер не входит в домен или не установлена интеграция с Active Directory, отключите безопасность транспорта, задав для режима проверки подлинности и уровня защиты значение `None`, как показано в следующем образце конфигурации.  
+2.  <span data-ttu-id="da440-132">Если компьютер не входит в домен или не установлена интеграция с Active Directory, отключите безопасность транспорта, задав для режима проверки подлинности и уровня защиты значение `None`, как показано в следующем образце конфигурации.</span><span class="sxs-lookup"><span data-stu-id="da440-132">If your computer is not part of a domain or does not have active directory integration installed, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <behaviors>  
         <serviceBehaviors>  
@@ -101,44 +104,43 @@ caps.handback.revision: 23
       </bindings>  
   
     </system.serviceModel>  
-  
     ```  
   
-3.  Перед выполнением примера убедитесь, что изменена конфигурация как сервера, так и клиента.  
+3.  <span data-ttu-id="da440-133">Перед выполнением примера убедитесь, что изменена конфигурация как сервера, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="da440-133">Ensure that you change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  Задание для `security` `mode` значения `None` равнозначно заданию для безопасности <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> и `Message` значения `None`.  
+    >  <span data-ttu-id="da440-134">Задание для `security``mode` значения `None` эквивалентно заданию для параметров безопасности <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> и `Message` значения `None`.</span><span class="sxs-lookup"><span data-stu-id="da440-134">Setting `security``mode` to `None` is equivalent to setting <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, and `Message` security to `None`.</span></span>  
   
-4.  Чтобы выполнить базу данных на удаленном компьютере, необходимо изменить строку подключения так, чтобы она указывала на компьютер, на котором находится база данных.  
+4.  <span data-ttu-id="da440-135">Чтобы выполнить базу данных на удаленном компьютере, необходимо изменить строку подключения так, чтобы она указывала на компьютер, на котором находится база данных.</span><span class="sxs-lookup"><span data-stu-id="da440-135">To run the database on a remote computer, change the connection string to point to the computer on which the database resides.</span></span>  
   
-## Требования  
- Для выполнения этого образца должна быть установлена MSMQ, необходимо также использовать SQL или SQL Express.  
+## <a name="requirements"></a><span data-ttu-id="da440-136">Требования</span><span class="sxs-lookup"><span data-stu-id="da440-136">Requirements</span></span>  
+ <span data-ttu-id="da440-137">Для выполнения этого образца должна быть установлена MSMQ, необходимо также использовать SQL или SQL Express.</span><span class="sxs-lookup"><span data-stu-id="da440-137">To run this sample, MSMQ must be installed and SQL or SQL Express is required.</span></span>  
   
-## Демонстрации  
- В этом образце демонстрируется поведение пакетирования с поддержкой транзакций.  Пакетирование с поддержкой транзакций \- это функция оптимизации производительности, предоставляемая с транспортом очередей MSMQ.  
+## <a name="demonstrates"></a><span data-ttu-id="da440-138">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="da440-138">Demonstrates</span></span>  
+ <span data-ttu-id="da440-139">В этом образце демонстрируется поведение пакетирования с поддержкой транзакций.</span><span class="sxs-lookup"><span data-stu-id="da440-139">The sample demonstrates transacted batching behavior.</span></span> <span data-ttu-id="da440-140">Пакетирование с поддержкой транзакций - это функция оптимизации производительности, предоставляемая с транспортом очередей MSMQ.</span><span class="sxs-lookup"><span data-stu-id="da440-140">Transacted batching is a performance optimization feature provided with MSMQ queued transport.</span></span>  
   
- При использовании транзакций для отправки и получения сообщений это фактически две отдельные транзакции.  При отправке клиентом сообщений в области транзакции эта транзакция локальна для клиента и диспетчера очереди клиента.  При получении службой сообщений в области транзакции эта транзакция локальна для службы и диспетчера принимающей очереди.  Очень важно помнить, что клиент и служба не участвуют в одной транзакции, а используют разные транзакции при выполнении операций с очередью \(например, отправки и получения\).  
+ <span data-ttu-id="da440-141">При использовании транзакций для отправки и получения сообщений это фактически две отдельные транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-141">When transactions are used to send and receive messages there are actually 2 separate transactions.</span></span> <span data-ttu-id="da440-142">При отправке клиентом сообщений в области транзакции эта транзакция локальна для клиента и диспетчера очереди клиента.</span><span class="sxs-lookup"><span data-stu-id="da440-142">When the client sends messages within the scope of a transaction, the transaction is local to the client and the client queue manager.</span></span> <span data-ttu-id="da440-143">При получении службой сообщений в области транзакции эта транзакция локальна для службы и диспетчера принимающей очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-143">When the service receives messages within the scope of the transaction, the transaction is local to the service and the receiving queue manager.</span></span> <span data-ttu-id="da440-144">Очень важно помнить, что клиент и служба не участвуют в одной транзакции, а используют разные транзакции при выполнении операций с очередью (например, отправки и получения).</span><span class="sxs-lookup"><span data-stu-id="da440-144">It is very important to remember that the client and the service are not participating in the same transaction; rather they are using different transactions when performing their operations (such as send and receive) with the queue.</span></span>  
   
- В этом образце одна транзакция используется для выполнения нескольких операций службы.  Этот подход используется исключительно в качестве функции оптимизации производительности и не влияет на семантику приложения.  Образец основан на примере [Привязка MSMQ с поддержкой транзакций](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ <span data-ttu-id="da440-145">В этом образце одна транзакция используется для выполнения нескольких операций службы.</span><span class="sxs-lookup"><span data-stu-id="da440-145">In the sample we use a single transaction for the execution of multiple service operations.</span></span> <span data-ttu-id="da440-146">Этот подход используется исключительно в качестве возможности оптимизации производительности и не влияет на семантику приложения.</span><span class="sxs-lookup"><span data-stu-id="da440-146">This is used only as a performance optimization feature and does not impact the semantics of the application.</span></span> <span data-ttu-id="da440-147">Пример построен на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span><span class="sxs-lookup"><span data-stu-id="da440-147">The sample is based on [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
   
-## Комментарии  
- В этом образце клиент отправляет службе пакет сообщений из области транзакции.  Чтобы продемонстрировать оптимизацию производительности, отправляется большое число сообщений \(до 2 500 в данном случае\).  
+## <a name="comments"></a><span data-ttu-id="da440-148">Комментарии</span><span class="sxs-lookup"><span data-stu-id="da440-148">Comments</span></span>  
+ <span data-ttu-id="da440-149">В этом образце клиент отправляет службе пакет сообщений из области транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-149">In this sample, the client sends a batch of messages to the service from within the scope of a transaction.</span></span> <span data-ttu-id="da440-150">Чтобы продемонстрировать оптимизацию производительности, отправляется большое число сообщений (до 2 500 в данном случае).</span><span class="sxs-lookup"><span data-stu-id="da440-150">To show the performance optimization, we send a large number of messages; in this case, up to 2500 messages.</span></span>  
   
- Сообщения, отправленные в очередь, принимаются после этого службой в области транзакции, определенной службой.  Если не используется пакетирование, каждый вызов операции службы приводит к выполнению 2 500 транзакций.  Это влияет на производительность системы.  Так как участвуют два диспетчера ресурсов \(очередь MSMQ и база данных `Orders`\), каждая транзакция является транзакцией DTC.  Оптимизация обеспечивается выполнением гораздо меньшего числа транзакций, что возможно благодаря вызову пакета сообщений и операции службы в одной транзакции.  
+ <span data-ttu-id="da440-151">Сообщения, отправленные в очередь, принимаются после этого службой в области транзакции, определенной службой.</span><span class="sxs-lookup"><span data-stu-id="da440-151">The messages sent to the queue are then received by the service within the transaction scope defined by the service.</span></span> <span data-ttu-id="da440-152">Если не используется пакетирование, каждый вызов операции службы приводит к выполнению 2 500 транзакций.</span><span class="sxs-lookup"><span data-stu-id="da440-152">Without batching, this results in 2500 transactions for each invocation of the service operation.</span></span> <span data-ttu-id="da440-153">Это влияет на производительность системы.</span><span class="sxs-lookup"><span data-stu-id="da440-153">This impacts performance of the system.</span></span> <span data-ttu-id="da440-154">Так как участвуют два диспетчера ресурсов (очередь MSMQ и база данных `Orders`), каждая транзакция является транзакцией DTC.</span><span class="sxs-lookup"><span data-stu-id="da440-154">Because two resource managers are involved -the MSMQ queue and the `Orders` database- each such transaction is a DTC transaction.</span></span> <span data-ttu-id="da440-155">Оптимизация обеспечивается выполнением гораздо меньшего числа транзакций, что возможно благодаря вызову пакета сообщений и операции службы в одной транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-155">We optimize this by using a much smaller number of transactions by ensuring that a batch of messages and service operation invocations happen in a single transaction.</span></span>  
   
- Ниже перечислены способы использования функции пакетирования.  
+ <span data-ttu-id="da440-156">Ниже перечислены способы использования функции пакетирования.</span><span class="sxs-lookup"><span data-stu-id="da440-156">We use the batching feature by:</span></span>  
   
--   При задании поведения пакетирования с поддержкой транзакций в конфигурации.  
+-   <span data-ttu-id="da440-157">При задании поведения пакетирования с поддержкой транзакций в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="da440-157">Specifying transacted batching behavior in configuration.</span></span>  
   
--   При задании размера пакета в терминах числа сообщений, считываемых в одной транзакции.  
+-   <span data-ttu-id="da440-158">При задании размера пакета в терминах числа сообщений, считываемых в одной транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-158">Specifying a batch size in terms of number of messages to be read using a single transaction.</span></span>  
   
--   При задании максимального числа одновременно выполняемых пакетов.  
+-   <span data-ttu-id="da440-159">При задании максимального числа одновременно выполняемых пакетов.</span><span class="sxs-lookup"><span data-stu-id="da440-159">Specifying the maximum number of concurrent batches to run.</span></span>  
   
- В этом примере демонстрируется повышение производительности благодаря уменьшению числа транзакций вследствие того, что в одной транзакции вызывается 100 операций службы до фиксации транзакции.  
+ <span data-ttu-id="da440-160">В этом примере демонстрируется повышение производительности благодаря уменьшению числа транзакций вследствие того, что в одной транзакции вызывается 100 операций службы до фиксации транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-160">In this example, we show performance gains by reducing the number of transactions by ensuring that 100 service operations are invoked in a single transaction before committing the transaction.</span></span>  
   
- Поведение службы определяет поведение операции со значением `TransactionScopeRequired`, равным `true`.  Это обеспечивает использование любыми диспетчерами ресурсов, к которым обращается метод, той же области транзакции, что и для получения сообщения из очереди.  В этом примере основная база данных используется для хранения сведений о заказе на покупку, содержащихся в сообщении.  Область транзакции также гарантирует возврат сообщения в очередь, если метод создаст исключение.  Если не установить такое поведение операции, канал в очереди создает транзакцию для чтения сообщения из очереди и автоматически фиксирует ее перед передачей, поэтому при ошибке операции сообщение теряется.  Наиболее стандартная схема для операций служб заключается в зачислении в транзакцию, которая используется для чтения сообщения из очереди, как показано в следующем примере кода.  
+ <span data-ttu-id="da440-161">Поведение службы определяет поведение операции со значением `TransactionScopeRequired`, равным `true`.</span><span class="sxs-lookup"><span data-stu-id="da440-161">The service behavior defines an operation behavior with `TransactionScopeRequired` set to `true`.</span></span> <span data-ttu-id="da440-162">Это обеспечивает использование любыми диспетчерами ресурсов, к которым обращается метод, той же области транзакции, что и для получения сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-162">This ensures that the same transaction scope that is used to retrieve the message from the queue is used by any resource managers accessed by the method.</span></span> <span data-ttu-id="da440-163">В этом примере основная база данных используется для хранения сведений о заказе на покупку, содержащихся в сообщении.</span><span class="sxs-lookup"><span data-stu-id="da440-163">In this example, we use a basic database to store the purchase order information contained in the message.</span></span> <span data-ttu-id="da440-164">Область транзакции также гарантирует возврат сообщения в очередь, если метод создаст исключение.</span><span class="sxs-lookup"><span data-stu-id="da440-164">The transaction scope also guarantees that if the method throws an exception, the message is returned to the queue.</span></span> <span data-ttu-id="da440-165">Если не установить такое поведение операции, канал в очереди создает транзакцию для чтения сообщения из очереди и автоматически фиксирует ее перед передачей, поэтому при ошибке операции сообщение теряется.</span><span class="sxs-lookup"><span data-stu-id="da440-165">Without setting this operation behavior, a queued channel creates a transaction to read the message from the queue and commits it automatically before it is dispatched so that if the operation fails, the message is lost.</span></span> <span data-ttu-id="da440-166">Наиболее стандартная схема для операций служб заключается в зачислении в транзакцию, которая используется для чтения сообщения из очереди, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="da440-166">The most common scenario is for service operations to enlist in the transaction that is used to read the message from the queue as demonstrated in the following code.</span></span>  
   
- Обратите внимание, что `ReleaseServiceInstanceOnTransactionComplete` присвоено значение `false`.  Это важное требование при пакетировании.  Свойство `ReleaseServiceInstanceOnTransactionComplete` в `ServiceBehaviorAttribute` показывает, что делать с экземпляром службы после завершения транзакции.  По умолчанию после завершения транзакции экземпляр службы освобождается.  Смысл пакетирования заключается в том, что одна транзакция используется для чтения и диспетчеризации большого числа сообщений в очереди.  Следовательно, освобождение экземпляра службы приводит к преждевременному завершению транзакции, что противоречит смыслу пакетирования.  Если этому свойству присвоено значение `true`, а поведение пакетирования с поддержкой транзакций добавляется в конечную точку, поведение проверки пакетирования создает исключение.  
+ <span data-ttu-id="da440-167">Обратите внимание, что `ReleaseServiceInstanceOnTransactionComplete` присвоено значение `false`.</span><span class="sxs-lookup"><span data-stu-id="da440-167">Note that `ReleaseServiceInstanceOnTransactionComplete` is set to `false`.</span></span> <span data-ttu-id="da440-168">Это важное требование при пакетировании.</span><span class="sxs-lookup"><span data-stu-id="da440-168">This is an important requirement for batching.</span></span> <span data-ttu-id="da440-169">Свойство `ReleaseServiceInstanceOnTransactionComplete` в `ServiceBehaviorAttribute` показывает, что делать с экземпляром службы после завершения транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-169">The property `ReleaseServiceInstanceOnTransactionComplete` on `ServiceBehaviorAttribute` indicates what to do with the service instance once the transaction is completed.</span></span> <span data-ttu-id="da440-170">По умолчанию после завершения транзакции экземпляр службы освобождается.</span><span class="sxs-lookup"><span data-stu-id="da440-170">By default, the service instance is released upon completing the transaction.</span></span> <span data-ttu-id="da440-171">Смысл пакетирования заключается в том, что одна транзакция используется для чтения и диспетчеризации большого числа сообщений в очереди.</span><span class="sxs-lookup"><span data-stu-id="da440-171">The core aspect to batching is the use of a single transaction for reading and dispatching many messages in the queue.</span></span> <span data-ttu-id="da440-172">Следовательно, освобождение экземпляра службы приводит к преждевременному завершению транзакции, что противоречит смыслу пакетирования.</span><span class="sxs-lookup"><span data-stu-id="da440-172">Therefore releasing the service instance ends up completing the transaction prematurely negating the very use of batching.</span></span> <span data-ttu-id="da440-173">Если этому свойству присвоено значение `true`, а поведение пакетирования с поддержкой транзакций добавляется в конечную точку, поведение проверки пакетирования создает исключение.</span><span class="sxs-lookup"><span data-stu-id="da440-173">If this property is set to `true` and transacted batching behavior is added to the endpoint, the batching validation behavior throws an exception.</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -157,10 +159,9 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-  
 ```  
   
- Класс `Orders` инкапсулирует обработку заказа.  В этом образце он обновляет базу данных, внося сведения о заказе на покупку.  
+ <span data-ttu-id="da440-174">Класс `Orders` инкапсулирует обработку заказа.</span><span class="sxs-lookup"><span data-stu-id="da440-174">The `Orders` class encapsulates the processing of the order.</span></span> <span data-ttu-id="da440-175">В этом образце он обновляет базу данных, внося сведения о заказе на покупку.</span><span class="sxs-lookup"><span data-stu-id="da440-175">In the sample, it updates the database with purchase order information.</span></span>  
   
 ```  
 // Order Processing Logic  
@@ -234,9 +235,9 @@ public class Orders
 }  
 ```  
   
- Поведение пакетирования и его конфигурация заданы в конфигурации приложения службы.  
+ <span data-ttu-id="da440-176">Поведение пакетирования и его конфигурация заданы в конфигурации приложения службы.</span><span class="sxs-lookup"><span data-stu-id="da440-176">The batching behavior and its configuration are specified in the service application configuration.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -281,15 +282,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  Размер пакета \- это подсказка системе.  Например, если задать размер пакета равным 20, именно столько сообщений считает и диспетчеризует одна транзакция, после чего произойдет фиксация транзакции.  Однако в некоторых случаях транзакция может зафиксировать пакет раньше, чем будет достигнут размер пакета.  
+>  <span data-ttu-id="da440-177">Размер пакета - это подсказка системе.</span><span class="sxs-lookup"><span data-stu-id="da440-177">The batch size is a hint to the system.</span></span> <span data-ttu-id="da440-178">Например, если задать размер пакета равным 20, именно столько сообщений считает и диспетчеризует одна транзакция, после чего произойдет фиксация транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-178">For example, if you specify a batch size of 20, then 20 messages would be read and dispatched using a single transaction and then the transaction is committed.</span></span> <span data-ttu-id="da440-179">Однако в некоторых случаях транзакция может зафиксировать пакет раньше, чем будет достигнут размер пакета.</span><span class="sxs-lookup"><span data-stu-id="da440-179">But there are cases where the transaction may commit the batch before the batch size is reached.</span></span>  
 >   
->  С каждой транзакцией связан период ожидания, который отсчитывается после создания транзакции.  По истечении этого времени ожидания транзакция прерывается.  Этот период ожидания может истечь раньше, чем будет достигнут размер пакета.  Чтобы избежать переработки пакета из\-за прерывания, `TransactedBatchingBehavior` проверяет, сколько времени осталось до истечения периода ожидания для данной транзакции.  Транзакция фиксируется по истечении 80 % времени ожидания транзакции.  
+>  <span data-ttu-id="da440-180">С каждой транзакцией связан период ожидания, который отсчитывается после создания транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-180">Associated with every transaction is a timeout that starts ticking once the transaction is created.</span></span> <span data-ttu-id="da440-181">По истечении этого времени ожидания транзакция прерывается.</span><span class="sxs-lookup"><span data-stu-id="da440-181">When this timeout expires the transaction is aborted.</span></span> <span data-ttu-id="da440-182">Этот период ожидания может истечь раньше, чем будет достигнут размер пакета.</span><span class="sxs-lookup"><span data-stu-id="da440-182">It is possible for this timeout to expire even before the batch size is reached.</span></span> <span data-ttu-id="da440-183">Чтобы избежать переработки пакета из-за прерывания, `TransactedBatchingBehavior` проверяет, сколько времени осталось до истечения периода ожидания для данной транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-183">To avoid re-working the batch because of the abort, the `TransactedBatchingBehavior` checks to see how much time is left on the transaction.</span></span> <span data-ttu-id="da440-184">Транзакция фиксируется по истечении 80 % времени ожидания транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-184">If 80% of the transaction timeout is used up, then the transaction is committed.</span></span>  
 >   
->  Если в очереди больше нет сообщений, вместо того, чтобы ждать достижения размера пакета, поведение <xref:System.ServiceModel.Description.TransactedBatchingBehavior> фиксирует транзакцию.  
+>  <span data-ttu-id="da440-185">Если в очереди больше нет сообщений, вместо того, чтобы ждать достижения размера пакета, поведение <xref:System.ServiceModel.Description.TransactedBatchingBehavior> фиксирует транзакцию.</span><span class="sxs-lookup"><span data-stu-id="da440-185">If there are no more messages in the queue then instead of waiting for the fulfillment of the batch size the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> commits the transaction.</span></span>  
 >   
->  Выбор размера пакета зависит от используемого приложения.  Если размер пакета слишком маленький, производительность может быть ниже требуемого уровня.  С другой стороны, слишком большой размер пакета также может снизить производительность.  Например, время существования транзакции может увеличиться, и она может хранить блокировки используемой базы данных, либо возможна взаимоблокировка транзакции, в результате чего может произойти откат пакета и повторение всей процедуры.  
+>  <span data-ttu-id="da440-186">Выбор размера пакета зависит от используемого приложения.</span><span class="sxs-lookup"><span data-stu-id="da440-186">The choice of the batch size is dependent on your application.</span></span> <span data-ttu-id="da440-187">Если размер пакета слишком маленький, производительность может быть ниже требуемого уровня.</span><span class="sxs-lookup"><span data-stu-id="da440-187">If the batch size is too small, you may not get the desired performance.</span></span> <span data-ttu-id="da440-188">С другой стороны, слишком большой размер пакета также может снизить производительность.</span><span class="sxs-lookup"><span data-stu-id="da440-188">On the other hand if the batch size is too big, it may deteriorate performance.</span></span> <span data-ttu-id="da440-189">Например, время существования транзакции может увеличиться, и она может хранить блокировки используемой базы данных, либо возможна взаимоблокировка транзакции, в результате чего может произойти откат пакета и повторение всей процедуры.</span><span class="sxs-lookup"><span data-stu-id="da440-189">For example, your transaction could live longer and hold locks on your database or your transaction could become dead locked, which could cause the batch to get rolled back and to redo the work.</span></span>  
   
- Клиент создает область транзакции.  Связь с очередью происходит в области транзакции, поэтому она обрабатывается как единый модуль, в котором либо все сообщения отправляются в очередь, либо в очередь не отправляется ни одного сообщения.  Транзакция фиксируется вызовом метода <xref:System.Transactions.TransactionScope.Complete%2A> для области транзакции.  
+ <span data-ttu-id="da440-190">Клиент создает область транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-190">The client creates a transaction scope.</span></span> <span data-ttu-id="da440-191">Связь с очередью происходит в области транзакции, поэтому она обрабатывается как единый модуль, в котором либо все сообщения отправляются в очередь, либо в очередь не отправляется ни одного сообщения.</span><span class="sxs-lookup"><span data-stu-id="da440-191">Communication with the queue takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages are sent to the queue or none of the messages are sent to the queue.</span></span> <span data-ttu-id="da440-192">Транзакция фиксируется вызовом метода <xref:System.Transactions.TransactionScope.Complete%2A> для области транзакции.</span><span class="sxs-lookup"><span data-stu-id="da440-192">The transaction is committed by calling <xref:System.Transactions.TransactionScope.Complete%2A> on the transaction scope.</span></span>  
   
 ```  
 //Client implementation code.  
@@ -340,7 +341,7 @@ class Client
 }  
 ```  
   
- При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента.  Можно видеть, как служба получает сообщения от клиента.  Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно.  Можно запустить клиент, выключить его, а затем запустить службу, которая все равно получит сообщения клиента.  При считывании и обработке пакета сообщений можно видеть чередующийся вывод.  
+ <span data-ttu-id="da440-193">При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="da440-193">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="da440-194">Можно видеть, как служба получает сообщения от клиента.</span><span class="sxs-lookup"><span data-stu-id="da440-194">You can see the service receive messages from the client.</span></span> <span data-ttu-id="da440-195">Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.</span><span class="sxs-lookup"><span data-stu-id="da440-195">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="da440-196">Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно.</span><span class="sxs-lookup"><span data-stu-id="da440-196">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="da440-197">Можно запустить клиент, выключить его, а затем запустить службу, которая все равно получит сообщения клиента.</span><span class="sxs-lookup"><span data-stu-id="da440-197">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span> <span data-ttu-id="da440-198">При считывании и обработке пакета сообщений можно видеть чередующийся вывод.</span><span class="sxs-lookup"><span data-stu-id="da440-198">You can see a rolling output as messages are read in a batch and processed.</span></span>  
   
 ```  
 The service is ready.  
@@ -375,12 +376,12 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="da440-199">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="da440-199">The samples may already be installed on your computer.</span></span> <span data-ttu-id="da440-200">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="da440-200">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="da440-201">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="da440-201">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="da440-202">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="da440-202">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="da440-203">См. также</span><span class="sxs-lookup"><span data-stu-id="da440-203">See Also</span></span>

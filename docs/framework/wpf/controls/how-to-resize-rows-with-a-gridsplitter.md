@@ -1,48 +1,51 @@
 ---
-title: "Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "строки сетки, изменение размеров"
-  - "GridSplitter - элемент управления, изменение размеров строк сетки"
-  - "изменение размеров строк сетки"
+title: "Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resizing grid rows [WPF]
+- grid rows [WPF], resizing
+- GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6621cc0048270b97c42ff4c4e646b0ddd9ca3477
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter
-Этот пример показывает, как использовать горизонтальный <xref:System.Windows.Controls.GridSplitter> для распределения пространства между двумя строками в <xref:System.Windows.Controls.Grid> без изменения размеров <xref:System.Windows.Controls.Grid>.  
+# <a name="how-to-resize-rows-with-a-gridsplitter"></a><span data-ttu-id="dc950-102">Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter</span><span class="sxs-lookup"><span data-stu-id="dc950-102">How to: Resize Rows with a GridSplitter</span></span>
+<span data-ttu-id="dc950-103">В этом примере показано, как использовать горизонтальный <xref:System.Windows.Controls.GridSplitter> для распределения пространства между двумя строками в <xref:System.Windows.Controls.Grid> без изменения размеров <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="dc950-103">This example shows how to use a horizontal <xref:System.Windows.Controls.GridSplitter> to redistribute the space between two rows in a <xref:System.Windows.Controls.Grid> without changing the dimensions of the <xref:System.Windows.Controls.Grid>.</span></span>  
   
-## Пример  
- **Создание GridSplitter, который располагается поверх края строки**  
+## <a name="example"></a><span data-ttu-id="dc950-104">Пример</span><span class="sxs-lookup"><span data-stu-id="dc950-104">Example</span></span>  
+ <span data-ttu-id="dc950-105">**Создание GridSplitter, который накладывается на границы строки**</span><span class="sxs-lookup"><span data-stu-id="dc950-105">**How to create a GridSplitter that overlays the edge of a row**</span></span>  
   
- Чтобы указать <xref:System.Windows.Controls.GridSplitter>, который изменяет размеры соседних строк в <xref:System.Windows.Controls.Grid>, задайте [вложенное свойство](GTMT) <xref:System.Windows.Controls.Grid.Row%2A> равным номеру строки, размер которого вы хотите изменить.  Если ваш <xref:System.Windows.Controls.Grid> имеет более чем один столбец, задайте вложенному свойству <xref:System.Windows.Controls.Grid.ColumnSpan%2A> число столбцов.  Затем установите <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> в <xref:System.Windows.VerticalAlignment> или <xref:System.Windows.VerticalAlignment> \(выравнивание, которое вы установите зависит от двух строк, размеры которых вы хотите изменить\).  Наконец, установите свойство <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> равным <xref:System.Windows.HorizontalAlignment>.  
+ <span data-ttu-id="dc950-106">Чтобы указать <xref:System.Windows.Controls.GridSplitter> , изменяет размеры соседних строк в <xref:System.Windows.Controls.Grid>, задайте <xref:System.Windows.Controls.Grid.Row%2A> присоединенного свойства для одной из строк, которые вы хотите изменить.</span><span class="sxs-lookup"><span data-stu-id="dc950-106">To specify a <xref:System.Windows.Controls.GridSplitter> that resizes adjacent rows in a <xref:System.Windows.Controls.Grid>, set the <xref:System.Windows.Controls.Grid.Row%2A> attached property to one of the rows that you want to resize.</span></span> <span data-ttu-id="dc950-107">Если ваш <xref:System.Windows.Controls.Grid> имеет более чем один столбец, задайте <xref:System.Windows.Controls.Grid.ColumnSpan%2A> присоединенное свойство, чтобы указать число столбцов.</span><span class="sxs-lookup"><span data-stu-id="dc950-107">If your <xref:System.Windows.Controls.Grid> has more than one column, set the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> attached property to specify the number of columns.</span></span> <span data-ttu-id="dc950-108">Затем установите <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> для <xref:System.Windows.VerticalAlignment.Top> или <xref:System.Windows.VerticalAlignment.Bottom> (выравнивание, которое можно задать зависит от на две строки, для которого необходимо изменить).</span><span class="sxs-lookup"><span data-stu-id="dc950-108">Then set the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> to <xref:System.Windows.VerticalAlignment.Top> or <xref:System.Windows.VerticalAlignment.Bottom> (which alignment you set depends on which two rows you want to resize).</span></span> <span data-ttu-id="dc950-109">Задайте <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства <xref:System.Windows.HorizontalAlignment.Stretch>.</span><span class="sxs-lookup"><span data-stu-id="dc950-109">Finally, set the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property to <xref:System.Windows.HorizontalAlignment.Stretch>.</span></span>  
   
- В следующем примере показано определение горизонтального <xref:System.Windows.Controls.GridSplitter>, который изменяет размеры соседних строк.  
+ <span data-ttu-id="dc950-110">В следующем примере показано определение горизонтального <xref:System.Windows.Controls.GridSplitter> , изменяет размеры соседних строк.</span><span class="sxs-lookup"><span data-stu-id="dc950-110">The following example shows how to define a horizontal <xref:System.Windows.Controls.GridSplitter> that resizes adjacent rows.</span></span>  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- <xref:System.Windows.Controls.GridSplitter>, который не содержит собственную строку, может быть скрыт другими элементами управления в <xref:System.Windows.Controls.Grid>.  Дополнительные сведения о том, как предотвратить эту проблему см. в разделе [Проверка видимости GridSplitter](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ <span data-ttu-id="dc950-111">Объект <xref:System.Windows.Controls.GridSplitter> , не содержит собственную строку может быть скрыт других элементов управления в <xref:System.Windows.Controls.Grid>.</span><span class="sxs-lookup"><span data-stu-id="dc950-111">A <xref:System.Windows.Controls.GridSplitter> that does not occupy its own row may be obscured by other controls in the <xref:System.Windows.Controls.Grid>.</span></span> <span data-ttu-id="dc950-112">Дополнительные сведения о том, как предотвратить возникновение этой проблемы, см. в разделе [Проверка видимости GridSplitter](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).</span><span class="sxs-lookup"><span data-stu-id="dc950-112">For more information about how to prevent this issue, see [Make Sure That a GridSplitter Is Visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).</span></span>  
   
- **Как создать GridSplitter занимающий строку**  
+ <span data-ttu-id="dc950-113">**Создание GridSplitter, который занимает строку**</span><span class="sxs-lookup"><span data-stu-id="dc950-113">**How to create a GridSplitter that occupies a row**</span></span>  
   
- Чтобы указать <xref:System.Windows.Controls.GridSplitter>, который занимает строку в <xref:System.Windows.Controls.Grid>, задайте [вложенное свойство](GTMT) <xref:System.Windows.Controls.Grid.Row%2A> равным номеру строки, размер которой вы хотите изменить.  Если ваш <xref:System.Windows.Controls.Grid> имеет более чем один столбец, задайте вложенному свойству <xref:System.Windows.Controls.Grid.ColumnSpan%2A> число столбцов.  Затем установите <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> в <xref:System.Windows.VerticalAlignment>, установите свойство <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> в <xref:System.Windows.HorizontalAlignment>, и установите <xref:System.Windows.Controls.RowDefinition.Height%2A> строки, содержащего <xref:System.Windows.Controls.GridSplitter> равным <xref:System.Windows.GridLength.Auto%2A>.  
+ <span data-ttu-id="dc950-114">Чтобы указать <xref:System.Windows.Controls.GridSplitter> , занимает строку в <xref:System.Windows.Controls.Grid>, задайте <xref:System.Windows.Controls.Grid.Row%2A> присоединенного свойства для одной из строк, которые вы хотите изменить.</span><span class="sxs-lookup"><span data-stu-id="dc950-114">To specify a <xref:System.Windows.Controls.GridSplitter> that occupies a row in a <xref:System.Windows.Controls.Grid>, set the <xref:System.Windows.Controls.Grid.Row%2A> attached property to one of the rows that you want to resize.</span></span> <span data-ttu-id="dc950-115">Если ваш <xref:System.Windows.Controls.Grid> имеет более чем один столбец, задайте <xref:System.Windows.Controls.Grid.ColumnSpan%2A> вложенному свойству количество столбцов.</span><span class="sxs-lookup"><span data-stu-id="dc950-115">If your <xref:System.Windows.Controls.Grid> has more than one column, set the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> attached property to the number of columns.</span></span> <span data-ttu-id="dc950-116">Затем установите <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> для <xref:System.Windows.VerticalAlignment.Center>, задайте <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства <xref:System.Windows.HorizontalAlignment.Stretch>и задайте <xref:System.Windows.Controls.RowDefinition.Height%2A> строки, которая содержит <xref:System.Windows.Controls.GridSplitter> для <xref:System.Windows.GridLength.Auto%2A>.</span><span class="sxs-lookup"><span data-stu-id="dc950-116">Then set the <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> to <xref:System.Windows.VerticalAlignment.Center>, set the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property to <xref:System.Windows.HorizontalAlignment.Stretch>, and set the <xref:System.Windows.Controls.RowDefinition.Height%2A> of the row that contains the <xref:System.Windows.Controls.GridSplitter> to <xref:System.Windows.GridLength.Auto%2A>.</span></span>  
   
- В следующем примере показано определение горизонтального <xref:System.Windows.Controls.GridSplitter>, который занимает строку и изменяет размеры строк по обе стороны от него.  
+ <span data-ttu-id="dc950-117">В следующем примере показано определение горизонтального <xref:System.Windows.Controls.GridSplitter> , занимает строку и изменяет размеры строк на обеих сторонах.</span><span class="sxs-lookup"><span data-stu-id="dc950-117">The following example shows how to define a horizontal <xref:System.Windows.Controls.GridSplitter> that occupies a row and resizes the rows on either side of it.</span></span>  
   
- [!code-xml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
-## См. также  
- <xref:System.Windows.Controls.GridSplitter>   
- [Практические руководства](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="dc950-118">См. также</span><span class="sxs-lookup"><span data-stu-id="dc950-118">See Also</span></span>  
+ <xref:System.Windows.Controls.GridSplitter>  
+ [<span data-ttu-id="dc950-119">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="dc950-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

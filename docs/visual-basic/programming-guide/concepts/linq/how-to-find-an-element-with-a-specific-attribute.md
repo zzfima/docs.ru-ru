@@ -1,34 +1,30 @@
 ---
-title: "Практическое руководство: найти элемент с определенным атрибутом (Visual Basic) | Документы Microsoft"
+title: "Как: найти элемент с определенным атрибутом (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce57f1c7e0e1860d858d36ccaff256aa4afe7e2b
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 97842cc0c42ca531c0965914d086f4c2a1faa6f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Практическое руководство: найти элемент с определенным атрибутом (Visual Basic)
-В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.  
+# <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a><span data-ttu-id="fc7b9-102">Как: найти элемент с определенным атрибутом (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc7b9-102">How to: Find an Element with a Specific Attribute (Visual Basic)</span></span>
+<span data-ttu-id="fc7b9-103">В этом разделе показан поиск элемента, имеющего атрибут с определенным значением.</span><span class="sxs-lookup"><span data-stu-id="fc7b9-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
   
-## <a name="example"></a>Пример  
- В примере показано, как выполнить поиск элемента `Address`, имеющего атрибут `Type` со значением «Billing».  
+## <a name="example"></a><span data-ttu-id="fc7b9-104">Пример</span><span class="sxs-lookup"><span data-stu-id="fc7b9-104">Example</span></span>  
+ <span data-ttu-id="fc7b9-105">В примере показано, как выполнить поиск элемента `Address`, имеющего атрибут `Type` со значением «Billing».</span><span class="sxs-lookup"><span data-stu-id="fc7b9-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ <span data-ttu-id="fc7b9-106">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="fc7b9-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -41,10 +37,9 @@ For Each el As XElement In address
 Next  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="fc7b9-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="fc7b9-107">This code produces the following output:</span></span>  
   
 ```xml  
-  
           <Address Type="Billing">  
   <Name>Tai Yee</Name>  
   <Street>8 Oak Avenue</Street>  
@@ -55,12 +50,12 @@ Next
 </Address>  
 ```  
   
- Обратите внимание, что в этом примере используется [свойство оси дочернего XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [свойство оси атрибута XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)и [свойство значения XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ <span data-ttu-id="fc7b9-108">Обратите внимание, что в этом примере используется [XML Child axis-свойство](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [свойство оси атрибута XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)и [свойство значения XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span><span class="sxs-lookup"><span data-stu-id="fc7b9-108">Note that this example uses the [XML Child axis property](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), the [XML Attribute axis property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md), and the [XML Value property](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+## <a name="example"></a><span data-ttu-id="fc7b9-109">Пример</span><span class="sxs-lookup"><span data-stu-id="fc7b9-109">Example</span></span>  
+ <span data-ttu-id="fc7b9-110">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="fc7b9-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="fc7b9-111">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="fc7b9-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ <span data-ttu-id="fc7b9-112">В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="fc7b9-112">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -79,7 +74,7 @@ Module Module1
 End Module  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="fc7b9-113">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="fc7b9-113">This code produces the following output:</span></span>  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -92,9 +87,9 @@ End Module
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement.Attribute%2A></xref:System.Xml.Linq.XElement.Attribute%2A>   
- <xref:System.Xml.Linq.XContainer.Elements%2A></xref:System.Xml.Linq.XContainer.Elements%2A>   
- [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Операции проецирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+## <a name="see-also"></a><span data-ttu-id="fc7b9-114">См. также</span><span class="sxs-lookup"><span data-stu-id="fc7b9-114">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A>  
+ [<span data-ttu-id="fc7b9-115">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc7b9-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [<span data-ttu-id="fc7b9-116">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc7b9-116">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="fc7b9-117">Операции проецирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc7b9-117">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

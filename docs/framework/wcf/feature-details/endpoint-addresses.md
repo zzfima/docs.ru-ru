@@ -1,150 +1,152 @@
 ---
-title: "Адреса конечных точек | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "адреса [WCF]"
-  - "WCF [WCF], адреса"
-  - "Windows Communication Foundation [WCF], адреса"
+title: "Адреса конечных точек"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- addresses [WCF]
+- Windows Communication Foundation [WCF], addresses
+- WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 52c5dfd84a55e727e465e2bd6214462fd57c334f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Адреса конечных точек
-С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки.Этот адрес в первую очередь включает универсальный код ресурса \(URI\), задающий расположение конечной точки.Адрес конечной точки представляется в модели программирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] классом <xref:System.ServiceModel.EndpointAddress>, который содержит необязательное свойство <xref:System.ServiceModel.EndpointAddress.Identity%2A>, включающее проверку подлинности конечной точки другими конечными точками, с которыми она обменивается сообщениями, а также набор необязательных свойств <xref:System.ServiceModel.EndpointAddress.Headers%2A>, задающих другие заголовки SOAP, необходимые для получения доступа к службе.Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней.При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS\-Addressing.  
+# <a name="endpoint-addresses"></a><span data-ttu-id="38d13-102">Адреса конечных точек</span><span class="sxs-lookup"><span data-stu-id="38d13-102">Endpoint Addresses</span></span>
+<span data-ttu-id="38d13-103">С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки.</span><span class="sxs-lookup"><span data-stu-id="38d13-103">Every endpoint has an address associated with it, which is used to locate and identify the endpoint.</span></span> <span data-ttu-id="38d13-104">Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки.</span><span class="sxs-lookup"><span data-stu-id="38d13-104">This address consists primarily of a Uniform Resource Identifier (URI), which specifies the location of the endpoint.</span></span> <span data-ttu-id="38d13-105">Адрес конечной точки представляется в модели программирования [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] классом <xref:System.ServiceModel.EndpointAddress>, который содержит необязательное свойство <xref:System.ServiceModel.EndpointAddress.Identity%2A>, включающее проверку подлинности конечной точки другими конечными точками, с которыми она обменивается сообщениями, а также набор необязательных свойств <xref:System.ServiceModel.EndpointAddress.Headers%2A>, задающих другие заголовки SOAP, необходимые для получения доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="38d13-105">The endpoint address is represented in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] programming model by the <xref:System.ServiceModel.EndpointAddress> class, which contains an optional <xref:System.ServiceModel.EndpointAddress.Identity%2A> property that enables the authentication of the endpoint by other endpoints that exchange messages with it, and a set of optional <xref:System.ServiceModel.EndpointAddress.Headers%2A> properties, which define any other SOAP headers required to reach the service.</span></span> <span data-ttu-id="38d13-106">Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней.</span><span class="sxs-lookup"><span data-stu-id="38d13-106">The optional headers provide additional and more detailed addressing information to identify or interact with the service endpoint.</span></span> <span data-ttu-id="38d13-107">При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="38d13-107">The address of an endpoint is represented on the wire as a WS-Addressing endpoint reference (EPR).</span></span>  
   
-## Структура универсального кода ресурса \(URI\) адреса  
- Универсальный код ресурса \(URI\) для большинства видов транспорта состоит из четырех частей.Например, код http:\/\/www.fabrikam.com:322\/mathservice.svc\/secureEndpoint можно разбить на части следующим образом.  
+## <a name="uri-structure-of-an-address"></a><span data-ttu-id="38d13-108">Структура универсального кода ресурса (URI) адреса</span><span class="sxs-lookup"><span data-stu-id="38d13-108">URI Structure of an Address</span></span>  
+ <span data-ttu-id="38d13-109">Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей.</span><span class="sxs-lookup"><span data-stu-id="38d13-109">The address URI for most transports has four parts.</span></span> <span data-ttu-id="38d13-110">Например, код http://www.fabrikam.com:322/mathservice.svc/secureEndpoint можно разбить на части следующим образом.</span><span class="sxs-lookup"><span data-stu-id="38d13-110">For example, the four parts of the URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint can be itemized as follows:</span></span>  
   
--   Схема: http:  
+-   <span data-ttu-id="38d13-111">Схема: http:</span><span class="sxs-lookup"><span data-stu-id="38d13-111">Scheme: http:</span></span>  
   
--   Компьютер: www.fabrikam.com  
+-   <span data-ttu-id="38d13-112">Компьютер: www.fabrikam.com</span><span class="sxs-lookup"><span data-stu-id="38d13-112">Machine: www.fabrikam.com</span></span>  
   
--   \(необязательно\) Порт: 322  
+-   <span data-ttu-id="38d13-113">(необязательно) Порт: 322</span><span class="sxs-lookup"><span data-stu-id="38d13-113">(optional) Port: 322</span></span>  
   
--   Путь: \/mathservice.svc\/secureEndpoint  
+-   <span data-ttu-id="38d13-114">Путь: /mathservice.svc/secureEndpoint</span><span class="sxs-lookup"><span data-stu-id="38d13-114">Path: /mathservice.svc/secureEndpoint</span></span>  
   
-## Определение адреса службы  
- Адрес конечной точки службы можно задать императивно с помощью кода или декларативно с помощью конфигурации.Определение конечных точек в коде обычно бывает непрактичным, поскольку привязки и адреса для развернутой службы чаще всего отличаются от привязок и адресов, используемых в процессе разработки службы.Обычно более целесообразно задать конечные точки службы в конфигурации, а не в коде.Если не указывать привязку и адрес в коде, их можно изменять, не выполняя повторную компиляцию или повторное развертывание приложения.  
+## <a name="defining-an-address-for-a-service"></a><span data-ttu-id="38d13-115">Определение адреса службы</span><span class="sxs-lookup"><span data-stu-id="38d13-115">Defining an Address for a Service</span></span>  
+ <span data-ttu-id="38d13-116">Адрес конечной точки службы можно задать императивно с помощью кода или декларативно с помощью конфигурации.</span><span class="sxs-lookup"><span data-stu-id="38d13-116">The endpoint address for a service can be specified either imperatively using code or declaratively through configuration.</span></span> <span data-ttu-id="38d13-117">Как правило, определять конечные точки в коде непрактично, поскольку привязки и адреса для развернутой службы чаще всего отличаются от привязок и адресов, используемых в процессе разработки службы.</span><span class="sxs-lookup"><span data-stu-id="38d13-117">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="38d13-118">Обычно более целесообразно задать конечные точки службы в конфигурации, а не в коде.</span><span class="sxs-lookup"><span data-stu-id="38d13-118">Generally, it is more practical to define service endpoints using configuration rather than code.</span></span> <span data-ttu-id="38d13-119">Если не указывать привязку и адрес в коде, их можно изменять, не выполняя повторную компиляцию или повторное развертывание приложения.</span><span class="sxs-lookup"><span data-stu-id="38d13-119">Keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
-### Определение адреса в файле конфигурации  
- Чтобы определить конечную точку в файле конфигурации, следует использовать элемент [\<конечная точка\>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md).Дополнительные сведения и пример см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-configuration"></a><span data-ttu-id="38d13-120">Определение адреса в файле конфигурации</span><span class="sxs-lookup"><span data-stu-id="38d13-120">Defining an Address in Configuration</span></span>  
+ <span data-ttu-id="38d13-121">Для определения конечной точки в файле конфигурации, используйте [ \<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="38d13-121">To define an endpoint in a configuration file, use the [\<endpoint>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="38d13-122">Дополнительные сведения и пример см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="38d13-122">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-### Определение адреса в коде  
- Адрес конечной точки можно создать в коде с помощью класса <xref:System.ServiceModel.EndpointAddress>.Дополнительные сведения и пример см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="defining-an-address-in-code"></a><span data-ttu-id="38d13-123">Определение адреса в коде</span><span class="sxs-lookup"><span data-stu-id="38d13-123">Defining an Address in Code</span></span>  
+ <span data-ttu-id="38d13-124">Адрес конечной точки можно создать в коде с помощью класса <xref:System.ServiceModel.EndpointAddress>.</span><span class="sxs-lookup"><span data-stu-id="38d13-124">An endpoint address can be created in code with the <xref:System.ServiceModel.EndpointAddress> class.</span></span> <span data-ttu-id="38d13-125">Дополнительные сведения и пример см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="38d13-125">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-### Конечные точки на языке WSDL  
- Адрес конечной точки также может быть представлен на языке WSDL в виде элемента EPR WS\-Addressing в элементе `wsdl:port` соответствующей конечной точки.Элемент EPR содержит адрес конечной точки, а также все остальные свойства адреса.Дополнительные сведения и пример см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="endpoints-in-wsdl"></a><span data-ttu-id="38d13-126">Конечные точки на языке WSDL</span><span class="sxs-lookup"><span data-stu-id="38d13-126">Endpoints in WSDL</span></span>  
+ <span data-ttu-id="38d13-127">Адрес конечной точки также может быть представлен на языке WSDL в виде элемента EPR WS-Addressing в элементе `wsdl:port` соответствующей конечной точки.</span><span class="sxs-lookup"><span data-stu-id="38d13-127">An endpoint address can also be represented in WSDL as a WS-Addressing EPR element inside the corresponding endpoint's `wsdl:port` element.</span></span> <span data-ttu-id="38d13-128">Ссылка на конечную точку (EPR) содержит адрес конечной точки и любые свойства адреса.</span><span class="sxs-lookup"><span data-stu-id="38d13-128">The EPR contains the endpoint's address as well as any address properties.</span></span> <span data-ttu-id="38d13-129">Дополнительные сведения и пример см. в разделе [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="38d13-129">For details and an example, see [Specifying an Endpoint Address](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span>  
   
-## Поддержка нескольких привязок служб IIS в платформе .NET Framework 3.5  
- Поставщики услуг Интернета часто размещают большое число приложений на одном сайте и сервере, чтобы повысить эффективность использования сайта и сократить совокупную стоимость владения.Эти приложения обычно привязываются к различным базовым адресам.Веб\-сайт служб IIS может содержать несколько приложений.Доступ к приложениям на сайте может осуществляться через одну или несколько привязок служб IIS.  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a><span data-ttu-id="38d13-130">Поддержка привязки в .NET Framework 3.5 несколько служб IIS</span><span class="sxs-lookup"><span data-stu-id="38d13-130">Multiple IIS Binding Support in .NET Framework 3.5</span></span>  
+ <span data-ttu-id="38d13-131">Поставщики услуг Интернета часто размещают большое число приложений на одном сайте и сервере, чтобы повысить эффективность использования сайта и сократить совокупную стоимость владения.</span><span class="sxs-lookup"><span data-stu-id="38d13-131">Internet service providers often host many applications on the same server and site to increase the site density and lower total cost of ownership.</span></span> <span data-ttu-id="38d13-132">Эти приложения обычно привязываются к различным базовым адресам.</span><span class="sxs-lookup"><span data-stu-id="38d13-132">These applications are typically bound to different base addresses.</span></span> <span data-ttu-id="38d13-133">Веб-сайт служб IIS может содержать несколько приложений.</span><span class="sxs-lookup"><span data-stu-id="38d13-133">An Internet Information Services (IIS) Web site can contain multiple applications.</span></span> <span data-ttu-id="38d13-134">Доступ к приложениям на сайте может осуществляться через одну или несколько привязок служб IIS.</span><span class="sxs-lookup"><span data-stu-id="38d13-134">The applications in a site can be accessed through one or more IIS bindings.</span></span>  
   
- Привязки IIS предоставляют два блока данных: протокол привязки и данные привязки.Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к сайту.  
+ <span data-ttu-id="38d13-135">Привязки IIS предоставляют два блока данных: протокол привязки и данные привязки.</span><span class="sxs-lookup"><span data-stu-id="38d13-135">IIS bindings provide two pieces of information: a binding protocol, and binding information.</span></span> <span data-ttu-id="38d13-136">Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к сайту.</span><span class="sxs-lookup"><span data-stu-id="38d13-136">The binding protocol defines the scheme over which communication occurs, and binding information is the information used to access the site.</span></span>  
   
- Ниже приведен пример элементов, которые могут присутствовать в привязке IIS.  
+ <span data-ttu-id="38d13-137">Ниже приведен пример элементов, которые могут присутствовать в привязке IIS.</span><span class="sxs-lookup"><span data-stu-id="38d13-137">The following example shows the components that can be present in an IIS binding:</span></span>  
   
--   Протокол привязки: HTTP  
+-   <span data-ttu-id="38d13-138">Протокол привязки: HTTP</span><span class="sxs-lookup"><span data-stu-id="38d13-138">Binding protocol: HTTP</span></span>  
   
--   Данные привязки: IP\-адрес, порт, заголовок узла  
+-   <span data-ttu-id="38d13-139">Данные привязки: IP-адрес, порт, заголовок узла</span><span class="sxs-lookup"><span data-stu-id="38d13-139">Binding Information: IP Address, Port, Host header</span></span>  
   
- Службы IIS поддерживают задание нескольких привязок для каждого сайта, что позволяет использовать несколько базовых адресов для каждой схемы.До появления [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживала использование нескольких адресов для одной схемы, и, если они были заданы, во время активации создавалось исключение <xref:System.ArgumentException>.  
+ <span data-ttu-id="38d13-140">Службы IIS поддерживают задание нескольких привязок для каждого сайта, что позволяет использовать несколько базовых адресов для каждой схемы.</span><span class="sxs-lookup"><span data-stu-id="38d13-140">IIS can specify multiple bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="38d13-141">До появления [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] платформа [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживала использование нескольких адресов для одной схемы, и, если они были заданы, во время активации создавалось исключение <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="38d13-141">Prior to [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] did not support multiple addresses for a schema and, if they were specified, threw a <xref:System.ArgumentException> during activation.</span></span>  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет поставщикам услуг Интернета размещать на одном сайте несколько приложений с различными базовыми адресами в рамках одной схемы.  
+ <span data-ttu-id="38d13-142">[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет поставщикам услуг Интернета размещать на одном сайте несколько приложений с различными базовыми адресами в рамках одной схемы.</span><span class="sxs-lookup"><span data-stu-id="38d13-142">The [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] enables Internet service providers to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
   
- Например, сайт может содержать следующие базовые адреса:  
+ <span data-ttu-id="38d13-143">Например, сайт может содержать следующие базовые адреса:</span><span class="sxs-lookup"><span data-stu-id="38d13-143">For example, a site could contain the following base addresses:</span></span>  
   
--   http:\/\/payroll.myorg.com\/Service.svc  
+-   <span data-ttu-id="38d13-144">http://payroll.myorg.com/Service.svc</span><span class="sxs-lookup"><span data-stu-id="38d13-144">http://payroll.myorg.com/Service.svc</span></span>  
   
--   http:\/\/shipping.myorg.com\/Service.svc  
+-   <span data-ttu-id="38d13-145">http://shipping.myorg.com/Service.svc</span><span class="sxs-lookup"><span data-stu-id="38d13-145">http://shipping.myorg.com/Service.svc</span></span>  
   
- Платформа [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет задать в файле конфигурации фильтр префикса на уровне домена приложения.Для этого следует воспользоваться элементом [\<baseAddressPrefixFilters\>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md), который содержит список префиксов.Входящие базовые адреса, предоставляемые службами IIS, фильтруются с использованием необязательно списка префиксов.Если префикс не задан, по умолчанию пропускаются все адреса.При задании префикса разрешается прохождение данных только с соответствующего базового адреса для данной схемы.  
+ <span data-ttu-id="38d13-146">Платформа [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет задать в файле конфигурации фильтр префикса на уровне домена приложения.</span><span class="sxs-lookup"><span data-stu-id="38d13-146">With [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], you specify a prefix filter at the AppDomain level in the configuration file.</span></span> <span data-ttu-id="38d13-147">Для этого с [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) элемент, который содержит список префиксов.</span><span class="sxs-lookup"><span data-stu-id="38d13-147">You do this with the [\<baseAddressPrefixFilters>](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, which contains a list of prefixes.</span></span> <span data-ttu-id="38d13-148">Входящие базовые адреса, предоставляемые службами IIS, фильтруются с использованием необязательно списка префиксов.</span><span class="sxs-lookup"><span data-stu-id="38d13-148">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list.</span></span> <span data-ttu-id="38d13-149">Если префикс не задан, по умолчанию пропускаются все адреса.</span><span class="sxs-lookup"><span data-stu-id="38d13-149">By default, when a prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="38d13-150">При задании префикса разрешается прохождение данных только с соответствующего базового адреса для данной схемы.</span><span class="sxs-lookup"><span data-stu-id="38d13-150">Specifying the prefix results in only the matching base address for that scheme to be passed through.</span></span>  
   
- Ниже приведен пример кода конфигурации, в котором используются фильтры префиксов.  
+ <span data-ttu-id="38d13-151">Ниже приведен пример кода конфигурации, в котором используются фильтры префиксов.</span><span class="sxs-lookup"><span data-stu-id="38d13-151">The following is an example of configuration code that uses the prefix filters.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <serviceHostingEnvironment>  
      <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://payroll.myorg.com:8000"/>  
-        <add prefix="http://shipping.myorg.com:8000"/>  
-    </baseAddressPrefixFilters>  
+        <add prefix="net.tcp://payroll.myorg.com:8000"/>  
+        <add prefix="http://shipping.myorg.com:8000"/>  
+    </baseAddressPrefixFilters>  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- В приведенном выше примере net.tcp:\/\/payroll.myorg.com:8000 и http:\/\/shipping.myorg.com:8000 являются единственными базовыми адресами для соответствующих схем, которые будут пропущены.  
+ <span data-ttu-id="38d13-152">В приведенном выше примере net.tcp://payroll.myorg.com:8000 и http://shipping.myorg.com:8000 являются единственными базовыми адресами для соответствующих схем, которые будут пропущены.</span><span class="sxs-lookup"><span data-stu-id="38d13-152">In the preceding example, net.tcp://payroll.myorg.com:8000 and http://shipping.myorg.com:8000 are the only base addresses, for their respective schemes, which are passed through.</span></span>  
   
- Элемент `baseAddressPrefixFilter` не поддерживает подстановочные знаки.  
+ <span data-ttu-id="38d13-153">Элемент `baseAddressPrefixFilter` не поддерживает подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="38d13-153">The `baseAddressPrefixFilter` does not support wildcards.</span></span>  
   
- Среди базовых адресов, предоставляемых службами IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`.Эти адреса не отфильтровываются.  
+ <span data-ttu-id="38d13-154">Среди базовых адресов, предоставляемых службами IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`.</span><span class="sxs-lookup"><span data-stu-id="38d13-154">The base addresses supplied by IIS may have addresses bound to other schemes not present in `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="38d13-155">Эти адреса не фильтруются.</span><span class="sxs-lookup"><span data-stu-id="38d13-155">These addresses are not filtered out.</span></span>  
   
-## Поддержка нескольких привязок служб IIS в платформе .NET Framework 4 и более поздней  
- Начиная с .NET 4, в службах IIS можно включить поддержку нескольких привязок, при этом не требуется выбирать один базовый адрес. Для этого атрибуту <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> элемента <xref:System.ServiceModel.ServiceHostingEnvironment> необходимо задать значение true.Эта поддержка обеспечивается только для схем протокола HTTP.  
+## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a><span data-ttu-id="38d13-156">Поддержка нескольких привязок служб IIS в платформе .NET Framework 4 и более поздних версиях</span><span class="sxs-lookup"><span data-stu-id="38d13-156">Multiple IIS Binding Support in .NET Framework 4 and later</span></span>  
+ <span data-ttu-id="38d13-157">Начиная с .NET 4, в службах IIS можно включить поддержку нескольких привязок, при этом не требуется выбирать один базовый адрес. Для этого атрибуту <xref:System.ServiceModel.ServiceHostingEnvironment> элемента <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> необходимо задать значение true.</span><span class="sxs-lookup"><span data-stu-id="38d13-157">Starting in .NET 4, you can enable support for multiple bindings in IIS without having to pick a single base address, by setting <xref:System.ServiceModel.ServiceHostingEnvironment>’s <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> setting to true.</span></span> <span data-ttu-id="38d13-158">Эта поддержка обеспечивается только для схем протокола HTTP.</span><span class="sxs-lookup"><span data-stu-id="38d13-158">This support is limited to HTTP protocol schemes.</span></span>  
   
- Ниже приведен пример кода конфигурации, в котором используется атрибут multipleSiteBindingsEnabled элемента [\<serviceHostingEnvironment\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+ <span data-ttu-id="38d13-159">Ниже приведен пример кода конфигурации, который использует multipleSiteBindingsEnabled на [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).</span><span class="sxs-lookup"><span data-stu-id="38d13-159">The following is an example of configuration code that uses multipleSiteBindingsEnabled on [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
-  <serviceHostingEnvironment multipleSiteBindingsEnabled=”true” >  
+  <serviceHostingEnvironment multipleSiteBindingsEnabled="true" >  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- Если с помощью этого параметра включены несколько привязок к узлам, все параметры baseAddressPrefixFilters не учитываются как для протокола HTTP, так и для других протоколов.  
+ <span data-ttu-id="38d13-160">Если с помощью этого параметра включены несколько привязок к узлам, все параметры baseAddressPrefixFilters не учитываются как для протокола HTTP, так и для других протоколов.</span><span class="sxs-lookup"><span data-stu-id="38d13-160">Any baseAddressPrefixFilters settings are ignored, for both HTTP and non-HTTP protocols, when multiple site bindings are enabled using this setting.</span></span>  
   
- Дополнительные сведения и примеры см. в разделах [Поддержка нескольких привязок узла IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) и <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ <span data-ttu-id="38d13-161">Дополнительные сведения и примеры см. в разделе [поддержка нескольких привязок узла IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) и <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.</span><span class="sxs-lookup"><span data-stu-id="38d13-161">For details and examples, see [Supporting Multiple IIS Site Bindings](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) and <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.</span></span>  
   
-## Расширение модели адресов в службах WCF  
- Модель адресов служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию использует коды URI адресов конечных точек для следующих целей:  
+## <a name="extending-addressing-in-wcf-services"></a><span data-ttu-id="38d13-162">Расширение модели адресов в службах WCF</span><span class="sxs-lookup"><span data-stu-id="38d13-162">Extending Addressing in WCF Services</span></span>  
+ <span data-ttu-id="38d13-163">Модель адресов служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] по умолчанию использует коды URI адресов конечных точек для следующих целей:</span><span class="sxs-lookup"><span data-stu-id="38d13-163">The default addressing model of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services uses the endpoint address URI for the following purposes:</span></span>  
   
--   задание адреса ожидания передачи данных службы, т. е. расположения, по которому конечная точка ожидает сообщений;  
+-   <span data-ttu-id="38d13-164">задание адреса ожидания передачи данных службы, т. е. расположения, по которому конечная точка ожидает сообщений;</span><span class="sxs-lookup"><span data-stu-id="38d13-164">To specify the service listening address, the location at which the endpoint listens for messages,</span></span>  
   
--   задание фильтра адресов SOAP, т. е. адреса, ожидаемого конечной точкой в качестве заголовка SOAP.  
+-   <span data-ttu-id="38d13-165">задание фильтра адресов SOAP, т. е. адреса, ожидаемого конечной точкой в качестве заголовка SOAP.</span><span class="sxs-lookup"><span data-stu-id="38d13-165">To specify the SOAP address filter, the address an endpoint expects as a SOAP header.</span></span>  
   
- Значения в каждом из этих случаев могут задаваться отдельно, что позволяет реализовать несколько расширений модели адресов, которые можно использовать в следующих сценариях:  
+ <span data-ttu-id="38d13-166">Значения в каждом из этих случаев могут задаваться отдельно, что позволяет реализовать несколько расширений модели адресов, которые можно использовать в следующих сценариях:</span><span class="sxs-lookup"><span data-stu-id="38d13-166">The values for each of these purposes can be specified separately, allowing several extensions of addressing that cover useful scenarios:</span></span>  
   
--   посредники протокола SOAP: сообщение, отправляемое клиентом, проходит через одну или несколько дополнительных служб, обрабатывающих это сообщение, прежде чем оно достигнет конечной точки назначения.Посредники протокола SOAP могут выполнять с сообщениями различные задачи, например кэширование, маршрутизацию или проверку схемы.Этот сценарий также можно реализовать путем отправки сообщения по отдельному физическому адресу \(`via`\), нацеленному на посредник, а не просто по логическому адресу \(`wsa:To`\), который нацелен на конечную точку назначения;  
+-   <span data-ttu-id="38d13-167">посредники протокола SOAP: сообщение, отправляемое клиентом, проходит через одну или несколько дополнительных служб, обрабатывающих это сообщение, прежде чем оно достигнет конечной точки назначения.</span><span class="sxs-lookup"><span data-stu-id="38d13-167">SOAP intermediaries: a message sent by a client traverses one or more additional services that process the message before it reaches its final destination.</span></span> <span data-ttu-id="38d13-168">Посредники протокола SOAP могут выполнять с сообщениями различные задачи, например кэширование, маршрутизацию или проверку схемы.</span><span class="sxs-lookup"><span data-stu-id="38d13-168">SOAP intermediaries can perform various tasks, such as caching, routing, load-balancing, or schema validation on the messages.</span></span> <span data-ttu-id="38d13-169">Этот сценарий также можно реализовать путем отправки сообщения по отдельному физическому адресу (`via`), нацеленному на посредник, а не просто по логическому адресу (`wsa:To`), который нацелен на конечную точку назначения;</span><span class="sxs-lookup"><span data-stu-id="38d13-169">This scenario is accomplished by sending messages to a separate physical address (`via`) that targets the intermediary rather than just to a logical address (`wsa:To`) that targets the ultimate destination.</span></span>  
   
--   адрес ожидания передачи данных конечной точки является закрытым универсальным кодом ресурса \(URI\) и имеет значение, отличное от значения свойства `listenURI`.  
+-   <span data-ttu-id="38d13-170">адрес ожидания передачи данных конечной точки является закрытым универсальным кодом ресурса (URI) и имеет значение, отличное от значения свойства `listenURI`.</span><span class="sxs-lookup"><span data-stu-id="38d13-170">The listening address of the endpoint is a private URI and is set to a different value than its `listenURI` property.</span></span>  
   
- Адрес транспорта, задаваемый параметром `via`, определяет расположение, через которое сообщение должно предварительно пройти по пути на какой\-либо другой удаленный адрес, задаваемый параметром `to` и определяющий расположение службы.В большинстве случаев работы через Интернет значение универсального кода ресурса \(URI\) `via` совпадает со значением свойства <xref:System.ServiceModel.EndpointAddress.Uri%2A> конечного адреса `to` службы.При осуществлении маршрутизации вручную приходится выбирать только между этими двумя адресами.  
+ <span data-ttu-id="38d13-171">Адрес транспорта, задаваемый параметром `via`, определяет расположение, через которое сообщение должно предварительно пройти по пути на какой-либо другой удаленный адрес, задаваемый параметром `to` и определяющий расположение службы.</span><span class="sxs-lookup"><span data-stu-id="38d13-171">The transport address that the `via` specifies is the location to which a message should initially be sent on its way to some other remote address specified by the `to` parameter at which the service is located.</span></span> <span data-ttu-id="38d13-172">В большинстве случаев работы через Интернет значение универсального кода ресурса (URI) `via` совпадает со значением свойства <xref:System.ServiceModel.EndpointAddress.Uri%2A> конечного адреса `to` службы.</span><span class="sxs-lookup"><span data-stu-id="38d13-172">In most Internet scenarios, the `via` URI is the same as the <xref:System.ServiceModel.EndpointAddress.Uri%2A> property of the final `to` address of the service.</span></span> <span data-ttu-id="38d13-173">При осуществлении маршрутизации вручную приходится выбирать только между этими двумя адресами.</span><span class="sxs-lookup"><span data-stu-id="38d13-173">You only distinguish between these two addresses when you must do manual routing.</span></span>  
   
-### Заголовки адресов  
- Помимо базового универсального кода ресурса \(URI\) к конечной точке можно обратиться по одному или нескольким заголовкам SOAP.К сценариям, в которых это бывает удобно, относятся сценарии с посредниками протокола SOAP, в которых конечная точка требует, чтобы клиенты включали заголовки SOAP, нацеленные на посредники.  
+### <a name="addressing-headers"></a><span data-ttu-id="38d13-174">Заголовки адресов</span><span class="sxs-lookup"><span data-stu-id="38d13-174">Addressing Headers</span></span>  
+ <span data-ttu-id="38d13-175">Помимо базового универсального кода ресурса (URI) к конечной точке можно обратиться по одному или нескольким заголовкам SOAP.</span><span class="sxs-lookup"><span data-stu-id="38d13-175">An endpoint can be addressed by one or more SOAP headers in addition to its basic URI.</span></span> <span data-ttu-id="38d13-176">К сценариям, в которых это бывает удобно, относятся сценарии с посредниками протокола SOAP, в которых конечная точка требует, чтобы клиенты включали заголовки SOAP, нацеленные на посредники.</span><span class="sxs-lookup"><span data-stu-id="38d13-176">One set of scenarios where this is useful is a set of SOAP intermediary scenarios where an endpoint requires clients of that endpoint to include SOAP headers targeted at intermediaries.</span></span>  
   
- Пользовательские заголовки адресов можно определять двумя способами — с помощью кода или файла конфигурации:  
+ <span data-ttu-id="38d13-177">Пользовательские заголовки адресов можно определять двумя способами - с помощью кода или файла конфигурации:</span><span class="sxs-lookup"><span data-stu-id="38d13-177">You can define custom address headers in two ways—by using either code or configuration:</span></span>  
   
--   в коде создайте пользовательские заголовки адреса с помощью класса <xref:System.ServiceModel.Channels.AddressHeader>, а затем используйте их в конструкторе класса <xref:System.ServiceModel.EndpointAddress>;  
+-   <span data-ttu-id="38d13-178">в коде создайте пользовательские заголовки адреса с помощью класса <xref:System.ServiceModel.Channels.AddressHeader>, а затем используйте их в конструкторе класса <xref:System.ServiceModel.EndpointAddress>;</span><span class="sxs-lookup"><span data-stu-id="38d13-178">In code, create custom address headers by using the <xref:System.ServiceModel.Channels.AddressHeader> class, and then used in the construction of an <xref:System.ServiceModel.EndpointAddress>.</span></span>  
   
--   в файле конфигурации пользовательские значения [\<верхние колонтитулы\>](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)[\<endpoint\> задаются в качестве дочерних элементов элемента](http://msdn.microsoft.com/ru-ru/13aa23b7-2f08-4add-8dbf-a99f8127c017).  
+-   <span data-ttu-id="38d13-179">В конфигурации, пользовательских [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) указываются как дочерние элементы [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента.</span><span class="sxs-lookup"><span data-stu-id="38d13-179">In configuration, custom [\<headers>](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) are specified as children of the [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
- Обычно рекомендуется использовать не код, а файл конфигурации, поскольку в этом случае заголовки можно будет менять после развертывания.  
+ <span data-ttu-id="38d13-180">Обычно рекомендуется использовать не код, а файл конфигурации, поскольку в этом случае заголовки можно будет менять после развертывания.</span><span class="sxs-lookup"><span data-stu-id="38d13-180">Configuration is generally preferable to code, as it allows you to change the headers after deployment.</span></span>  
   
-### Пользовательские адреса ожидания передачи данных  
- Можно задать адрес ожидания передачи данных, который отличается от универсального кода ресурса \(URI\) конечной точки.Это бывает удобно в сценариях с посредниками, когда предоставляемый адрес SOAP является адресом открытого посредника протокола SOAP, а адрес, по которому конечная точка ожидает передачи данных, является закрытым сетевым адресом.  
+### <a name="custom-listening-addresses"></a><span data-ttu-id="38d13-181">Пользовательские адреса ожидания передачи данных</span><span class="sxs-lookup"><span data-stu-id="38d13-181">Custom Listening Addresses</span></span>  
+ <span data-ttu-id="38d13-182">Можно задать адрес ожидания передачи данных, который отличается от универсального кода ресурса (URI) конечной точки.</span><span class="sxs-lookup"><span data-stu-id="38d13-182">You can set the listening address to a different value than the endpoint’s URI.</span></span> <span data-ttu-id="38d13-183">Это бывает удобно в сценариях с посредниками, когда предоставляемый адрес SOAP является адресом открытого посредника протокола SOAP, а адрес, по которому конечная точка ожидает передачи данных, является закрытым сетевым адресом.</span><span class="sxs-lookup"><span data-stu-id="38d13-183">This is useful in intermediary scenarios where the SOAP address to be exposed is that of a public SOAP intermediary, whereas the address where the endpoint actually listens is a private network address.</span></span>  
   
- Пользовательский адрес ожидания передачи данных можно задать с помощью кода или файла конфигурации:  
+ <span data-ttu-id="38d13-184">Пользовательский адрес ожидания передачи данных можно задать с помощью кода или файла конфигурации:</span><span class="sxs-lookup"><span data-stu-id="38d13-184">You can specify a custom listening address by using either code or configuration:</span></span>  
   
--   для задания пользовательского адреса ожидания передачи данных в коде необходимо добавить класс <xref:System.ServiceModel.Description.ClientViaBehavior> в коллекцию расширений функциональности конечной точки;  
+-   <span data-ttu-id="38d13-185">для задания пользовательского адреса ожидания передачи данных в коде необходимо добавить класс <xref:System.ServiceModel.Description.ClientViaBehavior> в коллекцию расширений функциональности конечной точки;</span><span class="sxs-lookup"><span data-stu-id="38d13-185">In code, specify a custom listening address by adding a <xref:System.ServiceModel.Description.ClientViaBehavior> class to the endpoint’s behavior collection.</span></span>  
   
--   в файле конфигурации необходимо задать пользовательский адрес ожидания передачи данных в атрибуте `ListenUri` элемента [\<endpoint\>](http://msdn.microsoft.com/ru-ru/13aa23b7-2f08-4add-8dbf-a99f8127c017) службы.  
+-   <span data-ttu-id="38d13-186">В конфигурации задания пользовательского адреса ожидания передачи данных с `ListenUri` атрибут службы [ \<endpoint >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента.</span><span class="sxs-lookup"><span data-stu-id="38d13-186">In configuration, specify a custom listening address with the `ListenUri` attribute of the service [\<endpoint>](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element.</span></span>  
   
-### Пользовательский фильтр адресов SOAP  
- Свойство <xref:System.ServiceModel.EndpointAddress.Uri%2A> в сочетании со свойством <xref:System.ServiceModel.EndpointAddress.Headers%2A> позволяет определить фильтр адресов SOAP конечной точки \(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>\).По умолчанию этот фильтр проверяет, что заголовок `To` входящего сообщения совпадает с универсальным кодом ресурса \(URI\) конечной точки и что в сообщении имеются все обязательные заголовки конечной точки.  
+### <a name="custom-soap-address-filter"></a><span data-ttu-id="38d13-187">Пользовательский фильтр адресов SOAP</span><span class="sxs-lookup"><span data-stu-id="38d13-187">Custom SOAP Address Filter</span></span>  
+ <span data-ttu-id="38d13-188">Свойство <xref:System.ServiceModel.EndpointAddress.Uri%2A> в сочетании со свойством <xref:System.ServiceModel.EndpointAddress.Headers%2A> позволяет определить фильтр адресов SOAP конечной точки (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>).</span><span class="sxs-lookup"><span data-stu-id="38d13-188">The <xref:System.ServiceModel.EndpointAddress.Uri%2A> is used in conjunction with any <xref:System.ServiceModel.EndpointAddress.Headers%2A> property to define an endpoint’s SOAP address filter (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>).</span></span> <span data-ttu-id="38d13-189">По умолчанию этот фильтр проверяет, что заголовок `To` входящего сообщения совпадает с универсальным кодом ресурса (URI) конечной точки и что в сообщении имеются все обязательные заголовки конечной точки.</span><span class="sxs-lookup"><span data-stu-id="38d13-189">By default, this filter verifies that an incoming message has a `To` message header that matches the endpoint’s URI and that all of the required endpoint headers are present in the message.</span></span>  
   
- В некоторых сценариях конечная точка получает все сообщения, которые приходят через соответствующий транспорт, а не только те, у которых есть соответствующий заголовок `To`.Чтобы включить такой режим, можно воспользоваться классом <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
+ <span data-ttu-id="38d13-190">В некоторых сценариях конечная точка получает все сообщения, которые приходят через соответствующий транспорт, а не только те, у которых есть соответствующий заголовок `To`.</span><span class="sxs-lookup"><span data-stu-id="38d13-190">In some scenarios, an endpoint receives all messages that arrive on the underlying transport, and not just those with the appropriate `To` header.</span></span> <span data-ttu-id="38d13-191">Чтобы включить такой режим, можно воспользоваться классом <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.</span><span class="sxs-lookup"><span data-stu-id="38d13-191">To enable this, the user can use the <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> class.</span></span>  
   
-## См. также  
- [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)   
- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="38d13-192">См. также</span><span class="sxs-lookup"><span data-stu-id="38d13-192">See Also</span></span>  
+ [<span data-ttu-id="38d13-193">Указание адреса конечной точки</span><span class="sxs-lookup"><span data-stu-id="38d13-193">Specifying an Endpoint Address</span></span>](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+ [<span data-ttu-id="38d13-194">Службы идентификации и проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="38d13-194">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
