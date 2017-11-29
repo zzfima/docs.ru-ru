@@ -1,22 +1,25 @@
 ---
-title: "Справочные сведения по классам WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Справочные сведения по классам WMI"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ee03f0c567f2b154eaf2e7fdf608b093cfbe2d1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Справочные сведения по классам WMI
+# <a name="wmi-class-reference"></a>Справочные сведения по классам WMI
 В данном разделе перечислены все классы WMI, представленные поставщиком WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
   
 ## <a name="accessing-wmi-instances"></a>Доступ к экземплярам WMI  
@@ -31,7 +34,7 @@ caps.handback.revision: 6
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- «Поведение класс»  
+ «Класс поведение»  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -105,7 +108,7 @@ caps.handback.revision: 6
   
  [PrivacyNoticeBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/privacynoticebindingelement.md)  
   
- [ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
+ [Элемент ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
   
  [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   

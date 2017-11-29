@@ -1,76 +1,79 @@
 ---
-title: "&lt;findCriteria&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;Критерии_поиска&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b428d1a95ec6f1f493c831f66223f52e4723990c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;findCriteria&gt;
-Элемент конфигурации, который предоставляет набор критериев, используемых клиентским приложением для поиска службы обнаружения.  Критерии могут быть сгруппированы в критерии поиска \(с указанием искомых служб\) и критерии прекращения поиска \(как долго должен длиться поиск\).  
+# <a name="ltfindcriteriagt"></a>&lt;Критерии_поиска&gt;
+Элемент конфигурации, который предоставляет набор критериев, используемых клиентским приложением для поиска службы обнаружения. Критерии могут быть сгруппированы в критерии поиска (с указанием искомых служб, которые вы ищете) и критерии прекращения поиска (как долго поиска должно длиться).  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<standardEndpoints >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <system.serviceModel>  
-    <standardEndpoints>  
-       <dynamicEndpoint>   
-          <standardEndpoint>  
-             <discoveryClientSettings discoveryEndpoint=”String” >  
-               <findCriteria duration=”TimeSpan”  
-                  maxResults=”Integer”   
-                  scopeMatchBy=”Uri” >  
-                  <contractTypeNames>  
-                     <add name="String" namespace="String" />  
-                  <contractTypeNames>  
-                  <extensions />  
-                  <scopes>  
-                    <add scope="URI"/>  
-                  </scopes>  
-               </findCriteria>  
-             </discoveryClientSettings>  
-          <standardEndpoint>  
-       </dynamicEndpoint>          
-    </standardEndpoints>  
+  <standardEndpoints>
+    <dynamicEndpoint>
+      <standardEndpoint>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String" namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI" />
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
+      </standardEndpoint>
+    </dynamicEndpoint>
+  </standardEndpoints>  
 </system.serviceModel>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|duration|Значение Timespan, указывающее максимальное время ожидания ответа от служб в сети.  Значение по умолчанию \- 20 секунд.|  
-|maxResults|Целочисленное значение, указывающее максимальное количество ответов, ожидаемых от служб по сети или через Интернет.  Операция поиска завершается, если максимальное число ответов достигнуто до истечения срока, указанного в атрибуте `duration`.|  
-|scopeMatchBy|URI, указывающий алгоритм сопоставления, который используется для сопоставления областей из сообщения зонда с областями из конечной точки.<br /><br /> Поддерживаются пять правил сопоставления областей.  Если правило сопоставления областей не указано, используется `ScopeMatchByPrefix`.  Дополнительные сведения см. в разделе <xref:System.ServiceModel.Discovery.FindCriteria>.|  
+|---------------|-----------------|  
+|duration|Значение Timespan, указывающее максимальное время ожидания ответа от служб в сети. Значение по умолчанию - 20 секунд.|  
+|maxResults|Целочисленное значение, указывающее максимальное количество ответов, ожидаемых от служб по сети или через Интернет. Операция поиска завершается, если максимальное число ответов достигнуто до истечения срока, указанного в атрибуте `duration`.|  
+|scopeMatchBy|URI, указывающий алгоритм сопоставления, который используется для сопоставления областей из сообщения зонда с областями из конечной точки.<br /><br /> Поддерживаются пять правил сопоставления областей. Если правило сопоставления областей не указано, используется `ScopeMatchByPrefix`. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Discovery.FindCriteria>.|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<contractTypeNames\>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Коллекция элементов конфигурации, которые содержат имена типов контрактов службы рабочего процесса.|  
-|\<расширения\> из \<критерии\_поиска\>|Коллекция объектов элементов XML, предоставляющих расширения.|  
-|[\<scopes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Коллекция объектов, содержащих абсолютные URI, по которым определяется расположение отдельных служб в ходе операции поиска.<br /><br /> Если найдена определенная служба, URI службы и URI области были успешно сопоставлены, иногда с помощью правил области, предназначенных для преодоления сложностей совпадения.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<standardEndpoints\>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Содержит параметры, необходимые приложению для участия в процессе обнаружения служб в качестве клиента.|  
+|-------------|-----------------|  
+|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Коллекция элементов конфигурации, которые содержат имена типов контрактов службы рабочего процесса.|  
+|\<расширения > из \<Критерии_поиска >|Коллекция объектов элементов XML, предоставляющих расширения.|  
+|[\<области >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Коллекция объектов, содержащих абсолютные URI, по которым определяется расположение отдельных служб в ходе операции поиска.<br /><br /> Если найдена определенная служба, URI службы и URI области были успешно сопоставлены, иногда с помощью правил области, предназначенных для преодоления сложностей совпадения.|  
   
-## См. также  
- <xref:System.ServiceModel.Discovery.FindCriteria>   
+### <a name="parent-elements"></a>Родительские элементы  
+  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Содержит параметры, необходимые приложению для участия в процессе обнаружения служб в качестве клиента.|  
+  
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Discovery.FindCriteria>  
  <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

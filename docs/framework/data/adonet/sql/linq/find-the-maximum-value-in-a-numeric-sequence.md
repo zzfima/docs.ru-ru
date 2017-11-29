@@ -1,25 +1,31 @@
 ---
-title: "Нахождение наибольшего значения в числовой последовательности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Нахождение максимального значения в числовой последовательности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 06c8d2b2eedc2d3684ef44f028cd73e80a8da5cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Нахождение наибольшего значения в числовой последовательности
+# <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Нахождение максимального значения в числовой последовательности
 Используйте оператор <xref:System.Linq.Enumerable.Max%2A> для нахождения максимального значения в числовой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере выполняется поиск самой последней даты приема сотрудника на работу.  
   
  Если этот запрос запустить в образце базы данных Northwind, то будут получены следующие выходные данные: `11/15/1994 12:00:00 AM`.  
@@ -27,7 +33,7 @@ caps.handback.revision: 2
  [!code-csharp[DLinqQueryExamples#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#6)]
  [!code-vb[DLinqQueryExamples#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#6)]  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере выполняется максимальное количество единиц продукта на складе.  
   
  Если этот пример запустить в образце базы данных Northwind, то будут получены следующие выходные данные: `125`.  
@@ -35,8 +41,8 @@ caps.handback.revision: 2
  [!code-csharp[DLinqQueryExamples#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#7)]
  [!code-vb[DLinqQueryExamples#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#7)]  
   
-## Пример  
- В следующем примере для поиска `Products`, имеющего максимальную цену за единицу в каждой категории используется функция Max.  Результаты упорядочиваются по категории.  
+## <a name="example"></a>Пример  
+ В следующем примере для поиска `Products`, имеющего максимальную цену за единицу в каждой категории используется функция Max. Результаты упорядочиваются по категории.  
   
  [!code-csharp[DLinqQueryExamples#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#8)]
  [!code-vb[DLinqQueryExamples#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#8)]  
@@ -75,6 +81,6 @@ caps.handback.revision: 2
   
  `Carnarvon Tigers`  
   
-## См. также  
- [Агрегатные запросы](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)   
- [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>См. также  
+ [Статистические запросы](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 25a384fa2465be6f4e523410e69aba6813e5c22d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Пример: Устранение неполадок динамического программирования
 > [!NOTE]
@@ -60,9 +58,9 @@ AppViewModel.Current.LayoutVM.PageMap
   
  Вероятной причиной для сбоя является то, что в `App.Core.ViewModels.Layout.LayoutApplicationVM` не хватает метаданных, так как он находится в другом пространстве имен.  
   
- В этом случае добавления директивы среды выполнения для `App.Core.ViewModels` устранило проблему. Первопричиной был вызов API для метода <xref:System.Type.GetType%28System.String%29?displayProperty=fullName>, который вернул значение **NULL**, а приложение молча проигнорировало проблему до возникновения сбоя.  
+ В этом случае добавления директивы среды выполнения для `App.Core.ViewModels` устранило проблему. Первопричиной был вызов API для метода <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType>, который вернул значение **NULL**, а приложение молча проигнорировало проблему до возникновения сбоя.  
   
- В динамическом программировании хорошей практикой при использовании API отражения в [!INCLUDE[net_native](../../../includes/net-native-md.md)] считается использование перегрузок <xref:System.Type.GetType%2A?displayProperty=fullName>, которые создает исключение при сбое.  
+ В динамическом программировании хорошей практикой при использовании API отражения в [!INCLUDE[net_native](../../../includes/net-native-md.md)] считается использование перегрузок <xref:System.Type.GetType%2A?displayProperty=nameWithType>, которые создает исключение при сбое.  
   
 ## <a name="is-this-an-isolated-case"></a>Это изолированный случай?  
  Другие проблемы также могут возникнуть при использовании `App.Core.ViewModels`.  Необходимо решить, стоит ли определять и устранять каждое исключение отсутствующих метаданных или лучше сэкономить время и добавить директивы для большего класса типов.  Здесь, добавление метаданных `dynamic` для `App.Core.ViewModels` может быть лучше, если результирующее увеличение размера выходного двоичного файла не проблема.  
@@ -71,6 +69,5 @@ AppViewModel.Current.LayoutVM.PageMap
  Если приложение использовало `typeof(LayoutApplicationVM)` вместо `Type.GetType("LayoutApplicationVM")`, то цепочка инструментов могла сохранить метаданные `browse`.  Тем не менее оно по-прежнему не создало метаданные `invoke`, которые бы привели к исключению [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) при создании экземпляра типа. Чтобы предотвратить это исключение, как и раньше необходимо добавить директиву среды выполнения для пространства имен или тип, который задает политику `dynamic`. Сведения о директивах среды выполнения см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>См. также  
- [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Пример. Обработка исключений при привязке данных](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
-

@@ -1,25 +1,31 @@
 ---
-title: "Программирование клиентов на уровне канала | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Программирование клиентов на уровне канала"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a6ffe482c8d04314b79ee5bb7029d2583c56c363
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Программирование клиентов на уровне канала
-В данном разделе описывается, как создать клиентское приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], не используя класс <xref:System.ServiceModel.ClientBase%601?displayProperty=fullName> и связанную с ним объектную модель.  
+# <a name="client-channel-level-programming"></a>Программирование клиентов на уровне канала
+В данном разделе описывается, как создать клиентское приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], не используя класс <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> и связанную с ним объектную модель.  
   
-## Отправка сообщений  
+## <a name="sending-messages"></a>Отправка сообщений  
  Чтобы подготовиться к отправке сообщений и получению и обработке ответов, необходимы следующие действия.  
   
 1.  Создайте привязку.  
@@ -32,19 +38,19 @@ caps.handback.revision: 6
   
 5.  Закройте все объекты каналов.  
   
-#### Создание привязки  
- Процедура отправки сообщений аналогична процедуре их получения \(см. раздел [Программирование служб на уровне канала](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)\) в том, что в первую очередь создается привязка.В данном примере создается новая привязка <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName>, и в коллекцию ее элементов добавляется элемент <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=fullName>.  
+#### <a name="creating-a-binding"></a>Создание привязки  
+ Аналогично принимающей (см. [программирования на уровне канала службы](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), отправка сообщений начинается при создании привязки. В данном примере создается новая привязка <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, и в коллекцию ее элементов добавляется элемент <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>.  
   
-#### Создание фабрики каналов  
- На этот раз вместо того чтобы создавать прослушиватель каналов <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=fullName>, следует создать производство каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=fullName> вызовом метода <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=fullName> в привязке с параметром типа <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=fullName>.Прослушиватели каналов используются ожидающей входящих сообщений стороной, а фабрики каналов — стороной, которая инициирует связь для создания канала.Точно так же, как при работе с прослушивателями каналов, фабрики каналов можно использовать только после того, как они будут открыты.  
+#### <a name="building-a-channelfactory"></a>Создание фабрики каналов  
+ На этот раз вместо того чтобы создавать прослушиватель каналов <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType>, следует создать производство каналов <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> вызовом метода <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> в привязке с параметром типа <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>. Прослушиватели каналов используются ожидающей входящих сообщений стороной, а фабрики каналов - стороной, которая инициирует связь для создания канала. Точно так же, как при работе с прослушивателями каналов, фабрики каналов можно использовать только после того, как они будут открыты.  
   
-#### Создание канала  
- Затем, чтобы создать канал <xref:System.ServiceModel.Channels.IRequestChannel>, необходимо вызвать метод <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=fullName>.Этот вызов принимает адрес конечной точки, с которой необходимо установить связь, используя вновь создаваемый канал.После создания канала необходимо вызвать для него функцию "Открыть", чтобы подготовить его к взаимодействию.В зависимости от особенностей транспорта подобный вызов функции "Открыть" может инициировать соединение с целевой конечной точкой или не выполнить никаких действий в сети.  
+#### <a name="creating-a-channel"></a>Создание канала  
+ Затем, чтобы создать канал <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>, необходимо вызвать метод <xref:System.ServiceModel.Channels.IRequestChannel>. Этот вызов принимает адрес конечной точки, с которой необходимо установить связь, используя вновь создаваемый канал. После создания канала необходимо вызвать для него функцию "Открыть", чтобы подготовить его к взаимодействию. В зависимости от особенностей транспорта подобный вызов функции "Открыть" может инициировать соединение с целевой конечной точкой или не выполнить никаких действий в сети.  
   
-#### Отправка запроса и чтение ответа  
- После открытия канала можно создать сообщение, воспользоваться методом запроса канала для отправки запроса и ожидать ответа.По возвращении этого метода приходит ответное сообщение, прочитав которое, можно узнать, каков был ответ конечной точки.  
+#### <a name="sending-a-request-and-reading-the-reply"></a>Отправка запроса и чтение ответа  
+ После открытия канала можно создать сообщение, воспользоваться методом запроса канала для отправки запроса и ожидать ответа. По возвращении этого метода приходит ответное сообщение, прочитав которое, можно узнать, каков был ответ конечной точки.  
   
-#### Закрытие объектов  
+#### <a name="closing-objects"></a>Закрытие объектов  
  Во избежание утечки ресурсов следует закрывать объекты, используемые во взаимодействии, если они больше не требуются.  
   
  В следующем примере кода показан основной клиент, использующий фабрику каналов для отправки сообщения и чтения ответа.  

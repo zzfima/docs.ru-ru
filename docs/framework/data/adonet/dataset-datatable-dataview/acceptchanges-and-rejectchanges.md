@@ -1,27 +1,33 @@
 ---
-title: "AcceptChanges и RejectChanges | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "AcceptChanges и RejectChanges"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6ac64fee869ce58413e799f4217f009ef6ae91a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# AcceptChanges и RejectChanges
-После проверки правильности изменений, внесенных в данные в объекте <xref:System.Data.DataTable>, эти изменения можно принять с помощью метода <xref:System.Data.DataRow.AcceptChanges%2A> объекта <xref:System.Data.DataRow>, <xref:System.Data.DataTable> или <xref:System.Data.DataSet>, который присваивает значениям строк **Current** значения **Original**, а свойству **RowState** \- значение **Unchanged**.  В результате принятия или отклонения изменений происходит удаление всех данных **RowError** и свойству **HasErrors** присваивается значение **false**.  Принятие или отклонение изменений также может затрагивать обновление данных в источнике данных.  Для получения дополнительной информации см. [Обновление источников данных с помощью объектов DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+# <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges и RejectChanges
+После проверки изменений, внесенных в данные в точности <xref:System.Data.DataTable>, можно принять изменения с помощью <xref:System.Data.DataRow.AcceptChanges%2A> метод <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, или <xref:System.Data.DataSet>, задающий **текущей** строки значения были **исходного** значения и задаст **RowState** свойства **Unchanged**. Принятие или отклонение изменений удаление всех **RowError** сведения и наборы **HasErrors** свойства **false**. Принятие или отклонение изменений также может затрагивать обновление данных в источнике данных. Дополнительные сведения см. в разделе [обновление источников данных с помощью DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- Если для объекта **DataTable** существуют ограничения внешнего ключа, то изменения, принятые или отклоненные с помощью методов **AcceptChanges** или **RejectChanges**, распространяются на дочерние строки объекта **DataRow** в соответствии с правилами **ForeignKeyConstraint.AcceptRejectRule**.  Для получения дополнительной информации см. [Ограничения DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Если существуют ограничения внешнего ключа на **DataTable**, изменения, принятые или отклоненные с помощью **AcceptChanges** и **RejectChanges** распространяются на дочерние строки объекта  **DataRow** согласно **ForeignKeyConstraint.AcceptRejectRule**. Дополнительные сведения см. в разделе [ограничения таблиц данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
- В следующем примере происходит проверка на наличие строк с ошибками, по возможности устраняются ошибки и отклоняются строки, в которых ошибка не может быть устранена.  Следует отметить, что применительно к устраненным ошибкам значение **RowError** переустанавливается в пустую строку, что приводит к присвоению свойству **HasErrors** значения **false**.  После устранения ошибок или отклонения всех строк с ошибками вызывается метод **AcceptChanges** для принятия всех изменений для всего объекта **DataTable**.  
+ В следующем примере происходит проверка на наличие строк с ошибками, по возможности устраняются ошибки и отклоняются строки, в которых ошибка не может быть устранена. Обратите внимание, что для разрешения ошибок, **RowError** значение сбрасывается на пустую строку, вызывая **HasErrors** свойству будет присвоено **false**. Когда все строки с ошибками после устранения ошибок или отклонения **AcceptChanges** вызывается для принятия всех изменений для всего **DataTable**.  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -39,7 +45,6 @@ If workTable.HasErrors Then
 End If  
   
 workTable.AcceptChanges()  
-  
 ```  
   
 ```csharp  
@@ -61,9 +66,9 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## См. также  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- [Обработка данных в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ [Обработка данных в объект DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

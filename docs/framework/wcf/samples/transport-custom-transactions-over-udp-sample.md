@@ -1,26 +1,29 @@
 ---
-title: "Транспорт: образец пользовательских транзакций по протоколу UDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Транспорт: пример пользовательских транзакций по протоколу UDP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c1586b763d98776468322144019407c7c6cc27a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Транспорт: образец пользовательских транзакций по протоколу UDP
-Этот пример основан на примере [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) из [Расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md)[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Он расширяет образец транспорта определяемой пользователем процедуры за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+# <a name="transport-custom-transactions-over-udp-sample"></a>Транспорт: пример пользовательских транзакций по протоколу UDP
+Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md). Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
-## Изменения кода в образце транспорта UDP  
- Чтобы продемонстрировать поток транзакций, в этом образце изменен контракт службы для `ICalculatorContract`. Здесь этот контракт требует область транзакции для `CalculatorService.Add()`.Кроме того, в контракт операции `Add` добавлен параметр `System.Guid`.Этот параметр используется для передачи службе идентификатора транзакции клиента.  
+## <a name="code-changes-in-the-udp-transport-sample"></a>Изменения кода в примере транспорта UDP  
+ Чтобы продемонстрировать поток транзакций, в этом примере изменен контракт службы для `ICalculatorContract`. Здесь этот контракт требует область транзакции для `CalculatorService.Add()`. Кроме того, в контракт операции `System.Guid` добавлен параметр `Add`. Этот параметр используется для передачи службе идентификатора транзакции клиента.  
   
 ```  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -45,7 +48,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- Образец [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) использует пакеты UDP для обмена сообщениями между клиентом и службой.Образец [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) использует для транспортировки сообщений тот же механизм, но при создании потока транзакции она вставляется в пакет UDP вместе с закодированным сообщением.  
+ [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образец использует пакеты UDP для передачи сообщений между клиентом и службой. [Транспорт: пример пользовательского транспорта](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) использует тот же механизм для передачи сообщений, но если поток транзакций, он автоматически вставляется в пакете UDP вместе с закодированное сообщение.  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -53,13 +56,13 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` — вспомогательный метод, содержащий новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и его помещения в буфер.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` - вспомогательный метод, содержащий новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и его помещения в буфер.  
   
- Для транспорта пользовательского потока транзакций реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций, и передавать эти сведения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Должен быть и механизм для передачи транзакции пользователя на транспортный уровень.Данный образец использует для получения этих сведений "инспекторы сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]".Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:  
+ Для транспорта пользовательского потока транзакций реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций, и передавать эти сведения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Должен быть и механизм для передачи транзакции пользователя на транспортный уровень. Данный образец использует для получения этих сведений "инспекторы сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]". Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:  
   
--   Определяет, следует ли создать поток транзакции для данного действия сообщения \(это происходит в `IsTxFlowRequiredForThisOperation()`\);  
+-   Определяет, следует ли создать поток транзакции для данного действия сообщения (это происходит в `IsTxFlowRequiredForThisOperation()`);  
   
--   Присоединяет к сообщению текущую внешнюю транзакцию с помощью `TransactionFlowProperty`, если транзакцию нужно заключить в поток \(это делается в `BeforeSendRequest()`\).  
+-   Присоединяет к сообщению текущую внешнюю транзакцию с помощью `TransactionFlowProperty`, если транзакцию нужно заключить в поток (это делается в `BeforeSendRequest()`).  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -97,7 +100,6 @@ public class TransactionFlowInspector : IClientMessageInspector
       [...]  
  }  
 }  
-  
 ```  
   
  Сам `TransactionFlowInspector` передается инфраструктуре с помощью пользовательского поведения `TransactionFlowBehavior`.  
@@ -125,7 +127,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- При наличии вышеуказанного механизма пользовательский код создает область `TransactionScope` перед вызовом операции службы.Инспектор сообщений следит, чтобы транзакция была передана транспорту, если она должна быть заключена в поток для операции службы.  
+ При наличии вышеуказанного механизма пользовательский код создает область `TransactionScope` перед вызовом операции службы. Инспектор сообщений следит, чтобы транзакция была передана транспорту, если она должна быть заключена в поток для операции службы.  
   
 ```  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -167,7 +169,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` — это вспомогательный метод, обращающий процесс сериализации, выполняемый `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` - это вспомогательный метод, обращающий процесс сериализации, выполняемый `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
   
  Если транзакция получена в потоке, она присоединяется к сообщению в свойстве `TransactionMessageProperty`.  
   
@@ -182,11 +184,11 @@ if (transaction != null)
   
  Это обеспечивает принятие диспетчером транзакции в момент распределения и использование ее при вызове операции службы, которой адресовано сообщение.  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Чтобы выполнить построение решения, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Этот образец следует выполнять так же, как образец [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).Для его запуска запустите службу с UdpTestService.exe.В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий.Для этого в проводнике щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и выберите **Запуск от имени администратора**.  
+2.  Текущая выборка должна выполняться так же, как [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Для его запуска запустите службу с UdpTestService.exe. В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий. Чтобы сделать это, щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и нажмите кнопку **Запуск от имени администратора**.  
   
 3.  Получатся следующие результаты.  
   
@@ -196,7 +198,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4.  В этот момент можно запустить клиент, выполнив UdpTestClient.exe.Результаты работы клиента таковы.  
+4.  В этот момент можно запустить клиент, выполнив UdpTestClient.exe. Результаты работы клиента таковы.  
   
     ```  
     0  
@@ -227,9 +229,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  Приложение службы отображает сообщение `The client transaction has flowed to the service`, если может сопоставить идентификатор, присланный клиентом в параметре `clientTransactionId` операции `CalculatorService.Add()`, идентификатору транзакции службы.Сопоставление происходит, только если транзакция клиента доставлена службе в виде потока.  
+6.  Приложение службы отображает сообщение `The client transaction has flowed to the service`, если может сопоставить идентификатор, присланный клиентом в параметре `clientTransactionId` операции `CalculatorService.Add()`, идентификатору транзакции службы. Сопоставление происходит, только если транзакция клиента доставлена службе в виде потока.  
   
-7.  Для выполнения клиентского приложения относительно конечных точек, опубликованных с помощью конфигурации, нажмите в окне приложения службы клавишу ВВОД и снова запустите тестовый клиент.Служба должна предоставить следующие результаты.  
+7.  Для выполнения клиентского приложения относительно конечных точек, опубликованных с помощью конфигурации, нажмите в окне приложения службы клавишу ВВОД и снова запустите тестовый клиент. Служба должна предоставить следующие результаты.  
   
     ```  
     Testing Udp From Config.  
@@ -247,7 +249,7 @@ if (transaction != null)
   
 10. Обратите внимание, что Svcutil.exe не создает конфигурацию расширения привязки для `sampleProfileUdpBinding`, поэтому ее нужно добавить вручную.  
   
-    ```  
+    ```xml  
     <configuration>  
         <system.serviceModel>      
             …  
@@ -262,13 +264,13 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

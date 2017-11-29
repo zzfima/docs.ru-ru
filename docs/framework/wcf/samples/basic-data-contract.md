@@ -1,30 +1,29 @@
 ---
-title: "Базовый контракт данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Контракт данных"
+title: "Базовый контракт данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-caps.latest.revision: 37
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 37
+caps.latest.revision: "37"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6f428953fe6803f1ade4f4947f71b0e1360fdb96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Базовый контракт данных
-Этот образец демонстрирует реализацию контракта данных.Контракты данных позволяют передавать структурированные данные в службы и из служб.Этот образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), однако в нем вместо базовых числовых типов используются комплексные числа.  
+# <a name="basic-data-contract"></a>Базовый контракт данных
+Этот образец демонстрирует реализацию контракта данных. Контракты данных позволяют передавать структурированные данные в службы и из служб. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , но использует комплексные числа вместо базовых числовых типов.  
   
- В этом образце служба размещается в службах IIS, а клиентом является консольное приложение \(EXE\).  
+ В этом образце служба размещается в службах IIS, а клиентом является консольное приложение (EXE).  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -45,10 +44,9 @@ public interface ICalculator
     [OperationContract]  
     ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2);  
 }  
-  
 ```  
   
- К определению класса `ComplexNumber` применены атрибуты <xref:System.Runtime.Serialization.DataContractAttribute>и <xref:System.Runtime.Serialization.DataMemberAttribute>, чтобы указать, какие поля класса могут быть переданы по линии связи между клиентом и службой, как показано в следующем образце кода.  
+ К определению класса <xref:System.Runtime.Serialization.DataContractAttribute> применены атрибуты <xref:System.Runtime.Serialization.DataMemberAttribute>и `ComplexNumber`, чтобы указать, какие поля класса могут быть переданы по линии связи между клиентом и службой, как показано в следующем образце кода.  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -65,7 +63,6 @@ public class ComplexNumber
         this.Imaginary = imaginary;  
     }  
 }  
-  
 ```  
   
  Реализация службы вычисляет и возвращает соответствующий результат, принимая и возвращая числа типа `ComplexNumber`.  
@@ -105,10 +102,9 @@ public class CalculatorService : ICalculator
                                                numerator.Imaginary);  
     }  
 }  
-  
 ```  
   
- Реализация клиента также оперирует комплексными числами.И контракт службы, и контракт данных определены в исходном файле generatedClient.cs, который формируется с помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из метаданных службы.  
+ Реализация клиента также оперирует комплексными числами. Контракт службы и контракт данных определяются в файле generatedClient.cs источника, который создается [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из метаданных службы.  
   
 ```  
 // Create a client.  
@@ -126,13 +122,11 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
       result.Real, result.Imaginary);   
     …  
 }  
-  
 ```  
   
- При выполнении образца запросы и отклики операции отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При выполнении образца запросы и отклики операции отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
-  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  
 Multiply(2 + 3i, 4 + 7i) = -13 + 26i  
@@ -141,21 +135,21 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 41i
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<Iдиск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## См. также
+## <a name="see-also"></a>См. также

@@ -1,40 +1,31 @@
 ---
-title: "Программирование с узлами (Visual Basic) | Документы Microsoft"
+title: "Программирование с узлами (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52fb60b95b869a79900f84c2a1a7a6151bb5b58f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5f56e98d4a732b6cc69dde87d0efe8e87506b48b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Программирование с узлами (Visual Basic)
-Разработчикам [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], которым требуется написать такие программы, как XML-редактор, система преобразования или модуль формирования отчетов, часто приходится писать программы, которые работают на более высоком уровне гранулярности по сравнению с элементами и атрибутами. Им часто приходится работать на уровне узлов, обрабатывая текстовые узлы, инструкции по обработке и комментарии. В этом разделе приводятся некоторые сведения о программировании на уровне узлов.  
+Разработчикам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], которым требуется написать такие программы, как XML-редактор, система преобразования или модуль формирования отчетов, часто приходится писать программы, которые работают на более высоком уровне гранулярности по сравнению с элементами и атрибутами. Им часто приходится работать на уровне узлов, обрабатывая текстовые узлы, инструкции по обработке и комментарии. В этом разделе приводятся некоторые сведения о программировании на уровне узлов.  
   
 ## <a name="node-details"></a>Сведения об узле  
  Программист, работающий на уровне узлов, должен учитывать целый ряд нюансов программирования.  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>Родительскому свойству дочерних узлов XDocument задано значение Null  
- <xref:System.Xml.Linq.XObject.Parent%2A>Свойство содержит родительский объект <xref:System.Xml.Linq.XElement>, не родительский узел.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XObject.Parent%2A> Дочерние узлы <xref:System.Xml.Linq.XDocument>не имеют родительского объекта <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> Их родителем является документ, поэтому <xref:System.Xml.Linq.XObject.Parent%2A>для этих узлов задано значение null.</xref:System.Xml.Linq.XObject.Parent%2A>  
+ Свойство <xref:System.Xml.Linq.XObject.Parent%2A> содержит родительский объект <xref:System.Xml.Linq.XElement>, а не родительский узел. Дочерние узлы объекта <xref:System.Xml.Linq.XDocument> не имеют родительского объекта <xref:System.Xml.Linq.XElement>. Их родителем является документ, поэтому свойству <xref:System.Xml.Linq.XObject.Parent%2A> этих узлов задается значение NULL.  
   
  Следующий пример демонстрирует это:  
   
@@ -52,7 +43,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>Соседние текстовые узлы возможны  
- В нескольких моделях программирования XML соседние текстовые узлы всегда объединяются. Иногда такую операцию называют нормализацией текстовых узлов. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] не нормализует текстовые узлы. Если добавить два текстовых узла в один элемент, то они будут соседними. Тем не менее если добавить содержимое, определенное как строка, а не как <xref:System.Xml.Linq.XText>узел, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] может объединить строку с соседним текстовым узлом.</xref:System.Xml.Linq.XText>  
+ В нескольких моделях программирования XML соседние текстовые узлы всегда объединяются. Иногда такую операцию называют нормализацией текстовых узлов. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] не нормализует текстовые узлы. Если добавить два текстовых узла в один элемент, то они будут соседними. Однако если добавить содержимое, определенное как строка, а не как узел <xref:System.Xml.Linq.XText>, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] может объединить строку с соседним текстовым узлом.  
   
  Следующий пример демонстрирует это:  
   
@@ -111,15 +102,15 @@ Console.WriteLine(child2)
   
  В этом примере выводятся следующие данные:  
   
-```  
+```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Пространства имен являются атрибутами в дереве LINQ to XML  
- Несмотря на то что синтаксис деклараций пространств имен похож на синтаксис атрибутов, в некоторых программных интерфейсах, например XSLT и XPath, декларации пространств имен не считаются атрибутами. Однако в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], пространства имен хранятся в виде <xref:System.Xml.Linq.XAttribute>объекты в дереве XML.</xref:System.Xml.Linq.XAttribute> Если просмотреть атрибуты элемента, который содержит декларацию пространства имен, то можно увидеть, что декларация пространства имен является одним из элементов возвращенной коллекции.  
+ Несмотря на то что синтаксис деклараций пространств имен похож на синтаксис атрибутов, в некоторых программных интерфейсах, например XSLT и XPath, декларации пространств имен не считаются атрибутами. Однако в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] пространства имен хранятся в XML-дереве как объекты <xref:System.Xml.Linq.XAttribute>. Если просмотреть атрибуты элемента, который содержит декларацию пространства имен, то можно увидеть, что декларация пространства имен является одним из элементов возвращенной коллекции.  
   
- <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>Свойство указывает, является ли атрибут объявления пространства имен.</xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>  
+ Свойство <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> указывает, является ли атрибут декларацией пространства имен.  
   
 ```vb  
 Dim root As XElement = _   
@@ -142,7 +133,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Методы оси XPath не возвращают дочерние пробелы XDocument  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]допускает дочерние текстовые узлы объекта <xref:System.Xml.Linq.XDocument>, при условии, что текстовые узлы содержат только пробелы.</xref:System.Xml.Linq.XDocument> Тем не менее, модель объектов XPath не включает пробелы как дочерние узлы документа, поэтому при прохождении по дочерним узлам из <xref:System.Xml.Linq.XDocument>с помощью <xref:System.Xml.Linq.XContainer.Nodes%2A>оси, будет возвращено текстовых узлов пробелов.</xref:System.Xml.Linq.XContainer.Nodes%2A> </xref:System.Xml.Linq.XDocument> Однако при прохождении по дочерним узлам из <xref:System.Xml.Linq.XDocument>помощи методов оси XPath текстовые узлы пробелов не возвращаются.</xref:System.Xml.Linq.XDocument>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] допускает дочерние текстовые узлы объекта <xref:System.Xml.Linq.XDocument>, если эти текстовые узлы содержат только пробелы. Однако модель объектов XPath не включает пробелы как дочерние узлы документа, поэтому при прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> при помощи оси <xref:System.Xml.Linq.XContainer.Nodes%2A> возвращаются текстовые узлы с пробелами. Однако при прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> при помощи методов оси XPath текстовые узлы с пробелами возвращены не будут.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -167,7 +158,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
 ```  
   
 ### <a name="xdeclaration-objects-are-not-nodes"></a>Объекты XDeclaration не являются узлами  
- При прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument>, вы не увидите объект XML-декларации.</xref:System.Xml.Linq.XDocument> Это свойство документа, а не его дочерний узел.  
+ При прохождении по дочерним узлам объекта <xref:System.Xml.Linq.XDocument> нельзя увидеть объект XML-декларации. Это свойство документа, а не его дочерний узел.  
   
 ```vb  
 Dim doc As XDocument = _  
@@ -183,12 +174,11 @@ Console.WriteLine(doc.Nodes().Count())
   
  В этом примере выводятся следующие данные:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+ [Дополнительно LINQ to XML, программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

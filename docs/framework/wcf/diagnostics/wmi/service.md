@@ -1,25 +1,28 @@
 ---
-title: "Служба | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Служба"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd784b470810e16b86ba7537b1f45681ac3e1ed1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Служба
+# <a name="service"></a>Служба
 Служба  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class Service  
@@ -39,98 +42,98 @@ class Service
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс Service не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс Service имеет следующие свойства.  
   
-### BaseAddresses  
+### <a name="baseaddresses"></a>BaseAddresses  
  Тип данных: массив строк  
   
  Тип доступа: только для чтения  
   
  Базовые адреса, используемые службой.  
   
-### Поведения  
+### <a name="behaviors"></a>Расширения функциональности  
  Тип данных: массив Behavior  
   
  Тип доступа: только для чтения  
   
  Поведения, связанные с этой службой.  
   
-### ConfigurationName  
+### <a name="configurationname"></a>ConfigurationName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- ServiceElement\_BehaviorConfiguration  
+ ServiceElement_BehaviorConfiguration  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя экземпляра счетчиков производительности службы.  
   
-### DistinguishedName  
+### <a name="distinguishedname"></a>DistinguishedName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя службы по адресу.  
   
-### Расширения  
+### <a name="extensions"></a>Расширения  
  Тип данных: массив строк  
   
  Тип доступа: только для чтения  
   
  Контексты экземпляра для расширений экземпляра службы.  
   
-### Метаданные  
+### <a name="metadata"></a>Метаданные  
  Тип данных: массив строк  
   
  Тип доступа: только для чтения  
   
  Параметры метаданных службы.  
   
-### Name  
+### <a name="name"></a>Имя  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Уникальное имя службы.  
   
-### Пространство имен  
+### <a name="namespace"></a>Пространство имен  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Пространство имен службы.  
   
-### Открыто  
+### <a name="opened"></a>Открыто  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Время открытия службы.  
   
-### OutgoingChannels  
+### <a name="outgoingchannels"></a>OutgoingChannels  
  Тип данных: массив Channel  
   
  Тип доступа: только для чтения  
   
  Каналы, исходящие из экземпляра службы.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Возвращает ИД процесса, который размещает службу.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|

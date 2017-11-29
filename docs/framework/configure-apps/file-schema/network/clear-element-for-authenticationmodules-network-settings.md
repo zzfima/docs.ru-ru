@@ -1,70 +1,71 @@
 ---
-title: "Элемент &lt;clear&gt; для элемента authenticationModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, clear - элемент"
-  - "<clear> - элемент, authenticationModules"
-  - "authenticationModules, clear - элемент"
-  - "clear - элемент, authenticationModules"
+title: "&lt;Очистить&gt; элемент для authenticationModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, authenticationModules
+- <authenticationModules>, clear element
+- <clear> element, authenticationModules
+- authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f056894148177e6b540fd45569140a996b6b888f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;clear&gt; для элемента authenticationModules (параметры сети)
-Удаляет из приложения все модули проверки подлинности.  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Очистить&gt; элемент для authenticationModules (параметры сети)
+Удаляет все модули проверки подлинности из приложения.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<authenticationModules >  
+\<Очистить >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Модули, используемые для проверки подлинности сетевых запросов.|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности сетевых запросов.|  
   
-## Заметки  
- Элемент `clear` вызывает удаление всех модулей проверки подлинности, определенных ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
+## <a name="remarks"></a>Примечания  
+ `clear` Элемент удаляет все модули проверки подлинности, определенные ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода демонстрируется удаление всех настроенных модулей проверки подлинности.  
+## <a name="example"></a>Пример  
+ Следующий пример удаляет все модули проверки подлинности.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -74,7 +75,7 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

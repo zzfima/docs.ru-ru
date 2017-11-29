@@ -1,43 +1,49 @@
 ---
-title: "Просмотр данных в DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Просмотр данных в таблице данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Просмотр данных в DataTable
-Доступ к содержимому <xref:System.Data.DataTable> можно получить с помощью коллекций **Rows** и **Columns** объекта **DataTable**.  Для возвращения подмножества данных в **DataTable** в соответствии с условиями поиска, порядком сортировки и состоянием строк можно также использовать метод <xref:System.Data.DataTable.Select%2A>.  Кроме того, при поиске конкретной строки по значению первичного ключа можно использовать метод <xref:System.Data.DataRowCollection.Find%2A> класса **DataRowCollection**.  
+# <a name="viewing-data-in-a-datatable"></a>Просмотр данных в таблице данных
+Можно получить содержимое из <xref:System.Data.DataTable> с помощью **строк** и **столбцы** коллекции **DataTable**. Можно также использовать <xref:System.Data.DataTable.Select%2A> метод для возврата подмножества данных в **DataTable** в соответствии с условиями поиска, порядок сортировки и состоянием строк. Кроме того, можно использовать <xref:System.Data.DataRowCollection.Find%2A> метод **DataRowCollection** при поиске конкретной строки, используя значение первичного ключа.  
   
- Метод **Select** объекта **DataTable** возвращает набор объектов <xref:System.Data.DataRow>, соответствующих заданным критериям.  Метод **Select** принимает необязательные аргументы критерия фильтра, выражения сортировки и **DataViewRowState**.  Критерий фильтра определяет возвращаемые строки на основе значений **DataColumn**, например `LastName = 'Smith'`.  Выражение сортировки следует стандартным соглашениям SQL об упорядочивании столбцов, например по `LastName ASC, FirstName ASC`.  Правила написания выражений см. в свойстве <xref:System.Data.DataColumn.Expression%2A> класса **DataColumn**.  
+ **Выберите** метод **DataTable** объект возвращает набор <xref:System.Data.DataRow> объектов, соответствующих указанным критериям. **Выберите** принимает необязательные аргументы критерия фильтра, выражения сортировки и **DataViewRowState**. Критерий фильтра определяет возвращаемые на основе строки **DataColumn** значения, например `LastName = 'Smith'`. Выражение сортировки следует стандартным соглашениям SQL об упорядочивании столбцов, например по `LastName ASC, FirstName ASC`. Правила написания выражений см <xref:System.Data.DataColumn.Expression%2A> свойство **DataColumn** класса.  
   
 > [!TIP]
->  Если выполняется несколько вызовов метода **Select** объекта **DataTable**, можно повысить производительность, создав вначале представление <xref:System.Data.DataView> для таблицы **DataTable**.  При создании **DataView** индексируются строки таблицы.  Метод **Select** использует этот индекс, что значительно сокращает время формирования результата.  Сведения о создании представления **DataView** для таблицы **DataTable** см. в разделе [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+>  При выполнении количество вызовов **выберите** метод **DataTable**, можно повысить производительность, создав вначале <xref:System.Data.DataView> для **DataTable**. Создание **DataView** индексируются строки таблицы. **Выберите** метод, а затем использует этот индекс, значительно сокращает время формирования результата. Дополнительные сведения о создании **DataView** для **DataTable**, в разделе [объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- Метод **Select** определяет, какую версию строк нужно просмотреть или обработать, на основе <xref:System.Data.DataViewRowState>.  В следующей таблице показаны возможные значения перечисления **DataViewRowState**.  
+ **Выберите** метод определяет, какие версии строк для просмотра и управления на основе <xref:System.Data.DataViewRowState>. В следующей таблице описаны возможные **DataViewRowState** значений перечисления.  
   
 |Значение DataViewRowState|Описание|  
-|-------------------------------|--------------|  
+|----------------------------|-----------------|  
 |**CurrentRows**|Текущие строки, включая не изменившиеся, добавленные и измененные.|  
-|**Deleted**|Удаленная строка.|  
-|**ModifiedCurrent**|Текущая версия, которая является измененной версией исходных данных.  \(См. **ModifiedOriginal**.\)|  
-|**ModifiedOriginal**|Исходная версия всех измененных строк.  Текущая версия доступна при использовании параметра **ModifiedCurrent**.|  
-|**Added**|Новая строка.|  
-|**Нет**|Отсутствует.|  
+|**Удален**|Удаленная строка.|  
+|**ModifiedCurrent**|Текущая версия, которая является измененной версией исходных данных. (См. **ModifiedOriginal**.)|  
+|**ModifiedOriginal**|Исходная версия всех измененных строк. Текущая версия — доступны с помощью **ModifiedCurrent**.|  
+|**Добавить**|Новая строка.|  
+|**None**|Отсутствует.|  
 |**OriginalRows**|Исходные строки, включая неизменившиеся и удаленные.|  
-|**Unchanged**|Неизменившаяся строка.|  
+|**Без изменений**|Неизменившаяся строка.|  
   
- В следующем примере объект **DataSet** фильтруется таким образом, что возвращаются только строки, параметр **DataViewRowState** для которых имеет значение **CurrentRows**.  
+ В следующем примере **DataSet** объекта является отфильтрованы, поэтому необходимо работать только со строками, **DataViewRowState** равно **CurrentRows**.  
   
 ```vb  
 Dim column As DataColumn  
@@ -65,7 +71,6 @@ Else
     Console.WriteLine(vbTab & rowState)  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -91,7 +96,7 @@ else
 }  
 ```  
   
- Метод **Select** может использоваться для возвращения строк с разными значениями **RowState** или значениями полей.  Следующий пример возвращает массив строк **DataRow**, который ссылается на все удаленные строки и возвращает другой массив **DataRow**, ссылающийся на строки, упорядоченные по **CustLName**, в которых столбец **CustID** больше 5.  Сведения о просмотре данных в строке **Deleted** см. в разделе [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ **Выберите** метод может использоваться для возвращения строк с разными значениями **RowState** или значениями полей. В следующем примере возвращается **DataRow** массив, который ссылается на все строки, которые были удалены и возвращает другой **DataRow** массив, который ссылается на все строки, упорядоченные по **CustLName**, где **CustID** столбца больше 5. Сведения о том, как просмотреть сведения в **Deleted** строк см. в разделе [состояния строк и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -100,7 +105,6 @@ Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowSta
 ' Retrieve rows where CustID > 5, and order by CustLName.  
 Dim custRows() As DataRow = workTable.Select( _  
     "CustID > 5", "CustLName ASC")  
-  
 ```  
   
 ```csharp  
@@ -112,11 +116,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## См. также  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataViewRowState>   
- [Обработка данных в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataViewRowState>  
+ [Обработка данных в объект DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Состояния строк и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,48 +1,47 @@
 ---
-title: "&lt;seealso&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<seealso> - XML-тег"
-  - "seealso - XML-тег"
+title: '&lt;seealso&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <seealso> XML tag
+- seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a1acbf2ee8f416e28987cc9d63dd3bf6d8c2dcf3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;seealso&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает ссылку, которая отображается в разделе "Cм. также".  
+# <a name="ltseealsogt-visual-basic"></a>&lt;seealso&gt; (Visual Basic)
+Указывает ссылку, которая отображается в разделе см.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <seealso cref="member"/>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на член или поле, которое может вызываться из текущей среды компиляции.  Компилятор проверяет, существует ли данный элемент кода и передает ли он `member` имени элемента в выходных XML\-данных.  `member` необходимо заключать в двойные кавычки \(" "\).  
+ Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, что данный элемент кода существует и передает `member` имени элемента в выходных данных XML. `member` необходимо заключать в двойные кавычки (" ").  
   
-## Заметки  
- Используйте тег `<seealso>`, чтобы указать текст, который должен отображаться в разделе "См. также".  Используйте [\<see\>](../../../visual-basic/language-reference/xmldoc/see.md), чтобы указать ссылку в тексте  
+## <a name="remarks"></a>Примечания  
+ Используйте `<seealso>` тег, чтобы указать текст, который будет отображаться в разделе см. Тег [\<see>](../../../visual-basic/language-reference/xmldoc/see.md) позволяет задать ссылку из текста.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- Этот пример использует тег `<seealso>` в разделе примечаний `DoesRecordExist` для ссылки на метод `UpdateRecord`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<seealso>` тегом `DoesRecordExist` раздел для обращения к примечаний `UpdateRecord` метод.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

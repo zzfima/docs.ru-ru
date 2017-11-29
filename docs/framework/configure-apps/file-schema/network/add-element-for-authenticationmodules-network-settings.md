@@ -1,76 +1,78 @@
 ---
-title: "Элемент &lt;add&gt; для authenticationModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> - элемент, authenticationModules"
-  - "<authenticationModules>, add - элемент"
-  - "add - элемент, authenticationModules"
-  - "authenticationModules, add - элемент"
+title: "&lt;Добавить&gt; элемент для authenticationModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add
+helpviewer_keywords:
+- authenticationModules, add element
+- add element, authenticationModules
+- <authenticationModules>, add element
+- <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 60909a738afbe2ec14d0f67846b06578a7393601
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;add&gt; для authenticationModules (параметры сети)
-Добавляет в приложение модуль проверки подлинности.  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;Добавить&gt; элемент для authenticationModules (параметры сети)
+Добавляет модуль проверки подлинности для приложения.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<authenticationModules >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <add   
-   type = "client type", System, Version="version number", Culture="culture", PublicKeyToken="token"   
+```xml  
+<add
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`type`|Имя класса и разновидности модуля, в которых реализована проверка подлинности.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойства), разделив их запятой.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Модули, используемые для проверки подлинности сетевых запросов.|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности сетевых запросов.|  
   
-## Заметки  
- Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности.  Эти модули вызываются в том порядке, в котором они были добавлены в список.  
+## <a name="remarks"></a>Примечания  
+ Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности. Модули проверки подлинности вызываются в том порядке, в котором они были добавлены в список.  
   
- Значением атрибута `type` должно быть допустимое имя библиотеки DLL или соответствующее имя класса, отделенное запятой.  
+ Значение для `type` атрибут должен быть допустимым именем типа и соответствующее имя сборки, разделенных точкой с запятой.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода показано включение используемых по умолчанию модулей проверки подлинности.  Необходимо заменить значения для параметров Version и PublicKeyToken правильными значениями для указанного модуля.  
+## <a name="example"></a>Пример  
+ В следующем примере включается модули проверки подлинности по умолчанию. Следует заменить значения для Version и PublicKeyToken правильные значения для указанного модуля.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
         <authenticationModules>  
@@ -89,7 +91,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

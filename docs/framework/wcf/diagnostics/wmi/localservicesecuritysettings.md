@@ -1,25 +1,28 @@
 ---
-title: "LocalServiceSecuritySettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LocalServiceSecuritySettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# LocalServiceSecuritySettings
+# <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -41,115 +44,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс LocalServiceSecuritySettings не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс LocalServiceSecuritySettings имеет следующие свойства.  
   
-### DetectReplays  
+### <a name="detectreplays"></a>DetectReplays  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Логическое значение, которое указывает, обнаруживаются и обрабатываются ли атаки повторной передачи пакетов против заданного канала автоматически.  
+ Логическое значение, показывающее, будут ли атаки с повторением обнаружены и ликвидированы на канале автоматически.  
   
-### InactivityTimeout  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Максимальное количество ожидающих безопасных сеансов, поддерживаемое службой.  
   
-### IssuedCookieLifetime  
+### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, которое задает время существования для всех новых файлов безопасности cookie.  
   
-### MaxCachedCookies  
+### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное количество файлов cookie, которые могут быть кэшированы.  
   
-### MaxClockSkew  
+### <a name="maxclockskew"></a>MaxClockSkew  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, указывающее максимальный разброс времени между системными часами взаимодействующих сторон.  
   
-### MaxPendingSessions  
+### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное количество ожидающих подключений к службе.  
   
-### MaxStatefulNegotiations  
+### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Количество одновременно выполняемых согласований режима безопасности.  
   
-### NegotiationTimeout  
+### <a name="negotiationtimeout"></a>NegotiationTimeout  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, указывающее максимальную длительность этапа согласования режима безопасности между сервером и клиентом.  
   
-### ReconnectTransportOnFailure  
+### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Логическое значение, указывающее, будут ли подключения, использующие режим обмена сообщениями WS\-Reliable, пытаться восстановиться после транспортных сбоев.  
+ Логическое значение, указывающее, будут ли подключения, использующие режим обмена сообщениями WS-Reliable, пытаться восстановиться после транспортных сбоев.  
   
-### ReplayCacheSize  
+### <a name="replaycachesize"></a>ReplayCacheSize  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Количество кэшированных параметров nonce, используемых для определения ответов.  
   
-### ReplayWindow  
+### <a name="replaywindow"></a>ReplayWindow  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, которое указывает срок действия параметров nonce отдельного сообщения.  
   
-### SessionKeyRenewalInterval  
+### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, которое задает интервал времени, по истечении которого инициатор обновляет ключ сеанса безопасности.  
   
-### SessionKeyRolloverInterval  
+### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, которое задает интервал времени, указывающий период, в течение которого предыдущий сеансовый ключ остается действительным для входящих сообщений, пока выполняется обновление ключа.  
   
-### TimestampValidityDuration  
+### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Значение типа TimeSpan, которое определяет интервал времени, указывающий срок действия отметки времени.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

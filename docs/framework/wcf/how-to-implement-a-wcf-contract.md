@@ -1,32 +1,34 @@
 ---
-title: "Практическое руководство. Реализация контракта службы Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "контракты служб [WCF], реализация"
+title: "Практическое руководство. Реализация контракта службы Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c8ef9d97d9ed76175c0ca4c4d5ba40ca401f8f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Реализация контракта службы Windows Communication Foundation
-Это вторая из шести задач, выполнение которых необходимо для создания базовой службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и клиента, который может вызывать службу.  Общие сведения обо всех шести задачах см. в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>Практическое руководство. Реализация контракта службы Windows Communication Foundation
+Это вторая из шести задач, выполнение которых необходимо для создания базовой службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] и клиента, который может вызывать службу. Обзор всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
   
- Следующий шаг по созданию приложения WCF \- это реализация интерфейса службы.  Это предполагает создание класса с именем `CalculatorService`, реализующего пользовательский интерфейс `ICalculator`.  
+ Следующий шаг по созданию приложения WCF - это реализация интерфейса службы. Это предполагает создание класса с именем `CalculatorService`, реализующего пользовательский интерфейс `ICalculator`.  
   
-### Реализация контракта службы WCF  
+### <a name="to-implement-a-wcf-service-contract"></a>Реализация контракта службы WCF  
   
 1.  Откройте файл Service1.cs или Service1.vb и добавьте следующий код:  
   
@@ -77,10 +79,9 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
-    ```  
+    ```vb
     ‘Service1.vb  
     Imports System  
     Imports System.ServiceModel  
@@ -127,10 +128,10 @@ caps.handback.revision: 38
   
      Каждый метод реализует операцию калькулятора и выводит на консоль некоторый текст, чтобы упростить тестирование.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем коде показан интерфейс, определяющий контракт, и реализация этого интерфейса.  
   
-```  
+```csharp
 // IService1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -154,10 +155,9 @@ namespace GettingStartedLib
             double Divide(double n1, double n2);  
         }  
 }  
-  
 ```  
   
-```  
+```csharp
 // Service1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -204,10 +204,9 @@ namespace GettingStartedLib
         }  
     }  
 }  
-  
 ```  
   
-```  
+```vb
 ‘IService.vb  
 Imports System  
 Imports System.ServiceModel  
@@ -229,7 +228,7 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
-```  
+```vb
 Imports System  
 Imports System.ServiceModel  
   
@@ -273,11 +272,11 @@ Namespace GettingStartedLib
 End Namespace  
 ```  
   
- Теперь контракт службы был создан и реализован.  Создайте решение, чтобы убедиться в отсутствии ошибок компиляции, затем переходите к разделу [Как размещать и запускать базовую службу](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) для запуска службы.  Сведения по устранению неполадок см. в разделе [Устранение неполадок, связанных с учебником по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
+ Теперь контракт службы был создан и реализован. Постройте решение, чтобы убедиться в отсутствии ошибок компиляции, а затем продолжайте [как: размещение и запуск базовой службы](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md) для запуска службы. Сведения об устранении неполадок в разделе [Устранение неполадок учебник по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   
-## Компиляция кода  
- Если используется Visual Studio, выберите в меню Построение пункт Построить решение \(или нажмите сочетание клавиш CTRL\+SHIFT\+B\).  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ При использовании Visual Studio в меню «Построение» выберите Построить решение (или нажмите клавиши CTRL + SHIFT + B).  
   
-## См. также  
- [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)   
+## <a name="see-also"></a>См. также  
+ [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)

@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0332bca146041aa955ea000cfeee78d3f5287036
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-auto-configuration"></a>Автоматическая настройка IPv6
 Одна из важнейших целей IPv6 заключается в поддержке самонастраивающегося узла. То есть можно подключить узел к сети IPv6 и автоматически настроить его без вмешательства человека.  
@@ -40,6 +34,5 @@ ms.lasthandoff: 08/21/2017
  В связи с распространением мобильных устройств появилось новое требование: устройство должно иметь возможность произвольным образом менять расположения на базе протокола IPv6 и при этом сохранять имеющиеся подключения. Для поддержки этой функции мобильному узлу присваивается домашний адрес, по которому его всегда можно найти. Если мобильный узел находится дома, он подключается к домашнему каналу и использует свой домашний адрес. Если мобильный узел находится вне дома, домашний агент, который обычно является маршрутизатором, передает сообщения между мобильным узлом и узлами, с которыми он взаимодействует.  
   
 ## <a name="see-also"></a>См. также  
- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Сокеты](../../../docs/framework/network-programming/sockets.md)
-

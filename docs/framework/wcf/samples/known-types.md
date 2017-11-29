@@ -1,23 +1,26 @@
 ---
-title: "Известные типы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Известные типы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eae1a7971c50372b999678b79be6503885d71f1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Известные типы
-В данном образце демонстрируется, как задать информацию о наследованных типах в контракте данных.Контракты данных позволяют передавать структурированные данные в службы и из служб.В объектно\-ориентированном программировании тип, унаследованный от другого типа, может использоваться вместо оригинального типа.В объектно\-ориентированном программировании отслеживаются скорее типы, а не схемы, и поэтому отношение между типами не сохраняется.Атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> позволяет включать в контракт данных информацию об унаследованных типах.Если этот механизм не используется, унаследованный тип не может быть отправлен или получен там, где ожидается базовый тип.  
+# <a name="known-types"></a>Известные типы
+В данном образце демонстрируется, как задать информацию о наследованных типах в контракте данных. Контракты данных позволяют передавать структурированные данные в службы и из служб. В объектно-ориентированном программировании тип, унаследованный от другого типа, может использоваться вместо оригинального типа. В объектно-ориентированном программировании отслеживаются скорее типы, а не схемы, и поэтому отношение между типами не сохраняется. Атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> позволяет включать в контракт данных информацию об унаследованных типах. Если этот механизм не используется, унаследованный тип не может быть отправлен или получен там, где ожидается базовый тип.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -38,10 +41,9 @@ public interface ICalculator
     [OperationContract]  
     ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2);  
 }  
-  
 ```  
   
- Тип <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute> применяется к классу `ComplexNumber` для указания тех полей класса, которые можно передавать между клиентом и службой.Вместо `ComplexNumber` можно использовать унаследованный класс `ComplexNumberWithMagnitude`.На это указывает атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> типа `ComplexNumber`.  
+ Тип <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute> применяется к классу `ComplexNumber` для указания тех полей класса, которые можно передавать между клиентом и службой. Вместо `ComplexNumberWithMagnitude` можно использовать унаследованный класс `ComplexNumber`. На это указывает атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> типа `ComplexNumber`.  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -59,13 +61,11 @@ public class ComplexNumber
         this.Imaginary = imaginary;  
     }  
 }  
-  
 ```  
   
- Тип `ComplexNumberWithMagnitude` наследуется от `ComplexNumber`, но добавляет дополнительный член данных — `Magnitude`.  
+ Тип `ComplexNumberWithMagnitude` наследуется от `ComplexNumber`, но добавляет дополнительный член данных - `Magnitude`.  
   
 ```  
-  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -81,7 +81,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Для демонстрации функции известных типов служба реализуется таким образом, чтобы возвращать только `ComplexNumberWithMagnitude` для добавления и вычитания.\(Даже несмотря на то, что контракт указывает `ComplexNumber`, это разрешается благодаря атрибуту `KnownTypeAttribute`\).Умножение и деление все также возвращают базовый тип `ComplexNumber` .  
+ Для демонстрации функции известных типов, служба реализуется таким образом, чтобы возвращать `ComplexNumberWithMagnitude` только для добавления и вычитания. (Даже несмотря на то, что контракт указывает `ComplexNumber`, это разрешается благодаря атрибуту `KnownTypeAttribute`). Умножение и деление по-прежнему возвращают базовый `ComplexNumber` типа.  
   
 ```  
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -124,7 +124,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- В клиенте контракт службы и контракт данных определяются во входном файле generatedClient.cs, который создается средством [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из метаданных службы.Поскольку атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> указан в контракте данных службы, клиент может получать при использовании службы классы `ComplexNumber` и `ComplexNumberWithMagnitude`.Клиент определяет, получен ли `ComplexNumberWithMagnitude`, и создает соответствующие выходные данные.  
+ На стороне клиента контракта службы и контракт данных определяются в файле generatedClient.cs источника, который создается [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из метаданных службы. Поскольку атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> указан в контракте данных службы, клиент может получать при использовании службы классы `ComplexNumber` и `ComplexNumberWithMagnitude`. Клиент определяет, получен ли `ComplexNumberWithMagnitude`, и создает соответствующие выходные данные.  
   
 ```  
 // Create a client  
@@ -147,10 +147,9 @@ else
 {  
     Console.WriteLine("No magnitude was sent from the service");  
 }  
-  
 ```  
   
- При выполнении образца запросы и отклики операции отображаются в окне консоли клиента.Обратите внимание, что умножение выводится для добавления или вычитания, но не для умножения или деления, по причине использованного способа реализации службы.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При выполнении образца запросы и отклики операции отображаются в окне консоли клиента. Обратите внимание, что умножение выводится для добавления или вычитания, но не для умножения или деления, по причине использованного способа реализации службы. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -165,21 +164,21 @@ No magnitude was sent from the service
     Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
-## См. также
+## <a name="see-also"></a>См. также

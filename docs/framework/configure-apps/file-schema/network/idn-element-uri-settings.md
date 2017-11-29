@@ -1,102 +1,100 @@
 ---
-title: "Элемент &lt;idn&gt; (параметры URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;IDN&gt; элемент (параметры Uri)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 1f631f41c256e74e9b7bf7dc2d771ee156538820
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;idn&gt; (параметры URI)
-Указывает, применяется ли синтаксический анализ международного доменного имени \(IDN\) к имени домена.  
+# <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; элемент (параметры Uri)
+Указывает, применяется ли синтаксический анализ международного доменного имени (IDN) к имени домена.  
   
-## Схема иерархии  
- [Элемент \<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a>Схема иерархии  
+ [Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [Элемент \<Uri\> \(параметры URI\)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<URI > элемент (параметры Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<idn\>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<IDN >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <idn  
   enabled="All|AllExceptIntranet|None"  
-/idn>  
+/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|`enabled`|Задает, применяется ли синтаксический анализ международного доменного имени к имени домена. Значение по умолчанию — нет.|  
+|-----------------|---------------------|  
+|`enabled`|Указывает, является ли синтаксический анализ международного доменного имени (IDN) применяется к имени домена по умолчанию none.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, как платформа .NET Framework обрабатывает веб\-адреса, выраженные с использованием универсальных кодов ресурсов \(URI\).|  
+|-----------------|---------------------|  
+|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, как платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).|  
   
-## Примечания  
- Существующий класс <xref:System.Uri> был расширен в .NET Framework 3.5, 3.0 SP1 и 2.0 SP1 поддержкой международных идентификаторов ресурсов \(IRI\) и международных доменных имен \(IDN\).  Пользователи не увидят никаких функциональных изменений в сравнении с .NET Framework 2.0, если специально не включат поддержку IRI и IDN.  Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
+## <a name="remarks"></a>Примечания  
+ Существующий <xref:System.Uri> класс был расширен в .NET Framework 3.5. 3.0 с пакетом обновления 1 и 2.0 SP1 с поддержкой международных идентификаторов ресурсов (IRI) и международных доменных имен (IDN). Текущие пользователи не увидят любые изменения в работе платформы .NET Framework 2.0, пока они не запустят IRI и IDN поддержки. Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
   
- Для включения поддержки IRI требуется внести два изменения.  
+ Чтобы обеспечить поддержку IRI, необходимы следующие два изменения:  
   
-1.  Добавить следующую строку в файл machine.config в каталоге .NET Framework 2.0.  
+1.  Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0  
   
-    ```  
+    ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Указать, применяется ли синтаксический анализ международного доменного имени к имени домена и должны ли применяться правила синтаксического анализа IRI.  Это можно сделать в файле machine.config или в файле app.config.  
+2.  Укажите, следует ли синтаксический анализ международного доменного имени (IDN), применяемый к имени домена и следует ли применять правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
   
- Имеются три возможных значения для IDN в зависимости от используемых DNS\-серверов:  
+ Существует три возможных значения для IDN в зависимости от используемых серверов DNS.  
   
--   idn enabled \= All  
+-   включить IDN = All  
   
-     При этом значении имена доменов из Юникода будут преобразовываться в их эквиваленты в Punycode \(IDN\-имена\).  
+     Это значение преобразует имена доменов в Юникоде в их эквиваленты в Punycode (имена IDN).  
   
--   idn enabled \= AllExceptIntranet  
+-   включить IDN = AllExceptIntranet  
   
-     При этом значении все находящиеся за пределами локальной интрасети имена доменов в кодировке Юникод, будут преобразовываться в их эквиваленты в Punycode \(IDN\-имена\).  В этом случае для обработки международных имен в локальной интрасети, используемые для интрасети DNS\-серверы должны поддерживать разрешение имен в Юникоде.  
+     Это значение преобразует все имена доменов в Юникоде не локальной интрасети эквиваленты в Punycode (имена IDN). В этом случае для обработки международных имен в локальной интрасети, DNS-серверы, которые используются для интрасети должны поддерживать разрешение имен в Юникоде.  
   
--   idn enabled \= None  
+-   включить IDN = нет  
   
-     При этом значении имена доменов в Юникоде не будут преобразовываться в их эквиваленты в Punycode.  Это значение по умолчанию, которое совместимо с поведением .NET Framework 2.0.  
+     Это значение не станет преобразовывать имена доменов в Юникоде в Punycode. Это значение по умолчанию, которое совместимо с поведением .NET Framework 2.0.  
   
- Включение IDN все метки в Юникоде в именах доменов будут преобразовываться в их эквиваленты в Punycode.  Имена в Punycode содержат только символы ASCII и всегда начинаются с приставки xn\-\-.  Это сделано для того, чтобы поддерживать существующие DNS\-серверы в интрасети, так как большинство DNS\-серверов поддерживает только символы ASCII \(см. RFC 3940\).  
+ При включенном IDN метки в Юникоде в доменном имени будут преобразованы в аналоги в кодировке Punicode. Имена Punicode содержат только символы ASCII и всегда начинаются с префикса "xn--". Это сделано для того, чтобы поддерживать существующие DNS-серверы в интрасети, так как большинство DNS-серверов поддерживает только символы ASCII (см. RFC 3940).  
   
-### Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+### <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- В следующем примере кода показывается, как использовать класс <xref:System.Uri> для поддержки синтаксического анализа IRI и имен IDN.  
+### <a name="description"></a>Описание  
+ В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс для поддержки синтаксического анализа IRI и имен IDN.  
   
-### Код  
+### <a name="code"></a>Код  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -105,7 +103,7 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Configuration.IdnElement?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

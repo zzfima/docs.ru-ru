@@ -1,35 +1,38 @@
 ---
-title: "4010 - PendingSessionQueueFull | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4010 - PendingSessionQueueFull
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14696793-16eb-4847-a530-fa2f90f682c9
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f147fbc746fbdfc6b23e622e4942410f0cc77028
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 4010 - PendingSessionQueueFull
-## Свойства  
+# <a name="4010---pendingsessionqueuefull"></a>4010 - PendingSessionQueueFull
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|4010|  
 |Ключевые слова|Службы активации|  
 |Уровень|Предупреждение|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
- Событие возникает, если диспетчеризация сеанса завершилась ошибкой из\-за переполнения очереди ожидающих сеансов.  
+## <a name="description"></a>Описание  
+ Событие возникает, если диспетчеризация сеанса завершилась ошибкой из-за переполнения очереди ожидающих сеансов.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Сбой диспетчеризации сеанса для «%1», так как очередь ожидающих сеансов заполнена «%2» ожидающими элементами.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

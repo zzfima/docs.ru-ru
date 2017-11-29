@@ -1,87 +1,89 @@
 ---
-title: "Элемент &lt;trace&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#trace"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<trace> - элемент"
-  - "прослушиватели"
-  - "trace - элемент"
-  - "прослушиватель трассировки, <trace> - элемент"
+title: "&lt;трассировки&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#trace
+helpviewer_keywords:
+- <trace> element
+- listeners
+- trace element
+- trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 157adb6c7317aa047976cdb9e30711d20c9e543b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;trace&gt;
-Содержит прослушиватели, собирающие, хранящие и маршрутизирующие сообщения трассировки.  
+# <a name="lttracegt-element"></a>&lt;трассировки&gt; элемент
+Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.Diagnostics >  
+\<трассировки >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <trace autoflush="true|false"   
        indentsize="indent value"  
        useGlobalLock="true| false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`autoflush`|Необязательный атрибут.<br /><br /> Указание того, должны ли прослушиватели трассировки автоматически очищать выходной буфер после каждой операции записи.|  
-|`indentsize`|Необязательный атрибут.<br /><br /> Задание количества пробелов для отступа.|  
-|`useGlobalLock`|Необязательный атрибут.<br /><br /> Определение того, необходимо ли использовать глобальную блокировку.|  
+|---------------|-----------------|  
+|`autoflush`|Необязательный атрибут.<br /><br /> Указывает, является ли прослушиватели трассировки автоматически очищать выходной буфер после каждой операции записи.|  
+|`indentsize`|Необязательный атрибут.<br /><br /> Задает число пробелов для отступа.|  
+|`useGlobalLock`|Необязательный атрибут.<br /><br /> Указывает, следует ли использовать глобальную блокировку.|  
   
-## Атрибут autoflush  
-  
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|Автоматическая очистка выходного буфера не выполняется.  Это значение по умолчанию.|  
-|`true`|Выполняется автоматическая очистка выходного буфера.|  
-  
-## Атрибут useGlobalLock  
+## <a name="autoflush-attribute"></a>Автоматическая запись атрибута  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`false`|Глобальная блокировка не используется, если прослушиватель потокобезопасен; в противном случае глобальная блокировка используется.|  
-|`true`|Глобальная блокировка используется независимо от того, является ли прослушиватель потокобезопасным.  Это значение по умолчанию.|  
+|-----------|-----------------|  
+|`false`|Не сбрасывает автоматически выходного буфера. Это значение по умолчанию.|  
+|`true`|Автоматически очищает выходной буфер.|  
   
-### Дочерние элементы  
+## <a name="usegloballock-attribute"></a>useGlobalLock атрибута  
+  
+|Значение|Описание|  
+|-----------|-----------------|  
+|`false`|Не использовать глобальную блокировку, если прослушиватель потокобезопасен; в противном случае использует глобальную блокировку.|  
+|`true`|Использует глобальную блокировку, независимо от того, прослушиватель потокобезопасным. Это значение по умолчанию.|  
+  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<прослушиватели\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Задает прослушиватель, собирающий, хранящий и маршрутизирующий сообщения.|  
+|-------------|-----------------|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Задает прослушиватель, собирающий, хранилища и маршрутизирует сообщения.|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
-## Пример  
- В следующем примере показано, как использовать элемент `<trace>` для добавления прослушивателя `MyListener` в коллекцию `Listeners`.  `MyListener` создает файл `MyListener.log` и записывает в него результат.  Атрибуту `useGlobalLock` назначено значение `false`, поэтому при потокобезопасном прослушивателе глобальная блокировка использоваться не будет.  Атрибуту `autoflush` назначено значение `true`, поэтому прослушиватель трассировки выполняет запись в файл независимо от того, вызывается ли метод <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=fullName>.  Атрибуту `indentsize` назначено значение 0 \(ноль\), поэтому прослушиватель не вставляет пробелов в отступ при вызове метода <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=fullName>.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать `<trace>` элемент для добавления прослушивателя `MyListener` для `Listeners` коллекции. `MyListener`Создает файл с именем `MyListener.log` и записывает выходные данные в файл. `useGlobalLock` Атрибута задано значение `false`, чего не должно использоваться, если прослушиватель трассировки потокобезопасен глобальную блокировку. `autoflush` Атрибута задано значение `true`, которое вызывает прослушиватель трассировки для записи в файл независимо от того, следует ли <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> вызывается метод. `indentsize` Атрибута задано значение 0 (ноль), вследствие чего слушатель в отступ при <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> вызывается метод.  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <trace useGlobalLock="false" autoflush="true" indentsize="0">  
@@ -93,9 +95,9 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
  [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

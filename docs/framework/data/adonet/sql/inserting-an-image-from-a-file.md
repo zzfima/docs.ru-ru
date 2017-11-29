@@ -1,28 +1,34 @@
 ---
-title: "Вставка изображения из файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вставка изображения из файла"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a780e35d9eb5420138587102aee753e96a8eff9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вставка изображения из файла
-Большой двоичный объект \(BLOB\) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных.  BLOB \- это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.  
+# <a name="inserting-an-image-from-a-file"></a>Вставка изображения из файла
+Большой двоичный объект (BLOB) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных. BLOB - это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.  
   
- Чтобы записать значение BLOB в базу данных, выполните соответствующую инструкцию INSERT или UPDATE, передав значение BLOB в качестве входного параметра \(см. раздел [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)\).  Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра.  Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
+ Запись значения большого двоичного ОБЪЕКТА для базы данных, выполните соответствующие инструкции INSERT или UPDATE и передать значение BLOB-ОБЪЕКТОВ в качестве входного параметра (в разделе [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра. Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
   
-## Пример  
- Следующий пример кода добавляет сведения о сотрудниках в таблицу Employees базы данных Northwind.  Фотографии сотрудников считываются из файла и добавляются в поле Photo в таблице, имеющей тип данных image.  
+## <a name="example"></a>Пример  
+ Следующий пример кода добавляет сведения о сотрудниках в таблицу Employees базы данных Northwind. Фотографии сотрудников считываются из файла и добавляются в поле Photo в таблице, имеющей тип данных image.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -134,9 +140,9 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## См. также  
- [Использование команд для изменения данных](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [Получение двоичных данных](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)   
- [Двоичные данные и данные большого размера SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Изменение данных с помощью команды](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Получение двоичных данных](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

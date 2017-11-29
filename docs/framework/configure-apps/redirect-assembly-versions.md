@@ -1,37 +1,35 @@
 ---
-title: "Перенаправление версий сборки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "конфигурация приложений [платформа .NET Framework]"
-  - "сборки [платформа .NET Framework], перенаправление привязки"
-  - "привязка сборок, перенаправление"
-  - "конфигурация [платформа .NET Framework], приложения"
-  - "перенаправление привязки сборки к ранней версии"
+title: "Перенаправление версий сборки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly binding, redirection
+- redirecting assembly binding to earlier version
+- configuration [.NET Framework], applications
+- application configuration [.NET Framework]
+- assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-caps.latest.revision: 26
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7446c43deff85e1a15288c0c847c9e3646870b72
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Перенаправление версий сборки
+# <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 Вы можете перенаправлять привязанные во время компиляции ссылки на сборки .NET Framework, сторонние сборки или сборки вашего собственного приложения. Вы можете перенаправлять свое приложение, чтобы оно использовало другую версию сборки, несколькими способами: через политику издателя, с помощью файла конфигурации приложения или с помощью файла конфигурации компьютера. В этой статье показывается, как привязка сборок работает в .NET Framework и как ее можно настроить.  
   
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>   
-## Унификация сборок и привязка по умолчанию  
+## <a name="assembly-unification-and-default-binding"></a>Унификация сборок и привязка по умолчанию  
  Привязки к сборкам .NET Framework иногда перенаправляются в ходе процесса, называемого *унификацией сборок*. .NET Framework включает версию среды CLR и около двадцати сборок .NET Framework, входящих в состав библиотеки типов. Эти сборки .NET Framework рассматриваются средой выполнения как единый блок. По умолчанию при запуске приложения все ссылки на типы в коде, выполняемом средой выполнения, направляются в сборки .NET Framework, которые имеют тот же номер версии, что и среда выполнения, которая загружается в процессе. Перенаправления, которые реализуются в этой модели, — это поведение по умолчанию для среды выполнения.  
   
  Например, если ваше приложение ссылается на типы в пространстве имен System.XML и было собрано с помощью [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], то оно содержит статические ссылки на сборку System.XML, которая поставляется вместе со средой выполнения версии 4.5. Если вы хотите перенаправить привязанную ссылку, чтобы она указывала на сборку System.XML, поставляемую вместе с .NET Framework 4, можно поместить сведения о перенаправлении в файл конфигурации приложения. Перенаправление привязки в файле конфигурации для унифицированной сборки .NET Framework отменяет унификацию для этой сборки.  
@@ -39,28 +37,34 @@ caps.handback.revision: 26
  Кроме того, может потребоваться вручную перенаправить привязку для сборок сторонних производителей, если имеется несколько доступных версий.  
   
 <a name="BKMK_Redirectingassemblyversionsbyusingpublisherpolicy"></a>   
-## Перенаправление версий сборок с помощью политики издателя  
+## <a name="redirecting-assembly-versions-by-using-publisher-policy"></a>Перенаправление версий сборок с помощью политики издателя  
  Поставщики сборок могут направлять приложения в более новую версию сборки, включая файл политики издателя с новой сборкой. Файл политики издателя, который находится в глобальном кэше сборок, содержит параметры перенаправления сборок.  
   
- Каждая версия *основной\_номер*.*дополнительный\_номер* сборки имеет свой собственный файл политики издателя. Например, перенаправления от версии 2.0.2.222 к версии 2.0.3.000 и от версии 2.0.2.321 к версии 2.0.3.000 приводят к тому же файлу, поскольку они связаны с версией 2.0. Однако перенаправление от версии 3.0.0.999 к версии 4.0.0.000 приводит к файлу для версии 3.0.999. Каждая основная версия сборки .NET Framework имеет свой собственный файл политики издателя.  
+ Каждая версия *основной_номер*.*дополнительный_номер* сборки имеет свой собственный файл политики издателя. Например, перенаправления от версии 2.0.2.222 к версии 2.0.3.000 и от версии 2.0.2.321 к версии 2.0.3.000 приводят к тому же файлу, поскольку они связаны с версией 2.0. Однако перенаправление от версии 3.0.0.999 к версии 4.0.0.000 приводит к файлу для версии 3.0.999. Каждая основная версия сборки .NET Framework имеет свой собственный файл политики издателя.  
   
  Если для сборки существует файл политики издателя, среда выполнения проверяет этот файл после проверки файла конфигурации приложения и манифеста сборки. Поставщики должны использовать файлы политики издателя только в том случае, если новая сборка имеет обратную совместимость с перенаправляемой сборкой.  
   
  Вы можете обойти политику издателя для своего приложения, задав параметры в файле конфигурации приложения, как описано в разделе [Обход политики издателя](#bypass_PP).  
   
 <a name="BKMK_Redirectingassemblyversionsattheapplevel"></a>   
-## Перенаправление версий сборки на уровне приложения  
+## <a name="redirecting-assembly-versions-at-the-app-level"></a>Перенаправление версий сборки на уровне приложения  
  Существует несколько разных методов изменения поведения привязки для вашего приложения с помощью файла конфигурации приложения: можно вручную изменить этот файл, или положиться на автоматическое перенаправление привязки, или указать поведение привязки путем обхода политики издателя.  
   
-### Изменение файла конфигурации приложения вручную  
+### <a name="manually-editing-the-app-config-file"></a>Изменение файла конфигурации приложения вручную  
  Вы можете вручную изменить файл конфигурации приложения для решения проблем со сборкой. Например, если поставщик выпускает более новую версию сборки, которую ваше приложение использует без указания политики издателя, так как он не гарантирует обратной совместимости, можно направить приложение на использование новой версии сборки, поместив сведения о привязке сборки в файл конфигурации приложения следующим образом.  
   
-```  
-<dependentAssembly> <assemblyIdentity name="someAssembly" publicKeyToken="32ab4ba45e0a69a1" culture="en-us" /> <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" /> </dependentAssembly>  
+```xml  
+<dependentAssembly>  
+        <assemblyIdentity name="someAssembly"  
+          publicKeyToken="32ab4ba45e0a69a1"  
+          culture="en-us" />  
+  
+        <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
+      </dependentAssembly>  
 ```  
   
-### Автоматическое перенаправление привязки  
- Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] новые классические приложения, предназначенные для [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], используют автоматическое перенаправление привязки. Это означает, что если два компонента ссылаются на разные версии одной сборки со строгим именем, среда выполнения автоматически добавляет в выходной файл конфигурации приложения \(app.config\) перенаправление привязки в новую версию сборки. Это перенаправление переопределяет унификацию сборок, которая может происходить в противном случае. Исходный файл app.config не изменяется. Например, предположим, что приложение непосредственно ссылается на компонент .NET Framework вне потока, но использует стороннюю библиотеку, которая нацелена на более старую версию того же компонента. При компиляции приложения выходной файл конфигурации приложения изменяется, и в него включается перенаправление привязки в новую версию компонента. Если вы создаете веб\-приложение, то получите предупреждение о конфликте привязки, которое в свою очередь дает вам возможность добавить необходимое перенаправление привязки в исходный файл веб\-конфигурации.  
+### <a name="relying-on-automatic-binding-redirection"></a>Автоматическое перенаправление привязки  
+ Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]новые классические приложения, предназначенные для [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] , используют автоматическое перенаправление привязки. Это означает, что если два компонента ссылаются на разные версии одной сборки со строгим именем, среда выполнения автоматически добавляет в выходной файл конфигурации приложения (app.config) перенаправление привязки в новую версию сборки. Это перенаправление переопределяет унификацию сборок, которая может происходить в противном случае. Исходный файл app.config не изменяется. Например, предположим, что приложение непосредственно ссылается на компонент .NET Framework вне потока, но использует стороннюю библиотеку, которая нацелена на более старую версию того же компонента. При компиляции приложения выходной файл конфигурации приложения изменяется, и в него включается перенаправление привязки в новую версию компонента. Если вы создаете веб-приложение, то получите предупреждение о конфликте привязки, которое в свою очередь дает вам возможность добавить необходимое перенаправление привязки в исходный файл веб-конфигурации.  
   
  Если вручную добавить перенаправления привязки в исходный файл app.config, во время компиляции [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] пытается унифицировать сборки на основе добавленных перенаправлений привязок. Например, предположим, что вы вставили следующее перенаправление привязки для сборки:  
   
@@ -70,58 +74,102 @@ caps.handback.revision: 26
   
  `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`  
   
- Вы можете включить автоматическое перенаправление привязки, если приложение предназначено для более старых версий .NET Framework в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]. Это поведение по умолчанию можно переопределить, предоставив сведения о перенаправлении привязки в файле app.config для какой\-либо сборки или отключив функцию перенаправления привязки. Сведения о том, как включить или выключить эту функцию, см. в разделе [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).  
+ Вы можете включить автоматическое перенаправление привязки, если приложение предназначено для более старых версий .NET Framework в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]. Это поведение по умолчанию можно переопределить, предоставив сведения о перенаправлении привязки в файле app.config для какой-либо сборки или отключив функцию перенаправления привязки. Сведения о том, как включить эту функцию, или отключить см. в разделе [как: Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).  
   
 <a name="bypass_PP"></a>   
-### Обход политики издателя  
- При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все\-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте элемент [\<publisherPolicy\>](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) в элемент [\<dependentAssembly\>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) в файле конфигурации приложения и установите для атрибута **apply** значение **no**, что переопределит все предыдущие установки **yes**.  
+### <a name="bypassing-publisher-policy"></a>Обход политики издателя  
+ При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) элемент [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) элемент в файл конфигурации приложения и набора **применить** атрибут **не**, что переопределит все предыдущие **Да** параметры.  
   
  `<publisherPolicy apply="no" />`  
   
  Обходите политику издателя, чтобы сохранить работоспособность приложения для пользователей, но обязательно сообщите о проблеме поставщику сборки. Если сборка имеет файл политики издателя, поставщик должен убедиться, что сборка имеет обратную совместимость и клиенты могут использовать новую версию в максимальной степени.  
   
 <a name="BKMK_Redirectingassemblyversionsatthemachinelevel"></a>   
-## Перенаправление версий сборки на уровне компьютера  
- Иногда администратор компьютера хочет, чтобы все приложения на компьютере использовали определенную версию сборки. Например, администратор может захотеть, чтобы каждое приложение использовало определенную версию сборки, так как эта версия устраняет брешь в системе безопасности. Если сборка перенаправляется в файле конфигурации компьютера, все приложения на этом компьютере, использующие старую версию, будут перенаправлены на использование новой версии. Файл конфигурации компьютера переопределяет файл конфигурации приложения и файл политики издателя. Этот файл находится в каталоге %*путь установки среды выполнения*%\\Config. Как правило, .NET Framework устанавливается в каталог %drive%\\Windows\\Microsoft.NET\\Framework.  
+## <a name="redirecting-assembly-versions-at-the-machine-level"></a>Перенаправление версий сборки на уровне компьютера  
+ Иногда администратор компьютера хочет, чтобы все приложения на компьютере использовали определенную версию сборки. Например, администратор может захотеть, чтобы каждое приложение использовало определенную версию сборки, так как эта версия устраняет брешь в системе безопасности. Если сборка перенаправляется в файле конфигурации компьютера, все приложения на этом компьютере, использующие старую версию, будут перенаправлены на использование новой версии. Файл конфигурации компьютера переопределяет файл конфигурации приложения и файл политики издателя. Этот файл находится в каталоге %*путь установки среды выполнения*%\Config. Как правило, .NET Framework устанавливается в каталог %drive%\Windows\Microsoft.NET\Framework.  
   
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>   
-## Указание привязки сборки в файлах конфигурации  
- Один и тот же формат XML позволяет указать перенаправления привязок в файле конфигурации приложения, в файле конфигурации компьютера и в файле политики издателя. Для перенаправления с одной версии сборки на другую используется элемент [\<bindingRedirect\>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md). В атрибуте **OldVersion** можно указать одну версию сборки или диапазон версий. В атрибуте `newVersion` должна быть указана одна версия.  Например, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` указывает, что среда выполнения должна использовать версию 2.0.0.0 вместо версий сборки от 1.1.0.0 до 1.2.0.0.  
+## <a name="specifying-assembly-binding-in-configuration-files"></a>Указание привязки сборки в файлах конфигурации  
+ Один и тот же формат XML позволяет указать перенаправления привязок в файле конфигурации приложения, в файле конфигурации компьютера и в файле политики издателя. Для перенаправления одной версии сборки на другую, используйте [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) элемента. В атрибуте **OldVersion** можно указать одну версию сборки или диапазон версий. В атрибуте `newVersion` должна быть указана одна версия.  Например, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` указывает, что среда выполнения должна использовать версию 2.0.0.0 вместо версий сборки от 1.1.0.0 до 1.2.0.0.  
   
- Следующий пример кода демонстрирует различные сценарии перенаправления привязки. В примере указывается перенаправление для диапазона версий `myAssembly` и одно перенаправление привязки для `mySecondAssembly`. В примере также указывается, что файл политики издателя не будет переопределять перенаправления привязок для `myThirdAssembly`.  
+ Следующий пример кода демонстрирует различные сценарии перенаправления привязки. В примере указывается перенаправление для диапазона версий `myAssembly`и одно перенаправление привязки для `mySecondAssembly`. В примере также указывается, что файл политики издателя не будет переопределять перенаправления привязок для `myThirdAssembly`.  
   
- Чтобы привязать сборку, необходимо указать строку "urn: schemas\-microsoft\-com:asm.v1" с атрибутом **xmlns** в теге [\<assemblyBinding\>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md).  
+ Чтобы привязать сборку, необходимо указать строку «urn: schemas-microsoft-com:asm.v1» с **xmlns** атрибута в [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) тег.  
   
+```xml  
+<configuration>  
+  <runtime>  
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
+      <dependentAssembly>  
+        <assemblyIdentity name="myAssembly"  
+          publicKeyToken="32ab4ba45e0a69a1"  
+          culture="en-us" />  
+        <!-- Assembly versions can be redirected in app,   
+          publisher policy, or machine configuration files. -->  
+        <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />  
+      </dependentAssembly>  
+  <dependentAssembly>  
+        <assemblyIdentity name="mySecondAssembly"  
+          publicKeyToken="32ab4ba45e0a69a1"  
+          culture="en-us" />  
+             <bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />  
+      </dependentAssembly>  
+      <dependentAssembly>  
+      <assemblyIdentity name="myThirdAssembly"  
+        publicKeyToken="32ab4ba45e0a69a1"  
+        culture="en-us" />  
+        <!-- Publisher policy can be set only in the app   
+          configuration file. -->  
+        <publisherPolicy apply="no" />  
+      </dependentAssembly>  
+    </assemblyBinding>  
+  </runtime>  
+</configuration>  
 ```  
-<configuration> <runtime> <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1"> <dependentAssembly> <assemblyIdentity name="myAssembly" publicKeyToken="32ab4ba45e0a69a1" culture="en-us" /> <!-- Assembly versions can be redirected in app, publisher policy, or machine configuration files. --> <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" /> </dependentAssembly> <dependentAssembly> <assemblyIdentity name="mySecondAssembly" publicKeyToken="32ab4ba45e0a69a1" culture="en-us" /> <bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" /> </dependentAssembly> <dependentAssembly> <assemblyIdentity name="myThirdAssembly" publicKeyToken="32ab4ba45e0a69a1" culture="en-us" /> <!-- Publisher policy can be set only in the app configuration file. --> <publisherPolicy apply="no" /> </dependentAssembly> </assemblyBinding> </runtime> </configuration>  
-```  
   
-### Ограничения привязок сборок определенной версией  
- Чтобы перенаправить ссылки привязки сборок на определенную версию .NET Framework, можно использовать атрибут **appliesTo** элемента [\<assemblyBinding\>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) в файле конфигурации приложения. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding\>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.  
+### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Ограничения привязок сборок определенной версией  
+ Можно использовать **appliesTo** атрибут [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) элемент в файле конфигурации приложения, чтобы перенаправить ссылки привязки сборок на определенную версию платформы .NET Платформа. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.  
   
  Например, чтобы перенаправить привязку сборки для .NET Framework версии 3.5, следует включить в файл конфигурации приложения приведенный ниже код XML.  
   
-```  
-<runtime> <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v3.5"> <dependentAssembly> <!-- assembly information goes here --> </dependentAssembly> </assemblyBinding> </runtime>  
+```xml  
+<runtime>  
+  <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1"   
+    appliesTo="v3.5">  
+    <dependentAssembly>   
+      <!-- assembly information goes here -->  
+    </dependentAssembly>  
+  </assemblyBinding>  
+</runtime>  
 ```  
   
  Вы должны указывать сведения о перенаправлении в порядке версий. Например, следует указывать сведения о перенаправлении привязок сборок для сборок .NET Framework 3.5, а затем для сборок .NET Framework 4.5. И только после этого вводятся сведения о перенаправлении привязок для любых перенаправлений сборок .NET Framework, которые не используют атрибут **appliesTo** и поэтому применимы ко всем версиям .NET Framework. В случае конфликта перенаправления используется первый подходящий оператор перенаправления в файле конфигурации.  
   
- Например, чтобы перенаправить одну ссылку на сборку .NET Framework 3.5, а другую ссылку — на сборку .NET Framework 4, можно использовать шаблон, показанный в следующем псевдокоде.  
+ Например, чтобы перенаправить одну ссылку на сборку .NET Framework 3.5, а другую ссылку — на сборку .NET Framework 4, можно использовать шаблон, показанный в следующем псевдокоде.  
   
-```  
-<assemblyBinding xmlns="..." appliesTo="v3.5 "> <!—.NET Framework version 3.5 redirects here --> </assemblyBinding> <assemblyBinding xmlns="..." appliesTo="v4.0.30319"> <!—.NET Framework version 4.0 redirects here --> </assemblyBinding> <assemblyBinding xmlns="..."> <!-- redirects meant for all versions of the runtime --> </assemblyBinding>  
+```xml  
+<assemblyBinding xmlns="..." appliesTo="v3.5 ">   
+  <!—.NET Framework version 3.5 redirects here -->   
+</assemblyBinding>   
+  
+<assemblyBinding xmlns="..." appliesTo="v4.0.30319">   
+  <!—.NET Framework version 4.0 redirects here -->   
+</assemblyBinding>   
+  
+<assemblyBinding xmlns="...">   
+  <!-- redirects meant for all versions of the runtime -->   
+</assemblyBinding>  
 ```  
   
-## См. также  
- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)   
- [Элемент \<bindingRedirect\>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)   
- [Разрешение безопасности перенаправления привязки сборок](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)   
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Настройка приложений](../../../docs/framework/configure-apps/index.md)   
- [Настройка приложений .NET Framework](http://msdn.microsoft.com/ru-ru/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)   
- [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
+ [\<bindingRedirect > элемент](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
+ [Разрешение безопасности перенаправления привязки сборок](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  
+ [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
+ [Настройка приложений .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Практическое руководство. Создание политики издателя](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

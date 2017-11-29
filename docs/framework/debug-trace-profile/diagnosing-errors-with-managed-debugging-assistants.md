@@ -5,17 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EHMDA
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+f1_keywords: EHMDA
 helpviewer_keywords:
 - run-time error debugging
 - managed code, run-time debugging
@@ -42,16 +35,15 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8afc1ec3d5a1dab4412b16826bb32829f9b42263
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23de3ea6e9693c05aa81da056ac7763bced8e9a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Диагностика ошибок посредством управляемых помощников по отладке
 Помощники отладки управляемого кода (MDA) — это вспомогательные средства отладки, которые работают совместно со средой CLR для предоставления информации о состоянии времени выполнения. Эти помощники формируют информационные сообщения о событиях времени выполнения, которые вы не можете зафиксировать иными средствами. Вы можете использовать помощники отладки управляемого кода для изоляции тяжело обнаружимых ошибок приложения, возникающих при переходе между управляемым и неуправляемым кодом. Вы можете включить или отключить все помощники отладки управляемого кода, добавив раздел в реестр Windows либо задав переменную среды. Вы можете включить отдельные помощники, используя параметры конфигурации приложения. Вы можете задать дополнительные параметры для некоторых отдельных помощников в файле конфигурации приложения. Поскольку эти файлы конфигурации анализируются при загрузке среды выполнения, следует включить помощник до запуска управляемого приложения. Вы не сможете включить его для уже запущенных приложений.  
@@ -198,4 +190,3 @@ Windows Registry Editor Version 5.00
   
 ## <a name="see-also"></a>См. также  
  [Отладка, трассировка и профилирование](../../../docs/framework/debug-trace-profile/index.md)
-

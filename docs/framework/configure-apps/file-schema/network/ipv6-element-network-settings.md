@@ -1,72 +1,74 @@
 ---
-title: "Элемент &lt;ipv6&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<ipv6> - элемент"
-  - "ipv6 - элемент"
+title: "&lt;IPv6&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#ipv6
+helpviewer_keywords:
+- <ipv6> element
+- ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-caps.latest.revision: 19
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: dd5366b4110d9ec2290e2669919575e07e8ec98a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;ipv6&gt; (параметры сети)
-Включает IPv6\-отклики от устаревших членов класса <xref:System.Net.Dns>.  
+# <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; элемент (параметры сети)
+Включает протокол IP версии 6 (IPv6) ответов от устаревшие члены <xref:System.Net.Dns> класса.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<Параметры >  
+\<IPv6 >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <ipv6  
+```xml  
+<ipv6  
   enabled="true|false"  
-/ipv6>  
+/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`enabled`|Указывает, возвращают ли члены класса <xref:System.Net.Dns> IP\-адреса IPv6.  Значение по умолчанию — `false`.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`enabled`|Указывает ли члены <xref:System.Net.Dns> класс возвращать протокола IP версии 6 (IPv6) адресов. Значение по умолчанию — `false`.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные сетевые параметры для пространства имен <xref:System.Net>.|  
+|-----------------|---------------------|  
+|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## Заметки  
- Этот параметр включает поддержку IPv6 для устаревших членов класса <xref:System.Net.Dns>: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> и <xref:System.Net.Dns.Resolve%2A>.  Для других членов пространства имен <xref:System.Net?displayProperty=fullName> IPv6\-адреса могут быть возвращены, если IPv6 включен в операционной системе.  
+## <a name="remarks"></a>Примечания  
+ Этот параметр обеспечивает поддержку IPv6 для устаревших членов <xref:System.Net.Dns> класса: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, и <xref:System.Net.Dns.Resolve%2A>. Для других членов <xref:System.Net?displayProperty=nameWithType> пространства имен, IPv6-адресов может быть возвращено, если IPv6 включен в операционной системе.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода демонстрируется способ включения поддержки IPv6 для класса <xref:System.Net.Dns>.  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как включить поддержку IPv6 <xref:System.Net.Dns> класса.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <settings>  
@@ -76,8 +78,8 @@ caps.handback.revision: 19
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net?displayProperty=fullName>   
- <xref:System.Net.Dns?displayProperty=fullName>   
- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net?displayProperty=nameWithType>  
+ <xref:System.Net.Dns?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

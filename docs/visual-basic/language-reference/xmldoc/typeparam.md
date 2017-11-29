@@ -1,51 +1,50 @@
 ---
-title: "&lt;typeparam&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<typeparam> - XML-тег"
-  - "typeparam - XML-тег"
+title: '&lt;typeparam&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- typeparam XML tag
+- <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b654fe6fc93642693730256b523fee999aa55937
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;typeparam&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Определяет имя и описание параметра типа.  
+# <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
+Определяет имя параметра типа и описание.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `name`  
- Имя параметра типа.  Заключите имя в двойные кавычки \(" "\).  
+ Имя параметра типа. Имя заключается в двойные кавычки (" ").  
   
  `description`  
  Описание параметра типа.  
   
-## Заметки  
- Используйте тег `<typeparam>` в комментарии для базового типа или объявления универсального члена для описания одного из параметров типа.  
+## <a name="remarks"></a>Примечания  
+ Используйте `<typeparam>` тег в комментарии для универсального типа или объявления универсального члена для описания одного из параметров типа.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- В этом примере тег `<typeparam>` используется для описания параметра `id`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<typeparam>` тегов для описания `id` параметра.  
   
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

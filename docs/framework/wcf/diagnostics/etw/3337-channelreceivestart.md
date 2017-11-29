@@ -1,35 +1,38 @@
 ---
-title: "3337 - ChannelReceiveStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3337 - ChannelReceiveStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa0d226a-3862-4a16-87e6-3bb601084203
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 57dfb56ad65e179cde9d946bc9571b227e4ede27
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3337 - ChannelReceiveStart
-## Свойства  
+# <a name="3337---channelreceivestart"></a>3337 - ChannelReceiveStart
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3337|  
 |Ключевые слова|Канал|  
 |Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Событие возникает при запуске получения канала.  
   
-## Сообщение  
- ChannelHandlerId:%1 \- цикл получения сообщений запущен.  
+## <a name="message"></a>Сообщение  
+ ChannelHandlerId:%1 - цикл получения сообщений запущен.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

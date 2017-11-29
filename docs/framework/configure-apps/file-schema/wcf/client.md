@@ -1,34 +1,36 @@
 ---
-title: "&lt;клиент&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#client"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "&lt;Клиент&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 67f91f4462fc8c11b1769d5805a4ad1407385a50
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;клиент&gt;
+# <a name="ltclientgt"></a>&lt;Клиент&gt;
 Элемент `client` определяет список конечных точек, к которым может подключаться клиент.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<Клиент >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <system.serviceModel>  
     <client>  
         <endpoint>  
@@ -39,33 +41,33 @@ caps.handback.revision: 18
 </system.serviceModel>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
  Нет  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<конечная точка\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Содержит коллекцию элементов конечных точек, указывающую конечные точки, к которым может подключиться данный клиент.|  
-|[\<метаданные\>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Содержит параметры обработки метаданных.|  
+|-------------|-----------------|  
+|[\<Конечная точка >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Содержит коллекцию элементов конечных точек, указывающую конечные точки, к которым может подключиться данный клиент.|  
+|[\<метаданные >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Содержит параметры обработки метаданных.|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<system.serviceModel\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Корневой элемент всех элементов конфигурации Windows Communication Foundation \(WCF\).|  
+|-------------|-----------------|  
+|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Корневой элемент всех элементов конфигурации Windows Communication Foundation (WCF).|  
   
-## Заметки  
- В разделе `client` определяется список конечных точек, к которым может подключаться клиент.  Каждая конечная точка, указанная в разделе клиента, определяет свои собственные привязку, поведение и контракт.  Она однозначно определяется сочетанием атрибутов `name` и `contract`.  В коде клиента указывается атрибут `name` для подключения к конечной точке службы, выполняемой клиентом.  Если атрибут `name` отсутствует, конечная точка действует как конечная точка по умолчанию для контракта, который она реализует.  
+## <a name="remarks"></a>Примечания  
+ В разделе `client` определяется список конечных точек, к которым может подключаться клиент. Каждая конечная точка, указанная в разделе клиента, определяет свои собственные привязку, поведение и контракт. Она однозначно определяется сочетанием атрибутов `name` и `contract`. В коде клиента указывается атрибут `name` для подключения к конечной точке службы, выполняемой клиентом. Если атрибут `name` отсутствует, конечная точка действует как конечная точка по умолчанию для контракта, который она реализует.  
   
  Кроме того, в данном разделе также задаются параметры обработки метаданных.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```xml  
 <client>  
     <endpoint address="/HelloWorld/"  
               bindingConfiguration="usingDefaults"  
@@ -78,8 +80,8 @@ caps.handback.revision: 18
 </client>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ClientSection>   
- <xref:System.ServiceModel.Configuration.MetadataElement>   
- [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.ClientSection>  
+ <xref:System.ServiceModel.Configuration.MetadataElement>  
+ [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Клиенты](../../../../../docs/framework/wcf/feature-details/clients.md)

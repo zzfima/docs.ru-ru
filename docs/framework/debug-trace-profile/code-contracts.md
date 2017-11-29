@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Code contracts
+- csharp
+- vb
+helpviewer_keywords: Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 78553d77ea9a669f7cebdd9187e2436d3b095a75
-ms.openlocfilehash: c0eca978f32c4f96ad976718584c0bf92bf638ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="code-contracts"></a>Контракты для кода
 Контракты для кода предоставляют способ указания предусловий, постусловий и инвариантов объектов в коде. Предусловия — это требования, которые должны быть выполнены при входе в метод или свойство. Постусловия описывают ожидания во время выхода из кода метода или свойства. Инварианты объектов описывают ожидаемое состояние класса, который находится в рабочем состоянии.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 08/21/2017
  Сведения о средствах и подробные инструкции по использованию контрактов кода см. на странице [Контракты кода](http://go.microsoft.com/fwlink/?LinkId=152461) на веб-сайте MSDN DevLabs.  
   
 ## <a name="preconditions"></a>Предусловия  
- Предусловия можно выразить с помощью метода <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=fullName>. Предусловия задают состояние при вызове метода. Обычно они используются для указания допустимых значений параметров. Все члены, упомянутые в предусловиях, должны быть не менее доступны, чем сам метод; в противном случае предусловие может быть не понято всеми объектами, вызывающими метод. Условие не должно иметь побочных эффектов. Поведение невыполненных предусловий во время выполнения определяется анализатором времени выполнения.  
+ Предусловия можно выразить с помощью метода <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. Предусловия задают состояние при вызове метода. Обычно они используются для указания допустимых значений параметров. Все члены, упомянутые в предусловиях, должны быть не менее доступны, чем сам метод; в противном случае предусловие может быть не понято всеми объектами, вызывающими метод. Условие не должно иметь побочных эффектов. Поведение невыполненных предусловий во время выполнения определяется анализатором времени выполнения.  
   
  Например, следующее предусловие указывает, что параметр `x` не должен иметь значение null.  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 08/21/2017
   
 -   после всего набора таких операторов следует явный вызов метода <xref:System.Diagnostics.Contracts.Contract>, например вызов метода <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> или <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>.  
   
- Если операторы `if`-`then`-`throw` появляются в этой форме, средства распознают их как устаревшие операторы `requires`. Если за последовательностью `if`-`then`-`throw` не следуют никакие другие контракты, завершите код методом <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=fullName>.  
+ Если операторы `if`-`then`-`throw` появляются в этой форме, средства распознают их как устаревшие операторы `requires`. Если за последовательностью `if`-`then`-`throw` не следуют никакие другие контракты, завершите код методом <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>.  
   
 ```  
 if ( x == null ) throw new ...  
@@ -87,7 +82,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
  `Contract.Ensures( this.F > 0 );`  
   
 ### <a name="exceptional-postconditions"></a>Исключительные постусловия  
- Исключительные постусловия — это постусловия, которые должны быть `true`, когда метод вызывает конкретное исключение. Эти постусловия можно задать с помощью метода <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=fullName>, как показано в следующем примере.  
+ Исключительные постусловия — это постусловия, которые должны быть `true`, когда метод вызывает конкретное исключение. Эти постусловия можно задать с помощью метода <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>, как показано в следующем примере.  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
@@ -193,7 +188,7 @@ Contract.Invariant(this.x > this.y);
   
 -   Любой метод, полное имя которого начинается с System.Diagnostics.Contracts.Contract, System.String, System.IO.Path или System.Type.  
   
--   Любой вызванный делегат, при условии, что сам тип этого делегата помечен атрибутом <xref:System.Diagnostics.Contracts.PureAttribute>. Типы делегата <xref:System.Predicate%601?displayProperty=fullName> и <xref:System.Comparison%601?displayProperty=fullName> считаются чистыми.  
+-   Любой вызванный делегат, при условии, что сам тип этого делегата помечен атрибутом <xref:System.Diagnostics.Contracts.PureAttribute>. Типы делегата <xref:System.Predicate%601?displayProperty=nameWithType> и <xref:System.Comparison%601?displayProperty=nameWithType> считаются чистыми.  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>Видимость  
@@ -202,5 +197,5 @@ Contract.Invariant(this.x > this.y);
 ## <a name="example"></a>Пример  
  В следующем примере показано использование контрактов для кода.  
   
- [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)] [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]
-
+ [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
+ [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

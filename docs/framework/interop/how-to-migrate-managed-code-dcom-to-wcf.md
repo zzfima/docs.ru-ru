@@ -5,26 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d6077b9d5be8866aa22b884f61ad49f48ee9b0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: af401cafe0740dcd9a313ae9143f9772605137d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодов в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
@@ -437,8 +430,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)   
- [Создание клиентов](../../../docs/framework/wcf/building-clients.md)   
+ [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
  [Дуплексные службы](../../../docs/framework/wcf/feature-details/duplex-services.md)
-
