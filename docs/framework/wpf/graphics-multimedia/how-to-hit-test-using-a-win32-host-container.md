@@ -1,44 +1,50 @@
 ---
-title: "Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка нажатия, использование контейнеров размещения Win32"
-  - "визуальные объекты, проверка нажатия"
-  - "контейнеры размещения Win32, проверка нажатия"
+title: "Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], using Win32 host containers
+- visual objects [WPF], hit tests on
+- Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a5cb77a53cbb106593b70d618bab67ef816e901
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32
-Если визуальные объекты создаются в окне [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], то для таких визуальных объектов можно использовать вложенный контейнер окна.  Чтобы обрабатывать события для содержащихся визуальных объектов, необходимо выполнять обработку сообщений, которые передаются в фильтрующий цикл обработки сообщений вложенного контейнера окна.  Дополнительные сведения о способах размещения визуальных объектов в окне [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] см. в разделе [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+# <a name="how-to-hit-test-using-a-win32-host-container"></a>Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32
+Можно создать визуальных объектов в пределах [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] окна использовать вложенный контейнер окна для визуальных объектов. Чтобы обрабатывать события для содержащихся визуальных объектов, выполняется обработка сообщений, переданных в цикл фильтрации сообщений контейнера окна. Ссылаться на [учебника: размещения визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md) Дополнительные сведения о способах размещения визуальных объектов в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна.  
   
-## Пример  
- В следующем коде показана настройка обработчиков событий мыши для окна [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], используемого в качестве вложенного контейнера для визуальных объектов.  
+## <a name="example"></a>Пример  
+ Ниже показано, как настройка обработчиков событий мыши для [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окно, которое используется в качестве вложенного контейнера для визуальных объектов.  
   
  [!code-csharp[VisualsHitTesting#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
  [!code-vb[VisualsHitTesting#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
- Следующий пример показывает, как установить [проверку попадания курсора](GTMT) в ответ на перехват конкретных событий мыши.  
+ В следующем примере показано, как для настройки проверки нажатия в ответ на перехват конкретных событий мыши.  
   
  [!code-csharp[VisualsHitTesting#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- Объект <xref:System.Windows.Interop.HwndSource> представляет содержимое [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в окне [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]. Значение свойства <xref:System.Windows.Interop.HwndSource.RootVisual%2A> объекта <xref:System.Windows.Interop.HwndSource> представляет самый верхний узел в иерархии [визуального дерева](GTMT).  
+ <xref:System.Windows.Interop.HwndSource> Объект представляет [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержимого в [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] окна. Значение <xref:System.Windows.Interop.HwndSource.RootVisual%2A> свойство <xref:System.Windows.Interop.HwndSource> представляет самый верхний узел в иерархии визуального дерева.  
   
- Полный пример объектов проверки нажатия с помощью вложенного контейнера Win32 см. в разделе [Пример проверки нажатия с помощью взаимодействия Win32](http://go.microsoft.com/fwlink/?LinkID=159995).  
+ Полный пример проверки нажатия объектов с помощью вложенного контейнера Win32 см. в разделе [с образец взаимодействие Win32](http://go.microsoft.com/fwlink/?LinkID=159995).  
   
-## См. также  
- <xref:System.Windows.Interop.HwndSource>   
- [Проверка попадания на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Interop.HwndSource>  
+ [Проверка нажатия на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
  [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)

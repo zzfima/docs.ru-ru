@@ -1,46 +1,50 @@
 ---
-title: "Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "растровые изображения [Windows Forms], использование матриц цветов для прозрачных"
-  - "изображения [Windows Forms], использование матриц цветов для прозрачных"
-  - "матрицы, альфа-компоненты"
-  - "прозрачность, матрицы цветов"
+title: "Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], using color matrices for semi-transparent
+- transparency [Windows Forms], color matrices
+- matrices [Windows Forms], alpha values
+- bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba7a016c96556f2719d4a247c93df7ac698b24fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях
-Классы <xref:System.Drawing.Bitmap> \(наследующий у класса <xref:System.Drawing.Image>\) и <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функции для чтения и записи значений пикселей.  Для изменения альфа\-компонентов во всем изображении можно использовать класс <xref:System.Drawing.Imaging.ImageAttributes>, либо можно вызывать метод <xref:System.Drawing.Bitmap.SetPixel%2A> класса <xref:System.Drawing.Bitmap> для изменения значений отдельных пикселей.  
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях
+<xref:System.Drawing.Bitmap> Класса (который наследуется от <xref:System.Drawing.Image> класса) и <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функции для получения и задания значений пикселей. Можно использовать <xref:System.Drawing.Imaging.ImageAttributes> класс для изменения альфа-канал значения для всего изображения, или можно вызвать <xref:System.Drawing.Bitmap.SetPixel%2A> метод <xref:System.Drawing.Bitmap> класса для изменения значений отдельных пикселей.  
   
-## Пример  
- Класс <xref:System.Drawing.Imaging.ImageAttributes> содержит множество свойств, которые можно использовать для модификаций изображений при их отрисовке.  В следующем примере объект <xref:System.Drawing.Imaging.ImageAttributes> используется для установки значений всех альфа\-компонентов равными 80 процентам от их первоначальных значений.  Для этого выполняется инициализация матрицы цветов и установка в этой матрице масштабирующего коэффициента для альфа\-компонента равным 0,8.  Адрес матрицы цветов передается методу <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> объекта <xref:System.Drawing.Imaging.ImageAttributes>, а объект <xref:System.Drawing.Imaging.ImageAttributes> передается методу <xref:System.Drawing.Graphics.DrawString%2A> объекта <xref:System.Drawing.Graphics>.  
+## <a name="example"></a>Пример  
+ <xref:System.Drawing.Imaging.ImageAttributes> Класс имеет множество свойств, которые можно использовать для изменения во время подготовки к просмотру изображений. В следующем примере <xref:System.Drawing.Imaging.ImageAttributes> объект используется для равным 80% от их первоначальных альфа-значения. Это делается, инициализация матрицы цветов и установив значение в матрице 0,8 масштабирования альфа-канал. Адрес матрицы цветов передается <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> метод <xref:System.Drawing.Imaging.ImageAttributes> объекта и <xref:System.Drawing.Imaging.ImageAttributes> объект передается <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> объекта.  
   
- В процессе отрисовки значения альфа\-компонентов растрового изображения преобразуются и становятся равными 80% от их первоначальных значений.  Это приводит к смешиванию изображения и фона.  Как показано на следующем рисунке, растровое изображение выглядит прозрачным, и сквозь него можно видеть сплошную черную линию.  
+ Во время подготовки к просмотру, альфа-факторы в битовой карте преобразуются в 80 процентов они были. Это приводит к изображение, смешивается с цветом фона. Как показано на следующем рисунке, растровое изображение выглядит прозрачным; Появится сплошная линия черным через него.  
   
- ![Альфа&#45;сглаживание с использованием матрицы](../../../../docs/framework/winforms/advanced/media/image2.png "image2")  
+ ![Альфа-смешение цвета с помощью матрицы](../../../../docs/framework/winforms/advanced/media/image2.png "изображение2")  
   
- В местах, где изображение покрывает белые участки фона, оно смешивается с белым цветом.  Там, где изображение пересекает черную линию, оно смешивается с черным цветом.  
+ Местах, где изображение покрывает белые участки фона, оно смешивается с белым цветом. Где изображение пересекает черную линию, изображение смешивается с черным цветом.  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Альфа\-смешение цвета для линий и заливок](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+## <a name="see-also"></a>См. также  
+ [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Альфа-смешение цвета для линий и заливок](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

@@ -1,49 +1,48 @@
 ---
-title: "Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater"
-  - "DataRepeater, добавление несвязанных элементов управления"
-  - "отображение несвязанных данных"
+title: "Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- DataRepeater, adding unbound controls
+- DataRepeater
+- displaying unbound data
 ms.assetid: f234fa40-5a13-4209-930e-7c5f81e86e66
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3e96219f0ea8b8198967e9fa3c6e5afb824352db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В дополнение к связанным элементам управления в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> можно добавить другие элементы управления, такие как статическая метка или изображение, повторяющееся на каждом элементе в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+# <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater (Visual Studio)
+Помимо связанные элементы управления, вы можете добавить другие элементы управления для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, такие как статическая метка или изображение, которое повторяется для каждого элемента в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
   
 > [!NOTE]
->  Необходимо также иметь как минимум один связанный с элементом управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемент, или во время выполнения ничего не будет отображаться.  
+>  Также необходимо иметь по крайней мере один связанный элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> или ничего не будет отображаться во время выполнения.  
   
-### Чтобы добавить несвязанные элементы управления в DataRepeater  
+### <a name="to-add-unbound-controls-to-a-datarepeater"></a>Добавление несвязанных элементов управления DataRepeater  
   
-1.  Перетащите элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> из вкладки **Visual Basic PowerPacks** в **панели элементов** на форму или контейнерный элемент управления.  
+1.  Перетащите <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления из **Visual Basic PowerPacks** вкладке **элементов** форму или контейнерный элемент управления.  
   
-2.  Измените размер и расположение в соответствии с размером и расположением элемента управления.  
+2.  Перетащите маркеры изменения размера и положения размер и положение этого элемента управления.  
   
-     Можно также изменить размер или переместить управляющий элемент, изменив свойства **Размер** и **Положение** в окне "Свойства".  
+     Можно также изменить размер и расположение элемента управления, изменив **размер** и **позиции** свойств в окне «Свойства».  
   
-3.  Добавьте как минимум один связанный с данными элемент управления в элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Дополнительные сведения см. в разделе [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md).  
+3.  Добавьте по крайней мере один элемент управления с привязкой к данным в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Дополнительные сведения см. в разделе [как: отображение привязки данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md).  
   
-4.  Перетащите элемент управления из **панели элементов** в область шаблона элемента для элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+4.  Перетащите элемент управления с **элементов** область шаблона элемента из <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
   
-     Обратите внимание, что у элемента управления две прямоугольных области.  Внутренняя область — *шаблон элемента*; элементы управления, добавленные в шаблон, будут повторены в каждом элементе элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> во время выполнения.  Внешняя область является *окном просмотра*, в котором будут отображены элементы; элементы управления, добавленные в эту область, не будут отображены во время выполнения.  
+     Обратите внимание, что элемент управления имеет двух прямоугольников. Внутренняя область — *шаблона элемента*; элементы управления, добавленные в шаблон будет повторяться в каждом элементе <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления во время выполнения. Внешняя область является *просмотра*, где будут отображены элементы; элементы управления, добавленные к этой области будет отображаться во время выполнения.  
   
-## См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Как: создать Главная и подчиненная формы с помощью двух элементов управления DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
  [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)

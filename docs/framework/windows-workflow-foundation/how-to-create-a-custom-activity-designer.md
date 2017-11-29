@@ -1,64 +1,67 @@
 ---
-title: "Как создать настраиваемый конструктор действий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как создать настраиваемый конструктор действий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cdf64dd7aca82fb0d0b3111832aca863a327270b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создать настраиваемый конструктор действий
-Пользовательские конструкторы действий обычно реализуются таким образом, что их связанные действия сочетаются с другими действиями, конструкторы которых могут помещаться вместе с ними на область конструктора.Эта функциональность требует, чтобы пользовательский конструктор действий предоставлял «зону перетаскивания», в которую может быть помещено произвольное действие, а также средства для управления результирующей коллекцией элементов в области конструктора.В этом разделе описано создание пользовательского конструктора действий, содержащего «зону перетаскивания», а также создание пользовательского конструктора действий, предоставляющего функции редактирования, необходимые для управления коллекцией элементов конструктора.  
+# <a name="how-to-create-a-custom-activity-designer"></a>Как создать настраиваемый конструктор действий
+Пользовательские конструкторы действий обычно реализуются таким образом, что их связанные действия сочетаются с другими действиями, конструкторы которых могут помещаться вместе с ними на область конструктора. Эта функциональность требует, что пользовательский конструктор действий предоставлял «зону перетаскивания» для которых может быть помещено произвольное действие, а также средства для управления результирующей коллекцией элементов в рабочей области конструирования. В этом разделе описано создание пользовательского конструктора действий, содержащего «зону перетаскивания», а также создание пользовательского конструктора действий, предоставляющего функции редактирования, необходимые для управления коллекцией элементов конструктора.  
   
- Пользовательские конструкторы действий обычно наследуют от <xref:System.Activities.Presentation.ActivityDesigner>, который является базовым типом конструктора действий по умолчанию для любых действий без определенного конструктора.Этот тип обеспечивает взаимодействие с таблицей свойств во время разработки и настройку основных аспектов, например, управления цветами и значками.  
+ Пользовательские конструкторы действий обычно наследуют от <xref:System.Activities.Presentation.ActivityDesigner>, который является базовым типом конструктора действий по умолчанию для любых действий без определенного конструктора. Этот тип обеспечивает взаимодействие с таблицей свойств во время разработки и настройку основных аспектов, например, управления цветами и значками.  
   
- Для упрощения разработки пользовательских конструкторов действий в конструкторе <xref:System.Activities.Presentation.ActivityDesigner> используют два элемента управления помощника, <xref:System.Activities.Presentation.WorkflowItemPresenter> и <xref:System.Activities.Presentation.WorkflowItemsPresenter>.Они обрабатывают общие функции, например перетаскивание дочерних элементов, удаление, выделение и добавление этих дочерних элементов.<xref:System.Activities.Presentation.WorkflowItemPresenter> может содержать один дочерний элемент пользовательского интерфейса, предоставляя «зону перетаскивания», а <xref:System.Activities.Presentation.WorkflowItemsPresenter> поддерживает несколько элементов пользовательского интерфейса, в том числе такие дополнительные функции, как упорядочение, перемещение, удаление и добавление дочерних элементов.  
+ Для упрощения разработки пользовательских конструкторов действий в конструкторе <xref:System.Activities.Presentation.ActivityDesigner> используют два элемента управления помощника, <xref:System.Activities.Presentation.WorkflowItemPresenter> и <xref:System.Activities.Presentation.WorkflowItemsPresenter>. Они обрабатывают общие функции, например перетаскивание дочерних элементов, удаление, выделение и добавление этих дочерних элементов. <xref:System.Activities.Presentation.WorkflowItemPresenter> Позволяет один дочерний элемент пользовательского интерфейса, предоставляя «зону перетаскивания» а <xref:System.Activities.Presentation.WorkflowItemsPresenter> может предоставить поддерживает несколько элементов пользовательского интерфейса, включая дополнительные функции, как упорядочение, перемещение, удаление и добавление дочерних элементов.  
   
- Другая важная часть описания, которую необходимо выделить в реализации пользовательских конструкторов действий, относится к способу привязывания визуальных изменений с использованием привязки данных [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] к хранящемуся в памяти экземпляру объекта, который изменяется в конструкторе.Это достигается с помощью дерева элементов модели, которое также обеспечивает уведомления об изменениях и отслеживание таких событий, как изменения состояний.  
+ Другая важная часть описания, которую необходимо выделить в реализации пользовательских конструкторов действий, относится к способу привязывания визуальных изменений с использованием привязки данных [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] к хранящемуся в памяти экземпляру объекта, который изменяется в конструкторе. Это достигается с помощью дерева элементов модели, которое также обеспечивает уведомления об изменениях и отслеживание таких событий, как изменения состояний.  
   
  В данном подразделе описаны две процедуры.  
   
-1.  Первая процедура описывает создание пользовательских конструкторов действий с <xref:System.Activities.Presentation.WorkflowItemPresenter>, предоставляющим «зону перетаскивания», в которую можно помещать другие действия.Эта процедура основана на образце [Пользовательские составные конструкторы — средство представления элементов рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md).  
+1.  Первая процедура описывает создание пользовательских конструкторов действий с <xref:System.Activities.Presentation.WorkflowItemPresenter>, предоставляющим «зону перетаскивания», в которую можно помещать другие действия. Эта процедура основана на [пользовательские составные конструкторы - средство представления элементов рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) образца.  
   
-2.  Вторая процедура описывает создание пользовательских конструкторов действий с элементом управления помощника <xref:System.Activities.Presentation.WorkflowItemsPresenter>, предоставляющим функции, необходимые для изменения коллекции содержащихся в нем элементов.Эта процедура основана на образце [Пользовательские составные конструкторы — средство представления элементов рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md).  
+2.  Вторая процедура описывает создание пользовательских конструкторов действий с элементом управления помощника <xref:System.Activities.Presentation.WorkflowItemsPresenter>, предоставляющим функции, необходимые для изменения коллекции содержащихся в нем элементов. Эта процедура основана на [пользовательские составные конструкторы - средство представления элементов рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) образца.  
   
-### Создание пользовательского конструктора действий с «зоной перетаскивания» с использованием WorkflowItemPresenter  
+### <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Создание пользовательского конструктора действий с "зоной сброса" с использованием WorkflowItemPresenter  
   
-1.  Запустите среду [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Запустите [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  В меню **Файл** укажите пункт **Создать** и выберите пункт **Проект**.  
+2.  На **файл** последовательно выберите пункты **New**, а затем выберите **проекта...** .  
   
-     Откроется диалоговое окно **Новый проект**.  
+     Откроется диалоговое окно **Новый проект** .  
   
-3.  В области **Установленные шаблоны** выберите **Windows** в категории предпочтительного языка.  
+3.  В **установленные шаблоны** выберите **Windows** из категории предпочтительного языка.  
   
-4.  В области **Шаблоны** выберите пункт **Приложение WPF**.  
+4.  В **шаблоны** выберите **приложение WPF**.  
   
-5.  В поле **Имя** введите `UsingWorkflowItemPresenter`.  
+5.  В **имя** введите `UsingWorkflowItemPresenter`.  
   
-6.  В поле **Расположение** введите путь к папке, где будет сохранен проект, или нажмите кнопку **Обзор**, чтобы перейти в эту папку.  
+6.  В **расположение** введите каталог, в котором требуется сохранить проект, или **Обзор** для перехода к нему.  
   
-7.  В поле **Решение** примите значение по умолчанию.  
+7.  В **решения** примите значение по умолчанию.  
   
 8.  Нажмите кнопку **ОК**.  
   
-9. В **обозревателе решений** щелкните правой кнопкой мыши файл MainWindows.xaml, выберите команду **Удалить** и нажмите кнопку **ОК** для подтверждения в диалоговом окне **Microsoft Visual Studio**.  
+9. Щелкните правой кнопкой мыши файл MainWindows.xaml в **обозревателе решений**выберите **удаление** и подтвердите **ОК** в **Microsoft Visual Studio**диалоговое окно.  
   
-10. Щелкните правой кнопкой мыши проект UsingWorkflowItemPresenter в окне **Обозреватель решений**, выберите команду **Добавить** и пункт **Новый элемент…**, чтобы открыть диалоговое окно **Добавление нового элемента**, затем выберите категорию **WPF** из раздела **Установленные шаблоны** в левой части окна.  
+10. Щелкните правой кнопкой мыши проект UsingWorkflowItemPresenter в **обозревателе решений**выберите **добавить**, затем **новый элемент...** Чтобы вызвать **Добавление нового элемента** и выберите **WPF** категории из **установленные шаблоны** слева.  
   
-11. Выберите шаблон **Window \(WPF\)**, назовите его `RehostingWFDesigner` и нажмите кнопку **Добавить**.  
+11. Выберите **Window (WPF)** шаблона, назовите его `RehostingWFDesigner`и нажмите кнопку **добавить**.  
   
 12. Откройте файл RehostingWFDesigner.xaml file и вставьте в него следующий код, чтобы определить пользовательский интерфейс для приложения.  
   
-    ```  
-  
+    ```xml  
     <Window x:Class=" UsingWorkflowItemPresenter.RehostingWFDesigner"  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -107,13 +110,11 @@ caps.handback.revision: 25
             <Border Grid.Column="2" Name="PropertyBorder"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
-13. Чтобы связать конструктор действия с типом действия, необходимо зарегистрировать конструктор действия в хранилище метаданных.Для этого добавьте метод `RegisterMetadata` в класс `RehostingWFDesigner`.В области метода `RegisterMetadata` создайте объект <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> и вызовите метод <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A>, чтобы добавить к нему атрибуты.Вызовите метод <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A>, чтобы добавить <xref:System.Activities.Presentation.Metadata.AttributeTable> в хранилище метаданных.Следующий код содержит логику повторного размещения для конструктора.Он регистрирует метаданные, помещает действие `SimpleNativeActivity` в область элементов и создает рабочий процесс.Поместите этот код в файл RehostingWFDesigner.xaml.cs.  
+13. Чтобы связать конструктор действия с типом действия, необходимо зарегистрировать конструктор действия в хранилище метаданных. Для этого добавьте метод `RegisterMetadata` в класс `RehostingWFDesigner`. В области метода `RegisterMetadata` создайте объект <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder> и вызовите метод <xref:System.Activities.Presentation.Metadata.AttributeTableBuilder.AddCustomAttributes%2A>, чтобы добавить к нему атрибуты. Вызовите метод <xref:System.Activities.Presentation.Metadata.MetadataStore.AddAttributeTable%2A>, чтобы добавить <xref:System.Activities.Presentation.Metadata.AttributeTable> в хранилище метаданных. Следующий код содержит логику повторного размещения для конструктора. Он регистрирует метаданные, помещает действие `SimpleNativeActivity` в область элементов и создает рабочий процесс. Поместите этот код в файл RehostingWFDesigner.xaml.cs.  
   
     ```  
-  
     using System;  
     using System.Activities.Core.Presentation;  
     using System.Activities.Presentation;  
@@ -159,12 +160,11 @@ caps.handback.revision: 25
             }  
         }  
     }  
-  
     ```  
   
-14. Щелкните правой кнопкой мыши папку References в «Обозревателе решений» и выберите **Добавить ссылку**, чтобы открыть диалоговое окно **Добавление ссылки**.  
+14. Щелкните правой кнопкой мыши папку References в обозревателе решений и выберите **добавить ссылку...** Чтобы вызвать **добавить ссылку** диалогового окна.  
   
-15. На вкладке **.NET** найдите сборку **System.Activities.Core.Presentation**, выберите ее и нажмите кнопку **ОК**.  
+15. Нажмите кнопку **.NET** найдите сборку с именем **System.Activities.Core.Presentation**, выделите его и нажмите кнопку **ОК**.  
   
 16. Таким же образом добавьте ссылки на следующие сборки:  
   
@@ -174,19 +174,18 @@ caps.handback.revision: 25
   
     3.  System.ServiceModel.Activities.dll  
   
-17. Откройте файл App.xaml file и измените значение StartUpUri на «RehostingWFDesigner.xaml».  
+17. Откройте файл App.xaml и измените значение StartUpUri на «RehostingWFDesigner.xaml».  
   
-18. Щелкните правой кнопкой мыши проект UsingWorkflowItemPresenter в окне **Обозреватель решений**, выберите команду **Добавить** и пункт **Новый элемент…**, чтобы открыть диалоговое окно **Добавление нового элемента**, и выберите категорию **Рабочий процесс** в разделе **Установленные шаблоны** слева.  
+18. Щелкните правой кнопкой мыши проект UsingWorkflowItemPresenter в **обозревателе решений**выберите **добавить**, затем **новый элемент...** Чтобы вызвать **Добавление нового элемента** и выберите **рабочего процесса** категорию **установленные шаблоны** слева.  
   
-19. Выберите шаблон **Activity Designer**, назовите его `SimpleNativeDesigner` и нажмите кнопку **Добавить**.  
+19. Выберите **конструктора** шаблона, назовите его `SimpleNativeDesigner`и нажмите кнопку **добавить**.  
   
-20. Откройте файл SimpleNativeDesigner.xaml и вставьте в него следующий код.Обратите внимание, что этот код использует <xref:System.Activities.Presentation.ActivityDesigner> в качестве корневого элемента и показывает, как привязка используется для интеграции <xref:System.Activities.Presentation.WorkflowItemPresenter> в конструктор, чтобы дочерний тип можно было отобразить в конструкторе составных действий.  
+20. Откройте файл SimpleNativeDesigner.xaml и вставьте в него следующий код. Обратите внимание, что этот код использует <xref:System.Activities.Presentation.ActivityDesigner> в качестве корневого элемента и показывает, как привязка используется для интеграции <xref:System.Activities.Presentation.WorkflowItemPresenter> в конструктор, чтобы дочерний тип можно было отобразить в конструкторе составных действий.  
   
     > [!NOTE]
     >  Схема для <xref:System.Activities.Presentation.ActivityDesigner> позволяет добавлять только один дочерний элемент в определение пользовательского конструктора действий. Однако этим элементом может быть `StackPanel`, `Grid` или другой составной элемент пользовательского интерфейса.  
   
-    ```  
-  
+    ```xml  
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemPresenter.SimpleNativeDesigner"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -218,17 +217,15 @@ caps.handback.revision: 25
             <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}" />  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
-21. Щелкните правой кнопкой мыши проект UsingWorkflowItemPresenter в окне **Обозреватель решений**, выберите команду **Добавить** и пункт **Новый элемент…**, чтобы открыть диалоговое окно **Добавление нового элемента**, и выберите категорию **Рабочий процесс** в разделе **Установленные шаблоны** слева.  
+21. Щелкните правой кнопкой мыши проект UsingWorkflowItemPresenter в **обозревателе решений**выберите **добавить**, затем **новый элемент...** Чтобы вызвать **Добавление нового элемента** и выберите **рабочего процесса** категорию **установленные шаблоны** слева.  
   
-22. Выберите шаблон **Code Activity**, назовите его `SimpleNativeActivity` и нажмите кнопку **Добавить**.  
+22. Выберите **действие кода** шаблона, назовите его `SimpleNativeActivity`и нажмите кнопку **добавить**.  
   
 23. Реализуйте класс `SimpleNativeActivity`, введя следующий код в файл SimpleNativeActivity.cs.  
   
     ```  
-  
     using System.Activities;  
   
     namespace UsingWorkflowItemPresenter  
@@ -253,20 +250,19 @@ caps.handback.revision: 25
             }  
         }  
     }  
-  
     ```  
   
-24. В меню **Построить** выберите пункт **Построить решение**.  
+24. Выберите **построить решение** из **построения** меню.  
   
-25. В меню **Отладка** выберите команду **Запуск без отладки**, чтобы открыть повторно размещенное пользовательское окно конструктора.  
+25. Выберите **Запуск без отладки** из **отладки** меню, чтобы открыть окно повторно размещенный пользовательского конструктора.  
   
-### Создание пользовательского конструктора действий с использованием WorkflowItemsPresenter  
+### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>Создание пользовательского конструктора действий с использованием WorkflowItemsPresenter  
   
-1.  Процедура для второго пользовательского конструктора действий похожа на предыдущую с определенными изменениями, первое из которых заключается в присвоении второму приложению имени `UsingWorkflowItemsPresenter`.Кроме того, это приложение не определяет новое пользовательское действие.  
+1.  Процедура для второго пользовательского конструктора действий похожа первый с несколькими изменениями, первый из которых заключается в второму приложению имени `UsingWorkflowItemsPresenter`. Кроме того, это приложение не определяет новое пользовательское действие.  
   
-2.  Основные различия находятся в файлах CustomParallelDesigner.xaml и RehostingWFDesigner.xaml.cs.Ниже приводится код из файла CustomParallelDesigne.xaml, который определяет пользовательский интерфейс.  
+2.  Основные различия находятся в файлах CustomParallelDesigner.xaml и RehostingWFDesigner.xaml.cs. Ниже приводится код из файла CustomParallelDesigne.xaml, который определяет пользовательский интерфейс.  
   
-    ```  
+    ```xml  
     <sap:ActivityDesigner x:Class=" UsingWorkflowItemsPresenter.CustomParallelDesigner"  
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -308,13 +304,11 @@ caps.handback.revision: 25
             <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
         </Grid>  
     </sap:ActivityDesigner>  
-  
     ```  
   
 3.  Ниже приводится код из файла RehostingWFDesigner.xaml.cs, который предоставляет логику повторного размещения.  
   
     ```  
-  
     using System;  
     using System.Activities.Core.Presentation;  
     using System.Activities.Presentation;  
@@ -357,10 +351,10 @@ caps.handback.revision: 25
     }  
     ```  
   
-## См. также  
- <xref:System.Activities.Presentation.ActivityDesigner>   
- <xref:System.Activities.Presentation.WorkflowItemPresenter>   
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>   
- <xref:System.Activities.Presentation.WorkflowViewElement>   
- <xref:System.Activities.Presentation.Model.ModelItem>   
- [Рекомендации по настройке конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation//customizing-the-workflow-design-experience.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Activities.Presentation.ActivityDesigner>  
+ <xref:System.Activities.Presentation.WorkflowItemPresenter>  
+ <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
+ <xref:System.Activities.Presentation.WorkflowViewElement>  
+ <xref:System.Activities.Presentation.Model.ModelItem>  
+ [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

@@ -1,36 +1,41 @@
 ---
-title: "Практическое руководство. Определение размера панелей строки состояния | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "панели, установка размера в строке состояния"
-  - "строки состояния, установка размера панели"
-  - "StatusBar - элемент управления [Windows Forms], размер панели"
+title: "Практическое руководство. Определение размера панелей строки состояния"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- StatusBar control [Windows Forms], panel size
+- status bars [Windows Forms], setting panel size
+- panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc9eca130b238ac686e88ebbc6e8491bc7be93bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Определение размера панелей строки состояния
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Практическое руководство. Определение размера панелей строки состояния
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStripStatusLabel> заменяет элемент управления <xref:System.Windows.Forms.StatusBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.StatusBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- Каждый экземпляр класса <xref:System.Windows.Forms.StatusBarPanel> в элементе управления [Элемент управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) имеет ряд динамических свойств, определяющих его ширину и изменение размеров во время выполнения.  
+ Каждый экземпляр <xref:System.Windows.Forms.StatusBarPanel> класса в [управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) управления имеет ряд динамических свойств, определяющих его ширину и размеров во время выполнения.  
   
-### Настройка размера панели  
+### <a name="to-set-the-size-of-a-panel"></a>Чтобы задать размер панели  
   
-1.  В процедуре установите свойства <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A> и <xref:System.Windows.Forms.StatusBarPanel.Width%2A> \(или любые их подмножества\) для панелей строк состояния , используя коэффициент, подставляемый через свойство <xref:System.Windows.Forms.StatusBar.Panels%2A> коллекции <xref:System.Windows.Forms.StatusBarPanel>.  
+1.  В процедуре, задайте <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, и <xref:System.Windows.Forms.StatusBarPanel.Width%2A> свойства (или любое подмножество ней) для строки состояния с помощью индекса панелей передать <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство <xref:System.Windows.Forms.StatusBarPanel> коллекции.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -42,7 +47,6 @@ caps.handback.revision: 14
     ' Enable the StatusBar control to display panels.  
        StatusBar1.ShowPanels = True  
         End Sub  
-  
     ```  
   
     ```csharp  
@@ -55,7 +59,6 @@ caps.handback.revision: 14
        statusBar1.Panels[0].Width = 200;  
        statusBar1.ShowPanels = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,9 +75,9 @@ caps.handback.revision: 14
        }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Пошаговое руководство. Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)   
- [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [Пошаговое руководство. Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
  [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

@@ -1,88 +1,87 @@
 ---
-title: "Разделяемые методы (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "пользовательская логика в коде [Visual Basic]"
-  - "вставка пользовательской логики в код"
-  - "методы [Visual Basic], частично выполненные методы"
-  - "частично выполненные методы [Visual Basic]"
-  - "разделяемые, методы [Visual Basic]"
+title: "Разделяемые методы (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Разделяемые методы (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Разделяемые методы позволяют разработчикам использовать другую логику в коде.  Обычно код является частью класса, созданного разработчиком.  Разделяемые методы определяются в разделяемом классе, созданном генератором кода, и они обычно используются для предоставления уведомлений о том, что объект был изменен.  Они позволяют разработчику указать пользовательское поведение в ответ на изменение.  
+# <a name="partial-methods-visual-basic"></a>Разделяемые методы (Visual Basic)
+Разделяемые методы позволяют разработчикам использовать пользовательскую логику в код. Обычно код является частью класса автоматически созданный конструктором. Разделяемые методы определяются в разделяемый класс, созданный генератор кода, и обычно используются для предоставления уведомления, что что-то был изменен. Они позволяют разработчику указать пользовательское поведение в ответ на изменение.  
   
- Конструктор генератора кода определяет только сигнатуру метода и один или несколько вызовов метода.  Разработчики могут затем предоставить реализации метода при необходимости изменения поведения созданного кода.  Если реализации не указаны, вызовы методов удаляются компилятором, что позволяет сократить потери производительности.  
+ Конструктор генератора кода определяет только сигнатуру метода и один или несколько вызовов метода. Разработчики могут затем предоставить реализации метода, если они хотят настроить поведение созданного кода. При реализации не указаны, вызовы метода удаляются компилятором, что потери производительности.  
   
-## Объявление  
- Созданный код помечает определение разделяемого метода, вставляя ключевое слово `Partial` в начале строки сигнатуры.  
+## <a name="declaration"></a>Объявление  
+ Созданный код помечает определение разделяемого метода, поместив ключевое слово `Partial` в начале строки сигнатуры.  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
  Определение должно удовлетворять следующим условиям:  
   
--   Метод должен иметь тип `Sub`, а не `Function`.  
+-   Метод должен быть `Sub`, а не `Function`.  
   
--   Тело метода необходимо оставить пустым.  
+-   Тело метода должно быть пустым.  
   
--   Модификатор доступа должны иметь тип `Private`.  
+-   Модификатор доступа должны иметь `Private`.  
   
-## Реализация  
- В основном реализация состоит из заполнения тела разделяемого метода.  Реализация находится обычно в отдельном разделяемом классе из определения и создается разработчиком, который стремится расширить созданный код.  
+## <a name="implementation"></a>Реализация  
+ Реализация состоит заполнения тела разделяемого метода. Реализация обычно находится в отдельном разделяемом классе из определения и записывается разработчиком, который требуется расширить созданный код.  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- Вариант предыдущего примера точно дублирует сигнатуру в объявлении, но возможны также другие варианты.  В частности, могут быть добавлены другие модификаторы, например `Overloads` или `Overrides`.  Разрешается использование только одного модификатора `Overrides`.  Дополнительные сведения о модификаторах метода см. в разделе [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ Предыдущий пример точно дублирует подпись в объявлении, но возможны также другие варианты. В частности, другие модификаторы можно добавить, например `Overloads` или `Overrides`. Только один `Overrides` модификатор разрешен. Дополнительные сведения о метод модификаторы см [оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## Применение  
- Вызовите разделяемый метод таким же образом, как вызывается любая другая процедура `Sub`.  Если метод был реализован, вычисляются аргументы и выполняется тело метода.  Однако следует помнить, что реализация разделяемого метода необязательна.  Если метод не реализован, то вызывать его не эффективно, и выражения, передаваемые как аргументы в метод, не вычисляются.  
+## <a name="use"></a>Применение  
+ Вызовите разделяемый метод, как и любой другой `Sub` процедуры. Если метод был реализован, вычисляются аргументы и выполняется тело метода. Однако следует помните, что реализация разделяемого метода является необязательным. Если метод не реализован, его вызов не оказывает влияния и не вычисляются выражения, передаваемые как аргументы в метод.  
   
-## Пример  
- В файле Product.Designer.vb определите класс `Product`, имеющий свойство `Quantity`.  
+## <a name="example"></a>Пример  
+ В файле с именем Product.Designer.vb, определить `Product` классом, имеющим `Quantity` свойство.  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
- В файле Product.vb создайте реализацию для `QuantityChanged`.  
+ В файле с именем Product.vb предоставить реализацию `QuantityChanged`.  
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- Наконец, в методе Main проекта объявите экземпляр `Product` и укажите начальное значение для его свойства `Quantity`.  
+ Наконец, в методе Main проекта объявите `Product` экземпляра и укажите начальное значение для его `Quantity` свойство.  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- Появится окно, которое выводит сообщение:  
+ Появится окно сообщения, будет отображено следующее сообщение:  
   
  `Quantity was changed to 100`  
   
-## См. также  
- [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Необязательные параметры](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [Создание кода в LINQ to SQL](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [Добавление бизнес\-логики с помощью разделяемых методов](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a>См. также  
+ [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Подпрограммы](./sub-procedures.md)  
+ [Необязательные параметры](./optional-parameters.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [Создание кода в LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
+ [Добавление бизнес-логики с помощью разделяемых методов](https://msdn.microsoft.com/library/bb546176)

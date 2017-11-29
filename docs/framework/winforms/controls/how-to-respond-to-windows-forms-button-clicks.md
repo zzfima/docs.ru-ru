@@ -1,42 +1,47 @@
 ---
-title: "Практическое руководство. Обработка события нажатия кнопки в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button - элемент управления [Windows Forms], реакция на щелчок"
-  - "кнопки, отклик на события Click"
-  - "Click - событие, Button - элемент управления"
-  - "Click - событие, реакция на"
-  - "двойной щелчок"
-  - "события [Windows Forms], события Click"
-  - "примеры [Windows Forms], элементы управления"
-  - "MouseDown - событие"
+title: "Практическое руководство. Обработка события нажатия кнопки в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- buttons [Windows Forms], responding to Click events
+- events [Windows Forms], Click events
+- Click event [Windows Forms], Button control
+- MouseDown event
+- Button control [Windows Forms], click response
+- double-clicks
+- examples [Windows Forms], controls
+- Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 923eb7d1b1b5b442ce897619253a958019b239a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Обработка события нажатия кнопки в Windows Forms
-Чаще всего элемент управления <xref:System.Windows.Forms.Button> в Windows Forms используется для выполнения какой\-либо программы при нажатии кнопки.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Практическое руководство. Обработка события нажатия кнопки в Windows Forms
+Чаще всего в Windows Forms <xref:System.Windows.Forms.Button> элемент управления должен выполнять определенный код, при нажатии кнопки.  
   
- Щелчок элемента управления <xref:System.Windows.Forms.Button> вызывает также некоторые другие события, например <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown> и <xref:System.Windows.Forms.Control.MouseUp>.  Если требуется вложить обработчики событий для таких событий, связанных с основным, убедитесь, что их действия не конфликтуют.  Например, если нажатие кнопки удаляет сведения, введенные пользователем в текстовое поле, при наведении указателя мыши на кнопку не должна появляться подсказка с несуществующими сведениями.  
+ Щелкнув <xref:System.Windows.Forms.Button> управления также создает ряд других событий, таких как <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, и <xref:System.Windows.Forms.Control.MouseUp> события. Если вы собираетесь добавить обработчики событий для этих связанных событий, убедитесь, что их действия не конфликтуют. Например если нажатие кнопки удаляет данные, данные, введенные пользователем в текстовое поле, при наведении указателя мыши на кнопку не должно отображать подсказки с несуществующими сведениями.  
   
- Если дважды щелкнуть элемент управления <xref:System.Windows.Forms.Button>, каждый щелчок будет обрабатываться отдельно; другими словами, этот элемент управления не поддерживает событие двойного щелчка.  
+ Если пользователь пытается дважды щелкните <xref:System.Windows.Forms.Button> элемента управления, каждый щелчок будет обрабатываться отдельно; то есть элемент управления не поддерживает событие двойного щелчка.  
   
-### Ответ на нажатие кнопки  
+### <a name="to-respond-to-a-button-click"></a>Ответ на нажатие кнопки  
   
--   В обработчике`Click` <xref:System.EventHandler> кнопки напишите выполняемый код.  `Button1_Click` необходимо привязать к элементу управления.  Дополнительные сведения см. в разделе [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+-   На кнопке панели `Click` <xref:System.EventHandler> написать код для выполнения. `Button1_Click`должен быть привязан к элементу управления. Дополнительные сведения см. в разделе [как: Создание обработчиков событий в запуска времени для Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -51,7 +56,7 @@ caps.handback.revision: 14
     }  
     ```  
   
-    ```cpp#  
+    ```cpp  
     private:  
        void button1_Click(System::Object ^ sender,  
           System::EventArgs ^ e)  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
        }  
     ```  
   
-## См. также  
- [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  [Элемент управления Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

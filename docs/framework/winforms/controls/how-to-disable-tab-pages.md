@@ -1,43 +1,48 @@
 ---
-title: "Практическое руководство. Блокировка доступа ко вкладкам | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "страницы вкладок, скрытие в формах"
-  - "TabControl - элемент управления [Windows Forms], отключение страниц"
+title: "Практическое руководство. Блокировка доступа ко вкладкам"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tab pages [Windows Forms], hiding in forms
+- TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 20674a93459f42a793ddf5f7ee5dffb1fa122d0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Блокировка доступа ко вкладкам
-В некоторых ситуациях бывает необходимо ограничить доступ к данным, доступным в приложении Windows Forms.  Например, при отображении данных на вкладках может возникнуть необходимость запретить гостевым пользователям и пользователям нижнего уровня доступ к содержимому одной из вкладок.  
+# <a name="how-to-disable-tab-pages"></a>Практическое руководство. Блокировка доступа ко вкладкам
+В некоторых случаях может потребоваться ограничить доступ к данным, доступным в приложении Windows Forms. Примером этого может быть при наличии данных, отображаемых на страницах вкладок элемента управления вкладками; Администраторы могут иметь сведения на странице вкладки, который требуется запретить запись гостя или пользователям более низкого уровня.  
   
-### Чтобы отключить страницы вкладок программными средствами  
+### <a name="to-disable-tab-pages-programmatically"></a>Чтобы отключить страницы вкладок программными средствами  
   
-1.  Напишите код для обработки события <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> элемента управления вкладок.  Данное событие происходит при переключении пользователя на очередную вкладку.  
+1.  Напишите код для обработки управления "Вкладка" <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> событий. Это событие, которое возникает при переключении с одной вкладки к следующему.  
   
-2.  Проверьте учетные данные пользователя.  Прежде чем разрешить пользователю просматривать вкладку, можно, в зависимости от предоставленных сведений, проверить имя пользователя, с которым он вошел в систему, или другие учетные данные.  
+2.  Проверьте учетные данные. В зависимости от данных, выводимых, вы можете проверить имя пользователя, который пользователь вошел в систему или другие формы учетные данные, прежде чем предоставить пользователю получить доступ к вкладке.  
   
-3.  Если учетные данные соответствуют требованиям, отобразите нужную вкладку.  Если у пользователя нет надлежащих учетных данных, выведите диалоговое окно или другой элемент пользовательского интерфейса, указывающий на отсутствие доступа, и вернитесь на исходную вкладку.  
+3.  Если у пользователя есть соответствующие учетные данные, отображаться вкладка, которая была нажата. Если пользователь не имеет соответствующих учетных данных, окно сообщения, или другой пользовательский интерфейс, указывающий, что они не имеют доступа и вернуться на вкладку начальной.  
   
     > [!NOTE]
-    >  При реализации этой функции в приложении можно выполнять проверку учетных данных в обработчике события <xref:System.Windows.Forms.Form.Load> формы.  Это позволит скрывать вкладку до отображения пользовательского интерфейса, что предпочтительнее с точки зрения стиля программирования.  Используемые ниже методы \(проверка учетных данных и отключение вкладки в обработчике события <xref:System.Windows.Forms.TabControl.SelectedIndexChanged>\) носят чисто иллюстративный характер.  
+    >  При реализации этих возможностей в приложении можно выполнять проверку учетных данных во время формы <xref:System.Windows.Forms.Form.Load> событий. Это позволит скрывать вкладку до отображения пользовательского интерфейса, это более предпочтительно в программировании. Используемые ниже методы (проверка учетных данных и отключение вкладки в <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> событий) для демонстрационных целей.  
   
-4.  Если страниц вкладок больше двух, можно отобразить вкладку, отличающуюся от первоначальной.  
+4.  При необходимости при наличии более двух вкладок, можно отобразите вкладку отличается от исходного.  
   
-     В приведенном ниже примере вместо проверки учетных данных используется элемент управления <xref:System.Windows.Forms.CheckBox>, поскольку условия доступа к вкладке будут изменяться в зависимости от приложения.  Если при распознавании события <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> проверка учетных данных прошла успешно \(т. е. флажок установлен\) и выбрана вкладка `TabPage2` \(в данном примере — вкладка с конфиденциальными данными\), то вкладка `TabPage2` отображается.  В противном случае отображается вкладка `TabPage3` и открывается окно с сообщением об отсутствии необходимых прав доступа.  Нижеследующий код предполагает наличие формы, в которой имеется элемент управления <xref:System.Windows.Forms.CheckBox> \(`CredentialCheck`\) и элемент управления <xref:System.Windows.Forms.TabControl> с тремя страницами вкладок.  
+     В следующем примере <xref:System.Windows.Forms.CheckBox> управления используется вместо проверки учетных данных, в качестве критерия для доступа к вкладке зависит от приложения. Когда <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> события, если проверка учетных данных имеет значение true (то есть флажок установлен) и выбрана вкладка `TabPage2` (вкладка с конфиденциальными данными, в этом примере), затем `TabPage2` отображается. В противном случае `TabPage3` отображается и отображается окно сообщения об отсутствии необходимых прав доступа. В следующем примере кода предполагается наличие формы с <xref:System.Windows.Forms.CheckBox> управления (`CredentialCheck`) и <xref:System.Windows.Forms.TabControl> управления с тремя вкладками.  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -53,7 +58,6 @@ caps.handback.revision: 15
           TabControl1.SelectedTab = TabPage3  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -71,7 +75,6 @@ caps.handback.revision: 15
             tabControl1.SelectedTab = tabPage3;  
         }  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,12 +99,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-     \(Visual C\#, Visual C\+\+\) Добавьте в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     (Visual C#, Visual C++) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.tabControl1.SelectedIndexChanged +=   
        new System.EventHandler(this.tabControl1_SelectedIndexChanged);  
-  
     ```  
   
     ```cpp  
@@ -109,8 +111,8 @@ caps.handback.revision: 15
        gcnew System::EventHandler(this, &Form1::tabControl1_SelectedIndexChanged);  
     ```  
   
-## См. также  
- [Общие сведения об элементе управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [Практическое руководство. Добавление элемента управления на вкладку](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения об элементе управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [Практическое руководство. Добавление элемента управления на вкладку](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  [Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

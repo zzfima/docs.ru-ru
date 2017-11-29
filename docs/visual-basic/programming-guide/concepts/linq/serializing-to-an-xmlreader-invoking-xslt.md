@@ -1,36 +1,28 @@
 ---
-title: "Сериализация в XmlReader (вызов XSLT) (Visual Basic) | Документы Microsoft"
+title: "Сериализация в XmlReader (вызов XSLT) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bca1e63bbe5b3ccd13f183c3cc6081917624ad94
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ea4a8a17e938b22d6e307ebe307c69481e44e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Сериализация в XmlReader (вызов XSLT) (Visual Basic)
-При использовании <xref:System.Xml?displayProperty=fullName>возможности взаимодействия [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], можно использовать <xref:System.Xml.Linq.XNode.CreateReader%2A>для создания <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.CreateReader%2A> </xref:System.Xml?displayProperty=fullName> Модуль, считывающий из этого <xref:System.Xml.XmlReader>считывает узлы XML-дерева и обрабатывает их соответствующим образом.</xref:System.Xml.XmlReader>  
+При использовании средств взаимодействия <xref:System.Xml?displayProperty=nameWithType>, реализованных в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], можно применять <xref:System.Xml.Linq.XNode.CreateReader%2A> для создания <xref:System.Xml.XmlReader>. Модуль, считывающий из этого <xref:System.Xml.XmlReader>, считывает узлы XML-дерева и обрабатывает их соответствующим образом.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Запуск преобразования XSLT  
- Кроме того, этот метод можно использовать для запуска преобразования XSLT. Можно создать XML-дерево, создать <xref:System.Xml.XmlReader>из XML-дерева, создайте новый документ и затем создать <xref:System.Xml.XmlWriter>для записи в новый документ.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> После этого можно вызвать преобразование XSLT, передавая <xref:System.Xml.XmlReader>и <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> После успешного завершения преобразования новое XML-дерево заполняется ее результатами.  
+ Кроме того, этот метод можно использовать для запуска преобразования XSLT. Можно сформировать XML-дерево, создать из этого дерева <xref:System.Xml.XmlReader>, создать новый документ и затем создать <xref:System.Xml.XmlWriter> для записи в новый документ. Далее можно запустить преобразование XSLT, передавая <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>. После успешного завершения преобразования новое XML-дерево заполняется ее результатами.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  

@@ -1,42 +1,43 @@
 ---
-title: "Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button - элемент управления [Windows Forms], назначение в качестве кнопки отмены"
-  - "кнопки, кнопки отмены"
+title: "Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- buttons [Windows Forms], cancel buttons
+- Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28e1667d086f26759e0129fc62d94ea79c68d880
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора
-В любой форме Windows Forms элемент управления <xref:System.Windows.Forms.Button> можно назначить кнопкой "Отмена".  Кнопка "Отмена" активируется при любом нажатии клавиши ESC, независимо от того, на каком элементе управления формы находится в этот момент фокус.  Такая кнопка обычно создается, чтобы позволить пользователю быстро прервать операцию, не выполняя никакого действия.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора
+В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> элемента управления "Отмена". Каждый раз, когда пользователь нажимает клавишу ESC, независимо от других элементов управления в форме имеет фокус по нажатию кнопки "Отмена". Такая кнопка обычно создается, чтобы пользователь мог быстро прервать операцию, не выполняя никаких действий.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы назначить кнопку "Отмена"  
+### <a name="to-designate-the-cancel-button"></a>Чтобы создать кнопку «Отмена»  
   
 1.  Выберите форму, в которой находится кнопка.  
   
-2.  В окне **Свойства** установите значение свойства формы <xref:System.Windows.Forms.Form.CancelButton%2A> равным имени элемента управления <xref:System.Windows.Forms.Button>.  
+2.  В **свойства** задайте формы <xref:System.Windows.Forms.Form.CancelButton%2A> свойства <xref:System.Windows.Forms.Button> имя элемента управления.  
   
-## См. также  
- <xref:System.Windows.Forms.Form.CancelButton%2A>   
- [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Form.CancelButton%2A>  
+ [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
  [Элемент управления Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

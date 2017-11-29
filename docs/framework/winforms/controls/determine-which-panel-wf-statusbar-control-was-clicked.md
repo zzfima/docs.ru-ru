@@ -1,44 +1,49 @@
 ---
-title: "Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Panel - элемент управления [Windows Forms], определение щелчка"
-  - "PanelClick - событие, определение выбранной панели"
-  - "панели, определение выбранной"
-  - "строки состояния, определение выбранной панели"
-  - "StatusBar - элемент управления [Windows Forms], кодирование событий выбора панели"
-  - "StatusBar - элемент управления [Windows Forms], определение выбранной панели"
+title: "Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- status bars [Windows Forms], determining panel clicked
+- panels [Windows Forms], determining clicked
+- StatusBar control [Windows Forms], coding panel click events
+- StatusBar control [Windows Forms], determining panel clicked
+- PanelClick event [Windows Forms], determining panel clicked
+- Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 27cf31d7e5944f206bca880adad1407ab124ad6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms
 > [!IMPORTANT]
->  Элементы управления <xref:System.Windows.Forms.StatusStrip> и <xref:System.Windows.Forms.ToolStripStatusLabel> заменяют элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> и расширяют их функциональные возможности; однако при необходимости элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> можно сохранить для обратной совместимости и использования в будущем.  
+>  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> заменить элементы управления и добавить функциональные возможности в <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления можно сохранить для обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
   
- Для программирования элемента управления [Элемент управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) на реагирование на щелчок мышью пользователя используется оператор условия в событии <xref:System.Windows.Forms.StatusBar.PanelClick>.  Событие содержит аргумент \(аргумент области\), содержащий ссылку на нажатый элемент управления <xref:System.Windows.Forms.StatusBarPanel>.  Используя эту ссылку, можно определить индекс выбранной панели и соответствующим образом запрограммировать ее.  
+ Для программы [управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) управления отвечать на щелчки мышью, используйте инструкции case в <xref:System.Windows.Forms.StatusBar.PanelClick> событий. Событие содержит аргумент (аргумент панели), который содержит ссылку на нажатый элемент <xref:System.Windows.Forms.StatusBarPanel>. Используя эту ссылку, можно определить индекс выбранной панели и программировать соответствующим образом.  
   
 > [!NOTE]
->  Убедитесь, что свойство <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> элемента управления <xref:System.Windows.Forms.StatusBar> имеет значение `true`.  
+>  Убедитесь, что <xref:System.Windows.Forms.StatusBar> элемента управления <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойству `true`.  
   
-### Чтобы определить, в какой области был щелчок  
+### <a name="to-determine-which-panel-was-clicked"></a>Чтобы определить, какая панель была выбрана  
   
-1.  В обработчике событий <xref:System.Windows.Forms.StatusBar.PanelClick> используйте оператор `Select Case` \(в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\) или `switch case` \(в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\), чтобы определить, какая панель была выбрана, посредством проверки индекса выбранной панели в аргументах события.  
+1.  В <xref:System.Windows.Forms.StatusBar.PanelClick> обработчик событий, используйте `Select Case` (в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) или `switch case` ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) инструкцию, чтобы определить, какая панель была выбрана, посредством проверки индекса выбранной панели в аргументах события.  
   
-     В следующем примере кода требуется наличие в форме элемента управления <xref:System.Windows.Forms.StatusBar>, `StatusBar1` и двух объектов <xref:System.Windows.Forms.StatusBarPanel>,`StatusBarPanel1` и`StatusBarPanel2`.  
+     В следующем примере кода требуется наличие в форме объекта <xref:System.Windows.Forms.StatusBar> управления `StatusBar1`и два <xref:System.Windows.Forms.StatusBarPanel> объектов, `StatusBarPanel1` и `StatusBarPanel2`.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -49,7 +54,6 @@ caps.handback.revision: 16
            MessageBox.Show("You have clicked Panel Two.")  
        End Select  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -66,7 +70,6 @@ caps.handback.revision: 16
              break;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -86,13 +89,12 @@ caps.handback.revision: 16
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Добавьте в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   
        System.Windows.Forms.StatusBarPanelClickEventHandler   
        (this.statusBar1_PanelClick);  
-  
     ```  
   
     ```cpp  
@@ -101,9 +103,9 @@ caps.handback.revision: 16
        (this, &Form1::statusBar1_PanelClick);  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Практическое руководство. Определение размера панелей строки состояния](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)   
- [Пошаговое руководство. Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [Практическое руководство. Определение размера панелей строки состояния](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ [Пошаговое руководство. Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
  [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

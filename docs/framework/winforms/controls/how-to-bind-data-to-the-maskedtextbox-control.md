@@ -1,41 +1,46 @@
 ---
-title: "Практическое руководство. Связывание данных с элементом управления MaskedTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "привязка данных, MaskedTextBox - элемент управления [Windows Forms]"
-  - "MaskedTextBox - элемент управления [Windows Forms]"
-  - "MaskedTextBox - элемент управления [Windows Forms], привязка данных"
+title: "Практическое руководство. Связывание данных с элементом управления MaskedTextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- MaskedTextBox control [Windows Forms]
+- data binding [Windows Forms], MaskedTextBox control [Windows Forms]
+- MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Связывание данных с элементом управления MaskedTextBox
-Данные можно привязать в элементу управления <xref:System.Windows.Forms.MaskedTextBox>, как к любому другому элементу управления Windows Forms.  При этом, если формат данных в базе данных не соответствует формату, ожидаемому определением маски, его необходимо изменить.  В следующей процедуре показано, как для этой цели можно использовать события <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> класса <xref:System.Windows.Forms.Binding> для отображения отдельных полей базы данных номеров телефонов и добавочных номеров в качестве одного изменяемого поля.  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Связывание данных с элементом управления MaskedTextBox
+Можно привязать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms. Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определением маски, необходимо будет изменять формат данных. Ниже показано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класса для отображения отдельных телефон и phone поля расширения базы данных в виде одного поля для редактирования.  
   
- Для процедуры требуется доступ к базе данных SQL Server с примером базы данных "Northwind".  
+ Следующая процедура требует наличия доступа к базе данных SQL Server с установленным образца базы данных "Борей".  
   
-### Привязка данных к элементу управления MaskedTextBox  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Привязка данных к элементу управления MaskedTextBox  
   
-1.  Создайте новый проект Windows Forms.  
+1.  Создайте проект Windows Forms.  
   
-2.  Перетащите два элемента управления <xref:System.Windows.Forms.TextBox> в форму и назовите их `Имя` и `Фамилия`.  
+2.  Перетащите два <xref:System.Windows.Forms.TextBox> элементов управления на форму; присвойте им `FirstName` и `LastName`.  
   
-3.  Перетащите элемент управления <xref:System.Windows.Forms.MaskedTextBox> в форму и назовите его `Маска телефона`.  
+3.  Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления на форму, присвойте ей имя `PhoneMask`.  
   
-4.  Для свойства <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> элемента управления `Маска телефона` установите значение `(000) 000-0000 x9999`.  
+4.  Задать <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` для `(000) 000-0000 x9999`.  
   
 5.  Добавьте следующие импорты пространства имен в форму.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 12
     Imports System.Data.SqlClient  
     ```  
   
-6.  Щелкните форму правой кнопкой мыши и выберите команду **Просмотреть код**.  Поместите этот код в любое место в классе формы.  
+6.  Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**. Поместите этот код в любом месте в классе формы.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -141,7 +146,7 @@ caps.handback.revision: 12
     End Sub  
     ```  
   
-7.  Добавьте обработчиков событий для событий <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> для объединения и разделения полей `Номер телефона` и `Расширение` из связанного <xref:System.Data.DataSet>.  
+7.  Добавьте обработчики событий для <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> событий для объединения и разделения `PhoneNumber` и `Extension` поля из границы <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -209,7 +214,7 @@ caps.handback.revision: 12
     End Sub  
     ```  
   
-8.  Добавьте в форму два элемента управления <xref:System.Windows.Forms.Button>.  Назовите их `Кнопка Назад` и `Кнопка Далее`.  Дважды щелкните каждую кнопку для добавления обработчика событий <xref:System.Windows.Forms.Control.Click> и заполните обработчики событий, как показано в следующем примере кода.  
+8.  Добавление двух <xref:System.Windows.Forms.Button> элементов управления в форму. Назовите их `previousButton` и `nextButton`. Дважды щелкните каждую кнопку, чтобы добавить <xref:System.Windows.Forms.Control.Click> обработчик событий и заполните обработчики событий, как показано в следующем примере кода.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -233,26 +238,26 @@ caps.handback.revision: 12
     End Sub  
     ```  
   
-9. Запустите пример.  Измените данные и используйте кнопки **Назад** и **Далее**, чтобы убедиться, что данные правильно сохранены <xref:System.Data.DataSet>.  
+9. Выполните образец. Измените данные и используйте **Назад** и **Далее** кнопок, чтобы увидеть, что данные правильно сохранены <xref:System.Data.DataSet>.  
   
-## Пример  
- В следующем примере приводится листинг всего кода, являющийся результатом выполнения описанной процедуры.  
+## <a name="example"></a>Пример  
+ В следующем примере кода приведен полный код, которые являются результатом выполнения описанной процедуры.  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
  [!code-vb[MaskedTextBoxData#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Создайте проект [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)].  
+-   Создание [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] проекта.  
   
--   Добавьте в форму элементы управления <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox>, как было описано в предыдущей процедуре.  
+-   Добавить <xref:System.Windows.Forms.TextBox> и <xref:System.Windows.Forms.MaskedTextBox> в форму элементы управления, как описано в предыдущей процедуре.  
   
--   Откройте файл с исходным кодом для формы по умолчанию для проекта.  
+-   Откройте файл исходного кода для формы по умолчанию проекта.  
   
--   Замените исходный код в этом файле кодом, приведенным в предыдущем разделе кода.  
+-   Замените исходный код в этот файл код, приведенный в предыдущем разделе «Code».  
   
 -   Скомпилируйте приложение.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пример. Работа с элементом управления MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

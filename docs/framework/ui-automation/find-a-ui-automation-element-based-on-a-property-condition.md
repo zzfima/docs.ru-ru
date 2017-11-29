@@ -1,40 +1,46 @@
 ---
-title: "Find a UI Automation Element Based on a Property Condition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elements, finding by property conditions"
-  - "UI Automation, finding elements by property conditions"
+title: "Нахождение Элемента Автоматизации Пользовательского Интерфейса в Зависимости от Состояния Свойства"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- elements, finding by property conditions
+- UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: cafd84ce3acea80905d686f33f23338e3581a9c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Find a UI Automation Element Based on a Property Condition
+# <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Нахождение Элемента Автоматизации Пользовательского Интерфейса в Зависимости от Состояния Свойства
 > [!NOTE]
->  Эта документация предназначена для разработчиков на платформе .NET Framework, которым требуется использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], определенные в пространстве имен <xref:System.Windows.Automation>.  Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. на веб\-странице [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- В этом разделе содержится пример кода, который показывает, как найти элемент в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] на основе конкретного свойства или свойств.  
+ В этом разделе содержится пример кода, демонстрирующий способы поиска элемента в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] дерева на основе конкретного свойства или свойств.  
   
-## Пример  
- В следующем примере задается набор состояний свойства, которые идентифицируют определенный элемент \(или элементы\) в дереве <xref:System.Windows.Automation.AutomationElement>.  Поиск всех соответствующих элементов затем выполняется с помощью метода <xref:System.Windows.Automation.AutomationElement.FindAll%2A>, который включает ряд логических операций <xref:System.Windows.Automation.AndCondition>, чтобы ограничить число соответствующих элементов.  
+## <a name="example"></a>Пример  
+ В следующем примере набор состояний свойства указаны, которые задают определенный элемент (или элементы), представляющие интерес в <xref:System.Windows.Automation.AutomationElement> дерева. Затем выполняется поиск всех соответствующих элементов с <xref:System.Windows.Automation.AutomationElement.FindAll%2A> метод, который включает ряд <xref:System.Windows.Automation.AndCondition> логические операции, чтобы ограничить число соответствующих элементов.  
   
 > [!NOTE]
->  При поиске с <xref:System.Windows.Automation.AutomationElement.RootElement%2A>, вы должны попробовать получить только прямые потомки.  В процессе поиска потомков могут перебираться сотни или даже тысячи элементов, что может привести к переполнению стека.  При попытке получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
+>  При поиске с <xref:System.Windows.Automation.AutomationElement.RootElement%2A>, вы должны пытаться получить только прямые потомки. Поиск потомков может выполнить итерацию по сотням или даже тысячам элементов, что может привести к переполнению стека. Если вы пытаетесь получить определенный элемент на более низком уровне, необходимо запустить поиск из окна приложения или из контейнера на более низком уровне.  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
-## См. также  
- [InvokePattern and ExpandCollapsePattern Menu Item Sample](http://msdn.microsoft.com/ru-ru/b7fa141c-e2d1-4da2-a27f-81a7d1172210)   
- [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)   
- [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+## <a name="see-also"></a>См. также  
+ [InvokePattern и образец элемента меню ExpandCollapsePattern](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)  
+ [Получение элементов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [Использование свойства AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)

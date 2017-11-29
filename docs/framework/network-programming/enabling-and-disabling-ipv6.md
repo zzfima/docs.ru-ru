@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dee5dd53a88bdd108b84d05cfb75799630836033
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9edb87cf1ee35ac6848a478552cf8d0732177a81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Включение и отключение IPv6
 Чтобы использовать протокол IPv6, убедитесь, что он поддерживается вашей версией операционной системы, а также что операционная система и сетевые классы настроены должным образом.  
@@ -51,13 +45,12 @@ ms.lasthandoff: 08/21/2017
 </system.net>  
 ```  
   
- Для .NET Framework версии 1.1 и более ранних версий параметр конфигурации **ipv6 enabled** указывает, возвращают ли члены класса <xref:System.Net.Dns?displayProperty=fullName> IPv6-адреса.  
+ Для .NET Framework версии 1.1 и более ранних версий параметр конфигурации **ipv6 enabled** указывает, возвращают ли члены класса <xref:System.Net.Dns?displayProperty=nameWithType> IPv6-адреса.  
   
- Для .NET Framework версии 2.0 и более поздней версии, если Windows поддерживает IPv6, то члены класса <xref:System.Net.Dns?displayProperty=fullName> (например, метод <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName>) будут возвращать IPv6-адреса с одним ограничением. Устаревшие члены службы доменных имен <xref:System.Net.Dns?displayProperty=fullName> (например, метод <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName>) считывают и распознают значение из файла конфигурации для параметра ipv6 enabled.  
+ Для .NET Framework версии 2.0 и более поздней версии, если Windows поддерживает IPv6, то члены класса <xref:System.Net.Dns?displayProperty=nameWithType> (например, метод <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>) будут возвращать IPv6-адреса с одним ограничением. Устаревшие члены службы доменных имен <xref:System.Net.Dns?displayProperty=nameWithType> (например, метод <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) считывают и распознают значение из файла конфигурации для параметра ipv6 enabled.  
   
 ## <a name="see-also"></a>См. также  
- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [Сокеты](../../../docs/framework/network-programming/sockets.md)   
- [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Сокеты](../../../docs/framework/network-programming/sockets.md)  
+ [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [Элемент \<ipv6> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
-

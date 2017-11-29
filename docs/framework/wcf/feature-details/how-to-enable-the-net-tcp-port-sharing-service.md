@@ -1,46 +1,48 @@
 ---
-title: "Практическое руководство. Включение службы совместного использования портов Net.TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "совместное использование портов [WCF]"
-  - "службы активации [WCF]"
+title: "Практическое руководство. Включение службы совместного использования портов Net.TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- port sharing [WCF]
+- activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9934d198b8f3e30a4dc350c968263851ebeab1e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Включение службы совместного использования портов Net.TCP
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Практическое руководство. Включение службы совместного использования портов Net.TCP
 Чтобы упростить совместное использование портов TCP в нескольких процессах, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] использует службу совместного использования портов Net.TCP Windows. Эта служба устанавливается как часть [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], однако из соображений безопасности служба не включается по умолчанию и перед первым использованием должна быть включена вручную. В настоящем разделе описывается настройка службы совместного использования портов Net.TCP с помощью оснастки консоли управления (MMC).  
   
- После включения службы совместного использования портов Net.TCP и запустить его вручную, см. [Практическое руководство: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) сведения о том, как настроить службу на использование этой службы.  
+ После включения служба совместного использования портов Net.TCP и запустить его вручную, см. раздел [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) сведения о том, как настроить службу для использования этой службы.  
   
- Пример, совместное использование портов net.tcp://, в разделе [пример совместного использования портов Net.TCP](../../../../docs/framework/wcf/samples/net-tcp-port-sharing-sample.md).  
+ Образец использует совместное использование порта net.tcp:// см [пример совместного использования портов Net.TCP](../../../../docs/framework/wcf/samples/net-tcp-port-sharing-sample.md).  
   
 ### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>Включение службы совместного использования портов Net.TCP с помощью консоли управления (MMC)  
   
-1.  Из меню «Пуск», откройте консоль управления службами, необходимо открыть окно командной строки и ввести `services.msc` выполнить и введя `services.msc` в поле «Открыть».  
+1.  Из меню «Пуск», откройте консоль управления служб либо откройте окно командной строки и введите `services.msc` или выполнить и введя `services.msc` в поле «Открыть».  
   
-2.  В **имя** щелкните правой кнопкой мыши столбец из списка служб, **служба совместного использования портов Net.Tcp**и выберите **свойства** в меню.  
+2.  В **имя** столбец из списка служб, щелкните правой кнопкой мыши **доступа к портам NET.TCP**и выберите **свойства** в меню.  
   
-3.  Чтобы включить вручную при запуске службы, в **свойства** выберите **Общие** вкладки и в **тип запуска** вручную, выберите поле и нажмите кнопку **применить**.  
+3.  Чтобы включить вручную при запуске службы, в **свойства** выберите **Общие** вкладку и в **тип запуска** выберите вручную, а затем щелкните **Применить**.  
   
 4.  Чтобы запустить службу, в области состояния службы, нажмите кнопку **запустить** кнопки. Состояние службы теперь будет показано как "Работает".  
   
-5.  Чтобы вернуться в список служб, нажмите кнопку **ОК**и выйдите из консоли MMC.  
+5.  Чтобы получить список служб, нажмите кнопку **ОК**и закройте консоль MMC.  
   
 ## <a name="example"></a>Пример  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
   
 ## <a name="see-also"></a>См. также  
- [Общий доступ к портам Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)   
- [Настройка службы общего доступа к портам Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+ [Общий доступ к портам Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Настройка службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

@@ -1,48 +1,52 @@
 ---
-title: "Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI - интерфейс, создание списка окон"
-  - "MenuStrip - элемент управления [Windows Forms], создание списка окон"
+title: "Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- MDI [Windows Forms], creating window lists
+- MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea2b3f41e6e40b589589db99bb2a5a0ba474c8cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
-Для создания приложений, которые могут одновременно открывать несколько документов, а также копировать содержимое из одного документа и вставлять в другой, используется интерфейс MDI.  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
+Используйте многодокументного интерфейса (MDI) для создания приложений, которые могут открывать несколько документов, в то же время и копировать и вставлять содержимое из одного документа в другой.  
   
- Эта процедура показывает, как создать список всех активных дочерних форм на меню родительского окна.  
+ Эта процедура показано, как создать список всех активных дочерних форм в меню родительского окна.  
   
-### Чтобы создать список окон MDI для объекта MenuStrip, выполните следующие действия.  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Чтобы создать список окон MDI на элементе управления MenuStrip  
   
 1.  Создайте форму и присвойте ее свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`.  
   
-2.  Добавьте элемент <xref:System.Windows.Forms.MenuStrip> в форму.  
+2.  Добавьте на форму элемент <xref:System.Windows.Forms.MenuStrip>.  
   
-3.  Добавьте два пункта меню верхнего уровня в элемент <xref:System.Windows.Forms.MenuStrip> и присвойте его свойствам <xref:System.Windows.Forms.Control.Text%2A> значения `&File` и `&Window` .  
+3.  Добавьте два элемента меню верхнего уровня <xref:System.Windows.Forms.MenuStrip> и задайте их <xref:System.Windows.Forms.Control.Text%2A> свойства `&File` и `&Window`.  
   
-4.  Добавьте пункт подменю в пункт меню `&File` и присвойте его свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Open`.  
+4.  Добавьте пункт подменю в элемент меню `&File` и присвойте его свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&Open`.  
   
-5.  Установка <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> свойство   <xref:System.Windows.Forms.MenuStrip> к  `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+5.  Задать <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> свойство <xref:System.Windows.Forms.MenuStrip> для `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-6.  Добавьте в проект форму, а в форму — требуемые элементы управления, такие как другой <xref:System.Windows.Forms.MenuStrip>.  
+6.  Добавить форму в проект и добавить элемент управления, необходимо, например другой <xref:System.Windows.Forms.MenuStrip>.  
   
-7.  Создайте обработчик событий для события <xref:System.Windows.Forms.Control.Click> событие   `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+7.  Создайте обработчик событий для события <xref:System.Windows.Forms.Control.Click> элемента `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-8.  В обработчик событий вставьте код, аналогичный следующему, для создания и отображения новых экземпляров формы `Form2` как дочерних MDI\-форм формы `Form1`.  
+8.  В обработчик событий вставьте код, аналогичный приведенному ниже, чтобы создать и отображения новых экземпляров `Form2` как дочерних окон MDI `Form1`.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -54,12 +58,9 @@ caps.handback.revision: 16
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void newToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -68,32 +69,29 @@ caps.handback.revision: 16
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-9. Код размещения в like `&New`<xref:System.Windows.Forms.ToolStripMenuItem> зарегистрировать обработчик событий.  
+9. Поместите код, аналогичный следующему в `&New` <xref:System.Windows.Forms.ToolStripMenuItem> для регистрации обработчика событий.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles newToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
-  
     ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Два элемента управления <xref:System.Windows.Forms.Form> с именами `Form1` и `Form2`.  
+-   два элемента управления <xref:System.Windows.Forms.Form> с именами `Form1` и `Form2`;  
   
--   Элемент управления <xref:System.Windows.Forms.MenuStrip> в форме `Form1` с именем `menuStrip1`, и элемент управления <xref:System.Windows.Forms.MenuStrip> в форме `Form2` с именем `menuStrip2`.  
+-   элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form1` с именем `menuStrip1` и элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form2` с именем `menuStrip2`;  
   
--   Ссылки на сборки <xref:System?displayProperty=fullName> и <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## См. также  
- [Практическое руководство. Создание родительских MDI\-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Практическое руководство. Создание дочерних MDI\-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Создание родительских MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Практическое руководство. Создание дочерних MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
  [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

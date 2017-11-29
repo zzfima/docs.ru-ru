@@ -1,39 +1,41 @@
 ---
-title: "Создание утверждений и значения ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "утверждения [WCF], создание и значения ресурсов"
+title: "Создание утверждений и значения ресурсов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a553a33f4747e2e5ed51f675a8db2d90da65fb58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание утверждений и значения ресурсов
-Класс <xref:System.IdentityModel.Claims.Claim> предоставляет несколько методов для создания экземпляров встроенных типов утверждений.Из этих методов следующие не выполняют проверки семантики или формата переданного ресурса:  
+# <a name="claim-creation-and-resource-values"></a>Создание утверждений и значения ресурсов
+Класс <xref:System.IdentityModel.Claims.Claim> предоставляет несколько методов для создания экземпляров встроенных типов утверждений. Из этих методов следующие не выполняют проверки семантики или формата переданного ресурса:  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateDnsClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> \(не проверяет длину или содержимое байтового массива\);  
+-   <xref:System.IdentityModel.Claims.Claim.CreateHashClaim%2A> (не проверяет длину или содержимое байтового массива).  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateNameClaim%2A>  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateSpnClaim%2A>  
   
--   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> \(не проверяет длину или содержимое байтового массива\).  
+-   <xref:System.IdentityModel.Claims.Claim.CreateThumbprintClaim%2A> (не проверяет длину или содержимое байтового массива).  
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateUpnClaim%2A>  
   
- При вызове перечисленных выше методов необходимо обеспечить, чтобы передаваемые значения ресурсов имели правильный формат или содержали правильную информацию \(или и то, и другое\).  
+ При вызове перечисленных выше методов необходимо обеспечить, чтобы передаваемые значения ресурсов имели правильный формат или содержали правильную информацию (или и то, и другое).  
   
  Следующие методы принимают определенные типы:  
   
@@ -49,7 +51,7 @@ caps.handback.revision: 6
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## См. также  
- <xref:System.IdentityModel.Claims.Claim>   
- <xref:System.IdentityModel.Claims.ClaimSet>   
+## <a name="see-also"></a>См. также  
+ <xref:System.IdentityModel.Claims.Claim>  
+ <xref:System.IdentityModel.Claims.ClaimSet>  
  [Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

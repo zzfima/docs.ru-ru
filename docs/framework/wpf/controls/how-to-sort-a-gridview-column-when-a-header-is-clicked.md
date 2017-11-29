@@ -1,28 +1,34 @@
 ---
-title: "Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементов управления GridView"
-  - "элементы управления, ListView"
-  - "Элементы управления ListView, сортировка столбцов GridView"
-  - "Элементы управления GridView, элемент управления ListView"
+title: "Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], GridView
+- controls [WPF], ListView
+- ListView controls [WPF], sorting GridView columns
+- GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
-В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, реализующий <xref:System.Windows.Controls.GridView> просмотреть режим и сортировка данных содержимого, когда пользователь щелкает заголовок столбца.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
+В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> просмотра режим и сортировка данных содержимого при щелчке заголовка столбца.  
   
 ## <a name="example"></a>Пример  
  В следующем примере определяется <xref:System.Windows.Controls.GridView> с тремя столбцами, которые привязаны к <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, и <xref:System.DateTime.Day%2A>, свойства <xref:System.DateTime> структуры.  
@@ -41,7 +47,7 @@ caps.handback.revision: 18
 </GridView>  
 ```  
   
- В следующем примере показано элементов данных, которые определены как <xref:System.Collections.ArrayList> из <xref:System.DateTime> объектов. <xref:System.Collections.ArrayList> определяется как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.ListView> элемента управления.  
+ В следующем примере показано элементов данных, которые определены как <xref:System.Collections.ArrayList> из <xref:System.DateTime> объектов. <xref:System.Collections.ArrayList> Определяется как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.ListView> элемента управления.  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -62,7 +68,7 @@ caps.handback.revision: 18
 </ListView.ItemsSource>  
 ```  
   
- `s` И `p` идентификаторы в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] тегов см. сопоставления пространства имен, которые определены в метаданных [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы. В следующем примере показано определение метаданных.  
+ Идентификаторы `s` и `p` в тегах [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] относятся к сопоставлениям пространства имен, определенных в метаданных страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. В следующем примере представлено определение метаданных.  
   
 ```xaml  
 <Window        
@@ -73,7 +79,7 @@ caps.handback.revision: 18
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Чтобы отсортировать данные в соответствии с содержимым столбца, в примере определяется обработчик событий для обработки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, возникающее при нажатии кнопки заголовка столбца. В следующем примере показано, как задать обработчик событий для <xref:System.Windows.Controls.GridViewColumnHeader> управления.  
+ Чтобы отсортировать данные в соответствии с содержимым столбца, в примере определяется обработчик событий для обработки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, возникающее при нажатии кнопки заголовка столбца. В следующем примере показано, как задать обработчик событий для <xref:System.Windows.Controls.GridViewColumnHeader> элемента управления.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -82,7 +88,7 @@ caps.handback.revision: 18
  >  
 ```  
   
- В примере определяется обработчик событий, чтобы изменяет направление сортировки по возрастанию и убыванию при каждом нажатии кнопки заголовка столбца. В следующем примере показан обработчик событий.  
+ В примере определяется обработчик событий, который изменяет направление сортировки по возрастанию и убыванию при каждом нажатии кнопки заголовка столбца. В следующем примере показан обработчик событий.  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -196,7 +202,7 @@ Partial Public Class Window1
         End Sub  
 ```  
   
- В следующем примере алгоритм сортировки, который вызывается обработчиком событий для сортировки данных. Сортировка выполняется путем создания нового <xref:System.ComponentModel.SortDescription> структуры.  
+ В следующем примере приводится алгоритм сортировки, который вызывается обработчиком событий для сортировки данных. Сортировка выполняется путем создания нового <xref:System.ComponentModel.SortDescription> структуры.  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -209,7 +215,6 @@ private void Sort(string sortBy, ListSortDirection direction)
     dataView.SortDescriptions.Add(sd);  
     dataView.Refresh();  
 }  
-  
 ```  
   
 ```vb  
@@ -224,8 +229,8 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Общие сведения о ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
  [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

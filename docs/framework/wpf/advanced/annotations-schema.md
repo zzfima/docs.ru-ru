@@ -1,54 +1,48 @@
 ---
-title: "Схема примечаний | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "документы, заметки"
-  - "Microsoft Annotations Framework"
-  - "определение схемы XML (XSD)"
+title: "Схема примечаний"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schema definition (XSD)
+- Microsoft Annotations Framework [WPF]
+- documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4a68b8966e72339a6bf5929661cf89f7f8a0b07c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Схема примечаний
-В этом разделе описывается определение схемы XML \(XSD\), используемое Microsoft Annotations Framework для сохранения и извлечения данных о примечаниях пользователя.  
+# <a name="annotations-schema"></a>Схема примечаний
+В этом разделе описывается определение схемы XML (XSD), используемое структурой заметок для сохранения и извлечения данных заметок пользователей.  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] [проводит сериализацию](GTMT) данных примечаний из внутреннего представления в формат XML.  XML\-формат, используемый для этого преобразования, описывается XSD\-схемой [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)].  Схема определяет независимый от реализации формат XML, который может использоваться для обмена данными примечаний между приложениями.  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] сериализует данные заметки из внутреннего представления в формат XML.  Формат XML, используемый для этого преобразования, описывается XSD-схемой [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)].  Схема определяет независимый от реализации формат XML, который может использоваться для обмена данными заметок между приложениями.  
   
- Определение схемы XML [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] состоит из двух подсхем  
+ Определение схемы XML [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] состоит из двух подсхем:  
   
--   Основная схема XML примечаний \(основная схема\).  
+-   основная схема XML-заметок (основная схема);  
   
--   Базовая схема XML примечаний \(базовая схема\).  
+-   базовая схема XML-заметок (базовая схема).  
   
- Основная схема определяет первичную XML\-структуру <xref:System.Windows.Annotations.Annotation>.  Большая часть XML\-элементов, определенных в основной схеме, соответствует типам в пространстве имен <xref:System.Windows.Annotations>.  Основная схема предоставляет три точки расширения, где приложения могут добавить собственные XML\-данные.  К этим точкам расширения относятся <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> и «Содержимое».  \(Элементы содержимого представлены в виде списка <xref:System.Xml.XmlElement>.\)  
+ Основная схема определяет первичный XML-структуру <xref:System.Windows.Annotations.Annotation>.  Большая часть XML-элементов, определенных в схеме Core соответствуют типам в <xref:System.Windows.Annotations> пространства имен.  Основная схема предоставляет три точки расширения, в которых приложения могут добавлять собственные XML-данные.  Эти точки расширения включают <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и «Содержимое».  (Элементы содержимого представлены в виде <xref:System.Xml.XmlElement> список.)  
   
- Базовая схема, описанная в этом разделе, определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> и типы содержимого, включая начальный выпуск [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
-  
- В этом разделе содержатся следующие подразделы.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [Основная схема XML примечаний](#CoreSchema)  
-  
--   [Базовая схема XML примечаний](#BaseSchema)  
-  
--   [Пример XML, создаваемый XmlStreamStore примечаний](#SampleXML)  
+ Базовая схема, описанная в этом разделе определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и типы содержимого, включая начальный [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] выпуска.  
   
 <a name="CoreSchema"></a>   
-## Основная схема XML примечаний  
- Основная схема XML примечаний определяет XML\-структуру, которая используется для хранения объектов <xref:System.Windows.Annotations.Annotation>.  
+## <a name="annotations-xml-core-schema"></a>Основная схема XML-заметок  
+ Основная схема XML примечаний определяет XML-структуру, которая используется для хранения <xref:System.Windows.Annotations.Annotation> объектов.  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
             blockDefault="#all"  
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -197,10 +191,10 @@ caps.handback.revision: 13
 ```  
   
 <a name="BaseSchema"></a>   
-## Базовая схема XML примечаний  
- Базовая схема определяет структуру XML для трех абстрактных элементов, определенных в основной схеме — <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> и <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
+## <a name="annotations-xml-base-schema"></a>Базовая схема XML-заметок  
+ Базовая схема определяет структуру XML для трех абстрактных элементов, определенных в схеме Core – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, и <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
      blockDefault="#all"  
      xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -508,10 +502,10 @@ caps.handback.revision: 13
 ```  
   
 <a name="SampleXML"></a>   
-## Образец XML, созданный XmlStreamStore примечаний  
- Представленный ниже XML показывает вывод <xref:System.Windows.Annotations.Storage.XmlStreamStore> примечаний и организацию файла примера, который содержит три примечания — выделение текста, клейкие заметки и рукописные заметки.  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Пример XML-кода, созданный классом XmlStreamStore Annotations  
+ Кодом XML ниже показан результат выполнения заметки <xref:System.Windows.Annotations.Storage.XmlStreamStore> и организация образец файла, который содержит три заметки - выделения текста-записки и манипулятор заметки рукописного ввода.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <anc:Annotations  
      xmlns:anc="http://schemas.microsoft.com/windows/annotations/2003/11/core"  
@@ -597,10 +591,10 @@ caps.handback.revision: 13
 </anc:Annotations>  
 ```  
   
-## См. также  
- <xref:System.Windows.Annotations>   
- <xref:System.Windows.Annotations.Storage>   
- <xref:System.Windows.Annotations.Annotation>   
- <xref:System.Windows.Annotations.Storage.AnnotationStore>   
- <xref:System.Windows.Annotations.Storage.XmlStreamStore>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Annotations>  
+ <xref:System.Windows.Annotations.Storage>  
+ <xref:System.Windows.Annotations.Annotation>  
+ <xref:System.Windows.Annotations.Storage.AnnotationStore>  
+ <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
  [Общие сведения о заметках](../../../../docs/framework/wpf/advanced/annotations-overview.md)

@@ -1,37 +1,32 @@
 ---
-title: "Практическое руководство: поиск дочернего элемента (XPath-LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: поиск дочернего элемента (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b54bc8a2b7821399857f716c35a651c24de10f3f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0929807c2f915be64f553be7a3aa669db6981f70
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Практическое руководство: поиск дочернего элемента (XPath-LINQ to XML) (Visual Basic)
-В этом разделе сравнивается ось дочернего элемента XPath с [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>метод.</xref:System.Xml.Linq.XContainer.Element%2A>  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Как: поиск дочернего элемента (XPath-LINQ to XML) (Visual Basic)
+В этом разделе сравнивается ось дочерних элементов XPath с методом [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Element%2A>.  
   
  Выражение XPath - `DeliveryNotes`.  
   
 ## <a name="example"></a>Пример  
  В этом примере производится поиск дочернего элемента `DeliveryNotes`.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -62,4 +57,3 @@ Results are identical
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

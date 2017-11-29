@@ -1,56 +1,57 @@
 ---
-title: "Общие сведения об элементе управления WebBrowser (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "веб-страницы, размещение в приложениях"
-  - "веб-страницы, элементы управления Windows Forms"
-  - "WebBrowser - элемент управления [Windows Forms]"
+title: "Общие сведения об элементе управления WebBrowser (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WebBrowser control [Windows Forms]
+- Web pages [Windows Forms], hosting in applications
+- Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Общие сведения об элементе управления WebBrowser (Windows Forms)
-Элемент управления Windows Forms `WebBrowser` содержит веб\-страницы и обеспечивает возможности веб\-обзора в вашем приложении.  
+# <a name="webbrowser-control-windows-forms"></a>Общие сведения об элементе управления WebBrowser (Windows Forms)
+Windows Forms `WebBrowser` элемент управления содержит веб-страницы и предоставляет приложению возможности работы в Интернете.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- Описание данного элемента управления и его основных характеристик и свойств.  
+ Описывается элемент управления, его основные возможности и свойства.  
   
  [Безопасность элемента управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
  Описание вопросов безопасности, связанных с элементом управления.  
   
- [Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- Демонстрация использования элемента управления для перехода к определенному URL\-адресу.  
+ [Практическое руководство. Переход по заданному URL-адресу с помощью элемента управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ Показано, как использовать элемент управления для перехода к определенному URL-АДРЕСУ.  
   
  [Практическое руководство. Печать с использованием элемента управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
- Показано, как напечатать веб\-страницу без ее открытия.  
+ Показано, как печати веб-страницы без его отображения.  
   
- [Практическое руководство. Добавление функциональности веб\-браузера в приложения Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- Описаны способы инициализации элемента управления для веб\-браузера.  
+ [Практическое руководство. Добавление функциональности веб-браузера в приложения Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ Описывает, как инициализировать элемент управления для использования в качестве веб-браузера.  
   
- [Практическое руководство. Создание средства просмотра HTML\-документов в приложении Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- Описаны способы инициализации элемента управления для средства просмотра HTML.  
+ [Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ Описывает, как инициализировать элемент управления для использования в качестве просмотра HTML-страниц.  
   
  [Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
- Описание способа реализации двунаправленной связи между кодом приложения и кодом DHTML в веб\-странице, размещаемой в элементе управления.  
+ Описывает, как настроить двусторонний обмен данными между кодом приложения и кодом DHTML в веб-страницы, размещаемой в элементе управления.  
   
- [Использование управляемой объектной модели HTML\-документов](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
- Содержит ссылки на разделы, описывающие способы управления или создания HTML\-страниц, содержащиеся в элементе управления <xref:System.Windows.Forms.WebBrowser>.  
+ [Использование управляемой объектной модели HTML-документов](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ Содержит разделы, описывающие способы управления или создания HTML-страниц, расположенных на <xref:System.Windows.Forms.WebBrowser> элемента управления.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.WebBrowser>  
  Описание класса и ссылки на все его члены.  
   
@@ -61,7 +62,7 @@ caps.handback.revision: 14
  Описание этого делегата.  
   
  <xref:System.Windows.Forms.WebBrowserEncryptionLevel>  
- Описание этого перечисления и всех его значений.  
+ Описание этого перечисления и все ее значения.  
   
  <xref:System.Windows.Forms.WebBrowserNavigatedEventArgs>  
  Описание класса и ссылки на все его члены.  
@@ -82,10 +83,10 @@ caps.handback.revision: 14
  Описание этого делегата.  
   
  <xref:System.Windows.Forms.WebBrowserReadyState>  
- Описание этого перечисления и всех его значений.  
+ Описание этого перечисления и все ее значения.  
   
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
- Описание этого перечисления и всех его значений.  
+ Описание этого перечисления и все ее значения.  
   
-## См. также  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

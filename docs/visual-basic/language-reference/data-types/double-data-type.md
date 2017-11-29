@@ -1,74 +1,72 @@
 ---
-title: "Тип данных Double (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Double"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "# - знак типа идентификатора"
-  - "0 знаков, в конце"
-  - "типы данных [Visual Basic], назначение"
-  - "Double - тип данных"
-  - "тип данных Double [Visual Basic]"
-  - "числа двойной точности"
-  - "числа с плавающей запятой, Double - тип данных"
-  - "символы типа идентификатора, #"
-  - "символы типа литерала, R"
-  - "знак типа литерала R"
-  - "действительные числа"
-  - "знаки с 0 в конце"
-  - "нули в конце"
-  - "нули, в конце"
+title: "Тип данных Double (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Double
+helpviewer_keywords:
+- 'identifier type characters [Visual Basic], #'
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- 0 characters [Visual Basic], trailing
+- literal type characters [Visual Basic], R
+- data types [Visual Basic], assigning
+- Double data type [Visual Basic]
+- '# identifier type character'
+- double-precision numbers
+- floating-point numbers [Visual Basic], Double data type
+- R literal type character [Visual Basic]
+- zeros, trailing
+- Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Тип данных Double (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Переменные типа Double хранятся как 64\-разрядные \(8\-байтные\) IEEE\-числа двойной точности с плавающей запятой и знаком, которые изменяются в диапазоне от \-1,79769313486231570E\+308 до \-4,94065645841246544E\-324 для отрицательных значений и от 4,94065645841246544E\-324 до 1,79769313486231570E\+308 для положительных.  Числа двойной точности сохраняют приближенные значения действительных чисел.  
+# <a name="double-data-type-visual-basic"></a>Тип данных Double (Visual Basic)
+Содержит знаком IEEE 64-разрядные (8-байтные) числа двойной точности с плавающей запятой числа, в диапазоне от - 1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений и от 4, 94065645841246544E-324 до 1, 79769313486231570E + 308 положительные значения. Числа двойной точности сохраняют приближенные значения вещественным числом.  
   
-## Заметки  
- Тип данных `Double` предоставляет наибольшую и наименьшую возможные величины для числа.  
+## <a name="remarks"></a>Примечания  
+ `Double` Тип данных обеспечивает наибольшую и наименьшую возможные размеры для нескольких.  
   
- Значение по умолчанию для типа `Double` равно 0.  
+ Значение по умолчанию для типа `Double` — 0.  
   
-## Советы по программированию  
+## <a name="programming-tips"></a>Советы по программированию  
   
--   **Точность**. Используя числа с плавающей запятой, следует учитывать, что они не всегда имеют точное представление в памяти.  Это может привести к непредвиденным результатам для определенных операций, таких как сравнение значений и `Mod`.  Дополнительные сведения см. в разделе [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Точность.** При работе с числами с плавающей запятой, помните, что они не всегда имеют точное представление в памяти. Это может привести к непредвиденным результатам определенных операций, таких как значение сравнения и `Mod` оператор. Дополнительные сведения см. в разделе [Устранение неполадок типы данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Нули в конце строки**. Типы данных с плавающей запятой не имеют какого\-либо внутреннего представления нулевых байтов в конце строки.  Например, они не различают значения 4,2000 и 4,2.  Следовательно, нулевые символы в конце строки не появляются при отображении или печати значений с плавающей запятой.  
+-   **Замыкающие нули.** Типы данных с плавающей запятой не имеет внутреннего представления конечные нуля символов. Например они не различают 4,2000 и 4,2. Следовательно нулевые символы в конце не появляются при отображении или печати значений с плавающей запятой.  
   
--   **Символы типов**. При добавлении знака `R` типа литерала к литералу происходит приведение литерала к типу данных `Double`.  Например, если после целочисленного значения находится знак `R`, то происходит приведение значения к типу `Double`.  
+-   **Символы типов.** При добавлении к литералу символа типа литерала `R` производится принудительное приведение литерала к типу данных `Double`. Например, если целочисленное значение сопровождается `R`, присвоено значение `Double`.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     При добавлении знака `#` типа идентификатора к какому\-либо идентификатору происходит приведение идентификатора к типу `Double`.  В следующем примере переменная `num` типизирована как `Double`:  
+     При добавлении символа идентификатора типа `#` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Double`. В следующем примере переменная `num` типизируется как `Double`:  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Тип Framework.**. В .NET Framework данный тип соответствует структуре <xref:System.Double?displayProperty=fullName>.  
+-   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Double?displayProperty=nameWithType>.  
   
-## См. также  
- <xref:System.Double?displayProperty=fullName>   
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Символы типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Double?displayProperty=nameWithType>  
+ [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Знаки типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

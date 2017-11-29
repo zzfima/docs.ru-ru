@@ -1,60 +1,63 @@
 ---
-title: "Практическое руководство. Закраска области сплошным цветом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кисти, закраска сплошным цветом"
-  - "рисование, сплошным цветом"
-  - "сплошной цвет, рисование с помощью"
+title: "Практическое руководство. Закраска области сплошным цветом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- solid colors [WPF], painting with
+- brushes [WPF], painting with solid colors
+- painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cde7f7df5089806ffb3235393eacc855d137ee51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Закраска области сплошным цветом
-Для закраски области сплошным цветом можно использовать стандартную системную кисть, например <xref:System.Windows.Media.Brushes.Red%2A> или <xref:System.Windows.Media.Brushes.Blue%2A>, или же можно создать новую <xref:System.Windows.Media.SolidColorBrush> и описать ее <xref:System.Windows.Media.SolidColorBrush.Color%2A> с помощью значений «альфа», «красный», «зеленый» и «синий».  В языке XAML можно также закрасить область сплошным цветом, используя шестнадцатеричную нотацию.  
+# <a name="how-to-paint-an-area-with-a-solid-color"></a>Практическое руководство. Закраска области сплошным цветом
+Для рисования область сплошным цветом, можно использовать стандартную системную кисть, например <xref:System.Windows.Media.Brushes.Red%2A> или <xref:System.Windows.Media.Brushes.Blue%2A>, или можно создать новую <xref:System.Windows.Media.SolidColorBrush> и описания его <xref:System.Windows.Media.SolidColorBrush.Color%2A> с помощью значений альфа, красного, зеленого и синего. В XAML можно также закрасить область сплошным цветом, используя шестнадцатеричную нотацию.  
   
- В следующих примерах из этих методов используется для рисования синего <xref:System.Windows.Shapes.Rectangle>.  
+ В следующих примерах используется каждый из этих способов для закрашивания <xref:System.Windows.Shapes.Rectangle> синим.  
   
-## Пример  
+## <a name="example"></a>Пример  
  **Использование стандартной кисти**  
   
  В следующем примере используется стандартная кисть <xref:System.Windows.Media.Brushes.Blue%2A> для рисования синего прямоугольника.  
   
- [!code-xml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_predefinedbrush1)]  
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
  **Использование шестнадцатеричной нотации**  
   
- В следующем примере используется 8 цифр шестнадцатеричного формата для рисования синего прямоугольника.  
+ В следующем примере используется шестнадцатеричная нотация из 8 цифр для закрашивания прямоугольника синим цветом.  
   
- [!code-xml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
   
  **Использование значений ARGB**  
   
- В следующем примере создается <xref:System.Windows.Media.SolidColorBrush> и задается ее <xref:System.Windows.Media.SolidColorBrush.Color%2A> с помощью значений ARGB для получения синего цвета.  
+ В следующем примере создается <xref:System.Windows.Media.SolidColorBrush> и описывает его <xref:System.Windows.Media.SolidColorBrush.Color%2A> использование ARGB значений для синего цвета.  
   
- [!code-xml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
+ [!code-xaml[brushsamples_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_rgbnotation1)]  
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_RgbNotation1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_rgbnotation1)]  
   
- Другие способы задания цвета см. в описании структуры <xref:System.Windows.Media.Color>.  
+ Другие способы задания цвета в разделе <xref:System.Windows.Media.Color> структуры.  
   
- **Связанные разделы**  
+ **См. также**  
   
- Дополнительные сведения о <xref:System.Windows.Media.SolidColorBrush> и дополнительные примеры содержатся в обзоре [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Дополнительные сведения о <xref:System.Windows.Media.SolidColorBrush> и Дополнительные примеры см. в разделе [Рисование с сплошные цвета и градиенты Обзор](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) Обзор.  
   
- Данный пример кода является частью большого примера, приведенного в описании класса <xref:System.Windows.Media.SolidColorBrush>.  Полный код примера см. на веб\-странице [Пример Brushes](http://go.microsoft.com/fwlink/?LinkID=159973).  
+ Данный пример кода является частью большего примера, приведенного для <xref:System.Windows.Media.SolidColorBrush> класса. Полный пример см. в разделе [Пример использования кистей](http://go.microsoft.com/fwlink/?LinkID=159973).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Windows.Media.Brushes>

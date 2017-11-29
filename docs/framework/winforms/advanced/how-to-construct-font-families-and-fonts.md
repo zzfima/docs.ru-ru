@@ -1,60 +1,64 @@
 ---
-title: "Практическое руководство. Разработка шрифтов и их семейств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "семейства шрифтов, создание"
-  - "шрифты, создание"
+title: "Практическое руководство. Разработка шрифтов и их семейств"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- font families [Windows Forms], constructing
+- fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 066cf358e43dabb3b952b32ecec34ca77c6e8c38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Разработка шрифтов и их семейств
-Шрифты с одинаковым характером рисунка, но разными начертаниями группируются в интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в семейства шрифтов.  Например, семейство шрифтов Arial содержит следующие шрифты:  
+# <a name="how-to-construct-font-families-and-fonts"></a>Практическое руководство. Разработка шрифтов и их семейств
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]шрифты с же гарнитуры, но разными стилями группируются в семейства шрифтов. Например семейство шрифтов Arial содержит следующие шрифты:  
   
--   Arial Regular  
+-   Arial обычного  
   
--   Arial Bold  
+-   Arial полужирным шрифтом  
   
--   Arial Italic  
+-   Arial курсив  
   
--   Arial Bold Italic  
+-   Arial полужирный курсив  
   
- В интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] используются четыре начертания для формирования семейств шрифтов: обычный \(regular\), полужирный \(bold\), курсив \(italic\) и полужирный курсив \(bold italic\).  Такие прилагательные как *narrow \(узкий\)* или *rounded \(скругленный\)*  не определяют новых начертаний, а лишь являются частью имен семейств.  Например, Arial Narrow является семейством шрифтов, включающим следующие члены:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]используются четыре стиля для формирования семейств шрифтов: обычный, полужирный, курсив и полужирный курсив. Прилагательные, такие как *сузить* и *округленное* не считаются стили; они являются частями имен семейств шрифтов. Например Arial Narrow — семейство шрифтов с следующие члены:  
   
--   Arial Narrow Regular  
+-   Arial обычного узкий  
   
--   Arial Narrow Bold  
+-   Полужирным шрифтом Arial узкая  
   
--   Arial Narrow Italic  
+-   Arial узких курсив  
   
--   Arial Narrow Bold Italic  
+-   Arial узких полужирный курсив  
   
- Перед тем как выводить текст с помощью интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объекты <xref:System.Drawing.FontFamily> и <xref:System.Drawing.Font>.  Объект <xref:System.Drawing.FontFamily> определяет гарнитуру \(например Arial\), а объект <xref:System.Drawing.Font> указывает размер, начертание и единицы измерения.  
+ Перед тем как выводить текст с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать <xref:System.Drawing.FontFamily> объекта и <xref:System.Drawing.Font> объекта. <xref:System.Drawing.FontFamily> Объекта определяет гарнитуру (например, Arial) и <xref:System.Drawing.Font> объект определяет размер, стиль и единицы измерения.  
   
-## Пример  
- В следующем примере создается шрифт Arial с обычным начертанием и размером, равным 16 пикселям.  В приведенном выше коде конструктор <xref:System.Drawing.Font.%23ctor%2A> получает в качестве своего первого параметра объект <xref:System.Drawing.FontFamily>.  Второй параметр определяет размер шрифта в единицах измерения, задаваемых в четвертом параметре.  Третий параметр указывает начертание шрифта.  
+## <a name="example"></a>Пример  
+ В следующем примере создается обычного стиля шрифта Arial с размером 16 пикселей. В следующем коде первый аргумент, переданный <xref:System.Drawing.Font.%23ctor%2A> конструктор является <xref:System.Drawing.FontFamily> объекта. Второй аргумент задает размер шрифта, измеряется в единицах, которые идентифицируют четвертый аргумент. Третий параметр указывает стиль.  
   
- Значение <xref:System.Drawing.GraphicsUnit> является членом перечисления <xref:System.Drawing.GraphicsUnit>, а значение <xref:System.Drawing.FontStyle> является членом перечисления <xref:System.Drawing.FontStyle>.  
+ <xref:System.Drawing.GraphicsUnit.Pixel>является членом <xref:System.Drawing.GraphicsUnit> перечисления, и <xref:System.Drawing.FontStyle.Regular> является членом <xref:System.Drawing.FontStyle> перечисления.  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>См. также  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

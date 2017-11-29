@@ -1,39 +1,30 @@
 ---
-title: "Смешанные ошибки декларативного кода императивного кода (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Смешанные ошибки декларативного кода императивного кода (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Смешанные ошибки декларативного и императивного кода (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Этот интерфейс программирования описывается в [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). При выполнении итерации по одной оси, такие как <xref:System.Xml.Linq.XContainer.Elements%2A>и изменении XML-дерева при просмотре оси, можно в итоге обнаружить некоторые неожиданные ошибки.</xref:System.Xml.Linq.XContainer.Elements%2A>  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Интерфейс программирования описывается в [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
   
  Этот вид ошибки иногда называется Halloween Problem.  
   
 ## <a name="definition-of-the-problem"></a>Определение этой ошибки  
- При создании некоего кода с использованием LINQ, при котором выполняется последовательное прохождение по элементам коллекции, код пишется в декларативном стиле. Это больше похоже на описание *что* требуется, скорее, *как* требуется выполнение задачи. Если написать код, при котором 1) извлекается первый элемент, 2) выполняется его проверка согласно определенному условию, 3) выполняется его изменение и 4) выполняется его помещение назад в список элементов, то это означает, что это был бы императивный код. Вы описываете *как* делать то, что нужно done.  
+ При создании некоего кода с использованием LINQ, при котором выполняется последовательное прохождение по элементам коллекции, код пишется в декларативном стиле. Это больше похоже на описание того, *что* именно требуется получить, а не *как* именно требуется выполнить задачу. Если написать код, при котором 1) извлекается первый элемент, 2) выполняется его проверка согласно определенному условию, 3) выполняется его изменение и 4) выполняется его помещение назад в список элементов, то это означает, что это был бы императивный код. При этом вы описываете, *как именно* следует выполнить задачу.  
   
  Смешение этих стилей кода в одной операции является источником неполадок. Рассмотрим следующий пример.  
   
@@ -66,7 +57,7 @@ Next
   
  Этот код представляет собой бесконечный цикл. Инструкция `foreach` последовательно применяется ко всей оси `Elements()`, при этом добавляются новые элементы к элементу `doc`. После этого она переходит на только что добавленные элементы. И поскольку она выделяет память для новых объектов на каждом шаге, она захватит всю доступную память.  
   
- Данную проблему можно устранить путем извлечения коллекции в памяти с помощью <xref:System.Linq.Enumerable.ToList%2A>стандартного оператора запроса, как показано ниже:</xref:System.Linq.Enumerable.ToList%2A>  
+ Эту неполадку можно устранить за счет переноса массива в память, используя стандартный оператор запросов <xref:System.Linq.Enumerable.ToList%2A> следующим образом.  
   
 ```vb  
 Dim root As XElement = _  
@@ -121,7 +112,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- Решение снова заключается в вызове <xref:System.Linq.Enumerable.ToList%2A>Чтобы материализовать коллекцию следующим образом:</xref:System.Linq.Enumerable.ToList%2A>  
+ Решение снова заключается в вызове <xref:System.Linq.Enumerable.ToList%2A>, чтобы материализовать коллекцию следующим образом.  
   
 ```vb  
 Dim root As XElement = _  
@@ -142,7 +133,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- Кроме того, можно исключить итерации вообще путем вызова <xref:System.Xml.Linq.XElement.RemoveAll%2A>на родительском элементе:</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+ Кроме того, можно совсем исключить итерацию за счет вызова <xref:System.Xml.Linq.XElement.RemoveAll%2A> на родительском элементе.  
   
 ```vb  
 Dim root As XElement = _  
@@ -195,5 +186,4 @@ Console.WriteLine(newRoot)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+ [Дополнительно LINQ to XML, программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

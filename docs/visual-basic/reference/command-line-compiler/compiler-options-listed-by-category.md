@@ -1,72 +1,54 @@
 ---
-title: "Параметры компилятора Visual Basic, упорядоченные по категориям | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Параметры компилятора Visual Basic по категориям"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c379a937f798a02badd7b7cd8470f2e1ce3b072
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Параметры компилятора Visual Basic по категориям
-Компилятор командной строки [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. Ниже приведен список параметров компилятора командной строки [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], отсортированных по функциональной категории.  
+Компилятор командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Ниже приведен список параметров компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], отсортированных по функциональной категории.  
   
 ## <a name="compiler-output"></a>Сообщения компилятора  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Подавляет сведения баннера компилятора.|  
 |[/utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Отображает выходные данные компилятора в кодировке UTF-8.|  
 |[/verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Отображает дополнительные сведения во время компиляции.|  
 |`/modulename:<string>`|Укажите имя исходного модуля.|  
-|[/ preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Укажите язык для выходных данных компилятора.|  
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Укажите язык для выходных данных компилятора.|  
   
 ## <a name="optimization"></a>Оптимизация  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Задает выравнивание размеров выходного файла.|  
 |[/optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Включает или отключает оптимизацию.|  
   
 ## <a name="output-files"></a>Выходные файлы  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Сведение документирующих комментариев в XML-файл.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает для компилятора целевой объект [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].|  
+|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[/out](../../../visual-basic/reference/command-line-compiler/out.md)|Задает выходной файл.|  
 |[/target](../../../visual-basic/reference/command-line-compiler/target.md)|Задает формат выходного файла.|  
   
 ## <a name="net-assemblies"></a>Сборки .NET  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Дает компилятору указание сделать всю информацию о типах из указанных файлов доступной компилируемому проекту.|  
 |[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Указывает, будет ли сборка полностью или частично подписана.|  
@@ -81,7 +63,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="debuggingerror-checking"></a>Отладка и проверка на ошибки  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.|  
 |[/debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Создает отладочную информацию.|  
@@ -93,16 +75,16 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="help"></a>Справка  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/?](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `/help`. Компиляция не происходит.|  
-|[/ Help](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `/?`. Компиляция не происходит.|  
+|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `/?`. Компиляция не происходит.|  
   
 ## <a name="language"></a>Язык  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Укажите языковую версию: 9 | 9.0 | 10 | 10.0 | 11 | 11.0.|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Укажите версию языка: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0.|  
 |[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Принудительное явное объявление переменных.|  
 |[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Принудительное применение строгой семантики.|  
 |[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Указывает, будут ли сравнения строк двоичными или следует использовать семантику языкового стандарта.|  
@@ -110,13 +92,13 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="preprocessor"></a>Препроцессор  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/define](../../../visual-basic/reference/command-line-compiler/define.md)|Определяет символы условной компиляции.|  
   
 ## <a name="resources"></a>Ресурсы  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Создает ссылку на управляемый ресурс.|  
 |[/resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Внедряет управляемый ресурс в сборку.|  
@@ -125,14 +107,14 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="miscellaneous"></a>Прочее  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |[@ (указание файла ответов)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Указывает файл ответа.|  
 |[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Задает базовый адрес библиотеки DLL.|  
 |[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Указывает, как компилятор [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] должен сообщать о внутренних ошибках.|  
+|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Указывает, как компилятор [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] должен сообщать о внутренних ошибках.|  
 |[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Сообщает ядру Windows, поддерживает ли указанный исполняемый файл технологию Address Space Layout Randomization (ASLR) с высокой энтропией.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Указывает класс, содержащий `Sub``Main` процедуры при запуске.|  
+|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Указывает класс, который содержит `Sub``Main` процедуры при запуске.|  
 |[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Не компилировать с Vbc.rsp.|  
 |[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Указывает компилятору не ссылаться на стандартные библиотеки.|  
 |[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Указывает компилятору не внедрять манифест приложения в исполняемый файл.|  
@@ -146,7 +128,7 @@ ms.lasthandoff: 03/13/2017
 |`/checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора Visual Basic в алфавитном порядке](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)   
- [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [Параметры компилятора Visual Basic в алфавитном порядке](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+ [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)

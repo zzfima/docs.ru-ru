@@ -1,56 +1,62 @@
 ---
-title: "Безопасность сообщений при использовании клиентом сертификата | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность сообщений при использовании клиентом сертификата"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: afc1e0def03040acaa5cffe3f67339a61cda7d5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность сообщений при использовании клиентом сертификата
-В следующем сценарии показаны служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные с помощью режима безопасности сообщений.Проверка подлинности клиента и службы выполняется с помощью сертификатов.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+# <a name="message-security-with-a-certificate-client"></a>Безопасность сообщений при использовании клиентом сертификата
+В следующем сценарии показаны служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Распределенного приложения безопасности](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
- Пример приложения см. в разделе [Сертификат безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
+ Пример приложения см. в разделе [сертификат безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
  ![Клиент с сертификатом](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
 |Характеристика|Описание|  
-|--------------------|--------------|  
+|--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
 |Взаимодействие|Только [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Проверка подлинности \(сервера\)|Использование сертификатов служб|  
-|Проверка подлинности \(клиента\)|Использование сертификатов клиента|  
+|Проверка подлинности (сервера)|Использование сертификатов служб|  
+|Проверка подлинности (клиента)|Использование сертификатов клиента|  
 |Целостность|Да|  
 |Конфиденциальность|Да|  
-|Транспорт|HTTP|  
+|Transport|HTTP|  
 |Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="service"></a>Служба  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 -   Создайте автономную службу, используя код без конфигурации.  
   
 -   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано создание конечной точки службы, которая использует безопасность сообщений для установления защищенного контекста.  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### Конфигурация  
+### <a name="configuration"></a>Конфигурация  
  Вместо кода можно использовать следующую конфигурацию.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -88,26 +94,26 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## Клиент  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="client"></a>Клиент  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
--   Создайте автономный клиент, используя код \(и код клиента\).  
+-   Создайте автономный клиент, используя код (и код клиента).  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек.Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.Пример:  
+-   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Код  
- Следующий код служит для создания клиента.Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `Certificate`.  
+### <a name="code"></a>Код  
+ Следующий код служит для создания клиента. Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `Certificate`.  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### Конфигурация  
- В следующей конфигурации задается сертификат клиента с помощью поведения конечной точки.Дополнительные сведения о сертификатах см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).В коде также используется элемент \<`identity`\>, определяющий службу доменных имен \(DNS\) ожидаемой идентификации сервера.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] удостоверениях см. в разделе [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+### <a name="configuration"></a>Конфигурация  
+ В следующей конфигурации задается сертификат клиента с помощью поведения конечной точки. Дополнительные сведения см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Данный код также использует <`identity`> для указания доменных имен (DNS) из удостоверения сервера ожидаемый элемент. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удостоверение, в разделе [удостоверения службы и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -147,8 +153,8 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

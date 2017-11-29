@@ -1,37 +1,38 @@
 ---
-title: "How to: Create GenericPrincipal and GenericIdentity Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Creating Generic Identity Objects"
-  - "GenericPrincipal Objects"
-  - "Creating GenericPrincipal Objects"
-  - "GenericIdentity Objects"
+title: "Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Creating Generic Identity Objects
+- GenericPrincipal Objects
+- Creating GenericPrincipal Objects
+- GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 93cd88d0321133a8340864645954b450a8e530ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create GenericPrincipal and GenericIdentity Objects
-Класс <xref:System.Security.Principal.GenericIdentity> можно использовать совместно с классом <xref:System.Security.Principal.GenericPrincipal> для создания схемы авторизации, существующей независимо от домена Windows NT или Windows 2000.  
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity
+Можно использовать <xref:System.Security.Principal.GenericIdentity> класса вместе с <xref:System.Security.Principal.GenericPrincipal> класса для создания схемы авторизации, существует независимо от домена Windows.  
   
-### Создание объекта GenericPrincipal  
+### <a name="to-create-a-genericprincipal-object"></a>Создание объекта GenericPrincipal  
   
-1.  Создайте новый экземпляр класса Identity и инициализируйте его с требуемым именем.  В следующем фрагменте кода создается новый объект **GenericIdentity** с именем `MyUser`.  
+1.  Создайте новый экземпляр класса identity и инициализируйте его с необходимым именем. Следующий код создает новый объект **GenericIdentity** и инициализирует его с именем `MyUser`.  
   
     ```vb  
     Dim MyIdentity As New GenericIdentity("MyUser")  
@@ -41,7 +42,7 @@ caps.handback.revision: 8
     GenericIdentity MyIdentity = new GenericIdentity("MyUser");  
     ```  
   
-2.  Создайте новый экземпляр класса **GenericPrincipal** и инициализируйте его с помощью созданного ранее объекта **GenericIdentity** и массива строк, представляющих роли, которые необходимо связать с этим участником.  В следующем примере кода определяется массив строк, который представляет роль администратора и роль пользователя.  Далее объект **GenericPrincipal** инициализируется с помощью ранее созданного объекта **GenericIdentity** и строкового массива.  
+2.  Создайте новый экземпляр класса **GenericPrincipal** и инициализируйте его с ранее созданным объектом **GenericIdentity** и массивом строк, представляющими роли, которые требуется связать с этим участником. В следующем примере кода задается массив строк, представляющих роль администратора и роль пользователя. Затем **GenericPrincipal** инициализируется с предыдущим **GenericIdentity** и массивом строк.  
   
     ```vb  
     Dim MyStringArray As String() = {"Manager", "Teller"}  
@@ -53,7 +54,7 @@ caps.handback.revision: 8
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  Подключите участника к текущему потоку с помощью следующего кода.  Это полезно в ситуациях, когда участник либо должен быть проверен несколько раз, либо он должен быть проверен другим программным кодом, запущенным в данном приложении, либо он должен быть проверен объектом <xref:System.Security.Permissions.PrincipalPermission>.  Выполнять проверку объекта\-участника на основе ролей можно и без подключения его к потоку.  Дополнительные сведения см. в разделе [Замена объекта\-участника](../../../docs/standard/security/replacing-a-principal-object.md).  
+3.  Для подключения участника к текущему потоку используйте следующий код. Это полезно в ситуациях, когда участник должен быть проверен несколько раз, он должен быть проверен другой код, выполняемый в приложении, или он должен быть проверен <xref:System.Security.Permissions.PrincipalPermission> объекта. Объект Principal по-прежнему можно проверять на основании ролей без подключения его к потоку. Дополнительные сведения см. в разделе [Замена объекта Principal](../../../docs/standard/security/replacing-a-principal-object.md).  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -63,8 +64,8 @@ caps.handback.revision: 8
     Thread.CurrentPrincipal = MyPrincipal;  
     ```  
   
-## Пример  
- В следующем примере кода демонстрируется создание экземпляров объектов **GenericPrincipal** и **GenericIdentity**.  Этот код выводит на консоль значения этих объектов.  
+## <a name="example"></a>Пример  
+ В следующем примере кода показано, как создать экземпляр объекта **GenericPrincipal** и **GenericIdentity**. Данный код выводит значения этих объектов на консоль.  
   
 ```vb  
 Imports System  
@@ -138,7 +139,7 @@ public class Class1
 }  
 ```  
   
- По завершении выполнения приложение выводит текст, подобный следующему:  
+ Во время выполнения приложение выводит примерно следующие сведения.  
   
 ```  
 The Name is: MyIdentity  
@@ -146,9 +147,9 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## См. также  
- <xref:System.Security.Principal.GenericIdentity>   
- <xref:System.Security.Principal.GenericPrincipal>   
- <xref:System.Security.Permissions.PrincipalPermission>   
- [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md)   
- [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Security.Principal.GenericIdentity>  
+ <xref:System.Security.Principal.GenericPrincipal>  
+ <xref:System.Security.Permissions.PrincipalPermission>  
+ [Замена объекта Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [Объекты Principal и Identity](../../../docs/standard/security/principal-and-identity-objects.md)

@@ -1,45 +1,30 @@
 ---
-title: "/ subsystemversion (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: /subsystemversion (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bc9ea6a844fae7f98315e5d3557fdf306f467dd5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8330896f890febc4d9f8627715fdd55a8f341f0c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="subsystemversion-visual-basic"></a>/subsystemversion (Visual Basic)
 Указывает минимальную версию подсистемы, в которой может выполняться созданный исполняемый файл, то есть определяет версии Windows, в которых может работать исполняемый файл. Чаще всего этот параметр предоставляет исполняемому файлу возможность использовать определенные возможности безопасности, недоступные в прежних версиях Windows.  
   
 > [!NOTE]
->  Чтобы задать саму подсистему, используйте [/target-](../../../csharp/language-reference/compiler-options/target-compiler-option.md) параметр компилятора.  
+>  Чтобы задать саму подсистему, используйте параметр компилятора [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,30 +49,29 @@ ms.lasthandoff: 03/13/2017
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Значения по умолчанию  
- Значение по умолчанию **/subsystemversion** параметр компилятора зависит от условий в следующем списке:  
+ Значение по умолчанию параметра компилятора **/subsystemversion** зависит от условий в следующем списке.  
   
 -   Значение по умолчанию — 6.02, если задан любой параметр компилятора из следующего списка.  
   
-    -   [/ target: appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/ target: winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/platform:ARM](../../../visual-basic/reference/command-line-compiler/platform.md)  
+    -   [/platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
--   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
+-   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](~/includes/net-v45-md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
   
 -   Если ни одно из предыдущих условий не верно, значение по умолчанию — 4.00.  
   
 ## <a name="setting-this-option"></a>Задание этого параметра  
- Чтобы задать **/subsystemversion** параметра компилятора в Visual Studio, необходимо открыть VBPROJ-файл и указать значение для `SubsystemVersion` свойства в MSBuild XML. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. в разделе «Значения по умолчанию» ранее в этом разделе или [общие свойства проектов MSBuild](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
+ Чтобы задать **/subsystemversion** параметра компилятора в Visual Studio, необходимо открыть VBPROJ-файл и указать значение для `SubsystemVersion` свойство в MSBuild XML. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. выше в подразделе "Значения по умолчанию" или в разделе [Общие свойства проектов MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 
   
 ## <a name="see-also"></a>См. также  
-[Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+[Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 
-[Свойства MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties)
-
+[Свойства MSBuild](/visualstudio/msbuild/msbuild-properties)

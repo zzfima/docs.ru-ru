@@ -1,33 +1,25 @@
 ---
-title: "Сравнение клонирования и Присоединение (Visual Basic) | Документы Microsoft"
+title: "Сравнение клонирования и Присоединение (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81cbcb066d60851ba83bd4d783d34f8dd3bd1fac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 811e0b9d6359287d779a8352482f5dc56a3b0035
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Сравнение клонирования и Присоединение (Visual Basic)
-При добавлении <xref:System.Xml.Linq.XNode>(включая <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>в новое дерево объектов, если новое содержимое не имеет родителя, объекты просто присоединяются к XML-дереву.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode> Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется. Затем клонированное содержимое присоединяется к XML-дереву.  
+При добавлении объекта <xref:System.Xml.Linq.XNode> (включая <xref:System.Xml.Linq.XElement>) или объекта <xref:System.Xml.Linq.XAttribute> в новое дерево, если новое содержимое не имеет родителя, объекты просто добавляются к XML-дереву. Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется. Затем клонированное содержимое присоединяется к XML-дереву.  
   
 ## <a name="example"></a>Пример  
  Следующий код демонстрирует поведение при добавлении к дереву элемента с родителем и при добавлении к дереву элемента без родителей.  

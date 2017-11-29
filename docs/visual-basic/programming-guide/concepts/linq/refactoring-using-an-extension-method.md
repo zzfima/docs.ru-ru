@@ -1,40 +1,36 @@
 ---
-title: "Оптимизация кода с помощью метода расширения (Visual Basic) | Документы Microsoft"
+title: "Рефакторинг с использованием метода расширения (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 83934292a57b5830cc6a3b002b61c6ad657d4eb7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ac7ce4c6a40829582628907bd50321bdda29bb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>Оптимизация кода с помощью метода расширения (Visual Basic)
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>Рефакторинг с использованием метода расширения (Visual Basic)
 Этот пример основан на предыдущем примере [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), путем оптимизации кода объединения строк с помощью чистой функции, которая реализуется как метод расширения.  
   
- В предыдущем примере использовался <xref:System.Linq.Enumerable.Aggregate%2A>стандартного оператора запроса для объединения нескольких строк в одну строку.</xref:System.Linq.Enumerable.Aggregate%2A> Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.  
+ В предыдущем примере использовался стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A> для объединения нескольких строк в одну. Однако более удобно записывать для этого метод расширения, так как результирующий запрос становится меньше и проще.  
   
 ## <a name="example"></a>Пример  
  В этом примере обрабатывается документ WordprocessingML и происходит получение абзацев, стилей и текста каждого абзаца. Этот пример основан на предыдущих примерах данного учебника.  
   
  В примере представлено несколько перегруженных вариантов метода `StringConcatenate`.  
   
- Можно найти инструкции по созданию исходного документа для данного примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Имеются инструкции по созданию исходного документа для этого примера в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 <System.Runtime.CompilerServices.Extension()> _  
@@ -229,7 +225,7 @@ Module Module1
 End Module  
 ```  
   
- В этом примере выводятся следующие выходные данные при применении к документу, описанному в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ В этом примере выводятся следующие выходные данные при применении к документу, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -254,8 +250,8 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Дальнейшие действия  
  В следующем примере показано, как обеспечить оптимизацию данного кода другим способом, с использованием чистых функций:  
   
--   [Оптимизация кода с использованием чистой функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+-   [Рефакторинг с использованием чистых функций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

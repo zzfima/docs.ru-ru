@@ -1,145 +1,148 @@
 ---
-title: "Windows Forms и архитектура ввода взаимодействия WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ElementHost - клавиатура и сообщения"
-  - "архитектура ввода [взаимодействие с WPF]"
-  - "взаимодействие [WPF], Windows Forms"
-  - "взаимодействие с клавиатурой [WPF]"
-  - "WPF - сообщения"
-  - "[WPF] - безрежимные диалоговые окна"
-  - "безрежимные формы"
-  - "Windows Forms [WPF], взаимодействие с"
-  - "Windows Forms, взаимодействие с WPF"
-  - "WindowsFormsHost - клавиатура и сообщения"
+title: "Windows Forms и архитектура ввода взаимодействия WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input architecture [WPF interoperability]
+- messages [WPF]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- modeless forms [WPF]
+- ElementHost keyboard and messages [WPF]
+- keyboard interoperation [WPF]
+- WindowsFormsHost keyboard and messages [WPF]
+- modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b48b5d78ce3136146f7ad17f859a489b5556a000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms и архитектура ввода взаимодействия WPF
-Взаимодействие между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] требует, чтобы обе технологии имели соответствующую обработку ввода с клавиатуры.  В этом подразделе описывается, как эти технологии реализуют обработку клавиатуры и сообщений, чтобы обеспечить корректное взаимодействие в гибридных приложениях.  
+# <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms и архитектура ввода взаимодействия WPF
+Взаимодействие между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] требует, чтобы обе технологии обработки входных данных соответствующие клавиатуры. Описывается, как реализовать эти технологии и чтобы обеспечить корректное взаимодействие в гибридных приложениях обработки сообщений клавиатуры.  
   
  В этом разделе содержатся следующие подразделы:  
   
 -   Немодальные формы и диалоговые окна  
   
--   Обработка клавиатуры и сообщений WindowsFormsHost  
+-   WindowsFormsHost клавиатуры и обработки сообщений  
   
--   Обработка клавиатуры и сообщений ElementHost  
+-   ElementHost клавиатуры и обработки сообщений  
   
-## Немодальные формы и диалоговые окна  
- Вызовите метод <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> для элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost>, чтобы открыть немодальную форму или диалоговое окно из приложения на базе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="modeless-forms-and-dialog-boxes"></a>Немодальные формы и диалоговые окна  
+ Вызовите <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> метод <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента для размыкания Безрежимные формы или диалогового окна поле из [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения.  
   
- Вызовите метод <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> для элемента управления <xref:System.Windows.Forms.Integration.ElementHost>, чтобы открыть немодальную страницу [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении на базе [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+ Вызовите <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> метод <xref:System.Windows.Forms.Integration.ElementHost> управления, чтобы открыть немодальный [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страницы в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-приложение на основе.  
   
-## Обработка клавиатуры и сообщений WindowsFormsHost  
- При размещении приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обработка клавиатуры и сообщений [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] состоит из следующего:  
+## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost клавиатуры и обработки сообщений  
+ Если они размещаются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложение, на основе [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] клавиатуры и обработка состоит из следующих сообщений:  
   
--   Класс <xref:System.Windows.Forms.Integration.WindowsFormsHost> получает сообщения из цикла сообщений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], который реализован классом <xref:System.Windows.Interop.ComponentDispatcher>.  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Класс получает сообщения из [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] цикл обработки сообщений, который реализован <xref:System.Windows.Interop.ComponentDispatcher> класса.  
   
--   Класс <xref:System.Windows.Forms.Integration.WindowsFormsHost> создает суррогатный цикл обработки сообщений [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], чтобы убедиться в том, что выполняется обычная обработка клавиатуры [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Класс создает суррогат [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] цикл обработки сообщений, чтобы убедиться, что обычные [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] происходит обработка клавиатуры.  
   
--   Класс <xref:System.Windows.Forms.Integration.WindowsFormsHost> реализует интерфейс <xref:System.Windows.Interop.IKeyboardInputSink> для координации управления фокусом с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Класс реализует <xref:System.Windows.Interop.IKeyboardInputSink> интерфейс для координации управления фокусом с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   Элементы управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> регистрируют себя и запускают их циклы обработки сообщений.  
+-   <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элементы управления регистрируют себя и запускают их циклы обработки сообщений.  
   
- В следующих разделах эти части процесса описаны более подробно.  
+ В следующих разделах описаны эти части процесса более подробно.  
   
-### Получение сообщений из цикла обработки сообщений WPF  
- Класс <xref:System.Windows.Interop.ComponentDispatcher> реализует диспетчер цикла обработки сообщений для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Класс <xref:System.Windows.Interop.ComponentDispatcher> предоставляет ловушки, позволяющие внешним клиентам фильтровать сообщения до того, как [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обработает их.  
+### <a name="acquiring-messages-from-the-wpf-message-loop"></a>Получение сообщений из цикла обработки сообщений WPF  
+ <xref:System.Windows.Interop.ComponentDispatcher> Класс реализует диспетчер цикла обработки сообщений для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Interop.ComponentDispatcher> Класс предоставляет ловушки, позволяющие внешними клиентами для фильтрации сообщений до [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обрабатывает их.  
   
- Межоперационная реализация обрабатывает событие <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>, что позволяет элементам управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] обрабатывать сообщения до элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Дескрипторы взаимодействия реализацию <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> событие, которое позволяет [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления для обработки сообщений перед [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.  
   
-### Суррогатный цикл обработки сообщений Windows Forms  
- По умолчанию класс <xref:System.Windows.Forms.Application?displayProperty=fullName> содержит основной цикл обработки сообщений для приложений [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Во время взаимодействия цикла обработки сообщений [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не обрабатывает сообщения.  Таким образом, эта логика должна быть воспроизведена.  Обработчик события <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName> выполняет следующие шаги:  
+### <a name="surrogate-windows-forms-message-loop"></a>Цикл обработки сообщений символов-заместителей Windows Forms  
+ По умолчанию <xref:System.Windows.Forms.Application?displayProperty=nameWithType> класс содержит цикл обработки сообщений основной для [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложений. Во время взаимодействия [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сообщение цикла не обрабатывает сообщения. Поэтому эту логику необходимо воспроизвести. Обработчик <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> событий выполняет следующие действия:  
   
-1.  Фильтрует сообщение с помощью интерфейса <xref:System.Windows.Forms.IMessageFilter>.  
+1.  Фильтры сообщений с помощью <xref:System.Windows.Forms.IMessageFilter> интерфейса.  
   
-2.  Вызывает метод <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=fullName>.  
+2.  Вызовы <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> метод.  
   
-3.  Переводит и отправляет сообщение, если это необходимо.  
+3.  Преобразует и отправляет сообщение, если это необходимо.  
   
-4.  Передает сообщение размещающему элементу управления, если другие элементы управления не обрабатывают сообщение.  
+4.  Передает сообщение для размещения элемента управления, если другие элементы управления не обрабатывает сообщение.  
   
-### Реализация IKeyboardInputSink  
- Суррогатный цикл обработки сообщений обрабатывает управление клавиатурой.  Таким образом, метод <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> является единственным членом <xref:System.Windows.Interop.IKeyboardInputSink>, который требует реализации в классе <xref:System.Windows.Forms.Integration.WindowsFormsHost>.  
+### <a name="ikeyboardinputsink-implementation"></a>Реализация IKeyboardInputSink  
+ Суррогатный цикл обработки сообщений обрабатывает управление клавиатуры. Таким образом <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> — единственный <xref:System.Windows.Interop.IKeyboardInputSink> член, который требует реализации в <xref:System.Windows.Forms.Integration.WindowsFormsHost> класса.  
   
- По умолчанию класс <xref:System.Windows.Interop.HwndHost> возвращает `false` для реализации его <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A>.  Это предотвращает переход из элемента управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+ По умолчанию <xref:System.Windows.Interop.HwndHost> возвращает `false` для его <xref:System.Windows.Interop.HwndHost.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> реализации. Это предотвращает переход из [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления.  
   
- Реализация <xref:System.Windows.Forms.Integration.WindowsFormsHost> для метода <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=fullName> выполняет следующие шаги:  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> Реализация <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> метод выполняет следующие действия:  
   
-1.  Находит первый или последний элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], который содержит элемент управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> и который может получить фокус.  Выбор элемента управления зависит от обхода сведений.  
+1.  Находит первый или последний [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления, содержащийся в <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента управления, которые могут получать фокус. Выбор элемента управления зависит от обхода сведений.  
   
-2.  Устанавливает фокус элементу управления и возвращает значение `true`.  
+2.  Устанавливает фокус на элементе управления и возвращает `true`.  
   
-3.  Если элемент управления не может получить фокус, он возвращает `false`.  
+3.  Если элемент управления не может получить фокус, возвращает `false`.  
   
-### Регистрация WindowsFormsHost  
- При создании дескриптора окна для элемента управления <xref:System.Windows.Forms.Integration.WindowsFormsHost>, элемент управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> вызывает внутренний статический метод, который регистрирует его присутствие для цикла обработки сообщений.  
+### <a name="windowsformshost-registration"></a>WindowsFormsHost регистрации  
+ Если дескриптор окна <xref:System.Windows.Forms.Integration.WindowsFormsHost> создается элемент управления, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент управления вызывает внутренний статический метод, который регистрирует его присутствие для цикла обработки сообщений.  
   
- Во время регистрации элемент управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> проверяет цикл обработки сообщений.  Если цикл обработки сообщений не был запущен, создается обработчик событий <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>.  Цикл обработки сообщений считается запущенным при присоединении обработчика событий <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=fullName>.  
+ Во время регистрации <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления проверяет цикл обработки сообщений. Если цикл обработки сообщений не был запущен, <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> будет создан обработчик событий. Цикл обработки сообщений считается запущенным при <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> присоединен обработчик событий.  
   
- При уничтожении дескриптора окна элемент управления <xref:System.Windows.Forms.Integration.WindowsFormsHost> удаляет себя из регистрации.  
+ При уничтожении дескриптора окна <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления удаляет себя из регистрации.  
   
-## Обработка клавиатуры и сообщений ElementHost  
- При размещении приложением [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] обработка клавиатуры и сообщений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] состоит из следующего:  
+## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost клавиатуры и обработки сообщений  
+ Если они размещаются в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] клавиатуры и обработка состоит из следующих сообщений:  
   
--   Реализация интерфейсов <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink> и <xref:System.Windows.Interop.IKeyboardInputSite>.  
+-   <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.IKeyboardInputSink>, и <xref:System.Windows.Interop.IKeyboardInputSite> реализации интерфейсов.  
   
--   Переходы и клавиши со стрелкой.  
+-   Переход между элементами и клавишами со стрелками.  
   
 -   Клавиши команд и диалоговых окон.  
   
--   Обработка с помощью ускорителя[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Обработка сочетаний клавиш.  
   
- В следующих разделах это описывается более подробно.  
+ В следующих разделах описаны более подробно эти части.  
   
-### Реализация интерфейсов  
- В приложении [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сообщения клавиатуры маршрутизируются в дескриптор окна элемента управления, на котором установлен фокус.  В элементе управления <xref:System.Windows.Forms.Integration.ElementHost> эти сообщения маршрутизируются в размещенный элемент управления.  Чтобы выполнить это, элемент управления <xref:System.Windows.Forms.Integration.ElementHost> предоставляет экземпляр <xref:System.Windows.Interop.HwndSource>.  Если элемент управления <xref:System.Windows.Forms.Integration.ElementHost> имеет фокус, экземпляр <xref:System.Windows.Interop.HwndSource> маршрутизирует почти весь клавиатурный ввод таким образом, чтобы он мог быть обработан с помощью класса [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>.  
+### <a name="interface-implementations"></a>Реализации интерфейсов  
+ В [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], сообщения клавиатуры маршрутизируются в дескриптор окна элемента управления, который имеет фокус. В <xref:System.Windows.Forms.Integration.ElementHost> управления, эти сообщения маршрутизируются в размещенный элемент. Чтобы выполнить это, <xref:System.Windows.Forms.Integration.ElementHost> управления предоставляет <xref:System.Windows.Interop.HwndSource> экземпляра. Если <xref:System.Windows.Forms.Integration.ElementHost> элемент управления имеет фокус, <xref:System.Windows.Interop.HwndSource> экземпляр направляет большинство клавиатуры, чтобы можно было обработать по [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> класса.  
   
- Класс <xref:System.Windows.Interop.HwndSource> реализует интерфейсы <xref:System.Windows.Interop.IKeyboardInputSink> и <xref:System.Windows.Interop.IKeyboardInputSite>.  
+ <xref:System.Windows.Interop.HwndSource> Класс реализует <xref:System.Windows.Interop.IKeyboardInputSink> и <xref:System.Windows.Interop.IKeyboardInputSite> интерфейсов.  
   
- Взаимодействие клавиатуры основывается на реализации метода <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> для обработки клавиши TAB и клавиши со стрелкой, которые перемещают фокус элементов.  
+ Взаимодействие клавиатуры основывается на реализации <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> метод для обработки клавиши TAB и клавишами со ключа ввода, который перемещает фокус элементов.  
   
-### Переходы и клавиши со стрелкой  
- Логика выбора [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставляется с методами <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> и <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> для реализации переходов по TAB и клавише со стрелкой.  Переопределение метода <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> выполняет это сопоставление.  
+### <a name="tabbing-and-arrow-keys"></a>Между приложениями и клавиш со стрелками  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Логику выбора сопоставляется <xref:System.Windows.Interop.HwndSource.System%23Windows%23Interop%23IKeyboardInputSink%23TabInto%2A> и <xref:System.Windows.Interop.IKeyboardInputSite.OnNoMoreTabStops%2A> методы для реализации ВКЛАДКУ и стрелкой ключа навигации. Переопределение <xref:System.Windows.Forms.Integration.ElementHost.Select%2A> метод выполняет это сопоставление.  
   
-### Клавиши команд и диалоговых окон  
- Чтобы предоставить приложению [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] первому возможность обрабатывать клавиши команд и диалоговых окон, обработка команд [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] подключается к методу <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A>.  Переопределение метода <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=fullName> объединяет две технологии.  
+### <a name="command-keys-and-dialog-box-keys"></a>Сочетания клавиш и диалоговых окон  
+ Чтобы предоставить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] первому возможность обрабатывать клавиши команд и диалоговых окон, [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] команды предварительной обработки подключен к <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> метод. Переопределение <xref:System.Windows.Forms.Control.ProcessCmdKey%2A?displayProperty=nameWithType> метод объединяет две технологии.  
   
- С помощью метода <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> размещенные элементы могут обрабатывать все клавишные сообщения, такие как WM\_KEYDOWN, WM\_SYSKEYDOWN, WM\_KEYUP или WM\_SYSKEYUP, включая клавиши команд, такие как TAB, ВВОД, ESC и клавиши со стрелками.  Если сообщение о нажатии клавиши не обрабатывается, оно отправляется вверх по иерархии [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] для обработки.  
+ С <xref:System.Windows.Interop.IKeyboardInputSink.TranslateAccelerator%2A> метод, размещенные элементы можно обрабатывать все сообщение о нажатии клавиши, например WM_KEYUP WM_KEYDOWN, WM_SYSKEYDOWN или WM_SYSKEYUP, включая команды клавиши, такие как TAB, ввод, ESC и стрелка. Если сообщение о нажатии клавиши не обрабатывается, оно отправляется вверх [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] иерархии для обработки.  
   
-### Обработка с помощью ускорителя  
- Для правильной обработки сочетаний клавиш обработка с помощью сочетания клавиш [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] должна быть подключена к классу [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>.  Кроме того все сообщения WM\_CHAR должны быть правильно маршрутизированы в размещенные элементы.  
+### <a name="accelerator-processing"></a>Обработка сочетаний клавиш  
+ Для правильной обработки [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сочетаний клавиш обработки должен быть подключен к [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> класса. Кроме того все сообщения WM_CHAR должны быть правильно маршрутизированы в размещенные элементы.  
   
- Поскольку по умолчанию реализация <xref:System.Windows.Interop.HwndSource> метода <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> возвращает значение `false`, сообщения WM\_CHAR обрабатываются с помощью следующей логики:  
+ Так как значение по умолчанию <xref:System.Windows.Interop.HwndSource> реализация <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> возвращает `false`, сообщений WM_CHAR обрабатываются с использованием следующую логику:  
   
--   Метод <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=fullName> переопределяется так, чтобы гарантировать, что все сообщения WM\_CHAR перенаправляются в размещенные элементы.  
+-   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> Метод переопределяется, чтобы убедиться, что все сообщения WM_CHAR перенаправляются в размещенные элементы.  
   
--   Если нажата клавиша ALT, сообщением является WM\_SYSCHAR.  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не обрабатывает это сообщение с помощью метода <xref:System.Windows.Forms.Control.IsInputChar%2A>.  Поэтому метод <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> переопределяется так, чтобы отправить объекту [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> запрос на зарегистрированное сочетание клавиш.  Если зарегистрированный ускоритель найден, <xref:System.Windows.Input.AccessKeyManager> обрабатывает его.  
+-   Если нажата клавиша ALT, сообщение — WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]не обрабатывает это сообщение с помощью <xref:System.Windows.Forms.Control.IsInputChar%2A> метод. Таким образом <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> метод переопределяется для запроса [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> на зарегистрированное сочетание клавиш. Если зарегистрированный ускоритель найден, <xref:System.Windows.Input.AccessKeyManager> обрабатывает его.  
   
--   Если не нажата клавиша ALT, класс [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> обрабатывает необработанные входные данные.  Если входные данные являются ускорителем, <xref:System.Windows.Input.AccessKeyManager> обрабатывает его.  Событие <xref:System.Windows.Input.InputManager.PostProcessInput> обрабатывается для сообщений WM\_CHAR, которые не были обработаны.  
+-   Если не нажата клавиша ALT, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> класс обрабатывает необработанные входные данные. Если входное значение ускоритель <xref:System.Windows.Input.AccessKeyManager> обрабатывает его. <xref:System.Windows.Input.InputManager.PostProcessInput> Событие обрабатывается для сообщений WM_CHAR, которые не были обработаны.  
   
- Когда пользователь нажимает клавишу ALT, визуальные команды вызова ускорителя отображаются на всей форме.  Чтобы поддерживать такое поведение, все элементы управления <xref:System.Windows.Forms.Integration.ElementHost> на активной форме получают сообщения WM\_SYSKEYDOWN, независимо от того, какой элемента управления имеет фокус.  
+ Когда пользователь нажимает клавишу ALT, визуальные подсказки сочетаний клавиш отображаются на всей форме. Для поддержки данной возможности всех <xref:System.Windows.Forms.Integration.ElementHost> элементов управления в форме active получают сообщения WM_SYSKEYDOWN, независимо от того, что элемент управления имеет фокус.  
   
- Сообщения отправляются только в элементы управления <xref:System.Windows.Forms.Integration.ElementHost> в активной форме.  
+ Сообщения отправляются только в <xref:System.Windows.Forms.Integration.ElementHost> элементов управления в активной формы.  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>   
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
  [Взаимодействие WPF и Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

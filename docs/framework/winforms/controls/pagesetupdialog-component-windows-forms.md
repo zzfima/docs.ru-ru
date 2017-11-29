@@ -1,60 +1,61 @@
 ---
-title: "Компонент PageSetupDialog (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "нижние колонтитулы, параметры страницы"
-  - "верхние колонтитулы, печать"
-  - "альбомная ориентация"
-  - "поля, параметры страницы"
-  - "нижний колонтитул страницы"
-  - "верхний колонтитул страницы"
-  - "свойства страницы"
-  - "параметры страницы"
-  - "Параметры страницы - диалоговое окно"
-  - "PageSetupDialog - компонент"
-  - "ориентация на странице"
-  - "книжная ориентация"
-  - "параметры печати, PageSetupDialog - компонент"
-  - "печать [Windows Forms], отображение диалоговых окон параметров"
-  - "печать [Windows Forms], нижние и верхние колонтитулы"
-  - "печать [Windows Forms], параметры страницы"
+title: "Компонент PageSetupDialog (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing [Windows Forms], page setup
+- margins [Windows Forms], page setup options
+- paper orientation
+- print options [Windows Forms], PageSetupDialog component
+- page properties
+- printing [Windows Forms], displaying setup dialog boxes
+- portrait orientation
+- headers [Windows Forms], printing
+- footers [Windows Forms], page setup options
+- landscape orientation
+- page footer
+- page setup
+- Page Setup dialog box
+- PageSetupDialog component
+- page header
+- printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eb071b4bf3248deaa171ad473d1867d2edb46ab
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Компонент PageSetupDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.PageSetupDialog> является стандартным диалоговым окном, используемым для задания сведений о странице для печати в приложениях Windows.  Этот компонент используется в приложении Windows в качестве простого решения для задания параметров настройки страницы вместо диалогового окна, настраиваемого самостоятельно.  Можно разрешить пользователям задавать параметры границ и полей, верхних и нижних колонтитулов, а также выбирать книжную или  альбомную ориентацию.  Использование стандартных диалоговых окон Windows помогает создавать приложения, основные функциональные возможности которых хорошо знакомы пользователям.  
+# <a name="pagesetupdialog-component-windows-forms"></a>Компонент PageSetupDialog (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> компонент является предварительно настроенным диалоговым окном, используемым для задания сведений о странице для печати в приложениях Windows. Он используется в приложении Windows в качестве простого решения для задания параметров настройки страницы вместо настройки собственного диалогового. Можно разрешить пользователям задавать границы и полей, заголовки и нижние колонтитулы и книжной и альбомной ориентацией. Использование стандартных диалоговых окон Windows помогает создавать приложения, основные функциональные возможности которых хорошо знакомы пользователям.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о компоненте PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
- Основные понятия, связанные с компонентом <xref:System.Windows.Forms.PageSetupDialog>, служащим для вывода стандартного диалогового окна для работы с параметрами страницы.  
+ Основные понятия <xref:System.Windows.Forms.PageSetupDialog> компонент, который можно использовать для отображения стандартного диалогового окна для работы с параметрами страницы.  
   
  [Практическое руководство. Определение свойств страницы с помощью компонента PageSetupDialog](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Описание задания свойств страницы в ходе выполнения с помощью экземпляра компонента <xref:System.Windows.Forms.PageSetupDialog>.  
+ Объясняется, как задать свойства страницы с помощью экземпляра <xref:System.Windows.Forms.PageSetupDialog> компонента во время выполнения.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.PageSetupDialog>  
- Справочные сведения о данном классе и его членах.  
+ Справочная информация о классе и его членах.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.  
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
  [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Описание набора элементов управления и компонентов для выполнения пользователем стандартных действий в приложении или системе.  
   
- [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575)  
- Описание элементов управления и компонентов диалоговых окон Windows Forms, а также кода, необходимого для выполнения их основных функций.  \(Техническая статья библиотеки MSDN в Интернете\)
+ [Основной код для диалоговых окон Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ Описываются элементы управления и компоненты диалоговых окон Windows Forms, а также код, необходимый для выполнения их основных функций (техническая статья в библиотеке MSDN в Интернете).

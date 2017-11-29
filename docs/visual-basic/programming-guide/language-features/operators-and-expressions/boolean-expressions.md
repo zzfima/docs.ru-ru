@@ -1,85 +1,84 @@
 ---
-title: "Логические выражения (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "логические выражения"
-  - "вычисление выражений, логические выражения"
-  - "выражения [Visual Basic], Логические"
-  - "логические операторы, логические выражения"
-  - "логические операторы, сокращенные вычисления"
-  - "операторы [Visual Basic], Логические"
-  - "операторы [Visual Basic], сокращенные вычисления"
-  - "сокращенные вычисления"
-  - "сокращенные вычисления"
-  - "код Visual Basic, выражения"
-  - "код Visual Basic, операторы"
+title: "Логические выражения (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- short-circuiting
+- Boolean expressions
+- logical operators [Visual Basic], Boolean expressions
+- expressions [Visual Basic], Boolean
+- expression evaluation [Visual Basic], Boolean expressions
+- operators [Visual Basic], short-circuiting
+- Visual Basic code, operators
+- short-circuit evaluation
+- logical operators [Visual Basic], short-circuiting
+- operators [Visual Basic], Boolean
+- Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 48071c6833f9841fa42311dda59d6959c0645ff4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Логические выражения (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-*Логическое выражение* — это выражение, результатом вычисления которого является значение [логического типа данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` или `False`.  Выражения `Boolean` могут принимать различные формы.  Самой простой является прямое сравнение значения переменной `Boolean` с литералом `Boolean`, например:  
+# <a name="boolean-expressions-visual-basic"></a>Логические выражения (Visual Basic)
+Объект *логическое выражение* — это выражение, результатом которого является значение из [тип данных Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` или `False`. `Boolean`выражения могут принимать различные формы. Самым простым является прямое сравнение значения `Boolean` переменной `Boolean` литерал, как показано в следующем примере.  
   
  [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
-## Два значения оператора \=  
- Необходимо отметить, что инструкция присваивания `newCustomer = True` выглядит так же, как выражение из предыдущего примера, но она выполняет другую функцию и используется по\-другому.  В предыдущем примере выражение `newCustomer = True` представляет значение Boolean, а знак `=` интерпретируется как оператор сравнения.  В автономной инструкции символ `=` интерпретируется как оператор присваивания и присваивает вычисленное значение переменной слева.  Это показано в приведенном ниже примере.  
+## <a name="two-meanings-of-the--operator"></a>Два значения =-оператор  
+ Обратите внимание, что оператор присваивания `newCustomer = True` выглядит так же, как выражение в предыдущем примере, но она выполняет другую функцию и используется по-разному. В предыдущем примере выражение `newCustomer = True` представляет логическое значение и `=` входа интерпретируется как оператор сравнения. В инструкции автономный `=` входа интерпретируется как оператор присваивания и присваивает значение справа переменной слева. Это показано в следующем примере.  
   
  [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
   
- Дополнительные сведения см. в разделе [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) и [Операторы](../../../../visual-basic/language-reference/statements/index.md).  
+ Дополнительные сведения см. в разделе [сравнение значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) и [инструкции](../../../../visual-basic/language-reference/statements/index.md).  
   
-## Операторы сравнения  
- Операторы сравнения `=`, `<`, `>`, `<>`, `<=` и `>=` сравнивают выражения в левой части оператора с выражением в правой части оператора и представляют результат в виде логического значения `True` или `False`.  Это показано в приведенном ниже примере.  
+## <a name="comparison-operators"></a>Операторы сравнения  
+ Операторы сравнения, такие как `=`, `<`, `>`, `<>`, `<=`, и `>=` создания логических выражений, сравнивая выражение в левой части оператора с выражением с правой стороны оператора и представляют результат в виде `True` или `False`. Это показано в следующем примере.  
   
  `42 < 81`  
   
- Поскольку 42 меньше 81, в предыдущем примере выражение Boolean принимает значение `True`.  Дополнительные сведения о выражениях такого рода содержатся в разделе [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
+ Поскольку 42 меньше 81, логическое выражение в предыдущем примере результатом которого является `True`. Дополнительные сведения о выражениях такого рода см. в разделе [сравнение значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
   
-### Операторы сравнения в комбинации с логическими операторами  
- Выражения сравнения можно комбинировать с логическими операторами для создания более сложных логических Boolean выражений.  В следующем примере показано использование операторов сравнения в сочетании с логическим оператором.  
+### <a name="comparison-operators-combined-with-logical-operators"></a>Операторы сравнения в комбинации с логическими операторами  
+ Выражения сравнения можно комбинировать с логическими операторами для создания более сложных выражений типа Boolean. В следующем примере показано использование операторов сравнения в сочетании с логическим оператором.  
   
  `x > y And x < 1000`  
   
- В данном примере значение полного выражения зависит от значений выражений в каждой части оператора `And`.  Если оба выражения `True`, то полное выражение принимает значение `True`.  Если любая из частей выражения `False`, то полное выражение принимает значение `False`.  
+ В предыдущем примере значение полного выражения зависит от значения выражения на каждой стороне `And` оператор. Если оба выражения имеют `True`, а затем полное выражение принимает значение `True`. Если одно из выражений имеет `False`, то все выражение, результатом которого является `False`.  
   
-## Операторы, допускающие сокращенные вычисления  
- Логические операторы `AndAlso` и `OrElse` представляют обработку, называемую *сокращенной*.  Эти операторы сначала вычисляют выражение, расположенное слева.  Если левый операнд определяет значение всего выражения, то выполнение программы продолжается без вычисления правого выражения.  Это показано в приведенном ниже примере.  
+## <a name="short-circuiting-operators"></a>Сокращенные вычисления операторов  
+ Логические операторы `AndAlso` и `OrElse` демонстрируют поведение, известный как *сокращенного вычисления*. Вычисляют сначала вычисляет левый операнд. Если левый операнд определяет значение всего выражения, выполнение программы продолжается без вычисления правого выражения. Это показано в следующем примере.  
   
  [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
   
- В предыдущем примере оператор вычисляет левое выражение `45 < 12`.  Так как левое выражение `False`, всё логическое выражение должно возвращать `False`.  Таким образом, выполнение программы пропускает выполнение кода в блоке `If` без вычисления правого выражения `testFunction(3)`.  В этом примере `testFunction()` не вызывается, поскольку левое выражение опровергает всё выражение.  
+ В предыдущем примере оператор вычисляет левое выражение `45 < 12`. Так как левое выражение, результатом которого является `False`, весь логическое выражение должно возвращать `False`. Таким образом, выполнение программы пропускает выполнение кода внутри `If` блок без вычисления правого выражения `testFunction(3)`. В этом примере не вызывает `testFunction()` поскольку левое выражение опровергает всего выражения.  
   
- Аналогично, если для левой части в логическом выражении, использующем `OrElse`, вычисляется `True`, то выражение переходит к следующей строке кода без вычисления правого выражения, поскольку левое выражение уже определило результат полного выражения.  
+ Аналогичным образом если левое выражение в логическом выражении, использующем `OrElse` равен `True`, выполнение продолжается на следующую строку кода без вычисления правого выражения, поскольку левое выражение уже проверены всего выражение.  
   
-### Сравнение с обычными операторами  
- И наоборот, обе части логического оператора вычисляются, если используются логические операторы `And` и `Or`.  Это показано в приведенном ниже примере.  
+### <a name="comparison-with-non-short-circuiting-operators"></a>Сравнение с операторами вычисление не Short  
+ И наоборот, обе части логического оператора вычисляются при логические операторы `And` и `Or` используются. Это показано в следующем примере.  
   
  [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
   
- В предыдущем примере вызывается `testFunction()`, даже если левое выражение становится равным `False`.  
+ В предыдущем примере вызывается `testFunction()` даже если левое выражение, результатом которого является `False`.  
   
-## Выражения в скобках  
- Круглые скобки используются для управления порядком вычисления выражений Boolean.  Выражения, заключенные в круглые скобки, вычисляются в первую очередь.  Для нескольких уровней вложения приоритет предоставляется самым глубоко вложенным \(внутренним\) выражениям.  В круглых скобках вычисление выполняется в соответствии с правилами приоритета операторов.  Дополнительные сведения см. в разделе [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+## <a name="parenthetical-expressions"></a>Выражения в скобках  
+ Круглые скобки используются для управления порядком вычисления логических выражений. Заключено в скобки выражения вычисляются в первую очередь. Для нескольких уровней вложения приоритет предоставляется наиболее глубоко вложенных выражений. Между скобками вычисление выполняется согласно правилам приоритета операторов. Дополнительные сведения см. в разделе [операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## См. также  
- [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)   
- [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [Операторы](../../../../visual-basic/programming-guide/language-features/statements.md)   
- [Операторы сравнения](../../../../visual-basic/language-reference/operators/comparison-operators.md)   
- [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
- [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Тип данных Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+## <a name="see-also"></a>См. также  
+ [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  
+ [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
+ [Операторы](../../../../visual-basic/programming-guide/language-features/statements.md)  
+ [Операторы сравнения](../../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
+ [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Логический тип данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)

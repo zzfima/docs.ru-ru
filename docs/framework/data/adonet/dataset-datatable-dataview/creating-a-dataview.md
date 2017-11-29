@@ -1,36 +1,41 @@
 ---
-title: "Создание DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 28a2f6f299d2f904dc3f842c0c778f30081240b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание DataView
-Есть два способа создания представления данных <xref:System.Data.DataView>.  Можно использовать конструктор **DataView** или создать ссылку на свойство <xref:System.Data.DataTable.DefaultView%2A> таблицы <xref:System.Data.DataTable>.  Конструктор **DataView** может быть пустым либо может принимать **DataTable** в виде одного аргумента или **DataTable** вместе с критериями фильтрации, критериями сортировки и фильтром состояния строк.  Дополнительные сведения о других аргументах, доступных для использования с **DataView**, см. в разделе [Сортировка и фильтрация данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+# <a name="creating-a-dataview"></a>Создание DataView
+Есть два способа создания представления данных <xref:System.Data.DataView>. Можно использовать **DataView** конструктору, или вы можете создать ссылку на <xref:System.Data.DataTable.DefaultView%2A> свойство <xref:System.Data.DataTable>. **DataView** конструктор может быть пустым либо может принимать **DataTable** как один аргумент или **DataTable** вместе с критериями фильтрации, сортировки и строки фильтр состояния. Дополнительные сведения о дополнительных аргументов для использования с **DataView**, в разделе [Сортировка и фильтрация данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
- Так как индекс для представления **DataView** строится при создании этого **DataView**, а также при изменении любого из свойств **Sort**, **RowFilter** или **RowStateFilter**, наивысшая производительность достигается при предоставлении первоначального порядка сортировки или критериев фильтрации в виде аргументов конструктора во время создания **DataView**.  При создании **DataView** без указания условий фильтра и сортировки с последующим заданием свойств **Sort**, **RowFilter** или **RowStateFilter** индекс будет построен как минимум дважды: один раз при создании **DataView**, а затем при изменении свойств сортировки или фильтрации.  
+ Так как индекс для **DataView** формируется как при **DataView** создается и если какие-либо **сортировки**, **RowFilter**, или  **RowStateFilter** свойства изменяются, добиться лучшей производительности, указав любой исходный порядок сортировки или критерии фильтрации как аргументы конструктора, при создании **DataView**. Создание **DataView** без указания критериев сортировки и фильтрации, а затем установить **сортировки**, **RowFilter**, или **RowStateFilter** свойства позже приводит индекса для создания по крайней мере дважды: после при **DataView** создается, и снова при любого из свойств сортировки или фильтрации, будут изменены.  
   
- Имейте в виду, что при создании **DataView** при помощи конструктора без аргументов представление **DataView** нельзя будет использовать, пока не будет задано свойство **Table**.  
+ Обратите внимание, что при создании **DataView** с помощью конструктора, который не принимает никаких аргументов, нельзя будет использовать **DataView** пока **таблицы** свойство .  
   
- В следующем примере кода демонстрируется, как создавать представление **DataView** при помощи конструктора **DataView**.  Значение **RowFilter**, столбец **Sort** и состояние **DataViewRowState** передаются вместе с **DataTable**.  
+ В следующем примере кода показано, как создать **DataView** с помощью **DataView** конструктор. Объект **RowFilter**, **сортировки** столбца, и **DataViewRowState** передаются вместе с **DataTable**.  
   
 ```vb  
 Dim custDV As DataView = New DataView(custDS.Tables("Customers"), _  
     "Country = 'USA'", _  
     "ContactName", _  
     DataViewRowState.CurrentRows)  
-  
 ```  
   
 ```csharp  
@@ -40,21 +45,20 @@ DataView custDV = new DataView(custDS.Tables["Customers"],
     DataViewRowState.CurrentRows);  
 ```  
   
- В следующем примере кода демонстрируется, как получать ссылку на представление **DataView** по умолчанию таблицы **DataTable** при помощи свойства **DefaultView** этой таблицы.  
+ В следующем примере кода показано, как получить ссылку на значение по умолчанию **DataView** из **DataTable** с помощью **DefaultView** свойство таблицы.  
   
 ```vb  
 Dim custDV As DataView = custDS.Tables("Customers").DefaultView  
-  
 ```  
   
 ```csharp  
 DataView custDV = custDS.Tables["Customers"].DefaultView;  
 ```  
   
-## См. также  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Сортировка и фильтрация данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Сортировка и фильтрация данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

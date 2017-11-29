@@ -1,28 +1,24 @@
 ---
-title: "Практическое руководство: фильтрацию по атрибуту (XPath-LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: фильтрация по атрибуту (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 321fd6aba7b8ab40b29eb0708039cb5c0f8a964d
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c4bd1482b535035c9cae329c774e952e54d8c681
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Практическое руководство: фильтрацию по атрибуту (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Как: фильтрация по атрибуту (XPath-LINQ to XML) (Visual Basic)
 В этом разделе показано, как получать элементы-потомки с указанным именем и атрибут с заданным значением.  
   
  Выражение XPath:  
@@ -32,7 +28,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  В этом примере обнаруживаются все элементы-потомки с именем `Address` и с атрибутом `Type`, имеющим значение «Доставка».  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  

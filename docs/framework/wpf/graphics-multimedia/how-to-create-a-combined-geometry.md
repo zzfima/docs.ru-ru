@@ -1,55 +1,58 @@
 ---
-title: "Практическое руководство. Создание объединенных геометрических объектов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "комбинирование геометрических объектов"
-  - "геометрические объекты, объединение"
-  - "графика, комбинирование геометрических объектов"
+title: "Практическое руководство. Создание объединенных геометрических объектов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- combining geometries [WPF]
+- graphics [WPF], combining geometries
+- geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2be0471f27d26b145cc29847a08bf3bc3b1d51ff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Создание объединенных геометрических объектов
-В этом примере демонстрируется способ объединения геометрических объектов.  Чтобы объединить два геометрических объекта, используйте объект <xref:System.Windows.Media.CombinedGeometry>.  Необходимо задать в его свойствах <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> два геометрических объекта для объединения и установить свойство <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>, которое определяет способ объединения геометрических объектов, в значение `Union`, `Intersect`, `Exclude` или `Xor`.  
+# <a name="how-to-create-a-combined-geometry"></a>Практическое руководство. Создание объединенных геометрических объектов
+В этом примере показано, как объединить геометрических объектов. Чтобы объединить два геометрических объекта, используйте <xref:System.Windows.Media.CombinedGeometry> объекта. Задать его <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> свойства два геометрических объекта для объединения и установить <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> свойство, которое определяет, как геометрические объекты будут объединены вместе, чтобы `Union`, `Intersect`, `Exclude`, или `Xor`.  
   
- Чтобы создать составной геометрический объект из двух или более геометрических объектов, используется <xref:System.Windows.Media.GeometryGroup>.  
+ Чтобы создать составной геометрический объект из двух или более геометрических объектов, используйте <xref:System.Windows.Media.GeometryGroup>.  
   
-## Пример  
- В следующем примере <xref:System.Windows.Media.CombinedGeometry> задается режимом объединения геометрических объектов `Exclude`.  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> задаются как круги с одинаковыми радиусами, но с центрами, смещенными на 50.  
+## <a name="example"></a>Пример  
+ В следующем примере <xref:System.Windows.Media.CombinedGeometry> определяется режимом объединения geometry из `Exclude`.  Оба <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> определяются как круги же radius, но со смещением центры 50.  
   
- [!code-xml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
+ [!code-xaml[GeometrySample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#21)]  
   
- ![Результаты объединенного режима Exclude](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.png "mil\_task\_combined\_geometry\_exclude")  
-Объединение геометрических объектов в режиме Exclude  
+ ![Исключить результаты объединенного режима](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-exclude.PNG "mil_task_combined_geometry_exclude")  
+Исключить объединенных геометрических объектов  
   
- В следующем примере разметки <xref:System.Windows.Media.CombinedGeometry> задается режимом объединения `Intersect`.  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> задаются как круги с одинаковыми радиусами, но с центрами, смещенными на 50.  
+ В следующую разметку <xref:System.Windows.Media.CombinedGeometry> определяется режимом объединения из `Intersect`.  Оба <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> определяются как круги же radius, но со смещением центры 50.  
   
- [!code-xml[GeometrySample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#22)]  
+ [!code-xaml[GeometrySample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#22)]  
   
- ![Результаты объединенного режима Intersect](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.png "mil\_task\_combined\_geometry\_intersect")  
-Объединение геометрических объектов в режиме Intersect  
+ ![Функция Intersect результаты объединенного режима](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-intersect.PNG "mil_task_combined_geometry_intersect")  
+Intersect объединенных геометрических объектов  
   
- В следующем примере разметки <xref:System.Windows.Media.CombinedGeometry> задается режимом объединения `Union`.  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> задаются как круги с одинаковыми радиусами, но с центрами, смещенными на 50.  
+ В следующую разметку <xref:System.Windows.Media.CombinedGeometry> определяется режимом объединения из `Union`.  Оба <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> определяются как круги же radius, но со смещением центры 50.  
   
- [!code-xml[GeometrySample#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
+ [!code-xaml[GeometrySample#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#23)]  
   
- ![Результаты объединенного режима Union](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.png "mil\_task\_combined\_geometry\_union")  
-Объединение геометрических объектов в режиме Union  
+ ![Результаты объединения в режиме Union ](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-union.PNG "mil_task_combined_geometry_union")  
+Объединение комбинированной геометрии  
   
- В следующем примере разметки <xref:System.Windows.Media.CombinedGeometry> задается режимом объединения `Xor`.  <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> задаются как круги с одинаковыми радиусами, но с центрами, смещенными на 50.  
+ В следующую разметку <xref:System.Windows.Media.CombinedGeometry> определяется режимом объединения из `Xor`.  Оба <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> и <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> определяются как круги же radius, но со смещением центры 50.  
   
- [!code-xml[GeometrySample#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
+ [!code-xaml[GeometrySample#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#24)]  
   
- ![Результаты объединенного режима Xor](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.png "mil\_task\_combined\_geometry\_xor")  
-Объединение геометрических объектов в режиме Xor
+ ![Результаты объединения в режиме Xor ](../../../../docs/framework/wpf/graphics-multimedia/media/mil-task-combined-geometry-xor.PNG "mil_task_combined_geometry_xor")  
+Xor объединенных геометрических объектов

@@ -1,41 +1,46 @@
 ---
-title: "Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ImageList - компонент [Windows Forms], добавление изображений"
-  - "ImageList - компонент [Windows Forms], удаление изображений"
-  - "изображения [Windows Forms], добавление в компонент ImageList"
-  - "изображения [Windows Forms], отображение с помощью элементов управления"
-  - "изображения [Windows Forms], удаление из компонента ImageList"
-  - "изображения [Windows Forms], хранение для элементов управления"
+title: "Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], removing from ImageList component
+- images [Windows Forms], storing for controls
+- ImageList component [Windows Forms], adding images
+- ImageList component [Windows Forms], removing images
+- images [Windows Forms], adding to ImageList component
+- images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ce13ba3413c13ced7ff9a967e23d87622309feb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms
-Компонент Windows Forms <xref:System.Windows.Forms.ImageList> обычно заполняется рисунками перед связыванием с каким\-либо элементом управления.  Однако добавление и удаление рисунков возможно и после связывания этого компонента с элементом управления.  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms
+Windows Forms <xref:System.Windows.Forms.ImageList> компонента обычно заполняется с изображениями, прежде чем он будет связан с элементом управления. Тем не менее можно добавить и удалить изображения после связывания списка изображений с элементом управления.  
   
 > [!NOTE]
->  При удалении рисунков обеспечьте, чтобы оставалось действительным свойство <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> любых связанных элементов управления.  
+>  При удалении изображений, убедитесь, что <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> свойство любых связанных элементов управления по-прежнему допустимо.  
   
-### Чтобы добавить рисунки с помощью программных средств  
+### <a name="to-add-images-programmatically"></a>Добавление изображений программными средствами  
   
--   Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> свойства <xref:System.Windows.Forms.ImageList.Images%2A> набора изображений.  
+-   Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> метод списка изображений <xref:System.Windows.Forms.ImageList.Images%2A> свойство.  
   
-     В следующем примере кода в качестве местоположения изображения выбрана папка **Мои документы**.  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  Для следующего примера кода требуется форма с заранее добавленным элементом управления <xref:System.Windows.Forms.ImageList>.  
+     В следующем примере кода путь задан при размещении изображения является **Мои документы** папки. Это расположение используется, так как предполагается, что большинство компьютеров под управлением операционной системы Windows включает эту папку. Эта папка также дает возможность пользователям минимальный уровень доступа к системе более безопасно запустить приложение. В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.ImageList> управления уже добавлен.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -46,7 +51,6 @@ caps.handback.revision: 15
        & "\Image.gif")  
        ImageList1.Images.Add(myImage)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ caps.handback.revision: 15
        + @"\Image.gif");  
        imageList1.Images.Add(myImage);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,11 +84,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-### Добавление изображений со значением ключа.  
+### <a name="to-add-images-with-a-key-value"></a>Добавление изображений со значением ключа.  
   
--   Используйте один из методов <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> свойства <xref:System.Windows.Forms.ImageList.Images%2A> набора изображений, которое принимает значение ключа.  
+-   Используйте один из <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> методы списка изображений <xref:System.Windows.Forms.ImageList.Images%2A> свойства, которое принимает значение ключа.  
   
-     В следующем примере кода в качестве местоположения изображения выбрана папка **Мои документы**.  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  Для следующего примера кода требуется форма с заранее добавленным элементом управления <xref:System.Windows.Forms.ImageList>.  
+     В следующем примере кода путь задан при размещении изображения является **Мои документы** папки. Это расположение используется, так как предполагается, что большинство компьютеров под управлением операционной системы Windows включает эту папку. Эта папка также дает возможность пользователям минимальный уровень доступа к системе более безопасно запустить приложение. В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.ImageList> управления уже добавлен.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -96,7 +99,6 @@ caps.handback.revision: 15
        & "\Image.gif")  
        ImageList1.Images.Add("myPhoto", myImage)  
     End Sub  
-  
     ```  
   
 ```csharp  
@@ -111,23 +113,23 @@ public void addImage()
    + @"\Image.gif");  
    imageList1.Images.Add("myPhoto", myImage);  
 }  
-  
 ```  
   
-### Чтобы удалить все изображения с помощью программных средств  
+1.  
   
--   Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> для удаления одного изображения  
+### <a name="to-remove-all-images-programmatically"></a>Чтобы удалить все образы программными средствами  
   
-     \-либо\-  
+-   Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> метод для удаления одного образа  
   
-     Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> для удаления всех изображений в наборе.  
+     , - или -  
+  
+     Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> метод, чтобы удалить все образы в списке изображений.  
   
     ```vb  
     ' Removes the first image in the image list  
     ImageList1.Images.Remove(myImage)  
     ' Clears all images in the image list  
     ImageList1.Images.Clear()  
-  
     ```  
   
 ```csharp  
@@ -135,26 +137,23 @@ public void addImage()
 imageList1.Images.Remove(myImage);  
 // Clears all images in the image list.  
 imageList1.Images.Clear();  
-  
 ```  
   
-### Чтобы удалить рисунки по ключу  
+### <a name="to-remove-images-by-key"></a>Чтобы удалить рисунки по ключу  
   
--   Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> для удаления отдельного изображения по ключу.  
+-   Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> метод для удаления одного образа по его ключу.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
     ImageList1.Images.RemoveByKey("myPhoto")  
-  
     ```  
   
 ```csharp  
 // Removes the image named "myPhoto" from the list.  
 imageList1.Images.RemoveByKey("myPhoto");  
-  
 ```  
   
-## См. также  
- [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)   
- [Общие сведения о компоненте ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)   
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>См. также  
+ [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [Общие сведения о компоненте ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
+ [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

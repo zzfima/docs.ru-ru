@@ -1,49 +1,48 @@
 ---
-title: "Объект My.Computer.FileSystem | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "FileClose - функция"
-  - "FileGet - функция"
-  - "FileGetObject - функция"
-  - "FileOpen - функция"
-  - "FilePut - функция"
-  - "FilePutObject - функция"
-  - "FileSystem - модуль"
-  - "My.Computer.FileSystem - объект"
-  - "Seek - функция"
+title: "Объект My.Computer.FileSystem"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- FileSystem module
+- FileClose function
+- FileGet function
+- My.Computer.FileSystem object
+- FilePutObject function
+- FilePut function
+- FileGetObject function
+- Seek function
+- FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aa6b61333152e6cb52fac969551e93d6b3697e53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Объект My.Computer.FileSystem
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Предоставляет свойства и методы для работы с дисками, файлами и каталогами.  
+# <a name="mycomputerfilesystem-object"></a>Объект My.Computer.FileSystem
+Включает свойства и методы для работы с дисками, файлами и каталогами.  
   
-## Заметки  
- Дополнительные сведения о доступных методах и свойствах объекта `My.Computer.FileSystem` см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о методах и свойствах `My.Computer.FileSystem` см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- Дополнительные сведения см. в разделе [Доступ к файлам с помощью Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Дополнительные сведения см. в разделе [доступ к файлам с помощью Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
->  Можно также использовать классы в пространстве имен <xref:System.IO?displayProperty=fullName> для работы с дисками, файлами и каталогами.  
+>  Можно также использовать классы в <xref:System.IO?displayProperty=nameWithType> пространство имен для работы с дисками, файлами и каталогами.  
   
-## Требования  
- **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a>Требования  
+ **Пространство имен:**<xref:Microsoft.VisualBasic.MyServices>  
   
- **Класс.** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> \(предоставляет доступ к <xref:Microsoft.VisualBasic.FileIO.FileSystem>\)  
+ **Класс:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (предоставляет доступ к <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Сборка:** библиотека времени выполнения Visual Basic \(в Microsoft.VisualBasic.dll\)  
+ **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
   
-## См. также  
- [Объект My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)   
+## <a name="see-also"></a>См. также  
+ [Объект My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
  [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

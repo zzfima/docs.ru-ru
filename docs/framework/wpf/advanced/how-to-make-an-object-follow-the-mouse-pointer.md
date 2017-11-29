@@ -1,39 +1,45 @@
 ---
-title: "Практическое руководство. Создание объекта, следующего за указателем мыши | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WPF, следование объектов за"
-  - "следование за указателем мыши (курсором)"
-  - "курсор (указатель мыши), следование объектов за"
+title: "Практическое руководство. Создание объекта, следующего за указателем мыши"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- following the mouse pointer (cursor)
+- mouse pointer (cursor), making objects follow
+- cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1991d2a4b43c679fe7e30f633742e01e281e19b3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Создание объекта, следующего за указателем мыши
-В этом примере показан способ изменения размеров объекта при передвижении указателя мыши по экрану.  
+# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Практическое руководство. Создание объекта, следующего за указателем мыши
+В этом примере показано, как изменить размеры объекта, когда указатель мыши перемещается на экране.  
   
- Пример включает файл [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], который создает [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] и файл кода программной части, который создает обработчик событий.  
+ Пример включает [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файл, который создает [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] и файл кода, который создает обработчик событий.  
   
-## Пример  
- В следующем примере [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] создается [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который состоит из фигуры <xref:System.Windows.Shapes.Ellipse> в элементе управления <xref:System.Windows.Controls.StackPanel>, и присоединяется обработчик событий для события <xref:System.Windows.UIElement.MouseMove>.  
+## <a name="example"></a>Пример  
+ Следующие [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] создает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который состоит из <xref:System.Windows.Shapes.Ellipse> внутри <xref:System.Windows.Controls.StackPanel>и присоединяет обработчик событий для <xref:System.Windows.UIElement.MouseMove> события.  
   
- [!code-xml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
+ [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
- Следующий код создает обработчик событий <xref:System.Windows.UIElement.MouseMove>.  Когда указатель мыши перемещается, высота и ширина <xref:System.Windows.Shapes.Ellipse> увеличивается и уменьшается.  
+ Следующий код создает <xref:System.Windows.UIElement.MouseMove> обработчика событий.  При перемещении указателя мыши, высоту и ширину <xref:System.Windows.Shapes.Ellipse> увеличивается и уменьшается.  
   
  [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)

@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CLR ETW events, logging
+helpviewer_keywords: CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aebeb1bb1257599cc3fb9b8be7bf2595ccca0f13
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f996cf730acc355f3bf13287b79581d23e4e6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 Трассировку событий для Windows (ETW) можно использовать для записи событий среды CLR. Для создания и просмотра трассировки можно использовать следующие инструменты.  
@@ -119,6 +116,5 @@ Provider                                 GUID
      Эта команда XPerf помещает события в дамп в виде файла с разделителями-запятыми (CSV-файл), который впоследствии можно просмотреть. Поскольку у разных событий поля разные, этот CSV-файл содержит несколько строк заголовков, расположенных перед данными. Первое поле каждой строки является типом события с указанием заголовка, который должен использоваться для определения остальных полей.  
   
 ## <a name="see-also"></a>См. также  
- [Набор средств для оценки производительности Windows](http://go.microsoft.com/fwlink/?LinkID=161141)   
+ [Набор средств производительности Windows](http://go.microsoft.com/fwlink/?LinkID=161141)  
  [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
-

@@ -1,43 +1,44 @@
 ---
-title: "Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "кэш глобальной сборки, диалоговое окно "Выбор элементов панели элементов""
-  - "AssemblyFoldersEx, диалоговое окно "Выбор элементов панели элементов""
-  - "элементы управления, отображение в диалоговом окне "Выбор элементов панели элементов""
-  - "регистрация папки сборки, диалоговое окно "Выбор элементов панели элементов""
-  - "Диалоговое окно "Выбор элементов панели элементов", отображение элементов управления"
+title: "Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global assembly cache [Windows Forms], Choose Toolbox Items dialog box
+- AssemblyFoldersEx [Windows Forms], Choose Toolbox Items dialog box
+- controls [Windows Forms], display in Choose Toolbox Items dialog box
+- assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
+- Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f7bbb13e8a2b877d0f503e091b5bb8b1e7e89d00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов
-Создаваемые элементы управления можно отобразить в диалоговом окне **Выбор элементов панели элементов**, которое открывается, если щелкнуть правой кнопкой мыши **Панель элементов** и выбрать пункт **Выбрать элементы**.  Чтобы элемент управления появился в этом диалоговом окне, достаточно выполнить процедуру регистрации AssemblyFoldersEx.  
+# <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов
+При разработке и распространение элементов управления, вы можете эти элементы управления отображались в **Выбор элементов панели элементов** dialog box, которое отображается при щелчке правой кнопкой мыши **элементов** и выберите  **Выберите элементы**. Можно включить элемент управления для отображения в этом диалоговом окне, используя процедуру регистрации AssemblyFoldersEx.  
   
-### Отображение элемента управления в диалоговом окне "Выбор элементов панели элементов"  
+### <a name="to-display-your-control-in-the-choose-toolbox-items-dialog-box"></a>Отображение элемента управления в диалоговом окне Выбор элементов панели элементов  
   
--   Установите сборку элемента управления в глобальный кэш сборок.  Дополнительные сведения см. в разделе [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
+-   Установите сборку элемента управления в глобальный кэш сборок. Дополнительные сведения см. в разделе [как: Установка сборки в глобальный кэш сборок](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
-     \-или\-  
+     -или-  
   
--   Зарегистрируйте элемент управления и связанные с ним сборки времени разработки, используя процедуру регистрации AssemblyFoldersEx.  AssemblyFoldersEx – это расположение в реестре, где сторонние производители хранят пути к каждой версии .NET Framework, которую они поддерживают.  Разрешение времени разработки может искать указанные сборки в этом расположении реестра.  Скрипт реестра может задать элементы управления, которые должны отображаться в панели элементов.  Дополнительные сведения см. в разделе [Развертывание сборок пользовательских элементов управления и сборок времени разработки](http://msdn.microsoft.com/ru-ru/96158eb0-b691-4ae1-9e7b-3c65a1b798cb).  
+-   Зарегистрируйте элемент управления и связанных с ней сборок во время разработки, используя процедуру регистрации AssemblyFoldersEx. AssemblyFoldersEx находится в расположении реестра, где сторонние поставщики хранят пути для каждой версии платформы, на которой они поддерживают. Разрешение во время разработки можно искать в этом расположении реестра указанные сборки. Скрипт реестра может задать элементы управления, которые должны отображаться на панели инструментов. Дополнительные сведения см. в разделе [развертывание пользовательского элемента управления и сборки времени разработки (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb).  
   
-## См. также  
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/ru-ru/bd07835f-18a8-433e-bccc-7141f65263bb)   
- [Развертывание сборок пользовательских элементов управления и сборок времени разработки](http://msdn.microsoft.com/ru-ru/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)   
- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
- [Пример. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>См. также  
+ [Диалоговое окно "Выбор элементов панели элементов" (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [Развертывание пользовательского элемента управления и сборки времени разработки (Visual Studio 2013)](http://msdn.microsoft.com/en-us/96158eb0-b691-4ae1-9e7b-3c65a1b798cb)  
+ [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

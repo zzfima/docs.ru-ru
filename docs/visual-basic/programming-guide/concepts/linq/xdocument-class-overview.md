@@ -1,65 +1,57 @@
 ---
-title: "Общие сведения о классах XDocument (Visual Basic) | Документы Microsoft"
+title: "Обзор класса XDocument (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31111b23adb019aad3ad55787c073dc02446291d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 41b09335ae124ac290d8cd51afda71dfd935b7ff
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="xdocument-class-overview-visual-basic"></a>Общие сведения о классах XDocument (Visual Basic)
-В этом разделе описываются <xref:System.Xml.Linq.XDocument>класса.</xref:System.Xml.Linq.XDocument>  
+# <a name="xdocument-class-overview-visual-basic"></a>Обзор класса XDocument (Visual Basic)
+В этом разделе представлен класс <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="overview-of-the-xdocument-class"></a>Общие сведения о классе XDocument  
- <xref:System.Xml.Linq.XDocument>Класс содержит сведения, необходимые для допустимого XML-документа.</xref:System.Xml.Linq.XDocument> К ним относятся XML-декларация, инструкции по обработке и комментарии.  
+ Класс <xref:System.Xml.Linq.XDocument> содержит сведения, необходимые для допустимого XML-документа. К ним относятся XML-декларация, инструкции по обработке и комментарии.  
   
- Обратите внимание, что только для создания <xref:System.Xml.Linq.XDocument>объектов, если требуются определенные функциональные возможности, предоставляемые <xref:System.Xml.Linq.XDocument>класса.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XDocument> Во многих случаях может работать непосредственно с <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> Работа непосредственно с <xref:System.Xml.Linq.XElement>реализует простую модель программирования.</xref:System.Xml.Linq.XElement>  
+ Отметим, что, если требуются только конкретные функции, обеспечиваемые классом <xref:System.Xml.Linq.XDocument>, необходимо создавать только объекты <xref:System.Xml.Linq.XDocument>. Во многих случаях пользователь может работать непосредственно с <xref:System.Xml.Linq.XElement>. Непосредственная работа с <xref:System.Xml.Linq.XElement> реализует более простую модель программирования.  
   
- <xref:System.Xml.Linq.XDocument>является производным от <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer></xref:System.Xml.Linq.XDocument> Поэтому он может содержать дочерние узлы. Тем не менее <xref:System.Xml.Linq.XDocument>объекты могут иметь только один дочерний <xref:System.Xml.Linq.XElement>узла.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> Это обстоятельство отражает стандарт XML, согласно которому в XML-документе может содержаться лишь один корневой элемент.  
+ Интерфейс <xref:System.Xml.Linq.XDocument> является производным от интерфейса <xref:System.Xml.Linq.XContainer>. Поэтому он может содержать дочерние узлы. Однако объекты <xref:System.Xml.Linq.XDocument> могут иметь только по одному дочернему узлу <xref:System.Xml.Linq.XElement>. Это обстоятельство отражает стандарт XML, согласно которому в XML-документе может содержаться лишь один корневой элемент.  
   
 ## <a name="components-of-xdocument"></a>Компоненты XDocument  
- <xref:System.Xml.Linq.XDocument>Может содержать следующие элементы:</xref:System.Xml.Linq.XDocument>  
+ Документ <xref:System.Xml.Linq.XDocument> может включать в себя следующие элементы:  
   
--   Один <xref:System.Xml.Linq.XDeclaration>объекта.</xref:System.Xml.Linq.XDeclaration> <xref:System.Xml.Linq.XDeclaration>позволяет указать соответствующие части XML-декларации: версию XML, кодировку документа, а ли XML-документ изолированным.</xref:System.Xml.Linq.XDeclaration>  
+-   Один объект <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> позволяет указать соответствующие части XML-объявления: версию XML, кодировку документа, а также то, является ли этот XML-документ изолированным.  
   
--   Один <xref:System.Xml.Linq.XElement>объекта.</xref:System.Xml.Linq.XElement> Это корневой узел XML-документа.  
+-   Один объект <xref:System.Xml.Linq.XElement>. Это корневой узел XML-документа.  
   
--   Любое количество <xref:System.Xml.Linq.XProcessingInstruction>объектов.</xref:System.Xml.Linq.XProcessingInstruction> Инструкция по обработке передает сведения в приложение, обрабатывающее XML-код.  
+-   Любое количество объектов <xref:System.Xml.Linq.XProcessingInstruction>. Инструкция по обработке передает сведения в приложение, обрабатывающее XML-код.  
   
--   Любое количество <xref:System.Xml.Linq.XComment>объектов.</xref:System.Xml.Linq.XComment> Комментарии и корневой элемент находятся на одном уровне. <xref:System.Xml.Linq.XComment>Объект не может быть первый аргумент в списке, так как оно является недопустимым для документа XML, начинаться с комментария.</xref:System.Xml.Linq.XComment>  
+-   Любое количество объектов <xref:System.Xml.Linq.XComment>. Комментарии и корневой элемент находятся на одном уровне. Объект <xref:System.Xml.Linq.XComment> не может быть первым аргументом в списке, так как XML-документ не может начинаться с комментария.  
   
--   Один <xref:System.Xml.Linq.XDocumentType>для DTD.</xref:System.Xml.Linq.XDocumentType>  
+-   Один тип документа <xref:System.Xml.Linq.XDocumentType> для DTD.  
   
- При сериализации <xref:System.Xml.Linq.XDocument>, даже если `XDocument.Declaration` — `null`, выходные данные будут иметь XML-декларацию, если модуль записи имеет `Writer.Settings.OmitXmlDeclaration` значение `false` (по умолчанию).</xref:System.Xml.Linq.XDocument>  
+ При сериализации документа <xref:System.Xml.Linq.XDocument>, даже если значением декларации `XDocument.Declaration` является `null`, выходные данные будут иметь XML-декларацию, если для свойства `Writer.Settings.OmitXmlDeclaration` автор указал значение `false` (применяется по умолчанию).  
   
- По умолчанию [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] указывает для версии значение «1.0», а для кодировки значение «utf-8».  
+ По умолчанию [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] указывает для версии значение «1.0», а для кодировки значение «utf-8».  
   
 ## <a name="using-xelement-without-xdocument"></a>Использование XElement без XDocument  
- Как упоминалось ранее, <xref:System.Xml.Linq.XElement>– это основной класс в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] интерфейс программирования.</xref:System.Xml.Linq.XElement> Во многих случаях приложение не требует создания документа. С помощью <xref:System.Xml.Linq.XElement>класс, создание XML-дерева, добавьте к нему другие XML-деревья, изменять XML-дерево и сохранить его</xref:System.Xml.Linq.XElement>  
+ Как уже отмечалось, класс <xref:System.Xml.Linq.XElement> является основным классом интерфейса программирования [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Во многих случаях приложение не требует создания документа. Класс <xref:System.Xml.Linq.XElement> позволяет создавать XML-дерево, добавлять к нему другие XML-деревья, изменять XML-дерево и сохранять его.  
   
 ## <a name="using-xdocument"></a>Использование XDocument  
- Для создания <xref:System.Xml.Linq.XDocument>, используется функциональное построение, так же, как и для создания <xref:System.Xml.Linq.XElement>объектов.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument>  
+ При создании объектов <xref:System.Xml.Linq.XDocument> используется функциональное построение, так же как и при создании объектов <xref:System.Xml.Linq.XElement>.  
   
- Следующий код создает <xref:System.Xml.Linq.XDocument>и связанный с ним вложенные объекты.</xref:System.Xml.Linq.XDocument>  
+ Следующий фрагмент кода создает объект <xref:System.Xml.Linq.XDocument> и ассоциированные с ним вложенные объекты.  
   
 ```vb  
 Dim doc As XDocument = <?xml version="1.0" encoding="utf-8"?>  
@@ -99,4 +91,4 @@ doc.Save("test.xml")
 ```  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to XML обзор программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+ [LINQ to Общие сведения о программировании XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
