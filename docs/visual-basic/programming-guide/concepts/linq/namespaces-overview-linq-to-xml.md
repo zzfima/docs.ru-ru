@@ -1,44 +1,36 @@
 ---
-title: "Обзор пространств имен (LINQ to XML) | Документы Microsoft"
+title: "Обзор пространств имен (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cec2efd31c96af17ad717abaa8f4359210e99a78
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 082172720abd39634f7183367d4d7b8d53d2bb7e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="namespaces-overview-linq-to-xml"></a>Обзор пространств имен (LINQ to XML)
-Этот раздел знакомит с пространствами имен, <xref:System.Xml.Linq.XName>класс и <xref:System.Xml.Linq.XNamespace>класса.</xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName>  
+# <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="ad014-102">Обзор пространств имен (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ad014-102">Namespaces Overview (LINQ to XML)</span></span>
+<span data-ttu-id="ad014-103">Этот раздел знакомит с пространствами имен, классом <xref:System.Xml.Linq.XName> и классом <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="ad014-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  
   
-## <a name="xml-names"></a>Имена XML  
- Имена XML часто становятся источником сложности при программировании на XML. Имя XML состоит из пространства имен XML (которое также называется URI-кодом пространства имен XML) и локального имени. Пространство имен XML аналогично пространству имен в программах на основе [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Позволяет уникально квалифицировать имена элементов и атрибутов. Это помогает избежать конфликтов имен в разных частях XML-документа. При задании пространства имен XML можно выбрать локальное имя, которое должно быть уникальным только по значению пространства имен.  
+## <a name="xml-names"></a><span data-ttu-id="ad014-104">Имена XML</span><span class="sxs-lookup"><span data-stu-id="ad014-104">XML Names</span></span>  
+ <span data-ttu-id="ad014-105">Имена XML часто становятся источником сложности при программировании на XML.</span><span class="sxs-lookup"><span data-stu-id="ad014-105">XML names are often a source of complexity in XML programming.</span></span> <span data-ttu-id="ad014-106">Имя XML состоит из пространства имен XML (которое также называется URI-кодом пространства имен XML) и локального имени.</span><span class="sxs-lookup"><span data-stu-id="ad014-106">An XML name consists of an XML namespace (also called an XML namespace URI) and a local name.</span></span> <span data-ttu-id="ad014-107">Пространство имен XML аналогично пространству имен в программах на основе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ad014-107">An XML namespace is similar to a namespace in a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-based program.</span></span> <span data-ttu-id="ad014-108">Позволяет уникально квалифицировать имена элементов и атрибутов.</span><span class="sxs-lookup"><span data-stu-id="ad014-108">It enables you to uniquely qualify the names of elements and attributes.</span></span> <span data-ttu-id="ad014-109">Это помогает избежать конфликтов имен в разных частях XML-документа.</span><span class="sxs-lookup"><span data-stu-id="ad014-109">This helps avoid name conflicts between various parts of an XML document.</span></span> <span data-ttu-id="ad014-110">При задании пространства имен XML можно выбрать локальное имя, которое должно быть уникальным только по значению пространства имен.</span><span class="sxs-lookup"><span data-stu-id="ad014-110">When you have declared an XML namespace, you can select a local name that only has to be unique within that namespace.</span></span>  
   
- Другим аспектом имен XML являются XML *префиксы пространства имен*. Именно префиксы создают основную сложность в работе с именами XML. Эти префиксы позволяют создавать ярлык пространства имен XML, что делает XML-документ более организованным и понятным. Однако, чтобы префиксы XML несли значение, необходимо, чтобы они были соотнесены с определенным контекстом, а это вносит дополнительную сложность. Например, префикс XML `aw` можно ассоциировать с одним пространством имен XML в одной части XML-дерева и с другим пространством имен XML в другой его части.  
+ <span data-ttu-id="ad014-111">Другим аспектом имен XML являются *префиксы пространств имен* XML.</span><span class="sxs-lookup"><span data-stu-id="ad014-111">Another aspect of XML names is XML *namespace prefixes*.</span></span> <span data-ttu-id="ad014-112">Именно префиксы создают основную сложность в работе с именами XML.</span><span class="sxs-lookup"><span data-stu-id="ad014-112">XML prefixes cause most of the complexity of XML names.</span></span> <span data-ttu-id="ad014-113">Эти префиксы позволяют создавать ярлык пространства имен XML, что делает XML-документ более организованным и понятным.</span><span class="sxs-lookup"><span data-stu-id="ad014-113">These prefixes enable you to create a shortcut for an XML namespace, which makes the XML document more concise and understandable.</span></span> <span data-ttu-id="ad014-114">Однако, чтобы префиксы XML несли значение, необходимо, чтобы они были соотнесены с определенным контекстом, а это вносит дополнительную сложность.</span><span class="sxs-lookup"><span data-stu-id="ad014-114">However, XML prefixes depend on their context to have meaning, which adds complexity.</span></span> <span data-ttu-id="ad014-115">Например, префикс XML `aw` можно ассоциировать с одним пространством имен XML в одной части XML-дерева и с другим пространством имен XML в другой его части.</span><span class="sxs-lookup"><span data-stu-id="ad014-115">For example, the XML prefix `aw` could be associated with one XML namespace in one part of an XML tree, and with a different XML namespace in a different part of the XML tree.</span></span>  
   
- При использовании [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] с Visual Basic и XML-литералы, необходимо использовать префиксы пространств имен при работе с документами в пространствах имен.  
+ <span data-ttu-id="ad014-116">При использовании [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] с Visual Basic и XML-литералы, необходимо использовать префиксы пространства имен при работе с документами в пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="ad014-116">When using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] with Visual Basic and XML literals, you must use namespace prefixes when working with documents in namespaces.</span></span>  
   
- В [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> — класс, который представляет имена XML Имена XML часто появляются [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] API, и когда требуется имя XML, вы увидите <xref:System.Xml.Linq.XName>параметр.</xref:System.Xml.Linq.XName> Тем не менее редко работать непосредственно с <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> <xref:System.Xml.Linq.XName>содержит неявное преобразование из строки.</xref:System.Xml.Linq.XName>  
+ <span data-ttu-id="ad014-117">В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] следующий класс представляет имена XML: <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="ad014-117">In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the class that represents XML names is <xref:System.Xml.Linq.XName>.</span></span> <span data-ttu-id="ad014-118">Имена XML часто появляются в API [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], и, когда требуется использовать имя XML, обнаруживается параметр <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="ad014-118">XML names appear frequently throughout the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API, and wherever an XML name is required, you will find an <xref:System.Xml.Linq.XName> parameter.</span></span> <span data-ttu-id="ad014-119">Однако напрямую работать с <xref:System.Xml.Linq.XName> приходится редко.</span><span class="sxs-lookup"><span data-stu-id="ad014-119">However, you rarely work directly with an <xref:System.Xml.Linq.XName>.</span></span> <span data-ttu-id="ad014-120"><xref:System.Xml.Linq.XName> содержит неявное преобразование строки.</span><span class="sxs-lookup"><span data-stu-id="ad014-120"><xref:System.Xml.Linq.XName> contains an implicit conversion from string.</span></span>  
   
- Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNamespace>и <xref:System.Xml.Linq.XName>.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XNamespace>  
+ <span data-ttu-id="ad014-121">Дополнительные сведения см. в разделах <xref:System.Xml.Linq.XNamespace> и <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="ad014-121">For more information, see <xref:System.Xml.Linq.XNamespace> and <xref:System.Xml.Linq.XName>.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="ad014-122">См. также</span><span class="sxs-lookup"><span data-stu-id="ad014-122">See Also</span></span>  
+ [<span data-ttu-id="ad014-123">Работа с пространствами имен XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad014-123">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

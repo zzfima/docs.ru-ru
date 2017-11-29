@@ -1,44 +1,50 @@
 ---
-title: "Практическое руководство. Проверка попадания курсора Geometry визуальном объекте | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Geometry - объекты, визуальные объекты, составляющие"
-  - "проверка нажатия, визуальных объектов, составляющих объекты Geometry"
-  - "визуальные объекты, проверка нажатия"
+title: "Практическое руководство. Проверка попадания курсора Geometry визуальном объекте"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], on visual objects comprising Geometry objects [WPF]
+- visual objects [WPF], hit tests on
+- Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ab125fe4031b5408eb202f21ce0fdf4314781f1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Проверка попадания курсора Geometry визуальном объекте
-В данном примере показано, как выполнять [проверку попадания курсора](GTMT) на визуальный объект, состоящий из одного или нескольких объектов <xref:System.Windows.Media.Geometry>.  
+# <a name="how-to-hit-test-geometry-in-a-visual"></a><span data-ttu-id="feb5d-102">Практическое руководство. Проверка попадания курсора Geometry визуальном объекте</span><span class="sxs-lookup"><span data-stu-id="feb5d-102">How to: Hit Test Geometry in a Visual</span></span>
+<span data-ttu-id="feb5d-103">В этом примере показано, как для выполнения проверки попадания на визуальный объект, который состоит из одного или нескольких <xref:System.Windows.Media.Geometry> объектов.</span><span class="sxs-lookup"><span data-stu-id="feb5d-103">This example shows how to perform a hit test on a visual object that is composed of one or more <xref:System.Windows.Media.Geometry> objects.</span></span>  
   
-## Пример  
- В следующем примере показано, как извлечь объект <xref:System.Windows.Media.DrawingGroup> из визуального объекта, который использует метод <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>.  Затем выполняется проверка попадания курсора на отображенное содержимое каждого рисунка объекта <xref:System.Windows.Media.DrawingGroup>, чтобы определить, на какой геометрический объект попал курсор.  
+## <a name="example"></a><span data-ttu-id="feb5d-104">Пример</span><span class="sxs-lookup"><span data-stu-id="feb5d-104">Example</span></span>  
+ <span data-ttu-id="feb5d-105">В следующем примере показано, как получить <xref:System.Windows.Media.DrawingGroup> из визуальный объект, который использует <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="feb5d-105">The following example shows how to retrieve the <xref:System.Windows.Media.DrawingGroup> from a visual object that uses the <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> method.</span></span> <span data-ttu-id="feb5d-106">Затем выполняется нажатия на отображенное содержимое каждого рисунка <xref:System.Windows.Media.DrawingGroup> для определения, какой геометрический объект был нажат.</span><span class="sxs-lookup"><span data-stu-id="feb5d-106">A hit test is then performed on the rendered content of each drawing in the <xref:System.Windows.Media.DrawingGroup> to determine which geometry was hit.</span></span>  
   
 > [!NOTE]
->  Для определения попадания курсора на какую\-либо часть отображенного содержимого визуального объекта, в большинстве случаев следует использовать метод <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>.  
+>  <span data-ttu-id="feb5d-107">В большинстве случаев можно использовать <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> метод для определения попадания курсора на любой из отображаемого содержимого визуального элемента.</span><span class="sxs-lookup"><span data-stu-id="feb5d-107">In most cases, you would use the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method to determine whether a point intersects any of the rendered content of a visual.</span></span>  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- Метод <xref:System.Windows.Media.Geometry.FillContains%2A> — это перегруженный метод, который позволяет проводить проверку попадания курсора, с помощью объектов <xref:System.Windows.Point> или <xref:System.Windows.Media.Geometry>.  Если есть пересечение с геометрической фигурой, то оно может лежать за пределами границ заполнения.  В этом случае, возможно, потребуется вызов <xref:System.Windows.Media.Geometry.StrokeContains%2A> в дополнение к <xref:System.Windows.Media.Geometry.FillContains%2A>.  
+ <span data-ttu-id="feb5d-108"><xref:System.Windows.Media.Geometry.FillContains%2A> — Перегруженный метод, позволяющий проверки нажатия, используя указанную <xref:System.Windows.Point> или <xref:System.Windows.Media.Geometry>.</span><span class="sxs-lookup"><span data-stu-id="feb5d-108">The <xref:System.Windows.Media.Geometry.FillContains%2A> method is an overloaded method that allows you to hit test by using a specified <xref:System.Windows.Point> or <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="feb5d-109">Если линия геометрического объекта штрихованная, штрих может выходить за границы заполнения.</span><span class="sxs-lookup"><span data-stu-id="feb5d-109">If a geometry is stroked, the stroke can extend outside the fill bounds.</span></span> <span data-ttu-id="feb5d-110">В этом случае необходимо вызвать <xref:System.Windows.Media.Geometry.StrokeContains%2A> в дополнение к <xref:System.Windows.Media.Geometry.FillContains%2A>.</span><span class="sxs-lookup"><span data-stu-id="feb5d-110">In which case, you may want to call <xref:System.Windows.Media.Geometry.StrokeContains%2A> in addition to <xref:System.Windows.Media.Geometry.FillContains%2A>.</span></span>  
   
- Можно также предоставить <xref:System.Windows.Media.ToleranceType>, который используется в целях спрямления кривой Безье.  
+ <span data-ttu-id="feb5d-111">Можно также предоставить <xref:System.Windows.Media.ToleranceType> , используемый в целях спрямления кривой Безье.</span><span class="sxs-lookup"><span data-stu-id="feb5d-111">You can also provide a <xref:System.Windows.Media.ToleranceType> that is used for the purposes of Bezier flattening.</span></span>  
   
 > [!NOTE]
->  В данном примере не принимаются в расчет никакие преобразования или отсечения, которые могут быть применены к геометрической фигуре.  Кроме того, данный пример не будет работать с элементом управления со стилями, поскольку он не имеет никаких рисунков, непосредственно связанных с ним.  
+>  <span data-ttu-id="feb5d-112">В этом примере не учитываются преобразования или обрезка, которые могут быть применены к геометрическому объекту.</span><span class="sxs-lookup"><span data-stu-id="feb5d-112">This sample does not take into account any transforms or clipping that may be applied to the geometry.</span></span> <span data-ttu-id="feb5d-113">Кроме того этот пример не будет работать с элементом управления со стилями, поскольку он не имеет никаких рисунков, непосредственно связанных с ним.</span><span class="sxs-lookup"><span data-stu-id="feb5d-113">In addition, this sample will not work with a styled control, since it does not have any drawings directly associated with it.</span></span>  
   
-## См. также  
- [Проверка попадания на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [Проверка нажатия с использованием геометрии в качестве параметра](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
+## <a name="see-also"></a><span data-ttu-id="feb5d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="feb5d-114">See Also</span></span>  
+ [<span data-ttu-id="feb5d-115">Проверка нажатия на визуальном уровне</span><span class="sxs-lookup"><span data-stu-id="feb5d-115">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="feb5d-116">Проверка нажатия с использованием геометрии в качестве параметра</span><span class="sxs-lookup"><span data-stu-id="feb5d-116">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)

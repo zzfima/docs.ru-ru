@@ -1,29 +1,27 @@
 ---
-title: "При доступе к свойству по умолчанию возникает неоднозначность между членами наследуемых интерфейсов: &lt;имяСвойстваПоУмолчанию&gt; интерфейса &lt;имяИнтерфейса1&gt; и &lt;имяСвойстваПоУмолчанию&gt; интерфейса &lt;имяИнтерфейса2&gt; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: "Доступ к свойству по умолчанию определяется неоднозначно между наследуемые члены интерфейса &#39; &lt;defaultpropertyname&gt;&#39; из интерфейса &#39;&lt; имя_интерфейса1&gt;&#39; и &#39;&lt; defaultpropertyname&gt;&#39; из интерфейса &#39;&lt; имя_интерфейса2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# При доступе к свойству по умолчанию возникает неоднозначность между членами наследуемых интерфейсов: &lt;имяСвойстваПоУмолчанию&gt; интерфейса &lt;имяИнтерфейса1&gt; и &lt;имяСвойстваПоУмолчанию&gt; интерфейса &lt;имяИнтерфейса2&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Интерфейс наследуется из двух интерфейсов, каждый из которых объявляет свойство по умолчанию с тем же именем.  Компилятор не может разрешить доступ к этому свойству по умолчанию без уточнения.  Это показано в приведенном ниже примере.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a><span data-ttu-id="5948a-102">Доступ к свойству по умолчанию определяется неоднозначно между наследуемые члены интерфейса &#39; &lt;defaultpropertyname&gt;&#39; из интерфейса &#39;&lt; имя_интерфейса1&gt;&#39; и &#39;&lt; defaultpropertyname&gt;&#39; из интерфейса &#39;&lt; имя_интерфейса2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="5948a-102">Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="5948a-103">Интерфейс наследует от двух интерфейсов, каждый из которых объявляет свойство по умолчанию с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="5948a-103">An interface inherits from two interfaces, each of which declares a default property with the same name.</span></span> <span data-ttu-id="5948a-104">Компилятор не может разрешить доступ к этому свойству по умолчанию без уточнения.</span><span class="sxs-lookup"><span data-stu-id="5948a-104">The compiler cannot resolve an access to this default property without qualification.</span></span> <span data-ttu-id="5948a-105">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="5948a-105">The following example illustrates this.</span></span>  
   
 ```  
 Public Interface Iface1  
@@ -43,21 +41,21 @@ Public Class testClass
 End Class  
 ```  
   
- При указании `testObj(1)` компилятор пытается разрешить его свойства по умолчанию.  Однако есть два возможных свойства по умолчанию, наследуемые из интерфейсов, поэтому компилятор создает эту ошибку.  
+ <span data-ttu-id="5948a-106">При указании `testObj(1)`, компилятор пытается разрешить ее свойства по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5948a-106">When you specify `testObj(1)`, the compiler tries to resolve it to the default property.</span></span> <span data-ttu-id="5948a-107">Однако существуют два свойства по умолчанию невозможно из-за наследуемых интерфейсов, поэтому компилятор создает эту ошибку.</span><span class="sxs-lookup"><span data-stu-id="5948a-107">However, there are two possible default properties because of the inherited interfaces, so the compiler signals this error.</span></span>  
   
- **Идентификатор ошибки**: BC30686  
+ <span data-ttu-id="5948a-108">**Идентификатор ошибки:** BC30686</span><span class="sxs-lookup"><span data-stu-id="5948a-108">**Error ID:** BC30686</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5948a-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="5948a-109">To correct this error</span></span>  
   
--   Следует избегать наследования элементов с одинаковыми именами.  В предыдущем примере, если для `testObj` не требуется ни один из элементов из, например, `Iface2`, то он затем объявляется следующим образом:  
+-   <span data-ttu-id="5948a-110">Избегайте наследования элементов с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="5948a-110">Avoid inheriting any members with the same name.</span></span> <span data-ttu-id="5948a-111">В предыдущем примере если `testObj` не требуется ни один из членов, например, `Iface2`, объявите его следующим образом:</span><span class="sxs-lookup"><span data-stu-id="5948a-111">In the preceding example, if `testObj` does not need any of the members of, say, `Iface2`, then declare it as follows:</span></span>  
   
     ```  
     Dim testObj As Iface1  
     ```  
   
-     \-или\-  
+     <span data-ttu-id="5948a-112">-или-</span><span class="sxs-lookup"><span data-stu-id="5948a-112">-or-</span></span>  
   
--   Реализуйте наследуемый интерфейс в классе.  Затем можно реализовать все наследуемые свойства с различными именами.  Однако свойством по умолчанию в реализации класса может быть только одно из них.  Это показано в приведенном ниже примере.  
+-   <span data-ttu-id="5948a-113">Реализуйте наследуемый интерфейс в классе.</span><span class="sxs-lookup"><span data-stu-id="5948a-113">Implement the inheriting interface in a class.</span></span> <span data-ttu-id="5948a-114">Затем можно реализовать все наследуемые свойства с различными именами.</span><span class="sxs-lookup"><span data-stu-id="5948a-114">Then you can implement each of the inherited properties with different names.</span></span> <span data-ttu-id="5948a-115">Однако только один из них может быть свойство по умолчанию для реализующего класса.</span><span class="sxs-lookup"><span data-stu-id="5948a-115">However, only one of them can be the default property of the implementing class.</span></span> <span data-ttu-id="5948a-116">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="5948a-116">The following example illustrates this.</span></span>  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## См. также  
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="5948a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="5948a-117">See Also</span></span>  
+ [<span data-ttu-id="5948a-118">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="5948a-118">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

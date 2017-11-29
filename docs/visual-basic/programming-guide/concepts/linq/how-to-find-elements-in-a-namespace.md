@@ -1,36 +1,32 @@
 ---
-title: "Практическое руководство: поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d665ddc1e7ad7340b05c97e790195abbc53e4f95
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 257d4c37f849bbc50aac6b9cb4531d1084163db2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Практическое руководство: поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)
-Выражения XPath позволяют находить узлы в конкретном пространстве имен. Для указания пространств имен в выражениях XPath используются префиксы пространств имен. Для синтаксического анализа выражения XPath, который содержит префиксы пространства имен, необходимо передать объект методу XPath, реализующему <xref:System.Xml.IXmlNamespaceResolver>.</xref:System.Xml.IXmlNamespaceResolver> В этом примере используется <xref:System.Xml.XmlNamespaceManager>.</xref:System.Xml.XmlNamespaceManager>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="d10d1-102">Как: поиск элементов в пространстве имен (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d10d1-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="d10d1-103">Выражения XPath позволяют находить узлы в конкретном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="d10d1-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="d10d1-104">Для указания пространств имен в выражениях XPath используются префиксы пространств имен.</span><span class="sxs-lookup"><span data-stu-id="d10d1-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="d10d1-105">Для синтаксического анализа выражения XPath, содержащего префиксы пространств имен, необходимо передать объект методу XPath, реализующему <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="d10d1-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="d10d1-106">В этом примере используется <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="d10d1-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- Выражение XPath:  
+ <span data-ttu-id="d10d1-107">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="d10d1-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a>Пример  
- В следующем примере считывается XML-дерево, содержащее два пространства имен. Он использует <xref:System.Xml.XmlReader>для чтения XML-документа.</xref:System.Xml.XmlReader> Затем он возвращает <xref:System.Xml.XmlNameTable>из <xref:System.Xml.XmlReader>и <xref:System.Xml.XmlNamespaceManager>из <xref:System.Xml.XmlNameTable>.</xref:System.Xml.XmlNameTable> </xref:System.Xml.XmlNamespaceManager> </xref:System.Xml.XmlReader> </xref:System.Xml.XmlNameTable> Он использует <xref:System.Xml.XmlNamespaceManager>при выборе элементов.</xref:System.Xml.XmlNamespaceManager>  
+## <a name="example"></a><span data-ttu-id="d10d1-108">Пример</span><span class="sxs-lookup"><span data-stu-id="d10d1-108">Example</span></span>  
+ <span data-ttu-id="d10d1-109">В следующем примере считывается XML-дерево, содержащее два пространства имен.</span><span class="sxs-lookup"><span data-stu-id="d10d1-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="d10d1-110">Для считывания XML-документа используется <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="d10d1-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="d10d1-111">Затем в примере происходит получение <xref:System.Xml.XmlNameTable> из <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlNamespaceManager> из <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="d10d1-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="d10d1-112">При выделении элементов используется <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="d10d1-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -58,7 +54,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="d10d1-113">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="d10d1-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -93,5 +89,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="d10d1-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d10d1-114">See Also</span></span>  
+ [<span data-ttu-id="d10d1-115">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d10d1-115">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

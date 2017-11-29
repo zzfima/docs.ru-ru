@@ -1,71 +1,73 @@
 ---
-title: "Стили и шаблоны элемента ToggleButton | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ToggleButton"
-  - "части [WPF], ToggleButton"
-  - "состояния [WPF], ToggleButton"
-  - "стили [WPF], ToggleButton"
-  - "шаблоны [WPF], ToggleButton"
-  - "ToggleButton [WPF], стили и шаблоны"
+title: "Стили и шаблоны элемента ToggleButton"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], ToggleButton
+- ToggleButton [WPF], styles and templates
+- ControlTemplate [WPF], ToggleButton
+- styles [WPF], ToggleButton
+- templates [WPF], ToggleButton
+- parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ecd6696ff9d62b4aa3397ac8567edc3fb387ba96
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента ToggleButton
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.Primitives.ToggleButton>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="togglebutton-syles-and-templates"></a><span data-ttu-id="c1631-102">Стили и шаблоны элемента ToggleButton</span><span class="sxs-lookup"><span data-stu-id="c1631-102">ToggleButton Syles and Templates</span></span>
+<span data-ttu-id="c1631-103">В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Primitives.ToggleButton> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c1631-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Primitives.ToggleButton> control.</span></span> <span data-ttu-id="c1631-104">Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c1631-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="c1631-105">Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="c1631-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Части ToggleButton  
- Элемент управления <xref:System.Windows.Controls.Primitives.ToggleButton> не имеет именованных частей.  
+## <a name="togglebutton-parts"></a><span data-ttu-id="c1631-106">Элемент управления ToggleButton частей</span><span class="sxs-lookup"><span data-stu-id="c1631-106">ToggleButton Parts</span></span>  
+ <span data-ttu-id="c1631-107"><xref:System.Windows.Controls.Primitives.ToggleButton> Управления не имеет именованных частей.</span><span class="sxs-lookup"><span data-stu-id="c1631-107">The <xref:System.Windows.Controls.Primitives.ToggleButton> control does not have any named parts.</span></span>  
   
-## Состояния ToggleButton  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.Primitives.ToggleButton>.  
+## <a name="togglebutton-states"></a><span data-ttu-id="c1631-108">Элемент управления ToggleButton состояний</span><span class="sxs-lookup"><span data-stu-id="c1631-108">ToggleButton States</span></span>  
+ <span data-ttu-id="c1631-109">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.ToggleButton> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c1631-109">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.ToggleButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="c1631-110">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="c1631-110">VisualState Name</span></span>|<span data-ttu-id="c1631-111">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="c1631-111">VisualStateGroup Name</span></span>|<span data-ttu-id="c1631-112">Описание</span><span class="sxs-lookup"><span data-stu-id="c1631-112">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
-|Pressed|CommonStates|Элемент управления нажат.|  
-|Disabled|CommonStates|Элемент управления отключен.|  
-|Focused|FocusStates|Элемент управления имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления не имеет фокуса.|  
-|Установлен|CheckStates|Параметр <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `true`.|  
-|Снят|CheckStates|Параметр <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `false`.|  
-|Indeterminate|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> равно `true`, а <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> равно `null`.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|<span data-ttu-id="c1631-113">Норм.</span><span class="sxs-lookup"><span data-stu-id="c1631-113">Normal</span></span>|<span data-ttu-id="c1631-114">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1631-114">CommonStates</span></span>|<span data-ttu-id="c1631-115">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c1631-115">The default state.</span></span>|  
+|<span data-ttu-id="c1631-116">MouseOver</span><span class="sxs-lookup"><span data-stu-id="c1631-116">MouseOver</span></span>|<span data-ttu-id="c1631-117">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1631-117">CommonStates</span></span>|<span data-ttu-id="c1631-118">Указатель мыши расположен в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="c1631-118">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="c1631-119">Нажато</span><span class="sxs-lookup"><span data-stu-id="c1631-119">Pressed</span></span>|<span data-ttu-id="c1631-120">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1631-120">CommonStates</span></span>|<span data-ttu-id="c1631-121">Элемент управления нажат.</span><span class="sxs-lookup"><span data-stu-id="c1631-121">The control is pressed.</span></span>|  
+|<span data-ttu-id="c1631-122">Отключено</span><span class="sxs-lookup"><span data-stu-id="c1631-122">Disabled</span></span>|<span data-ttu-id="c1631-123">CommonStates</span><span class="sxs-lookup"><span data-stu-id="c1631-123">CommonStates</span></span>|<span data-ttu-id="c1631-124">Элемент управления отключен.</span><span class="sxs-lookup"><span data-stu-id="c1631-124">The control is disabled.</span></span>|  
+|<span data-ttu-id="c1631-125">Focused</span><span class="sxs-lookup"><span data-stu-id="c1631-125">Focused</span></span>|<span data-ttu-id="c1631-126">FocusStates</span><span class="sxs-lookup"><span data-stu-id="c1631-126">FocusStates</span></span>|<span data-ttu-id="c1631-127">Элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="c1631-127">The control has focus.</span></span>|  
+|<span data-ttu-id="c1631-128">Без фокуса ввода</span><span class="sxs-lookup"><span data-stu-id="c1631-128">Unfocused</span></span>|<span data-ttu-id="c1631-129">FocusStates</span><span class="sxs-lookup"><span data-stu-id="c1631-129">FocusStates</span></span>|<span data-ttu-id="c1631-130">Элемент управления не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="c1631-130">The control does not have focus.</span></span>|  
+|<span data-ttu-id="c1631-131">Помечено</span><span class="sxs-lookup"><span data-stu-id="c1631-131">Checked</span></span>|<span data-ttu-id="c1631-132">CheckStates</span><span class="sxs-lookup"><span data-stu-id="c1631-132">CheckStates</span></span>|<span data-ttu-id="c1631-133">Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="c1631-133"><xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `true`.</span></span>|  
+|<span data-ttu-id="c1631-134">флажок снят</span><span class="sxs-lookup"><span data-stu-id="c1631-134">Unchecked</span></span>|<span data-ttu-id="c1631-135">CheckStates</span><span class="sxs-lookup"><span data-stu-id="c1631-135">CheckStates</span></span>|<span data-ttu-id="c1631-136">Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `false`.</span><span class="sxs-lookup"><span data-stu-id="c1631-136"><xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `false`.</span></span>|  
+|<span data-ttu-id="c1631-137">Неопределенный</span><span class="sxs-lookup"><span data-stu-id="c1631-137">Indeterminate</span></span>|<span data-ttu-id="c1631-138">CheckStates</span><span class="sxs-lookup"><span data-stu-id="c1631-138">CheckStates</span></span>|<span data-ttu-id="c1631-139"><xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>— `true`, и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> — `null`.</span><span class="sxs-lookup"><span data-stu-id="c1631-139"><xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> is `true`, and <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> is `null`.</span></span>|  
+|<span data-ttu-id="c1631-140">Valid</span><span class="sxs-lookup"><span data-stu-id="c1631-140">Valid</span></span>|<span data-ttu-id="c1631-141">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1631-141">ValidationStates</span></span>|<span data-ttu-id="c1631-142">Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="c1631-142">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="c1631-143">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="c1631-143">InvalidFocused</span></span>|<span data-ttu-id="c1631-144">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1631-144">ValidationStates</span></span>|<span data-ttu-id="c1631-145"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="c1631-145">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="c1631-146">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="c1631-146">InvalidUnfocused</span></span>|<span data-ttu-id="c1631-147">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="c1631-147">ValidationStates</span></span>|<span data-ttu-id="c1631-148"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="c1631-148">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
 > [!NOTE]
->  Если в шаблоне элемента управления не существует неопределенного визуального состоянии, неограниченное визуальное состояние будет использоваться как визуальное состояние по умолчанию.  
+>  <span data-ttu-id="c1631-149">Если в шаблоне элемента управления не существует неопределенного визуального состояния, неограниченное визуальное состояние будет использоваться как визуальное состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c1631-149">If the Indeterminate visual state does not exist in your control template, then the Unchecked visual state will be used as default visual state.</span></span>  
   
-## Пример использования шаблона ControlTemplate для элемента управления ToggleButton  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.Primitives.ToggleButton>.  
+## <a name="togglebutton-controltemplate-example"></a><span data-ttu-id="c1631-150">Пример шаблона элемента управления ToggleButton</span><span class="sxs-lookup"><span data-stu-id="c1631-150">ToggleButton ControlTemplate Example</span></span>  
+ <span data-ttu-id="c1631-151">В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Primitives.ToggleButton> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c1631-151">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Primitives.ToggleButton> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ToggleButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]  
+ [!code-xaml[ControlTemplateExamples#ToggleButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ <span data-ttu-id="c1631-152">В предыдущем примере используется один или несколько из следующих ресурсов.</span><span class="sxs-lookup"><span data-stu-id="c1631-152">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="c1631-153">Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="c1631-153">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="c1631-154">См. также</span><span class="sxs-lookup"><span data-stu-id="c1631-154">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="c1631-155">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="c1631-155">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="c1631-156">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="c1631-156">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="c1631-157">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="c1631-157">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="c1631-158">Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="c1631-158">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

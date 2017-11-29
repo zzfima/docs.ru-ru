@@ -1,139 +1,136 @@
 ---
-title: "Оператор On Error (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.OnError"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ветвление, On Error"
-  - "условные операторы, On Error"
-  - "поток управления, ветвление"
-  - "обработка ошибок, On Error - оператор"
-  - "Error - ключевое слово"
-  - "Error - оператор, и On Error - оператор"
-  - "ошибки [Visual Basic], перехват"
-  - "выполнение, conditional"
-  - "GoTo - оператор, и On Error - оператор"
-  - "Next - оператор, On Error"
-  - "On Error - оператор"
-  - "On Error - оператор, синтаксис"
-  - "On - ключевое слово"
-  - "Resume Next - оператор"
-  - "Resume - оператор, и On Error - оператор"
-  - "ошибки во время выполнения, обработка"
-  - "код Visual Basic, поток управления"
+title: "Оператор On Error (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.OnError
+helpviewer_keywords:
+- Visual Basic code, control flow
+- Resume Next statement [Visual Basic]
+- errors [Visual Basic], trapping
+- error handling, On Error statement
+- Next statement [Visual Basic], On Error
+- control flow [Visual Basic], branching
+- Error keyword [Visual Basic]
+- execution [Visual Basic], conditional
+- Resume statement [Visual Basic], and On Error statement
+- Error statement [Visual Basic], and On Error statement
+- GoTo statement [Visual Basic], and On Error statement
+- branching [Visual Basic], on error
+- conditional statements [Visual Basic], On Error
+- On Error statement [Visual Basic], syntax
+- On keyword [Visual Basic]
+- run-time errors [Visual Basic], handling
+- On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор On Error (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Включает подпрограмму обработки ошибок и определяет местоположение этой подпрограммы в процедуре. Может также использоваться для отключения подпрограммы обработки ошибок.  
+# <a name="on-error-statement-visual-basic"></a><span data-ttu-id="5bce2-102">Оператор On Error (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5bce2-102">On Error Statement (Visual Basic)</span></span>
+<span data-ttu-id="5bce2-103">Включает процедуру обработки ошибок и определяет местоположение этой подпрограммы в процедуре. может также использоваться для отключения подпрограммы обработки ошибок.</span><span class="sxs-lookup"><span data-stu-id="5bce2-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  
   
- Если оператор `On Error` отсутствует, любая ошибка во время выполнения является фатальной: программа выводит сообщение об ошибке, и выполнение заканчивается.  
+ <span data-ttu-id="5bce2-104">Без `On Error` инструкции, любая ошибка во время выполнения, возникает неустранимая: отображается сообщение об ошибке, и выполнение будет остановлено.</span><span class="sxs-lookup"><span data-stu-id="5bce2-104">Without an `On Error` statement, any run-time error that occurs is fatal: an error message is displayed, and execution stops.</span></span>  
   
- По возможности рекомендуется ознакомиться с структурная обработка исключений позволяет использовать в коде, а не с помощью неструктурной обработки исключений и `On Error` выписка.  Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ <span data-ttu-id="5bce2-105">По возможности рекомендуется использовать структурированных исключений в коде обработку, вместо использования неструктурированной обработки исключений и `On Error` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-105">Whenever possible, we suggest you use structured exception handling in your code, rather than using unstructured exception handling and the `On Error` statement.</span></span> <span data-ttu-id="5bce2-106">Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="5bce2-106">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
 > [!NOTE]
->  Ключевое слово `Error` также используется в [Оператор Error](../../../visual-basic/language-reference/statements/error-statement.md), который поддерживается для обратной совместимости.  
+>  <span data-ttu-id="5bce2-107">`Error` Также используется ключевое слово в [оператор Error](../../../visual-basic/language-reference/statements/error-statement.md), который поддерживается для обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="5bce2-107">The `Error` keyword is also used in the [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), which is supported for backward compatibility.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="5bce2-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5bce2-108">Syntax</span></span>  
   
 ```  
 On Error { GoTo [ line | 0 | -1 ] | Resume Next }  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="5bce2-109">Части</span><span class="sxs-lookup"><span data-stu-id="5bce2-109">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`GoTo` `line`|Включает подпрограмму обработки ошибок, которая начинается со строки, указанной в аргументе `line`.  Аргумент `line` представляет собой любую метку строки или ее номер.  Если во время выполнения возникает ошибка, управление передается на указанную строку, активируя обработчик ошибок.  Указанная строка должна находится в той же процедуре, что и оператор `On Error`, иначе возникнет ошибка во время компиляции.|  
-|`GoTo` 0|Отключает включенный обработчик ошибок в текущей процедуре и сбрасывает его в `Nothing`.|  
-|`GoTo` \-1|Отключает включенные исключения в текущей процедуре и сбрасывает их в `Nothing`.|  
-|`Resume Next`|Указывает, что при возникновении ошибки во время выполнения управление передается оператору, непосредственно следующему за тем, в котором возникла ошибка, и выполнение продолжается с этой точки.  Используйте эту форму вместо `On Error GoTo` при доступе к объектам.|  
+|<span data-ttu-id="5bce2-110">Термин</span><span class="sxs-lookup"><span data-stu-id="5bce2-110">Term</span></span>|<span data-ttu-id="5bce2-111">Определение</span><span class="sxs-lookup"><span data-stu-id="5bce2-111">Definition</span></span>|  
+|---|---|  
+|<span data-ttu-id="5bce2-112">`GoTo` `line`</span><span class="sxs-lookup"><span data-stu-id="5bce2-112">`GoTo` `line`</span></span>|<span data-ttu-id="5bce2-113">Включает подпрограмму обработки ошибок, которая начинается со строки, указанной в обязательном `line` аргумент.</span><span class="sxs-lookup"><span data-stu-id="5bce2-113">Enables the error-handling routine that starts at the line specified in the required `line` argument.</span></span> <span data-ttu-id="5bce2-114">`line` Аргумент является любую метку или номер строки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-114">The `line` argument is any line label or line number.</span></span> <span data-ttu-id="5bce2-115">При возникновении ошибки во время выполнения, управлять указанную строку, что делает активным обработчик ошибок.</span><span class="sxs-lookup"><span data-stu-id="5bce2-115">If a run-time error occurs, control branches to the specified line, making the error handler active.</span></span> <span data-ttu-id="5bce2-116">Указанная строка должна быть в той же процедуре `On Error` произойдет инструкции или ошибка времени компиляции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-116">The specified line must be in the same procedure as the `On Error` statement, or a compile-time error will occur.</span></span>|  
+|<span data-ttu-id="5bce2-117">`GoTo` 0</span><span class="sxs-lookup"><span data-stu-id="5bce2-117">`GoTo` 0</span></span>|<span data-ttu-id="5bce2-118">Отключает активированный обработчик ошибок в текущей процедуре и сбрасывает его в `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="5bce2-118">Disables enabled error handler in the current procedure and resets it to `Nothing`.</span></span>|  
+|<span data-ttu-id="5bce2-119">`GoTo` -1</span><span class="sxs-lookup"><span data-stu-id="5bce2-119">`GoTo` -1</span></span>|<span data-ttu-id="5bce2-120">Отключает включенные исключения в текущей процедуре и сбрасывает его в `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="5bce2-120">Disables enabled exception in the current procedure and resets it to `Nothing`.</span></span>|  
+|`Resume Next`|<span data-ttu-id="5bce2-121">Указывает, что при возникновении ошибки во время выполнения элемент управления передается оператору, сразу после инструкции, где возникла ошибка, и выполнение продолжается с этой точки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-121">Specifies that when a run-time error occurs, control goes to the statement immediately following the statement where the error occurred, and execution continues from that point.</span></span> <span data-ttu-id="5bce2-122">Используйте эту форму, а не `On Error GoTo` при доступе к объектам.</span><span class="sxs-lookup"><span data-stu-id="5bce2-122">Use this form rather than `On Error GoTo` when accessing objects.</span></span>|  
   
-## Заметки  
-  
-> [!NOTE]
->  Рекомендуется использовать структурную обработку исключений в коде если возможно, вместо использования и неструктурная обработка исключений `On Error` выписка.  Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
-  
- "Включенный" обработчик ошибок — это обработчик, включенный оператором `On Error`.  "Активный" обработчик ошибок — включенный обработчик, который находится в процессе обработки ошибок.  
-  
- Если ошибка возникает при активном обработчике ошибок \(между возникновением ошибки и операторами `Resume`, `Exit Sub` `Exit Function` или `Exit Property`\), обработчик ошибок в текущей процедуре не сможет обработать ошибку.  Управление передается вызывающей процедуре.  
-  
- Если у вызывающей процедуры есть включенный обработчик ошибок, он активируется для обработки ошибки.  Если обработчик ошибок вызывающей процедуры уже активен, управление возвращается по цепочке предыдущим вызывающим процедурам до тех пор, пока не будет найден включенный, но неактивный обработчик ошибок.  Если такой обработчик ошибок не найден, ошибка оказывается неустранимой в той точке, где она реально возникла.  
-  
- Каждый раз, когда обработчик ошибок передает управление вызывающей процедуре, эта процедура становится текущей.  После окончания обработки ошибки обработчиком любой из процедур, выполнение возобновляется в текущей процедуре со строки, указанной оператором `Resume`.  
+## <a name="remarks"></a><span data-ttu-id="5bce2-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="5bce2-123">Remarks</span></span>  
   
 > [!NOTE]
->  Подпрограмма обработки ошибок не является процедурой `Sub` или процедурой `Function`.  Это фрагмент кода, помеченный меткой строки или ее номером.  
+>  <span data-ttu-id="5bce2-124">Мы рекомендуем использовать структурированная обработка исключений в коде, когда это возможно, вместо использования неструктурированной обработки исключений и `On Error` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-124">We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` statement.</span></span> <span data-ttu-id="5bce2-125">Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="5bce2-125">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## Свойство Number  
- Подпрограммы обработки ошибок для определения их причин используют значение свойства `Number` объекта `Err`.  Подпрограмма должна проверить или сохранить соответствующие значения свойства в объекте `Err` до возникновения другой ошибки или вызова процедуры, которая может вызвать ошибку.  Значения свойств объекта `Err` отражают только наиболее часто встречающиеся ошибки.  Сообщение об ошибке, связанное с `Err.Number`, содержится в `Err.Description`.  
+ <span data-ttu-id="5bce2-126">Обработчик ошибок «enabled» понимается, которая включена по `On Error` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-126">An "enabled" error handler is one that is turned on by an `On Error` statement.</span></span> <span data-ttu-id="5bce2-127">Обработчик ошибок «active» — включенный обработчик, который находится в процессе обработки ошибки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-127">An "active" error handler is an enabled handler that is in the process of handling an error.</span></span>  
   
-## Оператор Throw  
- Ошибка, вызываемая с помощью метода `Err.Raise`, устанавливает свойство `Exception` в только что созданный экземпляр класса <xref:System.Exception>.  Для обеспечения вызова исключений производных типов в языке поддерживается оператор `Throw`.  У него есть единственный параметр, являющийся экземпляром создаваемого исключения.  В следующем примере показано, как эти возможности могут быть использованы в существующей системе обработки исключений.  
+ <span data-ttu-id="5bce2-128">Если возникает ошибка во время активности обработчика ошибок (между возникновением ошибки и `Resume`, `Exit Sub`, `Exit Function`, или `Exit Property` инструкции), обработчик ошибок текущей процедуры не может обработать ошибку.</span><span class="sxs-lookup"><span data-stu-id="5bce2-128">If an error occurs while an error handler is active (between the occurrence of the error and a `Resume`, `Exit Sub`, `Exit Function`, or `Exit Property` statement), the current procedure's error handler cannot handle the error.</span></span> <span data-ttu-id="5bce2-129">Управление возвращается в вызывающую процедуру.</span><span class="sxs-lookup"><span data-stu-id="5bce2-129">Control returns to the calling procedure.</span></span>  
+  
+ <span data-ttu-id="5bce2-130">Если у вызывающей процедуры есть включенный обработчик ошибок, он активируется для обработки ошибки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-130">If the calling procedure has an enabled error handler, it is activated to handle the error.</span></span> <span data-ttu-id="5bce2-131">Если обработчик ошибок вызывающей процедуры уже активен, управление передается обратно через предыдущих вызовах процедур, пока не будет найден обработчик ошибок включено, но неактивный.</span><span class="sxs-lookup"><span data-stu-id="5bce2-131">If the calling procedure's error handler is also active, control passes back through previous calling procedures until an enabled, but inactive, error handler is found.</span></span> <span data-ttu-id="5bce2-132">При обнаружении такой обработчик ошибок, в точке, где она реально возникла неустранимая ошибка.</span><span class="sxs-lookup"><span data-stu-id="5bce2-132">If no such error handler is found, the error is fatal at the point at which it actually occurred.</span></span>  
+  
+ <span data-ttu-id="5bce2-133">Каждый раз, когда обработчик ошибок передает управление обратно вызывающей процедуре, эта процедура становится текущей процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-133">Each time the error handler passes control back to a calling procedure, that procedure becomes the current procedure.</span></span> <span data-ttu-id="5bce2-134">После обработки ошибки обработчиком любой из процедур, выполнение возобновляется в текущей процедуре в той точке, назначенному с помощью `Resume` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-134">Once an error is handled by an error handler in any procedure, execution resumes in the current procedure at the point designated by the `Resume` statement.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="5bce2-135">Подпрограммы обработки ошибок не `Sub` процедуры или `Function` процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-135">An error-handling routine is not a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="5bce2-136">Это раздел кода, помеченный меткой строки или номер строки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-136">It is a section of code marked by a line label or a line number.</span></span>  
+  
+## <a name="number-property"></a><span data-ttu-id="5bce2-137">Свойство номера</span><span class="sxs-lookup"><span data-stu-id="5bce2-137">Number Property</span></span>  
+ <span data-ttu-id="5bce2-138">Подпрограммы обработки ошибок используют значение в `Number` свойство `Err` объекта, чтобы определить причину ошибки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-138">Error-handling routines rely on the value in the `Number` property of the `Err` object to determine the cause of the error.</span></span> <span data-ttu-id="5bce2-139">Подпрограммы, следует проверить или сохранить соответствующие значения свойства в `Err` объекта перед любой другой ошибки или до процедуры, которая может вызвать ошибку вызова.</span><span class="sxs-lookup"><span data-stu-id="5bce2-139">The routine should test or save relevant property values in the `Err` object before any other error can occur or before a procedure that might cause an error is called.</span></span> <span data-ttu-id="5bce2-140">Значения в `Err` объекта отражают только самую последнюю ошибку.</span><span class="sxs-lookup"><span data-stu-id="5bce2-140">The property values in the `Err` object reflect only the most recent error.</span></span> <span data-ttu-id="5bce2-141">Об ошибке, связанное с `Err.Number` содержится в `Err.Description`.</span><span class="sxs-lookup"><span data-stu-id="5bce2-141">The error message associated with `Err.Number` is contained in `Err.Description`.</span></span>  
+  
+## <a name="throw-statement"></a><span data-ttu-id="5bce2-142">Оператор Throw</span><span class="sxs-lookup"><span data-stu-id="5bce2-142">Throw Statement</span></span>  
+ <span data-ttu-id="5bce2-143">Ошибка, вызвавшая с `Err.Raise` метода задает `Exception` свойства в только что созданный экземпляр <xref:System.Exception> класса.</span><span class="sxs-lookup"><span data-stu-id="5bce2-143">An error that is raised with the `Err.Raise` method sets the `Exception` property to a newly created instance of the <xref:System.Exception> class.</span></span> <span data-ttu-id="5bce2-144">Для обеспечения вызова исключений производных типов, `Throw` инструкция поддерживается в языке.</span><span class="sxs-lookup"><span data-stu-id="5bce2-144">In order to support the raising of exceptions of derived exception types, a `Throw` statement is supported in the language.</span></span> <span data-ttu-id="5bce2-145">Это принимает один параметр, являющийся экземпляром исключение.</span><span class="sxs-lookup"><span data-stu-id="5bce2-145">This takes a single parameter that is the exception instance to be thrown.</span></span> <span data-ttu-id="5bce2-146">Следующий пример показывает, как эти функции можно использовать с существующей системой обработки исключений:</span><span class="sxs-lookup"><span data-stu-id="5bce2-146">The following example shows how these features can be used with the existing exception handling support:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
- Следует отметить, что оператор `On Error GoTo` перехватывает все ошибки вне зависимости от класса исключения.  
+ <span data-ttu-id="5bce2-147">Обратите внимание, что `On Error GoTo` оператор перехватывает все ошибки, независимо от класса exception.</span><span class="sxs-lookup"><span data-stu-id="5bce2-147">Notice that the `On Error GoTo` statement traps all errors, regardless of the exception class.</span></span>  
   
-## On Error Resume Next  
- `On Error Resume Next` приводит к тому, что выполнение продолжается начиная с оператора, непосредственно следующего за оператором, который вызвал ошибку во время выполнения, или с оператора, следующего за самым последним вызовом процедуры, содержащей оператор `On Error Resume Next`.  Этот оператор позволяет продолжить выполнение несмотря на ошибку времени выполнения.  Вместо того, чтобы передавать управление в другое место процедуры, подпрограмму обработки ошибок можно использовать там, где вероятно появление ошибки.  При вызове другой процедуры оператор `On Error Resume Next` становится неактивным, поэтому следует выполнять оператор `On Error Resume Next` в каждой вызываемой процедуре, в которую нужно встроить обработку ошибок.  
+## <a name="on-error-resume-next"></a><span data-ttu-id="5bce2-148">On Error Resume Next</span><span class="sxs-lookup"><span data-stu-id="5bce2-148">On Error Resume Next</span></span>  
+ <span data-ttu-id="5bce2-149">`On Error Resume Next`прерывает выполнение продолжить сразу после инструкции, вызвавшей ошибку во время выполнения инструкции или с помощью инструкции следующего за последним вызовом к процедуре, содержащей `On Error Resume Next` инструкции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-149">`On Error Resume Next` causes execution to continue with the statement immediately following the statement that caused the run-time error, or with the statement immediately following the most recent call out of the procedure containing the `On Error Resume Next` statement.</span></span> <span data-ttu-id="5bce2-150">Эта инструкция позволяет продолжить выполнение несмотря на ошибки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="5bce2-150">This statement allows execution to continue despite a run-time error.</span></span> <span data-ttu-id="5bce2-151">Можно поместить процедуру обработки ошибок, где возникнет ошибка, не передавая управление в другое место внутри процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-151">You can place the error-handling routine where the error would occur rather than transferring control to another location within the procedure.</span></span> <span data-ttu-id="5bce2-152">`On Error Resume Next` Оператор становится неактивным при вызове другой процедуры, поэтому следует выполнять `On Error Resume Next` оператор в каждой вызывается процедура, если нужно встроить ошибок обработки в рамках этой процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-152">An `On Error Resume Next` statement becomes inactive when another procedure is called, so you should execute an `On Error Resume Next` statement in each called routine if you want inline error handling within that routine.</span></span>  
   
 > [!NOTE]
->  Конструкция `On Error Resume Next` может оказаться предпочтительнее `On Error GoTo` при обработке ошибок, порожденных во время доступа к другим объектам.  Проверка `Err` после каждого взаимодействия с объектом позволяет избежать неоднозначности при определении объекта, с которым работал код.  Это позволяет получить достоверные сведения о том, какой объект поместил Идентификатор ошибки в `Err.Number`, а также о том, какой объект первоначально создал ошибку \(объект, указанный в `Err.Source`\).  
+>  <span data-ttu-id="5bce2-153">`On Error Resume Next` Конструкция может оказаться предпочтительнее `On Error GoTo` при обработке ошибок, формируемых во время доступа к другим объектам.</span><span class="sxs-lookup"><span data-stu-id="5bce2-153">The `On Error Resume Next` construct may be preferable to `On Error GoTo` when handling errors generated during access to other objects.</span></span> <span data-ttu-id="5bce2-154">Проверка `Err` после каждого взаимодействия с объектом позволяет избежать неоднозначности, о том, какие обращения к объекту с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="5bce2-154">Checking `Err` after each interaction with an object removes ambiguity about which object was accessed by the code.</span></span> <span data-ttu-id="5bce2-155">Можно быть уверенным, какой объект поместил код ошибки в `Err.Number`, а также какой объект первоначально создал ошибку (объект, указанный в `Err.Source`).</span><span class="sxs-lookup"><span data-stu-id="5bce2-155">You can be sure which object placed the error code in `Err.Number`, as well as which object originally generated the error (the object specified in `Err.Source`).</span></span>  
   
-## On Error GoTo 0  
- `On Error GoTo 0` отключает обработку ошибок в текущей процедуре.  Этот оператор не указывает строку 0 в качестве начальной для кода обработки ошибок, даже если процедура содержит строку с номером 0.  Если оператор `On Error GoTo 0` отсутствует, обработчик событий автоматически отключается при выходе из процедуры.  
+## <a name="on-error-goto-0"></a><span data-ttu-id="5bce2-156">На Error GoTo 0</span><span class="sxs-lookup"><span data-stu-id="5bce2-156">On Error GoTo 0</span></span>  
+ <span data-ttu-id="5bce2-157">`On Error GoTo 0`отключает обработку ошибок в текущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="5bce2-157">`On Error GoTo 0` disables error handling in the current procedure.</span></span> <span data-ttu-id="5bce2-158">Он не определяет строку 0 как начало кода обработки ошибок, даже если процедура содержит строку с номером 0.</span><span class="sxs-lookup"><span data-stu-id="5bce2-158">It doesn't specify line 0 as the start of the error-handling code, even if the procedure contains a line numbered 0.</span></span> <span data-ttu-id="5bce2-159">Без `On Error GoTo 0` инструкции, обработчик ошибок автоматически отключается при выходе из процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-159">Without an `On Error GoTo 0` statement, an error handler is automatically disabled when a procedure is exited.</span></span>  
   
-## On Error GoTo \-1  
- `On Error GoTo -1` отключает исключения в текущей процедуре.  Этот оператор не указывает строку \-1 в качестве начальной для кода обработки ошибок, даже если процедура содержит строку с номером \-1.  Если оператор `On Error GoTo -1` отсутствует, исключения автоматически отключаются при выходе из процедуры.  
+## <a name="on-error-goto--1"></a><span data-ttu-id="5bce2-160">На Error GoTo -1</span><span class="sxs-lookup"><span data-stu-id="5bce2-160">On Error GoTo -1</span></span>  
+ <span data-ttu-id="5bce2-161">`On Error GoTo -1`Отключает исключения в текущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="5bce2-161">`On Error GoTo -1` disables the exception in the current procedure.</span></span> <span data-ttu-id="5bce2-162">Оно указывает строки -1 как начало кода обработки ошибок, даже если процедура содержит строку с номером -1.</span><span class="sxs-lookup"><span data-stu-id="5bce2-162">It does not specify line -1 as the start of the error-handling code, even if the procedure contains a line numbered -1.</span></span> <span data-ttu-id="5bce2-163">Без `On Error GoTo -1` инструкции исключение автоматически отключается при выходе из процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-163">Without an `On Error GoTo -1` statement, an exception is automatically disabled when a procedure is exited.</span></span>  
   
- Чтобы предотвратить выполнение кода обработки ошибок при отсутствии ошибок, следует разместить непосредственно перед подпрограммой обработки ошибок операторы `Exit Sub`,`Exit Function` или `Exit Property`, как показано в следующем фрагменте:  
+ <span data-ttu-id="5bce2-164">Чтобы предотвратить выполнение при отсутствии ошибок кода обработки ошибок, поместите `Exit Sub`, `Exit Function`, или `Exit Property` инструкции непосредственно перед процедуру обработки ошибок, как показано в следующем фрагменте:</span><span class="sxs-lookup"><span data-stu-id="5bce2-164">To prevent error-handling code from running when no error has occurred, place an `Exit Sub`, `Exit Function`, or `Exit Property` statement immediately before the error-handling routine, as in the following fragment:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
- Здесь код обработки ошибки находится между операторами `Exit Sub` и `End Sub`, что позволяет отделить его от основной части процедуры.  Код обработки ошибки можно расположить в любом месте процедуры.  
+ <span data-ttu-id="5bce2-165">Здесь код обработки ошибок имеет `Exit Sub` инструкции и перед `End Sub` позволяет отделить его от основной части процедуры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-165">Here, the error-handling code follows the `Exit Sub` statement and precedes the `End Sub` statement to separate it from the procedure flow.</span></span> <span data-ttu-id="5bce2-166">Код обработки ошибок можно разместить в любом месте в процедуре.</span><span class="sxs-lookup"><span data-stu-id="5bce2-166">You can place error-handling code anywhere in a procedure.</span></span>  
   
-## Неперехваченные ошибки  
- Если объект выполняется как исполняемый файл, не перехваченные в объектах ошибки возвращаются в управляющее приложение.  В среде разработки неперехваченные ошибки возвращаются в управляющее приложение только в том случае, если установлены соответствующие параметры.  Обратитесь к документации по ведущему приложения для получения сведений о том, какие параметры должны быть установлены во время отладки, как их устанавливать, а также о том, может ли ведущее приложение создавать классы.  
+## <a name="untrapped-errors"></a><span data-ttu-id="5bce2-167">Неперехваченные ошибки</span><span class="sxs-lookup"><span data-stu-id="5bce2-167">Untrapped Errors</span></span>  
+ <span data-ttu-id="5bce2-168">Неперехваченные ошибки в объектах возвращаются управляющее приложение, если объект выполняется как исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="5bce2-168">Untrapped errors in objects are returned to the controlling application when the object is running as an executable file.</span></span> <span data-ttu-id="5bce2-169">В среде разработки неперехваченные ошибки возвращаются в управляющее приложение только в том случае, если установлены соответствующие параметры.</span><span class="sxs-lookup"><span data-stu-id="5bce2-169">Within the development environment, untrapped errors are returned to the controlling application only if the proper options are set.</span></span> <span data-ttu-id="5bce2-170">Документации ведущего приложения, описание которого параметры должны быть установлены во время отладки, способ их настройки и ли узле можно создавать классы.</span><span class="sxs-lookup"><span data-stu-id="5bce2-170">See your host application's documentation for a description of which options should be set during debugging, how to set them, and whether the host can create classes.</span></span>  
   
- Если создается объект, который обращается к другим объектам, можно попытаться обработать любые необработанные ошибки, возвращаемые этими объектами.  Если это невозможно, сопоставьте коды ошибок в `Err.Number` с одной из ошибок своего приложения, а затем верните их вызывающему объекту.  Необходимо определить свою ошибку, добавив ее код в константу `VbObjectError`.  Например, если Идентификатор ошибки 1052, присвойте ее следующим образом.  
+ <span data-ttu-id="5bce2-171">При создании объекта, который обращается к другим объектам, можно попытаться обработать любые необработанные ошибки, возвращаемые.</span><span class="sxs-lookup"><span data-stu-id="5bce2-171">If you create an object that accesses other objects, you should try to handle any unhandled errors they pass back.</span></span> <span data-ttu-id="5bce2-172">Если не удается сопоставьте коды ошибок в `Err.Number` одно из пользовательских ошибок и последующая передача их обратно в вызывающий объект.</span><span class="sxs-lookup"><span data-stu-id="5bce2-172">If you cannot, map the error codes in `Err.Number` to one of your own errors and then pass them back to the caller of your object.</span></span> <span data-ttu-id="5bce2-173">Следует определить свою ошибку, добавив код ошибки для `VbObjectError` константой.</span><span class="sxs-lookup"><span data-stu-id="5bce2-173">You should specify your error by adding your error code to the `VbObjectError` constant.</span></span> <span data-ttu-id="5bce2-174">Например если код ошибки 1052, присвойте ее следующим образом:</span><span class="sxs-lookup"><span data-stu-id="5bce2-174">For example, if your error code is 1052, assign it as follows:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
->  Системные ошибки во время вызовов динамических библиотек Windows \(DLL\) не вызывают исключений и не могут быть обработаны средствами Visual Basic.  При вызове функций библиотек DLL необходимо проверять каждое возвращаемое значение, чтобы определить, был ли вызов удачен, и в случае сбоя \(в соответствии со спецификациями API\) проверять значение свойства `LastDLLError` объекта `Err`.  
+>  <span data-ttu-id="5bce2-175">Системные ошибки во время вызовов Windows библиотек динамической компоновки (DLL) не вызывайте исключения и не может выполняться с помощью Visual Basic сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="5bce2-175">System errors during calls to Windows dynamic-link libraries (DLLs) do not raise exceptions and cannot be trapped with Visual Basic error trapping.</span></span> <span data-ttu-id="5bce2-176">При вызове функций библиотек DLL, необходимо проверять каждое возвращаемое значение успешное выполнение или сбой (в соответствии со спецификациями API) и в случае сбоя, проверьте значение `Err` объекта `LastDLLError` свойство.</span><span class="sxs-lookup"><span data-stu-id="5bce2-176">When calling DLL functions, you should check each return value for success or failure (according to the API specifications), and in the event of a failure, check the value in the `Err` object's `LastDLLError` property.</span></span>  
   
-## Пример  
- В этом примере сначала используется оператор `On Error GoTo`, указывающий месторасположение подпрограммы обработки ошибки в процедуре.  В этом примере попытка деления на ноль создает ошибку с номером 6.  Ошибка обрабатывается в подпрограмме обработки ошибок, и затем управление возвращается оператору, вызвавшему ошибку.  Оператор `On Error GoTo 0` отключает перехват ошибок.  Затем используется оператор `On Error Resume Next` для задержки перехвата ошибки. Это позволяет точно определить контекст ошибки, созданной следующим оператором.  Следует помнить, что `Err.Clear` используется для очистки свойств объекта `Err` после завершения обработки ошибки.  
+## <a name="example"></a><span data-ttu-id="5bce2-177">Пример</span><span class="sxs-lookup"><span data-stu-id="5bce2-177">Example</span></span>  
+ <span data-ttu-id="5bce2-178">В этом примере сначала используется `On Error GoTo` инструкцию, чтобы указать расположение подпрограммы обработки ошибок в процедуре.</span><span class="sxs-lookup"><span data-stu-id="5bce2-178">This example first uses the `On Error GoTo` statement to specify the location of an error-handling routine within a procedure.</span></span> <span data-ttu-id="5bce2-179">В примере попытка деления на ноль приводит к возникновению ошибки с номером 6.</span><span class="sxs-lookup"><span data-stu-id="5bce2-179">In the example, an attempt to divide by zero generates error number 6.</span></span> <span data-ttu-id="5bce2-180">Ошибка обрабатывается в процедуру обработки ошибок и управление возвращается оператору, который вызвал ошибку.</span><span class="sxs-lookup"><span data-stu-id="5bce2-180">The error is handled in the error-handling routine, and control is then returned to the statement that caused the error.</span></span> <span data-ttu-id="5bce2-181">`On Error GoTo 0` Инструкция отключает сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="5bce2-181">The `On Error GoTo 0` statement turns off error trapping.</span></span> <span data-ttu-id="5bce2-182">Затем `On Error Resume Next` можно отложить перехват ошибок, чтобы контекст для ошибки, возникающие из следующего оператора может быть известен некоторые инструкции.</span><span class="sxs-lookup"><span data-stu-id="5bce2-182">Then the `On Error Resume Next` statement is used to defer error trapping so that the context for the error generated by the next statement can be known for certain.</span></span> <span data-ttu-id="5bce2-183">Обратите внимание, что `Err.Clear` используется для очистки `Err` свойств объекта после завершения обработки ошибки.</span><span class="sxs-lookup"><span data-stu-id="5bce2-183">Note that `Err.Clear` is used to clear the `Err` object's properties after the error is handled.</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
-## Требования  
- **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="5bce2-184">Требования</span><span class="sxs-lookup"><span data-stu-id="5bce2-184">Requirements</span></span>  
+ <span data-ttu-id="5bce2-185">**Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="5bce2-185">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **Сборка:** библиотека времени выполнения Visual Basic \(в Microsoft.VisualBasic.dll\)  
+ <span data-ttu-id="5bce2-186">**Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="5bce2-186">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Information.Err%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Number%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Description%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)   
- [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Оператор Resume](../../../visual-basic/language-reference/statements/resume-statement.md)   
- [Сообщения об ошибках](../../../visual-basic/language-reference/error-messages/index.md)   
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="5bce2-187">См. также</span><span class="sxs-lookup"><span data-stu-id="5bce2-187">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Information.Err%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [<span data-ttu-id="5bce2-188">Оператор End</span><span class="sxs-lookup"><span data-stu-id="5bce2-188">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [<span data-ttu-id="5bce2-189">Оператор Exit</span><span class="sxs-lookup"><span data-stu-id="5bce2-189">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="5bce2-190">Оператор Resume</span><span class="sxs-lookup"><span data-stu-id="5bce2-190">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [<span data-ttu-id="5bce2-191">Сообщения об ошибках</span><span class="sxs-lookup"><span data-stu-id="5bce2-191">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)  
+ [<span data-ttu-id="5bce2-192">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="5bce2-192">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

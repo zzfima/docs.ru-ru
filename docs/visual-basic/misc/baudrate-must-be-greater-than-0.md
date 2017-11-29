@@ -1,22 +1,25 @@
 ---
-title: "Значение BaudRate должно быть больше нуля | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Значение BaudRate должно быть больше нуля"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 5d26c4b1-45ca-459b-9b96-907dbc6ea25c
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 06149dfaaff4ac0f1b52e1b05177b083b12bac0c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Значение BaudRate должно быть больше нуля
-Аргумент `BaudRate`, указанный для метода `My.Computer.Ports.OpenSerialPort`, должен быть больше нуля.  
+# <a name="baudrate-must-be-greater-than-0"></a><span data-ttu-id="ebccc-102">Значение BaudRate должно быть больше нуля</span><span class="sxs-lookup"><span data-stu-id="ebccc-102">BaudRate must be greater than 0</span></span>
+<span data-ttu-id="ebccc-103">Аргумент `BaudRate` , указанный для метода `My.Computer.Ports.OpenSerialPort` , должен быть больше нуля.</span><span class="sxs-lookup"><span data-stu-id="ebccc-103">The `BaudRate` argument specified for the `My.Computer.Ports.OpenSerialPort` method must be greater than zero.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ebccc-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="ebccc-104">To correct this error</span></span>  
   
--   Измените значение аргумента `BaudRate` на положительное число.  
+-   <span data-ttu-id="ebccc-105">Измените значение аргумента `BaudRate` на положительное число.</span><span class="sxs-lookup"><span data-stu-id="ebccc-105">Change the value of the `BaudRate` argument to a positive number.</span></span>  
   
-## См. также  
- [Метод My.Computer.Ports.OpenSerialPort](http://msdn.microsoft.com/ru-ru/ed1e75f0-635a-4229-8fe6-becea5d036c3)
+## <a name="see-also"></a><span data-ttu-id="ebccc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="ebccc-106">See Also</span></span>  
+ [<span data-ttu-id="ebccc-107">Метод My.Computer.Ports.OpenSerialPort</span><span class="sxs-lookup"><span data-stu-id="ebccc-107">My.Computer.Ports.OpenSerialPort Method</span></span>](http://msdn.microsoft.com/en-us/ed1e75f0-635a-4229-8fe6-becea5d036c3)

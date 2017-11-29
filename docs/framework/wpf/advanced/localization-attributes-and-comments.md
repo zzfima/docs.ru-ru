@@ -1,52 +1,55 @@
 ---
-title: "Атрибуты и комментарии локализации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "локализация, атрибуты"
-  - "локализация, комментарии"
+title: "Атрибуты и комментарии локализации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- localization [WPF], attributes
+- localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Атрибуты и комментарии локализации
-Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации.  Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме.  Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы.  Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
+# <a name="localization-attributes-and-comments"></a><span data-ttu-id="ac93c-102">Атрибуты и комментарии локализации</span><span class="sxs-lookup"><span data-stu-id="ac93c-102">Localization Attributes and Comments</span></span>
+<span data-ttu-id="ac93c-103">Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации.</span><span class="sxs-lookup"><span data-stu-id="ac93c-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] localization comments are properties, inside [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] source code, supplied by developers to provide rules and hints for localization.</span></span> <span data-ttu-id="ac93c-104">Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме.</span><span class="sxs-lookup"><span data-stu-id="ac93c-104">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] localization comments contain two sets of information: localizability attributes and free-form localization comments.</span></span> <span data-ttu-id="ac93c-105">Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы.</span><span class="sxs-lookup"><span data-stu-id="ac93c-105">Localizability attributes are used by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Localization API to indicate which resources are to be localized.</span></span> <span data-ttu-id="ac93c-106">Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.</span><span class="sxs-lookup"><span data-stu-id="ac93c-106">Free-form comments are any information that the application author wants to include.</span></span>  
   
-   
+
   
 <a name="Localizer_Comments_"></a>   
-## Комментарии локализации  
- Если авторы приложения разметки имеют особые требования для определенных элементов в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], например ограничения длины текста, семейства шрифтов или размера шрифта, они могут передать эту информацию локализаторам с помощью комментариев в коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  Процесс добавления комментариев к исходному коду выглядит следующим образом:  
+## <a name="localization-comments"></a><span data-ttu-id="ac93c-107">Комментарии локализации</span><span class="sxs-lookup"><span data-stu-id="ac93c-107">Localization Comments</span></span>  
+ <span data-ttu-id="ac93c-108">Если авторы приложения разметки имеют особые требования для определенных элементов в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], например ограничения длины текста, семейства шрифтов или размера шрифта, они могут передать эту информацию локализаторам с помощью комментариев в коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ac93c-108">If markup application authors have requirements for specific elements in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], such as constraints on text length, font family, or font size, they can convey this information to localizers with comments in the [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] code.</span></span> <span data-ttu-id="ac93c-109">Процесс добавления комментариев к исходному коду выглядит следующим образом.</span><span class="sxs-lookup"><span data-stu-id="ac93c-109">The process for adding comments to source code is as follows:</span></span>  
   
-1.  Разработчик приложения добавляет комментарии локализации в исходный код [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+1.  <span data-ttu-id="ac93c-110">Разработчик приложения добавляет комментарии локализации в исходный код [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ac93c-110">Application developer adds localization comments to [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] source code.</span></span>  
   
-2.  Во время процесса построения разработчик может указать в PROJ\-файле, следует ли оставить комментарии произвольной локализации в сборке, вынести за пределы файла часть комментариев или все комментарии.  Вынесенные комментарии помещаются в отдельный файл.  Параметр необходимо указать с помощью тега `LocalizationDirectivesToLocFile`, например:  
+2.  <span data-ttu-id="ac93c-111">Во время процесса построения разработчик может указать в PROJ-файле, следует ли оставить комментарии произвольной локализации в сборке либо вынести за пределы файла часть комментариев или все комментарии.</span><span class="sxs-lookup"><span data-stu-id="ac93c-111">During the build process, you can specify in the .proj file whether to leave the free-form localization comments in the assembly, strip out part of the comments, or strip out all the comments.</span></span> <span data-ttu-id="ac93c-112">Вынесенные комментарии помещаются в отдельный файл.</span><span class="sxs-lookup"><span data-stu-id="ac93c-112">The stripped-out comments are placed in a separate file.</span></span> <span data-ttu-id="ac93c-113">Параметр указывается с помощью тега `LocalizationDirectivesToLocFile`, например:</span><span class="sxs-lookup"><span data-stu-id="ac93c-113">You specify your option using a `LocalizationDirectivesToLocFile` tag, eg:</span></span>  
   
-     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
+     <span data-ttu-id="ac93c-114">`<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`</span><span class="sxs-lookup"><span data-stu-id="ac93c-114">`<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`</span></span>  
   
-3.  Могут быть назначены следующие значения:  
+3.  <span data-ttu-id="ac93c-115">Могут быть назначены следующие значения:</span><span class="sxs-lookup"><span data-stu-id="ac93c-115">The values that can be assigned are:</span></span>  
   
-    -   **None** — комментарии и атрибуты остаются внутри сборки, отдельный файл не создается.  
+    -   <span data-ttu-id="ac93c-116">**None** — комментарии и атрибуты остаются внутри сборки, отдельный файл не создается.</span><span class="sxs-lookup"><span data-stu-id="ac93c-116">**None** - Both comments and attributes stay inside the assembly and no separate file is generated.</span></span>  
   
-    -   **CommentsOnly** — из сборки выносятся только комментарии и помещаются в отдельном файле LocFile.  
+    -   <span data-ttu-id="ac93c-117">**CommentsOnly** — из сборки выносятся только комментарии и помещаются в отдельном файле LocFile.</span><span class="sxs-lookup"><span data-stu-id="ac93c-117">**CommentsOnly** - Strips only the comments from the assembly and places them in the separate LocFile.</span></span>  
   
-    -   **All** — из сборки выносятся комментарии и атрибуты, которые помещаются в отдельный файл LocFile.  
+    -   <span data-ttu-id="ac93c-118">**All** — из сборки выносятся комментарии и атрибуты, которые помещаются в отдельный файл LocFile.</span><span class="sxs-lookup"><span data-stu-id="ac93c-118">**All** - Strips both the comments and the attributes from the assembly and places them both in a separate LocFile.</span></span>  
   
-4.  При извлечении локализуемых ресурсов из [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] атрибуты локализуемости учитываются API локализации [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
+4.  <span data-ttu-id="ac93c-119">При извлечении локализуемых ресурсов из [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] атрибуты локализуемости учитываются API локализации [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ac93c-119">When localizable resources are extracted from [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], the localizability attributes are respected by the [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] Localization API.</span></span>  
   
-5.  Файлы локализации комментариев, содержащие только комментарии в произвольной форме, включаются в процесс локализации на более поздней стадии.  
+5.  <span data-ttu-id="ac93c-120">Файлы локализации комментариев, содержащие только комментарии в произвольной форме, включаются в процесс локализации на более поздней стадии.</span><span class="sxs-lookup"><span data-stu-id="ac93c-120">Localization comment files, containing only free-form comments, are incorporated into the localization process at a later time.</span></span>  
   
- В следующем примере показано добавление комментариев локализации в файл [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+ <span data-ttu-id="ac93c-121">В следующем примере показано добавление комментариев локализации в файл [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ac93c-121">The following example shows how to add localization comments to a [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] file.</span></span>  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -66,48 +69,48 @@ caps.handback.revision: 14
   
  `</TextBlock>`  
   
- В предыдущем примере раздел Localization.Attributes содержит атрибуты локализации, а раздел Localization.Comments — произвольные комментарии.  В следующей таблице показаны атрибуты, комментарии и их значения для локализатора.  
+ <span data-ttu-id="ac93c-122">В предыдущем примере раздел Localization.Attributes содержит атрибуты локализации, а раздел Localization.Comments — произвольные комментарии.</span><span class="sxs-lookup"><span data-stu-id="ac93c-122">In the previous sample the Localization.Attributes section contains the localization attributes and the Localization.Comments section the free-form comments.</span></span> <span data-ttu-id="ac93c-123">В следующей таблице показаны атрибуты, комментарии и их значения для локализатора.</span><span class="sxs-lookup"><span data-stu-id="ac93c-123">The following tables show the attributes and comments and their meaning to the localizer.</span></span>  
   
-|Атрибуты локализации.|Значение|  
-|---------------------------|--------------|  
-|$Content \(Unmodifiable Readable Text\)|Содержимое элемента TextBlock не может быть изменено.  Локализаторы не могут изменить слово «Microsoft».  Содержимое является видимым \(доступным для чтения\) для локализатора.  Категория содержимого — текст.|  
-|FontFamily \(Unmodifiable Readable\)|Свойство семейства шрифтов элемента TextBlock не может быть изменено, но является видимым для локализатора.|  
+|<span data-ttu-id="ac93c-124">Атрибуты локализации</span><span class="sxs-lookup"><span data-stu-id="ac93c-124">Localization attributes</span></span>|<span data-ttu-id="ac93c-125">Значение</span><span class="sxs-lookup"><span data-stu-id="ac93c-125">Meaning</span></span>|  
+|-----------------------------|-------------|  
+|<span data-ttu-id="ac93c-126">$Content (Unmodifiable Readable Text)</span><span class="sxs-lookup"><span data-stu-id="ac93c-126">$Content (Unmodifiable Readable Text)</span></span>|<span data-ttu-id="ac93c-127">Содержимое элемента TextBlock не может быть изменено.</span><span class="sxs-lookup"><span data-stu-id="ac93c-127">Contents of the TextBlock element cannot be modified.</span></span> <span data-ttu-id="ac93c-128">Локализаторы не могут изменить слово Microsoft.</span><span class="sxs-lookup"><span data-stu-id="ac93c-128">Localizers cannot change the word "Microsoft".</span></span> <span data-ttu-id="ac93c-129">Содержимое является видимым (доступным для чтения) локализатору.</span><span class="sxs-lookup"><span data-stu-id="ac93c-129">The content is visible (Readable) to the localizer.</span></span> <span data-ttu-id="ac93c-130">Категория содержимого — текст.</span><span class="sxs-lookup"><span data-stu-id="ac93c-130">The category of the content is text.</span></span>|  
+|<span data-ttu-id="ac93c-131">FontFamily (Unmodifiable Readable)</span><span class="sxs-lookup"><span data-stu-id="ac93c-131">FontFamily (Unmodifiable Readable)</span></span>|<span data-ttu-id="ac93c-132">Свойство семейства шрифтов элемента TextBlock не может быть изменено, но является видимым для локализатора.</span><span class="sxs-lookup"><span data-stu-id="ac93c-132">The font family property of the TextBlock element cannot be changed but it is visible to the localizer.</span></span>|  
   
-|Произвольные комментарии локализации|Значение|  
-|------------------------------------------|--------------|  
-|$Content \(Trademark\)|Автор приложения сообщает локализатору, что содержимое в элементе TextBlock является товарным знаком.|  
-|FontSize \(Trademark font size\)|Автор приложения указывает, что свойство font size должно соответствовать стандартному размеру товарного знака.|  
+|<span data-ttu-id="ac93c-133">Произвольные комментарии локализации</span><span class="sxs-lookup"><span data-stu-id="ac93c-133">Localization free-form comments</span></span>|<span data-ttu-id="ac93c-134">Значение</span><span class="sxs-lookup"><span data-stu-id="ac93c-134">Meaning</span></span>|  
+|--------------------------------------|-------------|  
+|<span data-ttu-id="ac93c-135">$Content (Trademark)</span><span class="sxs-lookup"><span data-stu-id="ac93c-135">$Content (Trademark)</span></span>|<span data-ttu-id="ac93c-136">Автор приложения сообщает локализатору, что содержимое в элементе TextBlock является товарным знаком.</span><span class="sxs-lookup"><span data-stu-id="ac93c-136">The application author tells the localizer that the content in the TextBlock element is a trademark.</span></span>|  
+|<span data-ttu-id="ac93c-137">FontSize (Trademark font size)</span><span class="sxs-lookup"><span data-stu-id="ac93c-137">FontSize (Trademark font size)</span></span>|<span data-ttu-id="ac93c-138">Автор приложения указывает, что свойство font size должно соответствовать стандартному размеру товарного знака.</span><span class="sxs-lookup"><span data-stu-id="ac93c-138">The application author indicates that the font size property should follow the standard trademark size.</span></span>|  
   
-### Атрибуты локализуемости  
- Информация атрибутов локализуемости содержит список пар, состоящих из имени целевого значения и связанных значений локализуемости.  Целевое имя может быть именем свойства или специальным именем $Content.  Если это имя свойства, целевое значение является значением свойства.  Если это $Content, то целевое значение является содержимым элемента.  
+### <a name="localizability-attributes"></a><span data-ttu-id="ac93c-139">Атрибуты локализуемости</span><span class="sxs-lookup"><span data-stu-id="ac93c-139">Localizability Attributes</span></span>  
+ <span data-ttu-id="ac93c-140">Информация атрибутов локализуемости содержит список пар, состоящих из имени целевого значения и связанных значений локализуемости.</span><span class="sxs-lookup"><span data-stu-id="ac93c-140">The information in Localization.Attributes contains a list of pairs: the targeted value name and the associated localizability values.</span></span> <span data-ttu-id="ac93c-141">Целевое имя может быть именем свойства или специальным именем $Content.</span><span class="sxs-lookup"><span data-stu-id="ac93c-141">The target name can be a property name or the special $Content name.</span></span> <span data-ttu-id="ac93c-142">Если это имя свойства, целевое значение является значением свойства.</span><span class="sxs-lookup"><span data-stu-id="ac93c-142">If it is a property name, the targeted value is the value of the property.</span></span> <span data-ttu-id="ac93c-143">Если это $Content, то целевое значение является содержимым элемента.</span><span class="sxs-lookup"><span data-stu-id="ac93c-143">If it is $Content, the target value is the content of the element.</span></span>  
   
- Существуют три типа атрибутов:  
+ <span data-ttu-id="ac93c-144">Существует три типа атрибутов.</span><span class="sxs-lookup"><span data-stu-id="ac93c-144">There are three types of attributes:</span></span>  
   
--   **Категория** Этот параметр определяет, должно ли значение изменяться из средства локализатора.  См. раздел <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+-   <span data-ttu-id="ac93c-145">**Категория**.</span><span class="sxs-lookup"><span data-stu-id="ac93c-145">**Category**.</span></span> <span data-ttu-id="ac93c-146">Этот параметр определяет, должно ли значение изменяться из средства локализатора.</span><span class="sxs-lookup"><span data-stu-id="ac93c-146">This specifies whether a value should be modifiable from a localizer tool.</span></span> <span data-ttu-id="ac93c-147">См. раздел <xref:System.Windows.LocalizabilityAttribute.Category%2A>.</span><span class="sxs-lookup"><span data-stu-id="ac93c-147">See <xref:System.Windows.LocalizabilityAttribute.Category%2A>.</span></span>  
   
--   **Читаемость**.  Параметр определяет, должно ли средство локализатора читать \(и отображать\) значение.  См. раздел <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+-   <span data-ttu-id="ac93c-148">**Удобочитаемость**.</span><span class="sxs-lookup"><span data-stu-id="ac93c-148">**Readability**.</span></span> <span data-ttu-id="ac93c-149">Этот параметр определяет, должно ли средство локализатора читать (и отображать) значение.</span><span class="sxs-lookup"><span data-stu-id="ac93c-149">This specifies whether a localizer tool should read (and display) a value.</span></span> <span data-ttu-id="ac93c-150">См. раздел <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.</span><span class="sxs-lookup"><span data-stu-id="ac93c-150">See <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.</span></span>  
   
--   **Изменяемость**.  Параметр определяет, разрешает ли средство локализатора изменять значение.  См. раздел <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+-   <span data-ttu-id="ac93c-151">**Изменяемость**.</span><span class="sxs-lookup"><span data-stu-id="ac93c-151">**Modifiability**.</span></span> <span data-ttu-id="ac93c-152">Этот параметр определяет, разрешает ли средство локализатора изменять значение.</span><span class="sxs-lookup"><span data-stu-id="ac93c-152">This specifies whether a localizer tool allows a value to be modified.</span></span> <span data-ttu-id="ac93c-153">См. раздел <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.</span><span class="sxs-lookup"><span data-stu-id="ac93c-153">See <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.</span></span>  
   
- Эти атрибуты можно указать в любом порядке через пробел.  В случае указания дублированных атрибутов, последний атрибут переопределяет предыдущие.  Например, Localization.Attributes \= " Unmodifiable Modifiable " устанавливает параметр Modifiability в значение Modifiable, так как это последнее значение.  
+ <span data-ttu-id="ac93c-154">Эти атрибуты можно указать в любом порядке через пробел.</span><span class="sxs-lookup"><span data-stu-id="ac93c-154">These attributes can be specified in any order delimited by a space.</span></span> <span data-ttu-id="ac93c-155">В случае указания дублированных атрибутов последний атрибут переопределяет предыдущие.</span><span class="sxs-lookup"><span data-stu-id="ac93c-155">In case duplicate attributes are specified, the last attribute will override former ones.</span></span> <span data-ttu-id="ac93c-156">Например, Localization.Attributes = "Unmodifiable Modifiable" устанавливает параметр Modifiability в значение Modifiable, так как это последнее значение.</span><span class="sxs-lookup"><span data-stu-id="ac93c-156">For example, Localization.Attributes = "Unmodifiable Modifiable" sets Modifiability to Modifiable because it is the last value.</span></span>  
   
- Параметры Modifiability \(изменяемость\) и Readability \(читаемость\) понятны без объяснений.  Атрибут Category \(категория\) предоставляет стандартные категории, которые помогают локализатору при переводе текста.  Такие категории, как Text, Label и Title предоставляют локализатору сведения о том, как следует переводить текст.  Существуют также специальные категории: None, Inherit, Ignore и NeverLocalize.  
+ <span data-ttu-id="ac93c-157">Параметры Modifiability (изменяемость) и Readability (читаемость) понятны без объяснений.</span><span class="sxs-lookup"><span data-stu-id="ac93c-157">Modifiability and Readability are self-explanatory.</span></span> <span data-ttu-id="ac93c-158">Атрибут Category (категория) предоставляет стандартные категории, которые помогают локализатору при переводе текста.</span><span class="sxs-lookup"><span data-stu-id="ac93c-158">The Category attribute provides predefined categories that help the localizer when translating text.</span></span> <span data-ttu-id="ac93c-159">Такие категории, как Text, Label и Title, предоставляют локализатору сведения о том, как следует переводить текст.</span><span class="sxs-lookup"><span data-stu-id="ac93c-159">Categories, such as, Text, Label, and Title give the localizer information about how to translate the text.</span></span> <span data-ttu-id="ac93c-160">Существуют также специальные категории: None, Inherit, Ignore и NeverLocalize.</span><span class="sxs-lookup"><span data-stu-id="ac93c-160">There are also special categories: None, Inherit, Ignore, and NeverLocalize.</span></span>  
   
- В следующей таблице показаны значения специальных категорий.  
+ <span data-ttu-id="ac93c-161">В следующей таблице показаны значения специальных категорий.</span><span class="sxs-lookup"><span data-stu-id="ac93c-161">The following table shows the meaning of the special categories.</span></span>  
   
-|Категория|Значение|  
-|---------------|--------------|  
-|None|Целевое значение не имеет определенной категории.|  
-|Inherit|Целевое значение наследует свои категории от родительского.|  
-|Ignore|Целевое значение не обрабатывается в процессе локализации.  Не обрабатывается только текущее значение.  Параметр не влияет на дочерние узлы.|  
-|NeverLocalize|Текущее значение не локализуется.  Эта категория наследуется потомками элемента.|  
+|<span data-ttu-id="ac93c-162">Категория</span><span class="sxs-lookup"><span data-stu-id="ac93c-162">Category</span></span>|<span data-ttu-id="ac93c-163">Значение</span><span class="sxs-lookup"><span data-stu-id="ac93c-163">Meaning</span></span>|  
+|--------------|-------------|  
+|<span data-ttu-id="ac93c-164">Нет</span><span class="sxs-lookup"><span data-stu-id="ac93c-164">None</span></span>|<span data-ttu-id="ac93c-165">Целевое значение не имеет определенной категории.</span><span class="sxs-lookup"><span data-stu-id="ac93c-165">Targeted value has no defined category.</span></span>|  
+|<span data-ttu-id="ac93c-166">Наследовать</span><span class="sxs-lookup"><span data-stu-id="ac93c-166">Inherit</span></span>|<span data-ttu-id="ac93c-167">Целевое значение наследует свои категории от родительского.</span><span class="sxs-lookup"><span data-stu-id="ac93c-167">Targeted value inherits its category from its parent.</span></span>|  
+|<span data-ttu-id="ac93c-168">Ignore</span><span class="sxs-lookup"><span data-stu-id="ac93c-168">Ignore</span></span>|<span data-ttu-id="ac93c-169">Целевое значение не обрабатывается в процессе локализации.</span><span class="sxs-lookup"><span data-stu-id="ac93c-169">Targeted value is ignored in the localization process.</span></span> <span data-ttu-id="ac93c-170">Не обрабатывается только текущее значение.</span><span class="sxs-lookup"><span data-stu-id="ac93c-170">Ignore affects only the current value.</span></span> <span data-ttu-id="ac93c-171">Параметр не влияет на дочерние узлы.</span><span class="sxs-lookup"><span data-stu-id="ac93c-171">It will not affect child nodes.</span></span>|  
+|<span data-ttu-id="ac93c-172">NeverLocalize</span><span class="sxs-lookup"><span data-stu-id="ac93c-172">NeverLocalize</span></span>|<span data-ttu-id="ac93c-173">Текущее значение не локализуется.</span><span class="sxs-lookup"><span data-stu-id="ac93c-173">Current value cannot be localized.</span></span> <span data-ttu-id="ac93c-174">Эта категория наследуется потомками элемента.</span><span class="sxs-lookup"><span data-stu-id="ac93c-174">This category is inherited by the children of an element.</span></span>|  
   
 <a name="Localization_Comments"></a>   
-## Комментарии локализации  
- Localization.Comments содержит произвольные строки, касающиеся целевого значения.  Разработчики приложения могут добавлять сведения для предоставления подсказок локализаторов о том, как следует переводить текст приложений  Форматом комментариев может быть любая строка, заключенная в «\(\)».  Используйте символ «\\» для создания escape\-символов.  
+## <a name="localization-comments"></a><span data-ttu-id="ac93c-175">Комментарии локализации</span><span class="sxs-lookup"><span data-stu-id="ac93c-175">Localization Comments</span></span>  
+ <span data-ttu-id="ac93c-176">Localization.Comments содержит произвольные строки, касающиеся целевого значения.</span><span class="sxs-lookup"><span data-stu-id="ac93c-176">Localization.Comments contains free-form strings concerning the targeted value.</span></span> <span data-ttu-id="ac93c-177">Разработчики приложения могут добавлять сведения для предоставления подсказок локализаторов о том, как следует переводить текст приложений.</span><span class="sxs-lookup"><span data-stu-id="ac93c-177">Application developers can add information to give localizers hints about how the applications text should be translated.</span></span> <span data-ttu-id="ac93c-178">Форматом комментариев может быть любая строка, заключенная в круглые скобки "()".</span><span class="sxs-lookup"><span data-stu-id="ac93c-178">The format of the comments can be any string surrounded by "()".</span></span> <span data-ttu-id="ac93c-179">Используйте символ "\\" для создания escape-символов.</span><span class="sxs-lookup"><span data-stu-id="ac93c-179">Use '\\' to escape characters.</span></span>  
   
-## См. также  
- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [Использование автоматической разметки для создания кнопки](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)   
- [Использование сетки для автоматической разметки](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)   
- [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a><span data-ttu-id="ac93c-180">См. также</span><span class="sxs-lookup"><span data-stu-id="ac93c-180">See Also</span></span>  
+ [<span data-ttu-id="ac93c-181">Глобализация для WPF</span><span class="sxs-lookup"><span data-stu-id="ac93c-181">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="ac93c-182">Использование автоматической разметки для создания кнопки</span><span class="sxs-lookup"><span data-stu-id="ac93c-182">Use Automatic Layout to Create a Button</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [<span data-ttu-id="ac93c-183">Использование сетки для автоматической разметки</span><span class="sxs-lookup"><span data-stu-id="ac93c-183">Use a Grid for Automatic Layout</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
+ [<span data-ttu-id="ac93c-184">Локализация приложения</span><span class="sxs-lookup"><span data-stu-id="ac93c-184">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

@@ -1,45 +1,46 @@
 ---
-title: "Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms — элементы управления, специальные возможности"
-  - "элементы управления [Windows Forms], специальные возможности"
-  - "специальные возможности, элементы управления Windows Forms"
+title: "Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, accessibility
+- controls [Windows Forms], accessibility
+- accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d7afc8cc67dc3a428e4995230345938075fbcc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
-Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  
+# <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a><span data-ttu-id="f53d4-102">Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f53d4-102">Providing Accessibility Information for Controls on a Windows Form</span></span>
+<span data-ttu-id="f53d4-103">Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры.</span><span class="sxs-lookup"><span data-stu-id="f53d4-103">Accessibility aids are specialized programs and devices that help people with disabilities use computers more effectively.</span></span> <span data-ttu-id="f53d4-104">Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры.</span><span class="sxs-lookup"><span data-stu-id="f53d4-104">Examples include screen readers for people who are blind and voice input utilities for people who provide verbal commands instead of using the mouse or keyboard.</span></span> <span data-ttu-id="f53d4-105">Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="f53d4-105">These accessibility aids interact with the accessibility properties exposed by Windows Forms controls.</span></span> <span data-ttu-id="f53d4-106">К этим свойствам относятся следующие.</span><span class="sxs-lookup"><span data-stu-id="f53d4-106">These properties are:</span></span>  
   
--   **AccessibilityObject**  
+-   <span data-ttu-id="f53d4-107">**AccessibilityObject**</span><span class="sxs-lookup"><span data-stu-id="f53d4-107">**AccessibilityObject**</span></span>  
   
--   **AccessibleDefaultActionDescription**  
+-   <span data-ttu-id="f53d4-108">**AccessibleDefaultActionDescription**</span><span class="sxs-lookup"><span data-stu-id="f53d4-108">**AccessibleDefaultActionDescription**</span></span>  
   
--   **AccessibleDescription**  
+-   <span data-ttu-id="f53d4-109">**AccessibleDescription**</span><span class="sxs-lookup"><span data-stu-id="f53d4-109">**AccessibleDescription**</span></span>  
   
--   **AccessibleName**  
+-   <span data-ttu-id="f53d4-110">**AccessibleName**</span><span class="sxs-lookup"><span data-stu-id="f53d4-110">**AccessibleName**</span></span>  
   
--   **AccessibleRole**  
+-   <span data-ttu-id="f53d4-111">**AccessibleRole**</span><span class="sxs-lookup"><span data-stu-id="f53d4-111">**AccessibleRole**</span></span>  
   
-## Свойство AccessibilityObject  
- Это свойство, доступное только для чтения, содержит экземпляр [класса AccessibleObject](frlrfSystemWindowsFormsAccessibleObjectClassTopic).**AccessibleObject** реализует интерфейс <xref:Accessibility.IAccessible>, предоставляющий описание элементов управления, расположение на экране, возможности навигации и значение. Конструктор задает это значение при добавлении элемента управления в форму.  
+## <a name="accessibilityobject-property"></a><span data-ttu-id="f53d4-112">Свойство AccessibilityObject</span><span class="sxs-lookup"><span data-stu-id="f53d4-112">AccessibilityObject Property</span></span>  
+ <span data-ttu-id="f53d4-113">Это свойство, доступное только для чтения, содержит экземпляр <xref:System.Windows.Forms.AccessibleObject> .</span><span class="sxs-lookup"><span data-stu-id="f53d4-113">This read-only property contains an <xref:System.Windows.Forms.AccessibleObject> instance.</span></span> <span data-ttu-id="f53d4-114">**AccessibleObject** реализует интерфейс <xref:Accessibility.IAccessible> , предоставляющий описание элементов управления, расположение на экране, возможности навигации и значение.</span><span class="sxs-lookup"><span data-stu-id="f53d4-114">The **AccessibleObject** implements the <xref:Accessibility.IAccessible> interface, which provides information about the control's description, screen location, navigational abilities, and value.</span></span> <span data-ttu-id="f53d4-115">Конструктор задает это значение при добавлении элемента управления в форму.</span><span class="sxs-lookup"><span data-stu-id="f53d4-115">The designer sets this value when the control is added to the form.</span></span>  
   
-## Свойство AccessibleDefaultActionDescription  
- Эта строка описывает действие элемента управления. Она не отображается в окне "Свойства", и ее можно задать только в коде. В следующем примере это свойство задается для элемента управления "Кнопка".  
+## <a name="accessibledefaultactiondescription-property"></a><span data-ttu-id="f53d4-116">Свойство AccessibleDefaultActionDescription</span><span class="sxs-lookup"><span data-stu-id="f53d4-116">AccessibleDefaultActionDescription Property</span></span>  
+ <span data-ttu-id="f53d4-117">Эта строка описывает действие элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f53d4-117">This string describes the action of the control.</span></span> <span data-ttu-id="f53d4-118">Она не отображается в окне "Свойства", и ее можно задать только в коде.</span><span class="sxs-lookup"><span data-stu-id="f53d4-118">It does not appear in the Properties window and may only be set in code.</span></span> <span data-ttu-id="f53d4-119">В следующем примере это свойство задается для элемента управления "Кнопка".</span><span class="sxs-lookup"><span data-stu-id="f53d4-119">The following example sets this property for a button control:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -55,8 +56,8 @@ button1->AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```  
   
-## Свойство AccessibleDescription  
- Эта строка описывает элемент управления. Его можно задать в окне "Свойства" или в коде следующим образом.  
+## <a name="accessibledescription-property"></a><span data-ttu-id="f53d4-120">Свойство AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="f53d4-120">AccessibleDescription Property</span></span>  
+ <span data-ttu-id="f53d4-121">Эта строка описывает элемент управления.</span><span class="sxs-lookup"><span data-stu-id="f53d4-121">This string describes the control.</span></span> <span data-ttu-id="f53d4-122">Его можно задать в окне "Свойства" или в коде следующим образом.</span><span class="sxs-lookup"><span data-stu-id="f53d4-122">It may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -69,8 +70,8 @@ Button1.AccessibleDescription = "A button with text 'Exit'";
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
-## Свойство AccessibleName  
- Это имя элемента управления, переданное специальным возможностям. Его можно задать в окне "Свойства" или в коде следующим образом.  
+## <a name="accessiblename-property"></a><span data-ttu-id="f53d4-123">Свойство AccessibleName</span><span class="sxs-lookup"><span data-stu-id="f53d4-123">AccessibleName Property</span></span>  
+ <span data-ttu-id="f53d4-124">Это имя элемента управления, переданное специальным возможностям.</span><span class="sxs-lookup"><span data-stu-id="f53d4-124">This is the name of a control reported to accessibility aids.</span></span> <span data-ttu-id="f53d4-125">Его можно задать в окне "Свойства" или в коде следующим образом.</span><span class="sxs-lookup"><span data-stu-id="f53d4-125">It may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -83,8 +84,8 @@ Button1.AccessibleName = "Order";
 button1->AccessibleName = "Order";  
 ```  
   
-## Свойство AccessibleRole  
- Это свойство, содержащее [перечисление AccessibleRole](frlrfSystemWindowsFormsAccessibleRoleClassTopic), описывает роль пользовательского интерфейса для элемента управления. Для нового элемента управления задано значение `Default`. Это означает, что по умолчанию элемент управления **Кнопка** работает как **Кнопка**. Возможно, потребуется сбросить это свойство, если у элемента управления есть другая роль. Например, вы можете использовать элемент управления **PictureBox** в качестве **Chart** и вам может потребоваться, чтобы специальные возможности передавали роль как **Chart**, а не как **PictureBox**. Возможно, вы захотите указать это свойство для разработанных пользовательских элементов управления. Это свойство можно задать в окне "Свойства" или в коде следующим образом.  
+## <a name="accessiblerole-property"></a><span data-ttu-id="f53d4-126">Свойство AccessibleRole</span><span class="sxs-lookup"><span data-stu-id="f53d4-126">AccessibleRole Property</span></span>  
+ <span data-ttu-id="f53d4-127">Это свойство, содержащее <xref:System.Windows.Forms.AccessibleRole> , описывает роль пользовательского интерфейса для элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f53d4-127">This property, which contains an <xref:System.Windows.Forms.AccessibleRole> enumeration, describes the user interface role of the control.</span></span> <span data-ttu-id="f53d4-128">Для нового элемента управления задано значение `Default`.</span><span class="sxs-lookup"><span data-stu-id="f53d4-128">A new control has the value set to `Default`.</span></span> <span data-ttu-id="f53d4-129">Это означает, что по умолчанию элемент управления **Кнопка** работает как **Кнопка**.</span><span class="sxs-lookup"><span data-stu-id="f53d4-129">This would mean that by default, a **Button** control acts as a **Button**.</span></span> <span data-ttu-id="f53d4-130">Возможно, потребуется сбросить это свойство, если у элемента управления есть другая роль.</span><span class="sxs-lookup"><span data-stu-id="f53d4-130">You may want to reset this property if a control has another role.</span></span> <span data-ttu-id="f53d4-131">Например, вы можете использовать элемент управления **PictureBox** в качестве **Chart**и вам может потребоваться, чтобы специальные возможности передавали роль как **Chart**, а не как **PictureBox**.</span><span class="sxs-lookup"><span data-stu-id="f53d4-131">For example, you may be using a **PictureBox** control as a **Chart**, and you may want accessibility aids to report the role as a **Chart**, not as a **PictureBox**.</span></span> <span data-ttu-id="f53d4-132">Возможно, вы захотите указать это свойство для разработанных пользовательских элементов управления.</span><span class="sxs-lookup"><span data-stu-id="f53d4-132">You may also want to specify this property for custom controls you have developed.</span></span> <span data-ttu-id="f53d4-133">Это свойство можно задать в окне "Свойства" или в коде следующим образом.</span><span class="sxs-lookup"><span data-stu-id="f53d4-133">This property may be set in the Properties window, or in code as follows:</span></span>  
   
 ```  
 ' Visual Basic  
@@ -97,11 +98,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## См. также  
- <xref:System.Windows.Forms.AccessibleObject>   
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>   
+## <a name="see-also"></a><span data-ttu-id="f53d4-134">См. также</span><span class="sxs-lookup"><span data-stu-id="f53d4-134">See Also</span></span>  
+ <xref:System.Windows.Forms.AccessibleObject>  
+ <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.AccessibleRole>

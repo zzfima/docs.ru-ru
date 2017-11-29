@@ -1,61 +1,53 @@
 ---
-title: "LINQ и каталоги файлов (Visual Basic) | Документы Microsoft"
+title: "LINQ и каталоги файлов (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5536ae95b42cdaddda2c4cae97a114681e94b0ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 470ad8e783eb05cc56949982b2d2d79d5aaefdc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-and-file-directories-visual-basic"></a>LINQ и каталоги файлов (Visual Basic)
-Многие операции файловой системы, по существу запросов и, следовательно, хорошо подходит для подход LINQ.  
+# <a name="linq-and-file-directories-visual-basic"></a><span data-ttu-id="ee9e7-102">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-102">LINQ and File Directories (Visual Basic)</span></span>
+<span data-ttu-id="ee9e7-103">Многие операции файловой системы по существу являются запросами и, следовательно, соответствуют принципам LINQ.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-103">Many file system operations are essentially queries and are therefore well-suited to the LINQ approach.</span></span>  
   
- Обратите внимание, что запросы в этом разделе являются безопасными. Они не используются для изменения содержимого исходных файлов или папок. Эта процедура выполняется правило, запросы не должны вызывать никаких побочных эффектов. Как правило любой код (включая запросы, выполняющие создания, обновления и удаления операторов), изменяющий исходные данные должны храниться отдельно от кода, который просто запрашивает данные.  
+ <span data-ttu-id="ee9e7-104">Обратите внимание, что запросы в этом разделе являются безопасными.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-104">Note that the queries in this section are non-destructive.</span></span> <span data-ttu-id="ee9e7-105">Они не используются для изменения содержимого исходных файлов или папок.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-105">They are not used to change the contents of the original files or folders.</span></span> <span data-ttu-id="ee9e7-106">Это соответствует правилу о том, что запросы не должны вызывать никаких побочных эффектов.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-106">This follows the rule that queries should not cause any side-effects.</span></span> <span data-ttu-id="ee9e7-107">Как правило, любой код (включая запросы, выполняющие операторы создания, изменения и удаления), изменяющий исходные данные, должен храниться отдельно от кода, который просто запрашивает данные.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-107">In general, any code (including queries that perform create / update / delete operators) that modifies source data should be kept separate from the code that just queries the data.</span></span>  
   
- В этом разделе рассматриваются следующие вопросы.  
+ <span data-ttu-id="ee9e7-108">В этом разделе рассматриваются следующие вопросы.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-108">This section contains the following topics:</span></span>  
   
- [Практическое руководство: запрос файлов с указанными атрибутами или именем (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- Описание способов поиска файлов путем проверки одного или нескольких свойств его <xref:System.IO.FileInfo>объекта.</xref:System.IO.FileInfo>  
+ [<span data-ttu-id="ee9e7-109">Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-109">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
+ <span data-ttu-id="ee9e7-110">Демонстрация поиска файлов путем проверки одного или нескольких свойств его объекта <xref:System.IO.FileInfo>.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-110">Shows how to search for files by examining one or more properties of its <xref:System.IO.FileInfo> object.</span></span>  
   
- [Практическое руководство: группировка файлов по расширению (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- Описание способов возврата групп <xref:System.IO.FileInfo>объекта в зависимости от расширения имени файла.</xref:System.IO.FileInfo>  
+ [<span data-ttu-id="ee9e7-111">Как: группировка файлов по расширению (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-111">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
+ <span data-ttu-id="ee9e7-112">Демонстрация возвращения групп объектов <xref:System.IO.FileInfo> в зависимости от расширения имени файла.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-112">Shows how to return groups of <xref:System.IO.FileInfo> object based on their file name extension.</span></span>  
   
- [Практическое руководство: запрос общее количество байтов в наборе папок (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
- Показано, как вернуть общее число байтов во всех файлах в указанном дереве каталогов.  
+ [<span data-ttu-id="ee9e7-113">Как: запрос общее число байтов в наборе папок (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-113">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)  
+ <span data-ttu-id="ee9e7-114">Демонстрация возвращения общего числа байтов во всех файлах в указанном дереве каталогов.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-114">Shows how to return the total number of bytes in all the files in a specified directory tree.</span></span>  
   
- [Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s  
- Показано, как вернуть все файлы, присутствующие в двух указанных папках, а также все файлы, которые присутствуют в одной папке, но отсутствующих в другой.  
+ <span data-ttu-id="ee9e7-115">[Как: сравнение содержимого двух папок (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span><span class="sxs-lookup"><span data-stu-id="ee9e7-115">[How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)s</span></span>  
+ <span data-ttu-id="ee9e7-116">Демонстрация возвращения всех файлов, присутствующих в двух указанных папках, а также всех файлов, которые присутствуют в одной папке, но отсутствуют в другой.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-116">Shows how to return all the files that are present in two specified folders, and also all the files that are present in one folder but not the other.</span></span>  
   
- [Практическое руководство: запрос самого большого файла или файлов в дереве каталогов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- Описание способов возврата наибольшего или наименьшего файла или определенного числа файлов, в дереве каталогов.  
+ [<span data-ttu-id="ee9e7-117">Как: запрос самого большого файла или файлов в дереве каталогов (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-117">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ <span data-ttu-id="ee9e7-118">Демонстрация возвращения наибольшего или наименьшего файла либо определенного числа файлов в дереве каталогов.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-118">Shows how to return the largest or smallest file, or a specified number of files, in a directory tree.</span></span>  
   
- [Практическое руководство: запрос повторяющихся файлов в дереве каталогов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
- Описание способов группировки всех имен файлов, находящихся в нескольких местах в указанном дереве каталогов. Также показано, как для выполнения более сложных сравнений с учетом пользовательского блока сравнения.  
+ [<span data-ttu-id="ee9e7-119">Как: запрос повторяющихся файлов в дереве каталогов (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-119">How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)  
+ <span data-ttu-id="ee9e7-120">Демонстрация группирования всех имен файлов, находящихся в нескольких расположениях в указанном дереве каталогов.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-120">Shows how to group for all file names that occur in more than one location in a specified directory tree.</span></span> <span data-ttu-id="ee9e7-121">Также показано, как выполнять более сложные сравнения на основе пользовательской функции сравнения.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-121">Also shows how to perform more complex comparisons based on a custom comparer.</span></span>  
   
- [Практическое руководство: запрос содержимого файлов в папке (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
- Показано, как перебора папок в дереве, открытия каждого файла и запроса к содержимому файла.  
+ [<span data-ttu-id="ee9e7-122">Как: запрос содержимого файлов в папке (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-122">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-linq.md)  
+ <span data-ttu-id="ee9e7-123">Демонстрация итерации по папкам в дереве, открытия каждого файла и запроса содержимого файла.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-123">Shows how to iterate through folders in a tree, open each file, and query the file's contents.</span></span>  
   
-## <a name="comments"></a>Комментарии  
- Существует некоторые сложности, связанные с созданием источника данных, который точно представляет содержимое файловой системы и корректно обрабатывает исключения. В примерах этого раздела создается моментальный снимок коллекции из <xref:System.IO.FileInfo>объектов, представляющих все файлы в указанной корневой папке и всех ее подпапках.</xref:System.IO.FileInfo> Фактическое состояние каждого <xref:System.IO.FileInfo>может измениться в период между началом и окончанием выполнения запроса.</xref:System.IO.FileInfo> Например, можно создать список <xref:System.IO.FileInfo>объектов для использования в качестве источника данных.</xref:System.IO.FileInfo> Если при попытке доступа к `Length` свойства в запросе, <xref:System.IO.FileInfo>объекта попытается получить доступ к файловой системе для обновления значения `Length`.</xref:System.IO.FileInfo> Если файл больше не существует, вы получите <xref:System.IO.FileNotFoundException>в запросе, даже если вы не выполняется в файловой системе непосредственный запрос.</xref:System.IO.FileNotFoundException> Некоторые запросы в этом разделе используют отдельный метод, который использует эти конкретные исключения в определенных случаях. Другой возможностью является поддержка источника данных обновленным динамически с помощью <xref:System.IO.FileSystemWatcher>.</xref:System.IO.FileSystemWatcher>  
+## <a name="comments"></a><span data-ttu-id="ee9e7-124">Комментарии</span><span class="sxs-lookup"><span data-stu-id="ee9e7-124">Comments</span></span>  
+ <span data-ttu-id="ee9e7-125">Существуют некоторые сложности, связанные с созданием источника данных, который точно представляет содержимое файловой системы и корректно обрабатывает исключения.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-125">There is some complexity involved in creating a data source that accurately represents the contents of the file system and handles exceptions gracefully.</span></span> <span data-ttu-id="ee9e7-126">В примерах этого раздела создается моментальный снимок коллекции объектов <xref:System.IO.FileInfo>, представляющих все файлы в указанной корневой папке и всех ее подпапках.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-126">The examples in this section create a snapshot collection of <xref:System.IO.FileInfo> objects that represents all the files under a specified root folder and all its subfolders.</span></span> <span data-ttu-id="ee9e7-127">Фактическое состояние каждого объекта <xref:System.IO.FileInfo> может измениться в период между началом и окончанием выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-127">The actual state of each <xref:System.IO.FileInfo> may change in the time between when you begin and end executing a query.</span></span> <span data-ttu-id="ee9e7-128">Например, можно создать список объектов <xref:System.IO.FileInfo> для использования в качестве источника данных.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-128">For example, you can create a list of <xref:System.IO.FileInfo> objects to use as a data source.</span></span> <span data-ttu-id="ee9e7-129">При попытке доступа к свойству `Length` в запросе объект <xref:System.IO.FileInfo> попытается получить доступ к файловой системе для обновления значения `Length`.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-129">If you try to access the `Length` property in a query, the <xref:System.IO.FileInfo> object will try to access the file system to update the value of `Length`.</span></span> <span data-ttu-id="ee9e7-130">Если файл больше не существует, вы получите исключение <xref:System.IO.FileNotFoundException> в запросе, даже если не запрашиваете файловую систему напрямую.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-130">If the file no longer exists, you will get a <xref:System.IO.FileNotFoundException> in your query, even though you are not querying the file system directly.</span></span> <span data-ttu-id="ee9e7-131">Некоторые запросы в этом разделе используют отдельный метод, который использует эти конкретные исключения в определенных случаях.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-131">Some queries in this section use a separate method that consumes these particular exceptions in certain cases.</span></span> <span data-ttu-id="ee9e7-132">Другой возможностью является поддержка источника данных, обновляемого динамически с помощью <xref:System.IO.FileSystemWatcher>.</span><span class="sxs-lookup"><span data-stu-id="ee9e7-132">Another option is to keep your data source updated dynamically by using the <xref:System.IO.FileSystemWatcher>.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="ee9e7-133">См. также</span><span class="sxs-lookup"><span data-stu-id="ee9e7-133">See Also</span></span>  
+ [<span data-ttu-id="ee9e7-134">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee9e7-134">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

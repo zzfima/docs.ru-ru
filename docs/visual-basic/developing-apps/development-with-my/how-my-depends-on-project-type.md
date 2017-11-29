@@ -1,92 +1,74 @@
 ---
-title: "Как Мой зависит от типа проекта (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Зависимость My от типа проекта (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- _MYTYPE
+helpviewer_keywords: _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d193dade94980f04b31605ea6fa968f9fa7d0ad6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-my-depends-on-project-type-visual-basic"></a>Зависимость My от типа проекта (Visual Basic)
-`My`предоставляет только те объекты, необходимые для конкретного типа проекта. Например `My.Forms` объект в приложении Windows Forms, но не доступен в консольном приложении. В этом разделе описывается, которой `My` объекты будут доступны в различных типах проектов.  
+# <a name="how-my-depends-on-project-type-visual-basic"></a><span data-ttu-id="734cf-102">Зависимость My от типа проекта (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="734cf-102">How My Depends on Project Type (Visual Basic)</span></span>
+<span data-ttu-id="734cf-103">`My`предоставляет только те объекты, необходимые для конкретного типа проекта.</span><span class="sxs-lookup"><span data-stu-id="734cf-103">`My` exposes only those objects required by a particular project type.</span></span> <span data-ttu-id="734cf-104">Например `My.Forms` объекта, доступные в приложении Windows Forms, но не доступен в консольном приложении.</span><span class="sxs-lookup"><span data-stu-id="734cf-104">For example, the `My.Forms` object is available in a Windows Forms application but not available in a console application.</span></span> <span data-ttu-id="734cf-105">В этом разделе описывается, что `My` доступных объектов в различных типах проектов.</span><span class="sxs-lookup"><span data-stu-id="734cf-105">This topic describes which `My` objects are available in different project types.</span></span>  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>Мои в Windows приложений и веб-сайтов  
- `My`предоставляет только те объекты, которые полезны в текущем типе проекта; он отключает объекты, которые не применяются. Например, на следующем рисунке показана `My` объектной модели в проекте Windows Forms.  
+## <a name="my-in-windows-applications-and-web-sites"></a><span data-ttu-id="734cf-106">Мои в Windows приложения и веб-сайтов</span><span class="sxs-lookup"><span data-stu-id="734cf-106">My in Windows Applications and Web Sites</span></span>  
+ <span data-ttu-id="734cf-107">`My`предоставляет только те объекты, которые полезны в текущем типе проекта; он подавляет объекты, которые не применяются.</span><span class="sxs-lookup"><span data-stu-id="734cf-107">`My` exposes only objects that are useful in the current project type; it suppresses objects that are not applicable.</span></span> <span data-ttu-id="734cf-108">Например, на следующем рисунке показана `My` объектной модели в проекте Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="734cf-108">For example, the following image shows the `My` object model in a Windows Forms project.</span></span>  
   
- ![Форма My в приложение Windows Forms](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ <span data-ttu-id="734cf-109">![Форма My в приложение Windows Forms](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")</span><span class="sxs-lookup"><span data-stu-id="734cf-109">![Shape of My in a Windows Forms application](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")</span></span>  
   
- В проект веб-сайта `My` предоставляет объекты, относящиеся к веб-разработчик (такие как `My.Request` и `My.Response` объектов) при подавлении объекты, которые не являются значимыми (такие как `My.Forms` объект). На следующем рисунке показана `My` объектной модели в проект веб-сайта:  
+ <span data-ttu-id="734cf-110">В проекте веб-сайта `My` предоставляет объекты, относящиеся к веб-разработчиком (такие как `My.Request` и `My.Response` объектов) при подавлении объекты, которые не являются значимыми (такие как `My.Forms` объекта).</span><span class="sxs-lookup"><span data-stu-id="734cf-110">In a Web site project, `My` exposes objects that are relevant to a Web developer (such as the `My.Request` and `My.Response` objects) while suppressing objects that are not relevant (such as the `My.Forms` object).</span></span> <span data-ttu-id="734cf-111">На следующем рисунке показана `My` объектной модели в проект веб-сайта:</span><span class="sxs-lookup"><span data-stu-id="734cf-111">The following image shows the `My` object model in a Web site project:</span></span>  
   
- ![Форма My в веб-приложении](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ <span data-ttu-id="734cf-112">![Форма My в веб-приложении](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")</span><span class="sxs-lookup"><span data-stu-id="734cf-112">![Shape of My in a Web application](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")</span></span>  
   
-## <a name="project-details"></a>Сведения о проекте  
- В следующей таблице показаны которого `My` объекты, включенные по умолчанию для восьми типов проектов: Windows приложения, библиотеки типов, консольного приложения, Windows библиотеки элементов управления, Web библиотеки элементов управления, Windows службы, пустой и веб-сайта.  
+## <a name="project-details"></a><span data-ttu-id="734cf-113">Сведения о проекте</span><span class="sxs-lookup"><span data-stu-id="734cf-113">Project Details</span></span>  
+ <span data-ttu-id="734cf-114">В следующей таблице показаны которой `My` объекты, включенные по умолчанию для восьми типов проектов: Windows приложения, библиотеки типов, консольное приложение, Windows библиотеки элементов управления, Web Библиотека элементов управления, Windows службы, пустым и веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="734cf-114">The following table shows which `My` objects are enabled by default for eight project types: Windows application, class Library, console application, Windows control library, Web control library, Windows service, empty, and Web site.</span></span>  
   
- Существуют три версии `My.Application` объект, две версии `My.Computer` объекта и две версии `My.User` объекта; сведения об этих версиях приведены в сносках после таблицы.  
+ <span data-ttu-id="734cf-115">Существуют три версии `My.Application` объект, две версии `My.Computer` объекта и две версии `My.User` объекта; сведения об этих версиях приведены в сноски после таблицы.</span><span class="sxs-lookup"><span data-stu-id="734cf-115">There are three versions of the `My.Application` object, two versions of the `My.Computer` object, and two versions of `My.User` object; details about these versions are given in the footnotes after the table.</span></span>  
   
-|My-объект|Приложение Windows|Библиотека классов|Консольное приложение|Библиотека элементов управления Windows|Библиотека веб-элементов управления|Служба Windows|Empty|Веб-сайт|  
+|<span data-ttu-id="734cf-116">My-объект</span><span class="sxs-lookup"><span data-stu-id="734cf-116">My Object</span></span>|<span data-ttu-id="734cf-117">Приложение Windows</span><span class="sxs-lookup"><span data-stu-id="734cf-117">Windows Application</span></span>|<span data-ttu-id="734cf-118">Библиотека классов</span><span class="sxs-lookup"><span data-stu-id="734cf-118">Class Library</span></span>|<span data-ttu-id="734cf-119">Консольное приложение</span><span class="sxs-lookup"><span data-stu-id="734cf-119">Console Application</span></span>|<span data-ttu-id="734cf-120">Библиотека элементов управления Windows</span><span class="sxs-lookup"><span data-stu-id="734cf-120">Windows Control Library</span></span>|<span data-ttu-id="734cf-121">Библиотека веб-элементов управления</span><span class="sxs-lookup"><span data-stu-id="734cf-121">Web Control Library</span></span>|<span data-ttu-id="734cf-122">Служба Windows</span><span class="sxs-lookup"><span data-stu-id="734cf-122">Windows Service</span></span>|<span data-ttu-id="734cf-123">Empty</span><span class="sxs-lookup"><span data-stu-id="734cf-123">Empty</span></span>|<span data-ttu-id="734cf-124">Веб-сайт</span><span class="sxs-lookup"><span data-stu-id="734cf-124">Web Site</span></span>|  
 |---|---|---|---|---|---|---|---|---|  
-|`My.Application`|**Yes** <sup>1</sup>|**Yes** <sup>2</sup>|**Yes** <sup>3</sup>|**Yes** <sup>2</sup>|Нет|**Yes** <sup>3</sup>|Нет|Нет|  
-|`My.Computer`|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>4</sup>|**Yes** <sup>5</sup>|**Yes** <sup>4</sup>|Нет|**Yes** <sup>5</sup>|  
-|`My.Forms`|**Да**|Нет|Нет|**Да**|Нет|Нет|Нет|Нет|  
-|`My.Log`|Нет|Нет|Нет|Нет|Нет|Нет|Нет|**Да**|  
-|`My.Request`|Нет|Нет|Нет|Нет|Нет|Нет|Нет|**Да**|  
-|`My.Resources`|**Да**|**Да**|**Да**|**Да**|**Да**|**Да**|Нет|Нет|  
-|`My.Response`|Нет|Нет|Нет|Нет|Нет|Нет|Нет|**Да**|  
-|`My.Settings`|**Да**|**Да**|**Да**|**Да**|**Да**|**Да**|Нет|Нет|  
-|`My.User`|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>6</sup>|**Yes** <sup>7</sup>|**Yes** <sup>6</sup>|Нет|**Yes** <sup>7</sup>|  
-|`My.WebServices`|**Да**|**Да**|**Да**|**Да**|**Да**|**Да**|Нет|Нет|  
+|`My.Application`|<span data-ttu-id="734cf-125">**Да** <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-125">**Yes** <sup>1</sup></span></span>|<span data-ttu-id="734cf-126">**Да** <sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-126">**Yes** <sup>2</sup></span></span>|<span data-ttu-id="734cf-127">**Да** <sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-127">**Yes** <sup>3</sup></span></span>|<span data-ttu-id="734cf-128">**Да** <sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-128">**Yes** <sup>2</sup></span></span>|<span data-ttu-id="734cf-129">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-129">No</span></span>|<span data-ttu-id="734cf-130">**Да** <sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-130">**Yes** <sup>3</sup></span></span>|<span data-ttu-id="734cf-131">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-131">No</span></span>|<span data-ttu-id="734cf-132">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-132">No</span></span>|  
+|`My.Computer`|<span data-ttu-id="734cf-133">**Да** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-133">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="734cf-134">**Да** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-134">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="734cf-135">**Да** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-135">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="734cf-136">**Да** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-136">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="734cf-137">**Да** <sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-137">**Yes** <sup>5</sup></span></span>|<span data-ttu-id="734cf-138">**Да** <sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-138">**Yes** <sup>4</sup></span></span>|<span data-ttu-id="734cf-139">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-139">No</span></span>|<span data-ttu-id="734cf-140">**Да** <sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-140">**Yes** <sup>5</sup></span></span>|  
+|`My.Forms`|<span data-ttu-id="734cf-141">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-141">**Yes**</span></span>|<span data-ttu-id="734cf-142">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-142">No</span></span>|<span data-ttu-id="734cf-143">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-143">No</span></span>|<span data-ttu-id="734cf-144">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-144">**Yes**</span></span>|<span data-ttu-id="734cf-145">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-145">No</span></span>|<span data-ttu-id="734cf-146">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-146">No</span></span>|<span data-ttu-id="734cf-147">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-147">No</span></span>|<span data-ttu-id="734cf-148">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-148">No</span></span>|  
+|`My.Log`|<span data-ttu-id="734cf-149">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-149">No</span></span>|<span data-ttu-id="734cf-150">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-150">No</span></span>|<span data-ttu-id="734cf-151">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-151">No</span></span>|<span data-ttu-id="734cf-152">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-152">No</span></span>|<span data-ttu-id="734cf-153">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-153">No</span></span>|<span data-ttu-id="734cf-154">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-154">No</span></span>|<span data-ttu-id="734cf-155">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-155">No</span></span>|<span data-ttu-id="734cf-156">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-156">**Yes**</span></span>|  
+|`My.Request`|<span data-ttu-id="734cf-157">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-157">No</span></span>|<span data-ttu-id="734cf-158">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-158">No</span></span>|<span data-ttu-id="734cf-159">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-159">No</span></span>|<span data-ttu-id="734cf-160">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-160">No</span></span>|<span data-ttu-id="734cf-161">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-161">No</span></span>|<span data-ttu-id="734cf-162">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-162">No</span></span>|<span data-ttu-id="734cf-163">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-163">No</span></span>|<span data-ttu-id="734cf-164">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-164">**Yes**</span></span>|  
+|`My.Resources`|<span data-ttu-id="734cf-165">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-165">**Yes**</span></span>|<span data-ttu-id="734cf-166">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-166">**Yes**</span></span>|<span data-ttu-id="734cf-167">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-167">**Yes**</span></span>|<span data-ttu-id="734cf-168">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-168">**Yes**</span></span>|<span data-ttu-id="734cf-169">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-169">**Yes**</span></span>|<span data-ttu-id="734cf-170">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-170">**Yes**</span></span>|<span data-ttu-id="734cf-171">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-171">No</span></span>|<span data-ttu-id="734cf-172">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-172">No</span></span>|  
+|`My.Response`|<span data-ttu-id="734cf-173">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-173">No</span></span>|<span data-ttu-id="734cf-174">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-174">No</span></span>|<span data-ttu-id="734cf-175">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-175">No</span></span>|<span data-ttu-id="734cf-176">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-176">No</span></span>|<span data-ttu-id="734cf-177">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-177">No</span></span>|<span data-ttu-id="734cf-178">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-178">No</span></span>|<span data-ttu-id="734cf-179">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-179">No</span></span>|<span data-ttu-id="734cf-180">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-180">**Yes**</span></span>|  
+|`My.Settings`|<span data-ttu-id="734cf-181">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-181">**Yes**</span></span>|<span data-ttu-id="734cf-182">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-182">**Yes**</span></span>|<span data-ttu-id="734cf-183">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-183">**Yes**</span></span>|<span data-ttu-id="734cf-184">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-184">**Yes**</span></span>|<span data-ttu-id="734cf-185">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-185">**Yes**</span></span>|<span data-ttu-id="734cf-186">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-186">**Yes**</span></span>|<span data-ttu-id="734cf-187">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-187">No</span></span>|<span data-ttu-id="734cf-188">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-188">No</span></span>|  
+|`My.User`|<span data-ttu-id="734cf-189">**Да** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-189">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="734cf-190">**Да** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-190">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="734cf-191">**Да** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-191">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="734cf-192">**Да** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-192">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="734cf-193">**Да** <sup>7</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-193">**Yes** <sup>7</sup></span></span>|<span data-ttu-id="734cf-194">**Да** <sup>6</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-194">**Yes** <sup>6</sup></span></span>|<span data-ttu-id="734cf-195">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-195">No</span></span>|<span data-ttu-id="734cf-196">**Да** <sup>7</sup></span><span class="sxs-lookup"><span data-stu-id="734cf-196">**Yes** <sup>7</sup></span></span>|  
+|`My.WebServices`|<span data-ttu-id="734cf-197">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-197">**Yes**</span></span>|<span data-ttu-id="734cf-198">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-198">**Yes**</span></span>|<span data-ttu-id="734cf-199">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-199">**Yes**</span></span>|<span data-ttu-id="734cf-200">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-200">**Yes**</span></span>|<span data-ttu-id="734cf-201">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-201">**Yes**</span></span>|<span data-ttu-id="734cf-202">**Да**</span><span class="sxs-lookup"><span data-stu-id="734cf-202">**Yes**</span></span>|<span data-ttu-id="734cf-203">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-203">No</span></span>|<span data-ttu-id="734cf-204">Нет</span><span class="sxs-lookup"><span data-stu-id="734cf-204">No</span></span>|  
   
- <sup>1</sup> версии Windows Forms `My.Application`. Является производным от консольной версии (см. Примечание 3). Дополнительно поддерживает взаимодействие с окнами приложения и предоставляет [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] модели приложения.  
+ <span data-ttu-id="734cf-205"><sup>1</sup> версию Windows Forms `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="734cf-205"><sup>1</sup> Windows Forms version of `My.Application`.</span></span> <span data-ttu-id="734cf-206">Является производной от версии консоли (см. Примечание 3). Добавляет поддержку для взаимодействия с окнами приложения и предоставляет [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] модели приложения.</span><span class="sxs-lookup"><span data-stu-id="734cf-206">Derives from the console version (see Note 3); adds support for interacting with the application's windows and provides the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application model.</span></span>  
   
- <sup>2</sup> версии библиотеки `My.Application`. Предоставляет базовую функциональность, необходимую приложению: предоставляет элементы для записи в журнал приложений и доступе к данным приложения.  
+ <span data-ttu-id="734cf-207"><sup>2</sup> версии библиотеки `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="734cf-207"><sup>2</sup> Library version of `My.Application`.</span></span> <span data-ttu-id="734cf-208">Предоставляет базовые функциональные возможности, необходимые приложению: содержит элементы для записи в журнал приложений и доступом к данным приложения.</span><span class="sxs-lookup"><span data-stu-id="734cf-208">Provides the basic functionality needed by an application: provides members for writing to the application log and accessing application information.</span></span>  
   
- <sup>3</sup> версию консоли `My.Application`. Является производной от версии библиотеки (см. Примечание 2), и добавляет дополнительные члены для доступа к аргументы командной строки приложения и сведения о развертывании ClickOnce.  
+ <span data-ttu-id="734cf-209"><sup>3</sup> версию консоли `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="734cf-209"><sup>3</sup> Console version of `My.Application`.</span></span> <span data-ttu-id="734cf-210">Является производным от версии библиотеки (см. Примечание 2), и добавляет дополнительные элементы для доступа к аргументы командной строки и сведения о развертывании ClickOnce для приложения.</span><span class="sxs-lookup"><span data-stu-id="734cf-210">Derives from the library version (see Note 2), and adds additional members for accessing the application's command-line arguments and ClickOnce deployment information.</span></span>  
   
- <sup>4</sup> версия Windows `My.Computer`. Является производным от версии сервера (см. Примечание 5) и предоставляет доступ к полезным объектам на клиентском компьютере, такие как клавиатуры, экрана и мыши.  
+ <span data-ttu-id="734cf-211"><sup>4</sup> версия Windows `My.Computer`.</span><span class="sxs-lookup"><span data-stu-id="734cf-211"><sup>4</sup> Windows version of `My.Computer`.</span></span> <span data-ttu-id="734cf-212">Является производным от версии сервера (см. Примечание 5) и предоставляет доступ к полезным объектам на клиентском компьютере, например экрана, клавиатуры и мыши.</span><span class="sxs-lookup"><span data-stu-id="734cf-212">Derives from the Server version (see Note 5), and provides access to useful objects on a client machine, such as the keyboard, screen, and mouse.</span></span>  
   
- <sup>5</sup> серверной версии `My.Computer`. Основные сведения о компьютере, такие как имя, доступ к времени и т. д.  
+ <span data-ttu-id="734cf-213"><sup>5</sup> серверной версии `My.Computer`.</span><span class="sxs-lookup"><span data-stu-id="734cf-213"><sup>5</sup> Server version of `My.Computer`.</span></span> <span data-ttu-id="734cf-214">Основные сведения о компьютере, такие как имя, доступ к времени и т. д.</span><span class="sxs-lookup"><span data-stu-id="734cf-214">Provides basic information about the computer, such as the name, access to the clock, and so on.</span></span>  
   
- <sup>6</sup> версия Windows `My.User`. Этот объект связан с идентификатором текущего потока.  
+ <span data-ttu-id="734cf-215"><sup>6</sup> версия Windows `My.User`.</span><span class="sxs-lookup"><span data-stu-id="734cf-215"><sup>6</sup> Windows version of `My.User`.</span></span> <span data-ttu-id="734cf-216">Этот объект связан с идентификатором текущего потока.</span><span class="sxs-lookup"><span data-stu-id="734cf-216">This object is associated with the thread's current identity.</span></span>  
   
- <sup>7</sup> версия `My.User`. Этот объект связан с удостоверением пользователя текущего HTTP-запроса приложения.  
+ <span data-ttu-id="734cf-217"><sup>7</sup> веб-версия `My.User`.</span><span class="sxs-lookup"><span data-stu-id="734cf-217"><sup>7</sup> Web version of `My.User`.</span></span> <span data-ttu-id="734cf-218">Этот объект связан с удостоверением пользователя текущего HTTP-запроса приложения.</span><span class="sxs-lookup"><span data-stu-id="734cf-218">This object is associated with the user identity of the application's current HTTP request.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [Настройка доступа к объектам, доступные в моей](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)   
- [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)   
- [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)   
- [Объект My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)   
- [Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="734cf-219">См. также</span><span class="sxs-lookup"><span data-stu-id="734cf-219">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.Logging.Log>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [<span data-ttu-id="734cf-220">Настройка доступа к объектам через My</span><span class="sxs-lookup"><span data-stu-id="734cf-220">Customizing Which Objects are Available in My</span></span>](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [<span data-ttu-id="734cf-221">Условная компиляция</span><span class="sxs-lookup"><span data-stu-id="734cf-221">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [<span data-ttu-id="734cf-222">/ define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="734cf-222">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [<span data-ttu-id="734cf-223">Объект My.Forms</span><span class="sxs-lookup"><span data-stu-id="734cf-223">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [<span data-ttu-id="734cf-224">Объект My.Request</span><span class="sxs-lookup"><span data-stu-id="734cf-224">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [<span data-ttu-id="734cf-225">Объект My.Response</span><span class="sxs-lookup"><span data-stu-id="734cf-225">My.Response Object</span></span>](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [<span data-ttu-id="734cf-226">Объект My.WebServices</span><span class="sxs-lookup"><span data-stu-id="734cf-226">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)

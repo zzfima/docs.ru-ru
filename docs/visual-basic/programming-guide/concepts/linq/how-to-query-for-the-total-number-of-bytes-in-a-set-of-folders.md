@@ -1,36 +1,28 @@
 ---
-title: "Практическое руководство: запрос общее количество байтов в наборе папок (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: запрос общее число байтов в наборе папок (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 668a8a4d89f7b81c3aef9b4e1a46ad749c4a8341
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b200581f4876400727c63e86e3ccf4a44c67914b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Практическое руководство: запрос общее количество байтов в наборе папок (LINQ) (Visual Basic)
-В этом примере показано, как получить общее число байтов, используемых все файлы в указанной папке и всех ее подпапках.  
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a><span data-ttu-id="7b9bd-102">Как: запрос общее число байтов в наборе папок (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b9bd-102">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="7b9bd-103">В этом примере показано, как получить общее число байтов, используемое всеми файлами в указанной папке и всех ее вложенных папках.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-103">This example shows how to retrieve the total number of bytes used by all the files in a specified folder and all its subfolders.</span></span>  
   
-## <a name="example"></a>Пример  
- <xref:System.Linq.Enumerable.Sum%2A>Метод складывает значения всех элементов, выбранных в `select` предложение.</xref:System.Linq.Enumerable.Sum%2A> Вы легко можете изменить этот запрос для получения наибольшего или наименьшего файла в дереве каталогов путем вызова <xref:System.Linq.Enumerable.Min%2A>или <xref:System.Linq.Enumerable.Max%2A>вместо <xref:System.Linq.Enumerable.Sum%2A>.</xref:System.Linq.Enumerable.Sum%2A> </xref:System.Linq.Enumerable.Max%2A> </xref:System.Linq.Enumerable.Min%2A>  
+## <a name="example"></a><span data-ttu-id="7b9bd-104">Пример</span><span class="sxs-lookup"><span data-stu-id="7b9bd-104">Example</span></span>  
+ <span data-ttu-id="7b9bd-105">Метод <xref:System.Linq.Enumerable.Sum%2A> суммирует значения всех элементов, выбранных в предложении `select`.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-105">The <xref:System.Linq.Enumerable.Sum%2A> method adds the values of all the items selected in the `select` clause.</span></span> <span data-ttu-id="7b9bd-106">Этот запрос можно легко изменить, чтобы получить самый большой или маленький файл в заданном дереве каталогов, вызвав метод <xref:System.Linq.Enumerable.Min%2A> или <xref:System.Linq.Enumerable.Max%2A> вместо <xref:System.Linq.Enumerable.Sum%2A>.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-106">You can easily modify this query to retrieve the biggest or smallest file in the specified directory tree by calling the <xref:System.Linq.Enumerable.Min%2A> or <xref:System.Linq.Enumerable.Max%2A> method instead of <xref:System.Linq.Enumerable.Sum%2A>.</span></span>  
   
 ```vb  
 Module QueryTotalBytes  
@@ -84,13 +76,13 @@ Module QueryTotalBytes
 End Module  
 ```  
   
- При наличии только число байтов в указанном дереве каталогов, можно сделать это более эффективно без создания запроса LINQ, который вносит дополнительную нагрузку, связанную с созданием коллекции списков в качестве источника данных. Полезность этого подхода LINQ увеличивается по мере более сложный запрос или при необходимости выполнения нескольких запросов к одному источнику данных.  
+ <span data-ttu-id="7b9bd-107">Если требуется только подсчитать число байтов в указанном дереве каталогов, можно сделать это более эффективно без создания запроса LINQ, который вносит дополнительные издержки, связанные с созданием коллекции списков в качестве источника данных.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-107">If you only have to count the number of bytes in a specified directory tree, you can do this more efficiently without creating a LINQ query, which incurs the overhead of creating the list collection as a data source.</span></span> <span data-ttu-id="7b9bd-108">Практичность подхода LINQ увеличивается по мере усложнения запроса или при необходимости выполнения нескольких запросов к одному источнику данных.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-108">The usefulness of the LINQ approach increases as the query becomes more complex, or when you have to run multiple queries against the same data source.</span></span>  
   
- Запрос вызывает отдельный метод для получения длины файла. Это делается для обработки возможных исключений, которые могут возникнуть, если файл был удален в другом потоке после <xref:System.IO.FileInfo>объект был создан в вызове `GetFiles`.</xref:System.IO.FileInfo> Несмотря на то что <xref:System.IO.FileInfo>объект уже создан, исключение может возникнуть из-за <xref:System.IO.FileInfo>будет пытаться обновить его <xref:System.IO.FileInfo.Length%2A>свойство с самую последнюю длину при первом обращении к свойству.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Поместив эту операцию в блок try-catch вне запроса, код следует правилу избежать операции в запросах, которые могут вызвать побочные эффекты. В общем случае отлично необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться в том, что приложение не остается в неизвестном состоянии.  
+ <span data-ttu-id="7b9bd-109">Для получения длины файла запрос вызывает отдельный метод.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-109">The query calls out to a separate method to obtain the file length.</span></span> <span data-ttu-id="7b9bd-110">Это необходимо для обработки возможных исключений, которые могут возникнуть из-за удаления файла в другом потоке после создания объекта <xref:System.IO.FileInfo> вызовом `GetFiles`.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-110">It does this in order to consume the possible exception that will be raised if the file was deleted on another thread after the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`.</span></span> <span data-ttu-id="7b9bd-111">Даже если объект <xref:System.IO.FileInfo> уже создан, может возникнуть исключение, так как объект <xref:System.IO.FileInfo> будет пытаться обновить свойство <xref:System.IO.FileInfo.Length%2A>, используя самую последнюю длину при первом обращении к свойству.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-111">Even though the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property with the most current length the first time the property is accessed.</span></span> <span data-ttu-id="7b9bd-112">При помещении этой операции в блок try-catch вне запроса будет выполнено правило исключения использования в запросах операций, которые могут вызвать побочные эффекты.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-112">By putting this operation in a try-catch block outside the query, the code follows the rule of avoiding operations in queries that can cause side-effects.</span></span> <span data-ttu-id="7b9bd-113">В целом необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться, что приложение не остается в неизвестном состоянии.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-113">In general, great care must be taken when you consume exceptions to make sure that an application is not left in an unknown state.</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="7b9bd-114">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="7b9bd-114">Compiling the Code</span></span>  
+ <span data-ttu-id="7b9bd-115">Создайте в проекте, ориентированном на .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="7b9bd-115">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="7b9bd-116">См. также</span><span class="sxs-lookup"><span data-stu-id="7b9bd-116">See Also</span></span>  
+ [<span data-ttu-id="7b9bd-117">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b9bd-117">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="7b9bd-118">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b9bd-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

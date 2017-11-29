@@ -1,15 +1,12 @@
 ---
 title: "Типы данных в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data types [Visual Basic], declaring
 - typing
@@ -17,60 +14,43 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b90a5e58d135a3769761ca431fd0c05f79e045f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 20a24c8632e1f2193cfa86319a824dfcc038d9d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-types-in-visual-basic"></a>Типы данных в Visual Basic
-*Тип данных* программного элемента определяет данные, которые он может содержать, а также способ их хранения. Типы данных применяются ко всем значениям, которые могут храниться в памяти компьютера или участвовать в вычислении выражения. Все переменные, литералы, константы, перечисления, свойства, параметры и аргументы процедуры, а также возвращаемые значения процедуры относятся к определенному типу данных.  
+# <a name="data-types-in-visual-basic"></a><span data-ttu-id="78e26-102">Типы данных в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78e26-102">Data Types in Visual Basic</span></span>
+<span data-ttu-id="78e26-103">*Тип данных* программного элемента определяет данные, которые он может содержать, а также способ их хранения.</span><span class="sxs-lookup"><span data-stu-id="78e26-103">The *data type* of a programming element refers to what kind of data it can hold and how it stores that data.</span></span> <span data-ttu-id="78e26-104">Типы данных применяются ко всем значениям, которые могут храниться в памяти компьютера или участвовать в вычислении выражения.</span><span class="sxs-lookup"><span data-stu-id="78e26-104">Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression.</span></span> <span data-ttu-id="78e26-105">Все переменные, литералы, константы, перечисления, свойства, параметры и аргументы процедуры, а также возвращаемые значения процедуры относятся к определенному типу данных.</span><span class="sxs-lookup"><span data-stu-id="78e26-105">Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.</span></span>  
   
-## <a name="declared-data-types"></a>Объявленные типы данных  
- Программный элемент определяется с помощью оператора объявления, а его тип данных указывается с помощью предложения `As`. В таблице ниже приведены инструкции, которые используются для объявления разных элементов.  
+## <a name="declared-data-types"></a><span data-ttu-id="78e26-106">Объявленные типы данных</span><span class="sxs-lookup"><span data-stu-id="78e26-106">Declared Data Types</span></span>  
+ <span data-ttu-id="78e26-107">Программный элемент определяется с помощью оператора объявления, а его тип данных указывается с помощью предложения `As`.</span><span class="sxs-lookup"><span data-stu-id="78e26-107">You define a programming element with a declaration statement, and you specify its data type with the `As` clause.</span></span> <span data-ttu-id="78e26-108">В таблице ниже приведены инструкции, которые используются для объявления разных элементов.</span><span class="sxs-lookup"><span data-stu-id="78e26-108">The following table shows the statements you use to declare various elements.</span></span>  
   
-|Программный элемент|Объявление типа данных|  
+|<span data-ttu-id="78e26-109">Программный элемент</span><span class="sxs-lookup"><span data-stu-id="78e26-109">Programming element</span></span>|<span data-ttu-id="78e26-110">Объявление типа данных</span><span class="sxs-lookup"><span data-stu-id="78e26-110">Data type declaration</span></span>|  
 |-------------------------|---------------------------|  
-|Переменная|В [операторе Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
-|Литерал|С помощью символа типа литерала; см. [символы типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
-|Константа|В [операторе Const](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
-|Перечисление|В [операторе Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|Свойство|В [операторе Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
-|Параметр процедуры|В [операторе Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md) или [инструкции Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
-|Аргумент процедуры|В вызывающем коде; все аргументы являются уже объявленными элементами программирования или выражениями, содержащими объявленные элементы<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
-|Возвращаемое значение процедуры|В [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md) или [инструкции Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
+|<span data-ttu-id="78e26-111">Переменная</span><span class="sxs-lookup"><span data-stu-id="78e26-111">Variable</span></span>|<span data-ttu-id="78e26-112">В [операторе Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-112">In a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)</span></span><br /><br /> <span data-ttu-id="78e26-113">`Dim`   `amount As Double`</span><span class="sxs-lookup"><span data-stu-id="78e26-113">`Dim`   `amount As Double`</span></span><br /><br /> <span data-ttu-id="78e26-114">`Static`   `yourName As String`</span><span class="sxs-lookup"><span data-stu-id="78e26-114">`Static`   `yourName As String`</span></span><br /><br /> <span data-ttu-id="78e26-115">`Public`   `billsPaid As Decimal = 0`</span><span class="sxs-lookup"><span data-stu-id="78e26-115">`Public`   `billsPaid As Decimal = 0`</span></span>|  
+|<span data-ttu-id="78e26-116">Литерал</span><span class="sxs-lookup"><span data-stu-id="78e26-116">Literal</span></span>|<span data-ttu-id="78e26-117">С помощью символа типа литерала; см. [символы типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-117">With a literal type character; see "Literal Type Characters" in [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)</span></span><br /><br /> <span data-ttu-id="78e26-118">`Dim searchChar As Char = "."`  `C`</span><span class="sxs-lookup"><span data-stu-id="78e26-118">`Dim searchChar As Char = "."`  `C`</span></span>|  
+|<span data-ttu-id="78e26-119">Константа</span><span class="sxs-lookup"><span data-stu-id="78e26-119">Constant</span></span>|<span data-ttu-id="78e26-120">В [операторе Const](../../../../visual-basic/language-reference/statements/const-statement.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-120">In a [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)</span></span><br /><br /> <span data-ttu-id="78e26-121">`Const`   `modulus As Single = 4.17825F`</span><span class="sxs-lookup"><span data-stu-id="78e26-121">`Const`   `modulus As Single = 4.17825F`</span></span>|  
+|<span data-ttu-id="78e26-122">Перечисление</span><span class="sxs-lookup"><span data-stu-id="78e26-122">Enumeration</span></span>|<span data-ttu-id="78e26-123">В [операторе Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-123">In an [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)</span></span><br /><br /> <span data-ttu-id="78e26-124">`Public`   `Enum`   `colors`</span><span class="sxs-lookup"><span data-stu-id="78e26-124">`Public`   `Enum`   `colors`</span></span>|  
+|<span data-ttu-id="78e26-125">Свойство</span><span class="sxs-lookup"><span data-stu-id="78e26-125">Property</span></span>|<span data-ttu-id="78e26-126">В [операторе Property](../../../../visual-basic/language-reference/statements/property-statement.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-126">In a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)</span></span><br /><br /> <span data-ttu-id="78e26-127">`Property`   `region() As String`</span><span class="sxs-lookup"><span data-stu-id="78e26-127">`Property`   `region() As String`</span></span>|  
+|<span data-ttu-id="78e26-128">Параметр процедуры</span><span class="sxs-lookup"><span data-stu-id="78e26-128">Procedure parameter</span></span>|<span data-ttu-id="78e26-129">В [операторе Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md) или [инструкции Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-129">In a [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md), [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md), or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)</span></span><br /><br /> <span data-ttu-id="78e26-130">`Sub addSale(ByVal`   `amount`   `As Double)`</span><span class="sxs-lookup"><span data-stu-id="78e26-130">`Sub addSale(ByVal`   `amount`   `As Double)`</span></span>|  
+|<span data-ttu-id="78e26-131">Аргумент процедуры</span><span class="sxs-lookup"><span data-stu-id="78e26-131">Procedure argument</span></span>|<span data-ttu-id="78e26-132">В вызывающем коде; все аргументы являются уже объявленными элементами программирования или выражениями, содержащими объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="78e26-132">In the calling code; each argument is a programming element that has already been declared, or an expression containing declared elements</span></span><br /><br /> <span data-ttu-id="78e26-133">`subString = Left(`  `inputString`  `,`   `5`  `)`</span><span class="sxs-lookup"><span data-stu-id="78e26-133">`subString = Left(`  `inputString`  `,`   `5`  `)`</span></span>|  
+|<span data-ttu-id="78e26-134">Возвращаемое значение процедуры</span><span class="sxs-lookup"><span data-stu-id="78e26-134">Procedure return value</span></span>|<span data-ttu-id="78e26-135">В [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md) или [инструкции Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)</span><span class="sxs-lookup"><span data-stu-id="78e26-135">In a [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md) or [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)</span></span><br /><br /> <span data-ttu-id="78e26-136">`Function convert(ByVal b As Byte)`   `As String`</span><span class="sxs-lookup"><span data-stu-id="78e26-136">`Function convert(ByVal b As Byte)`   `As String`</span></span>|  
   
- См. список [типов данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md) Visual Basic  
+ <span data-ttu-id="78e26-137">См. список [типов данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md) Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78e26-137">For a list of Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Символы типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Кортежи](tuples.md)     
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-
+## <a name="see-also"></a><span data-ttu-id="78e26-138">См. также</span><span class="sxs-lookup"><span data-stu-id="78e26-138">See Also</span></span>  
+ [<span data-ttu-id="78e26-139">Знаки типов</span><span class="sxs-lookup"><span data-stu-id="78e26-139">Type Characters</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="78e26-140">Простые типы данных</span><span class="sxs-lookup"><span data-stu-id="78e26-140">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="78e26-141">Составные типы данных</span><span class="sxs-lookup"><span data-stu-id="78e26-141">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="78e26-142">Универсальные типы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78e26-142">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="78e26-143">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="78e26-143">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="78e26-144">Преобразования типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="78e26-144">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="78e26-145">Структуры</span><span class="sxs-lookup"><span data-stu-id="78e26-145">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ <span data-ttu-id="78e26-146">[Кортежи](tuples.md)   </span><span class="sxs-lookup"><span data-stu-id="78e26-146">[Tuples](tuples.md)   </span></span>  
+ [<span data-ttu-id="78e26-147">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="78e26-147">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="78e26-148">Типы данных</span><span class="sxs-lookup"><span data-stu-id="78e26-148">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="78e26-149">Эффективное использование типов данных</span><span class="sxs-lookup"><span data-stu-id="78e26-149">Efficient Use of Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

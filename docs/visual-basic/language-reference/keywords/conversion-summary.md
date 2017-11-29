@@ -1,60 +1,42 @@
 ---
-title: "Сводка по преобразованию (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Сводка по преобразованию (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- data type conversion, keywords
+- data type conversion [Visual Basic], keywords
 - reference, type conversions
-- conversions, Visual Basic
-- type conversion, keywords
+- conversions [Visual Basic], Visual Basic
+- type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 05ea9ba57cc2d6f5f3d05d6e623527958b9dc1eb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76c5d56276dca62af8f0dacc66618b9b941bea35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="conversion-summary-visual-basic"></a>Сводка по преобразованию (Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]ключевые слова языка и члены библиотек времени выполнения упорядочены по назначению и использованию.  
+# <a name="conversion-summary-visual-basic"></a><span data-ttu-id="53d29-102">Сводка по преобразованию (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53d29-102">Conversion Summary (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="53d29-103">ключевые слова языка и члены библиотек времени выполнения упорядочены по назначению и использованию.</span><span class="sxs-lookup"><span data-stu-id="53d29-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|Действие|Элемент языка|  
+|<span data-ttu-id="53d29-104">Действие</span><span class="sxs-lookup"><span data-stu-id="53d29-104">Action</span></span>|<span data-ttu-id="53d29-105">Элемент языка</span><span class="sxs-lookup"><span data-stu-id="53d29-105">Language element</span></span>|  
 |------------|----------------------|  
-|Преобразование значения ANSI в строку.|<xref:Microsoft.VisualBasic.Strings.Chr%2A>,<xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>|  
-|Преобразуйте строку в верхний или нижний регистр.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.LCase%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|Преобразование даты в серийный номер.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>|  
-|Преобразование десятичного числа в другую систему исчисления.|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>,<xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Hex%2A>|  
-|Преобразование числа в строку.|<xref:Microsoft.VisualBasic.Strings.Format%2A>,<xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|Преобразование одного типа данных в другой.|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Fix%2A>|  
-|Преобразование даты в день, месяц, день недели или год.|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A></xref:Microsoft.VisualBasic.DateAndTime.Month%2A></xref:Microsoft.VisualBasic.DateAndTime.Day%2A>|  
-|Преобразование времени в час, минуты или секунды.|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Minute%2A></xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>|  
-|Преобразование строки в значение ASCII.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>,<xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>|  
-|Преобразуйте строку в число.|<xref:Microsoft.VisualBasic.Conversion.Val%2A></xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
-|Преобразование времени в серийный номер.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>|  
+|<span data-ttu-id="53d29-106">Преобразование значения ANSI в строку.</span><span class="sxs-lookup"><span data-stu-id="53d29-106">Convert ANSI value to string.</span></span>|<span data-ttu-id="53d29-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|  
+|<span data-ttu-id="53d29-108">Преобразуйте строку в верхний или нижний регистр.</span><span class="sxs-lookup"><span data-stu-id="53d29-108">Convert string to lowercase or uppercase.</span></span>|<span data-ttu-id="53d29-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span></span>|  
+|<span data-ttu-id="53d29-110">Преобразование даты в серийный номер.</span><span class="sxs-lookup"><span data-stu-id="53d29-110">Convert date to serial number.</span></span>|<span data-ttu-id="53d29-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span></span>|  
+|<span data-ttu-id="53d29-112">Преобразование десятичного числа в другую систему исчисления.</span><span class="sxs-lookup"><span data-stu-id="53d29-112">Convert decimal number to other bases.</span></span>|<span data-ttu-id="53d29-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span></span>|  
+|<span data-ttu-id="53d29-114">Преобразование числа в строку.</span><span class="sxs-lookup"><span data-stu-id="53d29-114">Convert number to string.</span></span>|<span data-ttu-id="53d29-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span></span>|  
+|<span data-ttu-id="53d29-116">Преобразуйте данные из одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="53d29-116">Convert one data type to another.</span></span>|<span data-ttu-id="53d29-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [ CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>,<xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="53d29-118">Преобразование даты в день, месяц, день недели или год.</span><span class="sxs-lookup"><span data-stu-id="53d29-118">Convert date to day, month, weekday, or year.</span></span>|<span data-ttu-id="53d29-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span></span>|  
+|<span data-ttu-id="53d29-120">Преобразование времени в час, минуту или секунду.</span><span class="sxs-lookup"><span data-stu-id="53d29-120">Convert time to hour, minute, or second.</span></span>|<span data-ttu-id="53d29-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span></span>|  
+|<span data-ttu-id="53d29-122">Преобразование строки в значение ASCII.</span><span class="sxs-lookup"><span data-stu-id="53d29-122">Convert string to ASCII value.</span></span>|<span data-ttu-id="53d29-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|  
+|<span data-ttu-id="53d29-124">Преобразуйте строку в число.</span><span class="sxs-lookup"><span data-stu-id="53d29-124">Convert string to number.</span></span>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
+|<span data-ttu-id="53d29-125">Преобразование времени в серийный номер.</span><span class="sxs-lookup"><span data-stu-id="53d29-125">Convert time to serial number.</span></span>|<span data-ttu-id="53d29-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span><span class="sxs-lookup"><span data-stu-id="53d29-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)   
- [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="53d29-127">См. также</span><span class="sxs-lookup"><span data-stu-id="53d29-127">See Also</span></span>  
+ [<span data-ttu-id="53d29-128">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="53d29-128">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="53d29-129">Члены библиотеки времени выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="53d29-129">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

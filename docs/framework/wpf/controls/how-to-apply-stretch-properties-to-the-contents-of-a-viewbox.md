@@ -1,40 +1,46 @@
 ---
-title: "Практическое руководство. Применение свойства Stretch к содержимому элемента Viewbox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы управления, Viewbox"
-  - "Stretch - свойства"
-  - "StretchDirection - свойства"
-  - "Viewbox - элемент управления"
+title: "Практическое руководство. Применение свойства Stretch к содержимому элемента Viewbox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- StretchDirection properties [WPF]
+- Stretch properties [WPF]
+- controls [WPF], Viewbox
+- Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6e93c744a8d7c294556e80f0ac4bf1f973ea5c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Применение свойства Stretch к содержимому элемента Viewbox
-## Пример  
- В этом примере описывается порядок изменения значений свойств <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> и <xref:System.Windows.Controls.Viewbox.Stretch%2A> элемента <xref:System.Windows.Controls.Viewbox>.  
+# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a><span data-ttu-id="e5b85-102">Практическое руководство. Применение свойства Stretch к содержимому элемента Viewbox</span><span class="sxs-lookup"><span data-stu-id="e5b85-102">How to: Apply Stretch Properties to the Contents of a Viewbox</span></span>
+## <a name="example"></a><span data-ttu-id="e5b85-103">Пример</span><span class="sxs-lookup"><span data-stu-id="e5b85-103">Example</span></span>  
+ <span data-ttu-id="e5b85-104">В этом примере показано, как изменить значение <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> и <xref:System.Windows.Controls.Viewbox.Stretch%2A> свойства <xref:System.Windows.Controls.Viewbox>.</span><span class="sxs-lookup"><span data-stu-id="e5b85-104">This example shows how to change the value of the <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> and <xref:System.Windows.Controls.Viewbox.Stretch%2A> properties of a <xref:System.Windows.Controls.Viewbox>.</span></span>  
   
- В первом примере используется [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для определения элемента <xref:System.Windows.Controls.Viewbox>.  Назначается значение 400 для свойств <xref:System.Windows.FrameworkElement.MaxWidth%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A>.  В примере в элемент <xref:System.Windows.Controls.Viewbox> вкладывается элемент <xref:System.Windows.Controls.Image>.  Элементы <xref:System.Windows.Controls.Button>, которые соответствуют значениям свойств для перечислений <xref:System.Windows.Controls.Viewbox.Stretch%2A> и <xref:System.Windows.Controls.StretchDirection>, управляют растяжением вложенного <xref:System.Windows.Controls.Image>.  
+ <span data-ttu-id="e5b85-105">В первом примере используется [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для определения <xref:System.Windows.Controls.Viewbox> элемента.</span><span class="sxs-lookup"><span data-stu-id="e5b85-105">The first example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to define a <xref:System.Windows.Controls.Viewbox> element.</span></span> <span data-ttu-id="e5b85-106">Он назначает <xref:System.Windows.FrameworkElement.MaxWidth%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> 400.</span><span class="sxs-lookup"><span data-stu-id="e5b85-106">It assigns a <xref:System.Windows.FrameworkElement.MaxWidth%2A> and <xref:System.Windows.FrameworkElement.MaxHeight%2A> of 400.</span></span> <span data-ttu-id="e5b85-107">В примере операторы <xref:System.Windows.Controls.Image> элемент в пределах <xref:System.Windows.Controls.Viewbox>.</span><span class="sxs-lookup"><span data-stu-id="e5b85-107">The example nests an <xref:System.Windows.Controls.Image> element within the <xref:System.Windows.Controls.Viewbox>.</span></span> <span data-ttu-id="e5b85-108"><xref:System.Windows.Controls.Button>элементы, которые соответствуют значениям свойств для <xref:System.Windows.Controls.Viewbox.Stretch%2A> и <xref:System.Windows.Controls.StretchDirection> перечисления управляют растяжением вложенного <xref:System.Windows.Controls.Image>.</span><span class="sxs-lookup"><span data-stu-id="e5b85-108"><xref:System.Windows.Controls.Button> elements that correspond to the property values for the <xref:System.Windows.Controls.Viewbox.Stretch%2A> and <xref:System.Windows.Controls.StretchDirection> enumerations manipulate the stretching behavior of the nested <xref:System.Windows.Controls.Image>.</span></span>  
   
- [!code-xml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
   
- В следующем файле кода программной части выполняется обработка событий <xref:System.Windows.Controls.Primitives.ButtonBase.Click> объекта <xref:System.Windows.Controls.Button>, которые определены в предыдущем примере [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ <span data-ttu-id="e5b85-109">Дескрипторы файлов, в следующем кода <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> события, предыдущий [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] примере определяется.</span><span class="sxs-lookup"><span data-stu-id="e5b85-109">The following code-behind file handles the <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events that the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example defines.</span></span>  
   
  [!code-csharp[viewboxStretchLayoutSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml.cs#2)]
  [!code-vb[viewboxStretchLayoutSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/viewboxStretchLayoutSamp/VisualBasic/Window1.xaml.vb#2)]  
   
-## См. также  
- <xref:System.Windows.Controls.Viewbox>   
- <xref:System.Windows.Media.Stretch>   
+## <a name="see-also"></a><span data-ttu-id="e5b85-110">См. также</span><span class="sxs-lookup"><span data-stu-id="e5b85-110">See Also</span></span>  
+ <xref:System.Windows.Controls.Viewbox>  
+ <xref:System.Windows.Media.Stretch>  
  <xref:System.Windows.Controls.StretchDirection>

@@ -1,49 +1,49 @@
 ---
-title: "Общие сведения об элементе управления ProgressBar (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ProgressBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления хода выполнения, сведения об элементах управления хода выполнения"
-  - "ProgressBar - элемент управления [Windows Forms], сведения об элементе управления ProgressBar"
+title: "Общие сведения об элементе управления ProgressBar (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ProgressBar
+helpviewer_keywords:
+- ProgressBar control [Windows Forms], about ProgressBar control
+- progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc840220e1642acd7bd0e6f62e0ae7050c4e2027
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления ProgressBar (Windows Forms)
+# <a name="progressbar-control-overview-windows-forms"></a><span data-ttu-id="c6649-102">Общие сведения об элементе управления ProgressBar (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c6649-102">ProgressBar Control Overview (Windows Forms)</span></span>
 > [!IMPORTANT]
->  Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления <xref:System.Windows.Forms.ProgressBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ProgressBar> можно сохранить для обратной совместимости и использования в будущем.  
+>  <span data-ttu-id="c6649-103">Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления <xref:System.Windows.Forms.ProgressBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ProgressBar> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="c6649-103">The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- Элемент управления форм Windows Forms <xref:System.Windows.Forms.ProgressBar> показывает, на какой стадии находится выполняемый процесс, что выражается в соответствующем числе прямоугольников, расположенных на горизонтальной шкале.  Завершение процесса характеризуется заполненной шкалой.  Индикаторы выполнения обычно используются, чтобы показать пользователю время, оставшееся до завершения процесса, например при загрузке большого файла.  
+ <span data-ttu-id="c6649-104">Windows Forms <xref:System.Windows.Forms.ProgressBar> элемент управления показывает ход выполнения процесса, выражается в соответствующем числе прямоугольников, расположенных на горизонтальной полосе.</span><span class="sxs-lookup"><span data-stu-id="c6649-104">The Windows Forms <xref:System.Windows.Forms.ProgressBar> control indicates the progress of a process by displaying an appropriate number of rectangles arranged in a horizontal bar.</span></span> <span data-ttu-id="c6649-105">После завершения процесса заполняется строке.</span><span class="sxs-lookup"><span data-stu-id="c6649-105">When the process is complete, the bar is filled.</span></span> <span data-ttu-id="c6649-106">Индикаторы выполнения обычно используются для предоставления пользователю понять, как long для дождитесь завершения; Например, при большой файл загрузке.</span><span class="sxs-lookup"><span data-stu-id="c6649-106">Progress bars are commonly used to give the user an idea of how long to wait for a process to complete; for instance, when a large file is being loaded.</span></span>  
   
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.ProgressBar> может быть ориентирован в форме только горизонтально.  
+>  <span data-ttu-id="c6649-107"><xref:System.Windows.Forms.ProgressBar> Управления только может быть имеет горизонтальную ориентацию в форме.</span><span class="sxs-lookup"><span data-stu-id="c6649-107">The <xref:System.Windows.Forms.ProgressBar> control can only be oriented horizontally on the form.</span></span>  
   
-## Ключевые свойства и методы  
- Ключевыми свойствами элемента управления <xref:System.Windows.Forms.ProgressBar> являются <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A>.  Свойства <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> задают минимальное и максимальное значения, отображаемые на индикаторе выполнения.  Свойство <xref:System.Windows.Forms.ProgressBar.Value%2A> представляет объем выполненной работы для завершения операции.  Поскольку полоска, отображаемая в этом элементе управления, состоит из блоков, значение, отображаемое в <xref:System.Windows.Forms.ProgressBar>, представляет только приблизительное текущее значение свойства <xref:System.Windows.Forms.ProgressBar.Value%2A>.  Свойство <xref:System.Windows.Forms.ProgressBar.Value%2A> определяет момент отображения следующего блока исходя из размера <xref:System.Windows.Forms.ProgressBar>.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="c6649-108">Ключевые свойства и методы</span><span class="sxs-lookup"><span data-stu-id="c6649-108">Key Properties and Methods</span></span>  
+ <span data-ttu-id="c6649-109">Ключевые свойства <xref:System.Windows.Forms.ProgressBar> управления <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A>, и <xref:System.Windows.Forms.ProgressBar.Maximum%2A>.</span><span class="sxs-lookup"><span data-stu-id="c6649-109">The key properties of the <xref:System.Windows.Forms.ProgressBar> control are <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A>, and <xref:System.Windows.Forms.ProgressBar.Maximum%2A>.</span></span> <span data-ttu-id="c6649-110"><xref:System.Windows.Forms.ProgressBar.Minimum%2A> И <xref:System.Windows.Forms.ProgressBar.Maximum%2A> свойства задать максимальное и минимальное значения, можно отобразить индикатор выполнения.</span><span class="sxs-lookup"><span data-stu-id="c6649-110">The <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> properties set the maximum and minimum values the progress bar can display.</span></span> <span data-ttu-id="c6649-111"><xref:System.Windows.Forms.ProgressBar.Value%2A> Свойство представляет ход выполнения, выполненный по выполнению операции.</span><span class="sxs-lookup"><span data-stu-id="c6649-111">The <xref:System.Windows.Forms.ProgressBar.Value%2A> property represents the progress that has been made toward completing the operation.</span></span> <span data-ttu-id="c6649-112">Так как строки, отображаемой в элементе управления состоит из блоков, значение, отображаемое <xref:System.Windows.Forms.ProgressBar> управления лишь приблизительно <xref:System.Windows.Forms.ProgressBar.Value%2A> текущее значение свойства.</span><span class="sxs-lookup"><span data-stu-id="c6649-112">Because the bar displayed in the control is composed of blocks, the value displayed by the <xref:System.Windows.Forms.ProgressBar> control only approximates the <xref:System.Windows.Forms.ProgressBar.Value%2A> property's current value.</span></span> <span data-ttu-id="c6649-113">В зависимости от размера <xref:System.Windows.Forms.ProgressBar> управления <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство определяет время отображения следующего блока.</span><span class="sxs-lookup"><span data-stu-id="c6649-113">Based on the size of the <xref:System.Windows.Forms.ProgressBar> control, the <xref:System.Windows.Forms.ProgressBar.Value%2A> property determines when to display the next block.</span></span>  
   
- Наиболее распространенным способом обновления текущего значения выполнения является запись кода, задающего свойство <xref:System.Windows.Forms.ProgressBar.Value%2A>.  Например, при загрузке большого файла можно задать в качестве максимального значения размер файла в килобайтах.  Так, если для свойства <xref:System.Windows.Forms.ProgressBar.Maximum%2A> задано значение 100, для свойства <xref:System.Windows.Forms.ProgressBar.Minimum%2A> — значение 10, а для свойства <xref:System.Windows.Forms.ProgressBar.Value%2A> — значение 50, на шкале отобразятся 5 прямоугольников.  Это составляет половину числа, которое может быть отображено.  
+ <span data-ttu-id="c6649-114">Наиболее распространенным способом обновления текущего значения хода выполнения заключается в написании кода, чтобы задать <xref:System.Windows.Forms.ProgressBar.Value%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="c6649-114">The most common way to update the current progress value is to write code to set the <xref:System.Windows.Forms.ProgressBar.Value%2A> property.</span></span> <span data-ttu-id="c6649-115">В примере загрузка больших файлов может присвоить максимальный размер файла в килобайтах.</span><span class="sxs-lookup"><span data-stu-id="c6649-115">In the example of loading a large file, you might set the maximum to the size of the file in kilobytes.</span></span> <span data-ttu-id="c6649-116">Например если <xref:System.Windows.Forms.ProgressBar.Maximum%2A> задано значение 100, <xref:System.Windows.Forms.ProgressBar.Minimum%2A> задано значение 10 и <xref:System.Windows.Forms.ProgressBar.Value%2A> задано значение 50, отображаются прямоугольники 5.</span><span class="sxs-lookup"><span data-stu-id="c6649-116">For example, if the <xref:System.Windows.Forms.ProgressBar.Maximum%2A> property is set to 100, the <xref:System.Windows.Forms.ProgressBar.Minimum%2A> property is set to 10, and the <xref:System.Windows.Forms.ProgressBar.Value%2A> property is set to 50, 5 rectangles will be displayed.</span></span> <span data-ttu-id="c6649-117">Это половины номер, который может быть отображен.</span><span class="sxs-lookup"><span data-stu-id="c6649-117">This is half of the number that can be displayed.</span></span>  
   
- Однако помимо непосредственного задания свойства <xref:System.Windows.Forms.ProgressBar.Value%2A> существуют другие способы изменить значение, отображаемое в элементе управления <xref:System.Windows.Forms.ProgressBar>.  Можно использовать свойство <xref:System.Windows.Forms.ProgressBar.Step%2A> для указания значения шага изменения свойства <xref:System.Windows.Forms.ProgressBar.Value%2A>.  При этом значение будет изменяться при вызове метода <xref:System.Windows.Forms.ProgressBar.PerformStep%2A>.  Для изменения значения приращения можно использовать метод <xref:System.Windows.Forms.ProgressBar.Increment%2A> и задать значение, которое будет использовать для приращения свойства <xref:System.Windows.Forms.ProgressBar.Value%2A>.  
+ <span data-ttu-id="c6649-118">Однако существуют другие способы для изменения значения, отображаемого в <xref:System.Windows.Forms.ProgressBar> управления, кроме параметра <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство напрямую.</span><span class="sxs-lookup"><span data-stu-id="c6649-118">However, there are other ways to modify the value displayed by the <xref:System.Windows.Forms.ProgressBar> control, aside from setting the <xref:System.Windows.Forms.ProgressBar.Value%2A> property directly.</span></span> <span data-ttu-id="c6649-119"><xref:System.Windows.Forms.ProgressBar.Step%2A> Свойство может использоваться для указания значения для увеличения <xref:System.Windows.Forms.ProgressBar.Value%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="c6649-119">The <xref:System.Windows.Forms.ProgressBar.Step%2A> property can be used to specify a value to increment the <xref:System.Windows.Forms.ProgressBar.Value%2A> property by.</span></span> <span data-ttu-id="c6649-120">После этого вызова <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> метод приводит к увеличению значения.</span><span class="sxs-lookup"><span data-stu-id="c6649-120">Then, calling the <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> method will increment the value.</span></span> <span data-ttu-id="c6649-121">Для изменения значения приращения, можно использовать <xref:System.Windows.Forms.ProgressBar.Increment%2A> метод и укажите значения, которое увеличивается <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="c6649-121">To vary the increment value, you can use the <xref:System.Windows.Forms.ProgressBar.Increment%2A> method and specify a value with which to increment the <xref:System.Windows.Forms.ProgressBar.Value%2A> property.</span></span>  
   
- Другим элементом управления для графического представления пользователю сведений о текущем действии является элемент управления <xref:System.Windows.Forms.StatusBar>.  
+ <span data-ttu-id="c6649-122">Является другим элементом управления для графического представления пользователю сведений о текущем действии <xref:System.Windows.Forms.StatusBar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c6649-122">Another control that graphically informs the user about a current action is the <xref:System.Windows.Forms.StatusBar> control.</span></span>  
   
 > [!IMPORTANT]
->  Элементы управления <xref:System.Windows.Forms.StatusStrip> и <xref:System.Windows.Forms.ToolStripStatusLabel> заменяют элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> и расширяют их функциональные возможности; однако при необходимости элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> можно сохранить для обратной совместимости и использования в будущем.  
+>  <span data-ttu-id="c6649-123"><xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> заменить элементы управления и добавить функциональные возможности в <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления можно сохранить для обратной совместимости и использования в будущем, если вы Выберите этот параметр.</span><span class="sxs-lookup"><span data-stu-id="c6649-123">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.ProgressBar>   
- [Элемент управления ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c6649-124">См. также</span><span class="sxs-lookup"><span data-stu-id="c6649-124">See Also</span></span>  
+ <xref:System.Windows.Forms.ProgressBar>  
+ [<span data-ttu-id="c6649-125">Элемент управления ProgressBar</span><span class="sxs-lookup"><span data-stu-id="c6649-125">ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)

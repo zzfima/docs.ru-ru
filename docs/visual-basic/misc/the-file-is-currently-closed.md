@@ -1,25 +1,28 @@
 ---
-title: "Файл в данный момент закрыт | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Файл в данный момент закрыт"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9a484488193e8eaf0f80d461d866de0beba05514
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Файл в данный момент закрыт
-Была предпринята попытка выполнить операцию, которую можно применять только к открытым файлам, но в этот момент файл был закрыт.  
+# <a name="the-file-is-currently-closed"></a><span data-ttu-id="23d03-102">Файл в данный момент закрыт</span><span class="sxs-lookup"><span data-stu-id="23d03-102">The file is currently closed</span></span>
+<span data-ttu-id="23d03-103">Была предпринята попытка выполнить операцию, которую можно применять только к открытым файлам, но в этот момент файл был закрыт.</span><span class="sxs-lookup"><span data-stu-id="23d03-103">An attempt has been made to perform an operation that can only be performed on an open file, but the file is currently closed.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="23d03-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="23d03-104">To correct this error</span></span>  
   
--   Откройте файл и повторите операцию.  
+-   <span data-ttu-id="23d03-105">Откройте файл и повторите операцию.</span><span class="sxs-lookup"><span data-stu-id="23d03-105">Open the file and attempt the operation again.</span></span>  
   
-## См. также  
- [НЕ В СБОРКЕ. Функция FileOpen](http://msdn.microsoft.com/ru-ru/0f07e1df-d4ea-44a9-a21c-76aa2e242f81)   
- [НЕ В СБОРКЕ. Функция FileClose](http://msdn.microsoft.com/ru-ru/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)   
- [Объект My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   
- [Доступ к файлам с помощью Visual Basic](../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+## <a name="see-also"></a><span data-ttu-id="23d03-106">См. также</span><span class="sxs-lookup"><span data-stu-id="23d03-106">See Also</span></span>  
+ [<span data-ttu-id="23d03-107">НЕ в СБОРКЕ: Функция FileOpen</span><span class="sxs-lookup"><span data-stu-id="23d03-107">NOT IN BUILD: FileOpen Function</span></span>](http://msdn.microsoft.com/en-us/0f07e1df-d4ea-44a9-a21c-76aa2e242f81)  
+ [<span data-ttu-id="23d03-108">НЕ в СБОРКЕ: Функция FileClose</span><span class="sxs-lookup"><span data-stu-id="23d03-108">NOT IN BUILD: FileClose Function</span></span>](http://msdn.microsoft.com/en-us/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)  
+ [<span data-ttu-id="23d03-109">Объект My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="23d03-109">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [<span data-ttu-id="23d03-110">Доступ к файлам с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="23d03-110">File Access with Visual Basic</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

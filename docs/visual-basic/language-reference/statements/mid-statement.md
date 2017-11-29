@@ -1,51 +1,33 @@
 ---
-title: "Оператор Mid | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Оператор Mid"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
-dev_langs:
-- VB
 helpviewer_keywords:
-- substrings, Mid statement
+- substrings [Visual Basic], Mid statement
 - strings [Visual Basic], substrings
-- Mid statement
+- Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e385d6838daa16d45903c6b270fc47ad88797845
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="mid-statement"></a>Оператор Mid
-Заменяет указанное число знаков в `String` переменной на знаки из другой строки.  
+# <a name="mid-statement"></a><span data-ttu-id="f154b-102">Оператор Mid</span><span class="sxs-lookup"><span data-stu-id="f154b-102">Mid Statement</span></span>
+<span data-ttu-id="f154b-103">Заменяет указанное число символов в `String` переменной символами из другой строки.</span><span class="sxs-lookup"><span data-stu-id="f154b-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="f154b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f154b-104">Syntax</span></span>  
   
 ```  
 Mid( _  
@@ -55,46 +37,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## <a name="parts"></a>Части  
+## <a name="parts"></a><span data-ttu-id="f154b-105">Части</span><span class="sxs-lookup"><span data-stu-id="f154b-105">Parts</span></span>  
  `Target`  
- Обязательный. Имя `String` переменной для изменения.  
+ <span data-ttu-id="f154b-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="f154b-106">Required.</span></span> <span data-ttu-id="f154b-107">Имя `String` переменной для изменения.</span><span class="sxs-lookup"><span data-stu-id="f154b-107">Name of the `String` variable to modify.</span></span>  
   
  `Start`  
- Обязательный. `Integer`выражение. Позиция знака в `Target` начинается замена текста. `Start`использует индекс от единицы.  
+ <span data-ttu-id="f154b-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="f154b-108">Required.</span></span> <span data-ttu-id="f154b-109">`Integer`выражение.</span><span class="sxs-lookup"><span data-stu-id="f154b-109">`Integer` expression.</span></span> <span data-ttu-id="f154b-110">Позиция знака в `Target` где начинается замена текста.</span><span class="sxs-lookup"><span data-stu-id="f154b-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="f154b-111">`Start`использует однобазовый индекс.</span><span class="sxs-lookup"><span data-stu-id="f154b-111">`Start` uses a one-based index.</span></span>  
   
  `Length`  
- Необязательный. `Integer`выражение. Число знаков для замены. Если не указано, все `String` используется.  
+ <span data-ttu-id="f154b-112">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="f154b-112">Optional.</span></span> <span data-ttu-id="f154b-113">`Integer`выражение.</span><span class="sxs-lookup"><span data-stu-id="f154b-113">`Integer` expression.</span></span> <span data-ttu-id="f154b-114">Число символов для замены.</span><span class="sxs-lookup"><span data-stu-id="f154b-114">Number of characters to replace.</span></span> <span data-ttu-id="f154b-115">Если не указано, все `String` используется.</span><span class="sxs-lookup"><span data-stu-id="f154b-115">If omitted, all of `String` is used.</span></span>  
   
  `StringExpression`  
- Обязательный. `String`выражение, которое заменяет часть `Target`.  
+ <span data-ttu-id="f154b-116">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="f154b-116">Required.</span></span> <span data-ttu-id="f154b-117">`String`выражение, которое заменяет часть `Target`.</span><span class="sxs-lookup"><span data-stu-id="f154b-117">`String` expression that replaces part of `Target`.</span></span>  
   
-## <a name="exceptions"></a>Исключения  
+## <a name="exceptions"></a><span data-ttu-id="f154b-118">Исключения</span><span class="sxs-lookup"><span data-stu-id="f154b-118">Exceptions</span></span>  
   
-|Тип исключения|Условие|  
+|<span data-ttu-id="f154b-119">Тип исключения</span><span class="sxs-lookup"><span data-stu-id="f154b-119">Exception type</span></span>|<span data-ttu-id="f154b-120">Условие</span><span class="sxs-lookup"><span data-stu-id="f154b-120">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException></xref:System.ArgumentException>|`Start`<= 0="" or=""></=>`Length`< 0.></ 0.>|  
+|<xref:System.ArgumentException>|<span data-ttu-id="f154b-121">`Start`< = 0 или `Length` < 0.</span><span class="sxs-lookup"><span data-stu-id="f154b-121">`Start` <= 0 or `Length` < 0.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Число заменяемых знаков всегда будет меньше или равно числу символов в `Target`.  
+## <a name="remarks"></a><span data-ttu-id="f154b-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="f154b-122">Remarks</span></span>  
+ <span data-ttu-id="f154b-123">Число заменяемых знаков, всегда меньше или равно количество символов в `Target`.</span><span class="sxs-lookup"><span data-stu-id="f154b-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
   
- Visual Basic имеет <xref:Microsoft.VisualBasic.Strings.Mid%2A>функции и `Mid` инструкции.</xref:Microsoft.VisualBasic.Strings.Mid%2A> Эти элементы, как работают на указанное число знаков в строке, но `Mid` функция возвращает символы при `Mid` инструкция заменяет символы. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</xref:Microsoft.VisualBasic.Strings.Mid%2A>  
+ <span data-ttu-id="f154b-124">Visual Basic использует <xref:Microsoft.VisualBasic.Strings.Mid%2A> функции и `Mid` инструкции.</span><span class="sxs-lookup"><span data-stu-id="f154b-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="f154b-125">Эти элементы, они работают на указанное число знаков в строке, но `Mid` функция возвращает символов при `Mid` инструкция заменяет символы.</span><span class="sxs-lookup"><span data-stu-id="f154b-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="f154b-126">Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span><span class="sxs-lookup"><span data-stu-id="f154b-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
   
 > [!NOTE]
->  `MidB` Инструкции более ранних версиях Visual Basic заменяет подстроку в байтах, а не символы. Он используется главным образом для преобразования строк в приложениях с двухбайтовой кодировки (DBCS). Все строки Visual Basic кодируются в Юникоде, и `MidB` больше не поддерживается.  
+>  <span data-ttu-id="f154b-127">`MidB` Оператором в более ранних версиях Visual Basic заменяет подстроку в байтах, а не символы.</span><span class="sxs-lookup"><span data-stu-id="f154b-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="f154b-128">Он используется главным образом для преобразования строк в приложениях с двухбайтовой кодировки (DBCS).</span><span class="sxs-lookup"><span data-stu-id="f154b-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="f154b-129">Все строки Visual Basic кодируются в Юникоде, и `MidB` больше не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="f154b-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере используется `Mid` инструкции для замены указанное число символов в строковой переменной на знаки из другой строки.  
+## <a name="example"></a><span data-ttu-id="f154b-130">Пример</span><span class="sxs-lookup"><span data-stu-id="f154b-130">Example</span></span>  
+ <span data-ttu-id="f154b-131">В этом примере используется `Mid` инструкцию, чтобы заменить указанное число символов в строковой переменной символами из другой строки.</span><span class="sxs-lookup"><span data-stu-id="f154b-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
   
- [!code-vb[VbVbalrStrings&#5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## <a name="requirements"></a>Требования  
- **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="f154b-132">Требования</span><span class="sxs-lookup"><span data-stu-id="f154b-132">Requirements</span></span>  
+ <span data-ttu-id="f154b-133">**Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="f154b-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **Модуль:**`Strings`  
+ <span data-ttu-id="f154b-134">**Модуль:**`Strings`</span><span class="sxs-lookup"><span data-stu-id="f154b-134">**Module:** `Strings`</span></span>  
   
- **Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ <span data-ttu-id="f154b-135">**Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f154b-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
- [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [Знакомство со строками в Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="f154b-136">См. также</span><span class="sxs-lookup"><span data-stu-id="f154b-136">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
+ [<span data-ttu-id="f154b-137">Строки</span><span class="sxs-lookup"><span data-stu-id="f154b-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [<span data-ttu-id="f154b-138">Знакомство со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f154b-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

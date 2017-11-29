@@ -1,45 +1,48 @@
 ---
-title: "Практическое руководство. Анимация контекстного меню | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Popup - элементы управления"
-  - "Popup - элемент управления, анимирование"
+title: "Практическое руководство. Анимация контекстного меню"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Popup control [WPF], animating
+- animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 276c1a54cfdddcde84c0702f4e84f1dc6174bbda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация контекстного меню
-В этом примере показаны два способа анимации элемента управления <xref:System.Windows.Controls.Primitives.Popup>.  
+# <a name="how-to-animate-a-popup"></a><span data-ttu-id="50f2d-102">Практическое руководство. Анимация контекстного меню</span><span class="sxs-lookup"><span data-stu-id="50f2d-102">How to: Animate a Popup</span></span>
+<span data-ttu-id="50f2d-103">В этом примере показаны два способа анимации <xref:System.Windows.Controls.Primitives.Popup> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="50f2d-103">This example shows two ways to animate a <xref:System.Windows.Controls.Primitives.Popup> control.</span></span>  
   
-## Пример  
- В примере свойству <xref:System.Windows.Controls.Primitives.PopupAnimation> присваивается значение <xref:System.Windows.Controls.Primitives.PopupAnimation>, в результате чего достигается эффект «скольжения» при появлении элемента <xref:System.Windows.Controls.Primitives.Popup>.  
+## <a name="example"></a><span data-ttu-id="50f2d-104">Пример</span><span class="sxs-lookup"><span data-stu-id="50f2d-104">Example</span></span>  
+ <span data-ttu-id="50f2d-105">В следующем примере задается <xref:System.Windows.Controls.Primitives.PopupAnimation> свойство в значение <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, чего <xref:System.Windows.Controls.Primitives.Popup> для «слайд в» когда он появится.</span><span class="sxs-lookup"><span data-stu-id="50f2d-105">The following example sets the <xref:System.Windows.Controls.Primitives.PopupAnimation> property to a value of <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, which causes the <xref:System.Windows.Controls.Primitives.Popup> to "slide-in" when it appears.</span></span>  
   
- Чтобы повернуть элемент управления <xref:System.Windows.Controls.Primitives.Popup>, в этом примере значение <xref:System.Windows.Media.RotateTransform> присваивается свойству <xref:System.Windows.UIElement.RenderTransform%2A> объекта <xref:System.Windows.Controls.Canvas>, который является дочерним элементом <xref:System.Windows.Controls.Primitives.Popup>.  
+ <span data-ttu-id="50f2d-106">Чтобы повернуть <xref:System.Windows.Controls.Primitives.Popup>, этот пример назначает <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.UIElement.RenderTransform%2A> свойство <xref:System.Windows.Controls.Canvas>, который является дочерним элементом элемента <xref:System.Windows.Controls.Primitives.Popup>.</span><span class="sxs-lookup"><span data-stu-id="50f2d-106">In order to rotate the <xref:System.Windows.Controls.Primitives.Popup>, this example assigns a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property on the <xref:System.Windows.Controls.Canvas>, which is the child element of the <xref:System.Windows.Controls.Primitives.Popup>.</span></span>  
   
- Для корректной работы преобразования в примере необходимо присвоить свойству <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> значение `true`.  Кроме того, в свойстве <xref:System.Windows.FrameworkElement.Margin%2A> содержимого объекта <xref:System.Windows.Controls.Canvas> должно быть задано достаточно места для поворота элемента <xref:System.Windows.Controls.Primitives.Popup>.  
+ <span data-ttu-id="50f2d-107">Для корректной работы преобразования в примере необходимо присвоить <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="50f2d-107">For the transform to work correctly, the example must set the <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> property to `true`.</span></span> <span data-ttu-id="50f2d-108">Кроме того <xref:System.Windows.FrameworkElement.Margin%2A> на <xref:System.Windows.Controls.Canvas> содержимого необходимо указать достаточно места для <xref:System.Windows.Controls.Primitives.Popup> для поворота.</span><span class="sxs-lookup"><span data-stu-id="50f2d-108">In addition, the <xref:System.Windows.FrameworkElement.Margin%2A> on the <xref:System.Windows.Controls.Canvas> content must specify enough space for the <xref:System.Windows.Controls.Primitives.Popup> to rotate.</span></span>  
   
- [!code-xml[AnimatedPopup#RotateTransform2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
+ [!code-xaml[AnimatedPopup#RotateTransform2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
   
- В следующем примере показано, как событие <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, которое возникает при щелчке кнопки <xref:System.Windows.Controls.Button>, инициирует событие <xref:System.Windows.Media.Animation.Storyboard>, запускающее анимацию.  
+ <span data-ttu-id="50f2d-109">В следующем примере показан способ <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, возникающее при <xref:System.Windows.Controls.Button> нажатии триггеры <xref:System.Windows.Media.Animation.Storyboard> , запускающее анимацию.</span><span class="sxs-lookup"><span data-stu-id="50f2d-109">The following example shows how a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event, which occurs when a <xref:System.Windows.Controls.Button> is clicked, triggers the <xref:System.Windows.Media.Animation.Storyboard> that starts the animation.</span></span>  
   
- [!code-xml[AnimatedPopup#RotateTransform1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
+ [!code-xaml[AnimatedPopup#RotateTransform1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
   
-## См. также  
- <xref:System.Windows.UIElement.RenderTransform%2A>   
- <xref:System.Windows.Controls.Primitives.BulletDecorator>   
- <xref:System.Windows.Media.RotateTransform>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- <xref:System.Windows.Controls.Primitives.Popup>   
- [Практические руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)   
- [Общие сведения о контекстном меню](../../../../docs/framework/wpf/controls/popup-overview.md)
+## <a name="see-also"></a><span data-ttu-id="50f2d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="50f2d-110">See Also</span></span>  
+ <xref:System.Windows.UIElement.RenderTransform%2A>  
+ <xref:System.Windows.Controls.Primitives.BulletDecorator>  
+ <xref:System.Windows.Media.RotateTransform>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ <xref:System.Windows.Controls.Primitives.Popup>  
+ [<span data-ttu-id="50f2d-111">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="50f2d-111">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [<span data-ttu-id="50f2d-112">Общие сведения о контекстном меню</span><span class="sxs-lookup"><span data-stu-id="50f2d-112">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)

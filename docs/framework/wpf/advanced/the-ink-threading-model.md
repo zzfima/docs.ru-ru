@@ -1,107 +1,110 @@
 ---
-title: "Потоковая модель рукописного ввода | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "поток пользовательского интерфейса приложения"
-  - "поток динамической отрисовки"
-  - "подключаемый модуль приема рукописного ввода"
-  - "потоковая модель рукописного ввода"
-  - "рукописный ввод, отрисовка"
-  - "поток пера"
-  - "подключаемые модули, для рукописного ввода"
-  - "отрисовка рукописных данных"
-  - "подключаемый модуль пера"
-  - "потоковая модель"
+title: "Потоковая модель рукописного ввода"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application user interface thread [WPF]
+- stylus plug-in
+- ink threading model [WPF]
+- ink [WPF], rendering
+- pen thread [WPF]
+- threading model [WPF]
+- rendering ink [WPF]
+- dynamic rendering thread [WPF]
+- ink collection plug-in
+- plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: efbd05f88b962363e3b866fbf914f6d3a37823cc
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Потоковая модель рукописного ввода
-Одним из преимуществ рукописного ввода на планшетных ПК является его сходство с письмом обычной ручкой на бумаге.  Чтобы добиться этого, перу планшета приходится получать входные данные гораздо быстрее мыши и отображать рукописные данные как записи пользователя.  Потока пользовательского интерфейса приложения недостаточно для сбора данных пера и отрисовки рукописного ввода, так как он может быть заблокирован.  Чтобы устранить эту проблему, приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует два дополнительных потока, когда пользователь осуществляет рукописный ввод.  
+# <a name="the-ink-threading-model"></a><span data-ttu-id="9b9af-102">Потоковая модель рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="9b9af-102">The Ink Threading Model</span></span>
+<span data-ttu-id="9b9af-103">Одно из преимуществ рукописного ввода на планшетных ПК — что он сходство с записи с обычной ручкой и документ.</span><span class="sxs-lookup"><span data-stu-id="9b9af-103">One of the benefits of ink on a Tablet PC is that it feels a lot like writing with a regular pen and paper.</span></span>  <span data-ttu-id="9b9af-104">Для этого пера получать входные данные гораздо быстрее мыши и отображает рукописные данные как записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="9b9af-104">To accomplish this, the tablet pen collects input data at a much higher rate than a mouse does and renders the ink as the user writes.</span></span>  <span data-ttu-id="9b9af-105">Потока пользовательского интерфейса приложения недостаточно для сбора данных пера и отображения рукописного ввода, так как он может быть заблокирован.</span><span class="sxs-lookup"><span data-stu-id="9b9af-105">The application's user interface (UI) thread is not sufficient for collecting pen data and rendering ink, because it can become blocked.</span></span>  <span data-ttu-id="9b9af-106">Чтобы устранить эту проблему, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложение использует два дополнительных потока, когда пользователь осуществляет рукописный ввод.</span><span class="sxs-lookup"><span data-stu-id="9b9af-106">To solve this, a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application uses two additional threads when a user writes ink.</span></span>  
   
- Ниже перечислены потоки, принимающие участие в сборе и отрисовке цифровых рукописных данных:  
+ <span data-ttu-id="9b9af-107">Ниже перечислены потоки, принимающие участие в сборе и отображении рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="9b9af-107">The following list describes the threads that take part in collecting and rendering digital ink:</span></span>  
   
--   Потоком пера является поток, который принимает ввод от пера.  \(На самом деле, это пул потоков, но в этом разделе он называется потоком пера.\)  
+-   <span data-ttu-id="9b9af-108">Потоком пера потока, который принимает ввод от пера.</span><span class="sxs-lookup"><span data-stu-id="9b9af-108">Pen thread - the thread that takes input from the stylus.</span></span>  <span data-ttu-id="9b9af-109">(На самом деле это пул потоков, но в этом разделе он называется потоком пера.)</span><span class="sxs-lookup"><span data-stu-id="9b9af-109">(In reality, this is a thread pool, but this topic refers to it as a pen thread.)</span></span>  
   
--   Потоком пользовательского интерфейса приложения является поток, управляющий пользовательским интерфейсом приложения.  
+-   <span data-ttu-id="9b9af-110">Потоком пользовательского интерфейса приложения - поток, который определяет пользовательский интерфейс приложения.</span><span class="sxs-lookup"><span data-stu-id="9b9af-110">Application user interface thread - the thread that controls the user interface of the application.</span></span>  
   
--   Потоком динамической отрисовки является поток, отображающий рукописные данные при вводе пользователем каждого штриха.  Поток динамической отрисовки отличается от потока, отображающего другие элементы пользовательского интерфейса приложения, как указывается в разделе [Модель потоков](../../../../docs/framework/wpf/advanced/threading-model.md) WPF.  
+-   <span data-ttu-id="9b9af-111">Поток динамической отрисовки - поток, который отображает рукописные данные, то время как пользователь штриха.</span><span class="sxs-lookup"><span data-stu-id="9b9af-111">Dynamic rendering thread - the thread that renders the ink while the user draws a stroke.</span></span> <span data-ttu-id="9b9af-112">Поток динамической отрисовки отличается от потока, отображающего другие элементы пользовательского интерфейса для приложения, как было сказано в окне WPF [потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md).</span><span class="sxs-lookup"><span data-stu-id="9b9af-112">The dynamic rendering thread is different than the thread that renders other UI elements for the application, as mentioned in Window Presentation Foundation [Threading Model](../../../../docs/framework/wpf/advanced/threading-model.md).</span></span>  
   
- Используется одна и та же модель рукописного ввода, независимо от того, использует приложение <xref:System.Windows.Controls.InkCanvas> или пользовательский элемент управления, аналогичный элементу управления в [Создание элемента управления рукописным вводом](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  Хотя в этом разделе обсуждаются потоки в терминах <xref:System.Windows.Controls.InkCanvas>, те же принципы применяются для создания пользовательского элемента управления.  
+ <span data-ttu-id="9b9af-113">Модель рукописного ввода совпадает ли приложение использует <xref:System.Windows.Controls.InkCanvas> или пользовательского элемента управления подобное в [создания элемента управления ввода рукописного ввода](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span><span class="sxs-lookup"><span data-stu-id="9b9af-113">The inking model is the same whether the application uses the <xref:System.Windows.Controls.InkCanvas> or a custom control similar to the one in [Creating an Ink Input Control](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).</span></span>  <span data-ttu-id="9b9af-114">Несмотря на то, что в этом разделе обсуждаются потоки в терминах <xref:System.Windows.Controls.InkCanvas>, те же принципы применяются при создании пользовательского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9b9af-114">Although this topic discusses threading in terms of the <xref:System.Windows.Controls.InkCanvas>, the same concepts apply when you create a custom control.</span></span>  
   
-## Общие сведения о работе с потоками  
- На следующей схеме показана модель потоков в момент, когда пользователь рисует штрих:  
+## <a name="threading-overview"></a><span data-ttu-id="9b9af-115">Работа с потоками Обзор</span><span class="sxs-lookup"><span data-stu-id="9b9af-115">Threading Overview</span></span>  
+ <span data-ttu-id="9b9af-116">На следующей схеме показана модель потоков, когда пользователем штриха:</span><span class="sxs-lookup"><span data-stu-id="9b9af-116">The following diagram illustrates the threading model when a user draws a stroke:</span></span>  
   
- ![Потоковая модель во время отрисовки мазка.](../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading\_DrawingInk")  
+ <span data-ttu-id="9b9af-117">![Потоковая модель во время отрисовки мазка. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")</span><span class="sxs-lookup"><span data-stu-id="9b9af-117">![Threading model while drawing a stroke.](../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")</span></span>  
   
-1.  Действия, происходящие во время рисования пользователем штриха  
+1.  <span data-ttu-id="9b9af-118">Действия, происходящие во время рисования штрих</span><span class="sxs-lookup"><span data-stu-id="9b9af-118">Actions occurring while the user draws the stroke</span></span>  
   
-    1.  Когда пользователь рисует штрих, точки пера поставляются в поток пера.  Подключаемые модули пера, включая <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, принимают точки пера в потоке пера и имеют возможность изменить их, прежде чем их получит <xref:System.Windows.Controls.InkCanvas>.  
+    1.  <span data-ttu-id="9b9af-119">Когда пользователь рисует штрих, точки пера поставляются в потоке пера.</span><span class="sxs-lookup"><span data-stu-id="9b9af-119">When the user draws a stroke, the stylus points come in on the pen thread.</span></span>  <span data-ttu-id="9b9af-120">Подключаемые модули пера, включая <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, принимают точки пера в потоке пера и иметь возможность изменить их, прежде чем <xref:System.Windows.Controls.InkCanvas> их получает.</span><span class="sxs-lookup"><span data-stu-id="9b9af-120">Stylus plug-ins, including the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, accept the stylus points on the pen thread and have the chance to modify them before the <xref:System.Windows.Controls.InkCanvas> receives them.</span></span>  
   
-    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> воспроизводит точки пера в потоке динамической отрисовки.  Это происходит одновременно с предыдущим шагом.  
+    2.  <span data-ttu-id="9b9af-121"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Воспроизводит точки пера в потоке динамической отрисовки.</span><span class="sxs-lookup"><span data-stu-id="9b9af-121">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the stylus points on the dynamic rendering thread.</span></span> <span data-ttu-id="9b9af-122">Это происходит в то же время на предыдущем этапе.</span><span class="sxs-lookup"><span data-stu-id="9b9af-122">This happens at the same time as the previous step.</span></span>  
   
-    3.  <xref:System.Windows.Controls.InkCanvas> получает точки пера в поток пользовательского интерфейса.  
+    3.  <span data-ttu-id="9b9af-123"><xref:System.Windows.Controls.InkCanvas> Получает точки пера в потоке пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="9b9af-123">The <xref:System.Windows.Controls.InkCanvas> receives the stylus points on the UI thread.</span></span>  
   
-2.  Действия, происходящие после того, как пользователь завершает штрих  
+2.  <span data-ttu-id="9b9af-124">Действия, происходящие после пользователь завершает штрих</span><span class="sxs-lookup"><span data-stu-id="9b9af-124">Actions occurring after the user ends the stroke</span></span>  
   
-    1.  Когда пользователь прекращает рисование штриха, <xref:System.Windows.Controls.InkCanvas> создает объект <xref:System.Windows.Ink.Stroke> и добавляет его к <xref:System.Windows.Controls.InkPresenter>, который статически его отображает.  
+    1.  <span data-ttu-id="9b9af-125">Когда пользователь завершает рисование штриха, <xref:System.Windows.Controls.InkCanvas> создает <xref:System.Windows.Ink.Stroke> объекта и добавляет его в <xref:System.Windows.Controls.InkPresenter>, который статически его отображает.</span><span class="sxs-lookup"><span data-stu-id="9b9af-125">When the user finishes drawing the stroke, the <xref:System.Windows.Controls.InkCanvas> creates a <xref:System.Windows.Ink.Stroke> object and adds it to the <xref:System.Windows.Controls.InkPresenter>, which statically renders it.</span></span>  
   
-    2.  Поток пользовательского интерфейса оповещает <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, что штрих отображен статически, поэтому <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> удаляет его визуальное представление.  
+    2.  <span data-ttu-id="9b9af-126">Поток пользовательского интерфейса оповещает <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , статически штриха отображается, поэтому <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> удаляет его визуальное представление штриха.</span><span class="sxs-lookup"><span data-stu-id="9b9af-126">The UI thread alerts the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> that the stroke is statically rendered, so the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> removes its visual representation of the stroke.</span></span>  
   
-## Коллекция рукописного ввода и подключаемые модули пера  
- Каждый <xref:System.Windows.UIElement> имеет <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  Объекты в <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> получают точки пера и могут изменять их в потоке пера.  Объекты <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> получают точки пера согласно их порядку в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
+## <a name="ink-collection-and-stylus-plug-ins"></a><span data-ttu-id="9b9af-127">Коллекция рукописного ввода и подключаемых модулей пера</span><span class="sxs-lookup"><span data-stu-id="9b9af-127">Ink collection and Stylus Plug-ins</span></span>  
+ <span data-ttu-id="9b9af-128">Каждый <xref:System.Windows.UIElement> имеет <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="9b9af-128">Each <xref:System.Windows.UIElement> has a <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span>  <span data-ttu-id="9b9af-129"><xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Объекты в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> получать и изменять точки пера в потоке пера.</span><span class="sxs-lookup"><span data-stu-id="9b9af-129">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> receive and can modify the stylus points on the pen thread.</span></span> <span data-ttu-id="9b9af-130"><xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Объекты получают точки пера согласно порядку их следования в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span><span class="sxs-lookup"><span data-stu-id="9b9af-130">The <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> objects receive the stylus points according to their order in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.</span></span>  
   
- Следующая диаграмма иллюстрирует гипотетическую ситуацию, когда коллекция <xref:System.Windows.UIElement.StylusPlugIns%2A> элементов <xref:System.Windows.UIElement> содержит `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и `stylusPlugin2` в указанном порядке.  
+ <span data-ttu-id="9b9af-131">На следующей схеме показана гипотетическая ситуация где <xref:System.Windows.UIElement.StylusPlugIns%2A> коллекцию <xref:System.Windows.UIElement> содержит `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, и `stylusPlugin2`в этом порядке.</span><span class="sxs-lookup"><span data-stu-id="9b9af-131">The following diagram illustrates the hypothetical situation where the <xref:System.Windows.UIElement.StylusPlugIns%2A> collection of a <xref:System.Windows.UIElement> contains `stylusPlugin1`, a <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, and `stylusPlugin2`, in that order.</span></span>  
   
- ![Порядок вывода подключаемых модулей пера.](../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading\_PluginOrder")  
+ <span data-ttu-id="9b9af-132">![Порядок модулей пера влияет на выходные данные. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")</span><span class="sxs-lookup"><span data-stu-id="9b9af-132">![Order of Stylus Plugins affect output.](../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")</span></span>  
   
- На предыдущей иллюстрации имеет место следующая ситуация:  
+ <span data-ttu-id="9b9af-133">На предыдущей диаграмме выполняется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9b9af-133">In the previous diagram, the following behavior takes place:</span></span>  
   
-1.  `StylusPlugin1` изменяет значения x и y.  
+1.  <span data-ttu-id="9b9af-134">`StylusPlugin1`изменяет значения x и y.</span><span class="sxs-lookup"><span data-stu-id="9b9af-134">`StylusPlugin1` modifies the values for x and y.</span></span>  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> получает измененные точки пера и помещает их в поток динамической отрисовки.  
+2.  <span data-ttu-id="9b9af-135"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>Получает измененные точки пера и помещает их в поток динамической отрисовки.</span><span class="sxs-lookup"><span data-stu-id="9b9af-135"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives the modified stylus points and renders them on the dynamic rendering thread.</span></span>  
   
-3.  `StylusPlugin2` получает измененные точки пера и выполняет дальнейшие изменения значений x и y.  
+3.  <span data-ttu-id="9b9af-136">`StylusPlugin2`Получает измененные точки пера и выполняет дальнейшие изменения значений x и y.</span><span class="sxs-lookup"><span data-stu-id="9b9af-136">`StylusPlugin2` receives the modified stylus points and further modifies the values for x and y.</span></span>  
   
-4.  Приложение собирает точки пера и статически отображает штрих, когда пользователь завершает штрих.  
+4.  <span data-ttu-id="9b9af-137">Приложение собирает точки пера и, когда пользователь завершает штрих статически отображает штриха.</span><span class="sxs-lookup"><span data-stu-id="9b9af-137">The application collects the stylus points, and, when the user finishes the stroke, statically renders the stroke.</span></span>  
   
- Предположим, что `stylusPlugin1` ограничивает точки пера прямоугольной областью, а `stylusPlugin2` переносит точки пера вправо.  В предыдущем сценарии <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> получает ограниченные, но не перенесенные точки пера.  Во время рисования штрих отображается в пределах прямоугольной области, но он не доступен для переноса до тех пор, пока пользователь не оторвет от планшета перо.  
+ <span data-ttu-id="9b9af-138">Предположим, что `stylusPlugin1` ограничивает точки пера в прямоугольник и `stylusPlugin2` переносит точки пера вправо.</span><span class="sxs-lookup"><span data-stu-id="9b9af-138">Suppose that `stylusPlugin1` restricts the stylus points to a rectangle and `stylusPlugin2` translates the stylus points to the right.</span></span>  <span data-ttu-id="9b9af-139">В приведенном выше сценарии <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> принимает ограниченные, но не перенесенные точки пера.</span><span class="sxs-lookup"><span data-stu-id="9b9af-139">In the previous scenario, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> receives the restricted stylus points, but not the translated stylus points.</span></span>  <span data-ttu-id="9b9af-140">Когда пользователь рисует обводку, штриха отображается в пределах границ прямоугольника, но он не доступен для перевода, пока пользователь отрывает перо.</span><span class="sxs-lookup"><span data-stu-id="9b9af-140">When the user draws the stroke, the stroke is rendered within the bounds of the rectangle, but the stroke doesn't appear to be translated until the user lifts the pen.</span></span>  
   
-### Выполнение операций с подключаемым модулем пера в потоке пользовательского интерфейса  
- Так как в потоке пера не может быть выполнена точная проверка нахождения пера в пределах элемента, некоторые элементы могут иногда получать ввод от пера, предназначенный для других элементов.  Если перед выполнением операции необходимо убедиться, что входные данные было правильно направлены, выполните подписку и воспользуйтесь одним из следующих методов: <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A> или <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A>.  Эти методы вызываются потоком приложения после того, как была проведена точная проверка расположения пера.  Для подписки на эти методы вызовите метод <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> в методе, выполняющемся в потоке пера.  
+### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a><span data-ttu-id="9b9af-141">Выполнение операций с подключаемым модулем в потоке пользовательского интерфейса пера</span><span class="sxs-lookup"><span data-stu-id="9b9af-141">Performing operations with a Stylus Plug-in on the UI thread</span></span>  
+ <span data-ttu-id="9b9af-142">Поскольку точные попадания не может выполняться в потоке пера, некоторые элементы могут иногда получать ввод от пера предназначен для других элементов.</span><span class="sxs-lookup"><span data-stu-id="9b9af-142">Because accurate hit-testing cannot be performed on the pen thread, some elements might occasionally receive stylus input intended for other elements.</span></span> <span data-ttu-id="9b9af-143">Если требуется, чтобы убедиться, что входные данные было правильно направлены до выполнения операции, подписаться и выполнить операцию в <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, или <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="9b9af-143">If you need to make sure the input was routed correctly before performing an operation, subscribe to and perform the operation in the <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, or <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> method.</span></span> <span data-ttu-id="9b9af-144">Эти методы вызываются потоком приложения после завершения проверки актуальности проверки нажатия.</span><span class="sxs-lookup"><span data-stu-id="9b9af-144">These methods are invoked by the application thread after accurate hit-testing has been performed.</span></span> <span data-ttu-id="9b9af-145">Для подписки на эти методы вызовите <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> в методе, который выполняется в потоке пера.</span><span class="sxs-lookup"><span data-stu-id="9b9af-145">To subscribe to these methods, call the <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> method in the method that occurs on the pen thread.</span></span>  
   
- На следующей диаграмме показана связь между потоком пера и потоком пользовательского интерфейса по отношению к событиям пера <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
+ <span data-ttu-id="9b9af-146">На следующей схеме показана связь между потоком пера и потоком пользовательского интерфейса по отношению к событиям пера <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span><span class="sxs-lookup"><span data-stu-id="9b9af-146">The following diagram illustrates the relationship between the pen thread and UI thread with respect to the stylus events of a <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.</span></span>  
   
- ![Потоковые модели рукописного ввода &#40;пользовательский интерфейс и перо&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading\_PluginCallbacks")  
+ <span data-ttu-id="9b9af-147">![Рукописного ввода Threading Models &#40; Пользовательский Интерфейс и перо &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")</span><span class="sxs-lookup"><span data-stu-id="9b9af-147">![Ink Threading Models &#40;UI and Pen&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")</span></span>  
   
-## Отрисовка рукописных данных  
- Когда пользователь рисует штрих, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> отображает рукописные данные в отдельном потоке, поэтому данные «идут» от пера в поток, даже когда поток пользовательского интерфейса занят.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> строит визуальное дерево потока динамической отрисовки, который получает точки пера.  Когда пользователь заканчивает рисование штриха, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> запрашивает уведомление о том, что приложение выполняет следующий шаг генерации изображения.  После того как приложение завершит следующий этап отрисовки, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> очистит свое визуальное дерево.  Этот процесс показан на следующей схеме.  
+## <a name="rendering-ink"></a><span data-ttu-id="9b9af-148">Подготовка к просмотру рукописного ввода</span><span class="sxs-lookup"><span data-stu-id="9b9af-148">Rendering Ink</span></span>  
+ <span data-ttu-id="9b9af-149">Как пользователь штриха, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> отображает рукописные данные в отдельном потоке, поэтому данные «идут» от пера даже в том случае, если поток пользовательского интерфейса занят.</span><span class="sxs-lookup"><span data-stu-id="9b9af-149">As the user draws a stroke, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the ink on a separate thread so the ink appears to "flow" from the pen even when the UI thread is busy.</span></span>  <span data-ttu-id="9b9af-150"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Строит визуальное дерево в потоке динамической отрисовки, который получает точки пера.</span><span class="sxs-lookup"><span data-stu-id="9b9af-150">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> builds a visual tree on the dynamic rendering thread as it collects stylus points.</span></span>  <span data-ttu-id="9b9af-151">Когда пользователь завершает штрих <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> запросом получать уведомления, когда приложение выполняет следующий этап отрисовки.</span><span class="sxs-lookup"><span data-stu-id="9b9af-151">When the user finishes the stroke, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> asks to be notified when the application does the next rendering pass.</span></span>  <span data-ttu-id="9b9af-152">После завершения работы приложения следующего прохода отрисовки <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> очищает его визуального дерева.</span><span class="sxs-lookup"><span data-stu-id="9b9af-152">After the application completes the next rendering pass, the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cleans up its visual tree.</span></span>  <span data-ttu-id="9b9af-153">Этот процесс показан на следующей схеме.</span><span class="sxs-lookup"><span data-stu-id="9b9af-153">The following diagram illustrates this process.</span></span>  
   
- ![Схема обработки рукописного ввода](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading\_VisualTree")  
+ <span data-ttu-id="9b9af-154">![Работа с потоками схема рукописного ввода](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")</span><span class="sxs-lookup"><span data-stu-id="9b9af-154">![Ink threading diagram](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")</span></span>  
   
-1.  Пользователь начинает рисовать штрих.  
+1.  <span data-ttu-id="9b9af-155">Пользователь начинает штриха.</span><span class="sxs-lookup"><span data-stu-id="9b9af-155">The user begins the stroke.</span></span>  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> создает визуальное дерево.  
+    1.  <span data-ttu-id="9b9af-156"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Создает визуальное дерево.</span><span class="sxs-lookup"><span data-stu-id="9b9af-156">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> creates the visual tree.</span></span>  
   
-2.  Пользователь рисует штрих.  
+2.  <span data-ttu-id="9b9af-157">Пользователь рисует штриха.</span><span class="sxs-lookup"><span data-stu-id="9b9af-157">The user is drawing the stroke.</span></span>  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> строит визуальное дерево.  
+    1.  <span data-ttu-id="9b9af-158"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Строит визуальное дерево.</span><span class="sxs-lookup"><span data-stu-id="9b9af-158">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> builds the visual tree.</span></span>  
   
-3.  Пользователь завершает рисование штриха.  
+3.  <span data-ttu-id="9b9af-159">Пользователь завершает штриха.</span><span class="sxs-lookup"><span data-stu-id="9b9af-159">The user ends the stroke.</span></span>  
   
-    1.  <xref:System.Windows.Controls.InkPresenter> добавляет штрих в визуальное дерево.  
+    1.  <span data-ttu-id="9b9af-160"><xref:System.Windows.Controls.InkPresenter> Добавляет штрих в визуальном дереве.</span><span class="sxs-lookup"><span data-stu-id="9b9af-160">The <xref:System.Windows.Controls.InkPresenter> adds the stroke to its visual tree.</span></span>  
   
-    2.  MIL статически отображает штрихи.  
+    2.  <span data-ttu-id="9b9af-161">Уровень интеграции носителя (MIL) статически отображает штрихи.</span><span class="sxs-lookup"><span data-stu-id="9b9af-161">The Media Integration Layer (MIL) statically renders the strokes.</span></span>  
   
-    3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> очищает визуальные элементы.
+    3.  <span data-ttu-id="9b9af-162"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Очищает визуальные элементы.</span><span class="sxs-lookup"><span data-stu-id="9b9af-162">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> cleans up the visuals.</span></span>

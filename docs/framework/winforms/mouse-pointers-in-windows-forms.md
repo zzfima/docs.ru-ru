@@ -1,45 +1,46 @@
 ---
-title: "Mouse Pointers in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pointers, setting [Windows Forms]"
-  - "mouse pointers"
-  - "mouse cursors"
-  - "mouse pointers, setting [Windows Forms]"
-  - "cursors, setting [Windows Forms]"
-  - "mouse, cursors"
+title: "Указатели мыши в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pointers [Windows Forms], setting
+- mouse pointers
+- mouse cursors
+- mouse pointers [Windows Forms], setting
+- cursors [Windows Forms], setting
+- mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fb0e193ccbced719f30ede91cb59cd51dd349a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Mouse Pointers in Windows Forms
-*Указатель* мыши \(называемый иногда курсором\) — это растровый рисунок, который задает точку фокуса на экране для ввода данных пользователем с помощью мыши.  В этом разделе приведен обзор указателей мыши в формах Windows Forms и описаны некоторые способы изменения указателя мыши и управления им.  
+# <a name="mouse-pointers-in-windows-forms"></a><span data-ttu-id="e6a3b-102">Указатели мыши в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e6a3b-102">Mouse Pointers in Windows Forms</span></span>
+<span data-ttu-id="e6a3b-103">Мышь *указатель*, которые иногда называют курсор является точечного рисунка, который задает точку фокуса на экране для ввода данных пользователем с помощью мыши.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-103">The mouse *pointer*, which is sometimes referred to as the cursor, is a bitmap that specifies a focus point on the screen for user input with the mouse.</span></span> <span data-ttu-id="e6a3b-104">В этом разделе содержится обзор указатель мыши в формах Windows Forms и описываются некоторые из способов изменения и управления указатель мыши.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-104">This topic provides an overview of the mouse pointer in Windows Forms and describes some of the ways to modify and control the mouse pointer.</span></span>  
   
-## Доступ к указателю мыши  
- Указатель мыши представлен классом <xref:System.Windows.Forms.Cursor>, и каждый класс <xref:System.Windows.Forms.Control> имеет свойство <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName>, определяющее указатель мыши для этого элемента управления.  Класс <xref:System.Windows.Forms.Cursor> содержит свойства, описывающие указатель мыши, например свойства <xref:System.Windows.Forms.Cursor.Position%2A> и <xref:System.Windows.Forms.Cursor.HotSpot%2A>, и методы, которые могут изменить внешний вид указателя, такие как <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A> и <xref:System.Windows.Forms.Cursor.DrawStretched%2A>.  
+## <a name="accessing-the-mouse-pointer"></a><span data-ttu-id="e6a3b-105">Обращение к указателю мыши</span><span class="sxs-lookup"><span data-stu-id="e6a3b-105">Accessing the Mouse Pointer</span></span>  
+ <span data-ttu-id="e6a3b-106">Указатель мыши представлен <xref:System.Windows.Forms.Cursor> класса и каждая <xref:System.Windows.Forms.Control> имеет <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> свойство, которое указывает указатель для этого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-106">The mouse pointer is represented by the <xref:System.Windows.Forms.Cursor> class, and each <xref:System.Windows.Forms.Control> has a <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> property that specifies the pointer for that control.</span></span> <span data-ttu-id="e6a3b-107"><xref:System.Windows.Forms.Cursor> Класс содержит свойства, описывающие указателя, такие как <xref:System.Windows.Forms.Cursor.Position%2A> и <xref:System.Windows.Forms.Cursor.HotSpot%2A> свойства и методы, которые можно изменить внешний вид указателя, такие как <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, и <xref:System.Windows.Forms.Cursor.DrawStretched%2A> методы.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-107">The <xref:System.Windows.Forms.Cursor> class contains properties that describe the pointer, such as the <xref:System.Windows.Forms.Cursor.Position%2A> and <xref:System.Windows.Forms.Cursor.HotSpot%2A> properties, and methods that can modify the appearance of the pointer, such as the <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, and <xref:System.Windows.Forms.Cursor.DrawStretched%2A> methods.</span></span>  
   
-## Управление указателем мыши  
- Иногда может потребоваться ограничить область, в которой может быть использован указатель мыши, или изменить положение указателя.  Можно получить или задать текущее расположение мыши с помощью свойства <xref:System.Windows.Forms.Cursor.Position%2A> класса <xref:System.Windows.Forms.Cursor>.  Кроме того, можно ограничить область, в которой может быть использован указатель мыши, при помощи свойства <xref:System.Windows.Forms.Cursor.Clip%2A>.  Областью отсечения по умолчанию является весь экран.  
+## <a name="controlling-the-mouse-pointer"></a><span data-ttu-id="e6a3b-108">Управление указателем мыши</span><span class="sxs-lookup"><span data-stu-id="e6a3b-108">Controlling the Mouse Pointer</span></span>  
+ <span data-ttu-id="e6a3b-109">Иногда может потребоваться ограничить область, в котором указатель мыши, можно использовать или изменение положения указателя мыши.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-109">Sometimes you may want to limit the area in which the mouse pointer can be used or change the position the mouse.</span></span> <span data-ttu-id="e6a3b-110">Можно получить или задать текущее расположение мыши с помощью <xref:System.Windows.Forms.Cursor.Position%2A> свойство <xref:System.Windows.Forms.Cursor>.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-110">You can get or set the current location of the mouse using the <xref:System.Windows.Forms.Cursor.Position%2A> property of the <xref:System.Windows.Forms.Cursor>.</span></span> <span data-ttu-id="e6a3b-111">Кроме того, можно ограничить область, можно использовать указатель мыши режим <xref:System.Windows.Forms.Cursor.Clip%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-111">In addition, you can limit the area the mouse pointer can be used be setting the <xref:System.Windows.Forms.Cursor.Clip%2A> property.</span></span> <span data-ttu-id="e6a3b-112">Области отсечения по умолчанию является весь экран.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-112">The clip area, by default, is the entire screen.</span></span>  
   
-## Изменение указателя мыши  
- Изменение указателя мыши является важным способом предоставления отклика пользователю.  Например, указатель мыши может быть изменен в обработчиках событий <xref:System.Windows.Forms.Control.MouseEnter> и <xref:System.Windows.Forms.Control.MouseLeave>, чтобы сообщить пользователю о выполнении вычислений и ограничить взаимодействие пользователя с элементом управления.  Иногда указатель мыши изменяется из\-за системных событий, например когда приложение участвует в операции перетаскивания.  
+## <a name="changing-the-mouse-pointer"></a><span data-ttu-id="e6a3b-113">Изменение указателя мыши</span><span class="sxs-lookup"><span data-stu-id="e6a3b-113">Changing the Mouse Pointer</span></span>  
+ <span data-ttu-id="e6a3b-114">Изменение указателя мыши является важным способом предоставления отклика для пользователя.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-114">Changing the mouse pointer is an important way of providing feedback to the user.</span></span> <span data-ttu-id="e6a3b-115">Например, можно изменить указатель мыши в обработчиках <xref:System.Windows.Forms.Control.MouseEnter> и <xref:System.Windows.Forms.Control.MouseLeave> событий, чтобы сообщить пользователю о выполнении вычислений и ограничить взаимодействие с пользователем в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-115">For example, the mouse pointer can be modified in the handlers of the <xref:System.Windows.Forms.Control.MouseEnter> and <xref:System.Windows.Forms.Control.MouseLeave> events to tell the user that computations are occurring and to limit user interaction in the control.</span></span> <span data-ttu-id="e6a3b-116">Иногда указатель мыши изменяется из-за системных событий, например когда приложение участвует в операции перетаскивания и вставки.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-116">Sometimes, the mouse pointer will change because of system events, such as when your application is involved in a drag-and-drop operation.</span></span>  
   
- Основным способом изменения указателя мыши является установка для свойства <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> или <xref:System.Windows.Forms.Control.DefaultCursor%2A> элемента управления нового класса <xref:System.Windows.Forms.Cursor>.  Примеры изменения указателя мыши приведены в примере кода в классе <xref:System.Windows.Forms.Cursor>.  Кроме того, класс <xref:System.Windows.Forms.Cursors> предоставляет набор объектов <xref:System.Windows.Forms.Cursor> для различных типов указателей, таких как указатель в виде руки.  Для отображения указателя ожидания, который приобретает вид песочных часов, когда указатель мыши находится над элементом управления, используется свойство <xref:System.Windows.Forms.Control.UseWaitCursor%2A> класса <xref:System.Windows.Forms.Control>.  
+ <span data-ttu-id="e6a3b-117">— Это основной способ изменение указателя мыши, задав <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> или <xref:System.Windows.Forms.Control.DefaultCursor%2A> свойства элемента управления в новую <xref:System.Windows.Forms.Cursor>.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-117">The primary way to change the mouse pointer is by setting the <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> or <xref:System.Windows.Forms.Control.DefaultCursor%2A> property of a control to a new <xref:System.Windows.Forms.Cursor>.</span></span> <span data-ttu-id="e6a3b-118">Примеры изменения указателя мыши, см. в примере кода в <xref:System.Windows.Forms.Cursor> класса.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-118">For examples of changing the mouse pointer, see the code example in the <xref:System.Windows.Forms.Cursor> class.</span></span> <span data-ttu-id="e6a3b-119">Кроме того <xref:System.Windows.Forms.Cursors> класс предоставляет набор <xref:System.Windows.Forms.Cursor> объектов для различных типов указателей, таких как указатель в виде руки.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-119">In addition, the <xref:System.Windows.Forms.Cursors> class exposes a set of <xref:System.Windows.Forms.Cursor> objects for many different types of pointers, such as a pointer that resembles a hand.</span></span> <span data-ttu-id="e6a3b-120">Для отображения указателя ожидания, который имеет вид песочных часов, каждый раз, когда указатель мыши находится на элементе управления, используйте <xref:System.Windows.Forms.Control.UseWaitCursor%2A> свойство <xref:System.Windows.Forms.Control> класса.</span><span class="sxs-lookup"><span data-stu-id="e6a3b-120">To display the wait pointer, which resembles an hourglass, whenever the mouse pointer is on the control, use the <xref:System.Windows.Forms.Control.UseWaitCursor%2A> property of the <xref:System.Windows.Forms.Control> class.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Cursor>   
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
- [Drag\-and\-Drop Functionality in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e6a3b-121">См. также</span><span class="sxs-lookup"><span data-stu-id="e6a3b-121">See Also</span></span>  
+ <xref:System.Windows.Forms.Cursor>  
+ [<span data-ttu-id="e6a3b-122">Ввод данных мышью в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e6a3b-122">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="e6a3b-123">Функциональная возможность перетаскивания в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e6a3b-123">Drag-and-Drop Functionality in Windows Forms</span></span>](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

@@ -1,38 +1,43 @@
 ---
-title: "Практическое руководство. Повышение производительности элемента управления TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView - элемент управления [WPF], повышение производительности"
+title: "Практическое руководство. Повышение производительности элемента управления TreeView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 209f2c5645758aba4d1e10fc36fe773faa975e6b
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Повышение производительности элемента управления TreeView
-Если элемент управления <xref:System.Windows.Controls.TreeView> содержит множество элементов, для их загрузки может потребоваться значительное время, что может привести к задержке в работе пользовательского интерфейса.  Время загрузки можно сократить, присвоив вложенному свойству <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName> значение `true`.  Пользовательский интерфейс также может медленно реагировать на прокрутку пользователем элемента управления <xref:System.Windows.Controls.TreeView> с помощью колесика мыши или путем перетаскивания ползунка полосы прокрутки.  Производительность элемента управления <xref:System.Windows.Controls.TreeView> при прокрутке можно повысить, присвоив вложенному свойству <xref:System.Windows.Controls.VirtualizingStackPanel.VirtualizationMode%2A?displayProperty=fullName> значение <xref:System.Windows.Controls.VirtualizationMode>.  
+# <a name="how-to-improve-the-performance-of-a-treeview"></a><span data-ttu-id="75a9f-102">Практическое руководство. Повышение производительности элемента управления TreeView</span><span class="sxs-lookup"><span data-stu-id="75a9f-102">How to: Improve the Performance of a TreeView</span></span>
+<span data-ttu-id="75a9f-103">Если <xref:System.Windows.Controls.TreeView> содержит много элементов, количество времени, необходимое для загрузки может вызвать значительные задержки в пользовательском интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="75a9f-103">If a <xref:System.Windows.Controls.TreeView> contains many items, the amount of time it takes to load may cause a significant delay in the user interface.</span></span> <span data-ttu-id="75a9f-104">Можно сократить время загрузки, задав `VirtualizingStackPanel.IsVirtualizing` присоединенному свойству `true`.</span><span class="sxs-lookup"><span data-stu-id="75a9f-104">You can improve the load time by setting the `VirtualizingStackPanel.IsVirtualizing` attached property to `true`.</span></span>  <span data-ttu-id="75a9f-105">Пользовательский Интерфейс также может медленно реагировать при прокрутке <xref:System.Windows.Controls.TreeView> с помощью колесика мыши или путем перетаскивания ползунка полосы прокрутки.</span><span class="sxs-lookup"><span data-stu-id="75a9f-105">The UI might also be slow to react when a user scrolls the <xref:System.Windows.Controls.TreeView> by using the mouse wheel or dragging the thumb of a scrollbar.</span></span> <span data-ttu-id="75a9f-106">Можно повысить производительность <xref:System.Windows.Controls.TreeView> при прокрутке, задав `VirtualizingStackPanel.VirtualizationMode` присоединенному свойству <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="75a9f-106">You can improve the performance of the <xref:System.Windows.Controls.TreeView> when the user scrolls by setting the `VirtualizingStackPanel.VirtualizationMode` attached property to <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="75a9f-107">Пример</span><span class="sxs-lookup"><span data-stu-id="75a9f-107">Example</span></span>  
   
-## Описание  
- В приведенном ниже примере создается элемент управления <xref:System.Windows.Controls.TreeView>, для оптимизации производительности свойству <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName> которого присваивается значение true, а свойству <xref:System.Windows.Controls.VirtualizingStackPanel.VirtualizationMode%2A?displayProperty=fullName> — значение <xref:System.Windows.Controls.VirtualizationMode>.  
+## <a name="description"></a><span data-ttu-id="75a9f-108">Описание</span><span class="sxs-lookup"><span data-stu-id="75a9f-108">Description</span></span>  
+<span data-ttu-id="75a9f-109">В следующем примере создается <xref:System.Windows.Controls.TreeView> , которая устанавливает `VirtualizingStackPanel.IsVirtualizing` вложенное свойство в значение true и `VirtualizingStackPanel.VirtualizationMode` присоединенному свойству <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType> для оптимизации производительности.</span><span class="sxs-lookup"><span data-stu-id="75a9f-109">The following example creates a <xref:System.Windows.Controls.TreeView> that sets the `VirtualizingStackPanel.IsVirtualizing` attached property to true and the `VirtualizingStackPanel.VirtualizationMode` attached property to <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType> to optimize its performance.</span></span>  
   
-## Код  
- [!code-xml[RecycleItemContainerShippets#VirtualizingTreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizingtreeview)]  
+## <a name="code"></a><span data-ttu-id="75a9f-110">Код</span><span class="sxs-lookup"><span data-stu-id="75a9f-110">Code</span></span>  
+ [!code-xaml[RecycleItemContainerShippets#VirtualizingTreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml#virtualizingtreeview)]  
   
- В следующем примере показаны данные, использовавшиеся в предыдущем примере.  
+ <span data-ttu-id="75a9f-111">В следующем примере показано данные в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="75a9f-111">The following example shows the data that the previous example uses.</span></span>  
   
  [!code-csharp[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RecycleItemContainerShippets/CSharp/Window1.xaml.cs#treeviewdata)]
  [!code-vb[RecycleItemContainerShippets#TreeViewData](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
-## См. также  
- [Элементы управления](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a><span data-ttu-id="75a9f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="75a9f-112">See Also</span></span>  
+ [<span data-ttu-id="75a9f-113">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="75a9f-113">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

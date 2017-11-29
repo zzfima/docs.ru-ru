@@ -1,39 +1,38 @@
 ---
-title: "&lt;list&gt; (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<description> - XML-тег"
-  - "<item> - XML-тег"
-  - "<list> - XML-тег"
-  - "<listheader> - XML-тег"
-  - "<term> - XML-тег"
-  - "description - XML-тег"
-  - "item - XML-тег"
-  - "list - XML-тег"
-  - "listheader - XML-тег"
-  - "term - XML-тег"
+title: "&lt;список&gt; (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- listheader XML tag
+- <item> XML tag
+- <list> XML tag
+- <listheader> XML tag
+- term XML tag
+- list XML tag
+- <description> XML tag
+- description XML tag
+- item XML tag
+- <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 34347df88f1bc3097db0020526ec99943c8f7bd4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;list&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Определяет список или таблицу.  
+# <a name="ltlistgt-visual-basic"></a><span data-ttu-id="2369b-102">&lt;список&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2369b-102">&lt;list&gt; (Visual Basic)</span></span>
+<span data-ttu-id="2369b-103">Определяет список или таблицу.</span><span class="sxs-lookup"><span data-stu-id="2369b-103">Defines a list or table.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="2369b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2369b-104">Syntax</span></span>  
   
-```  
+```xml  
 <list type="type">  
    <listheader>  
       <term>term</term>  
@@ -46,29 +45,29 @@ caps.handback.revision: 12
 </list>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a><span data-ttu-id="2369b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2369b-105">Parameters</span></span>  
  `type`  
- Тип списка.  Должен иметь значение "bullet" для маркированного списка, "number" для нумерованного списка или "table" для таблицы с двумя столбцами.  
+ <span data-ttu-id="2369b-106">Тип списка.</span><span class="sxs-lookup"><span data-stu-id="2369b-106">The type of the list.</span></span> <span data-ttu-id="2369b-107">Должно быть «bullet» для маркированного списка, «number» для нумерованного списка или «table» для двух столбцов таблицы.</span><span class="sxs-lookup"><span data-stu-id="2369b-107">Must be a "bullet" for a bulleted list, "number" for a numbered list, or "table" for a two-column table.</span></span>  
   
  `term`  
- Используется только в том случае, когда типом `type` является "table". Термин для определения, который определен в теге описания.  
+ <span data-ttu-id="2369b-108">Используется, только если `type` является «table».</span><span class="sxs-lookup"><span data-stu-id="2369b-108">Only used when `type` is "table."</span></span> <span data-ttu-id="2369b-109">Термин, который определен в теге описания.</span><span class="sxs-lookup"><span data-stu-id="2369b-109">A term to define, which is defined in the description tag.</span></span>  
   
  `description`  
- Если тип `type` — "bullet" или "number", то `description` — это элемент списка. Если `type` — "table", то `description` — это определение `term`.  
+ <span data-ttu-id="2369b-110">Когда `type` «bullet» или «number», `description` — это элемент в списке при `type` является «table» `description` является определением `term`.</span><span class="sxs-lookup"><span data-stu-id="2369b-110">When `type` is "bullet" or "number," `description` is an item in the list When `type` is "table," `description` is the definition of `term`.</span></span>  
   
-## Заметки  
- Блок `<listheader>` задает заголовок таблицы или списка определений.  При определении таблицы достаточно указать запись для `term` в заголовке.  
+## <a name="remarks"></a><span data-ttu-id="2369b-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="2369b-111">Remarks</span></span>  
+ <span data-ttu-id="2369b-112">`<listheader>` Блок определяет заголовок таблицы или определение списка.</span><span class="sxs-lookup"><span data-stu-id="2369b-112">The `<listheader>` block defines the heading of either a table or definition list.</span></span> <span data-ttu-id="2369b-113">При определении таблицы достаточно указать запись для `term` в заголовке.</span><span class="sxs-lookup"><span data-stu-id="2369b-113">When defining a table, you only have to supply an entry for `term` in the heading.</span></span>  
   
- Каждый элемент в списке указывается в блоке `<item>`.  При создании списка определений необходимо указать и `term`, и `description`.  Однако для таблицы, маркированного или нумерованного списка достаточно указать `description`.  
+ <span data-ttu-id="2369b-114">Каждый элемент в списке указывается в `<item>` блока.</span><span class="sxs-lookup"><span data-stu-id="2369b-114">Each item in the list is specified with an `<item>` block.</span></span> <span data-ttu-id="2369b-115">При создании списка определений, должны быть указаны `term` и `description`.</span><span class="sxs-lookup"><span data-stu-id="2369b-115">When creating a definition list, you must specify both `term` and `description`.</span></span> <span data-ttu-id="2369b-116">Однако для таблицы, маркированного или нумерованного списка достаточно указать запись для `description`.</span><span class="sxs-lookup"><span data-stu-id="2369b-116">However, for a table, bulleted list, or numbered list, you only have to supply an entry for `description`.</span></span>  
   
- Список или таблица может иметь столько блоков `<item>`, сколько необходимо.  
+ <span data-ttu-id="2369b-117">Список или таблица может иметь любое количество `<item>` блокируется при необходимости.</span><span class="sxs-lookup"><span data-stu-id="2369b-117">A list or table can have as many `<item>` blocks as needed.</span></span>  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ <span data-ttu-id="2369b-118">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="2369b-118">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## Пример  
- В этом примере тег `<list>` используется для создания маркированного списка в разделе примечаний.  
+## <a name="example"></a><span data-ttu-id="2369b-119">Пример</span><span class="sxs-lookup"><span data-stu-id="2369b-119">Example</span></span>  
+ <span data-ttu-id="2369b-120">В этом примере используется `<list>` тег, чтобы определить маркированный список в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="2369b-120">This example uses the `<list>` tag to define a bulleted list in the remarks section.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="2369b-121">См. также</span><span class="sxs-lookup"><span data-stu-id="2369b-121">See Also</span></span>  
+ [<span data-ttu-id="2369b-122">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="2369b-122">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -1,99 +1,98 @@
 ---
-title: "Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join - предложение [Visual Basic]"
-  - "Join - предложение [LINQ в Visual Basic]"
-  - "присоединение [LINQ в Visual Basic]"
-  - "соединения [LINQ в Visual Basic]"
-  - "запросы [LINQ в Visual Basic], разделы практического руководства"
-  - "запросы [LINQ в Visual Basic], соединения"
+title: "Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], joins
+- joins [LINQ in Visual Basic]
+- Join clause [LINQ in Visual Basic]
+- Group Join clause [Visual Basic]
+- joining [LINQ in Visual Basic]
+- queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 432be646ce4353fd4627a34f363e7562f6181e92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Visual Basic предоставляет предложения запроса `Join` и `Group Join` для объединения содержимого нескольких коллекций на основе общих значений между коллекциями.  Эти значения называются значениями *ключа*.  Разработчики, знакомые с основными понятиями реляционных баз данных, будет воспринимать предложение `Join` как INNER JOIN и предложение `Group Join` фактически как LEFT OUTER JOIN.  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a><span data-ttu-id="f8edd-102">Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f8edd-102">How to: Combine Data with LINQ by Using Joins (Visual Basic)</span></span>
+<span data-ttu-id="f8edd-103">Visual Basic предоставляет `Join` и `Group Join` для объединения содержимого нескольких коллекций на основе общих значений между коллекциями предложения запроса.</span><span class="sxs-lookup"><span data-stu-id="f8edd-103">Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections.</span></span> <span data-ttu-id="f8edd-104">Эти значения называются *ключ* значения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-104">These values are known as *key* values.</span></span> <span data-ttu-id="f8edd-105">Разработчики, знакомые с понятиями реляционной базы данных будет распознавать `Join` предложение INNER JOIN и `Group Join` предложение as, по сути, ЛЕВОЕ ВНЕШНЕЕ соединение.</span><span class="sxs-lookup"><span data-stu-id="f8edd-105">Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.</span></span>  
   
- В этом разделе в примерах демонстрируются несколько способов для объединения данных с помощью предложений запроса `Join` и `Group Join`.  
+ <span data-ttu-id="f8edd-106">Примеры в этом разделе демонстрируют несколько способов объединения данных с помощью `Join` и `Group Join` предложения запроса.</span><span class="sxs-lookup"><span data-stu-id="f8edd-106">The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.</span></span>  
   
-## Создание проекта и добавление данных\-образцов  
+## <a name="create-a-project-and-add-sample-data"></a><span data-ttu-id="f8edd-107">Создание проекта и добавление демонстрационных данных</span><span class="sxs-lookup"><span data-stu-id="f8edd-107">Create a Project and Add Sample Data</span></span>  
   
-#### Создание проекта, содержащего данные\-образцы и типы  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a><span data-ttu-id="f8edd-108">Создание проекта, который содержит образец данных и типы</span><span class="sxs-lookup"><span data-stu-id="f8edd-108">To create a project that contains sample data and types</span></span>  
   
-1.  Чтобы запустить примеры в этом разделе, откройте Visual Studio и добавьте новый проект консольного приложения Visual Basic.  Дважды щелкните файл Module1.vb, созданный Visual Basic.  
+1.  <span data-ttu-id="f8edd-109">Для выполнения примеров в этом разделе, откройте Visual Studio и добавьте новый проект консольного приложения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f8edd-109">To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project.</span></span> <span data-ttu-id="f8edd-110">Дважды щелкните файл Module1.vb, созданными Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f8edd-110">Double-click the Module1.vb file created by Visual Basic.</span></span>  
   
-2.  Образцы в этом разделе используют типы `Person` и `Pet` и данные из следующего примера кода.  Скопируйте этот код в модуль `Module1`, созданный Visual Basic по умолчанию.  
+2.  <span data-ttu-id="f8edd-111">Образцы в этом разделе используют `Person` и `Pet` типы и данные из следующего примера кода.</span><span class="sxs-lookup"><span data-stu-id="f8edd-111">The samples in this topic use the `Person` and `Pet` types and data from the following code example.</span></span> <span data-ttu-id="f8edd-112">Скопируйте этот код в значение по умолчанию `Module1` модуля, созданного в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f8edd-112">Copy this code into the default `Module1` module created by Visual Basic.</span></span>  
   
      [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
     [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
-## Выполнение внутреннего соединения с помощью предложения Join  
- Внутреннее соединение объединяет данные из двух коллекций.  Включены элементы, для которых указанные ключевые значения совпадают.  Все элементы из любой из двух коллекций, у которых нет соответствующего элемента в другой коллекции, исключаются.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a><span data-ttu-id="f8edd-113">Выполнение внутреннего соединения с помощью предложения Join</span><span class="sxs-lookup"><span data-stu-id="f8edd-113">Perform an Inner Join by Using the Join Clause</span></span>  
+ <span data-ttu-id="f8edd-114">ВНУТРЕННЕЕ соединение объединяет данные из двух коллекций.</span><span class="sxs-lookup"><span data-stu-id="f8edd-114">An INNER JOIN combines data from two collections.</span></span> <span data-ttu-id="f8edd-115">Будут включены элементы, для которых указанные ключевые значения совпадают.</span><span class="sxs-lookup"><span data-stu-id="f8edd-115">Items for which the specified key values match are included.</span></span> <span data-ttu-id="f8edd-116">Все элементы из любой коллекции, у которых нет соответствующего элемента в другой коллекции, исключаются.</span><span class="sxs-lookup"><span data-stu-id="f8edd-116">Any items from either collection that do not have a matching item in the other collection are excluded.</span></span>  
   
- В Visual Basic LINQ поддерживает два параметра для выполнения внутреннего соединения: неявное соединение и явное соединение.  
+ <span data-ttu-id="f8edd-117">В Visual Basic LINQ предоставляет два параметра для выполнения внутреннего СОЕДИНЕНИЯ: неявное соединение и явное соединение.</span><span class="sxs-lookup"><span data-stu-id="f8edd-117">In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.</span></span>  
   
- Неявное соединение задает коллекции для объединения в предложении `From` и определяет соответствующие ключевые поля в предложении `Where`.  Visual Basic неявно объединяет две коллекции, основанные на указанных ключевых полях.  
+ <span data-ttu-id="f8edd-118">Неявное соединение задает коллекции для объединения в `From` предложения и определяет соответствующие ключевые поля в `Where` предложения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-118">An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause.</span></span> <span data-ttu-id="f8edd-119">Visual Basic неявно объединяет две коллекции, основанные на указанных ключевых полях.</span><span class="sxs-lookup"><span data-stu-id="f8edd-119">Visual Basic implicitly joins the two collections based on the specified key fields.</span></span>  
   
- Явное соединение можно указать с помощью предложения `Join` при необходимости явно указать, какие ключевые поля использовать для объединения.  В этом случае предложение `Where` по\-прежнему может быть использовано для фильтрации результатов запроса.  
+ <span data-ttu-id="f8edd-120">Явное соединение можно указать с помощью `Join` предложения, если требуется явно указать, какие ключевые поля использовать для объединения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-120">You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join.</span></span> <span data-ttu-id="f8edd-121">В этом случае `Where` предложение по-прежнему может использоваться для фильтрации результатов запроса.</span><span class="sxs-lookup"><span data-stu-id="f8edd-121">In this case, a `Where` clause can still be used to filter the query results.</span></span>  
   
-#### Выполнение внутреннего соединения с помощью предложения Join  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a><span data-ttu-id="f8edd-122">Для выполнения Inner Join с помощью предложения Join</span><span class="sxs-lookup"><span data-stu-id="f8edd-122">To perform an Inner Join by using the Join clause</span></span>  
   
-1.  Добавьте следующий код в модуль `Module1` проекта, чтобы просмотреть примеры о неявных и явных способах внутреннего соединения.  
+1.  <span data-ttu-id="f8edd-123">Добавьте следующий код в `Module1` модуль проекта, чтобы просмотреть примеры явных и неявных внутреннее соединение.</span><span class="sxs-lookup"><span data-stu-id="f8edd-123">Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.</span></span>  
   
      [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
-## Выполнение левого внешнего соединения с помощью предложения Group Join  
- Левое внешнее соединение включает все элементы из левосторонней коллекции соединения и только совпадающие значения из правосторонней коллекции соединения.  Все элементы из правосторонней коллекции соединения, у которых нет соответствующего элемента в левосторонней коллекции, исключаются из результатов запроса.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a><span data-ttu-id="f8edd-124">Выполните левое внешнее соединение, используя предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="f8edd-124">Perform a Left Outer Join by Using the Group Join Clause</span></span>  
+ <span data-ttu-id="f8edd-125">ЛЕВОЕ ВНЕШНЕЕ соединение включает все элементы из коллекции слева, соединения и только совпадающие значения из коллекции правой стороны соединения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-125">A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join.</span></span> <span data-ttu-id="f8edd-126">Все элементы из коллекции правой стороны соединения, у которых нет соответствующего элемента коллекции слева, исключаются из результата запроса.</span><span class="sxs-lookup"><span data-stu-id="f8edd-126">Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.</span></span>  
   
- Предложение `Group Join` выполняет, в сущности, левое внешнее соединение.  Различием между левым внешним соединением и предложением `Group Join` является то, что предложение `Group Join` возвращает соответствующие элементы из правосторонней коллекции объединения для каждого элемента в левосторонней коллекции.  В реляционной базе данных левое внешнее соединение возвращает несгруппированный результат, в котором каждый элемент результата запроса содержит найденные элементы из обеих коллекций в соединении.  В этом случае элементы из левосторонней коллекции соединения повторяются для каждого соответствующего элемента из правосторонней коллекции.  Как это выглядит можно увидеть после выполнения следующей процедуры.  
+ <span data-ttu-id="f8edd-127">`Group Join` Предложение выполняет, в сущности, ЛЕВОЕ ВНЕШНЕЕ соединение.</span><span class="sxs-lookup"><span data-stu-id="f8edd-127">The `Group Join` clause performs, in effect, a LEFT OUTER JOIN.</span></span> <span data-ttu-id="f8edd-128">Разница между обычно называемое ЛЕВОЕ ВНЕШНЕЕ соединение и что `Group Join` предложение возвращает значение, которое `Group Join` результаты предложения группы из коллекции правой стороны соединения для каждого элемента коллекции слева.</span><span class="sxs-lookup"><span data-stu-id="f8edd-128">The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection.</span></span> <span data-ttu-id="f8edd-129">В реляционной базе данных ЛЕВОЕ ВНЕШНЕЕ соединение возвращает несгруппированные результат, в котором каждый элемент в запросе привести содержит совпадающие элементы из обеих коллекций в соединении.</span><span class="sxs-lookup"><span data-stu-id="f8edd-129">In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join.</span></span> <span data-ttu-id="f8edd-130">В этом случае элементы из коллекции слева соединения повторяются для каждого соответствующего элемента из коллекции правой стороны.</span><span class="sxs-lookup"><span data-stu-id="f8edd-130">In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection.</span></span> <span data-ttu-id="f8edd-131">Вы увидите, как это выглядит после выполнения следующей процедуры.</span><span class="sxs-lookup"><span data-stu-id="f8edd-131">You will see what this looks like when you complete the next procedure.</span></span>  
   
- Можно получить результаты запроса `Group Join` в виде несгруппированного результата, расширяя запрос, чтобы объект возвращался для каждого сгруппированного результата запроса.  Чтобы выполнить это, необходимо убедиться, что выполняется запрос для метода `DefaultIfEmpty` сгруппированной коллекции.  Это гарантирует, что элементы из левосторонней коллекции соединения будут включены в результат запроса, даже если они не имеют совпадающих элементов из правосторонней коллекции.  Можно добавить код к запросу для предоставления результирующего значения по умолчанию при отсутствии совпадающих значений из правосторонней коллекции объединения.  
+ <span data-ttu-id="f8edd-132">Можно получить результаты `Group Join` запроса в виде несгруппированные результата, расширяя запрос, чтобы возвращался для каждого сгруппированного результата запроса.</span><span class="sxs-lookup"><span data-stu-id="f8edd-132">You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result.</span></span> <span data-ttu-id="f8edd-133">Чтобы сделать это, необходимо убедиться, что запрос на `DefaultIfEmpty` метод сгруппированной коллекции.</span><span class="sxs-lookup"><span data-stu-id="f8edd-133">To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection.</span></span> <span data-ttu-id="f8edd-134">Это гарантирует, что элементы из коллекции слева соединения по-прежнему включаются в результат запроса, даже если они не имеют совпадающих из коллекции правой.</span><span class="sxs-lookup"><span data-stu-id="f8edd-134">This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection.</span></span> <span data-ttu-id="f8edd-135">Можно добавить код в запрос для предоставления результирующее значение по умолчанию при отсутствии совпадающих значений из коллекции правой стороны соединения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-135">You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.</span></span>  
   
-#### Выполнение левого внешнего соединения с помощью предложения Group Join  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a><span data-ttu-id="f8edd-136">Для выполнения левого внешнего соединения с помощью предложения Group Join</span><span class="sxs-lookup"><span data-stu-id="f8edd-136">To perform a Left Outer Join by using the Group Join clause</span></span>  
   
-1.  Добавьте следующий код в модуль `Module1` проекта, чтобы просмотреть примеры сгруппированного левого внешнего соединения и несгруппированного левого внешнего соединения.  
+1.  <span data-ttu-id="f8edd-137">Добавьте следующий код для `Module1` модуля проекта, чтобы просмотреть примеры сгруппированного левого внешнего соединения и без группировки левого внешнего соединения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-137">Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.</span></span>  
   
      [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
-## Выполнение соединения с помощью составного ключа  
- Можно использовать ключевое слово `And` в предложении `Join` или `Group Join` для идентификации нескольких ключевых полей для использования при определении соответствия значений из соединяемых коллекций.  Ключевое слово `And` определяет, что все указанные ключевые поля должны соответствовать элементам, которые будут присоединены.  
+## <a name="perform-a-join-by-using-a-composite-key"></a><span data-ttu-id="f8edd-138">Выполнение соединения с помощью составного ключа</span><span class="sxs-lookup"><span data-stu-id="f8edd-138">Perform a Join by Using a Composite Key</span></span>  
+ <span data-ttu-id="f8edd-139">Можно использовать `And` ключевое слово в `Join` или `Group Join` предложение, определяющее несколько ключевых полей для использования при сравнении значений из соединяемых коллекций.</span><span class="sxs-lookup"><span data-stu-id="f8edd-139">You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined.</span></span> <span data-ttu-id="f8edd-140">`And` Ключевое слово указывает, что все указанные ключевые поля должны соответствовать элементам для объединения.</span><span class="sxs-lookup"><span data-stu-id="f8edd-140">The `And` keyword specifies that all specified key fields must match for items to be joined.</span></span>  
   
-#### Выполнение соединения с помощью составного ключа  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a><span data-ttu-id="f8edd-141">Для выполнения соединения с помощью составного ключа</span><span class="sxs-lookup"><span data-stu-id="f8edd-141">To perform a Join by using a composite key</span></span>  
   
-1.  Добавьте следующий код в модуль `Module1` проекта, чтобы просмотреть примеры соединения, в которых используется составной ключ.  
+1.  <span data-ttu-id="f8edd-142">Добавьте следующий код в `Module1` модуль проекта, чтобы просмотреть примеры соединения, в которых используется составной ключ.</span><span class="sxs-lookup"><span data-stu-id="f8edd-142">Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.</span></span>  
   
      [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
   
-## Запустите код  
+## <a name="run-the-code"></a><span data-ttu-id="f8edd-143">Выполнение кода</span><span class="sxs-lookup"><span data-stu-id="f8edd-143">Run the Code</span></span>  
   
-#### Добавление кода для выполнения примеров  
+#### <a name="to-add-code-to-run-the-examples"></a><span data-ttu-id="f8edd-144">Добавление кода для выполнения примеров</span><span class="sxs-lookup"><span data-stu-id="f8edd-144">To add code to run the examples</span></span>  
   
-1.  Чтобы выполнить примеры в этом разделе, замените `Sub Main` в модуле `Module1` в проекте на следующий код.  
+1.  <span data-ttu-id="f8edd-145">Замените `Sub Main` в `Module1` модуля в проекте следующим кодом для выполнения примеров этого раздела.</span><span class="sxs-lookup"><span data-stu-id="f8edd-145">Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.</span></span>  
   
      [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
   
-2.  Нажмите клавишу F5 для запуска примеров.  
+2.  <span data-ttu-id="f8edd-146">Нажмите клавишу F5 для запуска примеров.</span><span class="sxs-lookup"><span data-stu-id="f8edd-146">Press F5 to run the examples.</span></span>  
   
-## См. также  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Знакомство с LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Предложение Join](../../../../visual-basic/language-reference/queries/join-clause.md)   
- [Предложение Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)   
- [Предложение From](../../../../visual-basic/language-reference/queries/from-clause.md)   
- [Предложение Where](../../../../visual-basic/language-reference/queries/where-clause.md)   
- [Запросы](../../../../visual-basic/language-reference/queries/queries.md)   
- [Преобразования данных с помощью LINQ \(C\#\)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a><span data-ttu-id="f8edd-147">См. также</span><span class="sxs-lookup"><span data-stu-id="f8edd-147">See Also</span></span>  
+ [<span data-ttu-id="f8edd-148">LINQ</span><span class="sxs-lookup"><span data-stu-id="f8edd-148">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ <span data-ttu-id="f8edd-149">[Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f8edd-149">[Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>  
+ [<span data-ttu-id="f8edd-150">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="f8edd-150">Join Clause</span></span>](../../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="f8edd-151">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="f8edd-151">Group Join Clause</span></span>](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="f8edd-152">Предложение From</span><span class="sxs-lookup"><span data-stu-id="f8edd-152">From Clause</span></span>](../../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="f8edd-153">Предложения Where</span><span class="sxs-lookup"><span data-stu-id="f8edd-153">Where Clause</span></span>](../../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="f8edd-154">Запросы</span><span class="sxs-lookup"><span data-stu-id="f8edd-154">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="f8edd-155">Преобразования данных с помощью LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="f8edd-155">Data Transformations with LINQ (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

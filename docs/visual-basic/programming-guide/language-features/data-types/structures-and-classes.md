@@ -1,121 +1,104 @@
 ---
-title: "Структуры и классы (Visual Basic) | Документы Microsoft"
+title: "Структуры и классы (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
-- structures
+- structures [Visual Basic]
 - classes [Visual Basic]
-- structures, compared to classes
-- structures, structure variables
-- structure variables
+- structures [Visual Basic], compared to classes
+- structures [Visual Basic], structure variables
+- structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e7402ec0fcfc279470d39a4919d3b5ec8b5d9dff
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="structures-and-classes-visual-basic"></a>Структуры и классы (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]унифицирован синтаксис структур и классов, в результате чего обе сущности поддерживают большинство тех же функций. Тем не менее существуют важные различия между структурами и классами.  
+# <a name="structures-and-classes-visual-basic"></a><span data-ttu-id="9b365-102">Структуры и классы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b365-102">Structures and Classes (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="9b365-103">объединяет синтаксис структур и классов, в результате чего обе сущности поддерживают большинство тех же функций.</span><span class="sxs-lookup"><span data-stu-id="9b365-103"> unifies the syntax for structures and classes, with the result that both entities support most of the same features.</span></span> <span data-ttu-id="9b365-104">Однако существуют важные различия между структуры и классы.</span><span class="sxs-lookup"><span data-stu-id="9b365-104">However, there are also important differences between structures and classes.</span></span>  
   
- Классы имеют преимущество ссылочных типов — ссылки более эффективна, чем передача переменной структуры с его данными. С другой стороны структур не требуется выделение памяти в куче глобального.  
+ <span data-ttu-id="9b365-105">Классы имеют преимущество ссылочных типов — ссылки более эффективна, чем передача переменной структуры со всеми данными.</span><span class="sxs-lookup"><span data-stu-id="9b365-105">Classes have the advantage of being reference types — passing a reference is more efficient than passing a structure variable with all its data.</span></span> <span data-ttu-id="9b365-106">С другой стороны структуры не требуют выделения памяти в куче глобального.</span><span class="sxs-lookup"><span data-stu-id="9b365-106">On the other hand, structures do not require allocation of memory on the global heap.</span></span>  
   
- Так как не может наследовать от структуры, структуры можно использовать только для объектов, которые не обязательно должны быть расширен. Используйте структуры, если объект, который вы хотите создать экземпляр небольшой размер и принимать во внимание характеристики производительности классов и структур.  
+ <span data-ttu-id="9b365-107">Так как не может наследовать от структуры, структуры можно использовать только для объектов, которые не обязательно должны быть расширен.</span><span class="sxs-lookup"><span data-stu-id="9b365-107">Because you cannot inherit from a structure, structures should be used only for objects that do not need to be extended.</span></span> <span data-ttu-id="9b365-108">Используйте структуры, если объект, который вы хотите создать экземпляр небольшой размер и принимать во внимание характеристики производительности классы и структуры.</span><span class="sxs-lookup"><span data-stu-id="9b365-108">Use structures when the object you wish to create has a small instance size, and take into account the performance characteristics of classes versus structures.</span></span>  
   
-## <a name="similarities"></a>Сходство  
- Структуры и классы схожи в следующих отношениях:  
+## <a name="similarities"></a><span data-ttu-id="9b365-109">Сходства</span><span class="sxs-lookup"><span data-stu-id="9b365-109">Similarities</span></span>  
+ <span data-ttu-id="9b365-110">Структуры и классы схожи в следующих отношениях.</span><span class="sxs-lookup"><span data-stu-id="9b365-110">Structures and classes are similar in the following respects:</span></span>  
   
--   Оба *контейнер* типов, то есть содержат другие типы в качестве членов.  
+-   <span data-ttu-id="9b365-111">Оба этих параметра соответствуют *контейнера* типов, то есть содержат другие типы в качестве членов.</span><span class="sxs-lookup"><span data-stu-id="9b365-111">Both are *container* types, meaning that they contain other types as members.</span></span>  
   
--   Оба имеют членов, включая конструкторы, методы, свойства, поля, константы, перечисления, события и обработчики событий. Однако не следует путать эти члены, объявленные с *элементы* структуры.  
+-   <span data-ttu-id="9b365-112">Оба имеют членов, включая конструкторы, методы, свойства, поля, константы, перечисления, события и обработчики событий.</span><span class="sxs-lookup"><span data-stu-id="9b365-112">Both have members, which can include constructors, methods, properties, fields, constants, enumerations, events, and event handlers.</span></span> <span data-ttu-id="9b365-113">Однако не следует путать эти элементы с объявленным *элементы* структуры.</span><span class="sxs-lookup"><span data-stu-id="9b365-113">However, do not confuse these members with the declared *elements* of a structure.</span></span>  
   
--   Их элементы могут иметь индивидуальные уровни доступа. Например, может быть объявлен один член `Public` и другим `Private`.  
+-   <span data-ttu-id="9b365-114">Их элементы могут иметь индивидуальные уровни доступа.</span><span class="sxs-lookup"><span data-stu-id="9b365-114">Members of both can have individualized access levels.</span></span> <span data-ttu-id="9b365-115">Например, один элемент можно объявить `Public` и другой `Private`.</span><span class="sxs-lookup"><span data-stu-id="9b365-115">For example, one member can be declared `Public` and another `Private`.</span></span>  
   
--   Они могут реализовывать интерфейсы.  
+-   <span data-ttu-id="9b365-116">Они могут реализовывать интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="9b365-116">Both can implement interfaces.</span></span>  
   
--   Они имеют общие конструкторы с параметрами или без параметров.  
+-   <span data-ttu-id="9b365-117">Они имеют общие конструкторы с параметрами или без.</span><span class="sxs-lookup"><span data-stu-id="9b365-117">Both can have shared constructors, with or without parameters.</span></span>  
   
--   Они могут предоставлять *по умолчанию свойство*, если это свойство принимает хотя бы один параметр.  
+-   <span data-ttu-id="9b365-118">Они могут предоставлять *свойство по умолчанию*, если это свойство принимает хотя бы один параметр.</span><span class="sxs-lookup"><span data-stu-id="9b365-118">Both can expose a *default property*, provided that property takes at least one parameter.</span></span>  
   
--   Они могут объявлять и создавать события и могут объявлять делегаты.  
+-   <span data-ttu-id="9b365-119">Они могут объявлять и создавать события и могут объявлять делегаты.</span><span class="sxs-lookup"><span data-stu-id="9b365-119">Both can declare and raise events, and both can declare delegates.</span></span>  
   
-## <a name="differences"></a>Различия  
- Структуры и классы отличаются следующими особенностями:  
+## <a name="differences"></a><span data-ttu-id="9b365-120">Различия</span><span class="sxs-lookup"><span data-stu-id="9b365-120">Differences</span></span>  
+ <span data-ttu-id="9b365-121">Структуры и классы отличаются следующими особенностями:</span><span class="sxs-lookup"><span data-stu-id="9b365-121">Structures and classes differ in the following particulars:</span></span>  
   
--   Структуры являются *типы значений*; классы являются *ссылочные типы*. Переменная типа структуры содержит данные структуры, а чем содержащий ссылку на данные в виде типа класса.  
+-   <span data-ttu-id="9b365-122">Структуры являются *типы значений*; классы являются *ссылочные типы*.</span><span class="sxs-lookup"><span data-stu-id="9b365-122">Structures are *value types*; classes are *reference types*.</span></span> <span data-ttu-id="9b365-123">Переменная типа структуры содержит данные структуры, вместо содержащий ссылку на данные в виде типа класса.</span><span class="sxs-lookup"><span data-stu-id="9b365-123">A variable of a structure type contains the structure's data, rather than containing a reference to the data as a class type does.</span></span>  
   
--   Структуры используют расположение стека; классы используют память в куче.  
+-   <span data-ttu-id="9b365-124">Структуры используют расположение стека; классы используют память в куче.</span><span class="sxs-lookup"><span data-stu-id="9b365-124">Structures use stack allocation; classes use heap allocation.</span></span>  
   
--   Все элементы структуры, `Public` по умолчанию; класс переменные и константы- `Private` по умолчанию, а другие члены класса являются `Public` по умолчанию. Такое поведение членов класса обеспечивает совместимость с системой Visual Basic 6.0, значений по умолчанию.  
+-   <span data-ttu-id="9b365-125">Все элементы структуры, `Public` по умолчанию; класс переменные и константы, `Private` по умолчанию, а другие члены класса являются `Public` по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9b365-125">All structure elements are `Public` by default; class variables and constants are `Private` by default, while other class members are `Public` by default.</span></span> <span data-ttu-id="9b365-126">Это поведение для членов класса обеспечивает совместимость с системой Visual Basic 6.0, значений по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9b365-126">This behavior for class members provides compatibility with the Visual Basic 6.0 system of defaults.</span></span>  
   
--   Структуры должны иметь по крайней мере один не совместно переменную или без общего доступа элемента события; класс может быть пустым.  
+-   <span data-ttu-id="9b365-127">Структура должна иметь по крайней мере один не совместно переменную или без общего доступа элемент события; класс может быть пустым.</span><span class="sxs-lookup"><span data-stu-id="9b365-127">A structure must have at least one nonshared variable or nonshared, noncustom event element; a class can be completely empty.</span></span>  
   
--   Элементы структуры не могут объявляться как `Protected`; члены класса могут.  
+-   <span data-ttu-id="9b365-128">Элементы структуры не могут объявляться как `Protected`; члены класса могут.</span><span class="sxs-lookup"><span data-stu-id="9b365-128">Structure elements cannot be declared as `Protected`; class members can.</span></span>  
   
--   Процедура структуры может обрабатывать события только в том случае, если это [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` процедура и только с помощью параметра [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md); любая процедура класса может обработать событие, используя либо [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) ключевое слово или `AddHandler` инструкции. Дополнительные сведения см. в разделе [события](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+-   <span data-ttu-id="9b365-129">Процедура структуры может обрабатывать события только в том случае, если это [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` процедура и только с помощью параметра [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md); любая процедура класса может обработать событие, используя либо [ Обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) ключевое слово или `AddHandler` инструкции.</span><span class="sxs-lookup"><span data-stu-id="9b365-129">A structure procedure can handle events only if it is a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure, and only by means of the [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md); any class procedure can handle events, using either the [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) keyword or the `AddHandler` statement.</span></span> <span data-ttu-id="9b365-130">Дополнительные сведения см. в статье [Events (Visual Basic)](../../../../visual-basic/programming-guide/language-features/events/index.md) (События в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="9b365-130">For more information, see [Events](../../../../visual-basic/programming-guide/language-features/events/index.md).</span></span>  
   
--   Объявления переменных структуры нельзя указать инициализаторы или исходные размеры массивов; возможность объявления переменных класса.  
+-   <span data-ttu-id="9b365-131">Объявления переменных структуры нельзя указать инициализаторы или исходные размеры массивов; возможность объявления переменных класса.</span><span class="sxs-lookup"><span data-stu-id="9b365-131">Structure variable declarations cannot specify initializers or initial sizes for arrays; class variable declarations can.</span></span>  
   
--   Структуры неявно наследуют от <xref:System.ValueType?displayProperty=fullName>класса и не может наследоваться от любого другого типа; классы могут наследовать от любых классов, отличных от <xref:System.ValueType?displayProperty=fullName>.</xref:System.ValueType?displayProperty=fullName> </xref:System.ValueType?displayProperty=fullName>  
+-   <span data-ttu-id="9b365-132">Структуры неявно наследуют от <xref:System.ValueType?displayProperty=nameWithType> класса и не может наследовать из любого другого типа; классы могут наследовать от любых классов, отличных от <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9b365-132">Structures implicitly inherit from the <xref:System.ValueType?displayProperty=nameWithType> class and cannot inherit from any other type; classes can inherit from any class or classes other than <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
--   Структуры не наследуются; классы являются.  
+-   <span data-ttu-id="9b365-133">Структуры не наследуются; классы являются.</span><span class="sxs-lookup"><span data-stu-id="9b365-133">Structures are not inheritable; classes are.</span></span>  
   
--   Структуры никогда не завершаются, поэтому общеязыковой среды выполнения (CLR) никогда не вызывает <xref:System.Object.Finalize%2A>метод для структур; классы завершаются сборщиком мусора (GC), который вызывает <xref:System.Object.Finalize%2A>для класса, когда обнаруживает, что не осталось активных ссылок.</xref:System.Object.Finalize%2A> </xref:System.Object.Finalize%2A>  
+-   <span data-ttu-id="9b365-134">Структуры никогда не завершаются, поэтому общеязыковой среды выполнения (CLR) никогда не вызывает <xref:System.Object.Finalize%2A> метод для структур; классы завершаются сборщиком мусора (GC), который вызывает <xref:System.Object.Finalize%2A> для класса, когда обнаруживает, что не активных ссылок остальные.</span><span class="sxs-lookup"><span data-stu-id="9b365-134">Structures are never terminated, so the common language runtime (CLR) never calls the <xref:System.Object.Finalize%2A> method on any structure; classes are terminated by the garbage collector (GC), which calls <xref:System.Object.Finalize%2A> on a class when it detects there are no active references remaining.</span></span>  
   
--   Структуры не требуется конструктор; для класса требуется.  
+-   <span data-ttu-id="9b365-135">Структуры не требуется конструктор. для класса требуется.</span><span class="sxs-lookup"><span data-stu-id="9b365-135">A structure does not require a constructor; a class does.</span></span>  
   
--   Структуры могут иметь не общие конструкторы, только если они принимают параметры; классы могут иметь их с параметрами или без параметров.  
+-   <span data-ttu-id="9b365-136">Структуры могут иметь конструкторы, не используемые совместно только в том случае, если они принимают параметры; классы могут иметь их с параметрами или без.</span><span class="sxs-lookup"><span data-stu-id="9b365-136">Structures can have nonshared constructors only if they take parameters; classes can have them with or without parameters.</span></span>  
   
- Каждая структура имеет неявный открытый конструктор без параметров. Этот конструктор инициализирует элементы структуры данных к значениям по умолчанию. Не удалось переопределить это поведение.  
+ <span data-ttu-id="9b365-137">Каждая структура имеет неявный открытый конструктор без параметров.</span><span class="sxs-lookup"><span data-stu-id="9b365-137">Every structure has an implicit public constructor without parameters.</span></span> <span data-ttu-id="9b365-138">Этот конструктор инициализирует элементы структуры данных в значения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9b365-138">This constructor initializes all the structure's data elements to their default values.</span></span> <span data-ttu-id="9b365-139">Не удалось переопределить это поведение.</span><span class="sxs-lookup"><span data-stu-id="9b365-139">You cannot redefine this behavior.</span></span>  
   
-## <a name="instances-and-variables"></a>Экземпляры и переменные  
- Поскольку структуры являются типами значений, каждая переменная структуры постоянно привязана к отдельному экземпляру структуры. Классы являются ссылочными типами, и переменная объекта может ссылаться на различные экземпляры класса в разное время. Это различие влияет на использование структур и классов следующим образом:  
+## <a name="instances-and-variables"></a><span data-ttu-id="9b365-140">Экземпляры и переменные</span><span class="sxs-lookup"><span data-stu-id="9b365-140">Instances and Variables</span></span>  
+ <span data-ttu-id="9b365-141">Поскольку структуры являются типами значений, каждая переменная структуры постоянно привязан к отдельному экземпляру структуры.</span><span class="sxs-lookup"><span data-stu-id="9b365-141">Because structures are value types, each structure variable is permanently bound to an individual structure instance.</span></span> <span data-ttu-id="9b365-142">Однако классы — ссылочными типами, и переменная объекта может ссылаться на различные экземпляры класса в разное время.</span><span class="sxs-lookup"><span data-stu-id="9b365-142">But classes are reference types, and an object variable can refer to various class instances at different times.</span></span> <span data-ttu-id="9b365-143">Это различие влияет на использование структур и классов следующим образом:</span><span class="sxs-lookup"><span data-stu-id="9b365-143">This distinction affects your usage of structures and classes in the following ways:</span></span>  
   
--   **Инициализация.** Переменная структуры неявно содержит инициализацию элементов с помощью структуры конструктор без параметров. Таким образом `Dim s As struct1` эквивалентно `Dim s As struct1 = New struct1()`.  
+-   <span data-ttu-id="9b365-144">**Инициализация.**</span><span class="sxs-lookup"><span data-stu-id="9b365-144">**Initialization.**</span></span> <span data-ttu-id="9b365-145">Переменная структуры неявно содержит инициализацию элементов с помощью конструктора без параметров структуры.</span><span class="sxs-lookup"><span data-stu-id="9b365-145">A structure variable implicitly includes an initialization of the elements using the structure's parameterless constructor.</span></span> <span data-ttu-id="9b365-146">Таким образом `Dim s As struct1` эквивалентно `Dim s As struct1 = New struct1()`.</span><span class="sxs-lookup"><span data-stu-id="9b365-146">Therefore, `Dim s As struct1` is equivalent to `Dim s As struct1 = New struct1()`.</span></span>  
   
--   **Присваивание переменных.** Когда одна переменная структуры присваивается другой или экземпляр структуры передается в аргумент процедуры, текущие значения всех элементов переменной копируются в новую структуру. Когда переменная объекта присваивается другой или передается в процедуру, копируется только указатель ссылки.  
+-   <span data-ttu-id="9b365-147">**Присваивание переменных.**</span><span class="sxs-lookup"><span data-stu-id="9b365-147">**Assigning Variables.**</span></span> <span data-ttu-id="9b365-148">Когда одна переменная структуры присваивается другой или экземпляр структуры передается в аргумент процедуры, текущие значения всех элементов переменной копируются в новую структуру.</span><span class="sxs-lookup"><span data-stu-id="9b365-148">When you assign one structure variable to another, or pass a structure instance to a procedure argument, the current values of all the variable elements are copied to the new structure.</span></span> <span data-ttu-id="9b365-149">Когда переменная объекта присваивается другой или передается в процедуру, копируется только указатель ссылки.</span><span class="sxs-lookup"><span data-stu-id="9b365-149">When you assign one object variable to another, or pass an object variable to a procedure, only the reference pointer is copied.</span></span>  
   
--   **Назначение ничего.** Можно назначить значение [ничего](../../../../visual-basic/language-reference/nothing.md) в структуру переменной, но экземпляр продолжает оставаться связанным с переменной. Можно по-прежнему вызывать его методы и доступ к ее элементам данных, хотя элементы переменной заново инициализируются назначением.  
+-   <span data-ttu-id="9b365-150">**Назначение никаких действий.**</span><span class="sxs-lookup"><span data-stu-id="9b365-150">**Assigning Nothing.**</span></span> <span data-ttu-id="9b365-151">Может быть присвоено значение [ничего](../../../../visual-basic/language-reference/nothing.md) к структуре переменной, но экземпляр продолжает быть связанным с переменной.</span><span class="sxs-lookup"><span data-stu-id="9b365-151">You can assign the value [Nothing](../../../../visual-basic/language-reference/nothing.md) to a structure variable, but the instance continues to be associated with the variable.</span></span> <span data-ttu-id="9b365-152">Можно по-прежнему вызывать его методы и доступ к ее элементам данных, хотя элементы переменной инициализируются с назначением.</span><span class="sxs-lookup"><span data-stu-id="9b365-152">You can still call its methods and access its data elements, although variable elements are reinitialized by the assignment.</span></span>  
   
-     Напротив, если задано значение переменной объекта `Nothing`, она не связана ни с каким экземпляром класса и доступ к любым элементам через переменную невозможно, пока не будет присвоен другой экземпляр.  
+     <span data-ttu-id="9b365-153">В отличие от этого, если значение переменной объекта `Nothing`, она не связана ни с каким экземпляром класса и доступ к любым элементам через переменную невозможно, пока не будет присвоен другой экземпляр.</span><span class="sxs-lookup"><span data-stu-id="9b365-153">In contrast, if you set an object variable to `Nothing`, you dissociate it from any class instance, and you cannot access any members through the variable until you assign another instance to it.</span></span>  
   
--   **Несколько экземпляров.** Переменной объекта может иметь разные экземпляры класса назначены в различные моменты времени, и несколько переменных объекта может ссылаться на один экземпляр класса в то же время. Изменения, внесенные в значения членов класса, влияют на эти члены при доступе через другую переменную, указывающую на тот же экземпляр.  
+-   <span data-ttu-id="9b365-154">**Несколько экземпляров.**</span><span class="sxs-lookup"><span data-stu-id="9b365-154">**Multiple Instances.**</span></span> <span data-ttu-id="9b365-155">Переменная объекта может иметь разные экземпляры класса назначены в разные моменты времени, и несколько переменных объекта могут ссылаться на один экземпляр класса, в то же время.</span><span class="sxs-lookup"><span data-stu-id="9b365-155">An object variable can have different class instances assigned to it at different times, and several object variables can refer to the same class instance at the same time.</span></span> <span data-ttu-id="9b365-156">Изменения, внесенные в значения членов класса влияет на эти члены при доступе через другую переменную, указывающую на тот же экземпляр.</span><span class="sxs-lookup"><span data-stu-id="9b365-156">Changes you make to the values of class members affect those members when accessed through another variable pointing to the same instance.</span></span>  
   
-     Элементы структуры изолированы в пределах своего экземпляра. Изменения в их значения не отражаются в любой других переменных структуры, даже в других экземплярах того же `Structure` объявления.  
+     <span data-ttu-id="9b365-157">Элементы структуры изолированы в пределах своего экземпляра.</span><span class="sxs-lookup"><span data-stu-id="9b365-157">Structure elements, however, are isolated within their own instance.</span></span> <span data-ttu-id="9b365-158">Изменения их значения не отражаются в любые другие переменные структуры, даже в других экземплярах одной и той же `Structure` объявления.</span><span class="sxs-lookup"><span data-stu-id="9b365-158">Changes to their values are not reflected in any other structure variables, even in other instances of the same `Structure` declaration.</span></span>  
   
--   **Проверки на равенство.** Проверки равенства двух структур должна выполняться с параметром-элемент теста. Две переменные объекта могут сравниваться с помощью <xref:System.Object.Equals%2A>метод.</xref:System.Object.Equals%2A> <xref:System.Object.Equals%2A>Определяет, указывают ли две переменные на один экземпляр.</xref:System.Object.Equals%2A>  
+-   <span data-ttu-id="9b365-159">**Равенство.**</span><span class="sxs-lookup"><span data-stu-id="9b365-159">**Equality.**</span></span> <span data-ttu-id="9b365-160">Проверки равенства двух структур должна выполняться с тестом по элементам.</span><span class="sxs-lookup"><span data-stu-id="9b365-160">Equality testing of two structures must be performed with an element-by-element test.</span></span> <span data-ttu-id="9b365-161">Две переменные объекта можно сравнивать с помощью <xref:System.Object.Equals%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="9b365-161">Two object variables can be compared using the <xref:System.Object.Equals%2A> method.</span></span> <span data-ttu-id="9b365-162"><xref:System.Object.Equals%2A>Определяет, указывают ли две переменные с тем же экземпляром.</span><span class="sxs-lookup"><span data-stu-id="9b365-162"><xref:System.Object.Equals%2A> indicates whether the two variables point to the same instance.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Устранение неполадок типы данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Структуры и другие элементы программирования](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="9b365-163">См. также</span><span class="sxs-lookup"><span data-stu-id="9b365-163">See Also</span></span>  
+ [<span data-ttu-id="9b365-164">Типы данных</span><span class="sxs-lookup"><span data-stu-id="9b365-164">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="9b365-165">Составные типы данных</span><span class="sxs-lookup"><span data-stu-id="9b365-165">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="9b365-166">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="9b365-166">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="9b365-167">Структуры</span><span class="sxs-lookup"><span data-stu-id="9b365-167">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="9b365-168">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="9b365-168">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="9b365-169">Структуры и другие элементы программирования</span><span class="sxs-lookup"><span data-stu-id="9b365-169">Structures and Other Programming Elements</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [<span data-ttu-id="9b365-170">Объекты и классы</span><span class="sxs-lookup"><span data-stu-id="9b365-170">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

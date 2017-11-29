@@ -1,103 +1,102 @@
 ---
-title: "Размерность массивов в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "массивы [Visual Basic], измерения"
-  - "массивы [Visual Basic], ранжировать"
-  - "массивы [Visual Basic], прямоугольные"
-  - "измерения, массивы"
-  - "ранжирование, массивы"
-  - "прямоугольные массивы"
+title: Array Dimensions in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- dimensions, arrays
+- arrays [Visual Basic], dimensions
+- arrays [Visual Basic], rectangular
+- arrays [Visual Basic], rank
+- rectangular arrays
+- ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Размерность массивов в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-*Размерность* — это направление, в котором можно изменять спецификацию элементов массива.  Массив, содержащий суммы продаж на каждый день месяца, имеет одну размерность \(день месяца\).  Массив, содержащий суммы продаж по каждому отделу на каждый день месяца, имеет два измерения \(номер отдела и день месяца\).  *Рангом* массива называется число его измерений.  
+# <a name="array-dimensions-in-visual-basic"></a><span data-ttu-id="e70bc-102">Array Dimensions in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e70bc-102">Array Dimensions in Visual Basic</span></span>
+<span data-ttu-id="e70bc-103">Объект *измерения* направление, в котором можно изменять спецификацию элементов массива.</span><span class="sxs-lookup"><span data-stu-id="e70bc-103">A *dimension* is a direction in which you can vary the specification of an array's elements.</span></span> <span data-ttu-id="e70bc-104">Массив, содержащий суммы продаж за каждый день месяца, имеет одного измерения (день месяца).</span><span class="sxs-lookup"><span data-stu-id="e70bc-104">An array that holds the sales total for each day of the month has one dimension (the day of the month).</span></span> <span data-ttu-id="e70bc-105">Массив, содержащий суммы по отделу продаж за каждый день месяца, имеет два измерения (номер отдела и день месяца).</span><span class="sxs-lookup"><span data-stu-id="e70bc-105">An array that holds the sales total by department for each day of the month has two dimensions (the department number and the day of the month).</span></span> <span data-ttu-id="e70bc-106">Размерность массива не вызывается его *ранг*.</span><span class="sxs-lookup"><span data-stu-id="e70bc-106">The number of dimensions an array has is called its *rank*.</span></span>  
   
 > [!NOTE]
->  Для определения количества измерений массива можно использовать свойство <xref:System.Array.Rank%2A>.  
+>  <span data-ttu-id="e70bc-107">Можно использовать <xref:System.Array.Rank%2A> свойство для определения количества измерений массива.</span><span class="sxs-lookup"><span data-stu-id="e70bc-107">You can use the <xref:System.Array.Rank%2A> property to determine the how many dimensions an array has.</span></span>  
   
-## Работа с измерениями  
- Необходимо указывать элемент массива, указав *индекс* для каждого из его измерений.  Элементы непрерывны вдоль каждого измерения, начиная с индекса 0 до наибольшего индекса для этого измерения.  
+## <a name="working-with-dimensions"></a><span data-ttu-id="e70bc-108">Работа с измерениями</span><span class="sxs-lookup"><span data-stu-id="e70bc-108">Working with Dimensions</span></span>  
+ <span data-ttu-id="e70bc-109">Необходимо указывать элемент массива, указав *индекс* или *индекс* для каждого из его измерений.</span><span class="sxs-lookup"><span data-stu-id="e70bc-109">You specify an element of an array by supplying an *index* or *subscript* for each of its dimensions.</span></span> <span data-ttu-id="e70bc-110">Элементы непрерывны вдоль каждого измерения, от индекса 0 до наибольшего индекса для этого измерения.</span><span class="sxs-lookup"><span data-stu-id="e70bc-110">The elements are contiguous along each dimension from index 0 through the highest index for that dimension.</span></span>  
   
- На следующем рисунке показана общая структура массивов различного ранга.  Каждый элемент на иллюстрациях указывает значения индекса при обращениях к нему.  Например, можно получить доступ к первому элементу второй строки двумерного массива, указав индексы `(1, 0)`.  
+ <span data-ttu-id="e70bc-111">Общая структура массивов различного ранга на рисунках ниже.</span><span class="sxs-lookup"><span data-stu-id="e70bc-111">The following illustrations show the conceptual structure of arrays with different ranks.</span></span> <span data-ttu-id="e70bc-112">Каждый элемент на рисунках показаны значения индекса, которые к нему доступ.</span><span class="sxs-lookup"><span data-stu-id="e70bc-112">Each element in the illustrations shows the index values that access it.</span></span> <span data-ttu-id="e70bc-113">Например, можно получить доступ к первый элемент второй строки двумерного массива, указав индексы `(1, 0)`.</span><span class="sxs-lookup"><span data-stu-id="e70bc-113">For example, you can access the first element of the second row of the two-dimensional array by specifying indexes `(1, 0)`.</span></span>  
   
- ![Графическая схема одномерного массива](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.png "ArrayExDimOne")  
-Одномерный массив  
+ <span data-ttu-id="e70bc-114">![Графическая схема один &#45; двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")</span><span class="sxs-lookup"><span data-stu-id="e70bc-114">![Graphic diagram of one&#45;dimensional array](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")</span></span>  
+<span data-ttu-id="e70bc-115">Одномерный массив</span><span class="sxs-lookup"><span data-stu-id="e70bc-115">One-dimensional array</span></span>  
   
- ![Графическая схема двухмерного массива](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.png "ArrayExDimTwo")  
-Двумерный массив  
+ <span data-ttu-id="e70bc-116">![График схемы двух &#45; двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")</span><span class="sxs-lookup"><span data-stu-id="e70bc-116">![Graphic diagram of two&#45;dimensional array](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")</span></span>  
+<span data-ttu-id="e70bc-117">Двумерный массив</span><span class="sxs-lookup"><span data-stu-id="e70bc-117">Two-dimensional array</span></span>  
   
- ![Графическая схема трехмерного массива](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.png "ArrayExDimThree")  
-Трехмерный массив  
+ <span data-ttu-id="e70bc-118">![Графическая схема трех &#45; двумерный массив](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")</span><span class="sxs-lookup"><span data-stu-id="e70bc-118">![Graphic diagram of three&#45;dimensional array](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")</span></span>  
+<span data-ttu-id="e70bc-119">Трехмерный массив</span><span class="sxs-lookup"><span data-stu-id="e70bc-119">Three-dimensional array</span></span>  
   
-### Одно измерение  
- Многие массивы имеют только одно измерение, например, количество людей каждого возраста.  Единственное требование при указании элемента — необходимо указывать возраст, для которого этот элемент содержит счетчик.  Поэтому такой массив использует только один индекс.  В следующем примере объявляется переменная для хранения  *одномерного массива*  счетчиков возраста для возраста от 0 до 120.  
+### <a name="one-dimension"></a><span data-ttu-id="e70bc-120">Одно измерение</span><span class="sxs-lookup"><span data-stu-id="e70bc-120">One Dimension</span></span>  
+ <span data-ttu-id="e70bc-121">Многие массивы имеют только одно измерение, например, сколько людей каждого возраста.</span><span class="sxs-lookup"><span data-stu-id="e70bc-121">Many arrays have only one dimension, such as the number of people of each age.</span></span> <span data-ttu-id="e70bc-122">Единственное требование для указания элемента является возраст, для которого этот элемент содержит счетчик.</span><span class="sxs-lookup"><span data-stu-id="e70bc-122">The only requirement to specify an element is the age for which that element holds the count.</span></span> <span data-ttu-id="e70bc-123">Таким образом такой массив использует только один индекс.</span><span class="sxs-lookup"><span data-stu-id="e70bc-123">Therefore, such an array uses only one index.</span></span> <span data-ttu-id="e70bc-124">В следующем примере объявляется переменная для хранения *одномерный массив* возраст подсчитывает для возраста от 0 до 120.</span><span class="sxs-lookup"><span data-stu-id="e70bc-124">The following example declares a variable to hold a *one-dimensional array* of age counts for ages 0 through 120.</span></span>  
   
 ```  
 Dim ageCounts(120) As UInteger  
 ```  
   
-### Два измерения  
- Некоторые массивы имеют два измерения. Например, количество офисов на каждом этаже каждого здания на территории предприятия.  Спецификация элемента требует одновременно указания номера здания и этажа. Каждый элемент содержит счетчик для этой комбинации.  Таким образом, такой массив использует два индекса.  В следующем примере объявляется переменная для хранения  *двумерного массива*  из счетчиков офисов для зданий от 0 до 40 и этажей от 0 до 5.  
+### <a name="two-dimensions"></a><span data-ttu-id="e70bc-125">Два измерения</span><span class="sxs-lookup"><span data-stu-id="e70bc-125">Two Dimensions</span></span>  
+ <span data-ttu-id="e70bc-126">Некоторые массивы имеют два измерения, такие как количество офисов в каждой установки каждого построения на другой.</span><span class="sxs-lookup"><span data-stu-id="e70bc-126">Some arrays have two dimensions, such as the number of offices on each floor of each building on a campus.</span></span> <span data-ttu-id="e70bc-127">Спецификация элемента требует номера здания и пол, а каждый элемент содержит счетчик для данного сочетания здание и этаж.</span><span class="sxs-lookup"><span data-stu-id="e70bc-127">The specification of an element requires both the building number and the floor, and each element holds the count for that combination of building and floor.</span></span> <span data-ttu-id="e70bc-128">Таким образом такой массив использует два индекса.</span><span class="sxs-lookup"><span data-stu-id="e70bc-128">Therefore, such an array uses two indexes.</span></span> <span data-ttu-id="e70bc-129">В следующем примере объявляется переменная для хранения *двумерный массив* из счетчиков офисов для зданий от 0 до 40 и этажи 0 – 5.</span><span class="sxs-lookup"><span data-stu-id="e70bc-129">The following example declares a variable to hold a *two-dimensional array* of office counts, for buildings 0 through 40 and floors 0 through 5.</span></span>  
   
 ```  
 Dim officeCounts(40, 5) As Byte  
 ```  
   
- Двумерный массив также называют  *прямоугольным массивом*.  
+ <span data-ttu-id="e70bc-130">Также называется двумерный массив *прямоугольный массив*.</span><span class="sxs-lookup"><span data-stu-id="e70bc-130">A two-dimensional array is also called a *rectangular array*.</span></span>  
   
-### Три измерения  
- Некоторые массивы имеют три измерения. Например, координаты в трехмерном пространстве.  Такой массив использует три индекса, которые в этом случае представляют координаты физического пространства x, y и z.  В следующем примере объявляется переменная для хранения  *трехмерного массива*  температуры воздуха в различных точках трехмерного объема.  
+### <a name="three-dimensions"></a><span data-ttu-id="e70bc-131">Три измерения</span><span class="sxs-lookup"><span data-stu-id="e70bc-131">Three Dimensions</span></span>  
+ <span data-ttu-id="e70bc-132">Некоторые массивы имеют три измерения, такие как значения в трехмерном пространстве.</span><span class="sxs-lookup"><span data-stu-id="e70bc-132">A few arrays have three dimensions, such as values in three-dimensional space.</span></span> <span data-ttu-id="e70bc-133">Такой массив использует три индекса, которые в этом случае представляют x, y и z координаты физического пространства.</span><span class="sxs-lookup"><span data-stu-id="e70bc-133">Such an array uses three indexes, which in this case represent the x, y, and z coordinates of physical space.</span></span> <span data-ttu-id="e70bc-134">В следующем примере объявляется переменная для хранения *трехмерный массив* температуры воздуха в различных точках трехмерного объема.</span><span class="sxs-lookup"><span data-stu-id="e70bc-134">The following example declares a variable to hold a *three-dimensional array* of air temperatures at various points in a three-dimensional volume.</span></span>  
   
 ```  
 Dim airTemperatures(99, 99, 24) As Single  
 ```  
   
-### Более трех измерений  
- Хотя массив может иметь до 32 измерений, довольно редко их бывает более трех.  
+### <a name="more-than-three-dimensions"></a><span data-ttu-id="e70bc-135">Более трех измерений</span><span class="sxs-lookup"><span data-stu-id="e70bc-135">More than Three Dimensions</span></span>  
+ <span data-ttu-id="e70bc-136">Несмотря на то, что массив может иметь до 32 измерений, довольно редко бывает более трех.</span><span class="sxs-lookup"><span data-stu-id="e70bc-136">Although an array can have as many as 32 dimensions, it is rare to have more than three.</span></span>  
   
 > [!NOTE]
->  Многомерные массивы и массивы массивов следует использовать с осторожностью, так как при увеличении размерности массива память, необходимая для его хранения, значительно увеличивается.  
+>  <span data-ttu-id="e70bc-137">При добавлении измерения массива, общий объем хранилища, необходимого для массива, значительно, увеличивается так многомерные массивы используйте с осторожностью.</span><span class="sxs-lookup"><span data-stu-id="e70bc-137">When you add dimensions to an array, the total storage needed by the array increases considerably, so use multidimensional arrays with care.</span></span>  
   
-## Использование различных измерений  
- Предположим, требуется отслеживать суммы продаж за каждый день текущего месяца.  Можно объявить одномерный массив с 31 элементом, по одному для каждого дня месяца, как показано в следующем примере.  
+## <a name="using-different-dimensions"></a><span data-ttu-id="e70bc-138">Использование различных измерений</span><span class="sxs-lookup"><span data-stu-id="e70bc-138">Using Different Dimensions</span></span>  
+ <span data-ttu-id="e70bc-139">Предположим, что требуется отслеживать суммы продаж за каждый день текущего месяца.</span><span class="sxs-lookup"><span data-stu-id="e70bc-139">Suppose you want to track sales amounts for every day of the present month.</span></span> <span data-ttu-id="e70bc-140">Можно объявить одномерный массив с 31 элементом одному на каждый день месяца, в следующем примере показано.</span><span class="sxs-lookup"><span data-stu-id="e70bc-140">You might declare a one-dimensional array with 31 elements, one for each day of the month, as the following example shows.</span></span>  
   
 ```  
 Dim salesAmounts(30) As Double  
 ```  
   
- Теперь предположим, что требуется отслеживать те же сведения, не только для каждого дня месяца, но и для каждого месяца в году.  Можно объявить двумерный массив с 12 строками \(для месяцев\) и 31 столбцом \(для дней\), как показано в следующем примере.  
+ <span data-ttu-id="e70bc-141">Теперь предположим, что требуется отслеживать те же сведения, не только для каждого дня в месяце, но и для каждого месяца года.</span><span class="sxs-lookup"><span data-stu-id="e70bc-141">Now suppose you want to track the same information not only for every day of a month but also for every month of the year.</span></span> <span data-ttu-id="e70bc-142">Можно объявить двумерный массив с 12 строк (по месяцам) и 31 колонок (дни), как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="e70bc-142">You might declare a two-dimensional array with 12 rows (for the months) and 31 columns (for the days), as the following example shows.</span></span>  
   
 ```  
 Dim salesAmounts(11, 30) As Double  
 ```  
   
- Теперь предположим, что необходимо хранить сведения за более чем один год.  Если требуется отслеживать суммы продаж в течение 5 лет, можно объявить трехмерный массив с 5 слоями, 12 строками и 31 столбцом, как показано в следующем примере.  
+ <span data-ttu-id="e70bc-143">Теперь предположим, что вы решили хранить сведения для более чем одного года.</span><span class="sxs-lookup"><span data-stu-id="e70bc-143">Now suppose you decide to have your array hold information for more than one year.</span></span> <span data-ttu-id="e70bc-144">Если вы хотите отслеживать суммы продаж в течение 5 лет, можно объявить трехмерный массив с 5 слоями, 12 строк и 31 столбцом, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="e70bc-144">If you want to track sales amounts for 5 years, you could declare a three-dimensional array with 5 layers, 12 rows, and 31 columns, as the following example shows.</span></span>  
   
 ```  
 Dim salesAmounts(4, 11, 30) As Double  
 ```  
   
- Обратите внимание, что, так как каждый индекс меняется от 0 до своего максимального значения, каждое измерение массива `salesAmounts` объявляется как меньшее на единицу, чем требуемая длина этого измерения.  Обратите внимание, что размер массива возрастает с каждым новым измерением.  Три размера массивов из предыдущих примеров — это 31, 372 и 1860 элементов, соответственно.  
+ <span data-ttu-id="e70bc-145">Обратите внимание, что, так как каждый индекс меняется от 0 до своего максимального значения, каждое измерение массива `salesAmounts` объявлен на единицу меньше, чем требуемая длина этого измерения.</span><span class="sxs-lookup"><span data-stu-id="e70bc-145">Note that, because each index varies from 0 to its maximum, each dimension of `salesAmounts` is declared as one less than the required length for that dimension.</span></span> <span data-ttu-id="e70bc-146">Обратите внимание, что размер массива увеличивается с каждым новым измерением.</span><span class="sxs-lookup"><span data-stu-id="e70bc-146">Note also that the size of the array increases with each new dimension.</span></span> <span data-ttu-id="e70bc-147">В приведенном примере три размера: 31, 372 и 1860 элементов.</span><span class="sxs-lookup"><span data-stu-id="e70bc-147">The three sizes in the preceding examples are 31, 372, and 1,860 elements respectively.</span></span>  
   
 > [!NOTE]
->  Можно создать массив без использования оператора `Dim` или предложения `New`.  Например, можно вызвать метод <xref:System.Array.CreateInstance%2A> или другой компонент, который может передавать коду массив, созданный таким же способом.  Нижняя граница такого массива может отличаться от 0.  Нижнюю границу всегда можно найти с помощью метода <xref:System.Array.GetLowerBound%2A> или функции `LBound`.  
+>  <span data-ttu-id="e70bc-148">Можно создать массив без использования `Dim` инструкции или `New` предложения.</span><span class="sxs-lookup"><span data-stu-id="e70bc-148">You can create an array without using the `Dim` statement or the `New` clause.</span></span> <span data-ttu-id="e70bc-149">Например, можно вызвать <xref:System.Array.CreateInstance%2A> метода или другим компонентом массив можно передать кода создается таким образом.</span><span class="sxs-lookup"><span data-stu-id="e70bc-149">For example, you can call the <xref:System.Array.CreateInstance%2A> method, or another component can pass your code an array created in this manner.</span></span> <span data-ttu-id="e70bc-150">Такой массив может иметь нижнюю границу, отличное от 0.</span><span class="sxs-lookup"><span data-stu-id="e70bc-150">Such an array can have a lower bound other than 0.</span></span> <span data-ttu-id="e70bc-151">Можно всегда проверять для нижней границы измерения с помощью <xref:System.Array.GetLowerBound%2A> метода или `LBound` функции.</span><span class="sxs-lookup"><span data-stu-id="e70bc-151">You can always test for the lower bound of a dimension by using the <xref:System.Array.GetLowerBound%2A> method or the `LBound` function.</span></span>  
   
-## См. также  
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a><span data-ttu-id="e70bc-152">См. также</span><span class="sxs-lookup"><span data-stu-id="e70bc-152">See Also</span></span>  
+ [<span data-ttu-id="e70bc-153">Массивы</span><span class="sxs-lookup"><span data-stu-id="e70bc-153">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="e70bc-154">Устранение неполадок, связанных с массивами</span><span class="sxs-lookup"><span data-stu-id="e70bc-154">Troubleshooting Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

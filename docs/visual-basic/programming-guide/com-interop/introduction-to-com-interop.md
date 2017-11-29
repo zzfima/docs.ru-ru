@@ -1,88 +1,71 @@
 ---
-title: "Знакомство с COM-взаимодействием (Visual Basic) | Документы Microsoft"
+title: "Знакомство с COM-взаимодействием (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - interop assemblies
-- COM interop, about COM interop
+- COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8866dbadca040c57ed2b59540dd2c341eb81758c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 81a9d0fc7036ff1b821c46687541311f26113212
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="introduction-to-com-interop-visual-basic"></a>Знакомство с COM-взаимодействием (Visual Basic)
-Модель компонентных объектов (COM) позволяет объекту предоставлять его функциональность другим компонентам и приложениям хоста. Хотя COM-объекты были основой программирования в течение многих лет в Windows, приложений, предназначенных для общеязыковой среды выполнения (CLR), имеют много преимуществ.  
+# <a name="introduction-to-com-interop-visual-basic"></a><span data-ttu-id="c7337-102">Знакомство с COM-взаимодействием (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c7337-102">Introduction to COM Interop (Visual Basic)</span></span>
+<span data-ttu-id="c7337-103">Модель объектов компонентов (COM) позволяет объекту предоставлять его функциональность другим компонентам и приложениям хоста.</span><span class="sxs-lookup"><span data-stu-id="c7337-103">The Component Object Model (COM) lets an object expose its functionality to other components and to host applications.</span></span> <span data-ttu-id="c7337-104">Хотя COM-объекты были основой программирования в течение многих лет в Windows, приложений, предназначенных для общеязыковой среды выполнения (CLR), имеют много преимуществ.</span><span class="sxs-lookup"><span data-stu-id="c7337-104">While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]приложения будут заменят разработанные с применением COM. До этого, может потребоваться использовать или создавать объекты COM с помощью [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. Взаимодействие с COM, или *COM-взаимодействия*, позволяет использовать существующие объекты COM при постепенном переходе [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] в своем темпе.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<span data-ttu-id="c7337-105">приложения будут заменят разработанные с применением COM.</span><span class="sxs-lookup"><span data-stu-id="c7337-105"> applications will eventually replace those developed with COM.</span></span> <span data-ttu-id="c7337-106">До этого времени может потребоваться использовать или создавать объекты COM с помощью [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c7337-106">Until then, you may have to use or create COM objects by using [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span> <span data-ttu-id="c7337-107">Взаимодействие с COM, или *COM-взаимодействия*, позволяет использовать существующие объекты COM при постепенном переходе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] в своем темпе.</span><span class="sxs-lookup"><span data-stu-id="c7337-107">Interoperability with COM, or *COM interop*, enables you to use existing COM objects while transitioning to the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] at your own pace.</span></span>  
   
- С помощью [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] для создания компонентов COM, можно использовать COM-взаимодействие без регистрации. Это позволяет контролировать, какая версия DLL включена, при более чем одной версии установлено на компьютере и позволяет конечным пользователям использовать XCOPY или FTP скопировать приложение в соответствующий каталог на своем компьютере когда может быть выполнена. Дополнительные сведения см. в разделе [COM-взаимодействия без регистрации](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ <span data-ttu-id="c7337-108">С помощью [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для создания компонентов COM, можно использовать COM-взаимодействие без регистрации.</span><span class="sxs-lookup"><span data-stu-id="c7337-108">By using the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] to create COM components, you can use registration-free COM interop.</span></span> <span data-ttu-id="c7337-109">Это позволяет контролировать, какая версия библиотеки DLL будет включаться при более чем одной версии установлена на компьютере и позволяет конечным пользователям использовать XCOPY или FTP скопировать приложение в соответствующий каталог на своем компьютере когда может быть выполнена.</span><span class="sxs-lookup"><span data-stu-id="c7337-109">This lets you control which DLL version is enabled when more than one version is installed on a computer, and lets end users use XCOPY or FTP to copy your application to an appropriate directory on their computer where it can be run.</span></span> <span data-ttu-id="c7337-110">Дополнительные сведения см. в разделе [COM-взаимодействия без регистрации](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).</span><span class="sxs-lookup"><span data-stu-id="c7337-110">For more information, see [Registration-Free COM Interop](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).</span></span>  
   
-## <a name="managed-code-and-data"></a>Управляемый код и данные  
- Код, разработанный для [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] называется *управляемого кода*и содержит метаданные, которые используются средой CLR. Данные, используемые [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] приложения называется *управляемыми данными* , так как среда выполнения управляет задачами, связанными с данными, такие как выделение и освобождение памяти и проверка типов. По умолчанию [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)] использует управляемый код и данные, но можно получить доступ к неуправляемому коду и данным объектов COM с помощью сборок взаимодействия (описываемых далее на этой странице).  
+## <a name="managed-code-and-data"></a><span data-ttu-id="c7337-111">Управляемый код и данные</span><span class="sxs-lookup"><span data-stu-id="c7337-111">Managed Code and Data</span></span>  
+ <span data-ttu-id="c7337-112">Код, разработанный для [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] называется *управляемого кода*и содержит метаданные, используемые средой CLR.</span><span class="sxs-lookup"><span data-stu-id="c7337-112">Code developed for the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] is referred to as *managed code*, and contains metadata that is used by the CLR.</span></span> <span data-ttu-id="c7337-113">Данные, используемые [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения называется *управляемыми данными* так, как среда выполнения управляет задач, связанных с данными, такие как выделение и освобождение памяти и проверка типов.</span><span class="sxs-lookup"><span data-stu-id="c7337-113">Data used by [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications is called *managed data* because the runtime manages data-related tasks such as allocating and reclaiming memory and performing type checking.</span></span> <span data-ttu-id="c7337-114">По умолчанию Visual Basic .NET использует управляемый код и данные, но можно получить доступ к неуправляемому коду и данным объектов COM с помощью сборок взаимодействия (описанным ниже на этой странице).</span><span class="sxs-lookup"><span data-stu-id="c7337-114">By default, Visual Basic .NET uses managed code and data, but you can access the unmanaged code and data of COM objects using interop assemblies (described later on this page).</span></span>  
   
-## <a name="assemblies"></a>Сборки  
- Сборка является основным стандартным блоком [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] приложения. Это коллекция функциональных возможностей, которые построен, версии и развертываются как единое одной реализации, содержащий один или несколько файлов. Каждая сборка содержит манифест сборки.  
+## <a name="assemblies"></a><span data-ttu-id="c7337-115">Сборки</span><span class="sxs-lookup"><span data-stu-id="c7337-115">Assemblies</span></span>  
+ <span data-ttu-id="c7337-116">Сборка является основной строительный блок [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.</span><span class="sxs-lookup"><span data-stu-id="c7337-116">An assembly is the primary building block of a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.</span></span> <span data-ttu-id="c7337-117">Это коллекция функциональных возможностей, построенные с версией и развертываются как единое реализаций, содержащий один или несколько файлов.</span><span class="sxs-lookup"><span data-stu-id="c7337-117">It is a collection of functionality that is built, versioned, and deployed as a single implementation unit containing one or more files.</span></span> <span data-ttu-id="c7337-118">Каждая сборка содержит манифест сборки.</span><span class="sxs-lookup"><span data-stu-id="c7337-118">Each assembly contains an assembly manifest.</span></span>  
   
-## <a name="type-libraries-and-assembly-manifests"></a>Библиотеки типов и манифесты сборки  
- Библиотеки типов описывают характеристики объектов COM, такие как имена членов и типы данных. Манифесты сборки выполняют ту же функцию для [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] приложений. В их число входят следующие сведения:  
+## <a name="type-libraries-and-assembly-manifests"></a><span data-ttu-id="c7337-119">Библиотеки типов и манифесты сборки</span><span class="sxs-lookup"><span data-stu-id="c7337-119">Type Libraries and Assembly Manifests</span></span>  
+ <span data-ttu-id="c7337-120">Библиотеки типов описывают характеристики объектов COM, такие как имена членов и типов данных.</span><span class="sxs-lookup"><span data-stu-id="c7337-120">Type libraries describe characteristics of COM objects, such as member names and data types.</span></span> <span data-ttu-id="c7337-121">Манифесты сборки выполняют ту же функцию для [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="c7337-121">Assembly manifests perform the same function for [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications.</span></span> <span data-ttu-id="c7337-122">Они включают следующие сведения:</span><span class="sxs-lookup"><span data-stu-id="c7337-122">They include information about the following:</span></span>  
   
--   Идентификатор сборки, версии, языка и региональных параметров и цифровой подписи.  
+-   <span data-ttu-id="c7337-123">Удостоверение сборки, версию, язык и региональные параметры и цифровой подписи.</span><span class="sxs-lookup"><span data-stu-id="c7337-123">Assembly identity, version, culture, and digital signature.</span></span>  
   
--   Файлов, составляющих реализацию сборки.  
+-   <span data-ttu-id="c7337-124">Файлы, образующие реализацию сборки.</span><span class="sxs-lookup"><span data-stu-id="c7337-124">Files that make up the assembly implementation.</span></span>  
   
--   Типы и ресурсы, образующие сборку. Сюда входят те, которые экспортируются из него.  
+-   <span data-ttu-id="c7337-125">Типы и ресурсы, составляющие сборку.</span><span class="sxs-lookup"><span data-stu-id="c7337-125">Types and resources that make up the assembly.</span></span> <span data-ttu-id="c7337-126">Сюда входят те, которые экспортируются из него.</span><span class="sxs-lookup"><span data-stu-id="c7337-126">This includes those that are exported from it.</span></span>  
   
--   Во время компиляции зависимости от других сборок.  
+-   <span data-ttu-id="c7337-127">Во время компиляции зависимостей от других сборок.</span><span class="sxs-lookup"><span data-stu-id="c7337-127">Compile-time dependencies on other assemblies.</span></span>  
   
--   Разрешения, необходимые для правильного выполнения сборки.  
+-   <span data-ttu-id="c7337-128">Разрешения, необходимые для сборки, для правильной работы.</span><span class="sxs-lookup"><span data-stu-id="c7337-128">Permissions required for the assembly to run correctly.</span></span>  
   
- Дополнительные сведения о сборках и манифестах сборки см. в разделе [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ <span data-ttu-id="c7337-129">Дополнительные сведения о сборках и манифестов сборки см. в разделе [сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).</span><span class="sxs-lookup"><span data-stu-id="c7337-129">For more information about assemblies and assembly manifests, see [Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).</span></span>  
   
-### <a name="importing-and-exporting-type-libraries"></a>Импорт и экспорт библиотек типов  
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] приложения. Можно создавать библиотеки типов из сборок при помощи программы Tlbexp.  
+### <a name="importing-and-exporting-type-libraries"></a><span data-ttu-id="c7337-130">Импорт и экспорт библиотеки типов</span><span class="sxs-lookup"><span data-stu-id="c7337-130">Importing and Exporting Type Libraries</span></span>  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="c7337-131">содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.</span><span class="sxs-lookup"><span data-stu-id="c7337-131"> contains a utility, Tlbimp, that lets you import information from a type library into a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.</span></span> <span data-ttu-id="c7337-132">Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.</span><span class="sxs-lookup"><span data-stu-id="c7337-132">You can generate type libraries from assemblies by using the Tlbexp utility.</span></span>  
   
- Сведения о программе Tlbimp и Tlbexp содержатся [Tlbimp.exe (программа импорта библиотек типов)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) и [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ <span data-ttu-id="c7337-133">Сведения о Tlbimp и Tlbexp см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) и [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).</span><span class="sxs-lookup"><span data-stu-id="c7337-133">For information about Tlbimp and Tlbexp, see [Tlbimp.exe (Type Library Importer)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) and [Tlbexp.exe (Type Library Exporter)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).</span></span>  
   
-## <a name="interop-assemblies"></a>Сборки взаимодействия  
- Сборки взаимодействия являются [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] сборки, которые мост между управляемым и неуправляемым кода, отображая члены объекта COM в эквивалент [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] управляемых элементов. Сборки взаимодействия, созданные [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)] обрабатывать различные аспекты работы с объектами COM, например маршалингом взаимодействия.  
+## <a name="interop-assemblies"></a><span data-ttu-id="c7337-134">Сборки взаимодействия</span><span class="sxs-lookup"><span data-stu-id="c7337-134">Interop Assemblies</span></span>  
+ <span data-ttu-id="c7337-135">Сборки взаимодействия являются [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки, которые мост между управляемым и неуправляемым кода, отображая члены объекта COM, в эквивалент [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] управляемых элементов.</span><span class="sxs-lookup"><span data-stu-id="c7337-135">Interop assemblies are [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblies that bridge between managed and unmanaged code, mapping COM object members to equivalent [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] managed members.</span></span> <span data-ttu-id="c7337-136">Сборки взаимодействия, созданные в Visual Basic .NET обрабатывать различные аспекты работы с объектами COM, такие как маршалинг взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="c7337-136">Interop assemblies created by Visual Basic .NET handle many of the details of working with COM objects, such as interoperability marshaling.</span></span>  
   
-## <a name="interoperability-marshaling"></a>Маршалинг взаимодействия  
- Все [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] приложения используют набор общих типов, обеспечить взаимодействие объектов, независимо от используемого языка программирования. Параметры и возвращаемые значения объектов COM иногда используют типы данных, которые отличаются от используемых в управляемом коде. *Маршалинг взаимодействия* — это процесс упаковки параметров и возвращения значений в эквивалентных типах данных при передаче в объекты COM и обратно. Дополнительные сведения см. в разделе [маршалинг взаимодействия](http://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a).  
+## <a name="interoperability-marshaling"></a><span data-ttu-id="c7337-137">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="c7337-137">Interoperability Marshaling</span></span>  
+ <span data-ttu-id="c7337-138">Все [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения используют набор общих типов, обеспечить взаимодействие объектов, независимо от используемого языка программирования.</span><span class="sxs-lookup"><span data-stu-id="c7337-138">All [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applications share a set of common types that enable interoperability of objects, regardless of the programming language that is used.</span></span> <span data-ttu-id="c7337-139">Параметры и возвращаемые значения объектов COM иногда используют типы данных, которые отличаются от тех, которые используются в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="c7337-139">The parameters and return values of COM objects sometimes use data types that differ from those used in managed code.</span></span> <span data-ttu-id="c7337-140">*Маршалинг взаимодействия* — это процесс упаковки параметров и возвращаемых значений в эквивалентные типы данных при передаче и COM-объектов.</span><span class="sxs-lookup"><span data-stu-id="c7337-140">*Interoperability marshaling* is the process of packaging parameters and return values into equivalent data types as they move to and from COM objects.</span></span> <span data-ttu-id="c7337-141">Дополнительные сведения см. в разделе [маршалинг взаимодействия](../../../framework/interop/interop-marshaling.md).</span><span class="sxs-lookup"><span data-stu-id="c7337-141">For more information, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Взаимодействие COM](../../../visual-basic/programming-guide/com-interop/index.md)   
- [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)   
- [Взаимодействие с неуправляемым кодом](https://msdn.microsoft.com/library/sd10k43k)   
- [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)   
- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Tlbimp.exe (программа импорта библиотек типов)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)   
- [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)   
- [Маршалинг взаимодействия](http://msdn.microsoft.com/library/115f7a2f-d422-4605-ab36-13a8dd28142a)   
- [Без регистрации COM-взаимодействия](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+## <a name="see-also"></a><span data-ttu-id="c7337-142">См. также</span><span class="sxs-lookup"><span data-stu-id="c7337-142">See Also</span></span>  
+ [<span data-ttu-id="c7337-143">COM-взаимодействие</span><span class="sxs-lookup"><span data-stu-id="c7337-143">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [<span data-ttu-id="c7337-144">Пошаговое руководство. Реализация наследования с использованием COM-объектов</span><span class="sxs-lookup"><span data-stu-id="c7337-144">Walkthrough: Implementing Inheritance with COM Objects</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [<span data-ttu-id="c7337-145">Взаимодействие с неуправляемым кодом</span><span class="sxs-lookup"><span data-stu-id="c7337-145">Interoperating with Unmanaged Code</span></span>](https://msdn.microsoft.com/library/sd10k43k)  
+ [<span data-ttu-id="c7337-146">Устранение неполадок взаимодействия</span><span class="sxs-lookup"><span data-stu-id="c7337-146">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ [<span data-ttu-id="c7337-147">Сборки и глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="c7337-147">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="c7337-148">Tlbimp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="c7337-148">Tlbimp.exe (Type Library Importer)</span></span>](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [<span data-ttu-id="c7337-149">Tlbexp.exe (программа экспорта библиотек типов)</span><span class="sxs-lookup"><span data-stu-id="c7337-149">Tlbexp.exe (Type Library Exporter)</span></span>](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [<span data-ttu-id="c7337-150">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="c7337-150">Interop Marshaling</span></span>](../../../framework/interop/interop-marshaling.md)  
+ [<span data-ttu-id="c7337-151">COM-взаимодействие без регистрации</span><span class="sxs-lookup"><span data-stu-id="c7337-151">Registration-Free COM Interop</span></span>](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

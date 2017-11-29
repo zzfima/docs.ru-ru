@@ -1,41 +1,40 @@
 ---
-title: "Практическое руководство. Перебор элементов перечисления в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "массивы [Visual Basic], итерация"
-  - "перечисления [Visual Basic], итерация"
-  - "ListBox - элемент управления [Windows Forms], заполнение из перечисления"
+title: "Практическое руководство. Перебор элементов перечисления в Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- arrays [Visual Basic], iterating
+- enumerations [Visual Basic], iterating
+- ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 439e6eae7d475316625a2cc1d3a70a9e7181f68a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Перебор элементов перечисления в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Перечисления предлагают удобный способ работы с наборами связанных констант и присвоения постоянным значениям имен.  Для перебора элементов перечисления можно переместить его в массив с помощью метода <xref:System.Enum.GetValues%2A>.  Также можно просмотреть элементы перечисления с помощью оператора `For...Each`, метода <xref:System.Enum.GetNames%2A> или <xref:System.Enum.GetValues%2A> для извлечения строкового или числового значения.  
+# <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a><span data-ttu-id="f5b3d-102">Практическое руководство. Перебор элементов перечисления в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f5b3d-102">How to: Iterate Through An Enumeration in Visual Basic</span></span>
+<span data-ttu-id="f5b3d-103">Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.</span><span class="sxs-lookup"><span data-stu-id="f5b3d-103">Enumerations provide a convenient way to work with sets of related constants, and to associate constant values with names.</span></span> <span data-ttu-id="f5b3d-104">Для перебора элементов перечисления, его можно переместить в массив с помощью <xref:System.Enum.GetValues%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="f5b3d-104">To iterate through an enumeration, you can move it into an array using the <xref:System.Enum.GetValues%2A> method.</span></span> <span data-ttu-id="f5b3d-105">Вы также можно просмотреть элементы перечисления с помощью `For...Each` инструкции, с помощью <xref:System.Enum.GetNames%2A> или <xref:System.Enum.GetValues%2A> метод для извлечения строковое или числовое значение.</span><span class="sxs-lookup"><span data-stu-id="f5b3d-105">You could also iterate through an enumeration using a `For...Each` statement, using the <xref:System.Enum.GetNames%2A> or <xref:System.Enum.GetValues%2A> method to extract the string or numeric value.</span></span>  
   
-### Для просмотра элементов перечисления  
+### <a name="to-iterate-through-an-enumeration"></a><span data-ttu-id="f5b3d-106">Для перебора элементов перечисления</span><span class="sxs-lookup"><span data-stu-id="f5b3d-106">To iterate through an enumeration</span></span>  
   
--   Объявите массив и преобразуйте перечисление к нему с помощью метода <xref:System.Enum.GetValues%2A> перед передачей массива так же, как и любую другую переменную.  В следующем примере по мере просмотра элементов перечисления <xref:Microsoft.VisualBasic.FirstDayOfWeek> отображается каждый его элемент.  
+-   <span data-ttu-id="f5b3d-107">Объявите массив и преобразуйте перечисление к нему с <xref:System.Enum.GetValues%2A> метод перед передачей массива, как вы бы любую другую переменную.</span><span class="sxs-lookup"><span data-stu-id="f5b3d-107">Declare an array and convert the enumeration to it with the <xref:System.Enum.GetValues%2A> method before passing the array as you would any other variable.</span></span> <span data-ttu-id="f5b3d-108">В следующем примере отображается каждый член перечисления <xref:Microsoft.VisualBasic.FirstDayOfWeek> как в нем производится итерация по перечислению.</span><span class="sxs-lookup"><span data-stu-id="f5b3d-108">The following example displays each member of the enumeration <xref:Microsoft.VisualBasic.FirstDayOfWeek> as it iterates through the enumeration.</span></span>  
   
      [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
-## См. также  
- [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
- [Практическое руководство. Объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [Когда следует использовать перечисление](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [Практическое руководство. Определение строки, связанной со значением из перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [Практическое руководство. Ссылка на член перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="f5b3d-109">См. также</span><span class="sxs-lookup"><span data-stu-id="f5b3d-109">See Also</span></span>  
+ [<span data-ttu-id="f5b3d-110">Общие сведения о перечислениях</span><span class="sxs-lookup"><span data-stu-id="f5b3d-110">Enumerations Overview</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
+ [<span data-ttu-id="f5b3d-111">Как: объявление перечисления</span><span class="sxs-lookup"><span data-stu-id="f5b3d-111">How to: Declare an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
+ [<span data-ttu-id="f5b3d-112">Когда следует использовать перечисление</span><span class="sxs-lookup"><span data-stu-id="f5b3d-112">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [<span data-ttu-id="f5b3d-113">Практическое руководство. Определение строки, связанной со значением из перечисления</span><span class="sxs-lookup"><span data-stu-id="f5b3d-113">How to: Determine the String Associated with an Enumeration Value</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [<span data-ttu-id="f5b3d-114">Практическое руководство. Ссылка на элемент перечисления</span><span class="sxs-lookup"><span data-stu-id="f5b3d-114">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [<span data-ttu-id="f5b3d-115">Перечисления и уточнение имен</span><span class="sxs-lookup"><span data-stu-id="f5b3d-115">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [<span data-ttu-id="f5b3d-116">Массивы</span><span class="sxs-lookup"><span data-stu-id="f5b3d-116">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

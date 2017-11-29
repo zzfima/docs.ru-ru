@@ -1,38 +1,38 @@
 ---
-title: "Общие сведения об элементе управления ToolStripStatusLabel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripStatusLabel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "строки состояния"
-  - "ToolStripStatusLabel - элемент управления [Windows Forms], aboutToolStripStatusLabel - элемент управления"
+title: "Общие сведения об элементе управления ToolStripStatusLabel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripStatusLabel
+helpviewer_keywords:
+- ToolStripStatusLabel control [Windows Forms], aboutToolStripStatusLabel control
+- status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2bd5da2474c59b9ea893b90f6b5f15343769f80c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Общие сведения об элементе управления ToolStripStatusLabel
-<xref:System.Windows.Forms.ToolStripStatusLabel> является меткой для <xref:System.Windows.Forms.StatusStrip>.  <xref:System.Windows.Forms.ToolStripStatusLabel> предоставляет область отображения для текста и изображений, не содержащую активных точек, аналогично <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.ToolStripLabel>.  <xref:System.Windows.Forms.ToolStripStatusLabel> размещается в <xref:System.Windows.Forms.StatusStrip>.  
+# <a name="toolstripstatuslabel-control-overview"></a><span data-ttu-id="382e4-102">Общие сведения об элементе управления ToolStripStatusLabel</span><span class="sxs-lookup"><span data-stu-id="382e4-102">ToolStripStatusLabel Control Overview</span></span>
+<span data-ttu-id="382e4-103"><xref:System.Windows.Forms.ToolStripStatusLabel> Это метка для <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="382e4-103">The <xref:System.Windows.Forms.ToolStripStatusLabel> is a label for a <xref:System.Windows.Forms.StatusStrip>.</span></span> <span data-ttu-id="382e4-104">Как <xref:System.Windows.Forms.Label> или <xref:System.Windows.Forms.ToolStripLabel>, <xref:System.Windows.Forms.ToolStripStatusLabel> предоставляет недоступную для щелчка отображаемую область для текста и изображений.</span><span class="sxs-lookup"><span data-stu-id="382e4-104">Like the <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.ToolStripLabel>, the <xref:System.Windows.Forms.ToolStripStatusLabel> provides a non-clickable display area for text, images, or both.</span></span> <span data-ttu-id="382e4-105"><xref:System.Windows.Forms.ToolStripStatusLabel> Размещается <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="382e4-105">The <xref:System.Windows.Forms.ToolStripStatusLabel> is hosted by a <xref:System.Windows.Forms.StatusStrip>.</span></span>  
   
-### Важные члены ToolStripStatusLabel  
+### <a name="important-toolstripstatuslabel-members"></a><span data-ttu-id="382e4-106">ToolStripStatusLabel важные члены</span><span class="sxs-lookup"><span data-stu-id="382e4-106">Important ToolStripStatusLabel Members</span></span>  
   
-|Имя|Описание|  
-|---------|--------------|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|Получает или задает значение, указывающее, заполняет ли <xref:System.Windows.Forms.ToolStripStatusLabel> автоматически доступное пространство в <xref:System.Windows.Forms.StatusStrip> при изменении размера формы.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|Получает или задает значение, указывающее, с каких сторон <xref:System.Windows.Forms.ToolStripStatusLabel> отображаются границы.|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|Получает или задает стиль объекта <xref:System.Windows.Forms.ToolStripStatusLabel>.|  
+|<span data-ttu-id="382e4-107">Имя</span><span class="sxs-lookup"><span data-stu-id="382e4-107">Name</span></span>|<span data-ttu-id="382e4-108">Описание</span><span class="sxs-lookup"><span data-stu-id="382e4-108">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>|<span data-ttu-id="382e4-109">Возвращает или задает значение, указывающее, является ли <xref:System.Windows.Forms.ToolStripStatusLabel> автоматически заполняет доступное пространство на <xref:System.Windows.Forms.StatusStrip> при изменении размера формы</span><span class="sxs-lookup"><span data-stu-id="382e4-109">Gets or sets a value indicating whether the <xref:System.Windows.Forms.ToolStripStatusLabel> automatically fills the available space on the <xref:System.Windows.Forms.StatusStrip> as the form is resized</span></span>|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>|<span data-ttu-id="382e4-110">Возвращает или задает значение, указывающее, какие стороны <xref:System.Windows.Forms.ToolStripStatusLabel> Показать границы.</span><span class="sxs-lookup"><span data-stu-id="382e4-110">Gets or sets a value that indicates which sides of the <xref:System.Windows.Forms.ToolStripStatusLabel> show borders.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>|<span data-ttu-id="382e4-111">Возвращает или задает стиль границы <xref:System.Windows.Forms.ToolStripStatusLabel>.</span><span class="sxs-lookup"><span data-stu-id="382e4-111">Gets or sets the border style of the <xref:System.Windows.Forms.ToolStripStatusLabel>.</span></span>|  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="382e4-112">См. также</span><span class="sxs-lookup"><span data-stu-id="382e4-112">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>

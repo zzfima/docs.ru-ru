@@ -1,99 +1,100 @@
 ---
-title: "Использование переносимой библиотеки классов с шаблоном &quot;модель-представление-модель представления&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Переносимая библиотека классов [.NET Framework] и MVVM"
-  - "MVVM и переносимая библиотека классов"
+title: "Использование переносимой библиотеки классов с шаблоном \"модель-представление-модель представления\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Portable Class Library [.NET Framework], and MVVM
+- MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-caps.latest.revision: 17
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e39a8df5c8aee05414e778f15a29bbeda8dba930
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование переносимой библиотеки классов с шаблоном &quot;модель-представление-модель представления&quot;
-Вы можете использовать [Переносимые библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) для реализации шаблона Model\-View\-View Model \(MVVM\) и совместного использования сборки на нескольких платформах.  
+# <a name="using-portable-class-library-with-model-view-view-model"></a><span data-ttu-id="23765-102">Использование переносимой библиотеки классов с шаблоном "модель-представление-модель представления"</span><span class="sxs-lookup"><span data-stu-id="23765-102">Using Portable Class Library with Model-View-View Model</span></span>
+<span data-ttu-id="23765-103">Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) для реализации шаблона Model-View-View Model (MVVM) и совместного использования сборок на нескольких платформах.</span><span class="sxs-lookup"><span data-stu-id="23765-103">You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.</span></span>  
   
- MVVM \- это шаблон приложения, который изолирует интерфейс пользователя от основной бизнес\-логики.  В частности, можно реализовать классы модели и модели представления в проекте [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], а затем создать представления, которые учитывают особенности разных платформ.  Такой подход позволяет создавать модель и бизнес\-логику данных только один раз, и использовать этот код в платформе .NET Framework, приложениях Silverlight, Windows Phone и Windows [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], как показано на следующей иллюстрации.  
+ <span data-ttu-id="23765-104">MVVM — это шаблон приложения, который изолирует интерфейс пользователя от основной бизнес-логики.</span><span class="sxs-lookup"><span data-stu-id="23765-104">MVVM is an application pattern that isolates the user interface from the underlying business logic.</span></span> <span data-ttu-id="23765-105">Можно реализовать классы модели и модели представления в проекте [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], а затем создать представления, которые учитывают особенности разных платформ.</span><span class="sxs-lookup"><span data-stu-id="23765-105">You can implement the model and view model classes in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], and then create views that are customized for different platforms.</span></span> <span data-ttu-id="23765-106">Такой подход позволяет создавать модель и бизнес-логику данных только один раз и использовать этот код в платформе .NET Framework, приложениях Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], как показано на следующей иллюстрации.</span><span class="sxs-lookup"><span data-stu-id="23765-106">This approach enables you to write the data model and business logic only once, and use that code from .NET Framework, Silverlight, Windows Phone, and [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps, as shown in the following illustration.</span></span>  
   
- ![Переносится со схемой MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
+ <span data-ttu-id="23765-107">![Переносимый со схемой MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")</span><span class="sxs-lookup"><span data-stu-id="23765-107">![Portable with MVVM diagram](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")</span></span>  
   
- Этот раздел не содержит общих сведений о шаблоне MVVM.  Он предоставляет сведения только о том, как использовать [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] для реализации MVVM.  Дополнительные сведения о шаблоне MVVM см. в разделе [MVVM Quickstart](http://go.microsoft.com/fwlink/?LinkId=234934).  
+ <span data-ttu-id="23765-108">В этом разделе не предоставляет общие сведения о шаблоне MVVM.</span><span class="sxs-lookup"><span data-stu-id="23765-108">This topic does not provide general information about the MVVM pattern.</span></span> <span data-ttu-id="23765-109">Он только предоставляет сведения об использовании [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] для реализации MVVM.</span><span class="sxs-lookup"><span data-stu-id="23765-109">It only provides information about how to use [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] to implement MVVM.</span></span> <span data-ttu-id="23765-110">Дополнительные сведения о MVVM см. в разделе [краткое руководство MVVM](http://go.microsoft.com/fwlink/?LinkId=234934).</span><span class="sxs-lookup"><span data-stu-id="23765-110">For more information about MVVM, see the [MVVM Quickstart](http://go.microsoft.com/fwlink/?LinkId=234934).</span></span>  
   
-## Классы, поддерживающие MVVM  
- Если для проекта [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] предназначены [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight или Windows Phone 7.5, то для реализации шаблона MVVM доступны следующие классы:  
+## <a name="classes-that-support-mvvm"></a><span data-ttu-id="23765-111">Классы, поддерживающие MVVM</span><span class="sxs-lookup"><span data-stu-id="23765-111">Classes That Support MVVM</span></span>  
+ <span data-ttu-id="23765-112">При разработке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight или Windows Phone 7.5 для вашего [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта, следующие классы доступны для реализации шаблона MVVM:</span><span class="sxs-lookup"><span data-stu-id="23765-112">When you target the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight, or Windows Phone 7.5 for your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, the following classes are available for implementing the MVVM pattern:</span></span>  
   
--   Класс <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=fullName>  
+-   <span data-ttu-id="23765-113">Класс <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-113"><xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=fullName>  
+-   <span data-ttu-id="23765-114">Класс <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-114"><xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=fullName>  
+-   <span data-ttu-id="23765-115">Класс <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-115"><xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=fullName>  
+-   <span data-ttu-id="23765-116">Класс <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-116"><xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=fullName>  
+-   <span data-ttu-id="23765-117">Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-117"><xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=fullName>  
+-   <span data-ttu-id="23765-118">Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-118"><xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=fullName>  
+-   <span data-ttu-id="23765-119">Класс <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-119"><xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=fullName>  
+-   <span data-ttu-id="23765-120">Класс <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-120"><xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=fullName>  
+-   <span data-ttu-id="23765-121">Класс <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-121"><xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> class</span></span>  
   
--   Класс <xref:System.Windows.Input.ICommand?displayProperty=fullName>  
+-   <span data-ttu-id="23765-122">Класс <xref:System.Windows.Input.ICommand?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="23765-122"><xref:System.Windows.Input.ICommand?displayProperty=nameWithType> class</span></span>  
   
--   Все классы в пространстве имен <xref:System.ComponentModel.DataAnnotations?displayProperty=fullName> .  
+-   <span data-ttu-id="23765-123">Все классы в <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> пространства имен</span><span class="sxs-lookup"><span data-stu-id="23765-123">All classes in the <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> namespace</span></span>  
   
-## Реализация MVVM  
- Для реализации MVVM обычно и модель, и модель представления создаются в проекте [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], поскольку проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] не может ссылаться на непереносимые проекты.  Модель и модель представления могут находиться в одном и том же или же в разных проектах.  При использовании отдельных проектов добавьте ссылку из проекта модели представления на проект модели.  
+## <a name="implementing-mvvm"></a><span data-ttu-id="23765-124">Реализация MVVM</span><span class="sxs-lookup"><span data-stu-id="23765-124">Implementing MVVM</span></span>  
+ <span data-ttu-id="23765-125">Чтобы реализовать MVVM, обычно создаются модели и модели представления в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект, поскольку [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Непереносимый проект не может ссылаться на проект.</span><span class="sxs-lookup"><span data-stu-id="23765-125">To implement MVVM, you typically create both the model and the view model in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, because a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project cannot reference a non-portable project.</span></span> <span data-ttu-id="23765-126">Модели и модели представления может быть в том же проекте или в виде отдельных проектов.</span><span class="sxs-lookup"><span data-stu-id="23765-126">The model and view model can be in the same project or in separate projects.</span></span> <span data-ttu-id="23765-127">Если вы используете отдельные проекты, добавьте ссылку из проекта модели представления в проект модели.</span><span class="sxs-lookup"><span data-stu-id="23765-127">If you use separate projects, add a reference from the view model project to the model project.</span></span>  
   
- Скомпилировав проекты модели и модели представления, можно ссылаться на эти сборки в приложении, которое содержит представление.  Если представление работает только с моделью представления, то необходимо ссылаться только на сборку, которая содержит модель представления.  
+ <span data-ttu-id="23765-128">После компиляции модели и просматривать проекты модели, можно ссылаться на эти сборки в приложении, которая содержит представление.</span><span class="sxs-lookup"><span data-stu-id="23765-128">After you compile the model and view model projects, you reference those assemblies in the app that contains the view.</span></span> <span data-ttu-id="23765-129">Если представление взаимодействует только с помощью модели представления, имеется ссылка на сборку, содержащую модель представления.</span><span class="sxs-lookup"><span data-stu-id="23765-129">If the view interacts only with the view model, you only have to reference the assembly that contains the view model.</span></span>  
   
-### Модель  
- В следующем примере показан класс упрощенной модели, который может находиться в проекте [!INCLUDE[net_portable](../../../includes/net-portable-md.md)].  
+### <a name="model"></a><span data-ttu-id="23765-130">Модель</span><span class="sxs-lookup"><span data-stu-id="23765-130">Model</span></span>  
+ <span data-ttu-id="23765-131">В следующем примере показано упрощенная модель класс, который может находиться в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта.</span><span class="sxs-lookup"><span data-stu-id="23765-131">The following example shows a simplified model class that could reside in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
  [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]  
   
- В следующем примере показан простой способ заполнения, получения и обновления данных в проектах [!INCLUDE[net_portable](../../../includes/net-portable-md.md)].  В реальном приложении данные будут получены из источника, подобного службе Windows Communication Foundation \(WCF\).  
+ <span data-ttu-id="23765-132">В следующем примере показано простой способ заполнения, получения и обновления данных в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта.</span><span class="sxs-lookup"><span data-stu-id="23765-132">The following example shows a simple way to populate, retrieve, and update the data in a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project.</span></span> <span data-ttu-id="23765-133">В реальном приложении будет получать данные из источника, например службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="23765-133">In a real app, you would retrieve the data from a source such as a Windows Communication Foundation (WCF) service.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
  [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]  
   
-### Модель представления  
- Базовый класс для модели представления часто добавляется при реализации шаблона MVVM.  В следующем примере показан базовый класс.  
+### <a name="view-model"></a><span data-ttu-id="23765-134">Модель представления</span><span class="sxs-lookup"><span data-stu-id="23765-134">View Model</span></span>  
+ <span data-ttu-id="23765-135">Базовый класс для представления моделей часто добавляется при реализации шаблона MVVM.</span><span class="sxs-lookup"><span data-stu-id="23765-135">A base class for view models is frequently added when implementing the MVVM pattern.</span></span> <span data-ttu-id="23765-136">В следующем примере базовый класс.</span><span class="sxs-lookup"><span data-stu-id="23765-136">The following example shows a base class.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]  
   
- Реализация интерфейса <xref:System.Windows.Input.ICommand> часто используется с шаблоном MVVM.  В следующем примере показана реализация интерфейса <xref:System.Windows.Input.ICommand>.  
+ <span data-ttu-id="23765-137">Реализация <xref:System.Windows.Input.ICommand> часто используется интерфейс с шаблоном MVVM.</span><span class="sxs-lookup"><span data-stu-id="23765-137">An implementation of the <xref:System.Windows.Input.ICommand> interface is frequently used with the MVVM pattern.</span></span> <span data-ttu-id="23765-138">В следующем примере показана реализация интерфейса <xref:System.Windows.Input.ICommand>.</span><span class="sxs-lookup"><span data-stu-id="23765-138">The following example shows an implementation of the <xref:System.Windows.Input.ICommand> interface.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]  
   
- В следующем примере показана упрощенная модель представления.  
+ <span data-ttu-id="23765-139">В следующем примере показано упрощенное представление модели.</span><span class="sxs-lookup"><span data-stu-id="23765-139">The following example shows a simplified view model.</span></span>  
   
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### Просмотр  
- Из приложения [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], приложения на основе Silverlight или приложения Windows Phone 7.5 можно ссылаться на сборку, которая содержит проекты модели и модели представления.  Затем создается представление, которое взаимодействует с моделью представления.  В следующем примере показан упрощенное приложение Windows Presentation Foundation \(WPF\), получающее и обновляющее данные из модели представления.  Можно создавать схожие представления в Silverlight, Windows Phone или приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+### <a name="view"></a><span data-ttu-id="23765-140">Просмотр</span><span class="sxs-lookup"><span data-stu-id="23765-140">View</span></span>  
+ <span data-ttu-id="23765-141">Из [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] приложения, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложения, приложения Silverlight или приложения Windows Phone 7.5, могут ссылаться на сборку, содержащую проекты модели и представления модели.</span><span class="sxs-lookup"><span data-stu-id="23765-141">From a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] app, [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, Silverlight-based app, or Windows Phone 7.5 app, you can reference the assembly that contains the model and view model projects.</span></span>  <span data-ttu-id="23765-142">Затем создается представление, которое взаимодействует с модели представления.</span><span class="sxs-lookup"><span data-stu-id="23765-142">You then create a view that interacts with the view model.</span></span> <span data-ttu-id="23765-143">В следующем примере показано упрощенное приложения Windows Presentation Foundation (WPF), который получает и обновляет данные из модели представления.</span><span class="sxs-lookup"><span data-stu-id="23765-143">The following example shows a simplified Windows Presentation Foundation (WPF) app that retrieves and updates data from the view model.</span></span> <span data-ttu-id="23765-144">Вы можете создать сходные представления в Silverlight, Windows Phone или [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="23765-144">You could create similar views in Silverlight, Windows Phone, or [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span>  
   
- [!code-xml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
+ [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## См. также  
- [Переносная библиотека классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a><span data-ttu-id="23765-145">См. также</span><span class="sxs-lookup"><span data-stu-id="23765-145">See Also</span></span>  
+ [<span data-ttu-id="23765-146">Переносимая библиотека классов</span><span class="sxs-lookup"><span data-stu-id="23765-146">Portable Class Library</span></span>](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

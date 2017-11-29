@@ -1,94 +1,106 @@
 ---
-title: "Создание экземпляра объекта DateTimeOffset | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание экземпляров объектов часовых поясов"
-  - "объекты часовых поясов [платформа .NET Framework], создание экземпляров"
-  - "структура DateTimeOffset, преобразование к типу DateTime"
-  - "структура DateTimeOffset, создание экземпляров"
+title: "Создание экземпляра объекта DateTimeOffset"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- instantiating time zone objects
+- time zone objects [.NET Framework], instantiation
+- DateTimeOffset structure, converting to DateTime
+- DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f072aecf45aaaf9bd4aec845a698d6f12916fedb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Создание экземпляра объекта DateTimeOffset
-В структуре <xref:System.DateTimeOffset> есть несколько способов создания новых значений <xref:System.DateTimeOffset>.  Многие из них непосредственно соответствуют методам создания новых значений класса <xref:System.DateTime>; отличающие их усовершенствования позволяют указывать смещение значения даты и времени относительно универсального синхронизированного времени \(UTC\).  В частности, экземпляр значения <xref:System.DateTimeOffset> можно создать следующими способами.  
-  
--   Используя литерал даты и времени.  
-  
--   Вызвав конструктор <xref:System.DateTimeOffset>.  
-  
--   Неявным преобразованием в значение типа <xref:System.DateTimeOffset>.  
-  
--   Разбором строкового представления даты и времени.  
-  
- В этом разделе приводятся более подробные сведения и примеры кода, призванные иллюстрировать данные методы создания новых значений типа <xref:System.DateTimeOffset>.  
-  
-## Литералы даты и времени  
- Одним из наиболее распространенных способов создания экземпляров значений <xref:System.DateTime> в языках, допускающих такую возможность, является представление даты и времени в виде жестко заданного литерала.  Например, в следующем коде на языке Visual Basic создается объект <xref:System.DateTime>, значение которого соответствует 1 января 2008 г., 10:00.  
-  
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]  
-  
- При использовании языков, поддерживающих литералы типа <xref:System.DateTime>, значения <xref:System.DateTimeOffset> также могут инициализироваться с помощью литералов даты и времени.  Например, в следующем коде на языке Visual Basic создается объект <xref:System.DateTimeOffset>.  
-  
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]  
-  
- По результату, выведенному на консоль, видно, что созданному таким способом значению <xref:System.DateTimeOffset> присваивается смещение локального часового пояса.  Отсюда следует, что значение <xref:System.DateTimeOffset>, заданное с помощью знакового литерала, не будет определять один и тот же момент времени при выполнении кода на разных компьютерах.  
-  
-## Конструкторы DateTimeOffset  
- В классе <xref:System.DateTimeOffset> определено шесть конструкторов.  Четыре из них непосредственно соответствуют конструкторам <xref:System.DateTime>, отличаясь от них дополнительным параметром типа <xref:System.TimeSpan>, который задает смещение даты и времени относительно времени UTC.  Они позволяют определить значение <xref:System.DateTimeOffset> на основе значений отдельных компонентов даты и времени.  К примеру, в следующем коде эти четыре конструктора используются для создания объектов <xref:System.DateTimeOffset> с одинаковыми значениями 01.07.2008, 12:05 \+01:00.  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#3)]
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#3)]  
-  
- Обратите внимание, что при инициализации значения объекта <xref:System.DateTimeOffset> путем передачи в качестве одного из аргументов конструктора объекта <xref:System.Globalization.PersianCalendar> при последующем выводе значения на консоль дата выражается по григорианскому календарю, а не по иранскому.  Пример вывода даты, выраженной по иранскому календарю, см. в разделе <xref:System.Globalization.PersianCalendar>.  
-  
- Два других конструктора создают объект <xref:System.DateTimeOffset> по значению <xref:System.DateTime>.  Единственный параметр первого из них — это значение <xref:System.DateTime>, преобразуемое в значение типа <xref:System.DateTimeOffset>.  Смещение результирующего значения <xref:System.DateTimeOffset> зависит от свойства <xref:System.DateTime.Kind%2A> единственного параметра конструктора.  Если его значение равно <xref:System.DateTimeKind?displayProperty=fullName>, то смещение приравнивается к <xref:System.TimeSpan.Zero?displayProperty=fullName>.  В противном случае его смещение приравнивается к смещению местного часового пояса.  В следующем примере приведен пример использования этого конструктора для создания объектов <xref:System.DateTimeOffset>, представляющих UTC и местный часовой пояс:  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#4)]
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#4)]  
-  
+# <a name="instantiating-a-datetimeoffset-object"></a><span data-ttu-id="d1e12-102">Создание экземпляра объекта DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="d1e12-102">Instantiating a DateTimeOffset object</span></span>
+
+<span data-ttu-id="d1e12-103"><xref:System.DateTimeOffset> Структуры предлагает несколько способов создания новых <xref:System.DateTimeOffset> значений.</span><span class="sxs-lookup"><span data-stu-id="d1e12-103">The <xref:System.DateTimeOffset> structure offers a number of ways to create new <xref:System.DateTimeOffset> values.</span></span> <span data-ttu-id="d1e12-104">Многие из них соответствуют непосредственно методы для создания новых <xref:System.DateTime> значений с улучшениями, которые позволяют указать значение даты и времени смещение от времени в формате UTC.</span><span class="sxs-lookup"><span data-stu-id="d1e12-104">Many of them correspond directly to the methods available for instantiating new <xref:System.DateTime> values, with enhancements that allow you to specify the date and time value's offset from Coordinated Universal Time (UTC).</span></span> <span data-ttu-id="d1e12-105">В частности, можно создать экземпляр <xref:System.DateTimeOffset> значение одним из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="d1e12-105">In particular, you can instantiate a <xref:System.DateTimeOffset> value in the following ways:</span></span>
+
+* <span data-ttu-id="d1e12-106">С помощью литерал даты и времени.</span><span class="sxs-lookup"><span data-stu-id="d1e12-106">By using a date and time literal.</span></span>
+
+* <span data-ttu-id="d1e12-107">Путем вызова <xref:System.DateTimeOffset> конструктор.</span><span class="sxs-lookup"><span data-stu-id="d1e12-107">By calling a <xref:System.DateTimeOffset> constructor.</span></span>
+
+* <span data-ttu-id="d1e12-108">Путем неявного преобразования значение <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-108">By implicitly converting a value to <xref:System.DateTimeOffset> value.</span></span>
+
+* <span data-ttu-id="d1e12-109">Разбором строкового представления даты и времени.</span><span class="sxs-lookup"><span data-stu-id="d1e12-109">By parsing the string representation of a date and time.</span></span>
+
+<span data-ttu-id="d1e12-110">Этот раздел содержит больше сведений и примеры кода, иллюстрирующие эти методы создания новых <xref:System.DateTimeOffset> значений.</span><span class="sxs-lookup"><span data-stu-id="d1e12-110">This topic provides greater detail and code examples that illustrate these methods of instantiating new <xref:System.DateTimeOffset> values.</span></span>
+
+## <a name="date-and-time-literals"></a><span data-ttu-id="d1e12-111">Литералы даты и времени</span><span class="sxs-lookup"><span data-stu-id="d1e12-111">Date and time literals</span></span>
+
+<span data-ttu-id="d1e12-112">Для языков, поддерживающих ее, одним из наиболее распространенных способов создания экземпляров <xref:System.DateTime> значение даты и времени в виде жестко литеральное значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-112">For languages that support it, one of the most common ways to instantiate a <xref:System.DateTime> value is to provide the date and time as a hard-coded literal value.</span></span> <span data-ttu-id="d1e12-113">Например, следующий код Visual Basic создает <xref:System.DateTime> объект, значение которого соответствует 1 января 2008 года, 10:00 AM.</span><span class="sxs-lookup"><span data-stu-id="d1e12-113">For example, the following Visual Basic code creates a <xref:System.DateTime> object whose value is January 1, 2008, at 10:00 AM.</span></span>
+
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]
+
+<span data-ttu-id="d1e12-114"><xref:System.DateTimeOffset>значения могут также инициализироваться с помощью литералов даты и времени, при использовании языков, поддерживающих <xref:System.DateTime> литералы.</span><span class="sxs-lookup"><span data-stu-id="d1e12-114"><xref:System.DateTimeOffset> values can also be initialized using date and time literals when using languages that support <xref:System.DateTime> literals.</span></span> <span data-ttu-id="d1e12-115">Например, следующий код Visual Basic создает <xref:System.DateTimeOffset> объекта.</span><span class="sxs-lookup"><span data-stu-id="d1e12-115">For example, the following Visual Basic code creates a <xref:System.DateTimeOffset> object.</span></span>
+
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]
+
+<span data-ttu-id="d1e12-116">Как показывают выходные данные консоли, <xref:System.DateTimeOffset> созданные таким образом присваивается смещение местного часового пояса.</span><span class="sxs-lookup"><span data-stu-id="d1e12-116">As the console output shows, the <xref:System.DateTimeOffset> value created in this way is assigned the offset of the local time zone.</span></span> <span data-ttu-id="d1e12-117">Это означает, что <xref:System.DateTimeOffset> заданное с помощью символьный литерал не видно точки времени запуска кода на разных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="d1e12-117">This means that a <xref:System.DateTimeOffset> value assigned using a character literal does not identify a single point of time if the code is run on different computers.</span></span>
+
+## <a name="datetimeoffset-constructors"></a><span data-ttu-id="d1e12-118">Конструкторы DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="d1e12-118">DateTimeOffset constructors</span></span>
+
+<span data-ttu-id="d1e12-119"><xref:System.DateTimeOffset> Определено шесть конструкторов.</span><span class="sxs-lookup"><span data-stu-id="d1e12-119">The <xref:System.DateTimeOffset> type defines six constructors.</span></span> <span data-ttu-id="d1e12-120">Четыре из них непосредственно соответствуют <xref:System.DateTime> конструкторы с дополнительным параметром типа <xref:System.TimeSpan> , определяющее дату и смещение по времени от времени UTC.</span><span class="sxs-lookup"><span data-stu-id="d1e12-120">Four of them correspond directly to <xref:System.DateTime> constructors, with an additional parameter of type <xref:System.TimeSpan> that defines the date and time's offset from UTC.</span></span> <span data-ttu-id="d1e12-121">Они позволяют определять <xref:System.DateTimeOffset> значение на основе значения из его отдельных компонентов даты и времени.</span><span class="sxs-lookup"><span data-stu-id="d1e12-121">These allow you to define a <xref:System.DateTimeOffset> value based on the value of its individual date and time components.</span></span> <span data-ttu-id="d1e12-122">Например, следующий код использует эти четыре конструктора для создания экземпляров <xref:System.DateTimeOffset> объекты с одинаковыми значениями 7/1/2008 12:05:00 + 01:00.</span><span class="sxs-lookup"><span data-stu-id="d1e12-122">For example, the following code uses these four constructors to instantiate <xref:System.DateTimeOffset> objects with identical values of 7/1/2008 12:05 AM +01:00.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#3)]
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#3)]
+
+<span data-ttu-id="d1e12-123">Обратите внимание, что, если значение <xref:System.DateTimeOffset> объект, созданный с помощью <xref:System.Globalization.PersianCalendar> на консоль выводятся объект в качестве одного из аргументов конструктора, она представляется как дата григорианского календаря, а не персидский календарь.</span><span class="sxs-lookup"><span data-stu-id="d1e12-123">Note that, when the value of the <xref:System.DateTimeOffset> object instantiated using a <xref:System.Globalization.PersianCalendar> object as one of the arguments to its constructor is displayed to the console, it is expressed as a date in the Gregorian rather than the Persian calendar.</span></span> <span data-ttu-id="d1e12-124">Для вывода даты с использованием персидский календарь, см. пример в <xref:System.Globalization.PersianCalendar> разделе.</span><span class="sxs-lookup"><span data-stu-id="d1e12-124">To output a date using the Persian calendar, see the example in the <xref:System.Globalization.PersianCalendar> topic.</span></span>
+
+<span data-ttu-id="d1e12-125">Два других конструктора создают <xref:System.DateTimeOffset> объекта из <xref:System.DateTime> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-125">The other two constructors create a <xref:System.DateTimeOffset> object from a <xref:System.DateTime> value.</span></span> <span data-ttu-id="d1e12-126">Первый из них имеет один параметр, <xref:System.DateTime> значение для преобразования в <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-126">The first of these has a single parameter, the <xref:System.DateTime> value to convert to a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="d1e12-127">Смещение результирующего <xref:System.DateTimeOffset> значение зависит от <xref:System.DateTime.Kind%2A> свойство одного параметра конструктора.</span><span class="sxs-lookup"><span data-stu-id="d1e12-127">The offset of the resulting <xref:System.DateTimeOffset> value depends on the <xref:System.DateTime.Kind%2A> property of the constructor's single parameter.</span></span> <span data-ttu-id="d1e12-128">Если его значение равно <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, смещение приравнивается к <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1e12-128">If its value is <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, the offset is set equal to <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d1e12-129">В противном случае его смещение приравнивается к смещению местного часового пояса.</span><span class="sxs-lookup"><span data-stu-id="d1e12-129">Otherwise, its offset is set equal to that of the local time zone.</span></span> <span data-ttu-id="d1e12-130">Следующий пример иллюстрирует использование этого конструктора для создания <xref:System.DateTimeOffset> объектов, представляющих UTC и местный часовой пояс:</span><span class="sxs-lookup"><span data-stu-id="d1e12-130">The following example illustrates the use of this constructor to instantiate <xref:System.DateTimeOffset> objects representing UTC and the local time zone:</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#4)]
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#4)]
+
 > [!NOTE]
->  Вызов перегрузки конструктора <xref:System.DateTimeOffset>, принимающей одиночный параметр <xref:System.DateTime>, эквивалентен выполнению неявного преобразования значения типа <xref:System.DateTime> в значение типа <xref:System.DateTimeOffset>.  
-  
- Второй конструктор, создающий объект класса <xref:System.DateTimeOffset> по значению <xref:System.DateTime>, имеет два параметра: преобразуемое значение <xref:System.DateTime> и значение <xref:System.TimeSpan>, задающее смещение даты и времени относительно UTC.  Это смещение должно соответствовать свойству <xref:System.DateTime.Kind%2A> первого параметра конструктора — в противном случае будет создано исключение <xref:System.ArgumentException>.  Если свойство <xref:System.DateTime.Kind%2A> первого параметра имеет значение <xref:System.DateTimeKind?displayProperty=fullName>, то значение второго параметра должно быть равно <xref:System.TimeSpan.Zero?displayProperty=fullName>.  Если свойство <xref:System.DateTime.Kind%2A> первого параметра имеет значение <xref:System.DateTimeKind?displayProperty=fullName>, то значение второго параметра должно быть равно смещению локального часового пояса.  Если свойство <xref:System.DateTime.Kind%2A> первого параметра имеет значение <xref:System.DateTimeKind?displayProperty=fullName>, то смещение может иметь произвольное допустимое значение.  В следующем коде показано, как этот конструктор позволяет преобразовывать значения <xref:System.DateTime> в значения <xref:System.DateTimeOffset>.  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#5)]
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#5)]  
-  
-## Неявное преобразование типов  
- Тип <xref:System.DateTimeOffset> поддерживает только одно неявное преобразование: из значения типа <xref:System.DateTime> в значение типа <xref:System.DateTimeOffset>. \(неявное преобразование типов \- это преобразование одного типа в другой, не требующее явного приведения, как в языке C\#, или преобразования, как в языке Visual Basic, в ходе которого не теряются данные\).  Благодаря этому можно использовать код, аналогичный приведенному ниже.  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#6)]
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#6)]  
-  
- Смещение результирующего объекта <xref:System.DateTimeOffset> зависит от значения свойства <xref:System.DateTime.Kind%2A?displayProperty=fullName>.  Если его значение равно <xref:System.DateTimeKind?displayProperty=fullName>, то смещение приравнивается к <xref:System.TimeSpan.Zero?displayProperty=fullName>.  Если его значение равно <xref:System.DateTimeKind?displayProperty=fullName> или <xref:System.DateTimeKind?displayProperty=fullName>, то смещение приравнивается к смещению местного часового пояса.  
-  
-## Разбор строкового представления даты и времени  
- В классе <xref:System.DateTimeOffset> присутствует четыре метода, позволяющих преобразовывать строковое представление даты и времени в значение типа <xref:System.DateTimeOffset>:  
-  
--   Метод <xref:System.DateTimeOffset.Parse%2A>, который пытается преобразовать строковое представление даты и времени в значение <xref:System.DateTimeOffset> и создает исключение при сбое преобразования.  
-  
--   Метод <xref:System.DateTimeOffset.TryParse%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в значение <xref:System.DateTimeOffset> и возвращает `false` при сбое преобразования.  
-  
--   Метод <xref:System.DateTimeOffset.ParseExact%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в определенном формате в значение <xref:System.DateTimeOffset>.  Этот метод создает исключение при сбое преобразования.  
-  
--   Метод <xref:System.DateTimeOffset.TryParseExact%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в определенном формате в значение <xref:System.DateTimeOffset>.  При сбое преобразования метод возвращает значение `false`.  
-  
- В следующем коде приведены примеры вызова каждого из этих четырех методов преобразования строк, формирующие значения типа <xref:System.DateTimeOffset>.  
-  
- [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
- [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]  
-  
-## См. также  
- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+> <span data-ttu-id="d1e12-131">Вызов перегрузки <xref:System.DateTimeOffset> конструктор с одним <xref:System.DateTime> параметр эквивалентно выполнению неявное преобразование <xref:System.DateTime> значение <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-131">Calling the overload of the <xref:System.DateTimeOffset> constructor that has a single <xref:System.DateTime> parameter is equivalent to performing an implicit conversion of a <xref:System.DateTime> value to a <xref:System.DateTimeOffset> value.</span></span>
+
+<span data-ttu-id="d1e12-132">Второй конструктор, который создает <xref:System.DateTimeOffset> объекта из <xref:System.DateTime> значение имеет два параметра: <xref:System.DateTime> , которое требуется преобразовать и <xref:System.TimeSpan> смещение от времени UTC, представляющее дату и время.</span><span class="sxs-lookup"><span data-stu-id="d1e12-132">The second constructor that creates a <xref:System.DateTimeOffset> object from a <xref:System.DateTime> value has two parameters: the <xref:System.DateTime> value to convert, and a <xref:System.TimeSpan> value representing the date and time's offset from UTC.</span></span> <span data-ttu-id="d1e12-133">Это значение смещения должен соответствовать <xref:System.DateTime.Kind%2A> свойства первого параметра конструктора или <xref:System.ArgumentException> возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-133">This offset value must correspond to the <xref:System.DateTime.Kind%2A> property of the constructor's first parameter or an <xref:System.ArgumentException> is thrown.</span></span> <span data-ttu-id="d1e12-134">Если <xref:System.DateTime.Kind%2A> свойство первый параметр — <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, значение второго параметра должно быть <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1e12-134">If the <xref:System.DateTime.Kind%2A> property of the first parameter is <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, the value of the second parameter must be <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d1e12-135">Если <xref:System.DateTime.Kind%2A> свойство первый параметр — <xref:System.DateTimeKind.Local?displayProperty=nameWithType>, значение второго параметра должно быть смещение часового пояса локальной системы.</span><span class="sxs-lookup"><span data-stu-id="d1e12-135">If the <xref:System.DateTime.Kind%2A> property of the first parameter is <xref:System.DateTimeKind.Local?displayProperty=nameWithType>, the value of the second parameter must be the offset of the local system's time zone.</span></span> <span data-ttu-id="d1e12-136">Если <xref:System.DateTime.Kind%2A> свойство первый параметр — <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, смещение может быть любым допустимым значением.</span><span class="sxs-lookup"><span data-stu-id="d1e12-136">If the <xref:System.DateTime.Kind%2A> property of the first parameter is <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, the offset can be any valid value.</span></span> <span data-ttu-id="d1e12-137">В следующем коде показано, как этот конструктор для преобразования <xref:System.DateTime> для <xref:System.DateTimeOffset> значения.</span><span class="sxs-lookup"><span data-stu-id="d1e12-137">The following code illustrates calls to this constructor to convert <xref:System.DateTime> to <xref:System.DateTimeOffset> values.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#5)]
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#5)]
+
+## <a name="implicit-type-conversion"></a><span data-ttu-id="d1e12-138">Неявное преобразование типов</span><span class="sxs-lookup"><span data-stu-id="d1e12-138">Implicit type conversion</span></span>
+
+<span data-ttu-id="d1e12-139"><xref:System.DateTimeOffset> Тип поддерживает одно неявное преобразование: из <xref:System.DateTime> значение <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-139">The <xref:System.DateTimeOffset> type supports one implicit type conversion: from a <xref:System.DateTime> value to a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="d1e12-140">(Неявное преобразование типов — это преобразование одного типа в другой, не требующее явного приведения, как в языке C#, или преобразования, как в языке Visual Basic, в ходе которого не теряются данные.)</span><span class="sxs-lookup"><span data-stu-id="d1e12-140">(An implicit type conversion is a conversion from one type to another that does not require an explicit cast (in C#) or conversion (in Visual Basic) and that does not lose information.</span></span> <span data-ttu-id="d1e12-141">Благодаря этому можно использовать код, аналогичный приведенному ниже.</span><span class="sxs-lookup"><span data-stu-id="d1e12-141">It makes code like the following possible.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#6)]
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#6)]
+
+<span data-ttu-id="d1e12-142">Смещение результирующего <xref:System.DateTimeOffset> значение зависит от <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> значение свойства.</span><span class="sxs-lookup"><span data-stu-id="d1e12-142">The offset of the resulting <xref:System.DateTimeOffset> value depends on the <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> property value.</span></span> <span data-ttu-id="d1e12-143">Если его значение равно <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, смещение приравнивается к <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1e12-143">If its value is <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, the offset is set equal to <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d1e12-144">Если его значение равно <xref:System.DateTimeKind.Local?displayProperty=nameWithType> или <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, смещение задано равным местного часового пояса.</span><span class="sxs-lookup"><span data-stu-id="d1e12-144">If its value is either <xref:System.DateTimeKind.Local?displayProperty=nameWithType> or <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, the offset is set equal to that of the local time zone.</span></span>
+
+## <a name="parsing-the-string-representation-of-a-date-and-time"></a><span data-ttu-id="d1e12-145">Разбор строкового представления даты и времени</span><span class="sxs-lookup"><span data-stu-id="d1e12-145">Parsing the string representation of a date and time</span></span>
+
+<span data-ttu-id="d1e12-146"><xref:System.DateTimeOffset> Тип поддерживает четыре метода, которые позволяют преобразовать строковое представление даты и времени в <xref:System.DateTimeOffset> значение:</span><span class="sxs-lookup"><span data-stu-id="d1e12-146">The <xref:System.DateTimeOffset> type supports four methods that allow you to convert the string representation of a date and time into a <xref:System.DateTimeOffset> value:</span></span>
+
+* <span data-ttu-id="d1e12-147"><xref:System.DateTimeOffset.Parse%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в <xref:System.DateTimeOffset> значение и вызывает исключение, если преобразование завершается неудачей.</span><span class="sxs-lookup"><span data-stu-id="d1e12-147"><xref:System.DateTimeOffset.Parse%2A>, which tries to convert the string representation of a date and time to a <xref:System.DateTimeOffset> value and throws an exception if the conversion fails.</span></span>
+
+* <span data-ttu-id="d1e12-148"><xref:System.DateTimeOffset.TryParse%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в <xref:System.DateTimeOffset> значения и возвращает `false` при сбое преобразования.</span><span class="sxs-lookup"><span data-stu-id="d1e12-148"><xref:System.DateTimeOffset.TryParse%2A>, which tries to convert the string representation of a date and time to a <xref:System.DateTimeOffset> value and returns `false` if the conversion fails.</span></span>
+
+* <span data-ttu-id="d1e12-149"><xref:System.DateTimeOffset.ParseExact%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в указанном формате в <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-149"><xref:System.DateTimeOffset.ParseExact%2A>, which tries to convert the string representation of a date and time in a specified format to a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="d1e12-150">Этот метод создает исключение при сбое преобразования.</span><span class="sxs-lookup"><span data-stu-id="d1e12-150">The method throws an exception if the conversion fails.</span></span>
+
+* <span data-ttu-id="d1e12-151"><xref:System.DateTimeOffset.TryParseExact%2A>, который предпринимает попытку преобразовать строковое представление даты и времени в указанном формате в <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-151"><xref:System.DateTimeOffset.TryParseExact%2A>, which tries to convert the string representation of a date and time in a specified format to a <xref:System.DateTimeOffset> value.</span></span> <span data-ttu-id="d1e12-152">При сбое преобразования метод возвращает значение `false`.</span><span class="sxs-lookup"><span data-stu-id="d1e12-152">The method returns `false` if the conversion fails.</span></span>
+
+<span data-ttu-id="d1e12-153">В следующем примере демонстрируется вызова каждого из этих четырех методов преобразования строк для создания экземпляра <xref:System.DateTimeOffset> значение.</span><span class="sxs-lookup"><span data-stu-id="d1e12-153">The following example illustrates calls to each of these four string conversion methods to instantiate a <xref:System.DateTimeOffset> value.</span></span>
+
+[!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
+[!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]
+
+## <a name="see-also"></a><span data-ttu-id="d1e12-154">См. также</span><span class="sxs-lookup"><span data-stu-id="d1e12-154">See also</span></span>
+
+[<span data-ttu-id="d1e12-155">Даты, время и часовые пояса</span><span class="sxs-lookup"><span data-stu-id="d1e12-155">Dates, times, and time zones</span></span>](../../../docs/standard/datetime/index.md)

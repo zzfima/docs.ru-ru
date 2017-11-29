@@ -1,84 +1,82 @@
 ---
-title: "Правила использования прописных букв | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "имена с чередованием регистра [платформа .NET Framework]"
-  - "Класс рекомендации по разработке библиотек [платформа .NET Framework], регистр букв"
-  - "Имена стиле Pascal [платформа .NET Framework]"
-  - "учет регистра букв"
-  - "имена [платформа .NET Framework], регистр букв"
+title: "Соглашения о написании прописными буквами"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- camel-case names [.NET Framework]
+- class library design guidelines [.NET Framework], capitalization
+- Pascal-case names [.NET Framework]
+- case sensitivity, capitalization conventions
+- names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Правила использования прописных букв
-Правила, описанные в этой главе размещать простой метод с помощью варианта, при применении согласованно, создание идентификаторов для типов, членов и параметров, удобном для чтения.  
+# <a name="capitalization-conventions"></a><span data-ttu-id="7b31f-102">Соглашения о написании прописными буквами</span><span class="sxs-lookup"><span data-stu-id="7b31f-102">Capitalization Conventions</span></span>
+<span data-ttu-id="7b31f-103">Правила, описанные в этой главе размещать простой способ проверки с помощью варианта, при применении единообразно идентификаторы делать для типов, членов и параметров, удобном для чтения.</span><span class="sxs-lookup"><span data-stu-id="7b31f-103">The guidelines in this chapter lay out a simple method for using case that, when applied consistently, make identifiers for types, members, and parameters easy to read.</span></span>  
   
-## Правила использования прописных букв для идентификаторов  
- Чтобы различать слова в идентификаторе, преобразование первой буквы каждого слова в идентификаторе. Не используйте символы подчеркивания для различения слова, или на то пошло, в любом месте идентификаторов. Существует два способа соответствующего идентификатора в зависимости от использования идентификатора к прописным:  
+## <a name="capitalization-rules-for-identifiers"></a><span data-ttu-id="7b31f-104">Правила использования прописных букв для идентификаторов</span><span class="sxs-lookup"><span data-stu-id="7b31f-104">Capitalization Rules for Identifiers</span></span>  
+ <span data-ttu-id="7b31f-105">Чтобы различать слова в идентификаторе, преобразование первой буквы каждого слова в идентификаторе.</span><span class="sxs-lookup"><span data-stu-id="7b31f-105">To differentiate words in an identifier, capitalize the first letter of each word in the identifier.</span></span> <span data-ttu-id="7b31f-106">Не используйте символы подчеркивания для разделения слов, или по этой причине в любом месте идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="7b31f-106">Do not use underscores to differentiate words, or for that matter, anywhere in identifiers.</span></span> <span data-ttu-id="7b31f-107">Существует два способа соответствующие прописной идентификаторов, в зависимости от использования идентификатора:</span><span class="sxs-lookup"><span data-stu-id="7b31f-107">There are two appropriate ways to capitalize identifiers, depending on the use of the identifier:</span></span>  
   
--   PascalCasing  
+-   <span data-ttu-id="7b31f-108">PascalCasing</span><span class="sxs-lookup"><span data-stu-id="7b31f-108">PascalCasing</span></span>  
   
--   camelCasing  
+-   <span data-ttu-id="7b31f-109">camelCasing</span><span class="sxs-lookup"><span data-stu-id="7b31f-109">camelCasing</span></span>  
   
- PascalCasing соглашение, все идентификаторы, за исключением имен параметров, первая буква каждого слова \(включая акронимов через из двух букв\), как показано в следующих примерах:  
+ <span data-ttu-id="7b31f-110">Соглашение о PascalCasing, используется для всех идентификаторов, за исключением имен параметров, первая буква каждого слова (включая акронимов через из двух букв), как показано в следующих примерах:</span><span class="sxs-lookup"><span data-stu-id="7b31f-110">The PascalCasing convention, used for all identifiers except parameter names, capitalizes the first character of each word (including acronyms over two letters in length), as shown in the following examples:</span></span>  
   
- `PropertyDescriptor`   
+ `PropertyDescriptor`  
  `HtmlTag`  
   
- Особым случаем совершается двухбуквенных акронимах, в которых заданы оба буквы, как показано в следующий идентификатор:  
+ <span data-ttu-id="7b31f-111">Особым случаем совершается двухбуквенных акронимах, в которых заданы оба букв, как показано в следующий идентификатор:</span><span class="sxs-lookup"><span data-stu-id="7b31f-111">A special case is made for two-letter acronyms in which both letters are capitalized, as shown in the following identifier:</span></span>  
   
  `IOStream`  
   
- CamelCasing соглашение, используется только для имен параметров, первая буква каждого слова, кроме первого, как показано в следующих примерах. Как показано в примере, двухбуквенных акронимах, которые начинаются с идентификатора Camel находятся нижнего регистра.  
+ <span data-ttu-id="7b31f-112">Соглашение о camelCasing, используется только для имен параметров, первая буква каждого слова, кроме первого, как показано в следующих примерах.</span><span class="sxs-lookup"><span data-stu-id="7b31f-112">The camelCasing convention, used only for parameter names, capitalizes the first character of each word except the first word, as shown in the following examples.</span></span> <span data-ttu-id="7b31f-113">Как показано в примере, двухбуквенных акронимах, начинающиеся стиля Camel присутствуют нижний регистр.</span><span class="sxs-lookup"><span data-stu-id="7b31f-113">As the example also shows, two-letter acronyms that begin a camel-cased identifier are both lowercase.</span></span>  
   
- `propertyDescriptor`   
- `ioStream`   
+ `propertyDescriptor`  
+ `ioStream`  
  `htmlTag`  
   
- **✓ сделать** использовать PascalCasing для всех открытых члена типа и пространство имен имен, состоящих из нескольких слов.  
+ <span data-ttu-id="7b31f-114">**✓ СДЕЛАТЬ** использовать PascalCasing для всех открытых элемента, типа и пространство имен имен, состоящих из нескольких слов.</span><span class="sxs-lookup"><span data-stu-id="7b31f-114">**✓ DO** use PascalCasing for all public member, type, and namespace names consisting of multiple words.</span></span>  
   
- **✓ сделать** использовать camelCasing для имен параметров.  
+ <span data-ttu-id="7b31f-115">**✓ СДЕЛАТЬ** использовать camelCasing для имен параметров.</span><span class="sxs-lookup"><span data-stu-id="7b31f-115">**✓ DO** use camelCasing for parameter names.</span></span>  
   
- Следующая таблица описывает правила использования прописных букв для различных типов идентификаторов.  
+ <span data-ttu-id="7b31f-116">Следующая таблица описывает правила использования прописных букв для различных типов идентификаторов.</span><span class="sxs-lookup"><span data-stu-id="7b31f-116">The following table describes the capitalization rules for different types of identifiers.</span></span>  
   
-|Идентификатор|Регистр|Пример|  
-|-------------------|-------------|------------|  
-|Пространство имен|Стиль языка Pascal|`namespace System.Security { ... }`|  
-|Тип|Стиль языка Pascal|`public class StreamReader { ... }`|  
-|Интерфейс|Стиль языка Pascal|`public interface IEnumerable { ... }`|  
-|Метод|Стиль языка Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|Свойство|Стиль языка Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Событие|Стиль языка Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
-|Поле|Стиль языка Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
-|Значение перечисления|Стиль языка Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Параметр|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|<span data-ttu-id="7b31f-117">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="7b31f-117">Identifier</span></span>|<span data-ttu-id="7b31f-118">Регистр</span><span class="sxs-lookup"><span data-stu-id="7b31f-118">Casing</span></span>|<span data-ttu-id="7b31f-119">Пример</span><span class="sxs-lookup"><span data-stu-id="7b31f-119">Example</span></span>|  
+|----------------|------------|-------------|  
+|<span data-ttu-id="7b31f-120">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="7b31f-120">Namespace</span></span>|<span data-ttu-id="7b31f-121">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-121">Pascal</span></span>|`namespace System.Security { ... }`|  
+|<span data-ttu-id="7b31f-122">Тип</span><span class="sxs-lookup"><span data-stu-id="7b31f-122">Type</span></span>|<span data-ttu-id="7b31f-123">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-123">Pascal</span></span>|`public class StreamReader { ... }`|  
+|<span data-ttu-id="7b31f-124">Интерфейс</span><span class="sxs-lookup"><span data-stu-id="7b31f-124">Interface</span></span>|<span data-ttu-id="7b31f-125">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-125">Pascal</span></span>|`public interface IEnumerable { ... }`|  
+|<span data-ttu-id="7b31f-126">Метод</span><span class="sxs-lookup"><span data-stu-id="7b31f-126">Method</span></span>|<span data-ttu-id="7b31f-127">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-127">Pascal</span></span>|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
+|<span data-ttu-id="7b31f-128">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b31f-128">Property</span></span>|<span data-ttu-id="7b31f-129">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-129">Pascal</span></span>|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|<span data-ttu-id="7b31f-130">Событие</span><span class="sxs-lookup"><span data-stu-id="7b31f-130">Event</span></span>|<span data-ttu-id="7b31f-131">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-131">Pascal</span></span>|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|<span data-ttu-id="7b31f-132">Поле</span><span class="sxs-lookup"><span data-stu-id="7b31f-132">Field</span></span>|<span data-ttu-id="7b31f-133">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-133">Pascal</span></span>|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
+|<span data-ttu-id="7b31f-134">Значение перечисления</span><span class="sxs-lookup"><span data-stu-id="7b31f-134">Enum value</span></span>|<span data-ttu-id="7b31f-135">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-135">Pascal</span></span>|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
+|<span data-ttu-id="7b31f-136">Параметр</span><span class="sxs-lookup"><span data-stu-id="7b31f-136">Parameter</span></span>|<span data-ttu-id="7b31f-137">Стиль Camel</span><span class="sxs-lookup"><span data-stu-id="7b31f-137">Camel</span></span>|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## Использование составных слов и общие термины  
- Большинство составные термины обрабатываются как отдельные слова в целях использования прописных букв.  
+## <a name="capitalizing-compound-words-and-common-terms"></a><span data-ttu-id="7b31f-138">Прописной буквы в составных словах и общих терминов</span><span class="sxs-lookup"><span data-stu-id="7b31f-138">Capitalizing Compound Words and Common Terms</span></span>  
+ <span data-ttu-id="7b31f-139">Большинство составные термины рассматриваются как отдельные слова в целях использования прописных букв.</span><span class="sxs-lookup"><span data-stu-id="7b31f-139">Most compound terms are treated as single words for purposes of capitalization.</span></span>  
   
- **X не** прописных так называемые составные слова закрытия формы.  
+ <span data-ttu-id="7b31f-140">**X не** прописных так называемые единым составные слова.</span><span class="sxs-lookup"><span data-stu-id="7b31f-140">**X DO NOT** capitalize each word in so-called closed-form compound words.</span></span>  
   
- Это сложные слова, записываются в одно слово, например конечной точки. С целью правила учета регистра считайте составное слово единым одно слово. Используете текущий словарь для определения, если является составным словом записывается в виде закрытых.  
+ <span data-ttu-id="7b31f-141">Это сложные слова, которые написаны как одно слово, например конечной точки.</span><span class="sxs-lookup"><span data-stu-id="7b31f-141">These are compound words written as a single word, such as endpoint.</span></span> <span data-ttu-id="7b31f-142">С целью правила определения регистра обрабатывать составное слово единым как одно слово.</span><span class="sxs-lookup"><span data-stu-id="7b31f-142">For the purpose of casing guidelines, treat a closed-form compound word as a single word.</span></span> <span data-ttu-id="7b31f-143">Используете текущий словарь для определения, если составное слово записывается в закрытой формой.</span><span class="sxs-lookup"><span data-stu-id="7b31f-143">Use a current dictionary to determine if a compound word is written in closed form.</span></span>  
   
-|Стиль языка Pascal|Camel|Не|  
-|------------------------|-----------|--------|  
+|<span data-ttu-id="7b31f-144">Pascal</span><span class="sxs-lookup"><span data-stu-id="7b31f-144">Pascal</span></span>|<span data-ttu-id="7b31f-145">Стиль Camel</span><span class="sxs-lookup"><span data-stu-id="7b31f-145">Camel</span></span>|<span data-ttu-id="7b31f-146">не</span><span class="sxs-lookup"><span data-stu-id="7b31f-146">Not</span></span>|  
+|------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
 |`Canceled`|`canceled`|`Cancelled`|  
@@ -105,15 +103,15 @@ caps.handback.revision: 16
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|  
 |`Writable`|`writable`|`Writeable`|  
   
-## Учет регистра  
- Языки, которые могут выполняться в среде CLR не обязаны поддерживать чувствительность к регистру, хотя некоторые сделать. Даже если ее поддерживает язык других языков, которые могут получить доступ к вашей платформы не происходит. Интерфейсы API, доступные извне, таким образом, нельзя полагаться на случай для различения двух имен в том же контексте.  
+## <a name="case-sensitivity"></a><span data-ttu-id="7b31f-147">Учет регистра</span><span class="sxs-lookup"><span data-stu-id="7b31f-147">Case Sensitivity</span></span>  
+ <span data-ttu-id="7b31f-148">Языки, которые могут выполняться в среде CLR не требуются для поддержки чувствительность к регистру, несмотря на то, что некоторые выполнять.</span><span class="sxs-lookup"><span data-stu-id="7b31f-148">Languages that can run on the CLR are not required to support case-sensitivity, although some do.</span></span> <span data-ttu-id="7b31f-149">Даже если его поддерживает ваш язык, другими языками, может получить доступ к вашей платформы нет.</span><span class="sxs-lookup"><span data-stu-id="7b31f-149">Even if your language supports it, other languages that might access your framework do not.</span></span> <span data-ttu-id="7b31f-150">Интерфейсы API, доступны извне, таким образом, нельзя полагаться на случай отдельно, чтобы различать два имени, в том же контексте.</span><span class="sxs-lookup"><span data-stu-id="7b31f-150">Any APIs that are externally accessible, therefore, cannot rely on case alone to distinguish between two names in the same context.</span></span>  
   
- **X не** предполагается, что все языки программирования чувствительны к регистру. Они не являются. Имена не могут различаться только регистром.  
+ <span data-ttu-id="7b31f-151">**X не** предполагается, что все языки программирования чувствительны к регистру.</span><span class="sxs-lookup"><span data-stu-id="7b31f-151">**X DO NOT** assume that all programming languages are case sensitive.</span></span> <span data-ttu-id="7b31f-152">Это не так.</span><span class="sxs-lookup"><span data-stu-id="7b31f-152">They are not.</span></span> <span data-ttu-id="7b31f-153">Имена не могут различаться только регистром.</span><span class="sxs-lookup"><span data-stu-id="7b31f-153">Names cannot differ by case alone.</span></span>  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="7b31f-154">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="7b31f-154">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="7b31f-155">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="7b31f-155">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)   
- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="7b31f-156">См. также</span><span class="sxs-lookup"><span data-stu-id="7b31f-156">See Also</span></span>  
+ [<span data-ttu-id="7b31f-157">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="7b31f-157">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="7b31f-158">Правила именования</span><span class="sxs-lookup"><span data-stu-id="7b31f-158">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

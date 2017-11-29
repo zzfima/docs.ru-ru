@@ -1,39 +1,39 @@
 ---
-title: "Общие сведения об элементе управления NumericUpDown (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NumericUpDown"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "числовый счетчик - элемент управления, Windows Forms"
-  - "NumericUpDown - элемент управления [Windows Forms], сведения об элементе управления NumericUpDown"
-  - "счетчик - элемент управления, Windows Forms"
+title: "Общие сведения об элементе управления NumericUpDown (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NumericUpDown
+helpviewer_keywords:
+- numeric spin button control [Windows Forms], Windows Forms
+- NumericUpDown control [Windows Forms], about NumericUpDown control
+- spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e1afb128fd5e098a59fa2636f09998a2a463c926
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления NumericUpDown (Windows Forms)
-Элемент управления <xref:System.Windows.Forms.NumericUpDown> представляет собой сочетание текстового поля и пары кнопок со стрелками для выбора значения пользователем.  Он выводит и задает отдельное числовое значение в списке вариантов фиксированных числовых значений.  Пользователь может увеличивать и уменьшать число, нажимая кнопки со стрелками вверх и вниз или клавиши со стрелками ВВЕРХ и ВНИЗ, а также вводя число в области текстового поля элемента управления.  При нажатии клавиши со стрелкой ВВЕРХ число увеличивается до максимума; при нажатии клавиши со стрелкой ВНИЗ число уменьшается до минимума.  
+# <a name="numericupdown-control-overview-windows-forms"></a><span data-ttu-id="c4af9-102">Общие сведения об элементе управления NumericUpDown (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="c4af9-102">NumericUpDown Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="c4af9-103"><xref:System.Windows.Forms.NumericUpDown> Элемент управления выглядит как сочетание текстового поля и пары кнопок со стрелками для выбора значения пользователем.</span><span class="sxs-lookup"><span data-stu-id="c4af9-103">The <xref:System.Windows.Forms.NumericUpDown> control looks like a combination of a text box and a pair of arrows that the user can click to adjust a value.</span></span> <span data-ttu-id="c4af9-104">Он выводит и задает отдельное числовое значение в списке основных вариантов числовых значений.</span><span class="sxs-lookup"><span data-stu-id="c4af9-104">The control displays and sets a single numeric value from a list of fixed numeric-value choices.</span></span> <span data-ttu-id="c4af9-105">Пользователь может увеличить и уменьшить число вверх и Стрелка вниз, клавиши со стрелками вверх и вниз или введя число в части текстового поля элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c4af9-105">The user can increase and decrease the number by clicking the up and down arrows, by pressing the UP and DOWN ARROW keys, or by typing a number in the text box part of the control.</span></span> <span data-ttu-id="c4af9-106">Нажав клавишу со стрелкой вверх перемещает номер увеличивается до максимума; нажав клавишу со стрелкой вниз перемещение номера уменьшается до минимума.</span><span class="sxs-lookup"><span data-stu-id="c4af9-106">Clicking the UP ARROW key moves the number toward the maximum; clicking the DOWN ARROW key moves the number toward the minimum.</span></span>  
   
- Благодаря своим универсальным функциональным возможностям, этот элемент управления – очевидный выбор для создания регулятора громкости приложения музыкального проигрывателя.  Элемент управления <xref:System.Windows.Forms.NumericUpDown> используется во многих приложениях панели управления Windows.  
+ <span data-ttu-id="c4af9-107">Из-за универсальным функциональным возможностям этот элемент управления является очевидным выбором, например, если требуется создать музыкальный проигрыватель регулятор громкости.</span><span class="sxs-lookup"><span data-stu-id="c4af9-107">Because of its versatile functionality, this control is an obvious choice, for example, if you want to create a volume control for a music player application.</span></span> <span data-ttu-id="c4af9-108"><xref:System.Windows.Forms.NumericUpDown> Управления используется во многих приложениях панели управления Windows.</span><span class="sxs-lookup"><span data-stu-id="c4af9-108">The <xref:System.Windows.Forms.NumericUpDown> control is used in many Windows Control Panel applications.</span></span>  
   
-## Ключевые свойства и методы  
- Выводимые значения могут быть представлены текстовом поле элемента управления в различных форматах, в том числе в шестнадцатеричном.  Дополнительные сведения см. в разделе [Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).  Ключевые свойства элемента управления: <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> \(значение по умолчанию – 100\), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> \(значение по умолчанию – 0\) и <xref:System.Windows.Forms.NumericUpDown.Increment%2A> \(значение по умолчанию – 1\).  Свойство <xref:System.Windows.Forms.NumericUpDown.Value%2A> задает текущее число, выбранное в элементе управления.  Свойство <xref:System.Windows.Forms.NumericUpDown.Increment%2A> задает шаг изменения значения при нажатии кнопки со стрелкой вверх или вниз.  При снятии фокуса с элемента управления любые введенные данные проверяются на соответствие с минимальным и максимальным числовыми значениями.  Для увеличения скорости перемещения элемента управления в зависимости от непрерывности нажатия пользователем клавиш со стрелкой вверх и вниз можно использовать свойство <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>.  Основными методами этого элемента управления являются методы <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> и <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="c4af9-109">Ключевые свойства и методы</span><span class="sxs-lookup"><span data-stu-id="c4af9-109">Key Properties and Methods</span></span>  
+ <span data-ttu-id="c4af9-110">Чисел, отображаемых в текстовом поле элемента управления могут находиться в различных форматах, включая шестнадцатеричное.</span><span class="sxs-lookup"><span data-stu-id="c4af9-110">The numbers displayed in the control's text box can be in a variety of formats, including hexadecimal.</span></span> <span data-ttu-id="c4af9-111">Дополнительные сведения см. в разделе [как: Задание формата элемента управления NumericUpDown в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span><span class="sxs-lookup"><span data-stu-id="c4af9-111">For more information, see [How to: Set the Format for the Windows Forms NumericUpDown Control](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md).</span></span> <span data-ttu-id="c4af9-112">Ключевые свойства элемента управления являются <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (значение по умолчанию 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (значение по умолчанию 0), и <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (значение 1 по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="c4af9-112">The key properties of the control are <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (default value 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (default value 0), and <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (default value 1).</span></span> <span data-ttu-id="c4af9-113"><xref:System.Windows.Forms.NumericUpDown.Value%2A> Свойство задает номер текущей выбраны в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="c4af9-113">The <xref:System.Windows.Forms.NumericUpDown.Value%2A> property sets the current number selected in the control.</span></span> <span data-ttu-id="c4af9-114"><xref:System.Windows.Forms.NumericUpDown.Increment%2A> Свойство задает значение, что номер настраивается, когда пользователь щелкает вверх или Стрелка вниз.</span><span class="sxs-lookup"><span data-stu-id="c4af9-114">The <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property sets the amount that the number is adjusted by when the user clicks an up or down arrow.</span></span> <span data-ttu-id="c4af9-115">При снятии фокуса управления любые введенные данные будет проверена на соответствие минимальным и максимальным числовые значения.</span><span class="sxs-lookup"><span data-stu-id="c4af9-115">When focus moves off the control, any typed input will be validated against the minimum and maximum numeric values.</span></span> <span data-ttu-id="c4af9-116">Можно ускорить, элемент управления перемещается через чисел, когда пользователь нажимает постоянно вверх или Стрелка вниз, с <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="c4af9-116">You can increase the speed that the control moves through numbers, when the user continuously presses the up or down arrow, with the <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> property.</span></span> <span data-ttu-id="c4af9-117">Основные методы элемента управления, <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> и <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="c4af9-117">The key methods of the control are <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.NumericUpDown>   
- [Элемент управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)   
- [Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)   
- [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c4af9-118">См. также</span><span class="sxs-lookup"><span data-stu-id="c4af9-118">See Also</span></span>  
+ <xref:System.Windows.Forms.NumericUpDown>  
+ [<span data-ttu-id="c4af9-119">Элемент управления NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="c4af9-119">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [<span data-ttu-id="c4af9-120">Практическое руководство. Определение формата элемента управления NumericUpDown в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c4af9-120">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ [<span data-ttu-id="c4af9-121">Элемент управления TextBox</span><span class="sxs-lookup"><span data-stu-id="c4af9-121">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

@@ -1,49 +1,55 @@
 ---
-title: "Практическое руководство. Поиск элемента TreeViewItem в TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView - элемент управления [WPF], поиск TreeViewItem"
-  - "TreeViewItem [WPF], поиск"
+title: "Практическое руководство. Поиск элемента TreeViewItem в TreeView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TreeView control [WPF], finding a TreeViewItem
+- TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Поиск элемента TreeViewItem в TreeView
-Элемент управления <xref:System.Windows.Controls.TreeView> предоставляет удобный способ отображения иерархических данных.  Если элемент управления <xref:System.Windows.Controls.TreeView> привязан к источнику данных, свойство <xref:System.Windows.Controls.TreeView.SelectedItem%2A> предоставляет удобный способ быстрого извлечения выбранного объекта данных.  Обычно лучше всего работать с базовым объектом данных, однако иногда требуется программно управлять элементом управления <xref:System.Windows.Controls.TreeViewItem>, содержащим данные.  Например, может возникать необходимость в программном расширении элемента управления <xref:System.Windows.Controls.TreeViewItem> или в выборе другого элемента из элемента управления <xref:System.Windows.Controls.TreeView>.  
+# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a><span data-ttu-id="06962-102">Практическое руководство. Поиск элемента TreeViewItem в TreeView</span><span class="sxs-lookup"><span data-stu-id="06962-102">How to: Find a TreeViewItem in a TreeView</span></span>
+<span data-ttu-id="06962-103"><xref:System.Windows.Controls.TreeView> Элемент управления предоставляет удобный способ отображения иерархических данных.</span><span class="sxs-lookup"><span data-stu-id="06962-103">The <xref:System.Windows.Controls.TreeView> control provides a convenient way to display hierarchical data.</span></span> <span data-ttu-id="06962-104">Если ваш <xref:System.Windows.Controls.TreeView> привязан к источнику данных, <xref:System.Windows.Controls.TreeView.SelectedItem%2A> свойству предоставляет удобный способ для быстрого извлечения выбранного объекта данных.</span><span class="sxs-lookup"><span data-stu-id="06962-104">If your <xref:System.Windows.Controls.TreeView> is bound to a data source, the <xref:System.Windows.Controls.TreeView.SelectedItem%2A> property provides a convenient way for you to quickly retrieve the selected data object.</span></span> <span data-ttu-id="06962-105">Обычно лучше всего работать с базовым объектом данных, но иногда необходимо программно манипулировать данных, содержащих <xref:System.Windows.Controls.TreeViewItem>.</span><span class="sxs-lookup"><span data-stu-id="06962-105">It is typically best to work with the underlying data object, but sometimes you may need to programmatically manipulate the data's containing <xref:System.Windows.Controls.TreeViewItem>.</span></span> <span data-ttu-id="06962-106">Например, может потребоваться программно разверните <xref:System.Windows.Controls.TreeViewItem>, или выберите другой элемент в <xref:System.Windows.Controls.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="06962-106">For example, you may need to programmatically expand the <xref:System.Windows.Controls.TreeViewItem>, or select a different item in the <xref:System.Windows.Controls.TreeView>.</span></span>  
   
- Чтобы найти элемент управления <xref:System.Windows.Controls.TreeViewItem>, содержащий конкретный объект данных, необходимо пройти каждый уровень <xref:System.Windows.Controls.TreeView>.  Для повышения производительности можно также виртуализировать элементы <xref:System.Windows.Controls.TreeView>.  В случае виртуализации элементов необходимо также реализовать элемент управления <xref:System.Windows.Controls.TreeViewItem>, чтобы проверить, содержит ли он объект данных.  
+ <span data-ttu-id="06962-107">Чтобы найти <xref:System.Windows.Controls.TreeViewItem> , содержащий конкретный объект данных, необходимо пройти каждый уровень <xref:System.Windows.Controls.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="06962-107">To find a <xref:System.Windows.Controls.TreeViewItem> that contains a specific data object, you must traverse each level of the <xref:System.Windows.Controls.TreeView>.</span></span> <span data-ttu-id="06962-108">Элементы в <xref:System.Windows.Controls.TreeView> также можно виртуализировать для повышения производительности.</span><span class="sxs-lookup"><span data-stu-id="06962-108">The items in a <xref:System.Windows.Controls.TreeView> can also be virtualized to improve performance.</span></span> <span data-ttu-id="06962-109">В случае, когда виртуализации элементов необходимо также реализовать <xref:System.Windows.Controls.TreeViewItem> Чтобы проверить, содержит ли объект данных.</span><span class="sxs-lookup"><span data-stu-id="06962-109">In the case where items might be virtualized, you also must realize a <xref:System.Windows.Controls.TreeViewItem> to check whether it contains the data object.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="06962-110">Пример</span><span class="sxs-lookup"><span data-stu-id="06962-110">Example</span></span>  
   
-## Описание  
- В следующем примере выполняется поиск определенного объекта в элементе управления <xref:System.Windows.Controls.TreeView> и возвращается элемент <xref:System.Windows.Controls.TreeViewItem>, содержащий этот объект.  В примере создается экземпляр каждого элемента <xref:System.Windows.Controls.TreeViewItem> для обеспечения возможности поиска его дочерних элементов.  Пример также работает, если в <xref:System.Windows.Controls.TreeView> не используются виртуализированные элементы.  
+## <a name="description"></a><span data-ttu-id="06962-111">Описание</span><span class="sxs-lookup"><span data-stu-id="06962-111">Description</span></span>  
+ <span data-ttu-id="06962-112">В следующем примере выполняется поиск <xref:System.Windows.Controls.TreeView> для указанного объекта и возвращает объект, содержащего <xref:System.Windows.Controls.TreeViewItem>.</span><span class="sxs-lookup"><span data-stu-id="06962-112">The following example searches a <xref:System.Windows.Controls.TreeView> for a specific object and returns the object's containing <xref:System.Windows.Controls.TreeViewItem>.</span></span> <span data-ttu-id="06962-113">В примере проверяется, чтобы каждый <xref:System.Windows.Controls.TreeViewItem> создается, чтобы его дочерние элементы можно искать.</span><span class="sxs-lookup"><span data-stu-id="06962-113">The example ensures that each <xref:System.Windows.Controls.TreeViewItem> is instantiated so that its child items can be searched.</span></span> <span data-ttu-id="06962-114">В этом примере также работает, если <xref:System.Windows.Controls.TreeView> используются виртуализированные элементы.</span><span class="sxs-lookup"><span data-stu-id="06962-114">This example also works if the <xref:System.Windows.Controls.TreeView> does not use virtualized items.</span></span>  
   
 > [!NOTE]
->  Следующий пример работает для любого элемента управления <xref:System.Windows.Controls.TreeView>, независимо от базовой модели данных; в нем выполняется поиск в каждом элементе <xref:System.Windows.Controls.TreeViewItem> до тех пор, пока не будет найдет требуемый объект.  Другой метод, характеризующийся более высокой производительностью, состоит в поиске определенного объекта в модели данных, отслеживании его расположения в иерархии данных и последующем поиске соответствующего элемента <xref:System.Windows.Controls.TreeViewItem> в элементе управления <xref:System.Windows.Controls.TreeView>.  Однако для реализации этого более производительного метода требуется знание модели данных, и его нельзя обобщить для любого заданного элемента управления <xref:System.Windows.Controls.TreeView>.  
+>  <span data-ttu-id="06962-115">Следующий пример работает для любого <xref:System.Windows.Controls.TreeView>, независимо от базовой модели данных и выполняет каждый <xref:System.Windows.Controls.TreeViewItem> пока объект найден.</span><span class="sxs-lookup"><span data-stu-id="06962-115">The following example works for any <xref:System.Windows.Controls.TreeView>, regardless of the underlying data model, and searches every <xref:System.Windows.Controls.TreeViewItem> until the object is found.</span></span> <span data-ttu-id="06962-116">Другим способом, который имеет более высокую производительность является поиск модели данных для указанного объекта, отслеживать его положение в иерархии данных и затем найти соответствующий <xref:System.Windows.Controls.TreeViewItem> в <xref:System.Windows.Controls.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="06962-116">Another technique that has better performance is to search the data model for the specified object, keep track of its location within the data hierarchy, and then find the corresponding <xref:System.Windows.Controls.TreeViewItem> in the <xref:System.Windows.Controls.TreeView>.</span></span> <span data-ttu-id="06962-117">Тем не менее, метод, который имеет более высокую производительность требует знаний модели данных и не может быть обобщена для любой заданной <xref:System.Windows.Controls.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="06962-117">However, the technique that has better performance requires knowledge of the data model and cannot be generalized for any given <xref:System.Windows.Controls.TreeView>.</span></span>  
   
-## Код  
+## <a name="code"></a><span data-ttu-id="06962-118">Код</span><span class="sxs-lookup"><span data-stu-id="06962-118">Code</span></span>  
  [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
- В предыдущем коде использовался пользовательский элемент управления <xref:System.Windows.Controls.VirtualizingStackPanel>, предоставляющий метод `BringIntoView`.  В следующем коде определяется пользовательский элемент управления <xref:System.Windows.Controls.VirtualizingStackPanel>.  
+ <span data-ttu-id="06962-119">Предыдущий код использует пользовательский <xref:System.Windows.Controls.VirtualizingStackPanel> , предоставляет метод с именем `BringIntoView`.</span><span class="sxs-lookup"><span data-stu-id="06962-119">The previous code relies on a custom <xref:System.Windows.Controls.VirtualizingStackPanel> that exposes a method named `BringIntoView`.</span></span> <span data-ttu-id="06962-120">Следующий код определяет пользовательский <xref:System.Windows.Controls.VirtualizingStackPanel>.</span><span class="sxs-lookup"><span data-stu-id="06962-120">The following code defines the custom <xref:System.Windows.Controls.VirtualizingStackPanel>.</span></span>  
   
  [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
  [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
- В следующем коде XAML показано создание элемента управления <xref:System.Windows.Controls.TreeView>, использующего пользовательский элемент управления <xref:System.Windows.Controls.VirtualizingStackPanel>.  
+ <span data-ttu-id="06962-121">Приведенный ниже код XAML показан способ создания <xref:System.Windows.Controls.TreeView> , использующего пользовательский <xref:System.Windows.Controls.VirtualizingStackPanel>.</span><span class="sxs-lookup"><span data-stu-id="06962-121">The following XAML shows how to create a <xref:System.Windows.Controls.TreeView> that uses the custom <xref:System.Windows.Controls.VirtualizingStackPanel>.</span></span>  
   
- [!code-xml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
+ [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
-## См. также  
- [Повышение производительности элемента управления TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+## <a name="see-also"></a><span data-ttu-id="06962-122">См. также</span><span class="sxs-lookup"><span data-stu-id="06962-122">See Also</span></span>  
+ [<span data-ttu-id="06962-123">Повышение производительности элемента управления TreeView</span><span class="sxs-lookup"><span data-stu-id="06962-123">Improve the Performance of a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)

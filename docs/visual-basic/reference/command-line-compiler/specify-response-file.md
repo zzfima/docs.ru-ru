@@ -1,57 +1,55 @@
 ---
-title: "@ (указание файла ответа) (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "@ (указание файла ответа) - параметр компилятора [Visual Basic]"
+title: "@ (указание файла ответа) (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ced258713983ded06fa70cb65d56071b41cdc75b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# @ (указание файла ответа) (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает файл, содержащий параметры компилятора и файлы исходного кода для компиляции.  
+# <a name="-specify-response-file-visual-basic"></a><span data-ttu-id="c5c55-102">@ (указание файла ответа) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5c55-102">@ (Specify Response File) (Visual Basic)</span></span>
+<span data-ttu-id="c5c55-103">Указывает файл, содержащий параметры компилятора и файлы исходного кода для компиляции.</span><span class="sxs-lookup"><span data-stu-id="c5c55-103">Specifies a file that contains compiler options and source-code files to compile.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="c5c55-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c5c55-104">Syntax</span></span>  
   
 ```  
 @response_file  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a><span data-ttu-id="c5c55-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="c5c55-105">Arguments</span></span>  
  `response_file`  
- Обязательный.  Файл, содержащий параметры компилятора и файлы исходного кода для компиляции.  Если имя файла содержит пробел, следует заключить его в кавычки \(" "\).  
+ <span data-ttu-id="c5c55-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="c5c55-106">Required.</span></span> <span data-ttu-id="c5c55-107">Файл, содержащий параметры компилятора и файлы исходного кода для компиляции.</span><span class="sxs-lookup"><span data-stu-id="c5c55-107">A file that lists compiler options or source-code files to compile.</span></span> <span data-ttu-id="c5c55-108">Заключите имя файла в кавычки (» «), если он содержит пробелы.</span><span class="sxs-lookup"><span data-stu-id="c5c55-108">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
   
-## Заметки  
- Компилятор обрабатывает указанные в файле ответа параметры и файлы исходного кода, как если бы они были указаны в командной строке.  
+## <a name="remarks"></a><span data-ttu-id="c5c55-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="c5c55-109">Remarks</span></span>  
+ <span data-ttu-id="c5c55-110">Компилятор обрабатывает параметры компилятора и файлы исходного кода, указанного в файле ответов, как если бы они были указаны в командной строке.</span><span class="sxs-lookup"><span data-stu-id="c5c55-110">The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.</span></span>  
   
- Чтобы использовать несколько файлов ответа во время компиляции, следует задать параметры для нескольких файлов ответа.  
+ <span data-ttu-id="c5c55-111">Чтобы указать более одного файла ответов при компиляции, укажите несколько параметров файла ответов, следующие.</span><span class="sxs-lookup"><span data-stu-id="c5c55-111">To specify more than one response file in a compilation, specify multiple response-file options, such as the following.</span></span>  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- В файле ответа на одной строке можно указать несколько параметров компилятора и файлов исходного кода.  Каждый параметр компилятора должен записываться только в одной строке \(нельзя переносить на другую строку\).  В файл ответа можно включать примечания, начинающиеся с символа `#`.  
+ <span data-ttu-id="c5c55-112">В ответ на несколько файлов, параметров компилятора и файлов исходного кода могут отображаться на одной строке.</span><span class="sxs-lookup"><span data-stu-id="c5c55-112">In a response file, multiple compiler options and source-code files can appear on one line.</span></span> <span data-ttu-id="c5c55-113">Каждый параметр компилятора должен записываться в одной строке (не может занимать несколько строк).</span><span class="sxs-lookup"><span data-stu-id="c5c55-113">A single compiler-option specification must appear on one line (cannot span multiple lines).</span></span> <span data-ttu-id="c5c55-114">Файл ответов можно включать комментарии, которые начинаются с `#` символов.</span><span class="sxs-lookup"><span data-stu-id="c5c55-114">Response files can have comments that begin with the `#` symbol.</span></span>  
   
- Можно сочетать использование параметров командной строки и параметров из одного или нескольких файлов ответа.  Компилятор обрабатывает параметры команды по мере их обнаружения.  Таким образом, параметры командной строки могут переопределять параметры, указанные в файле ответа.  Таким же образом параметры в файле ответа могут переопределять ранее указанные параметры командной строки или параметры из других файлов ответа.  
+ <span data-ttu-id="c5c55-115">Можно комбинировать параметры, указанные в командной строке с параметрами, заданными в один или несколько файлов ответов.</span><span class="sxs-lookup"><span data-stu-id="c5c55-115">You can combine options specified on the command line with options specified in one or more response files.</span></span> <span data-ttu-id="c5c55-116">Компилятор обрабатывает параметры командной строки, они встречаются.</span><span class="sxs-lookup"><span data-stu-id="c5c55-116">The compiler processes the command options as it encounters them.</span></span> <span data-ttu-id="c5c55-117">Таким образом аргументы командной строки могут переопределять параметры, указанные в файле ответа.</span><span class="sxs-lookup"><span data-stu-id="c5c55-117">Therefore, command-line arguments can override previously listed options in response files.</span></span> <span data-ttu-id="c5c55-118">Таким же образом параметры в файле ответов переопределять ранее указанные параметры в командной строке или в других файлов ответов.</span><span class="sxs-lookup"><span data-stu-id="c5c55-118">Conversely, options in a response file override options listed previously on the command line or in other response files.</span></span>  
   
- Visual Basic предоставляет файл Vbc.rsp, расположенный в том же каталоге, что и файл Vbc.exe.  Файл Vbc.rsp включается по умолчанию, если используется параметр `/noconfig`.  Дополнительные сведения см. в разделе [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
+ <span data-ttu-id="c5c55-119">В Visual Basic предусмотрен файл Vbc.rsp, который находится в том же каталоге, что и файл Vbc.exe.</span><span class="sxs-lookup"><span data-stu-id="c5c55-119">Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file.</span></span> <span data-ttu-id="c5c55-120">Файл Vbc.rsp включается по умолчанию, если не `/noconfig` используется параметр.</span><span class="sxs-lookup"><span data-stu-id="c5c55-120">The Vbc.rsp file is included by default, unless the `/noconfig` option is used.</span></span> <span data-ttu-id="c5c55-121">Дополнительные сведения см. в разделе [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).</span><span class="sxs-lookup"><span data-stu-id="c5c55-121">For more information, see [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).</span></span>  
   
 > [!NOTE]
->  Параметр `@` недоступен из среды разработки Visual Studio. Он доступен только при выполнении компиляции из командной строки.  
+>  <span data-ttu-id="c5c55-122">`@` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="c5c55-122">The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## Пример  
- Вот несколько строк из возможного файла ответа:  
+## <a name="example"></a><span data-ttu-id="c5c55-123">Пример</span><span class="sxs-lookup"><span data-stu-id="c5c55-123">Example</span></span>  
+ <span data-ttu-id="c5c55-124">Следующие строки являются из образца файла ответов.</span><span class="sxs-lookup"><span data-stu-id="c5c55-124">The following lines are from a sample response file.</span></span>  
   
 ```  
 # build the first output file  
@@ -61,14 +59,14 @@ source1.vb
 source2.vb  
 ```  
   
-## Пример  
- В следующем примере демонстрируется использование параметра `@` с файлом ответа `File1.rsp`.  
+## <a name="example"></a><span data-ttu-id="c5c55-125">Пример</span><span class="sxs-lookup"><span data-stu-id="c5c55-125">Example</span></span>  
+ <span data-ttu-id="c5c55-126">В следующем примере демонстрируется использование `@` параметр с именем файла ответов `File1.rsp`.</span><span class="sxs-lookup"><span data-stu-id="c5c55-126">The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.</span></span>  
   
 ```  
 vbc @file1.rsp  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="c5c55-127">См. также</span><span class="sxs-lookup"><span data-stu-id="c5c55-127">See Also</span></span>  
+ [<span data-ttu-id="c5c55-128">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="c5c55-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="c5c55-129">/noconfig</span><span class="sxs-lookup"><span data-stu-id="c5c55-129">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [<span data-ttu-id="c5c55-130">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="c5c55-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

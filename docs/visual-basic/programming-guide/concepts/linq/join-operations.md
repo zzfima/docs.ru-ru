@@ -1,54 +1,46 @@
 ---
-title: "Объединение (Visual Basic) | Документы Microsoft"
+title: "Объединение (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dce1adb5b918674bc8ee8fc48c8ff5b3c3814a88
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 21ff2c466db223720edf00be91c3516c641762ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-operations-visual-basic"></a>Объединение (Visual Basic)
-Объект *объединение* двух источников данных — это связь объектов в одном источнике данных с объектами, имеющими общий атрибут, в другом источнике данных.  
+# <a name="join-operations-visual-basic"></a><span data-ttu-id="4d202-102">Объединение (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d202-102">Join Operations (Visual Basic)</span></span>
+<span data-ttu-id="4d202-103">*Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.</span><span class="sxs-lookup"><span data-stu-id="4d202-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  
   
- Соединение является важной операцией в запросах, направленных на источники данных, отношения которых друг к другу нельзя отследить напрямую. В объектно-ориентированном программировании оно может означать корреляцию между немоделируемыми объектами, например такими, как обратное направление одностороннего отношения. Примером одностороннего отношения является класс Customer, имеющий свойство типа City (город), в то время как класс City не имеет свойства, которое является коллекцией объектов Customer (клиент). В случае наличия списка объектов City для поиска всех клиентов в каждом городе можно использовать операцию соединения.  
+ <span data-ttu-id="4d202-104">Соединение является важной операцией в запросах, направленных на источники данных, отношения которых друг к другу нельзя отследить напрямую.</span><span class="sxs-lookup"><span data-stu-id="4d202-104">Joining is an important operation in queries that target data sources whose relationships to each other cannot be followed directly.</span></span> <span data-ttu-id="4d202-105">В объектно-ориентированном программировании оно может означать корреляцию между немоделируемыми объектами, например такими, как обратное направление одностороннего отношения.</span><span class="sxs-lookup"><span data-stu-id="4d202-105">In object-oriented programming, this could mean a correlation between objects that is not modeled, such as the backwards direction of a one-way relationship.</span></span> <span data-ttu-id="4d202-106">Примером одностороннего отношения является класс Customer, имеющий свойство типа City (город), в то время как класс City не имеет свойства, которое является коллекцией объектов Customer (клиент).</span><span class="sxs-lookup"><span data-stu-id="4d202-106">An example of a one-way relationship is a Customer class that has a property of type City, but the City class does not have a property that is a collection of Customer objects.</span></span> <span data-ttu-id="4d202-107">В случае наличия списка объектов City для поиска всех клиентов в каждом городе можно использовать операцию соединения.</span><span class="sxs-lookup"><span data-stu-id="4d202-107">If you have a list of City objects and you want to find all the customers in each city, you could use a join operation to find them.</span></span>  
   
- Методы соединения LINQ framework являются <xref:System.Linq.Enumerable.Join%2A>и <xref:System.Linq.Enumerable.GroupJoin%2A>.</xref:System.Linq.Enumerable.GroupJoin%2A> </xref:System.Linq.Enumerable.Join%2A> Эти методы выполняют эквисоединения, или соединения, сопоставляющие два источника данных на основе равенства их ключей. (Для сравнения, Transact-SQL поддерживает операции соединения, отличные от оператора "равно", например оператор "меньше, чем".) В терминах реляционных баз данных <xref:System.Linq.Enumerable.Join%2A>реализует внутреннее соединение — тип соединения, в котором возвращаются только те объекты, которые имеют совпадение в наборе данных.</xref:System.Linq.Enumerable.Join%2A> <xref:System.Linq.Enumerable.GroupJoin%2A>Метод не имеет прямого эквивалента в терминах реляционных баз данных, но реализует надмножество внутренних соединений и левых внешних соединений.</xref:System.Linq.Enumerable.GroupJoin%2A> Левое внешнее соединение является соединением, которое возвращает каждый элемент первого (левого) источника данных, даже если он не имеет соответствующих элементов в другом источнике данных.  
+ <span data-ttu-id="4d202-108">На платформе LINQ представлены методы объединения <xref:System.Linq.Enumerable.Join%2A> и <xref:System.Linq.Enumerable.GroupJoin%2A>.</span><span class="sxs-lookup"><span data-stu-id="4d202-108">The join methods provided in the LINQ framework are <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="4d202-109">Они выполняют эквисоединения, или соединения, которые сопоставляют два источника данных на основе равенства их ключей.</span><span class="sxs-lookup"><span data-stu-id="4d202-109">These methods perform equijoins, or joins that match two data sources based on equality of their keys.</span></span> <span data-ttu-id="4d202-110">(Для сравнения, Transact-SQL поддерживает операции соединения, отличные от оператора "равно", например оператор "меньше, чем".) В терминах реляционных баз данных <xref:System.Linq.Enumerable.Join%2A> реализует внутреннее соединение — тип соединения, в котором возвращаются только те объекты, у которых есть совпадения в другом наборе данных.</span><span class="sxs-lookup"><span data-stu-id="4d202-110">(For comparison, Transact-SQL supports join operators other than 'equals', for example the 'less than' operator.) In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join, a type of join in which only those objects that have a match in the other data set are returned.</span></span> <span data-ttu-id="4d202-111">Метод <xref:System.Linq.Enumerable.GroupJoin%2A> не имеет прямого эквивалента в терминах реляционных баз данных, но реализует надмножество внутренних соединений и левых внешних соединений.</span><span class="sxs-lookup"><span data-stu-id="4d202-111">The <xref:System.Linq.Enumerable.GroupJoin%2A> method has no direct equivalent in relational database terms, but it implements a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="4d202-112">Левое внешнее соединение — это соединение, которое возвращает каждый элемент первого (левого) источника данных, даже если в другом источнике данных не имеется соответствующих элементов.</span><span class="sxs-lookup"><span data-stu-id="4d202-112">A left outer join is a join that returns each element of the first (left) data source, even if it has no correlated elements in the other data source.</span></span>  
   
- На следующем рисунке показано концептуальное представление из двух наборов и элементов, входящих в эти наборы, которые включены либо во внутреннее соединение, либо в левое внешнее соединение.  
+ <span data-ttu-id="4d202-113">На следующем рисунке показано концептуальное представление из двух наборов и элементов, входящих в эти наборы, которые включены либо во внутреннее соединение, либо в левое внешнее соединение.</span><span class="sxs-lookup"><span data-stu-id="4d202-113">The following illustration shows a conceptual view of two sets and the elements within those sets that are included in either an inner join or a left outer join.</span></span>  
   
- ![Два накладывающихся кольца, отображающие внешнее/внутреннее. ] (../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ <span data-ttu-id="4d202-114">![Два перекрывающихся кольца, отображающие внешнее и внутреннее соединение.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span><span class="sxs-lookup"><span data-stu-id="4d202-114">![Two overlapping circles showing inner&#47;outer.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span></span>  
   
-## <a name="methods"></a>Методы  
+## <a name="methods"></a><span data-ttu-id="4d202-115">Методы</span><span class="sxs-lookup"><span data-stu-id="4d202-115">Methods</span></span>  
   
-|Имя метода|Описание|Синтаксис выражения запроса для Visual Basic|Дополнительные сведения|  
+|<span data-ttu-id="4d202-116">Имя метода</span><span class="sxs-lookup"><span data-stu-id="4d202-116">Method Name</span></span>|<span data-ttu-id="4d202-117">Описание</span><span class="sxs-lookup"><span data-stu-id="4d202-117">Description</span></span>|<span data-ttu-id="4d202-118">Синтаксис выражения запроса Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4d202-118">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="4d202-119">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="4d202-119">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Join|Соединяет две последовательности на основании функций селектора ключа и извлекает пары значений.|`From x In …, y In … Where x.a = y.a`<br /><br /> -или-<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Join%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=fullName></xref:System.Linq.Queryable.Join%2A?displayProperty=fullName>|  
-|GroupJoin|Соединяет две последовательности на основании функций селектора ключа и группирует полученные при сопоставлении данные для каждого элемента.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=fullName></xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=fullName></xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=fullName>|  
+|<span data-ttu-id="4d202-120">Join</span><span class="sxs-lookup"><span data-stu-id="4d202-120">Join</span></span>|<span data-ttu-id="4d202-121">Соединяет две последовательности на основании функций селектора ключа и извлекает пары значений.</span><span class="sxs-lookup"><span data-stu-id="4d202-121">Joins two sequences based on key selector functions and extracts pairs of values.</span></span>|`From x In …, y In … Where x.a = y.a`<br /><br /> <span data-ttu-id="4d202-122">-или-</span><span class="sxs-lookup"><span data-stu-id="4d202-122">-or-</span></span><br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="4d202-123">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="4d202-123">GroupJoin</span></span>|<span data-ttu-id="4d202-124">Соединяет две последовательности на основании функций селектора ключа и группирует полученные при сопоставлении данные для каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="4d202-124">Joins two sequences based on key selector functions and groups the resulting matches for each element.</span></span>|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq></xref:System.Linq>   
- [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Формировать соединения и запросы перекрестного произведения](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)   
- [Предложение JOIN](../../../../visual-basic/language-reference/queries/join-clause.md)   
- [Практическое руководство: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)   
- [Практическое руководство: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+## <a name="see-also"></a><span data-ttu-id="4d202-125">См. также</span><span class="sxs-lookup"><span data-stu-id="4d202-125">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="4d202-126">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d202-126">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="4d202-127">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="4d202-127">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="4d202-128">Сформулировать соединения и запросы перекрестного произведения</span><span class="sxs-lookup"><span data-stu-id="4d202-128">Formulate Joins and Cross-Product Queries</span></span>](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [<span data-ttu-id="4d202-129">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="4d202-129">Join Clause</span></span>](../../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="4d202-130">Как: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d202-130">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [<span data-ttu-id="4d202-131">Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4d202-131">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

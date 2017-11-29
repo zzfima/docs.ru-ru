@@ -1,28 +1,30 @@
 ---
-title: "x:Members Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Директива x:Members"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 155b393d-3b49-4c5a-8c9e-b3d9893af4e4
-caps.latest.revision: 5
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 230c6359c59b9f00738de9ce7ceeccd69899135f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# x:Members Directive
-Содержит набор членов, определенных в разметке, которые применяются к объекту x:Class родительского элемента.  
+# <a name="xmembers-directive"></a><span data-ttu-id="2c44b-102">Директива x:Members</span><span class="sxs-lookup"><span data-stu-id="2c44b-102">x:Members Directive</span></span>
+<span data-ttu-id="2c44b-103">Содержит набор элементов, определенные в разметке, которые применяются к x: Class родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="2c44b-103">Holds a set of members that are defined in markup, which apply to the x:Class of the parent element.</span></span>  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="2c44b-104">Использование атрибута XAML</span><span class="sxs-lookup"><span data-stu-id="2c44b-104">XAML Attribute Usage</span></span>  
   
 ```  
-  
 <object x:Class="className">  
   <x:Members>  
     oneOrMoreMembers  
@@ -30,17 +32,17 @@ caps.handback.revision: 5
 </object>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-values"></a><span data-ttu-id="2c44b-105">Значения XAML</span><span class="sxs-lookup"><span data-stu-id="2c44b-105">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`className`|Имя класса резервирования или разделяемого класса для производства XAML.  См. примечания.|  
-|`oneOrMoreMembers`|Один или несколько элементов объекта, представляющие определения членов.  Как правило, это элементы объекта `x:Property`.  См. примечания.|  
+|`className`|<span data-ttu-id="2c44b-106">Имя класса резервирования или разделяемого класса для рабочей среды XAML.</span><span class="sxs-lookup"><span data-stu-id="2c44b-106">Name of the backing class or partial class for the XAML production.</span></span> <span data-ttu-id="2c44b-107">См. заметки.</span><span class="sxs-lookup"><span data-stu-id="2c44b-107">See Remarks.</span></span>|  
+|`oneOrMoreMembers`|<span data-ttu-id="2c44b-108">Один или несколько элементов объектов, представляющих определения элементов.</span><span class="sxs-lookup"><span data-stu-id="2c44b-108">One or more object elements that represent member definitions.</span></span> <span data-ttu-id="2c44b-109">Как правило, это `x:Property` элементов объекта.</span><span class="sxs-lookup"><span data-stu-id="2c44b-109">Typically, these are `x:Property` object elements.</span></span> <span data-ttu-id="2c44b-110">См. заметки.</span><span class="sxs-lookup"><span data-stu-id="2c44b-110">See Remarks.</span></span>|  
   
-## Заметки  
- В реализации служб XAML .NET Framework нет реализации базового члена или класса резервирования для `x:Members`.  `x:Members` является специальным членом XAML, который может существовать как член любого типа.  В потоке узлов XAML элемент `x:Members` представляется как член с именем `Members` из пространства имен XAML языка XAML.  Член `Members` содержит доступный только для чтения общий список объектов `Member`.  В стандартной разметке отдельные члены указываются в виде элементов свойств `x:Property`.  `x:Property` является более точным типом, предназначенным для свойств типов и приписываемым объекту `x:Member`.  Дополнительные сведения см. в разделе [x:Property Directive](../../../docs/framework/xaml-services/x-property-directive.md).  
+## <a name="remarks"></a><span data-ttu-id="2c44b-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="2c44b-111">Remarks</span></span>  
+ <span data-ttu-id="2c44b-112">В реализации служб XAML .NET Framework нет класса резервирования или базовой реализацией члена для `x:Members`.</span><span class="sxs-lookup"><span data-stu-id="2c44b-112">In the .NET Framework XAML Services implementation, there is no backing class or underlying member implementation for `x:Members`.</span></span> <span data-ttu-id="2c44b-113">`x:Members`— это специальные элемент XAML, который могут существовать как член с любым типом.</span><span class="sxs-lookup"><span data-stu-id="2c44b-113">`x:Members` is a special XAML member that can exist as a member on any type.</span></span> <span data-ttu-id="2c44b-114">В потоке узлов XAML `x:Members` представляется как элемент с именем `Members`, из пространства имен XAML языка XAML.</span><span class="sxs-lookup"><span data-stu-id="2c44b-114">In a XAML node stream, `x:Members` is represented as a member named `Members`, from the XAML language XAML namespace.</span></span> <span data-ttu-id="2c44b-115">Элемент `Members` содержит универсальный список только для чтения из `Member` объектов.</span><span class="sxs-lookup"><span data-stu-id="2c44b-115">The member `Members` contains a read-only generic list of `Member` objects.</span></span> <span data-ttu-id="2c44b-116">В обычной разметке отдельных элементов задаются в виде `x:Property` свойств элементов.</span><span class="sxs-lookup"><span data-stu-id="2c44b-116">In typical markup the individual members are specified as `x:Property` property elements.</span></span> <span data-ttu-id="2c44b-117">`x:Property`Это более точный тип специально для свойств типов и может быть назначен `x:Member`.</span><span class="sxs-lookup"><span data-stu-id="2c44b-117">`x:Property` is a more precise type specifically for properties of types and is assignable to `x:Member`.</span></span> <span data-ttu-id="2c44b-118">Дополнительные сведения см. в разделе [директива x: Property](../../../docs/framework/xaml-services/x-property-directive.md).</span><span class="sxs-lookup"><span data-stu-id="2c44b-118">For more information, see [x:Property Directive](../../../docs/framework/xaml-services/x-property-directive.md).</span></span>  
   
- Чтобы обеспечить практическое использование `x:Members` как средства задать определения элементов в разметке, эти элементы должны быть связаны с классом, который можно изменить.  Предполагаемая модель — `x:Members` существует как член типа, определяющий `x:Class`.  Однако механизм сопоставления типов и членов и создания определений динамических членов не поддерживается на уровне служб XAML .NET Framework.  За это отвечают отдельные платформы с моделями приложений, поддерживающими определения членов из XAML.  Как правило, для работы с этой функцией требуются действия построения MSBUILD, компилирующие XAML с разметкой и либо интегрирующие его в файл кода программной части, либо производящие сборки из XAML в чистом виде.  
+ <span data-ttu-id="2c44b-119">Для поддержки практического использования `x:Members` как средства указания определений членов в разметке эти члены должны быть связаны с классом, который может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="2c44b-119">To support a practical usage of `x:Members` as a means to specify member definitions in markup, the members must be associated with a class that can be modified.</span></span> <span data-ttu-id="2c44b-120">Предполагаемая модель состоит в том, что `x:Members` существует в качестве члена типа, указывающего `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="2c44b-120">The intended model is that `x:Members` exists as a member of a type that specifies an `x:Class`.</span></span> <span data-ttu-id="2c44b-121">Однако механизм для сопоставления типов и членов или для создания определений динамических членов не поддерживается на уровне служб XAML .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2c44b-121">However, the mechanism for associating types and members or for producing dynamic member definitions is not supported at the .NET Framework XAML Services level.</span></span> <span data-ttu-id="2c44b-122">Это отводится отдельным платформам, имеющим модели приложений, поддерживающие определения членов из XAML.</span><span class="sxs-lookup"><span data-stu-id="2c44b-122">This is left to individual frameworks that have application models that support member definitions from XAML.</span></span> <span data-ttu-id="2c44b-123">Как правило, для поддержки этой функции требуются действия MSBUILD при построении, которые компилируют разметку XAML и либо интегрируют его с выделенным кодом, либо создают чистые сборки из XAML.</span><span class="sxs-lookup"><span data-stu-id="2c44b-123">Typically, MSBUILD build actions that markup-compile the XAML and either integrate it with code-behind or produce pure from-XAML assemblies are needed to support that feature.</span></span>  
   
-## x:Members для Windows Workflow Foundation  
- В случае с Windows Workflow Foundation `x:Members` содержит члены пользовательского действия, полностью состоящие из XAML, или определенные в XAML динамические члены для конструктора действий с файлом программной части.  Также необходимо указать `x:Class` в корневом элементе производства XAML.  Это не является требованием на уровне служб XAML платформы .NET Framework, но является обязательным при загрузке производства XAML с помощью действий построения MSBUILD, поддерживающих пользовательские действия и XAML для Windows Workflow Foundation в целом.  `x:Members` должен быть первым дочерним элементом в разметке элемента объекта, объявляющей `x:Class`.
+## <a name="xmembers-for-windows-workflow-foundation"></a><span data-ttu-id="2c44b-124">x: Members для Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="2c44b-124">x:Members for Windows Workflow Foundation</span></span>  
+ <span data-ttu-id="2c44b-125">Для Windows Workflow Foundation `x:Members` содержит элементы, пользовательские действия, составленного полностью в XAML или XAML — определенные динамические члены для конструктора действий с выделенным кодом.</span><span class="sxs-lookup"><span data-stu-id="2c44b-125">For Windows Workflow Foundation, `x:Members` contains the members of a custom activity composed entirely in XAML, or XAML –defined dynamic members for an activity designer with code-behind.</span></span> <span data-ttu-id="2c44b-126">`x:Class` также должен быть указан в корневом элементе рабочей среды XAML.</span><span class="sxs-lookup"><span data-stu-id="2c44b-126">`x:Class` must also be specified on the root element of the XAML production.</span></span> <span data-ttu-id="2c44b-127">Это не является обязательным на уровне служб XAML .NET Framework, но становится обязательным при загрузке рабочей среды XAML с помощью действий MSBUILD при построении, которые поддерживают пользовательские действия и Windows Workflow Foundation XAML в целом.</span><span class="sxs-lookup"><span data-stu-id="2c44b-127">This is not a requirement at the .NET Framework XAML Services level, but becomes a requirement when the XAML production is loaded by the MSBUILD build actions that support custom activities and Windows Workflow Foundation XAML in general.</span></span> <span data-ttu-id="2c44b-128">`x:Members`должен быть первым дочерним элементом в разметке элемента объекта, который объявляет `x:Class`.</span><span class="sxs-lookup"><span data-stu-id="2c44b-128">`x:Members` must be the first child element in markup of the object element that declares the `x:Class`.</span></span>

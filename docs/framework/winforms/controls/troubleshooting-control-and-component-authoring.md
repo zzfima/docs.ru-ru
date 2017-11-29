@@ -1,93 +1,97 @@
 ---
-title: "Разрешение вопросов, связанных с созданием элементов управления и компонентов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "компоненты [Windows Forms], устранение неполадок"
-  - "элементы управления [Windows Forms], устранение неполадок"
-  - "устранение неполадок для компонентов"
-  - "устранение неполадок для элементов управления"
-  - "элементы управления Windows Forms, отладка"
+title: "Разрешение вопросов, связанных с созданием элементов управления и компонентов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- troubleshooting components
+- troubleshooting controls [Windows Forms]
+- controls [Windows Forms], troubleshooting
+- components [Windows Forms], troubleshooting
+- Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Разрешение вопросов, связанных с созданием элементов управления и компонентов
-В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления.  Дополнительные сведения см. в разделе [Programming with Components](../Topic/Programming%20with%20Components.md).  
+# <a name="troubleshooting-control-and-component-authoring"></a><span data-ttu-id="fecbb-102">Разрешение вопросов, связанных с созданием элементов управления и компонентов</span><span class="sxs-lookup"><span data-stu-id="fecbb-102">Troubleshooting Control and Component Authoring</span></span>
+<span data-ttu-id="fecbb-103">В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления.</span><span class="sxs-lookup"><span data-stu-id="fecbb-103">This topic lists the following common problems that arise when developing components and controls.</span></span> <span data-ttu-id="fecbb-104">Дополнительные сведения см. в разделе [Программирование с использованием компонентов](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span><span class="sxs-lookup"><span data-stu-id="fecbb-104">For more information, see [Programming with Components](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).</span></span>  
   
--   Не удается добавить элемент управления в панель элементов  
+-   <span data-ttu-id="fecbb-105">Не удается добавить элемент управления на панель элементов</span><span class="sxs-lookup"><span data-stu-id="fecbb-105">Cannot Add Control to Toolbox</span></span>  
   
--   Не удается отладить настраиваемые элементы управления и компоненты Windows Forms  
+-   <span data-ttu-id="fecbb-106">Не удается выполнить отладку пользовательского элемента управления или компонента Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fecbb-106">Cannot Debug the Windows Forms User Control or Component</span></span>  
   
--   В унаследованном компоненте или элементе управления событие вызывается дважды.  
+-   <span data-ttu-id="fecbb-107">Событие в производном элементе управления или компоненте вызывается дважды</span><span class="sxs-lookup"><span data-stu-id="fecbb-107">Event Is Raised Twice in Inherited Control or Component</span></span>  
   
--   Ошибка во время разработки: "Не удалось создать компонент *Имя компонента"*  
+-   <span data-ttu-id="fecbb-108">Ошибка времени разработки: "Не удалось создать компонент *имя компонента*"</span><span class="sxs-lookup"><span data-stu-id="fecbb-108">Design-Time Error: "Failed to Create Component '*Component Name*'"</span></span>  
   
--   STAThreadAttribute  
+-   <span data-ttu-id="fecbb-109">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="fecbb-109">STAThreadAttribute</span></span>  
   
--   Значок компонента не отображается в панели элементов  
+-   <span data-ttu-id="fecbb-110">Значок компонента не отображается на панели элементов</span><span class="sxs-lookup"><span data-stu-id="fecbb-110">Component Icon Does Not Appear in Toolbox</span></span>  
   
-## Не удается добавить элемент управления в панель элементов  
- Чтобы добавить в **Панель элементов** настраиваемый элемент управления, созданный в другом проекте, или элемент управления, созданный сторонним производителем, необходимо сделать это вручную.  Если в текущем проекте содержится пользовательский элемент управления или компонент, он должен отображаться в **панели элементов** автоматически.  Дополнительные сведения см. в разделе [Пример. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+## <a name="cannot-add-control-to-toolbox"></a><span data-ttu-id="fecbb-111">Не удается добавить элемент управления на панель элементов</span><span class="sxs-lookup"><span data-stu-id="fecbb-111">Cannot Add Control to Toolbox</span></span>  
+ <span data-ttu-id="fecbb-112">Если вы хотите добавить на **панель элементов** настраиваемый элемент управления, созданный в другом проекте, или сторонний элемент управления, это необходимо сделать вручную.</span><span class="sxs-lookup"><span data-stu-id="fecbb-112">If you want to add a custom control that you created in another project or a third-party control to the **Toolbox**, you must do so manually.</span></span> <span data-ttu-id="fecbb-113">Если ваш элемент управления или компонент уже находится в текущем проекте, он отобразится на **панели элементов** автоматически.</span><span class="sxs-lookup"><span data-stu-id="fecbb-113">If the current project contains your control or component, it should appear in the **Toolbox** automatically.</span></span> <span data-ttu-id="fecbb-114">Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span><span class="sxs-lookup"><span data-stu-id="fecbb-114">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
   
-#### Добавление элемента управления в панель элементов  
+#### <a name="to-add-a-control-to-the-toolbox"></a><span data-ttu-id="fecbb-115">Добавление элемента управления на панель элементов</span><span class="sxs-lookup"><span data-stu-id="fecbb-115">To add a control to the Toolbox</span></span>  
   
-1.  Щелкните правой кнопкой мыши по **панели элементов** и из контекстного меню выберите  **Выбрать элементы**.  
+1.  <span data-ttu-id="fecbb-116">Щелкните **панель инструментов** правой кнопкой мыши и выберите команду **Выбрать элементы**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-116">Right-click the **Toolbox** and from the shortcut menu, select **Choose Items**.</span></span>  
   
-2.  В диалоговом окне **Выбор элементов панели элементов** добавьте компонент.  
+2.  <span data-ttu-id="fecbb-117">Добавьте компонент в диалоговом окне **Выбор элементов панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-117">In the **Choose Toolbox Items** dialog box, add the component:</span></span>  
   
-    -   Чтобы добавить компонент или элемент управления .NET Framework, щелкните вкладку **Компоненты .NET Framework**.  
+    -   <span data-ttu-id="fecbb-118">Чтобы добавить компонент или элемент управления .NET Framework, откройте вкладку **Компоненты .NET Framework**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-118">If you want to add a .NET Framework component or control, click the **.NET Framework Components** tab.</span></span>  
   
-         – или –  
+         <span data-ttu-id="fecbb-119">— или —</span><span class="sxs-lookup"><span data-stu-id="fecbb-119">– or –</span></span>  
   
-    -   Чтобы добавить COM\-компонент или элемент управления ActiveX, щелкните вкладку **COM\-компоненты**.  
+    -   <span data-ttu-id="fecbb-120">Чтобы добавить COM-компонент или элемент управления ActiveX, откройте вкладку **COM-компоненты**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-120">If you want to add a COM component or ActiveX control, click the **COM Components** tab.</span></span>  
   
-3.  Если элемент управления указан в диалоговом окне, убедитесь, что он выделен, и нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="fecbb-121">Если элемент управления указан в диалоговом окне, выделите его и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-121">If your control is listed in the dialog box, confirm it is selected, and then click **OK**.</span></span>  
   
-     Элемент управления добавляется в **Панель элементов**.  
+     <span data-ttu-id="fecbb-122">Элемент управления будет добавлен на **панель элементов**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-122">The control is added to the **Toolbox**.</span></span>  
   
-4.  Если элемент управления не отображается в диалоговом окне, выполните следующую процедуру.  
+4.  <span data-ttu-id="fecbb-123">Если элемент управления не указан в диалоговом окне, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="fecbb-123">If your control is not listed in the dialog box, do the following:</span></span>  
   
-    1.  Нажмите кнопку **Обзор**.  
+    1.  <span data-ttu-id="fecbb-124">Нажмите кнопку **Обзор**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-124">Click the **Browse** button.</span></span>  
   
-    2.  Выберите папку, в которой находится DLL\-файл, содержащий этот элемент управления.  
+    2.  <span data-ttu-id="fecbb-125">Найдите папку с DLL-файлом, содержащим ваш элемент управления.</span><span class="sxs-lookup"><span data-stu-id="fecbb-125">Browse to the folder that contains the .dll file that contains your control.</span></span>  
   
-    3.  Выберите DLL\-файл и щелкните **Открыть**.  
+    3.  <span data-ttu-id="fecbb-126">Выберите этот DLL-файл и нажмите кнопку **Открыть**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-126">Select the .dll file and click **Open**.</span></span>  
   
-         Элемент управления отображается в диалоговом окне.  
+         <span data-ttu-id="fecbb-127">Элемент управления отобразится в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="fecbb-127">Your control appears in the dialog box.</span></span>  
   
-    4.  Убедитесь, что необходимый элемент управления выбран, а затем нажмите кнопку **ОК**.  
+    4.  <span data-ttu-id="fecbb-128">Выберите элемент управления и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-128">Confirm that your control is selected, and then click **OK**.</span></span>  
   
-         Элемент управления добавляется в **Панель элементов**.  
+         <span data-ttu-id="fecbb-129">Элемент управления будет добавлен на **панель элементов**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-129">Your control is added to the **Toolbox**.</span></span>  
   
-## Не удается отладить настраиваемые элементы управления и компоненты Windows Forms  
- Если элемент управления происходит из класса <xref:System.Windows.Forms.UserControl>, можно выполнить отладку его поведения во время выполнения, используя тестовый контейнер.  Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a><span data-ttu-id="fecbb-130">Не удается выполнить отладку пользовательского элемента управления или компонента Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fecbb-130">Cannot Debug the Windows Forms User Control or Component</span></span>  
+ <span data-ttu-id="fecbb-131">Если элемент управления является производным от <xref:System.Windows.Forms.UserControl> класса, можно отлаживать его поведение во время выполнения с использованием тестового контейнера.</span><span class="sxs-lookup"><span data-stu-id="fecbb-131">If your control derives from the <xref:System.Windows.Forms.UserControl> class, you can debug its run-time behavior with the test container.</span></span> <span data-ttu-id="fecbb-132">Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="fecbb-132">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- Другие настраиваемые элементы управления и компоненты не являются автономными проектами.  Они должны размещаться в каком\-либо приложении, например, в проекте Windows Forms.  Чтобы отладить элемент управления или компонент, его необходимо добавить к проекту Windows Forms.  
+ <span data-ttu-id="fecbb-133">Другие настраиваемые элементы управления и компоненты не являются автономными проектами</span><span class="sxs-lookup"><span data-stu-id="fecbb-133">Other custom controls and components are not stand-alone projects.</span></span> <span data-ttu-id="fecbb-134">и должны размещаться в приложении, таком как проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="fecbb-134">They must be hosted by an application such as a Windows Forms project.</span></span> <span data-ttu-id="fecbb-135">Для выполнения отладки элемент управления или компонент необходимо добавить в проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="fecbb-135">To debug a control or component, you must add it to a Windows Forms project.</span></span>  
   
-#### Чтобы выполнить отладку компонента или элемента управления  
+#### <a name="to-debug-a-control-or-component"></a><span data-ttu-id="fecbb-136">Отладка элемента управления или компонента</span><span class="sxs-lookup"><span data-stu-id="fecbb-136">To debug a control or component</span></span>  
   
-1.  В меню **Построение** щелкните **Построить решение**, чтобы выполнить построение собственного решения.  
+1.  <span data-ttu-id="fecbb-137">В меню **Сборка** выберите пункт **Сборка решения**, чтобы создать решение.</span><span class="sxs-lookup"><span data-stu-id="fecbb-137">From the **Build** menu, click **Build Solution** to build your solution.</span></span>  
   
-2.  Чтобы добавить к приложению тестовый проект, в меню **Файл** выберите **Добавить**, а затем выберите команду **Создать проект**.  
+2.  <span data-ttu-id="fecbb-138">В меню **Файл** выберите пункт **Добавить**, и затем **Новый проект**, чтобы добавить в приложение тестовый проект.</span><span class="sxs-lookup"><span data-stu-id="fecbb-138">From the **File** menu, choose **Add**, and then **New Project** to add a test project to your application.</span></span>  
   
-3.  В диалоговом окне **Добавление нового проекта** выберите в качестве типа проекта **Приложение Windows**.  
+3.  <span data-ttu-id="fecbb-139">В диалоговом окне **Добавление нового проекта** выберите в качестве типа проекта **Приложение Windows**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-139">In the **Add New Project** dialog box choose **Windows Application** for the type of project.</span></span>  
   
-4.  В **обозревателе решений** щелкните правой кнопкой мыши узел **Ссылки** для создания нового проекта.  Чтобы добавить ссылку на проект, содержащий компонент или элемент управления, в контекстном меню щелкните **Добавить ссылку**.  
+4.  <span data-ttu-id="fecbb-140">В **обозревателе решений** щелкните узел **Ссылки** для своего нового проекта правой кнопкой мыши.</span><span class="sxs-lookup"><span data-stu-id="fecbb-140">In **Solution Explorer**, right-click the **References** node for the new project.</span></span> <span data-ttu-id="fecbb-141">В контекстном меню выберите пункт **Добавить ссылку**, чтобы добавить ссылку на проект, содержащий элемент управления или компонент.</span><span class="sxs-lookup"><span data-stu-id="fecbb-141">On the shortcut menu, click **Add Reference** to add a reference to the project containing the control or component.</span></span>  
   
-5.  Создайте экземпляр компонента или элемента управления в тестовом проекте.  Если компонент находится в **панели элементов**, его можно перетащить на поверхность конструктора. Можно также создать экземпляр программным путем, как показано в следующем примере кода.  
+5.  <span data-ttu-id="fecbb-142">Создайте экземпляр элемента управления или компонента в тестовом проекте.</span><span class="sxs-lookup"><span data-stu-id="fecbb-142">Create an instance of your control or component in the test project.</span></span> <span data-ttu-id="fecbb-143">Если компонент находится на **панели элементов**, его можно перетащить в область конструктора или создать экземпляр программными средствами, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="fecbb-143">If your component is in the **Toolbox**, you can drag it to your designer surface, or you can create the instance programmatically, as shown in the following code example.</span></span>  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
@@ -97,27 +101,27 @@ caps.handback.revision: 22
     MyNeatComponent Component1 = new MyNeatComponent();  
     ```  
   
-     Теперь можно выполнять отладку элемента управления или компонента обычным образом.  
+     <span data-ttu-id="fecbb-144">После этого отладку элемента управления или компонента можно выполнить в обычном режиме.</span><span class="sxs-lookup"><span data-stu-id="fecbb-144">You can now debug your control or component as usual.</span></span>  
   
- Дополнительные сведения об отладке см. в разделах [Отладка в Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md) и [Пример. Отладка пользовательских элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ <span data-ttu-id="fecbb-145">Дополнительные сведения об отладке см. в разделах [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) и [Пошаговое руководство: отладка пользовательского управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="fecbb-145">For more information about debugging, see [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) and [Walkthrough: Debugging Custom Windows Forms Controls at Design Time](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).</span></span>  
   
-## В унаследованном компоненте или элементе управления событие вызывается дважды.  
- С большой долей вероятности причиной этой проблемы является повторяющееся предложение `Handles`.  Дополнительные сведения см. в разделе [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md).  
+## <a name="event-is-raised-twice-in-inherited-control-or-component"></a><span data-ttu-id="fecbb-146">Событие в производном элементе управления или компоненте вызывается дважды</span><span class="sxs-lookup"><span data-stu-id="fecbb-146">Event Is Raised Twice in Inherited Control or Component</span></span>  
+ <span data-ttu-id="fecbb-147">Это может быть связано с дублированием предложения `Handles`.</span><span class="sxs-lookup"><span data-stu-id="fecbb-147">This is likely due to a duplicated `Handles` clause.</span></span> <span data-ttu-id="fecbb-148">Дополнительные сведения см. в разделе [Устранение неполадок, связанных с унаследованными обработчиками событий в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="fecbb-148">For more information, see [Troubleshooting Inherited Event Handlers in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).</span></span>  
   
-## Ошибка во время разработки: "Не удалось создать компонент “Имя компонента”"  
- Пользовательский компонент или элемент управления должен предоставлять конструктор по умолчанию, не содержащий параметров.  Когда в среде разработки создается экземпляр компонента или элемента управления, она не пытается предоставить какие\-либо параметры перегрузкам конструктора, принимающим параметры.  
+## <a name="design-time-error-failed-to-create-component-component-name"></a><span data-ttu-id="fecbb-149">Ошибка времени разработки: "Не удалось создать компонент 'имя компонента'"</span><span class="sxs-lookup"><span data-stu-id="fecbb-149">Design-Time Error: "Failed to Create Component 'Component Name'"</span></span>  
+ <span data-ttu-id="fecbb-150">Компонент или элемент управления должен предоставлять конструктор по умолчанию без параметров.</span><span class="sxs-lookup"><span data-stu-id="fecbb-150">Your component or control must provide a default constructor with no parameters.</span></span> <span data-ttu-id="fecbb-151">Если в среде разработки создается экземпляр компонента или элемента управления, он не пытается предоставить какие-либо параметры для перегрузок конструктора, принимающих параметры.</span><span class="sxs-lookup"><span data-stu-id="fecbb-151">When the design environment creates an instance of your component or control, it does not attempt to provide any parameters to constructor overloads that take parameters.</span></span>  
   
-## STAThreadAttribute  
- <xref:System.STAThreadAttribute> информирует среду CLR, что Windows Forms использует модель однопотокового контейнера.  Если не применить этот атрибут к методу `Main` приложения Windows Forms, то можно заметить признаки нежелательного поведения.  Например, для таких элементов управления как <xref:System.Windows.Forms.ListView> могут не отображаться фоновые изображения.  Для некоторых элементов управления этот атрибут может понадобиться для правильного выполнения операций автозаполнения и перетаскивания.  
+## <a name="stathreadattribute"></a><span data-ttu-id="fecbb-152">STAThreadAttribute</span><span class="sxs-lookup"><span data-stu-id="fecbb-152">STAThreadAttribute</span></span>  
+ <span data-ttu-id="fecbb-153"><xref:System.STAThreadAttribute> Сообщает общеязыковой среды выполнения (CLR), что Windows Forms использует однопотоковое подразделение модель.</span><span class="sxs-lookup"><span data-stu-id="fecbb-153">The <xref:System.STAThreadAttribute> informs the common language runtime (CLR) that Windows Forms uses the single-threaded apartment model.</span></span> <span data-ttu-id="fecbb-154">Если не применить этот атрибут к методу `Main` приложения Windows Forms, может возникнуть непредусмотренное поведение.</span><span class="sxs-lookup"><span data-stu-id="fecbb-154">You may notice unintended behavior if you do not apply this attribute to your Windows Forms application's `Main` method.</span></span> <span data-ttu-id="fecbb-155">Например, фоновые изображения может отображаться для элементов управления, таких как <xref:System.Windows.Forms.ListView>.</span><span class="sxs-lookup"><span data-stu-id="fecbb-155">For example, background images may not appear for controls like <xref:System.Windows.Forms.ListView>.</span></span> <span data-ttu-id="fecbb-156">Некоторым элементам управления этот атрибут может требоваться также для правильного выполнения операций автозаполнения и перетаскивания.</span><span class="sxs-lookup"><span data-stu-id="fecbb-156">Some controls may also require this attribute for correct AutoComplete and drag-and-drop behavior.</span></span>  
   
-## Значок компонента не отображается в панели элементов  
- При использовании <xref:System.Drawing.ToolboxBitmapAttribute> для сопоставления значка и настраиваемого компонента для автоматически сгенерированных компонентов в панели инструментов точечный рисунок не отображается.  Чтобы увидеть растровый рисунок, перезагрузите элемент управления с помощью окна **Выберите элементы панели элементов**.  Дополнительные сведения см. в разделе [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+## <a name="component-icon-does-not-appear-in-toolbox"></a><span data-ttu-id="fecbb-157">Значок компонента не отображается на панели элементов</span><span class="sxs-lookup"><span data-stu-id="fecbb-157">Component Icon Does Not Appear in Toolbox</span></span>  
+ <span data-ttu-id="fecbb-158">При использовании <xref:System.Drawing.ToolboxBitmapAttribute> связать значок с пользовательским компонентом, растровое изображение не отображается на панели инструментов для автоматически созданных компонентов.</span><span class="sxs-lookup"><span data-stu-id="fecbb-158">When you use <xref:System.Drawing.ToolboxBitmapAttribute> to associate an icon with your custom component, the bitmap does not appear in the Toolbox for autogenerated components.</span></span> <span data-ttu-id="fecbb-159">Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="fecbb-159">To see the bitmap, reload the control by using the **Choose Toolbox Items** dialog box.</span></span> <span data-ttu-id="fecbb-160">Дополнительные сведения см. в разделе [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).</span><span class="sxs-lookup"><span data-stu-id="fecbb-160">For more information, see [How to: Provide a Toolbox Bitmap for a Control](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).</span></span>  
   
-## См. также  
- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Пример. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)   
- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)   
- [Пример. Отладка пользовательских элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)   
- [Component Authoring](../Topic/Component%20Authoring.md)   
- [Troubleshooting Design\-Time Development](../Topic/Troubleshooting%20Design-Time%20Development.md)   
- [Programming with Components](../Topic/Programming%20with%20Components.md)
+## <a name="see-also"></a><span data-ttu-id="fecbb-161">См. также</span><span class="sxs-lookup"><span data-stu-id="fecbb-161">See Also</span></span>  
+ [<span data-ttu-id="fecbb-162">Создание элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="fecbb-162">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="fecbb-163">Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами</span><span class="sxs-lookup"><span data-stu-id="fecbb-163">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [<span data-ttu-id="fecbb-164">Практическое руководство. Тестирование поведения элемента UserControl во время выполнения</span><span class="sxs-lookup"><span data-stu-id="fecbb-164">How to: Test the Run-Time Behavior of a UserControl</span></span>](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [<span data-ttu-id="fecbb-165">Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="fecbb-165">Walkthrough: Debugging Custom Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="fecbb-166">Создание компонентов</span><span class="sxs-lookup"><span data-stu-id="fecbb-166">Component Authoring</span></span>](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
+ [<span data-ttu-id="fecbb-167">Устранение неполадок при разработке во время разработки</span><span class="sxs-lookup"><span data-stu-id="fecbb-167">Troubleshooting Design-Time Development</span></span>](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [<span data-ttu-id="fecbb-168">Программирование с использованием компонентов</span><span class="sxs-lookup"><span data-stu-id="fecbb-168">Programming with Components</span></span>](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

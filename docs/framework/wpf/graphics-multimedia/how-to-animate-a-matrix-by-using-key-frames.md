@@ -1,48 +1,51 @@
 ---
-title: "Практическое руководство. Анимация матрицы с помощью ключевых кадров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, свойств Matrix с помощью ключевых кадров"
-  - "ключевые кадры, анимация свойств Matrix"
-  - "Matrix - свойства, анимация по ключевым кадрам"
+title: "Практическое руководство. Анимация матрицы с помощью ключевых кадров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], Matrix properties with key frames
+- Matrix properties [WPF], animating with key frames
+- key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8c67b5c8e179485083a40aa8a196fbee3e0fc24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация матрицы с помощью ключевых кадров
-В этом примере демонстрируется анимация свойства <xref:System.Windows.Media.MatrixTransform.Matrix%2A> элемента управления <xref:System.Windows.Media.MatrixTransform> с помощью полных кадров.  
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a><span data-ttu-id="6159c-102">Практическое руководство. Анимация матрицы с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="6159c-102">How to: Animate a Matrix by Using Key Frames</span></span>
+<span data-ttu-id="6159c-103">В этом примере демонстрируется анимация <xref:System.Windows.Media.MatrixTransform.Matrix%2A> свойство <xref:System.Windows.Media.MatrixTransform> с помощью ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="6159c-103">This example shows how to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform> by using key frames.</span></span>  
   
-## Пример  
- В следующем примере класс <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> используется для анимации свойства <xref:System.Windows.Media.MatrixTransform.Matrix%2A> объекта <xref:System.Windows.Media.MatrixTransform>.  В примере используется объект <xref:System.Windows.Media.MatrixTransform> для преобразования внешнего вида и положения объекта <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a><span data-ttu-id="6159c-104">Пример</span><span class="sxs-lookup"><span data-stu-id="6159c-104">Example</span></span>  
+ <span data-ttu-id="6159c-105">В следующем примере используется <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Media.MatrixTransform.Matrix%2A> свойство <xref:System.Windows.Media.MatrixTransform>.</span><span class="sxs-lookup"><span data-stu-id="6159c-105">The following example uses the <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Media.MatrixTransform.Matrix%2A> property of a <xref:System.Windows.Media.MatrixTransform>.</span></span> <span data-ttu-id="6159c-106">В этом примере <xref:System.Windows.Media.MatrixTransform> объект для преобразования его внешний вид и расположение <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="6159c-106">The example uses the <xref:System.Windows.Media.MatrixTransform> object to transform the appearance and position of a <xref:System.Windows.Controls.Button>.</span></span>  
   
- При анимации с использованием класса <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> создаются два полных кадра, с которыми выполняются следующие действия:  
+ <span data-ttu-id="6159c-107">Эта анимация использует <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> класса для создания двух ключевых кадров и выполняет следующие с ними:</span><span class="sxs-lookup"><span data-stu-id="6159c-107">This animation uses the <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> class to create two key frames and does the following with them:</span></span>  
   
-1.  Анимация первого объекта <xref:System.Windows.Media.Matrix> в течение первых 0,2 секунды.  В этом примере изменяются свойства <xref:System.Windows.Media.Matrix.M11%2A> и <xref:System.Windows.Media.Matrix.M12%2A> объекта <xref:System.Windows.Media.Matrix>.  В результате изменения кнопка растягивается и наклоняется.  Также в примере изменяются свойства <xref:System.Windows.Media.Matrix.OffsetX%2A> и <xref:System.Windows.Media.Matrix.OffsetY%2A>, в результате чего изменяется положение кнопки.  
+1.  <span data-ttu-id="6159c-108">Анимирует первый <xref:System.Windows.Media.Matrix> во время первого 0,2 секунды.</span><span class="sxs-lookup"><span data-stu-id="6159c-108">Animates the first <xref:System.Windows.Media.Matrix> during the first 0.2 seconds.</span></span> <span data-ttu-id="6159c-109">В примере изменяется <xref:System.Windows.Media.Matrix.M11%2A> и <xref:System.Windows.Media.Matrix.M12%2A> свойства <xref:System.Windows.Media.Matrix>.</span><span class="sxs-lookup"><span data-stu-id="6159c-109">The example changes the <xref:System.Windows.Media.Matrix.M11%2A> and <xref:System.Windows.Media.Matrix.M12%2A> properties of the <xref:System.Windows.Media.Matrix>.</span></span> <span data-ttu-id="6159c-110">Это изменение приводит к растягивать и стать неравномерным кнопки.</span><span class="sxs-lookup"><span data-stu-id="6159c-110">This change causes the button to stretch and become skewed.</span></span> <span data-ttu-id="6159c-111">В примере также изменяется <xref:System.Windows.Media.Matrix.OffsetX%2A> и <xref:System.Windows.Media.Matrix.OffsetY%2A> свойства, чтобы изменяется положение кнопки.</span><span class="sxs-lookup"><span data-stu-id="6159c-111">The example also changes the <xref:System.Windows.Media.Matrix.OffsetX%2A> and <xref:System.Windows.Media.Matrix.OffsetY%2A> properties so that the button changes position.</span></span>  
   
-2.  Анимация второго объекта <xref:System.Windows.Media.Matrix>, начиная с 1,0 секунды.  Кнопка перемещается в другое положение. Растяжение и наклон кнопки отменяются.  
+2.  <span data-ttu-id="6159c-112">Анимация второго <xref:System.Windows.Media.Matrix> начиная с 1,0 секунды.</span><span class="sxs-lookup"><span data-stu-id="6159c-112">Animates the second <xref:System.Windows.Media.Matrix> at 1.0 seconds.</span></span> <span data-ttu-id="6159c-113">Кнопка перемещается в другое место, пока кнопки больше не синхронизована или распространенным.</span><span class="sxs-lookup"><span data-stu-id="6159c-113">The button moves to another position while the button is no longer skewed or stretched.</span></span>  
   
-3.  Циклическое повторение анимации.  
+3.  <span data-ttu-id="6159c-114">Циклическое повторение анимации.</span><span class="sxs-lookup"><span data-stu-id="6159c-114">Repeats the animation indefinitely.</span></span>  
   
 > [!NOTE]
->  Полные кадры, производные от объекта <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>, создают резкие переходы между значениями, т.е. анимация выполняется рывками.  
+>  <span data-ttu-id="6159c-115">Ключевые кадры, которые являются производными от <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> объекта создать резкие переходы между значениями, перемещение анимации является рывками.</span><span class="sxs-lookup"><span data-stu-id="6159c-115">Key frames that derive from the <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> object create sudden jumps between values, that is, the movement of the animation is jerky.</span></span>  
   
- [!code-xml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ <span data-ttu-id="6159c-116">Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="6159c-116">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## См. также  
- <xref:System.Windows.Media.MatrixTransform.Matrix%2A>   
- <xref:System.Windows.Media.MatrixTransform>   
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Практические руководства, посвященные анимации по полным кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="6159c-117">См. также</span><span class="sxs-lookup"><span data-stu-id="6159c-117">See Also</span></span>  
+ <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  
+ <xref:System.Windows.Media.MatrixTransform>  
+ [<span data-ttu-id="6159c-118">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="6159c-118">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="6159c-119">Практические руководства, посвященные анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="6159c-119">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

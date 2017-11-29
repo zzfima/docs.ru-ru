@@ -1,109 +1,112 @@
 ---
-title: "Настройки реестра графической отрисовки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "графика [WPF], отрисовка"
-  - "отрисовка графики"
-  - "отрисовка графики, параметры реестра"
-  - "отрисовка графики, устранение неполадок"
-  - "устранение неполадок отрисовки графики"
+title: "Настройки реестра графической отрисовки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rendering graphics [WPF], registry settings
+- rendering graphics [WPF]
+- rendering graphics [WPF], troubleshooting
+- troubleshooting graphics rendering [WPF]
+- graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1a86d715edb68564d6ebfcc8a419e333da4ea03
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Настройки реестра графической отрисовки
-В этом разделе предоставлен обзор параметров реестра для отрисовки графики [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], влияющих на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="graphics-rendering-registry-settings"></a><span data-ttu-id="c4385-102">Настройки реестра графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="c4385-102">Graphics Rendering Registry Settings</span></span>
+<span data-ttu-id="c4385-103">В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-103">This topic provides an overview of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] graphics rendering registry settings that affect [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.</span></span>  
   
-   
+
   
 <a name="overview"></a>   
-## Когда следует использовать параметры реестра графической отрисовки  
- Эти параметры реестра предоставляются для устранения неполадок, отладки и поддержки продукта.  Поскольку изменения в реестре отражаются на всех приложениях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], приложение никогда не должно изменять эти разделы реестра автоматически или во время установки.  
+## <a name="when-to-use-graphics-rendering-registry-settings"></a><span data-ttu-id="c4385-104">Когда следует использовать настройки реестра для графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="c4385-104">When to Use Graphics Rendering Registry Settings</span></span>  
+ <span data-ttu-id="c4385-105">Эти параметры реестра предоставляются для устранения неполадок, отладки и поддержки продукта.</span><span class="sxs-lookup"><span data-stu-id="c4385-105">These registry settings are provided for troubleshooting, debugging, and product support purposes.</span></span> <span data-ttu-id="c4385-106">Поскольку изменения в реестре влияют на все приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ваше приложение никогда не должно изменять эти разделы реестра автоматически или во время установки.</span><span class="sxs-lookup"><span data-stu-id="c4385-106">Because changes to the registry affect all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, your application should never alter these registry keys automatically, or during installation.</span></span>  
   
 <a name="xpdmandwddm"></a>   
-## Что такое XPDM и WDDM?  
- Некоторые из параметров реестра графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйверы XPDM или WDDM.  XPDM – это модель драйвера монитора [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM – это модель драйвера монитора Windows.  Модель WDDM доступна на компьютерах, работающих под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)].  Модель XPDM доступна на компьютерах, работающих под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)].  Дополнительные сведения о модели WDDM см. на странице [руководства по конструкции модели драйвера монитора Windows Vista \(страница может отображаться на английском языке\)](http://go.microsoft.com/fwlink/?LinkId=178394).  
+## <a name="what-are-xpdm-and-wddm"></a><span data-ttu-id="c4385-107">Что такое XPDM и WDDM?</span><span class="sxs-lookup"><span data-stu-id="c4385-107">What are XPDM and WDDM?</span></span>  
+ <span data-ttu-id="c4385-108">Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM.</span><span class="sxs-lookup"><span data-stu-id="c4385-108">Some of the graphics rendering registry settings have different default values, depending on whether your video card uses an XPDM or WDDM driver.</span></span> <span data-ttu-id="c4385-109">XPDM — модель видеодрайвера [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM — модель видеодрайвера Windows.</span><span class="sxs-lookup"><span data-stu-id="c4385-109">XPDM is the [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model and WDDM is the Windows Display Driver Model.</span></span> <span data-ttu-id="c4385-110">Модель WDDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-110">WDDM is available on computers running [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] and [!INCLUDE[win7](../../../../includes/win7-md.md)].</span></span> <span data-ttu-id="c4385-111">Модель XPDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-111">XPDM is available on computers running [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], and [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)].</span></span> <span data-ttu-id="c4385-112">Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178394).</span><span class="sxs-lookup"><span data-stu-id="c4385-112">For more information about WDDM, see [Windows Vista Display Driver Model Design Guide](http://go.microsoft.com/fwlink/?LinkId=178394).</span></span>  
   
 <a name="registry_settings"></a>   
-## Параметры реестра  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет четыре параметра реестра для управления отрисовкой [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+## <a name="registry-settings"></a><span data-ttu-id="c4385-113">Параметры реестра</span><span class="sxs-lookup"><span data-stu-id="c4385-113">Registry Settings</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="c4385-114"> включает четыре параметра реестра для управления функциями отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="c4385-114"> provides four registry settings for controlling [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rendering:</span></span>  
   
-|Параметр|Описание|  
-|--------------|--------------|  
-|**Опция отключения аппаратного ускорения**|Определяет необходимость включения аппаратного ускорения.|  
-|**Максимальное значение мультисэмплинга**|Определяет степень мультисэмплинга для сглаживания [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] содержимого.|  
-|**Требуемый параметр даты видеодрайвера**|Указывает, отключает ли система аппаратное ускорение для драйверов, выпущенных до ноября 2004 г.|  
-|**Опция растеризации используемой ссылки**|Определяет, следует ли [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использовать растеризацию ссылок.|  
+|<span data-ttu-id="c4385-115">Параметр</span><span class="sxs-lookup"><span data-stu-id="c4385-115">Setting</span></span>|<span data-ttu-id="c4385-116">Описание</span><span class="sxs-lookup"><span data-stu-id="c4385-116">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="c4385-117">**Отключить аппаратное ускорение**</span><span class="sxs-lookup"><span data-stu-id="c4385-117">**Disable Hardware Acceleration Option**</span></span>|<span data-ttu-id="c4385-118">Указывает, следует ли включить аппаратное ускорение.</span><span class="sxs-lookup"><span data-stu-id="c4385-118">Specifies whether hardware acceleration should be enabled.</span></span>|  
+|<span data-ttu-id="c4385-119">**Максимальное значение мультисэмплинга**</span><span class="sxs-lookup"><span data-stu-id="c4385-119">**Maximum Multisample Value**</span></span>|<span data-ttu-id="c4385-120">Определяет степень мультисэмплинга для сглаживания содержимого [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-120">Specifies the degree of multisampling for antialiasing [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] content.</span></span>|  
+|<span data-ttu-id="c4385-121">**Требуемая дата видеодрайвера**</span><span class="sxs-lookup"><span data-stu-id="c4385-121">**Required Video Driver Date Setting**</span></span>|<span data-ttu-id="c4385-122">Указывает, отключает ли система аппаратное ускорение для драйверов, выпущенных до ноября 2004 г.</span><span class="sxs-lookup"><span data-stu-id="c4385-122">Specifies whether the system disables hardware acceleration for drivers released before November 2004.</span></span>|  
+|<span data-ttu-id="c4385-123">**Использовать средство программной прорисовки**</span><span class="sxs-lookup"><span data-stu-id="c4385-123">**Use Reference Rasterizer Option**</span></span>|<span data-ttu-id="c4385-124">Указывает, следует ли [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использовать средство программной прорисовки.</span><span class="sxs-lookup"><span data-stu-id="c4385-124">Specifies whether [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] should use the reference rasterizer.</span></span>|  
   
- Эти параметры могут быть доступны для любых служебных программ внешней конфигурации, которые знают, как ссылаться на параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Эти параметры могут также быть созданы или изменены с помощью доступа к значениям непосредственно с помощью редактора реестра [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ <span data-ttu-id="c4385-125">Эти параметры доступны любой внешней служебной программе настройки, которая знает, как ссылаться на параметры реестра [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-125">These settings can be accessed by any external configuration utility that knows how to reference the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] registry settings.</span></span> <span data-ttu-id="c4385-126">Эти параметры также можно создать или изменить через прямой доступ к значениям с использованием редактора реестра [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-126">These settings can also be created or modified by accessing the values directly by using the [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Registry Editor.</span></span>  
   
 <a name="disablehardwareacceleration"></a>   
-## Опция отключения аппаратного ускорения  
+## <a name="disable-hardware-acceleration-option"></a><span data-ttu-id="c4385-127">Отключить аппаратное ускорение</span><span class="sxs-lookup"><span data-stu-id="c4385-127">Disable Hardware Acceleration Option</span></span>  
   
-|Раздел реестра|Тип значения|  
-|--------------------|------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|DWORD|  
+|<span data-ttu-id="c4385-128">Раздел реестра</span><span class="sxs-lookup"><span data-stu-id="c4385-128">Registry key</span></span>|<span data-ttu-id="c4385-129">Тип значения</span><span class="sxs-lookup"><span data-stu-id="c4385-129">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|<span data-ttu-id="c4385-130">DWORD</span><span class="sxs-lookup"><span data-stu-id="c4385-130">DWORD</span></span>|  
   
- **опция отключения аппаратного ускорения**  позволяет отключать аппаратное ускорение для тестирования и отладки.  При появлении помех отрисовки в приложении попробуйте отключить аппаратное ускорение.  Если помеха исчезает, проблема может быть связана с видеодрайвером.  
+ <span data-ttu-id="c4385-131">Параметр **отключения аппаратного ускорения** позволяет отключить аппаратное ускорение для тестирования и отладки.</span><span class="sxs-lookup"><span data-stu-id="c4385-131">The **disable hardware acceleration option** enables you to turn off hardware acceleration for debugging and test purposes.</span></span> <span data-ttu-id="c4385-132">При появлении артефактов отрисовки в приложении попробуйте отключить аппаратное ускорение.</span><span class="sxs-lookup"><span data-stu-id="c4385-132">When you see rendering artifacts in an application, try turning off hardware acceleration.</span></span> <span data-ttu-id="c4385-133">Если артефакт исчезает, проблема может быть связана с видеодрайвером.</span><span class="sxs-lookup"><span data-stu-id="c4385-133">If the artifact disappears, the problem might be with your video driver.</span></span>  
   
- **Параметр отключения аппаратного ускорения** является значением типа DWORD, равным 0 или 1.  Значение 1 отключает аппаратное ускорение.  Значение 0 включает аппаратное ускорение, если система соответствует требованиям ускорения оборудования; дополнительные сведения см. в разделе [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ <span data-ttu-id="c4385-134">Параметр **отключить аппаратное ускорение** имеет тип DWORD и может принимать значение 0 или 1.</span><span class="sxs-lookup"><span data-stu-id="c4385-134">The **disable hardware acceleration option** is a DWORD value that is either 0 or 1.</span></span> <span data-ttu-id="c4385-135">Значение 1 отключает аппаратное ускорение.</span><span class="sxs-lookup"><span data-stu-id="c4385-135">A value of 1 disables hardware acceleration.</span></span> <span data-ttu-id="c4385-136">Значение 0 включает аппаратное ускорение, если система соответствует требованиям для аппаратного ускорения; дополнительные сведения см. в разделе [Уровни отрисовки графики](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span><span class="sxs-lookup"><span data-stu-id="c4385-136">A value of 0 enables hardware acceleration, provided the system meets hardware acceleration requirements; for more information, see [Graphics Rendering Tiers](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).</span></span>  
   
 <a name="maxmultisample"></a>   
-## Максимальное значение мультисэмплинга  
+## <a name="maximum-multisample-value"></a><span data-ttu-id="c4385-137">Максимальное значение мультисэмплинга</span><span class="sxs-lookup"><span data-stu-id="c4385-137">Maximum Multisample Value</span></span>  
   
-|Раздел реестра|Тип значения|  
-|--------------------|------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
+|<span data-ttu-id="c4385-138">Раздел реестра</span><span class="sxs-lookup"><span data-stu-id="c4385-138">Registry key</span></span>|<span data-ttu-id="c4385-139">Тип значения</span><span class="sxs-lookup"><span data-stu-id="c4385-139">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|<span data-ttu-id="c4385-140">DWORD</span><span class="sxs-lookup"><span data-stu-id="c4385-140">DWORD</span></span>|  
   
- **Максимальное значение мультисэмплинга** дает возможность настроить максимальное сглаживание содержимого [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].  Используйте этот уровень для отключения сглаживания [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] в [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] или его включения в [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ <span data-ttu-id="c4385-141">Параметр **максимальное значение мультисэмплинга** дает возможность настроить максимальное сглаживание содержимого [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-141">The **maximum multisample value** enables you to adjust the maximum amount of antialiasing of [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] content.</span></span> <span data-ttu-id="c4385-142">Используйте этот уровень для отключения сглаживания [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] в [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] или включения его в [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-142">Use this level to disable [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] antialiasing in [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] or enable it in [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span>  
   
- **Максимальное значение мультисэмплинга** – это значение типа DWORD, которое может быть в диапазоне от 0 до 16.  Значение 0 означает, что множественное сглаживание трехмерного содержимого должно быть отключено, а при значении 16 будет использоваться 16\-кратное множественное сглаживание, если оно поддерживается видеокартой.  Следует помнить, что установка этого значения раздела реестра на компьютерах, использующих драйверы XPDM, приведет к использованию приложениями большого объема дополнительной видеопамяти и уменьшению производительности отрисовки [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], а также потенциально может привести к появлению ошибок отрисовки и проблем стабильности.  
+ <span data-ttu-id="c4385-143">Параметр **максимальное значение мультисэмплинга** является значением типа DWORD в диапазоне от 0 до 16.</span><span class="sxs-lookup"><span data-stu-id="c4385-143">The **maximum multisample value** is a DWORD value that ranges from 0 to 16.</span></span> <span data-ttu-id="c4385-144">Значение 0 указывает, что мультисэмплинговое сглаживание трехмерного содержимого должно быть отключено, а при значении 16 будет выполняться попытка использования 16-кратного мультисэмплингового сглаживания, если это поддерживается видеоадаптером.</span><span class="sxs-lookup"><span data-stu-id="c4385-144">A value of 0 specifies that multisample antialiasing of 3-D content should be disabled, and a value of 16 will attempt to use up to 16x multisample antialiasing, if supported by the video card.</span></span> <span data-ttu-id="c4385-145">Имейте в виду, что установка этого значения раздела реестра на компьютерах, использующих драйверы XPDM, приведет к потреблению приложениями большого объема дополнительной видеопамяти, уменьшению производительности отрисовки [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] и потенциально может привести к появлению ошибок отрисовки и проблем стабильности.</span><span class="sxs-lookup"><span data-stu-id="c4385-145">Beware that setting this registry key value on computers using XPDM drivers will cause applications to use a large amount of additional video memory, decrease the performance of [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] rendering, and has the potential to introduce rendering errors and stability problems.</span></span>  
   
- Если этот раздел реестра не задан, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию устанавливается в 0 для драйверов XPDM и 4 — для драйверов WDDM.  
+ <span data-ttu-id="c4385-146">Если этот раздел реестра не задан, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] по умолчанию равно 0 для драйверов XPDM и 4 — для драйверов WDDM.</span><span class="sxs-lookup"><span data-stu-id="c4385-146">When this registry key is not set, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] defaults to 0 for XPDM drivers and 4 for WDDM drivers.</span></span>  
   
 <a name="requiredvideodriverdatesetting"></a>   
-## Требуемый параметр даты видеодрайвера  
+## <a name="required-video-driver-date-setting"></a><span data-ttu-id="c4385-147">Требуемая дата видеодрайвера</span><span class="sxs-lookup"><span data-stu-id="c4385-147">Required Video Driver Date Setting</span></span>  
   
-|Раздел реестра|Тип значения|  
-|--------------------|------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Строка.|  
+|<span data-ttu-id="c4385-148">Раздел реестра</span><span class="sxs-lookup"><span data-stu-id="c4385-148">Registry key</span></span>|<span data-ttu-id="c4385-149">Тип значения</span><span class="sxs-lookup"><span data-stu-id="c4385-149">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|<span data-ttu-id="c4385-150">Строка</span><span class="sxs-lookup"><span data-stu-id="c4385-150">String</span></span>|  
   
- В ноябре 2004 года [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] представил новую версию рекомендаций по тестированию драйвера; драйверы, написанные после этой даты, предлагают большую стабильность.  По умолчанию, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать конвейер аппаратного ускорения для этих драйверов и перейдет на более низкую скорость отрисовки аппаратного обеспечения для драйверов XPDM, опубликованных до этой даты.  
+ <span data-ttu-id="c4385-151">В ноябре 2004 года [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] выпустила новую версию рекомендаций по тестированию драйверов; драйверы, написанные после этой даты, более стабильны.</span><span class="sxs-lookup"><span data-stu-id="c4385-151">In November, 2004, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] released a new version of the driver testing guidelines; the drivers written after this date offer better stability.</span></span> <span data-ttu-id="c4385-152">По умолчанию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать для таких драйверов конвейер аппаратного ускорения и вернется к программной отрисовке для драйверов XPDM, опубликованных до этой даты.</span><span class="sxs-lookup"><span data-stu-id="c4385-152">By default, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] will use the hardware acceleration pipeline for these drivers and will fall back to software rendering for XPDM drivers published before this date.</span></span>  
   
- **Требуемый параметр даты видеодрайвера** позволяет указать альтернативную минимальную дату драйверов XPDM.  Следует только задать дату ранее ноября 2004 г., если вы уверены, что видеодрайвера достаточно стабилен для поддержки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <span data-ttu-id="c4385-153">Параметр **требуемая дата видеодрайвера** позволяет указать альтернативную минимальную дату для драйверов XPDM.</span><span class="sxs-lookup"><span data-stu-id="c4385-153">The **required video driver date setting** enables you to specify an alternate minimum date for XPDM drivers.</span></span> <span data-ttu-id="c4385-154">Дату ранее ноября 2004 г. следует указывать только в случае, если вы не уверены, что видеодрайвер достаточно стабилен для поддержки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4385-154">You should only specify a date earlier than November, 2004 if you are confident that your video driver is stable enough to support [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
- Требуемый параметр видеодрайвера принимает строку следующего формата:  
+ <span data-ttu-id="c4385-155">Параметр требуемой даты видеодрайвера принимает строку в следующем формате:</span><span class="sxs-lookup"><span data-stu-id="c4385-155">The required video driver setting takes a string of the following format:</span></span>  
   
 ||  
 |-|  
-|*ГГГГ* `/` *MM* `/` *ДД*|  
+|<span data-ttu-id="c4385-156">*ГГГГ* `/` *ММ* `/` *ДД*</span><span class="sxs-lookup"><span data-stu-id="c4385-156">*YYYY* `/` *MM* `/` *DD*</span></span>|  
   
- Где *ГГГГ* означает год, записанный 4\-мя цифрами, *ММ* — месяц, записанный 2\-мя цифрами, а *ДД* — день, записанный 2\-мя цифрами.  Когда это значение не установлено, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует ноябрь 2004 года в качестве даты, необходимой видеодрайверу.  
+ <span data-ttu-id="c4385-157">Где *ГГГГ* — четырехзначный год, *MM* — месяц из двух цифр и *ДД* — день из двух цифр.</span><span class="sxs-lookup"><span data-stu-id="c4385-157">Where *YYYY* is the four-digit year, *MM* is the two-digit month, and *DD* is the two digit day.</span></span> <span data-ttu-id="c4385-158">Если это значение не задано, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует ноябрь 2004 года в качестве требуемой даты видеодрайвера.</span><span class="sxs-lookup"><span data-stu-id="c4385-158">When this value is unset, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uses November, 2004 as its required video driver date.</span></span>  
   
 <a name="usereferencerasterizeroption"></a>   
-## Опция растеризации используемой ссылки  
+## <a name="use-reference-rasterizer-option"></a><span data-ttu-id="c4385-159">Использовать средство программной прорисовки</span><span class="sxs-lookup"><span data-stu-id="c4385-159">Use Reference Rasterizer Option</span></span>  
   
-|Раздел реестра|Тип значения|  
-|--------------------|------------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
+|<span data-ttu-id="c4385-160">Раздел реестра</span><span class="sxs-lookup"><span data-stu-id="c4385-160">Registry key</span></span>|<span data-ttu-id="c4385-161">Тип значения</span><span class="sxs-lookup"><span data-stu-id="c4385-161">Value type</span></span>|  
+|------------------|----------------|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|<span data-ttu-id="c4385-162">DWORD</span><span class="sxs-lookup"><span data-stu-id="c4385-162">DWORD</span></span>|  
   
- **Параметр использования средства программной прорисовки** позволяет перевести [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в режим смоделированной аппаратной отрисовки для отладки: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] переходит в режим оборудования, но использует средство программной прорисовки [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)] d3dref9.dll вместо фактического устройства.  
+ <span data-ttu-id="c4385-163">Параметр **использовать средство программной прорисовки** позволяет принудительно перевести [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в режим эмуляции аппаратной отрисовки для отладки: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] переходит в аппаратный режим, но вместо физического устройства использует средство программной прорисовки [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)], d3dref9.dll.</span><span class="sxs-lookup"><span data-stu-id="c4385-163">The **use reference rasterizer option** enables you to force [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] into a simulated hardware rendering mode for debugging: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] goes into hardware mode, but uses the [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)] reference software rasterizer, d3dref9.dll, instead of an actual hardware device.</span></span>  
   
- Растеризация ссылки является очень медленной, но обходит видеодрайвер во избежание проблем отрисовки, вызванных неполадками драйвера.  По этой причине можно использовать растеризацию ссылок, чтобы определить, существуют ли проблемы отрисовки, вызванные видеодрайвером.  Файл d3dref9.DLL должен находиться там, где приложения смогут обращаться к нему, например в любом месте в системном пути или в локальном каталоге приложения.  
+ <span data-ttu-id="c4385-164">Средство программной прорисовки является очень медленным, но обходит видеодрайвер во избежание проблем отрисовки, вызванных неполадками драйвера.</span><span class="sxs-lookup"><span data-stu-id="c4385-164">The reference rasterizer is very slow, but bypasses your video driver to avoid any rendering issues caused by driver problems.</span></span> <span data-ttu-id="c4385-165">По этой причине средство программной прорисовки можно использовать для определения, связаны ли проблемы отрисовки с видеодрайвером.</span><span class="sxs-lookup"><span data-stu-id="c4385-165">For this reason, you can use the reference rasterizer to determine if rendering issues are caused by the video driver.</span></span> <span data-ttu-id="c4385-166">Файл d3dref9.dll должен располагаться там, где приложение может получить к нему доступ, например в любом месте системного пути или в локальном каталоге приложения.</span><span class="sxs-lookup"><span data-stu-id="c4385-166">The d3dref9.dll file must be in a location where the application can access it, such as in any location in the system path or in the local directory of the application.</span></span>  
   
- **Опция растеризации используемой ссылки** принимает значение типа DWORD.  Значение, равное 0, указывает на тот, что растеризация ссылки не используется.  Любое другое отличное от нуля значение заставляет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использовать растеризацию ссылок.  
+ <span data-ttu-id="c4385-167">Параметр **использовать средство программной прорисовки** принимает значение типа DWORD.</span><span class="sxs-lookup"><span data-stu-id="c4385-167">The **use reference rasterizer option** takes a DWORD value.</span></span> <span data-ttu-id="c4385-168">Значение 0 указывает, что средство программной прорисовки не используется.</span><span class="sxs-lookup"><span data-stu-id="c4385-168">A value of 0 indicates that the reference rasterizer is not used.</span></span> <span data-ttu-id="c4385-169">Любое другое ненулевое значение приводит к тому, что [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать средство программной прорисовки.</span><span class="sxs-lookup"><span data-stu-id="c4385-169">Any other non-zero value forces [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to use the reference rasterizer.</span></span>  
   
-## См. также  
- [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)   
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c4385-170">См. также</span><span class="sxs-lookup"><span data-stu-id="c4385-170">See Also</span></span>  
+ [<span data-ttu-id="c4385-171">Уровни графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="c4385-171">Graphics Rendering Tiers</span></span>](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
+ [<span data-ttu-id="c4385-172">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="c4385-172">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

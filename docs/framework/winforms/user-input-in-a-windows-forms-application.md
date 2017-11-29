@@ -1,45 +1,45 @@
 ---
-title: "User Input in a Windows Forms Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, user input"
+title: "Ввод данных пользователем в приложении Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb6f832b77404b57ab22e4ac472e7707f0e10dd5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# User Input in a Windows Forms Application
-В Windows Forms ввод данных пользователем отправляется приложениям в виде сообщений Windows.  Эти сообщения обрабатываются рядом переопределяемых методов на уровне приложений, форм и элементов управления.  Когда эти методы получают сообщения клавиатуры и мыши, они вызывают события, которые могут быть обработаны для получения сведений о вводе данных с мыши или клавиатуры.  Во многих случаях приложения Windows Forms может обработать весь ввод пользователя путем обработки этих событий.  В других случаях приложению может потребоваться переопределить один из обрабатывающих сообщения методов, чтобы перехватить конкретное сообщение перед его получением приложением, формой или элементом управления.  
+# <a name="user-input-in-a-windows-forms-application"></a><span data-ttu-id="16292-102">Ввод данных пользователем в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="16292-102">User Input in a Windows Forms Application</span></span>
+<span data-ttu-id="16292-103">Ввод данных пользователем в Windows Forms, отправляется приложений в виде сообщения Windows.</span><span class="sxs-lookup"><span data-stu-id="16292-103">In Windows Forms, user input is sent to applications in the form of Windows messages.</span></span> <span data-ttu-id="16292-104">Серии переопределяемые методы обрабатывают эти сообщения в приложения, формы и уровень.</span><span class="sxs-lookup"><span data-stu-id="16292-104">A series of overridable methods process these messages at the application, form, and control level.</span></span> <span data-ttu-id="16292-105">Когда эти методы получают сообщения клавиатуры и мыши, они вызывают события, которые могут обрабатываться для получения сведения о мыши или клавиатуры входных данных.</span><span class="sxs-lookup"><span data-stu-id="16292-105">When these methods receive mouse and keyboard messages, they raise events that can be handled to get information about the mouse or keyboard input.</span></span> <span data-ttu-id="16292-106">Во многих случаях приложения Windows Forms будут обрабатывать все входные данные пользователя путем обработки этих событий.</span><span class="sxs-lookup"><span data-stu-id="16292-106">In many cases, Windows Forms applications will be able to process all user input simply by handling these events.</span></span> <span data-ttu-id="16292-107">В других случаях приложению может потребоваться переопределить один из методов, которые обрабатывают сообщения, чтобы перехватить конкретное сообщение перед его получением приложением, формы или элемента управления.</span><span class="sxs-lookup"><span data-stu-id="16292-107">In other cases, an application may need to override one of the methods that process messages in order to intercept a particular message before it is received by the application, form, or control.</span></span>  
   
-## События мыши и клавиатуры  
- Все элементы управления Windows Forms наследуют набор событий, связанных с вводом мыши и клавиатуры.  Например, элемент управления может обрабатывать событие <xref:System.Windows.Forms.Control.KeyPress> для определения кода знака нажатой клавиши или событие <xref:System.Windows.Forms.Control.MouseClick>, чтобы определить положение указателя мыши при щелчке.  Дополнительные сведения о событиях мыши и клавиатуры см. в разделах [Using Keyboard Events](../../../docs/framework/winforms/using-keyboard-events.md) и [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+## <a name="mouse-and-keyboard-events"></a><span data-ttu-id="16292-108">События мыши и клавиатуры</span><span class="sxs-lookup"><span data-stu-id="16292-108">Mouse and Keyboard Events</span></span>  
+ <span data-ttu-id="16292-109">Все элементы управления Windows Forms наследуют набор событий, связанных с клавиатуры и мыши.</span><span class="sxs-lookup"><span data-stu-id="16292-109">All Windows Forms controls inherit a set of events related to mouse and keyboard input.</span></span> <span data-ttu-id="16292-110">Например, элемент управления может обрабатывать <xref:System.Windows.Forms.Control.KeyPress> событие, чтобы определить код символа нажатой клавиши или элемент управления может обрабатывать <xref:System.Windows.Forms.Control.MouseClick> событие, чтобы определить положение указателя мыши, нажмите кнопку.</span><span class="sxs-lookup"><span data-stu-id="16292-110">For example, a control can handle the <xref:System.Windows.Forms.Control.KeyPress> event to determine the character code of a key that was pressed, or a control can handle the <xref:System.Windows.Forms.Control.MouseClick> event to determine the location of a mouse click.</span></span> <span data-ttu-id="16292-111">Дополнительные сведения о событиях мыши и клавиатуры см. в разделе [с помощью событий клавиатуры](../../../docs/framework/winforms/using-keyboard-events.md) и [события мыши в формах Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="16292-111">For more information on the mouse and keyboard events, see [Using Keyboard Events](../../../docs/framework/winforms/using-keyboard-events.md) and [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span></span>  
   
-## Методы, которые обрабатывают сообщения ввода пользователя  
- Формы и элементы управления имеют доступ к интерфейсу <xref:System.Windows.Forms.IMessageFilter> и набору переопределяемых методов, которые обрабатывают сообщения Windows в различных местах очереди сообщений.  Все эти методы имеют параметр <xref:System.Windows.Forms.Message>, который инкапсулирует подробные данные нижнего уровня о сообщениях Windows.  Можно реализовать или переопределить эти методы для проверки сообщения и его последующего использования или передачи к следующему получателю в очереди сообщений.  В следующей таблице представлены методы, которые обрабатывают все сообщения Windows в формах Windows Forms.  
+## <a name="methods-that-process-user-input-messages"></a><span data-ttu-id="16292-112">Методы, которые обрабатывают сообщения ввода пользователя</span><span class="sxs-lookup"><span data-stu-id="16292-112">Methods that Process User Input Messages</span></span>  
+ <span data-ttu-id="16292-113">Формы и элементы управления имеют доступ к <xref:System.Windows.Forms.IMessageFilter> интерфейс и набор переопределяемых методов, которые обрабатывают сообщения Windows в различных местах очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="16292-113">Forms and controls have access to the <xref:System.Windows.Forms.IMessageFilter> interface and a set of overridable methods that process Windows messages at different points in the message queue.</span></span> <span data-ttu-id="16292-114">Все эти методы имеют <xref:System.Windows.Forms.Message> параметр, который инкапсулирует сведения низкого уровня сообщений Windows.</span><span class="sxs-lookup"><span data-stu-id="16292-114">These methods all have a <xref:System.Windows.Forms.Message> parameter, which encapsulates the low-level details of Windows messages.</span></span> <span data-ttu-id="16292-115">Можно реализовать или переопределить эти методы для Проверьте сообщение и сообщение или передать его к следующему получателю в очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="16292-115">You can implement or override these methods to examine the message and then either consume the message or pass it on to the next consumer in the message queue.</span></span> <span data-ttu-id="16292-116">В следующей таблице представлены методы, которые обрабатывают все сообщения Windows в Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="16292-116">The following table presents the methods that process all Windows messages in Windows Forms.</span></span>  
   
-|Метод|Примечания|  
-|-----------|----------------|  
-|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|Данный метод перехватывает помещенные в очередь сообщения Windows \(также называемые отправленными\) на уровне приложения.|  
-|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|Данный метод перехватывает сообщения Windows на уровне формы и элемента управления до их обработки.|  
-|<xref:System.Windows.Forms.Control.WndProc%2A>|Этот метод обрабатывает сообщения Windows на уровне формы и элемента управления.|  
-|<xref:System.Windows.Forms.Control.DefWndProc%2A>|Этот метод выполняет стандартную обработку сообщений Windows на уровне формы и элемента управления.  Это обеспечивает минимальные функциональные возможности окна.|  
-|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|Данный метод перехватывает сообщения на уровне формы и элемента управления после того, как они были обработаны.  Для вызова этого метода необходимо установить бит стиля <xref:System.Windows.Forms.ControlStyles>.|  
+|<span data-ttu-id="16292-117">Метод</span><span class="sxs-lookup"><span data-stu-id="16292-117">Method</span></span>|<span data-ttu-id="16292-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="16292-118">Notes</span></span>|  
+|------------|-----------|  
+|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|<span data-ttu-id="16292-119">Данный метод перехватывает обновляемых посредством очередей сообщений Windows (также известный как отправленное) на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="16292-119">This method intercepts queued (also known as posted) Windows messages at the application level.</span></span>|  
+|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|<span data-ttu-id="16292-120">Данный метод перехватывает сообщения Windows на уровне формы и элемента управления, прежде чем они будут обработаны.</span><span class="sxs-lookup"><span data-stu-id="16292-120">This method intercepts Windows messages at the form and control level before they have been processed.</span></span>|  
+|<xref:System.Windows.Forms.Control.WndProc%2A>|<span data-ttu-id="16292-121">Этот метод обрабатывает сообщения Windows на уровне формы и элемента управления.</span><span class="sxs-lookup"><span data-stu-id="16292-121">This method processes Windows messages at the form and control level.</span></span>|  
+|<xref:System.Windows.Forms.Control.DefWndProc%2A>|<span data-ttu-id="16292-122">Этот метод выполняет обработку сообщения Windows на уровне формы и элемента управления по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="16292-122">This method performs the default processing of Windows messages at the form and control level.</span></span> <span data-ttu-id="16292-123">Это обеспечивает минимальные функциональные возможности окна.</span><span class="sxs-lookup"><span data-stu-id="16292-123">This provides the minimal functionality of a window.</span></span>|  
+|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|<span data-ttu-id="16292-124">Данный метод перехватывает сообщения на уровне формы и элемента управления после их обработки.</span><span class="sxs-lookup"><span data-stu-id="16292-124">This method intercepts messages at the form and control level, after they have been processed.</span></span> <span data-ttu-id="16292-125"><xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> Для вызова этого метода необходимо установить бит стиля.</span><span class="sxs-lookup"><span data-stu-id="16292-125">The <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> style bit must be set for this method to be called.</span></span>|  
   
- Сообщения клавиатуры и мыши также обрабатываются дополнительным набором переопределяемых методов, связанных с этими типами сообщений.  Дополнительные сведения см. в разделах [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md) и [How Mouse Input Works in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  
+ <span data-ttu-id="16292-126">Сообщения клавиатуры и мыши обрабатываются также дополнительный набор переопределяемых методов, характерных для этих типов сообщений.</span><span class="sxs-lookup"><span data-stu-id="16292-126">Keyboard and mouse messages are also processed by an additional set of overridable methods that are specific to those types of messages.</span></span> <span data-ttu-id="16292-127">Дополнительные сведения см. в разделе [принцип работы ввода с клавиатуры](../../../docs/framework/winforms/how-keyboard-input-works.md) и [принцип работы мыши ввода в Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="16292-127">For more information, see [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md) and [How Mouse Input Works in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).</span></span>  
   
-## См. также  
- [User Input in Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)   
- [Keyboard Input in a Windows Forms Application](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="16292-128">См. также</span><span class="sxs-lookup"><span data-stu-id="16292-128">See Also</span></span>  
+ [<span data-ttu-id="16292-129">Ввод данных пользователем в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="16292-129">User Input in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [<span data-ttu-id="16292-130">Ввод с клавиатуры в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="16292-130">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="16292-131">Ввод данных мышью в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="16292-131">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

@@ -1,89 +1,91 @@
 ---
-title: "Стили и шаблоны элемента TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], TreeView"
-  - "части [WPF], TreeView"
-  - "состояния [WPF], TreeView"
-  - "стили [WPF], TreeView"
-  - "шаблоны [WPF], TreeView"
-  - "TreeView [WPF], стили и шаблоны"
+title: "Стили и шаблоны элемента TreeView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ControlTemplate [WPF], TreeView
+- templates [WPF], TreeView
+- parts [WPF], TreeView
+- states [WPF], TreeView
+- styles [WPF], TreeView
+- TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 78e5faf7aab684f2a8760204079a26a61b9c3fda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента TreeView
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.TreeView>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="treeview-styles-and-templates"></a><span data-ttu-id="4d1c9-102">Стили и шаблоны элемента TreeView</span><span class="sxs-lookup"><span data-stu-id="4d1c9-102">TreeView Styles and Templates</span></span>
+<span data-ttu-id="4d1c9-103">В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.TreeView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.TreeView> control.</span></span> <span data-ttu-id="4d1c9-104">Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="4d1c9-105">Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="4d1c9-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Части TreeView  
- Элемент управления <xref:System.Windows.Controls.TreeView> не имеет именованных частей.  
+## <a name="treeview-parts"></a><span data-ttu-id="4d1c9-106">Части TreeView</span><span class="sxs-lookup"><span data-stu-id="4d1c9-106">TreeView Parts</span></span>  
+ <span data-ttu-id="4d1c9-107"><xref:System.Windows.Controls.TreeView> Управления не имеет именованных частей.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-107">The <xref:System.Windows.Controls.TreeView> control does not have any named parts.</span></span>  
   
- При создании шаблона <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.TreeView> шаблон может содержать часть <xref:System.Windows.Controls.ItemsPresenter> в элементе управления <xref:System.Windows.Controls.ScrollViewer>.  \(Элемент управления <xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в элементе управления <xref:System.Windows.Controls.TreeView>; элемент управления <xref:System.Windows.Controls.ScrollViewer> обеспечивает прокрутку в элементе управления\).  Если элемент управления <xref:System.Windows.Controls.ItemsPresenter> не является непосредственным дочерним элементом элемента управления <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить элементу управления <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ <span data-ttu-id="4d1c9-108">При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TreeView>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-108">When you create a <xref:System.Windows.Controls.ControlTemplate> for an <xref:System.Windows.Controls.TreeView>, your template might contain a <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="4d1c9-109">( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.TreeView>; <xref:System.Windows.Controls.ScrollViewer> разрешает прокрутку в элементе управления).</span><span class="sxs-lookup"><span data-stu-id="4d1c9-109">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.TreeView>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="4d1c9-110">Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, вы должны предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-110">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Состояния TreeView  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.TreeView>.  
+## <a name="treeview-states"></a><span data-ttu-id="4d1c9-111">Состояния TreeView</span><span class="sxs-lookup"><span data-stu-id="4d1c9-111">TreeView States</span></span>  
+ <span data-ttu-id="4d1c9-112">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TreeView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-112">The following table lists the visual states for the <xref:System.Windows.Controls.TreeView> control.</span></span>  
   
-||||  
+|<span data-ttu-id="4d1c9-113">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="4d1c9-113">VisualState Name</span></span>|<span data-ttu-id="4d1c9-114">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="4d1c9-114">VisualStateGroup Name</span></span>|<span data-ttu-id="4d1c9-115">Описание</span><span class="sxs-lookup"><span data-stu-id="4d1c9-115">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|<span data-ttu-id="4d1c9-116">Valid</span><span class="sxs-lookup"><span data-stu-id="4d1c9-116">Valid</span></span>|<span data-ttu-id="4d1c9-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-117">ValidationStates</span></span>|<span data-ttu-id="4d1c9-118">Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-118">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="4d1c9-119">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="4d1c9-119">InvalidFocused</span></span>|<span data-ttu-id="4d1c9-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-120">ValidationStates</span></span>|<span data-ttu-id="4d1c9-121"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="4d1c9-122">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="4d1c9-122">InvalidUnfocused</span></span>|<span data-ttu-id="4d1c9-123">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-123">ValidationStates</span></span>|<span data-ttu-id="4d1c9-124"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-124">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Части TreeViewItem  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.TreeViewItem>.  
+## <a name="treeviewitem-parts"></a><span data-ttu-id="4d1c9-125">Части TreeViewItem</span><span class="sxs-lookup"><span data-stu-id="4d1c9-125">TreeViewItem Parts</span></span>  
+ <span data-ttu-id="4d1c9-126">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.TreeViewItem> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-126">The following table lists the named parts for the <xref:System.Windows.Controls.TreeViewItem> control.</span></span>  
   
-|Часть|Тип|Описание|  
-|-----------|---------|--------------|  
-|PART\_Header|<xref:System.Windows.FrameworkElement>|Визуальный элемент, включающий содержимое заголовка элемента управления <xref:System.Windows.Controls.TreeView>.|  
+|<span data-ttu-id="4d1c9-127">Отделение</span><span class="sxs-lookup"><span data-stu-id="4d1c9-127">Part</span></span>|<span data-ttu-id="4d1c9-128">Тип</span><span class="sxs-lookup"><span data-stu-id="4d1c9-128">Type</span></span>|<span data-ttu-id="4d1c9-129">Описание</span><span class="sxs-lookup"><span data-stu-id="4d1c9-129">Description</span></span>|  
+|----------|----------|-----------------|  
+|<span data-ttu-id="4d1c9-130">PART_Header</span><span class="sxs-lookup"><span data-stu-id="4d1c9-130">PART_Header</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="4d1c9-131">Визуальный элемент, который содержит заголовок, содержимое <xref:System.Windows.Controls.TreeView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-131">A visual element that contains that header content of the <xref:System.Windows.Controls.TreeView> control.</span></span>|  
   
-## Состояния TreeViewItem  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.TreeViewItem>.  
+## <a name="treeviewitem-states"></a><span data-ttu-id="4d1c9-132">Состояния TreeViewItem</span><span class="sxs-lookup"><span data-stu-id="4d1c9-132">TreeViewItem States</span></span>  
+ <span data-ttu-id="4d1c9-133">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TreeViewItem> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-133">The following table lists the visual states for <xref:System.Windows.Controls.TreeViewItem> control.</span></span>  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|---------------------|--------------------------|--------------|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши наведен на элемент управления <xref:System.Windows.Controls.TreeViewItem>.|  
-|Disabled|CommonStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> отключен.|  
-|Focused|FocusStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> не имеет фокуса.|  
-|разреженный|ExpansionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> развернут.|  
-|Collapsed|ExpansionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> свернут.|  
-|HasItems|HasItemsStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> имеет элементы.|  
-|NoItems|HasItemsStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> не имеет элементов.|  
-|Выбран|SelectionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> выбран.|  
-|SelectedInactive|SelectionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> выбран, но не активен.|  
-|Не выбран|SelectionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> не выбран.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|<span data-ttu-id="4d1c9-134">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="4d1c9-134">VisualState Name</span></span>|<span data-ttu-id="4d1c9-135">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="4d1c9-135">VisualStateGroup Name</span></span>|<span data-ttu-id="4d1c9-136">Описание</span><span class="sxs-lookup"><span data-stu-id="4d1c9-136">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="4d1c9-137">Норм.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-137">Normal</span></span>|<span data-ttu-id="4d1c9-138">CommonStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-138">CommonStates</span></span>|<span data-ttu-id="4d1c9-139">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-139">The default state.</span></span>|  
+|<span data-ttu-id="4d1c9-140">MouseOver</span><span class="sxs-lookup"><span data-stu-id="4d1c9-140">MouseOver</span></span>|<span data-ttu-id="4d1c9-141">CommonStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-141">CommonStates</span></span>|<span data-ttu-id="4d1c9-142">Указатель мыши наведен на <xref:System.Windows.Controls.TreeViewItem>.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-142">The mouse pointer is positioned over the <xref:System.Windows.Controls.TreeViewItem>.</span></span>|  
+|<span data-ttu-id="4d1c9-143">Отключено</span><span class="sxs-lookup"><span data-stu-id="4d1c9-143">Disabled</span></span>|<span data-ttu-id="4d1c9-144">CommonStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-144">CommonStates</span></span>|<span data-ttu-id="4d1c9-145"><xref:System.Windows.Controls.TreeViewItem> Отключена.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-145">The <xref:System.Windows.Controls.TreeViewItem> is disabled.</span></span>|  
+|<span data-ttu-id="4d1c9-146">Focused</span><span class="sxs-lookup"><span data-stu-id="4d1c9-146">Focused</span></span>|<span data-ttu-id="4d1c9-147">FocusStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-147">FocusStates</span></span>|<span data-ttu-id="4d1c9-148"><xref:System.Windows.Controls.TreeViewItem> Имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-148">The <xref:System.Windows.Controls.TreeViewItem> has focus.</span></span>|  
+|<span data-ttu-id="4d1c9-149">Без фокуса ввода</span><span class="sxs-lookup"><span data-stu-id="4d1c9-149">Unfocused</span></span>|<span data-ttu-id="4d1c9-150">FocusStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-150">FocusStates</span></span>|<span data-ttu-id="4d1c9-151"><xref:System.Windows.Controls.TreeViewItem> Не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-151">The <xref:System.Windows.Controls.TreeViewItem> does not have focus.</span></span>|  
+|<span data-ttu-id="4d1c9-152">Развернуто</span><span class="sxs-lookup"><span data-stu-id="4d1c9-152">Expanded</span></span>|<span data-ttu-id="4d1c9-153">ExpansionStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-153">ExpansionStates</span></span>|<span data-ttu-id="4d1c9-154"><xref:System.Windows.Controls.TreeViewItem> Элемент управления развернут.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-154">The <xref:System.Windows.Controls.TreeViewItem> control is expanded.</span></span>|  
+|<span data-ttu-id="4d1c9-155">Свернуто</span><span class="sxs-lookup"><span data-stu-id="4d1c9-155">Collapsed</span></span>|<span data-ttu-id="4d1c9-156">ExpansionStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-156">ExpansionStates</span></span>|<span data-ttu-id="4d1c9-157"><xref:System.Windows.Controls.TreeViewItem> Управления сворачивается.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-157">The <xref:System.Windows.Controls.TreeViewItem> control is collapsed.</span></span>|  
+|<span data-ttu-id="4d1c9-158">Hasitems, доступное</span><span class="sxs-lookup"><span data-stu-id="4d1c9-158">HasItems</span></span>|<span data-ttu-id="4d1c9-159">HasItemsStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-159">HasItemsStates</span></span>|<span data-ttu-id="4d1c9-160"><xref:System.Windows.Controls.TreeViewItem> Содержит элементы.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-160">The <xref:System.Windows.Controls.TreeViewItem> has items.</span></span>|  
+|<span data-ttu-id="4d1c9-161">NoItems</span><span class="sxs-lookup"><span data-stu-id="4d1c9-161">NoItems</span></span>|<span data-ttu-id="4d1c9-162">HasItemsStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-162">HasItemsStates</span></span>|<span data-ttu-id="4d1c9-163"><xref:System.Windows.Controls.TreeViewItem> Не имеет элементов.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-163">The <xref:System.Windows.Controls.TreeViewItem> does not have items.</span></span>|  
+|<span data-ttu-id="4d1c9-164">Selected</span><span class="sxs-lookup"><span data-stu-id="4d1c9-164">Selected</span></span>|<span data-ttu-id="4d1c9-165">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-165">SelectionStates</span></span>|<span data-ttu-id="4d1c9-166"><xref:System.Windows.Controls.TreeViewItem> Выбран.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-166">The <xref:System.Windows.Controls.TreeViewItem> is selected.</span></span>|  
+|<span data-ttu-id="4d1c9-167">SelectedInactive</span><span class="sxs-lookup"><span data-stu-id="4d1c9-167">SelectedInactive</span></span>|<span data-ttu-id="4d1c9-168">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-168">SelectionStates</span></span>|<span data-ttu-id="4d1c9-169"><xref:System.Windows.Controls.TreeViewItem> Выделен, но не активен.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-169">The <xref:System.Windows.Controls.TreeViewItem> is selected but not active.</span></span>|  
+|<span data-ttu-id="4d1c9-170">Unselected</span><span class="sxs-lookup"><span data-stu-id="4d1c9-170">Unselected</span></span>|<span data-ttu-id="4d1c9-171">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-171">SelectionStates</span></span>|<span data-ttu-id="4d1c9-172"><xref:System.Windows.Controls.TreeViewItem> Не выбран.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-172">The <xref:System.Windows.Controls.TreeViewItem> is not selected.</span></span>|  
+|<span data-ttu-id="4d1c9-173">Valid</span><span class="sxs-lookup"><span data-stu-id="4d1c9-173">Valid</span></span>|<span data-ttu-id="4d1c9-174">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-174">ValidationStates</span></span>|<span data-ttu-id="4d1c9-175">Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-175">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="4d1c9-176">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="4d1c9-176">InvalidFocused</span></span>|<span data-ttu-id="4d1c9-177">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-177">ValidationStates</span></span>|<span data-ttu-id="4d1c9-178"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-178">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="4d1c9-179">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="4d1c9-179">InvalidUnfocused</span></span>|<span data-ttu-id="4d1c9-180">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="4d1c9-180">ValidationStates</span></span>|<span data-ttu-id="4d1c9-181"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-181">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Пример шаблона элемента управления ControlTemplate элемента TreeView  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.TreeView> и связанных с ним типов.  
+## <a name="treeview-controltemplate-example"></a><span data-ttu-id="4d1c9-182">Пример шаблона элемента управления TreeView</span><span class="sxs-lookup"><span data-stu-id="4d1c9-182">TreeView ControlTemplate Example</span></span>  
+ <span data-ttu-id="4d1c9-183">В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TreeView> элемента управления и его связанных типов.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-183">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.TreeView> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
+ [!code-xaml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ <span data-ttu-id="4d1c9-184">В предыдущем примере используется один или несколько из следующих ресурсов.</span><span class="sxs-lookup"><span data-stu-id="4d1c9-184">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="4d1c9-185">Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="4d1c9-185">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="4d1c9-186">См. также</span><span class="sxs-lookup"><span data-stu-id="4d1c9-186">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="4d1c9-187">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="4d1c9-187">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="4d1c9-188">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="4d1c9-188">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="4d1c9-189">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="4d1c9-189">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="4d1c9-190">Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="4d1c9-190">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

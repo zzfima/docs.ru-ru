@@ -1,43 +1,48 @@
 ---
-title: "Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], управление большими наборами данных"
-  - "DataGridView - элемент управления [Windows Forms], большие наборы данных"
-  - "DataGridView - элемент управления [Windows Forms], виртуальный режим"
-  - "виртуальный режим, пошаговые руководства"
-  - "пошаговые руководства [Windows Forms], DataGridView - элемент управления"
+title: "Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- data [Windows Forms], managing large data sets
+- DataGridView control [Windows Forms], virtual mode
+- virtual mode [Windows Forms], walkthroughs
+- DataGridView control [Windows Forms], large data sets
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31806d3ed13776e26634914b48bc887297ea4dab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms
-Если в элементе управления <xref:System.Windows.Forms.DataGridView> требуется отобразить большой объем табличных данных, можно задать для свойства <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> значение `true` и явным образом управлять взаимодействием элемента управления с хранилищем данных.  Это позволяет управлять производительностью элемента управления в такой ситуации.  
+# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3c564-102">Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3c564-102">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="3c564-103">Если вы хотите отобразить очень большому количеству табличные данные в <xref:System.Windows.Forms.DataGridView> управления, можно задать <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и явным образом управлять взаимодействием элемента управления с хранилищем данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-103">When you want to display very large quantities of tabular data in a <xref:System.Windows.Forms.DataGridView> control, you can set the <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property to `true` and explicitly manage the control's interaction with its data store.</span></span> <span data-ttu-id="3c564-104">Это позволяет оптимизировать производительность элемента управления в этой ситуации.</span><span class="sxs-lookup"><span data-stu-id="3c564-104">This lets you fine-tune the performance of the control in this situation.</span></span>  
   
- Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет несколько событий, которые могут обрабатываться для взаимодействия с пользовательским хранилищем данных.  Процесс реализации таких обработчиков событий описан в данном пошаговом руководстве.  В примере кода в этом разделе для наглядности используется очень простой источник данных.  На практике обычно загружаются только строки, необходимые для отображения в кэше, а события <xref:System.Windows.Forms.DataGridView> обрабатываются для взаимодействия с кэшем и его обновления.  Дополнительные сведения содержатся в разделе [Реализация виртуального режима с JIT\-загрузкой данных для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ <span data-ttu-id="3c564-105"><xref:System.Windows.Forms.DataGridView> Управления предоставляет несколько событий, которые могут обрабатываться для взаимодействия с пользовательским хранилищем данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-105">The <xref:System.Windows.Forms.DataGridView> control provides several events that you can handle to interact with a custom data store.</span></span> <span data-ttu-id="3c564-106">В этом пошаговом руководстве помогает выполнить процесс реализации эти обработчики событий.</span><span class="sxs-lookup"><span data-stu-id="3c564-106">This walkthrough guides you through the process of implementing these event handlers.</span></span> <span data-ttu-id="3c564-107">В примере кода в этом разделе использует очень простого источника данных для наглядности.</span><span class="sxs-lookup"><span data-stu-id="3c564-107">The code example in this topic uses a very simple data source for illustration purposes.</span></span> <span data-ttu-id="3c564-108">В производственной среде, обычно загружаются только строки, необходимые для отображения в кэше и обработки <xref:System.Windows.Forms.DataGridView> событий для взаимодействия с кэшем и его обновления.</span><span class="sxs-lookup"><span data-stu-id="3c564-108">In a production setting, you will typically load only the rows you need to display into a cache, and handle <xref:System.Windows.Forms.DataGridView> events to interact with and update the cache.</span></span> <span data-ttu-id="3c564-109">Дополнительные сведения см. в разделе [реализация виртуального режима с JIT-загрузкой данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)</span><span class="sxs-lookup"><span data-stu-id="3c564-109">For more information, see [Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)</span></span>  
   
- Чтобы скопировать весь текст кода из этой темы, см. ссылку [Практическое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="3c564-110">Скопируйте код из этой темы, в разделе [как: реализация виртуального режима в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="3c564-110">To copy the code in this topic as a single listing, see [How to: Implement Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## Создание формы  
+## <a name="creating-the-form"></a><span data-ttu-id="3c564-111">Создание формы</span><span class="sxs-lookup"><span data-stu-id="3c564-111">Creating the Form</span></span>  
   
-#### Чтобы реализовать виртуальный режим  
+#### <a name="to-implement-virtual-mode"></a><span data-ttu-id="3c564-112">Чтобы реализовать виртуальный режим</span><span class="sxs-lookup"><span data-stu-id="3c564-112">To implement virtual mode</span></span>  
   
-1.  Создайте производный от <xref:System.Windows.Forms.Form> класс, который содержит элемент управления <xref:System.Windows.Forms.DataGridView>.  
+1.  <span data-ttu-id="3c564-113">Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3c564-113">Create a class that derives from <xref:System.Windows.Forms.Form> and contains a <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     В следующем коде реализована начальная стадия инициализации.  Объявлены некоторые переменные, которые будут использоваться позднее, предоставлен метод `Main` и предоставлен простой макет формы в конструкторе класса.  
+     <span data-ttu-id="3c564-114">В следующем коде содержатся некоторые основные инициализации.</span><span class="sxs-lookup"><span data-stu-id="3c564-114">The following code contains some basic initialization.</span></span> <span data-ttu-id="3c564-115">Он объявляется несколько переменных, которые будут использоваться на последующих этапах, предоставляет `Main` метода и предоставляет простой макет формы в конструкторе класса.</span><span class="sxs-lookup"><span data-stu-id="3c564-115">It declares some variables that will be used in later steps, provides a `Main` method, and provides a simple form layout in the class constructor.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#001](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#001)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#001](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#001)]
@@ -46,101 +51,101 @@ caps.handback.revision: 14
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  Реализуйте обработчик для события <xref:System.Windows.Forms.Form.Load> формы, который инициализирует элемент управления <xref:System.Windows.Forms.DataGridView> и заполняет хранилище данных образцами значений.  
+2.  <span data-ttu-id="3c564-116">Реализуйте обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое инициализирует <xref:System.Windows.Forms.DataGridView> управления и заполняет значениями образец хранилища данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-116">Implement a handler for your form's <xref:System.Windows.Forms.Form.Load> event that initializes the <xref:System.Windows.Forms.DataGridView> control and populates the data store with sample values.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.CellValueNeeded>, который извлекает запрошенное значение ячейки из хранилища данных или объекта `Customer`, находящегося в режиме редактирования.  
+3.  <span data-ttu-id="3c564-117">Реализуйте обработчик для <xref:System.Windows.Forms.DataGridView.CellValueNeeded> событие, которое извлекает запрошенное значение ячейки из хранилища данных или `Customer` объекта, находящегося в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="3c564-117">Implement a handler for the <xref:System.Windows.Forms.DataGridView.CellValueNeeded> event that retrieves the requested cell value from the data store or the `Customer` object currently in edit.</span></span>  
   
-     Это событие происходит каждый раз, когда элементу управления <xref:System.Windows.Forms.DataGridView> требуется прорисовать ячейку.  
+     <span data-ttu-id="3c564-118">Это событие возникает при изменении <xref:System.Windows.Forms.DataGridView> элемента управления необходим для рисования ячейки.</span><span class="sxs-lookup"><span data-stu-id="3c564-118">This event occurs whenever the <xref:System.Windows.Forms.DataGridView> control needs to paint a cell.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#120](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#120)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.CellValuePushed>, который сохраняет измененное значение ячейки в объекте `Customer`, представляющем отредактированную строку.  Это событие происходит каждый раз, когда пользователь подтверждает изменение значения ячейки.  
+4.  <span data-ttu-id="3c564-119">Реализуйте обработчик для <xref:System.Windows.Forms.DataGridView.CellValuePushed> событие, которое сохраняет измененное значение ячейки в `Customer` объект, представляющий редактируемой строки.</span><span class="sxs-lookup"><span data-stu-id="3c564-119">Implement a handler for the <xref:System.Windows.Forms.DataGridView.CellValuePushed> event that stores an edited cell value in the `Customer` object representing the edited row.</span></span> <span data-ttu-id="3c564-120">Это событие возникает каждый раз, когда пользователь подтверждает изменение значения ячейки.</span><span class="sxs-lookup"><span data-stu-id="3c564-120">This event occurs whenever the user commits a cell value change.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.NewRowNeeded>, который создает новый объект `Customer`, представляющий созданную строку.  
+5.  <span data-ttu-id="3c564-121">Реализуйте обработчик для <xref:System.Windows.Forms.DataGridView.NewRowNeeded> событие, которое создает новый `Customer` объект, представляющий только что созданной строки.</span><span class="sxs-lookup"><span data-stu-id="3c564-121">Implement a handler for the <xref:System.Windows.Forms.DataGridView.NewRowNeeded> event that creates a new `Customer` object representing a newly created row.</span></span>  
   
-     Это событие происходит каждый раз, когда пользователь входит в строку для добавления новых записей.  
+     <span data-ttu-id="3c564-122">Это событие возникает каждый раз, когда пользователь вводит строку для новых записей.</span><span class="sxs-lookup"><span data-stu-id="3c564-122">This event occurs whenever the user enters the row for new records.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#140](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#140)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.RowValidated>, который сохраняет новые или измененные строки в хранилище данных.  
+6.  <span data-ttu-id="3c564-123">Реализуйте обработчик для <xref:System.Windows.Forms.DataGridView.RowValidated> событие, которое сохраняет новых или измененных строк в хранилище данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-123">Implement a handler for the <xref:System.Windows.Forms.DataGridView.RowValidated> event that saves new or modified rows to the data store.</span></span>  
   
-     Это событие происходит каждый раз, когда пользователь изменяет текущую строку.  
+     <span data-ttu-id="3c564-124">Это событие возникает каждый раз, когда пользователь изменяет текущую строку.</span><span class="sxs-lookup"><span data-stu-id="3c564-124">This event occurs whenever the user changes the current row.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#150](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#150)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>, который указывает, будет ли происходить событие <xref:System.Windows.Forms.DataGridView.CancelRowEdit> в случае, если пользователь восстанавливает строку, нажав ESC два раза в режиме редактирования или один раз в другом режиме.  
+7.  <span data-ttu-id="3c564-125">Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> событие, указывающее, является ли <xref:System.Windows.Forms.DataGridView.CancelRowEdit> события возникают в том случае, если пользователь восстанавливает строку, нажав клавишу ESC два раза в режиме редактирования или один раз в другом режиме.</span><span class="sxs-lookup"><span data-stu-id="3c564-125">Implement a handler for the <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> event that indicates whether the <xref:System.Windows.Forms.DataGridView.CancelRowEdit> event will occur when the user signals row reversion by pressing ESC twice in edit mode or once outside of edit mode.</span></span>  
   
-     По умолчанию <xref:System.Windows.Forms.DataGridView.CancelRowEdit> происходит при восстановлении строки, если любые ячейки в текущей строке были изменены, за исключением случая, когда для свойства <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=fullName> задано значение `true` в обработчике событий <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>.  Это событие наиболее эффективно, если область фиксации определяется во время выполнения.  
+     <span data-ttu-id="3c564-126">По умолчанию <xref:System.Windows.Forms.DataGridView.CancelRowEdit> происходит при восстановлении строки, если все ячейки в текущей строке были изменены, пока не <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> свойству `true` в <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="3c564-126">By default, <xref:System.Windows.Forms.DataGridView.CancelRowEdit> occurs upon row reversion when any cells in the current row have been modified unless the <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> property is set to `true` in the <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> event handler.</span></span> <span data-ttu-id="3c564-127">Это событие полезно в тех случаях, когда область фиксации определяется во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="3c564-127">This event is useful when the commit scope is determined at run time.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#160](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#160)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.CancelRowEdit>, который отменяет значения объекта `Customer`, представляющего текущую строку.  
+8.  <span data-ttu-id="3c564-128">Реализуйте обработчик для <xref:System.Windows.Forms.DataGridView.CancelRowEdit> событий, который удаляет значения `Customer` объект, представляющий текущую строку.</span><span class="sxs-lookup"><span data-stu-id="3c564-128">Implement a handler for the <xref:System.Windows.Forms.DataGridView.CancelRowEdit> event that discards the values of the `Customer` object representing the current row.</span></span>  
   
-     Это событие происходит, если пользователь восстанавливает строку, нажав ESC два раза в режиме редактирования или один раз в другом режиме.  Это событие не происходит, если ячейки в текущей строке не были изменены или для свойства <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=fullName> было задано значение `false` в обработчике событий <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>.  
+     <span data-ttu-id="3c564-129">Это событие возникает, если пользователь восстанавливает строку, нажав клавишу ESC два раза в режиме редактирования или один раз в другом режиме.</span><span class="sxs-lookup"><span data-stu-id="3c564-129">This event occurs when the user signals row reversion by pressing ESC twice in edit mode or once outside of edit mode.</span></span> <span data-ttu-id="3c564-130">Это событие не происходит, если ячейки отсутствуют в текущей строке были изменены или если значение <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> свойства `false` в <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="3c564-130">This event does not occur if no cells in the current row have been modified or if the value of the <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> property has been set to `false` in a <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> event handler.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#170](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#170)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#170)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#170)]  
   
-9. Реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.UserDeletingRow>, который удаляет существующий объект `Customer` из хранилища данных или отменяет несохраненный объект `Customer`, представляющий созданную строку.  
+9. <span data-ttu-id="3c564-131">Реализуйте обработчик для <xref:System.Windows.Forms.DataGridView.UserDeletingRow> событий, который удаляет существующий `Customer` объекта из хранилища данных или отменяет несохраненный `Customer` объект, представляющий только что созданной строки.</span><span class="sxs-lookup"><span data-stu-id="3c564-131">Implement a handler for the <xref:System.Windows.Forms.DataGridView.UserDeletingRow> event that deletes an existing `Customer` object from the data store or discards an unsaved `Customer` object representing a newly created row.</span></span>  
   
-     Это событие происходит каждый раз, когда пользователь удаляет строку, щелкнув по заголовку строки и нажав клавишу DELETE.  
+     <span data-ttu-id="3c564-132">Это событие возникает каждый раз, когда пользователь удаляет строку, щелкнув заголовок строки и нажав клавишу DELETE.</span><span class="sxs-lookup"><span data-stu-id="3c564-132">This event occurs whenever the user deletes a row by clicking a row header and pressing the DELETE key.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#180](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#180)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#180)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#180)]  
   
-10. Реализуйте простой класс `Customers` для представления элементов данных, используемых в этом примере кода.  
+10. <span data-ttu-id="3c564-133">Реализовать простой `Customers` класс для представления элементов данных, используемых в этом примере кода.</span><span class="sxs-lookup"><span data-stu-id="3c564-133">Implement a simple `Customers` class to represent the data items used by this code example.</span></span>  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#200](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#200)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#200)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#200)]  
   
-## Тестирование приложения  
- Теперь можно проверить форму, чтобы убедиться, что она работает так, как ожидалось.  
+## <a name="testing-the-application"></a><span data-ttu-id="3c564-134">Тестирование приложения</span><span class="sxs-lookup"><span data-stu-id="3c564-134">Testing the Application</span></span>  
+ <span data-ttu-id="3c564-135">Теперь можно проверить форму, чтобы убедиться в том, что оно правильно работает.</span><span class="sxs-lookup"><span data-stu-id="3c564-135">You can now test the form to make sure it behaves as expected.</span></span>  
   
-#### Чтобы проверить форму, выполните следующие действия:  
+#### <a name="to-test-the-form"></a><span data-ttu-id="3c564-136">Чтобы проверить форму</span><span class="sxs-lookup"><span data-stu-id="3c564-136">To test the form</span></span>  
   
--   Скомпилируйте и запустите приложение.  
+-   <span data-ttu-id="3c564-137">Скомпилируйте и запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="3c564-137">Compile and run the application.</span></span>  
   
-     Появится элемент управления <xref:System.Windows.Forms.DataGridView> с тремя записями клиентов.  Чтобы вернуть исходные значения во всей строке после изменения значений нескольких ячеек этой строки, можно нажать клавишу ESC два раза в режиме редактирования или один раз в другом режиме.  При изменении, добавлении или удалении строк в элементе управления, также изменяются, добавляются или удаляются объекты `Customer` в хранилище данных.  
+     <span data-ttu-id="3c564-138">Вы увидите <xref:System.Windows.Forms.DataGridView> управления заполняются три записи клиента.</span><span class="sxs-lookup"><span data-stu-id="3c564-138">You will see a <xref:System.Windows.Forms.DataGridView> control populated with three customer records.</span></span> <span data-ttu-id="3c564-139">Можно изменять значения нескольких ячеек в строке и нажмите клавишу ESC два раза в режиме редактирования и один раз за пределами режим редактирования, чтобы восстановить исходные значения во всей строке.</span><span class="sxs-lookup"><span data-stu-id="3c564-139">You can modify the values of multiple cells in a row and press ESC twice in edit mode and once outside of edit mode to revert the entire row to its original values.</span></span> <span data-ttu-id="3c564-140">Если изменения, добавления или удаления строк в элементе управления `Customer` изменен, добавлен или также удалены объекты в хранилище данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-140">When you modify, add, or delete rows in the control, `Customer` objects in the data store are modified, added, or deleted as well.</span></span>  
   
-## Следующие действия  
- Это приложение позволяет в общем понять, какие события необходимо обработать для реализации виртуального режима в элементе управления <xref:System.Windows.Forms.DataGridView>.  Это основное приложение можно улучшить несколькими способами.  
+## <a name="next-steps"></a><span data-ttu-id="3c564-141">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="3c564-141">Next Steps</span></span>  
+ <span data-ttu-id="3c564-142">Это приложение позволяет основные события, необходимо обработать для реализации виртуального режима в <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3c564-142">This application gives you a basic understanding of the events you must handle to implement virtual mode in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="3c564-143">Можно улучшить это основное приложение несколькими способами:</span><span class="sxs-lookup"><span data-stu-id="3c564-143">You can improve this basic application in a number of ways:</span></span>  
   
--   Реализуйте хранилище данных, кэширующее значения из внешней базы данных.  Кэш извлекает и отменяет значения по мере необходимости таким образом, что в нем содержатся только необходимые для отображения данные — при этом сокращается потребление ресурсов памяти на клиентском компьютере.  
+-   <span data-ttu-id="3c564-144">Реализация хранилища данных, который кэширует значения из внешней базы данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-144">Implement a data store that caches values from an external database.</span></span> <span data-ttu-id="3c564-145">Кэш извлекает и отменяет значения по мере необходимости, чтобы он содержал только необходимые для отображения при использовании небольшой объем памяти на клиентском компьютере.</span><span class="sxs-lookup"><span data-stu-id="3c564-145">The cache should retrieve and discard values as necessary so that it only contains what is necessary for display while consuming a small amount of memory on the client computer.</span></span>  
   
--   Выполните точную настройку производительности хранилища данных в зависимости от конкретных требований.  Например, может потребоваться компенсировать медленное сетевое соединение, а не ограничения оперативной памяти компьютера клиента. В таком случае можно использовать кэш с увеличенным размером, чтобы свести к минимуму количество запросов к базе данных.  
+-   <span data-ttu-id="3c564-146">Оптимизировать производительность хранилища данных в зависимости от требований.</span><span class="sxs-lookup"><span data-stu-id="3c564-146">Fine-tune the performance of the data store depending on your requirements.</span></span> <span data-ttu-id="3c564-147">Например может потребоваться компенсировать медленное сетевое соединение, а не ограничения оперативной памяти на клиентском компьютере, используя размер кэш-памяти и уменьшает количество запросов к базе данных.</span><span class="sxs-lookup"><span data-stu-id="3c564-147">For example, you might want to compensate for slow network connections rather than client-computer memory limitations by using a larger cache size and minimizing the number of database queries.</span></span>  
   
- Дополнительные сведения о кэшировании значений из внешней базы данных содержатся по ссылке [Практическое руководство. Реализация виртуального режима с JIT\-загрузкой данных для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
+ <span data-ttu-id="3c564-148">Дополнительные сведения о кэшировании значений из внешней базы данных см. в разделе [как: реализация виртуального режима с JIT-загрузкой данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="3c564-148">For more information about caching values from an external database, see [How to: Implement Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- <xref:System.Windows.Forms.DataGridView.CellValueNeeded>   
- <xref:System.Windows.Forms.DataGridView.CellValuePushed>   
- <xref:System.Windows.Forms.DataGridView.NewRowNeeded>   
- <xref:System.Windows.Forms.DataGridView.RowValidated>   
- <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>   
- <xref:System.Windows.Forms.DataGridView.CancelRowEdit>   
- <xref:System.Windows.Forms.DataGridView.UserDeletingRow>   
- [Оптимизация производительности элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [Реализация виртуального режима с JIT\-загрузкой данных для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)   
- [Практическое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="3c564-149">См. также</span><span class="sxs-lookup"><span data-stu-id="3c564-149">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ <xref:System.Windows.Forms.DataGridView.CellValueNeeded>  
+ <xref:System.Windows.Forms.DataGridView.CellValuePushed>  
+ <xref:System.Windows.Forms.DataGridView.NewRowNeeded>  
+ <xref:System.Windows.Forms.DataGridView.RowValidated>  
+ <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>  
+ <xref:System.Windows.Forms.DataGridView.CancelRowEdit>  
+ <xref:System.Windows.Forms.DataGridView.UserDeletingRow>  
+ [<span data-ttu-id="3c564-150">Оптимизация производительности элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3c564-150">Performance Tuning in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="3c564-151">Масштабирование элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3c564-151">Best Practices for Scaling the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="3c564-152">Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3c564-152">Implementing Virtual Mode with Just-In-Time Data Loading in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+ [<span data-ttu-id="3c564-153">Практическое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3c564-153">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

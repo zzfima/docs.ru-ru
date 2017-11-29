@@ -1,41 +1,39 @@
 ---
-title: "Правила разработки исключений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "исключения [платформа .NET Framework] рекомендации по проектированию"
-  - "Класс рекомендации по разработке библиотек [платформа .NET Framework] исключения"
-  - "ошибки [платформа .NET Framework] исключения"
-  - "отчеты об ошибках"
+title: "Правила разработки исключений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions [.NET Framework], design guidelines
+- class library design guidelines [.NET Framework], exceptions
+- errors [.NET Framework], exceptions
+- reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 30ee456632070f778d51d7fb40475a795a0f620b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Правила разработки исключений
-Обработка исключений имеет множество преимуществ перед отчеты об ошибках на основе возвращаемого значения. Хорошей платформы разработки позволяет разработчику использовать преимущества исключения. В этом разделе обсуждаются преимущества исключения и представлены рекомендации по эффективному использованию.  
+# <a name="design-guidelines-for-exceptions"></a><span data-ttu-id="e8a38-102">Правила разработки исключений</span><span class="sxs-lookup"><span data-stu-id="e8a38-102">Design Guidelines for Exceptions</span></span>
+<span data-ttu-id="e8a38-103">Обработка исключений имеет множество преимуществ перед отчеты об ошибках на основе возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="e8a38-103">Exception handling has many advantages over return-value-based error reporting.</span></span> <span data-ttu-id="e8a38-104">Хорошей платформы разработки позволяет использовать преимущества исключения разработчик приложения.</span><span class="sxs-lookup"><span data-stu-id="e8a38-104">Good framework design helps the application developer realize the benefits of exceptions.</span></span> <span data-ttu-id="e8a38-105">В этом разделе рассматриваются преимущества исключения и представлены рекомендации по эффективному использованию.</span><span class="sxs-lookup"><span data-stu-id="e8a38-105">This section discusses the benefits of exceptions and presents guidelines for using them effectively.</span></span>  
   
-## В этом подразделе  
- [Создание исключений](../../../docs/standard/design-guidelines/exception-throwing.md)  
- [Использование исключений стандартных типов](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
- [Исключения и производительность](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+## <a name="in-this-section"></a><span data-ttu-id="e8a38-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="e8a38-106">In This Section</span></span>  
+ [<span data-ttu-id="e8a38-107">Создание исключений</span><span class="sxs-lookup"><span data-stu-id="e8a38-107">Exception Throwing</span></span>](../../../docs/standard/design-guidelines/exception-throwing.md)  
+ [<span data-ttu-id="e8a38-108">Используя стандартные типы исключений</span><span class="sxs-lookup"><span data-stu-id="e8a38-108">Using Standard Exception Types</span></span>](../../../docs/standard/design-guidelines/using-standard-exception-types.md)  
+ [<span data-ttu-id="e8a38-109">Исключения и производительности</span><span class="sxs-lookup"><span data-stu-id="e8a38-109">Exceptions and Performance</span></span>](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
+ <span data-ttu-id="e8a38-110">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="e8a38-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="e8a38-111">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="e8a38-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="e8a38-112">См. также</span><span class="sxs-lookup"><span data-stu-id="e8a38-112">See Also</span></span>  
+ [<span data-ttu-id="e8a38-113">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="e8a38-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

@@ -1,47 +1,50 @@
 ---
-title: "Встроенные стили и шаблоны | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "встроенные стили"
-  - "встроенные шаблоны"
-  - "стили, inline"
-  - "шаблоны, inline"
+title: "Встроенные стили и шаблоны"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inline templates [WPF]
+- styles [WPF], inline
+- templates [WPF], inline
+- inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2acb455db8f8bdc5a95bfd2462b651cebbb692c3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Встроенные стили и шаблоны
-Приложение [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет объекты <xref:System.Windows.Style> и объекты шаблонов \(подклассы <xref:System.Windows.FrameworkTemplate>\) как способ определения внешнего вида элемента в ресурсах, поэтому они могут быть использованы много раз.  По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], принимающие аргументы типов <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate>, почти всегда создают ресурсные ссылки на существующие стили и шаблоны, вместо определения новых.  
+# <a name="inline-styles-and-templates"></a><span data-ttu-id="43fcf-102">Встроенные стили и шаблоны</span><span class="sxs-lookup"><span data-stu-id="43fcf-102">Inline Styles and Templates</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="43fcf-103">предоставляет <xref:System.Windows.Style> объектов и объектов шаблона (<xref:System.Windows.FrameworkTemplate> подклассов) как способ определения внешнего вида элемента в ресурсах, так что они могут использоваться несколько раз.</span><span class="sxs-lookup"><span data-stu-id="43fcf-103"> provides <xref:System.Windows.Style> objects and template objects (<xref:System.Windows.FrameworkTemplate> subclasses) as a way to define the visual appearance of an element in resources, so that they can be used multiple times.</span></span> <span data-ttu-id="43fcf-104">По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , принимающие аргументы типов <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate> почти всегда создают ресурсные ссылки на существующие стили и шаблоны вместо определения новых.</span><span class="sxs-lookup"><span data-stu-id="43fcf-104">For this reason, attributes in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] that take the types <xref:System.Windows.Style> and <xref:System.Windows.FrameworkTemplate> almost always make resource references to existing styles and templates rather than define new ones inline.</span></span>  
   
-## Ограничения встроенных стилей и шаблонов  
- В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] свойства стиля и шаблона формально могут задаваться одним из двух способов.  Можно использовать синтаксис атрибута для ссылки на стиль, который был определен в ресурсе, например `<`*object*`Style="{StaticResource`*myResourceKey*`}" .../>`.  Или можно использовать синтаксис элемента свойства, чтобы определить встроенный стиль, например:  
+## <a name="limitations-of-inline-styles-and-templates"></a><span data-ttu-id="43fcf-105">Ограничения встроенные стили и шаблоны</span><span class="sxs-lookup"><span data-stu-id="43fcf-105">Limitations of Inline Styles and Templates</span></span>  
+ <span data-ttu-id="43fcf-106">В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], свойства стиля и шаблона формально могут задаваться одним из двух способов.</span><span class="sxs-lookup"><span data-stu-id="43fcf-106">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], style and template properties can technically be set in one of two ways.</span></span> <span data-ttu-id="43fcf-107">Синтаксис атрибутов можно использовать для ссылки на стиль, который был определен в ресурсе, например `<` *объекта*`Style="{StaticResource`*myResourceKey*`}" .../>`.</span><span class="sxs-lookup"><span data-stu-id="43fcf-107">You can use attribute syntax to reference a style that was defined within a resource, for example `<`*object*`Style="{StaticResource`*myResourceKey*`}" .../>`.</span></span> <span data-ttu-id="43fcf-108">Или можно использовать синтаксис элемента свойства для определения встроенный стиль, например:</span><span class="sxs-lookup"><span data-stu-id="43fcf-108">Or you can use property element syntax to define a style inline, for instance:</span></span>  
   
- `<` *object* `>`  
+ <span data-ttu-id="43fcf-109">`<`*объекта*`>`</span><span class="sxs-lookup"><span data-stu-id="43fcf-109">`<` *object* `>`</span></span>  
   
- `<` *object* `.Style>`  
+ <span data-ttu-id="43fcf-110">`<`*объекта*`.Style>`</span><span class="sxs-lookup"><span data-stu-id="43fcf-110">`<` *object* `.Style>`</span></span>  
   
- `<` `Style`  `.../>`  
+ <span data-ttu-id="43fcf-111">`<` `Style`  `.../>`</span><span class="sxs-lookup"><span data-stu-id="43fcf-111">`<` `Style`  `.../>`</span></span>  
   
- `</` *object* `.Style>`  
+ <span data-ttu-id="43fcf-112">`</`*объекта*`.Style>`</span><span class="sxs-lookup"><span data-stu-id="43fcf-112">`</` *object* `.Style>`</span></span>  
   
- `</` *object* `>`  
+ <span data-ttu-id="43fcf-113">`</`*объекта*`>`</span><span class="sxs-lookup"><span data-stu-id="43fcf-113">`</` *object* `>`</span></span>  
   
- Использование атрибута является гораздо более распространенным.  Стиль, определенный встроенным образом и не определенный в ресурсах, обязательно распространяется только на содержащий элемент и не может быть повторно использован так же просто, поскольку он не имеет ключа ресурса.  Обычно стиль, определенный ресурсом, является более гибким, полезным и соответствующим принципу общей модели программирования [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для отделения программной логики в коде от конструкторской в разметке.  
+ <span data-ttu-id="43fcf-114">Использование атрибута является гораздо более распространенным.</span><span class="sxs-lookup"><span data-stu-id="43fcf-114">The attribute usage is much more common.</span></span> <span data-ttu-id="43fcf-115">Стиль, определенный встроенным образом и не определенный в ресурсах, обязательно распространяется только на содержащий элемент и не может повторно использоваться так же просто, так как он не имеет ключа ресурса.</span><span class="sxs-lookup"><span data-stu-id="43fcf-115">A style that is defined inline and not defined in resources is necessarily scoped to the containing element only, and cannot be re-used as easily because it has no resource key.</span></span> <span data-ttu-id="43fcf-116">В целом стиль, определенный ресурсом является более гибким, полезным и соответствующим Общие [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] отделения программной логики в коде из режима конструктора в разметке принцип модели программирования.</span><span class="sxs-lookup"><span data-stu-id="43fcf-116">In general a resource-defined style is more versatile and useful, and is more in keeping with the general [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programming model principle of separating program logic in code from design in markup.</span></span>  
   
- Обычно нет причин устанавливать встроенный стиль или шаблон даже в том случае, если требуется использовать этот стиль или шаблон только в этом месте.  Большинство элементов, которые могут принимать стиль или шаблон, также поддерживают свойство и модель содержимого.  Если используется любое логическое дерево, созданное с помощью стилей или шаблонов, то даже было бы проще заполнить это свойство содержимого эквивалентными дочерними элементами в прямой разметке.  Это полностью обойдет механизмы стиля и шаблона.  
+ <span data-ttu-id="43fcf-117">Обычно нет причин устанавливать встроенный стиль или шаблон, даже если вы собираетесь использовать этот стиль или шаблон в этом расположении.</span><span class="sxs-lookup"><span data-stu-id="43fcf-117">Usually there is no reason to set a style or template inline, even if you only intend to use that style or template in that location.</span></span> <span data-ttu-id="43fcf-118">Большинство элементов, которые могут принимать стиль или шаблон, также поддерживают свойство и модель содержимого.</span><span class="sxs-lookup"><span data-stu-id="43fcf-118">Most elements that can take a style or template also support a content property and a content model.</span></span> <span data-ttu-id="43fcf-119">Если используется любое логическое дерево можно создать с помощью стилей или шаблонов один раз, было бы даже проще заполнить это свойство содержимого с эквивалентными дочерними элементами в прямой разметке.</span><span class="sxs-lookup"><span data-stu-id="43fcf-119">If you are only using whatever logical tree you create through styling or templating once, it would be even easier to just fill that content property with the equivalent child elements in direct markup.</span></span> <span data-ttu-id="43fcf-120">Это будет полностью обойти механизмы стилей и шаблонов.</span><span class="sxs-lookup"><span data-stu-id="43fcf-120">This would bypass the style and template mechanisms altogether.</span></span>  
   
- Для стилей и шаблонов также доступны другие синтаксисы, разрешаемые расширениями разметки, которые возвращают объект.  Два таких расширения, имеющие возможные сценарии, включают [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) и <xref:System.Windows.Data.Binding>.  
+ <span data-ttu-id="43fcf-121">Возможны также другие синтаксисы, расширений разметки, которые возвращают объект для стилей и шаблонов.</span><span class="sxs-lookup"><span data-stu-id="43fcf-121">Other syntaxes enabled by markup extensions that return an object are also possible for styles and templates.</span></span> <span data-ttu-id="43fcf-122">Два таких расширения, имеющие возможные сценарии включают в себя [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) и <xref:System.Windows.Data.Binding>.</span><span class="sxs-lookup"><span data-stu-id="43fcf-122">Two such extensions that have possible scenarios include [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) and <xref:System.Windows.Data.Binding>.</span></span>  
   
-## См. также  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="43fcf-123">См. также</span><span class="sxs-lookup"><span data-stu-id="43fcf-123">See Also</span></span>  
+ [<span data-ttu-id="43fcf-124">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="43fcf-124">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

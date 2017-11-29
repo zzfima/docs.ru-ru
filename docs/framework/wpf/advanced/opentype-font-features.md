@@ -1,347 +1,353 @@
 ---
-title: "Возможности шрифта OpenType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шрифты OpenType"
-  - "Оформление и технологии шрифтов OpenType"
-  - "OpenType - технология шрифтов"
+title: "Возможности шрифта OpenType"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [WPF], OpenType
+- typography [WPF], OpenType font technology
+- OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-caps.latest.revision: 38
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 37
+caps.latest.revision: "38"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c80769a1563953fc412afc6baeffcb91b49667d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Возможности шрифта OpenType
-В этом разделе содержится обзор некоторых основных возможностей [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] технологии шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="opentype-font-features"></a><span data-ttu-id="7cb03-102">Возможности шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-102">OpenType Font Features</span></span>
+<span data-ttu-id="7cb03-103">В этом разделе содержится обзор некоторых ключевых возможностей [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] технологии шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7cb03-103">This topic provides an overview of some of the key features of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font technology in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-   
+
   
 <a name="overview"></a>   
-## <a name="opentype-font-format"></a>Формат шрифтов OpenType  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Шрифт является расширением [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] формат шрифтов, добавляя поддержку для данных шрифтов PostScript. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Шрифт был разработан совместно корпорацией [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты и операционная система которых поддержку службы [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты предоставляют пользователям простой способ установки и использования шрифтов, шрифтов содержат ли [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] контуров или контуры CFF (PostScript).  
+## <a name="opentype-font-format"></a><span data-ttu-id="7cb03-104">Формат шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-104">OpenType Font Format</span></span>  
+ <span data-ttu-id="7cb03-105">Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] является расширением формата шрифта [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], добавляющим поддержку данных шрифтов PostScript.</span><span class="sxs-lookup"><span data-stu-id="7cb03-105">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format is an extension of the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] font format, adding support for PostScript font data.</span></span> <span data-ttu-id="7cb03-106">Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] был разработан совместно [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] и Adobe Corporation.</span><span class="sxs-lookup"><span data-stu-id="7cb03-106">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format was developed jointly by [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] and Adobe Corporation.</span></span> <span data-ttu-id="7cb03-107">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] и службы операционной системы, поддерживающие шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], предоставляют пользователям простой способ установки и использования шрифтов, содержат ли они структуры [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] или структуры CFF (PostScript).</span><span class="sxs-lookup"><span data-stu-id="7cb03-107">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts and the operating system services which support [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts provide users with a simple way to install and use fonts, whether the fonts contain [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] outlines or CFF (PostScript) outlines.</span></span>  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Шрифт решает следующие задачи разработки:  
+ <span data-ttu-id="7cb03-108">Формат шрифта [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] решает следующие задачи разработки.</span><span class="sxs-lookup"><span data-stu-id="7cb03-108">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format addresses the following developer challenges:</span></span>  
   
--   Расширенная многоплатформенная поддержка.  
+-   <span data-ttu-id="7cb03-109">Расширенная поддержка многоплатформенности.</span><span class="sxs-lookup"><span data-stu-id="7cb03-109">Broader multi-platform support.</span></span>  
   
--   Улучшенная поддержка международных кодировок.  
+-   <span data-ttu-id="7cb03-110">Улучшенная поддержка международных кодировок.</span><span class="sxs-lookup"><span data-stu-id="7cb03-110">Better support for international character sets.</span></span>  
   
--   Улучшенная защита данных шрифта.  
+-   <span data-ttu-id="7cb03-111">Улучшенная защита данных шрифта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-111">Better protection for font data.</span></span>  
   
--   Меньшие размеры файлов, что делает распространение шрифта более эффективным.  
+-   <span data-ttu-id="7cb03-112">Меньшие размеры файлов, что повышает эффективность распространения шрифта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-112">Smaller file sizes to make font distribution more efficient.</span></span>  
   
--   Широкий поддержка дополнительного типографского контроля.  
+-   <span data-ttu-id="7cb03-113">Расширенная поддержка дополнительного типографского контроля.</span><span class="sxs-lookup"><span data-stu-id="7cb03-113">Broader support for advanced typographic control.</span></span>  
   
 > [!NOTE]
->  Windows SDK содержит набор образцов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифтов, которые можно использовать с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений. Эти шрифты обеспечивают большинство функций, приведенных в остальной части этого раздела. Дополнительные сведения см. в разделе [примере пакета шрифтов OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
+>  <span data-ttu-id="7cb03-114">Пакет Windows SDK содержит набор образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые можно использовать с приложениями [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7cb03-114">The Windows SDK contains a set of sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that you can use with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="7cb03-115">Эти шрифты обеспечивают большинство функций, приведенных в остальной части этого раздела.</span><span class="sxs-lookup"><span data-stu-id="7cb03-115">These fonts provide most of the features illustrated in the rest of this topic.</span></span> <span data-ttu-id="7cb03-116">Дополнительные сведения см. в разделе [Пакет образцов шрифтов OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).</span><span class="sxs-lookup"><span data-stu-id="7cb03-116">For more information, see [Sample OpenType Font Pack](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).</span></span>  
   
- В разделе [спецификации OpenType](http://go.microsoft.com/fwlink/?LinkId=96731) подробные сведения о [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] формат шрифта.  
+ <span data-ttu-id="7cb03-117">Подробные сведения о формате шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] см. в разделе [Спецификации OpenType](http://go.microsoft.com/fwlink/?LinkId=96731).</span><span class="sxs-lookup"><span data-stu-id="7cb03-117">See the [OpenType Specification](http://go.microsoft.com/fwlink/?LinkId=96731) for details of the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font format.</span></span>  
   
-### <a name="advanced-typographic-extensions"></a>Дополнительные типографские расширения  
- Дополнительные типографские таблицы ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] макет таблицы) расширяют функциональные возможности шрифтов с эскизами [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] или CFF. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]Макет шрифты содержат дополнительную информацию, которая расширяет возможности шрифтов для поддержки международных оформления высокого качества. Большинство [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты предоставлять только подмножество общее [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] возможности. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты обеспечивают следующие возможности.  
+### <a name="advanced-typographic-extensions"></a><span data-ttu-id="7cb03-118">Дополнительные типографские расширения</span><span class="sxs-lookup"><span data-stu-id="7cb03-118">Advanced Typographic Extensions</span></span>  
+ <span data-ttu-id="7cb03-119">Дополнительные типографские таблицы (макетные таблицы [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) расширяют функциональные возможности шрифтов со структурами [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] или CFF.</span><span class="sxs-lookup"><span data-stu-id="7cb03-119">The Advanced Typographic tables ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layout tables) extend the functionality of fonts with either [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] or CFF outlines.</span></span> <span data-ttu-id="7cb03-120">Шрифты макета [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] содержат дополнительные сведения, которые расширяют возможности шрифтов для поддержки высококачественной международной типографии.</span><span class="sxs-lookup"><span data-stu-id="7cb03-120">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layout fonts contain additional information that extends the capabilities of the fonts to support high-quality international typography.</span></span> <span data-ttu-id="7cb03-121">Большинство шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] предоставляет только подмножество общих доступных функций [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7cb03-121">Most [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts expose only a subset of the total [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features available.</span></span> <span data-ttu-id="7cb03-122">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] предоставляют следующие функции.</span><span class="sxs-lookup"><span data-stu-id="7cb03-122">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts provide the following features.</span></span>  
   
--   Расширенное сопоставление между символами и знаками, которые поддерживают лигатуры, позиционные формы, альтернатив и другие подстановки шрифтов.  
+-   <span data-ttu-id="7cb03-123">Широкое сопоставление между символами и глифами с поддержкой лигатур, позиционных форм, вариантов и других подстановок шрифтов.</span><span class="sxs-lookup"><span data-stu-id="7cb03-123">Rich mapping between characters and glyphs that support ligatures, positional forms, alternates, and other font substitutions.</span></span>  
   
--   Поддержка двумерного позиционирования и вложения глифа.  
+-   <span data-ttu-id="7cb03-124">Поддержка двумерного позиционирования и вложения глифов.</span><span class="sxs-lookup"><span data-stu-id="7cb03-124">Support for two-dimensional positioning and glyph attachment.</span></span>  
   
--   Явные сценариев и язык сведения, содержащиеся в шрифта, поэтому приложение обработки текста соответствующим образом настроить его поведение.  
+-   <span data-ttu-id="7cb03-125">Явные сведения сценариев и языка, содержащиеся в шрифте, чтобы приложение обработки текста могло соответствующим образом настроить его поведение.</span><span class="sxs-lookup"><span data-stu-id="7cb03-125">Explicit script and language information contained in font, so a text-processing application can adjust its behavior accordingly.</span></span>  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Макет таблицы описаны более подробно в [«Таблицы файл шрифта»](http://www.microsoft.com/typography/otspec/otff.htm) раздел [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] спецификации.  
+ <span data-ttu-id="7cb03-126">Макетные таблицы [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] подробно описаны в разделе [«Таблицы файла шрифта»](http://www.microsoft.com/typography/otspec/otff.htm) спецификации [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7cb03-126">The [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Layout tables are described in more detail in the ["Font File Tables"](http://www.microsoft.com/typography/otspec/otff.htm) section of the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] specification.</span></span>  
   
- Далее в этом обзоре описаны различные гибко визуально интересного [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] функции, предоставляемые свойства <xref:System.Windows.Documents.Typography> объекта. Дополнительные сведения об этом объекте в разделе [оформления класса](#typography_class).  
+ <span data-ttu-id="7cb03-127">В оставшейся части в этом обзоре описаны различные гибко визуального отображения [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] возможности, предоставляемые свойства <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-127">The remainder of this overview introduces the breadth and flexibility of some of the visually-interesting [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features that are exposed by the properties of the <xref:System.Windows.Documents.Typography> object.</span></span> <span data-ttu-id="7cb03-128">Дополнительные сведения об этом объекте см. в разделе [Класс Typography](#typography_class).</span><span class="sxs-lookup"><span data-stu-id="7cb03-128">For more information on this object, see [Typography Class](#typography_class).</span></span>  
   
 <a name="variants"></a>   
-## <a name="variants"></a>Варианты  
- Варианты используются для отображения различных типографских стилей, например верхние и нижние индексы.  
+## <a name="variants"></a><span data-ttu-id="7cb03-129">Варианты</span><span class="sxs-lookup"><span data-stu-id="7cb03-129">Variants</span></span>  
+ <span data-ttu-id="7cb03-130">Варианты используются для отображения различных типографских стилей, например надстрочных и подстрочных знаков.</span><span class="sxs-lookup"><span data-stu-id="7cb03-130">Variants are used to render different typographic styles, such as superscripts and subscripts.</span></span>  
   
-### <a name="superscripts-and-subscripts"></a>надстрочные и подстрочные  
- <xref:System.Windows.Documents.Typography.Variants%2A> позволяет установить значения верхнего и нижнего индекса для [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифта.  
+### <a name="superscripts-and-subscripts"></a><span data-ttu-id="7cb03-131">надстрочные и подстрочные</span><span class="sxs-lookup"><span data-stu-id="7cb03-131">Superscripts and Subscripts</span></span>  
+ <span data-ttu-id="7cb03-132"><xref:System.Windows.Documents.Typography.Variants%2A> Свойство позволяет задать верхним и нижним значениями для [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-132">The <xref:System.Windows.Documents.Typography.Variants%2A> property allows you to set superscript and subscript values for an [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font.</span></span>  
   
- Приведенный ниже текст отображает надстрочные знаки для шрифта Palatino Linotype.  
+ <span data-ttu-id="7cb03-133">Следующий текст демонстрирует надстрочные знаки для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-133">The following text displays superscripts for the Palatino Linotype font.</span></span>  
   
- ![Текст, использующий верхние индексы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont14.png "opentypefont14")  
-Текст, использующий верхние индексы OpenType  
+ <span data-ttu-id="7cb03-134">![Текст, использующий верхние индексы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")</span><span class="sxs-lookup"><span data-stu-id="7cb03-134">![Text using OpenType superscripts](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")</span></span>  
+<span data-ttu-id="7cb03-135">Текст, использующий верхние индексы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-135">Text using OpenType superscripts</span></span>  
   
- В следующем примере разметки показано определение верхних для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-136">В следующем примере разметки показано определение верхних индексов для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-136">The following markup example shows how to define superscripts for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
+ [!code-xaml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
- Приведенный ниже текст отображает индексов для шрифта Palatino Linotype.  
+ <span data-ttu-id="7cb03-137">Следующий текст демонстрирует подстрочные знаки для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-137">The following text displays subscripts for the Palatino Linotype font.</span></span>  
   
- ![Текст, использующий нижние индексы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont15.png "opentypefont15")  
-Текст, использующий нижние индексы OpenType  
+ <span data-ttu-id="7cb03-138">![Текст, использующий нижние индексы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")</span><span class="sxs-lookup"><span data-stu-id="7cb03-138">![Text using OpenType subscripts](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")</span></span>  
+<span data-ttu-id="7cb03-139">Текст, использующий нижние индексы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-139">Text using OpenType subscripts</span></span>  
   
- В следующем примере разметки показано определение нижних индексов для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-140">В следующем примере разметки показано определение нижних индексов для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-140">The following markup example shows how to define subscripts for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
+ [!code-xaml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
-### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Декоративные применения верхних и нижних индексов  
- Также можно использовать верхние и нижние индексы для создания декоративного эффекта текста в смешанном регистре. Приведенный ниже текст отображает текст верхнего и нижнего индекса для шрифта Palatino Linotype. Обратите внимание, что заглавные буквы не затронуты.  
+### <a name="decorative-uses-of-superscripts-and-subscripts"></a><span data-ttu-id="7cb03-141">Применение надстрочных и подстрочных знаков в декоративных целях</span><span class="sxs-lookup"><span data-stu-id="7cb03-141">Decorative Uses of Superscripts and Subscripts</span></span>  
+ <span data-ttu-id="7cb03-142">Надстрочные и подстрочные знаки можно также использовать для создания декоративных эффектов текста в смешанном регистре.</span><span class="sxs-lookup"><span data-stu-id="7cb03-142">You can also use superscripts and subscripts to create decorative effects of mixed case text.</span></span> <span data-ttu-id="7cb03-143">Следующий текст демонстрирует надстрочный и подстрочный текст для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-143">The following text displays superscript and subscript text for the Palatino Linotype font.</span></span> <span data-ttu-id="7cb03-144">Обратите внимание, что заглавные буквы не затрагиваются.</span><span class="sxs-lookup"><span data-stu-id="7cb03-144">Note that the capitals are not affected.</span></span>  
   
- ![Текст, использующий верхние индексы OpenType и индексы](../../../../docs/framework/wpf/advanced/media/opentypefont16.png "opentypefont16")  
-Текст, использующий верхние и нижние индексы OpenType  
+ <span data-ttu-id="7cb03-145">![Текст, использующий верхние индексы OpenType и индексы](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")</span><span class="sxs-lookup"><span data-stu-id="7cb03-145">![Text using OpenType superscripts and subscripts](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")</span></span>  
+<span data-ttu-id="7cb03-146">Текст, использующий верхние и нижние индексы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-146">Text using OpenType superscripts and subscripts</span></span>  
   
- В следующем примере разметки показано определение верхних и нижних индексов для шрифта с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-147">В следующем примере разметки показано определение верхних и нижних индексов для шрифта с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-147">The following markup example shows how to define superscripts and subscripts for a font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
+ [!code-xaml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
 <a name="capitals"></a>   
-## <a name="capitals"></a>Прописные буквы  
- Прописные буквы — это набор типографических форм, которые отображают текст в прописные глифы. Обычно, когда текст воспроизводится как все прописные, расстояние между буквами может казаться слишком маленьким, а плотность и пропорции символов слишком большими. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]поддерживает множество форматов стилей для прописных букв, включая прописные буквы, малые прописные буквы, титульные буквы и прописные интервалы. Эти форматы стиля позволяют управлять внешним видом прописных букв.  
+## <a name="capitals"></a><span data-ttu-id="7cb03-148">Capitals</span><span class="sxs-lookup"><span data-stu-id="7cb03-148">Capitals</span></span>  
+ <span data-ttu-id="7cb03-149">Capitals — это набор типографских форм, которые отображают текст в прописных глифах.</span><span class="sxs-lookup"><span data-stu-id="7cb03-149">Capitals are a set of typographical forms that render text in capital-styled glyphs.</span></span> <span data-ttu-id="7cb03-150">Когда текст отображается всеми прописными буквами, обычно расстояние между буквами кажется слишком маленьким, а плотность и пропорции символов слишком большими.</span><span class="sxs-lookup"><span data-stu-id="7cb03-150">Typically, when text is rendered as all capitals, the spacing between letters can appear too tight, and the weight and proportion of the letters too heavy.</span></span> [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]<span data-ttu-id="7cb03-151"> поддерживает множество форматов стилей для прописных букв, включая малые прописные, капитель, титульные буквы и прописные интервалы.</span><span class="sxs-lookup"><span data-stu-id="7cb03-151"> supports a number of styling formats for capitals, including small capitals, petite capitals, titling, and capital spacing.</span></span> <span data-ttu-id="7cb03-152">Эти форматы стиля позволяют управлять внешним видом прописных букв.</span><span class="sxs-lookup"><span data-stu-id="7cb03-152">These styling formats allow you to control the appearance of capitals.</span></span>  
   
- Приведенный ниже текст отображает стандартные прописных букв для шрифта Pescadero следуют буквы, в стиле «Малые прописные» и «AllSmallCaps». В этом случае для всех трех слов используется тот же размер шрифта.  
+ <span data-ttu-id="7cb03-153">Следующий текст демонстрирует стандартные прописные буквы, буквы в стиле SmallCaps и в стиле AllSmallCaps для шрифта Pescadero.</span><span class="sxs-lookup"><span data-stu-id="7cb03-153">The following text displays standard capital letters for the Pescadero font, followed by the letters styled as "SmallCaps" and "AllSmallCaps".</span></span> <span data-ttu-id="7cb03-154">В данном случае для всех трех слов используется один и тот же размер шрифта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-154">In this case, the same font size is used for all three words.</span></span>  
   
- ![Текст, использующий прописные буквы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.png "opentypefont11")  
-Текст, использующий прописные буквы OpenType  
+ <span data-ttu-id="7cb03-155">![Текст, использующий прописные буквы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span><span class="sxs-lookup"><span data-stu-id="7cb03-155">![Text using OpenType capitals](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span></span>  
+<span data-ttu-id="7cb03-156">Текст, использующий прописные буквы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-156">Text using OpenType capitals</span></span>  
   
- В следующем примере разметки показано определение прописных букв для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта. При использовании формата «Малые прописные» начальные прописные буквы учитывается.  
+ <span data-ttu-id="7cb03-157">В следующем примере разметки показано определение прописных букв для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-157">The following markup example shows how to define capitals for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span> <span data-ttu-id="7cb03-158">При использовании формата SmallCaps начальные прописные буквы игнорируются.</span><span class="sxs-lookup"><span data-stu-id="7cb03-158">When the "SmallCaps" format is used, any leading capital letter is ignored.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
-### <a name="titling-capitals"></a>Титульные прописные буквы  
- Титульные прописные буквы имеют меньшую плотность и пропорции и разработаны для придания более элегантный вида, чем обычные прописные буквы. Титульные прописные буквы обычно используются в больших размерах шрифта в заголовках. Приведенный ниже текст отображает обычные и титульные прописные буквы для шрифта Pescadero. Обратите внимание, узкую текста во второй строке.  
+### <a name="titling-capitals"></a><span data-ttu-id="7cb03-159">Титульные прописные буквы</span><span class="sxs-lookup"><span data-stu-id="7cb03-159">Titling Capitals</span></span>  
+ <span data-ttu-id="7cb03-160">Титульные прописные буквы имеют меньшую плотность и пропорции и разработаны для придания более изысканного вида, чем при использовании обычных прописных букв.</span><span class="sxs-lookup"><span data-stu-id="7cb03-160">Titling capitals are lighter in weight and proportion and designed to give a more elegant look than normal capitals.</span></span> <span data-ttu-id="7cb03-161">Титульные прописные буквы обычно используются в больших размерах шрифтов для заголовков.</span><span class="sxs-lookup"><span data-stu-id="7cb03-161">Titling capitals are typically used in larger font sizes as headings.</span></span> <span data-ttu-id="7cb03-162">Следующий текст демонстрирует обычные и титульные прописные буквы для шрифта Pescadero.</span><span class="sxs-lookup"><span data-stu-id="7cb03-162">The following text displays normal and titling capitals for the Pescadero font.</span></span> <span data-ttu-id="7cb03-163">Обратите внимание на более узкие ножки в тексте во второй строке.</span><span class="sxs-lookup"><span data-stu-id="7cb03-163">Notice the narrower stem widths of the text on the second line.</span></span>  
   
- ![Текст, использующий титульные прописные буквы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont20.png "OpenTypeFont20")  
-Текст, использующий титульные прописные буквы OpenType  
+ <span data-ttu-id="7cb03-164">![Текст, использующий титульные прописные буквы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")</span><span class="sxs-lookup"><span data-stu-id="7cb03-164">![Text using OpenType titling capitals](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")</span></span>  
+<span data-ttu-id="7cb03-165">Текст, использующий титульные прописные буквы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-165">Text using OpenType titling capitals</span></span>  
   
- В следующем примере разметки показано определение титульных прописных букв для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-166">В следующем примере разметки показано определение титульных прописных букв для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-166">The following markup example shows how to define titling capitals for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
-### <a name="capital-spacing"></a>Прописные интервалы  
- Прописной интервал является функция, которая позволяет предоставить дополнительные интервалы, при использовании только прописные буквы в тексте. Прописные буквы обычно предназначены для наложения со строчной буквы. Интервал, который кажется привлекательным между заглавной буквы и строчные буквы, может выглядеть слишком маленьким при использовании прописными буквами. Приведенный ниже текст отображает обычный и прописной интервал для шрифта Pescadero.  
+### <a name="capital-spacing"></a><span data-ttu-id="7cb03-167">Интервалы прописных букв</span><span class="sxs-lookup"><span data-stu-id="7cb03-167">Capital Spacing</span></span>  
+ <span data-ttu-id="7cb03-168">Прописной интервал — это функция, которая позволяет обеспечить дополнительные интервалы при использовании в тексте только прописных букв.</span><span class="sxs-lookup"><span data-stu-id="7cb03-168">Capital spacing is a feature that allows you to provide more spacing when using all capitals in text.</span></span> <span data-ttu-id="7cb03-169">Прописные буквы обычно разрабатываются для использования вместе со строчными.</span><span class="sxs-lookup"><span data-stu-id="7cb03-169">Capital letters are typically designed to blend with lowercase letters.</span></span> <span data-ttu-id="7cb03-170">Интервал между прописной и строчной буквами, который кажется вполне подходящим, может выглядеть слишком маленьким при использовании только прописных букв.</span><span class="sxs-lookup"><span data-stu-id="7cb03-170">Spacing that appears attractive between and a capital letter and a lowercase letter may look too tight when all capital letters are used.</span></span> <span data-ttu-id="7cb03-171">Следующий текст демонстрирует обычный и прописной интервалы для шрифта Pescadero.</span><span class="sxs-lookup"><span data-stu-id="7cb03-171">The following text displays normal and capital spacing for the Pescadero font.</span></span>  
   
- ![Текст, использующий прописной интервал OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont21.png "OpenTypeFont21")  
-Текст, использующий прописной интервал OpenType  
+ <span data-ttu-id="7cb03-172">![Текст, использующий прописной интервал OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")</span><span class="sxs-lookup"><span data-stu-id="7cb03-172">![Text using OpenType capital spacing](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")</span></span>  
+<span data-ttu-id="7cb03-173">Текст, использующий прописной интервал OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-173">Text using OpenType capital spacing</span></span>  
   
- В следующем примере разметки показано определение прописной интервал для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-174">В следующем примере разметки показано определение прописной интервал для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-174">The following markup example shows how to define capital spacing for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
 <a name="ligatures"></a>   
-## <a name="ligatures"></a>Лигатуры  
- Лигатуры — это два или более глифов, формирующихся в один глиф для создания более читаемого или привлекательного текста. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты поддерживают четыре типа лигатур:  
+## <a name="ligatures"></a><span data-ttu-id="7cb03-175">Лигатуры</span><span class="sxs-lookup"><span data-stu-id="7cb03-175">Ligatures</span></span>  
+ <span data-ttu-id="7cb03-176">Лигатуры — это два (или более) глифа, превращающиеся в один глиф для создания более читаемого или привлекательного текста.</span><span class="sxs-lookup"><span data-stu-id="7cb03-176">Ligatures are two or more glyphs that are formed into a single glyph in order to create more readable or attractive text.</span></span> <span data-ttu-id="7cb03-177">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают четыре типа лигатур.</span><span class="sxs-lookup"><span data-stu-id="7cb03-177">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts support four types of ligatures:</span></span>  
   
--   **Стандартные лигатуры**. Разработаны для улучшения удобочитаемости. Стандартные лигатуры включают «fi», «fl» и «ff».  
+-   <span data-ttu-id="7cb03-178">**Стандартные лигатуры**.</span><span class="sxs-lookup"><span data-stu-id="7cb03-178">**Standard ligatures**.</span></span> <span data-ttu-id="7cb03-179">Разработаны для улучшения удобочитаемости.</span><span class="sxs-lookup"><span data-stu-id="7cb03-179">Designed to enhance readability.</span></span> <span data-ttu-id="7cb03-180">Стандартные лигатуры включают fi, fl и ff.</span><span class="sxs-lookup"><span data-stu-id="7cb03-180">Standard ligatures include "fi", "fl", and "ff".</span></span>  
   
--   **Контекстные лигатуры**. Разработаны для улучшения удобочитаемости, предоставляя более эффективного поведения соединения символов, составляющих лигатуры.  
+-   <span data-ttu-id="7cb03-181">**Контекстные лигатуры**.</span><span class="sxs-lookup"><span data-stu-id="7cb03-181">**Contextual ligatures**.</span></span> <span data-ttu-id="7cb03-182">Разработаны для улучшения удобочитаемости путем обеспечения более эффективного поведения соединения символов, составляющих лигатуры.</span><span class="sxs-lookup"><span data-stu-id="7cb03-182">Designed to enhance readability by providing better joining behavior between the characters that make up the ligature.</span></span>  
   
--   **Избирательные лигатуры**. Предназначены для украшения и не применяются специально для удобочитаемости.  
+-   <span data-ttu-id="7cb03-183">**Дискретные лигатуры**.</span><span class="sxs-lookup"><span data-stu-id="7cb03-183">**Discretionary ligatures**.</span></span> <span data-ttu-id="7cb03-184">Предназначены для украшения и не разрабатывались для удобочитаемости.</span><span class="sxs-lookup"><span data-stu-id="7cb03-184">Designed to be ornamental, and not specifically designed for readability.</span></span>  
   
--   **Исторические лигатуры**. Должен быть исторические и не предназначены специально для удобочитаемости.  
+-   <span data-ttu-id="7cb03-185">**Исторические лигатуры**.</span><span class="sxs-lookup"><span data-stu-id="7cb03-185">**Historical ligatures**.</span></span> <span data-ttu-id="7cb03-186">Предназначены для исторических целей и не разрабатывались для удобочитаемости.</span><span class="sxs-lookup"><span data-stu-id="7cb03-186">Designed to be historical, and not specifically designed for readability.</span></span>  
   
- Следующий текст отображает стандартные глифы лигатуры для шрифта Pericles.  
+ <span data-ttu-id="7cb03-187">Следующий текст демонстрирует глифы стандартных лигатур для шрифта Pericles.</span><span class="sxs-lookup"><span data-stu-id="7cb03-187">The following text displays standard ligature glyphs for the Pericles font.</span></span>  
   
- ![Текст, использующий стандартные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont04.png "opentypefont04")  
-Текст, использующий стандартные лигатуры OpenType  
+ <span data-ttu-id="7cb03-188">![Текст, использующий стандартные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")</span><span class="sxs-lookup"><span data-stu-id="7cb03-188">![Text using OpenType standard ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")</span></span>  
+<span data-ttu-id="7cb03-189">Текст, использующий стандартные лигатуры OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-189">Text using OpenType standard ligatures</span></span>  
   
- В следующем примере разметки показано определение стандартных глифов лигатуры для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-190">В следующем примере разметки показано определение стандартных глифов лигатуры для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-190">The following markup example shows how to define standard ligature glyphs for the Pericles font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
+ [!code-xaml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
- Следующий текст отображает избирательные глифы лигатуры для шрифта Pericles.  
+ <span data-ttu-id="7cb03-191">Следующий текст демонстрирует глифы дискретных лигатур для шрифта Pericles.</span><span class="sxs-lookup"><span data-stu-id="7cb03-191">The following text displays discretionary ligature glyphs for the Pericles font.</span></span>  
   
- ![Текст, использующий избирательные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont05.png "opentypefont05")  
-Текст, использующий избирательные лигатуры OpenType  
+ <span data-ttu-id="7cb03-192">![Текст, использующий избирательные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")</span><span class="sxs-lookup"><span data-stu-id="7cb03-192">![Text using OpenType discretionary ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")</span></span>  
+<span data-ttu-id="7cb03-193">Текст, использующий избирательные лигатуры OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-193">Text using OpenType discretionary ligatures</span></span>  
   
- В следующем примере разметки показано определение избирательных глифов лигатуры для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-194">В следующем примере разметки показано определение глифы лигатур для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-194">The following markup example shows how to define discretionary ligature glyphs for the Pericles font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
+ [!code-xaml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- По умолчанию [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] используют стандартные лигатуры. Например при использовании шрифта Palatino Linotype стандартные лигатуры «fi», «ff» и «fl» отображаются как глиф объединенных символов. Обратите внимание, что пары знаков для каждой стандартной лигатуры касаются друг друга.  
+ <span data-ttu-id="7cb03-195">По умолчанию шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] используют стандартные лигатуры.</span><span class="sxs-lookup"><span data-stu-id="7cb03-195">By default, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enable standard ligatures.</span></span> <span data-ttu-id="7cb03-196">Например, при использовании шрифта Palatino Linotype стандартные лигатуры fi, ff и fl отображаются как глиф объединенных символов.</span><span class="sxs-lookup"><span data-stu-id="7cb03-196">For example, if you use the Palatino Linotype font, the standard ligatures "fi", "ff", and "fl" appear as a combined character glyph.</span></span> <span data-ttu-id="7cb03-197">Обратите внимание, что пары знаков для каждой стандартной лигатуры касаются друг друга.</span><span class="sxs-lookup"><span data-stu-id="7cb03-197">Notice that the pair of characters for each standard ligature touch each other.</span></span>  
   
- ![Текст, использующий стандартные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont06.png "opentypefont06")  
-Текст, использующий стандартные лигатуры OpenType  
+ <span data-ttu-id="7cb03-198">![Текст, использующий стандартные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont06.gif "opentypefont06")</span><span class="sxs-lookup"><span data-stu-id="7cb03-198">![Text using OpenType standard ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont06.gif "opentypefont06")</span></span>  
+<span data-ttu-id="7cb03-199">Текст, использующий стандартные лигатуры OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-199">Text using OpenType standard ligatures</span></span>  
   
- Однако функции стандартных лигатур можно отключить, чтобы стандартные лигатуры, такие как «ff» отображается как два отдельных глифа, а не как глиф объединенных символов.  
+ <span data-ttu-id="7cb03-200">Однако функции стандартных лигатур можно отключить, чтобы стандартные лигатуры, такие как ff, отображались как два отдельных глифа, а не как глиф объединенных символов.</span><span class="sxs-lookup"><span data-stu-id="7cb03-200">However, you can disable standard ligature features so that a standard ligature such as "ff" displays as two separate glyphs, rather than as a combined character glyph.</span></span>  
   
- ![Текст, использующий неактивные стандартные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont07.png "opentypefont07")  
-Текст, использующий неактивные стандартные лигатуры OpenType  
+ <span data-ttu-id="7cb03-201">![Текст, использующий неактивные стандартные лигатуры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")</span><span class="sxs-lookup"><span data-stu-id="7cb03-201">![Text using disabled OpenType standard ligatures](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")</span></span>  
+<span data-ttu-id="7cb03-202">Текст, использующий неактивные стандартные лигатуры OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-202">Text using disabled OpenType standard ligatures</span></span>  
   
- В следующем примере разметки показано, как отключить стандартные глифы лигатур для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-203">В следующем примере разметки показано, как отключить стандартные глифы лигатур для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-203">The following markup example shows how to disable standard ligature glyphs for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
+ [!code-xaml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
 <a name="swashes"></a>   
-## <a name="swashes"></a>Swash-глифы  
- Swash-глифы являются декоративными глифами, которые используют сложную орнаментацию, часто связанную с каллиграфией. Следующий текст отображает стандартные и swash глифы для шрифта Pescadero.  
+## <a name="swashes"></a><span data-ttu-id="7cb03-204">Орнаменты</span><span class="sxs-lookup"><span data-stu-id="7cb03-204">Swashes</span></span>  
+ <span data-ttu-id="7cb03-205">Swash-глифы являются декоративными глифами, которые используют сложную орнаментацию, часто связанную с каллиграфией.</span><span class="sxs-lookup"><span data-stu-id="7cb03-205">Swashes are decorative glyphs that use elaborate ornamentation often associated with calligraphy.</span></span> <span data-ttu-id="7cb03-206">Следующий текст отображает стандартные и swash-глифы для шрифта Pescadero.</span><span class="sxs-lookup"><span data-stu-id="7cb03-206">The following text displays standard and swash glyphs for the Pescadero font.</span></span>  
   
- ![Текст, использующий стандартные и swash глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont08.png "opentypefont08")  
-Текст, использующий стандартные и swash глифы OpenType  
+ <span data-ttu-id="7cb03-207">![Текст, использующий стандартные и swash глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")</span><span class="sxs-lookup"><span data-stu-id="7cb03-207">![Text using OpenType standard and swash glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")</span></span>  
+<span data-ttu-id="7cb03-208">Текст, использующий стандартные и swash глифы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-208">Text using OpenType standard and swash glyphs</span></span>  
   
- Swash-глифы часто используются как декоративные элементы в коротких фразах, таких как объявления о событиях. Следующий текст использует swash-глифы для выделения прописных букв имени события.  
+ <span data-ttu-id="7cb03-209">Орнаменты часто используются как декоративные элементы в коротких фразах, таких как объявления о событиях.</span><span class="sxs-lookup"><span data-stu-id="7cb03-209">Swashes are often used as decorative elements in short phrases such as event announcements.</span></span> <span data-ttu-id="7cb03-210">В следующем тексте орнаменты используются для выделения прописных букв названия события.</span><span class="sxs-lookup"><span data-stu-id="7cb03-210">The following text uses swashes to emphasize the capital letters of the name of the event.</span></span>  
   
- ![Текст, использующий swash глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont09.png "opentypefont09")  
-Текст, использующий swash глифы OpenType  
+ <span data-ttu-id="7cb03-211">![Текст, использующий swash глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")</span><span class="sxs-lookup"><span data-stu-id="7cb03-211">![Text using OpenType swashes](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")</span></span>  
+<span data-ttu-id="7cb03-212">Текст, использующий swash глифы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-212">Text using OpenType swashes</span></span>  
   
- В следующем примере разметки показано определение swash-глифы для шрифта с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-213">В следующем примере разметки показано определение swash-глифов в шрифте, с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-213">The following markup example shows how to define swashes for a font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
+ [!code-xaml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
-### <a name="contextual-swashes"></a>Контекстные swash-глифы  
- Определенные комбинации swash-глифов можно непривлекательно, например перекрывать подстрочные элементы на соседних буквах. Использование контекстных swash-глифов позволяет использовать замещающий swash-глиф, создающий улучшения внешнего вида. Следующий текст показывает то же слово до и после применения контекстных swash-глифов.  
+### <a name="contextual-swashes"></a><span data-ttu-id="7cb03-214">Контекстные орнаментированные глифы</span><span class="sxs-lookup"><span data-stu-id="7cb03-214">Contextual Swashes</span></span>  
+ <span data-ttu-id="7cb03-215">Некоторые комбинации орнаментированных глифов могут приводить к непривлекательному результату, например когда перекрываются подстрочные элементы на соседних буквах.</span><span class="sxs-lookup"><span data-stu-id="7cb03-215">Certain combinations of swash glyphs can cause an unattractive appearance, such as overlapping descenders on adjacent letters.</span></span> <span data-ttu-id="7cb03-216">Контекстные орнаментированные глифы позволяют использовать замещающий орнаментированный глиф, улучшающий внешний вид.</span><span class="sxs-lookup"><span data-stu-id="7cb03-216">Using a contextual swash allows you to use a substitute swash glyph that produces a better appearance.</span></span> <span data-ttu-id="7cb03-217">Следующий текст показывает одно и то же слово до и после применения контекстного орнаментированного глифа.</span><span class="sxs-lookup"><span data-stu-id="7cb03-217">The following text shows the same word before and after a contextual swash is applied.</span></span>  
   
- ![Текст, использующий контекстные swash-глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont19.png "OpenTypeFont19")  
-Текст, использующий контекстные swash-глифы OpenType  
+ <span data-ttu-id="7cb03-218">![Текст, использующий контекстные swash-глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")</span><span class="sxs-lookup"><span data-stu-id="7cb03-218">![Text using OpenType contextual swashes](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")</span></span>  
+<span data-ttu-id="7cb03-219">Текст, использующий контекстные swash-глифы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-219">Text using OpenType contextual swashes</span></span>  
   
- В следующем примере разметки показано определение контекстных swash-глифов для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-220">В следующем примере разметки показано определение контекстных swash-глифов для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-220">The following markup example shows how to define a contextual swash for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
 <a name="alternates"></a>   
-## <a name="alternates"></a>Варианты  
- Варианты — это глифы, которые могут быть заменены на стандартный глиф. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты, например Pericles, используемый в следующих примерах, могут содержать альтернативные глифы, которые можно использовать для создания различного внешнего вида для текста. Следующий текст отображает стандартные глифы для шрифта Pericles.  
+## <a name="alternates"></a><span data-ttu-id="7cb03-221">Варианты</span><span class="sxs-lookup"><span data-stu-id="7cb03-221">Alternates</span></span>  
+ <span data-ttu-id="7cb03-222">Варианты — это глифы, на которые может заменяться стандартный глиф.</span><span class="sxs-lookup"><span data-stu-id="7cb03-222">Alternates are glyphs that can be substituted for a standard glyph.</span></span> <span data-ttu-id="7cb03-223">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], например Pericles, используемый в следующих примерах, могут содержать варианты глифов, которые можно использовать для создания другого внешнего вида текста.</span><span class="sxs-lookup"><span data-stu-id="7cb03-223">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, such as the Pericles font used in the following examples, can contain alternate glyphs that you can use to create different appearances for text.</span></span> <span data-ttu-id="7cb03-224">Следующий текст демонстрирует стандартные глифы для шрифта Pericles.</span><span class="sxs-lookup"><span data-stu-id="7cb03-224">The following text displays standard glyphs for the Pericles font.</span></span>  
   
- ![Текст, использующий стандартные глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont01.png "opentypefont01")  
-Текст, использующий стандартные глифы OpenType  
+ <span data-ttu-id="7cb03-225">![Текст, использующий стандартные глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")</span><span class="sxs-lookup"><span data-stu-id="7cb03-225">![Text using OpenType standard glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")</span></span>  
+<span data-ttu-id="7cb03-226">Текст, использующий стандартные глифы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-226">Text using OpenType standard glyphs</span></span>  
   
- Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] содержит дополнительные глифы, поддерживающие изменение стилей для стандартных наборов глифов. Приведенный ниже текст отображает глифы с изменением стиля.  
+ <span data-ttu-id="7cb03-227">Шрифт [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Pericles содержит дополнительные глифы, поддерживающие изменение стилей для стандартных наборов глифов.</span><span class="sxs-lookup"><span data-stu-id="7cb03-227">The Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font contains additional glyphs that provide stylistic alternates to the standard set of glyphs.</span></span> <span data-ttu-id="7cb03-228">Приведенный ниже текст отображает глифы с изменением стиля.</span><span class="sxs-lookup"><span data-stu-id="7cb03-228">The following text displays stylistic alternate glyphs.</span></span>  
   
- ![Текст, использующий стилистически альтернативные глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont02.png "opentypefont02")  
-Текст, использующий глифы с изменением стилей OpenType  
+ <span data-ttu-id="7cb03-229">![Текст, использующий стилистически альтернативные глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")</span><span class="sxs-lookup"><span data-stu-id="7cb03-229">![Text using OpenType stylistic alternate glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")</span></span>  
+<span data-ttu-id="7cb03-230">Текст, использующий глифы с изменением стилей OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-230">Text using OpenType stylistic alternate glyphs</span></span>  
   
- В следующем примере разметки показано определение стилистических глифов для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-231">В следующем примере разметки показано определение глифы с изменением стиля для шрифта Pericles с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-231">The following markup example shows how to define stylistic alternate glyphs for the Pericles font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
+ [!code-xaml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
- Следующий текст отображает несколько дополнительных глифов стилистических вариантов для шрифта Pericles.  
+ <span data-ttu-id="7cb03-232">Следующий текст демонстрирует несколько других стилистических вариантов глифов для шрифта Pericles.</span><span class="sxs-lookup"><span data-stu-id="7cb03-232">The following text displays several other stylistic alternate glyphs for the Pericles font.</span></span>  
   
- ![Текст, использующий стилистически альтернативные глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont03.png "opentypefont03")  
-Текст, использующий глифы с изменением стилей OpenType  
+ <span data-ttu-id="7cb03-233">![Текст, использующий стилистически альтернативные глифы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")</span><span class="sxs-lookup"><span data-stu-id="7cb03-233">![Text using OpenType stylistic alternate glyphs](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")</span></span>  
+<span data-ttu-id="7cb03-234">Текст, использующий глифы с изменением стилей OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-234">Text using OpenType stylistic alternate glyphs</span></span>  
   
- В следующем примере разметки показано определение этих дополнительных глифов стилистических вариантов.  
+ <span data-ttu-id="7cb03-235">В следующем примере разметки показано, как определяются эти другие стилистические варианты глифов.</span><span class="sxs-lookup"><span data-stu-id="7cb03-235">The following markup example shows how to define these other stylistic alternate glyphs.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
+ [!code-xaml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
   
-### <a name="random-contextual-alternates"></a>Случайные контекстные варианты  
- Случайные контекстные альтернативы предоставляют несколько заменяющих глифов для одного символа. При реализации со шрифтами, эта функция может имитировать рукописного ввода с помощью набора случайно выбранных глифов с незначительными различиями в внешний вид. Следующий текст использует случайные контекстные глифы alternate для шрифта Lindsey. Обратите внимание, что буква «» немного отличается  
+### <a name="random-contextual-alternates"></a><span data-ttu-id="7cb03-236">Случайные контекстные варианты</span><span class="sxs-lookup"><span data-stu-id="7cb03-236">Random Contextual Alternates</span></span>  
+ <span data-ttu-id="7cb03-237">Случайные контекстные варианты предоставляют несколько заменяющих глифов для одного символа.</span><span class="sxs-lookup"><span data-stu-id="7cb03-237">Random contextual alternates provide multiple substitute glyphs for a single character.</span></span> <span data-ttu-id="7cb03-238">При реализации со шрифтами рукописного типа эта функция может имитировать рукописный ввод, используя набор случайно выбранных глифов с незначительными различиями во внешнем виде.</span><span class="sxs-lookup"><span data-stu-id="7cb03-238">When implemented with script-type fonts, this feature can simulate handwriting by using of a set of randomly chosen glyphs with slight differences in appearance.</span></span> <span data-ttu-id="7cb03-239">В следующем тексте используются случайные контекстные варианты глифов для шрифта Lindsey.</span><span class="sxs-lookup"><span data-stu-id="7cb03-239">The following text uses random contextual alternates for the Lindsey font.</span></span> <span data-ttu-id="7cb03-240">Обратите внимание, что буква «a» немного отличается.</span><span class="sxs-lookup"><span data-stu-id="7cb03-240">Notice that the letter "a" varies slightly in appearance</span></span>  
   
- ![Текст, использующий случайные контекстные модификаторы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont23.png "OpenTypeFont23")  
-Текст, использующий случайные контекстные alternate-глифы OpenType  
+ <span data-ttu-id="7cb03-241">![Текст, использующий случайные контекстные модификаторы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")</span><span class="sxs-lookup"><span data-stu-id="7cb03-241">![Text using OpenType random contextual alternates](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")</span></span>  
+<span data-ttu-id="7cb03-242">Текст, использующий случайные контекстные alternate-глифы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-242">Text using OpenType random contextual alternates</span></span>  
   
- В следующем примере разметки показано определение случайных контекстных вариантов для шрифта Lindsey с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-243">В следующем примере разметки показано определение случайных контекстных вариантов для шрифта Lindsey, с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-243">The following markup example shows how to define random contextual alternates for the Lindsey font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
-### <a name="historical-forms"></a>Исторические формы  
- Исторические формы являются типографские соглашения, принятые в прошлом. Приведенный ниже текст отображает фразу «Бостон, штат Массачусетс» с помощью исторические формы глифов для шрифта Palatino Linotype.  
+### <a name="historical-forms"></a><span data-ttu-id="7cb03-244">Исторические формы</span><span class="sxs-lookup"><span data-stu-id="7cb03-244">Historical Forms</span></span>  
+ <span data-ttu-id="7cb03-245">Исторические формы — это типографские соглашения, которые были приняты в прошлом.</span><span class="sxs-lookup"><span data-stu-id="7cb03-245">Historical forms are typographic conventions that were common in the past.</span></span> <span data-ttu-id="7cb03-246">Следующий текст отображает фразу Boston, Massachusetts с помощью исторической формы глифов для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-246">The following text displays the phrase, "Boston, Massachusetts", using an historical form of glyphs for the Palatino Linotype font.</span></span>  
   
- ![Текст, использующий исторические формы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont10.png "opentypefont10")  
-Текст, использующий исторические формы OpenType  
+ <span data-ttu-id="7cb03-247">![Текст, использующий исторические формы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")</span><span class="sxs-lookup"><span data-stu-id="7cb03-247">![Text using OpenType historical forms](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")</span></span>  
+<span data-ttu-id="7cb03-248">Текст, использующий исторические формы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-248">Text using OpenType historical forms</span></span>  
   
- В следующем примере разметки показано определение исторических форм для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-249">В следующем примере разметки показано определение исторических форм для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-249">The following markup example shows how to define historical forms for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
+ [!code-xaml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
 <a name="numerical_styles"></a>   
-## <a name="numerical-styles"></a>Числовые стили  
- Шрифты OpenType поддерживают большое количество функций, которые могут использоваться с числовыми значениями в тексте.  
+## <a name="numerical-styles"></a><span data-ttu-id="7cb03-250">Числовые стили</span><span class="sxs-lookup"><span data-stu-id="7cb03-250">Numerical Styles</span></span>  
+ <span data-ttu-id="7cb03-251">Шрифты OpenType поддерживают большое количество функций, которые могут использоваться с числовыми значениями в тексте.</span><span class="sxs-lookup"><span data-stu-id="7cb03-251">OpenType fonts support a large number of features that can be used with numerical values in text.</span></span>  
   
-### <a name="fractions"></a>Доли секунды  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты поддерживают стили для дробей, включая диагональные и вертикальные дроби.  
+### <a name="fractions"></a><span data-ttu-id="7cb03-252">Дроби</span><span class="sxs-lookup"><span data-stu-id="7cb03-252">Fractions</span></span>  
+ <span data-ttu-id="7cb03-253">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают разные стили для дробей, включая простые дроби с наклонной или горизонтальной чертой.</span><span class="sxs-lookup"><span data-stu-id="7cb03-253">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts support styles for fractions, including slashed and stacked.</span></span>  
   
- Приведенный ниже текст отображает стилей дробей для шрифта Palatino Linotype.  
+ <span data-ttu-id="7cb03-254">Следующий текст демонстрирует стили дробей для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-254">The following text displays fraction styles for the Palatino Linotype font.</span></span>  
   
- ![Текст, использующий OpenType диагональные и вертикальные дроби](../../../../docs/framework/wpf/advanced/media/opentypefont12.png "opentypefont12")  
-Текст, использующий диагональные и вертикальные дроби OpenType  
+ <span data-ttu-id="7cb03-255">![Текст, использующий OpenType диагональные и вертикальные дроби](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")</span><span class="sxs-lookup"><span data-stu-id="7cb03-255">![Text using OpenType slashed and stacked fractions](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")</span></span>  
+<span data-ttu-id="7cb03-256">Текст, использующий диагональные и вертикальные дроби OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-256">Text using OpenType slashed and stacked fractions</span></span>  
   
- В следующем примере разметки показано определение стилей дробей для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-257">В следующем примере разметки показано определение стилей дробей для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-257">The following markup example shows how to define fraction styles for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
+ [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
-### <a name="old-style-numerals"></a>Старый стиль числа  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты поддерживают формат старого стиля чисел. Этот формат полезен для отображения цифр в стилях, которые уже не являются стандартными. Следующий текст отображает дату 18-м веке в форматы чисел стандартного и старого стиля для шрифта Palatino Linotype.  
+### <a name="old-style-numerals"></a><span data-ttu-id="7cb03-258">Числа в старом стиле</span><span class="sxs-lookup"><span data-stu-id="7cb03-258">Old Style Numerals</span></span>  
+ <span data-ttu-id="7cb03-259">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают формат чисел в старом стиле.</span><span class="sxs-lookup"><span data-stu-id="7cb03-259">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts support an old style numeral format.</span></span> <span data-ttu-id="7cb03-260">Этот формат используется для отображения чисел в стилях, которые уже не являются стандартными.</span><span class="sxs-lookup"><span data-stu-id="7cb03-260">This format is useful for displaying numerals in styles that are no longer standard.</span></span> <span data-ttu-id="7cb03-261">Следующий текст демонстрирует дату 18 века в стандартном формате и в формате старого стиля для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-261">The following text displays an 18th century date in standard and old style numeral formats for the Palatino Linotype font.</span></span>  
   
- ![Текст, использующий старый стиль числа OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont24.png "OpenTypeFont24")  
-Текст, использующий старый стиль числа OpenType  
+ <span data-ttu-id="7cb03-262">![Текст, использующий старый стиль числа OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")</span><span class="sxs-lookup"><span data-stu-id="7cb03-262">![Text using OpenType old style numerals](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")</span></span>  
+<span data-ttu-id="7cb03-263">Текст, использующий старый стиль числа OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-263">Text using OpenType old style numerals</span></span>  
   
- Следующий текст отображает стандартные числа для шрифта Palatino Linotype, за которыми следуют числа старого стиля.  
+ <span data-ttu-id="7cb03-264">Следующий текст демонстрирует стандартные числа и числа в старом стиле для шрифта Palatino Linotype.</span><span class="sxs-lookup"><span data-stu-id="7cb03-264">The following text displays standard numerals for the Palatino Linotype font, followed by old style numerals.</span></span>  
   
- ![Текст, использующий OpenType наборы чисел старого стиля](../../../../docs/framework/wpf/advanced/media/opentypefont13.png "opentypefont13")  
-Текст, использующий наборы чисел старого стиля OpenType  
+ <span data-ttu-id="7cb03-265">![Текст, использующий OpenType наборы чисел старого стиля](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")</span><span class="sxs-lookup"><span data-stu-id="7cb03-265">![Text using OpenType old style numeral sets](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")</span></span>  
+<span data-ttu-id="7cb03-266">Текст, использующий наборы чисел старого стиля OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-266">Text using OpenType old style numeral sets</span></span>  
   
- В следующем примере разметки показано определение чисел старого стиля для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-267">В следующем примере разметки показано определение чисел старого стиля для шрифта Palatino Linotype с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-267">The following markup example shows how to define old style numerals for the Palatino Linotype font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
+ [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
-### <a name="proportional-and-tabular-figures"></a>Пропорциональные и табличные цифры  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты поддерживают отображение пропорциональных и табличных цифр для регулирования выравнивания по ширине при использовании чисел. Пропорциональные цифры считать каждого цифру со своей шириной — «1» будет уже, чем «5». Табличные цифры рассматриваются как цифры равной ширины, что выравнивает их по вертикали, повышает удобочитаемость финансовой информации.  
+### <a name="proportional-and-tabular-figures"></a><span data-ttu-id="7cb03-268">Пропорциональные и табличные цифры</span><span class="sxs-lookup"><span data-stu-id="7cb03-268">Proportional and Tabular Figures</span></span>  
+ <span data-ttu-id="7cb03-269">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают отображение пропорциональных и табличных цифр для регулирования выравнивания по ширине при использовании чисел.</span><span class="sxs-lookup"><span data-stu-id="7cb03-269">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts support a proportional and tabular figure feature to control the alignment of widths when using numerals.</span></span> <span data-ttu-id="7cb03-270">При использовании пропорциональных цифр каждая цифра имеет свою ширину — например 1 будет уже, чем 5.</span><span class="sxs-lookup"><span data-stu-id="7cb03-270">Proportional figures treat each numeral as having a different width—"1" is narrower than "5".</span></span> <span data-ttu-id="7cb03-271">Табличные цифры имеют одинаковую ширину, поэтому их можно выравнивать по вертикали, что повышает удобочитаемость финансовой информации.</span><span class="sxs-lookup"><span data-stu-id="7cb03-271">Tabular figures are treated as equal-width numerals so that they align vertically, which increases the readability of financial type information.</span></span>  
   
- Приведенный ниже текст отображает две пропорциональные цифры в первом столбце с использованием шрифта Miramonte. Обратите внимание на разницу в ширине между цифрами «5» и «1». Во втором столбце показаны же два числовых значения с шириной, скорректированной с помощью функции табличных цифр.  
+ <span data-ttu-id="7cb03-272">В первом столбце следующего текста показаны два числа, использующие пропорциональные цифры и шрифт Miramonte.</span><span class="sxs-lookup"><span data-stu-id="7cb03-272">The following text displays two proportional figures in the first column using the Miramonte font.</span></span> <span data-ttu-id="7cb03-273">Обратите внимание на разную ширину цифр 5 и 1.</span><span class="sxs-lookup"><span data-stu-id="7cb03-273">Note the difference in width between the numerals "5" and "1".</span></span> <span data-ttu-id="7cb03-274">Во втором столбце показаны те же два числа, ширина которых скорректирована с помощью функции табличных цифр.</span><span class="sxs-lookup"><span data-stu-id="7cb03-274">The second column shows the same two numeric values with the widths adjusted by using the tabular figure feature.</span></span>  
   
- ![Текст, использующий пропорциональные & табличные цифры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont22.png "OpenTypeFont22")  
-Текст, использующий пропорциональные и табличные цифры OpenType  
+ <span data-ttu-id="7cb03-275">![Текст, использующий пропорциональные и табличные цифры OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")</span><span class="sxs-lookup"><span data-stu-id="7cb03-275">![Text using OpenType proportional & tabular figures](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")</span></span>  
+<span data-ttu-id="7cb03-276">Текст, использующий пропорциональные и табличные цифры OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-276">Text using OpenType proportional and tabular figures</span></span>  
   
- В следующем примере разметки показано определение пропорциональные и табличные цифры для шрифта Miramonte с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-277">В следующем примере разметки показано определение пропорциональные и табличные цифры для шрифта Miramonte с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-277">The following markup example shows how to define proportional and tabular figures for the Miramonte font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
-### <a name="slashed-zero"></a>Нуль  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]шрифты поддерживают перечеркнутого нуля формат чисел, чтобы подчеркнуть разницу между буквой «O» и цифрой «0». Перечеркнутый ноль часто используется для идентификаторов в финансовых и деловых сведений.  
+### <a name="slashed-zero"></a><span data-ttu-id="7cb03-278">Перечеркнутый нуль</span><span class="sxs-lookup"><span data-stu-id="7cb03-278">Slashed Zero</span></span>  
+ <span data-ttu-id="7cb03-279">Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают формат чисел с перечеркнутым нулем, чтобы подчеркнуть разницу между буквой O и цифрой 0.</span><span class="sxs-lookup"><span data-stu-id="7cb03-279">[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts support a slashed zero numeral format to emphasize the difference between the letter "O" and the numeral "0".</span></span> <span data-ttu-id="7cb03-280">Числа с перечеркнутым нулем часто используются для идентификаторов в финансовых и деловых сведениях.</span><span class="sxs-lookup"><span data-stu-id="7cb03-280">The slashed zero numeral is often used for identifiers in financial and business information.</span></span>  
   
- Приведенный ниже текст отображает пример идентификатора заказа при помощи шрифта Miramonte. Первая строка использует стандартные цифры. Во второй строке используются перечеркнутые нули, чтобы подчеркнуть с заглавной буквы «O».  
+ <span data-ttu-id="7cb03-281">Следующий текст демонстрирует пример идентификатора заказа с использованием шрифта Miramonte.</span><span class="sxs-lookup"><span data-stu-id="7cb03-281">The following text displays a sample order identifier using the Miramonte font.</span></span> <span data-ttu-id="7cb03-282">В первой строке используются стандартные цифры.</span><span class="sxs-lookup"><span data-stu-id="7cb03-282">The first line uses standard numerals.</span></span> <span data-ttu-id="7cb03-283">Во второй строке используются перечеркнутые нули для лучшего контраста с прописной буквой O.</span><span class="sxs-lookup"><span data-stu-id="7cb03-283">The second line used slashed zero numerals to provide better contrast with the uppercase "O" letter.</span></span>  
   
- ![Текст, использующий OpenType перечеркнутые нули](../../../../docs/framework/wpf/advanced/media/opentypefont17.png "OpenTypeFont17")  
-Текст, использующий перечеркнутые нули OpenType  
+ <span data-ttu-id="7cb03-284">![Текст, использующий OpenType перечеркнутые нули](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")</span><span class="sxs-lookup"><span data-stu-id="7cb03-284">![Text using OpenType slashed zero numerals](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")</span></span>  
+<span data-ttu-id="7cb03-285">Текст, использующий перечеркнутые нули OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-285">Text using OpenType slashed zero numerals</span></span>  
   
- В следующем примере разметки показано определение перечеркнутого нуля для шрифта Miramonte с помощью свойств <xref:System.Windows.Documents.Typography> объекта.  
+ <span data-ttu-id="7cb03-286">В следующем примере разметки показано определение перечеркнутого нуля для шрифта Miramonte с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-286">The following markup example shows how to define slashed zero numerals for the Miramonte font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
-## <a name="typography-class"></a>Класс оформления  
- <xref:System.Windows.Documents.Typography> объект предоставляет набор функций, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживает шрифт. Задав свойства <xref:System.Windows.Documents.Typography> в разметке, можно легко создавать документы, которые используют преимущества [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] функции.  
+## <a name="typography-class"></a><span data-ttu-id="7cb03-287">Класс Typography</span><span class="sxs-lookup"><span data-stu-id="7cb03-287">Typography Class</span></span>  
+ <span data-ttu-id="7cb03-288"><xref:System.Windows.Documents.Typography> Объект предоставляет набор компонентов, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживает шрифт.</span><span class="sxs-lookup"><span data-stu-id="7cb03-288">The <xref:System.Windows.Documents.Typography> object exposes the set of features that an [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] font supports.</span></span> <span data-ttu-id="7cb03-289">Задав свойства <xref:System.Windows.Documents.Typography> в разметке, можно легко создавать документы, которые используют преимущества [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] функции.</span><span class="sxs-lookup"><span data-stu-id="7cb03-289">By setting the properties of <xref:System.Windows.Documents.Typography> in markup, you can easily author documents that take advantage of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features.</span></span>  
   
- Приведенный ниже текст отображает стандартные прописных букв для шрифта Pescadero следуют буквы, в стиле «Малые прописные» и «AllSmallCaps». В этом случае для всех трех слов используется тот же размер шрифта.  
+ <span data-ttu-id="7cb03-290">Следующий текст демонстрирует стандартные прописные буквы, буквы в стиле SmallCaps и в стиле AllSmallCaps для шрифта Pescadero.</span><span class="sxs-lookup"><span data-stu-id="7cb03-290">The following text displays standard capital letters for the Pescadero font, followed by the letters styled as "SmallCaps" and "AllSmallCaps".</span></span> <span data-ttu-id="7cb03-291">В данном случае для всех трех слов используется один и тот же размер шрифта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-291">In this case, the same font size is used for all three words.</span></span>  
   
- ![Текст, использующий прописные буквы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.png "opentypefont11")  
-Текст, использующий прописные буквы OpenType  
+ <span data-ttu-id="7cb03-292">![Текст, использующий прописные буквы OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span><span class="sxs-lookup"><span data-stu-id="7cb03-292">![Text using OpenType capitals](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")</span></span>  
+<span data-ttu-id="7cb03-293">Текст, использующий прописные буквы OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-293">Text using OpenType capitals</span></span>  
   
- В следующем примере разметки показано определение прописных букв для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта. При использовании формата «Малые прописные» начальные прописные буквы учитывается.  
+ <span data-ttu-id="7cb03-294">В следующем примере разметки показано определение прописных букв для шрифта Pescadero с помощью свойств <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-294">The following markup example shows how to define capitals for the Pescadero font, using properties of the <xref:System.Windows.Documents.Typography> object.</span></span> <span data-ttu-id="7cb03-295">При использовании формата SmallCaps начальные прописные буквы игнорируются.</span><span class="sxs-lookup"><span data-stu-id="7cb03-295">When the "SmallCaps" format is used, any leading capital letter is ignored.</span></span>  
   
- [!code-xml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
- В следующем примере кода выполняет ту же задачу, что и предыдущий пример разметки.  
+ <span data-ttu-id="7cb03-296">Следующий пример кода выполняет ту же задачу, что и предыдущий пример разметки.</span><span class="sxs-lookup"><span data-stu-id="7cb03-296">The following code example accomplishes the same task as the previous markup example.</span></span>  
   
  [!code-csharp[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TypographyCodeSnippets/CSharp/Page1.xaml.cs#typographycodesnippet1)]
  [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
-### <a name="typography-class-properties"></a>Класс свойств оформления  
- В следующей таблице перечислены свойства, значения и параметры по умолчанию <xref:System.Windows.Documents.Typography> объекта.  
+### <a name="typography-class-properties"></a><span data-ttu-id="7cb03-297">Свойства класса Typography</span><span class="sxs-lookup"><span data-stu-id="7cb03-297">Typography Class Properties</span></span>  
+ <span data-ttu-id="7cb03-298">В следующей таблице перечислены свойства, значения и параметры по умолчанию <xref:System.Windows.Documents.Typography> объекта.</span><span class="sxs-lookup"><span data-stu-id="7cb03-298">The following table lists the properties, values, and default settings of the <xref:System.Windows.Documents.Typography> object.</span></span>  
   
-|Свойство|Значения|Значение по умолчанию|  
+|<span data-ttu-id="7cb03-299">Свойство</span><span class="sxs-lookup"><span data-stu-id="7cb03-299">Property</span></span>|<span data-ttu-id="7cb03-300">Значения</span><span class="sxs-lookup"><span data-stu-id="7cb03-300">Value(s)</span></span>|<span data-ttu-id="7cb03-301">Значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="7cb03-301">Default Value</span></span>|  
 |--------------|----------------|-------------------|  
-|<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Числовое значение — байт|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals> | <xref:System.Windows.FontCapitals>|<xref:System.Windows.FontCapitals?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|<span data-ttu-id="7cb03-302">Числовое значение — байт</span><span class="sxs-lookup"><span data-stu-id="7cb03-302">Numeric value - byte</span></span>|<span data-ttu-id="7cb03-303">0</span><span class="sxs-lookup"><span data-stu-id="7cb03-303">0</span></span>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<span data-ttu-id="7cb03-304"><xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase></span><span class="sxs-lookup"><span data-stu-id="7cb03-304"><xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase></span></span>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
 |<xref:System.Windows.Documents.Typography.ContextualLigatures%2A>|<xref:System.Boolean>|`true`|  
-|<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Числовое значение — байт|0|  
+|<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|<span data-ttu-id="7cb03-305">Числовое значение — байт</span><span class="sxs-lookup"><span data-stu-id="7cb03-305">Numeric value - byte</span></span>|<span data-ttu-id="7cb03-306">0</span><span class="sxs-lookup"><span data-stu-id="7cb03-306">0</span></span>|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage> | <xref:System.Windows.FontEastAsianLanguage>|<xref:System.Windows.FontEastAsianLanguage?displayProperty=fullName>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths> | <xref:System.Windows.FontEastAsianWidths>|<xref:System.Windows.FontEastAsianWidths?displayProperty=fullName>|  
-|<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction> | <xref:System.Windows.FontFraction> | <xref:System.Windows.FontFraction>|<xref:System.Windows.FontFraction?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<span data-ttu-id="7cb03-307"><xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames></span><span class="sxs-lookup"><span data-stu-id="7cb03-307"><xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames></span></span>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<span data-ttu-id="7cb03-308"><xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third></span><span class="sxs-lookup"><span data-stu-id="7cb03-308"><xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third></span></span>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Fraction%2A>|<span data-ttu-id="7cb03-309"><xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked></span><span class="sxs-lookup"><span data-stu-id="7cb03-309"><xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked></span></span>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.Kerning%2A>|<xref:System.Boolean>|`true`|  
 |<xref:System.Windows.Documents.Typography.MathematicalGreek%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.NumeralAlignment%2A>|<xref:System.Windows.FontNumeralAlignment> | <xref:System.Windows.FontNumeralAlignment> | <xref:System.Windows.FontNumeralAlignment>|<xref:System.Windows.FontNumeralAlignment?displayProperty=fullName>|  
-|<xref:System.Windows.Documents.Typography.NumeralStyle%2A>|<xref:System.Boolean>|<xref:System.Windows.FontNumeralStyle?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.NumeralAlignment%2A>|<span data-ttu-id="7cb03-310"><xref:System.Windows.FontNumeralAlignment.Normal> &#124; <xref:System.Windows.FontNumeralAlignment.Proportional> &#124; <xref:System.Windows.FontNumeralAlignment.Tabular></span><span class="sxs-lookup"><span data-stu-id="7cb03-310"><xref:System.Windows.FontNumeralAlignment.Normal> &#124; <xref:System.Windows.FontNumeralAlignment.Proportional> &#124; <xref:System.Windows.FontNumeralAlignment.Tabular></span></span>|<xref:System.Windows.FontNumeralAlignment.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.NumeralStyle%2A>|<xref:System.Boolean>|<xref:System.Windows.FontNumeralStyle.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.SlashedZero%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StandardLigatures%2A>|<xref:System.Boolean>|`true`|  
-|<xref:System.Windows.Documents.Typography.StandardSwashes%2A>|числовое значение — байт|0|  
-|<xref:System.Windows.Documents.Typography.StylisticAlternates%2A>|числовое значение — байт|0|  
+|<xref:System.Windows.Documents.Typography.StandardSwashes%2A>|<span data-ttu-id="7cb03-311">Числовое значение — байт</span><span class="sxs-lookup"><span data-stu-id="7cb03-311">numeric value – byte</span></span>|<span data-ttu-id="7cb03-312">0</span><span class="sxs-lookup"><span data-stu-id="7cb03-312">0</span></span>|  
+|<xref:System.Windows.Documents.Typography.StylisticAlternates%2A>|<span data-ttu-id="7cb03-313">Числовое значение — байт</span><span class="sxs-lookup"><span data-stu-id="7cb03-313">numeric value – byte</span></span>|<span data-ttu-id="7cb03-314">0</span><span class="sxs-lookup"><span data-stu-id="7cb03-314">0</span></span>|  
 |<xref:System.Windows.Documents.Typography.StylisticSet1%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet2%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet3%2A>|<xref:System.Boolean>|`false`|  
@@ -362,11 +368,11 @@ caps.handback.revision: 37
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants> | <xref:System.Windows.FontVariants>|<xref:System.Windows.FontVariants?displayProperty=fullName>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<span data-ttu-id="7cb03-315"><xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript></span><span class="sxs-lookup"><span data-stu-id="7cb03-315"><xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript></span></span>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Documents.Typography>   
- [Спецификация OpenType](http://go.microsoft.com/fwlink/?LinkId=96731)   
- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)   
- [Образец пакета шрифтов OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)   
- [Упаковка шрифтов с приложениями](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a><span data-ttu-id="7cb03-316">См. также</span><span class="sxs-lookup"><span data-stu-id="7cb03-316">See Also</span></span>  
+ <xref:System.Windows.Documents.Typography>  
+ [<span data-ttu-id="7cb03-317">Спецификация OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-317">OpenType Specification</span></span>](http://go.microsoft.com/fwlink/?LinkId=96731)  
+ [<span data-ttu-id="7cb03-318">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="7cb03-318">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [<span data-ttu-id="7cb03-319">Пакет образцов шрифтов OpenType</span><span class="sxs-lookup"><span data-stu-id="7cb03-319">Sample OpenType Font Pack</span></span>](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [<span data-ttu-id="7cb03-320">Упаковка шрифтов с приложениями</span><span class="sxs-lookup"><span data-stu-id="7cb03-320">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

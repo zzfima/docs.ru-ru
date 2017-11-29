@@ -1,48 +1,31 @@
 ---
-title: "Операторы объединения в Visual Basic | Документы Microsoft"
+title: "Операторы объединения в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - '& operator [Visual Basic], concatenation'
-- concatenation operators
+- concatenation operators [Visual Basic]
 - operators [Visual Basic], concatenation
 - Visual Basic code, operators
 - + operator [Visual Basic], concatenation
-- concatenation operators, Visual Basic strings
+- concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa11f1dcff2c333861596cbac03391403cf962c1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3a444cca76fbc41807b0c8b69bcbaedbd75c36eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="concatenation-operators-in-visual-basic"></a>Операторы объединения в Visual Basic
-Операторы объединения объединяют несколько строк в одну. Существует два оператора объединения: `+` и `&`. Оба они выполняют базовую операцию объединения, как показано в следующем примере.  
+# <a name="concatenation-operators-in-visual-basic"></a><span data-ttu-id="d497c-102">Операторы объединения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d497c-102">Concatenation Operators in Visual Basic</span></span>
+<span data-ttu-id="d497c-103">Операторы объединения объединяют несколько строк в одну.</span><span class="sxs-lookup"><span data-stu-id="d497c-103">Concatenation operators join multiple strings into a single string.</span></span> <span data-ttu-id="d497c-104">Существует два оператора объединения: `+` и `&`.</span><span class="sxs-lookup"><span data-stu-id="d497c-104">There are two concatenation operators, `+` and `&`.</span></span> <span data-ttu-id="d497c-105">Оба они выполняют базовую операцию объединения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="d497c-105">Both carry out the basic concatenation operation, as the following example shows.</span></span>  
   
 ```vb
 Dim x As String = "Mic" & "ro" & "soft" 
@@ -50,21 +33,21 @@ Dim y As String = "Mic" + "ro" + "soft"
 ' The preceding statements set both x and y to "Microsoft".
 ```  
   
- Эти операторы также могут объединять переменные `String`, как показано в следующем примере.  
+ <span data-ttu-id="d497c-106">Эти операторы также могут объединять переменные `String`, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="d497c-106">These operators can also concatenate `String` variables, as the following example shows.</span></span>  
   
- [!code-vb[VbVbalrOperators&#76;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
   
-## <a name="differences-between-the-two-concatenation-operators"></a>Различия между двумя операторами объединения  
- [Оператор +](../../../../visual-basic/language-reference/operators/addition-operator.md) имеет основной целью сложения двух чисел. Однако он также может объединять числовые операнды со строковыми. `+` Оператор имеет сложный набор правил, определяющих, следует ли добавлять, объединять, сообщить об ошибке компилятора или исключение времени выполнения <xref:System.InvalidCastException>исключение.</xref:System.InvalidCastException>  
+## <a name="differences-between-the-two-concatenation-operators"></a><span data-ttu-id="d497c-107">Различия между двумя операторами объединения</span><span class="sxs-lookup"><span data-stu-id="d497c-107">Differences Between the Two Concatenation Operators</span></span>  
+ <span data-ttu-id="d497c-108">[Оператор +](../../../../visual-basic/language-reference/operators/addition-operator.md) имеет основной целью сложения двух чисел.</span><span class="sxs-lookup"><span data-stu-id="d497c-108">The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers.</span></span> <span data-ttu-id="d497c-109">Однако он также может объединять числовые операнды со строковыми.</span><span class="sxs-lookup"><span data-stu-id="d497c-109">However, it can also concatenate numeric operands with string operands.</span></span> <span data-ttu-id="d497c-110">Оператор `+` имеет сложный набор правил, определяющий, следует ли выполнять добавление, объединение, сигнализировать об ошибке компилятора или выдавать исключение времени выполнения <xref:System.InvalidCastException>.</span><span class="sxs-lookup"><span data-stu-id="d497c-110">The `+` operator has a complex set of rules that determine whether to add, concatenate, signal a compiler error, or throw a run-time <xref:System.InvalidCastException> exception.</span></span>  
   
- [& Оператор](../../../../visual-basic/language-reference/operators/concatenation-operator.md) определяется только для `String` операнда и всегда расширяет свои операнды до `String`, независимо от параметра `Option Strict`. Оператор `&` рекомендуется использовать для объединения строк, так как он определен исключительно для строк и снижает шансы создания непреднамеренного преобразования.  
+ <span data-ttu-id="d497c-111">[& Оператор](../../../../visual-basic/language-reference/operators/concatenation-operator.md) определяется только для `String` операнда и он всегда расширяет свои операнды до `String`, независимо от значения `Option Strict`.</span><span class="sxs-lookup"><span data-stu-id="d497c-111">The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`.</span></span> <span data-ttu-id="d497c-112">Оператор `&` рекомендуется использовать для объединения строк, так как он определен исключительно для строк и снижает шансы создания непреднамеренного преобразования.</span><span class="sxs-lookup"><span data-stu-id="d497c-112">The `&` operator is recommended for string concatenation because it is defined exclusively for strings and reduces your chances of generating an unintended conversion.</span></span>  
   
-## <a name="performance-string-and-stringbuilder"></a>Производительность: String и StringBuilder  
- Если вы выполняете множество манипуляций со строками, как объединения, удаления и замены, производительность можно увеличить с <xref:System.Text.StringBuilder>класса в <xref:System.Text>имен.</xref:System.Text> </xref:System.Text.StringBuilder> Требуется дополнительная инструкция для создания и инициализации <xref:System.Text.StringBuilder>объекта и еще один оператор для преобразования итогового значения для `String`, но на этот раз можно восстановить, так как <xref:System.Text.StringBuilder>может работать быстрее.</xref:System.Text.StringBuilder> </xref:System.Text.StringBuilder>  
+## <a name="performance-string-and-stringbuilder"></a><span data-ttu-id="d497c-113">Производительность: String и StringBuilder</span><span class="sxs-lookup"><span data-stu-id="d497c-113">Performance: String and StringBuilder</span></span>  
+ <span data-ttu-id="d497c-114">Если вы выполняете множество операций со строкой, таких как объединения, удаления и замены, использование класса <xref:System.Text.StringBuilder> из пространства имен <xref:System.Text> может оказать положительное влияние на производительность.</span><span class="sxs-lookup"><span data-stu-id="d497c-114">If you do a significant number of manipulations on a string, such as concatenations, deletions, and replacements, your performance might profit from the <xref:System.Text.StringBuilder> class in the <xref:System.Text> namespace.</span></span> <span data-ttu-id="d497c-115">Для создания и инициализации объекта <xref:System.Text.StringBuilder> требуется дополнительная инструкция, кроме того, еще одна инструкция необходима для преобразования итогового значения в `String`, однако это время можно скомпенсировать высокой скоростью выполнения <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="d497c-115">It takes an extra instruction to create and initialize a <xref:System.Text.StringBuilder> object, and another instruction to convert its final value to a `String`, but you might recover this time because <xref:System.Text.StringBuilder> can perform faster.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Типы методов для обработки в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)   
- [Арифметические операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="d497c-116">См. также</span><span class="sxs-lookup"><span data-stu-id="d497c-116">See Also</span></span>  
+ [<span data-ttu-id="d497c-117">Оператор Option Strict</span><span class="sxs-lookup"><span data-stu-id="d497c-117">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="d497c-118">Типы методов обработки строки в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d497c-118">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ [<span data-ttu-id="d497c-119">Арифметические операторы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d497c-119">Arithmetic Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="d497c-120">Операторы сравнения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d497c-120">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [<span data-ttu-id="d497c-121">Логические и побитовые операторы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d497c-121">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

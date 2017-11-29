@@ -1,41 +1,36 @@
 ---
-title: "Практическое руководство: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c1ef9db560de02efa20dbe88ff0e73ffd9e7fff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: fcd7cc8d68e6eccd00abeacf3c5817d3625b8891
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Практическое руководство: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
-Иногда требуется найти элементы на основании их позиции. Может понадобиться найти второй элемент или найти третий элемент через пятый.  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="bc418-102">Как: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc418-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="bc418-103">Иногда требуется найти элементы на основании их позиции.</span><span class="sxs-lookup"><span data-stu-id="bc418-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="bc418-104">Может понадобиться найти второй элемент или найти третий элемент через пятый.</span><span class="sxs-lookup"><span data-stu-id="bc418-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
   
- Выражение XPath:  
+ <span data-ttu-id="bc418-105">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="bc418-105">The XPath expression is:</span></span>  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Можно использовать <xref:System.Linq.Enumerable.Skip%2A>и <xref:System.Linq.Enumerable.Take%2A>можно использовать операторы, или <xref:System.Linq.Enumerable.Where%2A>перегрузку, принимающую индекса.</xref:System.Linq.Enumerable.Where%2A> </xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A> При использовании <xref:System.Linq.Enumerable.Where%2A>перегрузку, использовать лямбда-выражение, которое принимает два аргумента.</xref:System.Linq.Enumerable.Where%2A> Следующий пример показывает обе возможности выбора на основе позиции.  
+ <span data-ttu-id="bc418-106">Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bc418-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="bc418-107">Можно использовать операторы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> или перегруженный оператор <xref:System.Linq.Enumerable.Where%2A>, который потребляет индекс.</span><span class="sxs-lookup"><span data-stu-id="bc418-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="bc418-108">При использовании перегрузки оператора <xref:System.Linq.Enumerable.Where%2A> необходимо использовать лямбда-выражение, которое имеет два аргумента.</span><span class="sxs-lookup"><span data-stu-id="bc418-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="bc418-109">Следующий пример показывает обе возможности выбора на основе позиции.</span><span class="sxs-lookup"><span data-stu-id="bc418-109">The following example shows both methods of selecting based on position.</span></span>  
   
-## <a name="example"></a>Пример  
- В данном примере производится поиск второго элемента через четвертый элемент `Test`. Результатом является коллекция элементов.  
+## <a name="example"></a><span data-ttu-id="bc418-110">Пример</span><span class="sxs-lookup"><span data-stu-id="bc418-110">Example</span></span>  
+ <span data-ttu-id="bc418-111">В данном примере производится поиск второго элемента через четвертый элемент `Test`.</span><span class="sxs-lookup"><span data-stu-id="bc418-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="bc418-112">Результатом является коллекция элементов.</span><span class="sxs-lookup"><span data-stu-id="bc418-112">The result is a collection of elements.</span></span>  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ <span data-ttu-id="bc418-113">В этом примере используется следующий XML-документ: [Пример XML-файла. Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="bc418-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -68,7 +63,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="bc418-114">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="bc418-114">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -92,6 +87,5 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="bc418-115">См. также</span><span class="sxs-lookup"><span data-stu-id="bc418-115">See Also</span></span>  
+ [<span data-ttu-id="bc418-116">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc418-116">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

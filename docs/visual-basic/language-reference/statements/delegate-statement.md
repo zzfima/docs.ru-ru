@@ -1,99 +1,79 @@
 ---
-title: "Оператор Delegate | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Оператор Delegate"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Delegate
-dev_langs:
-- VB
+f1_keywords: vb.Delegate
 helpviewer_keywords:
-- delegate keyword
-- Delegate statement
+- delegate keyword [Visual Basic]
+- Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ac9e28c82f8a6b5a9c1398961d831c956a649e0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7e79a261f74cbc7aa067af63629e31bedf65d163
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="delegate-statement"></a>Оператор Delegate
-Используется для объявления делегата. Делегат — это ссылочный тип, который ссылается на `Shared` метод типа или на метод экземпляра объекта. Для создания экземпляра класса данного делегата может использоваться любая процедура с соответствующими типами параметров и возвращаемых. Процедура может затем быть вызвана через экземпляр делегата.  
+# <a name="delegate-statement"></a><span data-ttu-id="d3ef1-102">Оператор Delegate</span><span class="sxs-lookup"><span data-stu-id="d3ef1-102">Delegate Statement</span></span>
+<span data-ttu-id="d3ef1-103">Используется для объявления делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-103">Used to declare a delegate.</span></span> <span data-ttu-id="d3ef1-104">Делегат — это ссылочный тип, который ссылается на `Shared` метод типа или метода экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="d3ef1-105">Для создания экземпляра этого класса делегата можно использовать любую процедуру с соответствующими типами параметров и возвращаемых.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="d3ef1-106">Процедура может затем быть вызвана через экземпляр делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="d3ef1-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d3ef1-107">Syntax</span></span>  
   
 ```  
 [ <attrlist> ] [ accessmodifier ] _  
 [ Shadows ] Delegate [ Sub | Function ] name [( Of typeparamlist )] [([ parameterlist ])] [ As type ]  
 ```  
   
-## <a name="parts"></a>Части  
+## <a name="parts"></a><span data-ttu-id="d3ef1-108">Части</span><span class="sxs-lookup"><span data-stu-id="d3ef1-108">Parts</span></span>  
   
-|Термин|Определение|  
+|<span data-ttu-id="d3ef1-109">Термин</span><span class="sxs-lookup"><span data-stu-id="d3ef1-109">Term</span></span>|<span data-ttu-id="d3ef1-110">Определение</span><span class="sxs-lookup"><span data-stu-id="d3ef1-110">Definition</span></span>|  
 |---|---|  
-|`attrlist`|Необязательный. Список атрибутов, которые применяются для данного делегата. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).|  
-|`accessmodifier`|Необязательный. Указывает, какой код может обращаться к делегату. Ниже указаны доступные значения.<br /><br /> -   [Открытые](../../../visual-basic/language-reference/modifiers/public.md). Любой код, который можно получить доступ к элементу, который объявляет делегат может прочитать его.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md). Только код в пределах класса делегата или производного класса можно получить доступ к его.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md). Только код внутри одной сборки можно получить доступ к делегата.<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md). Только код внутри элемента, который объявляет делегат может прочитать его.<br /><br /> Можно указать `Protected Friend` для обеспечения доступа из кода внутри класса делегата, производного класса или той же сборки.|  
-|`Shadows`|Необязательный. Указывает, что данный делегат повторно объявляет и скрывает идентично именованный программный элемент или набор перегружаемых элементов в базовом классе. Можно скрыть любой тип объявленного элемента, используя любой другой тип.<br /><br /> Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент. Например если `Private` элемент затеняет элемент базового класса, код, который не имеет разрешения на доступ к `Private` элемент обращается к элементу базового класса.|  
-|`Sub`|Необязательно, но либо `Sub` или `Function` должно отображаться. Объявляет процедуру как делегат `Sub` процедуру, которая не возвращает значение.|  
-|`Function`|Необязательно, но либо `Sub` или `Function` должно отображаться. Объявляет процедуру как делегат `Function` процедуры, возвращающей значение.|  
-|`name`|Обязательный. Имя типа делегата. следует стандартным правилам именования переменных.|  
-|`typeparamlist`|Необязательный. Список параметров типа для этого делегата. Несколько параметров типа разделяются запятыми. Кроме того, каждый параметр типа можно объявить как вариант с использованием `In` и `Out` универсальных модификаторов. Необходимо заключить [список типов](../../../visual-basic/language-reference/statements/type-list.md) в круглые скобки и ввести его с `Of` ключевое слово.|  
-|`parameterlist`|Необязательный. Список параметров, передаваемых в процедуру при ее вызове. Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.|  
-|`type`|Требуется, если указана `Function` процедуры. Тип данных возвращаемого значения.|  
+|`attrlist`|<span data-ttu-id="d3ef1-111">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-111">Optional.</span></span> <span data-ttu-id="d3ef1-112">Список атрибутов, которые применяются для данного делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-112">List of attributes that apply to this delegate.</span></span> <span data-ttu-id="d3ef1-113">Несколько атрибутов разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-113">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="d3ef1-114">Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-114">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>|  
+|`accessmodifier`|<span data-ttu-id="d3ef1-115">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-115">Optional.</span></span> <span data-ttu-id="d3ef1-116">Указывает, какой код может обращаться к делегату.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-116">Specifies what code can access the delegate.</span></span> <span data-ttu-id="d3ef1-117">Ниже указаны доступные значения.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-117">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="d3ef1-118">-   [Открытые](../../../visual-basic/language-reference/modifiers/public.md).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-118">-   [Public](../../../visual-basic/language-reference/modifiers/public.md).</span></span> <span data-ttu-id="d3ef1-119">Любой код, который можно получить доступ к элементу, который объявляет делегат к нему возможен доступ.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-119">Any code that can access the element that declares the delegate can access it.</span></span><br /><span data-ttu-id="d3ef1-120">-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-120">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md).</span></span> <span data-ttu-id="d3ef1-121">Только код в пределах класса делегата или производного класса к нему возможен доступ.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-121">Only code within the delegate's class or a derived class can access it.</span></span><br /><span data-ttu-id="d3ef1-122">-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-122">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md).</span></span> <span data-ttu-id="d3ef1-123">Только код внутри той же сборке может получить доступ к делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-123">Only code within the same assembly can access the delegate.</span></span><br /><span data-ttu-id="d3ef1-124">-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-124">-   [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span> <span data-ttu-id="d3ef1-125">Только код внутри элемента, который объявляет делегат может обращаться к его.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-125">Only code within the element that declares the delegate can access it.</span></span><br /><br /> <span data-ttu-id="d3ef1-126">Можно указать `Protected Friend` для обеспечения доступа из кода внутри класса делегата, производном классе или той же сборки.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-126">You can specify `Protected Friend` to enable access from code within the delegate's class, a derived class, or the same assembly.</span></span>|  
+|`Shadows`|<span data-ttu-id="d3ef1-127">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-127">Optional.</span></span> <span data-ttu-id="d3ef1-128">Указывает, что этот делегат повторно объявляет и скрывает идентично именованный программный элемент или набор перегруженных элементов в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-128">Indicates that this delegate redeclares and hides an identically named programming element, or set of overloaded elements, in a base class.</span></span> <span data-ttu-id="d3ef1-129">Можно скрыть любой тип объявленного элемента, используя любой другой тип.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-129">You can shadow any kind of declared element with any other kind.</span></span><br /><br /> <span data-ttu-id="d3ef1-130">Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-130">A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible.</span></span> <span data-ttu-id="d3ef1-131">Например если `Private` элемент скрывает элемент базового класса, код, который не имеет разрешения на доступ к `Private` элемент обращается к элементу базового класса.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-131">For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.</span></span>|  
+|`Sub`|<span data-ttu-id="d3ef1-132">Необязательно, но либо `Sub` или `Function` должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-132">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="d3ef1-133">Объявляет процедуру представителем `Sub` процедуру, которая не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-133">Declares this procedure as a delegate `Sub` procedure that does not return a value.</span></span>|  
+|`Function`|<span data-ttu-id="d3ef1-134">Необязательно, но либо `Sub` или `Function` должны отображаться.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-134">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="d3ef1-135">Объявляет процедуру представителем `Function` процедуры, возвращающей значение.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-135">Declares this procedure as a delegate `Function` procedure that returns a value.</span></span>|  
+|`name`|<span data-ttu-id="d3ef1-136">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-136">Required.</span></span> <span data-ttu-id="d3ef1-137">Имя типа делегата; соответствует стандартным правилам именования переменных.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-137">Name of the delegate type; follows standard variable naming conventions.</span></span>|  
+|`typeparamlist`|<span data-ttu-id="d3ef1-138">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-138">Optional.</span></span> <span data-ttu-id="d3ef1-139">Список параметров типа для этого делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-139">List of type parameters for this delegate.</span></span> <span data-ttu-id="d3ef1-140">Несколько параметров типа разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-140">Multiple type parameters are separated by commas.</span></span> <span data-ttu-id="d3ef1-141">Кроме того, каждый параметр типа можно объявить как вариант с использованием `In` и `Out` универсальных модификаторов.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-141">Optionally, each type parameter can be declared variant by using `In` and `Out` generic modifiers.</span></span> <span data-ttu-id="d3ef1-142">Необходимо заключить [список типов](../../../visual-basic/language-reference/statements/type-list.md) в круглые скобки и ввести его с `Of` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-142">You must enclose the [Type List](../../../visual-basic/language-reference/statements/type-list.md) in parentheses and introduce it with the `Of` keyword.</span></span>|  
+|`parameterlist`|<span data-ttu-id="d3ef1-143">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-143">Optional.</span></span> <span data-ttu-id="d3ef1-144">Список параметров, передаваемых при вызове процедуры.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-144">List of parameters that are passed to the procedure when it is called.</span></span> <span data-ttu-id="d3ef1-145">Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-145">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`type`|<span data-ttu-id="d3ef1-146">Требуется, если указана `Function` процедуры.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-146">Required if you specify a `Function` procedure.</span></span> <span data-ttu-id="d3ef1-147">Тип данных возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-147">Data type of the return value.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- `Delegate` Оператор определяет типы параметров и возвращаемых классом делегата. Для создания экземпляра класса данного делегата может использоваться любая процедура с соответствующими параметрами и возвращаемыми типами. Процедура может затем быть вызвана через экземпляр делегата путем вызова делегата `Invoke` метод.  
+## <a name="remarks"></a><span data-ttu-id="d3ef1-148">Примечания</span><span class="sxs-lookup"><span data-stu-id="d3ef1-148">Remarks</span></span>  
+ <span data-ttu-id="d3ef1-149">`Delegate` Типы параметров и возвращаемых классом делегата, определяются оператором.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-149">The `Delegate` statement defines the parameter and return types of a delegate class.</span></span> <span data-ttu-id="d3ef1-150">Для создания экземпляра этого класса делегата можно использовать любую процедуру с соответствующими параметрами и возвращаемыми типами.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-150">Any procedure with matching parameters and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="d3ef1-151">Процедура может затем быть вызвана через экземпляр делегата путем вызова делегата `Invoke` метод.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-151">The procedure can then later be invoked by means of the delegate instance, by calling the delegate's `Invoke` method.</span></span>  
   
- Делегаты можно объявлять на пространства имен, модуля, класса или структуры, но не внутри процедуры.  
+ <span data-ttu-id="d3ef1-152">Делегаты можно объявлять пространства имен, модуля, класса или структуры уровня, но не внутри процедуры.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-152">Delegates can be declared at the namespace, module, class, or structure level, but not within a procedure.</span></span>  
   
- Каждый класс делегата определяет конструктор, которому передается спецификация метода объекта. Аргумент конструктора делегата должен быть ссылкой на метод или лямбда-выражение.  
+ <span data-ttu-id="d3ef1-153">Каждый класс делегата определяет конструктор, которому передается спецификация метода объекта.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-153">Each delegate class defines a constructor that is passed the specification of an object method.</span></span> <span data-ttu-id="d3ef1-154">Аргумент конструктора делегата должен быть ссылкой на метод или лямбда-выражение.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-154">An argument to a delegate constructor must be a reference to a method, or a lambda expression.</span></span>  
   
- Чтобы указать ссылку на метод, используйте следующий синтаксис:  
+ <span data-ttu-id="d3ef1-155">Чтобы указать ссылку на метод, используйте следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="d3ef1-155">To specify a reference to a method, use the following syntax:</span></span>  
   
- `AddressOf` [`expression`.]`methodname`  
+ <span data-ttu-id="d3ef1-156">`AddressOf` [`expression`.]`methodname`</span><span class="sxs-lookup"><span data-stu-id="d3ef1-156">`AddressOf` [`expression`.]`methodname`</span></span>  
   
- Тип во время компиляции `expression` должно быть именем класса или интерфейса, который содержит метод с указанным именем, сигнатура которого соответствует сигнатуре класса делегата. `methodname` Может быть совместно используемым методом или методом экземпляра. `methodname` Не является обязательным, даже если создается делегат для метода по умолчанию для класса.  
+ <span data-ttu-id="d3ef1-157">Тип `expression` во время компиляции должен представлять собой имя класса или интерфейса, который содержит метод с указанным именем, сигнатура которого соответствует сигнатуре класса делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-157">The compile-time type of the `expression` must be the name of a class or an interface that contains a method of the specified name whose signature matches the signature of the delegate class.</span></span> <span data-ttu-id="d3ef1-158">`methodname` должен быть общим методом или методом экземпляра.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-158">The `methodname` can be either a shared method or an instance method.</span></span> <span data-ttu-id="d3ef1-159">`methodname` всегда является обязательным, даже если делегат создается для метода по умолчанию в классе.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-159">The `methodname` is not optional, even if you create a delegate for the default method of the class.</span></span>  
   
- Чтобы указать лямбда-выражение, используйте следующий синтаксис:  
+ <span data-ttu-id="d3ef1-160">Чтобы указать лямбда-выражение, используйте следующий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="d3ef1-160">To specify a lambda expression, use the following syntax:</span></span>  
   
- `Function`([`parm` As `type`, `parm2` As `type2`, ...])`expression`  
+ <span data-ttu-id="d3ef1-161">`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`</span><span class="sxs-lookup"><span data-stu-id="d3ef1-161">`Function` ([`parm` As `type`, `parm2` As `type2`, ...]) `expression`</span></span>  
   
- Подпись функции должна соответствовать типу делегата. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ <span data-ttu-id="d3ef1-162">Сигнатура функции должна соответствовать сигнатуре типа делегата.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-162">The signature of the function must match that of the delegate type.</span></span> <span data-ttu-id="d3ef1-163">Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-163">For more information about lambda expressions, see [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).</span></span>  
   
- Дополнительные сведения о делегатах см. в разделе [делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
+ <span data-ttu-id="d3ef1-164">Дополнительные сведения о делегатах см. в разделе [делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="d3ef1-164">For more information about delegates, see [Delegates](../../../visual-basic/programming-guide/language-features/delegates/index.md).</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере используется `Delegate` инструкцию, чтобы объявить делегат для работы с двумя числами и возвращает число. `DelegateTest` Метод принимает экземпляр делегата этого типа и использует его для работы с парой чисел.  
+## <a name="example"></a><span data-ttu-id="d3ef1-165">Пример</span><span class="sxs-lookup"><span data-stu-id="d3ef1-165">Example</span></span>  
+ <span data-ttu-id="d3ef1-166">В следующем примере используется `Delegate` инструкцию, чтобы объявить делегат для работы с двумя числами и возвращает число.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-166">The following example uses the `Delegate` statement to declare a delegate for operating on two numbers and returning a number.</span></span> <span data-ttu-id="d3ef1-167">`DelegateTest` Метод принимает экземпляр делегата этого типа и использует его для работы с парой чисел.</span><span class="sxs-lookup"><span data-stu-id="d3ef1-167">The `DelegateTest` method takes an instance of a delegate of this type and uses it to operate on pairs of numbers.</span></span>  
   
- [!code-vb[VbVbalrDelegates&#14;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Предложение Of (Visual Basic)](../../../visual-basic/language-reference/statements/of-clause.md)   
- [Делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [Практическое руководство: использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Ковариация и контрвариация](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
- [В](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)   
- [Выход](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a><span data-ttu-id="d3ef1-168">См. также</span><span class="sxs-lookup"><span data-stu-id="d3ef1-168">See Also</span></span>  
+ [<span data-ttu-id="d3ef1-169">Оператор AddressOf</span><span class="sxs-lookup"><span data-stu-id="d3ef1-169">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="d3ef1-170">Of</span><span class="sxs-lookup"><span data-stu-id="d3ef1-170">Of</span></span>](../../../visual-basic/language-reference/statements/of-clause.md)  
+ [<span data-ttu-id="d3ef1-171">Делегаты</span><span class="sxs-lookup"><span data-stu-id="d3ef1-171">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="d3ef1-172">Практическое руководство. Использование универсального класса</span><span class="sxs-lookup"><span data-stu-id="d3ef1-172">How to: Use a Generic Class</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [<span data-ttu-id="d3ef1-173">Универсальные типы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d3ef1-173">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="d3ef1-174">Ковариация и контрвариантность</span><span class="sxs-lookup"><span data-stu-id="d3ef1-174">Covariance and Contravariance</span></span>](../../programming-guide/concepts/covariance-contravariance/index.md)  
+ [<span data-ttu-id="d3ef1-175">In</span><span class="sxs-lookup"><span data-stu-id="d3ef1-175">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [<span data-ttu-id="d3ef1-176">Out</span><span class="sxs-lookup"><span data-stu-id="d3ef1-176">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

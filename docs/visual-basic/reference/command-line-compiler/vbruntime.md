@@ -1,125 +1,108 @@
 ---
-title: "/ vbruntime | Документы Microsoft"
-ms.date: 2015-07-20
+title: /vbruntime
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbruntime
 - /vbruntime
-dev_langs:
-- VB
 helpviewer_keywords:
 - vbruntime compiler option [Visual Basic]
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 455f950988b540b74874ce38882c59059f77ea8f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: dda8ea7285a748bac53e30af8bd7a60099fe7411
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="vbruntime"></a>/vbruntime
-Указывает, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic или со ссылкой на конкретную библиотеку времени выполнения.  
+# <a name="vbruntime"></a><span data-ttu-id="aa7ca-102">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="aa7ca-102">/vbruntime</span></span>
+<span data-ttu-id="aa7ca-103">Указывает, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic или со ссылкой на конкретную библиотеку времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-103">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="aa7ca-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aa7ca-104">Syntax</span></span>  
   
 ```  
 /vbruntime:{ - | + | * | path }  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a><span data-ttu-id="aa7ca-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="aa7ca-105">Arguments</span></span>  
  \-  
- Компиляция без ссылки на библиотеку времени выполнения Visual Basic.  
+ <span data-ttu-id="aa7ca-106">Компиляцию без ссылки на библиотеку времени выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-106">Compile without a reference to the Visual Basic Runtime Library.</span></span>  
   
  \+  
- Компиляция со ссылкой на значение по умолчанию библиотеки времени выполнения Visual Basic.  
+ <span data-ttu-id="aa7ca-107">Компиляция со ссылкой на значение по умолчанию библиотеки времени выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-107">Compile with a reference to the default Visual Basic Runtime Library.</span></span>  
   
  \*  
- Компиляция без ссылки на библиотеку времени выполнения Visual Basic и внедрения в сборку базовую функциональность библиотеки времени выполнения Visual Basic.  
+ <span data-ttu-id="aa7ca-108">Компиляцию без ссылки на библиотеку времени выполнения Visual Basic и внедрения в сборку базовую функциональность библиотеки времени выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-108">Compile without a reference to the Visual Basic Runtime Library, and embed core functionality from the Visual Basic Runtime Library into the assembly.</span></span>  
   
  `path`  
- Компиляция со ссылкой на указанную библиотеку (DLL).  
+ <span data-ttu-id="aa7ca-109">Компиляция со ссылкой на указанную библиотеку (DLL).</span><span class="sxs-lookup"><span data-stu-id="aa7ca-109">Compile with a reference to the specified library (DLL).</span></span>  
   
-## <a name="remarks"></a>Примечания  
- `/vbruntime` Параметр компилятора позволяет указать, что компилятор должен компилировать без ссылки на библиотеку времени выполнения Visual Basic. Если компиляция выполняется без ссылки на библиотеку времени выполнения Visual Basic, ошибки или предупреждения регистрируются на код или языковой конструкции, которые создает вызов вспомогательной среды выполнения Visual Basic. (Объект *Вспомогательная среда выполнения Visual Basic* является функцией, определяемой в Microsoft.VisualBasic.dll, которая вызывается во время выполнения, чтобы выполнить конкретную семантику языка.)  
+## <a name="remarks"></a><span data-ttu-id="aa7ca-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="aa7ca-110">Remarks</span></span>  
+ <span data-ttu-id="aa7ca-111">`/vbruntime` Параметр компилятора позволяет указать, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-111">The `/vbruntime` compiler option enables you to specify that the compiler should compile without a reference to the Visual Basic Runtime Library.</span></span> <span data-ttu-id="aa7ca-112">Если компиляция выполняется без ссылки на библиотеку времени выполнения Visual Basic, ошибки или предупреждения регистрируются в код или языковой конструкции, которые создает вызов вспомогательный среды выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-112">If you compile without a reference to the Visual Basic Runtime Library, errors or warnings are logged on code or language constructs that generate a call to a Visual Basic runtime helper.</span></span> <span data-ttu-id="aa7ca-113">(A *Вспомогательная среда выполнения Visual Basic* является функция, определенная в Microsoft.VisualBasic.dll, которая вызывается во время выполнения, чтобы выполнить конкретную семантику языка.)</span><span class="sxs-lookup"><span data-stu-id="aa7ca-113">(A *Visual Basic runtime helper* is a function defined in Microsoft.VisualBasic.dll that is called at runtime to execute a specific language semantic.)</span></span>  
   
- `/vbruntime+` Параметр создает такое же поведение, которое возникает, если не `/vbruntime` указан ключ. Можно использовать `/vbruntime+` могут переопределить предыдущих `/vbruntime` коммутаторов.  
+ <span data-ttu-id="aa7ca-114">`/vbruntime+` Же поведение, которое возникает, если он не создает параметр `/vbruntime` указан ключ.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-114">The `/vbruntime+` option produces the same behavior that occurs if no `/vbruntime` switch is specified.</span></span> <span data-ttu-id="aa7ca-115">Можно использовать `/vbruntime+` могут переопределить предыдущих `/vbruntime` коммутаторов.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-115">You can use the `/vbruntime+` option to override previous `/vbruntime` switches.</span></span>  
   
- Большинство объектов `My` тип недоступны при использовании `/vbruntime-` или `vbruntime:``path` параметры.  
+ <span data-ttu-id="aa7ca-116">Большинство объектов `My` тип недоступны при использовании `/vbruntime-` или `vbruntime:``path` параметры.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-116">Most objects of the `My` type are unavailable when you use the `/vbruntime-` or `vbruntime:``path` options.</span></span>  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>Внедрение основные функциональные возможности среды выполнения Visual Basic  
- `/vbruntime*` Вариант позволяет выполнять компиляцию без ссылки на библиотеку времени выполнения. Вместо этого основных функций из библиотеки времени выполнения Visual Basic внедренного в сборку пользователя. Этот параметр можно использовать, если приложение выполняется на платформах, которые не содержат среда выполнения Visual Basic.  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a><span data-ttu-id="aa7ca-117">Внедрение основных функциональных возможностей среды выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="aa7ca-117">Embedding Visual Basic Runtime core functionality</span></span>  
+ <span data-ttu-id="aa7ca-118">`/vbruntime*` Позволяет компилировать без ссылки на библиотеку времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-118">The `/vbruntime*` option enables you to compile without a reference to a runtime library.</span></span> <span data-ttu-id="aa7ca-119">Вместо этого основные функции из библиотеки времени выполнения Visual Basic внедренных в сборку пользователя.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-119">Instead, core functionality from the Visual Basic Runtime Library is embedded in the user assembly.</span></span> <span data-ttu-id="aa7ca-120">Этот параметр можно использовать, если приложение работает на платформах, которые не содержат среда выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-120">You can use this option if your application runs on platforms that do not contain the Visual Basic runtime.</span></span>  
   
- Внедренные следующие компоненты времени выполнения:  
+ <span data-ttu-id="aa7ca-121">Внедряются следующие компоненты времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-121">The following runtime members are embedded:</span></span>  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions>класс</xref:Microsoft.VisualBasic.CompilerServices.Conversions>  
+-   <span data-ttu-id="aa7ca-122">Класс <xref:Microsoft.VisualBasic.CompilerServices.Conversions></span><span class="sxs-lookup"><span data-stu-id="aa7ca-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions> class</span></span>  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>метод</xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29>  
+-   <span data-ttu-id="aa7ca-123">Метод <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29></span><span class="sxs-lookup"><span data-stu-id="aa7ca-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> method</span></span>  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>метод</xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29>  
+-   <span data-ttu-id="aa7ca-124">Метод <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29></span><span class="sxs-lookup"><span data-stu-id="aa7ca-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> method</span></span>  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>метод</xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29>  
+-   <span data-ttu-id="aa7ca-125">Метод <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29></span><span class="sxs-lookup"><span data-stu-id="aa7ca-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> method</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack>Константа</xref:Microsoft.VisualBasic.Constants.vbBack>  
+-   <span data-ttu-id="aa7ca-126"><xref:Microsoft.VisualBasic.Constants.vbBack>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-126"><xref:Microsoft.VisualBasic.Constants.vbBack> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr>Константа</xref:Microsoft.VisualBasic.Constants.vbCr>  
+-   <span data-ttu-id="aa7ca-127"><xref:Microsoft.VisualBasic.Constants.vbCr>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-127"><xref:Microsoft.VisualBasic.Constants.vbCr> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf>Константа</xref:Microsoft.VisualBasic.Constants.vbCrLf>  
+-   <span data-ttu-id="aa7ca-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed>Константа</xref:Microsoft.VisualBasic.Constants.vbFormFeed>  
+-   <span data-ttu-id="aa7ca-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf>Константа</xref:Microsoft.VisualBasic.Constants.vbLf>  
+-   <span data-ttu-id="aa7ca-130"><xref:Microsoft.VisualBasic.Constants.vbLf>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-130"><xref:Microsoft.VisualBasic.Constants.vbLf> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine>Константа</xref:Microsoft.VisualBasic.Constants.vbNewLine>  
+-   <span data-ttu-id="aa7ca-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar>Константа</xref:Microsoft.VisualBasic.Constants.vbNullChar>  
+-   <span data-ttu-id="aa7ca-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString>Константа</xref:Microsoft.VisualBasic.Constants.vbNullString>  
+-   <span data-ttu-id="aa7ca-133"><xref:Microsoft.VisualBasic.Constants.vbNullString>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-133"><xref:Microsoft.VisualBasic.Constants.vbNullString> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab>Константа</xref:Microsoft.VisualBasic.Constants.vbTab>  
+-   <span data-ttu-id="aa7ca-134"><xref:Microsoft.VisualBasic.Constants.vbTab>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-134"><xref:Microsoft.VisualBasic.Constants.vbTab> constant</span></span>  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>Константа</xref:Microsoft.VisualBasic.Constants.vbVerticalTab>  
+-   <span data-ttu-id="aa7ca-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab>Константа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab> constant</span></span>  
   
--   Некоторые объекты `My` типа  
+-   <span data-ttu-id="aa7ca-136">Некоторые объекты `My` типа</span><span class="sxs-lookup"><span data-stu-id="aa7ca-136">Some objects of the `My` type</span></span>  
   
- Если компиляция выполняется с помощью `/vbruntime*` параметр и код ссылается на элемент из библиотеки времени выполнения Visual Basic, который не внедрен с основными функциями, компилятор возвращает ошибку, указывающую, что элемент недоступен.  
+ <span data-ttu-id="aa7ca-137">Если компиляция выполняется с помощью `/vbruntime*` параметр и код ссылается на элемент из библиотеки среды выполнения Visual Basic, не внедрены в основных функциональных возможностей, компилятор возвращает ошибку, указывающую, что член недоступен.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-137">If you compile using the `/vbruntime*` option and your code references a member from the Visual Basic Runtime Library that is not embedded with the core functionality, the compiler returns an error that indicates that the member is not available.</span></span>  
   
-## <a name="referencing-a-specified-library"></a>Ссылка на указанную библиотеку  
- Можно использовать `path` аргумент для компиляции со ссылкой на библиотеку настраиваемую среду выполнения вместо библиотеки времени выполнения Visual Basic по умолчанию.  
+## <a name="referencing-a-specified-library"></a><span data-ttu-id="aa7ca-138">Создание ссылок на указанную библиотеку</span><span class="sxs-lookup"><span data-stu-id="aa7ca-138">Referencing a specified library</span></span>  
+ <span data-ttu-id="aa7ca-139">Можно использовать `path` аргумент для компиляции со ссылкой на библиотеку времени выполнения пользовательского вместо значения по умолчанию библиотеки времени выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-139">You can use the `path` argument to compile with a reference to a custom runtime library instead of the default Visual Basic Runtime Library.</span></span>  
   
- Если значение `path` аргумент — полный путь к библиотеке DLL, компилятор будет использовать этот файл как библиотеку среды выполнения. Если значение `path` аргумент не является полный путь к библиотеке DLL, компилятор Visual Basic будет сначала поиск идентифицированной библиотеки DLL в текущей папке. Затем выполнит поиск по пути, указанному с помощью [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) параметр компилятора. Если `/sdkpath` не используется параметр компилятора, компилятор будет искать идентифицированной библиотеки DLL в папке .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ <span data-ttu-id="aa7ca-140">Если значение `path` аргумент — полный путь к DLL-файлу, компилятор будет использовать этот файл как библиотеку среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-140">If the value for the `path` argument is a fully qualified path to a DLL, the compiler will use that file as the runtime library.</span></span> <span data-ttu-id="aa7ca-141">Если значение `path` аргумент не является полный путь к библиотеке DLL, компилятор Visual Basic будет сначала искать идентифицированной библиотеки DLL в текущей папке.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-141">If the value for the `path` argument is not a fully qualified path to a DLL, the Visual Basic compiler will search for the identified DLL in the current folder first.</span></span> <span data-ttu-id="aa7ca-142">Затем будет выполнен поиск по пути, указанному с помощью [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-142">It will then search in the path that you have specified by using the [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) compiler option.</span></span> <span data-ttu-id="aa7ca-143">Если `/sdkpath` не используется параметр компилятора, компилятор будет искать идентифицированной библиотеки DLL в папке .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).</span><span class="sxs-lookup"><span data-stu-id="aa7ca-143">If the `/sdkpath` compiler option is not used, the compiler will search for the identified DLL in the .NET Framework folder (`%systemroot%\Microsoft.NET\Framework\versionNumber`).</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `/vbruntime` для компиляции со ссылкой на пользовательскую библиотеку.  
+## <a name="example"></a><span data-ttu-id="aa7ca-144">Пример</span><span class="sxs-lookup"><span data-stu-id="aa7ca-144">Example</span></span>  
+ <span data-ttu-id="aa7ca-145">В следующем примере показано, как использовать `/vbruntime` для компиляции со ссылкой на пользовательскую библиотеку.</span><span class="sxs-lookup"><span data-stu-id="aa7ca-145">The following example shows how to use the `/vbruntime` option to compile with a reference to a custom library.</span></span>  
   
 ```  
 vbc /vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Visual Basic Core — новый режим компиляции в Visual Studio 2010 SP1](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)   
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a><span data-ttu-id="aa7ca-146">См. также</span><span class="sxs-lookup"><span data-stu-id="aa7ca-146">See Also</span></span>  
+ [<span data-ttu-id="aa7ca-147">Основные Visual Basic — новый режим компиляции в Visual Studio 2010 SP1</span><span class="sxs-lookup"><span data-stu-id="aa7ca-147">Visual Basic Core – New compilation mode in Visual Studio 2010 SP1</span></span>](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
+ [<span data-ttu-id="aa7ca-148">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="aa7ca-148">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="aa7ca-149">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="aa7ca-149">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="aa7ca-150">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="aa7ca-150">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

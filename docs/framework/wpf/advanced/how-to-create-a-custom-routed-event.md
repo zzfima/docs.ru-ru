@@ -1,45 +1,50 @@
 ---
-title: "Практическое руководство. Создание пользовательских перенаправленных событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание, перенаправляемые события"
-  - "события, маршрутизация"
-  - "перенаправляемые события, создание"
+title: "Практическое руководство. Создание пользовательских перенаправленных событий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- routed events [WPF], creating
+- events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e901242b265e0012f9ad65d9eaab89b1b63b40ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание пользовательских перенаправленных событий
-Чтобы обеспечить поддержку [перенаправления событий](GTMT) в пользовательском событии, зарегистрируйте объект <xref:System.Windows.RoutedEvent> с помощью метода <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>.  В этом примере описываются основные принципы создания пользовательских перенаправленных событий.  
+# <a name="how-to-create-a-custom-routed-event"></a><span data-ttu-id="de13f-102">Практическое руководство. Создание пользовательских перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="de13f-102">How to: Create a Custom Routed Event</span></span>
+<span data-ttu-id="de13f-103">Для поддержки маршрутизации события в пользовательском событии, необходимо зарегистрировать <xref:System.Windows.RoutedEvent> с помощью <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="de13f-103">For your custom event to support event routing, you need to register a <xref:System.Windows.RoutedEvent> using the <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> method.</span></span> <span data-ttu-id="de13f-104">В этом примере демонстрируются основные принципы создания пользовательских перенаправленных событий.</span><span class="sxs-lookup"><span data-stu-id="de13f-104">This example demonstrates the basics of creating a custom routed event.</span></span>  
   
-## Пример  
- Как показано в следующем примере, сначала выполняется регистрация объекта <xref:System.Windows.RoutedEvent> с помощью метода <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>.  В соответствии с соглашением, имя статического поля <xref:System.Windows.RoutedEvent> должно заканчиваться суффиксом ***Event***.  В этом примере для события `Tap` используется стратегия перенаправления событий <xref:System.Windows.RoutingStrategy>.  После вызова регистрации для события можно предоставить методы доступа для добавления и удаления событий [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].  
+## <a name="example"></a><span data-ttu-id="de13f-105">Пример</span><span class="sxs-lookup"><span data-stu-id="de13f-105">Example</span></span>  
+ <span data-ttu-id="de13f-106">Как показано в следующем примере, нужно сначала зарегистрировать <xref:System.Windows.RoutedEvent> с помощью <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="de13f-106">As shown in the following example, you first register a <xref:System.Windows.RoutedEvent> using the <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> method.</span></span> <span data-ttu-id="de13f-107">По соглашению <xref:System.Windows.RoutedEvent> имя статического поля должно заканчиваться суффиксом ***событие***.</span><span class="sxs-lookup"><span data-stu-id="de13f-107">By convention, the <xref:System.Windows.RoutedEvent> static field name should end with the suffix ***Event***.</span></span> <span data-ttu-id="de13f-108">В этом примере событие называется `Tap` и стратегия маршрутизации события – <xref:System.Windows.RoutingStrategy.Bubble>.</span><span class="sxs-lookup"><span data-stu-id="de13f-108">In this example, the name of the event is `Tap` and the routing strategy of the event is <xref:System.Windows.RoutingStrategy.Bubble>.</span></span> <span data-ttu-id="de13f-109">После вызова регистрации можно предоставить для этого события методы доступа к событию добавления и удаления [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de13f-109">After the registration call, you can provide add-and-remove [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] event accessors for the event.</span></span>  
   
- Обратите внимание, что даже при вызове события с помощью виртуального метода `OnTap` вызов события и реакция события на изменения зависят от потребностей разработчика.  
+ <span data-ttu-id="de13f-110">Обратите внимание, что несмотря на то что в этом примере событие вызывается виртуальным методом `OnTap`, метод вызова события и его реагирование на изменения зависят от ваших потребностей.</span><span class="sxs-lookup"><span data-stu-id="de13f-110">Note that even though the event is raised through the `OnTap` virtual method in this particular example, how you raise your event or how your event responds to changes depends on your needs.</span></span>  
   
- Обратите внимание, что в этом примере в основном реализуется весь подкласс <xref:System.Windows.Controls.Button>. Этот подкласс создается в виде отдельной сборки, после чего на отдельной странице [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] создается его экземпляр в качестве пользовательского класса.  Это позволяет проиллюстрировать возможность вставки производных элементов управления в деревья, состоящие из других элементов управления. В этом случае пользовательские события в этих элементах управления включают в себя те же функции перенаправления событий, что и любой собственный элемент [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+ <span data-ttu-id="de13f-111">Обратите внимание, что в этом примере в основном реализуется весь подкласс <xref:System.Windows.Controls.Button>; Этот подкласс создается в виде отдельной сборки и затем создан в качестве пользовательского класса на отдельном [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы.</span><span class="sxs-lookup"><span data-stu-id="de13f-111">Note also that this example basically implements an entire subclass of <xref:System.Windows.Controls.Button>; that subclass is built as a separate assembly and then instantiated as a custom class on a separate [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="de13f-112">Это призвано проиллюстрировать тот факт, что производные от классов элементы управления можно вставлять в деревья, состоящие из других элементов управления, и что в этой ситуации пользовательские события в этих элементах управления имеют те же функции маршрутизации событий, что и собственный элемент [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="de13f-112">This is to illustrate the concept that subclassed controls can be inserted into trees composed of other controls, and that in this situation, custom events on these controls have the very same event routing capabilities as any native [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] element does.</span></span>  
   
  [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
  [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
- [!code-xml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
+ [!code-xaml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
- Если создается событие с нисходящей маршрутизацией, при вызове регистрации для свойства <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> устанавливается значение <xref:System.Windows.RoutingStrategy>.  В соответствии с соглашением, в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] к событиям с нисходящей маршрутизацией добавляется префикс "Preview".  
+ <span data-ttu-id="de13f-113">Туннельный события создаются таким же способом, но с <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> значение <xref:System.Windows.RoutingStrategy.Tunnel> в вызове регистрации.</span><span class="sxs-lookup"><span data-stu-id="de13f-113">Tunneling events are created the same way, but with <xref:System.Windows.RoutedEvent.RoutingStrategy%2A> set to <xref:System.Windows.RoutingStrategy.Tunnel> in the registration call.</span></span> <span data-ttu-id="de13f-114">По соглашению события нисходящей маршрутизации в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют префикс Preview.</span><span class="sxs-lookup"><span data-stu-id="de13f-114">By convention, tunneling events in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] are prefixed with the word "Preview".</span></span>  
   
- Пример использования событий с восходящей маршрутизацией см. в разделе [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ <span data-ttu-id="de13f-115">Пример функционирования восходящей маршрутизации событий см. в разделе [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).</span><span class="sxs-lookup"><span data-stu-id="de13f-115">To see an example of how bubbling events work, see [Handle a Routed Event](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).</span></span>  
   
-## См. также  
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)   
- [Общие сведения о разработке управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a><span data-ttu-id="de13f-116">См. также</span><span class="sxs-lookup"><span data-stu-id="de13f-116">See Also</span></span>  
+ [<span data-ttu-id="de13f-117">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="de13f-117">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="de13f-118">Общие сведения о входных данных</span><span class="sxs-lookup"><span data-stu-id="de13f-118">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="de13f-119">Общие сведения о разработке элементов управления</span><span class="sxs-lookup"><span data-stu-id="de13f-119">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

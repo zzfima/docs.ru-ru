@@ -1,107 +1,106 @@
 ---
-title: "Сводка типов данных (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "boolean - тип данных, поддерживаемые типы в Visual Basic"
-  - "Byte - тип данных, типы данных Visual Basic"
-  - "Char - тип данных, типы данных Visual Basic"
-  - "типы данных [Visual Basic], требования к памяти"
-  - "типы данных [Visual Basic], порядок хранения"
-  - "типы данных [Visual Basic], область хранения"
-  - "типы данных [Visual Basic], сводка"
-  - "типы данных [Visual Basic], Visual Basic"
-  - "Date - тип данных, Visual Basic"
-  - "даты [Visual Basic], типы данных"
-  - "Double - тип данных, типы данных Visual Basic"
-  - "числа двойной точности"
-  - "Integer - тип данных, типы данных Visual Basic"
-  - "встроенные типы данных"
-  - "Long - тип данных, поддерживаемые типы в Visual Basic"
-  - "расход памяти"
-  - "расход памяти, типы данных"
-  - "требования к памяти, типы данных"
-  - "нотация, экспоненциальный"
-  - "Object - тип данных, поддерживаемые типы в Visual Basic"
-  - "экспоненциальное представление чисел"
-  - "Single - тип данных, поддерживаемые типы в Visual Basic"
-  - "числа одинарной точности"
-  - "порядок хранения, контролирование в Visual Basic"
-  - "порядок хранения, типы данных"
-  - "хранение, расположение"
-  - "хранение, порядок хранения"
-  - "хранение, пространство"
-  - "String - тип данных, типы данных Visual Basic"
-  - "строки [Visual Basic], типы данных"
-  - "StructLayoutAttribute - класс, хранилище типа данных Visual Basic"
-  - "пользовательские типы данных, Visual Basic"
-  - "Variant - типы данных, поддерживаемые типы в Visual Basic"
-  - "Visual Basic, типы данных"
+title: "Сводка типов данных (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Boolean data type [Visual Basic], supported types in Visual Basic
+- storage [Visual Basic], order of storage
+- data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], supported types in Visual Basic
+- notation [Visual Basic], scientific
+- memory requirements, data types
+- user-defined data types [Visual Basic], Visual Basic
+- Date data type [Visual Basic], Visual Basic
+- Visual Basic, data types
+- storage [Visual Basic], allocation
+- Integer data type [Visual Basic], Visual Basic data types
+- storage [Visual Basic], space
+- Variant data types [Visual Basic], supported types in Visual Basic
+- Char data type [Visual Basic], Visual Basic data types
+- intrinsic data types [Visual Basic]
+- memory consumption [Visual Basic], data types
+- single-precision numbers
+- data types [Visual Basic], order of storage
+- Long data type [Visual Basic], supported types in Visual Basic
+- String data type [Visual Basic], Visual Basic data types
+- storage order, data types
+- StructLayoutAttribute class, Visual Basic data type storage
+- scientific notation
+- Double data type [Visual Basic], Visual Basic data types
+- Byte data type [Visual Basic], Visual Basic data types
+- Object data type [Visual Basic], supported types in Visual Basic
+- data types [Visual Basic], storage allocation
+- double-precision numbers
+- data types [Visual Basic], summary
+- dates [Visual Basic], data types
+- strings [Visual Basic], data types
+- memory consumption
+- storage order, controlling in Visual Basic
+- data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сводка типов данных (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В следующей таблице описаны типы данных Visual Basic, поддерживающие их типы среды CLR, номинально занимаемая память и диапазоны значений.  
+# <a name="data-type-summary-visual-basic"></a><span data-ttu-id="b9ee9-102">Сводка типов данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-102">Data Type Summary (Visual Basic)</span></span>
+<span data-ttu-id="b9ee9-103">В следующей таблице показаны типы данных Visual Basic, их вспомогательные типами среды CLR, их выделение номинальный хранилища и их диапазоны значений.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-103">The following table shows the Visual Basic data types, their supporting common language runtime types, their nominal storage allocation, and their value ranges.</span></span>  
   
-|Тип Visual Basic|Структура типа в среде CLR|Номинальная занимаемая память|Диапазон значений|  
-|----------------------|--------------------------------|-----------------------------------|-----------------------|  
-|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|Зависит от платформы реализации|`True` или `False`|  
-|[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 байт|От 0 до 255 \(беззнаковый\).|  
-|[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) \(один знак\)|<xref:System.Char>|2 байта|От 0 до 65535 \(беззнаковый\).|  
-|[Дата](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 байтов|От 0:00:00 \(полночь\) 1 января 0001 года до 11:59:59 вечера 31 декабря 9999 года.|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|16 байта|От 0 до \+\/–79 228 162 514 264 337 593 543 950 335 \(\+\/–7,9... E \+ 28\) <sup>†</sup> без десятичной запятой; от 0 до \+\/–7,9228162514264337593543950335 с 28 разрядами справа от десятичной запятой;<br /><br /> наименьшее ненулевое число — это \+\/–0,0000000000000000000000000001 \(\+\/–1E–28\) <sup>†</sup>|  
-|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) \(число двойной точности с плавающей запятой\)|<xref:System.Double>|8 байтов|От –1,79769313486231570E\+308 до –4.94065645841246544E–324 <sup>†</sup> для отрицательных значений;<br /><br /> от 4,94065645841246544E–324 до 1,79769313486231570E\+308 <sup>†</sup> для положительных значений|  
-|[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 байта|От –2 147 483 648 до 2 147 483 647 \(знаковый\)|  
-|[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) \(длинное целое число\)|<xref:System.Int64>|8 байтов|От –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807 \(9,2... E\+18 <sup>†</sup>\) \(знаковый\)|  
-|[Объект.](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> \(класс\)|4 байта на 32\-разрядной платформе<br /><br /> 8 байт на 64\-разрядной платформе|В переменной типа `Object` может храниться значение любого типа.|  
-|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 байт|От –128 до 127 \(знаковый\)|  
-|[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) \(короткое целое число\)|<xref:System.Int16>|2 байта|От –32 768 до 32 767 \(знаковый\)|  
-|[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) \(число одиночной точности с плавающей запятой\)|<xref:System.Single>|4 байта|От –3,4028235E\+38 до –1,401298E–45 <sup>†</sup> для отрицательных значений;<br /><br /> от 1,401298E–45 до 3,4028235E\+38 <sup>†</sup> для положительных значений|  
-|[String](../../../visual-basic/language-reference/data-types/string-data-type.md) \(строка переменной длины\)|<xref:System.String> \(класс\)|Зависит от платформы реализации|От 0 до приблизительно 2 миллиардов знаков в кодировке Юникод.|  
-|[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 байта|От 0 до 4 294 967 295 \(беззнаковый\).|  
-|[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 байтов|От 0 до 18 446 744 073 709 551 615 \(1,8... E\+19 <sup>†</sup>\) \(знаковый\)|  
-|[Пользовательский тип](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) \(структура\)|\(наследует от <xref:System.ValueType>\)|Зависит от платформы реализации|Каждый член структуры имеет диапазон, определяемый его типом данных и не зависящий от диапазонов других членов.|  
-|[UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|2 байта|От 0 до 65 535 \(беззнаковый\)|  
+|<span data-ttu-id="b9ee9-104">Тип Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b9ee9-104">Visual Basic type</span></span>|<span data-ttu-id="b9ee9-105">Общая структура типа среды выполнения языка</span><span class="sxs-lookup"><span data-stu-id="b9ee9-105">Common language runtime type structure</span></span>|<span data-ttu-id="b9ee9-106">Номинальной памяти</span><span class="sxs-lookup"><span data-stu-id="b9ee9-106">Nominal storage allocation</span></span>|<span data-ttu-id="b9ee9-107">Диапазон значений</span><span class="sxs-lookup"><span data-stu-id="b9ee9-107">Value range</span></span>|  
+|-----------------------|--------------------------------------------|--------------------------------|-----------------|  
+|[<span data-ttu-id="b9ee9-108">Boolean</span><span class="sxs-lookup"><span data-stu-id="b9ee9-108">Boolean</span></span>](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|<span data-ttu-id="b9ee9-109">Зависит от платформы реализации</span><span class="sxs-lookup"><span data-stu-id="b9ee9-109">Depends on implementing platform</span></span>|<span data-ttu-id="b9ee9-110">`True` или `False`</span><span class="sxs-lookup"><span data-stu-id="b9ee9-110">`True` or `False`</span></span>|  
+|[<span data-ttu-id="b9ee9-111">Byte</span><span class="sxs-lookup"><span data-stu-id="b9ee9-111">Byte</span></span>](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|<span data-ttu-id="b9ee9-112">1 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-112">1 byte</span></span>|<span data-ttu-id="b9ee9-113">от 0 до 255 (без знака)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-113">0 through 255 (unsigned)</span></span>|  
+|<span data-ttu-id="b9ee9-114">[Char-](../../../visual-basic/language-reference/data-types/char-data-type.md) (одиночный символ)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-114">[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) (single character)</span></span>|<xref:System.Char>|<span data-ttu-id="b9ee9-115">2 байта</span><span class="sxs-lookup"><span data-stu-id="b9ee9-115">2 bytes</span></span>|<span data-ttu-id="b9ee9-116">от 0 до 65535 (без знака)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-116">0 through 65535 (unsigned)</span></span>|  
+|[<span data-ttu-id="b9ee9-117">Date</span><span class="sxs-lookup"><span data-stu-id="b9ee9-117">Date</span></span>](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|<span data-ttu-id="b9ee9-118">8 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-118">8 bytes</span></span>|<span data-ttu-id="b9ee9-119">0:00:00 (полночь) 1 января 0001 года до 11:59:59 PM 31 декабря 9999 года</span><span class="sxs-lookup"><span data-stu-id="b9ee9-119">0:00:00 (midnight) on January 1, 0001 through 11:59:59 PM on December 31, 9999</span></span>|  
+|[<span data-ttu-id="b9ee9-120">Decimal</span><span class="sxs-lookup"><span data-stu-id="b9ee9-120">Decimal</span></span>](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|<xref:System.Decimal>|<span data-ttu-id="b9ee9-121">16 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-121">16 bytes</span></span>|<span data-ttu-id="b9ee9-122">от 0 до +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9... E + 28) <sup>†</sup> нет десятичной запятой; от 0 до +/-7,9228162514264337593543950335 с 28 разрядов справа от десятичной запятой;</span><span class="sxs-lookup"><span data-stu-id="b9ee9-122">0 through +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9...E+28) <sup>†</sup> with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal;</span></span><br /><br /> <span data-ttu-id="b9ee9-123">наименьшее ненулевое значение — +/-0,0000000000000000000000000001 (+/-1E-28) <sup>†</sup></span><span class="sxs-lookup"><span data-stu-id="b9ee9-123">smallest nonzero number is +/-0.0000000000000000000000000001 (+/-1E-28) <sup>†</sup></span></span>|  
+|<span data-ttu-id="b9ee9-124">[Двойные](../../../visual-basic/language-reference/data-types/double-data-type.md) (двойной точности с плавающей запятой)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-124">[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (double-precision floating-point)</span></span>|<xref:System.Double>|<span data-ttu-id="b9ee9-125">8 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-125">8 bytes</span></span>|<span data-ttu-id="b9ee9-126">-1, 79769313486231570E + 308 до - 4.94065645841246544E-324 <sup>†</sup> для отрицательных значений;</span><span class="sxs-lookup"><span data-stu-id="b9ee9-126">-1.79769313486231570E+308 through -4.94065645841246544E-324 <sup>†</sup> for negative values;</span></span><br /><br /> <span data-ttu-id="b9ee9-127">4.94065645841246544E-324 до 1, 79769313486231570E + 308 <sup>†</sup> для положительных значений</span><span class="sxs-lookup"><span data-stu-id="b9ee9-127">4.94065645841246544E-324 through 1.79769313486231570E+308 <sup>†</sup> for positive values</span></span>|  
+|[<span data-ttu-id="b9ee9-128">Integer</span><span class="sxs-lookup"><span data-stu-id="b9ee9-128">Integer</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|<span data-ttu-id="b9ee9-129">4 байта</span><span class="sxs-lookup"><span data-stu-id="b9ee9-129">4 bytes</span></span>|<span data-ttu-id="b9ee9-130">от -2147483648 до 2 147 483 647 (со знаком)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-130">-2,147,483,648 through 2,147,483,647 (signed)</span></span>|  
+|<span data-ttu-id="b9ee9-131">[Длинное](../../../visual-basic/language-reference/data-types/long-data-type.md) (длинное целое)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-131">[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (long integer)</span></span>|<xref:System.Int64>|<span data-ttu-id="b9ee9-132">8 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-132">8 bytes</span></span>|<span data-ttu-id="b9ee9-133">-9,223,372,036,854,775,808 до 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (подписанный)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-133">-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807 (9.2...E+18 <sup>†</sup>) (signed)</span></span>|  
+|[<span data-ttu-id="b9ee9-134">Объект</span><span class="sxs-lookup"><span data-stu-id="b9ee9-134">Object</span></span>](../../../visual-basic/language-reference/data-types/object-data-type.md)|<span data-ttu-id="b9ee9-135"><xref:System.Object>(класс)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-135"><xref:System.Object> (class)</span></span>|<span data-ttu-id="b9ee9-136">4 байта в 32-разрядной платформе</span><span class="sxs-lookup"><span data-stu-id="b9ee9-136">4 bytes on 32-bit platform</span></span><br /><br /> <span data-ttu-id="b9ee9-137">8 байт на 64-разрядной платформе</span><span class="sxs-lookup"><span data-stu-id="b9ee9-137">8 bytes on 64-bit platform</span></span>|<span data-ttu-id="b9ee9-138">Любой тип, которые могут храниться в переменной типа`Object`</span><span class="sxs-lookup"><span data-stu-id="b9ee9-138">Any type can be stored in a variable of type `Object`</span></span>|  
+|[<span data-ttu-id="b9ee9-139">SByte</span><span class="sxs-lookup"><span data-stu-id="b9ee9-139">SByte</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|<span data-ttu-id="b9ee9-140">1 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-140">1 byte</span></span>|<span data-ttu-id="b9ee9-141">от -128 до 127 (со знаком)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-141">-128 through 127 (signed)</span></span>|  
+|<span data-ttu-id="b9ee9-142">[Краткое](../../../visual-basic/language-reference/data-types/short-data-type.md) (короткое целое число)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-142">[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (short integer)</span></span>|<xref:System.Int16>|<span data-ttu-id="b9ee9-143">2 байта</span><span class="sxs-lookup"><span data-stu-id="b9ee9-143">2 bytes</span></span>|<span data-ttu-id="b9ee9-144">-32 768 до 32 767 (со знаком)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-144">-32,768 through 32,767 (signed)</span></span>|  
+|<span data-ttu-id="b9ee9-145">[Один](../../../visual-basic/language-reference/data-types/single-data-type.md) (одинарной точности с плавающей запятой)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-145">[Single](../../../visual-basic/language-reference/data-types/single-data-type.md) (single-precision floating-point)</span></span>|<xref:System.Single>|<span data-ttu-id="b9ee9-146">4 байта</span><span class="sxs-lookup"><span data-stu-id="b9ee9-146">4 bytes</span></span>|<span data-ttu-id="b9ee9-147">-3, 4028235E + 38 до - 1, 401298E-45 <sup>†</sup> для отрицательных значений;</span><span class="sxs-lookup"><span data-stu-id="b9ee9-147">-3.4028235E+38 through -1.401298E-45 <sup>†</sup> for negative values;</span></span><br /><br /> <span data-ttu-id="b9ee9-148">1, 401298E-45 до 3, 4028235E + 38 <sup>†</sup> для положительных значений</span><span class="sxs-lookup"><span data-stu-id="b9ee9-148">1.401298E-45 through 3.4028235E+38 <sup>†</sup> for positive values</span></span>|  
+|<span data-ttu-id="b9ee9-149">[Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) (переменной длины)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-149">[String](../../../visual-basic/language-reference/data-types/string-data-type.md) (variable-length)</span></span>|<span data-ttu-id="b9ee9-150"><xref:System.String>(класс)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-150"><xref:System.String> (class)</span></span>|<span data-ttu-id="b9ee9-151">Зависит от платформы реализации</span><span class="sxs-lookup"><span data-stu-id="b9ee9-151">Depends on implementing platform</span></span>|<span data-ttu-id="b9ee9-152">от 0 до приблизительно 2 миллиардов знаков Юникода</span><span class="sxs-lookup"><span data-stu-id="b9ee9-152">0 to approximately 2 billion Unicode characters</span></span>|  
+|[<span data-ttu-id="b9ee9-153">UInteger</span><span class="sxs-lookup"><span data-stu-id="b9ee9-153">UInteger</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|<span data-ttu-id="b9ee9-154">4 байта</span><span class="sxs-lookup"><span data-stu-id="b9ee9-154">4 bytes</span></span>|<span data-ttu-id="b9ee9-155">от 0 до 4 294 967 295 (без знака)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-155">0 through 4,294,967,295 (unsigned)</span></span>|  
+|[<span data-ttu-id="b9ee9-156">ULong</span><span class="sxs-lookup"><span data-stu-id="b9ee9-156">ULong</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|<span data-ttu-id="b9ee9-157">8 байт</span><span class="sxs-lookup"><span data-stu-id="b9ee9-157">8 bytes</span></span>|<span data-ttu-id="b9ee9-158">от 0 до 18446744073709551615 (1.8... E + 19 <sup>†</sup>) (без знака)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-158">0 through 18,446,744,073,709,551,615 (1.8...E+19 <sup>†</sup>) (unsigned)</span></span>|  
+|<span data-ttu-id="b9ee9-159">[Определяемые пользователем](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (структура)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-159">[User-Defined](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)</span></span>|<span data-ttu-id="b9ee9-160">(наследуется от <xref:System.ValueType>)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-160">(inherits from <xref:System.ValueType>)</span></span>|<span data-ttu-id="b9ee9-161">Зависит от платформы реализации</span><span class="sxs-lookup"><span data-stu-id="b9ee9-161">Depends on implementing platform</span></span>|<span data-ttu-id="b9ee9-162">Каждый элемент структуры имеет диапазон, определяемый по его типу данных и не зависят от диапазонов других членов</span><span class="sxs-lookup"><span data-stu-id="b9ee9-162">Each member of the structure has a range determined by its data type and independent of the ranges of the other members</span></span>|  
+|[<span data-ttu-id="b9ee9-163">UShort</span><span class="sxs-lookup"><span data-stu-id="b9ee9-163">UShort</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16>|<span data-ttu-id="b9ee9-164">2 байта</span><span class="sxs-lookup"><span data-stu-id="b9ee9-164">2 bytes</span></span>|<span data-ttu-id="b9ee9-165">от 0 до 65 535 (без знака)</span><span class="sxs-lookup"><span data-stu-id="b9ee9-165">0 through 65,535 (unsigned)</span></span>|  
   
- <sup>†</sup> В *экспоненциальном представлении чисел* "E" ссылается на степень 10.  Таким образом, запись "3,56E \+ 2" равна 3.56 x 10<sup>2</sup>, или 356, а запись "3,56E \- 2" равна 3.56 \/ 10<sup>2</sup>, или 0,0356.  
+ <span data-ttu-id="b9ee9-166"><sup>†</sup> В *экспоненциальное представление чисел*, «E» ссылается на степень числа 10.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-166"><sup>†</sup> In *scientific notation*, "E" refers to a power of 10.</span></span> <span data-ttu-id="b9ee9-167">Поэтому 3.56E + 2 означает 3.56 x 10<sup>2</sup> или 356 и 3.56E-2 означает 3.56 / 10<sup>2</sup> или 0.0356.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-167">So 3.56E+2 signifies 3.56 x 10<sup>2</sup> or 356, and 3.56E-2 signifies 3.56 / 10<sup>2</sup> or 0.0356.</span></span>  
   
 > [!NOTE]
->  Для преобразования строк, содержащих текст, из одного текстового формата в другой, следует использовать функцию <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.  
+>  <span data-ttu-id="b9ee9-168">Для строк, содержащих текст, используйте <xref:Microsoft.VisualBasic.Strings.StrConv%2A> функцию для преобразования из одного текстового формата.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-168">For strings containing text, use the <xref:Microsoft.VisualBasic.Strings.StrConv%2A> function to convert from one text format to another.</span></span>  
   
- Помимо указания типа данных в инструкцию объявления, можно по тип данных некоторых элементов программирования с помощью символа типа.  Дополнительные сведения см. в разделе [Символы типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
+ <span data-ttu-id="b9ee9-169">В дополнение к определению типов данных в операторе объявления, можно задать тип данных некоторых элементов программирования с помощью знака типа.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-169">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements by using a type character.</span></span> <span data-ttu-id="b9ee9-170">В разделе [символов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span><span class="sxs-lookup"><span data-stu-id="b9ee9-170">See [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span></span>  
   
-## Затраты памяти  
- Нельзя полагать, что при объявлении простого типа данных выделяемая для него память будет соответствовать номинальной памяти, занимаемой этим типом данных.  Причиной тому следующие соображения:  
+## <a name="memory-consumption"></a><span data-ttu-id="b9ee9-171">Затраты памяти</span><span class="sxs-lookup"><span data-stu-id="b9ee9-171">Memory Consumption</span></span>  
+ <span data-ttu-id="b9ee9-172">При объявлении простейший тип данных не уверенностью предположить, что объем используемой памяти совпадает со значением номинальной памяти.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-172">When you declare an elementary data type, it is not safe to assume that its memory consumption is the same as its nominal storage allocation.</span></span> <span data-ttu-id="b9ee9-173">Это происходит из-за следующее:</span><span class="sxs-lookup"><span data-stu-id="b9ee9-173">This is due to the following considerations:</span></span>  
   
--   **Выделение памяти.** В среде CLR количество выделяемой памяти зависит от текущих свойств платформы, на которой выполняется приложение.  Если память почти заполнена, она может упаковать объявленные элементы вместе максимально плотно.  В других случаях она может выравнять их адреса в памяти до по естественной аппаратной границе для повышения производительности.  
+-   <span data-ttu-id="b9ee9-174">**Выделение памяти.**</span><span class="sxs-lookup"><span data-stu-id="b9ee9-174">**Storage Assignment.**</span></span> <span data-ttu-id="b9ee9-175">Общеязыковая среда выполнения может назначить хранилище на основании текущих свойств платформы, на котором выполняется приложение.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-175">The common language runtime can assign storage based on the current characteristics of the platform on which your application is executing.</span></span> <span data-ttu-id="b9ee9-176">Если память почти заполнена, она может упаковать объявленные элементы близко друг к другу.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-176">If memory is nearly full, it might pack your declared elements as closely together as possible.</span></span> <span data-ttu-id="b9ee9-177">В других случаях она может выравнять их адреса памяти для естественным аппаратным границам памяти для оптимизации производительности.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-177">In other cases it might align their memory addresses to natural hardware boundaries to optimize performance.</span></span>  
   
--   **Разрядность платформы.** Выделение памяти на 64\-разрядной платформе отличается от выделения памяти на 32\-разрядной платформе.  
+-   <span data-ttu-id="b9ee9-178">**Ширина платформы.**</span><span class="sxs-lookup"><span data-stu-id="b9ee9-178">**Platform Width.**</span></span> <span data-ttu-id="b9ee9-179">Выделение памяти на 64-разрядной платформе отличается от выделения на 32-разрядной платформе.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-179">Storage assignment on a 64-bit platform is different from assignment on a 32-bit platform.</span></span>  
   
-### Составные типы данных  
- Аналогичные рассуждения справедливы для любых членов составных типов данных, таких как структура или массив.  Неверно основывать расчет требуемой памяти на простом сложении номинальных объемов памяти, занимаемых членами типа.  Кроме того, существуют другие вопросы, например:  
+### <a name="composite-data-types"></a><span data-ttu-id="b9ee9-180">Составные типы данных</span><span class="sxs-lookup"><span data-stu-id="b9ee9-180">Composite Data Types</span></span>  
+ <span data-ttu-id="b9ee9-181">Те же рекомендации применяются к каждому члену составной тип данных, таких как структура или массив.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-181">The same considerations apply to each member of a composite data type, such as a structure or an array.</span></span> <span data-ttu-id="b9ee9-182">Не следует полагать, просто добавляя выделения Номинальное дисковое членов типа.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-182">You cannot rely on simply adding together the nominal storage allocations of the type's members.</span></span> <span data-ttu-id="b9ee9-183">Кроме того существуют другие вопросы, например следующие:</span><span class="sxs-lookup"><span data-stu-id="b9ee9-183">Furthermore, there are other considerations, such as the following:</span></span>  
   
--   **Дополнительные издержки.** Некоторые составные типы расходуют дополнительный объем памяти.  Например, массив занимает дополнительную память для самого массива и для каждого измерения.  В настоящее время на 32\-разрядной платформе эти дополнительные издержки составляет 12 байтов плюс по 8 байтов для каждого измерения.  На 64\-разрядной платформе эти требования удваиваются.  
+-   <span data-ttu-id="b9ee9-184">**Дополнительные издержки.**</span><span class="sxs-lookup"><span data-stu-id="b9ee9-184">**Overhead.**</span></span> <span data-ttu-id="b9ee9-185">Некоторые составные типы предъявляют дополнительные требования к памяти.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-185">Some composite types have additional memory requirements.</span></span> <span data-ttu-id="b9ee9-186">Например массив использует дополнительную память для самого массива, а также для каждого измерения.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-186">For example, an array uses extra memory for the array itself and also for each dimension.</span></span> <span data-ttu-id="b9ee9-187">В настоящее время на 32-разрядной платформе, эти накладные расходы — 12 байтов плюс 8 байт для каждого измерения.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-187">On a 32-bit platform, this overhead is currently 12 bytes plus 8 bytes for each dimension.</span></span> <span data-ttu-id="b9ee9-188">На 64-разрядной платформе эти требования удваиваются.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-188">On a 64-bit platform this requirement is doubled.</span></span>  
   
--   **Расположение в памяти.** Нельзя однозначно полагать, что порядок расположения элементов в памяти соответствует порядку их объявления.  Нельзя даже делать какие\-либо предположения о порядке выравнивании байтов, таких как 2\-байтовая или 4\-байтовая границы.  Если при определении класса или структуры требуется контролировать расположение членов в памяти, то к классу или структуре можно применить атрибут <xref:System.Runtime.InteropServices.StructLayoutAttribute>.  
+-   <span data-ttu-id="b9ee9-189">**Расположение в памяти.**</span><span class="sxs-lookup"><span data-stu-id="b9ee9-189">**Storage Layout.**</span></span> <span data-ttu-id="b9ee9-190">Вы не полагать, что порядок расположения элементов в памяти является таким же, как и порядок их объявления.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-190">You cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="b9ee9-191">Даже не может делать предположения о байтового выравнивания, например 2-байтовая или 4-байтовые границы.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-191">You cannot even make assumptions about byte alignment, such as a 2-byte or 4-byte boundary.</span></span> <span data-ttu-id="b9ee9-192">Если вы определяете класс или структуру и вам необходимо управлять его члены структуры хранилища, можно применить <xref:System.Runtime.InteropServices.StructLayoutAttribute> атрибут в классе или структуре.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-192">If you are defining a class or structure and you need to control the storage layout of its members, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the class or structure.</span></span>  
   
-### Служебные данные типа Object  
- Переменная типа `Object`, ссылающаяся на любой простой или составной тип данных, использует 4 байта помимо данных, содержащихся в этом типе.  
+### <a name="object-overhead"></a><span data-ttu-id="b9ee9-193">Затраты на объект</span><span class="sxs-lookup"><span data-stu-id="b9ee9-193">Object Overhead</span></span>  
+ <span data-ttu-id="b9ee9-194">`Object` Ссылок на данные в любой простой или составной тип использует 4 байта в дополнение к данным, содержащимся в тип данных.</span><span class="sxs-lookup"><span data-stu-id="b9ee9-194">An `Object` referring to any elementary or composite data type uses 4 bytes in addition to the data contained in the data type.</span></span>  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>   
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Символы типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="b9ee9-195">См. также</span><span class="sxs-lookup"><span data-stu-id="b9ee9-195">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
+ [<span data-ttu-id="b9ee9-196">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="b9ee9-196">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="b9ee9-197">Сводка по преобразованию</span><span class="sxs-lookup"><span data-stu-id="b9ee9-197">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="b9ee9-198">Знаки типов</span><span class="sxs-lookup"><span data-stu-id="b9ee9-198">Type Characters</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [<span data-ttu-id="b9ee9-199">Эффективное использование типов данных</span><span class="sxs-lookup"><span data-stu-id="b9ee9-199">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

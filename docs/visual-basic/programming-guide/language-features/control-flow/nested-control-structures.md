@@ -1,54 +1,37 @@
 ---
-title: "Вложенные структуры управления (Visual Basic) | Документы Microsoft"
+title: "Вложенные структуры управления (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, control flow
-- control structures, nested
-- conditional statements, nested
+- control structures [Visual Basic], nested
+- conditional statements [Visual Basic], nested
 - statements [Visual Basic], control flow
-- control flow, nested control statements
-- structures, nested control
-- nested control statements
+- control flow [Visual Basic], nested control statements
+- structures [Visual Basic], nested control
+- nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4afc0afc2ad63d03f2c4251640d3682b2b184504
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
-Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла. Операторы управления помещен внутрь другого оператора управления называется *вложенных*.  
+# <a name="nested-control-structures-visual-basic"></a><span data-ttu-id="74840-102">Вложенные структуры управления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="74840-102">Nested Control Structures (Visual Basic)</span></span>
+<span data-ttu-id="74840-103">Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла.</span><span class="sxs-lookup"><span data-stu-id="74840-103">You can place control statements inside other control statements, for example an `If...Then...Else` block within a `For...Next` loop.</span></span> <span data-ttu-id="74840-104">Операторы управления, расположенных внутри другого оператора управления считается *вложенных*.</span><span class="sxs-lookup"><span data-stu-id="74840-104">A control statement placed inside another control statement is said to be *nested*.</span></span>  
   
-## <a name="nesting-levels"></a>Число уровней вложения  
- Структуры элементов управления в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] могут быть вложены на всех уровнях. Это часто становится более удобочитаемой вложенные структуры с помощью соответствующих отступов текст каждого из них. Редактор Интегрированная среда разработки автоматически выполняет это действие.  
+## <a name="nesting-levels"></a><span data-ttu-id="74840-105">Число уровней вложения</span><span class="sxs-lookup"><span data-stu-id="74840-105">Nesting Levels</span></span>  
+ <span data-ttu-id="74840-106">Управляющие структуры в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] могут быть вложены на всех уровнях.</span><span class="sxs-lookup"><span data-stu-id="74840-106">Control structures in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] can be nested to as many levels as you want.</span></span> <span data-ttu-id="74840-107">Это часто можно повысить читаемость вложенные структуры с помощью соответствующих отступов текст каждого из них.</span><span class="sxs-lookup"><span data-stu-id="74840-107">It is common practice to make nested structures more readable by indenting the body of each one.</span></span> <span data-ttu-id="74840-108">Редактор Интегрированная среда разработки автоматически делает это.</span><span class="sxs-lookup"><span data-stu-id="74840-108">The integrated development environment (IDE) editor automatically does this.</span></span>  
   
- В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы.  
+ <span data-ttu-id="74840-109">В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы.</span><span class="sxs-lookup"><span data-stu-id="74840-109">In the following example, the procedure `sumRows` adds together the positive elements of each row of the matrix.</span></span>  
   
 ```  
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -64,15 +47,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- В предыдущем примере первый `Next` инструкции закрывает внутренний `For` цикла, а последний `Next` инструкции закрывает внешний `For` цикла.  
+ <span data-ttu-id="74840-110">В предыдущем примере первый `Next` инструкции закрывает внутренний `For` цикл обработки и последнего `Next` инструкции закрывает внешний `For` цикла.</span><span class="sxs-lookup"><span data-stu-id="74840-110">In the preceding example, the first `Next` statement closes the inner `For` loop and the last `Next` statement closes the outer `For` loop.</span></span>  
   
- Аналогичным образом, во вложенных `If` инструкций, `End If` с ближайшим перед ними автоматически применяются инструкции `If` инструкции. Вложенные `Do` циклы работают таким же образом, с самого внутреннего `Loop` инструкции соответствует самому внутреннему `Do` инструкции.  
+ <span data-ttu-id="74840-111">Аналогичным образом, во вложенных `If` инструкций, `End If` выражения автоматически применяются к ближайшим перед ними `If` инструкции.</span><span class="sxs-lookup"><span data-stu-id="74840-111">Likewise, in nested `If` statements, the `End If` statements automatically apply to the nearest prior `If` statement.</span></span> <span data-ttu-id="74840-112">Вложенные `Do` циклы работает таким же образом, с самого внутреннего `Loop` оператор соответствует внутренний `Do` инструкции.</span><span class="sxs-lookup"><span data-stu-id="74840-112">Nested `Do` loops work in a similar fashion, with the innermost `Loop` statement matching the innermost `Do` statement.</span></span>  
   
 > [!NOTE]
->  Для многих структур управления что при щелчке ключевого слова, все ключевые слова в структуре выделяются. Например, при нажатии кнопки `If` в `If...Then...Else` конструкции, все экземпляры `If`, `Then`, `ElseIf`, `Else`, и `End If` при построении выделяются. Чтобы переместить выделенные следующего или предыдущего ключевое слово, нажмите клавиши CTRL + SHIFT + СТРЕЛКА ВНИЗ или CTRL + SHIFT + Стрелка вверх.  
+>  <span data-ttu-id="74840-113">Для многих управляющих структур при щелчке ключевого слова, все ключевые слова в структуре, выделяются.</span><span class="sxs-lookup"><span data-stu-id="74840-113">For many control structures, when you click a keyword, all of the keywords in the structure are highlighted.</span></span> <span data-ttu-id="74840-114">Например, при нажатии кнопки `If` в `If...Then...Else` конструкции, все экземпляры `If`, `Then`, `ElseIf`, `Else`, и `End If` выделяются при построении.</span><span class="sxs-lookup"><span data-stu-id="74840-114">For instance, when you click `If` in an `If...Then...Else` construction, all instances of `If`, `Then`, `ElseIf`, `Else`, and `End If` in the construction are highlighted.</span></span> <span data-ttu-id="74840-115">Чтобы переместить выделенный следующей или предыдущей ключевое слово, нажмите клавиши CTRL + SHIFT + СТРЕЛКА ВНИЗ или CTRL + SHIFT + Стрелка вверх.</span><span class="sxs-lookup"><span data-stu-id="74840-115">To move to the next or previous highlighted keyword, press CTRL+SHIFT+DOWN ARROW or CTRL+SHIFT+UP ARROW.</span></span>  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Вложение различных типов структур управления  
- Можно вложить один тип структуры управления внутрь другого типа. В следующем примере используется `With` внутри блока `For Each` цикл и вложенные `If` блокирует внутри `With` блок.  
+## <a name="nesting-different-kinds-of-control-structures"></a><span data-ttu-id="74840-116">Вложение структур управления различных типов</span><span class="sxs-lookup"><span data-stu-id="74840-116">Nesting Different Kinds of Control Structures</span></span>  
+ <span data-ttu-id="74840-117">Можно вложить один тип структуры управления внутрь другого типа.</span><span class="sxs-lookup"><span data-stu-id="74840-117">You can nest one kind of control structure within another kind.</span></span> <span data-ttu-id="74840-118">В следующем примере используется `With` блок `For Each` цикл и вложенными `If` блокирует внутри `With` блока.</span><span class="sxs-lookup"><span data-stu-id="74840-118">The following example uses a `With` block inside a `For Each` loop and nested `If` blocks inside the `With` block.</span></span>  
   
 ```  
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -89,16 +72,16 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Перекрывающиеся структуры управления  
- Управляющие структуры не могут перекрываться. Это означает, что любая вложенная структура должна полностью содержаться внутри следующей внутренней структуры. Например, следующее расположение является недопустимым из-за `For` цикл завершается раньше внутреннего `With` блока.  
+## <a name="overlapping-control-structures"></a><span data-ttu-id="74840-119">Перекрывающиеся структуры управления</span><span class="sxs-lookup"><span data-stu-id="74840-119">Overlapping Control Structures</span></span>  
+ <span data-ttu-id="74840-120">Управляющие структуры не могут перекрываться.</span><span class="sxs-lookup"><span data-stu-id="74840-120">You cannot overlap control structures.</span></span> <span data-ttu-id="74840-121">Это означает, что любая вложенная структура должен полностью содержаться внутри следующей внутренней структуры.</span><span class="sxs-lookup"><span data-stu-id="74840-121">This means that any nested structure must be completely contained within the next innermost structure.</span></span> <span data-ttu-id="74840-122">Например, следующее расположение является недопустимым из-за `For` цикл завершается раньше внутреннего `With` блока.</span><span class="sxs-lookup"><span data-stu-id="74840-122">For example, the following arrangement is invalid because the `For` loop terminates before the inner `With` block terminates.</span></span>  
   
- ![Схема графика недопустимого вложения](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Недопустимое вложение структур For и With  
+ <span data-ttu-id="74840-123">![Схема графика недопустимого вложения](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")</span><span class="sxs-lookup"><span data-stu-id="74840-123">![Graphic diagram of invalid nesting](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")</span></span>  
+<span data-ttu-id="74840-124">Недопустимое вложение структур For и With</span><span class="sxs-lookup"><span data-stu-id="74840-124">Invalid nesting of For and With structures</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Компилятор обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке при компиляции.  
+ <span data-ttu-id="74840-125">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Компилятор обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке времени компиляции.</span><span class="sxs-lookup"><span data-stu-id="74840-125">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler detects such overlapping control structures and signals a compile-time error.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Структуры критериев](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+## <a name="see-also"></a><span data-ttu-id="74840-126">См. также</span><span class="sxs-lookup"><span data-stu-id="74840-126">See Also</span></span>  
+ [<span data-ttu-id="74840-127">Поток управления</span><span class="sxs-lookup"><span data-stu-id="74840-127">Control Flow</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [<span data-ttu-id="74840-128">Структуры решений</span><span class="sxs-lookup"><span data-stu-id="74840-128">Decision Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [<span data-ttu-id="74840-129">Циклические структуры</span><span class="sxs-lookup"><span data-stu-id="74840-129">Loop Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="74840-130">Другие структуры управления</span><span class="sxs-lookup"><span data-stu-id="74840-130">Other Control Structures</span></span>](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

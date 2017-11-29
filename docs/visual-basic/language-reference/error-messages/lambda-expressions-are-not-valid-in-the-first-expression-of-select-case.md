@@ -1,54 +1,52 @@
 ---
-title: "Лямбда-выражения недопустимы в первом выражении оператора Select Case | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36635"
-  - "vbc36635"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36635"
+title: "Лямбда-выражения недопустимы в первом выражении &#39; Выберите вариант &#39; инструкции"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36635
+- vbc36635
+helpviewer_keywords: BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Лямбда-выражения недопустимы в первом выражении оператора Select Case
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Нельзя использовать лямбда\-выражений для проверки выражения в операторе `Select Case`.  Определения лямбда\-выражений возвращают функции, а тестовое выражение оператора `Select Case` должно иметь простой тип данных.  
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a><span data-ttu-id="18317-102">Лямбда-выражения недопустимы в первом выражении &#39; Выберите вариант &#39; инструкции</span><span class="sxs-lookup"><span data-stu-id="18317-102">Lambda expressions are not valid in the first expression of a &#39;Select Case&#39; statement</span></span>
+<span data-ttu-id="18317-103">Лямбда-выражения нельзя использовать для проверки выражения в `Select Case` инструкции.</span><span class="sxs-lookup"><span data-stu-id="18317-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="18317-104">Определения лямбда-выражений возвращают функции, а тестовое выражение `Select Case` инструкция должна быть простой тип данных.</span><span class="sxs-lookup"><span data-stu-id="18317-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
   
- Эту ошибку вызывает приведенный ниже код:  
+ <span data-ttu-id="18317-105">Следующий код вызывает эту ошибку:</span><span class="sxs-lookup"><span data-stu-id="18317-105">The following code causes this error:</span></span>  
   
-```vb#  
+```vb  
 ' Select Case (Function(arg) arg Is Nothing)  
     ' List of the cases.  
 ' End Select  
 ```  
   
- **Идентификатор ошибки**: BC36635  
+ <span data-ttu-id="18317-106">**Идентификатор ошибки:** BC36635</span><span class="sxs-lookup"><span data-stu-id="18317-106">**Error ID:** BC36635</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="18317-107">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="18317-107">To correct this error</span></span>  
   
--   Проверьте код, чтобы определить будут ли работать другие условные конструкции, такие как оператор `If...Then...Else`.  
+-   <span data-ttu-id="18317-108">Проверьте свой код, чтобы определить, подойдет ли вам другая условная конструкция, например оператор `If...Then...Else` .</span><span class="sxs-lookup"><span data-stu-id="18317-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
   
--   Возможно, потребуется вызвать функцию, как показано в следующем коде:  
+-   <span data-ttu-id="18317-109">Возможно, предполагалось вызывать функцию, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="18317-109">You may have intended to call the function, as shown in the following code:</span></span>  
   
-    ```vb#  
-    Dim num? As Integer  
-    Select Case ((Function(arg? As Integer) arg Is Nothing)(num))  
-        ' List of the cases  
-    End Select  
-    ```  
+```vb  
+Dim num? As Integer  
+Select Case ((Function(arg? As Integer) arg Is Nothing)(num))  
+    ' List of the cases  
+End Select  
+```  
   
-## См. также  
- [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+## <a name="see-also"></a><span data-ttu-id="18317-110">См. также</span><span class="sxs-lookup"><span data-stu-id="18317-110">See Also</span></span>  
+ [<span data-ttu-id="18317-111">Лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="18317-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [<span data-ttu-id="18317-112">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="18317-112">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="18317-113">Оператор Select...Case</span><span class="sxs-lookup"><span data-stu-id="18317-113">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)

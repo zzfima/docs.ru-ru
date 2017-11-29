@@ -1,40 +1,46 @@
 ---
-title: "Как изменить типа курсора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WPF"
-  - "курсор (указатель мыши), тип курсора"
+title: "Как изменить типа курсора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- mouse pointer [WPF], cursor type
+- cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41cd8c9cd647c7efbc4e6cf13517ed638245e51c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Как изменить типа курсора
-В этом примере демонстрируется изменение объекта <xref:System.Windows.Input.Cursor> указателя мыши для отдельного элемента и приложения.  
+# <a name="how-to-change-the-cursor-type"></a><span data-ttu-id="3d5a2-102">Как изменить типа курсора</span><span class="sxs-lookup"><span data-stu-id="3d5a2-102">How to: Change the Cursor Type</span></span>
+<span data-ttu-id="3d5a2-103">В этом примере показано, как изменить <xref:System.Windows.Input.Cursor> указателя мыши для отдельного элемента и приложения.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-103">This example shows how to change the <xref:System.Windows.Input.Cursor> of the mouse pointer for a specific element and for the application.</span></span>  
   
- Этот пример состоит из файла [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и файла с выделенным кодом.  
+ <span data-ttu-id="3d5a2-104">В этом примере состоит из [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файл и файл с выделенным кодом.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-104">This example consists of a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code behind file.</span></span>  
   
-## Пример  
- Создаваемый пользовательский интерфейс состоит из объекта <xref:System.Windows.Controls.ComboBox> для выбора нужного объекта <xref:System.Windows.Input.Cursor>, пары объектов <xref:System.Windows.Controls.RadioButton>, чтобы определить изменение курсора для одного элемента или для всего приложения, и объекта <xref:System.Windows.Controls.Border>, который является элементом, к которому применяется новый курсор.  
+## <a name="example"></a><span data-ttu-id="3d5a2-105">Пример</span><span class="sxs-lookup"><span data-stu-id="3d5a2-105">Example</span></span>  
+ <span data-ttu-id="3d5a2-106">Создается пользовательский интерфейс, который состоит из <xref:System.Windows.Controls.ComboBox> для выбора нужного <xref:System.Windows.Input.Cursor>, пару <xref:System.Windows.Controls.RadioButton> объектов, чтобы определить изменение курсора применяется только к одному элементу или применяется ко всему приложению и <xref:System.Windows.Controls.Border> который является элементом, применяемый к нового курсора.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-106">The user interface is created, which consists of a <xref:System.Windows.Controls.ComboBox> to select the desired <xref:System.Windows.Input.Cursor>, a pair of <xref:System.Windows.Controls.RadioButton> objects to determine if the cursor change applies to only a single element or applies to the entire application, and a <xref:System.Windows.Controls.Border> which is the element that the new cursor is applied to.</span></span>  
   
- [!code-xml[cursors#ChangeCursorsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml#changecursorsxaml)]  
+ [!code-xaml[cursors#ChangeCursorsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml#changecursorsxaml)]  
   
- Следующий фоновый код создает обработчик событий <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>, который вызывается, когда тип курсора изменяется в объекте <xref:System.Windows.Controls.ComboBox>.  Инструкция переключателя фильтрует имя курсора и задает свойство <xref:System.Windows.FrameworkElement.Cursor%2A> в объекте <xref:System.Windows.Controls.Border> с именем *DisplayArea*.  
+ <span data-ttu-id="3d5a2-107">Следующий код создает <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> обработчик событий, который вызывается при изменении типа курсора в <xref:System.Windows.Controls.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-107">The following code behind creates a <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event handler which is called when the cursor type is changed in the <xref:System.Windows.Controls.ComboBox>.</span></span>  <span data-ttu-id="3d5a2-108">Оператор switch выполняется фильтрация по имени курсора и наборы <xref:System.Windows.FrameworkElement.Cursor%2A> свойство <xref:System.Windows.Controls.Border> с именем *DisplayArea*.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-108">A switch statement filters on the cursor name and sets the <xref:System.Windows.FrameworkElement.Cursor%2A> property on the <xref:System.Windows.Controls.Border> which is named *DisplayArea*.</span></span>  
   
- Если изменение курсора установлено для «Всего приложения», свойство <xref:System.Windows.Input.Mouse.OverrideCursor%2A> устанавливается в свойство <xref:System.Windows.FrameworkElement.Cursor%2A> элемента управления <xref:System.Windows.Controls.Border>.  Это заставляет курсор изменяться для всего приложения.  
+ <span data-ttu-id="3d5a2-109">Если изменение курсора задано значение «Все приложение», <xref:System.Windows.Input.Mouse.OverrideCursor%2A> свойству <xref:System.Windows.FrameworkElement.Cursor%2A> свойства <xref:System.Windows.Controls.Border> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-109">If the cursor change is set to "Entire Application", the <xref:System.Windows.Input.Mouse.OverrideCursor%2A> property is set to the <xref:System.Windows.FrameworkElement.Cursor%2A> property of the <xref:System.Windows.Controls.Border> control.</span></span>  <span data-ttu-id="3d5a2-110">Это заставляет курсор изменяться для всего приложения.</span><span class="sxs-lookup"><span data-stu-id="3d5a2-110">This forces the cursor to change for the whole application.</span></span>  
   
  [!code-csharp[cursors#ChangeCursorsSample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/cursors/CSharp/Window1.xaml.cs#changecursorssample)]
  [!code-vb[cursors#ChangeCursorsSample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
   
-## См. также  
- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3d5a2-111">См. также</span><span class="sxs-lookup"><span data-stu-id="3d5a2-111">See Also</span></span>  
+ [<span data-ttu-id="3d5a2-112">Общие сведения о входных данных</span><span class="sxs-lookup"><span data-stu-id="3d5a2-112">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)

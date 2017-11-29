@@ -1,25 +1,27 @@
 ---
-title: "Значение аргумента &quot;&lt;путь&gt;&quot; содержит символы, которые недопустимо использовать при задании пути | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrArgument_InvalidPathChars1"
+title: "Значение аргумента &#39; &lt;pathname&gt;&#39; содержит знаки, недопустимые в имени пути"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrArgument_InvalidPathChars1
 ms.assetid: 3e1c61b3-888e-4dc3-a02c-a2e023dd7a07
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f8974c8c8027c9d9b1748808d16d60595a506ccb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Значение аргумента &quot;&lt;путь&gt;&quot; содержит символы, которые недопустимо использовать при задании пути
-Путь содержит недопустимые символы.  
+# <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a><span data-ttu-id="6366f-102">Значение аргумента &#39; &lt;pathname&gt;&#39; содержит знаки, недопустимые в имени пути</span><span class="sxs-lookup"><span data-stu-id="6366f-102">Argument value &#39;&lt;pathname&gt;&#39; contains characters that are not valid in a path name</span></span>
+<span data-ttu-id="6366f-103">Путь содержит недопустимые символы.</span><span class="sxs-lookup"><span data-stu-id="6366f-103">A path name contains one or more characters that are not valid.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6366f-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="6366f-104">To correct this error</span></span>  
   
--   Удалите символ из пути.  
+-   <span data-ttu-id="6366f-105">Удалите символ из пути.</span><span class="sxs-lookup"><span data-stu-id="6366f-105">Remove the character from the path name.</span></span>  
   
-## См. также  
- [Свойство My.Application.Info.DirectoryPath](http://msdn.microsoft.com/ru-ru/660586b9-638e-42a7-ae21-5eee34a3fccf)   
- [Практическое руководство. Анализ путей к файлам](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a><span data-ttu-id="6366f-106">См. также</span><span class="sxs-lookup"><span data-stu-id="6366f-106">See Also</span></span>  
+ [<span data-ttu-id="6366f-107">Свойство My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="6366f-107">My.Application.Info.DirectoryPath Property</span></span>](http://msdn.microsoft.com/en-us/660586b9-638e-42a7-ae21-5eee34a3fccf)  
+ [<span data-ttu-id="6366f-108">Практическое руководство. Анализ путей к файлам</span><span class="sxs-lookup"><span data-stu-id="6366f-108">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

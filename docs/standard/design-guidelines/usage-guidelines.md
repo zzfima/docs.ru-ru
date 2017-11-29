@@ -1,46 +1,43 @@
 ---
-title: "Правила использования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Класс рекомендации по разработке библиотек [платформа .NET Framework] рекомендации по использованию"
+title: "Правила использования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Правила использования
-Этот раздел содержит рекомендации по использованию общих типов в общедоступном API. Дело с прямого использования встроенных типов \(например, атрибуты сериализации\) и Framework перегрузка общих операторов.  
+# <a name="usage-guidelines"></a><span data-ttu-id="b91a4-102">Правила использования</span><span class="sxs-lookup"><span data-stu-id="b91a4-102">Usage Guidelines</span></span>
+<span data-ttu-id="b91a4-103">Этот раздел содержит рекомендации по использованию общих типов в общедоступный API.</span><span class="sxs-lookup"><span data-stu-id="b91a4-103">This section contains guidelines for using common types in publicly accessible APIs.</span></span> <span data-ttu-id="b91a4-104">Он обрабатывает прямое использование встроенных типов (например, атрибуты сериализации) и Framework перегрузка общих операторов.</span><span class="sxs-lookup"><span data-stu-id="b91a4-104">It deals with direct usage of built-in Framework types (e.g., serialization attributes) and overloading common operators.</span></span>  
   
- <xref:System.IDisposable?displayProperty=fullName> Интерфейс не рассматривается в этом разделе, но рассматривается в [Шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md) разделе.  
+ <span data-ttu-id="b91a4-105"><xref:System.IDisposable?displayProperty=nameWithType> Интерфейс не рассматривается в этом разделе, но рассматривается в [шаблон Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="b91a4-105">The <xref:System.IDisposable?displayProperty=nameWithType> interface is not covered in this section, but is discussed in the [Dispose Pattern](../../../docs/standard/design-guidelines/dispose-pattern.md) section.</span></span>  
   
 > [!NOTE]
->  Инструкции и Дополнительные сведения о других типичных встроенных типов .NET Framework, см в следующих разделах справки: <xref:System.DateTime?displayProperty=fullName>, <xref:System.DateTimeOffset?displayProperty=fullName>, <xref:System.ICloneable?displayProperty=fullName>, <xref:System.IComparable%601?displayProperty=fullName>, <xref:System.IEquatable%601?displayProperty=fullName>, <xref:System.Nullable%601?displayProperty=fullName>, <xref:System.Object?displayProperty=fullName>, <xref:System.Uri?displayProperty=fullName>.  
+>  <span data-ttu-id="b91a4-106">Инструкции и Дополнительные сведения о других типичных, встроенных типов .NET Framework в справочных разделах по следующим: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b91a4-106">For guidelines and additional information about about other common, built-in .NET Framework types, see the reference topics for the following: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.</span></span>  
   
-## В этом подразделе  
- [Массивы](../../../docs/standard/design-guidelines/arrays.md)  
- [Атрибуты](../../../docs/standard/design-guidelines/атрибуты.md)  
- [Коллекции](../../../amples/snippets/cpp/VS_Snippets_Misc/cx_collections/cpp/collections.vcxproj)  
- [Сериализация](../../../docs/standard/design-guidelines/сериализация.md)  
- [Использование System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [Операторы равенства](../../../docs/standard/design-guidelines/equality-operators.md)  
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+## <a name="in-this-section"></a><span data-ttu-id="b91a4-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="b91a4-107">In This Section</span></span>  
+ [<span data-ttu-id="b91a4-108">Массивы</span><span class="sxs-lookup"><span data-stu-id="b91a4-108">Arrays</span></span>](../../../docs/standard/design-guidelines/arrays.md)  
+ [<span data-ttu-id="b91a4-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b91a4-109">Attributes</span></span>](../../../docs/standard/design-guidelines/attributes.md)  
+ [<span data-ttu-id="b91a4-110">Коллекции</span><span class="sxs-lookup"><span data-stu-id="b91a4-110">Collections</span></span>](/cpp/mfc/collections)  
+ [<span data-ttu-id="b91a4-111">Сериализация</span><span class="sxs-lookup"><span data-stu-id="b91a4-111">Serialization</span></span>](../../../docs/standard/design-guidelines/serialization.md)  
+ [<span data-ttu-id="b91a4-112">Использование System.Xml</span><span class="sxs-lookup"><span data-stu-id="b91a4-112">System.Xml Usage</span></span>](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [<span data-ttu-id="b91a4-113">Операторы равенства</span><span class="sxs-lookup"><span data-stu-id="b91a4-113">Equality Operators</span></span>](../../../docs/standard/design-guidelines/equality-operators.md)  
+ <span data-ttu-id="b91a4-114">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="b91a4-114">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="b91a4-115">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="b91a4-115">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="b91a4-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b91a4-116">See Also</span></span>  
+ [<span data-ttu-id="b91a4-117">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="b91a4-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

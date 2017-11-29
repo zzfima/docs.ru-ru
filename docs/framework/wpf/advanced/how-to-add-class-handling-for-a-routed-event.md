@@ -1,43 +1,49 @@
 ---
-title: "Практическое руководство. Добавление обработки классов для перенаправленных событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обработчики классов, перенаправляемые события"
-  - "перенаправляемые события, обработчики классов"
-  - "перенаправляемое событие области задач с обработкой класса"
+title: "Практическое руководство. Добавление обработки классов для перенаправленных событий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- routed events [WPF], class handlers
+- task_core_add_class_handling_routed_properties [WPF]
+- class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: abbbdce0ca12c4d8bdd12f616bf49c3d6f66f441
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление обработки классов для перенаправленных событий
-Перенаправленные события могут быть обработаны с помощью обработчиков классов или экземпляров на любом узле данного маршрута.  Обработчики классов вызываются первыми и могут использоваться классами реализации для подавления событий обработчиков экземпляров или введения новых вариантов поведения для событий, которые относятся к базовым классам.  В этом примере иллюстрируются два тесно связанных между собой способа реализации обработчиков классов.  
+# <a name="how-to-add-class-handling-for-a-routed-event"></a><span data-ttu-id="bd5da-102">Практическое руководство. Добавление обработки классов для перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="bd5da-102">How to: Add Class Handling for a Routed Event</span></span>
+<span data-ttu-id="bd5da-103">Перенаправленные события могут быть обработаны с помощью обработчики класса или экземпляров на любом узле данного маршрута.</span><span class="sxs-lookup"><span data-stu-id="bd5da-103">Routed events can be handled either by class handlers or instance handlers on any given node in the route.</span></span> <span data-ttu-id="bd5da-104">Обработчики класса вызываются первыми, а также может использоваться для подавления событий обработчиков экземпляров или введения вариантов поведения других событий для события, которые принадлежат базовых классов путем реализации класса.</span><span class="sxs-lookup"><span data-stu-id="bd5da-104">Class handlers are invoked first, and can be used by class implementations to suppress events from instance handling or introduce other event specific behaviors on events that are owned by base classes.</span></span> <span data-ttu-id="bd5da-105">В этом примере показано два тесно связанные методы реализации обработчиков классов.</span><span class="sxs-lookup"><span data-stu-id="bd5da-105">This example illustrates two closely related techniques for implementing class handlers.</span></span>  
   
-## Пример  
- В этом примере пользовательский класс основан на панели <xref:System.Windows.Controls.Canvas>.  Основным условием для работы приложения является то, что пользовательский класс представляет поведение его дочерних элементов, включая перехват нажатия любых кнопок мыши и пометкой его как обработанного, перед тем как на нем будет вызван какой\-либо обработчик экземпляров или класс дочернего элемента.  
+## <a name="example"></a><span data-ttu-id="bd5da-106">Пример</span><span class="sxs-lookup"><span data-stu-id="bd5da-106">Example</span></span>  
+ <span data-ttu-id="bd5da-107">В этом примере пользовательский класс на основе <xref:System.Windows.Controls.Canvas> панель.</span><span class="sxs-lookup"><span data-stu-id="bd5da-107">This example uses a custom class based on the <xref:System.Windows.Controls.Canvas> panel.</span></span> <span data-ttu-id="bd5da-108">Основной замысел приложения состоит в том, что пользовательский класс представляет поведение его дочерних элементов, включая Перехват нажатия любой кнопок мыши и пометкой их обработать, прежде чем будет вызван класс дочернего элемента или обработчиков экземпляров на нем.</span><span class="sxs-lookup"><span data-stu-id="bd5da-108">The basic premise of the application is that the custom class introduces behaviors on its child elements, including intercepting any left mouse button clicks and marking them handled, before the child element class or any instance handlers on it will be invoked.</span></span>  
   
- Класс <xref:System.Windows.UIElement> предоставляет виртуальный метод, позволяющий классу обрабатывать событие <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> путем простого переопределения события.  Это наиболее простой способ реализации обработки классов, если такой виртуальный метод доступен где\-либо в иерархии класса.  В следующем коде показана реализация <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> в «MyEditContainer», который является производным от <xref:System.Windows.Controls.Canvas>.  Реализация помечает событие как обработанное в аргументах и затем добавляет часть кода для предоставления исходному элементу основное видимое изменение.  
+ <span data-ttu-id="bd5da-109"><xref:System.Windows.UIElement> Класс предоставляет виртуальный метод, который обеспечивает обработку класса <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> событие путем простого переопределения события.</span><span class="sxs-lookup"><span data-stu-id="bd5da-109">The <xref:System.Windows.UIElement> class exposes a virtual method that enables class handling on the <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> event, by simply overriding the event.</span></span> <span data-ttu-id="bd5da-110">Это самый простой способ реализации обработки классов, если виртуальный метод доступен в любом месте иерархии класса.</span><span class="sxs-lookup"><span data-stu-id="bd5da-110">This is the simplest way to implement class handling if such a virtual method is available somewhere in your class' hierarchy.</span></span> <span data-ttu-id="bd5da-111">В следующем коде показано <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> реализацию в «MyEditContainer», который является производным от <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="bd5da-111">The following code shows the <xref:System.Windows.UIElement.OnPreviewMouseLeftButtonDown%2A> implementation in the "MyEditContainer" that is derived from <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="bd5da-112">Реализация помечает событие как обработанное в аргументах и затем добавляет часть кода для предоставления исходному элементу основное видимое изменение.</span><span class="sxs-lookup"><span data-stu-id="bd5da-112">The implementation marks the event as handled in the arguments, and then adds some code to give the source element a basic visible change.</span></span>  
   
  [!code-csharp[ClassHandling#OnStarClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#onstarclasshandler)]
  [!code-vb[ClassHandling#OnStarClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#onstarclasshandler)]  
   
- Если нет доступного виртуального метода для базовых классов или для этого конкретного метода, обработка классов может добавляться напрямую с помощью служебного метода класса <xref:System.Windows.EventManager>, <xref:System.Windows.EventManager.RegisterClassHandler%2A>.  Этот метод следует вызывать только внутри статической инициализации классов, которые используют обработку классов.  В этом примере добавляется еще один обработчик для <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>, и в этом случае зарегистрированный класс является пользовательским классом.  В свою очередь, при использовании виртуальных методов зарегистрированный класс является базовым классом <xref:System.Windows.UIElement>.  В случаях, когда и базовые классы, и подклассы регистрируют обработку классов, обработчики подклассов вызываются первыми.  Сначала этот обработчик отобразит окно сообщения, а затем будет показано визуальное изменение в обработчике виртуального метода.  
+ <span data-ttu-id="bd5da-113">Если нет виртуальных базовых классов или для этого конкретного метода, обработка класса можно добавить непосредственно с помощью служебной программы метод <xref:System.Windows.EventManager> класса <xref:System.Windows.EventManager.RegisterClassHandler%2A>.</span><span class="sxs-lookup"><span data-stu-id="bd5da-113">If no virtual is available on base classes or for that particular method, class handling can be added directly using a utility method of the <xref:System.Windows.EventManager> class, <xref:System.Windows.EventManager.RegisterClassHandler%2A>.</span></span> <span data-ttu-id="bd5da-114">Этот метод должен вызываться только внутри статической инициализации классов, которые используют обработку классов.</span><span class="sxs-lookup"><span data-stu-id="bd5da-114">This method should only be called within the static initialization of classes that are adding class handling.</span></span> <span data-ttu-id="bd5da-115">В этом примере добавляется еще один обработчик для <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> , и в этом случае зарегистрированный класс является пользовательским классом.</span><span class="sxs-lookup"><span data-stu-id="bd5da-115">This example adds another handler for <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> , and in this case the registered class is the custom class.</span></span> <span data-ttu-id="bd5da-116">Напротив, при использовании виртуальных методов, зарегистрированный класс является <xref:System.Windows.UIElement> базового класса.</span><span class="sxs-lookup"><span data-stu-id="bd5da-116">In contrast, when using the virtuals, the registered class is really the <xref:System.Windows.UIElement> base class.</span></span> <span data-ttu-id="bd5da-117">В случаях, где базовых классов и подклассов зарегистрировать обработку класса обработчики подклассов вызываются первыми.</span><span class="sxs-lookup"><span data-stu-id="bd5da-117">In cases where base classes and subclass each register class handling, the subclass handlers are invoked first.</span></span> <span data-ttu-id="bd5da-118">Поведение в приложении бы, что сначала этот обработчик отобразит окно сообщения, а затем будет показано визуальное изменение в обработчике виртуального метода.</span><span class="sxs-lookup"><span data-stu-id="bd5da-118">The behavior in an application would be that first this handler would show its message box and then the visual change in the virtual method's handler would be shown.</span></span>  
   
  [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
-## См. также  
- <xref:System.Windows.EventManager>   
- [Маркировка перенаправленных событий как обработанных и обработка классов](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)   
- [Обработка перенаправленных событий](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)   
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a><span data-ttu-id="bd5da-119">См. также</span><span class="sxs-lookup"><span data-stu-id="bd5da-119">See Also</span></span>  
+ <xref:System.Windows.EventManager>  
+ [<span data-ttu-id="bd5da-120">Маркировка перенаправленных событий как обработанных и обработка классов</span><span class="sxs-lookup"><span data-stu-id="bd5da-120">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="bd5da-121">Обработка перенаправленных событий</span><span class="sxs-lookup"><span data-stu-id="bd5da-121">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="bd5da-122">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="bd5da-122">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

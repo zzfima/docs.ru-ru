@@ -1,78 +1,61 @@
 ---
-title: "Практическое руководство: объявление перечисления (Visual Basic) | Документы Microsoft"
+title: "Практическое руководство. Объявление перечисления (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- declarations, enumerations
+- declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
-- declaring enumerations
+- declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8ff8bf2df39bed0597740bcda968283ec854f447
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 938550ebbfcf099729db3de96b809549cb234d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-declare-enumerations-visual-basic"></a>Практическое руководство. Объявление перечисления (Visual Basic)
-Создание перечисления с `Enum` инструкции в разделе объявлений класса или модуля. Нельзя объявить перечисление в методе. Чтобы указать соответствующий уровень доступа, используйте `Private`, `Protected`, `Friend`, или `Public`.  
+# <a name="how-to-declare-enumerations-visual-basic"></a><span data-ttu-id="b8da8-102">Практическое руководство. Объявление перечисления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b8da8-102">How to: Declare Enumerations (Visual Basic)</span></span>
+<span data-ttu-id="b8da8-103">Создать перечисление с `Enum` инструкции в разделе объявлений класса или модуля.</span><span class="sxs-lookup"><span data-stu-id="b8da8-103">You create an enumeration with the `Enum` statement in the declarations section of a class or module.</span></span> <span data-ttu-id="b8da8-104">Нельзя объявить перечисление в методе.</span><span class="sxs-lookup"><span data-stu-id="b8da8-104">You cannot declare an enumeration within a method.</span></span> <span data-ttu-id="b8da8-105">Чтобы указать соответствующий уровень доступа, используйте `Private`, `Protected`, `Friend`, или `Public`.</span><span class="sxs-lookup"><span data-stu-id="b8da8-105">To specify the appropriate level of access, use `Private`, `Protected`, `Friend`, or `Public`.</span></span>  
   
- `Enum` Тип имеет имя, базовый тип и набор полей, каждое из которых представляет собой константу. Имя должно быть допустимым [!INCLUDE[vbprvblong](../../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong_md.md)] квалификатор. Базовый тип должен быть одним из целочисленных типов —`Byte`, `Short`, `Long` или `Integer`. Значение по умолчанию — `Integer`. Перечисления всегда имеют строгие типы и не взаимозаменяемы с целочисленными типами.  
+ <span data-ttu-id="b8da8-106">`Enum` Тип имеет имя, базовый тип и набор полей, каждое из которых представляет собой константу.</span><span class="sxs-lookup"><span data-stu-id="b8da8-106">An `Enum` type has a name, an underlying type, and a set of fields, each representing a constant.</span></span> <span data-ttu-id="b8da8-107">Имя должно быть допустимым квалификатором Visual Basic .NET.</span><span class="sxs-lookup"><span data-stu-id="b8da8-107">The name must be a valid Visual Basic .NET qualifier.</span></span> <span data-ttu-id="b8da8-108">Базовый тип должен быть одним из целочисленных типов —`Byte`, `Short`, `Long` или `Integer`.</span><span class="sxs-lookup"><span data-stu-id="b8da8-108">The underlying type must be one of the integer types—`Byte`, `Short`, `Long` or `Integer`.</span></span> <span data-ttu-id="b8da8-109">Значение по умолчанию — `Integer`.</span><span class="sxs-lookup"><span data-stu-id="b8da8-109">`Integer` is the default.</span></span> <span data-ttu-id="b8da8-110">Перечисления всегда строго типизированы и не является взаимозаменяемым с целочисленными типами.</span><span class="sxs-lookup"><span data-stu-id="b8da8-110">Enumerations are always strongly typed and are not interchangeable with integer number types.</span></span>  
   
- Перечисления не могут иметь значений с плавающей запятой. Если перечислению присваивается значение с плавающей запятой с `Option Strict On`, приведет к ошибке компилятора. Если `Option Strict` — `Off`, значение автоматически преобразуется в `Enum` типа.  
+ <span data-ttu-id="b8da8-111">Перечисления не могут иметь значения с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="b8da8-111">Enumerations cannot have floating-point values.</span></span> <span data-ttu-id="b8da8-112">Если перечислению присваивается значение с плавающей запятой с `Option Strict On`, приведет к ошибке компилятора.</span><span class="sxs-lookup"><span data-stu-id="b8da8-112">If an enumeration is assigned a floating-point value with `Option Strict On`, a compiler error results.</span></span> <span data-ttu-id="b8da8-113">Если `Option Strict` — `Off`, значение автоматически преобразуется в `Enum` типа.</span><span class="sxs-lookup"><span data-stu-id="b8da8-113">If `Option Strict` is `Off`, the value is automatically converted to the `Enum` type.</span></span>  
   
- Сведения об именах и использование `Imports` разделе инструкции, чтобы сделать уточнение имен нет необходимости, [перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ <span data-ttu-id="b8da8-114">Сведения об именах и как использовать `Imports` разделе инструкции, чтобы сделать уточнение имен при необходимости [перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span><span class="sxs-lookup"><span data-stu-id="b8da8-114">For information on names, and how to use the `Imports` statement to make name qualification unnecessary, see [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).</span></span>  
   
-### <a name="to-declare-an-enumeration"></a>Объявление перечисления  
+### <a name="to-declare-an-enumeration"></a><span data-ttu-id="b8da8-115">Для объявления перечисления</span><span class="sxs-lookup"><span data-stu-id="b8da8-115">To declare an enumeration</span></span>  
   
-1.  Написать объявление, которое включает уровень доступа к коду, `Enum` ключевое слово и допустимое имя, как показано в следующих примерах, каждый из которых объявляет различные `Enum`.  
+1.  <span data-ttu-id="b8da8-116">Написать объявление, которое включает уровень доступа к коду, `Enum` ключевое слово и допустимое имя, как показано в следующих примерах, каждый из которых объявляет различные `Enum`.</span><span class="sxs-lookup"><span data-stu-id="b8da8-116">Write a declaration that includes a code access level, the `Enum` keyword, and a valid name, as in the following examples, each of which declares a different `Enum`.</span></span>  
   
-     [!code-vb[VbEnumsTask&#3;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
-2.  Определите константы в перечислении. По умолчанию первая константа перечисления инициализируется `0`, и каждая последующая константа инициализируется значение на единицу больше, чем значение предыдущей константы. Например, следующее перечисление `Days`, содержит константу с именем `Sunday` со значением `0`, константу с именем `Monday` со значением `1`, константу с именем `Tuesday` со значением `2`, и т. д.  
+2.  <span data-ttu-id="b8da8-117">Определения констант в перечислении.</span><span class="sxs-lookup"><span data-stu-id="b8da8-117">Define the constants in the enumeration.</span></span> <span data-ttu-id="b8da8-118">По умолчанию первая константа перечисления инициализируется `0`, и каждая последующая константа инициализируется значение на единицу больше, чем значение предыдущей константы.</span><span class="sxs-lookup"><span data-stu-id="b8da8-118">By default, the first constant in an enumeration is initialized to `0`, and subsequent constants are initialized to a value of one more than the previous constant.</span></span> <span data-ttu-id="b8da8-119">Например, следующее перечисление `Days`, содержит константу с именем `Sunday` со значением `0`, константу с именем `Monday` со значением `1`, константу с именем `Tuesday` со значением `2`, и т. д.</span><span class="sxs-lookup"><span data-stu-id="b8da8-119">For example, the following enumeration, `Days`, contains a constant named `Sunday` with the value `0`, a constant named `Monday` with the value `1`, a constant named `Tuesday` with the value of `2`, and so on.</span></span>  
   
-     [!code-vb[VbEnumsTask&#4;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
-3.  Можно явным образом присвоить значения константам перечисления с помощью оператора присваивания. Можно назначить любое целочисленное значение, включая отрицательные числа. Например можно привести константы с отрицательными значениями в ту или иную ошибку. В следующем примере константа `Invalid` явным образом присваивается значение `–1`, а константа `Sunday` присваивается значение `0`. Поскольку это первая константа перечисления, `Saturday` также инициализируется значение `0`. Значение `Monday` — `1` (на единицу больше, чем значение `Sunday`); значение `Tuesday` — `2`, и т. д.  
+3.  <span data-ttu-id="b8da8-120">Можно явно назначить значения константы перечисления с помощью оператора присваивания.</span><span class="sxs-lookup"><span data-stu-id="b8da8-120">You can explicitly assign values to constants in an enumeration by using an assignment statement.</span></span> <span data-ttu-id="b8da8-121">Можно назначить любое целочисленное значение, включая отрицательные числа.</span><span class="sxs-lookup"><span data-stu-id="b8da8-121">You can assign any integer value, including negative numbers.</span></span> <span data-ttu-id="b8da8-122">Например может потребоваться константы с отрицательными значениями в ту или иную ошибку.</span><span class="sxs-lookup"><span data-stu-id="b8da8-122">For example, you may want constants with values less than zero to represent error conditions.</span></span> <span data-ttu-id="b8da8-123">В следующем примере константа `Invalid` явно назначено значение `–1`, а константа `Sunday` присваивается значение `0`.</span><span class="sxs-lookup"><span data-stu-id="b8da8-123">In the following enumeration, the constant `Invalid` is explicitly assigned the value `–1`, and the constant `Sunday` is assigned the value `0`.</span></span> <span data-ttu-id="b8da8-124">Поскольку это первая константа перечисления, `Saturday` также инициализируется значение `0`.</span><span class="sxs-lookup"><span data-stu-id="b8da8-124">Because it is the first constant in the enumeration, `Saturday` is also initialized to the value `0`.</span></span> <span data-ttu-id="b8da8-125">Значение `Monday` — `1` (на единицу больше, чем значение `Sunday`); значение `Tuesday` — `2`, и т. д.</span><span class="sxs-lookup"><span data-stu-id="b8da8-125">The value of `Monday` is `1` (one more than the value of `Sunday`); the value of `Tuesday` is `2`, and so on.</span></span>  
   
-     [!code-vb[VbEnumsTask&#5;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
-### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Для объявления перечисления в виде явного типа  
+### <a name="to-declare-an-enumeration-as-an-explicit-type"></a><span data-ttu-id="b8da8-126">Чтобы объявить перечисление как явный тип</span><span class="sxs-lookup"><span data-stu-id="b8da8-126">To declare an enumeration as an explicit type</span></span>  
   
--   Укажите тип перечисления с помощью `As` , как показано в следующем примере.  
+-   <span data-ttu-id="b8da8-127">Укажите тип перечисления с помощью `As` предложения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="b8da8-127">Specify the type of the enum by using the `As` clause, as shown in the following example.</span></span>  
   
-     [!code-vb[VbEnumsTask №&6;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Практическое руководство: ссылка на член перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Практическое руководство: перебор элементов перечисления в Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [Практическое руководство: определение строки, связанной со значением перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [Когда следует использовать перечисление](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [Общие сведения о константах](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Типы данных констант и литералов](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
- [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b8da8-128">См. также</span><span class="sxs-lookup"><span data-stu-id="b8da8-128">See Also</span></span>  
+ [<span data-ttu-id="b8da8-129">Перечисления и уточнение имен</span><span class="sxs-lookup"><span data-stu-id="b8da8-129">Enumerations and Name Qualification</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [<span data-ttu-id="b8da8-130">Практическое руководство. Ссылка на элемент перечисления</span><span class="sxs-lookup"><span data-stu-id="b8da8-130">How to: Refer to an Enumeration Member</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [<span data-ttu-id="b8da8-131">Как: перебор элементов перечисления в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b8da8-131">How to: Iterate Through An Enumeration in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)  
+ [<span data-ttu-id="b8da8-132">Практическое руководство. Определение строки, связанной со значением из перечисления</span><span class="sxs-lookup"><span data-stu-id="b8da8-132">How to: Determine the String Associated with an Enumeration Value</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [<span data-ttu-id="b8da8-133">Когда следует использовать перечисление</span><span class="sxs-lookup"><span data-stu-id="b8da8-133">When to Use an Enumeration</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [<span data-ttu-id="b8da8-134">Общие сведения о константах</span><span class="sxs-lookup"><span data-stu-id="b8da8-134">Constants Overview</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [<span data-ttu-id="b8da8-135">Типы данных констант и литералов</span><span class="sxs-lookup"><span data-stu-id="b8da8-135">Constant and Literal Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [<span data-ttu-id="b8da8-136">Константы и перечисления</span><span class="sxs-lookup"><span data-stu-id="b8da8-136">Constants and Enumerations</span></span>](../../../../visual-basic/language-reference/constants-and-enumerations.md)

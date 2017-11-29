@@ -1,40 +1,40 @@
 ---
-title: "Общие сведения о компоненте ImageList (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ImageList"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления коллекцией, изображения"
-  - "элемент управления списком значков"
-  - "ImageList - компонент [Windows Forms], сведения о компоненте ImageList"
+title: "Общие сведения о компоненте ImageList (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ImageList
+helpviewer_keywords:
+- collection controls [Windows Forms], images
+- icon list control
+- ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02fb14b84341d594f35885be220027631999d202
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о компоненте ImageList (Windows Forms)
-Компонент <xref:System.Windows.Forms.ImageList> в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления.  Список изображений позволяет написать код для создания единого согласованного каталога изображений.  Например, можно поворачивать изображения, отображаемые элементом управления <xref:System.Windows.Forms.Button>, просто изменив свойство <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> или <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> кнопки.  Кроме того, можно связать один список изображений с несколькими элементами управления.  Например, если вы используете оба элемента управления, <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView>, для отображения одного списка файлов, при изменении значка файла в списке изображений новый значок будет отображаться в обоих представлениях.  
+# <a name="imagelist-component-overview-windows-forms"></a><span data-ttu-id="2af1c-102">Общие сведения о компоненте ImageList (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2af1c-102">ImageList Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="2af1c-103">Компонент <xref:System.Windows.Forms.ImageList> в Windows Forms используется для хранения изображений, которые затем будут отображаться элементами управления.</span><span class="sxs-lookup"><span data-stu-id="2af1c-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is used to store images, which can then be displayed by controls.</span></span> <span data-ttu-id="2af1c-104">Список изображений позволяет написать код для создания единого согласованного каталога изображений.</span><span class="sxs-lookup"><span data-stu-id="2af1c-104">An image list allows you to write code for a single, consistent catalog of images.</span></span> <span data-ttu-id="2af1c-105">Например, можно поворачивать изображения, отображаемые элементом управления <xref:System.Windows.Forms.Button>, просто изменив свойство <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> или <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> кнопки.</span><span class="sxs-lookup"><span data-stu-id="2af1c-105">For example, you can rotate images displayed by a <xref:System.Windows.Forms.Button> control simply by changing the button's <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> or <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> property.</span></span> <span data-ttu-id="2af1c-106">Кроме того, можно связать один список изображений с несколькими элементами управления.</span><span class="sxs-lookup"><span data-stu-id="2af1c-106">You can also associate the same image list with multiple controls.</span></span> <span data-ttu-id="2af1c-107">Например, если вы используете оба элемента управления, <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView>, для отображения одного списка файлов, при изменении значка файла в списке изображений новый значок будет отображаться в обоих представлениях.</span><span class="sxs-lookup"><span data-stu-id="2af1c-107">For example, if you are using both a <xref:System.Windows.Forms.ListView> control and a <xref:System.Windows.Forms.TreeView> control to display the same list of files, changing a file's icon in the image list will cause the new icon to appear in both views.</span></span>  
   
-## Использование компонента ImageList с элементами управления  
- Список изображений можно использовать с любым элементом управления, который имеет свойство `ImageList` \(или свойства <xref:System.Windows.Forms.ListView.SmallImageList%2A> и <xref:System.Windows.Forms.ListView.LargeImageList%2A>, если используется элемент управления <xref:System.Windows.Forms.ListView>\).  Элементы управления, которые могут быть связаны со списком изображений, включают: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> и <xref:System.Windows.Forms.Label>.  Чтобы связать список изображений с элементом управления, задайте для свойства `ImageList` элемента управления имя компонента <xref:System.Windows.Forms.ImageList>.  
+## <a name="using-imagelist-with-controls"></a><span data-ttu-id="2af1c-108">Использование компонента ImageList с элементами управления</span><span class="sxs-lookup"><span data-stu-id="2af1c-108">Using ImageList with Controls</span></span>  
+ <span data-ttu-id="2af1c-109">Список изображений можно использовать с любым элементом управления, который имеет свойство `ImageList` (или свойства <xref:System.Windows.Forms.ListView.SmallImageList%2A> и <xref:System.Windows.Forms.ListView.LargeImageList%2A>, если используется элемент управления <xref:System.Windows.Forms.ListView>).</span><span class="sxs-lookup"><span data-stu-id="2af1c-109">You can use an image list with any control that has an `ImageList` property — or in the case of the <xref:System.Windows.Forms.ListView> control, <xref:System.Windows.Forms.ListView.SmallImageList%2A> and <xref:System.Windows.Forms.ListView.LargeImageList%2A> properties.</span></span> <span data-ttu-id="2af1c-110">Элементы управления, которые могут быть связаны со списком изображений, включают: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> и <xref:System.Windows.Forms.Label>.</span><span class="sxs-lookup"><span data-stu-id="2af1c-110">The controls that can be associated with an image list include: the <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton>, and <xref:System.Windows.Forms.Label> controls.</span></span> <span data-ttu-id="2af1c-111">Чтобы связать список изображений с элементом управления, задайте для свойства `ImageList` элемента управления имя компонента <xref:System.Windows.Forms.ImageList>.</span><span class="sxs-lookup"><span data-stu-id="2af1c-111">To associate the image list with a control, set the control's `ImageList` property to the name of the <xref:System.Windows.Forms.ImageList> component.</span></span>  
   
-## Основные свойства  
- Основным свойством компонента <xref:System.Windows.Forms.ImageList> является <xref:System.Windows.Forms.ImageList.Images%2A>, которое содержит изображения для использования связанным элементом управления.  Доступ к каждому отдельному изображению может осуществляться по значению индекса или ключу.  Свойство <xref:System.Windows.Forms.ImageList.ColorDepth%2A> определяет количество цветов, которые используются для отрисовки изображений.  Размер всех отображаемых изображений будет одинаковым \(задается свойством <xref:System.Windows.Forms.ImageList.ImageSize%2A>\).  Изображения, размер которых больше заданного, масштабируются.  
+## <a name="key-properties"></a><span data-ttu-id="2af1c-112">Основные свойства</span><span class="sxs-lookup"><span data-stu-id="2af1c-112">Key Properties</span></span>  
+ <span data-ttu-id="2af1c-113">Основным свойством компонента <xref:System.Windows.Forms.ImageList> является <xref:System.Windows.Forms.ImageList.Images%2A>, которое содержит изображения для использования связанным элементом управления.</span><span class="sxs-lookup"><span data-stu-id="2af1c-113">The key property of the <xref:System.Windows.Forms.ImageList> component is <xref:System.Windows.Forms.ImageList.Images%2A>, which contains the pictures to be used by the associated control.</span></span> <span data-ttu-id="2af1c-114">Доступ к каждому отдельному изображению может осуществляться по значению индекса или ключу.</span><span class="sxs-lookup"><span data-stu-id="2af1c-114">Each individual image can be accessed by its index value or by its key.</span></span> <span data-ttu-id="2af1c-115">Свойство <xref:System.Windows.Forms.ImageList.ColorDepth%2A> определяет количество цветов, которые используются для отрисовки изображений.</span><span class="sxs-lookup"><span data-stu-id="2af1c-115">The <xref:System.Windows.Forms.ImageList.ColorDepth%2A> property determines the number of colors that the images are rendered with.</span></span> <span data-ttu-id="2af1c-116">Размер всех отображаемых изображений будет одинаковым (задается свойством <xref:System.Windows.Forms.ImageList.ImageSize%2A>).</span><span class="sxs-lookup"><span data-stu-id="2af1c-116">The images will all be displayed at the same size, set by the <xref:System.Windows.Forms.ImageList.ImageSize%2A> property.</span></span> <span data-ttu-id="2af1c-117">Изображения, размер которых больше заданного, масштабируются.</span><span class="sxs-lookup"><span data-stu-id="2af1c-117">Images that are larger will be scaled to fit.</span></span>  
   
- При использовании [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] вы получаете доступ к большой библиотеке стандартных изображений, которые можно использовать в приложениях.  
+ <span data-ttu-id="2af1c-118">При использовании [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] вы получаете доступ к большой библиотеке стандартных изображений, которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="2af1c-118">If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use in your applications.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.ImageList>   
- [Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+## <a name="see-also"></a><span data-ttu-id="2af1c-119">См. также</span><span class="sxs-lookup"><span data-stu-id="2af1c-119">See Also</span></span>  
+ <xref:System.Windows.Forms.ImageList>  
+ [<span data-ttu-id="2af1c-120">Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2af1c-120">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

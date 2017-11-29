@@ -1,198 +1,202 @@
 ---
-title: "Пример. Создание профессионально оформленного элемента управления ToolStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "панели инструментов [Windows Forms], пошаговые руководства"
-  - "ToolStrip - элемент управления [Windows Forms], создание профессионально оформленных элементов управления"
-  - "ToolStripProfessionalRenderer - класс [Windows Forms]"
-  - "ToolStripRenderer - класс [Windows Forms]"
+title: "Пример. Создание профессионально оформленного элемента управления ToolStrip"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStripProfessionalRenderer class [Windows Forms]
+- ToolStripRenderer class [Windows Forms]
+- toolbars [Windows Forms], walkthroughs
+- ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0fbc03ad16bcc0d63a75df5478f7da8abbf19193
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Создание профессионально оформленного элемента управления ToolStrip
-Чтобы придать элементам управления приложения <xref:System.Windows.Forms.ToolStrip> профессиональный внешний вид и поведение, создайте собственный класс на основе типа <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a><span data-ttu-id="92db5-102">Пример. Создание профессионально оформленного элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="92db5-102">Walkthrough: Creating a Professionally Styled ToolStrip Control</span></span>
+<span data-ttu-id="92db5-103">Можно создать для своего приложения <xref:System.Windows.Forms.ToolStrip> управляет профессиональный внешний вид и поведение, создайте собственный класс, производный от <xref:System.Windows.Forms.ToolStripProfessionalRenderer> типа.</span><span class="sxs-lookup"><span data-stu-id="92db5-103">You can give your application’s <xref:System.Windows.Forms.ToolStrip> controls a professional appearance and behavior by writing your own class derived from the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.</span></span>  
   
- В этом пошаговом руководстве демонстрируется использование элементов управления <xref:System.Windows.Forms.ToolStrip> для создания составного элемента управления, напоминающего **Область переходов** в Microsoft® Outlook®.  В этом пошаговом руководстве проиллюстрированы следующие задачи:  
+ <span data-ttu-id="92db5-104">В этом пошаговом руководстве демонстрируется использование <xref:System.Windows.Forms.ToolStrip> элементы управления для создания составного элемента управления, напоминающего **панели навигации** в Microsoft® Outlook®.</span><span class="sxs-lookup"><span data-stu-id="92db5-104">This walkthrough demonstrates how to use <xref:System.Windows.Forms.ToolStrip> controls to create a composite control that resembles the **Navigation Pane** provided by Microsoft® Outlook®.</span></span> <span data-ttu-id="92db5-105">В этом пошаговом руководстве представлены следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="92db5-105">The following tasks are illustrated in this walkthrough:</span></span>  
   
--   Создание проекта "Библиотека элементов управления Windows"  
+-   <span data-ttu-id="92db5-106">Создание проекта библиотеки элементов управления Windows.</span><span class="sxs-lookup"><span data-stu-id="92db5-106">Creating a Windows Control Library project.</span></span>  
   
--   Разработка элемента управления StackView  
+-   <span data-ttu-id="92db5-107">Проектирование StackView элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-107">Designing the StackView Control.</span></span>  
   
--   Реализация настраиваемого средства визуализации  
+-   <span data-ttu-id="92db5-108">Реализация пользовательского средства отрисовки.</span><span class="sxs-lookup"><span data-stu-id="92db5-108">Implementing a Custom Renderer.</span></span>  
   
- По завершении работы с этим примером создается пользовательский клиентский элемент управления, доступный для многократного использования, имеющий профессиональный внешний вид элемента управления Microsoft Office® XP.  
+ <span data-ttu-id="92db5-109">Когда вы закончите, будет иметь элемент управления для повторного использования пользовательских клиентских профессиональный внешний вид элемента управления Microsoft Office® XP.</span><span class="sxs-lookup"><span data-stu-id="92db5-109">When you are finished, you will have a reusable custom client control with the professional appearance of a Microsoft Office® XP control.</span></span>  
   
- Чтобы скопировать весь текст кода из этой темы, см. раздел [Практическое руководство. Создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ <span data-ttu-id="92db5-110">Скопируйте код из этой темы, в разделе [как: создание профессионально оформленного элемента управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).</span><span class="sxs-lookup"><span data-stu-id="92db5-110">To copy the code in this topic as a single listing, see [How to: Create a Professionally Styled ToolStrip Control](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="92db5-111">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="92db5-111">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="92db5-112">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="92db5-112">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="92db5-113">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="92db5-113">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Обязательные компоненты  
- Для выполнения этого пошагового руководства потребуется следующее.  
+## <a name="prerequisites"></a><span data-ttu-id="92db5-114">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="92db5-114">Prerequisites</span></span>  
+ <span data-ttu-id="92db5-115">Для выполнения данного пошагового руководства требуется:</span><span class="sxs-lookup"><span data-stu-id="92db5-115">In order to complete this walkthrough, you will need:</span></span>  
   
--   Разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, на котором установлена [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+-   <span data-ttu-id="92db5-116">Разрешения, достаточные для создания и выполнения проектов приложений Windows Forms на компьютере, где [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] установлен.</span><span class="sxs-lookup"><span data-stu-id="92db5-116">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.</span></span>  
   
-## Создание проекта "Библиотека элементов управления Windows"  
- На первом этапе необходимо создать проект библиотеки элементов управления.  
+## <a name="creating-a-windows-control-library-project"></a><span data-ttu-id="92db5-117">Создание проекта библиотеки элементов управления Windows</span><span class="sxs-lookup"><span data-stu-id="92db5-117">Creating a Windows Control Library Project</span></span>  
+ <span data-ttu-id="92db5-118">Первым шагом является создание проекта библиотеки элементов управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-118">The first step is to create the control library project.</span></span>  
   
-#### Создание проекта библиотеки элементов управления  
+#### <a name="to-create-the-control-library-project"></a><span data-ttu-id="92db5-119">Создание проекта библиотеки элементов управления</span><span class="sxs-lookup"><span data-stu-id="92db5-119">To create the control library project</span></span>  
   
-1.  Создайте новый проект библиотеки элементов управления Windows под названием `StackViewLibrary`.  
+1.  <span data-ttu-id="92db5-120">Создайте новый проект библиотеки элементов управления Windows с именем `StackViewLibrary`.</span><span class="sxs-lookup"><span data-stu-id="92db5-120">Create a new Windows Control Library project named `StackViewLibrary`.</span></span>  
   
-2.  В **обозревателе решений** удалите элемент управления по умолчанию для этого проекта, удалив исходный файл "UserControl1.cs" или "UserControl1.vb" в зависимости от выбранного языка.  
+2.  <span data-ttu-id="92db5-121">В **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка.</span><span class="sxs-lookup"><span data-stu-id="92db5-121">In **Solution Explorer**, delete the project's default control by deleting the source file named "UserControl1.cs" or "UserControl1.vb", depending on your language of choice.</span></span>  
   
-     Дополнительные сведения см. в разделе [NIB:How to: Remove, Delete, and Exclude Items](http://msdn.microsoft.com/ru-ru/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     <span data-ttu-id="92db5-122">Дополнительные сведения см. в разделе [NIB: Практическое: удаление, Delete и исключить элементы](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).</span><span class="sxs-lookup"><span data-stu-id="92db5-122">For more information, see [NIB:How to: Remove, Delete, and Exclude Items](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).</span></span>  
   
-3.  Добавьте новый элемент <xref:System.Windows.Forms.UserControl> в проект **StackViewLibrary**.  Назовите новый исходный файл `StackView`.  
+3.  <span data-ttu-id="92db5-123">Добавьте новый <xref:System.Windows.Forms.UserControl> элемент **StackViewLibrary** проекта.</span><span class="sxs-lookup"><span data-stu-id="92db5-123">Add a new <xref:System.Windows.Forms.UserControl> item to the **StackViewLibrary** project.</span></span> <span data-ttu-id="92db5-124">Присвойте имя базовой новый исходный файл `StackView`.</span><span class="sxs-lookup"><span data-stu-id="92db5-124">Give the new source file a base name of `StackView`.</span></span>  
   
-## Разработка элемента управления StackView  
- Элемент управления `StackView` – это составной элемент управления, содержащий один дочерний элемент управления <xref:System.Windows.Forms.ToolStrip>.  Дополнительные сведения о составных элементах управления см. в разделе [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).  
+## <a name="designing-the-stackview-control"></a><span data-ttu-id="92db5-125">Проектирование элемента управления StackView</span><span class="sxs-lookup"><span data-stu-id="92db5-125">Designing the StackView Control</span></span>  
+ <span data-ttu-id="92db5-126">`StackView` Составной элемент управления, с одним дочерним <xref:System.Windows.Forms.ToolStrip> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-126">The `StackView` control is a composite control with one child <xref:System.Windows.Forms.ToolStrip> control.</span></span> <span data-ttu-id="92db5-127">Дополнительные сведения о составных элементах управления см. в разделе [разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span><span class="sxs-lookup"><span data-stu-id="92db5-127">For more information about composite controls, see [Varieties of Custom Controls](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).</span></span>  
   
-#### Чтобы разработать элемент управления StackView  
+#### <a name="to-design-the-stackview-control"></a><span data-ttu-id="92db5-128">Чтобы разработать элемент управления StackView</span><span class="sxs-lookup"><span data-stu-id="92db5-128">To design the StackView control</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.ToolStrip> из **панели элементов** на поверхность разработки.  
+1.  <span data-ttu-id="92db5-129">Из **элементов**, перетащите <xref:System.Windows.Forms.ToolStrip> управления на поверхность разработки.</span><span class="sxs-lookup"><span data-stu-id="92db5-129">From the **Toolbox**, drag a <xref:System.Windows.Forms.ToolStrip> control to the design surface.</span></span>  
   
-2.  В окне **Свойства** задайте свойства элемента управления <xref:System.Windows.Forms.ToolStrip> в соответствии со следующей таблицей.  
+2.  <span data-ttu-id="92db5-130">В **свойства** задайте <xref:System.Windows.Forms.ToolStrip> свойства элемента управления в соответствии со следующей таблицей.</span><span class="sxs-lookup"><span data-stu-id="92db5-130">In the **Properties** window, set the <xref:System.Windows.Forms.ToolStrip> control's properties according to the following table.</span></span>  
   
-    |Свойство.|Значение|  
-    |---------------|--------------|  
-    |Имя|`stackStrip`|  
-    |CanOverflow|`false`|  
-    |Dock|<xref:System.Windows.Forms.DockStyle>|  
-    |Шрифт|`Tahoma, 10pt, style=Bold`|  
-    |GripStyle|<xref:System.Windows.Forms.ToolStripGripStyle>|  
-    |LayoutStyle|<xref:System.Windows.Forms.ToolStripLayoutStyle>|  
-    |Заполнение|`0, 7, 0, 0`|  
-    |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode>|  
+    |<span data-ttu-id="92db5-131">Свойство</span><span class="sxs-lookup"><span data-stu-id="92db5-131">Property</span></span>|<span data-ttu-id="92db5-132">Значение</span><span class="sxs-lookup"><span data-stu-id="92db5-132">Value</span></span>|  
+    |--------------|-----------|  
+    |<span data-ttu-id="92db5-133">Имя</span><span class="sxs-lookup"><span data-stu-id="92db5-133">Name</span></span>|`stackStrip`|  
+    |<span data-ttu-id="92db5-134">CanOverflow</span><span class="sxs-lookup"><span data-stu-id="92db5-134">CanOverflow</span></span>|`false`|  
+    |<span data-ttu-id="92db5-135">Закрепить</span><span class="sxs-lookup"><span data-stu-id="92db5-135">Dock</span></span>|<xref:System.Windows.Forms.DockStyle.Bottom>|  
+    |<span data-ttu-id="92db5-136">Шрифт</span><span class="sxs-lookup"><span data-stu-id="92db5-136">Font</span></span>|`Tahoma, 10pt, style=Bold`|  
+    |<span data-ttu-id="92db5-137">Стиль захвата</span><span class="sxs-lookup"><span data-stu-id="92db5-137">GripStyle</span></span>|<xref:System.Windows.Forms.ToolStripGripStyle.Hidden>|  
+    |<span data-ttu-id="92db5-138">LayoutStyle</span><span class="sxs-lookup"><span data-stu-id="92db5-138">LayoutStyle</span></span>|<xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>|  
+    |<span data-ttu-id="92db5-139">Заполнение</span><span class="sxs-lookup"><span data-stu-id="92db5-139">Padding</span></span>|`0, 7, 0, 0`|  
+    |<span data-ttu-id="92db5-140">Отображается как</span><span class="sxs-lookup"><span data-stu-id="92db5-140">RenderMode</span></span>|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  В конструкторе Windows Forms щелкните кнопку **Добавить** для элемента управления <xref:System.Windows.Forms.ToolStrip> и добавьте <xref:System.Windows.Forms.ToolStripButton> к элементу управления `stackStrip`.  
+3.  <span data-ttu-id="92db5-141">В конструкторе Windows Forms выберите <xref:System.Windows.Forms.ToolStrip> элемента управления **добавить** и добавьте <xref:System.Windows.Forms.ToolStripButton> для `stackStrip` элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-141">In the Windows Forms Designer, click the <xref:System.Windows.Forms.ToolStrip> control's **Add** button and add a <xref:System.Windows.Forms.ToolStripButton> to the `stackStrip` control.</span></span>  
   
-4.  В окне **Свойства** задайте свойства элемента управления <xref:System.Windows.Forms.ToolStripButton> в соответствии со следующей таблицей.  
+4.  <span data-ttu-id="92db5-142">В **свойства** задайте <xref:System.Windows.Forms.ToolStripButton> свойства элемента управления в соответствии со следующей таблицей.</span><span class="sxs-lookup"><span data-stu-id="92db5-142">In the **Properties** window, set the <xref:System.Windows.Forms.ToolStripButton> control's properties according to the following table.</span></span>  
   
-    |Свойство.|Значение|  
-    |---------------|--------------|  
-    |Имя|`mailStackButton`|  
-    |CheckOnClick|true|  
-    |CheckState|<xref:System.Windows.Forms.CheckState>|  
-    |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle>|  
-    |ImageAlign|<xref:System.Drawing.ContentAlignment>|  
-    |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling>|  
-    |ImageTransparentColor|`238, 238, 238`|  
-    |Margin|`0, 0, 0, 0`|  
-    |Заполнение|`3, 3, 3, 3`|  
-    |Текст|Почта|  
-    |TextAlign|<xref:System.Drawing.ContentAlignment>|  
+    |<span data-ttu-id="92db5-143">Свойство</span><span class="sxs-lookup"><span data-stu-id="92db5-143">Property</span></span>|<span data-ttu-id="92db5-144">Значение</span><span class="sxs-lookup"><span data-stu-id="92db5-144">Value</span></span>|  
+    |--------------|-----------|  
+    |<span data-ttu-id="92db5-145">Имя</span><span class="sxs-lookup"><span data-stu-id="92db5-145">Name</span></span>|`mailStackButton`|  
+    |<span data-ttu-id="92db5-146">CheckOnClick</span><span class="sxs-lookup"><span data-stu-id="92db5-146">CheckOnClick</span></span>|<span data-ttu-id="92db5-147">true</span><span class="sxs-lookup"><span data-stu-id="92db5-147">true</span></span>|  
+    |<span data-ttu-id="92db5-148">Свойство CheckState</span><span class="sxs-lookup"><span data-stu-id="92db5-148">CheckState</span></span>|<xref:System.Windows.Forms.CheckState.Checked>|  
+    |<span data-ttu-id="92db5-149">DisplayStyle</span><span class="sxs-lookup"><span data-stu-id="92db5-149">DisplayStyle</span></span>|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
+    |<span data-ttu-id="92db5-150">ImageAlign</span><span class="sxs-lookup"><span data-stu-id="92db5-150">ImageAlign</span></span>|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
+    |<span data-ttu-id="92db5-151">ImageScaling</span><span class="sxs-lookup"><span data-stu-id="92db5-151">ImageScaling</span></span>|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
+    |<span data-ttu-id="92db5-152">ImageTransparentColor</span><span class="sxs-lookup"><span data-stu-id="92db5-152">ImageTransparentColor</span></span>|`238, 238, 238`|  
+    |<span data-ttu-id="92db5-153">Поля</span><span class="sxs-lookup"><span data-stu-id="92db5-153">Margin</span></span>|`0, 0, 0, 0`|  
+    |<span data-ttu-id="92db5-154">Заполнение</span><span class="sxs-lookup"><span data-stu-id="92db5-154">Padding</span></span>|`3, 3, 3, 3`|  
+    |<span data-ttu-id="92db5-155">Text</span><span class="sxs-lookup"><span data-stu-id="92db5-155">Text</span></span>|<span data-ttu-id="92db5-156">**Почта**</span><span class="sxs-lookup"><span data-stu-id="92db5-156">**Mail**</span></span>|  
+    |<span data-ttu-id="92db5-157">TextAlign</span><span class="sxs-lookup"><span data-stu-id="92db5-157">TextAlign</span></span>|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
-5.  Повторите шаг 7 для еще трех элементов управления <xref:System.Windows.Forms.ToolStripButton>.  
+5.  <span data-ttu-id="92db5-158">Повторите шаг 7 для еще трех <xref:System.Windows.Forms.ToolStripButton> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-158">Repeat step 7 for three more <xref:System.Windows.Forms.ToolStripButton> controls.</span></span>  
   
-     Назовите элементы управления `calendarStackButton`, `contactsStackButton` и `tasksStackButton`.  Укажите для свойства <xref:System.Windows.Forms.Control.Text%2A> значения Calendar, Contacts и Tasks соответственно.  
+     <span data-ttu-id="92db5-159">Присвоение имен элементам управления `calendarStackButton`, `contactsStackButton`, и `tasksStackButton`.</span><span class="sxs-lookup"><span data-stu-id="92db5-159">Name the controls `calendarStackButton`, `contactsStackButton`, and `tasksStackButton`.</span></span> <span data-ttu-id="92db5-160">Установите для параметра <xref:System.Windows.Forms.Control.Text%2A> свойства **календаря**, **контактов**, и **задачи**соответственно.</span><span class="sxs-lookup"><span data-stu-id="92db5-160">Set the value of the <xref:System.Windows.Forms.Control.Text%2A> property to **Calendar**, **Contacts**, and **Tasks**, respectively.</span></span>  
   
-## Обработка событий  
- Для обеспечения корректного поведения элемента управления `StackView` важны два события.  Обработайте событие <xref:System.Windows.Forms.UserControl.Load> для правильного размещения элемента управления.  Обработайте событие <xref:System.Windows.Forms.ToolStripItem.Click> для каждой кнопки <xref:System.Windows.Forms.ToolStripButton>, чтобы поведение состояния элемента управления `StackView` стало похожим на элемент управления <xref:System.Windows.Forms.RadioButton>.  
+## <a name="handling-events"></a><span data-ttu-id="92db5-161">Обработка событий</span><span class="sxs-lookup"><span data-stu-id="92db5-161">Handling Events</span></span>  
+ <span data-ttu-id="92db5-162">Чтобы сделать важны два события `StackView` корректного поведения элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-162">Two events are important to make the `StackView` control behave correctly.</span></span> <span data-ttu-id="92db5-163">Обрабатывать <xref:System.Windows.Forms.UserControl.Load> событий, чтобы правильно разместить элемент управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-163">Handle the <xref:System.Windows.Forms.UserControl.Load> event to position the control correctly.</span></span> <span data-ttu-id="92db5-164">Обрабатывать <xref:System.Windows.Forms.ToolStripItem.Click> событий для каждого <xref:System.Windows.Forms.ToolStripButton> для предоставления `StackView` контролировать состояние поведение аналогично <xref:System.Windows.Forms.RadioButton> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-164">Handle the <xref:System.Windows.Forms.ToolStripItem.Click> event for each <xref:System.Windows.Forms.ToolStripButton> to give the `StackView` control state behavior similar to the <xref:System.Windows.Forms.RadioButton> control.</span></span>  
   
-#### Чтобы обработать события  
+#### <a name="to-handle-events"></a><span data-ttu-id="92db5-165">Для обработки событий</span><span class="sxs-lookup"><span data-stu-id="92db5-165">To handle events</span></span>  
   
-1.  В конструкторе Windows Forms выберите элемент управления `StackView`.  
+1.  <span data-ttu-id="92db5-166">В конструкторе Windows Forms выберите `StackView` элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-166">In the Windows Forms Designer, select the `StackView` control.</span></span>  
   
-2.  В окне **Свойства** щелкните **События**.  
+2.  <span data-ttu-id="92db5-167">В **свойства** окно, нажмите кнопку **события**.</span><span class="sxs-lookup"><span data-stu-id="92db5-167">In the **Properties** window, click **Events**.</span></span>  
   
-3.  Дважды щелкните событие "Load" для создания обработчика события `StackView_Load`.  
+3.  <span data-ttu-id="92db5-168">Дважды щелкните событие загрузки для создания `StackView_Load` обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="92db5-168">Double-click the Load event to generate the `StackView_Load` event handler.</span></span>  
   
-4.  В обработчике события `StackView_Load` скопируйте и вставьте следующий код.  
+4.  <span data-ttu-id="92db5-169">Скопируйте и вставьте в обработчике события `StackView_Load` следующий код.</span><span class="sxs-lookup"><span data-stu-id="92db5-169">In the `StackView_Load` event handler, copy and paste the following code.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
-5.  В конструкторе Windows Forms выберите элемент управления `mailStackButton`.  
+5.  <span data-ttu-id="92db5-170">В конструкторе Windows Forms выберите `mailStackButton` элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-170">In the Windows Forms Designer, select the `mailStackButton` control.</span></span>  
   
-6.  В окне **Свойства** щелкните **События**.  
+6.  <span data-ttu-id="92db5-171">В **свойства** окно, нажмите кнопку **события**.</span><span class="sxs-lookup"><span data-stu-id="92db5-171">In the **Properties** window, click **Events**.</span></span>  
   
-7.  Дважды щелкните событие Click.  
+7.  <span data-ttu-id="92db5-172">Дважды щелкните событие Click.</span><span class="sxs-lookup"><span data-stu-id="92db5-172">Double-click the Click event.</span></span>  
   
-     Конструктор Windows Forms генерирует обработчик события для события `mailStackButton_Click`.  
+     <span data-ttu-id="92db5-173">Конструктор Windows Forms создает `mailStackButton_Click` обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="92db5-173">The Windows Forms Designer generates the `mailStackButton_Click` event handler.</span></span>  
   
-8.  Измените имя обработчика события `mailStackButton_Click` на `stackButton_Click`.  
+8.  <span data-ttu-id="92db5-174">Переименуйте `mailStackButton_Click` обработчик событий `stackButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="92db5-174">Rename the `mailStackButton_Click` event handler to `stackButton_Click`.</span></span>  
   
-     Дополнительные сведения см. в разделе [How to: Rename an Identifier \(Visual Basic\)](http://msdn.microsoft.com/ru-ru/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     <span data-ttu-id="92db5-175">Дополнительные сведения см. в разделе [как: переименовать идентификатор (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).</span><span class="sxs-lookup"><span data-stu-id="92db5-175">For more information, see [How to: Rename an Identifier (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).</span></span>  
   
-9. Вставьте следующий код в обработчик событий `stackButton_Click`.  
+9. <span data-ttu-id="92db5-176">Вставьте следующий код в `stackButton_Click` обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="92db5-176">Insert the following code into the `stackButton_Click` event handler.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#4)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#4)]  
   
-10. В конструкторе Windows Forms выберите элемент управления `calendarStackButton`.  
+10. <span data-ttu-id="92db5-177">В конструкторе Windows Forms выберите `calendarStackButton` элемента управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-177">In the Windows Forms Designer, select the `calendarStackButton` control.</span></span>  
   
-11. В окне **Свойства** задайте для события Click обработчик событий `stackButton_Click`.  
+11. <span data-ttu-id="92db5-178">В **свойства** задайте событие Click `stackButton_Click` обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="92db5-178">In the **Properties** window, set the Click event to the `stackButton_Click` event handler.</span></span>  
   
-12. Повторите шаги 10 и 11 для элементов управления `contactsStackButton` и `tasksStackButton`.  
+12. <span data-ttu-id="92db5-179">Повторите шаги 10 и 11 for `contactsStackButton` и `tasksStackButton` элементов управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-179">Repeat steps 10 and 11 for the `contactsStackButton` and `tasksStackButton` controls.</span></span>  
   
-## Определение значков  
- Каждой кнопке `StackView` назначается определенный значок.  Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до создания <xref:System.Drawing.Bitmap> на ее основе.  В производственной среде данные точечных рисунков хранятся как ресурс, и значки отображаются в конструкторе Windows Forms.  Дополнительные сведения см. в разделе [How to: Add Background Images to Windows Forms](http://msdn.microsoft.com/ru-ru/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+## <a name="defining-icons"></a><span data-ttu-id="92db5-180">Определение значков</span><span class="sxs-lookup"><span data-stu-id="92db5-180">Defining Icons</span></span>  
+ <span data-ttu-id="92db5-181">Каждый `StackView` кнопка имеет значок.</span><span class="sxs-lookup"><span data-stu-id="92db5-181">Each `StackView` button has an associated icon.</span></span> <span data-ttu-id="92db5-182">Для удобства каждый значок представлен как строка в кодировке Base64, которая десериализуется до <xref:System.Drawing.Bitmap> созданные из нее.</span><span class="sxs-lookup"><span data-stu-id="92db5-182">For convenience, each icon is represented as a Base64-encoded string, which is deserialized before a <xref:System.Drawing.Bitmap> is created from it.</span></span> <span data-ttu-id="92db5-183">В рабочей среде данные точечных рисунков хранятся как ресурс, и значки отображаются в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="92db5-183">In a production environment, you store bitmap data as a resource, and your icons appear in the Windows Forms Designer.</span></span> <span data-ttu-id="92db5-184">Дополнительные сведения см. в разделе [как: добавление фоновых изображений в Windows Forms](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).</span><span class="sxs-lookup"><span data-stu-id="92db5-184">For more information, see [How to: Add Background Images to Windows Forms](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).</span></span>  
   
-#### Чтобы определить значки  
+#### <a name="to-define-icons"></a><span data-ttu-id="92db5-185">Чтобы определить значки</span><span class="sxs-lookup"><span data-stu-id="92db5-185">To define icons</span></span>  
   
-1.  В редакторе кода вставьте следующий код в определение класса `StackView`.  Этот код инициализирует точечные рисунки для значков <xref:System.Windows.Forms.ToolStripButton>.  
+1.  <span data-ttu-id="92db5-186">В редакторе кода вставьте следующий код в `StackView` определения класса.</span><span class="sxs-lookup"><span data-stu-id="92db5-186">In the Code Editor, insert the following code into the `StackView` class definition.</span></span> <span data-ttu-id="92db5-187">Этот код инициализирует точечные рисунки для <xref:System.Windows.Forms.ToolStripButton> значков.</span><span class="sxs-lookup"><span data-stu-id="92db5-187">This code initializes the bitmaps for the <xref:System.Windows.Forms.ToolStripButton> icons.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  Добавьте вызов метода `InitializeImages` в конструктор класса `StackView`.  
+2.  <span data-ttu-id="92db5-188">Добавьте вызов `InitializeImages` метод в `StackView` конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="92db5-188">Add a call to the `InitializeImages` method in the `StackView` class constructor.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
-## Реализация настраиваемого средства визуализации  
- Большую часть элементов элемента управления `StackView` можно настроить, реализовав класс на основе класса <xref:System.Windows.Forms.ToolStripRenderer>.  В этой процедуре необходимо реализовать класс <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, используемый для настройки захвата и изображения градиентного фона для элементов управления <xref:System.Windows.Forms.ToolStripButton>.  
+## <a name="implementing-a-custom-renderer"></a><span data-ttu-id="92db5-189">Реализация пользовательского средства отрисовки</span><span class="sxs-lookup"><span data-stu-id="92db5-189">Implementing a Custom Renderer</span></span>  
+ <span data-ttu-id="92db5-190">Большинство элементов можно настроить `StackView` управления, реализовав класс, производный от <xref:System.Windows.Forms.ToolStripRenderer> класса.</span><span class="sxs-lookup"><span data-stu-id="92db5-190">You can customize most elements of the `StackView` control my implementing a class that derives from the <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span> <span data-ttu-id="92db5-191">В этой процедуре будет реализовывать <xref:System.Windows.Forms.ToolStripProfessionalRenderer> класс, используемый для настройки захвата и изображения градиентного фона для <xref:System.Windows.Forms.ToolStripButton> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-191">In this procedure, you will implement a <xref:System.Windows.Forms.ToolStripProfessionalRenderer> class that customizes the grip and draws gradient backgrounds for the <xref:System.Windows.Forms.ToolStripButton> controls.</span></span>  
   
-#### Чтобы реализовать настраиваемое средство визуализации  
+#### <a name="to-implement-a-custom-renderer"></a><span data-ttu-id="92db5-192">Для реализации пользовательского средства отрисовки</span><span class="sxs-lookup"><span data-stu-id="92db5-192">To implement a custom renderer</span></span>  
   
-1.  Вставьте следующий код в определение элемента управления `StackView`.  
+1.  <span data-ttu-id="92db5-193">Вставьте следующий код в `StackView` управлять определением.</span><span class="sxs-lookup"><span data-stu-id="92db5-193">Insert the following code into the `StackView` control definition.</span></span>  
   
-     Это определение для класса `StackRenderer`, который переопределяет методы <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder> и <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> для создания настраиваемого внешнего вида.  
+     <span data-ttu-id="92db5-194">Это определение для `StackRenderer` класс, переопределяющий <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>, и <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> методы для создания настраиваемого внешнего вида.</span><span class="sxs-lookup"><span data-stu-id="92db5-194">This is the definition for the `StackRenderer` class, which overrides the <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>, and <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> methods to produce a custom appearance.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
-2.  В конструкторе элемента управления `StackView` создайте новый экземпляр класса `StackRenderer` и назначьте этот экземпляр свойству <xref:System.Windows.Forms.ToolStrip.Renderer%2A> элемента управления `stackStrip`.  
+2.  <span data-ttu-id="92db5-195">В `StackView` конструктор элемента управления, создайте новый экземпляр `StackRenderer` класса и присвойте этот экземпляр `stackStrip` элемента управления <xref:System.Windows.Forms.ToolStrip.Renderer%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="92db5-195">In the `StackView` control's constructor, create a new instance of the `StackRenderer` class and assign this instance to the `stackStrip` control's <xref:System.Windows.Forms.ToolStrip.Renderer%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
-## Тестирование элемента управления StackView  
- Элемент управления `StackView` является производным от класса <xref:System.Windows.Forms.UserControl>.  Следовательно, этот элемент управления можно тестировать с использованием **Тестового контейнера пользовательских элементов управления**.  Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="testing-the-stackview-control"></a><span data-ttu-id="92db5-196">Тестирование элемента управления StackView</span><span class="sxs-lookup"><span data-stu-id="92db5-196">Testing the StackView Control</span></span>  
+ <span data-ttu-id="92db5-197">`StackView` Управления является производным от <xref:System.Windows.Forms.UserControl> класса.</span><span class="sxs-lookup"><span data-stu-id="92db5-197">The `StackView` control derives from the <xref:System.Windows.Forms.UserControl> class.</span></span> <span data-ttu-id="92db5-198">Таким образом, можно протестировать элемент управления с **контейнере для тестирования пользовательских элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="92db5-198">Therefore, you can test the control with the **UserControl Test Container**.</span></span> <span data-ttu-id="92db5-199">Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="92db5-199">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-#### Чтобы протестировать элемент управления StackView  
+#### <a name="to-test-the-stackview-control"></a><span data-ttu-id="92db5-200">Чтобы протестировать элемент управления StackView</span><span class="sxs-lookup"><span data-stu-id="92db5-200">To test the StackView control</span></span>  
   
-1.  Нажмите клавишу F5 для построения проекта и запуска **Тестового контейнера пользовательских элементов управления**.  
+1.  <span data-ttu-id="92db5-201">Нажмите клавишу F5, чтобы построить проект и запустить **тестовый контейнер пользовательских элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="92db5-201">Press F5 to build the project and start the **UserControl Test Container**.</span></span>  
   
-2.  Поместите указатель мыши над кнопками элемента управления `StackView`, а затем щелкните кнопку для просмотра внешнего вида выбранного для нее состояния.  
+2.  <span data-ttu-id="92db5-202">Переместите указатель над кнопками элемента `StackView` управления, а затем нажмите кнопку для просмотра внешнего вида выбранного состояния.</span><span class="sxs-lookup"><span data-stu-id="92db5-202">Move the pointer over the buttons of the `StackView` control, and then click a button to see the appearance of its selected state.</span></span>  
   
-## Следующие действия  
- В этом пошаговом руководстве был создан пользовательский клиентский элемент управления, допускающий многократное использование и имеющий профессиональный внешний вид элемента управления Office XP.  Семейством элементов управления <xref:System.Windows.Forms.ToolStrip> можно также пользоваться для многих других целей:  
+## <a name="next-steps"></a><span data-ttu-id="92db5-203">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="92db5-203">Next Steps</span></span>  
+ <span data-ttu-id="92db5-204">В этом пошаговом руководстве вы создали для повторного использования пользовательский клиентский элемент управления с профессиональный внешний вид элемента управления Office XP.</span><span class="sxs-lookup"><span data-stu-id="92db5-204">In this walkthrough, you have created a reusable custom client control with the professional appearance of an Office XP control.</span></span> <span data-ttu-id="92db5-205">Можно использовать <xref:System.Windows.Forms.ToolStrip> семейства элементов управления для других целей:</span><span class="sxs-lookup"><span data-stu-id="92db5-205">You can use the <xref:System.Windows.Forms.ToolStrip> family of controls for many other purposes:</span></span>  
   
--   Создайте контекстное меню для своих элементов управления с помощью <xref:System.Windows.Forms.ContextMenuStrip>.  Дополнительные сведения см. в разделе [Общие сведения об элементе управления ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   <span data-ttu-id="92db5-206">Создать контекстное меню для элементов управления с <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="92db5-206">Create shortcut menus for your controls with <xref:System.Windows.Forms.ContextMenuStrip>.</span></span> <span data-ttu-id="92db5-207">Дополнительные сведения см. в разделе [Общие сведения о компоненте ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="92db5-207">For more information, see [ContextMenu Component Overview](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span></span>  
   
--   Создайте форму с автоматически заполняемым стандартным меню.  Дополнительные сведения см. в разделе [Пошаговое руководство. Создание стандартных пунктов меню для формы](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   <span data-ttu-id="92db5-208">Создание формы с автоматически заполняемый стандартным меню.</span><span class="sxs-lookup"><span data-stu-id="92db5-208">Create a form with an automatically populated standard menu.</span></span> <span data-ttu-id="92db5-209">Дополнительные сведения см. в разделе [Пошаговое руководство: создание стандартных пунктов меню к форме](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).</span><span class="sxs-lookup"><span data-stu-id="92db5-209">For more information, see [Walkthrough: Providing Standard Menu Items to a Form](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).</span></span>  
   
--   Создайте форму многодокументного интерфейса MDI с закрепленными элементами управления <xref:System.Windows.Forms.ToolStrip>.  Дополнительные сведения см. в разделе [Практическое руководство. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   <span data-ttu-id="92db5-210">Создайте форму многодокументного интерфейса (MDI) с закрепление <xref:System.Windows.Forms.ToolStrip> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="92db5-210">Create a multiple document interface (MDI) form with docking <xref:System.Windows.Forms.ToolStrip> controls.</span></span> <span data-ttu-id="92db5-211">Дополнительные сведения см. в разделе [как: Создание формы MDI ПУТЕМ слияния меню и элементов управления ToolStrip с](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span><span class="sxs-lookup"><span data-stu-id="92db5-211">For more information, see [How to: Create an MDI Form with Menu Merging and ToolStrip Controls](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)   
- [Практическое руководство. Связывание с формой стандартных элементов меню](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a><span data-ttu-id="92db5-212">См. также</span><span class="sxs-lookup"><span data-stu-id="92db5-212">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [<span data-ttu-id="92db5-213">Элемент управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="92db5-213">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [<span data-ttu-id="92db5-214">Практическое руководство. Связывание с формой стандартных элементов меню</span><span class="sxs-lookup"><span data-stu-id="92db5-214">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

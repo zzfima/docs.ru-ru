@@ -1,81 +1,63 @@
 ---
-title: "/ addmodule | Документы Microsoft"
-ms.date: 2015-07-20
+title: /addmodule
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /addmodule compiler option [Visual Basic]
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 949962905ec933dc42301bf8c21654e73dbe2f70
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: fff292605e125776ae25e667d4813d770ed0a0aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="addmodule"></a>/addmodule
-Дает компилятору указание сделать всю информацию о типах из указанных файлов доступной компилируемому проекту.  
+# <a name="addmodule"></a><span data-ttu-id="354db-102">/addmodule</span><span class="sxs-lookup"><span data-stu-id="354db-102">/addmodule</span></span>
+<span data-ttu-id="354db-103">Дает компилятору указание сделать всю информацию о типах из указанных файлов доступной компилируемому проекту.</span><span class="sxs-lookup"><span data-stu-id="354db-103">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="354db-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="354db-104">Syntax</span></span>  
   
 ```  
 /addmodule:fileList  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a><span data-ttu-id="354db-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="354db-105">Arguments</span></span>  
  `fileList`  
- Обязательный. Разделенный запятыми список файлов, которые содержат метаданные, но не содержат манифестов сборки. Имена файлов, содержащие пробелы, которые должны быть заключены в кавычки (» «).  
+ <span data-ttu-id="354db-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="354db-106">Required.</span></span> <span data-ttu-id="354db-107">Разделенный запятыми список файлов, которые содержат метаданные, но не содержат манифестов сборки.</span><span class="sxs-lookup"><span data-stu-id="354db-107">Comma-delimited list of files that contain metadata but do not contain assembly manifests.</span></span> <span data-ttu-id="354db-108">Имена файлов, содержащие пробелы, которые должны быть заключены в кавычки (» «).</span><span class="sxs-lookup"><span data-stu-id="354db-108">File names containing spaces should be surrounded by quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Файлы, упорядоченные по `fileList` параметр должен быть создан с `/target:module` параметр, или с другим компилятором эквивалентно `/target:module`.  
+## <a name="remarks"></a><span data-ttu-id="354db-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="354db-109">Remarks</span></span>  
+ <span data-ttu-id="354db-110">Файлы, перечисленные по `fileList` параметр должен быть создан с `/target:module` параметр, или с помощью другого компилятора эквивалентно `/target:module`.</span><span class="sxs-lookup"><span data-stu-id="354db-110">The files listed by the `fileList` parameter must be created with the `/target:module` option, or with another compiler's equivalent to `/target:module`.</span></span>  
   
- Все модули, добавленные с помощью `/addmodule` во время выполнения должны находиться в том же каталоге, что и выходной файл. То есть во время компиляции можно указать модуль в любой папке, но во время выполнения он должен находиться в каталоге приложения. Если это не так, вы получаете <xref:System.TypeLoadException>ошибка.</xref:System.TypeLoadException>  
+ <span data-ttu-id="354db-111">Все модули, добавленные с `/addmodule` должно быть в том же каталоге, как выходного файла во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="354db-111">All modules added with `/addmodule` must be in the same directory as the output file at run time.</span></span> <span data-ttu-id="354db-112">То есть можно указать модуль в любом каталоге во время компиляции, но во время выполнения он должен находиться в каталоге приложения.</span><span class="sxs-lookup"><span data-stu-id="354db-112">That is, you can specify a module in any directory at compile time, but the module must be in the application directory at run time.</span></span> <span data-ttu-id="354db-113">Если это не так, вы получаете <xref:System.TypeLoadException> ошибки.</span><span class="sxs-lookup"><span data-stu-id="354db-113">If it is not, you get a <xref:System.TypeLoadException> error.</span></span>  
   
- При указании (явно или неявно) любой[/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) отличный вариант `/target:module` с `/addmodule`, можно передать файлы `/addmodule` становятся частью сборки проекта. Сборки, необходимые для выполнения выходного файла, который имеет один или добавлены дополнительные файлы `/addmodule`.  
+ <span data-ttu-id="354db-114">При указании (явно или неявно) любой[/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) параметр, отличный от `/target:module` с `/addmodule`, передаются файлы `/addmodule` становятся частью сборки проекта.</span><span class="sxs-lookup"><span data-stu-id="354db-114">If you specify (implicitly or explicitly) any[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) option other than `/target:module` with `/addmodule`, the files you pass to `/addmodule` become part of the project's assembly.</span></span> <span data-ttu-id="354db-115">Сборки, необходимые для выполнения выходного файла, который имеет один или несколько файлов добавлены, `/addmodule`.</span><span class="sxs-lookup"><span data-stu-id="354db-115">An assembly is required to run an output file that has one or more files added with `/addmodule`.</span></span>  
   
- Используйте [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) для импорта метаданных из файла, содержащего сборку.  
+ <span data-ttu-id="354db-116">Используйте [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) для импорта метаданных из файла, содержащего сборку.</span><span class="sxs-lookup"><span data-stu-id="354db-116">Use [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) to import metadata from a file that contains an assembly.</span></span>  
   
 > [!NOTE]
->  `/addmodule` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+>  <span data-ttu-id="354db-117">`/addmodule` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="354db-117">The `/addmodule` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем коде создается модуль.  
+## <a name="example"></a><span data-ttu-id="354db-118">Пример</span><span class="sxs-lookup"><span data-stu-id="354db-118">Example</span></span>  
+ <span data-ttu-id="354db-119">В следующем коде создается модуль.</span><span class="sxs-lookup"><span data-stu-id="354db-119">The following code creates a module.</span></span>  
   
- [!code-vb[VbVbalrCompiler&#47;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
   
- Следующий код импортирует типы модуля.  
+ <span data-ttu-id="354db-120">Следующий код импортирует типы модуля.</span><span class="sxs-lookup"><span data-stu-id="354db-120">The following code imports the module's types.</span></span>  
   
- [!code-vb[VbVbalrCompiler&#48;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
   
- При запуске `t1`, он выводит `802`.  
+ <span data-ttu-id="354db-121">При запуске `t1`, он выводит `802`.</span><span class="sxs-lookup"><span data-stu-id="354db-121">When you run `t1`, it outputs `802`.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="354db-122">См. также</span><span class="sxs-lookup"><span data-stu-id="354db-122">See Also</span></span>  
+ [<span data-ttu-id="354db-123">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="354db-123">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="354db-124">/ Target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="354db-124">/target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [<span data-ttu-id="354db-125">/ Reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="354db-125">/reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [<span data-ttu-id="354db-126">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="354db-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

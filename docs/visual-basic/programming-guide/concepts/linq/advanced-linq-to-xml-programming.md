@@ -1,45 +1,41 @@
 ---
-title: "Дополнительно LINQ to XML программирования (Visual Basic) | Документы Microsoft"
+title: "Дополнительно LINQ to XML, программирования (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 91c017ee1ccf8ae13663612d30ed0319cab584f7
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 75d06dcecb5501a23a8c1410f9248548f9e2a720
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="advanced-linq-to-xml-programming-visual-basic"></a>Дополнительно программированию LINQ to XML (Visual Basic)
-В этом разделе представлены сведения, которыми могут воспользоваться только опытные разработчики в определенных сценариях [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+# <a name="advanced-linq-to-xml-programming-visual-basic"></a><span data-ttu-id="8a43c-102">Дополнительно LINQ to XML, программирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-102">Advanced LINQ to XML Programming (Visual Basic)</span></span>
+<span data-ttu-id="8a43c-103">В этом разделе представлены сведения, которыми могут воспользоваться только опытные разработчики в определенных сценариях [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8a43c-103">This section provides information that will only be applicable to advanced developers in certain [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenarios.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a><span data-ttu-id="8a43c-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="8a43c-104">In This Section</span></span>  
   
-|Раздел|Описание|  
+|<span data-ttu-id="8a43c-105">Раздел</span><span class="sxs-lookup"><span data-stu-id="8a43c-105">Topic</span></span>|<span data-ttu-id="8a43c-106">Описание</span><span class="sxs-lookup"><span data-stu-id="8a43c-106">Description</span></span>|  
 |-----------|-----------------|  
-|[Примечания LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Описывает способ добавления заметок к узлам и атрибутам [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
-|[События LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|Описывает способ записи обработчиков событий для событий, происходящих во время изменения XML-дерева.|  
-|[Программирование с узлами (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-with-nodes.md)|Описывает способ запроса и управления узлами на более детализированном уровне гранулярности по сравнению с элементами и атрибутами.|  
-|[Смешанные ошибки декларативного и императивного кода (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|Описывает проблемы, появляющиеся при смешивании декларативного кода (запросы) с императивным (код, изменяющий XML-дерево).|  
-|[Практическое руководство: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|Описывает способ создания потока фрагментов XML из <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> Данный прием можно использовать для управления объемом памяти приложения.|  
-|[Практическое руководство: выполнять потоковое преобразование больших XML-документов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|Описывает способ создания потока XML из <xref:System.Xml.XmlReader>потока с помощью <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement> выходные данные и преобразования фрагмента XML</xref:System.Xml.XmlReader>|  
-|[Практическое руководство: чтение и запись закодированного документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|Описывает способ считывания и записи кодированных XML-документов.|  
-|[Использование XSLT для преобразования дерева XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|Описывает способ преобразования XML-дерева с помощью XSLT.|  
-|[Практическое руководство: использование примечаний для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|Описывает способ использования заметок для упрощения преобразований XML-дерева.|  
-|[Сериализация графов объектов, содержащих объекты XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|Описывает способ сериализации графов объектов, содержащих <xref:System.Xml.Linq.XElement>и <xref:System.Xml.Linq.XDocument>объекты.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>|  
-|[Привязка данных WPF с помощью LINQ to XML](https://docs.microsoft.com/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Описывает способ использования LINQ to XML в виде источника данных для привязки данных в приложениях Windows Presentation Foundation.|  
+|[<span data-ttu-id="8a43c-107">Примечания LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="8a43c-107">LINQ to XML Annotations</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|<span data-ttu-id="8a43c-108">Описывает способ добавления заметок к узлам и атрибутам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8a43c-108">Describes how to add annotations to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nodes and attributes.</span></span>|  
+|[<span data-ttu-id="8a43c-109">События LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-109">LINQ to XML Events (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|<span data-ttu-id="8a43c-110">Описывает способ записи обработчиков событий для событий, происходящих во время изменения XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="8a43c-110">Describes how to write event handlers for events that occur when you alter an XML tree.</span></span>|  
+|[<span data-ttu-id="8a43c-111">Программирование с узлами (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-111">Programming with Nodes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-with-nodes.md)|<span data-ttu-id="8a43c-112">Описывает способ запроса и управления узлами на более детализированном уровне гранулярности по сравнению с элементами и атрибутами.</span><span class="sxs-lookup"><span data-stu-id="8a43c-112">Describes how to query and manipulate nodes at a finer level of granularity than elements and attributes.</span></span>|  
+|[<span data-ttu-id="8a43c-113">Смешанные ошибки декларативного и императивного кода (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-113">Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md)|<span data-ttu-id="8a43c-114">Описывает проблемы, появляющиеся при смешивании декларативного кода (запросы) с императивным (код, изменяющий XML-дерево).</span><span class="sxs-lookup"><span data-stu-id="8a43c-114">Describes the problems that appear when you mix declarative code (queries) with imperative code (code that modifies the XML tree).</span></span>|  
+|[<span data-ttu-id="8a43c-115">Как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-115">How to: Stream XML Fragments with Access to Header Information (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)|<span data-ttu-id="8a43c-116">Описывает способ создания потока фрагментов XML из <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="8a43c-116">Describes how to stream XML fragments from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="8a43c-117">Данный прием можно использовать для управления объемом памяти приложения.</span><span class="sxs-lookup"><span data-stu-id="8a43c-117">You can use this technique to control the memory footprint of your application.</span></span>|  
+|[<span data-ttu-id="8a43c-118">Как: выполнение потокового преобразования крупных XML-документов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-118">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|<span data-ttu-id="8a43c-119">Описывает способ создания потока XML из <xref:System.Xml.XmlReader>, преобразования фрагмента XML и организацию потокового вывода с помощью <xref:System.Xml.Linq.XStreamingElement>.</span><span class="sxs-lookup"><span data-stu-id="8a43c-119">Describes how to stream XML from an <xref:System.Xml.XmlReader>, transform the XML fragment, and stream the output using <xref:System.Xml.Linq.XStreamingElement>.</span></span>|  
+|[<span data-ttu-id="8a43c-120">Как: чтение и запись кодированного документа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-120">How to: Read and Write an Encoded Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|<span data-ttu-id="8a43c-121">Описывает способ считывания и записи кодированных XML-документов.</span><span class="sxs-lookup"><span data-stu-id="8a43c-121">Describes how to read and write XML documents that are encoded.</span></span>|  
+|[<span data-ttu-id="8a43c-122">Использование XSLT для преобразования дерева XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-122">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|<span data-ttu-id="8a43c-123">Описывает способ преобразования XML-дерева с помощью XSLT.</span><span class="sxs-lookup"><span data-stu-id="8a43c-123">Describes how to transform an XML tree using XSLT.</span></span>|  
+|[<span data-ttu-id="8a43c-124">Как: использование примечаний для преобразования деревьев LINQ to XML в стиль XSLT (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-124">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|<span data-ttu-id="8a43c-125">Описывает способ использования заметок для упрощения преобразований XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="8a43c-125">Describes how annotations can be used to facilitate transforms of an XML tree.</span></span>|  
+|[<span data-ttu-id="8a43c-126">Сериализация графов объектов, содержащих объекты XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-126">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|<span data-ttu-id="8a43c-127">Описывает способ сериализации графов объектов, содержащих объекты <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="8a43c-127">Describes how to serialize object graphs that contain <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> objects.</span></span>|  
+|[<span data-ttu-id="8a43c-128">Привязка данных WPF с помощью LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="8a43c-128">WPF Data Binding with LINQ to XML</span></span>](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|<span data-ttu-id="8a43c-129">Описывает способ использования LINQ to XML в виде источника данных для привязки данных в приложениях Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="8a43c-129">Describes how to use LINQ to XML as the data source for data binding in Windows Presentation Foundation applications.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8a43c-130">См. также</span><span class="sxs-lookup"><span data-stu-id="8a43c-130">See Also</span></span>  
+ [<span data-ttu-id="8a43c-131">Руководство по программированию (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a43c-131">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -1,57 +1,81 @@
 ---
-title: "Тип данных SByte (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.sbyte"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "типы данных [Visual Basic], интеграл"
-  - "целые числа"
-  - "целые числа, типы данных"
-  - "целые числа, типы"
-  - "целочисленные типы данных"
-  - "числа, целочисленный"
-  - "числа, целый"
-  - "SByte тип данных"
-  - "целое число"
+title: "Тип данных SByte (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.sbyte
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Тип данных SByte (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="sbyte-data-type-visual-basic"></a><span data-ttu-id="4c588-102">Тип данных SByte (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c588-102">SByte data type (Visual Basic)</span></span>
 
-Содержит 8\-разрядные \(1\-байтовые\) целые числа со знаком в диапазоне от\-128 до 127.  
+<span data-ttu-id="4c588-103">Содержит знаком 8-разрядное (1-байтовые) целые числа в диапазоне от -128 до 127.</span><span class="sxs-lookup"><span data-stu-id="4c588-103">Holds signed 8-bit (1-byte) integers that range in value from -128 through 127.</span></span>  
   
-## Заметки  
- Используйте тип данных `SByte` для хранения целых значений, которые не требуют полного размера `Integer` или даже половины размера типа данных `Short`.  В некоторых случаях общая среда исполнения может использовать возможность упаковки переменных `SByte` вместе для уменьшения потребления памяти.  
+## <a name="remarks"></a><span data-ttu-id="4c588-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="4c588-104">Remarks</span></span>
+
+<span data-ttu-id="4c588-105">Используйте `SByte` тип данных для хранения целых значений, которые не требуют полного размера `Integer` или даже половины данных ширина `Short`.</span><span class="sxs-lookup"><span data-stu-id="4c588-105">Use the `SByte` data type to contain integer values that do not require the full data width of `Integer` or even the half data width of `Short`.</span></span> <span data-ttu-id="4c588-106">В некоторых случаях среда можно упаковать вашей `SByte` переменные тесном контакте и снизить потребление памяти.</span><span class="sxs-lookup"><span data-stu-id="4c588-106">In some cases, the common language runtime might be able to pack your `SByte` variables closely together and save memory consumption.</span></span>
+
+<span data-ttu-id="4c588-107">Значение по умолчанию для типа `SByte` — 0.</span><span class="sxs-lookup"><span data-stu-id="4c588-107">The default value of `SByte` is 0.</span></span>
+
+## <a name="literal-assignments"></a><span data-ttu-id="4c588-108">Литерал назначения</span><span class="sxs-lookup"><span data-stu-id="4c588-108">Literal assignments</span></span>
   
- Значение по умолчанию для типа `SByte` равно 0.  
+<span data-ttu-id="4c588-109">Можно объявить и инициализировать `SByte` переменной, назначив его десятичное литералом, Шестнадцатеричный литерал восьмеричного литерала, или (начиная с Visual Basic 2017 г) двоичный литерал.</span><span class="sxs-lookup"><span data-stu-id="4c588-109">You can declare and initialize an `SByte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal.</span></span>
+
+<span data-ttu-id="4c588-110">В следующем примере целых чисел, равные-102, представленное в десятичном, шестнадцатеричном виде, и двоичные литералы назначены `SByte` значения.</span><span class="sxs-lookup"><span data-stu-id="4c588-110">In the following example, integers equal to -102 that are represented as decimal, hexadecimal, and binary literals are assigned to `SByte` values.</span></span> <span data-ttu-id="4c588-111">Для этого примера требуются компиляции с параметром `/removeintchecks` переключатель компилятора.</span><span class="sxs-lookup"><span data-stu-id="4c588-111">This example requires that you compile with the `/removeintchecks` compiler switch.</span></span>
+
+[!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]  
+
+> [!NOTE] 
+> <span data-ttu-id="4c588-112">Используйте префикс `&h` или `&H` для обозначения Шестнадцатеричный литерал префиксом `&b` или `&B` для обозначения двоичный литерал и префикс `&o` или `&O` для обозначения восьмеричного литерала.</span><span class="sxs-lookup"><span data-stu-id="4c588-112">You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal.</span></span> <span data-ttu-id="4c588-113">У десятичных литералов префиксов нет.</span><span class="sxs-lookup"><span data-stu-id="4c588-113">Decimal literals have no prefix.</span></span>
+
+<span data-ttu-id="4c588-114">Начиная с Visual Basic 2017 г., можно также использовать знак подчеркивания `_`, как разделитель для повышения удобства чтения, как в следующем примере показано.</span><span class="sxs-lookup"><span data-stu-id="4c588-114">Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.</span></span>
+
+[!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+
+<span data-ttu-id="4c588-115">Если целочисленный литерал выходит за пределы диапазона `SByte` (то есть, если он меньше <xref:System.SByte.MinValue?displayProperty=nameWithType> или больше <xref:System.SByte.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.</span><span class="sxs-lookup"><span data-stu-id="4c588-115">If the integer literal is outside the range of `SByte` (that is, if it is less than <xref:System.SByte.MinValue?displayProperty=nameWithType> or greater than <xref:System.SByte.MaxValue?displayProperty=nameWithType>, a compilation error occurs.</span></span> <span data-ttu-id="4c588-116">Если целочисленный литерал не имеет суффикса, [целое](integer-data-type.md) выводится.</span><span class="sxs-lookup"><span data-stu-id="4c588-116">When an integer literal has no suffix, an [Integer](integer-data-type.md) is inferred.</span></span> <span data-ttu-id="4c588-117">Если целочисленный литерал находится за пределами диапазона `Integer` типа, [длинные](long-data-type.md) выводится.</span><span class="sxs-lookup"><span data-stu-id="4c588-117">If the integer literal is outside the range of the `Integer` type, a [Long](long-data-type.md) is inferred.</span></span> <span data-ttu-id="4c588-118">Это означает, что в предыдущих примерах, числовые литералы `0x9A` и `0b10011010` интерпретируются как 32-разрядных целых чисел со знаком со значением 156, что превышает <xref:System.SByte.MaxValue?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4c588-118">This means that, in the previous examples, the numeric literals `0x9A` and `0b10011010` are interpreted as 32-bit signed integers with a value of 156, which exceeds <xref:System.SByte.MaxValue?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4c588-119">Для успешной компиляции кода, например, назначающий целое число без десятичного `SByte`, можно выполнить одно из следующих действий:</span><span class="sxs-lookup"><span data-stu-id="4c588-119">To successfully compile code like this that assigns a non-decimal integer to an `SByte`, you can do either of the following:</span></span>
+
+- <span data-ttu-id="4c588-120">Отключение проверки границ для целочисленных значений при компиляции с `/removeintchecks` переключатель компилятора.</span><span class="sxs-lookup"><span data-stu-id="4c588-120">Disable integer bounds checks by compiling with the `/removeintchecks` compiler switch.</span></span>
+
+- <span data-ttu-id="4c588-121">Используйте [символ типа](../../programming-guide\language-features\data-types/type-characters.md) явно задать литеральное значение, которое вы хотите назначить `SByte`.</span><span class="sxs-lookup"><span data-stu-id="4c588-121">Use a [type character](../../programming-guide\language-features\data-types/type-characters.md) to explicitly define the literal value that you want to assign to the `SByte`.</span></span> <span data-ttu-id="4c588-122">В следующем примере присваивается отрицательное литерал `Short` значение `SByte`.</span><span class="sxs-lookup"><span data-stu-id="4c588-122">The following example assigns a negative literal `Short` value to an `SByte`.</span></span> <span data-ttu-id="4c588-123">Обратите внимание, что для отрицательных чисел, необходимо задать старших битов высокого порядка слова числового литерала.</span><span class="sxs-lookup"><span data-stu-id="4c588-123">Note that, for negative numbers, the high-order bit of the high-order word of the numeric literal must be set.</span></span> <span data-ttu-id="4c588-124">В случае в нашем примере это имеет тип bit 15 литерала `Short` значение.</span><span class="sxs-lookup"><span data-stu-id="4c588-124">In the case of our example, this is bit 15 of the literal `Short` value.</span></span>
+
+   [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
+
+## <a name="programming-tips"></a><span data-ttu-id="4c588-125">Советы по программированию</span><span class="sxs-lookup"><span data-stu-id="4c588-125">Programming tips</span></span>
   
-## Советы по программированию  
+-   <span data-ttu-id="4c588-126">**CLS-совместимости.**</span><span class="sxs-lookup"><span data-stu-id="4c588-126">**CLS Compliance.**</span></span> <span data-ttu-id="4c588-127">`SByte` Тип данных не является частью [спецификации CLS](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.</span><span class="sxs-lookup"><span data-stu-id="4c588-127">The `SByte` data type is not part of the [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), so CLS-compliant code cannot consume a component that uses it.</span></span>
+
+-   <span data-ttu-id="4c588-128">**Расширяющие.**</span><span class="sxs-lookup"><span data-stu-id="4c588-128">**Widening.**</span></span> <span data-ttu-id="4c588-129">`SByte` Тип данных может быть расширен до `Short`, `Integer`, `Long`, `Decimal`, `Single`, и `Double`.</span><span class="sxs-lookup"><span data-stu-id="4c588-129">The `SByte` data type widens to `Short`, `Integer`, `Long`, `Decimal`, `Single`, and `Double`.</span></span> <span data-ttu-id="4c588-130">Это означает, что можно преобразовать `SByte` на любой из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.</span><span class="sxs-lookup"><span data-stu-id="4c588-130">This means you can convert `SByte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>
   
--   **CLS\-совместимость**. Тип данных `SByte` не является частью [Независимость от языка и независимые от языка компоненты](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\), поэтому в CLS\-совместимом коде нельзя использовать компонент, который его использует.  
+-   <span data-ttu-id="4c588-131">**Символы типов.**</span><span class="sxs-lookup"><span data-stu-id="4c588-131">**Type Characters.**</span></span> <span data-ttu-id="4c588-132">`SByte`не имеет знак типа литерала или знак типа идентификатора.</span><span class="sxs-lookup"><span data-stu-id="4c588-132">`SByte` has no literal type character or identifier type character.</span></span>  
   
--   **Расширение**. Тип данных`SByte` расширяется до типов `Short`, `Integer`, `Long`, `Decimal`, `Single` и `Double`.  Это означает, что можно преобразовать `SByte` к любому из этих типов без появления ошибки <xref:System.OverflowException?displayProperty=fullName>.  
+-   <span data-ttu-id="4c588-133">**Тип Framework.**</span><span class="sxs-lookup"><span data-stu-id="4c588-133">**Framework Type.**</span></span> <span data-ttu-id="4c588-134">В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4c588-134">The corresponding type in the .NET Framework is the <xref:System.SByte?displayProperty=nameWithType> structure.</span></span>
   
--   **Символы типа.** `SByte` не имеет символов типа литерала или символов типа идентификатора.  
-  
--   **Тип Framework.**. В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=fullName>.  
-  
-## См. также  
- <xref:System.SByte?displayProperty=fullName>   
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)   
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="4c588-135">См. также</span><span class="sxs-lookup"><span data-stu-id="4c588-135">See also</span></span>
+
+ <xref:System.SByte?displayProperty=nameWithType>  
+ [<span data-ttu-id="4c588-136">Типы данных</span><span class="sxs-lookup"><span data-stu-id="4c588-136">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="4c588-137">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="4c588-137">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="4c588-138">Сводка по преобразованию</span><span class="sxs-lookup"><span data-stu-id="4c588-138">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="4c588-139">Тип данных Short</span><span class="sxs-lookup"><span data-stu-id="4c588-139">Short Data Type</span></span>](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [<span data-ttu-id="4c588-140">Тип данных Integer</span><span class="sxs-lookup"><span data-stu-id="4c588-140">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [<span data-ttu-id="4c588-141">Тип данных Long</span><span class="sxs-lookup"><span data-stu-id="4c588-141">Long Data Type</span></span>](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [<span data-ttu-id="4c588-142">Эффективное использование типов данных</span><span class="sxs-lookup"><span data-stu-id="4c588-142">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

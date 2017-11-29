@@ -1,89 +1,92 @@
 ---
-title: "Расширение разметки DynamicResource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DynamicResource"
-  - "DynamicResourceExtension"
-helpviewer_keywords: 
-  - "DynamicResource - расширения разметки"
-  - "XAML, DynamicResource - расширение разметки"
+title: "Расширение разметки DynamicResource"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DynamicResource
+- DynamicResourceExtension
+helpviewer_keywords:
+- XAML [WPF], DynamicResource markup extension
+- DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c80d975e756fab449c254b9e1d8d1bc99a25652e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Расширение разметки DynamicResource
-Предоставляет значение для любого атрибута свойства [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], исходя из того, что это значение будет ссылкой на уже определенный ресурс.  Механизм поиска этого ресурса аналогичен поиску во время выполнения.  
+# <a name="dynamicresource-markup-extension"></a><span data-ttu-id="5e6e7-102">Расширение разметки DynamicResource</span><span class="sxs-lookup"><span data-stu-id="5e6e7-102">DynamicResource Markup Extension</span></span>
+<span data-ttu-id="5e6e7-103">Предоставляет значение для любого [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] атрибут property, отложенной должен указывать определенный ресурс.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-103">Provides a value for any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] property attribute by deferring that value to be a reference to a defined resource.</span></span> <span data-ttu-id="5e6e7-104">Поведение подстановки для этого ресурса является аналогом во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-104">Lookup behavior for that resource is analogous to run-time lookup.</span></span>  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="5e6e7-105">Использование атрибута XAML</span><span class="sxs-lookup"><span data-stu-id="5e6e7-105">XAML Attribute Usage</span></span>  
   
+```xml  
+<object property="{DynamicResource key}" .../>  
 ```  
-<object property="{DynamicResource key}" .../>  
-```  
   
-## Использование элемента свойства XAML  
+## <a name="xaml-property-element-usage"></a><span data-ttu-id="5e6e7-106">Использование элемента свойства XAML</span><span class="sxs-lookup"><span data-stu-id="5e6e7-106">XAML Property Element Usage</span></span>  
   
-```  
+```xml  
 <object>  
   <object.property>  
-    <DynamicResource ResourceKey="key" .../>  
+    <DynamicResource ResourceKey="key" .../>  
   </object.property>  
 </object>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-values"></a><span data-ttu-id="5e6e7-107">Значения XAML</span><span class="sxs-lookup"><span data-stu-id="5e6e7-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`key`|Ключ для запрашиваемого ресурса.  Этот ключ был изначально присвоен атрибутом [Директива x:Key](../../../../docs/framework/xaml-services/x-key-directive.md), если ресурс был создан в разметке, или был предоставлен в качестве параметра `key` при вызове метода <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=fullName>, если ресурс создавался в коде.|  
+|`key`|<span data-ttu-id="5e6e7-108">Ключ для запрашиваемого ресурса.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-108">The key for the requested resource.</span></span> <span data-ttu-id="5e6e7-109">Этот ключ был изначально присвоенный [директива x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) Если ресурс был создан в разметке или был предоставлен в виде `key` параметра при вызове <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> Если ресурс был создан в коде.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-109">This key was initially assigned by the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) if a resource was created in markup, or was provided as the `key` parameter when calling <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> if the resource was created in code.</span></span>|  
   
-## Заметки  
- `DynamicResource` создаст временное выражение во время начальной компиляции и, таким образом, отложит поиск ресурсов до тех пор, пока значение запрошенного ресурса действительно не понадобится для создания объекта.  Потенциально это может быть после загрузки страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Значение ресурса будет найдено на основе ключа поиска по всем словарям активных ресурсов, начиная с текущей области страницы, и заменено замещающим выражением из компиляции.  
+## <a name="remarks"></a><span data-ttu-id="5e6e7-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="5e6e7-110">Remarks</span></span>  
+ <span data-ttu-id="5e6e7-111">Объект `DynamicResource` создаст временное выражение во время начальной компиляции и таким образом, отложит для ресурсов, пока значение запрошенного ресурса фактически требуется для создания объекта.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-111">A `DynamicResource` will create a temporary expression during the initial compilation and thus defer lookup for resources until the requested resource value is actually required in order to construct an object.</span></span> <span data-ttu-id="5e6e7-112">Потенциально это может быть после [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] загрузки страницы.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-112">This may potentially be after the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is loaded.</span></span> <span data-ttu-id="5e6e7-113">Значение ресурса будет найдено на основе ключа поиска по всем словарям активных ресурсов, начиная с текущей области страницы и заменяется замещающим выражением из компиляции.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-113">The resource value will be found based on key search against all active resource dictionaries starting from the current page scope, and is substituted for the placeholder expression from compilation.</span></span>  
   
 > [!IMPORTANT]
->  В терминах приоритета свойства зависимости, выражение `DynamicResource` эквивалентно позиции, в которой применяется динамическая ссылка на ресурс.  В случае задания локального значения для свойства, которое ранее имело в качестве локального значения выражение `DynamicResource`, `DynamicResource` полностью удаляется.  Дополнительные сведения см. в разделе [Приоритет значения свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+>  <span data-ttu-id="5e6e7-114">С точки зрения приоритета свойств зависимостей `DynamicResource` выражение эквивалентно позиции, где применяется ссылка на динамический ресурс.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-114">In terms of dependency property precedence, a `DynamicResource` expression is equivalent to the position where the dynamic resource reference is applied.</span></span> <span data-ttu-id="5e6e7-115">Если вы установите локальное значение для свойства, которое ранее было `DynamicResource` выражение в качестве локального значения `DynamicResource` полностью удаляется.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-115">If you set a local value for a property that previously had a `DynamicResource` expression as the local value, the `DynamicResource` is completely removed.</span></span> <span data-ttu-id="5e6e7-116">Дополнительные сведения см. в разделе [Приоритет значений свойств зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-116">For details, see [Dependency Property Value Precedence](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).</span></span>  
   
- Определенные сценарии доступа к ресурсу особенно подходят для `DynamicResource`, в отличие от [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  Обсуждение относительных достоинств и влияния `DynamicResource` и `StaticResource` на производительность см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ <span data-ttu-id="5e6e7-117">Для некоторых сценариев доступа к ресурсу особенно подходят `DynamicResource` в отличие от [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-117">Certain resource access scenarios are particularly appropriate for `DynamicResource` as opposed to a [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).</span></span> <span data-ttu-id="5e6e7-118">В разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) обсуждение относительный плюсы и влияние на производительность `DynamicResource` и `StaticResource`.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-118">See [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for a discussion about the relative merits and performance implications of `DynamicResource` and `StaticResource`.</span></span>  
   
- Указанный <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> должен соответствовать существующему ресурсу, определяемому [Директива x:Key](../../../../docs/framework/xaml-services/x-key-directive.md) на некотором уровне в странице, приложении, доступных темах элементов управления, внешних или системных ресурсах; поиск ресурса будет выполняться в указанном порядке.  Дополнительные сведения о поиске ресурса для статических и динамических ресурсов см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ <span data-ttu-id="5e6e7-119">Указанный <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> должны соответствовать существующий ресурс определяется [директива x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) на некотором уровне в страницу, приложения, доступный элемент управления темы и внешние ресурсы или системных ресурсов и Поиск ресурсов будет происходить в указанном порядке.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-119">The specified <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> should correspond to an existing resource determined by [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) at some level in your page, application, the available control themes and external resources, or system resources, and the resource lookup will happen in that order.</span></span> <span data-ttu-id="5e6e7-120">Дополнительные сведения о поиске ресурса для статических и динамических ресурсов см. в разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-120">For more information about resource lookup for static and dynamic resources, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
- Ключ ресурса может быть любой строкой, определенной в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).  Ключ ресурса также может быть и другим типом объекта, таким как <xref:System.Type>.  Ключ <xref:System.Type> является основой управления стилями элементов управления при помощи тем.  Дополнительные сведения см. в разделе [Общие сведения о разработке управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ <span data-ttu-id="5e6e7-121">Ключ ресурса может быть любая строка, определенная в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-121">A resource key may be any string defined in the [XamlName Grammar](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span> <span data-ttu-id="5e6e7-122">Ключ ресурса может также быть другие типы объектов, например <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-122">A resource key may also be other object types, such as a <xref:System.Type>.</span></span> <span data-ttu-id="5e6e7-123">Объект <xref:System.Type> ключ — это основа стилями элементов управления темы.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-123">A <xref:System.Type> key is fundamental to how controls can be styled by themes.</span></span> <span data-ttu-id="5e6e7-124">Дополнительные сведения см. в разделе [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-124">For more information, see [Control Authoring Overview](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span></span>  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] для поиска значений ресурсов, например <xref:System.Windows.FrameworkElement.FindResource%2A>, следуют той же логике поиска ресурса, которая используется `DynamicResource`.  
+ [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]<span data-ttu-id="5e6e7-125">для поиска значений ресурсов таких как <xref:System.Windows.FrameworkElement.FindResource%2A>, выполните ту же логику поиска ресурсов, используемый в `DynamicResource`.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-125"> for lookup of resource values, such as <xref:System.Windows.FrameworkElement.FindResource%2A>, follow the same resource lookup logic as used by `DynamicResource`.</span></span>  
   
- Альтернативным декларативным средством ссылки на ресурс является [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+ <span data-ttu-id="5e6e7-126">— Альтернативный декларативным образом ссылки на ресурс в виде [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-126">The alternative declarative means of referencing a resource is as a [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).</span></span>  
   
- Синтаксис атрибута является наиболее распространенным синтаксисом, который используется с этим расширением разметки.  Лексема строки, указанная после строки идентификатора `DynamicResource`, присваивается как значение <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> базового класса расширения <xref:System.Windows.DynamicResourceExtension>.  
+ <span data-ttu-id="5e6e7-127">Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-127">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="5e6e7-128">Строковая лексема, указываемая после строки идентификатора `DynamicResource`, присваивается в качестве значения <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> соответствующего класса расширения <xref:System.Windows.DynamicResourceExtension>.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-128">The string token provided after the `DynamicResource` identifier string is assigned as the <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> value of the underlying <xref:System.Windows.DynamicResourceExtension> extension class.</span></span>  
   
- В синтаксисе элемента объекта может использоваться `DynamicResource`.  В этом случае указание значения свойства <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> является обязательным.  
+ <span data-ttu-id="5e6e7-129">`DynamicResource`может использоваться в синтаксисе элемента объекта.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-129">`DynamicResource` can be used in object element syntax.</span></span> <span data-ttu-id="5e6e7-130">В этом случае укажите значение параметра <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> свойство является обязательным.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-130">In this case, specifying the value of the <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> property is required.</span></span>  
   
- Излишним может оказаться использование `DynamicResource` в атрибуте, в котором свойство <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> определено как пара «свойство\=значение».  
+ <span data-ttu-id="5e6e7-131">Излишним может оказаться и использование `DynamicResource` в атрибуте, в котором свойство <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> определено как пара "свойство=значение".</span><span class="sxs-lookup"><span data-stu-id="5e6e7-131">`DynamicResource` can also be used in a verbose attribute usage that specifies the <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> property as a property=value pair:</span></span>  
   
+```xml  
+<object property="{DynamicResource ResourceKey=key}" .../>  
 ```  
-<object property="{DynamicResource ResourceKey=key}" .../>  
-```  
   
- Подробное определение зачастую удобно использовать для расширений, которые имеют несколько устанавливаемых свойств, а также в том случае, если некоторые свойства являются необязательными.  Поскольку `DynamicResource` имеет только одно устанавливаемое свойство, которое является обязательным, это использование не является типичным.  
+ <span data-ttu-id="5e6e7-132">Подробное определение зачастую удобно использовать для расширений, которые имеют несколько устанавливаемых свойств, а также в том случае, если некоторые свойства являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-132">The verbose usage is often useful for extensions that have more than one settable property, or if some properties are optional.</span></span> <span data-ttu-id="5e6e7-133">Так как `DynamicResource` имеет только одно устанавливаемое свойство, которое является обязательным, это использование не является типичным.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-133">Because `DynamicResource` has only one settable property, which is required, this verbose usage is not typical.</span></span>  
   
- В реализации процессора [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обработка данного расширения разметки определяется классом <xref:System.Windows.DynamicResourceExtension>.  
+ <span data-ttu-id="5e6e7-134">В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] реализации процессора обработки для данного расширения разметки определяется <xref:System.Windows.DynamicResourceExtension> класса.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-134">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor implementation, the handling for this markup extension is defined by the <xref:System.Windows.DynamicResourceExtension> class.</span></span>  
   
- `DynamicResource` является расширением разметки.  Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами.  Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы { and } в синтаксисе их атрибутов, который является соглашением, по которому процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут.  Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="5e6e7-135">`DynamicResource` является расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-135">`DynamicResource` is a markup extension.</span></span> <span data-ttu-id="5e6e7-136">Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-136">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="5e6e7-137">Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут.</span><span class="sxs-lookup"><span data-stu-id="5e6e7-137">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="5e6e7-138">Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="5e6e7-138">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## См. также  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [Ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md)   
- [Директива x:Key](../../../../docs/framework/xaml-services/x-key-directive.md)   
- [Общие сведения о языке XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)   
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="5e6e7-139">См. также</span><span class="sxs-lookup"><span data-stu-id="5e6e7-139">See Also</span></span>  
+ [<span data-ttu-id="5e6e7-140">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="5e6e7-140">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="5e6e7-141">Ресурсы и код</span><span class="sxs-lookup"><span data-stu-id="5e6e7-141">Resources and Code</span></span>](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
+ [<span data-ttu-id="5e6e7-142">Директива x:Key</span><span class="sxs-lookup"><span data-stu-id="5e6e7-142">x:Key Directive</span></span>](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [<span data-ttu-id="5e6e7-143">Общие сведения о языке XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="5e6e7-143">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="5e6e7-144">Расширения разметки и XAML WPF</span><span class="sxs-lookup"><span data-stu-id="5e6e7-144">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="5e6e7-145">Расширение разметки StaticResource</span><span class="sxs-lookup"><span data-stu-id="5e6e7-145">StaticResource Markup Extension</span></span>](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [<span data-ttu-id="5e6e7-146">Расширения разметки и XAML WPF</span><span class="sxs-lookup"><span data-stu-id="5e6e7-146">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

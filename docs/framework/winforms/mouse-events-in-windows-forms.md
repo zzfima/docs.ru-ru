@@ -1,154 +1,155 @@
 ---
-title: "Mouse Events in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MouseLeave event"
-  - "events [Windows Forms], mouse"
-  - "Click event, raising order"
-  - "Windows Forms controls, click events"
-  - "MouseDoubleClick event"
-  - "MouseEnter event"
-  - "MouseHover event"
-  - "MouseDown event"
-  - "MouseClick event"
-  - "MouseMove event"
-  - "mouse, events"
-  - "MouseUp event"
+title: "События мыши в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MouseLeave event [Windows Forms]
+- events [Windows Forms], mouse
+- Click event [Windows Forms], raising order
+- Windows Forms controls, click events
+- MouseDoubleClick event [Windows Forms]
+- MouseEnter event [Windows Forms]
+- MouseHover event [Windows Forms]
+- MouseDown event [Windows Forms]
+- MouseClick event [Windows Forms]
+- MouseMove event [Windows Forms]
+- mouse [Windows Forms], events
+- MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 803f2daab5b8f6e216effe4a9ae9f34752d24e70
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Mouse Events in Windows Forms
-При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши.  В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms.  Список и описание всех событий мыши см. в разделе [How Mouse Input Works in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  См. также [Обзор обработчиков событий \(Windows Forms\)](http://msdn.microsoft.com/library/be6fx1bb%20\(v=vs.110\)) и [Общие сведения о событиях \(Windows Forms\)](http://msdn.microsoft.com/library/1h12f09z%20\(v=vs.110\))  
+# <a name="mouse-events-in-windows-forms"></a><span data-ttu-id="ed54a-102">События мыши в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ed54a-102">Mouse Events in Windows Forms</span></span>
+<span data-ttu-id="ed54a-103">При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши.</span><span class="sxs-lookup"><span data-stu-id="ed54a-103">When you handle mouse input, you usually want to know the location of the mouse pointer and the state of the mouse buttons.</span></span> <span data-ttu-id="ed54a-104">В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ed54a-104">This topic provides details on how to get this information from mouse events, and explains the order in which mouse click events are raised in Windows Forms controls.</span></span> <span data-ttu-id="ed54a-105">Список и описание всех событий мыши см. в разделе [принцип работы мыши ввода в Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="ed54a-105">For a list and description of all of the mouse events, see [How Mouse Input Works in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).</span></span>  <span data-ttu-id="ed54a-106">См. также [Обзор обработчиков событий (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="ed54a-106">Also see [Event Handlers Overview (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))</span></span>  
   
-## Сведения о мыши  
- Объект <xref:System.Windows.Forms.MouseEventArgs> отправляется обработчикам событий мыши, связанных с нажатием кнопки мыши и отслеживанием ее движений.  Объект <xref:System.Windows.Forms.MouseEventArgs> предоставляет сведения о текущем состоянии мыши, включая положение указателя мыши в клиентских координатах, какие кнопки мыши нажаты и произошла ли прокрутка колесика мыши.  Некоторые события мыши, например те, которые просто уведомляют о том, что указатель мыши пересек границы элемента управления, отправляют обработчику событий объект <xref:System.EventArgs> без подробных сведений.  
+## <a name="mouse-information"></a><span data-ttu-id="ed54a-107">Сведения о мыши</span><span class="sxs-lookup"><span data-stu-id="ed54a-107">Mouse Information</span></span>  
+ <span data-ttu-id="ed54a-108">Объект <xref:System.Windows.Forms.MouseEventArgs> отправляется обработчикам событий мыши, связанных с нажатием кнопки мыши и отслеживанием ее движений.</span><span class="sxs-lookup"><span data-stu-id="ed54a-108">A <xref:System.Windows.Forms.MouseEventArgs> is sent to the handlers of mouse events related to clicking a mouse button and tracking mouse movements.</span></span> <span data-ttu-id="ed54a-109">Объект <xref:System.Windows.Forms.MouseEventArgs> предоставляет сведения о текущем состоянии мыши, включая положение указателя мыши в клиентских координатах, какие кнопки мыши нажаты и произошла ли прокрутка колесика мыши.</span><span class="sxs-lookup"><span data-stu-id="ed54a-109"><xref:System.Windows.Forms.MouseEventArgs> provides information about the current state of the mouse, including the location of the mouse pointer in client coordinates, which mouse buttons are pressed, and whether the mouse wheel has scrolled.</span></span> <span data-ttu-id="ed54a-110">Некоторые события мыши, например те, которые просто уведомляют о том, что указатель мыши пересек границы элемента управления, отправляют обработчику событий объект <xref:System.EventArgs> без подробных сведений.</span><span class="sxs-lookup"><span data-stu-id="ed54a-110">Several mouse events, such as those that simply notify when the mouse pointer has entered or left the bounds of a control, send an <xref:System.EventArgs> to the event handler with no further information.</span></span>  
   
- Если нужно знать текущее состояние кнопок мыши или положение ее указателя, но при этом избежать обработки события мыши, можно также использовать свойства <xref:System.Windows.Forms.Control.MouseButtons%2A> и <xref:System.Windows.Forms.Control.MousePosition%2A> класса <xref:System.Windows.Forms.Control>.  Свойство <xref:System.Windows.Forms.Control.MouseButtons%2A> возвращает сведения о том, какие кнопки мыши в настоящее время нажаты.  Свойство <xref:System.Windows.Forms.Control.MousePosition%2A> возвращает экранные координаты указателя мыши, которые эквивалентны значению, возвращаемому методом <xref:System.Windows.Forms.Cursor.Position%2A>.  
+ <span data-ttu-id="ed54a-111">Если нужно знать текущее состояние кнопок мыши или положение ее указателя, но при этом избежать обработки события мыши, можно также использовать свойства <xref:System.Windows.Forms.Control.MouseButtons%2A> и <xref:System.Windows.Forms.Control.MousePosition%2A> класса <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-111">If you want to know the current state of the mouse buttons or the location of the mouse pointer, and you want to avoid handling a mouse event, you can also use the <xref:System.Windows.Forms.Control.MouseButtons%2A> and <xref:System.Windows.Forms.Control.MousePosition%2A> properties of the <xref:System.Windows.Forms.Control> class.</span></span> <span data-ttu-id="ed54a-112">Свойство <xref:System.Windows.Forms.Control.MouseButtons%2A> возвращает сведения о том, какие кнопки мыши в настоящее время нажаты.</span><span class="sxs-lookup"><span data-stu-id="ed54a-112"><xref:System.Windows.Forms.Control.MouseButtons%2A> returns information about which mouse buttons are currently pressed.</span></span> <span data-ttu-id="ed54a-113">Свойство <xref:System.Windows.Forms.Control.MousePosition%2A> возвращает экранные координаты указателя мыши, которые эквивалентны значению, возвращаемому методом <xref:System.Windows.Forms.Cursor.Position%2A>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-113">The <xref:System.Windows.Forms.Control.MousePosition%2A> returns the screen coordinates of the mouse pointer and is equivalent to the value returned by <xref:System.Windows.Forms.Cursor.Position%2A>.</span></span>  
   
-## Преобразование между экранными и клиентскими координатами  
- Так как некоторые сведения о положении мыши представлены в клиентских координатах, а другие — в экранных, может потребоваться преобразовать точку из одной системы координат в другую.  Это легко сделать с помощью методов <xref:System.Windows.Forms.Control.PointToClient%2A> и <xref:System.Windows.Forms.Control.PointToScreen%2A>, доступных в классе <xref:System.Windows.Forms.Control>.  
+## <a name="converting-between-screen-and-client-coordinates"></a><span data-ttu-id="ed54a-114">Преобразование между экранными и клиентскими координатами</span><span class="sxs-lookup"><span data-stu-id="ed54a-114">Converting Between Screen and Client Coordinates</span></span>  
+ <span data-ttu-id="ed54a-115">Так как некоторые сведения о положении мыши представлены в клиентских координатах, а другие — в экранных, может потребоваться преобразовать точку из одной системы координат в другую.</span><span class="sxs-lookup"><span data-stu-id="ed54a-115">Because some mouse location information is in client coordinates and some is in screen coordinates, you may need to convert a point from one coordinate system to the other.</span></span> <span data-ttu-id="ed54a-116">Это легко сделать с помощью методов <xref:System.Windows.Forms.Control.PointToClient%2A> и <xref:System.Windows.Forms.Control.PointToScreen%2A>, доступных в классе <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-116">You can do this easily by using the <xref:System.Windows.Forms.Control.PointToClient%2A> and <xref:System.Windows.Forms.Control.PointToScreen%2A> methods available on the <xref:System.Windows.Forms.Control> class.</span></span>  
   
-## Стандартное поведение события щелчка  
- Если требуется обрабатывать события щелчка мыши в определенном порядке, необходимо знать порядок, в котором вызываются события щелчка в элементах управления Windows Forms.  Когда кнопка мыши \(любая\) нажимается и отпускается, все элементы управления Windows Forms, кроме отмеченных в списке ниже, вызывают события щелчка в одном и том же порядке.  Ниже приведен порядок событий, вызываемых одинарным щелчком мыши.  
+## <a name="standard-click-event-behavior"></a><span data-ttu-id="ed54a-117">Стандартное поведение события щелчка</span><span class="sxs-lookup"><span data-stu-id="ed54a-117">Standard Click Event Behavior</span></span>  
+ <span data-ttu-id="ed54a-118">Если требуется обрабатывать события щелчка мыши в определенном порядке, необходимо знать порядок, в котором вызываются события щелчка в элементах управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ed54a-118">If you want to handle mouse click events in the proper order, you need to know the order in which click events are raised in Windows Forms controls.</span></span> <span data-ttu-id="ed54a-119">Когда кнопка мыши (любая) нажимается и отпускается, все элементы управления Windows Forms, кроме отмеченных в списке ниже, вызывают события щелчка в одном и том же порядке.</span><span class="sxs-lookup"><span data-stu-id="ed54a-119">All Windows Forms controls raise click events in the same order when a mouse button is pressed and released (regardless of which mouse button), except where noted in the following list for individual controls.</span></span> <span data-ttu-id="ed54a-120">Ниже приведен порядок событий, вызываемых одинарным щелчком мыши.</span><span class="sxs-lookup"><span data-stu-id="ed54a-120">The following list shows the order of events raised for a single mouse-button click:</span></span>  
   
-1.  Событие <xref:System.Windows.Forms.Control.MouseDown>.  
+1.  <span data-ttu-id="ed54a-121">Событие <xref:System.Windows.Forms.Control.MouseDown>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-121"><xref:System.Windows.Forms.Control.MouseDown> event.</span></span>  
   
-2.  Событие <xref:System.Windows.Forms.Control.Click>.  
+2.  <span data-ttu-id="ed54a-122">Событие <xref:System.Windows.Forms.Control.Click>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-122"><xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-3.  Событие <xref:System.Windows.Forms.Control.MouseClick>.  
+3.  <span data-ttu-id="ed54a-123">Событие <xref:System.Windows.Forms.Control.MouseClick>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-123"><xref:System.Windows.Forms.Control.MouseClick> event.</span></span>  
   
-4.  Событие <xref:System.Windows.Forms.Control.MouseUp>.  
+4.  <span data-ttu-id="ed54a-124">Событие <xref:System.Windows.Forms.Control.MouseUp>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-124"><xref:System.Windows.Forms.Control.MouseUp> event.</span></span>  
   
- Ниже приведен порядок событий, вызываемых двойным щелчком мыши.  
+ <span data-ttu-id="ed54a-125">Ниже приведен порядок событий, вызываемых двойным щелчком мыши.</span><span class="sxs-lookup"><span data-stu-id="ed54a-125">Following is the order of events raised for a double mouse-button click:</span></span>  
   
-1.  Событие <xref:System.Windows.Forms.Control.MouseDown>.  
+1.  <span data-ttu-id="ed54a-126">Событие <xref:System.Windows.Forms.Control.MouseDown>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-126"><xref:System.Windows.Forms.Control.MouseDown> event.</span></span>  
   
-2.  Событие <xref:System.Windows.Forms.Control.Click>.  
+2.  <span data-ttu-id="ed54a-127">Событие <xref:System.Windows.Forms.Control.Click>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-127"><xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-3.  Событие <xref:System.Windows.Forms.Control.MouseClick>.  
+3.  <span data-ttu-id="ed54a-128">Событие <xref:System.Windows.Forms.Control.MouseClick>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-128"><xref:System.Windows.Forms.Control.MouseClick> event.</span></span>  
   
-4.  Событие <xref:System.Windows.Forms.Control.MouseUp>.  
+4.  <span data-ttu-id="ed54a-129">Событие <xref:System.Windows.Forms.Control.MouseUp>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-129"><xref:System.Windows.Forms.Control.MouseUp> event.</span></span>  
   
-5.  Событие <xref:System.Windows.Forms.Control.MouseDown>.  
+5.  <span data-ttu-id="ed54a-130">Событие <xref:System.Windows.Forms.Control.MouseDown>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-130"><xref:System.Windows.Forms.Control.MouseDown> event.</span></span>  
   
-6.  Событие <xref:System.Windows.Forms.Control.DoubleClick>.  \(Может изменяться в зависимости от того, установлено ли для бита стиля <xref:System.Windows.Forms.ControlStyles> элемента управления значение `true`.  Подробнее о настройке бита <xref:System.Windows.Forms.ControlStyles> см. в разделе, посвященном методу <xref:System.Windows.Forms.Control.SetStyle%2A>.\)  
+6.  <span data-ttu-id="ed54a-131">Событие <xref:System.Windows.Forms.Control.DoubleClick>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-131"><xref:System.Windows.Forms.Control.DoubleClick> event.</span></span> <span data-ttu-id="ed54a-132">(Может изменяться в зависимости от того, установлено ли для бита стиля <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> элемента управления значение `true`.</span><span class="sxs-lookup"><span data-stu-id="ed54a-132">(This can vary, depending on whether the control in question has the <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> style bit set to `true`.</span></span> <span data-ttu-id="ed54a-133">Подробнее о настройке бита <xref:System.Windows.Forms.ControlStyles> см. в разделе, посвященном методу <xref:System.Windows.Forms.Control.SetStyle%2A>.)</span><span class="sxs-lookup"><span data-stu-id="ed54a-133">For more information about how to set a <xref:System.Windows.Forms.ControlStyles> bit, see the <xref:System.Windows.Forms.Control.SetStyle%2A> method.)</span></span>  
   
-7.  Событие <xref:System.Windows.Forms.Control.MouseDoubleClick>.  
+7.  <span data-ttu-id="ed54a-134">Событие <xref:System.Windows.Forms.Control.MouseDoubleClick>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-134"><xref:System.Windows.Forms.Control.MouseDoubleClick> event.</span></span>  
   
-8.  Событие <xref:System.Windows.Forms.Control.MouseUp>.  
+8.  <span data-ttu-id="ed54a-135">Событие <xref:System.Windows.Forms.Control.MouseUp>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-135"><xref:System.Windows.Forms.Control.MouseUp> event.</span></span>  
   
- Пример кода, который демонстрирует очередность событий щелчка мыши, см. в разделе [How to: Handle User Input Events in Windows Forms Controls](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ <span data-ttu-id="ed54a-136">Пример кода, который демонстрирует порядок мыши события click см. в разделе [как: обработка событий пользовательского ввода в элементах управления Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="ed54a-136">For a code example that demonstrates the order of the mouse click events, see [How to: Handle User Input Events in Windows Forms Controls](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).</span></span>  
   
-### Особые элементы управления  
- Поведение перечисленных ниже элементов управления при щелчке мыши не соответствует стандартному.  
+### <a name="individual-controls"></a><span data-ttu-id="ed54a-137">Особые элементы управления</span><span class="sxs-lookup"><span data-stu-id="ed54a-137">Individual Controls</span></span>  
+ <span data-ttu-id="ed54a-138">Поведение перечисленных ниже элементов управления при щелчке мыши не соответствует стандартному.</span><span class="sxs-lookup"><span data-stu-id="ed54a-138">The following controls do not conform to the standard mouse click event behavior:</span></span>  
   
--   Элементы управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.RadioButton>  
-  
-    > [!NOTE]
-    >  Если пользователь щелкает поле редактирования, кнопку или элемент в списке, то для элемента управления <xref:System.Windows.Forms.ComboBox> возникают описанные ниже события.  
-  
-    -   Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
-  
-    -   Щелчок правой кнопкой мыши: событие щелчка не вызывается  
-  
-    -   Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
-  
-    -   Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается  
-  
--   Элементы управления <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> и <xref:System.Windows.Forms.CheckedListBox>  
+-   <span data-ttu-id="ed54a-139">Элементы управления <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.RadioButton></span><span class="sxs-lookup"><span data-stu-id="ed54a-139"><xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.ComboBox>, and <xref:System.Windows.Forms.RadioButton> controls</span></span>  
   
     > [!NOTE]
-    >  Если пользователь щелкает любое место внутри этих элементов управления, то возникают описанные ниже события.  
+    >  <span data-ttu-id="ed54a-140">Если пользователь щелкает поле редактирования, кнопку или элемент в списке, то для элемента управления <xref:System.Windows.Forms.ComboBox> возникают описанные ниже события.</span><span class="sxs-lookup"><span data-stu-id="ed54a-140">For the <xref:System.Windows.Forms.ComboBox> control, the event behavior detailed later occurs if the user clicks on the edit field, the button, or on an item within the list.</span></span>  
   
-    -   Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
+    -   <span data-ttu-id="ed54a-141">Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-141">Left click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
   
-    -   Щелчок правой кнопкой мыши: событие щелчка не вызывается  
+    -   <span data-ttu-id="ed54a-142">Щелчок правой кнопкой мыши: событие щелчка не вызывается</span><span class="sxs-lookup"><span data-stu-id="ed54a-142">Right click: No click events raised</span></span>  
   
-    -   Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   <span data-ttu-id="ed54a-143">Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-143">Left double-click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
   
-    -   Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается  
+    -   <span data-ttu-id="ed54a-144">Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается</span><span class="sxs-lookup"><span data-stu-id="ed54a-144">Right double-click: No click events raised</span></span>  
   
--   Элемент управления <xref:System.Windows.Forms.ListView>  
-  
-    > [!NOTE]
-    >  Указанные ниже события возникают только в том случае, если пользователь щелкает элементы в <xref:System.Windows.Forms.ListView>.  Если пользователь щелкает мышью в любом другом месте элемента управления, то события не вызываются.  В дополнение к событиям, описанным ниже, существуют события <xref:System.Windows.Forms.ListView.BeforeLabelEdit> и <xref:System.Windows.Forms.ListView.AfterLabelEdit>, которые могут представлять интерес, если нужно выполнять проверку с помощью элемента управления <xref:System.Windows.Forms.ListView>.  
-  
-    -   Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
-  
-    -   Щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
-  
-    -   Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
-  
-    -   Двойной щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
-  
--   Элемент управления <xref:System.Windows.Forms.TreeView>  
+-   <span data-ttu-id="ed54a-145">Элементы управления <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> и <xref:System.Windows.Forms.CheckedListBox></span><span class="sxs-lookup"><span data-stu-id="ed54a-145"><xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox>, and <xref:System.Windows.Forms.CheckedListBox> controls</span></span>  
   
     > [!NOTE]
-    >  Указанные ниже события возникают только в том случае, если пользователь щелкает сами элементы или справа от них в элементе управления <xref:System.Windows.Forms.TreeView>.  Если пользователь щелкает мышью в любом другом месте элемента управления, то события не вызываются.  В дополнение к событиям, описанным ниже, существуют события <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck> и <xref:System.Windows.Forms.TreeView.AfterLabelEdit>, которые могут представлять интерес, если нужно выполнять проверку с помощью элемента управления <xref:System.Windows.Forms.TreeView>.  
+    >  <span data-ttu-id="ed54a-146">Если пользователь щелкает любое место внутри этих элементов управления, то возникают описанные ниже события.</span><span class="sxs-lookup"><span data-stu-id="ed54a-146">The event behavior detailed later occurs when the user clicks anywhere within these controls.</span></span>  
   
-    -   Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
+    -   <span data-ttu-id="ed54a-147">Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-147">Left click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
   
-    -   Щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
+    -   <span data-ttu-id="ed54a-148">Щелчок правой кнопкой мыши: событие щелчка не вызывается</span><span class="sxs-lookup"><span data-stu-id="ed54a-148">Right click: No click events raised</span></span>  
   
-    -   Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   <span data-ttu-id="ed54a-149">Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-149">Left double-click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span></span>  
   
-    -   Двойной щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   <span data-ttu-id="ed54a-150">Двойной щелчок правой кнопкой мыши: событие щелчка не вызывается</span><span class="sxs-lookup"><span data-stu-id="ed54a-150">Right double-click: No click events raised</span></span>  
   
-### Поведение отрисовки для переключателей  
- Переключатели, такие как элементы управления, производные от класса <xref:System.Windows.Forms.ButtonBase>, имеют описанное ниже нестандартное поведение отрисовки в сочетании с событиями щелчка.  
-  
-1.  Пользователь нажимает кнопку мыши.  
-  
-2.  Элемент управления отрисовывается в состоянии "нажато".  
-  
-3.  Возникает событие <xref:System.Windows.Forms.Control.MouseDown>.  
-  
-4.  Пользователь отпускает кнопку мыши.  
-  
-5.  Элемент управления отрисовывается в состоянии "отпущено".  
-  
-6.  Возникает событие <xref:System.Windows.Forms.Control.Click>.  
-  
-7.  Возникает событие <xref:System.Windows.Forms.Control.MouseClick>.  
-  
-8.  Возникает событие <xref:System.Windows.Forms.Control.MouseUp>.  
+-   <span data-ttu-id="ed54a-151">Элемент управления <xref:System.Windows.Forms.ListView></span><span class="sxs-lookup"><span data-stu-id="ed54a-151"><xref:System.Windows.Forms.ListView> control</span></span>  
   
     > [!NOTE]
-    >  Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши \(например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат\), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>.  События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.  
+    >  <span data-ttu-id="ed54a-152">Указанные ниже события возникают только в том случае, если пользователь щелкает элементы в <xref:System.Windows.Forms.ListView>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-152">The event behavior detailed later occurs only when the user clicks on the items in the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="ed54a-153">Если пользователь щелкает мышью в любом другом месте элемента управления, то события не вызываются.</span><span class="sxs-lookup"><span data-stu-id="ed54a-153">No events are raised for clicks anywhere else on the control.</span></span> <span data-ttu-id="ed54a-154">В дополнение к событиям, описанным ниже, существуют события <xref:System.Windows.Forms.ListView.BeforeLabelEdit> и <xref:System.Windows.Forms.ListView.AfterLabelEdit>, которые могут представлять интерес, если нужно выполнять проверку с помощью элемента управления <xref:System.Windows.Forms.ListView>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-154">In addition to the events described later, there are the <xref:System.Windows.Forms.ListView.BeforeLabelEdit> and <xref:System.Windows.Forms.ListView.AfterLabelEdit> events, which may be of interest to you if you want to use validation with the <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-## См. также  
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+    -   <span data-ttu-id="ed54a-155">Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-155">Left click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
+  
+    -   <span data-ttu-id="ed54a-156">Щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-156">Right click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
+  
+    -   <span data-ttu-id="ed54a-157">Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-157">Left double-click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span></span>  
+  
+    -   <span data-ttu-id="ed54a-158">Двойной щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-158">Right double-click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span></span>  
+  
+-   <span data-ttu-id="ed54a-159">Элемент управления <xref:System.Windows.Forms.TreeView></span><span class="sxs-lookup"><span data-stu-id="ed54a-159"><xref:System.Windows.Forms.TreeView> control</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="ed54a-160">Указанные ниже события возникают только в том случае, если пользователь щелкает сами элементы или справа от них в элементе управления <xref:System.Windows.Forms.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-160">The event behavior detailed later occurs only when the user clicks on the items themselves or to the right of the items in the <xref:System.Windows.Forms.TreeView> control.</span></span> <span data-ttu-id="ed54a-161">Если пользователь щелкает мышью в любом другом месте элемента управления, то события не вызываются.</span><span class="sxs-lookup"><span data-stu-id="ed54a-161">No events are raised for clicks anywhere else on the control.</span></span> <span data-ttu-id="ed54a-162">В дополнение к событиям, описанным ниже, существуют события <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck> и <xref:System.Windows.Forms.TreeView.AfterLabelEdit>, которые могут представлять интерес, если нужно выполнять проверку с помощью элемента управления <xref:System.Windows.Forms.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-162">In addition to those described later, there are the <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>, and <xref:System.Windows.Forms.TreeView.AfterLabelEdit> events, which may be of interest to you if you want to use validation with the <xref:System.Windows.Forms.TreeView> control.</span></span>  
+  
+    -   <span data-ttu-id="ed54a-163">Щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-163">Left click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
+  
+    -   <span data-ttu-id="ed54a-164">Щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-164">Right click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick></span></span>  
+  
+    -   <span data-ttu-id="ed54a-165">Двойной щелчок левой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-165">Left double-click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span></span>  
+  
+    -   <span data-ttu-id="ed54a-166">Двойной щелчок правой кнопкой мыши: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span><span class="sxs-lookup"><span data-stu-id="ed54a-166">Right double-click: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick></span></span>  
+  
+### <a name="painting-behavior-of-toggle-controls"></a><span data-ttu-id="ed54a-167">Поведение отрисовки для переключателей</span><span class="sxs-lookup"><span data-stu-id="ed54a-167">Painting Behavior of Toggle Controls</span></span>  
+ <span data-ttu-id="ed54a-168">Переключатели, такие как элементы управления, производные от класса <xref:System.Windows.Forms.ButtonBase>, имеют описанное ниже нестандартное поведение отрисовки в сочетании с событиями щелчка.</span><span class="sxs-lookup"><span data-stu-id="ed54a-168">Toggle controls, such as the controls deriving from the <xref:System.Windows.Forms.ButtonBase> class, have the following distinctive painting behavior in combination with mouse click events:</span></span>  
+  
+1.  <span data-ttu-id="ed54a-169">Пользователь нажимает кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="ed54a-169">The user presses the mouse button.</span></span>  
+  
+2.  <span data-ttu-id="ed54a-170">Элемент управления отрисовывается в состоянии "нажато".</span><span class="sxs-lookup"><span data-stu-id="ed54a-170">The control paints in the pressed state.</span></span>  
+  
+3.  <span data-ttu-id="ed54a-171">Возникает событие <xref:System.Windows.Forms.Control.MouseDown>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-171">The <xref:System.Windows.Forms.Control.MouseDown> event is raised.</span></span>  
+  
+4.  <span data-ttu-id="ed54a-172">Пользователь отпускает кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="ed54a-172">The user releases the mouse button.</span></span>  
+  
+5.  <span data-ttu-id="ed54a-173">Элемент управления отрисовывается в состоянии "отпущено".</span><span class="sxs-lookup"><span data-stu-id="ed54a-173">The control paints in the raised state.</span></span>  
+  
+6.  <span data-ttu-id="ed54a-174">Возникает событие <xref:System.Windows.Forms.Control.Click>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-174">The <xref:System.Windows.Forms.Control.Click> event is raised.</span></span>  
+  
+7.  <span data-ttu-id="ed54a-175">Возникает событие <xref:System.Windows.Forms.Control.MouseClick>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-175">The <xref:System.Windows.Forms.Control.MouseClick> event is raised.</span></span>  
+  
+8.  <span data-ttu-id="ed54a-176">Возникает событие <xref:System.Windows.Forms.Control.MouseUp>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-176">The <xref:System.Windows.Forms.Control.MouseUp> event is raised.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="ed54a-177">Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши (например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>.</span><span class="sxs-lookup"><span data-stu-id="ed54a-177">If the user moves the pointer out of the toggle control while the mouse button is down (such as moving the mouse off the <xref:System.Windows.Forms.Button> control while it is pressed), the toggle control will paint in the raised state and only the <xref:System.Windows.Forms.Control.MouseUp> event occurs.</span></span> <span data-ttu-id="ed54a-178">События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.</span><span class="sxs-lookup"><span data-stu-id="ed54a-178">The <xref:System.Windows.Forms.Control.Click> or <xref:System.Windows.Forms.Control.MouseClick> events will not occur in this situation.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ed54a-179">См. также</span><span class="sxs-lookup"><span data-stu-id="ed54a-179">See Also</span></span>  
+ [<span data-ttu-id="ed54a-180">Ввод данных мышью в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ed54a-180">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

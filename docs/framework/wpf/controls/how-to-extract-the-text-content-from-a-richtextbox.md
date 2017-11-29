@@ -1,42 +1,48 @@
 ---
-title: "Практическое руководство. Извлечение текстового содержимого из элемента управления RichTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "содержание, извлечение"
-  - "извлечение текстового содержимого"
-  - "RichTextBox - элемент управления, извлечение текстового содержимого"
-  - "текстовое содержимое, извлечение"
+title: "Практическое руководство. Извлечение текстового содержимого из элемента управления RichTextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text content [WPF], extracting
+- RichTextBox control [WPF], extracting text content
+- content [WPF], extracting
+- extracting text content [WPF]
 ms.assetid: f13c093f-1a05-45b3-ac8f-c9ea5e4a11c5
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f24b71bcb5f013c4b7054dd0948e5f2709230a99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Извлечение текстового содержимого из элемента управления RichTextBox
-В этом примере демонстрируется способ извлечения содержимого <xref:System.Windows.Controls.RichTextBox> в виде обычного текста.  
+# <a name="how-to-extract-the-text-content-from-a-richtextbox"></a><span data-ttu-id="8ad44-102">Практическое руководство. Извлечение текстового содержимого из элемента управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8ad44-102">How to: Extract the Text Content from a RichTextBox</span></span>
+<span data-ttu-id="8ad44-103">В этом примере показано, как извлечь содержимое <xref:System.Windows.Controls.RichTextBox> как обычный текст.</span><span class="sxs-lookup"><span data-stu-id="8ad44-103">This example shows how to extract the contents of a <xref:System.Windows.Controls.RichTextBox> as plain text.</span></span>  
   
-## Пример  
- В следующем коде [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] описывается элемент управления <xref:System.Windows.Controls.RichTextBox> с простым содержимым.  
+## <a name="example"></a><span data-ttu-id="8ad44-104">Пример</span><span class="sxs-lookup"><span data-stu-id="8ad44-104">Example</span></span>  
+ <span data-ttu-id="8ad44-105">Следующие [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] код описывает именованного <xref:System.Windows.Controls.RichTextBox> управления с простым содержимым.</span><span class="sxs-lookup"><span data-stu-id="8ad44-105">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] code describes a named <xref:System.Windows.Controls.RichTextBox> control with simple content.</span></span>  
   
- [!code-xml[RichTextBoxSnippets#_RTB_XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml#_rtb_xaml)]  
+ [!code-xaml[RichTextBoxSnippets#_RTB_XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml#_rtb_xaml)]  
   
-## Пример  
- Следующий код реализует метод, который принимает <xref:System.Windows.Controls.RichTextBox> в качестве аргумента и возвращает строку, представляющую текстовое содержимое <xref:System.Windows.Controls.RichTextBox>.  
+## <a name="example"></a><span data-ttu-id="8ad44-106">Пример</span><span class="sxs-lookup"><span data-stu-id="8ad44-106">Example</span></span>  
+ <span data-ttu-id="8ad44-107">Следующий код реализует метод, который принимает <xref:System.Windows.Controls.RichTextBox> как аргумент и возвращает строку, представляющую текстовое содержимое <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="8ad44-107">The following code implements a method that takes a <xref:System.Windows.Controls.RichTextBox> as an argument, and returns a string representing the plain text contents of the <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
- Метод создает новый объект <xref:System.Windows.Documents.TextRange> из содержимого <xref:System.Windows.Controls.RichTextBox> с помощью свойств <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> и <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> для указания диапазона извлекаемого содержимого.  Каждое из свойств <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> и <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> возвращает <xref:System.Windows.Documents.TextPointer> и доступно в основном FlowDocument, представляющем содержимое <xref:System.Windows.Controls.RichTextBox>.  <xref:System.Windows.Documents.TextRange> предоставляет свойство Text, которое возвращает часть обычного текста <xref:System.Windows.Documents.TextRange> в виде строки.  
+ <span data-ttu-id="8ad44-108">Метод создает новый <xref:System.Windows.Documents.TextRange> из содержимого <xref:System.Windows.Controls.RichTextBox>, с использованием <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> и <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> для указания диапазона для извлечения содержимого.</span><span class="sxs-lookup"><span data-stu-id="8ad44-108">The method creates a new <xref:System.Windows.Documents.TextRange> from the contents of the <xref:System.Windows.Controls.RichTextBox>, using the <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> and <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> to indicate the range of the contents to extract.</span></span>  <span data-ttu-id="8ad44-109"><xref:System.Windows.Documents.FlowDocument.ContentStart%2A>и <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> свойства каждого возвращают <xref:System.Windows.Documents.TextPointer>и доступно в основном FlowDocument, представляющий содержимое <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="8ad44-109"><xref:System.Windows.Documents.FlowDocument.ContentStart%2A> and <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A> properties each return a <xref:System.Windows.Documents.TextPointer>, and are accessible on the underlying FlowDocument that represents the contents of the <xref:System.Windows.Controls.RichTextBox>.</span></span>  <span data-ttu-id="8ad44-110"><xref:System.Windows.Documents.TextRange>предоставляет свойство Text, которое возвращает часть обычного текста <xref:System.Windows.Documents.TextRange> как строка.</span><span class="sxs-lookup"><span data-stu-id="8ad44-110"><xref:System.Windows.Documents.TextRange> provides a Text property, which returns the plain text portions of the <xref:System.Windows.Documents.TextRange> as a string.</span></span>  
   
  [!code-csharp[RichTextBoxSnippets#_RTB_StringFrom](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_rtb_stringfrom)]
  [!code-vb[RichTextBoxSnippets#_RTB_StringFrom](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_rtb_stringfrom)]  
   
-## См. также  
- [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)   
- [Общие сведения о TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8ad44-111">См. также</span><span class="sxs-lookup"><span data-stu-id="8ad44-111">See Also</span></span>  
+ [<span data-ttu-id="8ad44-112">Общие сведения о RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8ad44-112">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
+ [<span data-ttu-id="8ad44-113">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="8ad44-113">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)

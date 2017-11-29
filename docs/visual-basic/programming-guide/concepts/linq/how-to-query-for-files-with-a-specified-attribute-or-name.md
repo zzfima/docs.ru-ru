@@ -1,35 +1,27 @@
 ---
-title: "Практическое руководство: запрос файлов с указанными атрибутами или именем (Visual Basic) | Документы Microsoft"
+title: "Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db0e3f415df80e8e4c551bd8493814cb3f4fe5ee
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2b46750876e683e8ca5801d5c37267bf3d681cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Практическое руководство: запрос файлов с указанными атрибутами или именем (Visual Basic)
-В этом примере показано, как найти все файлы, имеющие расширение указанного файла (например, «.txt») в указанном дереве каталогов. Также показано, как вернуть новый или старый файл в дереве на основе времени создания.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="fb2e3-102">Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb2e3-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+<span data-ttu-id="fb2e3-103">В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов.</span><span class="sxs-lookup"><span data-stu-id="fb2e3-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="fb2e3-104">Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.</span><span class="sxs-lookup"><span data-stu-id="fb2e3-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="fb2e3-105">Пример</span><span class="sxs-lookup"><span data-stu-id="fb2e3-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -77,9 +69,9 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="fb2e3-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="fb2e3-106">Compiling the Code</span></span>  
+ <span data-ttu-id="fb2e3-107">Создайте в проекте, ориентированном на .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="fb2e3-107">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="fb2e3-108">См. также</span><span class="sxs-lookup"><span data-stu-id="fb2e3-108">See Also</span></span>  
+ [<span data-ttu-id="fb2e3-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb2e3-109">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="fb2e3-110">LINQ и каталоги файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb2e3-110">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

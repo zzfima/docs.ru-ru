@@ -1,33 +1,28 @@
 ---
-title: "Практическое руководство: извлечение значений атрибута (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: извлечение значений атрибута (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a1661b1ea00eb7e377fc4d8a57ba27a558052b46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 5eed0c34f79a4a338dda7b26049f2c1510443736
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Практическое руководство: извлечение значений атрибута (LINQ to XML) (Visual Basic)
-В этом разделе показано получение значений атрибутов. Существует два основных способа: можно привести <xref:System.Xml.Linq.XAttribute>к требуемому типу, оператор явного преобразования преобразует содержимое элемента или атрибута в указанный тип.</xref:System.Xml.Linq.XAttribute> Кроме того, можно использовать <xref:System.Xml.Linq.XAttribute.Value%2A>свойство.</xref:System.Xml.Linq.XAttribute.Value%2A> Однако приведение, как правило, является лучшим подходом. В частности, становится проще написание кода, обеспечивающего получение значения атрибута, который может существовать или не существовать, после приведения атрибута к типу, допускающему значение NULL. Примеры использования этой технологии см. в разделе [Практическое руководство: извлечение значений элемента (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a><span data-ttu-id="628f9-102">Как: извлечение значений атрибута (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="628f9-102">How to: Retrieve the Value of an Attribute (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="628f9-103">В этом разделе показано получение значений атрибутов.</span><span class="sxs-lookup"><span data-stu-id="628f9-103">This topic shows how to obtain the value of attributes.</span></span> <span data-ttu-id="628f9-104">Существует два основных способа. Можно привести <xref:System.Xml.Linq.XAttribute> к требуемому типу, после этого оператор явного преобразования преобразует содержимое элемента или атрибута в указанный тип.</span><span class="sxs-lookup"><span data-stu-id="628f9-104">There are two main ways: You can cast an <xref:System.Xml.Linq.XAttribute> to the desired type; the explicit conversion operator then converts the contents of the element or attribute to the specified type.</span></span> <span data-ttu-id="628f9-105">Иначе можно использовать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="628f9-105">Alternatively, you can use the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span> <span data-ttu-id="628f9-106">Однако приведение, как правило, является лучшим подходом.</span><span class="sxs-lookup"><span data-stu-id="628f9-106">However, casting is generally the better approach.</span></span> <span data-ttu-id="628f9-107">В частности, становится проще написание кода, обеспечивающего получение значения атрибута, который может существовать или не существовать, после приведения атрибута к типу, допускающему значение NULL.</span><span class="sxs-lookup"><span data-stu-id="628f9-107">If you cast the attribute to a nullable type, the code is simpler to write when retrieving the value of an attribute that might or might not exist.</span></span> <span data-ttu-id="628f9-108">Примеры этой методики см. в разделе [как: извлечение значения элемента (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="628f9-108">For examples of this technique, see [How to: Retrieve the Value of an Element (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).</span></span>  
   
-## <a name="example"></a>Пример  
- В Visual Basic для получения значения атрибута можно использовать встроенное свойство атрибута.  
+## <a name="example"></a><span data-ttu-id="628f9-109">Пример</span><span class="sxs-lookup"><span data-stu-id="628f9-109">Example</span></span>  
+ <span data-ttu-id="628f9-110">В Visual Basic для получения значения атрибута можно использовать встроенное свойство атрибута.</span><span class="sxs-lookup"><span data-stu-id="628f9-110">In Visual Basic, you can use the integrated attribute property to retrieve the value of an attribute.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root Attr="abcde"/>  
@@ -36,15 +31,15 @@ Dim str As String = root.@Attr
 Console.WriteLine(str)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="628f9-111">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="628f9-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Root Attr="abcde" />  
 abcde  
 ```  
   
-## <a name="example"></a>Пример  
- В Visual Basic для установки значения атрибута можно использовать встроенное свойство атрибута. Далее в случае использования встроенного свойства атрибута для установки значения несуществующего атрибута этот атрибут будет создан.  
+## <a name="example"></a><span data-ttu-id="628f9-112">Пример</span><span class="sxs-lookup"><span data-stu-id="628f9-112">Example</span></span>  
+ <span data-ttu-id="628f9-113">В Visual Basic для установки значения атрибута можно использовать встроенное свойство атрибута.</span><span class="sxs-lookup"><span data-stu-id="628f9-113">In Visual Basic, you can use the integrated attribute property to set the value of an attribute.</span></span> <span data-ttu-id="628f9-114">Далее в случае использования встроенного свойства атрибута для установки значения несуществующего атрибута этот атрибут будет создан.</span><span class="sxs-lookup"><span data-stu-id="628f9-114">Further, if you use the integrated attribute property to set the value of an attribute that does not exist, the attribute will be created.</span></span>  
   
 ```vb  
 Dim root As XElement = <Root Att1="content"/>  
@@ -53,14 +48,14 @@ root.@Att2 = "new attribute"
 Console.WriteLine(root)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="628f9-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="628f9-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root Att1="new content" Att2="new attribute" />  
 ```  
   
-## <a name="example"></a>Пример  
- В следующем примере показано, как получить значение атрибута, если атрибут находится в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+## <a name="example"></a><span data-ttu-id="628f9-116">Пример</span><span class="sxs-lookup"><span data-stu-id="628f9-116">Example</span></span>  
+ <span data-ttu-id="628f9-117">В следующем примере показано, как получить значение атрибута, если атрибут находится в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="628f9-117">The following example shows how to retrieve the value of an attribute where the attribute is in a namespace.</span></span> <span data-ttu-id="628f9-118">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="628f9-118">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -74,11 +69,11 @@ Module Module1
 End Module  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="628f9-119">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="628f9-119">This example produces the following output:</span></span>  
   
 ```  
 abcde  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="628f9-120">См. также</span><span class="sxs-lookup"><span data-stu-id="628f9-120">See Also</span></span>  
+ [<span data-ttu-id="628f9-121">Оси LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="628f9-121">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -1,256 +1,257 @@
 ---
-title: "Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], упорядочение с помощью линий привязки"
-  - "SnapLine - класс, пошаговые руководства"
-  - "линии привязки, упорядочение элементов управления Windows Forms"
-  - "элементы управления Windows Forms, упорядочение"
+title: "Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], arranging with snaplines
+- snaplines [Windows Forms], arranging Windows Forms controls
+- SnapLine class [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
-Точное расположение элементов управления на форме является важным для многих приложений.  Конструктор Windows Forms предоставляет широкий набор параметров макета, позволяющих выполнить эту задачу.  Одним из наиболее важных методов является возможность <xref:System.Windows.Forms.Design.Behavior.SnapLine>.  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a><span data-ttu-id="0001f-102">Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-102">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>
+<span data-ttu-id="0001f-103">Точное расположение элементов управления на форме является важным для многих приложений.</span><span class="sxs-lookup"><span data-stu-id="0001f-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="0001f-104">Конструктор Windows Forms предоставляет много инструментов для выполнения этой задачи.</span><span class="sxs-lookup"><span data-stu-id="0001f-104">The Windows Forms Designer gives you many layout tools to accomplish this.</span></span> <span data-ttu-id="0001f-105">Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> компонентов.</span><span class="sxs-lookup"><span data-stu-id="0001f-105">One of the most important is the <xref:System.Windows.Forms.Design.Behavior.SnapLine> feature.</span></span>  
   
- Линии привязки точно показывают, как выровнять элементы управления по отношению к другим элементам управления.  Они также показывают рекомендуемое расстояние между элементами управления в соответствии с рекомендациями по пользовательскому интерфейсу Windows.  Дополнительные сведения см. на странице [Проектирование и разработка пользовательского интерфейса](http://go.microsoft.com/FWLink/?LinkId=83878).  
+ <span data-ttu-id="0001f-106">Линии привязки точно показывают, как выровнять элементы управления относительно других элементов.</span><span class="sxs-lookup"><span data-stu-id="0001f-106">Snaplines show you precisely where to line up controls with other controls.</span></span> <span data-ttu-id="0001f-107">Они также показывают рекомендуемое расстояние между элементами управления в соответствии с рекомендациями по пользовательскому интерфейсу Windows.</span><span class="sxs-lookup"><span data-stu-id="0001f-107">They also show you the recommended distances for margins between controls, as specified by the Windows User Interface Guidelines.</span></span> <span data-ttu-id="0001f-108">Дополнительные сведения см. в разделе [пользовательского интерфейса и разработки](http://go.microsoft.com/FWLink/?LinkId=83878).</span><span class="sxs-lookup"><span data-stu-id="0001f-108">For details, see [User Interface Design and Development](http://go.microsoft.com/FWLink/?LinkId=83878).</span></span>  
   
- Линии привязки облегчают процесс выравнивания элементов управления и позволяют добиться идеального профессионального внешнего вида и поведения интерфейса.  
+ <span data-ttu-id="0001f-109">Линии привязки позволяют легко выравнивания элементов управления, для идеального профессиональный внешний вид и поведение (Вид).</span><span class="sxs-lookup"><span data-stu-id="0001f-109">Snaplines make it easy to align your controls, for crisp, professional appearance and behavior (look and feel).</span></span>  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ <span data-ttu-id="0001f-110">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="0001f-110">Tasks illustrated in this walkthrough include:</span></span>  
   
--   создание проекта типа Windows Forms;  
+-   <span data-ttu-id="0001f-111">Создание проекта Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0001f-111">Creating a Windows Forms project</span></span>  
   
--   Задание расстояния между элементами управления и их выравнивание с помощью линий привязки  
+-   <span data-ttu-id="0001f-112">Интервал и выравнивание элементов управления с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-112">Spacing and Aligning Controls Using Snaplines</span></span>  
   
--   Выравнивание по полям формы и контейнера  
+-   <span data-ttu-id="0001f-113">Выравнивание по полям формы и контейнера</span><span class="sxs-lookup"><span data-stu-id="0001f-113">Aligning to Form and Container Margins</span></span>  
   
--   Выравнивание по сгруппированным элементам управления  
+-   <span data-ttu-id="0001f-114">Выравнивание для сгруппированных элементов управления</span><span class="sxs-lookup"><span data-stu-id="0001f-114">Aligning to Grouped Controls</span></span>  
   
--   Использование линий привязки для размещения элемента управления, обрисовывая его контур  
+-   <span data-ttu-id="0001f-115">С помощью линий привязки для размещения элемента управления, его размер структуры</span><span class="sxs-lookup"><span data-stu-id="0001f-115">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
   
--   Использование линий привязки при перетаскивании элемента управления из панели элементов  
+-   <span data-ttu-id="0001f-116">С помощью линий привязки при перетаскивании элемента управления из панели элементов</span><span class="sxs-lookup"><span data-stu-id="0001f-116">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
   
--   Изменение размеров элементов управления с помощью линий привязки  
+-   <span data-ttu-id="0001f-117">Изменение размеров элементов управления с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-117">Resizing Controls Using Snaplines</span></span>  
   
--   Выравнивание метки по тексту элемента управления  
+-   <span data-ttu-id="0001f-118">Выравнивание метки по тексту элемента управления</span><span class="sxs-lookup"><span data-stu-id="0001f-118">Aligning a Label to a Control's Text</span></span>  
   
--   Использование линий привязки при работе с клавиатурой  
+-   <span data-ttu-id="0001f-119">С помощью линий привязки с помощью клавиатуры</span><span class="sxs-lookup"><span data-stu-id="0001f-119">Using Snaplines with Keyboard Navigation</span></span>  
   
--   Панели линий привязки и макета  
+-   <span data-ttu-id="0001f-120">Линии привязки и панели макета</span><span class="sxs-lookup"><span data-stu-id="0001f-120">Snaplines and Layout Panels</span></span>  
   
--   Отключение линий привязки  
+-   <span data-ttu-id="0001f-121">Отключение линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-121">Disabling Snaplines</span></span>  
   
- Работа с этим примером позволяет составить представление о той роли, которую играют линии привязки при создании макета.  
-  
-> [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## Создание проекта  
- Для начала следует создать проект и подготовить форму.  
-  
-#### Создание проекта  
-  
-1.  Создайте проект приложения на базе Windows и назовите его "SnaplineExample".  Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
-  
-2.  Откройте форму в конструкторе форм.  
-  
-## Задание расстояния между элементами управления и их выравнивание с помощью линий привязки  
- Линии привязки позволяют точно и легко выровнять элементы управления в форме.  Они отображаются при помещении выбранного элемента управления или элементов управления рядом с положением, где они будут выравниваться по другому элементу управления или набору элементов управления.  Выбранные элементы управления "привязываются" к предлагаемому положению при перемещении их мимо других элементов управления.  
-  
-#### Чтобы расположить элементы управления, используя линии привязки  
-  
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  
-  
-2.  Переместите элемент управления <xref:System.Windows.Forms.Button> в правый нижний угол формы.  Обратите внимание на линии привязки, отображающиеся при приближении элемента управления <xref:System.Windows.Forms.Button> к нижней и правой границе формы.  Эти линии привязки показывают рекомендованное расстояние между границами элемента управления и формы.  
-  
-3.  Переместите элемент управления <xref:System.Windows.Forms.Button> вдоль границ формы и обратите внимание, в каких местах появляются линии привязки.  По завершении этой процедуры переместите элемент управления <xref:System.Windows.Forms.Button> ближе к центру формы.  
-  
-4.  Перетащите еще один элемент управления <xref:System.Windows.Forms.Button> с **панели элементов** на форму.  
-  
-5.  Перемещайте второй элемент управления <xref:System.Windows.Forms.Button>, чтобы он оказался почти на том же уровне, что и первый.  Обратите внимание на линии привязки, появляющиеся вдоль базового плана текста обеих кнопок. Обратите внимание, что перемещаемый элемент управления привязывается к положению, которое находится точно на том же уровне, что и другой элемент управления.  
-  
-6.  Переместите второй элемент управления <xref:System.Windows.Forms.Button>, чтобы он оказался непосредственно над первым.  Обратите внимание на линии привязки, появляющиеся вдоль левого и правого краев обеих кнопок. Обратите внимание, что перемещаемый элемент управления привязывается к положению, точно выровненному по отношению к другому элементу управления.  
-  
-7.  Выберите один из элементов управления <xref:System.Windows.Forms.Button> и приблизьте его к другому почти до касания.  Обратите внимание на линию привязки, которая появляется между ними.  Это рекомендуемое расстояние между границами элементов управления.  Также обратите внимание, что перемещаемый элемент управления привязывается к этому положению.  
-  
-8.  Перетащите два элемента управления <xref:System.Windows.Forms.Panel> с **панели элементов** на форму.  
-  
-9. Перемещайте один из элементов управления <xref:System.Windows.Forms.Panel>, чтобы он оказался почти на том же уровне, что и первый.  Обратите внимание на линии привязки, появляющиеся вдоль верхнего и нижнего краев обоих элементов управления. Обратите внимание, что перемещаемый элемент управления привязывается к положению, расположенному точно на том же уровне, что и другой элемент управления.  
-  
-## Выравнивание по полям формы и контейнера  
- Линии привязки позволяют единообразно выровнять элементы управления вдоль полей формы и контейнера.  
-  
-#### Чтобы выровнять элементы управления по полям формы и контейнера  
-  
-1.  Выберите один из элементов управления <xref:System.Windows.Forms.Button> и перемещайте его ближе к правой границе формы до появления линии привязки.  Расстояние от линии привязки до правой границы \- это сумма значений свойства <xref:System.Windows.Forms.Control.Margin%2A> элемента управления и свойства <xref:System.Windows.Forms.Control.Padding%2A> формы.  
+ <span data-ttu-id="0001f-122">Когда закончите, вы будете понимать роль макета с помощью линий привязки функции.</span><span class="sxs-lookup"><span data-stu-id="0001f-122">When you are finished, you will have an understanding of the layout role played by the snaplines feature.</span></span>  
   
 > [!NOTE]
->  Если в качестве значения свойства <xref:System.Windows.Forms.Control.Padding%2A> формы указано 0,0,0,0, конструктор Windows Forms присваивает форме скрытое значение <xref:System.Windows.Forms.Control.Padding%2A>, равное 9,9,9,9.  Чтобы переопределить это поведение, присвойте значение, отличное от 0,0,0,0.  
+>  <span data-ttu-id="0001f-123">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="0001f-123">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="0001f-124">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="0001f-124">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="0001f-125">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="0001f-125">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-1.  Измените значение свойства <xref:System.Windows.Forms.Control.Margin%2A> элемента управления <xref:System.Windows.Forms.Button>, развернув пункт <xref:System.Windows.Forms.Control.Margin%2A> в окне **Свойства** и установив значение свойства <xref:System.Windows.Forms.Padding.All%2A> равным 0.  Дополнительные сведения см. в разделе [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+## <a name="creating-the-project"></a><span data-ttu-id="0001f-126">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="0001f-126">Creating the Project</span></span>  
+ <span data-ttu-id="0001f-127">Первым шагом является создание проекта и настройка формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-127">The first step is to create the project and set up the form.</span></span>  
   
-2.  Перемещайте элемент управления <xref:System.Windows.Forms.Button> ближе к правой границе формы до появления линии привязки.  Это расстояние теперь определяется значением свойства <xref:System.Windows.Forms.Control.Padding%2A> формы.  
+#### <a name="to-create-the-project"></a><span data-ttu-id="0001f-128">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="0001f-128">To create the project</span></span>  
   
-3.  Перетащите элемент управления <xref:System.Windows.Forms.GroupBox> из **панели элементов** в форму.  
+1.  <span data-ttu-id="0001f-129">Создайте проект приложения Windows с названием «SnaplineExample».</span><span class="sxs-lookup"><span data-stu-id="0001f-129">Create a Windows-based application project called "SnaplineExample".</span></span> <span data-ttu-id="0001f-130">Дополнительные сведения см. в разделе [Практическое руководство. Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="0001f-130">For details, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-4.  Измените значение свойства <xref:System.Windows.Forms.Control.Padding%2A> элемента управления <xref:System.Windows.Forms.GroupBox>, развернув пункт <xref:System.Windows.Forms.Control.Padding%2A> в окне **Свойства** и установив значение свойства <xref:System.Windows.Forms.Padding.All%2A> равным 10.  
+2.  <span data-ttu-id="0001f-131">Выберите форму в конструкторе форм.</span><span class="sxs-lookup"><span data-stu-id="0001f-131">Select the form in the Forms Designer.</span></span>  
   
-5.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.GroupBox>.  
+## <a name="spacing-and-aligning-controls-using-snaplines"></a><span data-ttu-id="0001f-132">Интервал и выравнивание элементов управления с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-132">Spacing and Aligning Controls Using Snaplines</span></span>  
+ <span data-ttu-id="0001f-133">Линии привязки позволяют точные и интуитивно понятный способ выравнивания элементов управления в форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-133">Snaplines give you an accurate and intuitive way to align controls on your form.</span></span> <span data-ttu-id="0001f-134">Они отображаются при перемещении выбранного элемента управления или элементов управления к положению, где будет происходить выравнивание с другим элементом управления или набора элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-134">They appear when you are moving a selected control or controls near a position that would align with another control or set of controls.</span></span> <span data-ttu-id="0001f-135">Выбор будет «привязки» на позицию, предлагаемое при перемещении за другими элементами управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-135">Your selection will "snap" to the suggested position as you move it past the other controls.</span></span>  
   
-6.  Перемещайте элемент управления <xref:System.Windows.Forms.Button> ближе к правой границе элемента управления <xref:System.Windows.Forms.GroupBox> до появления линии привязки.  Переместите элемент управления <xref:System.Windows.Forms.Button> внутрь элемента управления <xref:System.Windows.Forms.GroupBox> и обратите внимание, в каких местах появляются линии привязки.  
+#### <a name="to-arrange-controls-using-snaplines"></a><span data-ttu-id="0001f-136">Размещение элементов управления с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-136">To arrange controls using snaplines</span></span>  
   
-## Выравнивание по сгруппированным элементам управления  
- Можно использовать линии привязки для выравнивания сгруппированных элементов управления, а также элементов управления внутри элемента управления <xref:System.Windows.Forms.GroupBox>.  
+1.  <span data-ttu-id="0001f-137">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-137">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-#### Чтобы выровнять по сгруппированным элементам управления  
+2.  <span data-ttu-id="0001f-138">Переместить <xref:System.Windows.Forms.Button> элемента управления в правом нижнем углу формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-138">Move the <xref:System.Windows.Forms.Button> control to the lower-right corner of the form.</span></span> <span data-ttu-id="0001f-139">Обратите внимание на линии привязки, как <xref:System.Windows.Forms.Button> управления достигает нижняя и правая границы формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-139">Note the snaplines that appear as the <xref:System.Windows.Forms.Button> control approaches the bottom and right borders of the form.</span></span> <span data-ttu-id="0001f-140">Эти линии показывают рекомендуемое расстояние между границами элемента управления и формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-140">These snaplines display the recommended distance between the borders of the control and the form.</span></span>  
   
-1.  Выберите два элемента управления в форме.  Перемещайте выбранные элементы управления и обратите внимание на линии привязки, появляющиеся между выбранными элементами и остальными элементами управления.  
+3.  <span data-ttu-id="0001f-141">Переместить <xref:System.Windows.Forms.Button> управления вдоль границ формы и обратите внимание, где появляются линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-141">Move the <xref:System.Windows.Forms.Button> control around the borders of the form and note where the snaplines appear.</span></span> <span data-ttu-id="0001f-142">Когда вы закончите, переместите <xref:System.Windows.Forms.Button> управления ближе к центру формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-142">When you are finished, move the <xref:System.Windows.Forms.Button> control near the center of the form.</span></span>  
   
-2.  Перетащите элемент управления <xref:System.Windows.Forms.GroupBox> из **панели элементов** в форму.  
+4.  <span data-ttu-id="0001f-143">Перетащите еще одно <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-143">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-3.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в элемент управления <xref:System.Windows.Forms.GroupBox>.  
+5.  <span data-ttu-id="0001f-144">Переместите второй <xref:System.Windows.Forms.Button> управления, чтобы он оказался почти уровне с первым.</span><span class="sxs-lookup"><span data-stu-id="0001f-144">Move the second <xref:System.Windows.Forms.Button> control until it is nearly level with the first.</span></span> <span data-ttu-id="0001f-145">Обратите внимание на обеих кнопок базовой линии привязки и обратите внимание, что элемент управления, который нужно переместить привязывается к месту, появляющиеся с помощью элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-145">Note the snapline that appears at the text baseline of both buttons, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-4.  Выберите один из элементов управления <xref:System.Windows.Forms.Button> и перемещайте его вокруг элемента управления <xref:System.Windows.Forms.GroupBox>.  Обратите внимание на линии привязки, появляющиеся на краях элемента управления <xref:System.Windows.Forms.GroupBox>.  Также обратите внимание на линии привязки, появляющиеся на краях элемента управления <xref:System.Windows.Forms.Button>, находящегося внутри элемента управления <xref:System.Windows.Forms.GroupBox>.  Дочерние элементы управления, содержащиеся в контейнерном элементе управления, также поддерживают линии привязки.  
+6.  <span data-ttu-id="0001f-146">Переместите второй <xref:System.Windows.Forms.Button> управления, пока окажется непосредственно над первым.</span><span class="sxs-lookup"><span data-stu-id="0001f-146">Move the second <xref:System.Windows.Forms.Button> control until it is positioned directly above the first.</span></span> <span data-ttu-id="0001f-147">Обратите внимание на линии привязки, появляющиеся вдоль левого и правого краев обеих кнопок и обратите внимание, что элемент управления привязки позиции, которая точно выровнены с помощью элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-147">Note the snaplines that appear along the left and right edges of both buttons, and note that the control you are moving snaps to a position that is exactly aligned with the other control.</span></span>  
   
-## Использование линий привязки для размещения элемента управления, обрисовывая его контур  
- Линии привязки позволяют выровнять элементы управления при их первом размещении в форме.  
+7.  <span data-ttu-id="0001f-148">Выберите один из <xref:System.Windows.Forms.Button> элементов управления и переместите его к другому, пока они почти соприкасаются.</span><span class="sxs-lookup"><span data-stu-id="0001f-148">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the other, until they are almost touching.</span></span> <span data-ttu-id="0001f-149">Обратите внимание, привязки между ними.</span><span class="sxs-lookup"><span data-stu-id="0001f-149">Note the snapline that appears between them.</span></span> <span data-ttu-id="0001f-150">Это расстояние определяется рекомендуемое расстояние между границами элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-150">This distance is the recommended distance between the borders of the controls.</span></span> <span data-ttu-id="0001f-151">Также Обратите внимание, что элемент управления, который нужно переместить привязывается к этому положению.</span><span class="sxs-lookup"><span data-stu-id="0001f-151">Also note that the control you are moving snaps to this position.</span></span>  
   
-#### Чтобы использовать линии привязки для размещения элемента управления, обрисовывая его контур  
+8.  <span data-ttu-id="0001f-152">Перетащите два <xref:System.Windows.Forms.Panel> управляет из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-152">Drag two <xref:System.Windows.Forms.Panel> controls from the **Toolbox** onto your form.</span></span>  
   
-1.  На **панели элементов** щелкните значок элемента управления <xref:System.Windows.Forms.Button>.  Не перетаскивайте его в форму.  
+9. <span data-ttu-id="0001f-153">Переместите одно из <xref:System.Windows.Forms.Panel> элементы управления, чтобы он оказался почти уровне с первым.</span><span class="sxs-lookup"><span data-stu-id="0001f-153">Move one of the <xref:System.Windows.Forms.Panel> controls until it is nearly level with the first.</span></span> <span data-ttu-id="0001f-154">Обратите внимание на линии привязки, отображаются вдоль верхней и нижней границ обоих элементов управления и обратите внимание, что элемент управления, который нужно переместить привязывается к месту, появляющиеся с помощью элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-154">Note the snaplines that appear along the top and bottom edges of both controls, and note that the control you are moving snaps to a position that is exactly level with the other control.</span></span>  
   
-2.  Наведите указатель мыши на поверхность разработки формы.  Обратите внимание, что указатель превращается в перекрестие, к которому прикреплен значок элемента управления <xref:System.Windows.Forms.Button>.  Также обратите внимание на линии привязки, предлагающие положения выравнивания для элемента управления <xref:System.Windows.Forms.Button>.  
+## <a name="aligning-to-form-and-container-margins"></a><span data-ttu-id="0001f-155">Выравнивание по полям формы и контейнера</span><span class="sxs-lookup"><span data-stu-id="0001f-155">Aligning to Form and Container Margins</span></span>  
+ <span data-ttu-id="0001f-156">Линии привязки позволяют выровнять элементы управления формы и контейнера поля согласованным образом.</span><span class="sxs-lookup"><span data-stu-id="0001f-156">Snaplines help you to align your controls to form and container margins in a consistent manner.</span></span>  
   
-3.  Нажмите и удерживайте кнопку мыши.  
+#### <a name="to-align-controls-to-form-and-container-margins"></a><span data-ttu-id="0001f-157">Для выравнивания элементов управления к полям формы и контейнера</span><span class="sxs-lookup"><span data-stu-id="0001f-157">To align controls to form and container margins</span></span>  
   
-4.  Перемещайте указатель мыши по форме.  Обратите внимание, что при этом чертится контур, указывающий положение и размер элемента управления.  
+1.  <span data-ttu-id="0001f-158">Выберите один из <xref:System.Windows.Forms.Button> элементов управления и перемещайте его ближе к правой границе формы до появления линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-158">Select one of the <xref:System.Windows.Forms.Button> controls and move it close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="0001f-159">Линии привязки расстояние от правой границы складывается из элемента управления <xref:System.Windows.Forms.Control.Margin%2A> свойства и в форме <xref:System.Windows.Forms.Control.Padding%2A> значений свойств.</span><span class="sxs-lookup"><span data-stu-id="0001f-159">The snapline's distance from the right border is the sum of the control's <xref:System.Windows.Forms.Control.Margin%2A> property and the form's <xref:System.Windows.Forms.Control.Padding%2A> property values.</span></span>  
   
-5.  Перемещайте указатель до его выравнивания с другим элементом управления в форме.  Обратите внимание, что появляется линия привязки, указывающая выравнивание.  
+> [!NOTE]
+>  <span data-ttu-id="0001f-160">Если формы <xref:System.Windows.Forms.Control.Padding%2A> свойству 0,0,0,0, конструктор Windows Forms предоставляет форму затемненных <xref:System.Windows.Forms.Control.Padding%2A> значение 9,9,9,9.</span><span class="sxs-lookup"><span data-stu-id="0001f-160">If the form's <xref:System.Windows.Forms.Control.Padding%2A> property is set to 0,0,0,0, the Windows Forms Designer gives the form a shadowed <xref:System.Windows.Forms.Control.Padding%2A> value of 9,9,9,9.</span></span> <span data-ttu-id="0001f-161">Чтобы переопределить это поведение, следует назначьте значение, отличное от 0,0,0,0.</span><span class="sxs-lookup"><span data-stu-id="0001f-161">To override this behavior, assign a value other than 0,0,0,0.</span></span>  
   
-6.  Отпустите кнопку мыши.  Создается элемент управления, место расположения и размер которого выбираются в соответствии с нарисованным контуром.  
+1.  <span data-ttu-id="0001f-162">Измените значение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Margin%2A> , развернув <xref:System.Windows.Forms.Control.Margin%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 0.</span><span class="sxs-lookup"><span data-stu-id="0001f-162">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Margin%2A> property by expanding the <xref:System.Windows.Forms.Control.Margin%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 0.</span></span> <span data-ttu-id="0001f-163">Дополнительные сведения см. в разделе [Пошаговое руководство: размещение Out элементов управления Windows Forms с помощью заполнения, поля и свойства AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span><span class="sxs-lookup"><span data-stu-id="0001f-163">For details, see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span></span>  
   
-## Использование линий привязки при перетаскивании элемента управления из панели элементов  
- Линии привязки позволяют выровнять элементы управления при перетаскивании их в **панели элементов** на форму.  
+2.  <span data-ttu-id="0001f-164">Переместить <xref:System.Windows.Forms.Button> управления близко к правой границе формы до появления линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-164">Move the <xref:System.Windows.Forms.Button> control close to the right border of the form until a snapline appears.</span></span> <span data-ttu-id="0001f-165">Теперь это расстояние задается значение в формате <xref:System.Windows.Forms.Control.Padding%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="0001f-165">This distance is now given by the value of the form's <xref:System.Windows.Forms.Control.Padding%2A> property.</span></span>  
   
-#### Чтобы использовать линии привязки при перетаскивании элемента управления из панели элементов  
+3.  <span data-ttu-id="0001f-166">Перетащите <xref:System.Windows.Forms.GroupBox> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-166">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** на свою форму, но не отпускайте кнопку мыши.  
+4.  <span data-ttu-id="0001f-167">Измените значение <xref:System.Windows.Forms.GroupBox> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> входа в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> равным 10.</span><span class="sxs-lookup"><span data-stu-id="0001f-167">Change the value of the <xref:System.Windows.Forms.GroupBox> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to 10.</span></span>  
   
-2.  Наведите указатель мыши на поверхность разработки формы.  Обратите внимание, что указатель мыши меняется и указывает на положение, где создается новый элемент управления <xref:System.Windows.Forms.Button>.  
+5.  <span data-ttu-id="0001f-168">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-168">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  Перемещайте указатель мыши по форме.  Обратите внимание на линии привязки, предлагающие положения выравнивания для элемента управления <xref:System.Windows.Forms.Button>.  Найдите положение, где элемент управления выровнен относительно других элементов.  
+6.  <span data-ttu-id="0001f-169">Переместить <xref:System.Windows.Forms.Button> управления близко к правой границе <xref:System.Windows.Forms.GroupBox> управления, пока не появится линия привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-169">Move the <xref:System.Windows.Forms.Button> control close to the right border of the <xref:System.Windows.Forms.GroupBox> control until a snapline appears.</span></span> <span data-ttu-id="0001f-170">Переместить <xref:System.Windows.Forms.Button> управления в пределах <xref:System.Windows.Forms.GroupBox> управления и обратите внимание, где появляются линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-170">Move the <xref:System.Windows.Forms.Button> control within the <xref:System.Windows.Forms.GroupBox> control and note where the snaplines appear.</span></span>  
   
-4.  Отпустите кнопку мыши.  Создается элемент управления в месте, указанном линиями привязки.  
+## <a name="aligning-to-grouped-controls"></a><span data-ttu-id="0001f-171">Выравнивание для сгруппированных элементов управления</span><span class="sxs-lookup"><span data-stu-id="0001f-171">Aligning to Grouped Controls</span></span>  
+ <span data-ttu-id="0001f-172">Линии привязки можно использовать для выравнивания сгруппированных элементов управления, а также элементов управления в пределах <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-172">You can use snaplines to align grouped controls as well as controls within a <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-## Изменение размеров элементов управления с помощью линий привязки  
- Линии привязки позволяют выравнивать элементы управления при изменении их размеров.  
+#### <a name="to-align-to-grouped-controls"></a><span data-ttu-id="0001f-173">Выравнивание для сгруппированных элементов управления</span><span class="sxs-lookup"><span data-stu-id="0001f-173">To align to grouped controls</span></span>  
   
-#### Чтобы изменить размер элемента управления, используя линии привязки  
+1.  <span data-ttu-id="0001f-174">Выберите два элемента управления в форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-174">Select two of the controls on your form.</span></span> <span data-ttu-id="0001f-175">Перемещение выбранного и обратите внимание на линии привязки, между выбранными элементами и другими элементами управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-175">Move the selection around and note the snaplines that appear between your selection and the other controls.</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  
+2.  <span data-ttu-id="0001f-176">Перетащите <xref:System.Windows.Forms.GroupBox> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-176">Drag a <xref:System.Windows.Forms.GroupBox> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Измените размер элемента управления <xref:System.Windows.Forms.Button>, перетаскивая один из маркеров изменения размера, расположенных по углам.  Дополнительные сведения см. в разделе [Практическое руководство. Изменение размера элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+3.  <span data-ttu-id="0001f-177">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-177">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.GroupBox> control.</span></span>  
   
-3.  Перетаскивайте маркер изменения размера, пока одна из границ элемента управления <xref:System.Windows.Forms.Button> не выравнивается с другим элементом управления.  Обратите внимание на появление линии привязки.  Также обратите внимание, что маркер изменения размера привязывается к положению, указанному линией привязки.  
+4.  <span data-ttu-id="0001f-178">Выберите один из <xref:System.Windows.Forms.Button> управляет и перемещайте его <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-178">Select one of the <xref:System.Windows.Forms.Button> controls and move it around the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="0001f-179">Обратите внимание на линии привязки, по краям <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-179">Note the snaplines that appear at the edges of the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="0001f-180">Также Обратите внимание на линии, которые отображаются по краям <xref:System.Windows.Forms.Button> управления, содержащийся в <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-180">Also note the snaplines that appear at the edges of the <xref:System.Windows.Forms.Button> control that is contained by the <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="0001f-181">Элементы управления, являющиеся дочерними для контейнерного элемента управления также поддерживают линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-181">Controls that are children of a container control also support snaplines.</span></span>  
   
-4.  Измените размер элемента управления <xref:System.Windows.Forms.Button> в другом направлении и выровняйте маркер изменения размера с другим элементом управления.  Обратите внимание, что линии привязки появляются в разных направлениях, указывая на положение выравнивания.  
+## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="0001f-182">С помощью линий привязки для размещения элемента управления, его размер структуры</span><span class="sxs-lookup"><span data-stu-id="0001f-182">Using Snaplines to Place a Control by Outlining Its Size</span></span>  
+ <span data-ttu-id="0001f-183">Линии привязки помогают выравнивать элементы управления при их первом размещении в форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-183">Snaplines help you align controls when you first place them on a form.</span></span>  
   
-## Выравнивание метки по тексту элемента управления  
- В некоторых элементах управления используются линии привязки, позволяющие выровнять другие элементы управления по отношению к отображаемому тексту.  
+#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a><span data-ttu-id="0001f-184">Для размещения элемента управления, его размер структуры с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-184">To use snaplines to place a control by outlining its size</span></span>  
   
-#### Выравнивание метки по тексту элемента управления  
+1.  <span data-ttu-id="0001f-185">В **панели элементов**щелкните значок элемента управления <xref:System.Windows.Forms.Button> .</span><span class="sxs-lookup"><span data-stu-id="0001f-185">In the **Toolbox**, click the <xref:System.Windows.Forms.Button> control icon.</span></span> <span data-ttu-id="0001f-186">Не перетаскивайте его в форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-186">Do not drag it onto the form.</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.TextBox> из **панели элементов** в форму.  При отпускании элемента управления <xref:System.Windows.Forms.TextBox> на форму щелкните глиф смарт\-тега и выберите параметр **Задать текст для textBox1**.  Дополнительные сведения см. в разделе [Пошаговое руководство. Выполнение типичных задач с помощью смарт\-тегов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+2.  <span data-ttu-id="0001f-187">Наведите указатель мыши на поверхность разработки.</span><span class="sxs-lookup"><span data-stu-id="0001f-187">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="0001f-188">Обратите внимание, что указатель превратился в перекрестие с прикрепленным значком элемента управления <xref:System.Windows.Forms.Button> .</span><span class="sxs-lookup"><span data-stu-id="0001f-188">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.Button> control icon attached.</span></span> <span data-ttu-id="0001f-189">Также Обратите внимание на линии привязки, предлагающие положения выравнивания для <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-189">Also note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span>  
   
-2.  Перетащите элемент управления <xref:System.Windows.Forms.Label> из **панели элементов** в форму.  
+3.  <span data-ttu-id="0001f-190">Нажмите и удерживайте кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="0001f-190">Click and hold the mouse button.</span></span>  
   
-3.  Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Label> на `true`.  Обратите внимание, что границы элемента управления меняются для соответствия отображаемому тексту.  
+4.  <span data-ttu-id="0001f-191">Перетащите указатель мыши по форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-191">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="0001f-192">Обратите внимание, что выводится структуры, указывающий положение и размер элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-192">Note that an outline is drawn, indicating the position and the size of the control.</span></span>  
   
-4.  Переместите элемент управления <xref:System.Windows.Forms.Label> в левую часть элемента управления <xref:System.Windows.Forms.TextBox>, чтобы он выравнивался по нижнему краю элемента управления <xref:System.Windows.Forms.TextBox>.  Обратите внимание на линию выравнивания, появляющуюся вдоль нижних краев двух элементов управления.  
+5.  <span data-ttu-id="0001f-193">Перетащите указатель, до его выравнивания с другим элементом управления в форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-193">Drag the pointer until it aligns with another control on the form.</span></span> <span data-ttu-id="0001f-194">Обратите внимание, что появляется линия привязки, обозначающая выравнивание.</span><span class="sxs-lookup"><span data-stu-id="0001f-194">Note that a snapline appears to indicate alignment.</span></span>  
   
-5.  Переместите элемент управления <xref:System.Windows.Forms.Label>немного вверх до выравнивания текста <xref:System.Windows.Forms.Label>и текста <xref:System.Windows.Forms.TextBox>.  Обратите внимание на появление другой по стилю линии привязки, показывающей, когда текстовые поля обоих элементов управления выравниваются.  
+6.  <span data-ttu-id="0001f-195">Отпустите кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="0001f-195">Release the mouse button.</span></span> <span data-ttu-id="0001f-196">Элемент управления создается в позиции и размеру, указанному в контур.</span><span class="sxs-lookup"><span data-stu-id="0001f-196">The control is created at the position and size indicated by the outline.</span></span>  
   
-## Использование линий привязки при работе с клавиатурой  
- Линии привязки позволяют выравнивать элементы управления при их расположении с использованием стрелок со стрелками на клавиатуре.  
+## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="0001f-197">С помощью линий привязки при перетаскивании элемента управления из панели элементов</span><span class="sxs-lookup"><span data-stu-id="0001f-197">Using Snaplines When Dragging a Control from the Toolbox</span></span>  
+ <span data-ttu-id="0001f-198">Линии привязки помогают выравнивать элементы управления при перетаскивании их из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-198">Snaplines help you align controls when you drag them from the **Toolbox** onto your form.</span></span>  
   
-#### Чтобы использовать линии привязки при работе с клавиатурой  
+#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a><span data-ttu-id="0001f-199">Чтобы использовать линии привязки при перетаскивании элемента управления из панели элементов</span><span class="sxs-lookup"><span data-stu-id="0001f-199">To use snaplines when dragging a control from the Toolbox</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в форму.  Поместите его в левый верхний угол формы.  
+1.  <span data-ttu-id="0001f-200">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму, но не отпустите кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="0001f-200">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form, but do not release the mouse button.</span></span>  
   
-2.  Нажмите CTRL\+стрелка вниз.  Обратите внимание, что элемент управления перемещается вниз по форме до первого доступного положения выравнивания по горизонтали.  
+2.  <span data-ttu-id="0001f-201">Наведите указатель мыши на поверхность разработки.</span><span class="sxs-lookup"><span data-stu-id="0001f-201">Move the mouse pointer over the form's design surface.</span></span> <span data-ttu-id="0001f-202">Обратите внимание, что указатель указывает на положение, с которой новый <xref:System.Windows.Forms.Button> будет создан элемент управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-202">Note that the pointer changes to indicate the position at which the new <xref:System.Windows.Forms.Button> control will be created.</span></span>  
   
-3.  Нажимайте CTRL\+стрелка вниз, пока элемент управления не достигнет нижнего края формы.  Обратите внимание на положения, занимаемые им при перемещении вниз по форме.  
+3.  <span data-ttu-id="0001f-203">Перетащите указатель мыши по форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-203">Drag the mouse pointer around the form.</span></span> <span data-ttu-id="0001f-204">Обратите внимание на линии привязки, предлагающие положения выравнивания для <xref:System.Windows.Forms.Button> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-204">Note the snaplines that appear to suggest aligned positions for the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="0001f-205">Найдите положение, выравнивается с другими элементами управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-205">Find a position that is aligned with other controls.</span></span>  
   
-4.  Нажмите CTRL\+стрелка вправо.  Обратите внимание, что элемент управления перемещается через форму до первого доступного положения выравнивания по вертикали.  
+4.  <span data-ttu-id="0001f-206">Отпустите кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="0001f-206">Release the mouse button.</span></span> <span data-ttu-id="0001f-207">Элемент управления создается в месте, указанном линиями привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-207">The control is created at the position indicated by the snaplines.</span></span>  
   
-5.  Нажимайте CTRL\+стрелка вправо, пока элемент управления не достигнет границы формы.  Обратите внимание на положения, занимаемые им при перемещении через форму.  
+## <a name="resizing-controls-using-snaplines"></a><span data-ttu-id="0001f-208">Изменение размеров элементов управления с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-208">Resizing Controls Using Snaplines</span></span>  
+ <span data-ttu-id="0001f-209">Линии привязки помогают выравнивать элементы управления при изменении их размеров.</span><span class="sxs-lookup"><span data-stu-id="0001f-209">Snaplines help you align controls as you resize them.</span></span>  
   
-6.  Перемещайте элемент управления по форме, используя разные сочетания клавиш со стрелками.  Обратите внимание на положения, занимаемые элементом управления, и соответствующие им линии привязки.  
+#### <a name="to-resize-a-control-using-snaplines"></a><span data-ttu-id="0001f-210">Чтобы изменить размер элемента управления с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-210">To resize a control using snaplines</span></span>  
   
-7.  Нажимайте SHIFT и любую клавишу со стрелкой, чтобы изменить размер элемента управления <xref:System.Windows.Forms.Button> на величину, равную одному пикселю.  
+1.  <span data-ttu-id="0001f-211">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-211">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span>  
   
-8.  Нажимайте CTRL\+SHIFT и любую клавишу со стрелкой для изменения размера элемента управления <xref:System.Windows.Forms.Button> на величину линий привязки.  
+2.  <span data-ttu-id="0001f-212">Изменить размер <xref:System.Windows.Forms.Button> элемента управления, перетаскивая одну угла маркеров изменения размера.</span><span class="sxs-lookup"><span data-stu-id="0001f-212">Resize the <xref:System.Windows.Forms.Button> control by grabbing one of the corner sizing handles and dragging.</span></span> <span data-ttu-id="0001f-213">Дополнительные сведения см. в разделе [как: изменение размеров элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="0001f-213">For details, see [How to: Resize Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).</span></span>  
   
-## Панели линий привязки и макета  
- Линии привязки отключаются внутри панели макета.  
+3.  <span data-ttu-id="0001f-214">Перетащите маркер изменения размера, пока один из <xref:System.Windows.Forms.Button> границы элемента управления выравнивается с другим элементом управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-214">Drag the sizing handle until one of the <xref:System.Windows.Forms.Button> control's borders is aligned with another control.</span></span> <span data-ttu-id="0001f-215">Обратите внимание, что появляется линия привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-215">Note that a snapline appears.</span></span> <span data-ttu-id="0001f-216">Также Обратите внимание, что маркер изменения размера привязывается к позиции, указываемой параметром линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-216">Also note that the sizing handle snaps to the position indicated by the snapline.</span></span>  
   
-#### Чтобы выборочно отключить линии привязки  
+4.  <span data-ttu-id="0001f-217">Изменить размер <xref:System.Windows.Forms.Button> управления в другом направлении и выровняйте маркер изменения размера с другим элементом управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-217">Resize the <xref:System.Windows.Forms.Button> control in different directions and align the sizing handle to different controls.</span></span> <span data-ttu-id="0001f-218">Обратите внимание на то, как отображаются линии привязки в разных направлениях, обозначающая выравнивание.</span><span class="sxs-lookup"><span data-stu-id="0001f-218">Note how the snaplines appear in various orientations to indicate alignment.</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в форму.  
+## <a name="aligning-a-label-to-a-controls-text"></a><span data-ttu-id="0001f-219">Выравнивание метки по тексту элемента управления</span><span class="sxs-lookup"><span data-stu-id="0001f-219">Aligning a Label to a Control's Text</span></span>  
+ <span data-ttu-id="0001f-220">Некоторые элементы управления линии привязки для выравнивания других элементов управления для отображаемого текста.</span><span class="sxs-lookup"><span data-stu-id="0001f-220">Some controls offer a snapline for aligning other controls to displayed text.</span></span>  
   
-2.  Дважды щелкните значок элемента управления <xref:System.Windows.Forms.Button> на **панели элементов**.  Обратите внимание на появление нового кнопочного элемента управления в первой ячейке элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+#### <a name="to-align-a-label-to-a-controls-text"></a><span data-ttu-id="0001f-221">Выравнивание метки по тексту элемента управления</span><span class="sxs-lookup"><span data-stu-id="0001f-221">To align a label to a control's text</span></span>  
   
-3.  Дважды щелкните значок элемента управления <xref:System.Windows.Forms.Button> на **панели элементов** еще два раза.  В результате в элементе управления <xref:System.Windows.Forms.TableLayoutPanel> остается одна пустая ячейка.  
+1.  <span data-ttu-id="0001f-222">Перетащите <xref:System.Windows.Forms.TextBox> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-222">Drag a <xref:System.Windows.Forms.TextBox> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="0001f-223">При удалении <xref:System.Windows.Forms.TextBox> управления в форму, щелкните глиф смарт тега и выберите **задать текст для textBox1** параметр.</span><span class="sxs-lookup"><span data-stu-id="0001f-223">When you drop the <xref:System.Windows.Forms.TextBox> control onto the form, click the smart-tag glyph and select the **Set text to textBox1** option.</span></span> <span data-ttu-id="0001f-224">Дополнительные сведения см. в разделе [Пошаговое руководство: выполнение общих задач с помощью смарт-тегов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span><span class="sxs-lookup"><span data-stu-id="0001f-224">For details, see [Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).</span></span>  
   
-4.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в пустую ячейку элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  Обратите внимание, что линии привязки не появляются.  
+2.  <span data-ttu-id="0001f-225">Перетащите <xref:System.Windows.Forms.Label> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-225">Drag a <xref:System.Windows.Forms.Label> control from the **Toolbox** onto your form.</span></span>  
   
-5.  Вытащите элемент управления <xref:System.Windows.Forms.Button> из элемента управления <xref:System.Windows.Forms.TableLayoutPanel> и перемещайте его вокруг элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  Обратите внимание, что линии привязки опять появились.  
+3.  <span data-ttu-id="0001f-226">Измените значение свойства <xref:System.Windows.Forms.Control.AutoSize%2A> элемента управления <xref:System.Windows.Forms.Label> на `true`.</span><span class="sxs-lookup"><span data-stu-id="0001f-226">Change the value of the <xref:System.Windows.Forms.Label> control's <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="0001f-227">Обратите внимание, что границы элемента управления настраиваются в соответствии с отображаемого текста.</span><span class="sxs-lookup"><span data-stu-id="0001f-227">Note that the control's borders are adjusted to fit the display text.</span></span>  
   
-## Отключение линий привязки  
- По умолчанию линии привязки включены.  Можно отключить линии привязки выборочно или во всей среде разработки.  
+4.  <span data-ttu-id="0001f-228">Переместить <xref:System.Windows.Forms.Label> управления слева от <xref:System.Windows.Forms.TextBox> управления, поэтому она выравнивается по нижнему краю <xref:System.Windows.Forms.TextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-228">Move the <xref:System.Windows.Forms.Label> control to the left of the <xref:System.Windows.Forms.TextBox> control, so it is aligned with the bottom edge of the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="0001f-229">Обратите внимание, привязки вдоль нижнего края двух элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-229">Note the snapline that appears along the bottom edges of the two controls.</span></span>  
   
-#### Чтобы выборочно отключить линии привязки  
+5.  <span data-ttu-id="0001f-230">Переместить <xref:System.Windows.Forms.Label> управления немного вверх до <xref:System.Windows.Forms.Label> текста и <xref:System.Windows.Forms.TextBox> выравнивания текста.</span><span class="sxs-lookup"><span data-stu-id="0001f-230">Move the <xref:System.Windows.Forms.Label> control slightly upward, until the <xref:System.Windows.Forms.Label> text and the <xref:System.Windows.Forms.TextBox> text are aligned.</span></span> <span data-ttu-id="0001f-231">Обратите внимание, показывающей, когда текстовые поля обоих элементов управления выравниваются по-разному оформленного привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-231">Note the differently styled snapline that appears, indicating when the text fields of both controls are aligned.</span></span>  
   
--   Нажмите клавишу ALT и при перемещении элемента управления по форме:  
+## <a name="using-snaplines-with-keyboard-navigation"></a><span data-ttu-id="0001f-232">С помощью линий привязки с помощью клавиатуры</span><span class="sxs-lookup"><span data-stu-id="0001f-232">Using Snaplines with Keyboard Navigation</span></span>  
+ <span data-ttu-id="0001f-233">Линии привязки помогают выравнивать элементы управления при их с помощью клавиш со стрелками на клавиатуре расположении.</span><span class="sxs-lookup"><span data-stu-id="0001f-233">Snaplines help you align controls when you are arranging them using the keyboard's arrow keys.</span></span>  
   
-     обратите внимание, что линии привязки не появляются, а элемент управления не привязывается ни к одному из возможных положений выравнивания.  
+#### <a name="to-use-snaplines-with-keyboard-navigation"></a><span data-ttu-id="0001f-234">Чтобы использовать линии привязки с помощью клавиатуры</span><span class="sxs-lookup"><span data-stu-id="0001f-234">To use snaplines with keyboard navigation</span></span>  
   
-#### Чтобы отключить линии привязки в среде разработки  
+1.  <span data-ttu-id="0001f-235">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-235">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** onto your form.</span></span> <span data-ttu-id="0001f-236">Поместите его в левом верхнем углу формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-236">Place it in the upper-left corner of the form.</span></span>  
   
-1.  Из меню **Сервис** откройте диалоговое окно **Параметры**.  Откройте диалоговое окно конструктора Windows Forms.  Дополнительные сведения см. в разделе [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/ru-ru/8dd170af-72f0-4212-b04b-034ceee92834).  
+2.  <span data-ttu-id="0001f-237">Нажмите клавиши CTRL + стрелка вниз.</span><span class="sxs-lookup"><span data-stu-id="0001f-237">Press CTRL+DOWN ARROW.</span></span> <span data-ttu-id="0001f-238">Обратите внимание, что элемент управления перемещается вниз по форме в первую позицию доступны по горизонтали.</span><span class="sxs-lookup"><span data-stu-id="0001f-238">Note that the control moves down the form to the first available horizontal alignment position.</span></span>  
   
-2.  Выберите узел **Общие**.  В разделе **Режим макета** измените выбор с **Линии привязки** на **Привязка к сетке**.  
+3.  <span data-ttu-id="0001f-239">Нажмите клавиши CTRL + стрелка вниз, пока элемент управления не достигнет нижней части формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-239">Press CTRL+DOWN ARROW until the control reaches the bottom of the form.</span></span> <span data-ttu-id="0001f-240">Обратите внимание на положения, занимает при его перемещении вниз.</span><span class="sxs-lookup"><span data-stu-id="0001f-240">Note the positions it occupies as it moves down the form.</span></span>  
   
-3.  Щелкните "ОК", чтобы применить этот параметр.  
+4.  <span data-ttu-id="0001f-241">Нажмите сочетание клавиш CTRL + стрелка вправо.</span><span class="sxs-lookup"><span data-stu-id="0001f-241">Press CTRL+RIGHT ARROW.</span></span> <span data-ttu-id="0001f-242">Обратите внимание, что элемент управления перемещается в форме в первую позицию доступных выравнивание по вертикали.</span><span class="sxs-lookup"><span data-stu-id="0001f-242">Note that the control moves across the form to the first available vertical alignment position.</span></span>  
   
-4.  Выберите элемент управления на своей форме и перемещайте его к другим элементам управления.  Обратите внимание, что линии привязки не появляются.  
+5.  <span data-ttu-id="0001f-243">Нажмите клавиши CTRL + стрелка вправо, пока элемент управления не достигнет края формы.</span><span class="sxs-lookup"><span data-stu-id="0001f-243">Press CTRL+RIGHT ARROW until the control reaches the side of the form.</span></span> <span data-ttu-id="0001f-244">Обратите внимание на положения, занимает при их перемещении в форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-244">Note the positions it occupies as it moves across the form.</span></span>  
   
-## Следующие действия  
- Линии привязки обеспечивают простой способ выравнивания элементов управления на форме.  Рекомендации по дальнейшему обучению.  
+6.  <span data-ttu-id="0001f-245">Перемещайте элемент управления формы с сочетанием клавиш со стрелками.</span><span class="sxs-lookup"><span data-stu-id="0001f-245">Move the control around the form with a combination of arrow keys.</span></span> <span data-ttu-id="0001f-246">Обратите внимание на положения, занимаемые элементом управления и линии привязки, дополнять их.</span><span class="sxs-lookup"><span data-stu-id="0001f-246">Note the positions the control occupies and the snaplines that accompany them.</span></span>  
   
--   Попытайтесь вложить элемент управления <xref:System.Windows.Forms.GroupBox> в другой элемент управления <xref:System.Windows.Forms.GroupBox>.  Поместите элемент управления <xref:System.Windows.Forms.Button> внутри дочернего элемента управления <xref:System.Windows.Forms.GroupBox>, а другой элемент управления внутри родительского элемента управления <xref:System.Windows.Forms.GroupBox>.  Перемещайте элементы управления <xref:System.Windows.Forms.Button> и изучите, как линии привязки пересекают границы контейнера.  
+7.  <span data-ttu-id="0001f-247">Нажмите клавиши SHIFT + клавиши со стрелками для изменения размера <xref:System.Windows.Forms.Button> элемент управления один пиксель.</span><span class="sxs-lookup"><span data-stu-id="0001f-247">Press SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control by increments of one pixel.</span></span>  
   
--   Создайте столбец элементов управления <xref:System.Windows.Forms.TextBox> и соответствующий столбец элементов управления <xref:System.Windows.Forms.Label>.  Присвойте свойству <xref:System.Windows.Forms.Control.AutoSize%2A> элементов управления <xref:System.Windows.Forms.Label>значение `true`.  Используйте линии привязки для перемещения элементов управления <xref:System.Windows.Forms.Label>таким образом, чтобы отображаемый текст выравнивался по тексту в элементах управления <xref:System.Windows.Forms.TextBox>.  
+8.  <span data-ttu-id="0001f-248">Нажмите клавиши CTRL + SHIFT + клавиши со стрелками для изменения размера <xref:System.Windows.Forms.Button> элемента управления с приращением линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-248">Press CTRL+SHIFT+any arrow key to resize the <xref:System.Windows.Forms.Button> control in snapline increments.</span></span>  
   
- Сведения о проектировании пользовательского интерфейса Windows см. в книге *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers*, Redmond, WA: Microsoft Press, 1999.  \(USBN: 0\-7356\-0566\-1\).  
+## <a name="snaplines-and-layout-panels"></a><span data-ttu-id="0001f-249">Линии привязки и панели макета</span><span class="sxs-lookup"><span data-stu-id="0001f-249">Snaplines and Layout Panels</span></span>  
+ <span data-ttu-id="0001f-250">Линии привязки отключаются внутри панели макета.</span><span class="sxs-lookup"><span data-stu-id="0001f-250">Snaplines are disabled within layout panels.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)   
- [Расположение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="0001f-251">Чтобы выборочно отключить линии привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-251">To selectively disable snaplines</span></span>  
+  
+1.  <span data-ttu-id="0001f-252">Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-252">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+  
+2.  <span data-ttu-id="0001f-253">Дважды щелкните значок элемента управления <xref:System.Windows.Forms.Button> в **панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="0001f-253">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox**.</span></span> <span data-ttu-id="0001f-254">Обратите внимание, что отображается новый элемент управления button в <xref:System.Windows.Forms.TableLayoutPanel> первой ячейке элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-254">Note that a new button control appears in the <xref:System.Windows.Forms.TableLayoutPanel> control's first cell.</span></span>  
+  
+3.  <span data-ttu-id="0001f-255">Дважды щелкните <xref:System.Windows.Forms.Button> значок элемента управления в **элементов** дважды.</span><span class="sxs-lookup"><span data-stu-id="0001f-255">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox** twice more.</span></span> <span data-ttu-id="0001f-256">Это оставляет одну пустую ячейку в <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-256">This leaves one empty cell in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+  
+4.  <span data-ttu-id="0001f-257">Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в пустую ячейку <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-257">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the empty cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="0001f-258">Обратите внимание, что линии привязки не появляются.</span><span class="sxs-lookup"><span data-stu-id="0001f-258">Note that no snaplines appear.</span></span>  
+  
+5.  <span data-ttu-id="0001f-259">Перетащите <xref:System.Windows.Forms.Button> управления из <xref:System.Windows.Forms.TableLayoutPanel> управления и перемещайте его <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-259">Drag the <xref:System.Windows.Forms.Button> control out of the <xref:System.Windows.Forms.TableLayoutPanel> control and move it around the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="0001f-260">Обратите внимание, что появляются линии привязки.</span><span class="sxs-lookup"><span data-stu-id="0001f-260">Note that snaplines appear again.</span></span>  
+  
+## <a name="disabling-snaplines"></a><span data-ttu-id="0001f-261">Отключение линий привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-261">Disabling Snaplines</span></span>  
+ <span data-ttu-id="0001f-262">Линии привязки включены по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0001f-262">Snaplines are turned on by default.</span></span> <span data-ttu-id="0001f-263">Вы можете выборочно отключить линии привязки, или их можно отключить в среде разработки.</span><span class="sxs-lookup"><span data-stu-id="0001f-263">You can disable snaplines selectively, or you can disable them in the design environment.</span></span>  
+  
+#### <a name="to-selectively-disable-snaplines"></a><span data-ttu-id="0001f-264">Чтобы выборочно отключить линии привязки</span><span class="sxs-lookup"><span data-stu-id="0001f-264">To selectively disable snaplines</span></span>  
+  
+-   <span data-ttu-id="0001f-265">Нажмите клавишу ALT и при перемещении элемента управления по форме.</span><span class="sxs-lookup"><span data-stu-id="0001f-265">Press the ALT key and while moving a control around the form.</span></span>  
+  
+     <span data-ttu-id="0001f-266">Обратите внимание, что линии привязки не появляются, и элемент управления не привязывается ни к одному из возможных положений выравнивания.</span><span class="sxs-lookup"><span data-stu-id="0001f-266">Note that no snaplines appear and the control does not snap to any potential alignment positions.</span></span>  
+  
+#### <a name="to-disable-snaplines-in-the-design-environment"></a><span data-ttu-id="0001f-267">Чтобы отключить линии привязки в среде разработки</span><span class="sxs-lookup"><span data-stu-id="0001f-267">To disable snaplines in the design environment</span></span>  
+  
+1.  <span data-ttu-id="0001f-268">Из **средства** выберите пункт **параметры** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="0001f-268">From the **Tools** menu, open the **Options** dialog box.</span></span> <span data-ttu-id="0001f-269">Откройте диалоговое окно конструктора Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="0001f-269">Open the Windows Forms Designer dialog box.</span></span> <span data-ttu-id="0001f-270">Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно «Параметры»](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span><span class="sxs-lookup"><span data-stu-id="0001f-270">For details, see [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834).</span></span>  
+  
+2.  <span data-ttu-id="0001f-271">Выберите **Общие** узла.</span><span class="sxs-lookup"><span data-stu-id="0001f-271">Select the **General** node.</span></span> <span data-ttu-id="0001f-272">В **режим макета** измените выбранный вариант с **линии привязки** для **SnapToGrid**.</span><span class="sxs-lookup"><span data-stu-id="0001f-272">In the **Layout Mode** section, change the selection from **SnapLines** to **SnapToGrid**.</span></span>  
+  
+3.  <span data-ttu-id="0001f-273">Нажмите кнопку ОК, чтобы применить настройки.</span><span class="sxs-lookup"><span data-stu-id="0001f-273">Click OK to apply the setting.</span></span>  
+  
+4.  <span data-ttu-id="0001f-274">Выберите элемент управления на форму и перемещать других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-274">Select a control on your form and move it around the other controls.</span></span> <span data-ttu-id="0001f-275">Обратите внимание, что линии привязки не отображаются.</span><span class="sxs-lookup"><span data-stu-id="0001f-275">Note that snaplines do not appear.</span></span>  
+  
+## <a name="next-steps"></a><span data-ttu-id="0001f-276">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="0001f-276">Next Steps</span></span>  
+ <span data-ttu-id="0001f-277">Линии привязки обеспечивают простой способ выравнивания элементов управления на форму.</span><span class="sxs-lookup"><span data-stu-id="0001f-277">Snaplines offer an intuitive means of aligning controls on your form.</span></span> <span data-ttu-id="0001f-278">Рекомендуется также дополнительно исследовать следующие моменты.</span><span class="sxs-lookup"><span data-stu-id="0001f-278">Suggestions for more exploration include:</span></span>  
+  
+-   <span data-ttu-id="0001f-279">Попытайтесь вложить <xref:System.Windows.Forms.GroupBox> управления в другом <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-279">Try nesting a <xref:System.Windows.Forms.GroupBox> control within another <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="0001f-280">Место <xref:System.Windows.Forms.Button> управления в дочернем <xref:System.Windows.Forms.GroupBox> управления, а другой в родительском элементе <xref:System.Windows.Forms.GroupBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-280">Place a <xref:System.Windows.Forms.Button> control within the child <xref:System.Windows.Forms.GroupBox> control, and another within the parent <xref:System.Windows.Forms.GroupBox> control.</span></span> <span data-ttu-id="0001f-281">Переместить <xref:System.Windows.Forms.Button> элементов управления, изучите, как линии привязки пересекают границы контейнера.</span><span class="sxs-lookup"><span data-stu-id="0001f-281">Move the <xref:System.Windows.Forms.Button> controls around to see how the snaplines cross container boundaries.</span></span>  
+  
+-   <span data-ttu-id="0001f-282">Создать столбец <xref:System.Windows.Forms.TextBox> элементов управления и соответствующем столбце <xref:System.Windows.Forms.Label> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-282">Create a column of <xref:System.Windows.Forms.TextBox> controls and a corresponding column of <xref:System.Windows.Forms.Label> controls.</span></span> <span data-ttu-id="0001f-283">Установите для параметра <xref:System.Windows.Forms.Label> элементов управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="0001f-283">Set the value of the <xref:System.Windows.Forms.Label> controls' <xref:System.Windows.Forms.Control.AutoSize%2A> property to `true`.</span></span> <span data-ttu-id="0001f-284">Используйте линии привязки, чтобы переместить <xref:System.Windows.Forms.Label> элементов управления, чтобы их отображаемый текст выравнивается текст в <xref:System.Windows.Forms.TextBox> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="0001f-284">Use snaplines to move the <xref:System.Windows.Forms.Label> controls so their displayed text is aligned with the text in the <xref:System.Windows.Forms.TextBox> controls.</span></span>  
+  
+ <span data-ttu-id="0001f-285">Сведения о проектировании пользовательского интерфейса Windows приведены в книге *взаимодействие с пользователем Microsoft Windows, официальные рекомендации для разработчиков и конструкторов* Redmond, WA: Microsoft Press, 1999 г.</span><span class="sxs-lookup"><span data-stu-id="0001f-285">For information about Windows user interface design, see the book *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA: Microsoft Press, 1999.</span></span> <span data-ttu-id="0001f-286">(USBN: 0-7356-0566-1).</span><span class="sxs-lookup"><span data-stu-id="0001f-286">(USBN: 0-7356-0566-1).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0001f-287">См. также</span><span class="sxs-lookup"><span data-stu-id="0001f-287">See Also</span></span>  
+ <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
+ [<span data-ttu-id="0001f-288">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="0001f-288">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="0001f-289">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="0001f-289">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="0001f-290">Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize</span><span class="sxs-lookup"><span data-stu-id="0001f-290">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ [<span data-ttu-id="0001f-291">Упорядочение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0001f-291">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

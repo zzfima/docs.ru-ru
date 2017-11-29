@@ -1,37 +1,34 @@
 ---
-title: "Оператор Else (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.else"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Else - ключевое слово [Visual Basic]"
+title: "Оператор Else (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.else
+helpviewer_keywords: Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ccee9aef305fdf2f486ad21ec7753c29aeac4903
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Оператор Else (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Представляет группу операторов для выполнения или компиляции, если не выполнена или не скомпилирована другая группа в условии.  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="81c26-102">Оператор Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81c26-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="81c26-103">Вводит группу операторов, запускать или компиляции не условного группу инструкций после запуска или компиляции.</span><span class="sxs-lookup"><span data-stu-id="81c26-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## Заметки  
- Ключевое слово `Else` можно использовать в следующих контекстах:  
+## <a name="remarks"></a><span data-ttu-id="81c26-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="81c26-104">Remarks</span></span>  
+ <span data-ttu-id="81c26-105">Ключевое слово `Else` можно использовать в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="81c26-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="81c26-106">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="81c26-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="81c26-107">Оператор Select...Case</span><span class="sxs-lookup"><span data-stu-id="81c26-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [Директива \#If...Then...\#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="81c26-108">#If... Then... #Else-директива</span><span class="sxs-lookup"><span data-stu-id="81c26-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## См. также  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="81c26-109">См. также</span><span class="sxs-lookup"><span data-stu-id="81c26-109">See Also</span></span>  
+ [<span data-ttu-id="81c26-110">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="81c26-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,47 +1,49 @@
 ---
-title: "Как создать стиль для перетаскиваемого заголовка столбца GridView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView - элементы управления, применение стилей"
+title: "Как создать стиль для перетаскиваемого заголовка столбца GridView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 503683de875b8853e219139800eef2a5417a1574
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создать стиль для перетаскиваемого заголовка столбца GridView
-Этот пример показывает, как изменить внешний вид перетаскиваемого объекта <xref:System.Windows.Controls.GridViewColumnHeader>, когда пользователь изменяет положение столбца.  
+# <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a><span data-ttu-id="0bfd6-102">Как создать стиль для перетаскиваемого заголовка столбца GridView</span><span class="sxs-lookup"><span data-stu-id="0bfd6-102">How to: Create a Style for a Dragged GridView Column Header</span></span>
+<span data-ttu-id="0bfd6-103">В этом примере показано, как изменить внешний вид перетаскиваемого <xref:System.Windows.Controls.GridViewColumnHeader> когда пользователь изменяет положение столбца.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-103">This example shows how to change the appearance of a dragged <xref:System.Windows.Controls.GridViewColumnHeader> when the user changes the position of a column.</span></span>  
   
-## Пример  
- При перетаскивании заголовка столбца в другое местоположение в объекте <xref:System.Windows.Controls.ListView>, который использует <xref:System.Windows.Controls.GridView> для своего режима просмотра, столбец перемещается на новое место.  При перетаскивании заголовка столбца, перемещаемая копия заголовка отображается дополнительно к исходному заголовку.  Заголовок столбца в объекте <xref:System.Windows.Controls.GridView> представлен объектом <xref:System.Windows.Controls.GridViewColumnHeader>.  
+## <a name="example"></a><span data-ttu-id="0bfd6-104">Пример</span><span class="sxs-lookup"><span data-stu-id="0bfd6-104">Example</span></span>  
+ <span data-ttu-id="0bfd6-105">Если перетащить заголовок столбца в другое место <xref:System.Windows.Controls.ListView> , использующий <xref:System.Windows.Controls.GridView> для режима просмотра, столбец перемещается на новое место.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-105">When you drag a column header to another location in a <xref:System.Windows.Controls.ListView> that uses <xref:System.Windows.Controls.GridView> for its view mode, the column moves to the new position.</span></span> <span data-ttu-id="0bfd6-106">При перетаскивании заголовка столбца, перемещаемая копия заголовка возникает вместе с исходного заголовка.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-106">While you are dragging the column header, a floating copy of the header appears in addition to the original header.</span></span> <span data-ttu-id="0bfd6-107">Заголовок столбца в <xref:System.Windows.Controls.GridView> представленного <xref:System.Windows.Controls.GridViewColumnHeader> объекта.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-107">A column header in a <xref:System.Windows.Controls.GridView> is represented by a <xref:System.Windows.Controls.GridViewColumnHeader> object.</span></span>  
   
- Чтобы настроить внешний вид перемещаемого и исходного заголовка, можно задать значение <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> для изменения <xref:System.Windows.Style> объекта <xref:System.Windows.Controls.GridViewColumnHeader>.  Эти свойства <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> применяются, когда для свойства <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> установлено значение `true` и для свойства <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> — значение <xref:System.Windows.Controls.GridViewColumnHeaderRole>.  
+ <span data-ttu-id="0bfd6-108">Чтобы настроить внешний вид перемещаемого и исходного заголовка, можно задать <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> изменить <xref:System.Windows.Controls.GridViewColumnHeader> <xref:System.Windows.Style>.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-108">To customize the appearance of both the floating and original headers, you can set <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> to modify the <xref:System.Windows.Controls.GridViewColumnHeader> <xref:System.Windows.Style>.</span></span> <span data-ttu-id="0bfd6-109">Эти <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> применяются при <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> значение свойства `true` и <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> значение свойства <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-109">These <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> are applied when the <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> property value is `true` and the <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> property value is <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.</span></span>  
   
- Когда пользователь нажимает кнопку мыши и удерживает ее, пока указатель мыши находится на объекте <xref:System.Windows.Controls.GridViewColumnHeader>, значение свойства <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> меняется на `true`.  Аналогичным образом, когда пользователь начинает операцию перетаскивания, свойство <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> изменяется на <xref:System.Windows.Controls.GridViewColumnHeaderRole>.  
+ <span data-ttu-id="0bfd6-110">Когда пользователь нажимает кнопку мыши и удерживании его, когда указатель мыши задерживается на <xref:System.Windows.Controls.GridViewColumnHeader>, <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> примет значение свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-110">When the user presses the mouse button and holds it down while the mouse pauses on the <xref:System.Windows.Controls.GridViewColumnHeader>, the <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> property value changes to `true`.</span></span> <span data-ttu-id="0bfd6-111">Аналогичным образом, в том случае, когда пользователь начинает операцию перетаскивания, <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> изменения свойств <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-111">Likewise, when the user begins the drag operation, the <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> property changes to <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>.</span></span>  
   
- В следующем примере показано, как установить свойство <xref:System.Windows.Controls.ControlTemplate.Triggers%2A>, чтобы изменить цвета <xref:System.Windows.Controls.Control.Foreground%2A> и <xref:System.Windows.Controls.Control.Background%2A> исходного и перемещаемого заголовков, когда пользователь перетаскивает столбец на новое место.  
+ <span data-ttu-id="0bfd6-112">Следующий пример показывает, как задать <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> изменение <xref:System.Windows.Controls.Control.Foreground%2A> и <xref:System.Windows.Controls.Control.Background%2A> цвета заголовков исходного и с плавающей запятой при перетаскивании столбец в новое место.</span><span class="sxs-lookup"><span data-stu-id="0bfd6-112">The following example shows how to set <xref:System.Windows.Controls.ControlTemplate.Triggers%2A> to change the <xref:System.Windows.Controls.Control.Foreground%2A> and <xref:System.Windows.Controls.Control.Background%2A> colors of the original and floating headers when the user drags a column to a new position.</span></span>  
   
- [!code-xml[ListViewHeaderRoleStyle#GVCHControlTemplateStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplatestart)]  
-[!code-xml[ListViewHeaderRoleStyle#ControlTemplateTriggersStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersstart)]  
-[!code-xml[ListViewHeaderRoleStyle#IsPressed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#ispressed)]  
-[!code-xml[ListViewHeaderRoleStyle#Floating](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#floating)]  
-[!code-xml[ListViewHeaderRoleStyle#ControlTemplateTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersend)]  
-[!code-xml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
+ [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplatestart)]  
+[!code-xaml[ListViewHeaderRoleStyle#ControlTemplateTriggersStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersstart)]  
+[!code-xaml[ListViewHeaderRoleStyle#IsPressed](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#ispressed)]  
+[!code-xaml[ListViewHeaderRoleStyle#Floating](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#floating)]  
+[!code-xaml[ListViewHeaderRoleStyle#ControlTemplateTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersend)]  
+[!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
-## См. также  
- <xref:System.Windows.Controls.GridViewColumnHeader>   
- <xref:System.Windows.Controls.GridViewColumnHeaderRole>   
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Практические руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="0bfd6-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0bfd6-113">See Also</span></span>  
+ <xref:System.Windows.Controls.GridViewColumnHeader>  
+ <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [<span data-ttu-id="0bfd6-114">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="0bfd6-114">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="0bfd6-115">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="0bfd6-115">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="0bfd6-116">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="0bfd6-116">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)

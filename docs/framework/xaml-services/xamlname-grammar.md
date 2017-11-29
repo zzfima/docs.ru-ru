@@ -1,34 +1,37 @@
 ---
-title: "Грамматика XamlName | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DottedXamlName - грамматика [службы XAML]"
-  - "грамматика [службы XAML], DottedXamlName"
-  - "грамматика [службы XAML], XamlName"
-  - "имена в языке XAML [службы XAML]"
-  - "XamlName - грамматика [службы XAML]"
+title: "Грамматика XamlName"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DottedXamlName grammar [XAML Services]
+- grammar [XAML Services], DottedXamlName
+- grammar [XAML Services], XamlName
+- names in XAML [XAML Services]
+- XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-caps.latest.revision: 13
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 92327c8ff6232e64bf8b6b2a9d78e4a9eb30f3e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Грамматика XamlName
-Грамматика XamlName является определенной грамматикой, заданной в спецификации языка XAML \[MS\-XAML\], которая воспроизведена здесь для удобства.  
+# <a name="xamlname-grammar"></a><span data-ttu-id="95458-102">Грамматика XamlName</span><span class="sxs-lookup"><span data-stu-id="95458-102">XamlName Grammar</span></span>
+<span data-ttu-id="95458-103">Грамматика XamlName является определенной грамматикой, определенные в спецификации языка XAML [MS-XAML], которая воспроизводится здесь для удобства.</span><span class="sxs-lookup"><span data-stu-id="95458-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
   
-## Из спецификации XAML  
- Спецификация \[MS\-XAML\] определяет грамматику XamlName для определения набора разрешенных символьных идентификаторов, используемых для типов и свойств.  
+## <a name="from-the-xaml-specification"></a><span data-ttu-id="95458-104">Из спецификации XAML</span><span class="sxs-lookup"><span data-stu-id="95458-104">From the XAML Specification</span></span>  
+ <span data-ttu-id="95458-105">В спецификации [MS-XAML] определяет грамматику XamlName для определения набора разрешенных символьных идентификаторов, используемых для типов и свойств.</span><span class="sxs-lookup"><span data-stu-id="95458-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
   
- Строковые значения типа XamlName должны соответствовать следующей грамматике:  
+ <span data-ttu-id="95458-106">Строковые значения типа XamlName должны соответствовать следующей грамматике:</span><span class="sxs-lookup"><span data-stu-id="95458-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
   
 ```  
 XamlName ::= NameStartChar ( NameChar )*   
@@ -37,13 +40,11 @@ NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter
 LetterCharacter ::= UnicodeLu | UnicodeLl | UnicodeLo | UnicodeLt | UnicodeNl   
 DecimalDigit ::= UnicodeNd   
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
-  
 ```  
   
- которая допускает следующие общие значения категорий, определенных в базе знаков Юникод  
+ <span data-ttu-id="95458-107">Предполагается следующие общие значения категорий, как определено в базе данных символов Юникода</span><span class="sxs-lookup"><span data-stu-id="95458-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
   
 ```  
-  
 Lu  
 Letter, Uppercase  
 Ll  
@@ -64,13 +65,13 @@ Nl
 Number, Letter  
 ```  
   
- Язык XAML определяет вторую грамматику, DottedXamlName, которая используется для ссылок, определяемых свойством и событием, а также для вложенных членов.  Дополнительные сведения см. в разделах <xref:System.Windows.DependencyProperty> и [Общие сведения о языке XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ <span data-ttu-id="95458-108">Код XAML определяет вторую грамматику, DottedXamlName, который используется для свойства и события ссылок на, а также для вложенных элементов.</span><span class="sxs-lookup"><span data-stu-id="95458-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="95458-109">Дополнительные сведения см. в разделе <xref:System.Windows.DependencyProperty> и [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="95458-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
- Строковые значения типа DottedXamlName должны соответствовать следующей грамматике:  
+ <span data-ttu-id="95458-110">Строковые значения типа DottedXamlName должны соответствовать следующей грамматике:</span><span class="sxs-lookup"><span data-stu-id="95458-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
   
 ```  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## Заметки  
- Полную спецификацию см. в разделе [\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).
+## <a name="remarks"></a><span data-ttu-id="95458-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="95458-111">Remarks</span></span>  
+ <span data-ttu-id="95458-112">Полную спецификацию в разделе [ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).</span><span class="sxs-lookup"><span data-stu-id="95458-112">For the complete specification, see [\[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>

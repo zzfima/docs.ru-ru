@@ -1,57 +1,59 @@
 ---
-title: "Практическое руководство. Отклонение элемента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы, SkewTransform"
-  - "графика, наклон элементов"
-  - "наклон элементов"
-  - "SkewTransform - класс"
+title: "Практическое руководство. Отклонение элемента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- skewing elements [WPF]
+- graphics [WPF], skewing elements
+- classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5c46b8c64a26d83ba6d8f018b9a1f8ca8250a57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отклонение элемента
-В этом примере показано использование <xref:System.Windows.Media.SkewTransform> для наклона элемента.  [Наклон](GTMT), также называемый сдвигом, является преобразованием, которое растягивает пространство координат неравномерно.  Одним из примеров использования <xref:System.Windows.Media.SkewTransform> является имитация глубины [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] в объектах [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)].  
+# <a name="how-to-skew-an-element"></a><span data-ttu-id="95f73-102">Практическое руководство. Отклонение элемента</span><span class="sxs-lookup"><span data-stu-id="95f73-102">How to: Skew an Element</span></span>
+<span data-ttu-id="95f73-103">В этом примере показано, как использовать <xref:System.Windows.Media.SkewTransform> для наклона элемента.</span><span class="sxs-lookup"><span data-stu-id="95f73-103">This example shows how to use a <xref:System.Windows.Media.SkewTransform> to skew an element.</span></span> <span data-ttu-id="95f73-104">Отклонение (или срез) — это преобразование, которое неравномерно растягивает пространство координат.</span><span class="sxs-lookup"><span data-stu-id="95f73-104">A skew, which is also known as a shear, is a transformation that stretches the coordinate space in a non-uniform manner.</span></span> <span data-ttu-id="95f73-105">Одним из примеров использования <xref:System.Windows.Media.SkewTransform> является имитация [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] глубина в [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] объектов.</span><span class="sxs-lookup"><span data-stu-id="95f73-105">One typical use of a <xref:System.Windows.Media.SkewTransform> is for simulating [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] depth in [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] objects.</span></span>  
   
- Свойства <xref:System.Windows.Media.SkewTransform.CenterX%2A> и <xref:System.Windows.Media.SkewTransform.CenterY%2A> используются для указания точки центра <xref:System.Windows.Media.SkewTransform>.  
+ <span data-ttu-id="95f73-106">Используйте <xref:System.Windows.Media.SkewTransform.CenterX%2A> и <xref:System.Windows.Media.SkewTransform.CenterY%2A> точка свойства для указания центра <xref:System.Windows.Media.SkewTransform>.</span><span class="sxs-lookup"><span data-stu-id="95f73-106">Use the <xref:System.Windows.Media.SkewTransform.CenterX%2A> and <xref:System.Windows.Media.SkewTransform.CenterY%2A> properties to specify the center point of the <xref:System.Windows.Media.SkewTransform>.</span></span>  
   
- Свойства <xref:System.Windows.Media.SkewTransform.AngleX%2A> и <xref:System.Windows.Media.SkewTransform.AngleY%2A> используются для указания угла наклона по осям x и y и для наклона текущей системы координат вместе с этими осями.  
+ <span data-ttu-id="95f73-107">Используйте <xref:System.Windows.Media.SkewTransform.AngleX%2A> и <xref:System.Windows.Media.SkewTransform.AngleY%2A> свойства для указания угол отклонения оси x и оси y и наклонять текущей системы координат по осям эти.</span><span class="sxs-lookup"><span data-stu-id="95f73-107">Use the <xref:System.Windows.Media.SkewTransform.AngleX%2A> and <xref:System.Windows.Media.SkewTransform.AngleY%2A> properties to specify the skew angle of the x-axis and y-axis, and to skew the current coordinate system along these axes.</span></span>  
   
- Чтобы спрогнозировать результат наклона, рассмотрите значения наклонов <xref:System.Windows.Media.SkewTransform.AngleX%2A> по оси x относительно исходной системы координат.  Таким образом, при задании для <xref:System.Windows.Media.SkewTransform.AngleX%2A> значения 30 ось y поворачивается на 30 градусов через начало координат, и значения наклоняются по оси x на 30 градусов от этого начала координат.  Аналогично, при задании для <xref:System.Windows.Media.SkewTransform.AngleY%2A> значения 30 выполняется наклон фигуры по оси y на 30 градусов от начала координат.  Обратите внимание, что это не тоже самое, что перенос \(перемещение\) системы координат на 30 градусов по оси x и y.  
+ <span data-ttu-id="95f73-108">Чтобы спрогнозировать результат наклона, примите во внимание <xref:System.Windows.Media.SkewTransform.AngleX%2A> наклон значений по оси x относительно исходной системы координат.</span><span class="sxs-lookup"><span data-stu-id="95f73-108">To predict the effect of a skew transformation, consider that <xref:System.Windows.Media.SkewTransform.AngleX%2A> skews x-axis values relative to the original coordinate system.</span></span> <span data-ttu-id="95f73-109">Таким образом, для <xref:System.Windows.Media.SkewTransform.AngleX%2A> равно 30, ось y поворачивается на 30 градусов через начало координат и наклон значений в x-30 градусов от этого начала координат.</span><span class="sxs-lookup"><span data-stu-id="95f73-109">Therefore, for an <xref:System.Windows.Media.SkewTransform.AngleX%2A> of 30, the y-axis rotates 30 degrees through the origin and skews the values in x- by 30 degrees from that origin.</span></span> <span data-ttu-id="95f73-110">Аналогичным образом <xref:System.Windows.Media.SkewTransform.AngleY%2A> 30 наклон значений y фигуры на 30 градусов от начала координат.</span><span class="sxs-lookup"><span data-stu-id="95f73-110">Likewise, an <xref:System.Windows.Media.SkewTransform.AngleY%2A> of 30 skews the y- values of the shape by 30 degrees from the origin.</span></span> <span data-ttu-id="95f73-111">Обратите внимание, что это не то же самое, что перенос (перемещение) системы координат на 30 градусов по осям X и Y.</span><span class="sxs-lookup"><span data-stu-id="95f73-111">Note that this is not the same effect as translating (moving) the coordinate system by 30 degrees in x- or y-.</span></span>  
   
- В следующем примере применяется горизонтальный наклон в 45 градусов <xref:System.Windows.Shapes.Rectangle> от точки центра \(0,0\).  
+ <span data-ttu-id="95f73-112">В следующем примере применяется горизонтальный наклон в 45 градусов <xref:System.Windows.Shapes.Rectangle> относительно центральной точки (0,0).</span><span class="sxs-lookup"><span data-stu-id="95f73-112">The following example applies a horizontal skew of 45 degrees to a <xref:System.Windows.Shapes.Rectangle> from a center point of (0,0).</span></span>  
   
-## Пример  
- [!code-xml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
+## <a name="example"></a><span data-ttu-id="95f73-113">Пример</span><span class="sxs-lookup"><span data-stu-id="95f73-113">Example</span></span>  
+ [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
- В следующем примере применяется горизонтальный наклон в 45 градусов <xref:System.Windows.Shapes.Rectangle> от точки с координатами \(25,25\).  
+ <span data-ttu-id="95f73-114">В следующем примере применяется горизонтальный наклон в 45 градусов <xref:System.Windows.Shapes.Rectangle> относительно центральной точки (25,25).</span><span class="sxs-lookup"><span data-stu-id="95f73-114">The following example applies a horizontal skew of 45 degrees to a <xref:System.Windows.Shapes.Rectangle> from a center point of (25,25).</span></span>  
   
- [!code-xml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
+ [!code-xaml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
- В следующем примере применяется вертикальный наклон в 45 градусов <xref:System.Windows.Shapes.Rectangle> от точки центра с координатами \(25,25\).  
+ <span data-ttu-id="95f73-115">В следующем примере применяется вертикальной искажение 45 градусов <xref:System.Windows.Shapes.Rectangle> относительно центральной точки (25,25).</span><span class="sxs-lookup"><span data-stu-id="95f73-115">The following example applies a vertical skew of 45 degrees to a <xref:System.Windows.Shapes.Rectangle> from a center point of (25,25).</span></span>  
   
- [!code-xml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
+ [!code-xaml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
- На следующем рисунке показаны разные наклоны, использованные в этом примере.  
+ <span data-ttu-id="95f73-116">На следующем рисунке показаны отклонения, использованные в этом примере.</span><span class="sxs-lookup"><span data-stu-id="95f73-116">The following illustration shows the different skews that are used in this example.</span></span>  
   
- ![Примеры SkewTransform](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.png "img\_wcpsdk\_graphicsmm\_skewtransformexample")  
-Иллюстрированные три примера SkewTransform  
+ <span data-ttu-id="95f73-117">![Примеры SkewTransform](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")</span><span class="sxs-lookup"><span data-stu-id="95f73-117">![SkewTransform examples](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")</span></span>  
+<span data-ttu-id="95f73-118">Показаны три примера SkewTransform</span><span class="sxs-lookup"><span data-stu-id="95f73-118">The three SkewTransform examples illustrated</span></span>  
   
- Полный пример см. на веб\-странице [2\-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ <span data-ttu-id="95f73-119">Полный пример см. в разделе [Примеры двумерных преобразований](http://go.microsoft.com/fwlink/?LinkID=158252).</span><span class="sxs-lookup"><span data-stu-id="95f73-119">For the complete sample, see [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
   
-## См. также  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.SkewTransform>   
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="95f73-120">См. также</span><span class="sxs-lookup"><span data-stu-id="95f73-120">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.SkewTransform>  
+ [<span data-ttu-id="95f73-121">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="95f73-121">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="95f73-122">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="95f73-122">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

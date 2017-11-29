@@ -1,53 +1,49 @@
 ---
-title: "Обслуживание пар &quot;имя значение&quot; (Visual Basic) | Документы Microsoft"
+title: "Обслуживание пар \"имя значение\" (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 54db297ecd39e37492dcf8bb4de4f64476662670
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: e2743b7ce09db2ec2695c04eeef631a33fa2c289
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="maintaining-namevalue-pairs-visual-basic"></a>Обслуживание пар имя значение (Visual Basic)
-Множеству приложений приходится сохранять данные, которые лучше всего хранить в виде пар «имя-значение». Эти данные могут представлять сведения о конфигурации или глобальные параметры. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] содержит несколько методов, которые облегчают хранение пар «имя-значение». Можно либо оставить информацию в виде атрибутов, либо в виде набора дочерних элементов.  
+# <a name="maintaining-namevalue-pairs-visual-basic"></a><span data-ttu-id="bba6b-102">Обслуживание пар "имя значение" (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bba6b-102">Maintaining Name/Value Pairs (Visual Basic)</span></span>
+<span data-ttu-id="bba6b-103">Множеству приложений приходится сохранять данные, которые лучше всего хранить в виде пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="bba6b-103">Many applications have to maintain information that is best kept as name/value pairs.</span></span> <span data-ttu-id="bba6b-104">Эти данные могут представлять сведения о конфигурации или глобальные параметры.</span><span class="sxs-lookup"><span data-stu-id="bba6b-104">This information might be configuration information or global settings.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="bba6b-105"> содержит несколько методов, которые облегчают хранение пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="bba6b-105"> contains some methods that make it easy to keep a set of name/value pairs.</span></span> <span data-ttu-id="bba6b-106">Можно либо оставить информацию в виде атрибутов, либо в виде набора дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="bba6b-106">You can either keep the information as attributes or as a set of child elements.</span></span>  
   
- Одно из отличий между хранением информации в виде атрибутов и в виде дочерних элементов состоит в том, что атрибуты имеют ограничение в том, что для элемента может быть только один атрибут с данным именем. Это ограничение не относится к дочерним элементам.  
+ <span data-ttu-id="bba6b-107">Одно из отличий между хранением информации в виде атрибутов и в виде дочерних элементов состоит в том, что атрибуты имеют ограничение в том, что для элемента может быть только один атрибут с данным именем.</span><span class="sxs-lookup"><span data-stu-id="bba6b-107">One difference between keeping the information as attributes or as child elements is that attributes have the constraint that there can be only one attribute with a particular name for an element.</span></span> <span data-ttu-id="bba6b-108">Это ограничение не относится к дочерним элементам.</span><span class="sxs-lookup"><span data-stu-id="bba6b-108">This limitation does not apply to child elements.</span></span>  
   
-## <a name="setattributevalue-and-setelementvalue"></a>Методы SetAttributeValue и SetElementValue  
- Два метода, которые облегчают хранение имя значение пары <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>и <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</xref:System.Xml.Linq.XElement.SetElementValue%2A> </xref:System.Xml.Linq.XElement.SetAttributeValue%2A> Эти два метода имеют похожую семантику.  
+## <a name="setattributevalue-and-setelementvalue"></a><span data-ttu-id="bba6b-109">Методы SetAttributeValue и SetElementValue</span><span class="sxs-lookup"><span data-stu-id="bba6b-109">SetAttributeValue and SetElementValue</span></span>  
+ <span data-ttu-id="bba6b-110">Два метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> и <xref:System.Xml.Linq.XElement.SetElementValue%2A> облегчают хранение в виде пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="bba6b-110">The two methods that facilitate keeping name/value pairs are <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> and <xref:System.Xml.Linq.XElement.SetElementValue%2A>.</span></span> <span data-ttu-id="bba6b-111">Эти два метода имеют похожую семантику.</span><span class="sxs-lookup"><span data-stu-id="bba6b-111">These two methods have similar semantics.</span></span>  
   
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>можно добавить, изменить или удалить атрибуты элемента.</xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+ <span data-ttu-id="bba6b-112">С помощью метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> можно добавлять, изменять и удалять атрибуты данного элемента.</span><span class="sxs-lookup"><span data-stu-id="bba6b-112"><xref:System.Xml.Linq.XElement.SetAttributeValue%2A> can add, modify, or remove attributes of an element.</span></span>  
   
--   При вызове метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>с имя атрибута, который не существует, этот метод создаст новый атрибут и добавляет его в указанный элемент.</xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+-   <span data-ttu-id="bba6b-113">При вызове метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> с несуществующим именем атрибута этот метод создаст новый атрибут и добавит его в указанный элемент.</span><span class="sxs-lookup"><span data-stu-id="bba6b-113">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an attribute that does not exist, the method creates a new attribute and adds it to the specified element.</span></span>  
   
--   При вызове метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>с именем существующего атрибута и с указанным содержимого, содержимое атрибута замещается указанным содержимым.</xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+-   <span data-ttu-id="bba6b-114">При вызове метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> с существующим именем атрибута и с указанным содержимым содержимое данного атрибута замещается указанным содержимым.</span><span class="sxs-lookup"><span data-stu-id="bba6b-114">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute and with some specified content, the contents of the attribute are replaced with the specified content.</span></span>  
   
--   При вызове метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>с существующим именем атрибута и с указанием значения null для содержимого, атрибут удаляется из родительского.</xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+-   <span data-ttu-id="bba6b-115">При вызове метода <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> с существующим именем атрибута и с указанием значения NULL в качестве содержимого атрибут удаляется из своего родителя.</span><span class="sxs-lookup"><span data-stu-id="bba6b-115">If you call <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> with a name of an existing attribute, and specify null for the content, the attribute is removed from its parent.</span></span>  
   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A>можно добавлять, изменять или удалять дочерние элементы данного элемента.</xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+ <span data-ttu-id="bba6b-116">С помощью метода <xref:System.Xml.Linq.XElement.SetElementValue%2A> можно добавлять, изменять и удалять дочерние элементы данного элемента.</span><span class="sxs-lookup"><span data-stu-id="bba6b-116"><xref:System.Xml.Linq.XElement.SetElementValue%2A> can add, modify, or remove child elements of an element.</span></span>  
   
--   При вызове метода <xref:System.Xml.Linq.XElement.SetElementValue%2A>с именем дочерний элемент, который не существует, этот метод создает новый элемент и добавляет его в указанный элемент.</xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+-   <span data-ttu-id="bba6b-117">При вызове метода <xref:System.Xml.Linq.XElement.SetElementValue%2A> с несуществующим именем дочернего элемента этот метод создаст новый элемент и добавит его к указанному элементу.</span><span class="sxs-lookup"><span data-stu-id="bba6b-117">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of a child element that does not exist, the method creates a new element and adds it to the specified element.</span></span>  
   
--   При вызове метода <xref:System.Xml.Linq.XElement.SetElementValue%2A>с именем существующего элемента и с указанным содержимым, содержимое элемента, заменяются с указанным содержимым.</xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+-   <span data-ttu-id="bba6b-118">При вызове метода <xref:System.Xml.Linq.XElement.SetElementValue%2A> с существующим именем элемента и с указанным содержимым содержимое данного элемента замещается указанным содержимым.</span><span class="sxs-lookup"><span data-stu-id="bba6b-118">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element and with some specified content, the contents of the element are replaced with the specified content.</span></span>  
   
--   При вызове метода <xref:System.Xml.Linq.XElement.SetElementValue%2A>с именем существующего элемента и задать значение null для содержимого, элемент удаляется из своего родителя.</xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+-   <span data-ttu-id="bba6b-119">При вызове метода <xref:System.Xml.Linq.XElement.SetElementValue%2A> с существующим именем атрибута и с указанием значения NULL в качестве содержимого атрибут удаляется из своего родителя.</span><span class="sxs-lookup"><span data-stu-id="bba6b-119">If you call <xref:System.Xml.Linq.XElement.SetElementValue%2A> with a name of an existing element, and specify null for the content, the element is removed from its parent.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример показывает, как создать элемент без атрибутов. Затем он использует <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>метод для создания и поддержания списка пар имя значение.</xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+## <a name="example"></a><span data-ttu-id="bba6b-120">Пример</span><span class="sxs-lookup"><span data-stu-id="bba6b-120">Example</span></span>  
+ <span data-ttu-id="bba6b-121">Следующий пример показывает, как создать элемент без атрибутов.</span><span class="sxs-lookup"><span data-stu-id="bba6b-121">The following example creates an element with no attributes.</span></span> <span data-ttu-id="bba6b-122">Затем используется метод <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> для создания и поддержания списка пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="bba6b-122">It then uses the <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
   
 ```vb  
 ' Create an element with no content.  
@@ -70,16 +66,16 @@ root.SetAttributeValue("DefaultColor", Nothing)
 Console.WriteLine(root)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="bba6b-123">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="bba6b-123">This example produces the following output:</span></span>  
   
-```  
+```xml  
 <Root Top="22" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
 <Root Top="10" Left="20" Bottom="122" Right="300" DefaultColor="Color.Red" />  
 <Root Top="10" Left="20" Bottom="122" Right="300" />  
 ```  
   
-## <a name="example"></a>Пример  
- Следующий пример показывает, как создать элемент без дочерних элементов. Затем он использует <xref:System.Xml.Linq.XElement.SetElementValue%2A>метод для создания и поддержания списка пар имя значение.</xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+## <a name="example"></a><span data-ttu-id="bba6b-124">Пример</span><span class="sxs-lookup"><span data-stu-id="bba6b-124">Example</span></span>  
+ <span data-ttu-id="bba6b-125">Следующий пример показывает, как создать элемент без дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="bba6b-125">The following example creates an element with no child elements.</span></span> <span data-ttu-id="bba6b-126">Затем используется метод <xref:System.Xml.Linq.XElement.SetElementValue%2A> для создания и поддержания списка пар «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="bba6b-126">It then uses the <xref:System.Xml.Linq.XElement.SetElementValue%2A> method to create and maintain a list of name/value pairs.</span></span>  
   
 ```vb  
 ' Create an element with no content.  
@@ -102,12 +98,11 @@ Console.WriteLine("----")
 ' Remove DefaultColor.  
 root.SetElementValue("DefaultColor", Nothing)  
 Console.WriteLine(root)  
-  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="bba6b-127">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="bba6b-127">This example produces the following output:</span></span>  
   
-```  
+```xml  
 <Root>  
   <Top>22</Top>  
   <Left>20</Left>  
@@ -132,7 +127,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XElement.SetAttributeValue%2A></xref:System.Xml.Linq.XElement.SetAttributeValue%2A>   
- <xref:System.Xml.Linq.XElement.SetElementValue%2A></xref:System.Xml.Linq.XElement.SetElementValue%2A>   
- [Изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bba6b-128">См. также</span><span class="sxs-lookup"><span data-stu-id="bba6b-128">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>  
+ <xref:System.Xml.Linq.XElement.SetElementValue%2A>  
+ [<span data-ttu-id="bba6b-129">Изменение деревьев XML (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bba6b-129">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

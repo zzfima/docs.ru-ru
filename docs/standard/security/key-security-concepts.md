@@ -1,122 +1,75 @@
 ---
-title: "Key Security Concepts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "unauthorized access"
-  - "permissions [.NET Framework]"
-  - "security [.NET Framework], about security"
+title: "Основные понятия безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- unauthorized access
+- permissions [.NET Framework]
+- security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-caps.latest.revision: 22
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "22"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5e29b3c12fe89861574741506cb7cd018eb81b1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Key Security Concepts
-Microsoft .NET Framework предлагает прозрачность безопасности, управление доступом для кода и безопасность на основе ролей для решения проблем безопасности, связанных с мобильным кодом, и предоставления поддержки, которая позволяет компонентам определять, какие пользователи авторизованы для выполнения действий.  Эти механизмы безопасности используют простую согласованную модель, чтобы разработчики, знакомые с управлением доступом для кода, могли легко использовать безопасность на основе ролей и наоборот.  Как управление доступом для когда, так и безопасность на основе ролей реализованы при помощи общей инфраструктуры, предоставленной средой CLR.  
+# <a name="key-security-concepts"></a><span data-ttu-id="a8e0c-102">Основные понятия безопасности</span><span class="sxs-lookup"><span data-stu-id="a8e0c-102">Key Security Concepts</span></span>
+<span data-ttu-id="a8e0c-103">Microsoft .NET Framework предлагает безопасность на основе ролей для решения проблем безопасности, связанных с мобильным кодом, и предоставления поддержки, которая позволяет компонентам определять, какие пользователи авторизованы для выполнения действий.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-103">The Microsoft .NET Framework offers role-based security to help address security concerns about mobile code and to provide support that enables components to determine what users are authorized to do.</span></span>  
+  
+## <a name="type-safety-and-security"></a><span data-ttu-id="a8e0c-104">Безопасность типа и безопасность</span><span class="sxs-lookup"><span data-stu-id="a8e0c-104">Type safety and security</span></span>  
+ <span data-ttu-id="a8e0c-105">Код с безопасностью типа имеет доступ только к областям памяти, авторизованным для доступа.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-105">Type-safe code accesses only the memory locations it is authorized to access.</span></span> <span data-ttu-id="a8e0c-106">(В данном разделе безопасность типа относится исключительно к безопасности типа памяти, и ее не следует путать с безопасностью типа в широком смысле.) Например, код с безопасностью типа не может читать значения из закрытых полей другого объекта.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-106">(For this discussion, type safety specifically refers to memory type safety and should not be confused with type safety in a broader respect.) For example, type-safe code cannot read values from another object's private fields.</span></span> <span data-ttu-id="a8e0c-107">Он обращается к типам только строго определенными, допустимыми способами.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-107">It accesses types only in well-defined, allowable ways.</span></span>  
+  
+ <span data-ttu-id="a8e0c-108">Во время JIT-компиляции дополнительный процесс проверки проверяет метаданные и MSIL метода для JIT-компиляции в машинный код, чтобы убедиться, что они являются типобезопасными.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-108">During just-in-time (JIT) compilation, an optional verification process examines the metadata and Microsoft intermediate language (MSIL) of a method to be JIT-compiled into native machine code to verify that they are type safe.</span></span> <span data-ttu-id="a8e0c-109">Этот процесс не выполняется, если код имеет разрешение на пропуск проверки.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-109">This process is skipped if the code has permission to bypass verification.</span></span> <span data-ttu-id="a8e0c-110">Дополнительные сведения о проверке см. в разделе [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md).</span><span class="sxs-lookup"><span data-stu-id="a8e0c-110">For more information about verification, see [Managed Execution Process](../../../docs/standard/managed-execution-process.md).</span></span>  
+  
+ <span data-ttu-id="a8e0c-111">Хотя проверка безопасности типа не обязательна для запуска управляемого кода, безопасность типа играет ключевую роль в изоляции сборок и обеспечении безопасности.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-111">Although verification of type safety is not mandatory to run managed code, type safety plays a crucial role in assembly isolation and security enforcement.</span></span> <span data-ttu-id="a8e0c-112">Если код является типобезопасным, среда CLR может полностью изолировать сборки друг от друга.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-112">When code is type safe, the common language runtime can completely isolate assemblies from each other.</span></span> <span data-ttu-id="a8e0c-113">Эта изоляция помогает обеспечить отсутствие отрицательного влияния сборок друг на друга и повышает надежность приложений.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-113">This isolation helps ensure that assemblies cannot adversely affect each other and it increases application reliability.</span></span> <span data-ttu-id="a8e0c-114">Компоненты с безопасностью типа могут безопасно выполняться в одном процессе, даже если они имеют доверие на разных уровнях.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-114">Type-safe components can execute safely in the same process even if they are trusted at different levels.</span></span> <span data-ttu-id="a8e0c-115">Если код не является типобезопасным, могут возникать нежелательные побочные эффекты.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-115">When code is not type safe, unwanted side effects can occur.</span></span> <span data-ttu-id="a8e0c-116">Например, среда выполнения не может препятствовать вызову машинного (неуправляемого) кода со стороны управляемого кода и выполнению управляемым кодом нежелательных операций.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-116">For example, the runtime cannot prevent managed code from calling into native (unmanaged) code and performing malicious operations.</span></span> <span data-ttu-id="a8e0c-117">Если код является типобезопасным, механизм обеспечения безопасности среды выполнения гарантирует, что он не будет иметь доступ к машинному коду при отсутствии соответствующего разрешения.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-117">When code is type safe, the runtime's security enforcement mechanism ensures that it does not access native code unless it has permission to do so.</span></span> <span data-ttu-id="a8e0c-118">Чтобы код без безопасности типа мог запускаться, ему необходимо предоставить разрешение <xref:System.Security.Permissions.SecurityPermission> с переданным элементом перечисления <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A>.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-118">All code that is not type safe must have been granted <xref:System.Security.Permissions.SecurityPermission> with the passed enum member <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> to run.</span></span>  
+  
+ <span data-ttu-id="a8e0c-119">Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../docs/framework/misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="a8e0c-119">For more information, see [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
+  
+## <a name="principal"></a><span data-ttu-id="a8e0c-120">Участник</span><span class="sxs-lookup"><span data-stu-id="a8e0c-120">Principal</span></span>  
+ <span data-ttu-id="a8e0c-121">Участник представляет удостоверение и роль пользователя и действует от имени пользователя.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-121">A principal represents the identity and role of a user and acts on the user's behalf.</span></span> <span data-ttu-id="a8e0c-122">Безопасность на основе ролей в .NET Framework поддерживает три вида участников.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-122">Role-based security in the .NET Framework supports three kinds of principals:</span></span>  
+  
+-   <span data-ttu-id="a8e0c-123">Универсальные участники представляют пользователей и роли, которые существуют независимо от пользователей и ролей Windows.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-123">Generic principals represent users and roles that exist independent of Windows users and roles.</span></span>  
+  
+-   <span data-ttu-id="a8e0c-124">Участники Windows представляют пользователей Windows и их роли (или их группы Windows).</span><span class="sxs-lookup"><span data-stu-id="a8e0c-124">Windows principals represent Windows users and their roles (or their Windows groups).</span></span> <span data-ttu-id="a8e0c-125">Участник Windows может олицетворять другого пользователя, что означает, что этому участнику разрешен доступ к ресурсу от имени пользователя при предоставлении удостоверения, которое принадлежит этому пользователю.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-125">A Windows principal can impersonate another user, which means that the principal can access a resource on a user's behalf while presenting the identity that belongs to that user.</span></span>  
+  
+-   <span data-ttu-id="a8e0c-126">Настраиваемые участники могут определяться приложением любым способом, который необходим для данного конкретного приложения.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-126">Custom principals can be defined by an application in any way that is needed for that particular application.</span></span> <span data-ttu-id="a8e0c-127">При этом можно расширять базовое определение удостоверения и ролей участника.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-127">They can extend the basic notion of the principal's identity and roles.</span></span>  
+  
+ <span data-ttu-id="a8e0c-128">Дополнительные сведения см. в разделе [Объекты Principal и Identity](../../../docs/standard/security/principal-and-identity-objects.md).</span><span class="sxs-lookup"><span data-stu-id="a8e0c-128">For more information, see [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md).</span></span>  
+  
+## <a name="authentication"></a><span data-ttu-id="a8e0c-129">Проверка подлинности</span><span class="sxs-lookup"><span data-stu-id="a8e0c-129">Authentication</span></span>  
+ <span data-ttu-id="a8e0c-130">Проверка подлинности (аутентификация) — это процесс обнаружения и проверки удостоверения участника путем проверки учетных данных пользователя и проверки этих учетных данных в отношении некоторого центра сертификации.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-130">Authentication is the process of discovering and verifying the identity of a principal by examining the user's credentials and validating those credentials against some authority.</span></span> <span data-ttu-id="a8e0c-131">Сведения, полученные во время проверки подлинности, можно напрямую использовать в коде.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-131">The information obtained during authentication is directly usable by your code.</span></span> <span data-ttu-id="a8e0c-132">Для проверки подлинности текущего пользователя и определения, следует ли предоставить этому участнику доступ к коду, можно также использовать безопасность на основе ролей в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-132">You can also use .NET Framework role-based security to authenticate the current user and to determine whether to allow that principal to access your code.</span></span> <span data-ttu-id="a8e0c-133">Примеры проверки подлинности участника для конкретных ролей см. в описании перегрузок метода <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-133">See the overloads of the <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> method for examples of how to authenticate the principal for specific roles.</span></span> <span data-ttu-id="a8e0c-134">Например, можно использовать перегрузку <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType>, чтобы определить, является ли текущий пользователь членом группы «Администраторы».</span><span class="sxs-lookup"><span data-stu-id="a8e0c-134">For example, you can use the <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> overload to determine if the current user is a member of the Administrators group.</span></span>  
+  
+ <span data-ttu-id="a8e0c-135">В настоящее время используется ряд механизмов проверки подлинности, многие из которых могут быть использованы вместе с безопасностью на основе ролей в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-135">A variety of authentication mechanisms are used today, many of which can be used with .NET Framework role-based security.</span></span> <span data-ttu-id="a8e0c-136">Некоторые из наиболее часто используемых механизмов — это обычная проверка подлинности, дайджест-проверка подлинности, проверка подлинности по паспорту, проверка подлинности операционной системы (например, NTLM или Kerberos) или механизмы, определяемые приложением.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-136">Some of the most commonly used mechanisms are basic, digest, Passport, operating system (such as NTLM or Kerberos), or application-defined mechanisms.</span></span>  
+  
+### <a name="example"></a><span data-ttu-id="a8e0c-137">Пример</span><span class="sxs-lookup"><span data-stu-id="a8e0c-137">Example</span></span>  
+ <span data-ttu-id="a8e0c-138">Следующий пример требует, чтобы активный участник был администратором.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-138">The following example requires that the active principal be an administrator.</span></span> <span data-ttu-id="a8e0c-139">Параметр `name` имеет значение `null`, что позволяет любому пользователю с правами администратора проходить требование.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-139">The `name` parameter is `null`, which allows any user who is an administrator to pass the demand.</span></span>  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], прозрачность безопасности является механизмом применения по умолчанию.  Прозрачность безопасности отделяет код, выполняемый в рамках приложения, от кода, выполняемого в рамках инфраструктуры.  Дополнительные сведения см. в разделе [Security\-Transparent Code](../../../docs/framework/misc/security-transparent-code.md).  
-  
- Так как они используют одну и ту же модель и инфраструктуру, управление доступом для кода и безопасность на основе ролей совместно используют некоторые базовые понятия, которые описываются в этом разделе.  Убедитесь, что вы знакомы с этими понятиями, прежде чем приступить к чтению документации по управлению доступом для кода и безопасности на основе ролей в .NET Framework.  
-  
-## Разрешения безопасности  
- Среда CLR позволяет коду выполнять только те операции, на которые у него есть разрешение.  Среда выполнения использует объекты, называемые разрешениями, для обеспечения выполнения ограничений в управляемом коде.  Эта среда выполнения предоставляет встроенные классы разрешений в нескольких пространствах имен, а также поддерживает проектирование и реализацию настраиваемых классов разрешений.  
-  
- Существует два типа разрешений, каждый из которых имеет свое определенное назначение.  
-  
--   Разрешения для доступа к коду контролируют доступ к защищенному ресурсу или возможность выполнения защищенной операции.  
-  
--   Права доступа на основе ролей предоставляют механизм для определения, имеет ли пользователь \(или агент, действующий от имени пользователя\) конкретное удостоверение или является ли он членом указанной роли.  <xref:System.Security.Permissions.PrincipalPermission> — это единственное разрешение безопасности на основе ролей.  
-  
- Разрешения безопасности могут определяться в форме класса разрешений \(принудительной безопасности\) или атрибута, представляющего класс разрешений \(декларативной безопасности\).  Базовый класс для разрешений безопасности — <xref:System.Security.CodeAccessPermission?displayProperty=fullName>; базовый класс для атрибутов разрешений безопасности — <xref:System.Security.Permissions.CodeAccessSecurityAttribute?displayProperty=fullName>.  
-  
- Приложению в виде сборки предоставляется набор разрешений во время его загрузки в домен приложения.  Предоставление прав обычно выполняется с помощью заранее заданных наборов разрешений, определяемых методом <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=fullName>.  Набор прав определяет разрешения, которыми обладает код.  Среда выполнения предоставляет разрешения на основе исходного расположения кода \(например, на локальном компьютере, в местной интрасети или в Интернете\).  Коду также могут быть предоставлены специальные разрешения, если он загружается в песочницу.  Дополнительные сведения о выполнении кода в песочнице см. в разделе [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
-  
- Далее приведены основные способы использования разрешений.  
-  
--   Код библиотеки может требовать, чтобы вызывающие его объекты имели определенные разрешения.  Если вы помещаете <xref:System.Security.CodeAccessPermission.Demand%2A> для разрешения в своем коде, любой код, использующий ваш код, должен иметь это разрешение для запуска.  Требования можно использовать для определения наличия у вызывающих объектов доступа к определенным ресурсам или для обнаружения удостоверения вызывающего объекта.  
-  
--   Код может использовать разрешения для запрета доступа к ресурсам, которые необходимо защитить.  Вы можете использовать <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> для указания ограниченного набора разрешений, неявно запрещая все остальные разрешения.  Тем не менее, мы не рекомендуем использовать <xref:System.Security.Permissions.SecurityAction> для запрета доступа с целью защиты от умышленного злоупотребления.  Вызванные сборки, имеющие неявно отклоненные разрешения в своем наборе разрешений, могут переопределять отклоненные разрешения, выполнив <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> для всех разрешений, которые они хотят использовать.  Например, если предоставлено только разрешение <xref:System.Security.Permissions.UIPermission>, и вызывается сборка, изначально имеющая разрешение <xref:System.Security.Permissions.FileIOPermission>, эта сборка может просто выполнить <xref:System.Security.Permissions.SecurityAction> для <xref:System.Security.Permissions.FileIOPermission>, а затем выполнить операции с файлами.  Единственный способ надежно защитить ресурсы от ненадежного кода в связанных сборках заключается в выполнении этого кода с набором прав, который не включает эти разрешения.  
-  
-### Разрешения для доступа к коду  
- Разрешения для доступа к коду — это объекты разрешений, которые используются для защиты ресурсов и операций от несанкционированного использования.  Они являются основной частью механизма среды CLR для применения ограничений безопасности в управляемом коде.  
-  
- Каждое разрешение для доступа к коду представляет одно из следующих прав.  
-  
--   Право на доступ к защищенному ресурсу, такому как файлы или переменные среды.  
-  
--   Право выполнять защищенную операцию, такую как доступ к неуправляемому коду.  
-  
- Все разрешения для доступа к коду могут быть запрошены или затребованы кодом, а среда выполнения определяет, какие разрешения, если таковые имеются, следует предоставить коду.  
-  
- Каждое разрешение для доступа к коду является производным от класса <xref:System.Security.CodeAccessPermission>, что означает, что все разрешения для доступа к коду имеют методы, такие как **Demand**, **Assert**, **Deny**, **PermitOnly**, **IsSubsetOf**, **Intersect** и **Union**.  
-  
-> [!IMPORTANT]
->  В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] удалена поддержка среды выполнения для принудительного применения запросов разрешений <xref:System.Security.Permissions.SecurityAction>, <xref:System.Security.Permissions.SecurityAction>, <xref:System.Security.Permissions.SecurityAction> и <xref:System.Security.Permissions.SecurityAction>.  Эти запросы не должны использоваться в коде, основанном на [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] или более поздней версии.  Дополнительные сведения об этом и других изменениях см. в разделе [Изменения системы безопасности](../../../docs/framework/security/security-changes.md).  
-  
-### Разрешения безопасности на основе ролей  
- <xref:System.Security.Permissions.PrincipalPermission> — это разрешение безопасности на основе ролей, которое может использоваться для определения, имеет ли пользователь указанное удостоверение, или является ли он членом указанной роли.  **PrincipalPermission** — это единственное разрешение безопасности на основе ролей, предоставляемые библиотекой классов .NET Framework.  
-  
-## Безопасность типа и безопасность  
- Код с безопасностью типа имеет доступ только к областям памяти, авторизованным для доступа.  \(В данном разделе безопасность типа относится исключительно к безопасности типа памяти, и ее не следует путать с безопасностью типа в широком смысле.\) Например, код с безопасностью типа не может читать значения из закрытых полей другого объекта.  Он обращается к типам только строго определенными, допустимыми способами.  
-  
- Во время JIT\-компиляции дополнительный процесс проверки проверяет метаданные и MSIL метода для JIT\-компиляции в машинный код, чтобы убедиться, что они являются типобезопасными.  Этот процесс не выполняется, если код имеет разрешение на пропуск проверки.  Дополнительные сведения о проверке см. в разделе [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md).  
-  
- Хотя проверка безопасности типа не обязательна для запуска управляемого кода, безопасность типа играет ключевую роль в изоляции сборок и обеспечении безопасности.  Если код является типобезопасным, среда CLR может полностью изолировать сборки друг от друга.  Эта изоляция помогает обеспечить отсутствие отрицательного влияния сборок друг на друга и повышает надежность приложений.  Компоненты с безопасностью типа могут безопасно выполняться в одном процессе, даже если они имеют доверие на разных уровнях.  Если код не является типобезопасным, могут возникать нежелательные побочные эффекты.  Например, среда выполнения не может препятствовать вызову машинного \(неуправляемого\) кода со стороны управляемого кода и выполнению управляемым кодом нежелательных операций.  Если код является типобезопасным, механизм обеспечения безопасности среды выполнения гарантирует, что он не будет иметь доступ к машинному коду при отсутствии соответствующего разрешения.  Чтобы код без безопасности типа мог запускаться, ему необходимо предоставить разрешение <xref:System.Security.Permissions.SecurityPermission> с переданным элементом перечисления <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A>.  
-  
- Дополнительные сведения см. в разделе [NIB: Writing Verifiably Type\-Safe Code](http://msdn.microsoft.com/ru-ru/d18f10ef-3b48-4f47-8726-96714021547b).  
-  
-## Участник  
- Участник представляет удостоверение и роль пользователя и действует от имени пользователя.  Безопасность на основе ролей в .NET Framework поддерживает три вида участников.  
-  
--   Универсальные участники представляют пользователей и роли, которые существуют независимо от пользователей и ролей Windows.  
-  
--   Участники Windows представляют пользователей Windows и их роли \(или их группы Windows\).  Участник Windows может олицетворять другого пользователя, что означает, что этому участнику разрешен доступ к ресурсу от имени пользователя при предоставлении удостоверения, которое принадлежит этому пользователю.  
-  
--   Настраиваемые участники могут определяться приложением любым способом, который необходим для данного конкретного приложения.  При этом можно расширять базовое определение удостоверения и ролей участника.  
-  
- Дополнительные сведения см. в разделе [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md).  
-  
-## Аутентификация  
- Проверка подлинности \(аутентификация\) — это процесс обнаружения и проверки удостоверения участника путем проверки учетных данных пользователя и проверки этих учетных данных в отношении некоторого центра сертификации.  Сведения, полученные во время проверки подлинности, можно напрямую использовать в коде.  Для проверки подлинности текущего пользователя и определения, следует ли предоставить этому участнику доступ к коду, можно также использовать безопасность на основе ролей в .NET Framework.  Примеры проверки подлинности участника для конкретных ролей см. в описании перегрузок метода <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=fullName>.  Например, можно использовать перегрузку <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=fullName>, чтобы определить, является ли текущий пользователь членом группы «Администраторы».  
-  
- В настоящее время используется ряд механизмов проверки подлинности, многие из которых могут быть использованы вместе с безопасностью на основе ролей в .NET Framework.  Некоторые из наиболее часто используемых механизмов — это обычная проверка подлинности, дайджест\-проверка подлинности, проверка подлинности по паспорту, проверка подлинности операционной системы \(например, NTLM или Kerberos\) или механизмы, определяемые приложением.  
-  
-### Пример  
- Следующий пример требует, чтобы активный участник был администратором.  Параметр `name` имеет значение `null`, что позволяет любому пользователю с правами администратора проходить требование.  
-  
-> [!NOTE]
->  В Windows Vista привилегии пользователя определяются контролем учетных записей \(UAC\).  Члену встроенной группы "Администраторы" присваивается два маркера доступа на время выполнения: маркер доступа обычного пользователя и маркер доступа администратора.  По умолчанию назначена роль обычного пользователя.  Чтобы выполнить код, требующий прав администратора, необходимо сначала повысить права от прав стандартного пользователя до прав администратора.  Это можно сделать при запуске приложения, , щелкнув значок приложения правой кнопкой мыши и указав, что приложение должно запускаться от имени администратора.  
+>  <span data-ttu-id="a8e0c-140">В Windows Vista привилегии пользователя определяются контролем учетных записей (UAC).</span><span class="sxs-lookup"><span data-stu-id="a8e0c-140">In Windows Vista, User Account Control (UAC) determines the privileges of a user.</span></span> <span data-ttu-id="a8e0c-141">Члену встроенной группы "Администраторы" присваивается два маркера доступа на время выполнения: маркер доступа обычного пользователя и маркер доступа администратора.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-141">If you are a member of the Built-in Administrators group, you are assigned two run-time access tokens: a standard user access token and an administrator access token.</span></span> <span data-ttu-id="a8e0c-142">По умолчанию назначена роль обычного пользователя.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-142">By default, you are in the standard user role.</span></span> <span data-ttu-id="a8e0c-143">Чтобы выполнить код, требующий прав администратора, необходимо сначала повысить права от прав стандартного пользователя до прав администратора.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-143">To execute the code that requires you to be an administrator, you must first elevate your privileges from standard user to administrator.</span></span> <span data-ttu-id="a8e0c-144">Это можно сделать при запуске приложения, , щелкнув значок приложения правой кнопкой мыши и указав, что приложение должно запускаться от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-144">You can do this when you start an application by right-clicking the application icon and indicating that you want to run as an administrator.</span></span>  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
  [!code-vb[Classic PrincipalPermission Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/VB/source.vb#1)]  
   
- Следующий пример демонстрирует, как определить удостоверение участника и доступные для него роли.  Приложение в этом примере должно проверять, что текущий пользователь имеет роль, которая позволяет использовать приложение.  
+ <span data-ttu-id="a8e0c-145">Следующий пример демонстрирует, как определить удостоверение участника и доступные для него роли.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-145">The following example demonstrates how to determine the identity of the principal and the roles available to the principal.</span></span> <span data-ttu-id="a8e0c-146">Приложение в этом примере должно проверять, что текущий пользователь имеет роль, которая позволяет использовать приложение.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-146">An application of this example might be to confirm that the current user is in a role you allow for using your application.</span></span>  
   
  [!code-cpp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CPP/source.cpp#1)]
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## Авторизация  
- Авторизация — это процесс определения, разрешено ли участнику выполнять запрошенное действие.  Авторизация происходит после проверки подлинности и использует сведения об удостоверении и ролях участника, чтобы определить, к каким ресурсам имеет доступ этот участник.  Для реализации авторизации можно использовать безопасность на основе ролей в .NET Framework.  
-  
-## Вопросы безопасности, связанные с использованием ключевых слов internal virtual  
- Никогда не следует строить безопасность приложения на основе члена, помеченного с помощью модификатора [internal](../Topic/internal%20\(C%23%20Reference\).md) [virtual](../Topic/virtual%20\(C%23%20Reference\).md) в C\# \(модификатора [Overloads](../Topic/Overloads%20\(Visual%20Basic\).md) [Overridable](../Topic/Overridable%20\(Visual%20Basic\).md) [Friend](../Topic/Friend%20\(Visual%20Basic\).md) в Visual Basic\).  Хотя члены, помеченные этими модификаторами, могут быть переопределены только другими членами в текущей сборке, данное правило применяется только в языках C\# и Visual Basic.  Среда выполнения не обеспечивает применение этого правила.  Таким образом, можно переопределить элементы, отмеченные как **internal virtual** в C\# и **Overloads Overridable Friend** в Visual Basic, с помощью MSIL или любого другого языка, который не обеспечивает применение этого правила.  
-  
-## См. также  
- [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)
+## <a name="authorization"></a><span data-ttu-id="a8e0c-147">Авторизация</span><span class="sxs-lookup"><span data-stu-id="a8e0c-147">Authorization</span></span>  
+ <span data-ttu-id="a8e0c-148">Авторизация — это процесс определения, разрешено ли участнику выполнять запрошенное действие.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-148">Authorization is the process of determining whether a principal is allowed to perform a requested action.</span></span> <span data-ttu-id="a8e0c-149">Авторизация происходит после проверки подлинности и использует сведения об удостоверении и ролях участника, чтобы определить, к каким ресурсам имеет доступ этот участник.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-149">Authorization occurs after authentication and uses information about the principal's identity and roles to determine what resources the principal can access.</span></span> <span data-ttu-id="a8e0c-150">Для реализации авторизации можно использовать безопасность на основе ролей в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a8e0c-150">You can use .NET Framework role-based security to implement authorization.</span></span>

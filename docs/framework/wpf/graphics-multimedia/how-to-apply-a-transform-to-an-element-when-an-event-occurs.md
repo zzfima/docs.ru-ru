@@ -1,48 +1,53 @@
 ---
-title: "Практическое руководство. Применение преобразования к элементу при возникновении события | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "графика, преобразования в качестве реакции на события"
-  - "LayoutTransform - свойство"
-  - "свойства, LayoutTransform"
-  - "свойства, RenderTransform"
-  - "RenderTransform - свойство"
-  - "преобразования в качестве реакции на события"
+title: "Практическое руководство. Применение преобразования к элементу при возникновении события"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], transformations as event responses
+- properties [WPF], LayoutTransform
+- transformations as event responses [WPF]
+- properties [WPF], RenderTransform
+- LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Применение преобразования к элементу при возникновении события
-В этом примере демонстрируется применение <xref:System.Windows.Media.ScaleTransform> при возникновении события.  Показанная здесь концепция совпадает с той, которая используется для применения других типов преобразований.  Дополнительные сведения о доступных типах преобразований см. в описании класса <xref:System.Windows.Media.Transform> или в разделе [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a><span data-ttu-id="b5d4e-102">Практическое руководство. Применение преобразования к элементу при возникновении события</span><span class="sxs-lookup"><span data-stu-id="b5d4e-102">How to: Apply a Transform to an Element When an Event Occurs</span></span>
+<span data-ttu-id="b5d4e-103">В этом примере показано, как применить <xref:System.Windows.Media.ScaleTransform> при возникновении события.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-103">This example shows how to apply a <xref:System.Windows.Media.ScaleTransform> when an event occurs.</span></span> <span data-ttu-id="b5d4e-104">Показанный подход аналогичен тому, который используется при применении других типов преобразований.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-104">The concept that is shown here is the same that you use for applying other types of transformations.</span></span> <span data-ttu-id="b5d4e-105">Дополнительные сведения о доступных типах преобразований см. в разделе <xref:System.Windows.Media.Transform> класса или [преобразует Обзор](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b5d4e-105">For more information about the available types of transformations, see the <xref:System.Windows.Media.Transform> class or [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).</span></span>  
   
- Существует два способа применения преобразования к элементу.  
+ <span data-ttu-id="b5d4e-106">Преобразование можно применить к элементу любым из двух следующих способов:</span><span class="sxs-lookup"><span data-stu-id="b5d4e-106">You can apply a transform to an element in either of these two ways:</span></span>  
   
--   Если *не* требуется, чтобы преобразование оказывало влияние на макет, то следует использовать свойство <xref:System.Windows.UIElement.RenderTransform%2A> элемента.  
+-   <span data-ttu-id="b5d4e-107">Если сделать *не* требуется преобразование влияет на макет, используйте <xref:System.Windows.UIElement.RenderTransform%2A> свойство элемента.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-107">If you do *not* want the transform to affect layout, use the <xref:System.Windows.UIElement.RenderTransform%2A> property of the element.</span></span>  
   
--   Если необходимо, чтобы преобразование оказывало влияние на макет, то следует использовать свойство <xref:System.Windows.FrameworkElement.LayoutTransform%2A> элемента.  
+-   <span data-ttu-id="b5d4e-108">Преобразование, влияет на макет, используйте <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойство элемента.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-108">If you do want the transform to affect layout, use the <xref:System.Windows.FrameworkElement.LayoutTransform%2A> property of the element.</span></span>  
   
- В следующем примере <xref:System.Windows.Media.ScaleTransform> применяется к свойству <xref:System.Windows.UIElement.RenderTransform%2A> кнопки.  При наведении указателя мыши на кнопку свойства <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> у <xref:System.Windows.Media.ScaleTransform> устанавливаются в значение `2`, что приводит к увеличению кнопки.  При перемещении указателя мыши с кнопки свойства <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> устанавливаются в значение `1`, что восстанавливает исходный размер кнопки.  
+ <span data-ttu-id="b5d4e-109">В следующем примере применяется <xref:System.Windows.Media.ScaleTransform> для <xref:System.Windows.UIElement.RenderTransform%2A> свойства кнопки.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-109">The following example applies a <xref:System.Windows.Media.ScaleTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property of a button.</span></span> <span data-ttu-id="b5d4e-110">При перемещении указателя мыши на кнопку <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойства <xref:System.Windows.Media.ScaleTransform> присваиваются `2`, что приводит к увеличению кнопки.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-110">When the mouse moves over the button, the <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> properties of the <xref:System.Windows.Media.ScaleTransform> are set to `2`, which causes the button to become larger.</span></span> <span data-ttu-id="b5d4e-111">При перемещении указателя мыши с кнопки <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> присваивается значение `1`, которое вызывает кнопку, чтобы вернуться к исходному размеру.</span><span class="sxs-lookup"><span data-stu-id="b5d4e-111">When the mouse moves off the button, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> and <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> are set to `1`, which causes the button to return to its original size.</span></span>  
   
-## Пример  
- [!code-xml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
+## <a name="example"></a><span data-ttu-id="b5d4e-112">Пример</span><span class="sxs-lookup"><span data-stu-id="b5d4e-112">Example</span></span>  
+ [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
   
  [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
  [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
-## См. также  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.ScaleTransform>   
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)   
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b5d4e-113">См. также</span><span class="sxs-lookup"><span data-stu-id="b5d4e-113">See Also</span></span>  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.ScaleTransform>  
+ [<span data-ttu-id="b5d4e-114">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="b5d4e-114">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [<span data-ttu-id="b5d4e-115">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="b5d4e-115">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [<span data-ttu-id="b5d4e-116">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="b5d4e-116">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

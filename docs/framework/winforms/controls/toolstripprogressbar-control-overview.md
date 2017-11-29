@@ -1,44 +1,44 @@
 ---
-title: "Общие сведения об элементе управления ToolStripProgressBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ToolStripProgressBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления хода выполнения"
-  - "панели инструментов [Windows Forms], индикаторы выполнения"
-  - "ToolStripProgressBar - элемент управления [Windows Forms], сведения об элементе управления ToolStripProgressBar"
+title: "Общие сведения об элементе управления ToolStripProgressBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ToolStripProgressBar
+helpviewer_keywords:
+- toolbars [Windows Forms], progress bars
+- progress controls [Windows Forms]
+- ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Общие сведения об элементе управления ToolStripProgressBar
-Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> соединяет в себе функции нависания и отрисовки всех элементов управления <xref:System.Windows.Forms.ToolStrip> со стандартной функцией отслеживания выполнения процесса.  Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> обычно размещается в элементе управления <xref:System.Windows.Forms.StatusStrip> и реже в <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="toolstripprogressbar-control-overview"></a><span data-ttu-id="f6ea7-102">Общие сведения об элементе управления ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="f6ea7-102">ToolStripProgressBar Control Overview</span></span>
+<span data-ttu-id="f6ea7-103"><xref:System.Windows.Forms.ToolStripProgressBar> Объединяет нависание и функциональные возможности визуализации всех <xref:System.Windows.Forms.ToolStrip> элементов управления с его обычные функциональные возможности отслеживания выполнения процесса.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-103">The <xref:System.Windows.Forms.ToolStripProgressBar> combines the rafting and rendering functionality of all <xref:System.Windows.Forms.ToolStrip> controls with its typical process-tracking functionality.</span></span> <span data-ttu-id="f6ea7-104">Объект <xref:System.Windows.Forms.ToolStripProgressBar> наиболее обычно размещается <xref:System.Windows.Forms.StatusStrip>и менее часто, <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-104">A <xref:System.Windows.Forms.ToolStripProgressBar> is most usually hosted by <xref:System.Windows.Forms.StatusStrip>, and less frequently by a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
- Хотя элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления предыдущих версий и расширяет его функциональные возможности, при необходимости элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> можно сохранить для обратной совместимости и использования в будущем.  
+ <span data-ttu-id="f6ea7-105">Несмотря на то что <xref:System.Windows.Forms.ToolStripProgressBar> заменяет и расширяет его функциональные возможности для управления в предыдущих версиях <xref:System.Windows.Forms.ToolStripProgressBar> при необходимости можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-105">Although <xref:System.Windows.Forms.ToolStripProgressBar> replaces and adds functionality to the control in previous versions, <xref:System.Windows.Forms.ToolStripProgressBar> is retained for both backward compatibility and future use if desired.</span></span>  
   
-### Важные члены элемента управления ToolStripProgressBar  
+### <a name="important-toolstripprogressbar-members"></a><span data-ttu-id="f6ea7-106">ToolStripProgressBar важные члены</span><span class="sxs-lookup"><span data-stu-id="f6ea7-106">Important ToolStripProgressBar Members</span></span>  
   
-|Имя|Описание|  
-|---------|--------------|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|Получает или задает значение задержки между обновлениями отображения <xref:System.Windows.Forms.ProgressBarStyle> в миллисекундах.|  
-|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|Получает или задает верхнюю границу диапазона, устанавливаемого для данного элемента управления <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|Получает или задает нижнюю границу диапазона, устанавливаемого для данного элемента управления <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|Получает или задает стиль, используемый элементом управления <xref:System.Windows.Forms.ToolStripProgressBar> для отображения хода выполнения операции.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|Получает или устанавливает текущее значение <xref:System.Windows.Forms.ToolStripProgressBar>.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|Увеличивает текущую позицию индикатора хода выполнения на значение свойства <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>.|  
+|<span data-ttu-id="f6ea7-107">Имя</span><span class="sxs-lookup"><span data-stu-id="f6ea7-107">Name</span></span>|<span data-ttu-id="f6ea7-108">Описание</span><span class="sxs-lookup"><span data-stu-id="f6ea7-108">Description</span></span>|  
+|----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|<span data-ttu-id="f6ea7-109">Возвращает или задает значение, представляющее задержку между каждым <xref:System.Windows.Forms.ProgressBarStyle.Marquee> отображения обновления, в миллисекундах.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-109">Gets or sets a value representing the delay between each <xref:System.Windows.Forms.ProgressBarStyle.Marquee> display update, in milliseconds.</span></span>|  
+|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|<span data-ttu-id="f6ea7-110">Возвращает или задает верхнюю границу диапазона, определенные для данного <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-110">Gets or sets the upper bound of the range that is defined for this <xref:System.Windows.Forms.ToolStripProgressBar>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|<span data-ttu-id="f6ea7-111">Возвращает или задает нижнюю границу диапазона, определенные для данного <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-111">Gets or sets the lower bound of the range that is defined for this <xref:System.Windows.Forms.ToolStripProgressBar>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|<span data-ttu-id="f6ea7-112">Возвращает или задает стиль, <xref:System.Windows.Forms.ToolStripProgressBar> используется для отображения хода выполнения операции.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-112">Gets or sets the style that the <xref:System.Windows.Forms.ToolStripProgressBar> uses to display the progress of an operation.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|<span data-ttu-id="f6ea7-113">Возвращает или задает текущее значение <xref:System.Windows.Forms.ToolStripProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-113">Gets or sets the current value of the <xref:System.Windows.Forms.ToolStripProgressBar>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|<span data-ttu-id="f6ea7-114">Перемещает текущую позицию индикатора хода выполнения в зависимости от объема <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="f6ea7-114">Advances the current position of the progress bar by the amount of the <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> property.</span></span>|  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="f6ea7-115">См. также</span><span class="sxs-lookup"><span data-stu-id="f6ea7-115">See Also</span></span>  
  <xref:System.Windows.Forms.ToolStripProgressBar>

@@ -1,58 +1,59 @@
 ---
-title: "How to: Store Asymmetric Keys in a Key Container | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "cryptography [.NET Framework], asymmetric keys"
-  - "storing asymmetric keys"
-  - "keys, asymmetric"
-  - "encryption keys"
-  - "keys, storing in key containers"
-  - "asymmetric keys [.NET Framework]"
-  - "encryption [.NET Framework], asymmetric keys"
-  - "decryption keys"
+title: "Практическое руководство. Хранение асимметричных ключей в контейнере ключей"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cryptography [.NET Framework], asymmetric keys
+- storing asymmetric keys
+- keys, asymmetric
+- encryption keys
+- keys, storing in key containers
+- asymmetric keys [.NET Framework]
+- encryption [.NET Framework], asymmetric keys
+- decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Store Asymmetric Keys in a Key Container
-Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере.  Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа.  Дополнительные сведения о контейнерах ключей см. в разделе [Understanding Machine\-Level and User\-Level RSA Key Containers](../Topic/Understanding%20Machine-Level%20and%20User-Level%20RSA%20Key%20Containers.md).  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a><span data-ttu-id="32de2-102">Практическое руководство. Хранение асимметричных ключей в контейнере ключей</span><span class="sxs-lookup"><span data-stu-id="32de2-102">How to: Store Asymmetric Keys in a Key Container</span></span>
+<span data-ttu-id="32de2-103">Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="32de2-103">Asymmetric private keys should never be stored verbatim or in plain text on the local computer.</span></span> <span data-ttu-id="32de2-104">Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа.</span><span class="sxs-lookup"><span data-stu-id="32de2-104">If you need to store a private key, you should use a key container.</span></span> <span data-ttu-id="32de2-105">Дополнительные сведения о контейнерах ключей см. в разделе [Общие сведения о контейнерах ключей RSA уровня компьютера и пользователя](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).</span><span class="sxs-lookup"><span data-stu-id="32de2-105">For more information on key containers, see [Understanding Machine-Level and User-Level RSA Key Containers](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).</span></span>  
   
-### Порядок создания асимметричного ключа и сохранения его в контейнере ключей  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a><span data-ttu-id="32de2-106">Порядок создания асимметричного ключа и сохранения его в контейнере ключей</span><span class="sxs-lookup"><span data-stu-id="32de2-106">To create an asymmetric key and save it in a key container</span></span>  
   
-1.  Создайте новый экземпляр класса <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое должно вызывать контейнер ключей, в поле <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=fullName>.  
+1.  <span data-ttu-id="32de2-107">Создать новый экземпляр <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое должно вызывать контейнер ключей для <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> поля.</span><span class="sxs-lookup"><span data-stu-id="32de2-107">Create a new instance of a <xref:System.Security.Cryptography.CspParameters> class and pass the name that you want to call the key container to the <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> field.</span></span>  
   
-2.  Создайте новый экземпляр класса, производного от класса <xref:System.Security.Cryptography.AsymmetricAlgorithm> \(обычно это **RSACryptoServiceProvider** или **DSACryptoServiceProvider**\) и передайте ранее созданный объект **CspParameters** в его конструктор.  
+2.  <span data-ttu-id="32de2-108">Создать новый экземпляр класса, производного от <xref:System.Security.Cryptography.AsymmetricAlgorithm> класса (обычно **RSACryptoServiceProvider** или **DSACryptoServiceProvider**) и передайте ранее созданный  **CspParameters** объекта в его конструктор.</span><span class="sxs-lookup"><span data-stu-id="32de2-108">Create a new instance of a class that derives from the <xref:System.Security.Cryptography.AsymmetricAlgorithm> class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-### Порядок удаления ключа из контейнера ключей  
+### <a name="to-delete-the-key-from-a-key-container"></a><span data-ttu-id="32de2-109">Порядок удаления ключа из контейнера ключей</span><span class="sxs-lookup"><span data-stu-id="32de2-109">To delete the key from a key container</span></span>  
   
-1.  Создайте новый экземпляр класса **CspParameters** и передайте имя, которое должно вызывать контейнер ключей, в поле **CspParameters.KeyContainerName**.  
+1.  <span data-ttu-id="32de2-110">Создайте новый экземпляр класса **CspParameters** и передайте имя, которое должно вызывать контейнер ключей, в поле **CspParameters.KeyContainerName**.</span><span class="sxs-lookup"><span data-stu-id="32de2-110">Create a new instance of a **CspParameters** class and pass the name that you want to call the key container to the **CspParameters.KeyContainerName** field.</span></span>  
   
-2.  Создайте новый экземпляр класса, производного от класса **AsymmetricAlgorithm** \(обычно это **RSACryptoServiceProvider** или **DSACryptoServiceProvider**\) и передайте ранее созданный объект **CspParameters** в его конструктор.  
+2.  <span data-ttu-id="32de2-111">Создайте новый экземпляр класса, производного от класса **AsymmetricAlgorithm** (обычно это **RSACryptoServiceProvider** или **DSACryptoServiceProvider**) и передайте ранее созданный объект **CspParameters** в его конструктор.</span><span class="sxs-lookup"><span data-stu-id="32de2-111">Create a new instance of a class that derives from the **AsymmetricAlgorithm** class (usually **RSACryptoServiceProvider** or **DSACryptoServiceProvider**) and pass the previously created **CspParameters** object to its constructor.</span></span>  
   
-3.  Установите для свойства **PersistKeyInCSP** класса, являющегося производным от **AsymmetricAlgorithm**, значение **false** \(**False** в Visual Basic\).  
+3.  <span data-ttu-id="32de2-112">Установите для свойства **PersistKeyInCSP** класса, являющегося производным от **AsymmetricAlgorithm**, значение **false** (**False** в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="32de2-112">Set the **PersistKeyInCSP** property of the class that derives from **AsymmetricAlgorithm** to **false** (**False** in Visual Basic).</span></span>  
   
-4.  Вызовите метод **Clear** класса, производного от **AsymmetricAlgorithm**.  Этот метод освобождает все ресурсы класса и очищает контейнер ключей.  
+4.  <span data-ttu-id="32de2-113">Вызовите метод **Clear** класса, производного от **AsymmetricAlgorithm**.</span><span class="sxs-lookup"><span data-stu-id="32de2-113">Call the **Clear** method of the class that derives from **AsymmetricAlgorithm**.</span></span> <span data-ttu-id="32de2-114">Этот метод освобождает все ресурсы класса и очищает контейнер ключей.</span><span class="sxs-lookup"><span data-stu-id="32de2-114">This method releases all resources of the class and clears the key container.</span></span>  
   
-## Пример  
- В следующем примере показано, как создать асимметричный ключ, сохранить его в контейнере ключей, затем извлечь ключ и удалить его из контейнера.  
+## <a name="example"></a><span data-ttu-id="32de2-115">Пример</span><span class="sxs-lookup"><span data-stu-id="32de2-115">Example</span></span>  
+ <span data-ttu-id="32de2-116">В следующем примере показано, как создать асимметричный ключ, сохранить его в контейнере ключей, затем извлечь ключ и удалить его из контейнера.</span><span class="sxs-lookup"><span data-stu-id="32de2-116">The following example demonstrates how to create an asymmetric key, save it in a key container, retrieve the key at a later time, and delete the key from the container.</span></span>  
   
- Обратите внимание, что код в методах `GenKey_SaveInContainer` и `GetKeyFromContainer` совпадает.  Если указать имя контейнера ключей для объекта <xref:System.Security.Cryptography.CspParameters> и передать его в объект <xref:System.Security.Cryptography.AsymmetricAlgorithm>, когда свойство <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> или <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> имеет значение true, происходит следующее.  Если контейнер ключей с указанным именем не существует, он создается, а ключ сохраняется.  Если контейнер ключей с указанным именем существует, то ключ в этом контейнере автоматически загружается в текущий объект <xref:System.Security.Cryptography.AsymmetricAlgorithm>.  Таким образом, код в методе `GenKey_SaveInContainer` сохраняет ключ, так как он выполняется первым, а код в методе `GetKeyFromContainer` загружает ключ, так как он выполняется вторым.  
+ <span data-ttu-id="32de2-117">Обратите внимание, что код в методах `GenKey_SaveInContainer` и `GetKeyFromContainer` совпадает.</span><span class="sxs-lookup"><span data-stu-id="32de2-117">Notice that code in the `GenKey_SaveInContainer` method and the `GetKeyFromContainer` method is similar.</span></span>  <span data-ttu-id="32de2-118">Если указать имя контейнера ключей для объекта <xref:System.Security.Cryptography.CspParameters> и передать его в объект <xref:System.Security.Cryptography.AsymmetricAlgorithm>, когда свойство <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> или <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> имеет значение true, происходит следующее.</span><span class="sxs-lookup"><span data-stu-id="32de2-118">When you specify a key container name for a <xref:System.Security.Cryptography.CspParameters> object and pass it to an <xref:System.Security.Cryptography.AsymmetricAlgorithm> object with the <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> property or <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> property set to true, the following occurs.</span></span>  <span data-ttu-id="32de2-119">Если контейнер ключей с указанным именем не существует, он создается, а ключ сохраняется.</span><span class="sxs-lookup"><span data-stu-id="32de2-119">If a key container with the specified name does not exist, then one is created and the key is persisted.</span></span>  <span data-ttu-id="32de2-120">Если контейнер ключей с указанным именем существует, то ключ в этом контейнере автоматически загружается в текущий объект <xref:System.Security.Cryptography.AsymmetricAlgorithm>.</span><span class="sxs-lookup"><span data-stu-id="32de2-120">If a key container with the specified name does exist, then the key in the container is automatically loaded into the current <xref:System.Security.Cryptography.AsymmetricAlgorithm> object.</span></span>  <span data-ttu-id="32de2-121">Таким образом, код в методе `GenKey_SaveInContainer` сохраняет ключ, так как он выполняется первым, а код в методе `GetKeyFromContainer` загружает ключ, так как он выполняется вторым.</span><span class="sxs-lookup"><span data-stu-id="32de2-121">Therefore, the code in the `GenKey_SaveInContainer` method persists the key because it is run first, while the code in the `GetKeyFromContainer` method loads the key because it is run second.</span></span>  
   
 ```vb  
 Imports System  
@@ -130,7 +131,6 @@ Public Class StoreKey
         Console.WriteLine("Key deleted.")  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -220,18 +220,18 @@ public class StoreKey
 ```  
   
 ```Output  
-  
-            Ключ добавляется в контейнер:  
-<RSAKeyValue> Информация о ключе А</RSAKeyValue>  
-Ключ извлекается из контейнера:  
-<RSAKeyValue> Информация о ключе А</RSAKeyValue>  
-Ключ удаляется.  Ключ добавляется в контейнер:  
-<RSAKeyValue> Информация о ключе Б</RSAKeyValue>  
-Ключ удаляется.    
+Key added to container:  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key retrieved from container :  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key deleted.  
+Key added to container:  
+<RSAKeyValue> Key Information B</RSAKeyValue>  
+Key deleted.  
 ```  
   
-## См. также  
- [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)   
- [Encrypting Data](../../../docs/standard/security/encrypting-data.md)   
- [Decrypting Data](../../../docs/standard/security/decrypting-data.md)   
- [Службы криптографии](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="32de2-122">См. также</span><span class="sxs-lookup"><span data-stu-id="32de2-122">See Also</span></span>  
+ [<span data-ttu-id="32de2-123">Создание ключей для шифрования и расшифровки</span><span class="sxs-lookup"><span data-stu-id="32de2-123">Generating Keys for Encryption and Decryption</span></span>](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+ [<span data-ttu-id="32de2-124">Шифрование данных</span><span class="sxs-lookup"><span data-stu-id="32de2-124">Encrypting Data</span></span>](../../../docs/standard/security/encrypting-data.md)  
+ [<span data-ttu-id="32de2-125">Расшифровка данных</span><span class="sxs-lookup"><span data-stu-id="32de2-125">Decrypting Data</span></span>](../../../docs/standard/security/decrypting-data.md)  
+ [<span data-ttu-id="32de2-126">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="32de2-126">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

@@ -1,43 +1,26 @@
 ---
-title: "Слишком много клиентов Библиотеки приложения | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Слишком много приложений-клиентов DLL"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID47
+f1_keywords: vbrID47
 ms.assetid: 4b87780b-67ad-4c96-9253-db954a751dad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1abc9ce574de00db42a33cde478ca80be74e61ff
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d4b9278134e937ac8bf4626237954432d727ac0d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="too-many-dll-application-clients"></a>Слишком много приложений-клиентов DLL
-Библиотека динамической компоновки (DLL), для [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] может обеспечить доступ ограниченному числу ведущих приложений. Приложение и другие приложения, которые являются [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] узлов (некоторые из которых может осуществляться приложением) пытаются получить доступ к [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] DLL в то же время.  
+# <a name="too-many-dll-application-clients"></a><span data-ttu-id="4e49a-102">Слишком много приложений-клиентов DLL</span><span class="sxs-lookup"><span data-stu-id="4e49a-102">Too many DLL application clients</span></span>
+<span data-ttu-id="4e49a-103">Библиотека динамической компоновки (DLL) для [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] может обеспечить доступ ограниченному числу ведущих приложений.</span><span class="sxs-lookup"><span data-stu-id="4e49a-103">The dynamic-link library (DLL) for [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] can only accommodate access by a limited number of host applications.</span></span> <span data-ttu-id="4e49a-104">Ваше приложение и другие приложения, которые являются узлами [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] (к некоторым из которых может обращаться ваше приложение), пытаются получить доступ к библиотеке DLL [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] одновременно.</span><span class="sxs-lookup"><span data-stu-id="4e49a-104">Your application and other applications that are [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] hosts (some of which may be accessed by your application) are all attempting to access the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] DLL at the same time.</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4e49a-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4e49a-105">To correct this error</span></span>  
   
--   Уменьшите число открытых приложений, использующих [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+-   <span data-ttu-id="4e49a-106">Уменьшите число открытых приложений, обращающихся к [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4e49a-106">Reduce the number of open applications accessing [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Типы ошибок](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="4e49a-107">См. также</span><span class="sxs-lookup"><span data-stu-id="4e49a-107">See Also</span></span>  
+ [<span data-ttu-id="4e49a-108">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="4e49a-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

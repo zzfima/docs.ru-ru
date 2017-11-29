@@ -1,67 +1,68 @@
 ---
-title: "Order of Events in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "events [Windows Forms], order of"
-  - "focus event order"
-  - "application shutdown event order"
-  - "sequence, of events"
-  - "validation events, order of"
-  - "application startup event order"
+title: "Порядок событий в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [Windows Forms], order of
+- focus event order
+- application shutdown event order
+- sequence [Windows Forms], of events
+- validation events [Windows Forms], order of
+- application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f822133b44f0f32224402463b4332811f8cd52b5
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Order of Events in Windows Forms
-Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь.  Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения.  В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления.  Подробнее о порядке событий щелчков мыши см. в разделе [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  Обзор событий в Windows Forms см. в разделе [Events Overview](../../../docs/framework/winforms/events-overview-windows-forms.md).  Дополнительные сведения о создании обработчиков событий см. в разделе [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+# <a name="order-of-events-in-windows-forms"></a><span data-ttu-id="b1ef7-102">Порядок событий в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b1ef7-102">Order of Events in Windows Forms</span></span>
+<span data-ttu-id="b1ef7-103">Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-103">The order in which events are raised in Windows Forms applications is of particular interest to developers concerned with handling each of these events in turn.</span></span> <span data-ttu-id="b1ef7-104">Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-104">When a situation calls for meticulous handling of events, such as when you are redrawing parts of the form, an awareness of the precise order in which events are raised at run time is necessary.</span></span> <span data-ttu-id="b1ef7-105">В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-105">This topic provides some details on the order of events during several important stages in the lifetime of applications and controls.</span></span> <span data-ttu-id="b1ef7-106">Подробные сведения о порядке событий щелчков мыши см [события мыши в формах Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="b1ef7-106">For specific details about the order of mouse input events, see [Mouse Events in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).</span></span> <span data-ttu-id="b1ef7-107">Обзор событий в Windows Forms см. в разделе [Общие сведения о событиях](../../../docs/framework/winforms/events-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="b1ef7-107">For an overview of events in Windows Forms, see [Events Overview](../../../docs/framework/winforms/events-overview-windows-forms.md).</span></span> <span data-ttu-id="b1ef7-108">Дополнительные сведения о создании обработчиков событий см. в разделе [Обзор обработчиков событий](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="b1ef7-108">For details about the makeup of event handlers, see [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span></span>  
   
-## События запуска и завершения работы приложения  
- Классы <xref:System.Windows.Forms.Form> и <xref:System.Windows.Forms.Control> предоставляют набор событий, связанных с запуском и завершением приложения.  При запуске приложения Windows Forms события запуска главной формы вызываются в следующем порядке:  
+## <a name="application-startup-and-shutdown-events"></a><span data-ttu-id="b1ef7-109">События запуска и завершения работы приложения</span><span class="sxs-lookup"><span data-stu-id="b1ef7-109">Application Startup and Shutdown Events</span></span>  
+ <span data-ttu-id="b1ef7-110">Классы <xref:System.Windows.Forms.Form> и <xref:System.Windows.Forms.Control> предоставляют набор событий, связанных с запуском и завершением приложения.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-110">The <xref:System.Windows.Forms.Form> and <xref:System.Windows.Forms.Control> classes expose a set of events related to application startup and shutdown.</span></span> <span data-ttu-id="b1ef7-111">При запуске приложения Windows Forms события запуска главной формы вызываются в следующем порядке:</span><span class="sxs-lookup"><span data-stu-id="b1ef7-111">When a Windows Forms application starts, the startup events of the main form are raised in the following order:</span></span>  
   
--   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Control.BindingContextChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Load?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Control.VisibleChanged?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Activated?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.Activated?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Shown?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.Shown?displayProperty=nameWithType>  
   
- При закрытии приложения события запуска главной формы вызываются в следующем порядке:  
+ <span data-ttu-id="b1ef7-112">При закрытии приложения события запуска главной формы вызываются в следующем порядке:</span><span class="sxs-lookup"><span data-stu-id="b1ef7-112">When an application closes, the shutdown events of the main form are raised in the following order:</span></span>  
   
--   <xref:System.Windows.Forms.Form.Closing?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosing?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Closed?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.Closed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.FormClosed?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.FormClosed?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=fullName>  
+-   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- Событие <xref:System.Windows.Forms.Application.ApplicationExit> класса <xref:System.Windows.Forms.Application> вызывается после событий завершения работы основной формы.  
+ <span data-ttu-id="b1ef7-113">Событие <xref:System.Windows.Forms.Application.ApplicationExit> класса <xref:System.Windows.Forms.Application> вызывается после событий завершения работы основной формы.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-113">The <xref:System.Windows.Forms.Application.ApplicationExit> event of the <xref:System.Windows.Forms.Application> class is raised after the shutdown events of the main form.</span></span>  
   
 > [!NOTE]
->  В Visual Basic 2005 содержатся дополнительные события приложений, такие как <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=fullName> и <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=fullName>.  
+>  <span data-ttu-id="b1ef7-114">В Visual Basic 2005 содержатся дополнительные события приложений, такие как <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> и <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-114">Visual Basic 2005 includes additional application events, such as <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> and <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.</span></span>  
   
-## События, связанные с фокусом и проверками  
- При изменении фокуса с помощью клавиатуры \(при нажатии клавиш TAB, SHIFT\+TAB и так далее\), путем вызова методов <xref:System.Windows.Forms.Control.Select%2A> или <xref:System.Windows.Forms.Control.SelectNextControl%2A>, либо присвоением свойства <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> текущей форме, события фокуса ввода класса <xref:System.Windows.Forms.Control> происходят в следующем порядке:  
+## <a name="focus-and-validation-events"></a><span data-ttu-id="b1ef7-115">События, связанные с фокусом и проверками</span><span class="sxs-lookup"><span data-stu-id="b1ef7-115">Focus and Validation Events</span></span>  
+ <span data-ttu-id="b1ef7-116">При изменении фокуса с помощью клавиатуры (при нажатии клавиш TAB, SHIFT+TAB и так далее), путем вызова методов <xref:System.Windows.Forms.Control.Select%2A> или <xref:System.Windows.Forms.Control.SelectNextControl%2A>, либо присвоением свойства <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> текущей форме, события фокуса ввода класса <xref:System.Windows.Forms.Control> происходят в следующем порядке:</span><span class="sxs-lookup"><span data-stu-id="b1ef7-116">When you change the focus by using the keyboard (TAB, SHIFT+TAB, and so on), by calling the <xref:System.Windows.Forms.Control.Select%2A> or <xref:System.Windows.Forms.Control.SelectNextControl%2A> methods, or by setting the <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> property to the current form, focus events of the <xref:System.Windows.Forms.Control> class occur in the following order:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -75,7 +76,7 @@ caps.handback.revision: 15
   
 -   <xref:System.Windows.Forms.Control.LostFocus>  
   
- При изменении фокуса ввода с помощью мыши или путем вызова метода  <xref:System.Windows.Forms.Control.Focus%2A> события фокуса класса <xref:System.Windows.Forms.Control> происходят в следующем порядке.  
+ <span data-ttu-id="b1ef7-117">При изменении фокуса ввода с помощью мыши или путем вызова метода  <xref:System.Windows.Forms.Control.Focus%2A> события фокуса класса <xref:System.Windows.Forms.Control> происходят в следующем порядке.</span><span class="sxs-lookup"><span data-stu-id="b1ef7-117">When you change the focus by using the mouse or by calling the <xref:System.Windows.Forms.Control.Focus%2A> method, focus events of the <xref:System.Windows.Forms.Control> class occur in the following order:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -89,5 +90,5 @@ caps.handback.revision: 15
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## См. также  
- [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b1ef7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b1ef7-118">See Also</span></span>  
+ [<span data-ttu-id="b1ef7-119">Создание обработчиков событий в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b1ef7-119">Creating Event Handlers in Windows Forms</span></span>](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

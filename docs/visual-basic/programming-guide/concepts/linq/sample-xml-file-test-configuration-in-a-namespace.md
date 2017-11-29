@@ -1,35 +1,27 @@
 ---
-title: "Пример XML-файла: Конфигурация тестирования в Namespace3 | Документы Microsoft"
+title: "Образец XML-файла: Конфигурация тестирования в Namespace3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 176524376e10ab157c7d6bc33f254b1431fd6478
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 58e0adcad36b42b0dc994a0c878ebd4e069186ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Пример XML-файла. Конфигурация тестирования в пространстве имен
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Это тестовый файл конфигурации. XML располагается в пространстве имен.  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="d9cfb-102">Пример XML-файла. Конфигурация тестирования в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="d9cfb-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="d9cfb-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9cfb-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d9cfb-104">Это тестовый файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="d9cfb-104">This is a test configuration file.</span></span> <span data-ttu-id="d9cfb-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="d9cfb-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="d9cfb-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d9cfb-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,5 +65,5 @@ ms.lasthandoff: 03/13/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d9cfb-107">См. также</span><span class="sxs-lookup"><span data-stu-id="d9cfb-107">See Also</span></span>  
+ [<span data-ttu-id="d9cfb-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d9cfb-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

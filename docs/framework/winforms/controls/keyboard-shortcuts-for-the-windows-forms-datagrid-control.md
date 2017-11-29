@@ -1,64 +1,65 @@
 ---
-title: "Сочетания клавиш для элемента управления DataGrid в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid - элемент управления [Windows Forms], клавиши навигации"
-  - "сочетания клавиш, DataGrid - элемент управления"
+title: "Сочетания клавиш для элемента управления DataGrid в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ac73652d5f017fe43d1745866de38cd7eeccf8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сочетания клавиш для элемента управления DataGrid в Windows Forms
+# <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a><span data-ttu-id="6c998-102">Сочетания клавиш для элемента управления DataGrid в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6c998-102">Keyboard Shortcuts for the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="6c998-103">Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="6c998-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="6c998-104">Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="6c998-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Следующая таблица содержит сочетания клавиш, с помощью которых можно перемещаться в элементе управления Windows Forms <xref:System.Windows.Forms.DataGrid>.  
+ <span data-ttu-id="6c998-105">В следующей таблице перечислены сочетания клавиш, которые можно использовать для навигации в Windows Forms <xref:System.Windows.Forms.DataGrid> управления:</span><span class="sxs-lookup"><span data-stu-id="6c998-105">The following table lists the keyboard shortcuts that can be used for navigation within the Windows Forms <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
-|Действие|Ярлык|  
-|--------------|-----------|  
-|Завершение записи ячейки и перемещение вниз к следующей ячейке.<br /><br /> Если в фокусе ссылка дочерней таблицы, переход к этой таблице.|ВВОД|  
-|Отмена изменения ячейки в режиме редактирования.<br /><br /> Если выбрана бегущая строка, отмена редактирования в строке.|ESC|  
-|Удаление знака, находящегося перед курсором, при редактировании ячейки.|BACKSPACE|  
-|Удаление знака, находящегося непосредственно после курсора, при редактировании ячейки.|DELETE|  
-|Переход к первой ячейке текущей строки.|HOME|  
-|Переход к последней ячейке текущей строки.|END|  
-|Выделение знаков в текущей ячейке и размещение курсора в конце строки.  Такие же операции выполняются при двойном щелчке ячейки.|F2|  
-|Если фокус находится в ячейке, переход к следующей ячейке данной строки.<br /><br /> Если в фокусе последняя ячейка строки, переход к первой ссылке на дочернюю таблицу строки и ее развертывание.<br /><br /> Если в фокусе дочерняя ссылка, переход к следующей дочерней ссылке.<br /><br /> Если в фокусе последняя дочерняя ссылка, перемещение к первой ячейке следующей строки.|TAB|  
-|Если в фокусе ячейка, переход к предыдущей ячейке данной строки.<br /><br /> Если в фокусе первая ячейка строки, переход к последней развернутой ссылке дочерней таблицы предыдущей строки или переход к последней ячейке предыдущей строки.<br /><br /> Если в фокусе дочерняя ссылка, переход к предыдущей дочерней ссылке.<br /><br /> Если в фокусе первая дочерняя ссылка, переход к последней ячейке предыдущей строки.|SHIFT\+TAB|  
-|Переход к следующему элементу управления в последовательности переходов.|CTRL \+ TAB|  
-|Переход к предыдущему элементу управления в последовательности переходов.|CTRL \+ SHIFT \+ TAB|  
-|Переход вверх, к главной таблице, из дочерней таблицы.  Аналогично нажатию кнопки возврата.|ALT \+ СТРЕЛКА ВЛЕВО|  
-|Развертывание ссылок дочерних таблиц.  Сочетание клавиш ALT\+СТРЕЛКА ВНИЗ разворачивает все ссылки, а не только выбранные.|ALT \+ СТРЕЛКА ВНИЗ или CTRL \+ ЗНАК ПЛЮС|  
-|Свертывание ссылок дочерних таблиц.  Сочетание клавиш ALT\+СТРЕЛКА ВВЕРХ сворачивает все ссылки, а не только выбранные.|ALT\+СТРЕЛКА ВВЕРХ или CTRL\+ЗНАК МИНУС|  
-|Переход к самой крайней непустой ячейке в направлении стрелки.|CTRL\+СТРЕЛКА|  
-|Расширение выделения на одну строку в направлении стрелки \(включая ссылки на дочерние таблицы\).|SHIFT\+СТРЕЛКА ВВЕРХ или ВНИЗ|  
-|Расширение выделения до самой крайней непустой строки в направлении стрелки \(включая ссылки на дочерние таблицы\).|CTRL\+SHIFT\+ СТРЕЛКА ВВЕРХ или ВНИЗ|  
-|Переход к верхней левой ячейке.|CTRL \+ HOME|  
-|Переход к нижней правой ячейке.|CTRL \+ END|  
-|Расширение выделения до верхней строки.|CTRL \+ SHIFT \+ HOME|  
-|Расширение выделения до нижней строки.|CTRL \+ SHIFT \+ END|  
-|Выделение текущей строки \(включая ссылки на дочерние таблицы\).|SHIFT \+ Пробел|  
-|Выделение всей сетки \(включая ссылки на дочерние таблицы\).|CTRL\+A|  
-|Отображение родительской строки в дочерней таблице.|CTRL\+PAGE DOWN|  
-|Скрытие родительской строки в дочерней таблице.|CTRL\+PAGE UP|  
-|Расширение выделения на один экран вниз \(включая ссылки на дочерние таблицы\).|SHIFT \+ PAGE DOWN|  
-|Расширение выделения на один экран вверх \(включая ссылки на дочерние таблицы\).|SHIFT \+ PAGE UP|  
-|Вызов метода <xref:System.Windows.Forms.DataGrid.EndEdit%2A> для текущей строки.|CTRL\+ВВОД|  
-|Ввод значения <xref:System.DBNull.Value?displayProperty=fullName> в ячейку в режиме редактирования.|CTRL\+0|  
+|<span data-ttu-id="6c998-106">Действие</span><span class="sxs-lookup"><span data-stu-id="6c998-106">Action</span></span>|<span data-ttu-id="6c998-107">Сочетание клавиш</span><span class="sxs-lookup"><span data-stu-id="6c998-107">Shortcut</span></span>|  
+|------------|--------------|  
+|<span data-ttu-id="6c998-108">Завершите ввод в ячейку и переместить вниз к следующей ячейке.</span><span class="sxs-lookup"><span data-stu-id="6c998-108">Complete a cell entry and move down to the next cell.</span></span><br /><br /> <span data-ttu-id="6c998-109">Если в фокусе ссылка дочерней таблицы, переход к этой таблице.</span><span class="sxs-lookup"><span data-stu-id="6c998-109">If focus is on a child table link, navigate to that table.</span></span>|<span data-ttu-id="6c998-110">ВВОД</span><span class="sxs-lookup"><span data-stu-id="6c998-110">ENTER</span></span>|  
+|<span data-ttu-id="6c998-111">Отмена изменения ячейки, если он находится в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="6c998-111">Cancel cell editing if in cell edit mode.</span></span><br /><br /> <span data-ttu-id="6c998-112">Если в области выделения Отмена редактирования в строке.</span><span class="sxs-lookup"><span data-stu-id="6c998-112">If in marquee selection, cancel editing on the row.</span></span>|<span data-ttu-id="6c998-113">ESC</span><span class="sxs-lookup"><span data-stu-id="6c998-113">ESC</span></span>|  
+|<span data-ttu-id="6c998-114">Удаление знака перед курсором, при редактировании ячейки.</span><span class="sxs-lookup"><span data-stu-id="6c998-114">Delete the character before the insertion point when editing a cell.</span></span>|<span data-ttu-id="6c998-115">СТИРАНИЕ НАЗАД</span><span class="sxs-lookup"><span data-stu-id="6c998-115">BACKSPACE</span></span>|  
+|<span data-ttu-id="6c998-116">Удаление символа после курсора, при редактировании ячейки.</span><span class="sxs-lookup"><span data-stu-id="6c998-116">Delete the character after the insertion point when editing a cell.</span></span>|<span data-ttu-id="6c998-117">DELETE</span><span class="sxs-lookup"><span data-stu-id="6c998-117">DELETE</span></span>|  
+|<span data-ttu-id="6c998-118">Перемещение к первой ячейке в текущей строке.</span><span class="sxs-lookup"><span data-stu-id="6c998-118">Move to the first cell in the current row.</span></span>|<span data-ttu-id="6c998-119">ГЛАВНАЯ</span><span class="sxs-lookup"><span data-stu-id="6c998-119">HOME</span></span>|  
+|<span data-ttu-id="6c998-120">Перейти к последней ячейке в текущей строке.</span><span class="sxs-lookup"><span data-stu-id="6c998-120">Move to the last cell in the current row.</span></span>|<span data-ttu-id="6c998-121">END</span><span class="sxs-lookup"><span data-stu-id="6c998-121">END</span></span>|  
+|<span data-ttu-id="6c998-122">Выделение символов в текущей ячейке и поместите курсор в конец строки.</span><span class="sxs-lookup"><span data-stu-id="6c998-122">Highlight characters in the current cell and position the insertion point at the end of the line.</span></span> <span data-ttu-id="6c998-123">Такое же поведение при двойном щелчке ячейки.</span><span class="sxs-lookup"><span data-stu-id="6c998-123">Same behavior as double-clicking a cell.</span></span>|<span data-ttu-id="6c998-124">F2</span><span class="sxs-lookup"><span data-stu-id="6c998-124">F2</span></span>|  
+|<span data-ttu-id="6c998-125">Если фокус установлен на ячейку, переместите в следующую ячейку в строке.</span><span class="sxs-lookup"><span data-stu-id="6c998-125">If focus is on a cell, move to the next cell in the row.</span></span><br /><br /> <span data-ttu-id="6c998-126">Если фокус находится в последней ячейке в строке, переход к первой ссылке таблицы дочерние строки и ее развертывание.</span><span class="sxs-lookup"><span data-stu-id="6c998-126">If focus is on the last cell in a row, move to the first child table link of the row and expand it.</span></span><br /><br /> <span data-ttu-id="6c998-127">Если фокус находится в дочерних ссылках, переход к следующей ссылке дочерних.</span><span class="sxs-lookup"><span data-stu-id="6c998-127">If focus is on a child link, move to the next child link.</span></span><br /><br /> <span data-ttu-id="6c998-128">Если в фокусе последняя дочерняя ссылка, перемещение к первой ячейке следующей строки.</span><span class="sxs-lookup"><span data-stu-id="6c998-128">If focus is on the last child link, move to the first cell of the next row.</span></span>|<span data-ttu-id="6c998-129">TAB</span><span class="sxs-lookup"><span data-stu-id="6c998-129">TAB</span></span>|  
+|<span data-ttu-id="6c998-130">Если фокус установлен на ячейку, перейти к предыдущей ячейке в строке.</span><span class="sxs-lookup"><span data-stu-id="6c998-130">If focus is on a cell, move to the previous cell in the row.</span></span><br /><br /> <span data-ttu-id="6c998-131">Если фокус находится в первой ячейке в строке, переход к последней ссылке дочерних расширенных таблицы предыдущей строки или переход к последней ячейке предыдущей строки.</span><span class="sxs-lookup"><span data-stu-id="6c998-131">If focus is on the first cell in a row, move to the last expanded child table link of the previous row, or move to the last cell of the previous row.</span></span><br /><br /> <span data-ttu-id="6c998-132">Если фокус находится в дочерних ссылках, переход к предыдущей ссылке дочерних.</span><span class="sxs-lookup"><span data-stu-id="6c998-132">If focus is on a child link, move to the previous child link.</span></span><br /><br /> <span data-ttu-id="6c998-133">Если в фокусе первая дочерняя ссылка, перейти к последней ячейке предыдущей строки.</span><span class="sxs-lookup"><span data-stu-id="6c998-133">If focus is on the first child link, move to the last cell of the previous row.</span></span>|<span data-ttu-id="6c998-134">SHIFT+TAB</span><span class="sxs-lookup"><span data-stu-id="6c998-134">SHIFT+TAB</span></span>|  
+|<span data-ttu-id="6c998-135">Перемещение к следующему элементу управления в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="6c998-135">Move to the next control in the tab order.</span></span>|<span data-ttu-id="6c998-136">CTRL + TAB</span><span class="sxs-lookup"><span data-stu-id="6c998-136">CTRL+TAB</span></span>|  
+|<span data-ttu-id="6c998-137">Перемещение к предыдущему элементу управления в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="6c998-137">Move to the previous control in the tab order.</span></span>|<span data-ttu-id="6c998-138">CTRL+SHIFT+TAB</span><span class="sxs-lookup"><span data-stu-id="6c998-138">CTRL+SHIFT+TAB</span></span>|  
+|<span data-ttu-id="6c998-139">Переместить вверх, в родительской таблице, в дочерней таблице.</span><span class="sxs-lookup"><span data-stu-id="6c998-139">Move up to the parent table if in a child table.</span></span> <span data-ttu-id="6c998-140">То же самое, что и нажатие кнопки "Назад".</span><span class="sxs-lookup"><span data-stu-id="6c998-140">Same behavior as clicking the Back button.</span></span>|<span data-ttu-id="6c998-141">ALT+СТРЕЛКА ВЛЕВО</span><span class="sxs-lookup"><span data-stu-id="6c998-141">ALT+LEFT ARROW</span></span>|  
+|<span data-ttu-id="6c998-142">Разверните узел ссылки на дочерние таблицы.</span><span class="sxs-lookup"><span data-stu-id="6c998-142">Expand child table links.</span></span> <span data-ttu-id="6c998-143">ALT + СТРЕЛКА ВНИЗ Разворачивает все ссылки, а не только выбранные.</span><span class="sxs-lookup"><span data-stu-id="6c998-143">ALT+DOWN ARROW expands all links, not just the ones selected.</span></span>|<span data-ttu-id="6c998-144">ALT + СТРЕЛКА ВНИЗ или CTRL + знак плюс</span><span class="sxs-lookup"><span data-stu-id="6c998-144">ALT+DOWN ARROW or CTRL+PLUS SIGN</span></span>|  
+|<span data-ttu-id="6c998-145">Свернуть ссылки на дочерние таблицы.</span><span class="sxs-lookup"><span data-stu-id="6c998-145">Collapse child table links.</span></span> <span data-ttu-id="6c998-146">ALT + СТРЕЛКА ВВЕРХ сворачивает все ссылки, а не только выбранные.</span><span class="sxs-lookup"><span data-stu-id="6c998-146">ALT+UP ARROW collapses all links, not just the ones selected.</span></span>|<span data-ttu-id="6c998-147">ALT + стрелка вверх или CTRL + знак «минус»</span><span class="sxs-lookup"><span data-stu-id="6c998-147">ALT+UP ARROW or CTRL+MINUS SIGN</span></span>|  
+|<span data-ttu-id="6c998-148">Перейти к самой крайней непустой ячейке в направлении от стрелки.</span><span class="sxs-lookup"><span data-stu-id="6c998-148">Move to the farthest nonblank cell in the direction of the arrow.</span></span>|<span data-ttu-id="6c998-149">CTRL + СТРЕЛКА</span><span class="sxs-lookup"><span data-stu-id="6c998-149">CTRL+ARROW</span></span>|  
+|<span data-ttu-id="6c998-150">Расширение выделения на одну строку в направлении стрелки (включая ссылки на дочерние таблицы).</span><span class="sxs-lookup"><span data-stu-id="6c998-150">Extend the selection one row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="6c998-151">SHIFT + СТРЕЛКА ВВЕРХ ИЛИ ВНИЗ СТРЕЛКИ</span><span class="sxs-lookup"><span data-stu-id="6c998-151">SHIFT+UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="6c998-152">Расширьте область выбора до самой крайней непустой строки в направлении стрелки (включая ссылки на дочерние таблицы).</span><span class="sxs-lookup"><span data-stu-id="6c998-152">Extend the selection to farthest nonblank row in the direction of the arrow (excluding child table links).</span></span>|<span data-ttu-id="6c998-153">CTRL + SHIFT + ВВЕРХ И СТРЕЛКА ВНИЗ</span><span class="sxs-lookup"><span data-stu-id="6c998-153">CTRL+SHIFT+ UP/DOWN ARROW</span></span>|  
+|<span data-ttu-id="6c998-154">Переместите левый верхний угол.</span><span class="sxs-lookup"><span data-stu-id="6c998-154">Move to the upper-left cell.</span></span>|<span data-ttu-id="6c998-155">CTRL + HOME</span><span class="sxs-lookup"><span data-stu-id="6c998-155">CTRL+HOME</span></span>|  
+|<span data-ttu-id="6c998-156">Переместить в правой нижней ячейке.</span><span class="sxs-lookup"><span data-stu-id="6c998-156">Move to the lower-right cell.</span></span>|<span data-ttu-id="6c998-157">CTRL + END</span><span class="sxs-lookup"><span data-stu-id="6c998-157">CTRL+END</span></span>|  
+|<span data-ttu-id="6c998-158">Расширьте область выбора до верхней строки.</span><span class="sxs-lookup"><span data-stu-id="6c998-158">Extend the selection to the top row.</span></span>|<span data-ttu-id="6c998-159">CTRL + SHIFT + HOME</span><span class="sxs-lookup"><span data-stu-id="6c998-159">CTRL+SHIFT+HOME</span></span>|  
+|<span data-ttu-id="6c998-160">Расширьте Выбор до нижней строке.</span><span class="sxs-lookup"><span data-stu-id="6c998-160">Extend the selection to the bottom row.</span></span>|<span data-ttu-id="6c998-161">CTRL + SHIFT + END</span><span class="sxs-lookup"><span data-stu-id="6c998-161">CTRL+SHIFT+END</span></span>|  
+|<span data-ttu-id="6c998-162">Выделение текущей строки (включая ссылки на дочерние таблицы).</span><span class="sxs-lookup"><span data-stu-id="6c998-162">Select the current row (excluding child table links).</span></span>|<span data-ttu-id="6c998-163">SHIFT + ПРОБЕЛ</span><span class="sxs-lookup"><span data-stu-id="6c998-163">SHIFT+SPACEBAR</span></span>|  
+|<span data-ttu-id="6c998-164">Выберите всю таблицу (включая ссылки на дочерние таблицы).</span><span class="sxs-lookup"><span data-stu-id="6c998-164">Select the entire grid (excluding child table links).</span></span>|<span data-ttu-id="6c998-165">CTRL+A</span><span class="sxs-lookup"><span data-stu-id="6c998-165">CTRL+A</span></span>|  
+|<span data-ttu-id="6c998-166">Отображение родительской строки в дочерней таблице.</span><span class="sxs-lookup"><span data-stu-id="6c998-166">Display the parent row when in a child table.</span></span>|<span data-ttu-id="6c998-167">CTRL+PAGE DOWN</span><span class="sxs-lookup"><span data-stu-id="6c998-167">CTRL+PAGE DOWN</span></span>|  
+|<span data-ttu-id="6c998-168">Скрытие родительской строки в дочерней таблице.</span><span class="sxs-lookup"><span data-stu-id="6c998-168">Hide the parent row when in a child table.</span></span>|<span data-ttu-id="6c998-169">CTRL+PAGE UP</span><span class="sxs-lookup"><span data-stu-id="6c998-169">CTRL+PAGE UP</span></span>|  
+|<span data-ttu-id="6c998-170">Расширьте выбор вниз на один экран (включая ссылки на дочерние таблицы).</span><span class="sxs-lookup"><span data-stu-id="6c998-170">Extend the selection down one screen (excluding child table links).</span></span>|<span data-ttu-id="6c998-171">SHIFT + PAGE DOWN</span><span class="sxs-lookup"><span data-stu-id="6c998-171">SHIFT+PAGE DOWN</span></span>|  
+|<span data-ttu-id="6c998-172">Расширьте выбор вверх на один экран (включая ссылки на дочерние таблицы).</span><span class="sxs-lookup"><span data-stu-id="6c998-172">Extend the selection up one screen (excluding child table links).</span></span>|<span data-ttu-id="6c998-173">SHIFT + PAGE UP</span><span class="sxs-lookup"><span data-stu-id="6c998-173">SHIFT+PAGE UP</span></span>|  
+|<span data-ttu-id="6c998-174">Вызовите <xref:System.Windows.Forms.DataGrid.EndEdit%2A> метода для текущей строки.</span><span class="sxs-lookup"><span data-stu-id="6c998-174">Call the <xref:System.Windows.Forms.DataGrid.EndEdit%2A> method for the current row.</span></span>|<span data-ttu-id="6c998-175">CTRL+ВВОД</span><span class="sxs-lookup"><span data-stu-id="6c998-175">CTRL+ENTER</span></span>|  
+|<span data-ttu-id="6c998-176">Введите <xref:System.DBNull.Value?displayProperty=nameWithType> значение в ячейке в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="6c998-176">Enter a <xref:System.DBNull.Value?displayProperty=nameWithType> value into a cell when in edit mode.</span></span>|<span data-ttu-id="6c998-177">CTRL+0</span><span class="sxs-lookup"><span data-stu-id="6c998-177">CTRL+0</span></span>|  
   
-## См. также  
- [Общие сведения об элементе управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6c998-178">См. также</span><span class="sxs-lookup"><span data-stu-id="6c998-178">See Also</span></span>  
+ [<span data-ttu-id="6c998-179">Общие сведения об элементе управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="6c998-179">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6c998-180">Элемент управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="6c998-180">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

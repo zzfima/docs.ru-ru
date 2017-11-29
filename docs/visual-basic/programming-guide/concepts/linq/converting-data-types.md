@@ -1,60 +1,52 @@
 ---
-title: "Преобразование типов данных (Visual Basic) | Документы Microsoft"
+title: "Преобразование типов данных (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 53d8ad292891a567e13ec8a5396bcc114b379351
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5fb0e9dfb0f1fb882116449757ed0f0bf9029b39
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="converting-data-types-visual-basic"></a>Преобразование типов данных (Visual Basic)
-Методы преобразования изменяют тип входных объектов.  
+# <a name="converting-data-types-visual-basic"></a><span data-ttu-id="34bc1-102">Преобразование типов данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34bc1-102">Converting Data Types (Visual Basic)</span></span>
+<span data-ttu-id="34bc1-103">Методы преобразования изменяют тип входных объектов.</span><span class="sxs-lookup"><span data-stu-id="34bc1-103">Conversion methods change the type of input objects.</span></span>  
   
- Операции преобразования в запросах LINQ полезны для различных приложений. Ниже приведены некоторые примеры:  
+ <span data-ttu-id="34bc1-104">Операции преобразования в запросах LINQ удобны в различных ситуациях.</span><span class="sxs-lookup"><span data-stu-id="34bc1-104">Conversion operations in LINQ queries are useful in a variety of applications.</span></span> <span data-ttu-id="34bc1-105">Ниже приводятся некоторые примеры.</span><span class="sxs-lookup"><span data-stu-id="34bc1-105">Following are some examples:</span></span>  
   
--   <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>Метод может использоваться для скрытия пользовательскую реализацию стандартного оператора запроса типа.</xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>  
+-   <span data-ttu-id="34bc1-106">Метод <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> можно использовать, чтобы скрыть настраиваемую реализацию типа стандартного оператора запроса.</span><span class="sxs-lookup"><span data-stu-id="34bc1-106">The <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> method can be used to hide a type's custom implementation of a standard query operator.</span></span>  
   
--   <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>Метод может использоваться для включения непараметризованным коллекциям для запросов LINQ.</xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName>  
+-   <span data-ttu-id="34bc1-107">Метод <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> позволяет использовать непараметризованные коллекции для запросов LINQ.</span><span class="sxs-lookup"><span data-stu-id="34bc1-107">The <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> method can be used to enable non-parameterized collections for LINQ querying.</span></span>  
   
--   <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>, И <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>методы можно использовать для принудительного немедленного выполнения запроса вместо откладывания до перечисления запроса.</xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName> </xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>  
+-   <span data-ttu-id="34bc1-108">Методы <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> и <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> можно использовать для принудительного немедленного выполнения запроса, не дожидаясь, пока этот запрос будет перечислен.</span><span class="sxs-lookup"><span data-stu-id="34bc1-108">The <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, and <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> methods can be used to force immediate query execution instead of deferring it until the query is enumerated.</span></span>  
   
-## <a name="methods"></a>Методы  
- В следующей таблице перечислены методы стандартных операторов запросов, выполняющие преобразование типов данных.  
+## <a name="methods"></a><span data-ttu-id="34bc1-109">Методы</span><span class="sxs-lookup"><span data-stu-id="34bc1-109">Methods</span></span>  
+ <span data-ttu-id="34bc1-110">В следующей таблице перечислены методы стандартных операторов запросов, выполняющие преобразование типов данных.</span><span class="sxs-lookup"><span data-stu-id="34bc1-110">The following table lists the standard query operator methods that perform data-type conversions.</span></span>  
   
- Методы преобразования в этой таблице, имена которых начинаются с «As», изменяют статический тип исходной коллекции, но не перечислить. Методы, имена которых начинаются с «To», перечисляют исходную коллекцию и помещают элементы в коллекции, соответствующий тип.  
+ <span data-ttu-id="34bc1-111">Методы преобразования в этой таблице, имена которых начинаются с "As", изменяют статический тип исходной коллекции, но не выполняют перечисление.</span><span class="sxs-lookup"><span data-stu-id="34bc1-111">The conversion methods in this table whose names start with "As" change the static type of the source collection but do not enumerate it.</span></span> <span data-ttu-id="34bc1-112">Методы, имена которых начинаются с "To", перечисляют исходную коллекцию и помещают элементы в соответствующий тип коллекции.</span><span class="sxs-lookup"><span data-stu-id="34bc1-112">The methods whose names start with "To" enumerate the source collection and put the items into the corresponding collection type.</span></span>  
   
-|Имя метода|Описание|Синтаксис выражения запроса для Visual Basic|Дополнительные сведения|  
+|<span data-ttu-id="34bc1-113">Имя метода</span><span class="sxs-lookup"><span data-stu-id="34bc1-113">Method Name</span></span>|<span data-ttu-id="34bc1-114">Описание</span><span class="sxs-lookup"><span data-stu-id="34bc1-114">Description</span></span>|<span data-ttu-id="34bc1-115">Синтаксис выражения запроса Visual Basic</span><span class="sxs-lookup"><span data-stu-id="34bc1-115">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="34bc1-116">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="34bc1-116">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|AsEnumerable|Возвращает входные данные, типизированного как <xref:System.Collections.Generic.IEnumerable%601>.</xref:System.Collections.Generic.IEnumerable%601>|Неприменимо.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName></xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
-|AsQueryable|Преобразует (универсальный) <xref:System.Collections.IEnumerable>для <xref:System.Linq.IQueryable>.</xref:System.Linq.IQueryable> (универсальный)</xref:System.Collections.IEnumerable>|Неприменимо.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName></xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
-|Cast|Приводит элементы коллекции в указанный тип.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName></xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName>|  
-|OfType|Фильтрует значения в зависимости от их возможности приведения к указанному типу.|Неприменимо.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName></xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName></xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
-|ToArray|Преобразует коллекцию в массив. Этот метод вызывает выполнение запроса.|Неприменимо.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>|  
-|ToDictionary|Помещает элементы в <xref:System.Collections.Generic.Dictionary%602>на основании функции выбора ключа.</xref:System.Collections.Generic.Dictionary%602> Этот метод вызывает выполнение запроса.|Неприменимо.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>|  
-|ToList|Преобразует коллекцию <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> Этот метод вызывает выполнение запроса.|Неприменимо.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>|  
-|ToLookup|Помещает элементы в <xref:System.Linq.Lookup%602>(словарь "один ко многим") на основании функции выбора ключа.</xref:System.Linq.Lookup%602> Этот метод вызывает выполнение запроса.|Неприменимо.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+|<span data-ttu-id="34bc1-117">AsEnumerable</span><span class="sxs-lookup"><span data-stu-id="34bc1-117">AsEnumerable</span></span>|<span data-ttu-id="34bc1-118">Возвращает входное значение, типизированное как <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="34bc1-118">Returns the input typed as <xref:System.Collections.Generic.IEnumerable%601>.</span></span>|<span data-ttu-id="34bc1-119">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-119">Not applicable.</span></span>|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-120">AsQueryable</span><span class="sxs-lookup"><span data-stu-id="34bc1-120">AsQueryable</span></span>|<span data-ttu-id="34bc1-121">Преобразует <xref:System.Collections.IEnumerable> (универсальный шаблон) в <xref:System.Linq.IQueryable> (универсальный шаблон).</span><span class="sxs-lookup"><span data-stu-id="34bc1-121">Converts a (generic) <xref:System.Collections.IEnumerable> to a (generic) <xref:System.Linq.IQueryable>.</span></span>|<span data-ttu-id="34bc1-122">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-122">Not applicable.</span></span>|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-123">Cast</span><span class="sxs-lookup"><span data-stu-id="34bc1-123">Cast</span></span>|<span data-ttu-id="34bc1-124">Приводит элементы коллекции к указанному типу.</span><span class="sxs-lookup"><span data-stu-id="34bc1-124">Casts the elements of a collection to a specified type.</span></span>|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-125">OfType</span><span class="sxs-lookup"><span data-stu-id="34bc1-125">OfType</span></span>|<span data-ttu-id="34bc1-126">Фильтрует значения в зависимости от возможности их приведения к указанному типу.</span><span class="sxs-lookup"><span data-stu-id="34bc1-126">Filters values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="34bc1-127">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-127">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-128">ToArray</span><span class="sxs-lookup"><span data-stu-id="34bc1-128">ToArray</span></span>|<span data-ttu-id="34bc1-129">Преобразует коллекцию в массив.</span><span class="sxs-lookup"><span data-stu-id="34bc1-129">Converts a collection to an array.</span></span> <span data-ttu-id="34bc1-130">Этот метод принудительно выполняет запрос.</span><span class="sxs-lookup"><span data-stu-id="34bc1-130">This method forces query execution.</span></span>|<span data-ttu-id="34bc1-131">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-131">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-132">ToDictionary</span><span class="sxs-lookup"><span data-stu-id="34bc1-132">ToDictionary</span></span>|<span data-ttu-id="34bc1-133">Помещает элементы в <xref:System.Collections.Generic.Dictionary%602> в зависимости от функции выбора ключа.</span><span class="sxs-lookup"><span data-stu-id="34bc1-133">Puts elements into a <xref:System.Collections.Generic.Dictionary%602> based on a key selector function.</span></span> <span data-ttu-id="34bc1-134">Этот метод принудительно выполняет запрос.</span><span class="sxs-lookup"><span data-stu-id="34bc1-134">This method forces query execution.</span></span>|<span data-ttu-id="34bc1-135">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-135">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-136">ToList</span><span class="sxs-lookup"><span data-stu-id="34bc1-136">ToList</span></span>|<span data-ttu-id="34bc1-137">Преобразует коллекцию в <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="34bc1-137">Converts a collection to a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="34bc1-138">Этот метод принудительно выполняет запрос.</span><span class="sxs-lookup"><span data-stu-id="34bc1-138">This method forces query execution.</span></span>|<span data-ttu-id="34bc1-139">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-139">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="34bc1-140">ToLookup</span><span class="sxs-lookup"><span data-stu-id="34bc1-140">ToLookup</span></span>|<span data-ttu-id="34bc1-141">Помещает элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.</span><span class="sxs-lookup"><span data-stu-id="34bc1-141">Puts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span> <span data-ttu-id="34bc1-142">Этот метод принудительно выполняет запрос.</span><span class="sxs-lookup"><span data-stu-id="34bc1-142">This method forces query execution.</span></span>|<span data-ttu-id="34bc1-143">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="34bc1-143">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса  
- В следующем примере кода `From As` предложение для приведения типа к подтипу перед доступом к члену, доступному только для подтипа.  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="34bc1-144">Пример синтаксиса выражения запроса</span><span class="sxs-lookup"><span data-stu-id="34bc1-144">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="34bc1-145">Следующий пример кода использует `From As` предложение для приведения типа к подтипу перед доступом к члену, который доступен только для подтипа.</span><span class="sxs-lookup"><span data-stu-id="34bc1-145">The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.</span></span>  
   
 ```vb  
 Class Plant  
@@ -94,8 +86,8 @@ Sub Cast()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq></xref:System.Linq>   
- [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Предложение FROM](../../../../visual-basic/language-reference/queries/from-clause.md)   
- [Практическое руководство: запроса к ArrayList с помощью LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a><span data-ttu-id="34bc1-146">См. также</span><span class="sxs-lookup"><span data-stu-id="34bc1-146">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="34bc1-147">Общие сведения о стандартных операторах запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34bc1-147">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="34bc1-148">Предложение From</span><span class="sxs-lookup"><span data-stu-id="34bc1-148">From Clause</span></span>](../../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="34bc1-149">Как: запроса к ArrayList с помощью LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34bc1-149">How to: Query an ArrayList with LINQ (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

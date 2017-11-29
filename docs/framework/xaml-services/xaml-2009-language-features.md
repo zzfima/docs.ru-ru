@@ -1,43 +1,46 @@
 ---
-title: "XAML 2009 Language Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML 2009 [XAML Services]"
-  - "XAML [XAML Services], XAML 2009"
+title: "Возможности языка XAML 2009"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML 2009 [XAML Services]
+- XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-caps.latest.revision: 11
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 6299a29cb79650eb59df3f198c3ea3fcd49d0076
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# XAML 2009 Language Features
-XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. В частности, это [x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); и встроенные типы для общих примитивов языка \(например `x:Char`\).  
+# <a name="xaml-2009-language-features"></a><span data-ttu-id="d726c-102">Возможности языка XAML 2009</span><span class="sxs-lookup"><span data-stu-id="d726c-102">XAML 2009 Language Features</span></span>
+<span data-ttu-id="d726c-103">XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML.</span><span class="sxs-lookup"><span data-stu-id="d726c-103">XAML 2009 is the shorthand term for new XAML language features that extend the existing XAML language specification.</span></span> <span data-ttu-id="d726c-104">XAML 2009 содержит ряд новых директив и конструкций.</span><span class="sxs-lookup"><span data-stu-id="d726c-104">XAML 2009 introduces several new directives and constructs.</span></span> <span data-ttu-id="d726c-105">В частности, это[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); и встроенные типы для общих примитивов языка (например `x:Char`).</span><span class="sxs-lookup"><span data-stu-id="d726c-105">These include the[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); the [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); the [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); the [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); and built-in types for common language primitives (for example `x:Char`).</span></span>  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
-## Поддержка XAML 2009 в WPF и Visual Studio  
- В WPF можно использовать возможности XAML 2009, но только для кода XAML, не скомпилированного с разметкой WPF. Скомпилированный XAML с разметкой и форма BAML кода XAML пока не поддерживают ключевые слова языка и компоненты XAML 2009.  
+## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a><span data-ttu-id="d726c-106">Поддержка XAML 2009 в WPF и Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d726c-106">XAML 2009 Support in WPF and Visual Studio</span></span>  
+ <span data-ttu-id="d726c-107">В WPF можно использовать возможности XAML 2009, но только для кода XAML, не скомпилированного с разметкой WPF.</span><span class="sxs-lookup"><span data-stu-id="d726c-107">In WPF, you can use XAML 2009 features, but only for XAML that is not WPF markup-compiled.</span></span> <span data-ttu-id="d726c-108">Скомпилированный XAML с разметкой и форма BAML кода XAML пока не поддерживают ключевые слова языка и компоненты XAML 2009.</span><span class="sxs-lookup"><span data-stu-id="d726c-108">Markup-compiled XAML and the BAML form of XAML do not currently support the XAML 2009 language keywords and features.</span></span>  
   
- Обратите внимание, что существующие методы для загрузки свободного XAML в WPF также могут иметь ограничения по безопасности и доступу для типов CLR и системы типов, являющихся более строгими по сравнению со скомпилированным XAML с разметкой. Дополнительные сведения см. в разделе [Безопасность \(WPF\)](../../../ocs/framework/wpf/security-wpf.md) или [Стратегия безопасности WPF — безопасность платформы](../../../ocs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ <span data-ttu-id="d726c-109">Обратите внимание, что существующие методы для загрузки свободного XAML в WPF также могут иметь ограничения по безопасности и доступу для типов CLR и системы типов, являющихся более строгими по сравнению со скомпилированным XAML с разметкой.</span><span class="sxs-lookup"><span data-stu-id="d726c-109">Note that existing techniques for loading loose XAML in WPF also have possible security and access restrictions to CLR types and the type system that are more restrictive than for markup-compiled XAML.</span></span> <span data-ttu-id="d726c-110">Дополнительные сведения см. в разделе [Безопасность (WPF)](../../../docs/framework/wpf/security-wpf.md) или [Стратегия безопасности WPF — безопасность платформы](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).</span><span class="sxs-lookup"><span data-stu-id="d726c-110">For more information, see [Security (WPF)](../../../docs/framework/wpf/security-wpf.md) or [WPF Security Strategy - Platform Security](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).</span></span>  
   
- В XAML 2009 также реализованы дополнительные функции, изменяющие прежние конструкции XAML 2006 и основные формы разметки.  
+ <span data-ttu-id="d726c-111">В XAML 2009 также реализованы дополнительные функции, изменяющие прежние конструкции XAML 2006 и основные формы разметки.</span><span class="sxs-lookup"><span data-stu-id="d726c-111">XAML 2009 also introduces additional features that either modify the previous XAML 2006 constructs or that modify the basic markup forms.</span></span>  
   
-### x:Key как объектный элемент  
- XAML 2009 может поддерживать `x:Key` как объект \(элемент свойства, значением которого является элемент объекта\), но в XAML 2006 `x:Key` поддерживался только как атрибут. См. раздел "XAML 2009" в статье [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md).  
+### <a name="xkey-as-an-object-element"></a><span data-ttu-id="d726c-112">x:Key как объектный элемент</span><span class="sxs-lookup"><span data-stu-id="d726c-112">x:Key as an Object Element</span></span>  
+ <span data-ttu-id="d726c-113">XAML 2009 может поддерживать `x:Key` как объект (элемент свойства, значением которого является элемент объекта), но в XAML 2006 `x:Key` поддерживался только как атрибут.</span><span class="sxs-lookup"><span data-stu-id="d726c-113">XAML 2009 can support `x:Key` as an object (a property element that has object element value); however, XAML 2006 only supported `x:Key` as an attribute.</span></span> <span data-ttu-id="d726c-114">См. раздел "XAML 2009" в статье [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md).</span><span class="sxs-lookup"><span data-stu-id="d726c-114">See the "XAML 2009" section of [x:Key Directive](../../../docs/framework/xaml-services/x-key-directive.md).</span></span>  
   
-### xmlns для свойств элементов  
- XAML 2009 может поддерживать определения пространств имен \(xmlns\) XAML для свойств элементов, а в XAML 2006 определения xmlns поддерживались только для элементов объектов.  
+### <a name="xmlns-on-property-elements"></a><span data-ttu-id="d726c-115">xmlns для свойств элементов</span><span class="sxs-lookup"><span data-stu-id="d726c-115">xmlns on Property Elements</span></span>  
+ <span data-ttu-id="d726c-116">XAML 2009 может поддерживать определения пространств имен (xmlns) XAML для свойств элементов, а в XAML 2006 определения xmlns поддерживались только для элементов объектов.</span><span class="sxs-lookup"><span data-stu-id="d726c-116">XAML 2009 can support XAML namespace (xmlns) definitions on property elements; however, XAML 2006 only supports xmlns definitions on object elements.</span></span>  
   
-### Атрибуты событий  
- Для атрибутов, связанных с событиями, в XAML 2006 предполагается, что используется компиляция разметки, поэтому события подаются на компиляцию разметки. XAML 2009 поддерживает форму разметки, схожую с расширением разметки. Она дает возможность откладывать связывание событий до анализа и загрузки XAML. При этом приложения WPF и сценарии XAML для пользовательского интерфейса WPF обычно не используют эту возможность. WPF и его реализация в XAML 2006 используют сочетание связывания обработчика событий для перенаправленных событий, определенных на уровне <xref:System.Windows.UIElement>, и этап компилятора разметки для основной обработки атрибутов событий. Компилятор разметки также выполняет предварительную обработку всех атрибутов событий, найденных в XAML, где действия сборки объявляют, что используется компилятор разметки.  
+### <a name="event-attributes"></a><span data-ttu-id="d726c-117">Атрибуты событий</span><span class="sxs-lookup"><span data-stu-id="d726c-117">Event Attributes</span></span>  
+ <span data-ttu-id="d726c-118">Для атрибутов, связанных с событиями, в XAML 2006 предполагается, что используется компиляция разметки, поэтому события подаются на компиляцию разметки.</span><span class="sxs-lookup"><span data-stu-id="d726c-118">For attributes that are backed by events, XAML 2006 presumes that markup compilation is involved and submits the events to markup compilation.</span></span> <span data-ttu-id="d726c-119">XAML 2009 поддерживает форму разметки, схожую с расширением разметки. Она дает возможность откладывать связывание событий до анализа и загрузки XAML.</span><span class="sxs-lookup"><span data-stu-id="d726c-119">XAML 2009 supports a markup form that resembles a markup extension, which defers the event wiring until run-time parsing and loading of the XAML.</span></span> <span data-ttu-id="d726c-120">При этом приложения WPF и сценарии XAML для пользовательского интерфейса WPF обычно не используют эту возможность.</span><span class="sxs-lookup"><span data-stu-id="d726c-120">However, WPF applications and XAML scenarios for WPF UI generally do not use this capability.</span></span> <span data-ttu-id="d726c-121">WPF и его реализация в XAML 2006 используют сочетание связывания обработчика событий для перенаправленных событий, определенных на уровне <xref:System.Windows.UIElement> , и этап компилятора разметки для основной обработки атрибутов событий.</span><span class="sxs-lookup"><span data-stu-id="d726c-121">WPF and its XAML 2006 implementation uses the combination of event handler wiring for routed events defined at the <xref:System.Windows.UIElement> level and its markup compiler step for much of its event attribute processing.</span></span> <span data-ttu-id="d726c-122">Компилятор разметки также выполняет предварительную обработку всех атрибутов событий, найденных в XAML, где действия сборки объявляют, что используется компилятор разметки.</span><span class="sxs-lookup"><span data-stu-id="d726c-122">The markup compiler also preprocesses any event attributes found in XAML where the build actions declare that the markup compiler is used.</span></span>  
   
-## См. также  
- [Обзор XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="d726c-123">См. также</span><span class="sxs-lookup"><span data-stu-id="d726c-123">See Also</span></span>  
+ [<span data-ttu-id="d726c-124">Общие сведения о языке XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="d726c-124">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

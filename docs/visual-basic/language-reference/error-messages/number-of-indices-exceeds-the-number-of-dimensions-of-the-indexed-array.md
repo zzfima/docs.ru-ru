@@ -1,38 +1,35 @@
 ---
-title: "Количество индексов превышает размерность индексированного массива | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30106"
-  - "vbc30106"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30106"
+title: "Количество индексов превышает размерность индексированного массива"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30106
+- vbc30106
+helpviewer_keywords: BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8fdf031734d441daca2073925f6d45d6ba9f1f52
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Количество индексов превышает размерность индексированного массива
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Количество индексов, используемых для доступа к элементу массива, должно совпадать с рангом массива, т. е. с количеством объявленных для массива измерений.  
+# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="e3017-102">Количество индексов превышает размерность индексированного массива</span><span class="sxs-lookup"><span data-stu-id="e3017-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
+<span data-ttu-id="e3017-103">Число индексов, используемых для доступа к элементу массива, должно быть точно равно рангу массива, то есть числу измерений, объявленных для него.</span><span class="sxs-lookup"><span data-stu-id="e3017-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
   
- **Идентификатор ошибки**: BC30106  
+ <span data-ttu-id="e3017-104">**Идентификатор ошибки:** BC30106</span><span class="sxs-lookup"><span data-stu-id="e3017-104">**Error ID:** BC30106</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e3017-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="e3017-105">To correct this error</span></span>  
   
--   Удалите из ссылки на массив такое количество индексов, которое необходимо для совпадения общего количества индексов с рангом массива.  Примеры.  
+-   <span data-ttu-id="e3017-106">Удалите индексы из ссылки на массив общего количества индексов с рангом массива.</span><span class="sxs-lookup"><span data-stu-id="e3017-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="e3017-107">Пример:</span><span class="sxs-lookup"><span data-stu-id="e3017-107">For example:</span></span>  
   
-    ```  
-    [Visual Basic]  
+    ```vb  
     Dim gameBoard(3, 3) As String  
   
     ' Incorrect code. The array has two dimensions.  
@@ -44,5 +41,5 @@ caps.handback.revision: 10
     gameBoard(1, 0) = "O"  
     ```  
   
-## См. также  
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="e3017-108">См. также</span><span class="sxs-lookup"><span data-stu-id="e3017-108">See Also</span></span>  
+ [<span data-ttu-id="e3017-109">Массивы</span><span class="sxs-lookup"><span data-stu-id="e3017-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

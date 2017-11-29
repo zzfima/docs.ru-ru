@@ -1,88 +1,91 @@
 ---
-title: "x:Static Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StaticExtension"
-  - "xStatic"
-  - "x:Static"
-helpviewer_keywords: 
-  - "x:Static markup extension [XAML Services]"
-  - "Static markup extension in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Static markup extension"
+title: "Расширение разметки x:Static"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- StaticExtension
+- xStatic
+- x:Static
+helpviewer_keywords:
+- x:Static markup extension [XAML Services]
+- Static markup extension in XAML [XAML Services]
+- XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: 25
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: d006c8d0937a454dcbe092dcc3e35c4644088e59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# x:Static Markup Extension
-Ссылается на любую статическую сущность кода по значению, определенную совместимым с [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] образом.  Статическое свойство, на которое имеется ссылка, может использоваться для предоставления значения свойства в XAML.  
+# <a name="xstatic-markup-extension"></a><span data-ttu-id="bc0d6-102">Расширение разметки x:Static</span><span class="sxs-lookup"><span data-stu-id="bc0d6-102">x:Static Markup Extension</span></span>
+<span data-ttu-id="bc0d6-103">Ссылается на любой сущности кода статическую по значению, определенному в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— совместимым способом.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-103">References any static by-value code entity that is defined in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]–compliant way.</span></span> <span data-ttu-id="bc0d6-104">Статическое свойство, которое имеется ссылка может использоваться для задания значения свойства в XAML.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-104">The static property that is referenced can be used to provide the value of a property in XAML.</span></span>  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="bc0d6-105">Использование атрибута XAML</span><span class="sxs-lookup"><span data-stu-id="bc0d6-105">XAML Attribute Usage</span></span>  
   
+```xaml  
+<object property="{x:Static prefix:typeName.staticMemberName}" .../>  
 ```  
-<object property="{x:Static prefix:typeName.staticMemberName}" .../>  
-```  
   
-## Значения XAML  
+## <a name="xaml-values"></a><span data-ttu-id="bc0d6-106">Значения XAML</span><span class="sxs-lookup"><span data-stu-id="bc0d6-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`prefix`|Необязательный.  Префикс, который относится к сопоставленному пространству имен XML, не являющемуся пространством имен по умолчанию.  `prefix` явно приведен в варианте использования, так как редко создаются ссылки на статические свойства, полученные из пространства имен XAML по умолчанию.  См. примечания.|  
-|`typeName`|Обязательный.  Имя типа, который определяет требуемый статический член.|  
-|`staticMemberName`|Обязательный.  Имя требуемого статического значения члена \(константа, статическое свойство, поле или значение перечисления\).|  
+|`prefix`|<span data-ttu-id="bc0d6-107">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-107">Optional.</span></span> <span data-ttu-id="bc0d6-108">Префикс, который ссылается на сопоставленном, не по умолчанию пространство имен XAML.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-108">A prefix that refers to a mapped, non-default XAML namespace.</span></span> <span data-ttu-id="bc0d6-109">`prefix`явно приведен в использовании, так как редко создаются ссылки на статические свойства, полученные из пространства имен XAML по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-109">`prefix` is shown explicitly in the usage because you rarely reference static properties that come from a default XAML namespace.</span></span> <span data-ttu-id="bc0d6-110">См. заметки.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-110">See Remarks.</span></span>|  
+|`typeName`|<span data-ttu-id="bc0d6-111">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-111">Required.</span></span> <span data-ttu-id="bc0d6-112">Имя типа, который определяет требуемый статический член.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-112">The name of the type that defines the desired static member.</span></span>|  
+|`staticMemberName`|<span data-ttu-id="bc0d6-113">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-113">Required.</span></span> <span data-ttu-id="bc0d6-114">Имя требуемого статического значения члена (константа, статическое свойство, поле или значение перечисления).</span><span class="sxs-lookup"><span data-stu-id="bc0d6-114">The name of the desired static value member (a constant, a static property, a field, or an enumeration value).</span></span>|  
   
-## Заметки  
- сущность кода, на которую ссылаются, должна быть одной из следующих:  
+## <a name="remarks"></a><span data-ttu-id="bc0d6-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="bc0d6-115">Remarks</span></span>  
+ <span data-ttu-id="bc0d6-116">Код, на который имеется ссылка должна быть одно из следующих:</span><span class="sxs-lookup"><span data-stu-id="bc0d6-116">The code entity that is referenced must be one of the following:</span></span>  
   
--   Константа  
+-   <span data-ttu-id="bc0d6-117">Константа</span><span class="sxs-lookup"><span data-stu-id="bc0d6-117">A constant</span></span>  
   
--   Статическое свойство  
+-   <span data-ttu-id="bc0d6-118">Статическое свойство</span><span class="sxs-lookup"><span data-stu-id="bc0d6-118">A static property</span></span>  
   
--   Поле  
+-   <span data-ttu-id="bc0d6-119">Поле</span><span class="sxs-lookup"><span data-stu-id="bc0d6-119">A field</span></span>  
   
--   Значение перечисления.  
+-   <span data-ttu-id="bc0d6-120">Значение перечисления</span><span class="sxs-lookup"><span data-stu-id="bc0d6-120">An enumeration value</span></span>  
   
- Указание любой другой сущности кода, например нестатического свойства, приводит к ошибке времени компиляции, если для код XAML компилируется разметка, или к исключению синтаксического анализа времени загрузки XAML.  
+ <span data-ttu-id="bc0d6-121">Указание любой другой сущности кода, такие как нестатического свойства, приводит к ошибке времени компиляции, если XAML компиляции разметки или исключения во время загрузки синтаксического анализа XAML.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-121">Specifying any other code entity, such as a nonstatic property, causes a compile-time error if the XAML is markup compiled, or a XAML load-time parse exception.</span></span>  
   
- Ссылки `x:Static` могут быть применены к статическим полям или свойствам, которые отсутствуют в пределах пространства имен XAML по умолчанию для текущего документа XAML; однако это требует сопоставления префикса.  Пространства имен XAML почти всегда задаются в корневом элементе документа XAML.  
+ <span data-ttu-id="bc0d6-122">Чтобы `x:Static` ссылки на статические поля или свойства, которые не находятся в пространстве имен XAML по умолчанию для текущего документа XAML; Однако для этого требуется сопоставление префиксов.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-122">You can make `x:Static` references to static fields or properties that are not in the default XAML namespace for the current XAML document; however, this requires a prefix mapping.</span></span> <span data-ttu-id="bc0d6-123">Пространства имен XAML почти всегда определяются в корневом элементе XAML-документа.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-123">XAML namespaces are almost always defined on the root element of the XAML document.</span></span>  
   
- Операции поиска для статических свойств могут выполняться службами XAML .NET Framework и модулями чтения и записи XAML при работе с контекстом схемы XAML по умолчанию.  Этот контекст схемы XAML может использовать отражение среды CLR для предоставления необходимых статических значений для построения графа объекта.  Указываемое имя `typeName`, на самом деле является именем типа XAML, а не именем типа CLR, хотя по сути это одно и то же имя, если используется содержимое XAML\-схемы по умолчанию или все существующие платформы на основе CLR, реализующие XAML.  
+ <span data-ttu-id="bc0d6-124">Операции поиска для статических свойств, можно путем служб XAML .NET Framework и средств чтения и записи XAML, если они выполняются с контекстом схемы XAML по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-124">The lookup operations for static properties can be performed by .NET Framework XAML Services and its XAML readers and XAML writers, when they are running with the default XAML schema context.</span></span> <span data-ttu-id="bc0d6-125">Этот контекст схемы XAML может использовать отражение среды CLR для предоставления необходимых статических значений для построения графа объекта.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-125">This XAML schema context can use CLR reflection to provide the necessary static values for object graph construction.</span></span> <span data-ttu-id="bc0d6-126">`typeName` Указать, является фактически имени типа XAML, не имя типа CLR, несмотря на то, что это по сути тем же именем при использовании контекста схемы XAML по умолчанию или при использовании всех существующих инфраструктур, основанных на среде CLR реализация XAML.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-126">The `typeName` you specify is actually a XAML type name, not a CLR type name, although these are essentially the same name when using the default XAML schema context or when using all existing CLR-based XAML-implementing frameworks.</span></span>  
   
- Используйте предупреждение при создании ссылок `x:Static`, которые не являются непосредственно типом значения свойства.  В последовательности обработки XAML предоставленные значения из расширения разметки не вызывают дополнительного преобразования значений.  Это верно даже в том случае, если ссылка `x:Static` создает текстовую строку, а преобразование значений атрибутов на базе текстовой строки обычно выполняется для этого конкретного элемента или для значения любого элемента возвращаемого типа.  
+ <span data-ttu-id="bc0d6-127">Соблюдайте осторожность при внесении `x:Static` ссылки, которые непосредственно не принадлежат к типу значения свойства.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-127">Use caution when you make `x:Static` references that are not directly the type of a property's value.</span></span> <span data-ttu-id="bc0d6-128">В XAML-ФАЙЛЕ обработки последовательности, предоставленные значения из расширения разметки не вызывают дополнительное значение преобразования.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-128">In the XAML processing sequence, provided values from a markup extension do not invoke additional value conversion.</span></span> <span data-ttu-id="bc0d6-129">Это верно даже в том случае, если ваш `x:Static` ссылка создает строку текста и преобразования значений для значений атрибутов на базе текстовой строки обычно выполняется для этого конкретного элемента или для типа возвращаемого значения члена.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-129">This is true even if your `x:Static` reference creates a text string, and a value conversion for attribute values based on text string typically occurs either for that specific member or for any member values of the return type.</span></span>  
   
- Синтаксис атрибута является наиболее распространенным синтаксисом, который используется с этим расширением разметки.  маркер строки, указанный после идентификатора строки `x:Static`, получает значение <xref:System.Windows.Markup.StaticExtension.Member%2A> базового класса расширения <xref:System.Windows.Markup.StaticExtension>.  
+ <span data-ttu-id="bc0d6-130">Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-130">Attribute syntax is the most common syntax used with this markup extension.</span></span> <span data-ttu-id="bc0d6-131">Строковая лексема, указываемая после строки идентификатора `x:Static`, присваивается в качестве значения <xref:System.Windows.Markup.StaticExtension.Member%2A> соответствующего класса расширения <xref:System.Windows.Markup.StaticExtension>.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-131">The string token provided after the `x:Static` identifier string is assigned as the <xref:System.Windows.Markup.StaticExtension.Member%2A> value of the underlying <xref:System.Windows.Markup.StaticExtension> extension class.</span></span>  
   
- Существуют два других технически возможных вариант использования XAML.  Однако эти случаи использования менее распространены, так как они излишне подробны:  
+ <span data-ttu-id="bc0d6-132">Существует два использований XAML, технически возможно.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-132">There are two other XAML usages that are technically possible.</span></span> <span data-ttu-id="bc0d6-133">Однако эти случаи использования менее распространены, так как они являются избыточная:</span><span class="sxs-lookup"><span data-stu-id="bc0d6-133">However, these usages are less common because they are unnecessarily verbose:</span></span>  
   
- **Синтаксис объектного элемента:** `<x:Static Member="``prefix``:``typeName``.``staticMemberName``" .../>`  
+ <span data-ttu-id="bc0d6-134">**Синтаксис элемента объекта:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`</span><span class="sxs-lookup"><span data-stu-id="bc0d6-134">**Object element syntax:** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`</span></span>  
   
- **Синтаксис атрибута с явным свойством элемента для строка инициализации:** `<``object````property``="{x:Static Member=``prefix``:``typeName``.``staticMemberName``}" .../>`  
+ <span data-ttu-id="bc0d6-135">**Синтаксис атрибута с явным свойством элемента для Строка инициализации:** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`</span><span class="sxs-lookup"><span data-stu-id="bc0d6-135">**Attribute syntax with explicit Member property for initialization string:** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`</span></span>  
   
- В реализации служб XAML .NET Framework обработка этого расширения разметки определяется классом <xref:System.Windows.Markup.StaticExtension>.  
+ <span data-ttu-id="bc0d6-136">В реализации служб XAML .NET Framework определяется обработка для данного расширения разметки <xref:System.Windows.Markup.StaticExtension> класса.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-136">In the .NET Framework XAML Services implementation, the handling for this markup extension is defined by the <xref:System.Windows.Markup.StaticExtension> class.</span></span>  
   
- `x:Static` является расширением разметки.  Все расширения разметки в XAML используют знаки `{` и `}` в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно предоставлять значение.  Дополнительные сведения о расширениях разметки см. в разделе [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ <span data-ttu-id="bc0d6-137">`x:Static` является расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-137">`x:Static` is a markup extension.</span></span> <span data-ttu-id="bc0d6-138">Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки необходимо указать значение.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-138">All markup extensions in XAML use the `{` and `}` characters in their attribute syntax, which is the convention by which a XAML processor recognizes that a markup extension must provide a value.</span></span> <span data-ttu-id="bc0d6-139">Дополнительные сведения о расширениях разметки см. в разделе [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).</span><span class="sxs-lookup"><span data-stu-id="bc0d6-139">For more information about markup extensions, see [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).</span></span>  
   
-## Примечания об использовании WPF  
- Пространство имен XAML по умолчанию, используемое для программирования WPF, не содержит многих полезных статических свойств, а большинство полезных статические свойства имеют поддержку, например, преобразователей типов, которые облегчают использование без необходимости `{x:Static}`.  Для статических свойств необходимо сопоставить префикс пространства имен XAML, если выполняется одно из следующих условий:  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="bc0d6-140">Примечания об использовании WPF</span><span class="sxs-lookup"><span data-stu-id="bc0d6-140">WPF Usage Notes</span></span>  
+ <span data-ttu-id="bc0d6-141">Пространство имен XAML по умолчанию, используемое для программирования WPF не содержит многих полезных статических свойств, а большинство полезных статические свойства имеют поддержки, таких как преобразователи типов, которые облегчают использование без необходимости `{x:Static}` .</span><span class="sxs-lookup"><span data-stu-id="bc0d6-141">The default XAML namespace you use for WPF programming does not contain many useful static properties, and most of the useful static properties have support such as type converters that facilitate the usage without requiring `{x:Static}` .</span></span> <span data-ttu-id="bc0d6-142">Для статических свойств необходимо сопоставить префикс для пространства имен XAML, если выполняется одно из следующих:</span><span class="sxs-lookup"><span data-stu-id="bc0d6-142">For static properties, you must map a prefix for a XAML namespace if one of the following is true:</span></span>  
   
--   Ссылка на тип, который существует в WPF, но не является частью пространства имен XAML по умолчанию для WPF \([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]\).  Это достаточно общий скрипт для использования `x:Static`.  Например, можно использовать ссылку `x:Static` с сопоставлением пространства имен XAML для пространства имен CLR <xref:System> и сборки mscorlib, чтобы ссылаться на статические свойства класса <xref:System.Environment>.  
+-   <span data-ttu-id="bc0d6-143">Создание ссылок на тип, который существует в WPF, но не является частью пространства имен XAML по умолчанию для WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="bc0d6-143">You are referencing a type that exists in WPF but is not part of the default XAML namespace for WPF ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]).</span></span> <span data-ttu-id="bc0d6-144">Это очень распространенный сценарий использования `x:Static`.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-144">This is a fairly common scenario for using `x:Static`.</span></span> <span data-ttu-id="bc0d6-145">Например, можно использовать `x:Static` ссылку с сопоставление пространства имен XAML для <xref:System> сборки пространства имен и mscorlib среды CLR, чтобы ссылаться на статические свойства <xref:System.Environment> класса.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-145">For example, you might use an `x:Static` reference with a XAML namespace mapping to the <xref:System> CLR namespace and mscorlib assembly in order to reference the static properties of the <xref:System.Environment> class.</span></span>  
   
--   Ссылка на тип из пользовательской сборки.  
+-   <span data-ttu-id="bc0d6-146">Ссылка на тип из пользовательской сборки.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-146">You are referencing a type from a custom assembly.</span></span>  
   
--   Ссылка на тип, который существует в сборке WPF, но этот тип доступен внутри пространства имен CLR, которое не было сопоставлено, чтобы быть частью определения пространства имен XAML по умолчанию в WPF.  Сопоставление пространств имен среды CLR в пространство имен XAML по умолчанию для WPF выполняется путем определения в различных сборках WPF \(дополнительные сведения по этой концепции см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)\).  Несопоставленные пространства имен CLR могут существовать, если пространство имен CLR в основном состоит из определений классов, которые обычно не предназначены для XAML, например <xref:System.Windows.Threading>.  
+-   <span data-ttu-id="bc0d6-147">Тип, который существует в сборке WPF, ссылаетесь, однако этот тип в пространстве имен CLR, которое не было сопоставлено частью пространства имен XAML по умолчанию WPF.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-147">You are referencing a type that exists in a WPF assembly, but that type is within a CLR namespace that was not mapped to be part of the WPF default XAML namespace.</span></span> <span data-ttu-id="bc0d6-148">Сопоставление пространств имен CLR в пространстве имен XAML по умолчанию для WPF выполняется путем определений в разных сборках WPF (Дополнительные сведения об этой концепции см. в разделе [пространства имен XAML и сопоставление пространства имен для WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)).</span><span class="sxs-lookup"><span data-stu-id="bc0d6-148">The mapping of CLR namespaces into the default XAML namespace for WPF is performed by definitions in the various WPF assemblies (for more information about this concept, see [XAML Namespaces and Namespace Mapping for WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)).</span></span> <span data-ttu-id="bc0d6-149">Несопоставленные пространства имен CLR могут существовать, если пространство имен CLR основном состоит из определений классов, которые обычно не предназначены для XAML, таких как <xref:System.Windows.Threading>.</span><span class="sxs-lookup"><span data-stu-id="bc0d6-149">Non-mapped CLR namespaces can exist if that CLR namespace is composed mostly of class definitions that are not typically intended for XAML, such as <xref:System.Windows.Threading>.</span></span>  
   
- Дополнительные сведения об использовании префиксов и пространств имен XAML в WPF см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ <span data-ttu-id="bc0d6-150">Дополнительные сведения о том, как использовать префиксы и пространства имен XAML для WPF см. в разделе [пространства имен XAML и сопоставление пространства имен WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="bc0d6-150">For more information on how to use prefixes and XAML namespaces for WPF, see [XAML Namespaces and Namespace Mapping for WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).</span></span>  
   
-## См. также  
- [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="bc0d6-151">См. также</span><span class="sxs-lookup"><span data-stu-id="bc0d6-151">See Also</span></span>  
+ [<span data-ttu-id="bc0d6-152">Расширение разметки x:Type</span><span class="sxs-lookup"><span data-stu-id="bc0d6-152">x:Type Markup Extension</span></span>](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [<span data-ttu-id="bc0d6-153">Типы, перенесенные из WPF в System.Xaml</span><span class="sxs-lookup"><span data-stu-id="bc0d6-153">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

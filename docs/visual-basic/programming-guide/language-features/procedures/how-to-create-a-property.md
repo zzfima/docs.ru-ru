@@ -1,81 +1,80 @@
 ---
-title: "Практическое руководство. Создание свойства (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "процедуры, определение"
-  - "свойства [Visual Basic]"
-  - "код Visual Basic, процедуры"
-  - "код Visual Basic, свойства"
+title: "Практическое руководство. Создание свойства (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, properties
+- properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание свойства (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Заключите определение свойства между оператором `Property` и оператором `End Property`.  В этом определении вы определяете процедуру `Get`, `Set` или обе.  Весь код свойства находится в этих процедурах.  
+# <a name="how-to-create-a-property-visual-basic"></a><span data-ttu-id="2c0fb-102">Практическое руководство. Создание свойства (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2c0fb-102">How to: Create a Property (Visual Basic)</span></span>
+<span data-ttu-id="2c0fb-103">Заключите определение свойства между `Property` инструкции и `End Property` инструкции.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-103">You enclose a property definition between a `Property` statement and an `End Property` statement.</span></span> <span data-ttu-id="2c0fb-104">В этом определении вы определяете `Get` процедуре `Set` или обе.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-104">Within this definition you define a `Get` procedure, a `Set` procedure, or both.</span></span> <span data-ttu-id="2c0fb-105">Код свойства находится в этих процедурах.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-105">All the property's code lies within these procedures.</span></span>  
   
- Процедура `Get` получает значение свойства, а процедура `Set` сохраняет значение.  Если требуется свойство, для которого есть права чтения и записи, необходимо определить обе процедуры.  Для свойства, доступного только для чтения, нужно определить только `Get`, а для свойства, доступного только для записи, определите только `Set`.  
+ <span data-ttu-id="2c0fb-106">`Get` Процедура получает значение свойства и `Set` процедура сохраняет значение.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-106">The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value.</span></span> <span data-ttu-id="2c0fb-107">Если необходимо, чтобы свойство должна иметь доступ для чтения и записи, необходимо определить обе процедуры.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-107">If you want the property to have read/write access, you must define both procedures.</span></span> <span data-ttu-id="2c0fb-108">Для свойства только для чтения, определяется только `Get`, и для записи, определите только `Set`.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-108">For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.</span></span>  
   
-### Создание свойства  
+### <a name="to-create-a-property"></a><span data-ttu-id="2c0fb-109">Создание свойства</span><span class="sxs-lookup"><span data-stu-id="2c0fb-109">To create a property</span></span>  
   
-1.  Вне любых свойств и процедур используйте оператор [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md), за которым следует оператор `End Property`.  
+1.  <span data-ttu-id="2c0fb-110">Вне свойства или процедуры, используйте [оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md), за которым следует `End Property` инструкции.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-110">Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.</span></span>  
   
-2.  Если свойство принимает параметры, дополните ключевое слово `Property` именем процедуры, а затем списком параметров в круглых скобках.  
+2.  <span data-ttu-id="2c0fb-111">Если свойство принимает параметры, выполните `Property` ключевого слова with имя процедуры, а затем список параметров в круглых скобках.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-111">If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.</span></span>  
   
-3.  После круглых скобок используйте оператор `As` для указания типа данных значения свойства.  Необходимо указать тип данных даже для свойства, доступного только для чтения.  
+3.  <span data-ttu-id="2c0fb-112">Круглые скобки, используя `As` предложений, чтобы указать тип данных значения свойства.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-112">Follow the parentheses with an `As` clause to specify the data type of the property's value.</span></span> <span data-ttu-id="2c0fb-113">Необходимо указать тип данных даже для свойства только для записи.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-113">You must specify the data type even for a write-only property.</span></span>  
   
-4.  Добавьте процедуры `Get` или `Set` нужным образом.  См. следующие объявления.  
+4.  <span data-ttu-id="2c0fb-114">Добавить `Get` и `Set` соответствующим процедурам.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-114">Add `Get` and `Set` procedures, as appropriate.</span></span> <span data-ttu-id="2c0fb-115">См. в следующих направлениях.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-115">See the following directions.</span></span>  
   
-### Создание процедуры Get, которая получает значение свойства  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a><span data-ttu-id="2c0fb-116">Чтобы создать процедуру Get, которая получает значение свойства</span><span class="sxs-lookup"><span data-stu-id="2c0fb-116">To create a Get procedure that retrieves a property value</span></span>  
   
-1.  Между операторами `Property` и `End Property` добавьте [Оператор Get](../../../../visual-basic/language-reference/statements/get-statement.md), за которым следует оператор `End Get`.  Для процедуры `Get` определять параметры необязательно.  
+1.  <span data-ttu-id="2c0fb-117">Между `Property` и `End Property` записи инструкций, [оператор Get](../../../../visual-basic/language-reference/statements/get-statement.md), за которым следует `End Get` инструкции.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-117">Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement.</span></span> <span data-ttu-id="2c0fb-118">Необходимо определить все параметры `Get` процедуры.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-118">You do not need to define any parameters for the `Get` procedure.</span></span>  
   
-2.  Чтобы извлечь значение свойства, поместите операторы кода между операторами `Get` и `End Get`.  Этот код может включать другие вычисления и манипуляции с данными в дополнение к созданию и возврату значения свойства.  
+2.  <span data-ttu-id="2c0fb-119">Поместите операторы кода для получения значения свойства между `Get` и `End Get` инструкции.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-119">Place the code statements to retrieve the property's value between the `Get` and `End Get` statements.</span></span> <span data-ttu-id="2c0fb-120">Этот код может включать другие вычисления и манипуляции с данными в дополнение к созданию и возврату значения свойства.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-120">This code can include other calculations and data manipulations in addition to generating and returning the property's value.</span></span>  
   
-3.  Оператор `Return` используется для возвращения значения свойства в вызывающий код.  
+3.  <span data-ttu-id="2c0fb-121">Используйте `Return` для возврата значения свойства в вызывающий код.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-121">Use a `Return` statement to return the property's value to the calling code.</span></span>  
   
- Необходимо написать процедуру `Get` для свойства чтения и записи и для свойства только для чтения.  Определять `Get` для свойства, доступного только для записи, не нужно.  
+ <span data-ttu-id="2c0fb-122">Необходимо написать `Get` процедуры для свойства чтения и записи и для свойства только для чтения.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-122">You must write a `Get` procedure for a read-write property and for a read-only property.</span></span> <span data-ttu-id="2c0fb-123">Не следует определить `Get` процедуры для свойства только для записи.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-123">You must not define a `Get` procedure for a write-only property.</span></span>  
   
-### Создание процедуры Set, которая записывает значение свойства  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a><span data-ttu-id="2c0fb-124">Создание процедуры набор, который записывает значение свойства</span><span class="sxs-lookup"><span data-stu-id="2c0fb-124">To create a Set procedure that writes a property's value</span></span>  
   
-1.  Между операторами `Property` и `End Property` добавьте [Оператор Set](../../../../visual-basic/language-reference/statements/set-statement.md), за которым следует оператор `End Set`.  
+1.  <span data-ttu-id="2c0fb-125">Между `Property` и `End Property` записи инструкций, [инструкции Set](../../../../visual-basic/language-reference/statements/set-statement.md), за которым следует `End Set` инструкции.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-125">Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.</span></span>  
   
-2.  В операторе `Set` после ключевого слова `Set` укажите список параметров в круглых скобках.  Этот список параметров должен включать, по крайней мере, параметр для значения, предаваемого вызывающим кодом.  Имя этого параметра по умолчанию — `Value`, но при необходимости можно использовать другое имя.  Параметр значения должен быть того же типа, что и само свойство.  
+2.  <span data-ttu-id="2c0fb-126">В `Set` инструкции, выполните `Set` ключевое слово со списком параметров в круглых скобках.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-126">In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses.</span></span> <span data-ttu-id="2c0fb-127">Этот список параметров должен включать по крайней мере, параметр для значения, переданного вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-127">This parameter list must include at least a value parameter for the value passed by the calling code.</span></span> <span data-ttu-id="2c0fb-128">Является именем по умолчанию для этого параметра значение `Value`, но при необходимости можно использовать другое имя.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-128">The default name for this value parameter is `Value`, but you can use a different name if appropriate.</span></span> <span data-ttu-id="2c0fb-129">Значение параметра должен иметь тот же тип данных, самого свойства.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-129">The value parameter must have the same data type as the property itself.</span></span>  
   
-3.  Поместите операторы кода для получения значения свойства между операторами `Set` и `End Set`.  Этот код может включать другие вычисления и манипуляции с данными в дополнение к созданию и возврату значений свойств.  
+3.  <span data-ttu-id="2c0fb-130">Поместите операторы кода для хранения значения свойства между `Set` и `End Set` инструкции.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-130">Place the code statements to store a value in the property between the `Set` and `End Set` statements.</span></span> <span data-ttu-id="2c0fb-131">Этот код может включать другие вычисления и манипуляции с данными в дополнение к созданию и возврату значения свойства.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-131">This code can include other calculations and data manipulations in addition to validating and storing the property's value.</span></span>  
   
-4.  Используйте параметр значения, чтобы принять значение, предоставленное вызывающим кодом.  Можно либо хранить это значение непосредственно в операторе присваивания, или использовать его в выражении для вычисления внутреннего значения.  
+4.  <span data-ttu-id="2c0fb-132">Параметр значение принять значение, предоставленное вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-132">Use the value parameter to accept the value supplied by the calling code.</span></span> <span data-ttu-id="2c0fb-133">Сохраните значение непосредственно в операторе присваивания или использовать его в выражении для вычисления внутреннего значения для сохранения.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-133">You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.</span></span>  
   
- Необходимо написать процедуру `Set` для свойства чтения и записи и для свойства, доступного только для записи.  Определять процедуру `Set` для свойства, доступного только для записи, не нужно.  
+ <span data-ttu-id="2c0fb-134">Необходимо написать `Set` процедуры для свойства чтения и записи и для свойства только для записи.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-134">You must write a `Set` procedure for a read-write property and for a write-only property.</span></span> <span data-ttu-id="2c0fb-135">Не следует определить `Set` процедуры для свойства только для чтения.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-135">You must not define a `Set` procedure for a read-only property.</span></span>  
   
-## Пример  
- В следующем примере создается свойство чтения\/записи, которое сохраняет полное имя как два составных имени — имя и фамилия.  Когда вызывающий код считывает процедуры `fullName`, процедура `Get` объединяет два составных имени и возвращает полное имя.  Когда вызывающий код присваивает новое полное имя, процедура `Set` пытается разделить его на два составных имени.  Если не удается найти пробел, то она сохраняет все полное имя как имя.  
+## <a name="example"></a><span data-ttu-id="2c0fb-136">Пример</span><span class="sxs-lookup"><span data-stu-id="2c0fb-136">Example</span></span>  
+ <span data-ttu-id="2c0fb-137">В следующем примере создается свойство чтения/записи, которая хранит полное имя как два составных имени, имени и фамилии.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-137">The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name.</span></span> <span data-ttu-id="2c0fb-138">Когда вызывающий код считывает `fullName`, `Get` процедура объединяет два составных имени и возвращает полное имя.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-138">When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name.</span></span> <span data-ttu-id="2c0fb-139">Когда вызывающий код присваивает новое полное имя `Set` процедура пытается разделить его на два составных имени.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-139">When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names.</span></span> <span data-ttu-id="2c0fb-140">Если он не находит пробел, он сохраняет все как имя.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-140">If it does not find a space, it stores it all as the first name.</span></span>  
   
  [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
- В следующем примере показаны вызовы процедур свойств из `fullName`.  Первый вызов задает значение свойства, а второй вызов извлекает его.  
+ <span data-ttu-id="2c0fb-141">В следующем примере показаны вызовы процедур свойств из `fullName`.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-141">The following example shows typical calls to the property procedures of `fullName`.</span></span> <span data-ttu-id="2c0fb-142">Первый вызов задает значение свойства, а второй вызов извлекает его.</span><span class="sxs-lookup"><span data-stu-id="2c0fb-142">The first call sets the property value and the second call retrieves it.</span></span>  
   
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Процедуры свойств](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Различия между свойствами и переменными в Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [Практическое руководство. Объявление свойства со смешанным уровнем доступа](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [Практическое руководство. Вызов процедуры свойства](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [Практическое руководство. Запись значения в свойство](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [Практическое руководство. Получение значения из свойства](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="2c0fb-143">См. также</span><span class="sxs-lookup"><span data-stu-id="2c0fb-143">See Also</span></span>  
+ [<span data-ttu-id="2c0fb-144">Процедуры</span><span class="sxs-lookup"><span data-stu-id="2c0fb-144">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="2c0fb-145">Процедуры свойств</span><span class="sxs-lookup"><span data-stu-id="2c0fb-145">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="2c0fb-146">Параметры и аргументы процедуры</span><span class="sxs-lookup"><span data-stu-id="2c0fb-146">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="2c0fb-147">Различия между свойствами и переменными в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c0fb-147">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
+ [<span data-ttu-id="2c0fb-148">Практическое руководство. Объявление свойства со смешанным уровнем доступа</span><span class="sxs-lookup"><span data-stu-id="2c0fb-148">How to: Declare a Property with Mixed Access Levels</span></span>](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [<span data-ttu-id="2c0fb-149">Практическое руководство. Вызов процедуры свойства</span><span class="sxs-lookup"><span data-stu-id="2c0fb-149">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
+ [<span data-ttu-id="2c0fb-150">Как: объявление и вызов свойства по умолчанию в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c0fb-150">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)  
+ [<span data-ttu-id="2c0fb-151">Практическое руководство. Запись значения в свойство</span><span class="sxs-lookup"><span data-stu-id="2c0fb-151">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)  
+ [<span data-ttu-id="2c0fb-152">Практическое руководство. Получение значения из свойства</span><span class="sxs-lookup"><span data-stu-id="2c0fb-152">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)

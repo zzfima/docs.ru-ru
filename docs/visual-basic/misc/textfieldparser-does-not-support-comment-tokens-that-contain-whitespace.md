@@ -1,26 +1,28 @@
 ---
-title: "TextFieldParser не поддерживает токены комментариев, содержащие пробелы. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrTextFieldParser_WhitespaceInToken"
+title: "TextFieldParser не поддерживает токены комментариев, содержащие пробелы."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrTextFieldParser_WhitespaceInToken
 ms.assetid: 55107656-270e-4bbb-841a-478904df8e07
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cd7992eb2957a6471168a95ce4c139a6af7614a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# TextFieldParser не поддерживает токены комментариев, содержащие пробелы.
-Представлен токен комментария, содержащий пробел.`TextFieldParser` не поддерживает токены комментариев, содержащие пробелы, если это не пробел в начале токена. Пробелы в начале токена игнорируются.  
+# <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a><span data-ttu-id="f45a8-102">TextFieldParser не поддерживает токены комментариев, содержащие пробелы.</span><span class="sxs-lookup"><span data-stu-id="f45a8-102">TextFieldParser does not support comment tokens that contain whitespace</span></span>
+<span data-ttu-id="f45a8-103">Представлен токен комментария, содержащий пробел.</span><span class="sxs-lookup"><span data-stu-id="f45a8-103">A comment token that contains white space has been supplied.</span></span> <span data-ttu-id="f45a8-104">`TextFieldParser` не поддерживает токены комментариев, содержащие пробелы, если это не пробел в начале токена.</span><span class="sxs-lookup"><span data-stu-id="f45a8-104">The `TextFieldParser` does not support comment tokens that contain white space unless the white space occurs at the beginning of the token.</span></span> <span data-ttu-id="f45a8-105">Пробелы в начале токена игнорируются.</span><span class="sxs-lookup"><span data-stu-id="f45a8-105">White space occurring at the beginning of a token is ignored.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f45a8-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="f45a8-106">To correct this error</span></span>  
   
--   Укажите правильный токен комментария.  
+-   <span data-ttu-id="f45a8-107">Укажите правильный токен комментария.</span><span class="sxs-lookup"><span data-stu-id="f45a8-107">Supply a correct comment token.</span></span>  
   
-## См. также  
- [Свойство TextFieldParser.CommentTokens](http://msdn.microsoft.com/ru-ru/2e6b6435-4bee-4c14-a353-e8f2c82e2d61)   
- [Анализ текстовых файлов с помощью объекта TextFieldParser](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)   
- [Объект TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+## <a name="see-also"></a><span data-ttu-id="f45a8-108">См. также</span><span class="sxs-lookup"><span data-stu-id="f45a8-108">See Also</span></span>  
+ [<span data-ttu-id="f45a8-109">Свойство TextFieldParser.CommentTokens</span><span class="sxs-lookup"><span data-stu-id="f45a8-109">TextFieldParser.CommentTokens Property</span></span>](http://msdn.microsoft.com/en-us/2e6b6435-4bee-4c14-a353-e8f2c82e2d61)  
+ [<span data-ttu-id="f45a8-110">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="f45a8-110">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [<span data-ttu-id="f45a8-111">Объект TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="f45a8-111">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)

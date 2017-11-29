@@ -1,127 +1,124 @@
 ---
-title: "Оператор Class (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Class"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "модули класса"
-  - "Class - оператор"
-  - "типы классов, операторы class"
-  - "классы [Visual Basic], создание"
-  - "классы [Visual Basic], члены данных"
-  - "классы [Visual Basic], поля"
-  - "члены данных, классов"
-  - "поля, классов"
+title: "Оператор Class (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Class
+helpviewer_keywords:
+- class modules
+- Class statement [Visual Basic]
+- classes [Visual Basic], fields
+- fields [Visual Basic], of classes
+- class types [Visual Basic], class statements
+- classes [Visual Basic], creating
+- classes [Visual Basic], data members
+- data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Class (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объявляет имя класса и представляет определения переменных, свойств, событий и процедур, которые включаются в класс.  
+# <a name="class-statement-visual-basic"></a><span data-ttu-id="cd436-102">Оператор Class (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cd436-102">Class Statement (Visual Basic)</span></span>
+<span data-ttu-id="cd436-103">Объявляет имя класса и вводит определение переменных, свойств, событий и процедур, которые включаются в класс.</span><span class="sxs-lookup"><span data-stu-id="cd436-103">Declares the name of a class and introduces the definition of the variables, properties, events, and procedures that the class comprises.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="cd436-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cd436-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
-Class name [ ( Of typelist ) ]  
-    [ Inherits classname ]  
-    [ Implements interfacenames ]  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
+Class name [ ( Of typelist ) ]  
+    [ Inherits classname ]  
+    [ Implements interfacenames ]  
+    [ statements ]  
 End Class  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="cd436-105">Части</span><span class="sxs-lookup"><span data-stu-id="cd436-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`attributelist`|Необязательный.  См. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательный.  Может принимать следующие значения:<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенный](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный.  См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Необязательный.  Дополнительные сведения см. в разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Необязательный.  Дополнительные сведения см. в разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`Partial`|Необязательный.  Указывает частичное определение класса.  Дополнительные сведения см. в разделе [Partial](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Обязательный.  Имя этого класса.  См. раздел [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Of`|Необязательный.  Указывает на принадлежность к универсальному классу.|  
-|`typelist`|Является обязательным, если используется ключевое слово [Of](../../../visual-basic/language-reference/statements/of-clause.md).  Список типов параметров для данного класса.  См. раздел [Список типов](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Необязательный.  Указывает на то, что данный класс наследует члены другого класса.  Дополнительные сведения см. в разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Является обязательным, если используется оператор `Inherits`.  Имя класса, от которого наследует данный класс.|  
-|`Implements`|Необязательный.  Указывает на то, что этот класс реализует члены одного или нескольких интерфейсов.  Дополнительные сведения см. в разделе [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Является обязательным, если используется оператор `Implements`.  Имена интерфейсов, реализуемых данным классом.|  
-|`statements`|Необязательный.  Операторы, определяющие члены этого класса.|  
-|`End Class`|Обязательный.  Завершает определение `Class`.|  
+|<span data-ttu-id="cd436-106">Термин</span><span class="sxs-lookup"><span data-stu-id="cd436-106">Term</span></span>|<span data-ttu-id="cd436-107">Определение</span><span class="sxs-lookup"><span data-stu-id="cd436-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="cd436-108">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-108">Optional.</span></span> <span data-ttu-id="cd436-109">В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="cd436-110">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-110">Optional.</span></span> <span data-ttu-id="cd436-111">Ниже указаны доступные значения.</span><span class="sxs-lookup"><span data-stu-id="cd436-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="cd436-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="cd436-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="cd436-113">-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="cd436-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="cd436-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="cd436-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="cd436-115">-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="cd436-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="cd436-116">В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="cd436-117">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-117">Optional.</span></span> <span data-ttu-id="cd436-118">В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`MustInherit`|<span data-ttu-id="cd436-119">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-119">Optional.</span></span> <span data-ttu-id="cd436-120">В разделе [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-120">See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span></span>|  
+|`NotInheritable`|<span data-ttu-id="cd436-121">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-121">Optional.</span></span> <span data-ttu-id="cd436-122">В разделе [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-122">See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).</span></span>|  
+|`Partial`|<span data-ttu-id="cd436-123">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-123">Optional.</span></span> <span data-ttu-id="cd436-124">Указывает частичное определение класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-124">Indicates a partial definition of the class.</span></span> <span data-ttu-id="cd436-125">В разделе [частичного](../../../visual-basic/language-reference/modifiers/partial.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-125">See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).</span></span>|  
+|`name`|<span data-ttu-id="cd436-126">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd436-126">Required.</span></span> <span data-ttu-id="cd436-127">Имя этого класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-127">Name of this class.</span></span> <span data-ttu-id="cd436-128">В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-128">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Of`|<span data-ttu-id="cd436-129">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-129">Optional.</span></span> <span data-ttu-id="cd436-130">Указывает, что это универсальный класс.</span><span class="sxs-lookup"><span data-stu-id="cd436-130">Specifies that this is a generic class.</span></span>|  
+|`typelist`|<span data-ttu-id="cd436-131">Является обязательным, если используется [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="cd436-131">Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="cd436-132">Список параметров типа для этого класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-132">List of type parameters for this class.</span></span> <span data-ttu-id="cd436-133">В разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-133">See [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>|  
+|`Inherits`|<span data-ttu-id="cd436-134">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-134">Optional.</span></span> <span data-ttu-id="cd436-135">Указывает, что этот класс наследует члены другого класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-135">Indicates that this class inherits the members of another class.</span></span> <span data-ttu-id="cd436-136">В разделе [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-136">See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).</span></span>|  
+|`classname`|<span data-ttu-id="cd436-137">Является обязательным, если используется `Inherits` инструкции.</span><span class="sxs-lookup"><span data-stu-id="cd436-137">Required if you use the `Inherits` statement.</span></span> <span data-ttu-id="cd436-138">Имя класса, из которого происходит данный класс.</span><span class="sxs-lookup"><span data-stu-id="cd436-138">The name of the class from which this class derives.</span></span>|  
+|`Implements`|<span data-ttu-id="cd436-139">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-139">Optional.</span></span> <span data-ttu-id="cd436-140">Указывает, что этот класс реализует члены одного или нескольких интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="cd436-140">Indicates that this class implements the members of one or more interfaces.</span></span> <span data-ttu-id="cd436-141">В разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-141">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>|  
+|`interfacenames`|<span data-ttu-id="cd436-142">Является обязательным, если используется `Implements` инструкции.</span><span class="sxs-lookup"><span data-stu-id="cd436-142">Required if you use the `Implements` statement.</span></span> <span data-ttu-id="cd436-143">Имена интерфейсов, реализуемых этого класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-143">The names of the interfaces this class implements.</span></span>|  
+|`statements`|<span data-ttu-id="cd436-144">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="cd436-144">Optional.</span></span> <span data-ttu-id="cd436-145">Операторы, которые определяют члены этого класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-145">Statements which define the members of this class.</span></span>|  
+|`End Class`|<span data-ttu-id="cd436-146">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="cd436-146">Required.</span></span> <span data-ttu-id="cd436-147">Завершает `Class` определения.</span><span class="sxs-lookup"><span data-stu-id="cd436-147">Terminates the `Class` definition.</span></span>|  
   
-## Заметки  
- Оператор `Class` определяет новый тип данных.  *Класс* является основным строительным блоком в объектно\-ориентированном программировании \(OOP\).  Дополнительные сведения см. в разделе [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+## <a name="remarks"></a><span data-ttu-id="cd436-148">Примечания</span><span class="sxs-lookup"><span data-stu-id="cd436-148">Remarks</span></span>  
+ <span data-ttu-id="cd436-149">Объект `Class` инструкция определяет новый тип данных.</span><span class="sxs-lookup"><span data-stu-id="cd436-149">A `Class` statement defines a new data type.</span></span> <span data-ttu-id="cd436-150">Объект *класс* является основной строительный блок объектно ориентированное программирование (OOP).</span><span class="sxs-lookup"><span data-stu-id="cd436-150">A *class* is a fundamental building block of object-oriented programming (OOP).</span></span> <span data-ttu-id="cd436-151">Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-151">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
- Оператор `Class` можно использовать только на уровне пространства имен или модуля.  Это означает, что *контекстом объявления* для класса должен быть исходный файл, пространство имен, класс, структура, модуль или интерфейс и не может быть процедура или блок.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="cd436-152">Можно использовать `Class` только на уровне пространства имен или модуля.</span><span class="sxs-lookup"><span data-stu-id="cd436-152">You can use `Class` only at namespace or module level.</span></span> <span data-ttu-id="cd436-153">Это означает *контекст объявления* для класса должен быть исходный файл, пространство имен, класс, структура, модуль или интерфейс и не может быть процедурой или блоком.</span><span class="sxs-lookup"><span data-stu-id="cd436-153">This means the *declaration context* for a class must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block.</span></span> <span data-ttu-id="cd436-154">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-154">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Каждый экземпляр класса имеет время жизни, не зависящее от всех других экземпляров.  Это время жизни начинается при создании экземпляра предложением [Оператор New](../../../visual-basic/language-reference/operators/new-operator.md) или функцией, например <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.  Оно заканчивается, когда все переменные, указывающие на экземпляр были установлены в [Nothing](../../../visual-basic/language-reference/nothing.md) или в экземпляры других классов.  
+ <span data-ttu-id="cd436-155">Каждый экземпляр класса имеет время существования, независимое от всех других экземпляров.</span><span class="sxs-lookup"><span data-stu-id="cd436-155">Each instance of a class has a lifetime independent of all other instances.</span></span> <span data-ttu-id="cd436-156">Это время существования начинается, когда она была создана программой [оператор New](../../../visual-basic/language-reference/operators/new-operator.md) предложение или функцией, такой как <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="cd436-156">This lifetime begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause or by a function such as <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>.</span></span> <span data-ttu-id="cd436-157">Оно заканчивается, когда все переменные, указывающие на экземпляр было присвоено значение [ничего](../../../visual-basic/language-reference/nothing.md) или экземпляры других классов.</span><span class="sxs-lookup"><span data-stu-id="cd436-157">It ends when all variables pointing to the instance have been set to [Nothing](../../../visual-basic/language-reference/nothing.md) or to instances of other classes.</span></span>  
   
- Классы по умолчанию имеют доступ [Friend](../../../visual-basic/language-reference/modifiers/friend.md).  Уровни доступа можно настроить с помощью модификаторов доступа.  Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ <span data-ttu-id="cd436-158">По умолчанию для классов [Friend](../../../visual-basic/language-reference/modifiers/friend.md) доступа.</span><span class="sxs-lookup"><span data-stu-id="cd436-158">Classes default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access.</span></span> <span data-ttu-id="cd436-159">Вы можете настроить уровни доступа с помощью модификаторов доступа.</span><span class="sxs-lookup"><span data-stu-id="cd436-159">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="cd436-160">Дополнительные сведения см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-160">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## Правила  
+## <a name="rules"></a><span data-ttu-id="cd436-161">Правила</span><span class="sxs-lookup"><span data-stu-id="cd436-161">Rules</span></span>  
   
--   **Вложения.** Можно определить один класс внутри другого.  Внешний класс называется *содержащим классом*, а внутренний класс — *вложенным классом*.  
+-   <span data-ttu-id="cd436-162">**Вложение.**</span><span class="sxs-lookup"><span data-stu-id="cd436-162">**Nesting.**</span></span> <span data-ttu-id="cd436-163">Можно определить один класс внутри другого.</span><span class="sxs-lookup"><span data-stu-id="cd436-163">You can define one class within another.</span></span> <span data-ttu-id="cd436-164">Внешний класс называется *содержащий класс*, а внутренний класс — *вложенных классов*.</span><span class="sxs-lookup"><span data-stu-id="cd436-164">The outer class is called the *containing class*, and the inner class is called a *nested class*.</span></span>  
   
--   **Наследование.** Если класс использует [Инструкция Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md), то можно указать только один базовый класс или интерфейс.  Класс не может наследовать от нескольких элементов.  
+-   <span data-ttu-id="cd436-165">**Наследование.**</span><span class="sxs-lookup"><span data-stu-id="cd436-165">**Inheritance.**</span></span> <span data-ttu-id="cd436-166">Если класс использует [инструкцию наследует](../../../visual-basic/language-reference/statements/inherits-statement.md), можно указать только один базовый класс или интерфейс.</span><span class="sxs-lookup"><span data-stu-id="cd436-166">If the class uses the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), you can specify only one base class or interface.</span></span> <span data-ttu-id="cd436-167">Класс не может наследовать от более чем одного элемента.</span><span class="sxs-lookup"><span data-stu-id="cd436-167">A class cannot inherit from more than one element.</span></span>  
   
-     Класс не может наследовать от другого класса с более строгим уровнем доступа.  Например, класс `Public` не может наследовать от класса `Friend`.  
+     <span data-ttu-id="cd436-168">Класс не может наследовать от другого класса с более строгим уровнем доступа.</span><span class="sxs-lookup"><span data-stu-id="cd436-168">A class cannot inherit from another class with a more restrictive access level.</span></span> <span data-ttu-id="cd436-169">Например `Public` класс не может наследовать от `Friend` класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-169">For example, a `Public` class cannot inherit from a `Friend` class.</span></span>  
   
-     Класс не может наследовать от вложенного в него класса.  
+     <span data-ttu-id="cd436-170">Класс не может наследовать от вложенного в него класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-170">A class cannot inherit from a class nested within it.</span></span>  
   
--   **Реализация.** Если класс использует [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md), то необходимо реализовать каждый член, определенный каждым интерфейсом в `interfacenames`.  Исключение составляет повторная реализация члена базового класса.  Дополнительные сведения см. в главе "Повторная реализация" раздела [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  
+-   <span data-ttu-id="cd436-171">**Реализация.**</span><span class="sxs-lookup"><span data-stu-id="cd436-171">**Implementation.**</span></span> <span data-ttu-id="cd436-172">Если класс использует [оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md), должен реализовывать все члены каждого интерфейса, укажите в `interfacenames`.</span><span class="sxs-lookup"><span data-stu-id="cd436-172">If the class uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.</span></span> <span data-ttu-id="cd436-173">Исключением является повторная реализация члена базового класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-173">An exception to this is reimplementation of a base class member.</span></span> <span data-ttu-id="cd436-174">Дополнительные сведения см. в разделе «Повторная реализация» в [реализует](../../../visual-basic/language-reference/statements/implements-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-174">For more information, see "Reimplementation" in [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
--   **Атрибут по умолчанию.** Класс может указать только одно свойство в качестве *свойства по умолчанию*.  Дополнительные сведения см. в разделе [Default](../../../visual-basic/language-reference/modifiers/default.md).  
+-   <span data-ttu-id="cd436-175">**Свойство по умолчанию.**</span><span class="sxs-lookup"><span data-stu-id="cd436-175">**Default Property.**</span></span> <span data-ttu-id="cd436-176">Класс можно указать только одно свойство в качестве его *свойство по умолчанию*.</span><span class="sxs-lookup"><span data-stu-id="cd436-176">A class can specify at most one property as its *default property*.</span></span> <span data-ttu-id="cd436-177">Дополнительные сведения см. в разделе [по умолчанию](../../../visual-basic/language-reference/modifiers/default.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-177">For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).</span></span>  
   
-## Поведение  
+## <a name="behavior"></a><span data-ttu-id="cd436-178">Поведение</span><span class="sxs-lookup"><span data-stu-id="cd436-178">Behavior</span></span>  
   
--   **Уровень доступа.** В классе можно объявить каждый член со своим собственным уровнем доступа.  Члены класса по умолчанию имеют доступ [Public](../../../visual-basic/language-reference/modifiers/public.md), за исключением переменных и констант, которые по умолчанию имеют доступ [Private](../../../visual-basic/language-reference/modifiers/private.md).  Если класс имеет более ограниченный доступ, чем один из его членов, уровень доступа к заданному классу имеет больший приоритет.  
+-   <span data-ttu-id="cd436-179">**Уровень доступа.**</span><span class="sxs-lookup"><span data-stu-id="cd436-179">**Access Level.**</span></span> <span data-ttu-id="cd436-180">В пределах класса можно объявить каждый член со своим собственным уровнем доступа.</span><span class="sxs-lookup"><span data-stu-id="cd436-180">Within a class, you can declare each member with its own access level.</span></span> <span data-ttu-id="cd436-181">По умолчанию члены класса [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступ к, за исключением переменных и констант, который по умолчанию для [закрытый](../../../visual-basic/language-reference/modifiers/private.md) доступа.</span><span class="sxs-lookup"><span data-stu-id="cd436-181">Class members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access, except variables and constants, which default to [Private](../../../visual-basic/language-reference/modifiers/private.md) access.</span></span> <span data-ttu-id="cd436-182">Если класс более ограниченный доступ, чем один из его членов, уровень доступа класса имеет приоритет.</span><span class="sxs-lookup"><span data-stu-id="cd436-182">When a class has more restricted access than one of its members, the class access level takes precedence.</span></span>  
   
--   **Область действия.** Область действия класса — его пространство имен, класс, структура или модуль.  
+-   <span data-ttu-id="cd436-183">**Область действия.**</span><span class="sxs-lookup"><span data-stu-id="cd436-183">**Scope.**</span></span> <span data-ttu-id="cd436-184">Класс — область действия его содержащего пространства имен, класса, структуры или модуля.</span><span class="sxs-lookup"><span data-stu-id="cd436-184">A class is in scope throughout its containing namespace, class, structure, or module.</span></span>  
   
-     Областью действия каждого члена класса является весь класс.  
+     <span data-ttu-id="cd436-185">Область каждого члена класса является весь класс.</span><span class="sxs-lookup"><span data-stu-id="cd436-185">The scope of every class member is the entire class.</span></span>  
   
-     **Время существования.** Visual Basic не поддерживает статические классы.  Функциональный эквивалент статического класса обеспечивается модулем.  Дополнительные сведения см. в разделе [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md).  
+     <span data-ttu-id="cd436-186">**Время существования.**</span><span class="sxs-lookup"><span data-stu-id="cd436-186">**Lifetime.**</span></span> <span data-ttu-id="cd436-187">Visual Basic не поддерживает статические классы.</span><span class="sxs-lookup"><span data-stu-id="cd436-187">Visual Basic does not support static classes.</span></span> <span data-ttu-id="cd436-188">Функциональный эквивалент статического класса обеспечивается модуля.</span><span class="sxs-lookup"><span data-stu-id="cd436-188">The functional equivalent of a static class is provided by a module.</span></span> <span data-ttu-id="cd436-189">Дополнительные сведения см. в разделе [оператор Module](../../../visual-basic/language-reference/statements/module-statement.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-189">For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-     Время существования членов класса зависит от того, как и где они были объявлены.  Дополнительные сведения см. в разделе [Время существования в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+     <span data-ttu-id="cd436-190">Члены класса имеют время существования в зависимости от того, как и где они объявлены.</span><span class="sxs-lookup"><span data-stu-id="cd436-190">Class members have lifetimes depending on how and where they are declared.</span></span> <span data-ttu-id="cd436-191">Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-191">For more information, see [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   **Квалификация.** Код вне класса должен предварять имя члена именем этого класса.  
+-   <span data-ttu-id="cd436-192">**Квалификация.**</span><span class="sxs-lookup"><span data-stu-id="cd436-192">**Qualification.**</span></span> <span data-ttu-id="cd436-193">Код вне класса необходимо предварять именем члена с именем этого класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-193">Code outside a class must qualify a member's name with the name of that class.</span></span>  
   
-     Если код внутри вложенного класса делает неполную ссылку на элемент программирования, Visual Basic ищет элемент сначала во вложенном классе, затем в содержащем его классе, и так далее до выхода из внешнего содержащего элемента.  
+     <span data-ttu-id="cd436-194">Если код внутри вложенного класса делает неопределенную ссылку на элемент программирования, Visual Basic ищет элемент сначала во вложенном классе, затем в содержащий его класс, и т. д для внешнего содержащего элемента.</span><span class="sxs-lookup"><span data-stu-id="cd436-194">If code inside a nested class makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested class, then in its containing class, and so on out to the outermost containing element.</span></span>  
   
-## Классы и модули  
- Эти элементы имеют много общего, но существуют важные различия.  
+## <a name="classes-and-modules"></a><span data-ttu-id="cd436-195">Классы и модули</span><span class="sxs-lookup"><span data-stu-id="cd436-195">Classes and Modules</span></span>  
+ <span data-ttu-id="cd436-196">Эти элементы имеют много общего, но существуют некоторые важные различия.</span><span class="sxs-lookup"><span data-stu-id="cd436-196">These elements have many similarities, but there are some important differences as well.</span></span>  
   
--   **Терминология.** Предыдущие версии Visual Basic различают два типа модулей: *модули класса* \(файлы CLS\) и *стандартные модули* \(файлы BAS\).  В текущей версии они называются соответственно *классами* и *модулями*.  
+-   <span data-ttu-id="cd436-197">**Терминология.**</span><span class="sxs-lookup"><span data-stu-id="cd436-197">**Terminology.**</span></span> <span data-ttu-id="cd436-198">Предыдущие версии Visual Basic распознает два типа модулей: *модулей класса* (файлы CLS) и *стандартные модули* (файлы BAS).</span><span class="sxs-lookup"><span data-stu-id="cd436-198">Previous versions of Visual Basic recognize two types of modules: *class modules* (.cls files) and *standard modules* (.bas files).</span></span> <span data-ttu-id="cd436-199">Текущая версия вызывает эти *классы* и *модули*соответственно.</span><span class="sxs-lookup"><span data-stu-id="cd436-199">The current version calls these *classes* and *modules*, respectively.</span></span>  
   
--   **Общие члены.** Можно управлять тем, является ли член класса общим или членом экземпляра.  
+-   <span data-ttu-id="cd436-200">**Общие члены.**</span><span class="sxs-lookup"><span data-stu-id="cd436-200">**Shared Members.**</span></span> <span data-ttu-id="cd436-201">Можно управлять ли член класса общим или членом экземпляра.</span><span class="sxs-lookup"><span data-stu-id="cd436-201">You can control whether a member of a class is a shared or instance member.</span></span>  
   
--   **Объектная ориентация.** Классы являются объектно ориентированными, а модули — нет.  Пользователь может создать один или несколько экземпляров класса.  Дополнительные сведения см. в разделе [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+-   <span data-ttu-id="cd436-202">**Ориентация на объекты.**</span><span class="sxs-lookup"><span data-stu-id="cd436-202">**Object Orientation.**</span></span> <span data-ttu-id="cd436-203">Классы являются объектно ориентированного, но модули не будут.</span><span class="sxs-lookup"><span data-stu-id="cd436-203">Classes are object-oriented, but modules are not.</span></span> <span data-ttu-id="cd436-204">Можно создать один или несколько экземпляров класса.</span><span class="sxs-lookup"><span data-stu-id="cd436-204">You can create one or more instances of a class.</span></span> <span data-ttu-id="cd436-205">Дополнительные сведения см. в разделе [объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span><span class="sxs-lookup"><span data-stu-id="cd436-205">For more information, see [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
-## Пример  
- В следующем примере оператор `Class` используется для определения класса и нескольких членов.  
+## <a name="example"></a><span data-ttu-id="cd436-206">Пример</span><span class="sxs-lookup"><span data-stu-id="cd436-206">Example</span></span>  
+ <span data-ttu-id="cd436-207">В следующем примере используется `Class` инструкции для определения класса и несколько членов.</span><span class="sxs-lookup"><span data-stu-id="cd436-207">The following example uses a `Class` statement to define a class and several members.</span></span>  
   
  [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
-## См. также  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Структуры и классы](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Время существования: создание и уничтожение объектов](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Практическое руководство. Использование универсального класса](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+## <a name="see-also"></a><span data-ttu-id="cd436-208">См. также</span><span class="sxs-lookup"><span data-stu-id="cd436-208">See Also</span></span>  
+ [<span data-ttu-id="cd436-209">Объекты и классы</span><span class="sxs-lookup"><span data-stu-id="cd436-209">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="cd436-210">Структуры и классы</span><span class="sxs-lookup"><span data-stu-id="cd436-210">Structures and Classes</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="cd436-211">Оператор Interface</span><span class="sxs-lookup"><span data-stu-id="cd436-211">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="cd436-212">Оператор Module</span><span class="sxs-lookup"><span data-stu-id="cd436-212">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="cd436-213">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="cd436-213">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="cd436-214">Время существования. Создание и уничтожение объектов</span><span class="sxs-lookup"><span data-stu-id="cd436-214">Object Lifetime: How Objects Are Created and Destroyed</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [<span data-ttu-id="cd436-215">Универсальные типы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cd436-215">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="cd436-216">Практическое руководство. Использование универсального класса</span><span class="sxs-lookup"><span data-stu-id="cd436-216">How to: Use a Generic Class</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

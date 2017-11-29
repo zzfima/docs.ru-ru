@@ -1,37 +1,39 @@
 ---
-title: "Практическое руководство. Использование разделов системных параметров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы, SystemParameters"
-  - "ключи ресурса, SystemParameters - класс"
-  - "SystemParameters - класс"
+title: "Практическое руководство. Использование разделов системных параметров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource keys [WPF], SystemParameters class
+- classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2b5f45f386c58b0577a2716c6fe1396f4c44f4ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование разделов системных параметров
-Системные ресурсы предоставляют ряд метрик системы в качестве ресурсов, что помогает разработчикам создавать визуализацию, совместимую с параметрами системы.  <xref:System.Windows.SystemParameters> является классом, который содержит значения системных параметров и ключи ресурсов, которые привязаны к значениям, например <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> и <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>.  Метрики параметров системы могут использоваться в качестве статических или динамических ресурсов.  Используйте динамический ресурс, если требуется метрика параметра для автоматического обновления во время выполнения приложения; в других случаях используйте статический ресурс.  
+# <a name="how-to-use-system-parameters-keys"></a><span data-ttu-id="6abad-102">Практическое руководство. Использование разделов системных параметров</span><span class="sxs-lookup"><span data-stu-id="6abad-102">How to: Use System Parameters Keys</span></span>
+<span data-ttu-id="6abad-103">Системные ресурсы предоставляют ряд метрик системы в качестве ресурсов, что помогает разработчикам создавать визуальные элементы, совместимые с параметрами системы.</span><span class="sxs-lookup"><span data-stu-id="6abad-103">System resources expose a number of system metrics as resources to help developers create visuals that are consistent with system settings.</span></span> <span data-ttu-id="6abad-104"><xref:System.Windows.SystemParameters>— Это класс, который содержит значения системных параметров и ключи ресурсов, которые привязаны к значениям — например, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> и <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>.</span><span class="sxs-lookup"><span data-stu-id="6abad-104"><xref:System.Windows.SystemParameters> is a class that contains both system parameter values and resource keys that bind to the values—for example, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> and <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>.</span></span> <span data-ttu-id="6abad-105">Метрики параметров системы могут использоваться в качестве статических или динамических ресурсов.</span><span class="sxs-lookup"><span data-stu-id="6abad-105">System parameter metrics can be used as either static or dynamic resources.</span></span> <span data-ttu-id="6abad-106">Используйте динамический ресурс, если требуется метрика параметра для автоматического обновления во время выполнения приложения; в других случаях используйте статический ресурс.</span><span class="sxs-lookup"><span data-stu-id="6abad-106">Use a dynamic resource if you want the parameter metric to update automatically while the application runs; otherwise use a static resource.</span></span>  
   
 > [!NOTE]
->  Динамические ресурсы имеют ключевое слово *Key*, добавляемое к имени свойства.  
+>  <span data-ttu-id="6abad-107">Динамические ресурсы имеют ключевое слово *ключ* добавляется к имени свойства.</span><span class="sxs-lookup"><span data-stu-id="6abad-107">Dynamic resources have the keyword *Key* appended to the property name.</span></span>  
   
- В следующем примере показано, как получить доступ и использовать динамические ресурсы параметров системы для стилизации или настройки кнопки.  Этот пример [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] задает размеры кнопки, присваивая параметрам <xref:System.Windows.SystemParameters> значения ширины и высоты кнопки.  
+ <span data-ttu-id="6abad-108">В приведенном ниже примере показано, как получить доступ к ресурсам динамических параметров системы и использовать их для создания стиля или настройки кнопки.</span><span class="sxs-lookup"><span data-stu-id="6abad-108">The following example shows how to access and use system parameter dynamic resources to style or customize a button.</span></span> <span data-ttu-id="6abad-109">Это [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] пример изменяет размер кнопки, назначив <xref:System.Windows.SystemParameters> значения ширины и высоты кнопки.</span><span class="sxs-lookup"><span data-stu-id="6abad-109">This [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example sizes a button by assigning <xref:System.Windows.SystemParameters> values to the button's width and height.</span></span>  
   
-## Пример  
- [!code-xml[SystemRes_snip#ParameterDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
+## <a name="example"></a><span data-ttu-id="6abad-110">Пример</span><span class="sxs-lookup"><span data-stu-id="6abad-110">Example</span></span>  
+ [!code-xaml[SystemRes_snip#ParameterDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
   
-## См. также  
- [Закраска области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [Использование SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)   
- [Использование SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
+## <a name="see-also"></a><span data-ttu-id="6abad-111">См. также</span><span class="sxs-lookup"><span data-stu-id="6abad-111">See Also</span></span>  
+ [<span data-ttu-id="6abad-112">Заливка области с помощью системной кисти</span><span class="sxs-lookup"><span data-stu-id="6abad-112">Paint an Area with a System Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [<span data-ttu-id="6abad-113">Использование SystemFonts</span><span class="sxs-lookup"><span data-stu-id="6abad-113">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [<span data-ttu-id="6abad-114">Использование SystemParameters</span><span class="sxs-lookup"><span data-stu-id="6abad-114">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)

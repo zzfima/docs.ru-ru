@@ -1,53 +1,54 @@
 ---
-title: "Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "столбцы [Windows Forms], изменение размеров в сетке"
-  - "таблицы данных, изменение размеров столбцов и строк"
-  - "DataGridView - элемент управления [Windows Forms], установка размеров строк и столбцов"
+title: "Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], sizing rows and columns
+- columns [Windows Forms], resizing in grids
+- data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms
-Элемент управления `DataGridView` предоставляет множество возможностей для настройки поведения изменения размеров его столбцов и строк.  Обычно размер ячеек `DataGridView` не изменяется в зависимости от содержимого.  Вместо этого отображаемое значение, размер которого превышает размер ячейки, обрезается.  Если содержимое можно отобразить в виде строки, ячейка отображает его во всплывающей подсказке.  
+# <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="3ad4e-102">Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ad4e-102">Resizing Columns and Rows in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="3ad4e-103">`DataGridView` Элемент управления предоставляет множество возможностей для настройки поведения изменения размеров его столбцов и строк.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-103">The `DataGridView` control provides numerous options for customizing the sizing behavior of its columns and rows.</span></span> <span data-ttu-id="3ad4e-104">Как правило `DataGridView` размер ячейки не изменяется в зависимости от их содержимого.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-104">Typically, `DataGridView` cells do not resize based on their contents.</span></span> <span data-ttu-id="3ad4e-105">Вместо этого они обрезает все отображаемое значение, превышающее ячейки.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-105">Instead, they clip any display value that is larger than the cell.</span></span> <span data-ttu-id="3ad4e-106">Содержимое можно отобразить в виде строки, в ячейке отображается во всплывающей подсказке.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-106">If the content can be displayed as a string, the cell displays it in a ToolTip.</span></span>  
   
- По умолчанию пользователи могут перетаскивать разделители строки, столбца или заголовка с помощью мыши для отображения более подробных сведений.  Также можно дважды щелкнуть по разделителю, чтобы изменить размер строки, столбца или заголовка по размеру его содержимого.  
+ <span data-ttu-id="3ad4e-107">По умолчанию пользователи могут перетаскивать строк, столбцов и разделители заголовка с помощью мыши для отображения дополнительных сведений.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-107">By default, users can drag row, column, and header dividers with the mouse to show more information.</span></span> <span data-ttu-id="3ad4e-108">Пользователей можно также дважды щелкнуть разделитель для автоматического изменения размера связанного внешнего строки, столбца или заголовка, в зависимости от его содержимого.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-108">Users can also double-click a divider to automatically resize the associated row, column, or header band based on its contents.</span></span>  
   
- Элемент управления `DataGridView` предоставляет методы, свойства и события, которые позволяют настроить или отключить такое управляемое пользователем поведение.  Кроме того, можно программно изменять размер строки, столбца или заголовка по размеру его содержимого, а также можно настроить их автоматическое изменение при изменении содержимого.  Столбцы можно также настроить для автоматического распределения ширины элемента управления в соответствии с заданными пропорциями.  
+ <span data-ttu-id="3ad4e-109">`DataGridView` Элемент управления предоставляет свойства, методы и события, которые позволяют настроить или отключить такое поведение, управляемое пользователем.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-109">The `DataGridView` control provides properties, methods, and events that enable you to customize or disable all of these user-directed behaviors.</span></span> <span data-ttu-id="3ad4e-110">Кроме того можно программно изменить размер строк, столбцов и заголовков в соответствии с содержимым, или можно настроить их автоматическое изменение при изменении содержимого.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-110">Additionally, you can programmatically resize rows, columns, and headers to fit their contents, or you can configure them to automatically resize themselves whenever their contents change.</span></span> <span data-ttu-id="3ad4e-111">Можно также настроить столбцы для автоматического распределения ширины элемента управления в пропорций, указанных вами.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-111">You can also configure columns to automatically divide the available width of the control in proportions that you specify.</span></span>  
   
-## В этом подразделе  
- [Изменение размеров управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
- Описание параметров изменения размеров строк, столбцов и заголовков.  В разделе также содержатся подробные сведения о свойствах и методах, связанных с изменением размера, и описываются типовые примеры сценариев использования.  
+## <a name="in-this-section"></a><span data-ttu-id="3ad4e-112">Содержание</span><span class="sxs-lookup"><span data-stu-id="3ad4e-112">In This Section</span></span>  
+ [<span data-ttu-id="3ad4e-113">Изменение размеров управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ad4e-113">Sizing Options in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="3ad4e-114">Описание параметров для изменения размеров строк, столбцов и заголовков.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-114">Describes the options for sizing rows, columns, and headers.</span></span> <span data-ttu-id="3ad4e-115">Также предоставляет подробные сведения о связанных изменения размера свойства и методы и описываются распространенные сценарии использования.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-115">Also provides details on sizing-related properties and methods, and describes common usage scenarios.</span></span>  
   
- [Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- Подробное описание режима заполнения столбца, приводится демонстрационный код, который можно использовать для экспериментирования с режимом заполнения столбца и другими режимами.  
+ [<span data-ttu-id="3ad4e-116">Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ad4e-116">Column Fill Mode in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="3ad4e-117">Описание режима заполнения подробно, а также демонстрационный код, который можно использовать для экспериментов с режим заполнения столбцов и другие режимы.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-117">Describes column fill mode in detail, and provides demonstration code that you can use to experiment with column fill mode and other modes.</span></span>  
   
- [Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
- Описание способов настройки изменения размера столбцов.  
+ [<span data-ttu-id="3ad4e-118">Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ad4e-118">How to: Set the Sizing Modes of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="3ad4e-119">Описываются способы настройки режима изменения размеров для общих целей.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-119">Describes how to configure the sizing modes for common purposes.</span></span>  
   
- [Практическое руководство. Программное изменение размера ячеек элемента управления DataGridView в соответствии с размером отображаемых данных в Windows Forms](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
- Приводится демонстрационный код, который можно использовать для экспериментирования с программным изменением размеров.  
+ [<span data-ttu-id="3ad4e-120">Практическое руководство. Программное изменение размера ячеек элемента управления DataGridView в соответствии с размером отображаемых данных в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ad4e-120">How to: Programmatically Resize Cells to Fit Content in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ <span data-ttu-id="3ad4e-121">Предоставляет демонстрационный код, который можно использовать для экспериментов с программного изменения размеров.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-121">Provides demonstration code that you can use to experiment with programmatic resizing.</span></span>  
   
- [Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
- Приводится демонстрационный код, который можно использовать для экспериментирования с режимами автоматического изменением размеров.  
+ [<span data-ttu-id="3ad4e-122">Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ad4e-122">How to: Automatically Resize Cells When Content Changes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ <span data-ttu-id="3ad4e-123">Предоставляет демонстрационный код, который можно использовать для экспериментов с режима автоматического изменения размеров.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-123">Provides demonstration code that you can use to experiment with automatic sizing modes.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="3ad4e-124">Ссылка</span><span class="sxs-lookup"><span data-stu-id="3ad4e-124">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="3ad4e-125">Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="3ad4e-125">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-## См. также  
- [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3ad4e-126">См. также</span><span class="sxs-lookup"><span data-stu-id="3ad4e-126">See Also</span></span>  
+ [<span data-ttu-id="3ad4e-127">Элемент управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="3ad4e-127">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

@@ -1,35 +1,32 @@
 ---
-title: "Предложение Equals (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Equals"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Equals - ключевое слово"
+title: "Предложение Equals (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Equals
+helpviewer_keywords: Equals keyword [Visual Basic]
 ms.assetid: 3f5a7f21-3d54-4479-8197-bab62b34ac2e
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b9481aa79e4729ad279237edc4457af6e602940d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Предложение Equals (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Сравнивает ключи из объединяемых коллекций.  
+# <a name="equals-clause-visual-basic"></a><span data-ttu-id="a8e8a-102">Предложение Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8e8a-102">Equals Clause (Visual Basic)</span></span>
+<span data-ttu-id="a8e8a-103">Сравнивает ключи из объединяемых коллекций.</span><span class="sxs-lookup"><span data-stu-id="a8e8a-103">Compares keys from collections being joined.</span></span>  
   
-## Заметки  
- Ключевое слово `Equals` используется в следующем контексте:  
+## <a name="remarks"></a><span data-ttu-id="a8e8a-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="a8e8a-104">Remarks</span></span>  
+ <span data-ttu-id="a8e8a-105">`Equals` Ключевое слово используется в следующих контекстах:</span><span class="sxs-lookup"><span data-stu-id="a8e8a-105">The `Equals` keyword is used in the following contexts:</span></span>  
   
- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="a8e8a-106">Предложение Group Join</span><span class="sxs-lookup"><span data-stu-id="a8e8a-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="a8e8a-107">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="a8e8a-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## См. также  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="a8e8a-108">См. также</span><span class="sxs-lookup"><span data-stu-id="a8e8a-108">See Also</span></span>  
+ [<span data-ttu-id="a8e8a-109">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="a8e8a-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

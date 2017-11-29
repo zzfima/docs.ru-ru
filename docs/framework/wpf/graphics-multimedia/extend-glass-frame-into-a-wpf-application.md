@@ -1,62 +1,165 @@
 ---
-title: "Использование стеклянной рамки в приложении WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "приложения, расширение стеклянных фреймов"
-  - "расширение стеклянных фреймов в приложения"
-  - "стеклянные фреймы, расширение в приложения"
-  - "графика, расширение стеклянных фреймов в приложения"
+title: "Использование стеклянной рамки в приложении WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- applications [WPF], extending glass frames into
+- graphics [WPF], extending glass frames into applications
+- extending glass frames into applications [WPF]
+- glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d943d0b91d6f740144399d758a5ed80460f0eb6d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Использование стеклянной рамки в приложении WPF
-В этом разделе показано, как расширить стеклянный фрейм [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] в клиентской области приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="ed6a7-102">Использование стеклянной рамки в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="ed6a7-102">Extend Glass Frame Into a WPF Application</span></span>
+<span data-ttu-id="ed6a7-103">В этом разделе показано, как расширить стеклянную рамку [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] в клиентской области приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed6a7-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application.</span></span>  
   
 > [!NOTE]
->  Этот пример будет работать только на компьютере под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], на котором выполняется диспетчер окон рабочего стола \(DWM\) с включенным эффектом прозрачного стекла.  Выпуск [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic не поддерживает эффект прозрачного стекла.  Области, которые в других выпусках [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] обычно отображаются с эффектом прозрачного стекла, отображаются непрозрачными.  
+>  <span data-ttu-id="ed6a7-104">Этот пример будет работать только на компьютере под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], где работает диспетчер окон рабочего стола (DWM) с включенным эффектом прозрачного стекла.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]<span data-ttu-id="ed6a7-105"> Home Basic edition не поддерживает эффект прозрачного стекла.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-105"> Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="ed6a7-106">Области, которые обычно отображаются с эффектом прозрачного стекла, в других выпусках [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] отображаются непрозрачными.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>  
   
-## Пример  
- На следующем рисунке показан расширенный стеклянный фрейм в адресной строке Internet Explorer 7.  
+## <a name="example"></a><span data-ttu-id="ed6a7-107">Пример</span><span class="sxs-lookup"><span data-stu-id="ed6a7-107">Example</span></span>  
+ <span data-ttu-id="ed6a7-108">На следующем рисунке показана стеклянная рамка, расширенная на адресную строку Internet Explorer 7.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7.</span></span>  
   
- **Internet Explorer с расширенным стеклянным фреймом позади адресной строки.**  
+ <span data-ttu-id="ed6a7-109">**Internet Explorer со стеклянной рамкой, расширенной за адресной строкой.**</span><span class="sxs-lookup"><span data-stu-id="ed6a7-109">**Internet Explorer with extended glass frame behind address bar.**</span></span>  
   
- ![IE7 с прозрачным фреймом, расширенный за адресной строкой.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ <span data-ttu-id="ed6a7-110">![IE7 со стеклянной рамкой, расширенной за адресной строкой.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span><span class="sxs-lookup"><span data-stu-id="ed6a7-110">![IE7 with glass frame extended behind address bar.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span></span>  
   
- Чтобы расширить стеклянный фрейм в приложении [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], необходим доступ к неуправляемому [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].  Следующий пример кода выполняет платформенный вызов \(PInvoke\) для двух [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], необходимый для расширения фрейма в клиентскую область.  Каждый из этих [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] объявляется в классе с именем **NonClientRegionAPI**.  
+ <span data-ttu-id="ed6a7-111">Чтобы расширить стеклянную рамку в приложении [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], требуется доступ к неуправляемому [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed6a7-111">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] is needed.</span></span> <span data-ttu-id="ed6a7-112">В следующем примере кода выполняется платформенный вызов (pinvoke) для двух [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], необходимых для расширения рамки на клиентскую область.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-112">The following code example does a Platform Invoke (pinvoke) for the two [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] needed to extend the frame into the client area.</span></span> <span data-ttu-id="ed6a7-113">Каждый из этих [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] объявляется в классе с именем **NonClientRegionAPI**.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-113">Each of these [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] are declared in a class called **NonClientRegionAPI**.</span></span>  
   
-<!-- TODO: review snippet reference  [!CODE [AvalonClientGlass#DWMExtendFramePInvokeAPI](AvalonClientGlass#DWMExtendFramePInvokeAPI)]  -->  
+```csharp  
+[StructLayout(LayoutKind.Sequential)]  
+public struct MARGINS  
+{  
+    public int cxLeftWidth;      // width of left border that retains its size  
+    public int cxRightWidth;     // width of right border that retains its size  
+    public int cyTopHeight;      // height of top border that retains its size  
+    public int cyBottomHeight;   // height of bottom border that retains its size  
+};  
   
- [DwmExtendFrameIntoClientArea](_udwm_dwmextendframeintoclientarea) [](_udwm_dwmextendframeintoclientarea) является функцией диспетчера окон рабочего стола, которая расширяет фрейм до размера клиентской области.  Функция принимает два параметра: дескриптор окна и структуру [MARGINS](inet_MARGINS).  Структура [MARGINS](inet_MARGINS) используется для того, чтобы сообщить диспетчеру окон рабочего стола, насколько следует расширить фрейм в клиентской области.  
+[DllImport("DwmApi.dll")]  
+public static extern int DwmExtendFrameIntoClientArea(  
+    IntPtr hwnd,  
+    ref MARGINS pMarInset);  
+```  
   
-## Пример  
- Для использования функции [DwmExtendFrameIntoClientArea](_udwm_dwmextendframeintoclientarea) необходимо получить дескриптор окна.  В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] дескриптор окна может быть получен из свойства <xref:System.Windows.Interop.HwndSource.Handle%2A> объекта <xref:System.Windows.Interop.HwndSource>.  В следующем примере фрейм расширяется в клиентскую область при возникновении события окна <xref:System.Windows.FrameworkElement.Loaded>.  
+```vb  
+<StructLayout(LayoutKind.Sequential)>  
+        Public Structure MARGINS  
+            Public cxLeftWidth As Integer ' width of left border that retains its size  
+            Public cxRightWidth As Integer ' width of right border that retains its size  
+            Public cyTopHeight As Integer ' height of top border that retains its size  
+            Public cyBottomHeight As Integer ' height of bottom border that retains its size  
+        End Structure  
   
-<!-- TODO: review snippet reference  [!CODE [AvalonClientGlass#AvalonGlassOnLoadedCSharp](AvalonClientGlass#AvalonGlassOnLoadedCSharp)]  -->  
+        <DllImport("DwmApi.dll")>  
+        Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef pMarInset As MARGINS) As Integer  
+        End Function  
+```  
   
-## Пример  
- В следующем примере показано простое окно, в котором фрейм расширяется в клиентскую область.  Фрейм расширяется за пределы верхней границы, содержащей два объекта <xref:System.Windows.Controls.TextBox>.  
+ <span data-ttu-id="ed6a7-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) — функция DWM, которая расширяет рамку на клиентскую область.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="ed6a7-115">Она принимает два параметра — дескриптор окна и структуру [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx).</span><span class="sxs-lookup"><span data-stu-id="ed6a7-115">It takes two parameters; a window handle and a [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) structure.</span></span> <span data-ttu-id="ed6a7-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) используется для сообщения DWM, насколько следует расширить рамку в клиентской области.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>  
   
-<!-- TODO: review snippet reference  [!CODE [AvalonClientGlass#AvalonGlassFullWindowXAML](AvalonClientGlass#AvalonGlassFullWindowXAML)]  -->  
+## <a name="example"></a><span data-ttu-id="ed6a7-117">Пример</span><span class="sxs-lookup"><span data-stu-id="ed6a7-117">Example</span></span>  
+ <span data-ttu-id="ed6a7-118">Для использования функции [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) необходимо получить дескриптор окна.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-118">To use the [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) function, a window handle must be obtained.</span></span> <span data-ttu-id="ed6a7-119">В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], дескриптор окна, которые могут быть получены из <xref:System.Windows.Interop.HwndSource.Handle%2A> свойство <xref:System.Windows.Interop.HwndSource>.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-119">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="ed6a7-120">В следующем примере фрейм расширяется в клиентскую область на <xref:System.Windows.FrameworkElement.Loaded> события окна.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-120">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>  
   
- На следующем рисунке показан стеклянный фрейм, расширенная в приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+```csharp  
+void OnLoaded(object sender, RoutedEventArgs e)  
+{  
+   try  
+   {  
+      // Obtain the window handle for WPF application  
+      IntPtr mainWindowPtr = new WindowInteropHelper(this).Handle;  
+      HwndSource mainWindowSrc = HwndSource.FromHwnd(mainWindowPtr);  
+      mainWindowSrc.CompositionTarget.BackgroundColor = Color.FromArgb(0, 0, 0, 0);  
   
- **Прозрачный фрейм, расширенный в приложение**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] **.**  
+      // Get System Dpi  
+      System.Drawing.Graphics desktop = System.Drawing.Graphics.FromHwnd(mainWindowPtr);  
+      float DesktopDpiX = desktop.DpiX;  
+      float DesktopDpiY = desktop.DpiY;  
   
- ![Прозрачный фрейм, расширенная в приложение WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.png "WPFextendedGlassIntoClient")  
+      // Set Margins  
+      NonClientRegionAPI.MARGINS margins = new NonClientRegionAPI.MARGINS();  
   
-## См. также  
- [Общие сведения о диспетчере окон рабочего стола](_udwm_overview)   
- [Общие сведения об использовании эффекта размытия в диспетчере окон рабочего стола](_udwm_blur_ovw)   
- [DwmExtendFrameIntoClientArea](_udwm_dwmextendframeintoclientarea)
+      // Extend glass frame into client area  
+      // Note that the default desktop Dpi is 96dpi. The  margins are  
+      // adjusted for the system Dpi.  
+      margins.cxLeftWidth = Convert.ToInt32(5 * (DesktopDpiX / 96));  
+      margins.cxRightWidth = Convert.ToInt32(5 * (DesktopDpiX / 96));  
+      margins.cyTopHeight = Convert.ToInt32(((int)topBar.ActualHeight + 5) * (DesktopDpiX / 96));  
+      margins.cyBottomHeight = Convert.ToInt32(5 * (DesktopDpiX / 96));  
+  
+      int hr = NonClientRegionAPI.DwmExtendFrameIntoClientArea(mainWindowSrc.Handle, ref margins);  
+      //  
+      if (hr < 0)  
+      {  
+         //DwmExtendFrameIntoClientArea Failed  
+      }  
+   }  
+   // If not Vista, paint background white.  
+   catch (DllNotFoundException)  
+   {  
+      Application.Current.MainWindow.Background = Brushes.White;  
+   }  
+}  
+```  
+  
+## <a name="example"></a><span data-ttu-id="ed6a7-121">Пример</span><span class="sxs-lookup"><span data-stu-id="ed6a7-121">Example</span></span>  
+ <span data-ttu-id="ed6a7-122">В следующем примере показано простое окно, в котором рамка расширяется на клиентскую область.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-122">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="ed6a7-123">Фрейм расширяется за пределы верхней границы, содержащей два <xref:System.Windows.Controls.TextBox> объектов.</span><span class="sxs-lookup"><span data-stu-id="ed6a7-123">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>  
+  
+```xaml  
+<Window x:Class="SDKSample.Window1"  
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+    Title="Extended Glass in WPF" Height="300" Width="400"   
+    Loaded="OnLoaded" Background="Transparent"  
+    >  
+  <Grid ShowGridLines="True">  
+    <DockPanel Name="mainDock">  
+      <!-- The border is used to compute the rendered height with margins.  
+           topBar contents will be displayed on the extended glass frame.-->  
+      <Border Name="topBar" DockPanel.Dock="Top" >  
+        <Grid Name="grid">  
+          <Grid.ColumnDefinitions>  
+            <ColumnDefinition MinWidth="100" Width="*"/>  
+            <ColumnDefinition Width="Auto"/>  
+          </Grid.ColumnDefinitions>  
+          <TextBox Grid.Column="0" MinWidth="100" Margin="0,0,10,5">Path</TextBox>  
+          <TextBox Grid.Column="1" MinWidth="75" Margin="0,0,0,5">Search</TextBox>  
+        </Grid>  
+      </Border>  
+      <Grid DockPanel.Dock="Top" >  
+        <Grid.ColumnDefinitions>  
+          <ColumnDefinition/>  
+        </Grid.ColumnDefinitions>  
+        <TextBox Grid.Column="0" AcceptsReturn="True"/>  
+      </Grid>  
+    </DockPanel>  
+  </Grid>  
+</Window>  
+```  
+  
+ <span data-ttu-id="ed6a7-124">На следующем рисунке показана стеклянная рамка, расширенная на приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed6a7-124">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application.</span></span>  
+  
+ <span data-ttu-id="ed6a7-125">**Прозрачная рамка, расширенная на ** [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложение **.**</span><span class="sxs-lookup"><span data-stu-id="ed6a7-125">**Glass Frame Extended into a**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **Application.**</span></span>  
+  
+ <span data-ttu-id="ed6a7-126">![Прозрачная рамка, расширенная на приложение WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span><span class="sxs-lookup"><span data-stu-id="ed6a7-126">![Glass Frame Extended into a WPF application.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ed6a7-127">См. также</span><span class="sxs-lookup"><span data-stu-id="ed6a7-127">See Also</span></span>  
+ [<span data-ttu-id="ed6a7-128">Обзор диспетчера окон рабочего стола</span><span class="sxs-lookup"><span data-stu-id="ed6a7-128">Desktop Window Manager Overview</span></span>](https://msdn.microsoft.com/library/aa969540.aspx)  
+ [<span data-ttu-id="ed6a7-129">Общие сведения о размытия диспетчер окон рабочего стола</span><span class="sxs-lookup"><span data-stu-id="ed6a7-129">Desktop Window Manager Blur Overview</span></span>](https://msdn.microsoft.com/library/aa969537.aspx)  
+ [<span data-ttu-id="ed6a7-130">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="ed6a7-130">DwmExtendFrameIntoClientArea</span></span>](https://msdn.microsoft.com/library/aa969512.aspx)

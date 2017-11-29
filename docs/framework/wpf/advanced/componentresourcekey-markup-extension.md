@@ -1,89 +1,92 @@
 ---
-title: "Расширение разметки ComponentResourceKey | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ComponentResourceKey"
-  - "ComponentResourceKeyExtension"
-helpviewer_keywords: 
-  - "ComponentResourceKey - расширение разметки"
-  - "XAML, ComponentResourceKey - расширение разметки"
+title: "Расширение разметки ComponentResourceKey"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ComponentResourceKey
+- ComponentResourceKeyExtension
+helpviewer_keywords:
+- ComponentResourceKey markup extension [WPF]
+- XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7f959318c5991fea2df92ff8000e85345fb35ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Расширение разметки ComponentResourceKey
-Определения и ключи ссылок ресурсов, загружаемых из внешних сборок.  Это расширение позволяет при поиске ресурса указать целевой тип в сборке, вместо явного словаря ресурса в сборке или в классе.  
+# <a name="componentresourcekey-markup-extension"></a><span data-ttu-id="179a8-102">Расширение разметки ComponentResourceKey</span><span class="sxs-lookup"><span data-stu-id="179a8-102">ComponentResourceKey Markup Extension</span></span>
+<span data-ttu-id="179a8-103">Определения и ключи для ресурсов, которые загружаются из внешних сборок ссылок.</span><span class="sxs-lookup"><span data-stu-id="179a8-103">Defines and references keys for resources that are loaded from external assemblies.</span></span> <span data-ttu-id="179a8-104">Это позволяет при поиске ресурса указать целевой тип в сборке, вместо явного словаря ресурса в сборке или в классе.</span><span class="sxs-lookup"><span data-stu-id="179a8-104">This enables a resource lookup to specify a target type in an assembly, rather than an explicit resource dictionary in an assembly or on a class.</span></span>  
   
-## Использование атрибута XAML \(установка ключа, компактный\)  
+## <a name="xaml-attribute-usage-setting-key-compact"></a><span data-ttu-id="179a8-105">Использование атрибута XAML (Установка ключа, компактный)</span><span class="sxs-lookup"><span data-stu-id="179a8-105">XAML Attribute Usage (setting key, compact)</span></span>  
   
-```  
-<object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
-```  
-  
-## Использование атрибута XAML \(установка ключа, подробный\)  
-  
-```  
-<object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
+```xml  
+<object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## Использование атрибута XAML \(запрос ресурса, компактный\)  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a><span data-ttu-id="179a8-106">Использование атрибута XAML (Установка ключа, подробный)</span><span class="sxs-lookup"><span data-stu-id="179a8-106">XAML Attribute Usage (setting key, verbose)</span></span>  
   
-```  
-<object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
-```  
-  
-## Использование атрибута XAML \(запрос ресурса, подробный\)  
-  
-```  
-<object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
+```xml  
+<object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a><span data-ttu-id="179a8-107">Использование атрибута XAML (запрос ресурса, компактный)</span><span class="sxs-lookup"><span data-stu-id="179a8-107">XAML Attribute Usage (requesting resource, compact)</span></span>  
+  
+```xml  
+<object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
+```  
+  
+## <a name="xaml-attribute-usage-requesting-resource-verbose"></a><span data-ttu-id="179a8-108">Использование атрибута XAML (запрос ресурса, подробный)</span><span class="sxs-lookup"><span data-stu-id="179a8-108">XAML Attribute Usage (requesting resource, verbose)</span></span>  
+  
+```xml  
+<object property="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}}" .../>  
+```  
+  
+## <a name="xaml-values"></a><span data-ttu-id="179a8-109">Значения XAML</span><span class="sxs-lookup"><span data-stu-id="179a8-109">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`targetTypeName`|Имя открытого типа [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], определенного в сборке ресурсов.|  
-|`targetID`|Ключ ресурса.  При поиске ресурсов код `targetID` будет аналогом атрибута [Директива x:Key](../../../../docs/framework/xaml-services/x-key-directive.md) ресурса.|  
+|`targetTypeName`|<span data-ttu-id="179a8-110">Имя открытого [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] типа, определенного в сборке ресурсов.</span><span class="sxs-lookup"><span data-stu-id="179a8-110">The name of the public [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] type that is defined in the resource assembly.</span></span>|  
+|`targetID`|<span data-ttu-id="179a8-111">Ключ ресурса.</span><span class="sxs-lookup"><span data-stu-id="179a8-111">The key for the resource.</span></span> <span data-ttu-id="179a8-112">Если ресурсы ищутся, `targetID` будет аналогичен [директива x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) ресурса.</span><span class="sxs-lookup"><span data-stu-id="179a8-112">When resources are looked up, `targetID` will be analogous to the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) of the resource.</span></span>|  
   
-## Заметки  
- Как показано выше, расширение разметки {`ComponentResourceKey`} находится в двух местах:  
+## <a name="remarks"></a><span data-ttu-id="179a8-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="179a8-113">Remarks</span></span>  
+ <span data-ttu-id="179a8-114">Как показано в вариантах применения выше, {`ComponentResourceKey`} расширение разметки находится в двух местах:</span><span class="sxs-lookup"><span data-stu-id="179a8-114">As seen in the usages above, a {`ComponentResourceKey`} markup extension usage is found in two places:</span></span>  
   
--   Определения ключа в словаре ресурсов тем, предоставляемое автор элемента управления.  
+-   <span data-ttu-id="179a8-115">Определение ключ в словаре ресурсов тем, предоставляемые автором элемента управления.</span><span class="sxs-lookup"><span data-stu-id="179a8-115">The definition of a key within a theme resource dictionary, as provided by a control author.</span></span>  
   
--   Обращение к ресурсу темы из сборки при создании нового шаблона элемента управления, если при этом требуется использовать значения свойств из ресурсов, предоставленных темами элемента управления.  
+-   <span data-ttu-id="179a8-116">Если доступ к ресурсу темы из сборки, являются создания новых шаблонов элемента управления, но нужно использовать значения свойств из ресурсов, предоставленных темами элемента управления.</span><span class="sxs-lookup"><span data-stu-id="179a8-116">Accessing a theme resource from the assembly, when you are retemplating the control but want to use property values that come from resources provided by the control's themes.</span></span>  
   
- Для ссылок на ресурсы компонента, полученные из тем, обычно рекомендуется использовать `{DynamicResource}` вместо `{StaticResource}`.  Это показано в вариантах применения.  `{DynamicResource}` рекомендуется, поскольку тема сама по себе не может быть изменена пользователем.  Если требуется ресурс компонента, который наиболее точно соответствует цели автора элемента управления для поддержки темы, следует включить ссылку на ресурс компонента, чтобы он также был динамическим.  
+ <span data-ttu-id="179a8-117">Для ссылки на компонент ресурсов, поступивших из темы, обычно рекомендуется использовать `{DynamicResource}` вместо `{StaticResource}`.</span><span class="sxs-lookup"><span data-stu-id="179a8-117">For referencing component resources that come from themes, it is generally recommended that you use `{DynamicResource}` rather than `{StaticResource}`.</span></span> <span data-ttu-id="179a8-118">Это показано в вариантах применения.</span><span class="sxs-lookup"><span data-stu-id="179a8-118">This is shown in the usages.</span></span> <span data-ttu-id="179a8-119">`{DynamicResource}`рекомендуется, поскольку тема сама по себе может быть изменена пользователем.</span><span class="sxs-lookup"><span data-stu-id="179a8-119">`{DynamicResource}` is recommended because the theme itself can be changed by the user.</span></span> <span data-ttu-id="179a8-120">Если требуется ресурс компонента, который наиболее близко соответствует цели автора элемента управления для поддержки темы, следует включить компонент ресурсов справочной информации для также быть динамическими.</span><span class="sxs-lookup"><span data-stu-id="179a8-120">If you want the component resource that most closely matches the control author's intent for supporting a theme, you should enable your component resource reference to be dynamic also.</span></span>  
   
- Класс <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> определяет тип, существующий в целевой сборке, в которой фактически определен ресурс.  Расширение `ComponentResourceKey` может быть определено и использовано независимо от того, где определена сборка <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>, но со временем оно должен распознать тип через сборки, на которые имеются ссылки.  
+ <span data-ttu-id="179a8-121"><xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> Определяет тип, который существует в целевой сборки, где фактически определенных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="179a8-121">The <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifies a type that exists in the target assembly where the resource is actually defined.</span></span> <span data-ttu-id="179a8-122">Объект `ComponentResourceKey` определяется и используется независимо от точно знать, где <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> определен, но в конечном счете необходимо разрешить тип из сборок, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="179a8-122">A `ComponentResourceKey` can be defined and used independently of knowing exactly where the <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> is defined, but eventually must resolve the type through referenced assemblies.</span></span>  
   
- Типичное использование класса <xref:System.Windows.ComponentResourceKey> заключается в определении ключей, которые затем представляются как члены класса.  Для этой сферы применения следует использовать конструктор класса <xref:System.Windows.ComponentResourceKey>, а не расширение разметки.  Дополнительные сведения см в разделе <xref:System.Windows.ComponentResourceKey> или в подразделе "Определение и содержащие ссылки ключи для ресурсов тем" раздела [Общие сведения о разработке управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ <span data-ttu-id="179a8-123">Распространенным вариантом применения для <xref:System.Windows.ComponentResourceKey> необходимо определить ключи, которые затем отображаются как члены класса.</span><span class="sxs-lookup"><span data-stu-id="179a8-123">A common usage for <xref:System.Windows.ComponentResourceKey> is to define keys that are then exposed as members of a class.</span></span> <span data-ttu-id="179a8-124">Для такого использования, используйте <xref:System.Windows.ComponentResourceKey> конструктора класса, не расширения разметки.</span><span class="sxs-lookup"><span data-stu-id="179a8-124">For this usage, you use the <xref:System.Windows.ComponentResourceKey> class constructor, not the markup extension.</span></span> <span data-ttu-id="179a8-125">Дополнительные сведения см. в разделе <xref:System.Windows.ComponentResourceKey>, либо в разделе «Определение и создание ссылок на ключи для темы ресурсов» раздела [элементах](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span><span class="sxs-lookup"><span data-stu-id="179a8-125">For more information, see <xref:System.Windows.ComponentResourceKey>, or the "Defining and Referencing Keys for Theme Resources" section of the topic [Control Authoring Overview](../../../../docs/framework/wpf/controls/control-authoring-overview.md).</span></span>  
   
- Для установки ключей и ссылок на ресурсы с ключом синтаксис атрибута обычно используется для расширения разметки `ComponentResourceKey`.  
+ <span data-ttu-id="179a8-126">Для установки ключей и ссылки на различаемых ресурсы, синтаксис атрибутов обычно используется для `ComponentResourceKey` расширения разметки.</span><span class="sxs-lookup"><span data-stu-id="179a8-126">For both establishing keys and referencing keyed resources, attribute syntax is commonly used for the `ComponentResourceKey` markup extension.</span></span>  
   
- Приведенный компактный синтаксис основан на сигнатуре конструктора <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=fullName> и использовании позиционных параметров расширения разметки.  Порядок, в котором перечислены `targetTypeName` и `targetID`, имеет значение.  Подробный синтаксис основан на конструкторе по умолчанию <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=fullName>. Затем устанавливаются классы <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> способом, который соответствует истинному синтаксису атрибута элемента объекта.  В подробном синтаксисе не важен порядок, в котором устанавливаются значения свойств.  Связь и механизмы из этих двух вариантов \(компактный и подробный синтаксис\) описаны более подробно в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="179a8-127">Компактный синтаксис, показанный зависит <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> сигнатуры конструктора и использование позиционного параметра расширения разметки.</span><span class="sxs-lookup"><span data-stu-id="179a8-127">The compact syntax shown relies on the <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> constructor signature and positional parameter usage of a markup extension.</span></span> <span data-ttu-id="179a8-128">Порядок, в котором `targetTypeName` и `targetID` получают важен.</span><span class="sxs-lookup"><span data-stu-id="179a8-128">The order in which the `targetTypeName` and `targetID` are given is important.</span></span> <span data-ttu-id="179a8-129">Подробный синтаксис зависит от <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> конструктор по умолчанию, а затем устанавливает <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> в результате которого аналогичен синтаксису true атрибутов элемента объекта.</span><span class="sxs-lookup"><span data-stu-id="179a8-129">The verbose syntax relies on the <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> default constructor, and then sets the <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> and <xref:System.Windows.ComponentResourceKey.ResourceId%2A> in a way that is analogous to a true attribute syntax on an object element.</span></span> <span data-ttu-id="179a8-130">В подробном синтаксисе порядок, в котором задаются свойства не имеет значения.</span><span class="sxs-lookup"><span data-stu-id="179a8-130">In the verbose syntax, the order in which the properties are set is not important.</span></span> <span data-ttu-id="179a8-131">Связь и механизмы из этих двух вариантов (компактный и подробный синтаксис) является более подробно в разделе [расширения разметки и WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="179a8-131">The relationship and mechanisms of these two alternatives (compact and verbose) is described in more detail in the topic [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
- С технической точки зрения значением `targetID` может быть любой объект; это не обязательно должна быть строка.  Однако наиболее общим использованием WPF является выравнивание значения `targetID` с формами, которые представляют собой строки, и случаи, когда такие строки являются допустимыми в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
+ <span data-ttu-id="179a8-132">С технической точки зрения значение `targetID` может быть любым объектом, не имеет в виде строки.</span><span class="sxs-lookup"><span data-stu-id="179a8-132">Technically, the value for `targetID` can be any object, it does not have to be a string.</span></span> <span data-ttu-id="179a8-133">Наиболее распространенное использование в WPF то, чтобы выровнять `targetID` значение с формами, которые представляют собой строки, а когда такие строки являются допустимыми в [Грамматика XamlName](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span><span class="sxs-lookup"><span data-stu-id="179a8-133">However, the most common usage in WPF is to align the `targetID` value with forms that are strings, and where such strings are valid in the [XamlName Grammar](../../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span>  
   
- В синтаксисе элемента объекта может использоваться `ComponentResourceKey`.  В этом случае указание значения свойств <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> необходимо для правильной инициализации расширения.  
+ <span data-ttu-id="179a8-134">`ComponentResourceKey`может использоваться в синтаксисе элемента объекта.</span><span class="sxs-lookup"><span data-stu-id="179a8-134">`ComponentResourceKey` can be used in object element syntax.</span></span> <span data-ttu-id="179a8-135">В этом случае укажите значение параметра оба <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> и <xref:System.Windows.ComponentResourceKey.ResourceId%2A> свойства, необходимые для правильной инициализации расширения.</span><span class="sxs-lookup"><span data-stu-id="179a8-135">In this case, specifying the value of both the <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> and <xref:System.Windows.ComponentResourceKey.ResourceId%2A> properties is required to properly initialize the extension.</span></span>  
   
- В реализации средства чтения [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обработка данного расширения разметки определяется классом <xref:System.Windows.ComponentResourceKey>.  
+ <span data-ttu-id="179a8-136">В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] реализацию средства чтения, обработка для данного расширения разметки определяется <xref:System.Windows.ComponentResourceKey> класса.</span><span class="sxs-lookup"><span data-stu-id="179a8-136">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reader implementation, the handling for this markup extension is defined by the <xref:System.Windows.ComponentResourceKey> class.</span></span>  
   
- `ComponentResourceKey` является расширением разметки.  Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами.  Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы { and } в синтаксисе их атрибутов, который является соглашением, по которому процессор [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут.  Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="179a8-137">`ComponentResourceKey` является расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="179a8-137">`ComponentResourceKey` is a markup extension.</span></span> <span data-ttu-id="179a8-138">Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами.</span><span class="sxs-lookup"><span data-stu-id="179a8-138">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="179a8-139">Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут.</span><span class="sxs-lookup"><span data-stu-id="179a8-139">All markup extensions in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] use the { and } characters in their attribute syntax, which is the convention by which a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="179a8-140">Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="179a8-140">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.ComponentResourceKey>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Общие сведения о разработке управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)   
- [Общие сведения о языке XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="179a8-141">См. также</span><span class="sxs-lookup"><span data-stu-id="179a8-141">See Also</span></span>  
+ <xref:System.Windows.ComponentResourceKey>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="179a8-142">Общие сведения о разработке элементов управления</span><span class="sxs-lookup"><span data-stu-id="179a8-142">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [<span data-ttu-id="179a8-143">Общие сведения о языке XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="179a8-143">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="179a8-144">Расширения разметки и XAML WPF</span><span class="sxs-lookup"><span data-stu-id="179a8-144">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
