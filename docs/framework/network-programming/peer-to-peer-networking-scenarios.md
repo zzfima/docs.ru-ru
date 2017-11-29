@@ -7,82 +7,75 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: edf493f0999dc78e6b1065176f1638b23667d9b3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5d110d49ed93c1c53c257e4c01c3fc68eb2e0b0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="peer-to-peer-networking-scenarios"></a>Сценарии организации одноранговой сети
-Одноранговые сети обеспечивают реализацию или расширение следующих сценариев:  
+# <a name="peer-to-peer-networking-scenarios"></a><span data-ttu-id="0f7fd-102">Сценарии организации одноранговой сети</span><span class="sxs-lookup"><span data-stu-id="0f7fd-102">Peer-to-Peer Networking Scenarios</span></span>
+<span data-ttu-id="0f7fd-103">Одноранговые сети обеспечивают реализацию или расширение следующих сценариев:</span><span class="sxs-lookup"><span data-stu-id="0f7fd-103">Peer-to-peer networking enables or enhances the following scenarios:</span></span>  
   
-## <a name="real-time-communications-rtc"></a>Связь в режиме реального времени (RTC)  
+## <a name="real-time-communications-rtc"></a><span data-ttu-id="0f7fd-104">Связь в режиме реального времени (RTC)</span><span class="sxs-lookup"><span data-stu-id="0f7fd-104">Real-Time Communications (RTC)</span></span>  
   
--   Мгновенный обмен сообщениями без использования сервера  
+-   <span data-ttu-id="0f7fd-105">Мгновенный обмен сообщениями без использования сервера</span><span class="sxs-lookup"><span data-stu-id="0f7fd-105">Serverless Instant Messaging</span></span>  
   
- Технологии связи в режиме реального времени нашли широкое применение в современном мире. Пользователи компьютеров могут общаться со своими коллегами в чате и выполнять голосовые или видеозвонки. Тем не менее большинство из существующих программ и соответствующих протоколов связи используют в работе серверы. Если вы являетесь участником беспроводной сети с прямым подключением или изолированной сети, такие возможности связи в режиме реального времени будут вам недоступны. Для работы в таких сетевых средах применяется технология одноранговой сети, которая расширяет возможности технологий RTC.  
+ <span data-ttu-id="0f7fd-106">Технологии связи в режиме реального времени нашли широкое применение в современном мире.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-106">RTC exists today.</span></span> <span data-ttu-id="0f7fd-107">Пользователи компьютеров могут общаться со своими коллегами в чате и выполнять голосовые или видеозвонки.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-107">Computer users can chat and have voice or video conversations with their peers today.</span></span> <span data-ttu-id="0f7fd-108">Тем не менее большинство из существующих программ и соответствующих протоколов связи используют в работе серверы.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-108">However, many of the existing programs and their communications protocols rely on servers to function.</span></span> <span data-ttu-id="0f7fd-109">Если вы являетесь участником беспроводной сети с прямым подключением или изолированной сети, такие возможности связи в режиме реального времени будут вам недоступны.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-109">If you are participating in an ad-hoc wireless network or are a part of an isolated network, you are unable to use these RTC facilities.</span></span> <span data-ttu-id="0f7fd-110">Для работы в таких сетевых средах применяется технология одноранговой сети, которая расширяет возможности технологий RTC.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-110">Peer-to-peer technology allows the extension of RTC technologies to these additional networking environments.</span></span>  
   
--   Подбор игроков и игра в режиме реального времени  
+-   <span data-ttu-id="0f7fd-111">Подбор игроков и игра в режиме реального времени</span><span class="sxs-lookup"><span data-stu-id="0f7fd-111">Real-time matchmaking and gameplay</span></span>  
   
- Сегодня существуют технологии игр в режиме реального времени, аналогичные RTC. В Интернете представлено множество игровых веб-сайтов, доступных сообществу по сети. На них вы можете находить других пользователей со схожими интересами и играть с ними в различные игры. Проблема состоит в том, что игровые сайты существуют только в Интернете и ориентированы на тех, кто хочет сразиться с лучшими игроками в мире. Как правило, на них реализованы дополнительные функции отслеживания и сбора статистики. Тем не менее на них игрок не может организовать прямую игру со своими друзьями, находящимися в разных сетевых средах. Эту возможность реализуют с использованием одноранговых сетей.  
+ <span data-ttu-id="0f7fd-112">Сегодня существуют технологии игр в режиме реального времени, аналогичные RTC.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-112">Similar to RTC, real-time game play exists today.</span></span> <span data-ttu-id="0f7fd-113">В Интернете представлено множество игровых веб-сайтов, доступных сообществу по сети.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-113">There are many Web-based game sites that cater to the gaming community via the Internet.</span></span> <span data-ttu-id="0f7fd-114">На них вы можете находить других пользователей со схожими интересами и играть с ними в различные игры.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-114">They offer the ability to find other gamers with similar interests and play a game together.</span></span> <span data-ttu-id="0f7fd-115">Проблема состоит в том, что игровые сайты существуют только в Интернете и ориентированы на тех, кто хочет сразиться с лучшими игроками в мире.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-115">The problem is that the game sites exist only on the Internet and are geared toward the avid gamer who wants to play against the best gamers in the world.</span></span> <span data-ttu-id="0f7fd-116">Как правило, на них реализованы дополнительные функции отслеживания и сбора статистики.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-116">These sites track and provide the statistics to help in the process.</span></span> <span data-ttu-id="0f7fd-117">Тем не менее на них игрок не может организовать прямую игру со своими друзьями, находящимися в разных сетевых средах.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-117">However, these sites do not allow a gamer to set up an ad-hoc game among friends in a variety of networking environments.</span></span> <span data-ttu-id="0f7fd-118">Эту возможность реализуют с использованием одноранговых сетей.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-118">Peer-to-peer networking can provide this capability.</span></span>  
   
-## <a name="collaboration"></a>Совместная работа  
+## <a name="collaboration"></a><span data-ttu-id="0f7fd-119">Совместная работа</span><span class="sxs-lookup"><span data-stu-id="0f7fd-119">Collaboration</span></span>  
   
--   Рабочие области проектов для решения задач  
+-   <span data-ttu-id="0f7fd-120">Рабочие области проектов для решения задач</span><span class="sxs-lookup"><span data-stu-id="0f7fd-120">Project workspaces solving a goal</span></span>  
   
- С помощью рабочих областей приложений можно создавать специализированные рабочие группы, владельцы которых смогут добавлять в них инструментальные средства и содержимое для совместного решения конкретных поставленных задач. К ним могут относиться доски сообщений, средства повышения производительности и файлы.  
+ <span data-ttu-id="0f7fd-121">С помощью рабочих областей приложений можно создавать специализированные рабочие группы, владельцы которых смогут добавлять в них инструментальные средства и содержимое для совместного решения конкретных поставленных задач.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-121">Shared workspace applications allow for the creation of ad-hoc workgroups and then allow the workgroup owners to populate the shared workspace with the tools and content that will allow the group to solve a problem.</span></span> <span data-ttu-id="0f7fd-122">К ним могут относиться доски сообщений, средства повышения производительности и файлы.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-122">This could include message boards, productivity tools, and files.</span></span>  
   
--   Общий доступ к файлам  
+-   <span data-ttu-id="0f7fd-123">Общий доступ к файлам</span><span class="sxs-lookup"><span data-stu-id="0f7fd-123">Sharing files with others</span></span>  
   
- Одной из самых популярных возможностей рабочих областей проекта является общий доступ к файлам. Аналогичные функции реализованы в ОС Windows, однако с помощью одноранговых сетей их возможности можно расширить, обеспечив удобный и быстрый доступ к содержимому файлов. Благодаря доступу к большому объему данных на границе Интернета и в компьютерных средах прямого подключения ценность сетевых ресурсов значительно возрастает.  
+ <span data-ttu-id="0f7fd-124">Одной из самых популярных возможностей рабочих областей проекта является общий доступ к файлам.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-124">A subset of project workspace sharing is the ability to share files.</span></span> <span data-ttu-id="0f7fd-125">Аналогичные функции реализованы в ОС Windows, однако с помощью одноранговых сетей их возможности можно расширить, обеспечив удобный и быстрый доступ к содержимому файлов.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-125">Although this ability exists today with the current version of Windows, it can be enhanced through peer-to-peer networking to make file content available in an easy and friendly way.</span></span> <span data-ttu-id="0f7fd-126">Благодаря доступу к большому объему данных на границе Интернета и в компьютерных средах прямого подключения ценность сетевых ресурсов значительно возрастает.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-126">Allowing easy access to the incredible wealth of content at the edge of the Internet or in ad-hoc computing environments increases the value of network computing.</span></span>  
   
--   Обмен впечатлениями  
+-   <span data-ttu-id="0f7fd-127">Обмен впечатлениями</span><span class="sxs-lookup"><span data-stu-id="0f7fd-127">Sharing experiences</span></span>  
   
- Повсеместное распространение беспроводных сетей позволяет вам постоянно быть на связи со своими коллегами или друзьями и делиться с ними впечатлениями о закате, рок-концерте или отпуске буквально на лету.  
+ <span data-ttu-id="0f7fd-128">Повсеместное распространение беспроводных сетей позволяет вам постоянно быть на связи со своими коллегами или друзьями и делиться с ними впечатлениями о закате, рок-концерте или отпуске буквально на лету.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-128">With wireless connectivity becoming more prevalent, peer-to-peer networking allows you to be online in a group of peers and to be able to share your experiences (such as a sunset, a rock concert, or a vacation cruise) while they are occurring.</span></span>  
   
-## <a name="content-distribution"></a>Распространение содержимого  
+## <a name="content-distribution"></a><span data-ttu-id="0f7fd-129">Распространение содержимого</span><span class="sxs-lookup"><span data-stu-id="0f7fd-129">Content Distribution</span></span>  
   
--   Текстовые сообщения  
+-   <span data-ttu-id="0f7fd-130">Текстовые сообщения</span><span class="sxs-lookup"><span data-stu-id="0f7fd-130">Text messages</span></span>  
   
- С помощью одноранговых сетей вы можете распространять текстовую информацию в виде файлов или сообщений среди большой группы пользователей. В качестве примера можно привести новостные рассылки.  
-  
--  
-  
--   Аудио и видео  
-  
- Одноранговые сети также обеспечивают обмен аудио- и видеоданными, например трансляцией концерта или собрания, в рамках большой группы пользователей. Сегодня для распространения содержимого необходимо настроить высокопроизводительные серверы для сбора и доставки содержимого сотням и тысячам пользователей. Фактически в рамках одноранговой сети содержимое с централизованных серверов будет получать лишь небольшая группа одноранговых пользователей. Они, в свою очередь, поделятся информацией с другими людьми, которые распространят ее дальше, и т. д. Нагрузка по распространению содержимого распределяется между одноранговыми узлами в облаке. Для получения содержимого одноранговый узел находит ближайший к нему распространяющий узел.  
+ <span data-ttu-id="0f7fd-131">С помощью одноранговых сетей вы можете распространять текстовую информацию в виде файлов или сообщений среди большой группы пользователей.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-131">Peer-to-peer networking can allow for the dissemination of text-based information in the form of files or messages to a large group of users.</span></span> <span data-ttu-id="0f7fd-132">В качестве примера можно привести новостные рассылки.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-132">An example is a news list.</span></span>  
   
 -  
   
--   Распространение обновлений продуктов  
+-   <span data-ttu-id="0f7fd-133">Аудио и видео</span><span class="sxs-lookup"><span data-stu-id="0f7fd-133">Audio and video</span></span>  
   
- В одноранговых сетях также можно реализовать эффективный механизм распространения программного обеспечения, обновлений системы безопасности и пакетов исправления. В этом случае одноранговый узел с подключением к серверу распространения ПО получает с него обновления продукта и передает их дальше другим членам своей группы.  
-  
--  
-  
-## <a name="distributed-processing"></a>Распределенная обработка  
-  
--   Разделение и распределение задач  
-  
- Крупные вычислительные задачи на начальном этапе можно разделить на отдельные меньшие процессы, для выполнения которых будет достаточно ресурсов однорангового узла. Это может осуществлять сам одноранговый узел. После этого в рамках одноранговой сети отдельные задачи могут распределяться между одноранговыми узлами в группе. Каждый из них выполняет свою часть вычислительной задачи и передает результаты в центральную точку накопления.  
-  
--   Агрегирование ресурсов компьютера  
-  
- В рамках модели распределенных вычислений одноранговые сети также можно использовать для выполнения программ на каждом одноранговом узле. Такие программы выполняются во время бездействия процессора и являются частью крупной вычислительной задачи, решение которой координируется центральным сервером. Агрегируя ресурсы процессоров на нескольких компьютерах, одноранговые сети позволяют превратить группу одноранговых узлов в большую систему параллельных вычислений, предназначенную для решения объемных задач.  
+ <span data-ttu-id="0f7fd-134">Одноранговые сети также обеспечивают обмен аудио- и видеоданными, например трансляцией концерта или собрания, в рамках большой группы пользователей.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-134">Peer-to-peer networking can also allow for the dissemination of audio or video information to a large group of users, such as a large concert or company meeting.</span></span> <span data-ttu-id="0f7fd-135">Сегодня для распространения содержимого необходимо настроить высокопроизводительные серверы для сбора и доставки содержимого сотням и тысячам пользователей.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-135">To distribute the content today, you must configure high-capacity servers to collect and distribute the load to hundreds or thousands of users.</span></span> <span data-ttu-id="0f7fd-136">Фактически в рамках одноранговой сети содержимое с централизованных серверов будет получать лишь небольшая группа одноранговых пользователей.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-136">With peer-to-peer networking, only a handful of peers would actually get their content from the centralized servers.</span></span> <span data-ttu-id="0f7fd-137">Они, в свою очередь, поделятся информацией с другими людьми, которые распространят ее дальше, и т. д.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-137">These peers would flood this information out to a few more people who send it to others, and so on.</span></span> <span data-ttu-id="0f7fd-138">Нагрузка по распространению содержимого распределяется между одноранговыми узлами в облаке.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-138">The load of distributing the content is distributed to the peers in the cloud.</span></span> <span data-ttu-id="0f7fd-139">Для получения содержимого одноранговый узел находит ближайший к нему распространяющий узел.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-139">A peer that wants to receive the content would find the closest distributing peer and get the content from them.</span></span>  
   
 -  
   
-## <a name="see-also"></a>См. также  
+-   <span data-ttu-id="0f7fd-140">Распространение обновлений продуктов</span><span class="sxs-lookup"><span data-stu-id="0f7fd-140">Distribution of product updates</span></span>  
+  
+ <span data-ttu-id="0f7fd-141">В одноранговых сетях также можно реализовать эффективный механизм распространения программного обеспечения, обновлений системы безопасности и пакетов исправления.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-141">Peer-to-peer networking can also provide an efficient mechanism to distribute software such as product updates (security updates and service packs).</span></span> <span data-ttu-id="0f7fd-142">В этом случае одноранговый узел с подключением к серверу распространения ПО получает с него обновления продукта и передает их дальше другим членам своей группы.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-142">A peer that has a connection to a software distribution server can obtain the product update and propagate it to the other members of its group.</span></span>  
+  
+-  
+  
+## <a name="distributed-processing"></a><span data-ttu-id="0f7fd-143">Распределенная обработка</span><span class="sxs-lookup"><span data-stu-id="0f7fd-143">Distributed Processing</span></span>  
+  
+-   <span data-ttu-id="0f7fd-144">Разделение и распределение задач</span><span class="sxs-lookup"><span data-stu-id="0f7fd-144">Division and distribution of a task</span></span>  
+  
+ <span data-ttu-id="0f7fd-145">Крупные вычислительные задачи на начальном этапе можно разделить на отдельные меньшие процессы, для выполнения которых будет достаточно ресурсов однорангового узла.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-145">A large computing task can first be divided into separate smaller computing tasks well suited to the computing resources of a peer.</span></span> <span data-ttu-id="0f7fd-146">Это может осуществлять сам одноранговый узел.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-146">A peer could do the dividing of the large computing task.</span></span> <span data-ttu-id="0f7fd-147">После этого в рамках одноранговой сети отдельные задачи могут распределяться между одноранговыми узлами в группе.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-147">Then, peer-to-peer networking can distribute the individual tasks to the separate peers in the group.</span></span> <span data-ttu-id="0f7fd-148">Каждый из них выполняет свою часть вычислительной задачи и передает результаты в центральную точку накопления.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-148">Each peer performs its computing task and reports its result back to a centralized accumulation point.</span></span>  
+  
+-   <span data-ttu-id="0f7fd-149">Агрегирование ресурсов компьютера</span><span class="sxs-lookup"><span data-stu-id="0f7fd-149">Aggregation of computer resources</span></span>  
+  
+ <span data-ttu-id="0f7fd-150">В рамках модели распределенных вычислений одноранговые сети также можно использовать для выполнения программ на каждом одноранговом узле. Такие программы выполняются во время бездействия процессора и являются частью крупной вычислительной задачи, решение которой координируется центральным сервером.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-150">Another way to utilize peer-to-peer networking for distributed processing is to run programs on each peer that run during idle processor times and are part of a larger computing task that is coordinated by a central server.</span></span> <span data-ttu-id="0f7fd-151">Агрегируя ресурсы процессоров на нескольких компьютерах, одноранговые сети позволяют превратить группу одноранговых узлов в большую систему параллельных вычислений, предназначенную для решения объемных задач.</span><span class="sxs-lookup"><span data-stu-id="0f7fd-151">By aggregating the processors of multiple computers, peer-to-peer networking can turn a group of peer computers into a large parallel processor for large computing tasks.</span></span>  
+  
+-  
+  
+## <a name="see-also"></a><span data-ttu-id="0f7fd-152">См. также</span><span class="sxs-lookup"><span data-stu-id="0f7fd-152">See Also</span></span>  
  <xref:System.Net.PeerToPeer.Collaboration>
-

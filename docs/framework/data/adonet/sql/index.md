@@ -5,57 +5,54 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: effff61b424f914584ba1ffd963c100afbc3d745
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ab519f7881dd20c3fd9e2e08fef14591477d94a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sql-server-and-adonet"></a>SQL Server и ADO.NET
-В данном разделе описываются возможности и поведение, характерное для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).  
+# <a name="sql-server-and-adonet"></a><span data-ttu-id="56fa9-102">SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-102">SQL Server and ADO.NET</span></span>
+<span data-ttu-id="56fa9-103">В данном разделе описываются возможности и поведение, характерное для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).</span><span class="sxs-lookup"><span data-stu-id="56fa9-103">This section describes features and behaviors that are specific to the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>).</span></span>  
   
- Объект <xref:System.Data.SqlClient> предоставляет доступ к версиям SQL Server и инкапсулирует протоколы для конкретных баз данных. Возможности поставщика данных похожи на возможности поставщиков данных .NET Framework для OLE DB, ODBC и Oracle. Объект <xref:System.Data.SqlClient> включает средство синтаксического анализа потока табличных данных, которое служит для непосредственного взаимодействия с SQL Server.  
+ <span data-ttu-id="56fa9-104">Объект <xref:System.Data.SqlClient> предоставляет доступ к версиям SQL Server и инкапсулирует протоколы для конкретных баз данных.</span><span class="sxs-lookup"><span data-stu-id="56fa9-104"><xref:System.Data.SqlClient> provides access to versions of SQL Server, which encapsulates database-specific protocols.</span></span> <span data-ttu-id="56fa9-105">Возможности поставщика данных похожи на возможности поставщиков данных .NET Framework для OLE DB, ODBC и Oracle.</span><span class="sxs-lookup"><span data-stu-id="56fa9-105">The functionality of the data provider is designed to be similar to that of the .NET Framework data providers for OLE DB, ODBC, and Oracle.</span></span> <span data-ttu-id="56fa9-106">Объект <xref:System.Data.SqlClient> включает средство синтаксического анализа потока табличных данных, которое служит для непосредственного взаимодействия с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="56fa9-106"><xref:System.Data.SqlClient> includes a tabular data stream (TDS) parser to communicate directly with SQL Server.</span></span>  
   
 > [!NOTE]
->  Чтобы использовать поставщик данных .NET Framework для SQL Server, приложение должно ссылаться на пространство имен <xref:System.Data.SqlClient>.  
+>  <span data-ttu-id="56fa9-107">Чтобы использовать поставщик данных .NET Framework для SQL Server, приложение должно ссылаться на пространство имен <xref:System.Data.SqlClient>.</span><span class="sxs-lookup"><span data-stu-id="56fa9-107">To use the .NET Framework Data Provider for SQL Server, an application must reference the <xref:System.Data.SqlClient> namespace.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- Приводятся общие сведения о возможностях системы безопасности SQL Server, а также сценарии для создания безопасных приложений ADO.NET, предназначенных для работы с SQL Server.  
+## <a name="in-this-section"></a><span data-ttu-id="56fa9-108">Содержание</span><span class="sxs-lookup"><span data-stu-id="56fa9-108">In This Section</span></span>  
+ [<span data-ttu-id="56fa9-109">Безопасность SQL Server</span><span class="sxs-lookup"><span data-stu-id="56fa9-109">SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ <span data-ttu-id="56fa9-110">Приводятся общие сведения о возможностях системы безопасности SQL Server, а также сценарии для создания безопасных приложений ADO.NET, предназначенных для работы с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="56fa9-110">Provides an overview of SQL Server security features, and application scenarios for creating secure ADO.NET applications that target SQL Server.</span></span>  
   
- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- Описывается работа с типами данных SQL Server и их взаимодействие с типами данных .NET Framework.  
+ [<span data-ttu-id="56fa9-111">Типы данных SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-111">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ <span data-ttu-id="56fa9-112">Описывается работа с типами данных SQL Server и их взаимодействие с типами данных .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="56fa9-112">Describes how to work with SQL Server data types and how they interact with .NET Framework data types.</span></span>  
   
- [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- Описывается работа в SQL Server с данными большого размера.  
+ [<span data-ttu-id="56fa9-113">Двоичные данные и данные большого объема SQL Server</span><span class="sxs-lookup"><span data-stu-id="56fa9-113">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ <span data-ttu-id="56fa9-114">Описывается работа в SQL Server с данными большого размера.</span><span class="sxs-lookup"><span data-stu-id="56fa9-114">Describes how to work with large value data in SQL Server.</span></span>  
   
- [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- Описание работы с данными в SQL Server. Содержит разделы, посвященные операциям массового копирования, MARS, асинхронным операциям и возвращающим табличное значение параметрам.  
+ [<span data-ttu-id="56fa9-115">Операции данных SQL Server Data в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-115">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ <span data-ttu-id="56fa9-116">Описание работы с данными в SQL Server.</span><span class="sxs-lookup"><span data-stu-id="56fa9-116">Describes how to work with data in SQL Server.</span></span> <span data-ttu-id="56fa9-117">Содержит разделы, посвященные операциям массового копирования, MARS, асинхронным операциям и возвращающим табличное значение параметрам.</span><span class="sxs-lookup"><span data-stu-id="56fa9-117">Contains sections about bulk copy operations, MARS, asynchronous operations, and table-valued parameters.</span></span>  
   
- [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- Описываются возможности SQL Server, полезные для разработчиков приложений ADO.NET.  
+ [<span data-ttu-id="56fa9-118">Возможности SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-118">SQL Server Features and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ <span data-ttu-id="56fa9-119">Описываются возможности SQL Server, полезные для разработчиков приложений ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="56fa9-119">Describes SQL Server features that are useful for ADO.NET application developers.</span></span>  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- Описываются основные стандартные блоки, процессы и методы, необходимые для создания приложений по технологии LINQ to SQL.  
+ [<span data-ttu-id="56fa9-120">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="56fa9-120">LINQ to SQL</span></span>](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ <span data-ttu-id="56fa9-121">Описываются основные стандартные блоки, процессы и методы, необходимые для создания приложений по технологии LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="56fa9-121">Describes the basic building blocks, processes, and techniques required for creating LINQ to SQL applications.</span></span>  
   
- Полную документацию по ядру СУБД SQL Server см. в электронной документации по SQL Server для используемой версии SQL Server.  
+ <span data-ttu-id="56fa9-122">Полную документацию по ядру СУБД SQL Server см. в электронной документации по SQL Server для используемой версии SQL Server.</span><span class="sxs-lookup"><span data-stu-id="56fa9-122">For complete documentation of the SQL Server Database Engine, see SQL Server Books Online for the version of SQL Server you are using.</span></span>  
   
- [Электронная документация по SQL Server](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [<span data-ttu-id="56fa9-123">Электронная документация по SQL Server</span><span class="sxs-lookup"><span data-stu-id="56fa9-123">SQL Server Books Online</span></span>](http://msdn.microsoft.com/library/ms130214.aspx)  
   
-## <a name="see-also"></a>См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Сопоставления типов данных в ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
-
+## <a name="see-also"></a><span data-ttu-id="56fa9-124">См. также</span><span class="sxs-lookup"><span data-stu-id="56fa9-124">See Also</span></span>  
+ [<span data-ttu-id="56fa9-125">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-125">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="56fa9-126">Сопоставления типов данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-126">Data Type Mappings in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [<span data-ttu-id="56fa9-127">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="56fa9-127">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="56fa9-128">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-128">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="56fa9-129">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="56fa9-129">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

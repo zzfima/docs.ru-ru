@@ -1,45 +1,48 @@
 ---
-title: "Архитектура и разработка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Архитектура и разработка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f0dcad5d6287d5399dac6cea38b10984781770f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Архитектура и разработка
-Модуль создания SQL в [образце поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд.  Создание кода выполняется за один проход по дереву выражения.  
+# <a name="architecture-and-design"></a><span data-ttu-id="0af5b-102">Архитектура и разработка</span><span class="sxs-lookup"><span data-stu-id="0af5b-102">Architecture and Design</span></span>
+<span data-ttu-id="0af5b-103">Модуль создания SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд.</span><span class="sxs-lookup"><span data-stu-id="0af5b-103">The SQL generation module in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) is implemented as a visitor on the expression tree that represents the command tree.</span></span> <span data-ttu-id="0af5b-104">Создание кода выполняется за один проход по дереву выражения.</span><span class="sxs-lookup"><span data-stu-id="0af5b-104">The generation is done in a single pass over the expression tree.</span></span>  
   
- Узлы дерева обрабатываются в порядке снизу вверх.  Сначала создается промежуточная структура: SqlSelectStatement или SqlBuilder, в каждой из которых реализуется интерфейс ISqlFragment.  Затем из этой структуры создается строковая инструкция SQL.  Промежуточная структура создается по двум причинам.  
+ <span data-ttu-id="0af5b-105">Узлы дерева обрабатываются в порядке снизу вверх.</span><span class="sxs-lookup"><span data-stu-id="0af5b-105">The nodes of the tree are processed from the bottom up.</span></span> <span data-ttu-id="0af5b-106">Сначала создается промежуточная структура: SqlSelectStatement или SqlBuilder, в каждой из которых реализуется интерфейс ISqlFragment.</span><span class="sxs-lookup"><span data-stu-id="0af5b-106">First, an intermediate structure is produced: SqlSelectStatement or SqlBuilder, both implementing ISqlFragment.</span></span> <span data-ttu-id="0af5b-107">Затем из этой структуры создается строковая инструкция SQL.</span><span class="sxs-lookup"><span data-stu-id="0af5b-107">Next, the string SQL statement is produced from that structure.</span></span> <span data-ttu-id="0af5b-108">Промежуточная структура создается по двум причинам.</span><span class="sxs-lookup"><span data-stu-id="0af5b-108">There are two reasons for the intermediate structure:</span></span>  
   
--   С логической точки зрения инструкция SQL SELECT заполняется не по порядку.  Узлы, участвующие в предложении FROM, обходятся раньше, чем узлы, участвующие в предложениях WHERE, GROUP BY и ORDER BY.  
+-   <span data-ttu-id="0af5b-109">С логической точки зрения инструкция SQL SELECT заполняется не по порядку.</span><span class="sxs-lookup"><span data-stu-id="0af5b-109">Logically, a SQL SELECT statement is populated out of order.</span></span> <span data-ttu-id="0af5b-110">Узлы, участвующие в предложении FROM, обходятся раньше, чем узлы, участвующие в предложениях WHERE, GROUP BY и ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="0af5b-110">The nodes that participate in the FROM clause are visited before the nodes that participate in the WHERE, GROUP BY, and the ORDER BY clause.</span></span>  
   
--   Для переименования псевдонимов необходимо определить все используемые псевдонимы, чтобы избежать конфликтов во время переименования.  Чтобы определить варианты переименования в SqlBuilder, используйте объекты Symbol для представления столбцов\-кандидатов на переименование.  
+-   <span data-ttu-id="0af5b-111">Для переименования псевдонимов необходимо определить все используемые псевдонимы, чтобы избежать конфликтов во время переименования.</span><span class="sxs-lookup"><span data-stu-id="0af5b-111">To rename aliases, you must identify all used aliases to avoid collisions during renaming.</span></span> <span data-ttu-id="0af5b-112">Чтобы определить варианты переименования в SqlBuilder, используйте объекты Symbol для представления столбцов-кандидатов на переименование.</span><span class="sxs-lookup"><span data-stu-id="0af5b-112">To defer the renaming choices in SqlBuilder, use Symbol objects to represent the columns that are candidates for renaming.</span></span>  
   
- ![Схема](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705\-4f7c\-4d2d\-ace5\-afefc6d3cefa")  
+ <span data-ttu-id="0af5b-113">![Схема](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")</span><span class="sxs-lookup"><span data-stu-id="0af5b-113">![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")</span></span>  
   
- На первом этапе во время обхода дерева выражения выражения группируются в объекты SqlSelectStatement, а соединения и псевдонимы соединений преобразуются в плоские.  На этом проходе объекты Symbol представляют столбцы или входные псевдонимы, которые можно переименовать.  
+ <span data-ttu-id="0af5b-114">На первом этапе во время обхода дерева выражения группируются в объекты SqlSelectStatement, а соединения и псевдонимы соединений преобразуются в плоские.</span><span class="sxs-lookup"><span data-stu-id="0af5b-114">In the first phase, while visiting the expression tree, expressions are grouped into SqlSelectStatements, joins are flattened, and join aliases are flattened.</span></span> <span data-ttu-id="0af5b-115">На этом проходе объекты Symbol представляют столбцы или входные псевдонимы, которые можно переименовать.</span><span class="sxs-lookup"><span data-stu-id="0af5b-115">During this pass, Symbol objects represent columns or input aliases that may be renamed.</span></span>  
   
- На втором этапе во время создания фактической строки происходит переименование псевдонимов.  
+ <span data-ttu-id="0af5b-116">На втором этапе во время создания фактической строки происходит переименование псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-116">In the second phase, while producing the actual string, aliases are renamed.</span></span>  
   
-## Структуры данных  
- В этом разделе описываются типы, которые используются в [образце поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) для построения инструкции SQL.  
+## <a name="data-structures"></a><span data-ttu-id="0af5b-117">Структуры данных</span><span class="sxs-lookup"><span data-stu-id="0af5b-117">Data Structures</span></span>  
+ <span data-ttu-id="0af5b-118">В этом разделе рассматриваются типы, используемые в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616) , используемой для построения инструкции SQL.</span><span class="sxs-lookup"><span data-stu-id="0af5b-118">This section discusses the types used in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) that you use to build a SQL statement.</span></span>  
   
-### ISqlFragment  
- В этом разделе описаны классы, в которых реализован интерфейс ISqlFragment. Он выполняет две функции.  
+### <a name="isqlfragment"></a><span data-ttu-id="0af5b-119">ISqlFragment</span><span class="sxs-lookup"><span data-stu-id="0af5b-119">ISqlFragment</span></span>  
+ <span data-ttu-id="0af5b-120">В этом разделе описаны классы, в которых реализован интерфейс ISqlFragment. Он выполняет две функции.</span><span class="sxs-lookup"><span data-stu-id="0af5b-120">This section covers the classes that implement the ISqlFragment interface, which serves two purposes:</span></span>  
   
--   Общий тип возвращаемого значения для всех методов посетителя.  
+-   <span data-ttu-id="0af5b-121">Общий тип возвращаемого значения для всех методов посетителя.</span><span class="sxs-lookup"><span data-stu-id="0af5b-121">A common return type for all the visitor methods.</span></span>  
   
--   Предоставляет метод для записи окончательной строки SQL.  
+-   <span data-ttu-id="0af5b-122">Предоставляет метод для записи окончательной строки SQL.</span><span class="sxs-lookup"><span data-stu-id="0af5b-122">Gives a method to write the final SQL string.</span></span>  
   
 ```  
 internal interface ISqlFragment {  
@@ -47,8 +50,8 @@ internal interface ISqlFragment {
 }  
 ```  
   
-#### SqlBuilder  
- SqlBuilder \- это устройство сбора окончательной строки SQL, аналогичное StringBuilder.  Оно состоит из строк, которые составляют окончательную строку SQL, вместе с объектами ISqlFragment, которые можно преобразовать в строки.  
+#### <a name="sqlbuilder"></a><span data-ttu-id="0af5b-123">SqlBuilder</span><span class="sxs-lookup"><span data-stu-id="0af5b-123">SqlBuilder</span></span>  
+ <span data-ttu-id="0af5b-124">SqlBuilder - это устройство сбора окончательной строки SQL, аналогичное StringBuilder.</span><span class="sxs-lookup"><span data-stu-id="0af5b-124">SqlBuilder is a gathering device for the final SQL string, similar to StringBuilder.</span></span> <span data-ttu-id="0af5b-125">Оно состоит из строк, которые составляют окончательную строку SQL, вместе с объектами ISqlFragment, которые можно преобразовать в строки.</span><span class="sxs-lookup"><span data-stu-id="0af5b-125">It consists of the strings that make up the final SQL, along with ISqlFragments that can be converted into strings.</span></span>  
   
 ```  
 internal sealed class SqlBuilder : ISqlFragment {  
@@ -58,14 +61,14 @@ internal sealed class SqlBuilder : ISqlFragment {
 }  
 ```  
   
-#### SqlSelectStatement  
- SqlSelectStatement представляет каноническую инструкцию SQL SELECT в формате «SELECT … FROM ...  WHERE … GROUP BY … ORDER BY».  
+#### <a name="sqlselectstatement"></a><span data-ttu-id="0af5b-126">SqlSelectStatement</span><span class="sxs-lookup"><span data-stu-id="0af5b-126">SqlSelectStatement</span></span>  
+ <span data-ttu-id="0af5b-127">SqlSelectStatement представляет каноническую инструкцию SQL SELECT фигуры «SELECT...</span><span class="sxs-lookup"><span data-stu-id="0af5b-127">SqlSelectStatement represents a canonical SQL SELECT statement of the shape "SELECT …</span></span> <span data-ttu-id="0af5b-128">ОТ..</span><span class="sxs-lookup"><span data-stu-id="0af5b-128">FROM  ..</span></span> <span data-ttu-id="0af5b-129">ГДЕ...</span><span class="sxs-lookup"><span data-stu-id="0af5b-129">WHERE …</span></span> <span data-ttu-id="0af5b-130">ГРУППИРОВАТЬ ПО...</span><span class="sxs-lookup"><span data-stu-id="0af5b-130">GROUP BY …</span></span> <span data-ttu-id="0af5b-131">УПОРЯДОЧИТЬ ПО».</span><span class="sxs-lookup"><span data-stu-id="0af5b-131">ORDER BY".</span></span>  
   
- Каждое из предложений SQL представляется объектом StringBuilder.  Кроме того, он отслеживает, указано ли ключевое слово Distinct и является ли инструкция самой верхней.  Если это не так, то предложение ORDER BY не указывается, однако оно указывается, если инструкция также содержит предложение TOP.  
+ <span data-ttu-id="0af5b-132">Каждое из предложений SQL представляется объектом StringBuilder.</span><span class="sxs-lookup"><span data-stu-id="0af5b-132">Each of the SQL clauses is represented by a StringBuilder.</span></span> <span data-ttu-id="0af5b-133">Кроме того, он отслеживает, указано ли ключевое слово Distinct и является ли инструкция самой верхней.</span><span class="sxs-lookup"><span data-stu-id="0af5b-133">In addition, it tracks whether Distinct has been specified and whether the statement is topmost.</span></span> <span data-ttu-id="0af5b-134">Если это не так, то предложение ORDER BY не указывается, однако оно указывается, если инструкция также содержит предложение TOP.</span><span class="sxs-lookup"><span data-stu-id="0af5b-134">If the statement is not topmost, the ORDER BY clause is omitted unless the statement also has a TOP clause.</span></span>  
   
- FromExtents содержит список входных данных для инструкции SELECT.  Обычно это только один элемент.  Инструкции SELECT для соединений могут временно иметь несколько элементов.  
+ <span data-ttu-id="0af5b-135">FromExtents содержит список входных данных для инструкции SELECT.</span><span class="sxs-lookup"><span data-stu-id="0af5b-135">FromExtents contains the list of inputs for the SELECT statement.</span></span> <span data-ttu-id="0af5b-136">Обычно это только один элемент.</span><span class="sxs-lookup"><span data-stu-id="0af5b-136">There is usually just one element in this.</span></span> <span data-ttu-id="0af5b-137">Инструкции SELECT для соединений могут временно иметь несколько элементов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-137">SELECT statements for joins may temporarily have more than one element.</span></span>  
   
- Если инструкция SELECT создается узлом соединения, то в SqlSelectStatement ведется список всех экстентов, которые были преобразованы в плоские в соединении в AllJoinExtents.  OuterExtents представляет внешние ссылки SqlSelectStatement и используется для переименования входных псевдонимов.  
+ <span data-ttu-id="0af5b-138">Если инструкция SELECT создается узлом соединения, то в SqlSelectStatement ведется список всех экстентов, которые были преобразованы в плоские в соединении в AllJoinExtents.</span><span class="sxs-lookup"><span data-stu-id="0af5b-138">If the SELECT statement is created by a Join node, SqlSelectStatement maintains a list of all the extents that have been flattened in the join in AllJoinExtents.</span></span> <span data-ttu-id="0af5b-139">OuterExtents представляет внешние ссылки SqlSelectStatement и используется для переименования входных псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-139">OuterExtents represents outer references of the SqlSelectStatement and is used for input alias renaming.</span></span>  
   
 ```  
 internal sealed class SqlSelectStatement : ISqlFragment {  
@@ -86,8 +89,8 @@ internal sealed class SqlSelectStatement : ISqlFragment {
 }  
 ```  
   
-#### TopClause  
- TopClause представляет выражение TOP в SqlSelectStatement.  Свойство TopCount показывает, сколько нужно выбрать строк TOP.  Если WithTies имеет значение true, то TopClause построено из DbLimitExpession.  
+#### <a name="topclause"></a><span data-ttu-id="0af5b-140">TopClause</span><span class="sxs-lookup"><span data-stu-id="0af5b-140">TopClause</span></span>  
+ <span data-ttu-id="0af5b-141">TopClause представляет выражение TOP в SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-141">TopClause represents the TOP expression in a SqlSelectStatement.</span></span> <span data-ttu-id="0af5b-142">Свойство TopCount показывает, сколько нужно выбрать строк TOP.</span><span class="sxs-lookup"><span data-stu-id="0af5b-142">The TopCount property indicates how many TOP rows should be selected.</span></span>  <span data-ttu-id="0af5b-143">Если WithTies имеет значение true, то TopClause построено из DbLimitExpession.</span><span class="sxs-lookup"><span data-stu-id="0af5b-143">When WithTies is true, the TopClause was built from a DbLimitExpession.</span></span>  
   
 ```  
 class TopClause : ISqlFragment {  
@@ -98,10 +101,10 @@ class TopClause : ISqlFragment {
 }  
 ```  
   
-### Символы  
- Классы, связанные с Symbol, и таблица символов выполняют переименование входных псевдонимов, преобразование псевдонимов соединений в плоские и переименование псевдонимов столбцов.  
+### <a name="symbols"></a><span data-ttu-id="0af5b-144">Символы</span><span class="sxs-lookup"><span data-stu-id="0af5b-144">Symbols</span></span>  
+ <span data-ttu-id="0af5b-145">Классы, связанные с Symbol, и таблица символов выполняют переименование входных псевдонимов, преобразование псевдонимов соединений в плоские и переименование псевдонимов столбцов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-145">The Symbol-related classes and the symbol table perform input alias renaming, join alias flattening, and column alias renaming.</span></span>  
   
- Класс Symbol представляет экстент, вложенную инструкцию SELECT или столбец.  Он используется вместо фактического псевдонима, что позволяет переименовать его после использования, а также передает дополнительные сведения о представляемом артефакте \(например, типе\).  
+ <span data-ttu-id="0af5b-146">Класс Symbol представляет экстент, вложенную инструкцию SELECT или столбец.</span><span class="sxs-lookup"><span data-stu-id="0af5b-146">The Symbol class represents an extent, a nested SELECT statement, or a column.</span></span> <span data-ttu-id="0af5b-147">Он используется вместо фактического псевдонима, что позволяет переименовать его после использования, а также передает дополнительные сведения о представляемом артефакте (например, типе).</span><span class="sxs-lookup"><span data-stu-id="0af5b-147">It is used instead of an actual alias to allow for renaming after it has been used and it also carries additional information for the artifact it represents (like the type).</span></span>  
   
 ```  
 class Symbol : ISqlFragment {  
@@ -117,18 +120,18 @@ class Symbol : ISqlFragment {
 }  
 ```  
   
- В объекте Name хранится исходный псевдоним для представляемого экстента, вложенной инструкции SELECT или столбца.  
+ <span data-ttu-id="0af5b-148">В объекте Name хранится исходный псевдоним для представляемого экстента, вложенной инструкции SELECT или столбца.</span><span class="sxs-lookup"><span data-stu-id="0af5b-148">Name stores the original alias for the represented extent, nested SELECT statement, or a column.</span></span>  
   
- В объекте NewName хранится псевдоним, который будет использоваться в инструкции SQL SELECT.  Вначале значение устанавливается равным Name и изменяется только в случае необходимости при создании окончательного строкового запроса.  
+ <span data-ttu-id="0af5b-149">В объекте NewName хранится псевдоним, который будет использоваться в инструкции SQL SELECT.</span><span class="sxs-lookup"><span data-stu-id="0af5b-149">NewName stores the alias that will be used in the SQL SELECT statement.</span></span> <span data-ttu-id="0af5b-150">Вначале значение устанавливается равным Name и изменяется только в случае необходимости при создании окончательного строкового запроса.</span><span class="sxs-lookup"><span data-stu-id="0af5b-150">It is originally set to Name, and only renamed if needed when generating the final string query.</span></span>  
   
- Объект Type используется только для символов, представляющих экстенты и вложенные инструкции SELECT.  
+ <span data-ttu-id="0af5b-151">Объект Type используется только для символов, представляющих экстенты и вложенные инструкции SELECT.</span><span class="sxs-lookup"><span data-stu-id="0af5b-151">Type is only useful for symbols representing extents and nested SELECT statements.</span></span>  
   
-#### SymbolPair  
- Класс SymbolPair отвечает за преобразование записей в плоские.  
+#### <a name="symbolpair"></a><span data-ttu-id="0af5b-152">SymbolPair</span><span class="sxs-lookup"><span data-stu-id="0af5b-152">SymbolPair</span></span>  
+ <span data-ttu-id="0af5b-153">Класс SymbolPair отвечает за преобразование записей в плоские.</span><span class="sxs-lookup"><span data-stu-id="0af5b-153">The SymbolPair class addresses record flattening.</span></span>  
   
- Рассмотрим выражение свойства D\(v, "j3.j2.j1.a.x"\), где v обозначает VarRef, j1, j2, j3 \- соединения, a \- экстент, а x \- столбец.  
+ <span data-ttu-id="0af5b-154">Рассмотрим выражение свойства D(v, "j3.j2.j1.a.x"), где v обозначает VarRef, j1, j2, j3 - соединения, a - экстент, а x - столбец.</span><span class="sxs-lookup"><span data-stu-id="0af5b-154">Consider a property expression D(v, "j3.j2.j1.a.x") where v is a VarRef, j1, j2, j3 are joins, a is an extent, and x is a columns.</span></span>  
   
- Это выражение нужно преобразовать в {j'}.{x'}.  Исходное поле представляет самую внешнюю SqlStatement, представляющую выражение соединения \(например, j2\). Это всегда символ соединения.  Поле столбца перемещается от одного символа соединения к другому, пока не останавливается на символе, который не относится к соединению.  Оно возвращается при обходе DbPropertyExpression, но никогда не добавляется в SqlBuilder.  
+ <span data-ttu-id="0af5b-155">Это выражение нужно преобразовать в {j'}.{x'}.</span><span class="sxs-lookup"><span data-stu-id="0af5b-155">This has to be translated eventually into {j'}.{x'}.</span></span> <span data-ttu-id="0af5b-156">Исходное поле представляет самую внешнюю SqlStatement, представляющую выражение соединения (например, j2). Это всегда символ соединения.</span><span class="sxs-lookup"><span data-stu-id="0af5b-156">The source field represents the outermost SqlStatement, representing a join expression (say j2); this is always a Join symbol.</span></span> <span data-ttu-id="0af5b-157">Поле столбца перемещается от одного символа соединения к другому, пока не останавливается на символе, который не относится к соединению.</span><span class="sxs-lookup"><span data-stu-id="0af5b-157">The column field moves from one join symbol to the next until it stops at a non-join symbol.</span></span> <span data-ttu-id="0af5b-158">Оно возвращается при обходе DbPropertyExpression, но никогда не добавляется в SqlBuilder.</span><span class="sxs-lookup"><span data-stu-id="0af5b-158">This is returned when visiting a DbPropertyExpression but is never added to a SqlBuilder.</span></span>  
   
 ```  
 class SymbolPair : ISqlFragment {  
@@ -138,8 +141,8 @@ class SymbolPair : ISqlFragment {
 }  
 ```  
   
-#### JoinSymbol  
- Символ соединения \- это объект Symbol, представляющий вложенную инструкцию SELECT с соединением или входом соединения.  
+#### <a name="joinsymbol"></a><span data-ttu-id="0af5b-159">JoinSymbol</span><span class="sxs-lookup"><span data-stu-id="0af5b-159">JoinSymbol</span></span>  
+ <span data-ttu-id="0af5b-160">Символ соединения - это объект Symbol, представляющий вложенную инструкцию SELECT с соединением или входом соединения.</span><span class="sxs-lookup"><span data-stu-id="0af5b-160">A Join symbol is a Symbol that represents a nested SELECT statement with a join or a join input.</span></span>  
   
 ```  
 internal sealed class JoinSymbol : Symbol {  
@@ -153,14 +156,14 @@ internal sealed class JoinSymbol : Symbol {
 }  
 ```  
   
- ColumnList представляет список столбцов в предложении SELECT, если этот символ представляет инструкцию SQL SELECT.  ExtentList \- это список экстентов в предложении SELECT.  Если соединение содержит несколько плоских экстентов на верхнем уровне, то FlattenedExtentList отслеживает эти экстенты, чтобы обеспечить правильное переименование псевдонимов экстентов.  
+ <span data-ttu-id="0af5b-161">ColumnList представляет список столбцов в предложении SELECT, если этот символ представляет инструкцию SQL SELECT.</span><span class="sxs-lookup"><span data-stu-id="0af5b-161">ColumnList represents the list of columns in the SELECT clause if this symbol represents a SQL SELECT statement.</span></span> <span data-ttu-id="0af5b-162">ExtentList - это список экстентов в предложении SELECT.</span><span class="sxs-lookup"><span data-stu-id="0af5b-162">ExtentList is the list of extents in the SELECT clause.</span></span> <span data-ttu-id="0af5b-163">Если соединение содержит несколько плоских экстентов на верхнем уровне, то FlattenedExtentList отслеживает эти экстенты, чтобы обеспечить правильное переименование псевдонимов экстентов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-163">If the join has multiple extents flattened at the top level, FlattenedExtentList tracks the extents to ensure that extent aliases are renamed correctly.</span></span>  
   
- NameToExtent использует все экстенты из ExtentList в качестве словаря.  IsNestedJoin используется для определения типа JoinSymbol: обычный символ соединения или символ, для которого существует соответствующая SqlSelectStatement.  
+ <span data-ttu-id="0af5b-164">NameToExtent использует все экстенты из ExtentList в качестве словаря.</span><span class="sxs-lookup"><span data-stu-id="0af5b-164">NameToExtent has all the extents in ExtentList as a dictionary.</span></span> <span data-ttu-id="0af5b-165">IsNestedJoin используется для определения типа JoinSymbol: обычный символ соединения или символ, для которого существует соответствующая SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-165">IsNestedJoin is used to determine whether a JoinSymbol is an ordinary join symbol or one that has a corresponding SqlSelectStatement.</span></span>  
   
- Все списки задаются ровно один раз, а затем используются для уточняющих запросов и для перечисления.  
+ <span data-ttu-id="0af5b-166">Все списки задаются ровно один раз, а затем используются для уточняющих запросов и для перечисления.</span><span class="sxs-lookup"><span data-stu-id="0af5b-166">All the lists are set exactly once and then used for lookups or enumeration.</span></span>  
   
-#### SymbolTable  
- SymbolTable используется для разрешения имен переменных в объекты Symbol.  SymbolTable реализуется в виде стека с новой записью для каждой области.  Поиск в уточняющих запросах ведется по стеку сверху вниз, пока не будет найдена запись.  
+#### <a name="symboltable"></a><span data-ttu-id="0af5b-167">SymbolTable</span><span class="sxs-lookup"><span data-stu-id="0af5b-167">SymbolTable</span></span>  
+ <span data-ttu-id="0af5b-168">SymbolTable используется для разрешения имен переменных в объекты Symbol.</span><span class="sxs-lookup"><span data-stu-id="0af5b-168">SymbolTable is used to resolve variable names to Symbols.</span></span> <span data-ttu-id="0af5b-169">SymbolTable реализуется в виде стека с новой записью для каждой области.</span><span class="sxs-lookup"><span data-stu-id="0af5b-169">SymbolTable is implemented as a stack with a new entry for each scope.</span></span> <span data-ttu-id="0af5b-170">Поиск в уточняющих запросах ведется по стеку сверху вниз, пока не будет найдена запись.</span><span class="sxs-lookup"><span data-stu-id="0af5b-170">Lookups search from the top of the stack to the bottom until an entry is found.</span></span>  
   
 ```  
 internal sealed class SymbolTable {  
@@ -171,12 +174,12 @@ internal sealed class SymbolTable {
 }  
 ```  
   
- Для каждого экземпляра модуля создания SQL существует только одна SymbolTable.  Для каждого реляционного узла выполняется вход и выход из области.  Все символы в ранних областях видны поздним областям, если они не скрыты другими символами с таким же именем.  
+ <span data-ttu-id="0af5b-171">Для каждого экземпляра модуля создания SQL существует только одна SymbolTable.</span><span class="sxs-lookup"><span data-stu-id="0af5b-171">There is only one SymbolTable per one instance of the Sql Generation module.</span></span> <span data-ttu-id="0af5b-172">Для каждого реляционного узла выполняется вход и выход из области.</span><span class="sxs-lookup"><span data-stu-id="0af5b-172">Scopes are entered and exited for each relational node.</span></span> <span data-ttu-id="0af5b-173">Все символы в ранних областях видны поздним областям, если они не скрыты другими символами с таким же именем.</span><span class="sxs-lookup"><span data-stu-id="0af5b-173">All symbols in earlier scopes are visible to later scopes unless hidden by other symbols with the same name.</span></span>  
   
-### Глобальное состояние для посетителя  
- Чтобы упростить переименование псевдонимов и столбцов, ведите список всех имен столбцов \(AllColumnNames\) и псевдонимов экстентов \(AllExtentNames\), которые использованы в первом проходе по дереву запроса.  Таблица символов разрешает имена переменных в объекты Symbol.  IsVarRefSingle используется только для проверки и не является безусловно необходимым.  
+### <a name="global-state-for-the-visitor"></a><span data-ttu-id="0af5b-174">Глобальное состояние для посетителя</span><span class="sxs-lookup"><span data-stu-id="0af5b-174">Global State for the Visitor</span></span>  
+ <span data-ttu-id="0af5b-175">Чтобы упростить переименование псевдонимов и столбцов, ведите список всех имен столбцов (AllColumnNames) и псевдонимов экстентов (AllExtentNames), которые использованы в первом проходе по дереву запроса.</span><span class="sxs-lookup"><span data-stu-id="0af5b-175">To assist in renaming of aliases and columns, maintain a list of all the column names (AllColumnNames) and extent aliases (AllExtentNames) that have been used in the first pass over the query tree.</span></span>  <span data-ttu-id="0af5b-176">Таблица символов разрешает имена переменных в объекты Symbol.</span><span class="sxs-lookup"><span data-stu-id="0af5b-176">The symbol table resolves variable names to Symbols.</span></span> <span data-ttu-id="0af5b-177">IsVarRefSingle используется только для проверки и не является безусловно необходимым.</span><span class="sxs-lookup"><span data-stu-id="0af5b-177">IsVarRefSingle is only used for verification purposes, it is not strictly necessary.</span></span>  
   
- Два стека, используемые посредством CurrentSelectStatement и IsParentAJoin, служат для передачи параметров от родительских узлов в дочерние, поскольку схема посетителя не позволяет передавать параметры.  
+ <span data-ttu-id="0af5b-178">Два стека, используемые посредством CurrentSelectStatement и IsParentAJoin, служат для передачи параметров от родительских узлов в дочерние, поскольку схема посетителя не позволяет передавать параметры.</span><span class="sxs-lookup"><span data-stu-id="0af5b-178">The two stacks used via CurrentSelectStatement and IsParentAJoin are used to pass "parameters" from parent to child nodes, since the visitor pattern does not allow us to pass parameters.</span></span>  
   
 ```  
 internal Dictionary<string, int> AllExtentNames {get}  
@@ -191,97 +194,97 @@ Stack<bool> isParentAJoinStack;
 private bool IsParentAJoin{get}  
 ```  
   
-## Стандартные сценарии  
- В этом разделе описаны распространенные сценарии использования поставщика.  
+## <a name="common-scenarios"></a><span data-ttu-id="0af5b-179">Стандартные сценарии</span><span class="sxs-lookup"><span data-stu-id="0af5b-179">Common Scenarios</span></span>  
+ <span data-ttu-id="0af5b-180">В этом разделе описаны распространенные сценарии использования поставщика.</span><span class="sxs-lookup"><span data-stu-id="0af5b-180">This section discusses common provider scenarios.</span></span>  
   
-### Группирование узлов выражения в инструкции SQL  
- Объект SqlSelectStatement создается, когда при обходе дерева снизу вверх встречается первый реляционный узел \(обычно экстент DbScanExpression\).  Чтобы создать инструкцию SQL SELECT с минимально возможным количеством вложенных запросов, объедините максимальное число родительских узлов в этой SqlSelectStatement.  
+### <a name="grouping-expression-nodes-into-sql-statements"></a><span data-ttu-id="0af5b-181">Группирование узлов выражения в инструкции SQL</span><span class="sxs-lookup"><span data-stu-id="0af5b-181">Grouping Expression Nodes into SQL Statements</span></span>  
+ <span data-ttu-id="0af5b-182">Объект SqlSelectStatement создается, когда при обходе дерева снизу вверх встречается первый реляционный узел (обычно экстент DbScanExpression).</span><span class="sxs-lookup"><span data-stu-id="0af5b-182">A SqlSelectStatement is created when the first relational node is encountered (typically a DbScanExpression extent) when visiting the tree from the bottom up.</span></span> <span data-ttu-id="0af5b-183">Чтобы создать инструкцию SQL SELECT с минимально возможным количеством вложенных запросов, объедините максимальное число родительских узлов в этой SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-183">To produce a SQL SELECT statement with as few nested queries as possible, aggregate as many of its parent nodes as possible in that SqlSelectStatement.</span></span>  
   
- Метод IsCompatible определяет, можно ли добавить заданный \(реляционный\) узел в текущую SqlSelectStatement \(возвращенную при обходе входных данных\), или нужно запустить новую инструкцию. Решение зависит от узлов, которые уже входят в SqlSelectStatement \(и в свою очередь зависят от узлов, располагавшихся под заданным\).  
+ <span data-ttu-id="0af5b-184">Метод IsCompatible определяет, можно ли добавить заданный (реляционный) узел в текущую SqlSelectStatement (возвращенную при обходе входных данных), или нужно запустить новую инструкцию. Решение зависит от узлов, которые уже входят в SqlSelectStatement (и в свою очередь зависят от узлов, располагавшихся под заданным).</span><span class="sxs-lookup"><span data-stu-id="0af5b-184">The decision of whether a given (relational) node can be added to the current SqlSelectStatement (the one returned when visiting the input) or if a new statement needs to be started is computed by the method IsCompatible and depends on what is already in the SqlSelectStatement, which depends on what nodes were below the given node.</span></span>  
   
- Обычно, если предложения инструкции SQL вычисляются после предложений, где узлы, планируемые к объединению, не пусты, то узел нельзя добавить в текущую инструкцию.  Например, если следующий узел является фильтром, то его можно включить в текущую SqlSelectStatement, только если выполняются следующие условия.  
+ <span data-ttu-id="0af5b-185">Обычно, если предложения инструкции SQL вычисляются после предложений, где узлы, планируемые к объединению, не пусты, то узел нельзя добавить в текущую инструкцию.</span><span class="sxs-lookup"><span data-stu-id="0af5b-185">Typically, if SQL statement clauses are evaluated after clauses where the nodes being considered for merging are not empty, the node cannot be added to the current statement.</span></span> <span data-ttu-id="0af5b-186">Например, если следующий узел является фильтром, то его можно включить в текущую SqlSelectStatement, только если выполняются следующие условия.</span><span class="sxs-lookup"><span data-stu-id="0af5b-186">For example, if the next node is a Filter, that node can be incorporated into the current SqlSelectStatement only if the following is true:</span></span>  
   
--   Список SELECT пуст.  Если список SELECT не пуст, значит он создан узлом, предшествующим фильтру, и предикат может ссылаться на столбцы, созданные этим списком SELECT.  
+-   <span data-ttu-id="0af5b-187">Список SELECT пуст.</span><span class="sxs-lookup"><span data-stu-id="0af5b-187">The SELECT list is empty.</span></span> <span data-ttu-id="0af5b-188">Если список SELECT не пуст, значит он создан узлом, предшествующим фильтру, и предикат может ссылаться на столбцы, созданные этим списком SELECT.</span><span class="sxs-lookup"><span data-stu-id="0af5b-188">If the SELECT list is not empty, the select list was produced by a node preceding the filter and the predicate may refer to columns produced by that SELECT list.</span></span>  
   
--   Предложение GROUPBY пусто.  Если предложение GROUPBY не пусто, то добавление фильтра соответствует фильтрации перед группирования, а такой порядок недопустим.  
+-   <span data-ttu-id="0af5b-189">Предложение GROUPBY пусто.</span><span class="sxs-lookup"><span data-stu-id="0af5b-189">The GROUPBY is empty.</span></span> <span data-ttu-id="0af5b-190">Если предложение GROUPBY не пусто, то добавление фильтра соответствует фильтрации перед группирования, а такой порядок недопустим.</span><span class="sxs-lookup"><span data-stu-id="0af5b-190">If the GROUPBY is not empty, adding the filter would mean filtering before grouping, which is not correct.</span></span>  
   
--   Предложение TOP пусто.  Если предложение TOP не пусто, то добавление фильтра соответствует фильтрации перед операцией TOP, а такой порядок недопустим.  
+-   <span data-ttu-id="0af5b-191">Предложение TOP пусто.</span><span class="sxs-lookup"><span data-stu-id="0af5b-191">The TOP clause is empty.</span></span> <span data-ttu-id="0af5b-192">Если предложение TOP не пусто, то добавление фильтра соответствует фильтрации перед операцией TOP, а такой порядок недопустим.</span><span class="sxs-lookup"><span data-stu-id="0af5b-192">If the TOP clause is not empty, adding the filter would mean filtering before doing TOP, which is not correct.</span></span>  
   
- Эти ограничения не применяются к нереляционным узлам, таким как DbConstantExpression, а также к арифметическим выражениям, которые всегда включаются в существующую SqlSelectStatement.  
+ <span data-ttu-id="0af5b-193">Эти ограничения не применяются к нереляционным узлам, таким как DbConstantExpression, а также к арифметическим выражениям, которые всегда включаются в существующую SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-193">This does not apply to non-relational nodes like DbConstantExpression or arithmetic expressions, because these are always included as part of an existing SqlSelectStatement.</span></span>  
   
- Кроме того, после достижение корневого элемента дерева соединения \(узла соединения, для которого отсутствует родительский узел\), запускается новая SqlSelectStatement.  В эту SqlSelectStatement объединяются все дочерние узлы соединения с левой стороны.  
+ <span data-ttu-id="0af5b-194">Кроме того, после достижение корневого элемента дерева соединения (узла соединения, для которого отсутствует родительский узел), запускается новая SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-194">Also, when encountering the root of join tree (a join node that does not have a join parent), a new SqlSelectStatement is started.</span></span> <span data-ttu-id="0af5b-195">В эту SqlSelectStatement объединяются все дочерние узлы соединения с левой стороны.</span><span class="sxs-lookup"><span data-stu-id="0af5b-195">All of its left spine join children are aggregated into that SqlSelectStatement.</span></span>  
   
- Когда запускается новая SqlSelectStatement, а текущая инструкция добавляется во входные данные, может понадобиться завершить текущую SqlSelectStatement путем добавления столбцов проекции \(предложение SELECT\), если она еще не существует.  Это выполняется методом AddDefaultColumns, который проверяет FromExtents в SqlSelectStatement и добавляет все столбцы из списка экстентов, представленного FromExtents, которые попадают в область в список проецируемых столбцов.  Эта операция необходима, поскольку на данном этапе неизвестно, на какие столбцы ссылаются другие узлы.  Операцию можно оптимизировать так, чтобы проецировать только те столбцы, которые можно использовать в дальнейшем.  
+ <span data-ttu-id="0af5b-196">Когда запускается новая SqlSelectStatement, а текущая инструкция добавляется во входные данные, может понадобиться завершить текущую SqlSelectStatement путем добавления столбцов проекции (предложение SELECT), если она еще не существует.</span><span class="sxs-lookup"><span data-stu-id="0af5b-196">Whenever a new SqlSelectStatement is started, and the current one is added to the input, the current SqlSelectStatement may need to be completed by adding projection columns (a SELECT clause) if one does not exist.</span></span> <span data-ttu-id="0af5b-197">Это выполняется методом AddDefaultColumns, который проверяет FromExtents в SqlSelectStatement и добавляет все столбцы из списка экстентов, представленного FromExtents, которые попадают в область в список проецируемых столбцов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-197">This is done with the method AddDefaultColumns, which looks at the FromExtents of the SqlSelectStatement and adds all the columns that the list of extents represented by FromExtents brings in scope to the list of projected columns.</span></span> <span data-ttu-id="0af5b-198">Эта операция необходима, поскольку на данном этапе неизвестно, на какие столбцы ссылаются другие узлы.</span><span class="sxs-lookup"><span data-stu-id="0af5b-198">This is done, because at that point, it is unknown which columns are referenced by the other nodes.</span></span> <span data-ttu-id="0af5b-199">Операцию можно оптимизировать так, чтобы проецировать только те столбцы, которые можно использовать в дальнейшем.</span><span class="sxs-lookup"><span data-stu-id="0af5b-199">This can be optimized to only project the columns that can later be used.</span></span>  
   
-### Преобразование соединений в плоские  
- Свойство IsParentAJoin позволяет определить, можно ли преобразовать заданное соединение в плоское.  В частности, IsParentAJoin возвращает значение `true` только для дочернего элемента с левой стороны соединения и для каждого DbScanExpression, которое является непосредственным входом соединения, и в этом случае дочерний узел использует ту же SqlSelectStatement, которую затем будет использовать родительский узел.  Дополнительные сведения см. в разделе «Выражения соединения».  
+### <a name="join-flattening"></a><span data-ttu-id="0af5b-200">Преобразование соединений в плоские</span><span class="sxs-lookup"><span data-stu-id="0af5b-200">Join Flattening</span></span>  
+ <span data-ttu-id="0af5b-201">Свойство IsParentAJoin позволяет определить, можно ли преобразовать заданное соединение в плоское.</span><span class="sxs-lookup"><span data-stu-id="0af5b-201">The IsParentAJoin property helps determine whether a given join can be flattened.</span></span> <span data-ttu-id="0af5b-202">В частности, IsParentAJoin возвращает значение `true` только для дочернего элемента с левой стороны соединения и для каждого DbScanExpression, которое является непосредственным входом соединения, и в этом случае дочерний узел использует ту же SqlSelectStatement, которую затем будет использовать родительский узел.</span><span class="sxs-lookup"><span data-stu-id="0af5b-202">In particular, IsParentAJoin returns `true` only for the left child of a join and for each DbScanExpression that is an immediate input to a join, in which case that child node reuses the same SqlSelectStatement that the parent would later use.</span></span> <span data-ttu-id="0af5b-203">Дополнительные сведения см. в разделе «Выражения соединения».</span><span class="sxs-lookup"><span data-stu-id="0af5b-203">For more information, see "Join Expressions".</span></span>  
   
-### Перенаправление входных псевдонимов  
- Перенаправление входных псевдонимов реализуется с помощью таблицы символов.  
+### <a name="input-alias-redirecting"></a><span data-ttu-id="0af5b-204">Перенаправление входных псевдонимов</span><span class="sxs-lookup"><span data-stu-id="0af5b-204">Input Alias Redirecting</span></span>  
+ <span data-ttu-id="0af5b-205">Перенаправление входных псевдонимов реализуется с помощью таблицы символов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-205">Input alias redirecting is accomplished with the symbol table.</span></span>  
   
- Сведения о перенаправлении входных псевдонимов см. в первом примере из раздела [Создание кода SQL из деревьев команд. Рекомендации](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Символ «a» нужно перенаправить на символ «b» в проекции.  
+ <span data-ttu-id="0af5b-206">Чтобы объяснить перенаправление входных псевдонимов, см. в первом примере [создания SQL из деревьев команд. рекомендации по](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).</span><span class="sxs-lookup"><span data-stu-id="0af5b-206">To explain input alias redirecting, refer to the first example in [Generating SQL from Command Trees - Best Practices](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).</span></span>  <span data-ttu-id="0af5b-207">Символ «a» нужно перенаправить на символ «b» в проекции.</span><span class="sxs-lookup"><span data-stu-id="0af5b-207">There "a" needed to be redirected to "b" in the projection.</span></span>  
   
- Когда создается объект SqlSelectStatement, экстент, который является входом узла, помещается в свойство From объекта SqlSelectStatement.  Объект Symbol \(\<symbol\_b\>\) создается на основании имени входной привязки \(«b»\), чтобы представить этот экстент, а к предложению From добавляется конструкция «AS » \+ \<symbol\_b\>.  Символ также добавляется в свойство FromExtents.  
+ <span data-ttu-id="0af5b-208">Когда создается объект SqlSelectStatement, экстент, который является входом узла, помещается в свойство From объекта SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-208">When a SqlSelectStatement object is created, the extent that is the input to the node is put in the From property of the SqlSelectStatement.</span></span> <span data-ttu-id="0af5b-209">Объект Symbol (<symbol_b>) создается на основании имени входной привязки («b»), чтобы представить этот экстент, а к предложению From добавляется конструкция «AS » + <symbol_b>.</span><span class="sxs-lookup"><span data-stu-id="0af5b-209">A Symbol (<symbol_b>) is created based on the input binding name ("b") to represent that extent and "AS  " +  <symbol_b> is appended to the From Clause.</span></span>  <span data-ttu-id="0af5b-210">Символ также добавляется в свойство FromExtents.</span><span class="sxs-lookup"><span data-stu-id="0af5b-210">The symbol is also added to the FromExtents property.</span></span>  
   
- Кроме того, символ добавляется в таблицу символов, чтобы связать с ним имя входной привязки \(«b», \<symbol\_b\>\).  
+ <span data-ttu-id="0af5b-211">Кроме того, символ добавляется в таблицу символов, чтобы связать с ним имя входной привязки («b», <symbol_b>).</span><span class="sxs-lookup"><span data-stu-id="0af5b-211">The symbol is also added to the symbol table to link the input binding name to it ("b", <symbol_b>).</span></span>  
   
- Если эта SqlSelectStatement используется в следующем узле, то этот узел добавляет запись в таблицу символов, чтобы связать имя входной привязки с данным символом.  В данном примере DbProjectExpression с именем входной привязки «a» будет использовать SqlSelectStatement и добавит в таблицу запись \(«a», \<symbol\_b\>\).  
+ <span data-ttu-id="0af5b-212">Если эта SqlSelectStatement используется в следующем узле, то этот узел добавляет запись в таблицу символов, чтобы связать имя входной привязки с данным символом.</span><span class="sxs-lookup"><span data-stu-id="0af5b-212">If a subsequent node reuses that SqlSelectStatement, it adds an entry to the symbol table to link its input binding name to that symbol.</span></span> <span data-ttu-id="0af5b-213">В данном примере DbProjectExpression с именем входной привязки «a» будет использовать SqlSelectStatement и добавьте («», \< symbol_b >) в таблицу.</span><span class="sxs-lookup"><span data-stu-id="0af5b-213">In our example, the DbProjectExpression with the input binding name of "a" would reuse the SqlSelectStatement and add ("a", \< symbol_b>) to the table.</span></span>  
   
- Когда выражения ссылаются на имя входной привязки узла, который использует SqlSelectStatement, такая ссылка разрешается в нужный перенаправленный символ по таблице символов.  Когда символ «a» разрешается из «a.x» при обходе DbVariableReferenceExpression, представляющего «a», он будет разрешаться в символ \<symbol\_b\>.  
+ <span data-ttu-id="0af5b-214">Когда выражения ссылаются на имя входной привязки узла, который использует SqlSelectStatement, такая ссылка разрешается в нужный перенаправленный символ по таблице символов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-214">When expressions reference the input binding name of the node that is reusing the SqlSelectStatement, that reference is resolved using the symbol table to the correct redirected symbol.</span></span> <span data-ttu-id="0af5b-215">Когда символ «a» разрешается из «a.x» при обходе DbVariableReferenceExpression, представляющего «a», он будет разрешаться в символ <symbol_b>.</span><span class="sxs-lookup"><span data-stu-id="0af5b-215">When "a" from "a.x" is resolved while visiting the DbVariableReferenceExpression representing "a" it will resolve to the Symbol <symbol_b>.</span></span>  
   
-### Преобразование псевдонимов соединений в плоские  
- Преобразование псевдонимов соединений в плоские выполняется при обходе DbPropertyExpression, как описано в разделе «DbPropertyExpression».  
+### <a name="join-alias-flattening"></a><span data-ttu-id="0af5b-216">Преобразование псевдонимов соединений в плоские</span><span class="sxs-lookup"><span data-stu-id="0af5b-216">Join Alias Flattening</span></span>  
+ <span data-ttu-id="0af5b-217">Преобразование псевдонимов соединений в плоские выполняется при обходе DbPropertyExpression, как описано в разделе «DbPropertyExpression».</span><span class="sxs-lookup"><span data-stu-id="0af5b-217">Join alias flattening is achieved when visiting a DbPropertyExpression as described in the section titled DbPropertyExpression.</span></span>  
   
-### Переименование столбцов и псевдонимов экстентов  
- Задача переименования столбцов и псевдонимов экстентов решается с помощью символов, которые заменяются псевдонимами только на втором этапе создания кода, как описано в разделе «Второй этап формирования SQL: создание строковой команды».  
+### <a name="column-name-and-extent-alias-renaming"></a><span data-ttu-id="0af5b-218">Переименование столбцов и псевдонимов экстентов</span><span class="sxs-lookup"><span data-stu-id="0af5b-218">Column Name and Extent Alias Renaming</span></span>  
+ <span data-ttu-id="0af5b-219">Задача переименования столбцов и псевдонимов экстентов решается с помощью символов, которые заменяются псевдонимами только на втором этапе создания кода, как описано в разделе «Второй этап формирования SQL: создание строковой команды».</span><span class="sxs-lookup"><span data-stu-id="0af5b-219">The issue of column name and extent alias renaming is addressed by using symbols that only get substituted with aliases in the second phase of the generation described in the section titled Second Phase of SQL Generation: Generating the String Command.</span></span>  
   
-## Первый этап формирования SQL: обход дерева выражения  
- В этом разделе описывается первый этап формирования SQL, на котором выполняется обход выражения, представляющего запрос, и создается промежуточная структура: SqlSelectStatement или SqlBuilder.  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a><span data-ttu-id="0af5b-220">Первый этап формирования SQL: обход дерева выражения</span><span class="sxs-lookup"><span data-stu-id="0af5b-220">First Phase of the SQL Generation: Visiting the Expression Tree</span></span>  
+ <span data-ttu-id="0af5b-221">В этом разделе описывается первый этап формирования SQL, на котором выполняется обход выражения, представляющего запрос, и создается промежуточная структура: SqlSelectStatement или SqlBuilder.</span><span class="sxs-lookup"><span data-stu-id="0af5b-221">This section describes the first phase of SQL generation, when the expression representing the query is visited and an intermediate structure is produced, either a SqlSelectStatement or a SqlBuilder.</span></span>  
   
- В этом разделе описываются правила обхода различных категорий узлов выражения и данные, относящиеся к обходу различных типов выражения.  
+ <span data-ttu-id="0af5b-222">В этом разделе описываются правила обхода различных категорий узлов выражения и данные, относящиеся к обходу различных типов выражения.</span><span class="sxs-lookup"><span data-stu-id="0af5b-222">This section describes the principles of visiting different expression node categories, and details of visiting specific expression types.</span></span>  
   
-### Реляционные узлы \(не связанные с соединением\)  
- Следующие типы выражений поддерживают узлы, не связанные с соединением:  
+### <a name="relational-non-join-nodes"></a><span data-ttu-id="0af5b-223">Реляционные узлы (не связанные с соединением)</span><span class="sxs-lookup"><span data-stu-id="0af5b-223">Relational (Non-Join) Nodes</span></span>  
+ <span data-ttu-id="0af5b-224">Следующие типы выражений поддерживают узлы, не связанные с соединением:</span><span class="sxs-lookup"><span data-stu-id="0af5b-224">The following expression types support non-join nodes:</span></span>  
   
--   DbDistinctExpression  
+-   <span data-ttu-id="0af5b-225">DbDistinctExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-225">DbDistinctExpression</span></span>  
   
--   DbFilterExpression  
+-   <span data-ttu-id="0af5b-226">DbFilterExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-226">DbFilterExpression</span></span>  
   
--   DbGroupByExpression  
+-   <span data-ttu-id="0af5b-227">DbGroupByExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-227">DbGroupByExpression</span></span>  
   
--   DbLimitExpession  
+-   <span data-ttu-id="0af5b-228">DbLimitExpession</span><span class="sxs-lookup"><span data-stu-id="0af5b-228">DbLimitExpession</span></span>  
   
--   DbProjectExpression  
+-   <span data-ttu-id="0af5b-229">DbProjectExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-229">DbProjectExpression</span></span>  
   
--   DbSkipExpression  
+-   <span data-ttu-id="0af5b-230">DbSkipExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-230">DbSkipExpression</span></span>  
   
--   DbSortExpression  
+-   <span data-ttu-id="0af5b-231">DbSortExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-231">DbSortExpression</span></span>  
   
- Обход этих узлов выполняется по следующей схеме:  
+ <span data-ttu-id="0af5b-232">Обход этих узлов выполняется по следующей схеме:</span><span class="sxs-lookup"><span data-stu-id="0af5b-232">Visiting these nodes follows the following pattern:</span></span>  
   
-1.  Обход реляционного входа и получение результирующей SqlSelectStatement.  Входом реляционного узла может быть один из следующих объектов:  
+1.  <span data-ttu-id="0af5b-233">Обход реляционного входа и получение результирующей SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-233">Visit the relational input and get the resulting SqlSelectStatement.</span></span> <span data-ttu-id="0af5b-234">Входом реляционного узла может быть один из следующих объектов:</span><span class="sxs-lookup"><span data-stu-id="0af5b-234">The input to a relational node could be one of the following:</span></span>  
   
-    -   Реляционный узел, включающий экстент \(например, DbScanExpression\).  При обходе такого узла возвращается SqlSelectStatement.  
+    -   <span data-ttu-id="0af5b-235">Реляционный узел, включающий экстент (например, DbScanExpression).</span><span class="sxs-lookup"><span data-stu-id="0af5b-235">A relational node, including an extent (a DbScanExpression, for example).</span></span> <span data-ttu-id="0af5b-236">При обходе такого узла возвращается SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-236">Visiting such a node returns a SqlSelectStatement.</span></span>  
   
-    -   Выражение операции с наборами \(например, UNION ALL\).  Результат необходимо заключить в квадратные скобки и поместить в предложение FROM новой SqlSelectStatement.  
+    -   <span data-ttu-id="0af5b-237">Выражение операции с наборами (например, UNION ALL).</span><span class="sxs-lookup"><span data-stu-id="0af5b-237">A set operation expression (UNION ALL, for example).</span></span> <span data-ttu-id="0af5b-238">Результат необходимо заключить в квадратные скобки и поместить в предложение FROM новой SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-238">The result has to be wrapped in brackets and put in the FROM clause of a new SqlSelectStatement.</span></span>  
   
-2.  Проверьте, можно ли добавить текущий узел в SqlSelectStatement, созданную по входным данным.  Это описано в разделе «Выражение группирования в инструкции SQL».  Если добавление невозможно,  
+2.  <span data-ttu-id="0af5b-239">Проверьте, можно ли добавить текущий узел в SqlSelectStatement, созданную по входным данным.</span><span class="sxs-lookup"><span data-stu-id="0af5b-239">Check whether the current node can be added to the SqlSelectStatement produced by the input.</span></span> <span data-ttu-id="0af5b-240">Это описано в разделе «Выражение группирования в инструкции SQL».</span><span class="sxs-lookup"><span data-stu-id="0af5b-240">The section titled Grouping Expressions into SQL Statements describes this.</span></span> <span data-ttu-id="0af5b-241">Если добавление невозможно,</span><span class="sxs-lookup"><span data-stu-id="0af5b-241">If not,</span></span>  
   
-    -   удалите из стека текущий объект SqlSelectStatement.  
+    -   <span data-ttu-id="0af5b-242">удалите из стека текущий объект SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-242">Pop the current SqlSelectStatement object.</span></span>  
   
-    -   Создайте новый объект SqlSelectStatement и добавьте удаленный из стека объект SqlSelectStatement в качестве предложения FROM нового объекта SqlSelectStatement.  
+    -   <span data-ttu-id="0af5b-243">Создайте новый объект SqlSelectStatement и добавьте удаленный из стека объект SqlSelectStatement в качестве предложения FROM нового объекта SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-243">Create a new SqlSelectStatement object and add the popped SqlSelectStatement as the FROM of the new SqlSelectStatement object.</span></span>  
   
-    -   Поместите новый объект на верх стека.  
+    -   <span data-ttu-id="0af5b-244">Поместите новый объект на верх стека.</span><span class="sxs-lookup"><span data-stu-id="0af5b-244">Put the new object on top of the stack.</span></span>  
   
-3.  Перенаправьте входную привязку выражения к правильному символу из входа.  Эти сведения хранятся в объекте SqlSelectStatement.  
+3.  <span data-ttu-id="0af5b-245">Перенаправьте входную привязку выражения к правильному символу из входа.</span><span class="sxs-lookup"><span data-stu-id="0af5b-245">Redirect the input expression binding to the correct symbol from the input.</span></span> <span data-ttu-id="0af5b-246">Эти сведения хранятся в объекте SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-246">This information is maintained in the SqlSelectStatement object.</span></span>  
   
-4.  Добавьте новую область SymbolTable.  
+4.  <span data-ttu-id="0af5b-247">Добавьте новую область SymbolTable.</span><span class="sxs-lookup"><span data-stu-id="0af5b-247">Add a new SymbolTable scope.</span></span>  
   
-5.  Выполните обход части выражения, не связанной с входом \(например, проекция и предикат\).  
+5.  <span data-ttu-id="0af5b-248">Выполните обход части выражения, не связанной с входом (например, проекция и предикат).</span><span class="sxs-lookup"><span data-stu-id="0af5b-248">Visit the non-input part of the expression (for example, Projection and Predicate).</span></span>  
   
-6.  Удалите из стека все объекты, добавленные в глобальные стеки.  
+6.  <span data-ttu-id="0af5b-249">Удалите из стека все объекты, добавленные в глобальные стеки.</span><span class="sxs-lookup"><span data-stu-id="0af5b-249">Pop all the objects added to the global stacks.</span></span>  
   
- Для DbSkipExpression отсутствуют прямой эквивалент в SQL.  Логическим образом он преобразуется в:  
+ <span data-ttu-id="0af5b-250">Для DbSkipExpression отсутствуют прямой эквивалент в SQL.</span><span class="sxs-lookup"><span data-stu-id="0af5b-250">DbSkipExpression not have a direct equivalent in SQL.</span></span> <span data-ttu-id="0af5b-251">Логическим образом он преобразуется в:</span><span class="sxs-lookup"><span data-stu-id="0af5b-251">Logically, it is translated into:</span></span>  
   
 ```  
 SELECT Y.x1, Y.x2, ..., Y.xn  
@@ -293,82 +296,82 @@ WHERE Y.[row_number] > count
 ORDER BY sk1, sk2, ...  
 ```  
   
-### Выражения соединения  
- Следующие выражения считаются выражениями соединения и обрабатываются методом VisitJoinExpression одинаковым образом:  
+### <a name="join-expressions"></a><span data-ttu-id="0af5b-252">Выражения соединения</span><span class="sxs-lookup"><span data-stu-id="0af5b-252">Join Expressions</span></span>  
+ <span data-ttu-id="0af5b-253">Следующие выражения считаются выражениями соединения и обрабатываются методом VisitJoinExpression одинаковым образом:</span><span class="sxs-lookup"><span data-stu-id="0af5b-253">The following are considered join expressions and they are processed in a common way, by the VisitJoinExpression method:</span></span>  
   
--   DbApplyExpression  
+-   <span data-ttu-id="0af5b-254">DbApplyExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-254">DbApplyExpression</span></span>  
   
--   DbJoinExpression  
+-   <span data-ttu-id="0af5b-255">DbJoinExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-255">DbJoinExpression</span></span>  
   
--   DbCrossJoinExpression  
+-   <span data-ttu-id="0af5b-256">DbCrossJoinExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-256">DbCrossJoinExpression</span></span>  
   
- Далее перечислены этапы обхода.  
+ <span data-ttu-id="0af5b-257">Далее перечислены этапы обхода.</span><span class="sxs-lookup"><span data-stu-id="0af5b-257">The following are the visit steps:</span></span>  
   
- Сначала, перед обходом дочерних элементов, вызывается метод IsParentAJoin, чтобы определить, является ли узел соединения дочерним элементом соединения с левой стороны.  Если этот метод возвращает значение false, запускается новая SqlSelectStatement.  С этой точки зрения обход соединений выполняется иначе, чем остальных узлов, поскольку родительский элемент \(узел соединения\) создает SqlSelectStatement, которую могут использовать дочерние элементы.  
+ <span data-ttu-id="0af5b-258">Сначала, перед обходом дочерних элементов, вызывается метод IsParentAJoin, чтобы определить, является ли узел соединения дочерним элементом соединения с левой стороны.</span><span class="sxs-lookup"><span data-stu-id="0af5b-258">First, before visiting the children, IsParentAJoin is invoked to check whether the join node is a child of a join along a left spine.</span></span> <span data-ttu-id="0af5b-259">Если этот метод возвращает значение false, запускается новая SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-259">If it returns false, a new SqlSelectStatement is started.</span></span> <span data-ttu-id="0af5b-260">С этой точки зрения обход соединений выполняется иначе, чем остальных узлов, поскольку родительский элемент (узел соединения) создает SqlSelectStatement, которую могут использовать дочерние элементы.</span><span class="sxs-lookup"><span data-stu-id="0af5b-260">In that sense, joins are visited differently from the rest of the nodes, as the parent (the join node) creates the SqlSelectStatement for the children to possibly use.</span></span>  
   
- Затем поочередно обрабатываются входы.  Для каждого входа выполняются следующие действия.  
+ <span data-ttu-id="0af5b-261">Затем поочередно обрабатываются входы.</span><span class="sxs-lookup"><span data-stu-id="0af5b-261">Second, process the inputs one at a time.</span></span> <span data-ttu-id="0af5b-262">Для каждого входа выполняются следующие действия.</span><span class="sxs-lookup"><span data-stu-id="0af5b-262">For each input:</span></span>  
   
-1.  Обход входа.  
+1.  <span data-ttu-id="0af5b-263">Обход входа.</span><span class="sxs-lookup"><span data-stu-id="0af5b-263">Visit the input.</span></span>  
   
-2.  Дополнительная обработка результатов обхода входа путем вызова метода ProcessJoinInputResult, который отвечает за ведение таблицы символов после обхода дочернего элемента выражения соединения и возможное завершение SqlSelectStatement, созданной дочерним элементом.  Результатом дочернего элемента может быть один из следующих объектов:  
+2.  <span data-ttu-id="0af5b-264">Дополнительная обработка результатов обхода входа путем вызова метода ProcessJoinInputResult, который отвечает за ведение таблицы символов после обхода дочернего элемента выражения соединения и возможное завершение SqlSelectStatement, созданной дочерним элементом.</span><span class="sxs-lookup"><span data-stu-id="0af5b-264">Post process the result of visiting the input by invoking ProcessJoinInputResult, which is responsible for maintaining the symbol table after visiting a child of a join expression and possibly finishing the SqlSelectStatement produced by the child.</span></span> <span data-ttu-id="0af5b-265">Результатом дочернего элемента может быть один из следующих объектов:</span><span class="sxs-lookup"><span data-stu-id="0af5b-265">The child's result could be one of the following:</span></span>  
   
-    -   Объект SqlSelectStatement, отличный от объекта, в который будет добавлен родительский элемент.  В этом случае может понадобиться завершить инструкцию, добавив столбцы по умолчанию.  Если вход представлял соединение, необходимо создать новый символ соединения.  В противном случае создайте обычный символ.  
+    -   <span data-ttu-id="0af5b-266">Объект SqlSelectStatement, отличный от объекта, в который будет добавлен родительский элемент.</span><span class="sxs-lookup"><span data-stu-id="0af5b-266">A SqlSelectStatement different from the one to which the parent will be added.</span></span> <span data-ttu-id="0af5b-267">В этом случае может понадобиться завершить инструкцию, добавив столбцы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0af5b-267">In such case, it may need to be completed by adding default columns.</span></span> <span data-ttu-id="0af5b-268">Если вход представлял соединение, необходимо создать новый символ соединения.</span><span class="sxs-lookup"><span data-stu-id="0af5b-268">If the input was a Join, you need to create a new join symbol.</span></span> <span data-ttu-id="0af5b-269">В противном случае создайте обычный символ.</span><span class="sxs-lookup"><span data-stu-id="0af5b-269">Otherwise, create a normal symbol.</span></span>  
   
-    -   Экстент \(например, DbScanExpression\). В этом случае он просто добавляется в список входов родительской SqlSelectStatement.  
+    -   <span data-ttu-id="0af5b-270">Экстент (например, DbScanExpression). В этом случае он просто добавляется в список входов родительской SqlSelectStatement.</span><span class="sxs-lookup"><span data-stu-id="0af5b-270">An extent (a DbScanExpression, for example), in which case it is simply added to the list of inputs of the parent’s SqlSelectStatement.</span></span>  
   
-    -   Объект, отличный от SqlSelectStatement. В этом случае он заключается в квадратные скобки.  
+    -   <span data-ttu-id="0af5b-271">Объект, отличный от SqlSelectStatement. В этом случае он заключается в квадратные скобки.</span><span class="sxs-lookup"><span data-stu-id="0af5b-271">Not a SqlSelectStatement, in which case it is wrapped with brackets.</span></span>  
   
-    -   Объект SqlSelectStatement, в который добавляется родительский элемент.  В этом случае символы из списка FromExtents необходимо заменить единичным новым JoinSymbol, который представляет сразу все символы.  
+    -   <span data-ttu-id="0af5b-272">Объект SqlSelectStatement, в который добавляется родительский элемент.</span><span class="sxs-lookup"><span data-stu-id="0af5b-272">The same SqlSelectStatement to which the parent is added.</span></span> <span data-ttu-id="0af5b-273">В этом случае символы из списка FromExtents необходимо заменить единичным новым JoinSymbol, который представляет сразу все символы.</span><span class="sxs-lookup"><span data-stu-id="0af5b-273">In such case, the symbols in the FromExtents list need to be replaced with a single new JoinSymbol representing them all.</span></span>  
   
-    -   В первых трех случаях вызывается метод AddFromSymbol для добавления предложения AS и обновления таблицы символов.  
+    -   <span data-ttu-id="0af5b-274">В первых трех случаях вызывается метод AddFromSymbol для добавления предложения AS и обновления таблицы символов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-274">For the first three cases, AddFromSymbol is called to add the AS clause, and update the symbol table.</span></span>  
   
- Затем выполняется обход условия соединения \(если таковое присутствует\).  
+ <span data-ttu-id="0af5b-275">Затем выполняется обход условия соединения (если таковое присутствует).</span><span class="sxs-lookup"><span data-stu-id="0af5b-275">Third, the join condition (if any) is visited.</span></span>  
   
-### Операции над множествами  
- Операции с наборами DbUnionAllExpression, DbExceptExpression и DbIntersectExpression обрабатываются методом VisitSetOpExpression.  Он создает SqlBuilder формы  
+### <a name="set-operations"></a><span data-ttu-id="0af5b-276">Операции над множествами</span><span class="sxs-lookup"><span data-stu-id="0af5b-276">Set Operations</span></span>  
+ <span data-ttu-id="0af5b-277">Операции с наборами DbUnionAllExpression, DbExceptExpression и DbIntersectExpression обрабатываются методом VisitSetOpExpression.</span><span class="sxs-lookup"><span data-stu-id="0af5b-277">The set operations DbUnionAllExpression, DbExceptExpression, and DbIntersectExpression are processed by the method VisitSetOpExpression.</span></span> <span data-ttu-id="0af5b-278">Он создает SqlBuilder формы</span><span class="sxs-lookup"><span data-stu-id="0af5b-278">It creates a SqlBuilder of the shape</span></span>  
   
-```  
+```xml  
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>  
 ```  
   
- Здесь \<leftSqlSelectStatement\> и \<rightSqlSelectStatement\> представляют объекты SqlSelectStatement, полученные в результате обхода каждого из входов, а \<setOp\> — соответствующая операция \(например, UNION ALL\).  
+ <span data-ttu-id="0af5b-279">Где \<leftSqlSelectStatement > и \<rightSqlSelectStatement >, полученные в результате обхода каждого из входов, SqlSelectStatements и \<setOp > — соответствующая операция (UNION ALL для примера).</span><span class="sxs-lookup"><span data-stu-id="0af5b-279">Where \<leftSqlSelectStatement> and \<rightSqlSelectStatement> are SqlSelectStatements obtained by visiting each of the inputs, and \<setOp> is the corresponding operation (UNION ALL for example).</span></span>  
   
-### DbScanExpression  
- Если обход выполняется в контексте соединения \(в качестве входа соединения, которое является левым дочерним элементом другого соединения\), то DbScanExpression возвращает SqlBuilder с целевым кодом SQL для соответствующей цели \(определяющий запрос, таблицу или представление\).  В противном случае создается новый объект SqlSelectStatement с набором полей FROM в соответствии с целью.  
+### <a name="dbscanexpression"></a><span data-ttu-id="0af5b-280">DbScanExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-280">DbScanExpression</span></span>  
+ <span data-ttu-id="0af5b-281">Если обход выполняется в контексте соединения (в качестве входа соединения, которое является левым дочерним элементом другого соединения), то DbScanExpression возвращает SqlBuilder с целевым кодом SQL для соответствующей цели (определяющий запрос, таблицу или представление).</span><span class="sxs-lookup"><span data-stu-id="0af5b-281">If visited in a join context (as an input to a join that is a left child of another join), DbScanExpression returns a SqlBuilder with the target SQL for the corresponding target, which is either a defining query, table, or a view.</span></span> <span data-ttu-id="0af5b-282">В противном случае создается новый объект SqlSelectStatement с набором полей FROM в соответствии с целью.</span><span class="sxs-lookup"><span data-stu-id="0af5b-282">Otherwise, a new SqlSelectStatement is created with the FROM field set to correspond to the corresponding target.</span></span>  
   
-### DbVariableReferenceExpression  
- При обходе DbVariableReferenceExpression возвращается объект Symbol, соответствующей этому выражению со ссылкой на переменную на основе уточняющего запроса в таблице символов.  
+### <a name="dbvariablereferenceexpression"></a><span data-ttu-id="0af5b-283">DbVariableReferenceExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-283">DbVariableReferenceExpression</span></span>  
+ <span data-ttu-id="0af5b-284">При обходе DbVariableReferenceExpression возвращается объект Symbol, соответствующей этому выражению со ссылкой на переменную на основе уточняющего запроса в таблице символов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-284">The visit of a DbVariableReferenceExpression returns the Symbol corresponding to that variable reference expression based on a look up in the symbol table.</span></span>  
   
-### DbPropertyExpression  
- Преобразование псевдонимов соединения в плоские определяется и обрабатывается при обходе DbPropertyExpression.  
+### <a name="dbpropertyexpression"></a><span data-ttu-id="0af5b-285">DbPropertyExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-285">DbPropertyExpression</span></span>  
+ <span data-ttu-id="0af5b-286">Преобразование псевдонимов соединения в плоские определяется и обрабатывается при обходе DbPropertyExpression.</span><span class="sxs-lookup"><span data-stu-id="0af5b-286">Join alias flattening is identified and processed when visiting a DbPropertyExpression.</span></span>  
   
- Сначала выполняется обход свойства Instance, и результатом является объект Symbol, JoinSymbol или SymbolPair.  Эти три случая обрабатываются следующим образом.  
+ <span data-ttu-id="0af5b-287">Сначала выполняется обход свойства Instance, и результатом является объект Symbol, JoinSymbol или SymbolPair.</span><span class="sxs-lookup"><span data-stu-id="0af5b-287">The Instance property is first visited and the result is a Symbol, a JoinSymbol, or a SymbolPair.</span></span> <span data-ttu-id="0af5b-288">Эти три случая обрабатываются следующим образом.</span><span class="sxs-lookup"><span data-stu-id="0af5b-288">Here is how these three cases are handled:</span></span>  
   
--   Если возвращается JoinSymbol, то его свойство NameToExtent содержит символ для нужного свойства.  Если символ соединения представляет вложенное соединения, то возвращается новая пара символов с символом соединения для отслеживания символа, который будет использоваться в качестве псевдонима экземпляра, и символом, представляющим фактическое свойство для дальнейшего разрешения.  
+-   <span data-ttu-id="0af5b-289">Если возвращается JoinSymbol, то его свойство NameToExtent содержит символ для нужного свойства.</span><span class="sxs-lookup"><span data-stu-id="0af5b-289">If a JoinSymbol is returned, than its NameToExtent property contains a symbol for the needed property.</span></span> <span data-ttu-id="0af5b-290">Если символ соединения представляет вложенное соединения, то возвращается новая пара символов с символом соединения для отслеживания символа, который будет использоваться в качестве псевдонима экземпляра, и символом, представляющим фактическое свойство для дальнейшего разрешения.</span><span class="sxs-lookup"><span data-stu-id="0af5b-290">If the join symbol represents a nested join, a new Symbol pair is returned with the join symbol to track the symbol that would be used as the instance alias, and the symbol representing the actual property for further resolving.</span></span>  
   
--   Если возвращается SymbolPair, в которой часть Column является символом соединения, то снова возвращается символ соединения, однако теперь свойство столбца обновляется и указывает на свойство, представляемое текущим выражением свойства.  В противном случае возвращается SqlBuilder с источником SymbolPair в качестве псевдонима и символом для текущего свойства в качестве столбца.  
+-   <span data-ttu-id="0af5b-291">Если возвращается SymbolPair, в которой часть Column является символом соединения, то снова возвращается символ соединения, однако теперь свойство столбца обновляется и указывает на свойство, представляемое текущим выражением свойства.</span><span class="sxs-lookup"><span data-stu-id="0af5b-291">If a SymbolPair is returned and the Column part is a join symbol, a join symbol is again returned, but now the column property is updated to point to the property represented by the current property expression.</span></span> <span data-ttu-id="0af5b-292">В противном случае возвращается SqlBuilder с источником SymbolPair в качестве псевдонима и символом для текущего свойства в качестве столбца.</span><span class="sxs-lookup"><span data-stu-id="0af5b-292">Otherwise a SqlBuilder is returned with the SymbolPair source as the alias, and the symbol for the current property as the column.</span></span>  
   
--   Если возвращается объект Symbol, то метод Visit возвращает объект SqlBuilder с этим экземпляром в качестве псевдонима и именем свойства в качестве имени столбца.  
+-   <span data-ttu-id="0af5b-293">Если возвращается объект Symbol, то метод Visit возвращает объект SqlBuilder с этим экземпляром в качестве псевдонима и именем свойства в качестве имени столбца.</span><span class="sxs-lookup"><span data-stu-id="0af5b-293">If a Symbol is returned, the Visit method returns a SqlBuilder method with that instance as the alias, and the property name as column name.</span></span>  
   
-### DbNewInstanceExpression  
- Если DbNewInstanceExpression используется в качестве свойства Projection объекта DbProjectExpression, то создается список аргументов с разделителями\-запятыми, представляющий проецируемые столбцы.  
+### <a name="dbnewinstanceexpression"></a><span data-ttu-id="0af5b-294">DbNewInstanceExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-294">DbNewInstanceExpression</span></span>  
+ <span data-ttu-id="0af5b-295">Если DbNewInstanceExpression используется в качестве свойства Projection объекта DbProjectExpression, то создается список аргументов с разделителями-запятыми, представляющий проецируемые столбцы.</span><span class="sxs-lookup"><span data-stu-id="0af5b-295">When used as the Projection property of DbProjectExpression, DbNewInstanceExpression produces a comma-separated list of the arguments to represent the projected columns.</span></span>  
   
- Если DbNewInstanceExpression имеет возвращаемый тип коллекции и определяет новую коллекцию выражений, предоставляемых в качестве аргументов, то следующие три случая обрабатываются отдельно.  
+ <span data-ttu-id="0af5b-296">Если DbNewInstanceExpression имеет возвращаемый тип коллекции и определяет новую коллекцию выражений, предоставляемых в качестве аргументов, то следующие три случая обрабатываются отдельно.</span><span class="sxs-lookup"><span data-stu-id="0af5b-296">When DbNewInstanceExpression has a collection return type, and defines a new collection of the expressions provided as arguments, the following three cases are handled separately:</span></span>  
   
--   Если единственным аргументом DbNewInstanceExpression является DbElementExpression, он преобразуется следующим образом:  
+-   <span data-ttu-id="0af5b-297">Если единственным аргументом DbNewInstanceExpression является DbElementExpression, он преобразуется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="0af5b-297">If DbNewInstanceExpression has DbElementExpression as the only argument, it is translated as follows:</span></span>  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  
     ```  
   
- Если DbNewInstanceExpression не имеет аргументов \(представляет пустую таблицу\), то DbNewInstanceExpression преобразуется в следующее выражение:  
+ <span data-ttu-id="0af5b-298">Если DbNewInstanceExpression не имеет аргументов (представляет пустую таблицу), то DbNewInstanceExpression преобразуется в следующее выражение:</span><span class="sxs-lookup"><span data-stu-id="0af5b-298">If DbNewInstanceExpression has no arguments (represents an empty table), DbNewInstanceExpression is translated into:</span></span>  
   
 ```  
 SELECT CAST(NULL AS <primitiveType>) as X  
 FROM (SELECT 1) AS Y WHERE 1=0  
 ```  
   
- В противном случае DbNewInstanceExpression выстраивает лестницу аргументов UNION ALL.  
+ <span data-ttu-id="0af5b-299">В противном случае DbNewInstanceExpression выстраивает лестницу аргументов UNION ALL.</span><span class="sxs-lookup"><span data-stu-id="0af5b-299">Otherwise DbNewInstanceExpression builds a union-all ladder of the arguments:</span></span>  
   
 ```  
 SELECT <visit-result-arg1> as X  
@@ -377,49 +380,49 @@ UNION ALL …
 UNION ALL SELECT <visit-result-argN> as X  
 ```  
   
-### DbFunctionExpression  
- Канонические и встроенные функции обрабатываются одинаково: если требуется специальная обработка \(например, преобразование TRIM\(string\) в LTRIM\(RTRIM\(string\)\)\), то вызывается нужный обработчик.  В противном случае такие функции преобразуются в формат Имя\_функции\(аргумент1, аргумент2, ..., аргументN\).  
+### <a name="dbfunctionexpression"></a><span data-ttu-id="0af5b-300">DbFunctionExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-300">DbFunctionExpression</span></span>  
+ <span data-ttu-id="0af5b-301">Канонические и встроенные функции обрабатываются одинаково: если требуется специальная обработка (например, преобразование TRIM(string) в LTRIM(RTRIM(string))), то вызывается нужный обработчик.</span><span class="sxs-lookup"><span data-stu-id="0af5b-301">Canonical and built-in functions are processed the same way: if they need special handling (TRIM(string) to  LTRIM(RTRIM(string), for example), the appropriate handler is invoked.</span></span> <span data-ttu-id="0af5b-302">В противном случае такие функции преобразуются в формат Имя_функции(аргумент1, аргумент2, ..., аргументN).</span><span class="sxs-lookup"><span data-stu-id="0af5b-302">Otherwise they are translated to FunctionName(arg1, arg2, ..., argn).</span></span>  
   
- Словари используются для отслеживания функций, которым требуется специальная обработка, и соответствующих обработчиков.  
+ <span data-ttu-id="0af5b-303">Словари используются для отслеживания функций, которым требуется специальная обработка, и соответствующих обработчиков.</span><span class="sxs-lookup"><span data-stu-id="0af5b-303">Dictionaries are used to keep track of which functions need special handling and their appropriate handlers.</span></span>  
   
- Определяемые пользователем функции преобразуются в формат Имя\_пространства\_имен.Имя\_функции\(аргумент1, аргумент2, ..., аргументN\).  
+ <span data-ttu-id="0af5b-304">Определяемые пользователем функции преобразуются в формат Имя_пространства_имен.Имя_функции(аргумент1, аргумент2, ..., аргументN).</span><span class="sxs-lookup"><span data-stu-id="0af5b-304">User-defined functions are tanslated to NamespaceName.FunctionName(arg1, arg2, ..., argn).</span></span>  
   
-### DbElementExpression  
- Метод, выполняющий обход DbElementExpression, вызывается, только если DbElementExpression представляет скалярный вложенный запрос.  Поэтому DbElementExpression преобразуется в законченную SqlSelectStatement и заключается в квадратные скобки.  
+### <a name="dbelementexpression"></a><span data-ttu-id="0af5b-305">DbElementExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-305">DbElementExpression</span></span>  
+ <span data-ttu-id="0af5b-306">Метод, выполняющий обход DbElementExpression, вызывается, только если DbElementExpression представляет скалярный вложенный запрос.</span><span class="sxs-lookup"><span data-stu-id="0af5b-306">The method that visits DbElementExpression is only invoked for visiting a DbElementExpression when used to represent a scalar subquery.</span></span> <span data-ttu-id="0af5b-307">Поэтому DbElementExpression преобразуется в законченную SqlSelectStatement и заключается в квадратные скобки.</span><span class="sxs-lookup"><span data-stu-id="0af5b-307">Therefore, DbElementExpression translates into a complete SqlSelectStatement and adds brackets around it.</span></span>  
   
-### DbQuantifierExpression  
- В зависимости от типа выражения \(любой или все\) DbQuantifierExpression преобразуется следующим образом:  
+### <a name="dbquantifierexpression"></a><span data-ttu-id="0af5b-308">DbQuantifierExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-308">DbQuantifierExpression</span></span>  
+ <span data-ttu-id="0af5b-309">В зависимости от типа выражения (любой или все) DbQuantifierExpression преобразуется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="0af5b-309">Depending on the expression type (Any or All), DbQuantifierExpression is translated it as:</span></span>  
   
 ```  
 Any(input, x) => Exists(Filter(input,x))  
 All(input, x) => Not Exists(Filter(input, not(x))  
 ```  
   
-### DbNotExpression  
- В некоторых случаях можно свернуть преобразование DbNotExpression с входным выражением.  Например:  
+### <a name="dbnotexpression"></a><span data-ttu-id="0af5b-310">DbNotExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-310">DbNotExpression</span></span>  
+ <span data-ttu-id="0af5b-311">В некоторых случаях можно свернуть преобразование DbNotExpression с входным выражением.</span><span class="sxs-lookup"><span data-stu-id="0af5b-311">In some cases it is possible to collapse the translation of DbNotExpression with its input expression.</span></span> <span data-ttu-id="0af5b-312">Например:</span><span class="sxs-lookup"><span data-stu-id="0af5b-312">For example:</span></span>  
   
 ```  
 Not(IsNull(a)) =>  "a IS NOT NULL"  
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))  
 ```  
   
- Второе свертывание выполняется, поскольку поставщик неэффективным образом преобразует DbQuantifierExpression типа «все».  Поэтому платформа Entity Framework не может выполнить упрощение.  
+ <span data-ttu-id="0af5b-313">Второе свертывание выполняется, поскольку поставщик неэффективным образом преобразует DbQuantifierExpression типа «все».</span><span class="sxs-lookup"><span data-stu-id="0af5b-313">The reason the second collapse is performed is because inefficiencies were introduced by the provider when translating DbQuantifierExpression of type All.</span></span> <span data-ttu-id="0af5b-314">Поэтому платформа Entity Framework не может выполнить упрощение.</span><span class="sxs-lookup"><span data-stu-id="0af5b-314">Thus the Entity Framework could not have done the simplification.</span></span>  
   
-### DbIsEmptyExpression  
- DbIsEmptyExpression преобразуется следующим образом:  
+### <a name="dbisemptyexpression"></a><span data-ttu-id="0af5b-315">DbIsEmptyExpression</span><span class="sxs-lookup"><span data-stu-id="0af5b-315">DbIsEmptyExpression</span></span>  
+ <span data-ttu-id="0af5b-316">DbIsEmptyExpression преобразуется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="0af5b-316">DbIsEmptyExpression is translated as:</span></span>  
   
 ```  
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## Второй этап формирования SQL: создание строковой команды  
- При создании строковой команды SQL объект SqlSelectStatement создает фактические псевдонимы для символов, чтобы решить задачу переименования столбцов и псевдонимов экстентов.  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a><span data-ttu-id="0af5b-317">Второй этап формирования SQL: создание строковой команды</span><span class="sxs-lookup"><span data-stu-id="0af5b-317">Second Phase of SQL Generation: Generating the String Command</span></span>  
+ <span data-ttu-id="0af5b-318">При создании строковой команды SQL объект SqlSelectStatement создает фактические псевдонимы для символов, чтобы решить задачу переименования столбцов и псевдонимов экстентов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-318">When generating a string SQL command, the SqlSelectStatement produces actual aliases for the symbols, which addresses the issue of column name and extent alias renaming.</span></span>  
   
- Переименование псевдонимов экстентов происходит при записи объекта SqlSelectStatement в строку.  Сначала создайте список всех псевдонимов, используемых внешними экстентами.  Каждый символ в списке FromExtents \(или AllJoinExtents, если его значение отлично от null\) проходит переименование, если он вызывает конфликт с любым из внешних экстентов.  Если требуется переименование, то исключается конфликт с экстентами, собранными в AllExtentNames.  
+ <span data-ttu-id="0af5b-319">Переименование псевдонимов экстентов происходит при записи объекта SqlSelectStatement в строку.</span><span class="sxs-lookup"><span data-stu-id="0af5b-319">Extent alias renaming occurs while writing the SqlSelectStatement object into a string.</span></span> <span data-ttu-id="0af5b-320">Сначала создайте список всех псевдонимов, используемых внешними экстентами.</span><span class="sxs-lookup"><span data-stu-id="0af5b-320">First create a list of all the aliases used by the outer extents.</span></span> <span data-ttu-id="0af5b-321">Каждый символ в списке FromExtents (или AllJoinExtents, если его значение отлично от null) проходит переименование, если он вызывает конфликт с любым из внешних экстентов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-321">Each symbol in the FromExtents (or AllJoinExtents if it is non-null), gets renamed if it collides with any of the outer extents.</span></span> <span data-ttu-id="0af5b-322">Если требуется переименование, то исключается конфликт с экстентами, собранными в AllExtentNames.</span><span class="sxs-lookup"><span data-stu-id="0af5b-322">If renaming is needed, it will not conflict with any of the extents collected in AllExtentNames.</span></span>  
   
- Переименование столбцов происходит при записи объекта Symbol в строку.  Метод AddDefaultColumns на первом этапе определяет необходимость переименования каждого символа столбца.  На втором этапе выполняется только переименование. Это гарантирует, что созданное имя не вызывает конфликт с именами, используемыми в AllColumnNames  
+ <span data-ttu-id="0af5b-323">Переименование столбцов происходит при записи объекта Symbol в строку.</span><span class="sxs-lookup"><span data-stu-id="0af5b-323">Column renaming occurs while writing a Symbol object to a string.</span></span> <span data-ttu-id="0af5b-324">Метод AddDefaultColumns на первом этапе определяет необходимость переименования каждого символа столбца.</span><span class="sxs-lookup"><span data-stu-id="0af5b-324">AddDefaultColumns in the first phase has determined if a certain column symbol has to be renamed.</span></span> <span data-ttu-id="0af5b-325">На втором этапе выполняется только переименование. Это гарантирует, что созданное имя не вызывает конфликт с именами, используемыми в AllColumnNames</span><span class="sxs-lookup"><span data-stu-id="0af5b-325">In the second phase only the rename occurs making sure that the name produced does not conflict with any name used in AllColumnNames</span></span>  
   
- Для создания уникальных имен для столбцов и для псевдонимов экстентов используйте формат \<существующее\_имя\_n\>, где n — наименьший из еще не использованных псевдонимов.  Наличие глобального списка всех псевдонимов усиливает потребность в каскадном переименовании.  
+ <span data-ttu-id="0af5b-326">Для создания уникальных имен для столбцов и для псевдонимов экстентов используйте формат <существующее_имя_n>, где n — наименьший из еще не использованных псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="0af5b-326">To produce unique names both for extent aliases and for columns, use <existing_name>_n where n is the smallest alias that has not been used yet.</span></span> <span data-ttu-id="0af5b-327">Наличие глобального списка всех псевдонимов усиливает потребность в каскадном переименовании.</span><span class="sxs-lookup"><span data-stu-id="0af5b-327">The global list of all aliases increases the need for cascading renames.</span></span>  
   
-## См. также  
- [Создание кода SQL в образце поставщика](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a><span data-ttu-id="0af5b-328">См. также</span><span class="sxs-lookup"><span data-stu-id="0af5b-328">See Also</span></span>  
+ [<span data-ttu-id="0af5b-329">Создание кода SQL в образце поставщика</span><span class="sxs-lookup"><span data-stu-id="0af5b-329">SQL Generation in the Sample Provider</span></span>](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
