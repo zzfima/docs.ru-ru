@@ -1,68 +1,69 @@
 ---
-title: "Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource - компонент [Windows Forms], привязка к типу"
-  - "элементы управления [Windows Forms], привязка к типу"
-  - "типы [Windows Forms], привязка элементов управления"
+title: "Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], binding to a type
+- BindingSource component [Windows Forms], binding to a type
+- types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 215a69a47b0588e45fcc28202dce4c6210b1dfe6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора
-При создании элементов управления, взаимодействующих с данными, иногда нужно привязать элемент управления к типу, а не к объекту.  Обычно нужно привязать элемент управления к типу на этапе разработки, когда данные недоступны, но все равно нужно, чтобы элементу управления отображали данные из открытого интерфейса типа.  Ниже демонстрируется создания нового <xref:System.Windows.Forms.BindingSource>, связанного с типом, а затем связывание одного из свойств типа со свойством <xref:System.Windows.Forms.TextBox.Text%2A> <xref:System.Windows.Forms.TextBox>.  
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a><span data-ttu-id="c4e22-102">Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="c4e22-102">How to: Bind a Windows Forms Control to a Type Using the Designer</span></span>
+<span data-ttu-id="c4e22-103">При создании элементов управления, взаимодействующих с данными, иногда бывает нужно привязать элемент управления к типу, а не к объекту.</span><span class="sxs-lookup"><span data-stu-id="c4e22-103">When you are building controls that interact with data, you sometimes need to bind a control to a type, rather than an object.</span></span> <span data-ttu-id="c4e22-104">Обычно подобная ситуация возникает на этапе разработки, когда данные недоступны, однако нужно, чтобы элементы управления с привязкой к данным отображали данные из открытого интерфейса типа.</span><span class="sxs-lookup"><span data-stu-id="c4e22-104">You typically need to bind a control to a type at design time, when data may not be available, but you still want your data-bound controls to display data from a type's public interface.</span></span> <span data-ttu-id="c4e22-105">Ниже описано, как создать новый <xref:System.Windows.Forms.BindingSource> , связанного с типом, а затем связывание одного из свойств типа со <xref:System.Windows.Forms.TextBox.Text%2A> свойство <xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="c4e22-105">The following procedures demonstrate how to create a new <xref:System.Windows.Forms.BindingSource> that is bound to a type, and then how to bind one of the type's properties to the <xref:System.Windows.Forms.TextBox.Text%2A> property of a <xref:System.Windows.Forms.TextBox>.</span></span>  
   
-### Для привязки компонента BindingSource к типу выполните следующие действия.  
+### <a name="to-bind-the-bindingsource-to-a-type"></a><span data-ttu-id="c4e22-106">Привязка BindingSource к типу</span><span class="sxs-lookup"><span data-stu-id="c4e22-106">To bind the BindingSource to a type</span></span>  
   
-1.  Создайте проект Windows Forms.  
+1.  <span data-ttu-id="c4e22-107">Создайте проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="c4e22-107">Create a Windows Forms project.</span></span>  
   
-     Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     <span data-ttu-id="c4e22-108">Для получения дополнительной информации см. [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="c4e22-108">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  В представлении **разработки** перетащите компонент <xref:System.Windows.Forms.BindingSource> в форму.  
+2.  <span data-ttu-id="c4e22-109">В **разработки** Просмотр, перетащите <xref:System.Windows.Forms.BindingSource> компонента в форму.</span><span class="sxs-lookup"><span data-stu-id="c4e22-109">In **Design** view, drag a <xref:System.Windows.Forms.BindingSource> component onto the form.</span></span>  
   
-3.  В окне **Свойства** щелкните стрелку для свойства <xref:System.Windows.Forms.BindingSource.DataSource%2A>.  
+3.  <span data-ttu-id="c4e22-110">В **свойства** окно, щелкните стрелку, чтобы <xref:System.Windows.Forms.BindingSource.DataSource%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="c4e22-110">In the **Properties** window, click the arrow for the <xref:System.Windows.Forms.BindingSource.DataSource%2A> property.</span></span>  
   
-4.  В окне **редактора источника данных** выберите **Добавить новый источник данных проекта**.  
+4.  <span data-ttu-id="c4e22-111">В **редакторе типов пользовательского интерфейса DataSource** нажмите кнопку **Добавить источник данных проекта**.</span><span class="sxs-lookup"><span data-stu-id="c4e22-111">In the **DataSource UI Type Editor**, click **Add Project Data Source**.</span></span>  
   
-5.  На странице **Выбор типа источника данных** выберите **Объект** и нажмите кнопку **Далее**.  
+5.  <span data-ttu-id="c4e22-112">На странице **Выбор типа источника данных** выберите тип **Объект** и нажмите кнопку **Далее**.</span><span class="sxs-lookup"><span data-stu-id="c4e22-112">On the **Choose a Data Source Type** page, select **Object** and click **Next**.</span></span>  
   
-6.  Выберите тип для привязки.  
+6.  <span data-ttu-id="c4e22-113">Выберите тип для привязки.</span><span class="sxs-lookup"><span data-stu-id="c4e22-113">Select the type to bind to:</span></span>  
   
-    -   Если нужный тип находится в текущем проекте или сборка, содержащая тип, уже добавлена, раскройте узлы, чтобы найти нужный тип, и выберите его.  
+    -   <span data-ttu-id="c4e22-114">Если тип для привязки находится в текущем проекте либо сборка, содержащая этот тип, уже добавлена как ссылка, разверните узлы, а затем найдите и выберите желаемый тип.</span><span class="sxs-lookup"><span data-stu-id="c4e22-114">If the type you want to bind to is in the current project, or the assembly that contains the type is already added as a reference, expand the nodes to find the type you want, and then select it.</span></span>  
   
-         \-или\-  
+         <span data-ttu-id="c4e22-115">-или-</span><span class="sxs-lookup"><span data-stu-id="c4e22-115">-or-</span></span>  
   
-    -   Если нужный тип находится в другой сборке, щелкните **Добавить ссылку** и перейдите на вкладку **Проекты**.  Выберите проект, содержащий нужный бизнес\-объект, и нажмите кнопку **ОК**.  Проект будет отображен с списке сборок, поэтому нужный тип можно будет найти, раскрыв соответствующие узлы.  
+    -   <span data-ttu-id="c4e22-116">Если тип для привязки находится в другой сборке, которой еще нет в списке ссылок, нажмите **Добавить ссылку** и выберите вкладку **Проекты**. Выберите проект, содержащий нужный вам бизнес-объект, и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="c4e22-116">If the type you want to bind to is in another assembly, not currently in the list of references, click **Add Reference**, and then click the **Projects** tab. Select the project that contains the business object you want and click **OK**.</span></span> <span data-ttu-id="c4e22-117">Этот проект будет отображаться в списке сборок, так что вы сможете развернуть узлы, а затем найти и выбрать желаемый тип.</span><span class="sxs-lookup"><span data-stu-id="c4e22-117">This project will appear in the list of assemblies, so you can expand the nodes to find the type you want, and then select it.</span></span>  
   
         > [!NOTE]
-        >  Если требуется выполнить привязку к типу в структуре или сборке Microsoft, снимите флажок **Скрывать сборки, начинающиеся с Microsoft или System**.  
+        >  <span data-ttu-id="c4e22-118">Если тип, который нужно привязать, находится в инфраструктуре или сборке Майкрософт, снимите флажок **Скрыть сборки, начинающиеся с Microsoft или System**.</span><span class="sxs-lookup"><span data-stu-id="c4e22-118">If you want to bind to a type in a framework or Microsoft assembly, clear the **Hide assemblies that begin with Microsoft or System** check box.</span></span>  
   
-7.  Нажмите кнопку **Далее**, а затем **Готово**.  
+7.  <span data-ttu-id="c4e22-119">Щелкните **Далее**и затем нажмите кнопку **Готово**.</span><span class="sxs-lookup"><span data-stu-id="c4e22-119">Click **Next**, and then click **Finish**.</span></span>  
   
-### Для привязки элемента управления к компоненту BindingSource выполните следующие действия.  
+### <a name="to-bind-the-control-to-the-bindingsource"></a><span data-ttu-id="c4e22-120">Привязка элемента управления к BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e22-120">To bind the control to the BindingSource</span></span>  
   
-1.  Добавьте <xref:System.Windows.Forms.TextBox> в форму.  
+1.  <span data-ttu-id="c4e22-121">Добавьте на форму элемент <xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="c4e22-121">Add a <xref:System.Windows.Forms.TextBox> to the form.</span></span>  
   
-2.  В окне **Свойства** разверните узел **\(DataBindings\)**.  
+2.  <span data-ttu-id="c4e22-122">В окне **Свойства** разверните узел **(DataBindings)**.</span><span class="sxs-lookup"><span data-stu-id="c4e22-122">In the **Properties** window, expand the **(DataBindings)** node.</span></span>  
   
-3.  Щелкните стрелку рядом со свойством <xref:System.Windows.Forms.TextBox.Text%2A>.  
+3.  <span data-ttu-id="c4e22-123">Щелкните стрелку рядом с <xref:System.Windows.Forms.TextBox.Text%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="c4e22-123">Click the arrow next to the <xref:System.Windows.Forms.TextBox.Text%2A> property.</span></span>  
   
-4.  В **редакторе типов источников данных** раскройте узел для добавленного ранее <xref:System.Windows.Forms.BindingSource> и выберите свойство связанного типа, которое нужно связать со свойством <xref:System.Windows.Forms.TextBox.Text%2A> <xref:System.Windows.Forms.TextBox>.  
+4.  <span data-ttu-id="c4e22-124">В **редактора источника**, разверните узел для <xref:System.Windows.Forms.BindingSource> добавлен ранее и выберите свойство связанного типа, необходимо выполнить привязку к <xref:System.Windows.Forms.TextBox.Text%2A> свойство <xref:System.Windows.Forms.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="c4e22-124">In the **DataSource UI Type Editor**, expand the node for the <xref:System.Windows.Forms.BindingSource> added previously, and select the property of the bound type you want to bind to the <xref:System.Windows.Forms.TextBox.Text%2A> property of the <xref:System.Windows.Forms.TextBox>.</span></span>  
   
-## См. также  
- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Практическое руководство. Связывание элемента управления с типом в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)   
- [Привязка элементов управления к данным в Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a><span data-ttu-id="c4e22-125">См. также</span><span class="sxs-lookup"><span data-stu-id="c4e22-125">See Also</span></span>  
+ [<span data-ttu-id="c4e22-126">Компонент BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e22-126">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="c4e22-127">Практическое руководство. Связывание элемента управления с типом в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c4e22-127">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ [<span data-ttu-id="c4e22-128">Привязка элементов управления к данным в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c4e22-128">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

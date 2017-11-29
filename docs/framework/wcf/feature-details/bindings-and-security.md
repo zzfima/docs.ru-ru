@@ -1,239 +1,242 @@
 ---
-title: "Привязки и безопасность | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязки [WCF]"
-  - "привязки [WCF], безопасность"
-  - "безопасность WCF"
-  - "Windows Communication Foundation, безопасность"
+title: "Привязки и безопасность"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bindings [WCF], security
+- WCF security
+- Windows Communication Foundation, security
+- bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Привязки и безопасность
-Предоставляемые системой привязки, включенные в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], обеспечивают быстрый способ программирования приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].За одним исключением, во всех привязках включена схема безопасности по умолчанию.Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.  
+# <a name="bindings-and-security"></a><span data-ttu-id="3f616-102">Привязки и безопасность</span><span class="sxs-lookup"><span data-stu-id="3f616-102">Bindings and Security</span></span>
+<span data-ttu-id="3f616-103">Предоставляемые системой привязки, включенные в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], обеспечивают быстрый способ программирования приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3f616-103">The system-provided bindings included with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offer a quick way to program [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="3f616-104">За одним исключением, во всех привязках включена схема безопасности по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="3f616-104">With one exception, all the bindings have a default security scheme enabled.</span></span> <span data-ttu-id="3f616-105">Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.</span><span class="sxs-lookup"><span data-stu-id="3f616-105">This topic helps you select the right binding for your security needs.</span></span>  
   
- Общие сведения о безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о программировании в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с использованием привязок см. в разделе [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ <span data-ttu-id="3f616-106">Общие сведения о [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-106">For an overview of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security, see [Security Overview](../../../../docs/framework/wcf/feature-details/security-overview.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3f616-107">Программирование [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью привязки, в разделе [программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-107"> programming [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] using bindings, see [Programming WCF Security](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).</span></span>  
   
- Если привязка уже выбрана, дополнительные сведения о связанных с безопасностью поведениях времени выполнения см. в разделе [Поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ <span data-ttu-id="3f616-108">Если привязка уже выбран, можно найти дополнительные сведения о поведение во время выполнения, связанные с безопасностью в [поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-108">If you have already selected a binding, you can find out more about the run-time behaviors that are associated with security in [Security Behaviors](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).</span></span>  
   
- Некоторые функции безопасности невозможно запрограммировать с помощью привязок, предоставляемых системой.Сведения о дополнительных возможностях, обеспечиваемых пользовательскими привязками, см. в разделе [Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ <span data-ttu-id="3f616-109">Некоторые функции безопасности невозможно запрограммировать с помощью привязок, предоставляемых системой.</span><span class="sxs-lookup"><span data-stu-id="3f616-109">Some security functions are not programmable using the system-provided bindings.</span></span> <span data-ttu-id="3f616-110">Для усиления контроля использования пользовательской привязки, в разделе [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-110">For more control using a custom binding, see [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## Функции безопасности привязок  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] содержит ряд предоставляемых системой привязок, удовлетворяющих большей части потребностей.Если определенная привязка не удовлетворяет всем необходимым требованиям, можно также создать пользовательскую привязку.Список предоставляемых системой привязок см. в разделе [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о пользовательских привязках см. в разделе [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+## <a name="security-functions-of-bindings"></a><span data-ttu-id="3f616-111">Функции безопасности привязок</span><span class="sxs-lookup"><span data-stu-id="3f616-111">Security Functions of Bindings</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3f616-112"> содержит ряд предоставляемых системой привязок, удовлетворяющих большей части потребностей.</span><span class="sxs-lookup"><span data-stu-id="3f616-112"> includes a number of system-provided bindings that meet most needs.</span></span> <span data-ttu-id="3f616-113">Если определенная привязка не удовлетворяет всем необходимым требованиям, можно также создать пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="3f616-113">If a particular binding does not suffice, you can also create a custom binding.</span></span> <span data-ttu-id="3f616-114">Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-114">For a list of system-provided bindings, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3f616-115">пользовательские привязки в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-115"> custom bindings, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
- Каждая привязка в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] существует в двух видах: в виде API и в виде элемента XML, используемого в файле конфигурации.Например, для привязки `WSHttpBinding` \(API\) имеется эквивалентный элемент [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ <span data-ttu-id="3f616-116">Каждая привязка в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] существует в двух видах: в виде API и в виде элемента XML, используемого в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="3f616-116">Every binding in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] has two forms: as an API and as an XML element used in a configuration file.</span></span> <span data-ttu-id="3f616-117">Например `WSHttpBinding` (API) имеет аналога в [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-117">For example, the `WSHttpBinding` (API) has a counterpart in the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- В следующем подразделе перечисляются обе формы каждой из привязок и приводится краткое описание функций безопасности.  
+ <span data-ttu-id="3f616-118">В следующем подразделе перечисляются обе формы каждой из привязок и приводится краткое описание возможностей безопасности.</span><span class="sxs-lookup"><span data-stu-id="3f616-118">The following section lists both forms for each binding and summarizes the security features.</span></span>  
   
-### BasicHttp  
- В коде используйте класс <xref:System.ServiceModel.BasicHttpBinding>; в конфигурации используйте элемент [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+### <a name="basichttp"></a><span data-ttu-id="3f616-119">BasicHttp</span><span class="sxs-lookup"><span data-stu-id="3f616-119">BasicHttp</span></span>  
+ <span data-ttu-id="3f616-120">В коде используйте <xref:System.ServiceModel.BasicHttpBinding> класса; в конфигурации, используйте [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-120">In code, use the <xref:System.ServiceModel.BasicHttpBinding> class; in configuration, use the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).</span></span>  
   
- Эта привязка предназначена для использования с различными существующими технологиями, включая перечисленные ниже.  
+ <span data-ttu-id="3f616-121">Эта привязка предназначена для использования с различными существующими технологиями, включая перечисленные ниже.</span><span class="sxs-lookup"><span data-stu-id="3f616-121">This binding is designed for use with a range of existing technologies, including the following:</span></span>  
   
--   Веб\-службы ASP.NET \(ASMX\), версия 1.  
+-   <span data-ttu-id="3f616-122">Веб-службы ASP.NET (ASMX), версия 1.</span><span class="sxs-lookup"><span data-stu-id="3f616-122">ASP.NET Web services (ASMX), version 1.</span></span>  
   
--   Приложения расширений веб\-служб \(WSE\).  
+-   <span data-ttu-id="3f616-123">Приложения расширений веб-служб (WSE).</span><span class="sxs-lookup"><span data-stu-id="3f616-123">Web Service Enhancements (WSE) applications.</span></span>  
   
--   Базовый профиль Basic Profile, определенный в спецификации взаимодействия веб\-служб WS\-I \([http:\/\/go.microsoft.com\/fwlink\/?LinkId\=38955](http://go.microsoft.com/fwlink/?LinkId=38955)\).  
+-   <span data-ttu-id="3f616-124">Профиль Basic, как определено в взаимодействия веб-служб (WS-I) спецификация ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).</span><span class="sxs-lookup"><span data-stu-id="3f616-124">Basic Profile as defined in the Web Services Interoperability (WS-I) specification ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).</span></span>  
   
--   Базовый профиль безопасности, определенный в спецификации WS\-I.  
+-   <span data-ttu-id="3f616-125">Базовый профиль безопасности, определенный в спецификации WS-I.</span><span class="sxs-lookup"><span data-stu-id="3f616-125">Basic security profile as defined in WS-I.</span></span>  
   
- По умолчанию эта привязка не является безопасной.Она предназначена для взаимодействия со службами ASMX.Если безопасность включена, эта привязка обеспечивает беспрепятственное взаимодействие с механизмами безопасности служб IIS, такими как обычная проверка подлинности, дайджест\-проверка и встроенная система безопасности Windows.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).Эта привязка поддерживает следующие функции:  
+ <span data-ttu-id="3f616-126">По умолчанию эта привязка не является безопасной.</span><span class="sxs-lookup"><span data-stu-id="3f616-126">By default, this binding is not secure.</span></span> <span data-ttu-id="3f616-127">Она предназначена для взаимодействия со службами ASMX.</span><span class="sxs-lookup"><span data-stu-id="3f616-127">It is designed to interoperate with ASMX services.</span></span> <span data-ttu-id="3f616-128">Если безопасность включена, эта привязка обеспечивает беспрепятственное взаимодействие с механизмами безопасности служб IIS, такими как обычная проверка подлинности, дайджест-проверка и встроенная система безопасности Windows.</span><span class="sxs-lookup"><span data-stu-id="3f616-128">When security is enabled, the binding is designed for seamless interoperation with Internet Information Services (IIS) security mechanisms, such as basic authentication, digest, and integrated Windows security.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-129">[Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-129"> [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span> <span data-ttu-id="3f616-130">Эта привязка поддерживает следующие функции:</span><span class="sxs-lookup"><span data-stu-id="3f616-130">This binding supports the following:</span></span>  
   
--   Безопасность транспорта HTTPS.  
+-   <span data-ttu-id="3f616-131">Безопасность транспорта HTTPS.</span><span class="sxs-lookup"><span data-stu-id="3f616-131">HTTPS transport security.</span></span>  
   
--   Обычная проверка подлинности HTTP.  
+-   <span data-ttu-id="3f616-132">Обычная проверка подлинности HTTP.</span><span class="sxs-lookup"><span data-stu-id="3f616-132">HTTP basic authentication.</span></span>  
   
--   WS\-Security.  
+-   <span data-ttu-id="3f616-133">WS-Security.</span><span class="sxs-lookup"><span data-stu-id="3f616-133">WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> и <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-134"> <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> и <xref:System.ServiceModel.BasicHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="3f616-134"> <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>, and <xref:System.ServiceModel.BasicHttpSecurityMode>.</span></span>  
   
-### WSHttpBinding  
- В коде используйте класс <xref:System.ServiceModel.WSHttpBinding>; в конфигурации используйте элемент [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+### <a name="wshttpbinding"></a><span data-ttu-id="3f616-135">WSHttpBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-135">WSHttpBinding</span></span>  
+ <span data-ttu-id="3f616-136">В коде используйте <xref:System.ServiceModel.WSHttpBinding> класса; в конфигурации, используйте [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-136">In code, use the <xref:System.ServiceModel.WSHttpBinding> class; in configuration, use the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- По умолчанию эта привязка реализует спецификацию WS\-Security и обеспечивает взаимодействие со службами, реализующими спецификации WS\-\*.Она поддерживает следующие функции:  
+ <span data-ttu-id="3f616-137">По умолчанию эта привязка реализует спецификацию WS-Security и обеспечивает взаимодействие со службами, реализующими спецификации WS-*.</span><span class="sxs-lookup"><span data-stu-id="3f616-137">By default, this binding implements the WS-Security specification and provides interoperability with services that implement the WS-* specifications.</span></span> <span data-ttu-id="3f616-138">Она поддерживает следующие функции:</span><span class="sxs-lookup"><span data-stu-id="3f616-138">It supports the following:</span></span>  
   
--   Безопасность транспорта HTTPS.  
+-   <span data-ttu-id="3f616-139">Безопасность транспорта HTTPS.</span><span class="sxs-lookup"><span data-stu-id="3f616-139">HTTPS transport security.</span></span>  
   
--   WS\-Security.  
+-   <span data-ttu-id="3f616-140">WS-Security.</span><span class="sxs-lookup"><span data-stu-id="3f616-140">WS-Security.</span></span>  
   
--   Защита транспорта HTTPS с использованием безопасности учетных данных сообщения SOAP для проверки подлинности вызывающей стороны.  
+-   <span data-ttu-id="3f616-141">Защита транспорта HTTPS с использованием безопасности учетных данных сообщения SOAP для проверки подлинности вызывающей стороны.</span><span class="sxs-lookup"><span data-stu-id="3f616-141">HTTPS transport protection with SOAP message credential security for authenticating the caller.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType> и <xref:System.ServiceModel.HttpProxyCredentialType>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-142"> <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType> и <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="3f616-142"> <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, and <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>  
   
-### WSDualHttpBinding  
- В коде используйте класс <xref:System.ServiceModel.WSDualHttpBinding>; в конфигурации используйте элемент [\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+### <a name="wsdualhttpbinding"></a><span data-ttu-id="3f616-143">WSDualHttpBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-143">WSDualHttpBinding</span></span>  
+ <span data-ttu-id="3f616-144">В коде используйте <xref:System.ServiceModel.WSDualHttpBinding> класса; в конфигурации, используйте [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-144">In code, use the <xref:System.ServiceModel.WSDualHttpBinding> class; in configuration, use the [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
- Эта привязка предназначена для обеспечения приложений дуплексных служб.Эта привязка реализует спецификацию WS\-Security для обеспечения безопасности передачи на основе сообщений.Безопасность транспорта отсутствует.По умолчанию предусмотрены следующие функции.  
+ <span data-ttu-id="3f616-145">Эта привязка предназначена для обеспечения приложений дуплексных служб.</span><span class="sxs-lookup"><span data-stu-id="3f616-145">This binding is designed to enable duplex service applications.</span></span> <span data-ttu-id="3f616-146">Эта привязка реализует спецификацию WS-Security для обеспечения безопасности передачи на основе сообщений.</span><span class="sxs-lookup"><span data-stu-id="3f616-146">This binding implements the WS-Security specification for message-based transfer security.</span></span> <span data-ttu-id="3f616-147">Безопасность транспорта отсутствует.</span><span class="sxs-lookup"><span data-stu-id="3f616-147">Transport security is not available.</span></span> <span data-ttu-id="3f616-148">По умолчанию предусмотрены следующие функции.</span><span class="sxs-lookup"><span data-stu-id="3f616-148">By default, it provides the following features:</span></span>  
   
--   Для надежности реализован обмен сообщениями WS\-Reliable Messaging.  
+-   <span data-ttu-id="3f616-149">Для надежности реализован обмен сообщениями WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="3f616-149">Implements WS-Reliable Messaging for reliability.</span></span>  
   
--   Для транспортной безопасности и проверки подлинности реализована спецификация WS\-Security.  
+-   <span data-ttu-id="3f616-150">Для транспортной безопасности и проверки подлинности реализована спецификация WS-Security.</span><span class="sxs-lookup"><span data-stu-id="3f616-150">Implements WS-Security for transfer security and authentication.</span></span>  
   
--   Для доставки сообщений используется протокол HTTP.  
+-   <span data-ttu-id="3f616-151">Для доставки сообщений используется протокол HTTP.</span><span class="sxs-lookup"><span data-stu-id="3f616-151">Uses HTTP for message delivery.</span></span>  
   
--   Используется кодирование текстовых сообщений\/сообщений XML.  
+-   <span data-ttu-id="3f616-152">Используется кодирование текстовых сообщений/сообщений XML.</span><span class="sxs-lookup"><span data-stu-id="3f616-152">Uses text/XML message encoding.</span></span>  
   
- Используя WS\-Security \(безопасность на уровне сообщений\), эта привязка позволяет настроить следующие параметры:  
+ <span data-ttu-id="3f616-153">Используя WS-Security (безопасность на уровне сообщений), эта привязка позволяет настроить следующие параметры:</span><span class="sxs-lookup"><span data-stu-id="3f616-153">Using WS-Security (message-layer security), the binding allows you to configure the following parameters:</span></span>  
   
--   Набор алгоритмов безопасности для определения алгоритма шифрования.  
+-   <span data-ttu-id="3f616-154">Набор алгоритмов безопасности для определения алгоритма шифрования.</span><span class="sxs-lookup"><span data-stu-id="3f616-154">The security algorithm suite to determine the cryptographic algorithm.</span></span>  
   
--   Параметры привязки для:  
+-   <span data-ttu-id="3f616-155">Параметры привязки для:</span><span class="sxs-lookup"><span data-stu-id="3f616-155">Binding options for the following:</span></span>  
   
-    -   предоставления учетных данных службы, получаемых клиентом по внештатному каналу;  
+    -   <span data-ttu-id="3f616-156">предоставления учетных данных службы, получаемых клиентом по внештатному каналу;</span><span class="sxs-lookup"><span data-stu-id="3f616-156">Providing service credentials available out-of-band at the client.</span></span>  
   
-    -   предоставления учетных данных службы, согласованных со службой в процессе настройки канала.  
+    -   <span data-ttu-id="3f616-157">предоставления учетных данных службы, согласованных со службой в процессе настройки канала.</span><span class="sxs-lookup"><span data-stu-id="3f616-157">Providing service credentials negotiated from the service as part of channel setup.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> и <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-158"><xref:System.ServiceModel.WSDualHttpSecurity> и <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="3f616-158"> <xref:System.ServiceModel.WSDualHttpSecurity> and <xref:System.ServiceModel.WSDualHttpSecurityMode>.</span></span>  
   
-### NetTcpBinding  
- В коде используйте класс <xref:System.ServiceModel.NetTcpBinding>; в конфигурации используйте элемент [\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+### <a name="nettcpbinding"></a><span data-ttu-id="3f616-159">NetTcpBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-159">NetTcpBinding</span></span>  
+ <span data-ttu-id="3f616-160">В коде используйте <xref:System.ServiceModel.NetTcpBinding> класса; в конфигурации, используйте [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-160">In code, use the <xref:System.ServiceModel.NetTcpBinding> class; in configuration, use the [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  
   
- Эта привязка оптимизирована для обмена данными между компьютерами.По умолчанию она имеет следующие характеристики:  
+ <span data-ttu-id="3f616-161">Эта привязка оптимизирована для обмена данными между компьютерами.</span><span class="sxs-lookup"><span data-stu-id="3f616-161">This binding is optimized for cross-machine communication.</span></span> <span data-ttu-id="3f616-162">По умолчанию она имеет следующие характеристики:</span><span class="sxs-lookup"><span data-stu-id="3f616-162">By default, it has the following characteristics:</span></span>  
   
--   Реализуется безопасность на транспортном уровне.  
+-   <span data-ttu-id="3f616-163">Реализуется безопасность на транспортном уровне.</span><span class="sxs-lookup"><span data-stu-id="3f616-163">Implements transport-layer security.</span></span>  
   
--   Для безопасности передачи и проверки подлинности используется безопасность Windows.  
+-   <span data-ttu-id="3f616-164">Для безопасности передачи и проверки подлинности используется безопасность Windows.</span><span class="sxs-lookup"><span data-stu-id="3f616-164">Leverages Windows security for transfer security and authentication.</span></span>  
   
--   Для транспорта используется протокол TCP.  
+-   <span data-ttu-id="3f616-165">Для транспорта используется протокол TCP.</span><span class="sxs-lookup"><span data-stu-id="3f616-165">Uses TCP for transport.</span></span>  
   
--   Реализуется кодирование двоичных сообщений.  
+-   <span data-ttu-id="3f616-166">Реализуется кодирование двоичных сообщений.</span><span class="sxs-lookup"><span data-stu-id="3f616-166">Implements binary message encoding.</span></span>  
   
--   Реализуется обмен сообщениями WS\-Reliable Messaging.  
+-   <span data-ttu-id="3f616-167">Реализуется обмен сообщениями WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="3f616-167">Implements WS-Reliable Messaging.</span></span>  
   
- Дополнительно возможны:  
+ <span data-ttu-id="3f616-168">Дополнительно возможны:</span><span class="sxs-lookup"><span data-stu-id="3f616-168">Options include the following:</span></span>  
   
--   Безопасность на уровне сообщений \(с использованием WS\-Security\).  
+-   <span data-ttu-id="3f616-169">Безопасность на уровне сообщений (с использованием WS-Security).</span><span class="sxs-lookup"><span data-stu-id="3f616-169">Message-layer security (using WS-Security).</span></span>  
   
--   Безопасность транспорта с учетными данными сообщений — конфиденциальность и целостность обеспечиваются протоколом TLS через TCP, а учетные данные для проверки подлинности обеспечиваются спецификацией WS\-Security.  
+-   <span data-ttu-id="3f616-170">Безопасность транспорта с учетными данными сообщений - конфиденциальность и целостность обеспечиваются протоколом TLS через TCP, а учетные данные для проверки подлинности обеспечиваются спецификацией WS-Security.</span><span class="sxs-lookup"><span data-stu-id="3f616-170">Transport security with message credential—confidentiality and integrity provided by Transport Layer Security (TLS) over TCP, and credentials for authorization provided by WS-Security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp> и <xref:System.ServiceModel.MessageCredentialType>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-171"> <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp> и <xref:System.ServiceModel.MessageCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="3f616-171"> <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, and <xref:System.ServiceModel.MessageCredentialType>.</span></span>  
   
-### NetNamedPipeBinding  
- В коде используйте класс <xref:System.ServiceModel.NetNamedPipeBinding>; в конфигурации используйте элемент [\<netNamedPipeBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
+### <a name="netnamedpipebinding"></a><span data-ttu-id="3f616-172">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-172">NetNamedPipeBinding</span></span>  
+ <span data-ttu-id="3f616-173">В коде используйте <xref:System.ServiceModel.NetNamedPipeBinding> класса; в конфигурации, используйте [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-173">In code, use the <xref:System.ServiceModel.NetNamedPipeBinding> class; in configuration, use the [\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>  
   
- Эта привязка оптимизирована для обмена данными между процессами \(обычно на одном компьютере\).По умолчанию эта привязка имеет следующие характеристики:  
+ <span data-ttu-id="3f616-174">Эта привязка оптимизирована для обмена данными между процессами (обычно на одном компьютере).</span><span class="sxs-lookup"><span data-stu-id="3f616-174">This binding is optimized for cross-process communication (usually on the same machine).</span></span> <span data-ttu-id="3f616-175">По умолчанию эта привязка имеет следующие характеристики:</span><span class="sxs-lookup"><span data-stu-id="3f616-175">By default, this binding has the following characteristics:</span></span>  
   
--   Для передачи сообщений и проверки подлинности используется безопасность транспорта.  
+-   <span data-ttu-id="3f616-176">Для передачи сообщений и проверки подлинности используется безопасность транспорта.</span><span class="sxs-lookup"><span data-stu-id="3f616-176">Uses transport security for message transfer and authentication.</span></span>  
   
--   Для доставки сообщений используются именованные каналы.  
+-   <span data-ttu-id="3f616-177">Для доставки сообщений используются именованные каналы.</span><span class="sxs-lookup"><span data-stu-id="3f616-177">Uses named pipes for message delivery.</span></span>  
   
--   Реализуется кодирование двоичных сообщений.  
+-   <span data-ttu-id="3f616-178">Реализуется кодирование двоичных сообщений.</span><span class="sxs-lookup"><span data-stu-id="3f616-178">Implements binary message encoding.</span></span>  
   
--   Шифрование и подписывание сообщений.  
+-   <span data-ttu-id="3f616-179">Шифрование и подписывание сообщений.</span><span class="sxs-lookup"><span data-stu-id="3f616-179">Encryption and message signing.</span></span>  
   
- Дополнительно возможны:  
+ <span data-ttu-id="3f616-180">Дополнительно возможны:</span><span class="sxs-lookup"><span data-stu-id="3f616-180">Options include the following:</span></span>  
   
--   Проверка подлинности с использованием безопасности Windows.  
+-   <span data-ttu-id="3f616-181">Проверка подлинности с использованием безопасности Windows.</span><span class="sxs-lookup"><span data-stu-id="3f616-181">Authentication using Windows security.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> и <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> и <xref:System.ServiceModel.NamedPipeTransportSecurity>.</span><span class="sxs-lookup"><span data-stu-id="3f616-182"> <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode>, and <xref:System.ServiceModel.NamedPipeTransportSecurity>.</span></span>  
   
-### MsmqIntegrationBinding  
- В коде используйте класс <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>; в конфигурации используйте элемент [\<msmqIntegrationBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
+### <a name="msmqintegrationbinding"></a><span data-ttu-id="3f616-183">MsmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-183">MsmqIntegrationBinding</span></span>  
+ <span data-ttu-id="3f616-184">В коде используйте <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> класса; в конфигурации, используйте [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-184">In code, use the <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> class; in configuration, use the [\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>  
   
- Эта привязка оптимизирована для создания клиентов и служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], взаимодействующих с конечными точками MSMQ \(Microsoft Message Queuing\), созданными без использования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="3f616-185">Эта привязка оптимизирована для создания клиентов и служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], взаимодействующих с конечными точками MSMQ (Microsoft Message Queuing), созданными без использования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3f616-185">This binding is optimized for creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients and services that interoperate with non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) endpoints.</span></span>  
   
- По умолчанию в этой привязке используется безопасность транспорта и обеспечиваются следующие характеристики безопасности:  
+ <span data-ttu-id="3f616-186">По умолчанию в этой привязке используется безопасность транспорта и обеспечиваются следующие характеристики безопасности:</span><span class="sxs-lookup"><span data-stu-id="3f616-186">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   Система безопасности может быть отключена \(None\).  
+-   <span data-ttu-id="3f616-187">Система безопасности может быть отключена (None).</span><span class="sxs-lookup"><span data-stu-id="3f616-187">Security can be disabled (None).</span></span>  
   
--   Безопасность транспорта MSMQ \(Transport\).  
+-   <span data-ttu-id="3f616-188">Безопасность транспорта MSMQ (Transport).</span><span class="sxs-lookup"><span data-stu-id="3f616-188">MSMQ transport security (Transport).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] объекты <xref:System.ServiceModel.NetMsmqSecurity> и <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-189"><xref:System.ServiceModel.NetMsmqSecurity> и <xref:System.ServiceModel.NetMsmqSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="3f616-189"> <xref:System.ServiceModel.NetMsmqSecurity> and <xref:System.ServiceModel.NetMsmqSecurityMode>.</span></span>  
   
-### NetMsmqBinding  
- В коде используйте класс <xref:System.ServiceModel.NetMsmqBinding>; в конфигурации используйте элемент [\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
+### <a name="netmsmqbinding"></a><span data-ttu-id="3f616-190">NetMsmqBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-190">NetMsmqBinding</span></span>  
+ <span data-ttu-id="3f616-191">В коде используйте <xref:System.ServiceModel.NetMsmqBinding> класса; в конфигурации, используйте [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-191">In code, use the <xref:System.ServiceModel.NetMsmqBinding> class; in configuration, use the [\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).</span></span>  
   
- Эта привязка предназначена для использования при создании служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которым требуется поддержка очереди сообщений MSMQ.  
+ <span data-ttu-id="3f616-192">Эта привязка предназначена для использования при создании служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которым требуется поддержка очереди сообщений MSMQ.</span><span class="sxs-lookup"><span data-stu-id="3f616-192">This binding is intended for use when creating [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services that require MSMQ queued message support.</span></span>  
   
- По умолчанию в этой привязке используется безопасность транспорта и обеспечиваются следующие характеристики безопасности:  
+ <span data-ttu-id="3f616-193">По умолчанию в этой привязке используется безопасность транспорта и обеспечиваются следующие характеристики безопасности:</span><span class="sxs-lookup"><span data-stu-id="3f616-193">By default, this binding uses transport security and provides the following security characteristics:</span></span>  
   
--   Система безопасности может быть отключена \(None\).  
+-   <span data-ttu-id="3f616-194">Система безопасности может быть отключена (None).</span><span class="sxs-lookup"><span data-stu-id="3f616-194">Security can be disabled (None).</span></span>  
   
--   Безопасность транспорта MSMQ \(Transport\).  
+-   <span data-ttu-id="3f616-195">Безопасность транспорта MSMQ (Transport).</span><span class="sxs-lookup"><span data-stu-id="3f616-195">MSMQ transport security (Transport).</span></span>  
   
--   Безопасность сообщений на основе SOAP \(Message\).  
+-   <span data-ttu-id="3f616-196">Безопасность сообщений на основе SOAP (Message).</span><span class="sxs-lookup"><span data-stu-id="3f616-196">SOAP-based message security (Message).</span></span>  
   
--   Одновременное использование безопасности транспорта и безопасности сообщений \(Both\).  
+-   <span data-ttu-id="3f616-197">Одновременное использование безопасности транспорта и безопасности сообщений (Both).</span><span class="sxs-lookup"><span data-stu-id="3f616-197">Simultaneous Transport and Message security (Both).</span></span>  
   
--   Поддерживаемые типы учетных данных клиента: None, Windows, UserName, Certificate, IssuedToken.  
+-   <span data-ttu-id="3f616-198">Поддерживаемые типы учетных данных клиента: None, Windows, UserName, Certificate, IssuedToken.</span><span class="sxs-lookup"><span data-stu-id="3f616-198">Client Credential Types supported: None, Windows, UserName, Certificate, IssuedToken.</span></span>  
   
- Учетные данные типа <xref:System.ServiceModel.MessageCredentialType> поддерживаются только в том случае, если задан режим безопасности <xref:System.ServiceModel.NetMsmqSecurityMode> или <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ <span data-ttu-id="3f616-199">Учетные данные типа <xref:System.ServiceModel.MessageCredentialType.Certificate> поддерживаются только в том случае, если задан режим безопасности <xref:System.ServiceModel.NetMsmqSecurityMode.Both> или <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.</span><span class="sxs-lookup"><span data-stu-id="3f616-199">The <xref:System.ServiceModel.MessageCredentialType.Certificate> credential is supported only when the security mode is set to either <xref:System.ServiceModel.NetMsmqSecurityMode.Both> or <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> и <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-200"><xref:System.ServiceModel.MessageSecurityOverMsmq> и <xref:System.ServiceModel.MsmqTransportSecurity>.</span><span class="sxs-lookup"><span data-stu-id="3f616-200"> <xref:System.ServiceModel.MessageSecurityOverMsmq> and <xref:System.ServiceModel.MsmqTransportSecurity>.</span></span>  
   
-### WSFederationHttpBinding  
- В коде используйте класс <xref:System.ServiceModel.WSFederationHttpBinding>; в конфигурации используйте элемент [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+### <a name="wsfederationhttpbinding"></a><span data-ttu-id="3f616-201">WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="3f616-201">WSFederationHttpBinding</span></span>  
+ <span data-ttu-id="3f616-202">В коде используйте <xref:System.ServiceModel.WSFederationHttpBinding> класса; в конфигурации, используйте [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-202">In code, use the <xref:System.ServiceModel.WSFederationHttpBinding> class; in configuration, use the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
- По умолчанию в этой привязке используется спецификация WS\-Security \(безопасность на уровне сообщений\).  
+ <span data-ttu-id="3f616-203">По умолчанию в этой привязке используется спецификация WS-Security (безопасность на уровне сообщений).</span><span class="sxs-lookup"><span data-stu-id="3f616-203">By default, this binding uses WS-Security (message-layer security).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Федерация](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity> и <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-204">[Федерации](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, и <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="3f616-204"> [Federation](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, and <xref:System.ServiceModel.WSFederationHttpSecurityMode>.</span></span>  
   
-## Пользовательские привязки  
- Если ни одна из предоставляемых системой привязок не удовлетворяет вашим требованиям, можно создать пользовательскую привязку с пользовательским элементом привязки безопасности.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+## <a name="custom-bindings"></a><span data-ttu-id="3f616-205">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="3f616-205">Custom Bindings</span></span>  
+ <span data-ttu-id="3f616-206">Если ни одна из предоставляемых системой привязок не удовлетворяет вашим требованиям, можно создать пользовательскую привязку с пользовательским элементом привязки безопасности.</span><span class="sxs-lookup"><span data-stu-id="3f616-206">If none of the system-provided bindings meets you requirements, you can create a custom binding with a custom security binding element.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-207">[Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-207"> [Security Capabilities with Custom Bindings](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).</span></span>  
   
-## Функции привязок  
- В следующей таблице перечислены функции, обеспечиваемые настройкой режима безопасности; другими словами, перечислены доступные функции, если для режима безопасности задано значение `Transport`, `Message` или `TransportWithMessageCredential`.Эта таблица поможет найти функции безопасности, необходимые для вашего приложения.  
+## <a name="binding-choices"></a><span data-ttu-id="3f616-208">Функции привязок</span><span class="sxs-lookup"><span data-stu-id="3f616-208">Binding Choices</span></span>  
+ <span data-ttu-id="3f616-209">В следующей таблице перечислены функции, обеспечиваемые настройкой режима безопасности; другими словами, перечислены доступные функции, если для режима безопасности задано значение `Transport`, `Message` или `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="3f616-209">The following table summarizes the features offered in the security mode setting, that is, it lists the features available when the security mode is set to `Transport`, `Message`, or `TransportWithMessageCredential`.</span></span> <span data-ttu-id="3f616-210">Эта таблица поможет найти функции безопасности, необходимые для вашего приложения.</span><span class="sxs-lookup"><span data-stu-id="3f616-210">Use this table to help you find the security features your application requires.</span></span>  
   
-|Параметр|Функции|  
-|--------------|-------------|  
-|Транспорт|Проверка подлинности сервера<br /><br /> Проверка подлинности клиента<br /><br /> Безопасность типа "точка\-точка"<br /><br /> Взаимодействие<br /><br /> Аппаратное ускорение<br /><br /> Высокая пропускная способность<br /><br /> Безопасный брандмауэр<br /><br /> Приложения с большой задержкой<br /><br /> Повторное шифрование по нескольким участкам ретрансляции|  
-|Сообщение|Проверка подлинности сервера<br /><br /> Проверка подлинности клиента<br /><br /> Сквозная безопасность<br /><br /> Взаимодействие<br /><br /> Утверждения с широкими функциональными возможностями<br /><br /> Федерация<br /><br /> Многофакторная проверка подлинности<br /><br /> Пользовательские маркеры<br /><br /> Служба удостоверения\/отметки времени<br /><br /> Приложения с большой задержкой<br /><br /> Сохраняемость сигнатур сообщений|  
-|TransportWithMessageCredential|Проверка подлинности сервера<br /><br /> Проверка подлинности клиента<br /><br /> Безопасность типа "точка\-точка"<br /><br /> Взаимодействие<br /><br /> Аппаратное ускорение<br /><br /> Высокая пропускная способность<br /><br /> Утверждения клиентов с широкими функциональными возможностями<br /><br /> Федерация<br /><br /> Многофакторная проверка подлинности<br /><br /> Пользовательские маркеры<br /><br /> Безопасный брандмауэр<br /><br /> Приложения с большой задержкой<br /><br /> Повторное шифрование по нескольким участкам ретрансляции|  
+|<span data-ttu-id="3f616-211">Параметр</span><span class="sxs-lookup"><span data-stu-id="3f616-211">Setting</span></span>|<span data-ttu-id="3f616-212">Функции</span><span class="sxs-lookup"><span data-stu-id="3f616-212">Features</span></span>|  
+|-------------|--------------|  
+|<span data-ttu-id="3f616-213">Transport</span><span class="sxs-lookup"><span data-stu-id="3f616-213">Transport</span></span>|<span data-ttu-id="3f616-214">Проверка подлинности сервера</span><span class="sxs-lookup"><span data-stu-id="3f616-214">Server authentication</span></span><br /><br /> <span data-ttu-id="3f616-215">Проверка подлинности клиента</span><span class="sxs-lookup"><span data-stu-id="3f616-215">Client authentication</span></span><br /><br /> <span data-ttu-id="3f616-216">Безопасность типа "точка-точка"</span><span class="sxs-lookup"><span data-stu-id="3f616-216">Point-to-point security</span></span><br /><br /> <span data-ttu-id="3f616-217">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="3f616-217">Interoperability</span></span><br /><br /> <span data-ttu-id="3f616-218">Аппаратное ускорение</span><span class="sxs-lookup"><span data-stu-id="3f616-218">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="3f616-219">Высокая пропускная способность</span><span class="sxs-lookup"><span data-stu-id="3f616-219">High throughput</span></span><br /><br /> <span data-ttu-id="3f616-220">Безопасный брандмауэр</span><span class="sxs-lookup"><span data-stu-id="3f616-220">Secure firewall</span></span><br /><br /> <span data-ttu-id="3f616-221">Приложения с большой задержкой</span><span class="sxs-lookup"><span data-stu-id="3f616-221">High-latency applications</span></span><br /><br /> <span data-ttu-id="3f616-222">Повторное шифрование по нескольким участкам ретрансляции</span><span class="sxs-lookup"><span data-stu-id="3f616-222">Re-encryption across multiple hops</span></span>|  
+|<span data-ttu-id="3f616-223">Сообщение</span><span class="sxs-lookup"><span data-stu-id="3f616-223">Message</span></span>|<span data-ttu-id="3f616-224">Проверка подлинности сервера</span><span class="sxs-lookup"><span data-stu-id="3f616-224">Server authentication</span></span><br /><br /> <span data-ttu-id="3f616-225">Проверка подлинности клиента</span><span class="sxs-lookup"><span data-stu-id="3f616-225">Client authentication</span></span><br /><br /> <span data-ttu-id="3f616-226">Сквозная безопасность</span><span class="sxs-lookup"><span data-stu-id="3f616-226">End-to-end security</span></span><br /><br /> <span data-ttu-id="3f616-227">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="3f616-227">Interoperability</span></span><br /><br /> <span data-ttu-id="3f616-228">Утверждения с широкими функциональными возможностями</span><span class="sxs-lookup"><span data-stu-id="3f616-228">Rich claims</span></span><br /><br /> <span data-ttu-id="3f616-229">Федерация</span><span class="sxs-lookup"><span data-stu-id="3f616-229">Federation</span></span><br /><br /> <span data-ttu-id="3f616-230">Многофакторная проверка подлинности</span><span class="sxs-lookup"><span data-stu-id="3f616-230">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="3f616-231">Пользовательские маркеры</span><span class="sxs-lookup"><span data-stu-id="3f616-231">Custom tokens</span></span><br /><br /> <span data-ttu-id="3f616-232">Служба удостоверения/отметки времени</span><span class="sxs-lookup"><span data-stu-id="3f616-232">Notary/timestamp service</span></span><br /><br /> <span data-ttu-id="3f616-233">Приложения с большой задержкой</span><span class="sxs-lookup"><span data-stu-id="3f616-233">High-latency applications</span></span><br /><br /> <span data-ttu-id="3f616-234">Сохраняемость сигнатур сообщений</span><span class="sxs-lookup"><span data-stu-id="3f616-234">Persistence of message signatures</span></span>|  
+|<span data-ttu-id="3f616-235">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="3f616-235">TransportWithMessageCredential</span></span>|<span data-ttu-id="3f616-236">Проверка подлинности сервера</span><span class="sxs-lookup"><span data-stu-id="3f616-236">Server authentication</span></span><br /><br /> <span data-ttu-id="3f616-237">Проверка подлинности клиента</span><span class="sxs-lookup"><span data-stu-id="3f616-237">Client authentication</span></span><br /><br /> <span data-ttu-id="3f616-238">Безопасность типа "точка-точка"</span><span class="sxs-lookup"><span data-stu-id="3f616-238">Point-to-point security</span></span><br /><br /> <span data-ttu-id="3f616-239">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="3f616-239">Interoperability</span></span><br /><br /> <span data-ttu-id="3f616-240">Аппаратное ускорение</span><span class="sxs-lookup"><span data-stu-id="3f616-240">Hardware acceleration</span></span><br /><br /> <span data-ttu-id="3f616-241">Высокая пропускная способность</span><span class="sxs-lookup"><span data-stu-id="3f616-241">High throughput</span></span><br /><br /> <span data-ttu-id="3f616-242">Утверждения клиентов с широкими функциональными возможностями</span><span class="sxs-lookup"><span data-stu-id="3f616-242">Rich client claims</span></span><br /><br /> <span data-ttu-id="3f616-243">Федерация</span><span class="sxs-lookup"><span data-stu-id="3f616-243">Federation</span></span><br /><br /> <span data-ttu-id="3f616-244">Многофакторная проверка подлинности</span><span class="sxs-lookup"><span data-stu-id="3f616-244">Multifactor authentication</span></span><br /><br /> <span data-ttu-id="3f616-245">Пользовательские маркеры</span><span class="sxs-lookup"><span data-stu-id="3f616-245">Custom tokens</span></span><br /><br /> <span data-ttu-id="3f616-246">Безопасный брандмауэр</span><span class="sxs-lookup"><span data-stu-id="3f616-246">Secure firewall</span></span><br /><br /> <span data-ttu-id="3f616-247">Приложения с большой задержкой</span><span class="sxs-lookup"><span data-stu-id="3f616-247">High-latency applications</span></span><br /><br /> <span data-ttu-id="3f616-248">Повторное шифрование по нескольким участкам ретрансляции</span><span class="sxs-lookup"><span data-stu-id="3f616-248">Re-encryption across multiple hops</span></span>|  
   
- В следующей таблице перечислены привязки, поддерживающие различные параметры режима.Выберите в таблице привязку для использования при создании конечной точки своей службы.  
+ <span data-ttu-id="3f616-249">В следующей таблице перечислены привязки, поддерживающие различные параметры режима.</span><span class="sxs-lookup"><span data-stu-id="3f616-249">The following table lists the bindings that support the various mode settings.</span></span> <span data-ttu-id="3f616-250">Выберите в таблице привязку для использования при создании конечной точки своей службы.</span><span class="sxs-lookup"><span data-stu-id="3f616-250">Select a binding from the table to use to create your service endpoint.</span></span>  
   
-|Привязка|Поддержка режима Transport|Поддержка режима Message|Поддержка режима TransportWithMessageCredential|  
-|--------------|--------------------------------|------------------------------|-----------------------------------------------------|  
-|`BasicHttpBinding`|Да|Да|Да|  
-|`WSHttpBinding`|Да|Да|Да|  
-|`WSDualHttpBinding`|Нет|Да|Нет|  
-|`NetTcpBinding`|Да|Да|Да|  
-|`NetNamedPipeBinding`|Да|Нет|Нет|  
-|`NetMsmqBinding`|Да|Да|Нет|  
-|`MsmqIntegrationBinding`|Да|Нет|Нет|  
-|`wsFederationHttpBinding`|Нет|Да|Да|  
+|<span data-ttu-id="3f616-251">Привязка</span><span class="sxs-lookup"><span data-stu-id="3f616-251">Binding</span></span>|<span data-ttu-id="3f616-252">Поддержка режима Transport</span><span class="sxs-lookup"><span data-stu-id="3f616-252">Transport mode support</span></span>|<span data-ttu-id="3f616-253">Поддержка режима Message</span><span class="sxs-lookup"><span data-stu-id="3f616-253">Message mode support</span></span>|<span data-ttu-id="3f616-254">Поддержка режима TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="3f616-254">TransportWithMessageCredential support</span></span>|  
+|-------------|----------------------------|--------------------------|--------------------------------------------|  
+|`BasicHttpBinding`|<span data-ttu-id="3f616-255">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-255">Yes</span></span>|<span data-ttu-id="3f616-256">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-256">Yes</span></span>|<span data-ttu-id="3f616-257">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-257">Yes</span></span>|  
+|`WSHttpBinding`|<span data-ttu-id="3f616-258">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-258">Yes</span></span>|<span data-ttu-id="3f616-259">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-259">Yes</span></span>|<span data-ttu-id="3f616-260">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-260">Yes</span></span>|  
+|`WSDualHttpBinding`|<span data-ttu-id="3f616-261">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-261">No</span></span>|<span data-ttu-id="3f616-262">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-262">Yes</span></span>|<span data-ttu-id="3f616-263">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-263">No</span></span>|  
+|`NetTcpBinding`|<span data-ttu-id="3f616-264">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-264">Yes</span></span>|<span data-ttu-id="3f616-265">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-265">Yes</span></span>|<span data-ttu-id="3f616-266">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-266">Yes</span></span>|  
+|`NetNamedPipeBinding`|<span data-ttu-id="3f616-267">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-267">Yes</span></span>|<span data-ttu-id="3f616-268">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-268">No</span></span>|<span data-ttu-id="3f616-269">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-269">No</span></span>|  
+|`NetMsmqBinding`|<span data-ttu-id="3f616-270">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-270">Yes</span></span>|<span data-ttu-id="3f616-271">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-271">Yes</span></span>|<span data-ttu-id="3f616-272">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-272">No</span></span>|  
+|`MsmqIntegrationBinding`|<span data-ttu-id="3f616-273">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-273">Yes</span></span>|<span data-ttu-id="3f616-274">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-274">No</span></span>|<span data-ttu-id="3f616-275">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-275">No</span></span>|  
+|`wsFederationHttpBinding`|<span data-ttu-id="3f616-276">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-276">No</span></span>|<span data-ttu-id="3f616-277">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-277">Yes</span></span>|<span data-ttu-id="3f616-278">Да</span><span class="sxs-lookup"><span data-stu-id="3f616-278">Yes</span></span>|  
   
-## Учетные данные транспорта в привязках  
- В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки `BasicHttpBinding` или `WSHttpBinding` в режиме безопасности транспорта.  
+## <a name="transport-credentials-in-bindings"></a><span data-ttu-id="3f616-279">Учетные данные транспорта в привязках</span><span class="sxs-lookup"><span data-stu-id="3f616-279">Transport Credentials in Bindings</span></span>  
+ <span data-ttu-id="3f616-280">В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки `BasicHttpBinding` или `WSHttpBinding` в режиме безопасности транспорта.</span><span class="sxs-lookup"><span data-stu-id="3f616-280">The following table lists the client credential types available when using either `BasicHttpBinding` or `WSHttpBinding` in transport security mode.</span></span>  
   
-|Тип|Описание|  
-|---------|--------------|  
-|None|Указывает, что клиенту не требуется предоставлять учетные данные.Это означает, что клиент является анонимным.|  
-|Basic|Обычная проверка подлинности.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в документе "RFC 2617 – HTTP Authentication: Basic and Digest Authentication" \(RFC 2617 – Проверка подлинности HTTP: обычная проверка подлинности и дайджест\-проверка подлинности\) по ссылке [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Дайджест\-проверка подлинности.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] в документе "RFC 2617 – HTTP Authentication: Basic and Digest Authentication" \(RFC 2617 – Проверка подлинности HTTP: обычная проверка подлинности и дайджест\-проверка подлинности\) по ссылке [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|NTLM|Проверка подлинности NTLM \(NT LAN Manager\).|  
-|Windows|Проверка подлинности Windows.|  
-|Certificate|Проверка подлинности производится с использованием сертификата.|  
-|IssuedToken|Позволяет службе потребовать, чтобы проверка подлинности клиента производилась с помощью маркера, выданного службой маркеров безопасности или [!INCLUDE[infocard](../../../../includes/infocard-md.md)].[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|<span data-ttu-id="3f616-281">Тип</span><span class="sxs-lookup"><span data-stu-id="3f616-281">Type</span></span>|<span data-ttu-id="3f616-282">Описание</span><span class="sxs-lookup"><span data-stu-id="3f616-282">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="3f616-283">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-283">None</span></span>|<span data-ttu-id="3f616-284">Указывает, что клиенту не требуется предоставлять учетные данные.</span><span class="sxs-lookup"><span data-stu-id="3f616-284">Specifies that the client does not need to present any credential.</span></span> <span data-ttu-id="3f616-285">Это означает, что клиент является анонимным.</span><span class="sxs-lookup"><span data-stu-id="3f616-285">This translates to an anonymous client.</span></span>|  
+|<span data-ttu-id="3f616-286">Basic</span><span class="sxs-lookup"><span data-stu-id="3f616-286">Basic</span></span>|<span data-ttu-id="3f616-287">Обычная проверка подлинности.</span><span class="sxs-lookup"><span data-stu-id="3f616-287">Basic authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-288">Документе RFC 2617, проверка подлинности HTTP: Basic и дайджест-проверки подлинности, доступных [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span><span class="sxs-lookup"><span data-stu-id="3f616-288"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="3f616-289">Digest</span><span class="sxs-lookup"><span data-stu-id="3f616-289">Digest</span></span>|<span data-ttu-id="3f616-290">Дайджест-проверка подлинности.</span><span class="sxs-lookup"><span data-stu-id="3f616-290">Digest authentication.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-291">Документе RFC 2617, проверка подлинности HTTP: Basic и дайджест-проверки подлинности, доступных [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span><span class="sxs-lookup"><span data-stu-id="3f616-291"> RFC 2617 – HTTP Authentication: Basic and Digest Authentication, available at [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).</span></span>|  
+|<span data-ttu-id="3f616-292">NTLM</span><span class="sxs-lookup"><span data-stu-id="3f616-292">NTLM</span></span>|<span data-ttu-id="3f616-293">Проверка подлинности NTLM (NT LAN Manager).</span><span class="sxs-lookup"><span data-stu-id="3f616-293">NT LAN Manager (NTLM) authentication.</span></span>|  
+|<span data-ttu-id="3f616-294">Windows</span><span class="sxs-lookup"><span data-stu-id="3f616-294">Windows</span></span>|<span data-ttu-id="3f616-295">Проверка подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="3f616-295">Windows authentication.</span></span>|  
+|<span data-ttu-id="3f616-296">Сертификат</span><span class="sxs-lookup"><span data-stu-id="3f616-296">Certificate</span></span>|<span data-ttu-id="3f616-297">Проверка подлинности производится с использованием сертификата.</span><span class="sxs-lookup"><span data-stu-id="3f616-297">Authentication performed using a certificate.</span></span>|  
+|<span data-ttu-id="3f616-298">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="3f616-298">IssuedToken</span></span>|<span data-ttu-id="3f616-299">Позволяет службе потребовать, чтобы проверка подлинности клиента производилась с помощью маркера, выданного службой маркеров безопасности или [!INCLUDE[infocard](../../../../includes/infocard-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3f616-299">Allows the service to require that the client be authenticated using a token issued by a security token service or by [!INCLUDE[infocard](../../../../includes/infocard-md.md)].</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3f616-300">[Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span><span class="sxs-lookup"><span data-stu-id="3f616-300"> [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>|  
   
-### Учетные данные клиента в привязках в режиме Message  
- В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки в режиме безопасности Message.  
+### <a name="message-client-credentials-in-bindings"></a><span data-ttu-id="3f616-301">Учетные данные клиента в привязках в режиме Message</span><span class="sxs-lookup"><span data-stu-id="3f616-301">Message Client Credentials in Bindings</span></span>  
+ <span data-ttu-id="3f616-302">В приведенной ниже таблице перечислены типы учетных данных клиента, доступные при использовании привязки в режиме безопасности Message.</span><span class="sxs-lookup"><span data-stu-id="3f616-302">The following table lists the client credential types available when using a binding in Message security mode.</span></span>  
   
-|Тип|Описание|  
-|---------|--------------|  
-|None|Позволяет службе взаимодействовать с анонимными клиентами.|  
-|Windows|Позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows.|  
-|UserName|Позволяет службе запрашивать проверку подлинности клиента на основе учетных данных типа "имя пользователя".Обратите внимание, что если задан режим безопасности `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает отправку дайджеста пароля или создание ключей с помощью пароля и использование таких ключей для режима безопасности Message.Таким образом, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] принудительно задает безопасность транспорта при использовании учетных данных типа "имя пользователя".|  
-|Certificate|Позволяет службе требовать проверку подлинности клиента с помощью сертификата.|  
-|IssuedToken|Позволяет службе использовать службу маркеров безопасности для создания пользовательского маркера.|  
+|<span data-ttu-id="3f616-303">Тип</span><span class="sxs-lookup"><span data-stu-id="3f616-303">Type</span></span>|<span data-ttu-id="3f616-304">Описание</span><span class="sxs-lookup"><span data-stu-id="3f616-304">Description</span></span>|  
+|----------|-----------------|  
+|<span data-ttu-id="3f616-305">Нет</span><span class="sxs-lookup"><span data-stu-id="3f616-305">None</span></span>|<span data-ttu-id="3f616-306">Позволяет службе взаимодействовать с анонимными клиентами.</span><span class="sxs-lookup"><span data-stu-id="3f616-306">Allows the service to interact with anonymous clients.</span></span>|  
+|<span data-ttu-id="3f616-307">Windows</span><span class="sxs-lookup"><span data-stu-id="3f616-307">Windows</span></span>|<span data-ttu-id="3f616-308">Позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows.</span><span class="sxs-lookup"><span data-stu-id="3f616-308">Allows SOAP message exchanges to be made under the authenticated context of a Windows credential.</span></span>|  
+|<span data-ttu-id="3f616-309">UserName</span><span class="sxs-lookup"><span data-stu-id="3f616-309">UserName</span></span>|<span data-ttu-id="3f616-310">Позволяет службе запрашивать проверку подлинности клиента на основе учетных данных типа "имя пользователя".</span><span class="sxs-lookup"><span data-stu-id="3f616-310">Allows the service to require that the client be authenticated using a user name credential.</span></span> <span data-ttu-id="3f616-311">Обратите внимание, что если задан режим безопасности `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не поддерживает отправку дайджеста пароля или создание ключей с помощью пароля и использование таких ключей для режима безопасности Message.</span><span class="sxs-lookup"><span data-stu-id="3f616-311">Note that when the security mode is set to `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not support sending a password digest or deriving keys using password and using such keys for Message mode security.</span></span> <span data-ttu-id="3f616-312">Таким образом, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] принудительно задает безопасность транспорта при использовании учетных данных типа "имя пользователя".</span><span class="sxs-lookup"><span data-stu-id="3f616-312">As such, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enforces that the transport is secured when using user name credentials.</span></span>|  
+|<span data-ttu-id="3f616-313">Сертификат</span><span class="sxs-lookup"><span data-stu-id="3f616-313">Certificate</span></span>|<span data-ttu-id="3f616-314">Позволяет службе требовать проверки подлинности клиента с помощью сертификата.</span><span class="sxs-lookup"><span data-stu-id="3f616-314">Allows the service to require that the client be authenticated using a certificate.</span></span>|  
+|<span data-ttu-id="3f616-315">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="3f616-315">IssuedToken</span></span>|<span data-ttu-id="3f616-316">Позволяет службе использовать службу маркеров безопасности для создания пользовательского маркера.</span><span class="sxs-lookup"><span data-stu-id="3f616-316">Allows the service to use a security token service to supply a custom token.</span></span>|  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Выбор типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)   
- [Поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a><span data-ttu-id="3f616-317">См. также</span><span class="sxs-lookup"><span data-stu-id="3f616-317">See Also</span></span>  
+ [<span data-ttu-id="3f616-318">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="3f616-318">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="3f616-319">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="3f616-319">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="3f616-320">При выборе типа учетных данных</span><span class="sxs-lookup"><span data-stu-id="3f616-320">Selecting a Credential Type</span></span>](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="3f616-321">Возможности безопасности при использовании пользовательских привязок</span><span class="sxs-lookup"><span data-stu-id="3f616-321">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="3f616-322">Поведения безопасности</span><span class="sxs-lookup"><span data-stu-id="3f616-322">Security Behaviors</span></span>](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="3f616-323">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="3f616-323">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

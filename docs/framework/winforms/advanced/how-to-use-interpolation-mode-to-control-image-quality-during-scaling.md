@@ -1,57 +1,61 @@
 ---
-title: "Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "изображения [Windows Forms], управление качеством"
-  - "изображения [Windows Forms], масштабирование"
-  - "режим интерполяции, управление качеством изображения"
+title: "Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- interpolation mode [Windows Forms], controlling image quality
+- images [Windows Forms], scaling
+- images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10a0ef4e7fd8514245a7659dd515d8f363a716ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании
-Режим интерполяции объекта <xref:System.Drawing.Graphics> влияет на способ, с помощью которого [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] масштабирует \(растягивает и сжимает\) изображения.  Перечисление <xref:System.Drawing.Drawing2D.InterpolationMode> определяет различные режимы интерполяции, некоторые из которых приведены в следующем списке:  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a><span data-ttu-id="c0aba-102">Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании</span><span class="sxs-lookup"><span data-stu-id="c0aba-102">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>
+<span data-ttu-id="c0aba-103">Режим интерполяции <xref:System.Drawing.Graphics> влияет на способ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] масштабирует (растягивает и сжимает) изображения.</span><span class="sxs-lookup"><span data-stu-id="c0aba-103">The interpolation mode of a <xref:System.Drawing.Graphics> object influences the way [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] scales (stretches and shrinks) images.</span></span> <span data-ttu-id="c0aba-104"><xref:System.Drawing.Drawing2D.InterpolationMode> Перечисление определяет различные режимы интерполяции, некоторые из которых приведены в следующем списке:</span><span class="sxs-lookup"><span data-stu-id="c0aba-104">The <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration defines several interpolation modes, some of which are shown in the following list:</span></span>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- Чтобы растянуть изображение, каждый пиксель этого исходного изображения должен быть сопоставлен группе пикселей увеличенного изображения.  Чтобы сжать изображение, группы пикселей этого исходного изображения должны быть сопоставлены отдельным пикселям уменьшенного изображения.  Качество масштабированного изображения определяется алгоритмами, используемыми для осуществления этих сопоставлений.  Алгоритмы, создающие более качественные масштабированные изображения, обычно требуют больших затрат машинного времени.  Из методов интерполяции, приведенных в предыдущем списке, <xref:System.Drawing.Drawing2D.InterpolationMode> обеспечивает наихудшее качество, а <xref:System.Drawing.Drawing2D.InterpolationMode> — наилучшее.  
+ <span data-ttu-id="c0aba-105">Растянуть изображение, каждая точка исходного изображения должно быть сопоставлено в группу точек увеличенного изображения.</span><span class="sxs-lookup"><span data-stu-id="c0aba-105">To stretch an image, each pixel in the original image must be mapped to a group of pixels in the larger image.</span></span> <span data-ttu-id="c0aba-106">Сжать изображение, группы точек исходное изображение должно быть сопоставлено отдельным точкам уменьшенного изображения.</span><span class="sxs-lookup"><span data-stu-id="c0aba-106">To shrink an image, groups of pixels in the original image must be mapped to single pixels in the smaller image.</span></span> <span data-ttu-id="c0aba-107">Эффективность алгоритмы, которые выполняют эти сопоставления определяет качество масштабированного изображения.</span><span class="sxs-lookup"><span data-stu-id="c0aba-107">The effectiveness of the algorithms that perform these mappings determines the quality of a scaled image.</span></span> <span data-ttu-id="c0aba-108">Алгоритмы, создающие масштабированные изображения более высокого качества, как правило, требуют большего времени обработки.</span><span class="sxs-lookup"><span data-stu-id="c0aba-108">Algorithms that produce higher-quality scaled images tend to require more processing time.</span></span> <span data-ttu-id="c0aba-109">В предыдущем списке <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> режим низкое качество и <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> режим высочайшее качество.</span><span class="sxs-lookup"><span data-stu-id="c0aba-109">In the preceding list, <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> is the lowest-quality mode and <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> is the highest-quality mode.</span></span>  
   
- Чтобы установить режим интерполяции, присвойте один из членов перечисления <xref:System.Drawing.Drawing2D.InterpolationMode> свойству <xref:System.Drawing.Graphics.InterpolationMode%2A> объекта <xref:System.Drawing.Graphics>.  
+ <span data-ttu-id="c0aba-110">Чтобы задать режим интерполяции, назначить один из членов <xref:System.Drawing.Drawing2D.InterpolationMode> перечисления <xref:System.Drawing.Graphics.InterpolationMode%2A> свойство <xref:System.Drawing.Graphics> объекта.</span><span class="sxs-lookup"><span data-stu-id="c0aba-110">To set the interpolation mode, assign one of the members of the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to the <xref:System.Drawing.Graphics.InterpolationMode%2A> property of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## Пример  
- В следующем примере рисуется изображение, которое затем сжимается с использованием трех различных способов интерполяции.  
+## <a name="example"></a><span data-ttu-id="c0aba-111">Пример</span><span class="sxs-lookup"><span data-stu-id="c0aba-111">Example</span></span>  
+ <span data-ttu-id="c0aba-112">В следующем примере изображение рисуется и затем сжимается с использованием трех различных способов интерполяции.</span><span class="sxs-lookup"><span data-stu-id="c0aba-112">The following example draws an image and then shrinks the image with three different interpolation modes.</span></span>  
   
- На следующем рисунке показаны как исходное изображение, так и три варианта уменьшенного изображения.  
+ <span data-ttu-id="c0aba-113">Ниже показан исходный образ и три меньшего размера изображения.</span><span class="sxs-lookup"><span data-stu-id="c0aba-113">The following illustration shows the original image and the three smaller images.</span></span>  
   
- ![Изображение с отличными параметрами вставки](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")  
+ <span data-ttu-id="c0aba-114">![Изображение с отличными параметрами вставки](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span><span class="sxs-lookup"><span data-stu-id="c0aba-114">![Image with Varied Interpolation Settings](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="c0aba-115">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="c0aba-115">Compiling the Code</span></span>  
+ <span data-ttu-id="c0aba-116">Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="c0aba-116">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="c0aba-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c0aba-117">See Also</span></span>  
+ [<span data-ttu-id="c0aba-118">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="c0aba-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="c0aba-119">Работа с растровыми и векторными изображениями, значками и метафайлами</span><span class="sxs-lookup"><span data-stu-id="c0aba-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

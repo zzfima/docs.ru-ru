@@ -1,120 +1,117 @@
 ---
-title: "Оператор Const (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Const"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Const - оператор [Visual Basic]"
+title: "Оператор Const (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Const
+helpviewer_keywords: Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Const (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объявляет и определяет одну или несколько констант.  
+# <a name="const-statement-visual-basic"></a><span data-ttu-id="fdd50-102">Оператор Const (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fdd50-102">Const Statement (Visual Basic)</span></span>
+<span data-ttu-id="fdd50-103">Объявляет и определяет одну или несколько констант.</span><span class="sxs-lookup"><span data-stu-id="fdd50-103">Declares and defines one or more constants.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="fdd50-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fdd50-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
+[ <attributelist> ] [ accessmodifier ] [ Shadows ]   
 Const constantlist  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="fdd50-105">Части</span><span class="sxs-lookup"><span data-stu-id="fdd50-105">Parts</span></span>  
  `attributelist`  
- Необязательный.  Список атрибутов, применяемых ко всем константам, объявленным в данном операторе.  См. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловых скобках \("`<`" и "`>`"\).  
+ <span data-ttu-id="fdd50-106">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="fdd50-106">Optional.</span></span> <span data-ttu-id="fdd50-107">Список атрибутов, которые применяются ко всем константам, объявляемых в этом операторе.</span><span class="sxs-lookup"><span data-stu-id="fdd50-107">List of attributes that apply to all the constants declared in this statement.</span></span> <span data-ttu-id="fdd50-108">В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).</span><span class="sxs-lookup"><span data-stu-id="fdd50-108">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>  
   
  `accessmodifier`  
- Необязательный.  Позволяет указать, какой код может получить доступ к этим константам.  Может быть [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend` или [Private](../../../visual-basic/language-reference/modifiers/private.md).  
+ <span data-ttu-id="fdd50-109">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="fdd50-109">Optional.</span></span> <span data-ttu-id="fdd50-110">Позволяет указать, какой код может обращаться к этим константам.</span><span class="sxs-lookup"><span data-stu-id="fdd50-110">Use this to specify what code can access these constants.</span></span> <span data-ttu-id="fdd50-111">Может быть [открытый](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, или [частного](../../../visual-basic/language-reference/modifiers/private.md).</span><span class="sxs-lookup"><span data-stu-id="fdd50-111">Can be [Public](../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md), `Protected Friend`, or [Private](../../../visual-basic/language-reference/modifiers/private.md).</span></span>  
   
  `Shadows`  
- Необязательный.  Используется для переобъявления и скрытия программного элемента в базовом классе.  См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ <span data-ttu-id="fdd50-112">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="fdd50-112">Optional.</span></span> <span data-ttu-id="fdd50-113">Используется для повторного объявления и скрытия программного элемента в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="fdd50-113">Use this to redeclare and hide a programming element in a base class.</span></span> <span data-ttu-id="fdd50-114">В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="fdd50-114">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>  
   
  `constantlist`  
- Обязательный.  Список констант, объявляемых в этом операторе.  
+ <span data-ttu-id="fdd50-115">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="fdd50-115">Required.</span></span> <span data-ttu-id="fdd50-116">Список констант, объявляемых в этом операторе.</span><span class="sxs-lookup"><span data-stu-id="fdd50-116">List of constants being declared in this statement.</span></span>  
   
- `constant` `[ ,` `constant` `... ]`  
+ <span data-ttu-id="fdd50-117">`constant` `[ ,` `constant` `... ]`</span><span class="sxs-lookup"><span data-stu-id="fdd50-117">`constant` `[ ,` `constant` `... ]`</span></span>  
   
- Каждая процедура `constant` имеет следующий синтаксис и составляющие:  
+ <span data-ttu-id="fdd50-118">Каждый элемент `constant` имеет перечисленные ниже синтаксис и компоненты.</span><span class="sxs-lookup"><span data-stu-id="fdd50-118">Each `constant` has the following syntax and parts:</span></span>  
   
- `constantname` `[ As` `datatype` `] =` `initializer`  
+ <span data-ttu-id="fdd50-119">`constantname` `[ As` `datatype` `] =` `initializer`</span><span class="sxs-lookup"><span data-stu-id="fdd50-119">`constantname` `[ As` `datatype` `] =` `initializer`</span></span>  
   
-|Часть|Описание|  
-|-----------|--------------|  
-|`constantname`|Обязательный.  Имя константы.  Дополнительные сведения см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`datatype`|Требуется, если для `Option Strict` установлено значение `On`.  Тип данных константы.|  
-|`initializer`|Обязательный.  Выражение, вычисляемое во время компиляции и присваиваемое константе.|  
+|<span data-ttu-id="fdd50-120">Отделение</span><span class="sxs-lookup"><span data-stu-id="fdd50-120">Part</span></span>|<span data-ttu-id="fdd50-121">Описание</span><span class="sxs-lookup"><span data-stu-id="fdd50-121">Description</span></span>|  
+|----------|-----------------|  
+|`constantname`|<span data-ttu-id="fdd50-122">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="fdd50-122">Required.</span></span> <span data-ttu-id="fdd50-123">Имя константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-123">Name of the constant.</span></span> <span data-ttu-id="fdd50-124">В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="fdd50-124">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`datatype`|<span data-ttu-id="fdd50-125">Обязателен, если `Option Strict` — `On`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-125">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="fdd50-126">Тип данных константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-126">Data type of the constant.</span></span>|  
+|`initializer`|<span data-ttu-id="fdd50-127">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="fdd50-127">Required.</span></span> <span data-ttu-id="fdd50-128">Выражение, которое вычисляется во время компиляции и присваиваемое константе.</span><span class="sxs-lookup"><span data-stu-id="fdd50-128">Expression that is evaluated at compile time and assigned to the constant.</span></span>|  
   
-## Заметки  
- Если в приложении имеется значение, которое никогда не изменяется, можно определить именованную константу и использовать ее вместо исходного значения.  Имя проще запомнить, чем значение.  Можно определить константу только один раз и использовать ее в коде.  Если в более поздней версии требуется переопределить значение, оператор `Const` является единственным местом, где необходимо внести изменения.  
+## <a name="remarks"></a><span data-ttu-id="fdd50-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="fdd50-129">Remarks</span></span>  
+ <span data-ttu-id="fdd50-130">Если в приложении имеется значение, которое никогда не изменяется, можно определить именованную константу и использовать его вместо литеральных значений.</span><span class="sxs-lookup"><span data-stu-id="fdd50-130">If you have a value that never changes in your application, you can define a named constant and use it in place of a literal value.</span></span> <span data-ttu-id="fdd50-131">Имя легче запомнить, чем значение.</span><span class="sxs-lookup"><span data-stu-id="fdd50-131">A name is easier to remember than a value.</span></span> <span data-ttu-id="fdd50-132">Можно определить константу только один раз и использовать его во многих местах в коде.</span><span class="sxs-lookup"><span data-stu-id="fdd50-132">You can define the constant just once and use it in many places in your code.</span></span> <span data-ttu-id="fdd50-133">Если в более поздней версии требуется переопределить значение, `Const` оператор является единственным местом, необходимо внести изменения.</span><span class="sxs-lookup"><span data-stu-id="fdd50-133">If in a later version you need to redefine the value, the `Const` statement is the only place you need to make a change.</span></span>  
   
- `Const` можно использовать только на уровне модуля или процедуры.  Это означает, что *контекст объявления* для переменной должен быть классом, структурой, модулем, процедурой или блоком и не может быть исходным файлом, пространством имен или интерфейсом.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="fdd50-134">Можно использовать `Const` только на уровне модуля или процедуры.</span><span class="sxs-lookup"><span data-stu-id="fdd50-134">You can use `Const` only at module or procedure level.</span></span> <span data-ttu-id="fdd50-135">Это означает *контекст объявления* для переменной должен быть класс, структура, модуль, процедуры или блока и не может быть исходным файлом, пространством имен или интерфейс.</span><span class="sxs-lookup"><span data-stu-id="fdd50-135">This means the *declaration context* for a variable must be a class, structure, module, procedure, or block, and cannot be a source file, namespace, or interface.</span></span> <span data-ttu-id="fdd50-136">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="fdd50-136">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Локальные константы \(внутри процедуры\) по умолчанию имеют общий уровень доступа и в них нельзя использовать никакие модификаторы доступа.  Константы\-члены класса и модуля \(вне любых процедур\) по умолчанию имеют закрытый доступ, а константы\-члены структуры по умолчанию имеют общий доступ.  Уровни доступа можно настроить с помощью модификаторов доступа.  
+ <span data-ttu-id="fdd50-137">Локальные константы (внутри процедуры) по умолчанию для общего доступа и невозможно использовать модификаторы доступа на них.</span><span class="sxs-lookup"><span data-stu-id="fdd50-137">Local constants (inside a procedure) default to public access, and you cannot use any access modifiers on them.</span></span> <span data-ttu-id="fdd50-138">Класс и модуль члена константы (вне любых процедур) по умолчанию имеют закрытый доступ, а константы-члены структуры по умолчанию общий доступ.</span><span class="sxs-lookup"><span data-stu-id="fdd50-138">Class and module member constants (outside any procedure) default to private access, and structure member constants default to public access.</span></span> <span data-ttu-id="fdd50-139">Вы можете настроить уровни доступа с помощью модификаторов доступа.</span><span class="sxs-lookup"><span data-stu-id="fdd50-139">You can adjust their access levels with the access modifiers.</span></span>  
   
-## Правила  
+## <a name="rules"></a><span data-ttu-id="fdd50-140">Правила</span><span class="sxs-lookup"><span data-stu-id="fdd50-140">Rules</span></span>  
   
--   **Контекст объявления.** Константа, объявленная на уровне модуля, вне любой процедуры, представляет собой *константу\-член*; она является членом класса, структуры или модуля, объявляющего его.  
+-   <span data-ttu-id="fdd50-141">**Контекст объявления.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-141">**Declaration Context.**</span></span> <span data-ttu-id="fdd50-142">Константа объявленный на уровне модуля, вне любой процедуры *член*; он является членом класса, структуры или модуля, объявляющего его.</span><span class="sxs-lookup"><span data-stu-id="fdd50-142">A constant declared at module level, outside any procedure, is a *member constant*; it is a member of the class, structure, or module that declares it.</span></span>  
   
-     Константа, объявленная на процедурном уровне является *локальной константой*; она является локальной для процедуры или блока, объявляющего ее.  
+     <span data-ttu-id="fdd50-143">Константа, объявленные на уровне процедуры — *локальная константа*; она является локальной для процедуры или блока, объявляющего его.</span><span class="sxs-lookup"><span data-stu-id="fdd50-143">A constant declared at procedure level is a *local constant*; it is local to the procedure or block that declares it.</span></span>  
   
--   **Атрибуты.** Можно применить атрибуты только к константам\-членам, но не к локальным константам.  Атрибут вносит сведения для метаданных сборки, которая не имеет смысла для временного хранения таких констант, как локальные.  
+-   <span data-ttu-id="fdd50-144">**Атрибуты.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-144">**Attributes.**</span></span> <span data-ttu-id="fdd50-145">Атрибуты можно применять только к константам члена, а не к локальной константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-145">You can apply attributes only to member constants, not to local constants.</span></span> <span data-ttu-id="fdd50-146">Атрибут вносит сведения для метаданных сборки, которые не имеют смысла для временного хранения, например локальные константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-146">An attribute contributes information to the assembly's metadata, which is not meaningful for temporary storage such as local constants.</span></span>  
   
--   **Модификаторы.** По умолчанию, все константы являются `Shared`, `Static` и `ReadOnly`.  При объявлении констант эти ключевые слова использовать нельзя.  
+-   <span data-ttu-id="fdd50-147">**Модификаторы.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-147">**Modifiers.**</span></span> <span data-ttu-id="fdd50-148">По умолчанию, все константы `Shared`, `Static`, и `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-148">By default, all constants are `Shared`, `Static`, and `ReadOnly`.</span></span> <span data-ttu-id="fdd50-149">Эти ключевые слова нельзя использовать при объявлении константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-149">You cannot use any of these keywords when declaring a constant.</span></span>  
   
-     На уровне процедур нельзя использовать `Shadows` и все модификаторы доступа для объявления локальных констант.  
+     <span data-ttu-id="fdd50-150">На уровне процедуры, нельзя использовать `Shadows` или любой доступ модификаторов для объявления локальной константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-150">At procedure level, you cannot use `Shadows` or any access modifiers to declare local constants.</span></span>  
   
--   **Множественные константы.** В одном операторе объявления можно объявить несколько констант, указав компонент `constantname` для каждого из них.  Несколько констант разделяются запятыми.  
+-   <span data-ttu-id="fdd50-151">**Несколько констант.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-151">**Multiple Constants.**</span></span> <span data-ttu-id="fdd50-152">Можно объявить несколько констант в одном операторе объявления, указав `constantname` часть для каждого из них.</span><span class="sxs-lookup"><span data-stu-id="fdd50-152">You can declare several constants in the same declaration statement, specifying the `constantname` part for each one.</span></span> <span data-ttu-id="fdd50-153">Несколько констант разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="fdd50-153">Multiple constants are separated by commas.</span></span>  
   
-## Правила типов данных  
+## <a name="data-type-rules"></a><span data-ttu-id="fdd50-154">Правила типов данных</span><span class="sxs-lookup"><span data-stu-id="fdd50-154">Data Type Rules</span></span>  
   
--   **Типы данных.** Оператор `Const` может объявлять тип данных переменной.  Можно указать любой тип данных или имя перечисления.  
+-   <span data-ttu-id="fdd50-155">**Типы данных.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-155">**Data Types.**</span></span> <span data-ttu-id="fdd50-156">`Const` Инструкция может объявить тип данных переменной.</span><span class="sxs-lookup"><span data-stu-id="fdd50-156">The `Const` statement can declare the data type of a variable.</span></span> <span data-ttu-id="fdd50-157">Можно указать любой тип данных или имя перечисления.</span><span class="sxs-lookup"><span data-stu-id="fdd50-157">You can specify any data type or the name of an enumeration.</span></span>  
   
--   **Тип по умолчанию.** Если не определен элемент `datatype`, переменная принимает тип данных элемента `initializer`.  Если задан и `datatype` и `initializer`, тип данных `initializer` должен быть преобразован к `datatype`.  Если отсутствует и `datatype`, и `initializer`, по умолчанию типом данных является `Object`.  
+-   <span data-ttu-id="fdd50-158">**Тип по умолчанию.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-158">**Default Type.**</span></span> <span data-ttu-id="fdd50-159">Если вы не укажете `datatype`, константа имеет тип данных `initializer`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-159">If you do not specify `datatype`, the constant takes the data type of `initializer`.</span></span> <span data-ttu-id="fdd50-160">Если заданы оба `datatype` и `initializer`, тип данных `initializer` должно быть преобразуемым `datatype`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-160">If you specify both `datatype` and `initializer`, the data type of `initializer` must be convertible to `datatype`.</span></span> <span data-ttu-id="fdd50-161">Если ни одна из `datatype` , ни `initializer` присутствует, по умолчанию используется тип данных `Object`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-161">If neither `datatype` nor `initializer` is present, the data type defaults to `Object`.</span></span>  
   
--   **Различные типы.** Можно указать различные типы для разных констант с помощью отдельных предложений `As` для каждой объявляемой переменной.  Однако с помощью общего предложения `As` нельзя объявить несколько констант одного и того же типа.  
+-   <span data-ttu-id="fdd50-162">**Различные типы.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-162">**Different Types.**</span></span> <span data-ttu-id="fdd50-163">Можно указать различные типы данных для разных констант с помощью отдельных `As` предложение для каждой объявляемой переменной.</span><span class="sxs-lookup"><span data-stu-id="fdd50-163">You can specify different data types for different constants by using a separate `As` clause for each variable you declare.</span></span> <span data-ttu-id="fdd50-164">Однако нельзя объявлять несколько констант того же типа с помощью общего `As` предложения.</span><span class="sxs-lookup"><span data-stu-id="fdd50-164">However, you cannot declare several constants to be of the same type by using a common `As` clause.</span></span>  
   
--   **Инициализация.** Необходимо инициализировать значение каждой константы в `constantlist`.  `initializer` позволяет указать выражение, которое необходимо назначить константе.  Выражение может быть любым сочетанием литералов, других констант и членов перечислений, которые уже определены.  Для комбинирования этих элементов можно использовать арифметические и логические операторы.  
+-   <span data-ttu-id="fdd50-165">**Инициализация.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-165">**Initialization.**</span></span> <span data-ttu-id="fdd50-166">Необходимо инициализировать значение каждой константы в `constantlist`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-166">You must initialize the value of every constant in `constantlist`.</span></span> <span data-ttu-id="fdd50-167">Вы используете `initializer` позволяет указать выражение для назначения константы.</span><span class="sxs-lookup"><span data-stu-id="fdd50-167">You use `initializer` to supply an expression to be assigned to the constant.</span></span> <span data-ttu-id="fdd50-168">Выражение может быть любое сочетание литералов, другие константы, которые уже определены и членов перечисления, которые уже определены.</span><span class="sxs-lookup"><span data-stu-id="fdd50-168">The expression can be any combination of literals, other constants that are already defined, and enumeration members that are already defined.</span></span> <span data-ttu-id="fdd50-169">Можно использовать арифметические и логические операторы для объединения этих элементов.</span><span class="sxs-lookup"><span data-stu-id="fdd50-169">You can use arithmetic and logical operators to combine such elements.</span></span>  
   
-     Нельзя использовать переменные или функции в `initializer`.  Однако можно использовать ключевые слова преобразования, такие как `CByte` и `CShort`.  Также можно использовать функцию `AscW` для вызова с постоянными аргументами типа `String` или `Char`, поскольку ее значение может быть вычислено во время компиляции.  
+     <span data-ttu-id="fdd50-170">Нельзя использовать переменные или функции в `initializer`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-170">You cannot use variables or functions in `initializer`.</span></span> <span data-ttu-id="fdd50-171">Тем не менее, можно использовать ключевые слова преобразования, такие как `CByte` и `CShort`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-171">However, you can use conversion keywords such as `CByte` and `CShort`.</span></span> <span data-ttu-id="fdd50-172">Можно также использовать `AscW` при ее вызове с константой `String` или `Char` аргумент, поскольку, может быть вычислено во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="fdd50-172">You can also use `AscW` if you call it with a constant `String` or `Char` argument, since that can be evaluated at compile time.</span></span>  
   
-## Поведение  
+## <a name="behavior"></a><span data-ttu-id="fdd50-173">Поведение</span><span class="sxs-lookup"><span data-stu-id="fdd50-173">Behavior</span></span>  
   
--   **Область действия.** Локальные константы доступны только в пределах их процедуры или блока.  Константы\-члены доступны из любого места в пределах их класса, структуры или модуля.  
+-   <span data-ttu-id="fdd50-174">**Область действия.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-174">**Scope.**</span></span> <span data-ttu-id="fdd50-175">Локальные константы доступны только внутри их процедуры или блока.</span><span class="sxs-lookup"><span data-stu-id="fdd50-175">Local constants are accessible only from within their procedure or block.</span></span> <span data-ttu-id="fdd50-176">Константы-члены доступны в любом месте в пределах их класса, структуры или модуля.</span><span class="sxs-lookup"><span data-stu-id="fdd50-176">Member constants are accessible from anywhere within their class, structure, or module.</span></span>  
   
--   **Квалификация.** Код вне класса, модуля или структуры должен предварять имя константы\-члена именем этого класса, структуры или модуля.  Код за пределами процедуры или блока не может ссылаться на любые локальные константы в пределах этой процедуры или блока.  
+-   <span data-ttu-id="fdd50-177">**Квалификация.**</span><span class="sxs-lookup"><span data-stu-id="fdd50-177">**Qualification.**</span></span> <span data-ttu-id="fdd50-178">Код вне класса, структуры или модуля необходимо определять имя константы-члена с именем этого класса, структуры или модуля.</span><span class="sxs-lookup"><span data-stu-id="fdd50-178">Code outside a class, structure, or module must qualify a member constant's name with the name of that class, structure, or module.</span></span> <span data-ttu-id="fdd50-179">Код за пределами процедуры или блока не может ссылаться на любые локальные константы в пределах этой процедуры или блока.</span><span class="sxs-lookup"><span data-stu-id="fdd50-179">Code outside a procedure or block cannot refer to any local constants within that procedure or block.</span></span>  
   
-## Пример  
- В следующем примере оператор `Const` используется для объявления констант, заменяющих литералы.  
+## <a name="example"></a><span data-ttu-id="fdd50-180">Пример</span><span class="sxs-lookup"><span data-stu-id="fdd50-180">Example</span></span>  
+ <span data-ttu-id="fdd50-181">В следующем примере используется `Const` инструкции для объявления константы для использования вместо литеральных значений.</span><span class="sxs-lookup"><span data-stu-id="fdd50-181">The following example uses the `Const` statement to declare constants for use in place of literal values.</span></span>  
   
  [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
-## Пример  
- При определении константы с типом данных `Object` компилятор Visual Basic предоставляет ей тип `initializer` вместо `Object`.  В следующем примере константа `naturalLogBase` имеет тип времени выполнения `Decimal`.  
+## <a name="example"></a><span data-ttu-id="fdd50-182">Пример</span><span class="sxs-lookup"><span data-stu-id="fdd50-182">Example</span></span>  
+ <span data-ttu-id="fdd50-183">Если определить константу с типом данных `Object`, компилятор Visual Basic предоставляет тип `initializer`, а не `Object`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-183">If you define a constant with data type `Object`, the Visual Basic compiler gives it the type of `initializer`, instead of `Object`.</span></span> <span data-ttu-id="fdd50-184">В следующем примере константа `naturalLogBase` имеет тип времени выполнения `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-184">In the following example, the constant `naturalLogBase` has the run-time type `Decimal`.</span></span>  
   
  [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
- Вышеприведенный пример использует метод <xref:System.Type.ToString%2A> в объекте <xref:System.Type>, возвращенном оператором [Оператор GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), поскольку <xref:System.Type> не может быть преобразован к `String` с помощью `CStr`.  
+ <span data-ttu-id="fdd50-185">В предыдущем примере использовался <xref:System.Type.ToString%2A> метод <xref:System.Type> объект, возвращаемый [оператор GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), так как <xref:System.Type> не может быть преобразован `String` с помощью `CStr`.</span><span class="sxs-lookup"><span data-stu-id="fdd50-185">The preceding example uses the <xref:System.Type.ToString%2A> method on the <xref:System.Type> object returned by the [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md), because <xref:System.Type> cannot be converted to `String` using `CStr`.</span></span>  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Директива \#Const](../../../visual-basic/language-reference/directives/const-directive.md)   
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Оператор ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)   
- [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [Константы и перечисления](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)   
- [Константы и перечисления](../../../visual-basic/language-reference/constants-and-enumerations.md)   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a><span data-ttu-id="fdd50-186">См. также</span><span class="sxs-lookup"><span data-stu-id="fdd50-186">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ [<span data-ttu-id="fdd50-187">Оператор Enum</span><span class="sxs-lookup"><span data-stu-id="fdd50-187">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="fdd50-188">Директива #Const</span><span class="sxs-lookup"><span data-stu-id="fdd50-188">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [<span data-ttu-id="fdd50-189">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="fdd50-189">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="fdd50-190">Оператор reDim</span><span class="sxs-lookup"><span data-stu-id="fdd50-190">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [<span data-ttu-id="fdd50-191">Явные и неявные преобразования</span><span class="sxs-lookup"><span data-stu-id="fdd50-191">Implicit and Explicit Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="fdd50-192">Константы и перечисления</span><span class="sxs-lookup"><span data-stu-id="fdd50-192">Constants and Enumerations</span></span>](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
+ [<span data-ttu-id="fdd50-193">Константы и перечисления</span><span class="sxs-lookup"><span data-stu-id="fdd50-193">Constants and Enumerations</span></span>](../../../visual-basic/language-reference/constants-and-enumerations.md)  
+ [<span data-ttu-id="fdd50-194">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="fdd50-194">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

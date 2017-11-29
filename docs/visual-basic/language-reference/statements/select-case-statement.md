@@ -1,99 +1,97 @@
 ---
-title: "Оператор Select...Case (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Select"
-  - "vb.Case"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ветвление, conditional"
-  - "Case Else - оператор, Select...Case"
-  - "Case - оператор"
-  - "Case - оператор, Select...Case"
-  - "условные операторы, Select Case"
-  - "поток управления, ветвление"
-  - "Else - ключевое слово [Visual Basic], в Select...Case - операторы"
-  - "End - ключевое слово, Select...Case - операторы"
-  - "выполнение, conditional"
-  - "Is - оператор [Visual Basic], в Select...Case - операторы"
-  - "Select Case - оператор, Select...Case"
-  - "Select - оператор"
-  - "Select - оператор, Select...Case"
-  - "Select...Case - операторы"
-  - "To - ключевое слово, в Select...Case - операторы"
+title: "Оператор Select...Case (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Select
+- vb.Case
+helpviewer_keywords:
+- Select statement [Visual Basic]
+- Case statement [Visual Basic]
+- Select...Case statements
+- conditional statements [Visual Basic], Select Case
+- control flow [Visual Basic], branching
+- Else keyword [Visual Basic], in Select...Case statements
+- execution [Visual Basic], conditional
+- To keyword [Visual Basic], in Select...Case statements
+- Select Case statement [Visual Basic], Select...Case
+- Select statement [Visual Basic], Select...Case
+- Is operator [Visual Basic], in Select...Case statements
+- branching [Visual Basic], conditional
+- Case Else statement [Visual Basic], Select...Case
+- End keyword [Visual Basic], Select Case statements
+- Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Select...Case (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Выполняет один из блоков операторов в зависимости от значения выражения.  
+# <a name="selectcase-statement-visual-basic"></a><span data-ttu-id="edfd8-102">Оператор Select...Case (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edfd8-102">Select...Case Statement (Visual Basic)</span></span>
+<span data-ttu-id="edfd8-103">Запускает один из нескольких групп операторов в зависимости от значения выражения.</span><span class="sxs-lookup"><span data-stu-id="edfd8-103">Runs one of several groups of statements, depending on the value of an expression.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="edfd8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="edfd8-104">Syntax</span></span>  
   
 ```  
-Select [ Case ] testexpression  
-    [ Case expressionlist  
-        [ statements ] ]  
-    [ Case Else  
-        [ elsestatements ] ]  
+Select [ Case ] testexpression  
+    [ Case expressionlist  
+        [ statements ] ]  
+    [ Case Else  
+        [ elsestatements ] ]  
 End Select  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="edfd8-105">Части</span><span class="sxs-lookup"><span data-stu-id="edfd8-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`testexpression`|Обязательный.  Выражение.  Должен быть равен одному их простых типов данных \(`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong` и `UShort`\).|  
-|`expressionlist`|Обязателен в операторе `Case`.  Список возможных значений для `testexpression`.  Несколько выражений разделяются запятыми.  Каждое условие может принимать следующие формы:<br /><br /> -   *expression1* `To` *expression2*<br />-   `Is` \] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Используйте зарезервированное слово `To`, чтобы указать диапазон значений для `testexpression`.  Значение `expression1` должно быть меньше или равно значению `expression2`.<br /><br /> Используйте зарезервированное слово `Is` с оператором сравнения \(`=`, `<>`, `<`, `<=`, `>` или `>=`\) для ограничения возможных значений `testexpression`.  Если зарезервированное слово `Is` отсутствует, оно автоматически вставляется перед *comparisonoperator*.<br /><br /> Вид, в котором предоставляется только `expression`, рассматривается как особый случай использования `Is`, где *comparisonoperator* — знак равенства \(`=`\).  Данная форма вычисляется как `testexpression` \= `expression`.<br /><br /> Выражения в `expressionlist` могут иметь любой тип данных, если они неявно преобразуемы в тип данных, к которому относится `testexpression` и соответствующий элемент `comparisonoperator` подходит для двух используемых с ним типов данных.|  
-|`statements`|Необязательный.  Один или несколько операторов, следующих за `Case`, которые запускаются, если `testexpression` соответствует любому предложению в `expressionlist`.|  
-|`elsestatements`|Необязательный.  Один или несколько операторов, следующих за `Case Else`, которые выполняются, если `testexpression` не соответствует ни одному из предложений в `expressionlist` всех операторов `Case`.|  
-|`End Select`|Завершает определение конструкции `Select`...`Case`.|  
+|<span data-ttu-id="edfd8-106">Термин</span><span class="sxs-lookup"><span data-stu-id="edfd8-106">Term</span></span>|<span data-ttu-id="edfd8-107">Определение</span><span class="sxs-lookup"><span data-stu-id="edfd8-107">Definition</span></span>|  
+|---|---|  
+|`testexpression`|<span data-ttu-id="edfd8-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="edfd8-108">Required.</span></span> <span data-ttu-id="edfd8-109">Выражение.</span><span class="sxs-lookup"><span data-stu-id="edfd8-109">Expression.</span></span> <span data-ttu-id="edfd8-110">Необходимо иметь один из простейших типов данных (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, и `UShort`).</span><span class="sxs-lookup"><span data-stu-id="edfd8-110">Must evaluate to one of the elementary data types (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, and `UShort`).</span></span>|  
+|`expressionlist`|<span data-ttu-id="edfd8-111">Требуется в `Case` инструкции.</span><span class="sxs-lookup"><span data-stu-id="edfd8-111">Required in a `Case` statement.</span></span> <span data-ttu-id="edfd8-112">Список предложений выражение, представляющее совпадают со значениями для `testexpression`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-112">List of expression clauses representing match values for `testexpression`.</span></span> <span data-ttu-id="edfd8-113">Несколько предложений выражения разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="edfd8-113">Multiple expression clauses are separated by commas.</span></span> <span data-ttu-id="edfd8-114">Каждое условие может принимать одно из следующих форм:</span><span class="sxs-lookup"><span data-stu-id="edfd8-114">Each clause can take one of the following forms:</span></span><br /><br /> <span data-ttu-id="edfd8-115">-   *expression1* `To` *expression2*</span><span class="sxs-lookup"><span data-stu-id="edfd8-115">-   *expression1* `To` *expression2*</span></span><br /><span data-ttu-id="edfd8-116">-[ `Is` ] *comparisonoperator* *выражение*</span><span class="sxs-lookup"><span data-stu-id="edfd8-116">-   [ `Is` ] *comparisonoperator* *expression*</span></span><br /><span data-ttu-id="edfd8-117">-   *выражение*</span><span class="sxs-lookup"><span data-stu-id="edfd8-117">-   *expression*</span></span><br /><br /> <span data-ttu-id="edfd8-118">Используйте `To` ключевое слово, чтобы задать границы диапазона совпадения значений для `testexpression`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-118">Use the `To` keyword to specify the boundaries of a range of match values for `testexpression`.</span></span> <span data-ttu-id="edfd8-119">Значение `expression1` должно быть меньше или равно значению `expression2`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-119">The value of `expression1` must be less than or equal to the value of `expression2`.</span></span><br /><br /> <span data-ttu-id="edfd8-120">Используйте `Is` ключевое слово с помощью оператора сравнения (`=`, `<>`, `<`, `<=`, `>`, или `>=`) для определения ограничения возможных значений для `testexpression`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-120">Use the `Is` keyword with a comparison operator (`=`, `<>`, `<`, `<=`, `>`, or `>=`) to specify a restriction on the match values for `testexpression`.</span></span> <span data-ttu-id="edfd8-121">Если `Is` ключевое слово не предоставляется, то он автоматически вставляется перед *comparisonoperator*.</span><span class="sxs-lookup"><span data-stu-id="edfd8-121">If the `Is` keyword is not supplied, it is automatically inserted before *comparisonoperator*.</span></span><br /><br /> <span data-ttu-id="edfd8-122">Формы, указав только `expression` рассматривается как особый случай `Is` форме where *comparisonoperator* является знак равенства (`=`).</span><span class="sxs-lookup"><span data-stu-id="edfd8-122">The form specifying only `expression` is treated as a special case of the `Is` form where *comparisonoperator* is the equal sign (`=`).</span></span> <span data-ttu-id="edfd8-123">Эта форма вычисляется как `testexpression`  =  `expression`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-123">This form is evaluated as `testexpression` = `expression`.</span></span><br /><br /> <span data-ttu-id="edfd8-124">Выражения в `expressionlist` может быть любого типа данных, если они неявно преобразуются в тип `testexpression` и соответствующий `comparisonoperator` является допустимым для двух типов, он используется с.</span><span class="sxs-lookup"><span data-stu-id="edfd8-124">The expressions in `expressionlist` can be of any data type, provided they are implicitly convertible to the type of `testexpression` and the appropriate `comparisonoperator` is valid for the two types it is being used with.</span></span>|  
+|`statements`|<span data-ttu-id="edfd8-125">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="edfd8-125">Optional.</span></span> <span data-ttu-id="edfd8-126">Один или несколько следующих инструкций `Case` , если выполнения `testexpression` соответствует любое предложение в `expressionlist`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-126">One or more statements following `Case` that run if `testexpression` matches any clause in `expressionlist`.</span></span>|  
+|`elsestatements`|<span data-ttu-id="edfd8-127">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="edfd8-127">Optional.</span></span> <span data-ttu-id="edfd8-128">Один или несколько следующих инструкций `Case Else` , если выполнения `testexpression` не соответствует любое предложение в `expressionlist` любого `Case` инструкции.</span><span class="sxs-lookup"><span data-stu-id="edfd8-128">One or more statements following `Case Else` that run if `testexpression` does not match any clause in the `expressionlist` of any of the `Case` statements.</span></span>|  
+|`End Select`|<span data-ttu-id="edfd8-129">Завершает определение `Select`... `Case` построения.</span><span class="sxs-lookup"><span data-stu-id="edfd8-129">Terminates the definition of the `Select`...`Case` construction.</span></span>|  
   
-## Заметки  
- Если `testexpression` соответствует любому `Case` предложения `expressionlist`, операторы, следующие за инструкцией `Case` переводят к следующему оператору `Case`, `Case Else` или `End Select`.  Затем управление передается оператору, следующему за оператором `End Select`.  Если `testexpression` соответствует предложению `expressionlist` более чем в одном условии `Case`, выполнятся только операторы, следующие за первым сопоставлением.  
+## <a name="remarks"></a><span data-ttu-id="edfd8-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="edfd8-130">Remarks</span></span>  
+ <span data-ttu-id="edfd8-131">Если `testexpression` соответствует любому `Case` `expressionlist` предложение, инструкции, следующие за, `Case` запущена инструкция до следующего `Case`, `Case Else`, или `End Select` инструкции.</span><span class="sxs-lookup"><span data-stu-id="edfd8-131">If `testexpression` matches any `Case` `expressionlist` clause, the statements following that `Case` statement run up to the next `Case`, `Case Else`, or `End Select` statement.</span></span> <span data-ttu-id="edfd8-132">Затем управление передается оператору, следующему `End Select`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-132">Control then passes to the statement following `End Select`.</span></span> <span data-ttu-id="edfd8-133">Если `testexpression` соответствует `expressionlist` предложение в нескольких `Case` предложение, выполнить инструкции, следующие за первое совпадение.</span><span class="sxs-lookup"><span data-stu-id="edfd8-133">If `testexpression` matches an `expressionlist` clause in more than one `Case` clause, only the statements following the first match run.</span></span>  
   
- Оператор `Case Else` используется для выполнения `elsestatements`, если не найдено ни одного соответствия между `testexpression` и `expressionlist` в любом из других операторов `Case`.  Рекомендуется \(хотя это не обязательно\) иметь оператор `Case Else` в конструкции `Select Case` для обработки непредвиденных значений `testexpression`.  Если отсутствует оператор `Case`, для которого предложение `expressionlist` сопоставляется `testexpression` и отсутствует `Case Else`, то управление будет передано следующему оператору `End Select`.  
+ <span data-ttu-id="edfd8-134">`Case Else` Оператор используется для представления `elsestatements` для запуска, если совпадение не найдено между `testexpression` и `expressionlist` предложения в любой другой `Case` инструкции.</span><span class="sxs-lookup"><span data-stu-id="edfd8-134">The `Case Else` statement is used to introduce the `elsestatements` to run if no match is found between the `testexpression` and an `expressionlist` clause in any of the other `Case` statements.</span></span> <span data-ttu-id="edfd8-135">Несмотря на то, что не обязательно, рекомендуется иметь `Case Else` инструкции в вашей `Select Case` построения для обработки непредвиденных `testexpression` значения.</span><span class="sxs-lookup"><span data-stu-id="edfd8-135">Although not required, it is a good idea to have a `Case Else` statement in your `Select Case` construction to handle unforeseen `testexpression` values.</span></span> <span data-ttu-id="edfd8-136">Если не `Case` `expressionlist` предложение соответствует `testexpression` и не `Case Else` инструкции, управление передается оператору, следующему `End Select`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-136">If no `Case` `expressionlist` clause matches `testexpression` and there is no `Case Else` statement, control passes to the statement following `End Select`.</span></span>  
   
- В каждом предложении `Case` можно использовать несколько выражений и диапазонов.  Например, допустима следующая строка:  
+ <span data-ttu-id="edfd8-137">Можно использовать несколько выражений и диапазонов в каждом `Case` предложения.</span><span class="sxs-lookup"><span data-stu-id="edfd8-137">You can use multiple expressions or ranges in each `Case` clause.</span></span> <span data-ttu-id="edfd8-138">Например следующая строка является допустимым.</span><span class="sxs-lookup"><span data-stu-id="edfd8-138">For example, the following line is valid.</span></span>  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
->  Ключевое слово `Is`, используемое в операторах `Case` и `Case Else` отличается от [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md), который используется для сравнения ссылок объекта.  
+>  <span data-ttu-id="edfd8-139">`Is` Используется ключевое слово `Case` и `Case Else` инструкции не является таким же, как [оператор Is](../../../visual-basic/language-reference/operators/is-operator.md), который используется для сравнения объекта ссылки.</span><span class="sxs-lookup"><span data-stu-id="edfd8-139">The `Is` keyword used in the `Case` and `Case Else` statements is not the same as the [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md), which is used for object reference comparison.</span></span>  
   
- Можно указывать диапазоны и несколько выражений для строк.  В следующем примере `Case` пропускает любую строку, которая равна "apples", имеет значение между "nuts" и "soup" в алфавитном порядке или содержит точно такие же значения, как текущее значение `testItem`.  
+ <span data-ttu-id="edfd8-140">Можно указать диапазоны и несколько выражений для строк.</span><span class="sxs-lookup"><span data-stu-id="edfd8-140">You can specify ranges and multiple expressions for character strings.</span></span> <span data-ttu-id="edfd8-141">В следующем примере `Case` соответствует любой строке, которая равна «apples», имеет значение между «nuts» и «soup» в алфавитном порядке или содержит точно совпадает со значением текущего значения `testItem`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-141">In the following example, `Case` matches any string that is exactly equal to "apples", has a value between "nuts" and "soup" in alphabetical order, or contains the exact same value as the current value of `testItem`.</span></span>  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- Параметр `Option Compare` может повлиять на сравнение.  В `Option Compare Text` строки "Apples" и "apples" при сравнении воспринимаются как одинаковые, а при `Option Compare Binary` — нет.  
+ <span data-ttu-id="edfd8-142">Параметр `Option Compare` может влиять на сравнения строк.</span><span class="sxs-lookup"><span data-stu-id="edfd8-142">The setting of `Option Compare` can affect string comparisons.</span></span> <span data-ttu-id="edfd8-143">В разделе `Option Compare Text`, строки «Яблоки» и «яблоки» считаются равными, но в разделе `Option Compare Binary`, это не так.</span><span class="sxs-lookup"><span data-stu-id="edfd8-143">Under `Option Compare Text`, the strings "Apples" and "apples" compare as equal, but under `Option Compare Binary`, they do not.</span></span>  
   
 > [!NOTE]
->  Оператор `Case` с несколькими предложениями может демонстрировать поведение, называемое *short\-circuiting*.  Visual Basic вычисляет предложения слева направо, и если одно из них совпадает с `testexpression`, то оставшиеся предложения не обрабатываются.  Укорачивание может повысить производительность, однако оно может привести к непредсказуемым результатам, если ожидалось, что оцениваться будет каждое выражение в `expressionlist`.  Дополнительные сведения об укорачивании содержатся в разделе [Логические выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+>  <span data-ttu-id="edfd8-144">Объект `Case` инструкции с несколькими предложениями может демонстрировать поведение, известный как *сокращенного вычисления*.</span><span class="sxs-lookup"><span data-stu-id="edfd8-144">A `Case` statement with multiple clauses can exhibit behavior known as *short-circuiting*.</span></span> <span data-ttu-id="edfd8-145">Visual Basic вычисляет предложения слева направо и если он найдено соответствие с `testexpression`, оставшиеся предложения не обрабатываются.</span><span class="sxs-lookup"><span data-stu-id="edfd8-145">Visual Basic evaluates the clauses from left to right, and if one produces a match with `testexpression`, the remaining clauses are not evaluated.</span></span> <span data-ttu-id="edfd8-146">Сокращенные вычисления могут повысить производительность, но он может привести к непредвиденным результатам, если ожидалось, что каждое выражение в `expressionlist` для оценки.</span><span class="sxs-lookup"><span data-stu-id="edfd8-146">Short-circuiting can improve performance, but it can produce unexpected results if you are expecting every expression in `expressionlist` to be evaluated.</span></span> <span data-ttu-id="edfd8-147">Дополнительные сведения о сокращенное вычисление в разделе [логические выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="edfd8-147">For more information on short-circuiting, see [Boolean Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).</span></span>  
   
- Если код в пределах блока операторов `Case` или `Case Else` не требует выполнения любых дополнительных операторов в блоке, можно выйти из блока с помощью оператора `Exit Select`.  Это позволяет немедленно передать управление оператору, следующему за оператором `End Select`.  
+ <span data-ttu-id="edfd8-148">Если код внутри `Case` или `Case Else` блок инструкций необходимо выполнения любых дополнительных инструкций в блоке, можно выйти из блока с помощью `Exit Select` инструкции.</span><span class="sxs-lookup"><span data-stu-id="edfd8-148">If the code within a `Case` or `Case Else` statement block does not need to run any more of the statements in the block, it can exit the block by using the `Exit Select` statement.</span></span> <span data-ttu-id="edfd8-149">Управление передается оператору, следующему `End Select`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-149">This transfers control immediately to the statement following `End Select`.</span></span>  
   
- Конструкции `Select Case` могут быть вложенными.  Каждая вложенная конструкция `Select Case` должна иметь соответствующий оператор `End Select` и должна целиком содержаться внутри одного оператора `Case` или `Case Else` внешнего блока конструкции `Select Case` в которой она является вложенной.  
+ <span data-ttu-id="edfd8-150">`Select Case`конструкции могут быть вложенными.</span><span class="sxs-lookup"><span data-stu-id="edfd8-150">`Select Case` constructions can be nested.</span></span> <span data-ttu-id="edfd8-151">Каждая вложенная `Select Case` конструкция должна иметь соответствующий `End Select` инструкции и должны полностью содержаться в одном `Case` или `Case Else` блок операторов внешнего `Select Case` построения, в течение которого он является вложенным.</span><span class="sxs-lookup"><span data-stu-id="edfd8-151">Each nested `Select Case` construction must have a matching `End Select` statement and must be completely contained within a single `Case` or `Case Else` statement block of the outer `Select Case` construction within which it is nested.</span></span>  
   
-## Пример  
- В следующем примере используется оператор `Select Case` для записи строки, соответствующей значению переменной `number`.  Второй оператор `Case` содержит значение, соответствующее текущему значению `number`, поэтому выполняется оператор, выводящий строку "Between 6 and 8, inclusive".  
+## <a name="example"></a><span data-ttu-id="edfd8-152">Пример</span><span class="sxs-lookup"><span data-stu-id="edfd8-152">Example</span></span>  
+ <span data-ttu-id="edfd8-153">В следующем примере используется `Select Case` конструкции для записи строки, соответствующей значению переменной `number`.</span><span class="sxs-lookup"><span data-stu-id="edfd8-153">The following example uses a `Select Case` construction to write a line corresponding to the value of the variable `number`.</span></span> <span data-ttu-id="edfd8-154">Второй `Case` инструкция содержит значение, соответствующее значение текущей `number`, поэтому инструкция, которая записывает «между 6 и 8, inclusive» работает.</span><span class="sxs-lookup"><span data-stu-id="edfd8-154">The second `Case` statement contains the value that matches the current value of `number`, so the statement that writes "Between 6 and 8, inclusive" runs.</span></span>  
   
  [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   
- [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)   
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
- [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)
+## <a name="see-also"></a><span data-ttu-id="edfd8-155">См. также</span><span class="sxs-lookup"><span data-stu-id="edfd8-155">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
+ [<span data-ttu-id="edfd8-156">Оператор End</span><span class="sxs-lookup"><span data-stu-id="edfd8-156">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [<span data-ttu-id="edfd8-157">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="edfd8-157">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="edfd8-158">Оператор Option Compare</span><span class="sxs-lookup"><span data-stu-id="edfd8-158">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="edfd8-159">Оператор Exit</span><span class="sxs-lookup"><span data-stu-id="edfd8-159">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)

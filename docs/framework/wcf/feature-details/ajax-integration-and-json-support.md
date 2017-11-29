@@ -1,41 +1,43 @@
 ---
-title: "Интеграция с AJAX и поддержка JSON | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "интеграция с AJAX и поддержка JSON [WCF]"
+title: "Интеграция с AJAX и поддержка JSON"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4889c88dab77759f854da0069bb300d63ebb1a08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Интеграция с AJAX и поддержка JSON
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Поддержка формата данных асинхронных сценариев JavaScript и XML \(AJAX\) и Javascript Object Notation \(JSON\) ASP.NET позволяет клиентам AJAX использовать операции служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Клиенты AJAX представляют собой веб\-страницы, на которых выполняется код Javascript и которые обращаются к этим службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью запросов HTTP.В этом разделе приведены сведения о такой поддержке и способах ее реализации.  
+# <a name="ajax-integration-and-json-support"></a><span data-ttu-id="27e1f-102">Интеграция с AJAX и поддержка JSON</span><span class="sxs-lookup"><span data-stu-id="27e1f-102">AJAX Integration and JSON Support</span></span>
+<span data-ttu-id="27e1f-103">Поддержка [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] формата данных асинхронных сценариев JavaScript и XML (AJAX), а также JavaScript Object Notation (JSON) ASP.NET позволяет клиентам AJAX использовать операции служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="27e1f-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] support for ASP.NET Asynchronous JavaScript and XML (AJAX) and the JavaScript Object Notation (JSON) data format allow [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services to expose operations to AJAX clients.</span></span> <span data-ttu-id="27e1f-104">Клиенты AJAX представляют собой веб-страницы, на которых выполняется код JavaScript и которые обращаются к этим службам [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью HTTP-запросов.</span><span class="sxs-lookup"><span data-stu-id="27e1f-104">AJAX clients are Web pages running JavaScript code and accessing these [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services using HTTP requests.</span></span> <span data-ttu-id="27e1f-105">В этом разделе приведены сведения о такой поддержке и способах ее реализации.</span><span class="sxs-lookup"><span data-stu-id="27e1f-105">The topics in this section provide information about this support and about how to implement it.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET AJAX и интеграции с ASP.NET 2.0 см. в разделе [Общие сведения об ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="27e1f-106">ASP.NET AJAX и интеграции с ASP.NET 2.0. в разделе [Общие сведения о ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).</span><span class="sxs-lookup"><span data-stu-id="27e1f-106"> ASP.NET AJAX and its integration with ASP.NET 2.0, see [ASP.NET AJAX Overview](http://go.microsoft.com/fwlink/?LinkId=96725).</span></span>  
   
-## В этом подразделе  
- [Создание служб WCF для ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- Описывается, как клиенты AJAX могут использовать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], добавляя соответствующую конечную точку AJAX через конфигурацию или с помощью производства узла службы, настроенного на создание узла службы, который предназначен для автоматической настройки конечной точки AJAX.  
+## <a name="in-this-section"></a><span data-ttu-id="27e1f-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="27e1f-107">In This Section</span></span>  
+ [<span data-ttu-id="27e1f-108">Создание службы WCF для ASP.NET AJAX</span><span class="sxs-lookup"><span data-stu-id="27e1f-108">Creating WCF Services for ASP.NET AJAX</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ <span data-ttu-id="27e1f-109">Описывается, как клиенты AJAX могут использовать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], добавляя соответствующую конечную точку AJAX через конфигурацию или с помощью производства узла службы, настроенного на создание узла службы, который предназначен для автоматической настройки конечной точки AJAX.</span><span class="sxs-lookup"><span data-stu-id="27e1f-109">Describes how an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service can be exposed to AJAX clients by adding the appropriate AJAX endpoint either through configuration or by using a service host factory customized to generate a service host that configures the AJAX endpoint automatically.</span></span>  
   
- [Создание служб WCF AJAX без использования ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
- Описывается, как создать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], не используя ASP.NET.  
+ [<span data-ttu-id="27e1f-110">Создание служб WCF AJAX без использования ASP.NET</span><span class="sxs-lookup"><span data-stu-id="27e1f-110">Creating WCF AJAX Services without ASP.NET</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
+ <span data-ttu-id="27e1f-111">Описывается, как создать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], не используя ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="27e1f-111">Describes how to create an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service without using ASP.NET.</span></span>  
   
- [Поддержка JSON и других форматов передачи данных](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
- Описывается поддержка формата JSON, который обычно используется для обмена сообщениями со службами ASP.NET AJAX \(вместо XML\).  
+ [<span data-ttu-id="27e1f-112">Поддержка JSON и других данных форматов передачи</span><span class="sxs-lookup"><span data-stu-id="27e1f-112">Support for JSON and Other Data Transfer Formats</span></span>](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
+ <span data-ttu-id="27e1f-113">Описывается поддержка формата JSON, который обычно используется для обмена сообщениями со службами ASP.NET AJAX (вместо XML).</span><span class="sxs-lookup"><span data-stu-id="27e1f-113">Describes the support of the JSON format typically used (instead of XML) for messaging with ASP.NET AJAX services.</span></span>  
   
- [Практическое руководство. Миграция веб\-служб ASP.NET с поддержкой AJAX на платформу WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
- Описывается, как перенести веб\-службу ASP.NET с поддержкой AJAX в веб\-службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .  
+ [<span data-ttu-id="27e1f-114">Как: миграция с поддержкой AJAX веб-служб ASP.NET в WCF</span><span class="sxs-lookup"><span data-stu-id="27e1f-114">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ <span data-ttu-id="27e1f-115">Описывается, как перенести веб-службу ASP.NET с поддержкой AJAX в веб-службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="27e1f-115">Describes how to migrate an AJAX-enabled ASP.NET Web service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web service.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>   
- [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a><span data-ttu-id="27e1f-116">См. также</span><span class="sxs-lookup"><span data-stu-id="27e1f-116">See Also</span></span>  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>  
+ [<span data-ttu-id="27e1f-117">Модель программирования WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="27e1f-117">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

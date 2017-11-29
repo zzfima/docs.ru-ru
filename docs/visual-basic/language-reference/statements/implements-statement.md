@@ -1,33 +1,32 @@
 ---
-title: "Оператор Implements | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Implements"
-  - "Implements"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Implements - оператор"
-  - "Implements - оператор, синтаксис"
-  - "реализация интерфейсов, Implements - оператор"
+title: "Оператор Implements"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Implements
+- Implements
+helpviewer_keywords:
+- Implements statement [Visual Basic], syntax
+- Implements statement [Visual Basic]
+- interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1103305ffbf5425d9a6a6a09695437968642710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Implements
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Задает один или несколько интерфейсов или членов интерфейса, реализуемых в определении класса или структуры, в которых появляется этот оператор.  
+# <a name="implements-statement"></a><span data-ttu-id="873db-102">Оператор Implements</span><span class="sxs-lookup"><span data-stu-id="873db-102">Implements Statement</span></span>
+<span data-ttu-id="873db-103">Указывает один или несколько интерфейсов, или членов интерфейса, которые должны быть реализованы в классе или определение структуры, в котором он отображается.</span><span class="sxs-lookup"><span data-stu-id="873db-103">Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="873db-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="873db-104">Syntax</span></span>  
   
 ```  
 Implements interfacename [, ...]  
@@ -35,35 +34,35 @@ Implements interfacename [, ...]
 Implements interfacename.interfacemember [, ...]  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="873db-105">Части</span><span class="sxs-lookup"><span data-stu-id="873db-105">Parts</span></span>  
  `interfacename`  
- Обязательный.  Интерфейс, свойства, методы и события которого должны реализовываться соответствующими членами в классе или структуре.  
+ <span data-ttu-id="873db-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="873db-106">Required.</span></span> <span data-ttu-id="873db-107">Интерфейс, свойства, процедуры и события, должны быть реализованы соответствующие элементы в классе или структуре.</span><span class="sxs-lookup"><span data-stu-id="873db-107">An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.</span></span>  
   
  `interfacemember`  
- Обязательный.  Реализуемый член интерфейса.  
+ <span data-ttu-id="873db-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="873db-108">Required.</span></span> <span data-ttu-id="873db-109">Член интерфейса, который реализуется.</span><span class="sxs-lookup"><span data-stu-id="873db-109">The member of an interface that is being implemented.</span></span>  
   
-## Заметки  
- Интерфейс — это коллекция прототипов, которые представляют собой инкапсулированные интерфейсом члены \(свойства, методы и события\).  Интерфейсы содержат только объявления членов. Классы и структуры реализуют эти члены.  Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+## <a name="remarks"></a><span data-ttu-id="873db-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="873db-110">Remarks</span></span>  
+ <span data-ttu-id="873db-111">Интерфейс — это коллекция прототипов, представляющих члены (свойства, процедуры и события) инкапсулирует интерфейс.</span><span class="sxs-lookup"><span data-stu-id="873db-111">An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates.</span></span> <span data-ttu-id="873db-112">Интерфейсы содержат только объявления членов. классы и структуры реализуют эти члены.</span><span class="sxs-lookup"><span data-stu-id="873db-112">Interfaces contain only the declarations for members; classes and structures implement these members.</span></span> <span data-ttu-id="873db-113">Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="873db-113">For more information, see [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).</span></span>  
   
- Оператор `Implements` должен следовать непосредственно за операторами `Class` или `Structure`.  
+ <span data-ttu-id="873db-114">`Implements` Инструкции следует непосредственно за `Class` или `Structure` инструкции.</span><span class="sxs-lookup"><span data-stu-id="873db-114">The `Implements` statement must immediately follow the `Class` or `Structure` statement.</span></span>  
   
- Для реализации интерфейса необходимо реализовать все члены, объявленные в интерфейсе.  Пропуск какого\-либо члена считается синтаксической ошибкой.  Для реализации отдельного члена необходимо указать ключевое слово [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)\(которое отличается от оператора `Implements`\) при объявлении члена в классе или структуре.  Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ <span data-ttu-id="873db-115">При реализации интерфейса необходимо реализовать все члены, объявленные в интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="873db-115">When you implement an interface, you must implement all the members declared in the interface.</span></span> <span data-ttu-id="873db-116">Пропуск любого элемента считается синтаксическую ошибку.</span><span class="sxs-lookup"><span data-stu-id="873db-116">Omitting any member is considered to be a syntax error.</span></span> <span data-ttu-id="873db-117">Чтобы реализовать отдельные члены, необходимо указать [реализует](../../../visual-basic/language-reference/statements/implements-clause.md) ключевое слово (отделен от `Implements` инструкции) при объявлении члена в классе или структуре.</span><span class="sxs-lookup"><span data-stu-id="873db-117">To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure.</span></span> <span data-ttu-id="873db-118">Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="873db-118">For more information, see [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).</span></span>  
   
- Классы могут использовать реализации свойств и методов с уровнем доступа [Private](../../../visual-basic/language-reference/modifiers/private.md), однако эти члены доступны только путем приведения экземпляра реализующего класса к переменной типа интерфейса.  
+ <span data-ttu-id="873db-119">Классы могут использовать [закрытый](../../../visual-basic/language-reference/modifiers/private.md) реализации свойства и процедуры, однако эти члены доступны только путем приведения экземпляра реализующего класса в переменной, объявленной как типа интерфейса.</span><span class="sxs-lookup"><span data-stu-id="873db-119">Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.</span></span>  
   
-## Пример  
- В следующем примере показано использование оператора `Implements` для реализации членов интерфейса.  Этот оператор определяет интерфейс `ICustomerInfo` с событием, свойством и процедурой.  Класс `customerInfo` реализует все члены, определенные в интерфейсе.  
+## <a name="example"></a><span data-ttu-id="873db-120">Пример</span><span class="sxs-lookup"><span data-stu-id="873db-120">Example</span></span>  
+ <span data-ttu-id="873db-121">В следующем примере показано, как использовать `Implements` инструкции для реализации членов интерфейса.</span><span class="sxs-lookup"><span data-stu-id="873db-121">The following example shows how to use the `Implements` statement to implement members of an interface.</span></span> <span data-ttu-id="873db-122">Он определяет интерфейс с именем `ICustomerInfo` с событием, свойства и процедуры.</span><span class="sxs-lookup"><span data-stu-id="873db-122">It defines an interface named `ICustomerInfo` with an event, a property, and a procedure.</span></span> <span data-ttu-id="873db-123">Класс `customerInfo` реализует все члены, определенные в интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="873db-123">The class `customerInfo` implements all the members defined in the interface.</span></span>  
   
  [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
- Обратите внимание, что класс `customerInfo` использует оператор `Implements` в отдельной строке исходного кода, чтобы указать, что класс реализует все члены интерфейса `ICustomerInfo`.  Затем, чтобы указать, что он реализует член интерфейса, каждый член класса использует ключевое слово `Implements` как часть объявления этого члена.  
+ <span data-ttu-id="873db-124">Обратите внимание, что класс `customerInfo` использует `Implements` инструкции на отдельной строке исходного кода, чтобы указать, что класс реализует все члены `ICustomerInfo` интерфейса.</span><span class="sxs-lookup"><span data-stu-id="873db-124">Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface.</span></span> <span data-ttu-id="873db-125">Затем каждый член класса использует `Implements` ключевое слово как часть объявления, чтобы указать, что он реализует член этого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="873db-125">Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.</span></span>  
   
-## Пример  
- Следующие две процедуры показывают, как можно использовать интерфейс, реализованный в предыдущем примере.  Для поверки реализации интерфейса добавьте эти процедуры в проект и вызовите процедуру `testImplements`.  
+## <a name="example"></a><span data-ttu-id="873db-126">Пример</span><span class="sxs-lookup"><span data-stu-id="873db-126">Example</span></span>  
+ <span data-ttu-id="873db-127">В следующих двух процедурах показано, как можно использовать интерфейс, реализованный в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="873db-127">The following two procedures show how you could use the interface implemented in the preceding example.</span></span> <span data-ttu-id="873db-128">Чтобы проверить реализацию, добавьте эти процедуры в проекте и вызовите `testImplements` процедуры.</span><span class="sxs-lookup"><span data-stu-id="873db-128">To test the implementation, add these procedures to your project and call the `testImplements` procedure.</span></span>  
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## См. также  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="873db-129">См. также</span><span class="sxs-lookup"><span data-stu-id="873db-129">See Also</span></span>  
+ [<span data-ttu-id="873db-130">Implements</span><span class="sxs-lookup"><span data-stu-id="873db-130">Implements</span></span>](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [<span data-ttu-id="873db-131">Оператор Interface</span><span class="sxs-lookup"><span data-stu-id="873db-131">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="873db-132">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="873db-132">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -1,61 +1,65 @@
 ---
-title: "Практическое руководство. Преобразование цветов изображения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "растровые изображения [Windows Forms], изменение цветов"
-  - "цвета изображения [Windows Forms]"
-  - "изображения [Windows Forms], изменение цветов"
+title: "Практическое руководство. Преобразование цветов изображения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitmaps [Windows Forms], changing colors
+- images [Windows Forms], changing colors
+- image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c21d20b631d8e0cf68e370dd43b3f5e92144b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Преобразование цветов изображения
-Преобразование добавляет некоторое значение к одному или нескольким из четырех компонентов цвета.  Элементы матрицы цветов, соответствующие преобразованиями, приводятся в следующей таблице.  
+# <a name="how-to-translate-image-colors"></a><span data-ttu-id="b14c4-102">Практическое руководство. Преобразование цветов изображения</span><span class="sxs-lookup"><span data-stu-id="b14c4-102">How to: Translate Image Colors</span></span>
+<span data-ttu-id="b14c4-103">Перевод добавляет значение к одному или нескольким из четырех компонентов цвета.</span><span class="sxs-lookup"><span data-stu-id="b14c4-103">A translation adds a value to one or more of the four color components.</span></span> <span data-ttu-id="b14c4-104">В следующей таблице приведены элементы матрицы цветов, представляющих переводы.</span><span class="sxs-lookup"><span data-stu-id="b14c4-104">The color matrix entries that represent translations are given in the following table.</span></span>  
   
-|Преобразуемый компонент|Элемент матрицы|  
-|-----------------------------|---------------------|  
-|Красный|\[4\]\[0\]|  
-|Зеленый|\[4\]\[1\]|  
-|Синий|\[4\]\[2\]|  
-|Альфа|\[4\]\[3\]|  
+|<span data-ttu-id="b14c4-105">Преобразуемый компонент</span><span class="sxs-lookup"><span data-stu-id="b14c4-105">Component to be translated</span></span>|<span data-ttu-id="b14c4-106">Элемент матрицы</span><span class="sxs-lookup"><span data-stu-id="b14c4-106">Matrix entry</span></span>|  
+|--------------------------------|------------------|  
+|<span data-ttu-id="b14c4-107">Красный</span><span class="sxs-lookup"><span data-stu-id="b14c4-107">Red</span></span>|<span data-ttu-id="b14c4-108">[4][0]</span><span class="sxs-lookup"><span data-stu-id="b14c4-108">[4][0]</span></span>|  
+|<span data-ttu-id="b14c4-109">Зеленый</span><span class="sxs-lookup"><span data-stu-id="b14c4-109">Green</span></span>|<span data-ttu-id="b14c4-110">[4][1]</span><span class="sxs-lookup"><span data-stu-id="b14c4-110">[4][1]</span></span>|  
+|<span data-ttu-id="b14c4-111">Синий</span><span class="sxs-lookup"><span data-stu-id="b14c4-111">Blue</span></span>|<span data-ttu-id="b14c4-112">[4][2]</span><span class="sxs-lookup"><span data-stu-id="b14c4-112">[4][2]</span></span>|  
+|<span data-ttu-id="b14c4-113">Коэффициент альфа</span><span class="sxs-lookup"><span data-stu-id="b14c4-113">Alpha</span></span>|<span data-ttu-id="b14c4-114">[4][3]</span><span class="sxs-lookup"><span data-stu-id="b14c4-114">[4][3]</span></span>|  
   
-## Пример  
- В следующем примере объект <xref:System.Drawing.Image> создается на основе файла ColorBars.bmp.  После этого к красному компоненту каждого из пикселей изображения добавляется значение 0,75.  Исходное изображение отображается вместе с преобразованным изображением.  
+## <a name="example"></a><span data-ttu-id="b14c4-115">Пример</span><span class="sxs-lookup"><span data-stu-id="b14c4-115">Example</span></span>  
+ <span data-ttu-id="b14c4-116">В следующем примере создается <xref:System.Drawing.Image> объекта из файла ColorBars.bmp.</span><span class="sxs-lookup"><span data-stu-id="b14c4-116">The following example constructs an <xref:System.Drawing.Image> object from the file ColorBars.bmp.</span></span> <span data-ttu-id="b14c4-117">Затем код добавляет 0,75 красного компонента каждого пикселя в изображении.</span><span class="sxs-lookup"><span data-stu-id="b14c4-117">Then the code adds 0.75 to the red component of each pixel in the image.</span></span> <span data-ttu-id="b14c4-118">Исходное изображение отображается вместе с преобразованным изображением.</span><span class="sxs-lookup"><span data-stu-id="b14c4-118">The original image is drawn alongside the transformed image.</span></span>  
   
- На следующем рисунке показаны как исходное изображение \(слева\), так и преобразованное изображение \(справа\).  
+ <span data-ttu-id="b14c4-119">Ниже показан исходный образ в левой части экрана и преобразованное изображение справа.</span><span class="sxs-lookup"><span data-stu-id="b14c4-119">The following illustration shows the original image on the left and the transformed image on the right.</span></span>  
   
- ![Преобразовать цвета](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ <span data-ttu-id="b14c4-120">![Преобразовать цвета](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")</span><span class="sxs-lookup"><span data-stu-id="b14c4-120">![Translate Colors](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")</span></span>  
   
- В следующей таблице приводятся цветовые векторы четырех полос до и после преобразования.  Обратите внимание, что поскольку наибольшее значение компонента цвета равно 1, красный компонент во второй строке не меняется.  \(Аналогично наименьшим значением компонента цвета является 0.\)  
+ <span data-ttu-id="b14c4-121">Ниже перечислены эти векторы четырех полос до и после преобразования.</span><span class="sxs-lookup"><span data-stu-id="b14c4-121">The following table lists the color vectors for the four bars before and after the red translation.</span></span> <span data-ttu-id="b14c4-122">Обратите внимание, что так как максимальное значение для компонента цвета равно 1, красный компонент во второй строке не меняется.</span><span class="sxs-lookup"><span data-stu-id="b14c4-122">Note that because the maximum value for a color component is 1, the red component in the second row does not change.</span></span> <span data-ttu-id="b14c4-123">(Аналогичным образом, минимальное значение для компонента цвета равно 0).</span><span class="sxs-lookup"><span data-stu-id="b14c4-123">(Similarly, the minimum value for a color component is 0.)</span></span>  
   
-|До преобразования|После преобразования|  
-|-----------------------|--------------------------|  
-|Черный \(0, 0, 0, 1\)|\(0.75, 0, 0, 1\)|  
-|Красный \(1, 0, 0, 1\)|\(1, 0, 0, 1\)|  
-|Зеленый \(0, 1, 0, 1\)|\(0.75, 1, 0, 1\)|  
-|Синий \(0, 0, 1, 1\)|\(0.75, 0, 1, 1\)|  
+|<span data-ttu-id="b14c4-124">До преобразования</span><span class="sxs-lookup"><span data-stu-id="b14c4-124">Original</span></span>|<span data-ttu-id="b14c4-125">Перевод</span><span class="sxs-lookup"><span data-stu-id="b14c4-125">Translated</span></span>|  
+|--------------|----------------|  
+|<span data-ttu-id="b14c4-126">Черный (0, 0, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-126">Black (0, 0, 0, 1)</span></span>|<span data-ttu-id="b14c4-127">(0.75, 0, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-127">(0.75, 0, 0, 1)</span></span>|  
+|<span data-ttu-id="b14c4-128">Красный (1, 0, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-128">Red (1, 0, 0, 1)</span></span>|<span data-ttu-id="b14c4-129">(1, 0, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-129">(1, 0, 0, 1)</span></span>|  
+|<span data-ttu-id="b14c4-130">Зеленый цвет (0, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-130">Green (0, 1, 0, 1)</span></span>|<span data-ttu-id="b14c4-131">(0.75, 1, 0, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-131">(0.75, 1, 0, 1)</span></span>|  
+|<span data-ttu-id="b14c4-132">Синий (0, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-132">Blue (0, 0, 1, 1)</span></span>|<span data-ttu-id="b14c4-133">(0.75, 0, 1, 1)</span><span class="sxs-lookup"><span data-stu-id="b14c4-133">(0.75, 0, 1, 1)</span></span>|  
   
  [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  Замените путь и имя файла `ColorBars.bmp`  именем файла изображения в вашей системе.  
+## <a name="compiling-the-code"></a><span data-ttu-id="b14c4-134">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b14c4-134">Compiling the Code</span></span>  
+ <span data-ttu-id="b14c4-135">Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs>`e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="b14c4-135">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="b14c4-136">Замените `ColorBars.bmp` в вашей системе путь и имя файла изображения.</span><span class="sxs-lookup"><span data-stu-id="b14c4-136">Replace `ColorBars.bmp` with an image file name and path that are valid on your system.</span></span>  
   
-## См. также  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a><span data-ttu-id="b14c4-137">См. также</span><span class="sxs-lookup"><span data-stu-id="b14c4-137">See Also</span></span>  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [<span data-ttu-id="b14c4-138">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b14c4-138">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="b14c4-139">перекрашивание изображений</span><span class="sxs-lookup"><span data-stu-id="b14c4-139">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)

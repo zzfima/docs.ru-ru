@@ -1,86 +1,87 @@
 ---
-title: "Отображение данных с помощью элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], отображения в табличном формате"
-  - "таблицы данных, отображение данных"
-  - "DataGridView - элемент управления [Windows Forms], отображение данных"
-  - "отображение данных, таблицы данных"
+title: "Отображение данных с помощью элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], displaying data
+- displaying data [Windows Forms], data grids
+- DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Отображение данных с помощью элемента управления DataGridView в Windows Forms
-Элемент управления `DataGridView` используется для отображения данных из различных внешних источников данных.  Для заполнения элемента управления данными можно также вручную добавлять в него строки и столбцы.  
+# <a name="displaying-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="0828e-102">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-102">Displaying Data in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="0828e-103">`DataGridView` Элемент управления используется для отображения данных из различных внешних источников данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-103">The `DataGridView` control is used to display data from a variety of external data sources.</span></span> <span data-ttu-id="0828e-104">Кроме того можно добавить строки и столбцы в элемент управления и вручную заполнить его данными.</span><span class="sxs-lookup"><span data-stu-id="0828e-104">Alternatively, you can add rows and columns to the control and manually populate it with data.</span></span>  
   
- При связывании элемента управления с источником данных можно автоматически формировать столбцы, основываясь на схеме источника данных.  Если столбцы отображаются не в том порядке, их можно скрыть, удалить или переупорядочить.  Можно также добавить несвязанные столбцы для отображения вспомогательных данных, взятых не из источника данных.  
+ <span data-ttu-id="0828e-105">При привязке элемента управления к источнику данных, можно создавать столбцы автоматически на основе схемы источника данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-105">When you bind the control to a data source, you can generate columns automatically based on the schema of the data source.</span></span> <span data-ttu-id="0828e-106">Если эти столбцы не отображаются так же, как они нужны, можно скрыть, удалить или переупорядочить.</span><span class="sxs-lookup"><span data-stu-id="0828e-106">If these columns do not appear just as you want them to, you can hide, remove, or rearrange them.</span></span> <span data-ttu-id="0828e-107">Можно также добавить несвязанные столбцы для отображения вспомогательных данных, поступающих не из источника данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-107">You can also add unbound columns to display supplemental data that does not come from the data source.</span></span>  
   
- Кроме того, можно отображать данные с использованием стандартных форматов \(например, денежного формата\) или настроить нужный формат отображения данных \(например, изменить цвет фона для отрицательных чисел или заменить строковые значения соответствующими изображениями\).  
+ <span data-ttu-id="0828e-108">Кроме того можно отображать данные с использованием стандартных форматов (например, формат денежной единицы), или можно настроить отображение, форматирование представления данных, однако необходимо (например, изменение цвета фона для отрицательных чисел или заменить строковые значения с рисунками).</span><span class="sxs-lookup"><span data-stu-id="0828e-108">Additionally, you can display your data using standard formats (such as currency format), or you can customize the display formatting to present your data however you need to (such as changing the background color for negative numbers, or replacing string values with corresponding images).</span></span>  
   
-## В этом подразделе  
- [Режимы отображения данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
- Описание параметров заполнения элемента управления данными.  
+## <a name="in-this-section"></a><span data-ttu-id="0828e-109">Содержание</span><span class="sxs-lookup"><span data-stu-id="0828e-109">In This Section</span></span>  
+ [<span data-ttu-id="0828e-110">Режимы отображения данных в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-110">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-111">Описание параметров заполнения элемента управления данными.</span><span class="sxs-lookup"><span data-stu-id="0828e-111">Describes the options for populating the control with data.</span></span>  
   
- [Форматирование данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
- Описание параметров форматирования отображаемых в ячейках значений.  
+ [<span data-ttu-id="0828e-112">Форматирование данных в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-112">Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-113">Описывает параметры форматирования отображения значений ячеек.</span><span class="sxs-lookup"><span data-stu-id="0828e-113">Describes the options for formatting cell display values.</span></span>  
   
- [Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- Описание заполнение элемента управления данными вручную.  
+ [<span data-ttu-id="0828e-114">Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-114">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-115">Описывает, как для заполнения элемента управления данными вручную.</span><span class="sxs-lookup"><span data-stu-id="0828e-115">Describes how to manually populate the control with data.</span></span>  
   
- [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Описание заполнение элемента управления данными путем связывания его с источником данных `BindingSource`, который содержит информацию, извлеченную из базы данных.  
+ [<span data-ttu-id="0828e-116">Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-116">How to: Bind Data to the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-117">Описывает способ заполнения элемента управления данными, привязав его к `BindingSource` , содержащий сведения, запрошенная из базы данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-117">Describes how to populate the control with data by binding it to a `BindingSource` that contains information pulled from a database.</span></span>  
   
- [Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Описание автоматического формирования столбцов в зависимости от связанного источника данных.  
+ [<span data-ttu-id="0828e-118">Практическое руководство. Автоматическое создание столбцов связанного с данными элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-118">How to: Autogenerate Columns in a Data-Bound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ <span data-ttu-id="0828e-119">Описывает, как автоматическое создание столбцов в зависимости от связанного источника данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-119">Describes how to automatically generate columns based on a bound data source.</span></span>  
   
- [Практическое руководство. Удаление автоматически сгенерированных столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
- Описание скрытия или удаления столбцов, которые были автоматически сформированы из связанного источника данных.  
+ [<span data-ttu-id="0828e-120">Практическое руководство. Удаление автоматически сгенерированных столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-120">How to: Remove Autogenerated Columns from a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ <span data-ttu-id="0828e-121">Описывает, как скрыть или удалить столбцы, которые были автоматически сформированы из связанного источника данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-121">Describes how to hide or delete columns generated automatically from a bound data source.</span></span>  
   
- [Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
- Описание изменения порядка столбцов, которые были автоматически сформированы из связанного источника данных.  
+ [<span data-ttu-id="0828e-122">Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-122">How to: Change the Order of Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-123">Описывает изменение порядка столбцов, которые были автоматически сформированы из связанного источника данных.</span><span class="sxs-lookup"><span data-stu-id="0828e-123">Describes how to rearrange columns generated automatically from a bound data source.</span></span>  
   
- [Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
- Описание дополнения данных из связанного источника данных путем отображения дополнительных несвязанных столбцов.  
+ [<span data-ttu-id="0828e-124">Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-124">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+ <span data-ttu-id="0828e-125">Описывает, как дополнения данных из связанного источника данных путем отображения дополнительных несвязанных столбцов.</span><span class="sxs-lookup"><span data-stu-id="0828e-125">Describes how to supplement data from a bound data source by displaying additional, unbound columns.</span></span>  
   
- [Практическое руководство. Связывание объектов с элементами управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Описание связывания элемента управления с коллекцией произвольных объектов таким образом, чтобы каждый объект отображался в отдельной строке.  
+ [<span data-ttu-id="0828e-126">Практическое руководство. Связывание объектов с элементами управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-126">How to: Bind Objects to Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ <span data-ttu-id="0828e-127">Описывает, как привязать элемент управления к коллекции произвольных объектов, чтобы каждый объект отображался в отдельной строке.</span><span class="sxs-lookup"><span data-stu-id="0828e-127">Describes how to bind the control to a collection of arbitrary objects so that each object is displayed in its own row.</span></span>  
   
- [Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
- Описание извлечение объекта, связанного с определенной строкой элемента управления.  
+ [<span data-ttu-id="0828e-128">Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-128">How to: Access Objects Bound to Windows Forms DataGridView Rows</span></span>](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ <span data-ttu-id="0828e-129">Описывает, как для получения объекта, связанного с определенной строкой элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0828e-129">Describes how to retrieve an object bound to a particular row of the control.</span></span>  
   
- [Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagrids.md)  
- Описание отображения данных из двух связанных таблиц базы данных таким образом, чтобы значения в одном элементе управления `DataGridView` зависели от выбранной строки в другом элементе управления.  
+ [<span data-ttu-id="0828e-130">Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-130">Walkthrough: Creating a Master/Detail Form Using Two Windows Forms DataGridView Controls</span></span>](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
+ <span data-ttu-id="0828e-131">Описывает, как отобразить данные из двух связанных таблиц базы данных, чтобы значения в одном `DataGridView` управления зависят от выбранной строки в другой элемент управления.</span><span class="sxs-lookup"><span data-stu-id="0828e-131">Describes how to display data from two related database tables so that the values shown in one `DataGridView` control depend on the currently selected row in another control.</span></span>  
   
- [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Описание обработки события <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName> для изменения внешнего вида ячеек в зависимости от их значений.  
+ [<span data-ttu-id="0828e-132">Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-132">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-133">Описывает способы обработки <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> событий для изменения внешнего вида ячеек в зависимости от их значения.</span><span class="sxs-lookup"><span data-stu-id="0828e-133">Describes how to handle the <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> event to change the appearance of cells depending on their values.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="0828e-134">Ссылка</span><span class="sxs-lookup"><span data-stu-id="0828e-134">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="0828e-135">Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="0828e-135">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>  
- Справочная документация по свойству <xref:System.Windows.Forms.DataGridView.DataSource%2A>.  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ <span data-ttu-id="0828e-136">Содержит справочную документацию по <xref:System.Windows.Forms.DataGridView.DataSource%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="0828e-136">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.DataSource%2A> property.</span></span>  
   
  <xref:System.Windows.Forms.BindingSource>  
- Справочная документация по компоненту <xref:System.Windows.Forms.BindingSource>.  
+ <span data-ttu-id="0828e-137">Содержит справочную документацию по компоненту <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="0828e-137">Provides reference documentation for the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
-## Связанные подразделы  
- [Ввод данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- Разделы, в которых описано изменение способов добавления и изменения данных в элементе управления пользователем.  
+## <a name="related-sections"></a><span data-ttu-id="0828e-138">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0828e-138">Related Sections</span></span>  
+ [<span data-ttu-id="0828e-139">Ввод данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-139">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="0828e-140">Разделы, в которых описывается изменение способов добавления и изменения данных в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="0828e-140">Provides topics that describe how to change the way users add and modify data in the control.</span></span>  
   
-## См. также  
- [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Типы столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="0828e-141">См. также</span><span class="sxs-lookup"><span data-stu-id="0828e-141">See Also</span></span>  
+ [<span data-ttu-id="0828e-142">Элемент управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="0828e-142">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="0828e-143">Типы столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0828e-143">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

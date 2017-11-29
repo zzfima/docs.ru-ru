@@ -1,35 +1,34 @@
 ---
-title: "Предложение Group Join (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryGroupJoinIn"
-  - "vb.QueryGroupJoinOn"
-  - "vb.QueryGroupJoin"
-  - "vb.QueryGroupJoinInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join - предложение"
-  - "Group Join - оператор"
-  - "запросы [Visual Basic], Group Join"
+title: "Предложение Group Join (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение Group Join (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объединяет две коллекции в одну иерархическую.  Операция объединения основана на совпадении ключей.  
+# <a name="group-join-clause-visual-basic"></a><span data-ttu-id="ca48c-102">Предложение Group Join (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca48c-102">Group Join Clause (Visual Basic)</span></span>
+<span data-ttu-id="ca48c-103">Объединяет две коллекции в одну иерархическую коллекцию.</span><span class="sxs-lookup"><span data-stu-id="ca48c-103">Combines two collections into a single hierarchical collection.</span></span> <span data-ttu-id="ca48c-104">Операция соединения основана на сопоставлении ключей.</span><span class="sxs-lookup"><span data-stu-id="ca48c-104">The join operation is based on matching keys.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="ca48c-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ca48c-105">Syntax</span></span>  
   
 ```  
 Group Join element [As type] In collection _  
@@ -37,38 +36,37 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="ca48c-106">Части</span><span class="sxs-lookup"><span data-stu-id="ca48c-106">Parts</span></span>  
   
-|||  
-|-|-|  
-|Термин|Определение|  
-|`element`|Обязательный.  Переменная управления для присоединяемой коллекции.|  
-|`type`|Необязательный.  Тип `element`.  Если не указан `type`, тип `element` получается из `collection`.|  
-|`collection`|Обязательный.  Коллекция для объединения с коллекцией, находящейся в левой части оператора `Group Join`.  Предложение `Group Join` может быть вложено в предложение `Join` или в другое предложение `Group Join`.|  
-|`key1` `Equals` `key2`|Обязательный.  Определяет ключи для объединяемых коллекций.  Необходимо использовать оператор `Equals` для сравнения ключей из объединяемых коллекций.  Можно комбинировать условия соединения с помощью оператора `And` для идентификации нескольких ключей.  Параметр `key1` должен быть из коллекции, которая находится в левой части оператора `Join`.  Параметр `key2` должен быть из коллекции, которая находится в правой части оператора `Join`.<br /><br /> Ключи, используемые в условии объединения, могут быть выражениями, включающими несколько элементов из коллекции.  Однако каждое ключевое выражение может содержать только элементы из соответствующей ему коллекции.|  
-|`expressionList`|Обязательный.  Одно или несколько выражений, определяющих способ создания групп элементов из коллекции.  Для определения имени члена для сгруппированных результатов используйте ключевое слово `Group` \(`<alias> = Group`\).  Можно также включить агрегатные функции, применимые к группе.|  
+|<span data-ttu-id="ca48c-107">Термин</span><span class="sxs-lookup"><span data-stu-id="ca48c-107">Term</span></span>|<span data-ttu-id="ca48c-108">Определение</span><span class="sxs-lookup"><span data-stu-id="ca48c-108">Definition</span></span>|  
+|---|---|  
+|`element`|<span data-ttu-id="ca48c-109">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ca48c-109">Required.</span></span> <span data-ttu-id="ca48c-110">Переменная управления для присоединяемой коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-110">The control variable for the collection being joined.</span></span>|  
+|`type`|<span data-ttu-id="ca48c-111">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ca48c-111">Optional.</span></span> <span data-ttu-id="ca48c-112">Тип параметра `element`.</span><span class="sxs-lookup"><span data-stu-id="ca48c-112">The type of `element`.</span></span> <span data-ttu-id="ca48c-113">Если не `type` указан, тип `element` выводится из `collection`.</span><span class="sxs-lookup"><span data-stu-id="ca48c-113">If no `type` is specified, the type of `element` is inferred from `collection`.</span></span>|  
+|`collection`|<span data-ttu-id="ca48c-114">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ca48c-114">Required.</span></span> <span data-ttu-id="ca48c-115">Коллекция для объединения с коллекцией, которая находится слева от `Group Join` оператор.</span><span class="sxs-lookup"><span data-stu-id="ca48c-115">The collection to combine with the collection that is on the left side of the `Group Join` operator.</span></span> <span data-ttu-id="ca48c-116">Объект `Group Join` предложения, которые могут быть вложены в `Join` предложения или в другом `Group Join` предложения.</span><span class="sxs-lookup"><span data-stu-id="ca48c-116">A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.</span></span>|  
+|<span data-ttu-id="ca48c-117">`key1` `Equals` `key2`</span><span class="sxs-lookup"><span data-stu-id="ca48c-117">`key1` `Equals` `key2`</span></span>|<span data-ttu-id="ca48c-118">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ca48c-118">Required.</span></span> <span data-ttu-id="ca48c-119">Определяет ключи для соединяемых коллекций.</span><span class="sxs-lookup"><span data-stu-id="ca48c-119">Identifies keys for the collections being joined.</span></span> <span data-ttu-id="ca48c-120">Необходимо использовать `Equals` оператор для сравнения ключей из соединяемых коллекций.</span><span class="sxs-lookup"><span data-stu-id="ca48c-120">You must use the `Equals` operator to compare keys from the collections being joined.</span></span> <span data-ttu-id="ca48c-121">Можно комбинировать условия соединения с помощью `And` оператор для идентификации нескольких ключей.</span><span class="sxs-lookup"><span data-stu-id="ca48c-121">You can combine join conditions by using the `And` operator to identify multiple keys.</span></span> <span data-ttu-id="ca48c-122">`key1` Параметр должен быть из коллекции в левой части `Join` оператор.</span><span class="sxs-lookup"><span data-stu-id="ca48c-122">The `key1` parameter must be from the collection on the left side of the `Join` operator.</span></span> <span data-ttu-id="ca48c-123">`key2` Параметр должен быть из коллекции в правой части `Join` оператор.</span><span class="sxs-lookup"><span data-stu-id="ca48c-123">The `key2` parameter must be from the collection on the right side of the `Join` operator.</span></span><br /><br /> <span data-ttu-id="ca48c-124">Ключи, используемые в условии соединения может быть выражений, содержащих более одного элемента из коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-124">The keys used in the join condition can be expressions that include more than one item from the collection.</span></span> <span data-ttu-id="ca48c-125">Однако каждое ключевое выражение может содержать только элементы из соответствующей ему коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-125">However, each key expression can contain only items from its respective collection.</span></span>|  
+|`expressionList`|<span data-ttu-id="ca48c-126">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ca48c-126">Required.</span></span> <span data-ttu-id="ca48c-127">Одно или несколько выражений, определяющих способ создания групп элементов из коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-127">One or more expressions that identify how the groups of elements from the collection are aggregated.</span></span> <span data-ttu-id="ca48c-128">Чтобы определить имя элемента для результатов группирования, используйте `Group` ключевое слово (`<alias> = Group`).</span><span class="sxs-lookup"><span data-stu-id="ca48c-128">To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`).</span></span> <span data-ttu-id="ca48c-129">Вы также можете включать агрегатные функции для применения к группе.</span><span class="sxs-lookup"><span data-stu-id="ca48c-129">You can also include aggregate functions to apply to the group.</span></span>|  
   
-## Заметки  
- Предложение `Group Join` объединяет две коллекции, на основании совпадающих значений ключей из соединяемых коллекций.  Результирующая коллекция может содержать член, который ссылается на коллекцию элементов из второй коллекции, соответствующих значению ключа из первой коллекции.  Можно также указать агрегатные функции для применения к сгруппированным элементам из второй коллекции.  Дополнительные сведения об агрегатных функциях см. в разделе [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a><span data-ttu-id="ca48c-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="ca48c-130">Remarks</span></span>  
+ <span data-ttu-id="ca48c-131">`Group Join` Предложение объединяет две коллекции на основании совпадающих значений ключей из соединяемых коллекций.</span><span class="sxs-lookup"><span data-stu-id="ca48c-131">The `Group Join` clause combines two collections based on matching key values from the collections being joined.</span></span> <span data-ttu-id="ca48c-132">Полученная в результате коллекция может содержать член, который ссылается на коллекцию элементов из второй коллекции, соответствующих значению ключа из первой коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-132">The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection.</span></span> <span data-ttu-id="ca48c-133">Можно также указать агрегатные функции для применения к сгруппированным элементам из второй коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-133">You can also specify aggregate functions to apply to the grouped elements from the second collection.</span></span> <span data-ttu-id="ca48c-134">Сведения об агрегатных функциях см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="ca48c-134">For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- Рассмотрим, например, коллекцию руководителей и коллекцию сотрудников.  Элементы из обеих коллекций имеют свойство ManagerID, определяющее сотрудников, подотчетных конкретному руководителю.  Результаты операции соединения будут содержать результат для каждого руководителя и сотрудника с совпадением по значению ManagerID.  Результаты операции `Group Join` будут содержать полный список руководителей.  Результат для каждого руководителя будет иметь член, ссылающийся на список соответствующих ему сотрудников.  
+ <span data-ttu-id="ca48c-135">Рассмотрим, например, коллекция менеджеров и коллекции сотрудников.</span><span class="sxs-lookup"><span data-stu-id="ca48c-135">Consider, for example, a collection of managers and a collection of employees.</span></span> <span data-ttu-id="ca48c-136">Элементы из обеих коллекций имеют свойство ManagerID, определяющее сотрудников, подчиняющихся тому конкретному руководителю.</span><span class="sxs-lookup"><span data-stu-id="ca48c-136">Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager.</span></span> <span data-ttu-id="ca48c-137">Результаты операции соединения будут содержать результат для каждого руководителя и сотрудника с соответствующим значением ManagerID.</span><span class="sxs-lookup"><span data-stu-id="ca48c-137">The results from a join operation would contain a result for each manager and employee with a matching ManagerID value.</span></span> <span data-ttu-id="ca48c-138">В результате `Group Join` операции будет содержать полный список руководителей.</span><span class="sxs-lookup"><span data-stu-id="ca48c-138">The results from a `Group Join` operation would contain the complete list of managers.</span></span> <span data-ttu-id="ca48c-139">Каждый диспетчер результат будет иметь член, ссылающийся на список сотрудников, которые были соответствия для конкретного диспетчера.</span><span class="sxs-lookup"><span data-stu-id="ca48c-139">Each manager result would have a member that referenced the list of employees that were a match for the specific manager.</span></span>  
   
- Получаемая коллекция после операции `Group Join` может содержать любую комбинацию значений из коллекции, определенной в предложении `From`, и выражений, указанных в предложении `Into` предложения `Group Join`.  Дополнительные сведения о допустимых выражениях для предложения `Into` см. в разделе [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ <span data-ttu-id="ca48c-140">Коллекция, возникающие в результате `Group Join` операция может содержать любую комбинацию значений из коллекции, указанной в `From` предложения и выражений, указанных в `Into` предложения `Group Join` предложения.</span><span class="sxs-lookup"><span data-stu-id="ca48c-140">The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause.</span></span> <span data-ttu-id="ca48c-141">Дополнительные сведения о допустимых выражениях для `Into` предложение, в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="ca48c-141">For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- Операция `Group Join` возвратит все результаты из коллекции, определенной на левой стороне оператора `Group Join`.  Это верно, даже если не найдено совпадений в присоединяемой коллекции.  Это аналогично `LEFT OUTER JOIN` в SQL.  
+ <span data-ttu-id="ca48c-142">Объект `Group Join` операция вернет все результаты из коллекции в левой части `Group Join` оператор.</span><span class="sxs-lookup"><span data-stu-id="ca48c-142">A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator.</span></span> <span data-ttu-id="ca48c-143">Это верно, даже если не найдено совпадений в присоединяемой коллекции.</span><span class="sxs-lookup"><span data-stu-id="ca48c-143">This is true even if there are no matches in the collection being joined.</span></span> <span data-ttu-id="ca48c-144">Это аналогично `LEFT OUTER JOIN` в SQL.</span><span class="sxs-lookup"><span data-stu-id="ca48c-144">This is like a `LEFT OUTER JOIN` in SQL.</span></span>  
   
- Можно использовать предложение `Join` для объединения коллекций в одну коллекцию.  Это эквивалентно `INNER JOIN` в SQL.  
+ <span data-ttu-id="ca48c-145">Можно использовать `Join` предложение для объединения коллекции в одну коллекцию.</span><span class="sxs-lookup"><span data-stu-id="ca48c-145">You can use the `Join` clause to combine collections into a single collection.</span></span> <span data-ttu-id="ca48c-146">Это эквивалентно `INNER JOIN` в SQL.</span><span class="sxs-lookup"><span data-stu-id="ca48c-146">This is equivalent to an `INNER JOIN` in SQL.</span></span>  
   
-## Пример  
- В следующем примере кода две коллекции объединяются с помощью предложения `Group Join`.  
+## <a name="example"></a><span data-ttu-id="ca48c-147">Пример</span><span class="sxs-lookup"><span data-stu-id="ca48c-147">Example</span></span>  
+ <span data-ttu-id="ca48c-148">В следующем примере кода две коллекции объединяются с помощью `Group Join` предложения.</span><span class="sxs-lookup"><span data-stu-id="ca48c-148">The following code example joins two collections by using the `Group Join` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## См. также  
- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)   
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Предложение Where](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Предложение Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a><span data-ttu-id="ca48c-149">См. также</span><span class="sxs-lookup"><span data-stu-id="ca48c-149">See Also</span></span>  
+ <span data-ttu-id="ca48c-150">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca48c-150">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>  
+ [<span data-ttu-id="ca48c-151">Запросы</span><span class="sxs-lookup"><span data-stu-id="ca48c-151">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="ca48c-152">Предложение Select</span><span class="sxs-lookup"><span data-stu-id="ca48c-152">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="ca48c-153">Предложение From</span><span class="sxs-lookup"><span data-stu-id="ca48c-153">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="ca48c-154">Предложение Join</span><span class="sxs-lookup"><span data-stu-id="ca48c-154">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="ca48c-155">Предложения Where</span><span class="sxs-lookup"><span data-stu-id="ca48c-155">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="ca48c-156">Предложение Group By</span><span class="sxs-lookup"><span data-stu-id="ca48c-156">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)

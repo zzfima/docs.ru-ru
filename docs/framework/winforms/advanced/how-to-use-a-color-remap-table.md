@@ -1,45 +1,51 @@
 ---
-title: "Практическое руководство. Использование таблицы преобразования цветов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "таблицы преобразования цветов, использование"
-  - "таблицы цветов, преобразование цветов с использованием"
-  - "пользовательские цвета, создание с помощью таблиц преобразования цветов"
+title: "Практическое руководство. Использование таблицы преобразования цветов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- color tables [Windows Forms], remapping colors with
+- custom colors [Windows Forms], creating with color remap table
+- color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c4399e98504a675cfbf63462b8dc964c677488e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование таблицы преобразования цветов
-Преобразование — это процесс изменения цветов в изображении в соответствии с таблицей преобразования цветов.  Таблица преобразования цветов представляет собой массив объектов <xref:System.Drawing.Imaging.ColorMap>.  Каждый из объектов <xref:System.Drawing.Imaging.ColorMap> в массиве имеет свойства <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> и <xref:System.Drawing.Imaging.ColorMap.NewColor%2A>.  
+# <a name="how-to-use-a-color-remap-table"></a><span data-ttu-id="02fb7-102">Практическое руководство. Использование таблицы преобразования цветов</span><span class="sxs-lookup"><span data-stu-id="02fb7-102">How to: Use a Color Remap Table</span></span>
+<span data-ttu-id="02fb7-103">Преобразование — это процесс преобразования цветов в изображении в соответствии с таблицей сопоставления цветов.</span><span class="sxs-lookup"><span data-stu-id="02fb7-103">Remapping is the process of converting the colors in an image according to a color remap table.</span></span> <span data-ttu-id="02fb7-104">Таблицы преобразования цветов представляет собой массив <xref:System.Drawing.Imaging.ColorMap> объектов.</span><span class="sxs-lookup"><span data-stu-id="02fb7-104">The color remap table is an array of <xref:System.Drawing.Imaging.ColorMap> objects.</span></span> <span data-ttu-id="02fb7-105">Каждый <xref:System.Drawing.Imaging.ColorMap> объект в массиве имеет <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> свойство и <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="02fb7-105">Each <xref:System.Drawing.Imaging.ColorMap> object in the array has an <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> property and a <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> property.</span></span>  
   
- При рисовании изображения с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] каждый пиксель этого изображения сравнивается с элементами массива старых цветов.  Если цвет пикселя совпадает со старым цветом из этого массива, то цвет пикселя меняется на соответствующий новый цвет.  Цвета изменяются только при отрисовке — цветовые значения самого изображения \(хранимые в объекте <xref:System.Drawing.Image> или <xref:System.Drawing.Bitmap>\) не меняются.  
+ <span data-ttu-id="02fb7-106">Когда [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] рисовании изображения каждого пикселя изображения с помощью сравнивается с элементами массива старых цветов.</span><span class="sxs-lookup"><span data-stu-id="02fb7-106">When [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] draws an image, each pixel of the image is compared to the array of old colors.</span></span> <span data-ttu-id="02fb7-107">Если цвет пикселя совпадает со старым цветом, ее цвет меняется на соответствующий новый цвет.</span><span class="sxs-lookup"><span data-stu-id="02fb7-107">If a pixel's color matches an old color, its color is changed to the corresponding new color.</span></span> <span data-ttu-id="02fb7-108">Цвета изменяются только для подготовки к просмотру — значения цвета самого изображения (хранимые в <xref:System.Drawing.Image> или <xref:System.Drawing.Bitmap> объекта) не изменяются.</span><span class="sxs-lookup"><span data-stu-id="02fb7-108">The colors are changed only for rendering — the color values of the image itself (stored in an <xref:System.Drawing.Image> or <xref:System.Drawing.Bitmap> object) are not changed.</span></span>  
   
- Чтобы нарисовать изображение с преобразованными цветами, инициализируйте массив объектов <xref:System.Drawing.Imaging.ColorMap>.  Передайте массив методу <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> объекта <xref:System.Drawing.Imaging.ImageAttributes>, после чего передайте объект <xref:System.Drawing.Imaging.ImageAttributes> методу <xref:System.Drawing.Graphics.DrawImage%2A> объекта <xref:System.Drawing.Graphics>.  
+ <span data-ttu-id="02fb7-109">Чтобы нарисовать изображение с измененным сопоставлением, инициализируйте массив <xref:System.Drawing.Imaging.ColorMap> объектов.</span><span class="sxs-lookup"><span data-stu-id="02fb7-109">To draw a remapped image, initialize an array of <xref:System.Drawing.Imaging.ColorMap> objects.</span></span> <span data-ttu-id="02fb7-110">Передайте массив <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> метод <xref:System.Drawing.Imaging.ImageAttributes> , а затем передать <xref:System.Drawing.Imaging.ImageAttributes> объект <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта.</span><span class="sxs-lookup"><span data-stu-id="02fb7-110">Pass that array to the <xref:System.Drawing.Imaging.ImageAttributes.SetRemapTable%2A> method of an <xref:System.Drawing.Imaging.ImageAttributes> object, and then pass the <xref:System.Drawing.Imaging.ImageAttributes> object to the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object.</span></span>  
   
-## Пример  
- В следующем примере объект <xref:System.Drawing.Image> создается на основе файла RemapInput.bmp.  Код создает таблицу преобразования цветов, состоящую из единственного объекта <xref:System.Drawing.Imaging.ColorMap>.  Свойство <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> объекта `ColorRemap` содержит красный цвет, а свойство <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> — синий.  Один раз изображение рисуется без преобразования цветов, а второй раз — с преобразованием.  В процессе преобразования все красные пиксели заменяются на синие.  
+## <a name="example"></a><span data-ttu-id="02fb7-111">Пример</span><span class="sxs-lookup"><span data-stu-id="02fb7-111">Example</span></span>  
+ <span data-ttu-id="02fb7-112">В следующем примере создается <xref:System.Drawing.Image> объекта из файла RemapInput.bmp.</span><span class="sxs-lookup"><span data-stu-id="02fb7-112">The following example creates an <xref:System.Drawing.Image> object from the file RemapInput.bmp.</span></span> <span data-ttu-id="02fb7-113">Код создает таблицу преобразования цветов, состоящий из одного <xref:System.Drawing.Imaging.ColorMap> объекта.</span><span class="sxs-lookup"><span data-stu-id="02fb7-113">The code creates a color remap table that consists of a single <xref:System.Drawing.Imaging.ColorMap> object.</span></span> <span data-ttu-id="02fb7-114"><xref:System.Drawing.Imaging.ColorMap.OldColor%2A> Свойство `ColorRemap` объекта отображается красным цветом и <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> свойства — синим.</span><span class="sxs-lookup"><span data-stu-id="02fb7-114">The <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> property of the `ColorRemap` object is red, and the <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> property is blue.</span></span> <span data-ttu-id="02fb7-115">На рисунке показана формируемого один раз без изменения сопоставления и один раз с преобразованием.</span><span class="sxs-lookup"><span data-stu-id="02fb7-115">The image is drawn once without remapping and once with remapping.</span></span> <span data-ttu-id="02fb7-116">В процессе преобразования все Красные пиксели на синий.</span><span class="sxs-lookup"><span data-stu-id="02fb7-116">The remapping process changes all the red pixels to blue.</span></span>  
   
- На следующем рисунке показаны как исходное изображение \(слева\), так и преобразованное изображение \(справа\).  
+ <span data-ttu-id="02fb7-117">Ниже показан исходный образ в левой части экрана и преобразованное изображение справа.</span><span class="sxs-lookup"><span data-stu-id="02fb7-117">The following illustration shows the original image on the left and the remapped image on the right.</span></span>  
+  
+ <span data-ttu-id="02fb7-118">![Цветовой ReMap](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")</span><span class="sxs-lookup"><span data-stu-id="02fb7-118">![Color ReMap](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")</span></span>  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="02fb7-119">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="02fb7-119">Compiling the Code</span></span>  
+ <span data-ttu-id="02fb7-120">Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs>`e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="02fb7-120">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## См. также  
- [Перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="02fb7-121">См. также</span><span class="sxs-lookup"><span data-stu-id="02fb7-121">See Also</span></span>  
+ [<span data-ttu-id="02fb7-122">перекрашивание изображений</span><span class="sxs-lookup"><span data-stu-id="02fb7-122">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [<span data-ttu-id="02fb7-123">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="02fb7-123">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

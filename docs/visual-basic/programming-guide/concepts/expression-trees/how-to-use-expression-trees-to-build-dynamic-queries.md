@@ -1,58 +1,123 @@
 ---
-title: "Практическое руководство: использование деревьев выражений для построения динамических запросов (Visual Basic) | Документы Microsoft"
+title: "Как: использование деревьев выражений для построения динамических запросов (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8d69be78a9f3568535dffe54e21af80c6eb12f70
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d09f89b0b49118d575690f577c77c5c3d2a76e92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Практическое руководство: использование деревьев выражений для построения динамических запросов (Visual Basic)
-В LINQ деревья выражений используются для представления источников данных, которые реализуют <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> , целевой структурированных запросов Например, поставщик LINQ реализует <xref:System.Linq.IQueryable%601>интерфейс для выполнения запросов к реляционным хранилищам данных.</xref:System.Linq.IQueryable%601> Компилятор Visual Basic компилирует запросы к источникам данных в код, который строит дерево выражений во время выполнения. Поставщик запросов можно просматривать структуру данных для дерева выражений и преобразовать ее в язык запросов, соответствующий для источника данных.  
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a><span data-ttu-id="2d5e8-102">Как: использование деревьев выражений для построения динамических запросов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d5e8-102">How to: Use Expression Trees to Build Dynamic Queries (Visual Basic)</span></span>
+<span data-ttu-id="2d5e8-103">В LINQ деревья выражений используются для представления структурированных запросов к источникам данных, которые реализуют интерфейс <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-103">In LINQ, expression trees are used to represent structured queries that target sources of data that implement <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="2d5e8-104">Например, поставщик LINQ реализует интерфейс <xref:System.Linq.IQueryable%601> для выполнения запросов к реляционным хранилищам данных.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-104">For example, the LINQ provider implements the <xref:System.Linq.IQueryable%601> interface for querying relational data stores.</span></span> <span data-ttu-id="2d5e8-105">Компилятор Visual Basic компилирует запросы к источникам данных в код, который строит дерево выражений во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-105">The Visual Basic compiler compiles queries that target such data sources into code that builds an expression tree at runtime.</span></span> <span data-ttu-id="2d5e8-106">Поставщик запросов может переходить по структуре данных дерева выражения и преобразовать ее в язык запросов, соответствующий источнику данных.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-106">The query provider can then traverse the expression tree data structure and translate it into a query language appropriate for the data source.</span></span>  
   
- Деревья выражений также используются в LINQ для представления лямбда-выражений, которые присваиваются переменным типа <xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601>  
+ <span data-ttu-id="2d5e8-107">Деревья выражений также используются в LINQ для представления лямбда-выражений, которые присваиваются переменным типа <xref:System.Linq.Expressions.Expression%601>.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-107">Expression trees are also used in LINQ to represent lambda expressions that are assigned to variables of type <xref:System.Linq.Expressions.Expression%601>.</span></span>  
   
- В этом разделе описывается использование деревьев выражений для создания динамических запросов LINQ. Динамические запросы полезны в тех случаях, когда характеристики запроса неизвестны во время компиляции. Например приложение может предоставлять пользовательский интерфейс, который позволяет пользователю указать один или несколько предикатов для фильтрации данных. Для использования LINQ для запросов, такой тип приложений должен применять деревья выражений для создания запроса LINQ во время выполнения.  
+ <span data-ttu-id="2d5e8-108">В этом разделе описывается использование деревьев выражений для создания динамических запросов LINQ.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-108">This topic describes how to use expression trees to create dynamic LINQ queries.</span></span> <span data-ttu-id="2d5e8-109">Динамические запросы удобны в тех случаях, когда характеристики запроса неизвестны во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-109">Dynamic queries are useful when the specifics of a query are not known at compile time.</span></span> <span data-ttu-id="2d5e8-110">Например, приложение может предоставлять пользовательский интерфейс, который позволяет конечному пользователю указать один или несколько предикатов для фильтрации данных.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-110">For example, an application might provide a user interface that enables the end user to specify one or more predicates to filter the data.</span></span> <span data-ttu-id="2d5e8-111">Для использования LINQ для создания запросов такой тип приложения должен использовать деревья выражений для создания запроса LINQ во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-111">In order to use LINQ for querying, this kind of application must use expression trees to create the LINQ query at runtime.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере показано использование деревьев выражений для создания запроса к `IQueryable` источника данных и затем выполнить его. В коде создается дерево выражения для представления следующего запроса:  
+## <a name="example"></a><span data-ttu-id="2d5e8-112">Пример</span><span class="sxs-lookup"><span data-stu-id="2d5e8-112">Example</span></span>  
+ <span data-ttu-id="2d5e8-113">В следующем примере показано использование деревьев выражений для создания запроса к источнику данных `IQueryable` и его выполнения.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-113">The following example shows you how to use expression trees to construct a query against an `IQueryable` data source and then execute it.</span></span> <span data-ttu-id="2d5e8-114">В коде создается дерево выражения для представления следующего запроса:</span><span class="sxs-lookup"><span data-stu-id="2d5e8-114">The code builds an expression tree to represent the following query:</span></span>  
   
  `companies.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16).OrderBy(Function(company) company)`  
   
- Фабричные методы в <xref:System.Linq.Expressions>пространства имен используются для создания деревьев выражений, представляющих общий запрос.</xref:System.Linq.Expressions> Выражения, которые представляют вызовы методов стандартных операторов запросов ссылаются <xref:System.Linq.Queryable>реализации этих методов.</xref:System.Linq.Queryable> Итоговое дерево выражения передается <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29>реализацию поставщика `IQueryable` источник данных для создания исполняемого запроса типа `IQueryable`.</xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> Результаты получаются путем перечисление переменных запроса.  
+ <span data-ttu-id="2d5e8-115">Фабричные методы в пространстве имен <xref:System.Linq.Expressions> используются для создания деревьев выражений, представляющих общий запрос.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-115">The factory methods in the <xref:System.Linq.Expressions> namespace are used to create expression trees that represent the expressions that make up the overall query.</span></span> <span data-ttu-id="2d5e8-116">Выражения, которые представляют вызовы методов стандартных операторов запросов, ссылаются на реализации <xref:System.Linq.Queryable> этих методов.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-116">The expressions that represent calls to the standard query operator methods refer to the <xref:System.Linq.Queryable> implementations of these methods.</span></span> <span data-ttu-id="2d5e8-117">Итоговое дерево выражения передается в реализацию <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> поставщика источника данных `IQueryable` для создания исполняемого запроса типа `IQueryable`.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-117">The final expression tree is passed to the <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> implementation of the provider of the `IQueryable` data source to create an executable query of type `IQueryable`.</span></span> <span data-ttu-id="2d5e8-118">Результаты получаются путем перечисления переменной запроса.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-118">The results are obtained by enumerating that query variable.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Этот код использует фиксированное число выражений в предикате, передаваемый `Queryable.Where` метод. Тем не менее можно написать приложение, объединяющее переменное число выражений предиката, зависящее от вводимых пользователем данных. Также можно изменять стандартные операторы, которые вызываются в запросе, в зависимости от входных данных от пользователя.  
+```vb  
+' Add an Imports statement for System.Linq.Expressions.  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+Dim companies =   
+    {"Consolidated Messenger", "Alpine Ski House", "Southridge Video", "City Power & Light",   
+     "Coho Winery", "Wide World Importers", "Graphic Design Institute", "Adventure Works",   
+     "Humongous Insurance", "Woodgrove Bank", "Margie's Travel", "Northwind Traders",   
+     "Blue Yonder Airlines", "Trey Research", "The Phone Company",   
+     "Wingtip Toys", "Lucerne Publishing", "Fourth Coffee"}  
   
--   Создайте новый **консольное приложение** проекта.  
+' The IQueryable data to query.  
+Dim queryableData As IQueryable(Of String) = companies.AsQueryable()  
   
--   Добавьте ссылку на System.Core.dll, если нет ссылок.  
+' Compose the expression tree that represents the parameter to the predicate.  
+Dim pe As ParameterExpression = Expression.Parameter(GetType(String), "company")  
   
--   Включите пространство имен System.Linq.Expressions.  
+' ***** Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16) *****  
+' Create an expression tree that represents the expression: company.ToLower() = "coho winery".  
+Dim left As Expression = Expression.Call(pe, GetType(String).GetMethod("ToLower", System.Type.EmptyTypes))  
+Dim right As Expression = Expression.Constant("coho winery")  
+Dim e1 As Expression = Expression.Equal(left, right)  
   
--   Скопируйте код из примера и вставьте его в `Main` `Sub` процедуры.  
+' Create an expression tree that represents the expression: company.Length > 16.  
+left = Expression.Property(pe, GetType(String).GetProperty("Length"))  
+right = Expression.Constant(16, GetType(Integer))  
+Dim e2 As Expression = Expression.GreaterThan(left, right)  
   
-## <a name="see-also"></a>См. также  
- [Деревья выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Практическое руководство: выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+' Combine the expressions to create an expression tree that represents the  
+' expression: company.ToLower() = "coho winery" OrElse company.Length > 16).  
+Dim predicateBody As Expression = Expression.OrElse(e1, e2)  
+  
+' Create an expression tree that represents the expression:  
+' queryableData.Where(Function(company) company.ToLower() = "coho winery" OrElse company.Length > 16)  
+Dim whereCallExpression As MethodCallExpression = Expression.Call(   
+        GetType(Queryable),   
+        "Where",   
+        New Type() {queryableData.ElementType},   
+        queryableData.Expression,   
+        Expression.Lambda(Of Func(Of String, Boolean))(predicateBody, New ParameterExpression() {pe}))  
+' ***** End Where *****  
+  
+' ***** OrderBy(Function(company) company) *****  
+' Create an expression tree that represents the expression:  
+' whereCallExpression.OrderBy(Function(company) company)  
+Dim orderByCallExpression As MethodCallExpression = Expression.Call(   
+        GetType(Queryable),   
+        "OrderBy",   
+        New Type() {queryableData.ElementType, queryableData.ElementType},   
+        whereCallExpression,   
+        Expression.Lambda(Of Func(Of String, String))(pe, New ParameterExpression() {pe}))  
+' ***** End OrderBy *****  
+  
+' Create an executable query from the expression tree.  
+Dim results As IQueryable(Of String) = queryableData.Provider.CreateQuery(Of String)(orderByCallExpression)  
+  
+' Enumerate the results.  
+For Each company As String In results  
+    Console.WriteLine(company)  
+Next  
+  
+' This code produces the following output:  
+'  
+' Blue Yonder Airlines  
+' City Power & Light  
+' Coho Winery  
+' Consolidated Messenger  
+' Graphic Design Institute  
+' Humongous Insurance  
+' Lucerne Publishing  
+' Northwind Traders  
+' The Phone Company  
+' Wide World Importers  
+```  
+  
+ <span data-ttu-id="2d5e8-119">Этот код использует фиксированное число выражений в предикате, передаваемом в метод `Queryable.Where`.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-119">This code uses a fixed number of expressions in the predicate that is passed to the `Queryable.Where` method.</span></span> <span data-ttu-id="2d5e8-120">Тем не менее можно написать приложение, которое будет сочетать переменное число выражений предиката, зависящих от вводимых пользователем данных.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-120">However, you can write an application that combines a variable number of predicate expressions that depends on the user input.</span></span> <span data-ttu-id="2d5e8-121">Также можно изменять стандартные операторы запросов, которые вызываются в запросе, в зависимости от входных данных от пользователя.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-121">You can also vary the standard query operators that are called in the query, depending on the input from the user.</span></span>  
+  
+## <a name="compiling-the-code"></a><span data-ttu-id="2d5e8-122">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="2d5e8-122">Compiling the Code</span></span>  
+  
+-   <span data-ttu-id="2d5e8-123">Создайте новый проект **консольного приложения**.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-123">Create a new **Console Application** project.</span></span>  
+  
+-   <span data-ttu-id="2d5e8-124">Добавьте ссылку на библиотеку System.Core.dll, если такая ссылка отсутствует.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-124">Add a reference to System.Core.dll if it is not already referenced.</span></span>  
+  
+-   <span data-ttu-id="2d5e8-125">Включите пространство имен System.Linq.Expressions.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-125">Include the System.Linq.Expressions namespace.</span></span>  
+  
+-   <span data-ttu-id="2d5e8-126">Скопируйте код примера и вставьте его в `Main` `Sub` процедуры.</span><span class="sxs-lookup"><span data-stu-id="2d5e8-126">Copy the code from the example and paste it into the `Main` `Sub` procedure.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="2d5e8-127">См. также</span><span class="sxs-lookup"><span data-stu-id="2d5e8-127">See Also</span></span>  
+ <span data-ttu-id="2d5e8-128">[Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="2d5e8-128">[Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)</span></span>  
+ [<span data-ttu-id="2d5e8-129">Как: выполнение деревьев выражений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d5e8-129">How to: Execute Expression Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

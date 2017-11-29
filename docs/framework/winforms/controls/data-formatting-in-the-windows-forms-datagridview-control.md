@@ -1,49 +1,50 @@
 ---
-title: "Форматирование данных в элементе управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], форматирование в таблице"
-  - "таблицы данных, форматирование данных"
-  - "DataGridView - элемент управления [Windows Forms], форматирование данных"
+title: "Форматирование данных в элементе управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], formatting data
+- data [Windows Forms], formatting in grids
+- data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e716dc74946ac6f18ab82c6834518f0bd6bbea76
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Форматирование данных в элементе управления DataGridView в Windows Forms
-Элемент управления <xref:System.Windows.Forms.DataGridView> обеспечивает автоматическое преобразование между значениями ячеек и типами данных, которые отображаются в родительских столбцах.  Например, в столбцах текстовых полей отображаются строковые представления значений даты, времени, чисел и перечисления, а введенные пользователем строковые значения преобразуются в типы, необходимые для хранилища данных.  
+# <a name="data-formatting-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="5cbc3-102">Форматирование данных в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5cbc3-102">Data Formatting in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="5cbc3-103"><xref:System.Windows.Forms.DataGridView> Управления обеспечивает автоматическое преобразование между значениями ячеек и типы данных, которые отображаются в родительских столбцах.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-103">The <xref:System.Windows.Forms.DataGridView> control provides automatic conversion between cell values and the data types that the parent columns display.</span></span> <span data-ttu-id="5cbc3-104">Например, столбцах текстовых полей отображаются строковые представления значений даты, времени, числа и значения перечисления и введенные пользователем строковые значения преобразуются в типы, необходимые в хранилище данных.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-104">Text box columns, for example, display string representations of date, time, number, and enumeration values, and convert user-entered string values to the types required by the data store.</span></span>  
   
-## Форматирование с использованием класса DataGridViewCellStyle  
- Элемент управления <xref:System.Windows.Forms.DataGridView> обеспечивает базовое форматирование данных для значений ячеек через класс <xref:System.Windows.Forms.DataGridViewCellStyle>.  Свойство <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> можно использовать для форматирования значений даты, времени, чисел и перечисления в соответствии с выбранными региональными параметрами по умолчанию, используя спецификаторы форматы, которые описаны в [Типы форматирования](../../../../docs/standard/base-types/formatting-types.md).  Также эти значения можно отформатировать в соответствии с определенными региональными параметрами, используя свойство <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>.  Указанный формат используется как для отображения данных, так и для синтаксического анализа данных, которые пользователь вводит в указанном формате.  
+## <a name="formatting-with-the-datagridviewcellstyle-class"></a><span data-ttu-id="5cbc3-105">Форматирование с классом DataGridViewCellStyle</span><span class="sxs-lookup"><span data-stu-id="5cbc3-105">Formatting with the DataGridViewCellStyle class</span></span>  
+ <span data-ttu-id="5cbc3-106"><xref:System.Windows.Forms.DataGridView> Управления обеспечивает базовое форматирование данных для значений ячеек через <xref:System.Windows.Forms.DataGridViewCellStyle> класса.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-106">The <xref:System.Windows.Forms.DataGridView> control provides basic data formatting of cell values through the <xref:System.Windows.Forms.DataGridViewCellStyle> class.</span></span> <span data-ttu-id="5cbc3-107">Можно использовать <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> свойств для форматирования даты, времени, числа и перечисление значений для текущего языка и региональных параметров по умолчанию, с помощью описателей формата, описанные в [типы форматирования](../../../../docs/standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="5cbc3-107">You can use the <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> property to format date, time, number, and enumeration values for the current default culture using the format specifiers described in [Formatting Types](../../../../docs/standard/base-types/formatting-types.md).</span></span> <span data-ttu-id="5cbc3-108">Также можно отформатировать эти значения для определенных языков и региональных параметров с помощью <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-108">You can also format these values for specific cultures using the <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A> property.</span></span> <span data-ttu-id="5cbc3-109">Указанный формат используется для отображения данных и для синтаксического анализа данных, вводимых пользователем в указанном формате.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-109">The specified format is used both to display data and to parse data that the user enters in the specified format.</span></span>  
   
- Класс <xref:System.Windows.Forms.DataGridViewCellStyle> предоставляет дополнительные свойства форматирования для переноса слов и выравнивания текста и настройки отображения пустых значений базы данных.  Дополнительные сведения см. в разделе [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="5cbc3-110"><xref:System.Windows.Forms.DataGridViewCellStyle> Класс предоставляет дополнительные свойства форматирования для переноса слов, выравнивание текста и настройки отображения пустых значений базы данных.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-110">The <xref:System.Windows.Forms.DataGridViewCellStyle> class provides additional formatting properties for wordwrap, text alignment, and the custom display of null database values.</span></span> <span data-ttu-id="5cbc3-111">Дополнительные сведения см. в разделе [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5cbc3-111">For more information, see [How to: Format Data in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## Форматирование с использованием события CellFormatting  
- Если базовое форматирование не соответствует требованиям, можно предоставить пользовательское форматирование данных в обработчике событий <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>.  Событие <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>, передаваемое обработчику, содержит свойство <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>, которое изначально содержит значение ячейки.  Обычно это значение автоматически преобразуется к типу отображения.  Чтобы вручную преобразовать это значение, присвойте свойству <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> значение типа отображения.  
+## <a name="formatting-with-the-cellformatting-event"></a><span data-ttu-id="5cbc3-112">Форматирование с событием CellFormatting</span><span class="sxs-lookup"><span data-stu-id="5cbc3-112">Formatting with the CellFormatting Event</span></span>  
+ <span data-ttu-id="5cbc3-113">Если базовое форматирование не удовлетворяет вашим требованиям, можно предоставить пользовательское форматирование данных в обработчик <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> событий.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-113">If the basic formatting does not meet your needs, you can provide custom data formatting in a handler for the <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="5cbc3-114"><xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> Передается обработчику имеет <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> свойство, которое изначально содержит значение ячейки.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-114">The <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> passed to the handler has a <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> property that initially contains the cell value.</span></span> <span data-ttu-id="5cbc3-115">Как правило это значение автоматически преобразуется в тип отображения.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-115">Normally, this value is automatically converted to the display type.</span></span> <span data-ttu-id="5cbc3-116">Для преобразования значения самостоятельно, задайте <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> значение части типа отображения.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-116">To convert the value yourself, set the <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> property to a value of the display type.</span></span>  
   
 > [!NOTE]
->  Если для ячейки действует строка формата, она переопределяет пользовательское изменение значения свойства <xref:System.Windows.Forms.ConvertEventArgs.Value%2A>, за исключением случая, когда свойству <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A> присвоено значение `true`.  
+>  <span data-ttu-id="5cbc3-117">Если строка формата действует для ячейки, оно переопределяет изменения в <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> значение свойства, если не задать <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-117">If a format string is in effect for the cell, it overrides your change of the <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> property value unless you set the <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.FormattingApplied%2A> property to `true`.</span></span>  
   
- Событие <xref:System.Windows.Forms.DataGridView.CellFormatting> также используется в тех случаях, когда требуется указать значения для свойств <xref:System.Windows.Forms.DataGridViewCellStyle> отдельных ячеек, основываясь на их значениях.  Дополнительные сведения содержатся в разделе [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="5cbc3-118"><xref:System.Windows.Forms.DataGridView.CellFormatting> Событий также полезен, если вы хотите задать <xref:System.Windows.Forms.DataGridViewCellStyle> свойства для отдельных ячеек на основе их значений.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-118">The <xref:System.Windows.Forms.DataGridView.CellFormatting> event is also useful when you want to set <xref:System.Windows.Forms.DataGridViewCellStyle> properties for individual cells based on their values.</span></span> <span data-ttu-id="5cbc3-119">Дополнительные сведения см. в разделе [как: Настройка форматирования данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="5cbc3-119">For more information, see [How to: Customize Data Formatting in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span>  
   
- Если анализ по умолчанию или указанные пользователем значения не соответствуют требованиям, можно обработать событие <xref:System.Windows.Forms.DataGridView.CellParsing> элемента управления <xref:System.Windows.Forms.DataGridView> для предоставления пользовательского анализа.  
+ <span data-ttu-id="5cbc3-120">Если анализ указанные пользователем значения по умолчанию не удовлетворяет вашим требованиям, можно обработать <xref:System.Windows.Forms.DataGridView.CellParsing> событие <xref:System.Windows.Forms.DataGridView> элемента управления для предоставления пользовательского анализа.</span><span class="sxs-lookup"><span data-stu-id="5cbc3-120">If the default parsing of user-specified values does not meet your needs, you can handle the <xref:System.Windows.Forms.DataGridView.CellParsing> event of the <xref:System.Windows.Forms.DataGridView> control to provide custom parsing.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Стили ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)   
- [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="5cbc3-121">См. также</span><span class="sxs-lookup"><span data-stu-id="5cbc3-121">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ [<span data-ttu-id="5cbc3-122">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5cbc3-122">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="5cbc3-123">Стили ячеек элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5cbc3-123">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="5cbc3-124">Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5cbc3-124">How to: Format Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="5cbc3-125">Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5cbc3-125">How to: Customize Data Formatting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

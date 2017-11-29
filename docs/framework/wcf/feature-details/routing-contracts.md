@@ -1,38 +1,41 @@
 ---
-title: "Контракты маршрутизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Контракты маршрутизации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: daebd84c9cef5e64ea7ed55c27b671ba01d14df0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Контракты маршрутизации
-Контракты маршрутизации определяют схемы обмена сообщениями, которые может обрабатывать служба маршрутизации.Эти контракты являются бестиповыми, с их помощью служба может получать сообщение без набора знаний о схеме сообщения или действии.Благодаря этому служба маршрутизации может перенаправлять сообщения без дополнительной настройки под особенности маршрутизируемых сообщений.  
+# <a name="routing-contracts"></a><span data-ttu-id="0fba6-102">Контракты маршрутизации</span><span class="sxs-lookup"><span data-stu-id="0fba6-102">Routing Contracts</span></span>
+<span data-ttu-id="0fba6-103">Контракты маршрутизации определяют схемы обмена сообщениями, которые может обрабатывать служба маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="0fba6-103">Routing contracts define the message patterns that the Routing Service can process.</span></span>  <span data-ttu-id="0fba6-104">Эти контракты являются бестиповыми, с их помощью служба может получать сообщение без набора знаний о схеме сообщения или действии.</span><span class="sxs-lookup"><span data-stu-id="0fba6-104">Each contract is typeless and allows the service to receive a message without knowledge of the message schema or action.</span></span> <span data-ttu-id="0fba6-105">Благодаря этому служба маршрутизации может перенаправлять сообщения без дополнительной настройки под особенности маршрутизируемых сообщений.</span><span class="sxs-lookup"><span data-stu-id="0fba6-105">This allows the Routing Service to generically route messages without additional configuration for the specifics of the underlying messages being routed.</span></span>  
   
-## Контракты маршрутизации  
- Поскольку служба маршрутизации принимает общий объект сообщения WCF, наиболее важным аспектом при выборе контракта является форма канала, который будет использоваться для связи с клиентами и серверами.При обработке сообщений служба маршрутизации использует симметричные циклы обработки сообщений, поэтому, как правило, форма входящего контракта должна быть такой же, как форма исходящего контракта.Однако в некоторых случаях диспетчер модели службы может изменять эти формы, например в случае, когда он преобразует дуплексный канал в канал типа «запрос\-ответ» или удаляет поддержку сеанса из канала, если она не требуется и не используется \(то есть когда **SessionMode.Allowed** с преобразованием **IInputSessionChannel** в **IInputChannel**\).  
+## <a name="routing-contracts"></a><span data-ttu-id="0fba6-106">Контракты маршрутизации</span><span class="sxs-lookup"><span data-stu-id="0fba6-106">Routing Contracts</span></span>  
+ <span data-ttu-id="0fba6-107">Поскольку служба маршрутизации принимает общий объект сообщения WCF, наиболее важным аспектом при выборе контракта является форма канала, который будет использоваться для связи с клиентами и серверами.</span><span class="sxs-lookup"><span data-stu-id="0fba6-107">Because the Routing Service accepts a generic WCF Message object, the most important consideration when selecting a contract is the shape of the channel that will be used when communicating with the clients and services.</span></span> <span data-ttu-id="0fba6-108">При обработке сообщений служба маршрутизации использует симметричные циклы обработки сообщений, поэтому, как правило, форма входящего контракта должна быть такой же, как форма исходящего контракта.</span><span class="sxs-lookup"><span data-stu-id="0fba6-108">When processing messages, the Routing Service uses symmetrical message pumps, so generally the shape of the inbound contract must match the shape of the outbound contract.</span></span> <span data-ttu-id="0fba6-109">Однако бывают случаи, когда диспетчер модели службы можно изменить фигуры, например, когда диспетчер преобразует дуплексный канал в канал типа запрос ответ или удаляет поддержку сеанса из канала, когда он не является обязательным и не используется (то есть Если **SessionMode.Allowed**преобразования **IInputSessionChannel** в **IInputChannel**).</span><span class="sxs-lookup"><span data-stu-id="0fba6-109">However, there are cases where the Service Model’s dispatcher can modify the shapes, such as when the dispatcher converts a duplex channel into a request-reply channel, or removes the session support from a channel when it is not required and is not being used (that is, when **SessionMode.Allowed**, converting an **IInputSessionChannel** into an **IInputChannel**).</span></span>  
   
- Для поддержки этих циклов сообщений служба маршрутизации предоставляет контракты из пространства имен <xref:System.ServiceModel.Routing>, которые должны использоваться при определении конечных точек службы, используемых службой маршрутизации.Эти контракты являются бестиповыми, что позволяет принимать любые типы сообщений или действия, а также позволяет службе маршрутизации обрабатывать сообщения без набора знаний их схемы.Дополнительные сведения о контрактах, используемых службой маршрутизации, см. в разделе [Routing Contracts](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
+ <span data-ttu-id="0fba6-110">Для поддержки этих циклов сообщений служба маршрутизации предоставляет контракты из пространства имен <xref:System.ServiceModel.Routing>, которые должны использоваться при определении конечных точек службы, используемых службой маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="0fba6-110">To support these message pumps, the Routing Service provides contracts in the <xref:System.ServiceModel.Routing> namespace, which must be used when defining the service endpoints used by the Routing Service.</span></span> <span data-ttu-id="0fba6-111">Эти контракты являются бестиповыми, что позволяет принимать любые типы сообщений или действия, а также позволяет службе маршрутизации обрабатывать сообщения без набора знаний их схемы.</span><span class="sxs-lookup"><span data-stu-id="0fba6-111">These contracts are typeless, which allows the receipt of any message type or action, and allows the Routing Service to handle messages without knowledge of the specific message schema.</span></span> <span data-ttu-id="0fba6-112">Дополнительные сведения о контрактах, используемые службой маршрутизации см. в разделе [контракты маршрутизации](../../../../docs/framework/wcf/feature-details/routing-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="0fba6-112">For more information about the contracts used by the Routing Service, see [Routing Contracts](../../../../docs/framework/wcf/feature-details/routing-contracts.md).</span></span>  
   
- Контракты, предоставляемые службой маршрутизации, находятся в пространстве имен <xref:System.ServiceModel.Routing>, они описаны в следующей таблице.  
+ <span data-ttu-id="0fba6-113">Контракты, предоставляемые службой маршрутизации, находятся в пространстве имен <xref:System.ServiceModel.Routing>, они описаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="0fba6-113">The contracts provided by the Routing Service are located in the <xref:System.ServiceModel.Routing> namespace, and are described in the following table.</span></span>  
   
-|Контракт|Фигура|Форма канала|  
-|--------------|------------|------------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode \= SessionMode.Allowed<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true|IInputChannel \-\> IOutputChannel|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode \= SessionMode.Required<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true|IInputSessionChannel \-\> IOutputSessionChannel|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode \= SessionMode.Allowed<br /><br /> AsyncPattern \= true|IReplyChannel \-\> IRequestChannel|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode\=SessionMode.Required<br /><br /> CallbackContract\=typeof\(ISimplexSession\)<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true<br /><br /> TransactionFlow\(TransactionFlowOption.Allowed\)|IDuplexSessionChannel \-\> IDuplexSessionChannel|  
+|<span data-ttu-id="0fba6-114">Контракт</span><span class="sxs-lookup"><span data-stu-id="0fba6-114">Contract</span></span>|<span data-ttu-id="0fba6-115">Фигура</span><span class="sxs-lookup"><span data-stu-id="0fba6-115">Shape</span></span>|<span data-ttu-id="0fba6-116">Форма канала</span><span class="sxs-lookup"><span data-stu-id="0fba6-116">Channel Shape</span></span>|  
+|--------------|-----------|-------------------|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|<span data-ttu-id="0fba6-117">SessionMode = SessionMode.Allowed</span><span class="sxs-lookup"><span data-stu-id="0fba6-117">SessionMode = SessionMode.Allowed</span></span><br /><br /> <span data-ttu-id="0fba6-118">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-118">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="0fba6-119">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-119">IsOneWay = true</span></span>|<span data-ttu-id="0fba6-120">IInputChannel -> IOutputChannel</span><span class="sxs-lookup"><span data-stu-id="0fba6-120">IInputChannel -> IOutputChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|<span data-ttu-id="0fba6-121">SessionMode = SessionMode.Required</span><span class="sxs-lookup"><span data-stu-id="0fba6-121">SessionMode = SessionMode.Required</span></span><br /><br /> <span data-ttu-id="0fba6-122">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-122">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="0fba6-123">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-123">IsOneWay = true</span></span>|<span data-ttu-id="0fba6-124">IInputSessionChannel -> IOutputSessionChannel</span><span class="sxs-lookup"><span data-stu-id="0fba6-124">IInputSessionChannel -> IOutputSessionChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|<span data-ttu-id="0fba6-125">SessionMode = SessionMode.Allowed</span><span class="sxs-lookup"><span data-stu-id="0fba6-125">SessionMode = SessionMode.Allowed</span></span><br /><br /> <span data-ttu-id="0fba6-126">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-126">AsyncPattern = true</span></span>|<span data-ttu-id="0fba6-127">IReplyChannel -> IRequestChannel</span><span class="sxs-lookup"><span data-stu-id="0fba6-127">IReplyChannel -> IRequestChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|<span data-ttu-id="0fba6-128">SessionMode=SessionMode.Required</span><span class="sxs-lookup"><span data-stu-id="0fba6-128">SessionMode=SessionMode.Required</span></span><br /><br /> <span data-ttu-id="0fba6-129">CallbackContract=typeof(ISimplexSession)</span><span class="sxs-lookup"><span data-stu-id="0fba6-129">CallbackContract=typeof(ISimplexSession)</span></span><br /><br /> <span data-ttu-id="0fba6-130">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-130">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="0fba6-131">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="0fba6-131">IsOneWay = true</span></span><br /><br /> <span data-ttu-id="0fba6-132">TransactionFlow(TransactionFlowOption.Allowed)</span><span class="sxs-lookup"><span data-stu-id="0fba6-132">TransactionFlow(TransactionFlowOption.Allowed)</span></span>|<span data-ttu-id="0fba6-133">IDuplexSessionChannel -> IDuplexSessionChannel</span><span class="sxs-lookup"><span data-stu-id="0fba6-133">IDuplexSessionChannel -> IDuplexSessionChannel</span></span>|  
   
-## См. также  
- [Routing Service](http://msdn.microsoft.com/ru-ru/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)   
- [Введение в маршрутизацию](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a><span data-ttu-id="0fba6-134">См. также</span><span class="sxs-lookup"><span data-stu-id="0fba6-134">See Also</span></span>  
+ [<span data-ttu-id="0fba6-135">Служба маршрутизации</span><span class="sxs-lookup"><span data-stu-id="0fba6-135">Routing Service</span></span>](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [<span data-ttu-id="0fba6-136">Введение в маршрутизацию</span><span class="sxs-lookup"><span data-stu-id="0fba6-136">Routing Introduction</span></span>](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

@@ -1,96 +1,96 @@
 ---
-title: "Стили и шаблоны элемента ComboBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ComboBox [WPF], стили и шаблоны"
-  - "ControlTemplate [WPF], ComboBox"
-  - "части [WPF], ComboBox"
-  - "состояния [WPF], ComboBox"
-  - "стили [WPF], ComboBox"
-  - "шаблоны [WPF], ComboBox"
+title: "Стили и шаблоны элемента ComboBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ComboBox [WPF], styles and templates
+- states [WPF], ComboBox
+- ControlTemplate [WPF], ComboBox
+- styles [WPF], ComboBox
+- templates [WPF], ComboBox
+- parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd89d2150b2623a749614ab01aa767997dc4bdf3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента ComboBox
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ComboBox>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="combobox-styles-and-templates"></a><span data-ttu-id="ca9bb-102">Стили и шаблоны элемента ComboBox</span><span class="sxs-lookup"><span data-stu-id="ca9bb-102">ComboBox Styles and Templates</span></span>
+<span data-ttu-id="ca9bb-103">В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ComboBox> control.</span></span> <span data-ttu-id="ca9bb-104">Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="ca9bb-105">Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="ca9bb-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Части ComboBox  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.ComboBox>.  
+## <a name="combobox-parts"></a><span data-ttu-id="ca9bb-106">Части поля со списком</span><span class="sxs-lookup"><span data-stu-id="ca9bb-106">ComboBox Parts</span></span>  
+ <span data-ttu-id="ca9bb-107">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-107">The following table lists the named parts for the <xref:System.Windows.Controls.ComboBox> control.</span></span>  
   
-||||  
+|<span data-ttu-id="ca9bb-108">Отделение</span><span class="sxs-lookup"><span data-stu-id="ca9bb-108">Part</span></span>|<span data-ttu-id="ca9bb-109">Тип</span><span class="sxs-lookup"><span data-stu-id="ca9bb-109">Type</span></span>|<span data-ttu-id="ca9bb-110">Описание</span><span class="sxs-lookup"><span data-stu-id="ca9bb-110">Description</span></span>|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Содержит текст элемента управления <xref:System.Windows.Controls.ComboBox>.|  
-|PART\_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Раскрывающийся список, содержащий элементы в поле со списком.|  
+|<span data-ttu-id="ca9bb-111">PART_EditableTextBox</span><span class="sxs-lookup"><span data-stu-id="ca9bb-111">PART_EditableTextBox</span></span>|<xref:System.Windows.Controls.TextBox>|<span data-ttu-id="ca9bb-112">Содержит текст <xref:System.Windows.Controls.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-112">Contains the text of the <xref:System.Windows.Controls.ComboBox>.</span></span>|  
+|<span data-ttu-id="ca9bb-113">PART_Popup</span><span class="sxs-lookup"><span data-stu-id="ca9bb-113">PART_Popup</span></span>|<xref:System.Windows.Controls.Primitives.Popup>|<span data-ttu-id="ca9bb-114">Раскрывающийся список, содержащий элементы в поле со списком.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-114">The drop-down that contains the items in the combo box.</span></span>|  
   
- При создании шаблона <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.ComboBox> шаблон может содержать часть <xref:System.Windows.Controls.ItemsPresenter> в элементе управления <xref:System.Windows.Controls.ScrollViewer>.  \(Элемент управления <xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в элементе управления <xref:System.Windows.Controls.ComboBox>; элемент управления <xref:System.Windows.Controls.ScrollViewer> обеспечивает прокрутку в элементе управления\).  Если элемент управления <xref:System.Windows.Controls.ItemsPresenter> не является непосредственным дочерним элементом элемента управления <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить элементу управления <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ <span data-ttu-id="ca9bb-115">При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ComboBox>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-115">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ComboBox>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="ca9bb-116">( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.ComboBox>; <xref:System.Windows.Controls.ScrollViewer> разрешает прокрутку в элементе управления).</span><span class="sxs-lookup"><span data-stu-id="ca9bb-116">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.ComboBox>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="ca9bb-117">Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, вы должны предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-117">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Состояния ComboBox  
- В следующей таблице перечислены состояния элемента управления <xref:System.Windows.Controls.ComboBox>.  
+## <a name="combobox-states"></a><span data-ttu-id="ca9bb-118">Поле со списком состояний</span><span class="sxs-lookup"><span data-stu-id="ca9bb-118">ComboBox States</span></span>  
+ <span data-ttu-id="ca9bb-119">В следующей таблице перечислены состояния для <xref:System.Windows.Controls.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-119">The following table lists the states for the <xref:System.Windows.Controls.ComboBox> control.</span></span>  
   
-||||  
+|<span data-ttu-id="ca9bb-120">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="ca9bb-120">VisualState Name</span></span>|<span data-ttu-id="ca9bb-121">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="ca9bb-121">VisualStateGroup Name</span></span>|<span data-ttu-id="ca9bb-122">Описание</span><span class="sxs-lookup"><span data-stu-id="ca9bb-122">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|Disabled|CommonStates|Элемент управления отключен.|  
-|MouseOver|CommonStates|Указатель мыши наведен на элемент управления <xref:System.Windows.Controls.ComboBox>.|  
-|Focused|FocusStates|Элемент управления имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления не имеет фокуса.|  
-|FocusedDropDown|FocusStates|Раскрывающийся список для элемента управления <xref:System.Windows.Controls.ComboBox> имеет фокус.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
-|Editable|EditStates|Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `true`.|  
-|Uneditable|EditStates|Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `false`.|  
+|<span data-ttu-id="ca9bb-123">Норм.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-123">Normal</span></span>|<span data-ttu-id="ca9bb-124">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-124">CommonStates</span></span>|<span data-ttu-id="ca9bb-125">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-125">The default state.</span></span>|  
+|<span data-ttu-id="ca9bb-126">Отключено</span><span class="sxs-lookup"><span data-stu-id="ca9bb-126">Disabled</span></span>|<span data-ttu-id="ca9bb-127">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-127">CommonStates</span></span>|<span data-ttu-id="ca9bb-128">Элемент управления отключен.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-128">The control is disabled.</span></span>|  
+|<span data-ttu-id="ca9bb-129">MouseOver</span><span class="sxs-lookup"><span data-stu-id="ca9bb-129">MouseOver</span></span>|<span data-ttu-id="ca9bb-130">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-130">CommonStates</span></span>|<span data-ttu-id="ca9bb-131">Указатель мыши находится над <xref:System.Windows.Controls.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-131">The mouse pointer is over the <xref:System.Windows.Controls.ComboBox> control.</span></span>|  
+|<span data-ttu-id="ca9bb-132">Focused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-132">Focused</span></span>|<span data-ttu-id="ca9bb-133">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-133">FocusStates</span></span>|<span data-ttu-id="ca9bb-134">Элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-134">The control has focus.</span></span>|  
+|<span data-ttu-id="ca9bb-135">Без фокуса ввода</span><span class="sxs-lookup"><span data-stu-id="ca9bb-135">Unfocused</span></span>|<span data-ttu-id="ca9bb-136">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-136">FocusStates</span></span>|<span data-ttu-id="ca9bb-137">Элемент управления не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-137">The control does not have focus.</span></span>|  
+|<span data-ttu-id="ca9bb-138">FocusedDropDown</span><span class="sxs-lookup"><span data-stu-id="ca9bb-138">FocusedDropDown</span></span>|<span data-ttu-id="ca9bb-139">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-139">FocusStates</span></span>|<span data-ttu-id="ca9bb-140">В раскрывающемся списке для <xref:System.Windows.Controls.ComboBox> имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-140">The drop-down for the <xref:System.Windows.Controls.ComboBox> has focus.</span></span>|  
+|<span data-ttu-id="ca9bb-141">Valid</span><span class="sxs-lookup"><span data-stu-id="ca9bb-141">Valid</span></span>|<span data-ttu-id="ca9bb-142">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-142">ValidationStates</span></span>|<span data-ttu-id="ca9bb-143">Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-143">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="ca9bb-144">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-144">InvalidFocused</span></span>|<span data-ttu-id="ca9bb-145">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-145">ValidationStates</span></span>|<span data-ttu-id="ca9bb-146"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-146">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="ca9bb-147">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-147">InvalidUnfocused</span></span>|<span data-ttu-id="ca9bb-148">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-148">ValidationStates</span></span>|<span data-ttu-id="ca9bb-149"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-149">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
+|<span data-ttu-id="ca9bb-150">Для редактирования</span><span class="sxs-lookup"><span data-stu-id="ca9bb-150">Editable</span></span>|<span data-ttu-id="ca9bb-151">EditStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-151">EditStates</span></span>|<span data-ttu-id="ca9bb-152">Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `true`.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-152">The <xref:System.Windows.Controls.ComboBox.IsEditable%2A> property is `true`.</span></span>|  
+|<span data-ttu-id="ca9bb-153">Недоступными для редактирования</span><span class="sxs-lookup"><span data-stu-id="ca9bb-153">Uneditable</span></span>|<span data-ttu-id="ca9bb-154">EditStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-154">EditStates</span></span>|<span data-ttu-id="ca9bb-155">Значение свойства <xref:System.Windows.Controls.ComboBox.IsEditable%2A> — `false`.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-155">The <xref:System.Windows.Controls.ComboBox.IsEditable%2A> property is `false`.</span></span>|  
   
-## Части ComboBoxItem  
- Элемент управления <xref:System.Windows.Controls.ComboBoxItem> не имеет именованных частей.  
+## <a name="comboboxitem-parts"></a><span data-ttu-id="ca9bb-156">Части руководство.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-156">ComboBoxItem Parts</span></span>  
+ <span data-ttu-id="ca9bb-157"><xref:System.Windows.Controls.ComboBoxItem> Управления не имеет именованных частей.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-157">The <xref:System.Windows.Controls.ComboBoxItem> control does not have any named parts.</span></span>  
   
-## Состояния ComboBoxItem  
- В следующей таблице перечислены состояния элемента управления <xref:System.Windows.Controls.ComboBoxItem>.  
+## <a name="comboboxitem-states"></a><span data-ttu-id="ca9bb-158">Состояния руководство.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-158">ComboBoxItem States</span></span>  
+ <span data-ttu-id="ca9bb-159">В следующей таблице перечислены состояния для <xref:System.Windows.Controls.ComboBoxItem> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-159">The following table lists the states for the <xref:System.Windows.Controls.ComboBoxItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="ca9bb-160">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="ca9bb-160">VisualState Name</span></span>|<span data-ttu-id="ca9bb-161">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="ca9bb-161">VisualStateGroup Name</span></span>|<span data-ttu-id="ca9bb-162">Описание</span><span class="sxs-lookup"><span data-stu-id="ca9bb-162">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|Disabled|CommonStates|Элемент управления отключен.|  
-|MouseOver|CommonStates|Указатель мыши наведен на элемент управления <xref:System.Windows.Controls.ComboBox>.|  
-|Focused|FocusStates|Элемент управления имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления не имеет фокуса.|  
-|Выбран|SelectionStates|Элемент выбран.|  
-|Не выбран|SelectionStates|Элемент не выбран.|  
-|SelectedUnfocused|SelectionStates|Элемент выбран, но не имеет фокус.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|<span data-ttu-id="ca9bb-163">Норм.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-163">Normal</span></span>|<span data-ttu-id="ca9bb-164">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-164">CommonStates</span></span>|<span data-ttu-id="ca9bb-165">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-165">The default state.</span></span>|  
+|<span data-ttu-id="ca9bb-166">Отключено</span><span class="sxs-lookup"><span data-stu-id="ca9bb-166">Disabled</span></span>|<span data-ttu-id="ca9bb-167">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-167">CommonStates</span></span>|<span data-ttu-id="ca9bb-168">Элемент управления отключен.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-168">The control is disabled.</span></span>|  
+|<span data-ttu-id="ca9bb-169">MouseOver</span><span class="sxs-lookup"><span data-stu-id="ca9bb-169">MouseOver</span></span>|<span data-ttu-id="ca9bb-170">CommonStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-170">CommonStates</span></span>|<span data-ttu-id="ca9bb-171">Указатель мыши находится над <xref:System.Windows.Controls.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-171">The mouse pointer is over the <xref:System.Windows.Controls.ComboBox> control.</span></span>|  
+|<span data-ttu-id="ca9bb-172">Focused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-172">Focused</span></span>|<span data-ttu-id="ca9bb-173">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-173">FocusStates</span></span>|<span data-ttu-id="ca9bb-174">Элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-174">The control has focus.</span></span>|  
+|<span data-ttu-id="ca9bb-175">Без фокуса ввода</span><span class="sxs-lookup"><span data-stu-id="ca9bb-175">Unfocused</span></span>|<span data-ttu-id="ca9bb-176">FocusStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-176">FocusStates</span></span>|<span data-ttu-id="ca9bb-177">Элемент управления не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-177">The control does not have focus.</span></span>|  
+|<span data-ttu-id="ca9bb-178">Selected</span><span class="sxs-lookup"><span data-stu-id="ca9bb-178">Selected</span></span>|<span data-ttu-id="ca9bb-179">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-179">SelectionStates</span></span>|<span data-ttu-id="ca9bb-180">В настоящее время выбран элемент.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-180">The item is currently selected.</span></span>|  
+|<span data-ttu-id="ca9bb-181">Unselected</span><span class="sxs-lookup"><span data-stu-id="ca9bb-181">Unselected</span></span>|<span data-ttu-id="ca9bb-182">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-182">SelectionStates</span></span>|<span data-ttu-id="ca9bb-183">Элемент не выбран.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-183">The item is not selected.</span></span>|  
+|<span data-ttu-id="ca9bb-184">SelectedUnfocused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-184">SelectedUnfocused</span></span>|<span data-ttu-id="ca9bb-185">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-185">SelectionStates</span></span>|<span data-ttu-id="ca9bb-186">Элемент выбран, но не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-186">The item is selected, but does not have focus.</span></span>|  
+|<span data-ttu-id="ca9bb-187">Valid</span><span class="sxs-lookup"><span data-stu-id="ca9bb-187">Valid</span></span>|<span data-ttu-id="ca9bb-188">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-188">ValidationStates</span></span>|<span data-ttu-id="ca9bb-189">Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-189">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="ca9bb-190">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-190">InvalidFocused</span></span>|<span data-ttu-id="ca9bb-191">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-191">ValidationStates</span></span>|<span data-ttu-id="ca9bb-192"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-192">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="ca9bb-193">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="ca9bb-193">InvalidUnfocused</span></span>|<span data-ttu-id="ca9bb-194">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="ca9bb-194">ValidationStates</span></span>|<span data-ttu-id="ca9bb-195"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-195">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Пример шаблона ControlTemplate ComboBox  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.ComboBox> и связанных с ним типов.  
+## <a name="combobox-controltemplate-example"></a><span data-ttu-id="ca9bb-196">Пример шаблона элемента управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="ca9bb-196">ComboBox ControlTemplate Example</span></span>  
+ <span data-ttu-id="ca9bb-197">В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ComboBox> управления и связанных типов.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-197">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ComboBox> control and associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
+ [!code-xaml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ <span data-ttu-id="ca9bb-198">В предыдущем примере используется один или несколько из следующих ресурсов.</span><span class="sxs-lookup"><span data-stu-id="ca9bb-198">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="ca9bb-199">Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="ca9bb-199">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="ca9bb-200">См. также</span><span class="sxs-lookup"><span data-stu-id="ca9bb-200">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="ca9bb-201">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="ca9bb-201">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="ca9bb-202">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="ca9bb-202">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="ca9bb-203">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="ca9bb-203">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="ca9bb-204">Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="ca9bb-204">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

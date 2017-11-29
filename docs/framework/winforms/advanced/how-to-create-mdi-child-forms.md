@@ -1,67 +1,72 @@
 ---
-title: "Практическое руководство. Создание дочерних MDI-форм | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "дочерние формы"
-  - "MDI - интерфейс, создание форм"
+title: "Практическое руководство. Создание дочерних MDI-форм"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- MDI [Windows Forms], creating forms
+- child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a779229a61d18ec835197bafac66579c026e2ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание дочерних MDI-форм
-Дочерние формы MDI являются основным элементом [Приложения с интерфейсом MDI](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), так как они находятся в центре взаимодействия с пользователями.  
+# <a name="how-to-create-mdi-child-forms"></a><span data-ttu-id="ee37d-102">Практическое руководство. Создание дочерних MDI-форм</span><span class="sxs-lookup"><span data-stu-id="ee37d-102">How to: Create MDI Child Forms</span></span>
+<span data-ttu-id="ee37d-103">Дочерние формы MDI являются основным элементом [приложений многодокументного интерфейса (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), поскольку они находятся в центре взаимодействия с пользователем.</span><span class="sxs-lookup"><span data-stu-id="ee37d-103">MDI child forms are an essential element of [Multiple-Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), as these forms are the center of user interaction.</span></span>  
   
- С помощью описанной ниже процедуры создаются дочерние формы MDI, отображающие элемент управления <xref:System.Windows.Forms.RichTextBox> аналогично большинству текстовых приложений.  Замена элемента управления <xref:System.Windows.Forms> на другие элементы управления, такие как <xref:System.Windows.Forms.DataGridView>, или на сочетание элементов управления позволяет создавать дочерние окна MDI \(а также приложения MDI\) с различными возможностями.  
+ <span data-ttu-id="ee37d-104">С помощью описанной ниже процедуры создаются дочерние формы MDI, отображающие элемент управления <xref:System.Windows.Forms.RichTextBox> аналогично большинству текстовых приложений.</span><span class="sxs-lookup"><span data-stu-id="ee37d-104">In the following procedure, you will create MDI child form that displays a <xref:System.Windows.Forms.RichTextBox> control, similar to most word-processing applications.</span></span> <span data-ttu-id="ee37d-105">Замена элемента управления <xref:System.Windows.Forms> на другие элементы управления, такие как <xref:System.Windows.Forms.DataGridView>, или на сочетание элементов управления позволяет создавать дочерние окна MDI (а также приложения MDI) с различными возможностями.</span><span class="sxs-lookup"><span data-stu-id="ee37d-105">Substituting the <xref:System.Windows.Forms> control with other controls, such as the <xref:System.Windows.Forms.DataGridView> control, or a mixture of controls enables you to create MDI child windows (and, by extension, MDI applications) with diverse possibilities.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.  Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="ee37d-106">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="ee37d-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="ee37d-107">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="ee37d-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="ee37d-108">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="ee37d-108">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Создание дочерних форм MDI  
+### <a name="to-create-mdi-child-forms"></a><span data-ttu-id="ee37d-109">Создание дочерних форм MDI</span><span class="sxs-lookup"><span data-stu-id="ee37d-109">To create MDI child forms</span></span>  
   
-1.  Создайте проект Windows Forms.  В окне **Свойства** формы присвойте свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`, а свойству `WindowsState` — значение `Maximized`.  
+1.  <span data-ttu-id="ee37d-110">Создайте проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ee37d-110">Create a new Windows Forms project.</span></span> <span data-ttu-id="ee37d-111">В **Windows свойства** формы, задать его <xref:System.Windows.Forms.Form.IsMdiContainer%2A> свойства `true`и его `WindowsState` свойства `Maximized`.</span><span class="sxs-lookup"><span data-stu-id="ee37d-111">In **the Properties Windows** for the form, set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`, and its `WindowsState` property to `Maximized`.</span></span>  
   
-     При этом форма назначается в качестве MDI\-контейнера для дочерних окон.  
+     <span data-ttu-id="ee37d-112">При этом форма назначается в качестве MDI-контейнера для дочерних окон.</span><span class="sxs-lookup"><span data-stu-id="ee37d-112">This designates the form as an MDI container for child windows.</span></span>  
   
-2.  Из `Toolbox` перетащите элемент управления <xref:System.Windows.Forms.MenuStrip> в форму.  Присвойте свойству `Text` значение **File**.  
+2.  <span data-ttu-id="ee37d-113">Из `Toolbox` перетащите элемент управления <xref:System.Windows.Forms.MenuStrip> в форму.</span><span class="sxs-lookup"><span data-stu-id="ee37d-113">From the `Toolbox`, drag a <xref:System.Windows.Forms.MenuStrip> control to the form.</span></span> <span data-ttu-id="ee37d-114">Задайте его `Text` свойства **файл**.</span><span class="sxs-lookup"><span data-stu-id="ee37d-114">Set its `Text` property to **File**.</span></span>  
   
-3.  Нажмите кнопку с многоточием \(…\) рядом со свойством **Items** и выберите пункт **Добавить**, чтобы добавить два дочерних элемента типа "меню панели инструментов".  Присвойте свойству `Text` этих элементов значения **Создать** и **Окно**.  
+3.  <span data-ttu-id="ee37d-115">Нажмите кнопку с многоточием (...) рядом с **элементы** свойство и нажмите кнопку **добавить** для добавления двух дочерних средство полосковой пунктов меню.</span><span class="sxs-lookup"><span data-stu-id="ee37d-115">Click the ellipses (…) next to the **Items** property, and click **Add** to add two child tool strip menu items.</span></span> <span data-ttu-id="ee37d-116">Задать `Text` свойства для этих элементов, **New** и **окна**.</span><span class="sxs-lookup"><span data-stu-id="ee37d-116">Set the `Text` property for these items to **New** and **Window**.</span></span>  
   
-4.  В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите команду **Добавить**, а затем **Добавить новый элемент**.  
+4.  <span data-ttu-id="ee37d-117">В **обозревателе решений**, щелкните правой кнопкой мыши проект, выберите пункт **добавить**, а затем выберите **Добавление нового элемента**.</span><span class="sxs-lookup"><span data-stu-id="ee37d-117">In **Solution Explorer**, right-click the project, point to **Add**, and then select **Add New Item**.</span></span>  
   
-5.  В диалоговом окне **Добавление нового элемента** на панели **Шаблоны** выберите **Форма Windows Forms** \(в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) или **Приложение Windows Forms \(.NET\)** \(в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\).  В поле **Имя** введите имя формы Form2.  Нажмите кнопку **Открыть**, чтобы добавить форму в проект.  
-  
-    > [!NOTE]
-    >  Дочерняя форма MDI, созданная на этом этапе, является стандартной формой Windows Forms.  Таким образом, у нее есть свойство <xref:System.Windows.Forms.Form.Opacity%2A>, которое позволяет управлять прозрачностью формы.  Однако свойство <xref:System.Windows.Forms.Form.Opacity%2A> предназначено для окон верхнего уровня.  Его не следует использовать в дочерних формах MDI, иначе могут возникнуть проблемы с рисованием.  
-  
-     Эта форма будет шаблоном для дочерних форм MDI.  
-  
-     Откроется **конструктор Windows Forms** с формой Form2.  
-  
-6.  Из **панели элементов** перетащите на форму элемент управления **RichTextBox**.  
-  
-7.  В окне **Свойства** задайте для свойства `Anchor` значение **Top, Left**, а для свойства `Dock` — значение **Fill**.  
-  
-     В результате элемент управления <xref:System.Windows.Forms.RichTextBox> будет целиком заполнять область дочерней формы MDI, даже если ее размеры изменятся.  
-  
-8.  Дважды щелкните пункт меню **Создать**, чтобы создать для него обработчик событий <xref:System.Windows.Forms.Control.Click>.  
-  
-9. Вставьте код, аналогичный приведенному ниже, чтобы при выборе пользователем пункта меню **Создать** создавалась дочерняя форма MDI.  
+5.  <span data-ttu-id="ee37d-118">В **Добавление нового элемента** выберите **формы Windows Forms** (в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) или **приложение Windows Forms (.NET)** (в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) из **шаблоны** области.</span><span class="sxs-lookup"><span data-stu-id="ee37d-118">In the **Add New Item** dialog box, select **Windows Form** (in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) or **Windows Forms Application (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) from the **Templates** pane.</span></span> <span data-ttu-id="ee37d-119">В **имя** поле, имя формы **Form2**.</span><span class="sxs-lookup"><span data-stu-id="ee37d-119">In the **Name** box, name the form **Form2**.</span></span> <span data-ttu-id="ee37d-120">Нажмите кнопку **откройте** кнопку, чтобы добавить форму в проект.</span><span class="sxs-lookup"><span data-stu-id="ee37d-120">Click the **Open** button to add the form to the project.</span></span>  
   
     > [!NOTE]
-    >  В примере ниже обработчик событий обрабатывает событие <xref:System.Windows.Forms.Control.Click> для `MenuItem2`.  Имейте в виду, что в зависимости от особенностей архитектуры приложения пункт меню **Создать** может не являться `MenuItem2`.  
+    >  <span data-ttu-id="ee37d-121">Дочерняя форма MDI, созданная на этом этапе, является стандартной формой Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ee37d-121">The MDI child form you created in this step is a standard Windows Form.</span></span> <span data-ttu-id="ee37d-122">Таким образом, у нее есть свойство <xref:System.Windows.Forms.Form.Opacity%2A>, которое позволяет управлять прозрачностью формы.</span><span class="sxs-lookup"><span data-stu-id="ee37d-122">As such, it has an <xref:System.Windows.Forms.Form.Opacity%2A> property, which enables you to control the transparency of the form.</span></span> <span data-ttu-id="ee37d-123">Однако свойство <xref:System.Windows.Forms.Form.Opacity%2A> предназначено для окон верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="ee37d-123">However, the <xref:System.Windows.Forms.Form.Opacity%2A> property was designed for top-level windows.</span></span> <span data-ttu-id="ee37d-124">Его не следует использовать в дочерних формах MDI, иначе могут возникнуть проблемы с рисованием.</span><span class="sxs-lookup"><span data-stu-id="ee37d-124">Do not use it with MDI child forms, as painting problems can occur.</span></span>  
+  
+     <span data-ttu-id="ee37d-125">Эта форма будет шаблоном для дочерних форм MDI.</span><span class="sxs-lookup"><span data-stu-id="ee37d-125">This form will be the template for your MDI child forms.</span></span>  
+  
+     <span data-ttu-id="ee37d-126">**Конструктор Windows Forms** откроется **Form2**.</span><span class="sxs-lookup"><span data-stu-id="ee37d-126">The **Windows Forms Designer** opens, displaying **Form2**.</span></span>  
+  
+6.  <span data-ttu-id="ee37d-127">Из **элементов**, перетащите **RichTextBox** на форму элемент управления.</span><span class="sxs-lookup"><span data-stu-id="ee37d-127">From the **Toolbox**, drag a **RichTextBox** control to the form.</span></span>  
+  
+7.  <span data-ttu-id="ee37d-128">В **свойства** задайте `Anchor` свойства **верхнем, левом** и `Dock` свойства **заполнения**.</span><span class="sxs-lookup"><span data-stu-id="ee37d-128">In the **Properties** window, set the `Anchor` property to **Top, Left** and the `Dock` property to **Fill**.</span></span>  
+  
+     <span data-ttu-id="ee37d-129">В результате элемент управления <xref:System.Windows.Forms.RichTextBox> будет целиком заполнять область дочерней формы MDI, даже если ее размеры изменятся.</span><span class="sxs-lookup"><span data-stu-id="ee37d-129">This causes the <xref:System.Windows.Forms.RichTextBox> control to completely fill the area of the MDI child form, even when the form is resized.</span></span>  
+  
+8.  <span data-ttu-id="ee37d-130">Дважды щелкните **New** пункт меню, чтобы создать <xref:System.Windows.Forms.Control.Click> для него обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="ee37d-130">Double click the **New** menu item to create a <xref:System.Windows.Forms.Control.Click> event handler for it.</span></span>  
+  
+9. <span data-ttu-id="ee37d-131">Вставьте код, аналогичный приведенному ниже, чтобы создать новую дочернюю форму MDI, при щелчке **New** элемента меню.</span><span class="sxs-lookup"><span data-stu-id="ee37d-131">Insert code similar to the following to create a new MDI child form when the user clicks the **New** menu item.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="ee37d-132">В примере ниже обработчик событий обрабатывает событие <xref:System.Windows.Forms.Control.Click> для `MenuItem2`.</span><span class="sxs-lookup"><span data-stu-id="ee37d-132">In the following example, the event handler handles the <xref:System.Windows.Forms.Control.Click> event for `MenuItem2`.</span></span> <span data-ttu-id="ee37d-133">Имейте в виду, в зависимости от особенностей архитектуры приложения, к **New** пункт меню не может быть `MenuItem2`.</span><span class="sxs-lookup"><span data-stu-id="ee37d-133">Be aware that, depending on the specifics of your application architecture, your **New** menu item may not be `MenuItem2`.</span></span>  
   
     ```vb  
     Protected Sub MDIChildNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click  
@@ -71,7 +76,6 @@ caps.handback.revision: 21
        'Display the new form.  
        NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -82,7 +86,6 @@ caps.handback.revision: 21
        // Display the new form.  
        newMDIChild.Show();  
     }  
-  
     ```  
   
     ```cpp  
@@ -98,24 +101,24 @@ caps.handback.revision: 21
        }  
     ```  
   
-     При использовании [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] добавьте следующую директиву `#include` в начало формы Form1.h:  
+     <span data-ttu-id="ee37d-134">При использовании [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] добавьте следующую директиву `#include` в начало формы Form1.h:</span><span class="sxs-lookup"><span data-stu-id="ee37d-134">In [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], add the following `#include` directive at the top of Form1.h:</span></span>  
   
     ```cpp  
     #include "Form2.h"  
     ```  
   
-10. В раскрывающемся списке в верхней части окна **Свойства** выберите пункт меню, соответствующий пункту **Файл**, и задайте для свойства <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> значение <xref:System.Windows.Forms.ToolStripMenuItem> пункта "Окно".  
+10. <span data-ttu-id="ee37d-135">В раскрывающемся списке в верхней части **свойства** окно, выберите пункт меню, соответствующий **файл** ленты меню и набор <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> свойства в окне <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="ee37d-135">In the drop-down list at the top of the **Properties** window, select the menu strip that corresponds to the **File** menu strip and set the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property to the Window <xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-     Благодаря этому в меню **Окно** будет приводиться список открытых дочерних окон MDI с флажком рядом с активным окном.  
+     <span data-ttu-id="ee37d-136">Это позволит **окна** меню, чтобы поддерживать список открытых дочерних окон MDI с флажком рядом с активным дочерним окном.</span><span class="sxs-lookup"><span data-stu-id="ee37d-136">This will enable the **Window** menu to maintain a list of open MDI child windows with a check mark next to the active child window.</span></span>  
   
-11. Нажмите клавишу F5 для запуска приложения.  Выбирая команду **Создать** в меню **Файл**, можно создавать дочерние формы MDI, которые отслеживаются в меню **Окно**.  
+11. <span data-ttu-id="ee37d-137">Нажмите клавишу F5 для запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="ee37d-137">Press F5 to run the application.</span></span> <span data-ttu-id="ee37d-138">Выбрав **New** из **файл** меню, можно создать дочерние формы MDI, которыми будут храниться в **окна** пункта меню.</span><span class="sxs-lookup"><span data-stu-id="ee37d-138">By selecting **New** from the **File** menu, you can create new MDI child forms, which are kept track of in the **Window** menu item.</span></span>  
   
     > [!NOTE]
-    >  Когда в дочерней форме MDI есть компонент <xref:System.Windows.Forms.MainMenu> \(обычно обладающий структурой пунктов меню\) и он открыт внутри родительской формы MDI, также имеющей компонент <xref:System.Windows.Forms.MainMenu> \(обычно обладающий структурой пунктов меню\), пункты меню будут объединены автоматически, если задано свойство <xref:System.Windows.Forms.MenuItem.MergeType%2A> \(и, возможно, свойство <xref:System.Windows.Forms.MenuItem.MergeOrder%2A>\).  Установите для свойства <xref:System.Windows.Forms.MenuItem.MergeType%2A> обоих компонентов <xref:System.Windows.Forms.MainMenu> и всех пунктов меню дочерней формы значение <xref:System.Windows.Forms.MenuMerge>.  Кроме того, установите свойство <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> таким образом, чтобы пункты обоих меню приводились в нужном порядке.  Необходимо помнить, что при закрытии родительской формы MDI каждая из дочерних форм MDI создает событие <xref:System.Windows.Forms.Form.Closing> до создания события <xref:System.Windows.Forms.Form.Closing> для родительской формы MDI.  Отмена события <xref:System.Windows.Forms.Form.Closing> дочерней формы MDI не отменяет событие <xref:System.Windows.Forms.Form.Closing> родительской формы MDI. Однако для аргумента <xref:System.ComponentModel.CancelEventArgs> для события <xref:System.Windows.Forms.Form.Closing> родительской формы MDI будет установлено значение `true`.  Чтобы принудительно закрыть родительскую и все дочерние формы MDI, задайте для аргумента <xref:System.ComponentModel.CancelEventArgs> значение `false`.  
+    >  <span data-ttu-id="ee37d-139">Когда в дочерней форме MDI есть компонент <xref:System.Windows.Forms.MainMenu> (обычно обладающий структурой пунктов меню) и он открыт внутри родительской формы MDI, также имеющей компонент <xref:System.Windows.Forms.MainMenu> (обычно обладающий структурой пунктов меню), пункты меню будут объединены автоматически, если задано свойство <xref:System.Windows.Forms.MenuItem.MergeType%2A> (и, возможно, свойство <xref:System.Windows.Forms.MenuItem.MergeOrder%2A>).</span><span class="sxs-lookup"><span data-stu-id="ee37d-139">When an MDI child form has a <xref:System.Windows.Forms.MainMenu> component (with, usually, a menu structure of menu items) and it is opened within an MDI parent form that has a <xref:System.Windows.Forms.MainMenu> component (with, usually, a menu structure of menu items), the menu items will merge automatically if you have set the <xref:System.Windows.Forms.MenuItem.MergeType%2A> property (and optionally, the <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> property).</span></span> <span data-ttu-id="ee37d-140">Установите для свойства <xref:System.Windows.Forms.MenuItem.MergeType%2A> обоих компонентов <xref:System.Windows.Forms.MainMenu> и всех пунктов меню дочерней формы значение <xref:System.Windows.Forms.MenuMerge.MergeItems>.</span><span class="sxs-lookup"><span data-stu-id="ee37d-140">Set the <xref:System.Windows.Forms.MenuItem.MergeType%2A> property of both <xref:System.Windows.Forms.MainMenu> components and all of the menu items of the child form to <xref:System.Windows.Forms.MenuMerge.MergeItems>.</span></span> <span data-ttu-id="ee37d-141">Кроме того, установите свойство <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> таким образом, чтобы пункты обоих меню приводились в нужном порядке.</span><span class="sxs-lookup"><span data-stu-id="ee37d-141">Additionally, set the <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> property so that the menu items from both menus appear in the desired order.</span></span> <span data-ttu-id="ee37d-142">Необходимо помнить, что при закрытии родительской формы MDI каждая из дочерних форм MDI создает событие <xref:System.Windows.Forms.Form.Closing> до создания события <xref:System.Windows.Forms.Form.Closing> для родительской формы MDI.</span><span class="sxs-lookup"><span data-stu-id="ee37d-142">Moreover, keep in mind that when you close an MDI parent form, each of the MDI child forms raises a <xref:System.Windows.Forms.Form.Closing> event before the <xref:System.Windows.Forms.Form.Closing> event for the MDI parent is raised.</span></span> <span data-ttu-id="ee37d-143">Отмена события <xref:System.Windows.Forms.Form.Closing> дочерней формы MDI не отменяет событие <xref:System.Windows.Forms.Form.Closing> родительской формы MDI. Однако для аргумента <xref:System.ComponentModel.CancelEventArgs> для события <xref:System.Windows.Forms.Form.Closing> родительской формы MDI будет установлено значение `true`.</span><span class="sxs-lookup"><span data-stu-id="ee37d-143">Canceling an MDI child's <xref:System.Windows.Forms.Form.Closing> event will not prevent the MDI parent's <xref:System.Windows.Forms.Form.Closing> event from being raised; however, the <xref:System.ComponentModel.CancelEventArgs> argument for the MDI parent's <xref:System.Windows.Forms.Form.Closing> event will now be set to `true`.</span></span> <span data-ttu-id="ee37d-144">Чтобы принудительно закрыть родительскую и все дочерние формы MDI, задайте для аргумента <xref:System.ComponentModel.CancelEventArgs> значение `false`.</span><span class="sxs-lookup"><span data-stu-id="ee37d-144">You can force the MDI parent and all MDI child forms to close by setting the <xref:System.ComponentModel.CancelEventArgs> argument to `false`.</span></span>  
   
-## См. также  
- [Приложения с интерфейсом MDI](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [Практическое руководство. Создание родительских MDI\-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Практическое руководство. Определение активной дочерней MDI\-формы](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)   
- [Практическое руководство. Отправка данных в активную дочернюю MDI\-форму](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)   
- [Практическое руководство. Упорядочение дочерних форм интерфейса MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ee37d-145">См. также</span><span class="sxs-lookup"><span data-stu-id="ee37d-145">See Also</span></span>  
+ [<span data-ttu-id="ee37d-146">Приложения с интерфейсом MDI</span><span class="sxs-lookup"><span data-stu-id="ee37d-146">Multiple-Document Interface (MDI) Applications</span></span>](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [<span data-ttu-id="ee37d-147">Практическое руководство. Создание родительских MDI-форм</span><span class="sxs-lookup"><span data-stu-id="ee37d-147">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="ee37d-148">Практическое руководство. Определение активной дочерней MDI-формы</span><span class="sxs-lookup"><span data-stu-id="ee37d-148">How to: Determine the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [<span data-ttu-id="ee37d-149">Практическое руководство. Отправка данных в активную дочернюю MDI-форму</span><span class="sxs-lookup"><span data-stu-id="ee37d-149">How to: Send Data to the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
+ [<span data-ttu-id="ee37d-150">Практическое руководство. Упорядочение дочерних форм интерфейса MDI</span><span class="sxs-lookup"><span data-stu-id="ee37d-150">How to: Arrange MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

@@ -1,39 +1,39 @@
 ---
-title: "Общие сведения об элементе управления Button (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Button"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button - элемент управления [Windows Forms], сведения об элементе управления Button"
-  - "кнопки, сведения о кнопках"
+title: "Общие сведения об элементе управления Button (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Button
+helpviewer_keywords:
+- Button control [Windows Forms], about Button control
+- buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff98eb39113a2fa8117d091645ac04526e2983c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления Button (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.Button> \(кнопка\) служит для выполнения действия с помощью мыши.  Если нажать кнопку, она выглядит так, словно она нажата и отпущена.  При нажатии на кнопку вызывается обработчик событий <xref:System.Windows.Forms.Control.Click>.  В обработчик событий <xref:System.Windows.Forms.Control.Click> помещается код, отвечающий за выполнение нужного действия.  
+# <a name="button-control-overview-windows-forms"></a><span data-ttu-id="b1645-102">Общие сведения об элементе управления Button (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b1645-102">Button Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="b1645-103">Элемент управления Windows Forms <xref:System.Windows.Forms.Button> позволяет пользователю щелкнуть его для выполнения действия.</span><span class="sxs-lookup"><span data-stu-id="b1645-103">The Windows Forms <xref:System.Windows.Forms.Button> control allows the user to click it to perform an action.</span></span> <span data-ttu-id="b1645-104">При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают.</span><span class="sxs-lookup"><span data-stu-id="b1645-104">When the button is clicked, it looks as if it is being pushed in and released.</span></span> <span data-ttu-id="b1645-105">Когда пользователь нажимает кнопку, <xref:System.Windows.Forms.Control.Click> вызывается обработчик события.</span><span class="sxs-lookup"><span data-stu-id="b1645-105">Whenever the user clicks a button, the <xref:System.Windows.Forms.Control.Click> event handler is invoked.</span></span> <span data-ttu-id="b1645-106">Поместить код в <xref:System.Windows.Forms.Control.Click> обработчик событий, чтобы выполнять любые действия, которые можно выбрать.</span><span class="sxs-lookup"><span data-stu-id="b1645-106">You place code in the <xref:System.Windows.Forms.Control.Click> event handler to perform any action you choose.</span></span>  
   
- Текст, отображающийся на кнопке, содержится в свойстве <xref:System.Windows.Forms.Control.Text%2A>.  Если текст превышает ширину кнопки, он переходит на следующую строку.  Однако если высота элемента управления не может изменяться, текст обрезается.  Дополнительные сведения см. в разделе [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  Свойство <xref:System.Windows.Forms.Control.Text%2A> может содержать клавишу доступа, что позволяет пользователю выполнять действие, аналогичное щелчку элемента управления, нажав клавишу ALT одновременно с клавишей доступа.  Дополнительные сведения см. в разделе [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  Внешний вид текста управляется свойством <xref:System.Windows.Forms.Control.Font%2A> и свойством <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>.  
+ <span data-ttu-id="b1645-107">Текст, отображаемый на кнопке, содержится в <xref:System.Windows.Forms.Control.Text%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b1645-107">The text displayed on the button is contained in the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="b1645-108">Если текст превышает ширину кнопки, он переходит к следующей строке.</span><span class="sxs-lookup"><span data-stu-id="b1645-108">If your text exceeds the width of the button, it will wrap to the next line.</span></span> <span data-ttu-id="b1645-109">Тем не менее он будет обрезан, если элемент управления не может вместить высота.</span><span class="sxs-lookup"><span data-stu-id="b1645-109">However, it will be clipped if the control cannot accommodate its overall height.</span></span> <span data-ttu-id="b1645-110">Дополнительные сведения см. в разделе [как: значение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="b1645-110">For more information, see [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span> <span data-ttu-id="b1645-111"><xref:System.Windows.Forms.Control.Text%2A> Свойство может содержать ключ доступа, который позволяет пользователю «щелкните «элемент управления, нажав клавишу ALT, с помощью ключа доступа.</span><span class="sxs-lookup"><span data-stu-id="b1645-111">The <xref:System.Windows.Forms.Control.Text%2A> property can contain an access key, which allows a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="b1645-112">Дополнительные сведения см. в разделе [как: Создание сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="b1645-112">For details, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span></span> <span data-ttu-id="b1645-113">Внешний вид текста определяется <xref:System.Windows.Forms.Control.Font%2A> свойство и <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="b1645-113">The appearance of the text is controlled by the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> property.</span></span>  
   
- В элементе управления <xref:System.Windows.Forms.Button> можно также отображать рисунки с помощью свойств <xref:System.Windows.Forms.ButtonBase.Image%2A> и <xref:System.Windows.Forms.ButtonBase.ImageList%2A>.  Дополнительные сведения см. в разделе [Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="b1645-114"><xref:System.Windows.Forms.Button> Управления также может отображать изображения, используя <xref:System.Windows.Forms.ButtonBase.Image%2A> и <xref:System.Windows.Forms.ButtonBase.ImageList%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="b1645-114">The <xref:System.Windows.Forms.Button> control can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="b1645-115">Дополнительные сведения см. в разделе [как: задать изображение, отображаемое элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="b1645-115">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Button>   
- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)   
- [Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)   
- [Элемент управления Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b1645-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b1645-116">See Also</span></span>  
+ <xref:System.Windows.Forms.Button>  
+ [<span data-ttu-id="b1645-117">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b1645-117">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="b1645-118">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b1645-118">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="b1645-119">Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="b1645-119">How to: Designate a Windows Forms Button as the Accept Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ [<span data-ttu-id="b1645-120">Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="b1645-120">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ [<span data-ttu-id="b1645-121">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="b1645-121">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

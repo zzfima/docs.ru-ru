@@ -1,58 +1,41 @@
 ---
-title: "Оператор Event | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Оператор Event"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
-dev_langs:
-- VB
 helpviewer_keywords:
-- Event statement
-- declaring events, syntax
-- Public keyword, Event statements
-- Custom keyword
-- declarations, events
+- Event statement [Visual Basic]
+- declaring events [Visual Basic], syntax
+- Public keyword [Visual Basic], Event statements
+- Custom keyword [Visual Basic]
+- declarations [Visual Basic], events
 - event keyword [Visual Basic]
-- WithEvents keyword, Event statements
+- WithEvents keyword [Visual Basic], Event statements
 - events [Visual Basic], declaring
-- ByVal keyword, Event statements
+- ByVal keyword [Visual Basic], Event statements
 - events [Visual Basic], custom
-- ByRef keyword, Event statements
+- ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b0ea8074f996622df3cd88a7e87fc1156b63dcaf
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="event-statement"></a>Оператор Event
-Объявляет пользовательское событие.  
+# <a name="event-statement"></a><span data-ttu-id="ad953-102">Оператор Event</span><span class="sxs-lookup"><span data-stu-id="ad953-102">Event Statement</span></span>
+<span data-ttu-id="ad953-103">Объявляет пользовательское событие.</span><span class="sxs-lookup"><span data-stu-id="ad953-103">Declares a user-defined event.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="ad953-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ad953-104">Syntax</span></span>  
   
 ```  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -78,78 +61,78 @@ ms.lasthandoff: 03/13/2017
 End Event  
 ```  
   
-## <a name="parts"></a>Части  
+## <a name="parts"></a><span data-ttu-id="ad953-105">Части</span><span class="sxs-lookup"><span data-stu-id="ad953-105">Parts</span></span>  
   
-|Отделение|Описание|  
+|<span data-ttu-id="ad953-106">Отделение</span><span class="sxs-lookup"><span data-stu-id="ad953-106">Part</span></span>|<span data-ttu-id="ad953-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ad953-107">Description</span></span>|  
 |---|---|  
-|`attrlist`|Необязательный. Список атрибутов, применимых к этому событию. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).|  
-|`accessmodifier`|Необязательный. Указывает, какой код может получать доступ к событию. Ниже указаны доступные значения.<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)— доступ к нему любой код, который можно получить доступ к элементу, который объявляет его.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)— только код внутри своего класса или производного класса есть доступ к нему.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md)— только для кода в той же сборке есть доступ к нему.<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)— доступ к нему только код внутри элемента, объявляющего его.<br /><br /> Можно указать `Protected Friend` для предоставления доступа из кода в классе события, производном классе или той же сборке.|  
-|`Shared`|Необязательный. Указывает, что это событие не связано с определенным экземпляром класса или структуры.|  
-|`Shadows`|Необязательный. Указывает, что это событие повторно объявляет и скрывает программные элементы с одинаковыми именами или набор перегруженных элементов в базовом классе. Можно скрыть любой тип объявленного элемента, используя любой другой тип.<br /><br /> Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент. Например, если элемент `Private` скрывает элемент базового класса, то код, у которого нет разрешений на доступ к элементу `Private`, получает доступ к элементу базового класса.|  
-|`eventname`|Обязательный. Имя события; соответствует стандартным правилам именования переменных.|  
-|`parameterlist`|Необязательный. Список локальных переменных, которые представляют параметры этого события. Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.|  
-|`Implements`|Необязательный. Указывает, что это событие реализует событие интерфейса.|  
-|`implementslist`|Является обязательным, если предоставлен параметр `Implements`. Список реализуемых процедур `Sub`. Несколько процедур разделяются запятыми.<br /><br /> *реализуемая_процедура* [, *реализуемая_процедура* ...]<br /><br /> Каждый элемент `implementedprocedure` имеет перечисленные ниже синтаксис и компоненты.<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`— Обязательный параметр. Имя интерфейса, реализуемого классом или структурой, содержащими эту процедуру.<br />-   `Definedname`— Обязательный параметр. Имя, под которым процедура определена в `interface`. Оно не должно совпадать с `name`, именем, которое эта процедура использует для реализации определенной процедуры.|  
-|`Custom`|Обязательный. События, объявленные как `Custom`, должны определять настраиваемые методы доступа `AddHandler`, `RemoveHandler` и `RaiseEvent`.|  
-|`delegatename`|Необязательный. Имя делегата, указывающего подпись обработчика событий.|  
-|`AddHandler`|Обязательный. Объявляет метод доступа `AddHandler`, который задает операторы, выполняемые при добавлении обработчика событий, явно с помощью оператора `AddHandler` или неявно с помощью предложения `Handles`.|  
-|`End AddHandler`|Обязательный. Завершает блок `AddHandler`.|  
-|`value`|Обязательный. Имя параметра.|  
-|`RemoveHandler`|Обязательный. Объявляет метод доступа `RemoveHandler`, который задает операторы, выполняемые при удалении обработчика событий с помощью оператора `RemoveHandler`.|  
-|`End RemoveHandler`|Обязательный. Завершает блок `RemoveHandler`.|  
-|`RaiseEvent`|Обязательный. Объявляет метод доступа `RaiseEvent`, который задает операторы, выполняемые при создании события с помощью оператора `RaiseEvent`. Как правило, при этом вызывается список делегатов, обслуживаемых методами доступа `AddHandler` и `RemoveHandler`.|  
-|`End RaiseEvent`|Обязательный. Завершает блок `RaiseEvent`.|  
-|`delegatesignature`|Обязательный. Список параметров, соответствующий параметрам, требуемым делегатом `delegatename`. Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.|  
-|`statements`|Необязательный. Операторы, содержащие тела методов `AddHandler`, `RemoveHandler` и `RaiseEvent`.|  
-|`End Event`|Обязательный. Завершает блок `Event`.|  
+|`attrlist`|<span data-ttu-id="ad953-108">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-108">Optional.</span></span> <span data-ttu-id="ad953-109">Список атрибутов, применимых к этому событию.</span><span class="sxs-lookup"><span data-stu-id="ad953-109">List of attributes that apply to this event.</span></span> <span data-ttu-id="ad953-110">Несколько атрибутов разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="ad953-110">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="ad953-111">Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).</span><span class="sxs-lookup"><span data-stu-id="ad953-111">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>|  
+|`accessmodifier`|<span data-ttu-id="ad953-112">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-112">Optional.</span></span> <span data-ttu-id="ad953-113">Указывает, какой код может получать доступ к событию.</span><span class="sxs-lookup"><span data-stu-id="ad953-113">Specifies what code can access the event.</span></span> <span data-ttu-id="ad953-114">Ниже указаны доступные значения.</span><span class="sxs-lookup"><span data-stu-id="ad953-114">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="ad953-115">-   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)— любой код, который можно получить доступ к объявляющему его элементу, можно получить доступ к.</span><span class="sxs-lookup"><span data-stu-id="ad953-115">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)—any code that can access the element that declares it can access it.</span></span><br /><span data-ttu-id="ad953-116">-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)— только код внутри его класса или производного класса может получить доступ к.</span><span class="sxs-lookup"><span data-stu-id="ad953-116">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)—only code within its class or a derived class can access it.</span></span><br /><span data-ttu-id="ad953-117">-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md)— только код в той же сборке может получить доступ к.</span><span class="sxs-lookup"><span data-stu-id="ad953-117">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)—only code in the same assembly can access it.</span></span><br /><span data-ttu-id="ad953-118">-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)— только код в объявляющем его элементе может получить доступ к.</span><span class="sxs-lookup"><span data-stu-id="ad953-118">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)—only code in the element that declares it can access it.</span></span><br /><br /> <span data-ttu-id="ad953-119">Можно указать `Protected Friend` для предоставления доступа из кода в классе события, производном классе или той же сборке.</span><span class="sxs-lookup"><span data-stu-id="ad953-119">You can specify `Protected Friend` to enable access from code in the event's class, a derived class, or the same assembly.</span></span>|  
+|`Shared`|<span data-ttu-id="ad953-120">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-120">Optional.</span></span> <span data-ttu-id="ad953-121">Указывает, что это событие не связано с определенным экземпляром класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="ad953-121">Specifies that this event is not associated with a specific instance of a class or structure.</span></span>|  
+|`Shadows`|<span data-ttu-id="ad953-122">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-122">Optional.</span></span> <span data-ttu-id="ad953-123">Указывает, что это событие повторно объявляет и скрывает программные элементы с одинаковыми именами или набор перегруженных элементов в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="ad953-123">Indicates that this event redeclares and hides an identically named programming element, or set of overloaded elements, in a base class.</span></span> <span data-ttu-id="ad953-124">Можно скрыть любой тип объявленного элемента, используя любой другой тип.</span><span class="sxs-lookup"><span data-stu-id="ad953-124">You can shadow any kind of declared element with any other kind.</span></span><br /><br /> <span data-ttu-id="ad953-125">Скрытый элемент недоступен из производного класса, который его скрывает, за исключением тех классов, из которых недоступен скрывающий элемент.</span><span class="sxs-lookup"><span data-stu-id="ad953-125">A shadowed element is unavailable from within the derived class that shadows it, except from where the shadowing element is inaccessible.</span></span> <span data-ttu-id="ad953-126">Например, если элемент `Private` скрывает элемент базового класса, то код, у которого нет разрешений на доступ к элементу `Private`, получает доступ к элементу базового класса.</span><span class="sxs-lookup"><span data-stu-id="ad953-126">For example, if a `Private` element shadows a base-class element, code that does not have permission to access the `Private` element accesses the base-class element instead.</span></span>|  
+|`eventname`|<span data-ttu-id="ad953-127">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-127">Required.</span></span> <span data-ttu-id="ad953-128">Имя события; соответствует стандартным правилам именования переменных.</span><span class="sxs-lookup"><span data-stu-id="ad953-128">Name of the event; follows standard variable naming conventions.</span></span>|  
+|`parameterlist`|<span data-ttu-id="ad953-129">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-129">Optional.</span></span> <span data-ttu-id="ad953-130">Список локальных переменных, которые представляют параметры этого события.</span><span class="sxs-lookup"><span data-stu-id="ad953-130">List of local variables that represent the parameters of this event.</span></span> <span data-ttu-id="ad953-131">Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.</span><span class="sxs-lookup"><span data-stu-id="ad953-131">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`Implements`|<span data-ttu-id="ad953-132">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-132">Optional.</span></span> <span data-ttu-id="ad953-133">Указывает, что это событие реализует событие интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ad953-133">Indicates that this event implements an event of an interface.</span></span>|  
+|`implementslist`|<span data-ttu-id="ad953-134">Является обязательным, если предоставлен параметр `Implements`.</span><span class="sxs-lookup"><span data-stu-id="ad953-134">Required if `Implements` is supplied.</span></span> <span data-ttu-id="ad953-135">Список реализуемых процедур `Sub`.</span><span class="sxs-lookup"><span data-stu-id="ad953-135">List of `Sub` procedures being implemented.</span></span> <span data-ttu-id="ad953-136">Несколько процедур разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="ad953-136">Multiple procedures are separated by commas:</span></span><br /><br /> <span data-ttu-id="ad953-137">*реализуемая_процедура* [, *реализуемая_процедура* ...]</span><span class="sxs-lookup"><span data-stu-id="ad953-137">*implementedprocedure* [ , *implementedprocedure* ... ]</span></span><br /><br /> <span data-ttu-id="ad953-138">Каждый элемент `implementedprocedure` имеет перечисленные ниже синтаксис и компоненты.</span><span class="sxs-lookup"><span data-stu-id="ad953-138">Each `implementedprocedure` has the following syntax and parts:</span></span><br /><br /> <span data-ttu-id="ad953-139">`interface`.`definedname`</span><span class="sxs-lookup"><span data-stu-id="ad953-139">`interface`.`definedname`</span></span><br /><br /> <span data-ttu-id="ad953-140">-   `interface`-Обязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-140">-   `interface` - Required.</span></span> <span data-ttu-id="ad953-141">Имя интерфейса, реализуемого классом или структурой, содержащими эту процедуру.</span><span class="sxs-lookup"><span data-stu-id="ad953-141">Name of an interface that this procedure's containing class or structure is implementing.</span></span><br /><span data-ttu-id="ad953-142">-   `Definedname`-Обязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-142">-   `Definedname` - Required.</span></span> <span data-ttu-id="ad953-143">Имя, под которым процедура определена в `interface`.</span><span class="sxs-lookup"><span data-stu-id="ad953-143">Name by which the procedure is defined in `interface`.</span></span> <span data-ttu-id="ad953-144">Оно не должно совпадать с `name`, именем, которое эта процедура использует для реализации определенной процедуры.</span><span class="sxs-lookup"><span data-stu-id="ad953-144">This does not have to be the same as `name`, the name that this procedure is using to implement the defined procedure.</span></span>|  
+|`Custom`|<span data-ttu-id="ad953-145">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-145">Required.</span></span> <span data-ttu-id="ad953-146">События, объявленные как `Custom`, должны определять настраиваемые методы доступа `AddHandler`, `RemoveHandler` и `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="ad953-146">Events declared as `Custom` must define custom `AddHandler`, `RemoveHandler`, and `RaiseEvent` accessors.</span></span>|  
+|`delegatename`|<span data-ttu-id="ad953-147">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-147">Optional.</span></span> <span data-ttu-id="ad953-148">Имя делегата, указывающего подпись обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="ad953-148">The name of a delegate that specifies the event-handler signature.</span></span>|  
+|`AddHandler`|<span data-ttu-id="ad953-149">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-149">Required.</span></span> <span data-ttu-id="ad953-150">Объявляет метод доступа `AddHandler`, который задает операторы, выполняемые при добавлении обработчика событий, явно с помощью оператора `AddHandler` или неявно с помощью предложения `Handles`.</span><span class="sxs-lookup"><span data-stu-id="ad953-150">Declares an `AddHandler` accessor, which specifies the statements to execute when an event handler is added, either explicitly by using the `AddHandler` statement or implicitly by using the `Handles` clause.</span></span>|  
+|`End AddHandler`|<span data-ttu-id="ad953-151">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-151">Required.</span></span> <span data-ttu-id="ad953-152">Завершает блок `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="ad953-152">Terminates the `AddHandler` block.</span></span>|  
+|`value`|<span data-ttu-id="ad953-153">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-153">Required.</span></span> <span data-ttu-id="ad953-154">Имя параметра.</span><span class="sxs-lookup"><span data-stu-id="ad953-154">Parameter name.</span></span>|  
+|`RemoveHandler`|<span data-ttu-id="ad953-155">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-155">Required.</span></span> <span data-ttu-id="ad953-156">Объявляет метод доступа `RemoveHandler`, который задает операторы, выполняемые при удалении обработчика событий с помощью оператора `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="ad953-156">Declares a `RemoveHandler` accessor, which specifies the statements to execute when an event handler is removed using the `RemoveHandler` statement.</span></span>|  
+|`End RemoveHandler`|<span data-ttu-id="ad953-157">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-157">Required.</span></span> <span data-ttu-id="ad953-158">Завершает блок `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="ad953-158">Terminates the `RemoveHandler` block.</span></span>|  
+|`RaiseEvent`|<span data-ttu-id="ad953-159">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-159">Required.</span></span> <span data-ttu-id="ad953-160">Объявляет метод доступа `RaiseEvent`, который задает операторы, выполняемые при создании события с помощью оператора `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="ad953-160">Declares a `RaiseEvent` accessor, which specifies the statements to execute when the event is raised using the `RaiseEvent` statement.</span></span> <span data-ttu-id="ad953-161">Как правило, при этом вызывается список делегатов, обслуживаемых методами доступа `AddHandler` и `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="ad953-161">Typically, this invokes a list of delegates maintained by the `AddHandler` and `RemoveHandler` accessors.</span></span>|  
+|`End RaiseEvent`|<span data-ttu-id="ad953-162">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-162">Required.</span></span> <span data-ttu-id="ad953-163">Завершает блок `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="ad953-163">Terminates the `RaiseEvent` block.</span></span>|  
+|`delegatesignature`|<span data-ttu-id="ad953-164">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-164">Required.</span></span> <span data-ttu-id="ad953-165">Список параметров, соответствующий параметрам, требуемым делегатом `delegatename`.</span><span class="sxs-lookup"><span data-stu-id="ad953-165">List of parameters that matches the parameters required by the `delegatename` delegate.</span></span> <span data-ttu-id="ad953-166">Необходимо заключить [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md) в круглые скобки.</span><span class="sxs-lookup"><span data-stu-id="ad953-166">You must enclose the [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md) in parentheses.</span></span>|  
+|`statements`|<span data-ttu-id="ad953-167">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="ad953-167">Optional.</span></span> <span data-ttu-id="ad953-168">Операторы, содержащие тела методов `AddHandler`, `RemoveHandler` и `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="ad953-168">Statements that contain the bodies of the `AddHandler`, `RemoveHandler`, and `RaiseEvent` methods.</span></span>|  
+|`End Event`|<span data-ttu-id="ad953-169">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="ad953-169">Required.</span></span> <span data-ttu-id="ad953-170">Завершает блок `Event`.</span><span class="sxs-lookup"><span data-stu-id="ad953-170">Terminates the `Event` block.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- После объявления события используйте оператор `RaiseEvent` для создания события. Типичные события можно объявлять и создавать, как показано в следующих фрагментах кода.  
+## <a name="remarks"></a><span data-ttu-id="ad953-171">Примечания</span><span class="sxs-lookup"><span data-stu-id="ad953-171">Remarks</span></span>  
+ <span data-ttu-id="ad953-172">После объявления события используйте оператор `RaiseEvent` для создания события.</span><span class="sxs-lookup"><span data-stu-id="ad953-172">Once the event has been declared, use the `RaiseEvent` statement to raise the event.</span></span> <span data-ttu-id="ad953-173">Типичные события можно объявлять и создавать, как показано в следующих фрагментах кода.</span><span class="sxs-lookup"><span data-stu-id="ad953-173">A typical event might be declared and raised as shown in the following fragments:</span></span>  
   
- [!code-vb[VbVbalrEvents&#13;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
-  
-> [!NOTE]
->  Аргументы событий можно объявлять так же, как аргументы процедур, за следующими исключениями: события не могут иметь именованные аргументы, аргументы `ParamArray` и аргументы `Optional`. События не имеют возвращаемых значений.  
-  
- Для обработки события его необходимо связать с подпрограммой обработчика событий с помощью оператора `Handles` или `AddHandler`. Подписи подпрограммы и события должны совпадать. Для обработки общего события необходимо использовать оператор `AddHandler`.  
-  
- `Event` можно использовать только на уровне модуля. Это означает *контекст объявления* события должен быть класс, структура, модуль или интерфейс и не может быть исходным файлом, пространство имен, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
-  
- В большинстве случаев для объявления события можно использовать первый пример синтаксиса в разделе "Синтаксис" этой статьи. Однако в некоторых сценариях требуется контролировать поведение события более детально. Последний пример синтаксиса в разделе "Синтаксис" этой статьи, в котором используется ключевое слово `Custom`, обеспечивает такие возможности, позволяя определять настраиваемые события. В настраиваемом событии можно точно указать, что происходит, когда код добавляет или удаляет обработчик события для события или когда код вызывает событие. Примеры см. в разделе [как: объявление пользовательских событий для экономии памяти](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) и [как: объявление пользовательских событий для избежать блокировки](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
-  
-## <a name="example"></a>Пример  
- В следующем примере события используются для выполнения обратного отсчета от 10 до 0 секунд. Код иллюстрирует различные связанные с событиями методы, свойства и операторы. В том числе оператор `RaiseEvent`.  
-  
- Класс, который вызывает событие, является источником события, а методы, обрабатывающие события, — обработчиками событий. Источник события может иметь несколько обработчиков для создаваемых им событий. Когда класс создает событие, это событие создается во всех классах, выбранных для обработки событий данного экземпляра объекта.  
-  
- В примере также используется форма (`Form1`) с кнопкой (`Button1`) и текстовым полем (`TextBox1`). При нажатии кнопки в первом текстовом поле отображается обратный отсчет от 10 до 0 секунд. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
-  
- Код для `Form1` указывает начальное и конечное состояния формы. Он также содержит код, выполняемый при создании событий.  
-  
- Чтобы использовать этот пример, откройте новый проект Windows Forms. Затем добавьте кнопку с именем `Button1` и текстовое поле с именем `TextBox1` в главную форму с именем `Form1`. Затем щелкните правой кнопкой мыши форму и нажмите кнопку **просмотреть код** , чтобы открыть редактор кода.  
-  
- Добавьте переменную `WithEvents` в раздел объявлений класса `Form1`:  
-  
- [!code-vb[VbVbalrEvents&#14;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
-  
- Добавьте следующий код в код для `Form1`. Замените все повторяющиеся процедуры, которые могут существовать, такие как `Form_Load` или `Button_Click`.  
-  
- [!code-vb[VbVbalrEvents&#15;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
-  
- Нажмите клавишу F5 для запуска примера и нажмите кнопку с надписью **запустить**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
->  Способ обработки событий методом `My.Application.DoEvents` отличается от обработки событий формой. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [потоки](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+>  <span data-ttu-id="ad953-174">Аргументы событий можно объявлять так же, как аргументы процедур, за следующими исключениями: события не могут иметь именованные аргументы, аргументы `ParamArray` и аргументы `Optional`.</span><span class="sxs-lookup"><span data-stu-id="ad953-174">You can declare event arguments just as you do arguments of procedures, with the following exceptions: events cannot have named arguments, `ParamArray` arguments, or `Optional` arguments.</span></span> <span data-ttu-id="ad953-175">События не имеют возвращаемых значений.</span><span class="sxs-lookup"><span data-stu-id="ad953-175">Events do not have return values.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Оператор RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
- [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md)   
- [События](../../../visual-basic/programming-guide/language-features/events/index.md)   
- [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Обрабатывает](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Оператор Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Практическое руководство: объявление пользовательских событий для экономии памяти](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)   
- [Практическое руководство: объявление пользовательских событий, чтобы избежать блокировки](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)   
- [Общие](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+ <span data-ttu-id="ad953-176">Для обработки события его необходимо связать с подпрограммой обработчика событий с помощью оператора `Handles` или `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="ad953-176">To handle an event, you must associate it with an event handler subroutine using either the `Handles` or `AddHandler` statement.</span></span> <span data-ttu-id="ad953-177">Подписи подпрограммы и события должны совпадать.</span><span class="sxs-lookup"><span data-stu-id="ad953-177">The signatures of the subroutine and the event must match.</span></span> <span data-ttu-id="ad953-178">Для обработки общего события необходимо использовать оператор `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="ad953-178">To handle a shared event, you must use the `AddHandler` statement.</span></span>  
+  
+ <span data-ttu-id="ad953-179">`Event` можно использовать только на уровне модуля.</span><span class="sxs-lookup"><span data-stu-id="ad953-179">You can use `Event` only at module level.</span></span> <span data-ttu-id="ad953-180">Это означает *контекст объявления* событие должно быть класс, структура, модуль или интерфейс, оно не может быть исходным файлом, пространство имен, процедура или блок.</span><span class="sxs-lookup"><span data-stu-id="ad953-180">This means the *declaration context* for an event must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block.</span></span> <span data-ttu-id="ad953-181">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="ad953-181">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
+  
+ <span data-ttu-id="ad953-182">В большинстве случаев для объявления события можно использовать первый пример синтаксиса в разделе "Синтаксис" этой статьи.</span><span class="sxs-lookup"><span data-stu-id="ad953-182">In most circumstances, you can use the first syntax in the Syntax section of this topic for declaring events.</span></span> <span data-ttu-id="ad953-183">Однако в некоторых сценариях требуется контролировать поведение события более детально.</span><span class="sxs-lookup"><span data-stu-id="ad953-183">However, some scenarios require that you have more control over the detailed behavior of the event.</span></span> <span data-ttu-id="ad953-184">Последний пример синтаксиса в разделе "Синтаксис" этой статьи, в котором используется ключевое слово `Custom`, обеспечивает такие возможности, позволяя определять настраиваемые события.</span><span class="sxs-lookup"><span data-stu-id="ad953-184">The last syntax in the Syntax section of this topic, which uses the `Custom` keyword, provides that control by enabling you to define custom events.</span></span> <span data-ttu-id="ad953-185">В настраиваемом событии можно точно указать, что происходит, когда код добавляет или удаляет обработчик события для события или когда код вызывает событие.</span><span class="sxs-lookup"><span data-stu-id="ad953-185">In a custom event, you specify exactly what occurs when code adds or removes an event handler to or from the event, or when code raises the event.</span></span> <span data-ttu-id="ad953-186">Примеры см. в разделе [как: объявления пользовательских событий для экономии памяти](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) и [как: объявления пользовательских событий для предотвращения блокировки](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).</span><span class="sxs-lookup"><span data-stu-id="ad953-186">For examples, see [How to: Declare Custom Events To Conserve Memory](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) and [How to: Declare Custom Events To Avoid Blocking](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="ad953-187">Пример</span><span class="sxs-lookup"><span data-stu-id="ad953-187">Example</span></span>  
+ <span data-ttu-id="ad953-188">В следующем примере события используются для выполнения обратного отсчета от 10 до 0 секунд.</span><span class="sxs-lookup"><span data-stu-id="ad953-188">The following example uses events to count down seconds from 10 to 0.</span></span> <span data-ttu-id="ad953-189">Код иллюстрирует различные связанные с событиями методы, свойства и операторы.</span><span class="sxs-lookup"><span data-stu-id="ad953-189">The code illustrates several of the event-related methods, properties, and statements.</span></span> <span data-ttu-id="ad953-190">В том числе оператор `RaiseEvent`.</span><span class="sxs-lookup"><span data-stu-id="ad953-190">This includes the `RaiseEvent` statement.</span></span>  
+  
+ <span data-ttu-id="ad953-191">Класс, который вызывает событие, является источником события, а методы, обрабатывающие события, — обработчиками событий.</span><span class="sxs-lookup"><span data-stu-id="ad953-191">The class that raises an event is the event source, and the methods that process the event are the event handlers.</span></span> <span data-ttu-id="ad953-192">Источник события может иметь несколько обработчиков для создаваемых им событий.</span><span class="sxs-lookup"><span data-stu-id="ad953-192">An event source can have multiple handlers for the events it generates.</span></span> <span data-ttu-id="ad953-193">Когда класс создает событие, это событие создается во всех классах, выбранных для обработки событий данного экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="ad953-193">When the class raises the event, that event is raised on every class that has elected to handle events for that instance of the object.</span></span>  
+  
+ <span data-ttu-id="ad953-194">В примере также используется форма (`Form1`) с кнопкой (`Button1`) и текстовым полем (`TextBox1`).</span><span class="sxs-lookup"><span data-stu-id="ad953-194">The example also uses a form (`Form1`) with a button (`Button1`) and a text box (`TextBox1`).</span></span> <span data-ttu-id="ad953-195">При нажатии кнопки в первом текстовом поле отображается обратный отсчет от 10 до 0 секунд.</span><span class="sxs-lookup"><span data-stu-id="ad953-195">When you click the button, the first text box displays a countdown from 10 to 0 seconds.</span></span> <span data-ttu-id="ad953-196">По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.</span><span class="sxs-lookup"><span data-stu-id="ad953-196">When the full time (10 seconds) has elapsed, the first text box displays "Done".</span></span>  
+  
+ <span data-ttu-id="ad953-197">Код для `Form1` указывает начальное и конечное состояния формы.</span><span class="sxs-lookup"><span data-stu-id="ad953-197">The code for `Form1` specifies the initial and terminal states of the form.</span></span> <span data-ttu-id="ad953-198">Он также содержит код, выполняемый при создании событий.</span><span class="sxs-lookup"><span data-stu-id="ad953-198">It also contains the code executed when events are raised.</span></span>  
+  
+ <span data-ttu-id="ad953-199">Чтобы использовать этот пример, откройте новый проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ad953-199">To use this example, open a new Windows Forms project.</span></span> <span data-ttu-id="ad953-200">Затем добавьте кнопку с именем `Button1` и текстовое поле с именем `TextBox1` в главную форму с именем `Form1`.</span><span class="sxs-lookup"><span data-stu-id="ad953-200">Then add a button named `Button1` and a text box named `TextBox1` to the main form, named `Form1`.</span></span> <span data-ttu-id="ad953-201">Затем щелкните правой кнопкой мыши форму и нажмите кнопку **Просмотр кода** , чтобы открыть редактор кода.</span><span class="sxs-lookup"><span data-stu-id="ad953-201">Then right-click the form and click **View Code** to open the code editor.</span></span>  
+  
+ <span data-ttu-id="ad953-202">Добавьте переменную `WithEvents` в раздел объявлений класса `Form1`:</span><span class="sxs-lookup"><span data-stu-id="ad953-202">Add a `WithEvents` variable to the declarations section of the `Form1` class:</span></span>  
+  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+  
+ <span data-ttu-id="ad953-203">Добавьте следующий код в код для `Form1`.</span><span class="sxs-lookup"><span data-stu-id="ad953-203">Add the following code to the code for `Form1`.</span></span> <span data-ttu-id="ad953-204">Замените все повторяющиеся процедуры, которые могут существовать, такие как `Form_Load` или `Button_Click`.</span><span class="sxs-lookup"><span data-stu-id="ad953-204">Replace any duplicate procedures that may exist, such as `Form_Load` or `Button_Click`.</span></span>  
+  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+  
+ <span data-ttu-id="ad953-205">Нажмите клавишу F5 для запуска предыдущего примера и нажмите кнопку с многоточием **запустить**.</span><span class="sxs-lookup"><span data-stu-id="ad953-205">Press F5 to run the previous example, and click the button labeled **Start**.</span></span> <span data-ttu-id="ad953-206">Первое текстовое поле начинает обратный отсчет.</span><span class="sxs-lookup"><span data-stu-id="ad953-206">The first text box starts to count down the seconds.</span></span> <span data-ttu-id="ad953-207">По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.</span><span class="sxs-lookup"><span data-stu-id="ad953-207">When the full time (10 seconds) has elapsed, the first text box displays "Done".</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="ad953-208">Способ обработки событий методом `My.Application.DoEvents` отличается от обработки событий формой.</span><span class="sxs-lookup"><span data-stu-id="ad953-208">The `My.Application.DoEvents` method does not process events in the same way the form does.</span></span> <span data-ttu-id="ad953-209">Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность.</span><span class="sxs-lookup"><span data-stu-id="ad953-209">To enable the form to handle the events directly, you can use multithreading.</span></span> <span data-ttu-id="ad953-210">Дополнительные сведения см. в разделе [потоки](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).</span><span class="sxs-lookup"><span data-stu-id="ad953-210">For more information, see [Threading](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ad953-211">См. также</span><span class="sxs-lookup"><span data-stu-id="ad953-211">See Also</span></span>  
+ [<span data-ttu-id="ad953-212">Оператор RaiseEvent</span><span class="sxs-lookup"><span data-stu-id="ad953-212">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
+ [<span data-ttu-id="ad953-213">Оператор Implements</span><span class="sxs-lookup"><span data-stu-id="ad953-213">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)  
+ [<span data-ttu-id="ad953-214">События</span><span class="sxs-lookup"><span data-stu-id="ad953-214">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)  
+ [<span data-ttu-id="ad953-215">Оператор AddHandler</span><span class="sxs-lookup"><span data-stu-id="ad953-215">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
+ [<span data-ttu-id="ad953-216">Оператор RemoveHandler</span><span class="sxs-lookup"><span data-stu-id="ad953-216">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
+ [<span data-ttu-id="ad953-217">Handles</span><span class="sxs-lookup"><span data-stu-id="ad953-217">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)  
+ [<span data-ttu-id="ad953-218">Оператор Delegate</span><span class="sxs-lookup"><span data-stu-id="ad953-218">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="ad953-219">Практическое руководство. Объявление пользовательских событий для экономии памяти</span><span class="sxs-lookup"><span data-stu-id="ad953-219">How to: Declare Custom Events To Conserve Memory</span></span>](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [<span data-ttu-id="ad953-220">Практическое руководство. Объявление пользовательских событий для предотвращения блокировки</span><span class="sxs-lookup"><span data-stu-id="ad953-220">How to: Declare Custom Events To Avoid Blocking</span></span>](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [<span data-ttu-id="ad953-221">Общие</span><span class="sxs-lookup"><span data-stu-id="ad953-221">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="ad953-222">Shadows</span><span class="sxs-lookup"><span data-stu-id="ad953-222">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)

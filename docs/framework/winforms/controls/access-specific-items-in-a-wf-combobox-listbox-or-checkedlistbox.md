@@ -1,43 +1,47 @@
 ---
-title: "Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox - элемент управления [Windows Forms], доступ к элементам"
-  - "поля со списком, доступ к элементам"
-  - "ComboBox - элемент управления [Windows Forms], доступ к элементам"
-  - "списки, доступ к элементам"
-  - "ListBox - элемент управления [Windows Forms], доступ к элементам"
-  - "ListBox - элемент управления [Windows Forms], возврат сведений об элементах"
+title: "Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms
-Получение доступа к определенным элементам в элементах управления Windows Forms, списке или списке отмеченных элементов является важнейшей задачей.  Это позволяет программными средствами определить, что находится в любом месте списка.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="c2ce4-102">Практическое руководство. Получение доступа к определенным элементам в элементах управления ComboBox, ListBox или CheckedListBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c2ce4-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="c2ce4-103">Доступ к определенным элементам в поле со списком Windows Forms, список или список с установленными флажками является важнейшей задачей.</span><span class="sxs-lookup"><span data-stu-id="c2ce4-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="c2ce4-104">Он позволяет программно определить в виде списка, в любом месте.</span><span class="sxs-lookup"><span data-stu-id="c2ce4-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### Чтобы получить доступ к определенному элементу  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="c2ce4-105">Для доступа к определенного элемента</span><span class="sxs-lookup"><span data-stu-id="c2ce4-105">To access a specific item</span></span>  
   
-1.  Отправьте запрос в коллекцию`Items` с использованием номера определенного элемента:  
+1.  <span data-ttu-id="c2ce4-106">Запрос `Items` коллекции, используя индекс конкретного элемента:</span><span class="sxs-lookup"><span data-stu-id="c2ce4-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ caps.handback.revision: 13
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ caps.handback.revision: 13
        }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a><span data-ttu-id="c2ce4-107">См. также</span><span class="sxs-lookup"><span data-stu-id="c2ce4-107">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [<span data-ttu-id="c2ce4-108">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c2ce4-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

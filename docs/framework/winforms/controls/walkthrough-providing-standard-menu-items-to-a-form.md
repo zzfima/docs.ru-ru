@@ -1,134 +1,138 @@
 ---
-title: "Пошаговое руководство. Создание стандартных пунктов меню для формы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пункты меню, стандартные"
-  - "StatusStrip - элемент управления [Windows Forms]"
-  - "панели инструментов [Windows Forms], пошаговые руководства"
-  - "ToolStrip - элемент управления [Windows Forms]"
+title: "Пошаговое руководство. Создание стандартных пунктов меню для формы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], standard
+- toolbars [Windows Forms], walkthroughs
+- StatusStrip control [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eccb033dd07f634f3629fd6f314eaa3df56b422
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Создание стандартных пунктов меню для формы
-Используя элемент управления <xref:System.Windows.Forms.MenuStrip>, можно создать стандартные меню для своих форм.  
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a><span data-ttu-id="dc5ab-102">Пошаговое руководство. Создание стандартных пунктов меню для формы</span><span class="sxs-lookup"><span data-stu-id="dc5ab-102">Walkthrough: Providing Standard Menu Items to a Form</span></span>
+<span data-ttu-id="dc5ab-103">С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-103">You can provide a standard menu for your forms with the <xref:System.Windows.Forms.MenuStrip> control.</span></span>  
   
- В этом пошаговом руководстве демонстрируется использование элемента управления <xref:System.Windows.Forms.MenuStrip> для создания стандартного меню.  Также форма изменяется при выборе элемента меню.  В этом пошаговом руководстве проиллюстрированы следующие задачи:  
+ <span data-ttu-id="dc5ab-104">В этом пошаговом руководстве демонстрируется использование <xref:System.Windows.Forms.MenuStrip> управления создавать стандартные меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-104">This walkthrough demonstrates how to use a <xref:System.Windows.Forms.MenuStrip> control to create a standard menu.</span></span> <span data-ttu-id="dc5ab-105">Также форма изменяется, когда пользователь выбирает пункт меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-105">The form also responds when a user selects a menu item.</span></span> <span data-ttu-id="dc5ab-106">В этом пошаговом руководстве представлены следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="dc5ab-106">The following tasks are illustrated in this walkthrough:</span></span>  
   
--   Создание проекта типа Windows Forms  
+-   <span data-ttu-id="dc5ab-107">Создание проекта Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-107">Creating a Windows Forms project.</span></span>  
   
--   создание стандартного меню;  
+-   <span data-ttu-id="dc5ab-108">Создание стандартного меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-108">Creating a standard menu.</span></span>  
   
--   Создание элемента управления <xref:System.Windows.Forms.StatusStrip>.  
+-   <span data-ttu-id="dc5ab-109">Создание <xref:System.Windows.Forms.StatusStrip> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-109">Creating a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
--   управление выбором элементов меню;  
+-   <span data-ttu-id="dc5ab-110">Управление выбором элементов меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-110">Handling menu item selection.</span></span>  
   
- По завершении этой процедуры создается форма, содержащая стандартное меню, в котором отображаются выбранные элементы меню в элементе управления <xref:System.Windows.Forms.StatusStrip>.  
+ <span data-ttu-id="dc5ab-111">По завершении вы получите формы, содержащей стандартное меню, в котором отображаются выбранные элементы меню в <xref:System.Windows.Forms.StatusStrip> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-111">When you are finished, you will have a form with a standard menu that displays menu item selections in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
- Чтобы скопировать весь текст кода из этой темы, см. раздел [Практическое руководство. Связывание с формой стандартных элементов меню](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
+ <span data-ttu-id="dc5ab-112">Скопируйте код из этой темы, в разделе [как: предоставляют стандартных пунктов меню для формы](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).</span><span class="sxs-lookup"><span data-stu-id="dc5ab-112">To copy the code in this topic as a single listing, see [How to: Provide Standard Menu Items to a Form](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="dc5ab-113">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-113">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="dc5ab-114">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="dc5ab-114">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="dc5ab-115">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="dc5ab-115">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Обязательные компоненты  
- Для выполнения этого пошагового руководства потребуется следующее.  
+## <a name="prerequisites"></a><span data-ttu-id="dc5ab-116">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="dc5ab-116">Prerequisites</span></span>  
+ <span data-ttu-id="dc5ab-117">Для выполнения данного пошагового руководства требуется:</span><span class="sxs-lookup"><span data-stu-id="dc5ab-117">In order to complete this walkthrough, you will need:</span></span>  
   
--   Разрешения, необходимые для создания и выполнения проектов приложений Windows Forms на компьютере, на котором установлена [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+-   <span data-ttu-id="dc5ab-118">Разрешения, достаточные для создания и выполнения проектов приложений Windows Forms на компьютере, где [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] установлен.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-118">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] is installed.</span></span>  
   
-## Создание проекта  
- Для начала следует создать проект и подготовить форму.  
+## <a name="creating-the-project"></a><span data-ttu-id="dc5ab-119">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="dc5ab-119">Creating the Project</span></span>  
+ <span data-ttu-id="dc5ab-120">Первым шагом является создание проекта и настройка формы.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-120">The first step is to create the project and set up the form.</span></span>  
   
-#### Создание проекта  
+#### <a name="to-create-the-project"></a><span data-ttu-id="dc5ab-121">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="dc5ab-121">To create the project</span></span>  
   
-1.  Создайте проект "Приложение Windows" с названием StandardMenuForm.  
+1.  <span data-ttu-id="dc5ab-122">Создайте проект приложения Windows с именем **StandardMenuForm**.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-122">Create a Windows application project called **StandardMenuForm**.</span></span>  
   
-     Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     <span data-ttu-id="dc5ab-123">Для получения дополнительной информации см. [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="dc5ab-123">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  В конструкторе Windows Forms выберите форму.  
+2.  <span data-ttu-id="dc5ab-124">В конструкторе Windows Forms выберите форму.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-124">In the Windows Forms Designer, select the form.</span></span>  
   
-## Создание стандартного меню  
- Конструктор Windows Forms может автоматически добавить стандартные элементы меню в элемент управления <xref:System.Windows.Forms.MenuStrip>.  
+## <a name="creating-a-standard-menu"></a><span data-ttu-id="dc5ab-125">Создание стандартного меню</span><span class="sxs-lookup"><span data-stu-id="dc5ab-125">Creating a Standard Menu</span></span>  
+ <span data-ttu-id="dc5ab-126">Конструктор Windows Forms может автоматически заполнять <xref:System.Windows.Forms.MenuStrip> элемента управления с помощью стандартных элементов меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-126">The Windows Forms Designer can automatically populate a <xref:System.Windows.Forms.MenuStrip> control with standard menu items.</span></span>  
   
-#### Чтобы создать стандартное меню  
+#### <a name="to-create-a-standard-menu"></a><span data-ttu-id="dc5ab-127">Создание стандартного меню</span><span class="sxs-lookup"><span data-stu-id="dc5ab-127">To create a standard menu</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.MenuStrip> из **панели элементов** в свою форму.  
+1.  <span data-ttu-id="dc5ab-128">Из **элементов**, перетащите <xref:System.Windows.Forms.MenuStrip> управления на форму.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-128">From the **Toolbox**, drag a <xref:System.Windows.Forms.MenuStrip> control onto your form.</span></span>  
   
-2.  Щелкните для элемента управления <xref:System.Windows.Forms.MenuStrip> глиф смарт\-тега \(![Глиф смарт&#45;тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) и выберите **Вставить стандартные элементы**.  
+2.  <span data-ttu-id="dc5ab-129">Нажмите кнопку <xref:System.Windows.Forms.MenuStrip> глиф смарт-тега элемента управления (![глиф смарт-тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) и выберите **вставить стандартные элементы**.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-129">Click the <xref:System.Windows.Forms.MenuStrip> control's smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) and select **Insert Standard Items**.</span></span>  
   
-     Элемент управления <xref:System.Windows.Forms.MenuStrip> заполняется стандартными элементами меню.  
+     <span data-ttu-id="dc5ab-130"><xref:System.Windows.Forms.MenuStrip> Управления заполняется стандартных элементов меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-130">The <xref:System.Windows.Forms.MenuStrip> control is populated with the standard menu items.</span></span>  
   
-3.  Щелкните меню **Файл** для просмотра элементов меню по умолчанию и соответствующих им значков.  
+3.  <span data-ttu-id="dc5ab-131">Нажмите кнопку **файл** элемента меню, чтобы увидеть его элементы меню по умолчанию и соответствующие значки.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-131">Click the **File** menu item to see its default menu items and corresponding icons.</span></span>  
   
-## Создание элемента управления StatusStrip  
- Используйте элемент управления <xref:System.Windows.Forms.StatusStrip> для отображения состояния приложений Windows Forms.  В этом примере выбранные пользователем элементы меню отображаются в элементе управления <xref:System.Windows.Forms.StatusStrip>.  
+## <a name="creating-a-statusstrip-control"></a><span data-ttu-id="dc5ab-132">Создание элемента управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="dc5ab-132">Creating a StatusStrip Control</span></span>  
+ <span data-ttu-id="dc5ab-133">Используйте <xref:System.Windows.Forms.StatusStrip> элемента управления для отображения состояния для приложений Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-133">Use the <xref:System.Windows.Forms.StatusStrip> control to display status for your Windows Forms applications.</span></span> <span data-ttu-id="dc5ab-134">В этом примере отображаются элементы меню, выбранный пользователем в <xref:System.Windows.Forms.StatusStrip> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-134">In the current example, menu items selected by the user are displayed in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
-#### Чтобы создать элемент управления StatusStrip  
+#### <a name="to-create-a-statusstrip-control"></a><span data-ttu-id="dc5ab-135">Создание элемента управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="dc5ab-135">To create a StatusStrip control</span></span>  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.StatusStrip> из **панели элементов** в свою форму.  
+1.  <span data-ttu-id="dc5ab-136">Из **элементов**, перетащите <xref:System.Windows.Forms.StatusStrip> управления на форму.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-136">From the **Toolbox**, drag a <xref:System.Windows.Forms.StatusStrip> control onto your form.</span></span>  
   
-     Элемент управления <xref:System.Windows.Forms.StatusStrip> автоматически располагается в нижней части формы.  
+     <span data-ttu-id="dc5ab-137"><xref:System.Windows.Forms.StatusStrip> Автоматически прикреплен к нижней части формы.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-137">The <xref:System.Windows.Forms.StatusStrip> control automatically docks to the bottom of the form.</span></span>  
   
-2.  Нажмите кнопку раскрывающегося списка для элемента управления <xref:System.Windows.Forms.StatusStrip> и выберите **StatusLabel** для добавления элемента управления <xref:System.Windows.Forms.ToolStripStatusLabel> в элемент управления <xref:System.Windows.Forms.StatusStrip>.  
+2.  <span data-ttu-id="dc5ab-138">Нажмите кнопку <xref:System.Windows.Forms.StatusStrip> разворачивающуюся кнопку элемента управления и выберите **StatusLabel** добавление <xref:System.Windows.Forms.ToolStripStatusLabel> управления <xref:System.Windows.Forms.StatusStrip> управления.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-138">Click the <xref:System.Windows.Forms.StatusStrip> control's drop-down button and select **StatusLabel** to add a <xref:System.Windows.Forms.ToolStripStatusLabel> control to the <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
-## Управление выбором элементов  
- Обработайте событие <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>, чтобы оно реагировало на выделение элемента меню пользователем.  
+## <a name="handling-item-selection"></a><span data-ttu-id="dc5ab-139">Управление выбором элементов</span><span class="sxs-lookup"><span data-stu-id="dc5ab-139">Handling Item Selection</span></span>  
+ <span data-ttu-id="dc5ab-140">Обрабатывать <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> событий, чтобы ответить, когда пользователь выбирает пункт меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-140">Handle the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event to respond when the user selects a menu item.</span></span>  
   
-#### Чтобы управлять выбором элементов  
+#### <a name="to-handle-item-selection"></a><span data-ttu-id="dc5ab-141">Чтобы управлять выбором элементов</span><span class="sxs-lookup"><span data-stu-id="dc5ab-141">To handle item selection</span></span>  
   
-1.  Выберите пункт меню **Файл**, созданный при создании стандартного раздела меню.  
+1.  <span data-ttu-id="dc5ab-142">Нажмите кнопку **файл** пункт меню, который был создан при создании стандартного раздела меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-142">Click the **File** menu item that you created in the Creating a Standard Menu section.</span></span>  
   
-2.  В окне **Свойства** щелкните **События**.  
+2.  <span data-ttu-id="dc5ab-143">В **свойства** окно, нажмите кнопку **события**.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-143">In the **Properties** window, click **Events**.</span></span>  
   
-3.  Дважды щелкните событие <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.  
+3.  <span data-ttu-id="dc5ab-144">Дважды щелкните <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> событий.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-144">Double-click the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.</span></span>  
   
-     Конструктор Windows Forms генерирует обработчик событий для события <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.  
+     <span data-ttu-id="dc5ab-145">Конструктор Windows Forms создает обработчик событий для <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> события.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-145">The Windows Forms Designer generates an event handler for the <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> event.</span></span>  
   
-4.  Вставьте следующий код в обработчик события.  
+4.  <span data-ttu-id="dc5ab-146">Вставьте следующий код в обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-146">Insert the following code into the event handler.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Вставьте в форму определение служебного метода `UpdateStatus`.  
+5.  <span data-ttu-id="dc5ab-147">Вставить `UpdateStatus` программа определение метода в форму.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-147">Insert the `UpdateStatus` utility method definition into the form.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
   
-## Контрольная точка  
+## <a name="checkpoint"></a><span data-ttu-id="dc5ab-148">Контрольная точка</span><span class="sxs-lookup"><span data-stu-id="dc5ab-148">Checkpoint</span></span>  
   
-#### Чтобы проверить работоспособность формы  
+#### <a name="to-test-your-form"></a><span data-ttu-id="dc5ab-149">Чтобы проверить работоспособность формы</span><span class="sxs-lookup"><span data-stu-id="dc5ab-149">To test your form</span></span>  
   
-1.  Нажмите клавишу F5 чтобы скомпилировать и выполнить полученную форму.  
+1.  <span data-ttu-id="dc5ab-150">Нажмите клавишу F5, чтобы скомпилировать и запустить форму.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-150">Press F5 to compile and run your form.</span></span>  
   
-2.  Щелкните элемент меню **Файл**, чтобы открыть меню.  
+2.  <span data-ttu-id="dc5ab-151">Нажмите кнопку **файл** пункт меню, чтобы открыть меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-151">Click the **File** menu item to open the menu.</span></span>  
   
-3.  В меню **Файл** выберите один из элементов, щелкнув по нему.  
+3.  <span data-ttu-id="dc5ab-152">На **файл** меню, выберите один из элементов, чтобы выбрать его.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-152">On the **File** menu, click one of the items to select it.</span></span>  
   
-     Элемент управления <xref:System.Windows.Forms.StatusStrip> отображает выбранный элемент.  
+     <span data-ttu-id="dc5ab-153"><xref:System.Windows.Forms.StatusStrip> Элемент управления отображает выбранный элемент.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-153">The <xref:System.Windows.Forms.StatusStrip> control displays the selected item.</span></span>  
   
-## Следующие действия  
- В этом пошаговом руководстве была создана форма, содержащая стандартное меню.  Семейством элементов управления <xref:System.Windows.Forms.ToolStrip> можно также пользоваться для многих других целей:  
+## <a name="next-steps"></a><span data-ttu-id="dc5ab-154">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="dc5ab-154">Next Steps</span></span>  
+ <span data-ttu-id="dc5ab-155">В этом пошаговом руководстве вы создали формы, содержащей стандартное меню.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-155">In this walkthrough, you have created a form with a standard menu.</span></span> <span data-ttu-id="dc5ab-156">Можно использовать <xref:System.Windows.Forms.ToolStrip> семейства элементов управления для других целей:</span><span class="sxs-lookup"><span data-stu-id="dc5ab-156">You can use the <xref:System.Windows.Forms.ToolStrip> family of controls for many other purposes:</span></span>  
   
--   Создайте контекстное меню для своих элементов управления с помощью <xref:System.Windows.Forms.ContextMenuStrip>.  Дополнительные сведения см. в разделе [Общие сведения об элементе управления ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   <span data-ttu-id="dc5ab-157">Создать контекстное меню для элементов управления с <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-157">Create shortcut menus for your controls with <xref:System.Windows.Forms.ContextMenuStrip>.</span></span> <span data-ttu-id="dc5ab-158">Дополнительные сведения см. в разделе [Общие сведения о компоненте ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="dc5ab-158">For more information, see [ContextMenu Component Overview](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span></span>  
   
--   Создайте форму многодокументного интерфейса MDI с закрепленными элементами управления <xref:System.Windows.Forms.ToolStrip>.  Дополнительные сведения см. в разделе [Пример. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   <span data-ttu-id="dc5ab-159">Создайте форму многодокументного интерфейса (MDI) с закрепление <xref:System.Windows.Forms.ToolStrip> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-159">Create a multiple document interface (MDI) form with docking <xref:System.Windows.Forms.ToolStrip> controls.</span></span> <span data-ttu-id="dc5ab-160">Дополнительные сведения см. в разделе [Пошаговое руководство: Создание формы MDI ПУТЕМ слияния меню и элементов управления ToolStrip с](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span><span class="sxs-lookup"><span data-stu-id="dc5ab-160">For more information, see [Walkthrough: Creating an MDI Form with Menu Merging and ToolStrip Controls](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).</span></span>  
   
--   Придайте своим элементам управления <xref:System.Windows.Forms.ToolStrip> профессиональный вид.  Дополнительные сведения см. в разделе [Практическое руководство. Задание средства визуализации компонента ToolStrip для приложения](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   <span data-ttu-id="dc5ab-161">Предоставьте вашей <xref:System.Windows.Forms.ToolStrip> управляет профессиональный вид.</span><span class="sxs-lookup"><span data-stu-id="dc5ab-161">Give your <xref:System.Windows.Forms.ToolStrip> controls a professional appearance.</span></span> <span data-ttu-id="dc5ab-162">Дополнительные сведения см. в разделе [как: задать средство отрисовки элемента управления ToolStrip для приложения](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).</span><span class="sxs-lookup"><span data-stu-id="dc5ab-162">For more information, see [How to: Set the ToolStrip Renderer for an Application](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="dc5ab-163">См. также</span><span class="sxs-lookup"><span data-stu-id="dc5ab-163">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [<span data-ttu-id="dc5ab-164">Элемент управления MenuStrip</span><span class="sxs-lookup"><span data-stu-id="dc5ab-164">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

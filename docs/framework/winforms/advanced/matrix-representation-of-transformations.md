@@ -1,114 +1,118 @@
 ---
-title: "Матричное представление преобразований | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "аффинные преобразования"
-  - "составные преобразования"
-  - "линейные преобразования"
-  - "матрицы"
-  - "преобразования, составной"
-  - "преобразования, линейные"
-  - "преобразования, матричное представление"
-  - "преобразования, преобразование"
-  - "преобразования в матричном представлении"
-  - "векторы"
+title: "Матричное представление преобразований"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- composite transformations
+- transformations [Windows Forms], linear
+- matrices
+- translations in matrix representation
+- transformations [Windows Forms], composite
+- vectors
+- linear transformations
+- transformations [Windows Forms], matrix representation of
+- transformations [Windows Forms], translation
+- affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10babac22fd94bd00b14b7f861fe99469d3ecbda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Матричное представление преобразований
-Матрица m×n — это набор чисел, распределенных по m строкам и по n столбцам.  На приведенном ниже рисунке изображены различные матрицы.  
+# <a name="matrix-representation-of-transformations"></a><span data-ttu-id="b9d75-102">Матричное представление преобразований</span><span class="sxs-lookup"><span data-stu-id="b9d75-102">Matrix Representation of Transformations</span></span>
+<span data-ttu-id="b9d75-103">Матрица m n × — это набор чисел, распределенных по строкам m и n столбцам.</span><span class="sxs-lookup"><span data-stu-id="b9d75-103">An m×n matrix is a set of numbers arranged in m rows and n columns.</span></span> <span data-ttu-id="b9d75-104">На следующем рисунке несколько матрицы.</span><span class="sxs-lookup"><span data-stu-id="b9d75-104">The following illustration shows several matrices.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.png "AboutGdip05\_art04")  
+ <span data-ttu-id="b9d75-105">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")</span><span class="sxs-lookup"><span data-stu-id="b9d75-105">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")</span></span>  
   
- Две матрицы одинакового размера можно складывать путем складывания соответствующих элементов матриц.  На приведенном ниже рисунке показано два примера сложения матриц.  
+ <span data-ttu-id="b9d75-106">Две матрицы одинакового размера можно добавить путем добавления отдельных элементов.</span><span class="sxs-lookup"><span data-stu-id="b9d75-106">You can add two matrices of the same size by adding individual elements.</span></span> <span data-ttu-id="b9d75-107">Ниже представлены два примера сложения матриц.</span><span class="sxs-lookup"><span data-stu-id="b9d75-107">The following illustration shows two examples of matrix addition.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.png "AboutGdip05\_art05")  
+ <span data-ttu-id="b9d75-108">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")</span><span class="sxs-lookup"><span data-stu-id="b9d75-108">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")</span></span>  
   
- Матрицу размера m×n можно умножить на матрицу размера n×p, в результате чего получится матрица размера m×p.  Число столбцов в первой из перемножаемых матриц должно совпадать с числом строк во второй из перемножаемых матриц.  Например, матрицу размером 4×2 можно умножить на матрицу размером 2×3, в результате чего получится матрица размером 4×3.  
+ <span data-ttu-id="b9d75-109">Матрица m n × можно будет умножено на матрицу n × p и результатом является матрица m × p.</span><span class="sxs-lookup"><span data-stu-id="b9d75-109">An m×n matrix can be multiplied by an n×p matrix, and the result is an m×p matrix.</span></span> <span data-ttu-id="b9d75-110">Число столбцов в первой матрице должен совпадать с числом строк в матрице второй.</span><span class="sxs-lookup"><span data-stu-id="b9d75-110">The number of columns in the first matrix must be the same as the number of rows in the second matrix.</span></span> <span data-ttu-id="b9d75-111">Например матрицу 4 × 2 можно будет умножено на 2 × 3 матрицу, чтобы создать матрицу 4 × 3.</span><span class="sxs-lookup"><span data-stu-id="b9d75-111">For example, a 4×2 matrix can be multiplied by a 2×3 matrix to produce a 4×3 matrix.</span></span>  
   
- Точки на плоскости, а также строки и столбцы матрицы можно рассматривать как векторы.  Например, \(2, 5\) — это вектор из двух компонентов, а \(3, 7, 1\) — это вектор из трех компонентов.  Скалярным произведением двух векторов называется число, получаемое по следующим правилам:  
+ <span data-ttu-id="b9d75-112">Точки в плоскость и строки и столбцы матрицы могут рассматриваться как векторов.</span><span class="sxs-lookup"><span data-stu-id="b9d75-112">Points in the plane and rows and columns of a matrix can be thought of as vectors.</span></span> <span data-ttu-id="b9d75-113">Например (2, 5) является вектор с двумя компонентами и (3, 7, 1) представляет собой вектор, три компонента.</span><span class="sxs-lookup"><span data-stu-id="b9d75-113">For example, (2, 5) is a vector with two components, and (3, 7, 1) is a vector with three components.</span></span> <span data-ttu-id="b9d75-114">Скалярное произведение двух векторов определяется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="b9d75-114">The dot product of two vectors is defined as follows:</span></span>  
   
- \(a, b\) • \(c, d\) \= ac \+ bd  
+ <span data-ttu-id="b9d75-115">(a, b) • (c, d) = ac + bd</span><span class="sxs-lookup"><span data-stu-id="b9d75-115">(a, b) • (c, d) = ac + bd</span></span>  
   
- \(a, b, c\) • \(d, e, f\) \= ad \+ be \+ cf  
+ <span data-ttu-id="b9d75-116">(a, b, c) • (d, e, f) = ad + быть + cf</span><span class="sxs-lookup"><span data-stu-id="b9d75-116">(a, b, c) • (d, e, f) = ad + be + cf</span></span>  
   
- Например, скалярное произведение векторов \(2, 3\) и \(5, 4\) равно \(2\)\(5\) \+ \(3\)\(4\) \= 22.  Скалярное произведение векторов \(2, 5, 1\) и \(4, 3, 1\) равно \(2\)\(4\) \+ \(5\)\(3\) \+ \(1\)\(1\) \= 24.  Обратите внимание, что скалярное произведение векторов — это число, а не вектор.  Также обратите внимание, что скалярное произведение двух векторов можно вычислить, только если у этих векторов одинаковое количество компонентов.  
+ <span data-ttu-id="b9d75-117">Например, скалярное произведение (2, 3) и (5, 4) — (2)(5) + (3)(4) = 22.</span><span class="sxs-lookup"><span data-stu-id="b9d75-117">For example, the dot product of (2, 3) and (5, 4) is (2)(5) + (3)(4) = 22.</span></span> <span data-ttu-id="b9d75-118">Скалярное произведение (2, 5, 1) и (4, 3, 1) — (2)(4) + (5)(3) + (1)(1) = 24.</span><span class="sxs-lookup"><span data-stu-id="b9d75-118">The dot product of (2, 5, 1) and (4, 3, 1) is (2)(4) + (5)(3) + (1)(1) = 24.</span></span> <span data-ttu-id="b9d75-119">Обратите внимание, что скалярное произведение двух векторов номер, а не другой вектор.</span><span class="sxs-lookup"><span data-stu-id="b9d75-119">Note that the dot product of two vectors is a number, not another vector.</span></span> <span data-ttu-id="b9d75-120">Также Обратите внимание, можно вычислить скалярное произведение, только если два вектора имеют одинаковое количество компонентов.</span><span class="sxs-lookup"><span data-stu-id="b9d75-120">Also note that you can calculate the dot product only if the two vectors have the same number of components.</span></span>  
   
- Обозначение A\(i, j\) соответствует элементу матрицы A, расположенному на пересечении i\-ой строки и j\-го столбца.  Например, запись A\(3, 2\) обозначает элемент матрицы A, расположенный на пересечении 3\-ей строки и 2\-го столбца.  Предположим, что A, B и C — это матрицы, причем AB \= C.  Элементы матрицы C вычисляются следующим образом:  
+ <span data-ttu-id="b9d75-121">A(i, j) быть запись матрицы A i-ой строки и j-го столбца.</span><span class="sxs-lookup"><span data-stu-id="b9d75-121">Let A(i, j) be the entry in matrix A in the ith row and the jth column.</span></span> <span data-ttu-id="b9d75-122">Например, A (3, 2) элемент матрицы A в третьей строке и столбце 2-го.</span><span class="sxs-lookup"><span data-stu-id="b9d75-122">For example A(3, 2) is the entry in matrix A in the 3rd row and the 2nd column.</span></span> <span data-ttu-id="b9d75-123">Предположим, что A, B и C, матрицы, причем AB = C. Операции C вычисляются следующим образом:</span><span class="sxs-lookup"><span data-stu-id="b9d75-123">Suppose A, B, and C are matrices, and AB = C. The entries of C are calculated as follows:</span></span>  
   
- C\(i, j\) \= \(i\-я строка A\) • \(j\-й столбец B\)  
+ <span data-ttu-id="b9d75-124">C (i, j) = (строка i A) • (столбец j B)</span><span class="sxs-lookup"><span data-stu-id="b9d75-124">C(i, j) = (row i of A) • (column j of B)</span></span>  
   
- На приведенном ниже рисунке показано несколько примеров перемножения матриц.  
+ <span data-ttu-id="b9d75-125">На следующем рисунке показано несколько примеров умножение матриц.</span><span class="sxs-lookup"><span data-stu-id="b9d75-125">The following illustration shows several examples of matrix multiplication.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.png "AboutGdip05\_art06")  
+ <span data-ttu-id="b9d75-126">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")</span><span class="sxs-lookup"><span data-stu-id="b9d75-126">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")</span></span>  
   
- Если рассматривать точки на плоскости в качестве матриц размером 1×2, эти точки можно подвергать преобразованиям, умножая их матрицы на матрицу размером 2×2.  На приведенном ниже рисунке изображены результаты применения различных преобразований к точке с координатами \(2, 1\).  
+ <span data-ttu-id="b9d75-127">Если вы считаете точки на плоскости как матрицу 1 × 2, можно преобразовать эту точку путем его умножения на матрицу размером 2 × 2.</span><span class="sxs-lookup"><span data-stu-id="b9d75-127">If you think of a point in a plane as a 1×2 matrix, you can transform that point by multiplying it by a 2×2 matrix.</span></span> <span data-ttu-id="b9d75-128">На следующем рисунке несколько преобразований, применен к точке (2, 1).</span><span class="sxs-lookup"><span data-stu-id="b9d75-128">The following illustration shows several transformations applied to the point (2, 1).</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05\_art07")  
+ <span data-ttu-id="b9d75-129">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")</span><span class="sxs-lookup"><span data-stu-id="b9d75-129">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")</span></span>  
   
- Все преобразования, показанные на приведенном ранее рисунке, являются линейными преобразованиями.  Некоторые другие преобразования, такие как сдвиг, не являются линейными и не могут быть осуществлены путем умножения на матрицу размером 2×2.  Предположим, что нужно взять точку с координатами \(2, 1\), повернуть ее на 90 градусов относительно начала координат, сдвинуть на 3 единицы вдоль оси X и на 4 единицы вдоль оси Y.  Такое преобразование можно выполнить путем выполнения умножения и сложения матриц.  
+ <span data-ttu-id="b9d75-130">Все преобразования, показанные на предыдущем рисунке, линейные преобразования.</span><span class="sxs-lookup"><span data-stu-id="b9d75-130">All of the transformations shown in the preceding figure are linear transformations.</span></span> <span data-ttu-id="b9d75-131">Некоторые другие преобразования, такие как преобразования, не являются линейными и не может быть выражен как умножение на матрицу размером 2 × 2.</span><span class="sxs-lookup"><span data-stu-id="b9d75-131">Certain other transformations, such as translation, are not linear, and cannot be expressed as multiplication by a 2×2 matrix.</span></span> <span data-ttu-id="b9d75-132">Предположим, что нужно начать с точка (2, 1), повернуть на 90 градусов, сдвинуть на 3 единицы по оси x и 4 единицы измерения по оси y.</span><span class="sxs-lookup"><span data-stu-id="b9d75-132">Suppose you want to start with the point (2, 1), rotate it 90 degrees, translate it 3 units in the x direction, and translate it 4 units in the y direction.</span></span> <span data-ttu-id="b9d75-133">Это можно сделать с помощью выполнения сложения матриц умножения.</span><span class="sxs-lookup"><span data-stu-id="b9d75-133">You can accomplish this by using a matrix multiplication followed by a matrix addition.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05\_art08")  
+ <span data-ttu-id="b9d75-134">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")</span><span class="sxs-lookup"><span data-stu-id="b9d75-134">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")</span></span>  
   
- Линейное преобразование \(умножение на матрицу размером 2×2\) и сдвиг \(прибавление матрицы размером 1×2\), вместе называются аффинным преобразованием.  Альтернативой заданию аффинного преобразования через пару матриц \(одна для линейного преобразования и одна для сдвига\) является запись всего преобразования в виде одной матрицы размером 3×3.  Чтобы можно было использовать такие матрицы преобразований, точки плоскости нужно хранить в виде матриц размером 1×3, с фиктивной третьей координатой.  Обычно третью координату делают равной 1.  Например, точка с координатами \(2, 1\) представляется матрицей \[2 1 1\].  На приведенном ниже рисунке представлен пример аффинного преобразования \(поворот на 90 градусов; сдвиг на 3 единицы по оси X и на 4 единицы по оси Y\), заданного умножением на матрицу размером 3×3.  
+ <span data-ttu-id="b9d75-135">Линейное преобразование (умножение на матрицу размером 2 × 2) и сдвиг (Добавление матрицы 1 × 2) называется аффинные преобразования.</span><span class="sxs-lookup"><span data-stu-id="b9d75-135">A linear transformation (multiplication by a 2×2 matrix) followed by a translation (addition of a 1×2 matrix) is called an affine transformation.</span></span> <span data-ttu-id="b9d75-136">Для хранения всего преобразования в матрицу 3 × 3 является альтернативой заданию аффинного преобразования через пару матриц (одна для линейной) и один для перевода.</span><span class="sxs-lookup"><span data-stu-id="b9d75-136">An alternative to storing an affine transformation in a pair of matrices (one for the linear part and one for the translation) is to store the entire transformation in a 3×3 matrix.</span></span> <span data-ttu-id="b9d75-137">Чтобы добиться этого, точки плоскости должны храниться в матрице 1 × 3 с фиктивной 3-й координат.</span><span class="sxs-lookup"><span data-stu-id="b9d75-137">To make this work, a point in the plane must be stored in a 1×3 matrix with a dummy 3rd coordinate.</span></span> <span data-ttu-id="b9d75-138">Обычно является третью координату равно 1.</span><span class="sxs-lookup"><span data-stu-id="b9d75-138">The usual technique is to make all 3rd coordinates equal to 1.</span></span> <span data-ttu-id="b9d75-139">Например точка (2, 1) представляется матрицей [2 1 1].</span><span class="sxs-lookup"><span data-stu-id="b9d75-139">For example, the point (2, 1) is represented by the matrix [2 1 1].</span></span> <span data-ttu-id="b9d75-140">На следующем рисунке показан пример аффинного преобразования (поворот на 90 градусов; сдвиг на три единицы по оси x и на 4 единицы по оси y) заданного умножением матрицу 3 × 3.</span><span class="sxs-lookup"><span data-stu-id="b9d75-140">The following illustration shows an affine transformation (rotate 90 degrees; translate 3 units in the x direction, 4 units in the y direction) expressed as multiplication by a single 3×3 matrix.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.png "AboutGdip05\_art09")  
+ <span data-ttu-id="b9d75-141">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")</span><span class="sxs-lookup"><span data-stu-id="b9d75-141">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")</span></span>  
   
- В предыдущем примере точка \(2, 1\) преобразуется в точку \(2, 6\).  Обратите внимание, что третий столбец матрицы размером 3×3 содержит числа 0, 0, 1.  Такие значения обязательны для всех матриц размером 3×3, задающих аффинные преобразования.  Смысловую нагрузку несут только шесть чисел в первом и втором столбцах матрицы преобразования.  Верхняя левая часть матрицы размером 2×2 задает линейную часть преобразования, а первые два числа в третьей строке матрицы задают сдвиг.  
+ <span data-ttu-id="b9d75-142">В предыдущем примере точка (2, 1) сопоставляется точка (2, 6).</span><span class="sxs-lookup"><span data-stu-id="b9d75-142">In the preceding example, the point (2, 1) is mapped to the point (2, 6).</span></span> <span data-ttu-id="b9d75-143">Обратите внимание, что третий столбец матрицы 3 × 3 содержит числа 0, 0, 1.</span><span class="sxs-lookup"><span data-stu-id="b9d75-143">Note that the third column of the 3×3 matrix contains the numbers 0, 0, 1.</span></span> <span data-ttu-id="b9d75-144">Это всегда будет в случае матрицы 3 × 3 аффинные преобразования.</span><span class="sxs-lookup"><span data-stu-id="b9d75-144">This will always be the case for the 3×3 matrix of an affine transformation.</span></span> <span data-ttu-id="b9d75-145">Важные цифры являются шесть чисел в столбцах 1 и 2.</span><span class="sxs-lookup"><span data-stu-id="b9d75-145">The important numbers are the six numbers in columns 1 and 2.</span></span> <span data-ttu-id="b9d75-146">В левом верхнем 2 × 2 части матрицы представляет линейную часть преобразования, а первые два числа в третьей строке представляют перевода.</span><span class="sxs-lookup"><span data-stu-id="b9d75-146">The upper-left 2×2 portion of the matrix represents the linear part of the transformation, and the first two entries in the 3rd row represent the translation.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05\_art10")  
+ <span data-ttu-id="b9d75-147">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")</span><span class="sxs-lookup"><span data-stu-id="b9d75-147">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")</span></span>  
   
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет хранить аффинные преобразования в объекте <xref:System.Drawing.Drawing2D.Matrix>.  Так как третий столбец матрицы, задающей аффинное преобразование, всегда равен \(0, 0, 1\), при создании объекта <xref:System.Drawing.Drawing2D.Matrix> нужно задавать только шесть чисел в первых двух столбцах.  Инструкция `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` создает матрицу, изображенную на приведенном выше рисунке.  
+ <span data-ttu-id="b9d75-148">В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно хранить аффинные преобразования в <xref:System.Drawing.Drawing2D.Matrix> объекта.</span><span class="sxs-lookup"><span data-stu-id="b9d75-148">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] you can store an affine transformation in a <xref:System.Drawing.Drawing2D.Matrix> object.</span></span> <span data-ttu-id="b9d75-149">Поскольку третий столбец матрицы, задающей аффинное преобразование всегда является (0, 0, 1), укажите только шесть чисел в первых двух столбцах при создании <xref:System.Drawing.Drawing2D.Matrix> объекта.</span><span class="sxs-lookup"><span data-stu-id="b9d75-149">Because the third column of a matrix that represents an affine transformation is always (0, 0, 1), you specify only the six numbers in the first two columns when you construct a <xref:System.Drawing.Drawing2D.Matrix> object.</span></span> <span data-ttu-id="b9d75-150">Инструкция `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` создает матрицу, показанный на предыдущем рисунке.</span><span class="sxs-lookup"><span data-stu-id="b9d75-150">The statement `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constructs the matrix shown in the preceding figure.</span></span>  
   
-## Составные преобразования  
- Составным преобразованием называется серия последовательно применяемых преобразований.  Рассмотрим следующие матрицы и преобразования:  
+## <a name="composite-transformations"></a><span data-ttu-id="b9d75-151">Составные преобразования</span><span class="sxs-lookup"><span data-stu-id="b9d75-151">Composite Transformations</span></span>  
+ <span data-ttu-id="b9d75-152">Составное преобразование — это последовательность преобразований, одно за другим.</span><span class="sxs-lookup"><span data-stu-id="b9d75-152">A composite transformation is a sequence of transformations, one followed by the other.</span></span> <span data-ttu-id="b9d75-153">Рассмотрим матрицы и преобразования в следующем списке:</span><span class="sxs-lookup"><span data-stu-id="b9d75-153">Consider the matrices and transformations in the following list:</span></span>  
   
 |||  
 |-|-|  
-|Матрица A|Поворот на 90 градусов.|  
-|Матрица B|Масштабирование по оси X с коэффициентом 2.|  
-|Матрица C|Сдвиг на три единицы по оси Y.|  
+|<span data-ttu-id="b9d75-154">Матрицы A</span><span class="sxs-lookup"><span data-stu-id="b9d75-154">Matrix A</span></span>|<span data-ttu-id="b9d75-155">Повернуть на 90 градусов</span><span class="sxs-lookup"><span data-stu-id="b9d75-155">Rotate 90 degrees</span></span>|  
+|<span data-ttu-id="b9d75-156">Матрица B</span><span class="sxs-lookup"><span data-stu-id="b9d75-156">Matrix B</span></span>|<span data-ttu-id="b9d75-157">Масштабирование по с коэффициентом 2 по оси x</span><span class="sxs-lookup"><span data-stu-id="b9d75-157">Scale by a factor of 2 in the x direction</span></span>|  
+|<span data-ttu-id="b9d75-158">Матрица C</span><span class="sxs-lookup"><span data-stu-id="b9d75-158">Matrix C</span></span>|<span data-ttu-id="b9d75-159">Сдвиг на три единицы по оси y</span><span class="sxs-lookup"><span data-stu-id="b9d75-159">Translate 3 units in the y direction</span></span>|  
   
- Если взять матричное представление для точки с координатами \(2, 1\) — \[2 1 1\] — и последовательно умножить его на матрицу A, затем на B, а затем на C, точка \(2, 1\) последовательно подвергнется трем соответствующим преобразованиям.  
+ <span data-ttu-id="b9d75-160">Мы начнем с точкой (2, 1), представленный в матрице [2 1 1] — и умножьте, B и затем C, точка (2, 1) будут подвергнуты три преобразования в указанном порядке.</span><span class="sxs-lookup"><span data-stu-id="b9d75-160">If we start with the point (2, 1) — represented by the matrix [2 1 1] — and multiply by A, then B, then C, the point (2, 1) will undergo the three transformations in the order listed.</span></span>  
   
- \[2 1 1\]ABC \= \[\-2 5 1\]  
+ <span data-ttu-id="b9d75-161">[2 1 1] ABC = [1-2 5]</span><span class="sxs-lookup"><span data-stu-id="b9d75-161">[2 1 1]ABC = [-2 5 1]</span></span>  
   
- Вместо того чтобы хранить три части составного преобразования в отдельных матрицах, можно перемножить матрицы A, B и C и получить одну матрицу размером 3×3, содержащую все составное преобразование.  Предположим, что ABC \= D.  Тогда точка, умноженная на матрицу D, подвергается тем же преобразованиям, что и после последовательного умножения на матрицы A, B и C.  
+ <span data-ttu-id="b9d75-162">А не хранить три части составного преобразования в три отдельных матрицы, можно умножить A, B и C вместе для получения одного матрицу 3 × 3, которая хранит все составное преобразование.</span><span class="sxs-lookup"><span data-stu-id="b9d75-162">Rather than store the three parts of the composite transformation in three separate matrices, you can multiply A, B, and C together to get a single 3×3 matrix that stores the entire composite transformation.</span></span> <span data-ttu-id="b9d75-163">Предположим, что ABC = D. Затем точка, умноженная D дает тот же результат, как точка, умноженное на A, B и C.</span><span class="sxs-lookup"><span data-stu-id="b9d75-163">Suppose ABC = D. Then a point multiplied by D gives the same result as a point multiplied by A, then B, then C.</span></span>  
   
- \[2 1 1\]D \= \[\-2 5 1\]  
+ <span data-ttu-id="b9d75-164">[2 1 1] D = [1-2 5]</span><span class="sxs-lookup"><span data-stu-id="b9d75-164">[2 1 1]D = [-2 5 1]</span></span>  
   
- На приведенном ниже рисунке показаны матрицы A, B, C и D.  
+ <span data-ttu-id="b9d75-165">На следующем рисунке показан матрицы A, B, C и D.</span><span class="sxs-lookup"><span data-stu-id="b9d75-165">The following illustration shows the matrices A, B, C, and D.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.png "AboutGdip05\_art12")  
+ <span data-ttu-id="b9d75-166">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")</span><span class="sxs-lookup"><span data-stu-id="b9d75-166">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")</span></span>  
   
- Тот факт, что матрица составного преобразования может быть создана путем перемножения отдельных матриц преобразования, означает, что любая последовательность аффинных преобразований может быть задана одним объектом <xref:System.Drawing.Drawing2D.Matrix>.  
+ <span data-ttu-id="b9d75-167">Тот факт, что матрица составного преобразования может быть создана путем перемножения отдельных матриц преобразования означает, что любая последовательность аффинных преобразований могут храниться в одном <xref:System.Drawing.Drawing2D.Matrix> объекта.</span><span class="sxs-lookup"><span data-stu-id="b9d75-167">The fact that the matrix of a composite transformation can be formed by multiplying the individual transformation matrices means that any sequence of affine transformations can be stored in a single <xref:System.Drawing.Drawing2D.Matrix> object.</span></span>  
   
 > [!CAUTION]
->  Порядок применения \(перемножения\) матриц преобразования имеет значение.  В общем случае поворот, затем масштабирование и затем сдвиг производят преобразование, отличное от того, которое получается после применения масштабирования, затем поворота и затем сдвига.  Поэтому важное значение имеет порядок, в котором перемножаются матрицы.  В общем случае ABC не равно BAC.  
+>  <span data-ttu-id="b9d75-168">Важен порядок составного преобразования.</span><span class="sxs-lookup"><span data-stu-id="b9d75-168">The order of a composite transformation is important.</span></span> <span data-ttu-id="b9d75-169">В общем случае поворот, затем масштабирование, а затем перевод не совпадает как масштабирование, затем поворот, затем сдвиг.</span><span class="sxs-lookup"><span data-stu-id="b9d75-169">In general, rotate, then scale, then translate is not the same as scale, then rotate, then translate.</span></span> <span data-ttu-id="b9d75-170">Аналогичным образом важен порядок умножения для матрицы.</span><span class="sxs-lookup"><span data-stu-id="b9d75-170">Similarly, the order of matrix multiplication is important.</span></span> <span data-ttu-id="b9d75-171">В общем случае ABC не равно BAC.</span><span class="sxs-lookup"><span data-stu-id="b9d75-171">In general, ABC is not the same as BAC.</span></span>  
   
- Класс <xref:System.Drawing.Drawing2D.Matrix> содержит несколько методов для составных преобразований: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A> и <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>.  В приведенном ниже примере демонстрируется создание матрицы составного преобразования, реализующей поворот на 30 градусов, затем масштабирование вдоль оси Y с коэффициентом 2 и сдвиг на 5 единиц вдоль оси X.  
+ <span data-ttu-id="b9d75-172"><xref:System.Drawing.Drawing2D.Matrix> Класс предоставляет несколько методов для составных преобразований: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, и <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>.</span><span class="sxs-lookup"><span data-stu-id="b9d75-172">The <xref:System.Drawing.Drawing2D.Matrix> class provides several methods for building a composite transformation: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, and <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>.</span></span> <span data-ttu-id="b9d75-173">В следующем примере создается матрица составного преобразования, реализующей поворот на 30 градусов, затем масштабирование с коэффициентом 2 по оси y и сдвиг на 5 единиц по оси x:</span><span class="sxs-lookup"><span data-stu-id="b9d75-173">The following example creates the matrix of a composite transformation that first rotates 30 degrees, then scales by a factor of 2 in the y direction, and then translates 5 units in the x direction:</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
- На приведенном ниже рисунке изображена полученная матрица.  
+ <span data-ttu-id="b9d75-174">На следующем рисунке показана матрица.</span><span class="sxs-lookup"><span data-stu-id="b9d75-174">The following illustration shows the matrix.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.png "AboutGdip05\_art13")  
+ <span data-ttu-id="b9d75-175">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")</span><span class="sxs-lookup"><span data-stu-id="b9d75-175">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")</span></span>  
   
-## См. также  
- [Системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Использование преобразований в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="b9d75-176">См. также</span><span class="sxs-lookup"><span data-stu-id="b9d75-176">See Also</span></span>  
+ [<span data-ttu-id="b9d75-177">Системы координат и преобразования</span><span class="sxs-lookup"><span data-stu-id="b9d75-177">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="b9d75-178">Использование преобразований в управляемом GDI+</span><span class="sxs-lookup"><span data-stu-id="b9d75-178">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

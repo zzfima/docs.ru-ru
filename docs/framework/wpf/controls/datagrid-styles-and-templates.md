@@ -1,195 +1,188 @@
 ---
-title: "Стили и шаблоны элемента DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], DataGrid"
-  - "DataGrid [WPF], стили и шаблоны"
-  - "части [WPF], DataGrid"
-  - "состояния [WPF], DataGrid"
-  - "стили [WPF], DataGrid"
-  - "шаблоны [WPF], DataGrid"
+title: "Стили и шаблоны элемента DataGrid"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], DataGrid
+- ControlTemplate [WPF], DataGrid
+- DataGrid [WPF], styles and templates
+- templates [WPF], DataGrid
+- styles [WPF], DataGrid
+- parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента DataGrid
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.DataGrid>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="datagrid-styles-and-templates"></a><span data-ttu-id="02691-102">Стили и шаблоны элемента DataGrid</span><span class="sxs-lookup"><span data-stu-id="02691-102">DataGrid Styles and Templates</span></span>
+<span data-ttu-id="02691-103">В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DataGrid> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="02691-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="02691-104">Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления.</span><span class="sxs-lookup"><span data-stu-id="02691-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="02691-105">Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="02691-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Части DataGrid  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.DataGrid>.  
+## <a name="datagrid-parts"></a><span data-ttu-id="02691-106">Элементы управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="02691-106">DataGrid Parts</span></span>  
+ <span data-ttu-id="02691-107">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.DataGrid> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="02691-107">The following table lists the named parts for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-108">Отделение</span><span class="sxs-lookup"><span data-stu-id="02691-108">Part</span></span>|<span data-ttu-id="02691-109">Тип</span><span class="sxs-lookup"><span data-stu-id="02691-109">Type</span></span>|<span data-ttu-id="02691-110">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-110">Description</span></span>|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Строка, содержащая заголовки столбцов.|  
+|<span data-ttu-id="02691-111">PART_ColumnHeadersPresenter</span><span class="sxs-lookup"><span data-stu-id="02691-111">PART_ColumnHeadersPresenter</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|<span data-ttu-id="02691-112">Строка, содержащая заголовки столбцов.</span><span class="sxs-lookup"><span data-stu-id="02691-112">The row that contains the column headers.</span></span>|  
   
- При создании шаблона <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.DataGrid> шаблон может содержать часть <xref:System.Windows.Controls.ItemsPresenter> в элементе управления <xref:System.Windows.Controls.ScrollViewer>.  \(Элемент управления <xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в элементе управления <xref:System.Windows.Controls.DataGrid>; элемент управления <xref:System.Windows.Controls.ScrollViewer> обеспечивает прокрутку в элементе управления\).  Если элемент управления <xref:System.Windows.Controls.ItemsPresenter> не является непосредственным дочерним элементом элемента управления <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить элементу управления <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ <span data-ttu-id="02691-113">При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.DataGrid>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="02691-113">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.DataGrid>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="02691-114">( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> разрешает прокрутку в элементе управления).</span><span class="sxs-lookup"><span data-stu-id="02691-114">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.DataGrid>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="02691-115">Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, вы должны предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="02691-115">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
- Шаблон элемента управления <xref:System.Windows.Controls.DataGrid> по умолчанию содержит элемент управления <xref:System.Windows.Controls.ScrollViewer>.  Дополнительные сведения о частях, определенных элементом управления <xref:System.Windows.Controls.ScrollViewer>, см. в разделе [Стили и шаблоны элемента ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+ <span data-ttu-id="02691-116">Шаблон по умолчанию для <xref:System.Windows.Controls.DataGrid> содержит <xref:System.Windows.Controls.ScrollViewer> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="02691-116">The default template for the <xref:System.Windows.Controls.DataGrid> contains a <xref:System.Windows.Controls.ScrollViewer> control.</span></span> <span data-ttu-id="02691-117">Дополнительные сведения о частях определяется <xref:System.Windows.Controls.ScrollViewer>, в разделе [ScrollViewer стили и шаблоны](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).</span><span class="sxs-lookup"><span data-stu-id="02691-117">For more information about the parts defined by the <xref:System.Windows.Controls.ScrollViewer>, see [ScrollViewer Styles and Templates](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).</span></span>  
   
-## Состояния DataGrid  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.DataGrid>.  
+## <a name="datagrid-states"></a><span data-ttu-id="02691-118">DataGrid состояний</span><span class="sxs-lookup"><span data-stu-id="02691-118">DataGrid States</span></span>  
+ <span data-ttu-id="02691-119">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DataGrid> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="02691-119">The following table lists the visual states for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-120">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="02691-120">VisualState Name</span></span>|<span data-ttu-id="02691-121">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="02691-121">VisualStateGroup Name</span></span>|<span data-ttu-id="02691-122">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-122">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|Disabled|CommonStates|Элемент управления отключен.|  
-|InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Элемент управления не является допустимым и не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления является допустимым.|  
+|<span data-ttu-id="02691-123">Норм.</span><span class="sxs-lookup"><span data-stu-id="02691-123">Normal</span></span>|<span data-ttu-id="02691-124">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-124">CommonStates</span></span>|<span data-ttu-id="02691-125">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="02691-125">The default state.</span></span>|  
+|<span data-ttu-id="02691-126">Отключено</span><span class="sxs-lookup"><span data-stu-id="02691-126">Disabled</span></span>|<span data-ttu-id="02691-127">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-127">CommonStates</span></span>|<span data-ttu-id="02691-128">Элемент управления отключен.</span><span class="sxs-lookup"><span data-stu-id="02691-128">The control is disabled.</span></span>|  
+|<span data-ttu-id="02691-129">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="02691-129">InvalidFocused</span></span>|<span data-ttu-id="02691-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-130">ValidationStates</span></span>|<span data-ttu-id="02691-131">Элемент управления не является допустимым и имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-131">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="02691-132">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="02691-132">InvalidUnfocused</span></span>|<span data-ttu-id="02691-133">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-133">ValidationStates</span></span>|<span data-ttu-id="02691-134">Элемент управления не является допустимым и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-134">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-135">Valid</span><span class="sxs-lookup"><span data-stu-id="02691-135">Valid</span></span>|<span data-ttu-id="02691-136">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-136">ValidationStates</span></span>|<span data-ttu-id="02691-137">Элемент управления является допустимым.</span><span class="sxs-lookup"><span data-stu-id="02691-137">The control is valid.</span></span>|  
   
-## Части DataGridCell  
- Элемент <xref:System.Windows.Controls.DataGridCell> не имеет именованных частей.  
+## <a name="datagridcell-parts"></a><span data-ttu-id="02691-138">DataGridCell частей</span><span class="sxs-lookup"><span data-stu-id="02691-138">DataGridCell Parts</span></span>  
+ <span data-ttu-id="02691-139"><xref:System.Windows.Controls.DataGridCell> Элемент не имеет именованных частей.</span><span class="sxs-lookup"><span data-stu-id="02691-139">The <xref:System.Windows.Controls.DataGridCell> element does not have any named parts.</span></span>  
   
-## Состояния DataGridCell  
- В следующей таблице перечислены визуальные состояния элемента <xref:System.Windows.Controls.DataGridCell>.  
+## <a name="datagridcell-states"></a><span data-ttu-id="02691-140">DataGridCell состояний</span><span class="sxs-lookup"><span data-stu-id="02691-140">DataGridCell States</span></span>  
+ <span data-ttu-id="02691-141">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DataGridCell> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-141">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridCell> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-142">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="02691-142">VisualState Name</span></span>|<span data-ttu-id="02691-143">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="02691-143">VisualStateGroup Name</span></span>|<span data-ttu-id="02691-144">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-144">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши наведен на ячейку.|  
-|Focused|FocusStates|Ячейка имеет фокус.|  
-|Unfocused|FocusStates|Ячейка не имеет фокуса.|  
-|Текущий|CurrentStates|Ячейка является текущей.|  
-|Регулярное|CurrentStates|Ячейка не является текущей.|  
-|Отображение|InteractionStates|Ячейка находится в режиме отображения.|  
-|Редактирование|InteractionStates|Ячейка находится в режиме правки.|  
-|Выбран|SelectionStates|Ячейка выбрана.|  
-|Не выбран|SelectionStates|Ячейка не выбрана.|  
-|InvalidFocused|ValidationStates|Ячейка не является допустимой и имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Ячейка не является допустимой и не имеет фокуса.|  
-|Valid|ValidationStates|Ячейка является допустимой.|  
+|<span data-ttu-id="02691-145">Норм.</span><span class="sxs-lookup"><span data-stu-id="02691-145">Normal</span></span>|<span data-ttu-id="02691-146">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-146">CommonStates</span></span>|<span data-ttu-id="02691-147">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="02691-147">The default state.</span></span>|  
+|<span data-ttu-id="02691-148">MouseOver</span><span class="sxs-lookup"><span data-stu-id="02691-148">MouseOver</span></span>|<span data-ttu-id="02691-149">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-149">CommonStates</span></span>|<span data-ttu-id="02691-150">Указатель мыши наведен на ячейку.</span><span class="sxs-lookup"><span data-stu-id="02691-150">The mouse pointer is positioned over the cell.</span></span>|  
+|<span data-ttu-id="02691-151">Focused</span><span class="sxs-lookup"><span data-stu-id="02691-151">Focused</span></span>|<span data-ttu-id="02691-152">FocusStates</span><span class="sxs-lookup"><span data-stu-id="02691-152">FocusStates</span></span>|<span data-ttu-id="02691-153">Ячейка имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-153">The cell has focus.</span></span>|  
+|<span data-ttu-id="02691-154">Без фокуса ввода</span><span class="sxs-lookup"><span data-stu-id="02691-154">Unfocused</span></span>|<span data-ttu-id="02691-155">FocusStates</span><span class="sxs-lookup"><span data-stu-id="02691-155">FocusStates</span></span>|<span data-ttu-id="02691-156">Ячейка имеет фокус</span><span class="sxs-lookup"><span data-stu-id="02691-156">The cell does not have focus</span></span>|  
+|<span data-ttu-id="02691-157">Текущие</span><span class="sxs-lookup"><span data-stu-id="02691-157">Current</span></span>|<span data-ttu-id="02691-158">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="02691-158">CurrentStates</span></span>|<span data-ttu-id="02691-159">Ячейка является текущей.</span><span class="sxs-lookup"><span data-stu-id="02691-159">The cell is the current cell.</span></span>|  
+|<span data-ttu-id="02691-160">Регулярное</span><span class="sxs-lookup"><span data-stu-id="02691-160">Regular</span></span>|<span data-ttu-id="02691-161">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="02691-161">CurrentStates</span></span>|<span data-ttu-id="02691-162">Ячейка не является текущей ячейки.</span><span class="sxs-lookup"><span data-stu-id="02691-162">The cell is not the current cell.</span></span>|  
+|<span data-ttu-id="02691-163">Отображение</span><span class="sxs-lookup"><span data-stu-id="02691-163">Display</span></span>|<span data-ttu-id="02691-164">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="02691-164">InteractionStates</span></span>|<span data-ttu-id="02691-165">Ячейка находится в режиме отображения.</span><span class="sxs-lookup"><span data-stu-id="02691-165">The cell is in display mode.</span></span>|  
+|<span data-ttu-id="02691-166">Редактирование</span><span class="sxs-lookup"><span data-stu-id="02691-166">Editing</span></span>|<span data-ttu-id="02691-167">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="02691-167">InteractionStates</span></span>|<span data-ttu-id="02691-168">Ячейка находится в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="02691-168">The cell is in edit mode.</span></span>|  
+|<span data-ttu-id="02691-169">Selected</span><span class="sxs-lookup"><span data-stu-id="02691-169">Selected</span></span>|<span data-ttu-id="02691-170">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="02691-170">SelectionStates</span></span>|<span data-ttu-id="02691-171">Ячейка выбрана.</span><span class="sxs-lookup"><span data-stu-id="02691-171">The cell is selected.</span></span>|  
+|<span data-ttu-id="02691-172">Unselected</span><span class="sxs-lookup"><span data-stu-id="02691-172">Unselected</span></span>|<span data-ttu-id="02691-173">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="02691-173">SelectionStates</span></span>|<span data-ttu-id="02691-174">Ячейка не выбрана.</span><span class="sxs-lookup"><span data-stu-id="02691-174">The cell is not selected.</span></span>|  
+|<span data-ttu-id="02691-175">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="02691-175">InvalidFocused</span></span>|<span data-ttu-id="02691-176">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-176">ValidationStates</span></span>|<span data-ttu-id="02691-177">Ячейка не является допустимым и имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-177">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="02691-178">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="02691-178">InvalidUnfocused</span></span>|<span data-ttu-id="02691-179">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-179">ValidationStates</span></span>|<span data-ttu-id="02691-180">Ячейка не является допустимым и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-180">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-181">Valid</span><span class="sxs-lookup"><span data-stu-id="02691-181">Valid</span></span>|<span data-ttu-id="02691-182">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-182">ValidationStates</span></span>|<span data-ttu-id="02691-183">Ячейка является допустимой.</span><span class="sxs-lookup"><span data-stu-id="02691-183">The cell is valid.</span></span>|  
   
-## Части DataGridRow  
- Элемент <xref:System.Windows.Controls.DataGridRow> не имеет именованных частей.  
+## <a name="datagridrow-parts"></a><span data-ttu-id="02691-184">DataGridRow частей</span><span class="sxs-lookup"><span data-stu-id="02691-184">DataGridRow Parts</span></span>  
+ <span data-ttu-id="02691-185"><xref:System.Windows.Controls.DataGridRow> Элемент не имеет именованных частей.</span><span class="sxs-lookup"><span data-stu-id="02691-185">The <xref:System.Windows.Controls.DataGridRow> element does not have any named parts.</span></span>  
   
-## Состояния DataGridRow  
- В следующей таблице перечислены визуальные состояния элемента <xref:System.Windows.Controls.DataGridRow>.  
+## <a name="datagridrow-states"></a><span data-ttu-id="02691-186">DataGridRow состояний</span><span class="sxs-lookup"><span data-stu-id="02691-186">DataGridRow States</span></span>  
+ <span data-ttu-id="02691-187">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DataGridRow> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-187">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridRow> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-188">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="02691-188">VisualState Name</span></span>|<span data-ttu-id="02691-189">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="02691-189">VisualStateGroup Name</span></span>|<span data-ttu-id="02691-190">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-190">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши наведен на строку.|  
-|MouseOver\_Editing|CommonStates|Указатель мыши наведен на строку, и строка находится в режиме правки.|  
-|MouseOver\_Selected|CommonStates|Указатель мыши наведен на строку, и строка выбрана.|  
-|MouseOver\_Unfocused\_Editing|CommonStates|Указатель мыши наведен на строку, строка находится в режиме правки и не имеет фокуса.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|Указатель мыши наведен на строку, строка выбрана и не имеет фокуса.|  
-|Normal\_AlternatingRow|CommonStates|Строка является чередующейся.|  
-|Normal\_Editing|CommonStates|Строка находится в режиме правки.|  
-|Normal\_Selected|CommonStates|Строка выбрана.|  
-|Unfocused\_Editing|CommonStates|Строка находится в режиме правки и не имеет фокуса.|  
-|Unfocused\_Selected|CommonStates|Строка выбрана и не имеет фокуса.|  
-|InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Элемент управления не является допустимым и не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления является допустимым.|  
+|<span data-ttu-id="02691-191">Норм.</span><span class="sxs-lookup"><span data-stu-id="02691-191">Normal</span></span>|<span data-ttu-id="02691-192">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-192">CommonStates</span></span>|<span data-ttu-id="02691-193">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="02691-193">The default state.</span></span>|  
+|<span data-ttu-id="02691-194">MouseOver</span><span class="sxs-lookup"><span data-stu-id="02691-194">MouseOver</span></span>|<span data-ttu-id="02691-195">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-195">CommonStates</span></span>|<span data-ttu-id="02691-196">Указатель мыши наведен на строку.</span><span class="sxs-lookup"><span data-stu-id="02691-196">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="02691-197">MouseOver_Editing</span><span class="sxs-lookup"><span data-stu-id="02691-197">MouseOver_Editing</span></span>|<span data-ttu-id="02691-198">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-198">CommonStates</span></span>|<span data-ttu-id="02691-199">Указатель мыши наведен на строку, и строка находится в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="02691-199">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="02691-200">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-200">MouseOver_Selected</span></span>|<span data-ttu-id="02691-201">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-201">CommonStates</span></span>|<span data-ttu-id="02691-202">Указатель мыши наведен на строку и выбрана строка.</span><span class="sxs-lookup"><span data-stu-id="02691-202">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="02691-203">MouseOver_Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="02691-203">MouseOver_Unfocused_Editing</span></span>|<span data-ttu-id="02691-204">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-204">CommonStates</span></span>|<span data-ttu-id="02691-205">Указатель мыши наведен на строку, строка находится в режиме редактирования и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-205">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-206">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-206">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="02691-207">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-207">CommonStates</span></span>|<span data-ttu-id="02691-208">Указатель мыши наведен на строку, строка выбрана и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-208">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-209">Normal_AlternatingRow</span><span class="sxs-lookup"><span data-stu-id="02691-209">Normal_AlternatingRow</span></span>|<span data-ttu-id="02691-210">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-210">CommonStates</span></span>|<span data-ttu-id="02691-211">Строка является чередующейся.</span><span class="sxs-lookup"><span data-stu-id="02691-211">The row is an alternating row.</span></span>|  
+|<span data-ttu-id="02691-212">Normal_Editing</span><span class="sxs-lookup"><span data-stu-id="02691-212">Normal_Editing</span></span>|<span data-ttu-id="02691-213">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-213">CommonStates</span></span>|<span data-ttu-id="02691-214">Строка находится в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="02691-214">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="02691-215">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-215">Normal_Selected</span></span>|<span data-ttu-id="02691-216">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-216">CommonStates</span></span>|<span data-ttu-id="02691-217">Выбрана строка.</span><span class="sxs-lookup"><span data-stu-id="02691-217">The row is selected.</span></span>|  
+|<span data-ttu-id="02691-218">Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="02691-218">Unfocused_Editing</span></span>|<span data-ttu-id="02691-219">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-219">CommonStates</span></span>|<span data-ttu-id="02691-220">Строка находится в режиме редактирования и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-220">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-221">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-221">Unfocused_Selected</span></span>|<span data-ttu-id="02691-222">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-222">CommonStates</span></span>|<span data-ttu-id="02691-223">Строка выбрана и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-223">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-224">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="02691-224">InvalidFocused</span></span>|<span data-ttu-id="02691-225">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-225">ValidationStates</span></span>|<span data-ttu-id="02691-226">Элемент управления не является допустимым и имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-226">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="02691-227">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="02691-227">InvalidUnfocused</span></span>|<span data-ttu-id="02691-228">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-228">ValidationStates</span></span>|<span data-ttu-id="02691-229">Элемент управления не является допустимым и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-229">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-230">Valid</span><span class="sxs-lookup"><span data-stu-id="02691-230">Valid</span></span>|<span data-ttu-id="02691-231">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-231">ValidationStates</span></span>|<span data-ttu-id="02691-232">Элемент управления является допустимым.</span><span class="sxs-lookup"><span data-stu-id="02691-232">The control is valid.</span></span>|  
   
-## Части DataGridRowHeader  
- В следующей таблице перечислены именованные части элемента <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+## <a name="datagridrowheader-parts"></a><span data-ttu-id="02691-233">DataGridRowHeader частей</span><span class="sxs-lookup"><span data-stu-id="02691-233">DataGridRowHeader Parts</span></span>  
+ <span data-ttu-id="02691-234">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DataGridRowHeader> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-234">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-235">Отделение</span><span class="sxs-lookup"><span data-stu-id="02691-235">Part</span></span>|<span data-ttu-id="02691-236">Тип</span><span class="sxs-lookup"><span data-stu-id="02691-236">Type</span></span>|<span data-ttu-id="02691-237">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-237">Description</span></span>|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка строки сверху.|  
-|PART\_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка строки снизу.|  
+|<span data-ttu-id="02691-238">PART_TopHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="02691-238">PART_TopHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="02691-239">Элемент, используемый для изменения размера заголовка строки сверху.</span><span class="sxs-lookup"><span data-stu-id="02691-239">The element that is used to resize the row header from the top.</span></span>|  
+|<span data-ttu-id="02691-240">PART_BottomHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="02691-240">PART_BottomHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="02691-241">Элемент, используемый для изменения размера заголовка строки снизу.</span><span class="sxs-lookup"><span data-stu-id="02691-241">The element that is used to resize the row header from the bottom.</span></span>|  
   
-## Состояния DataGridRowHeader  
- В следующей таблице перечислены визуальные состояния элемента <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+## <a name="datagridrowheader-states"></a><span data-ttu-id="02691-242">DataGridRowHeader состояний</span><span class="sxs-lookup"><span data-stu-id="02691-242">DataGridRowHeader States</span></span>  
+ <span data-ttu-id="02691-243">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DataGridRowHeader> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-243">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-244">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="02691-244">VisualState Name</span></span>|<span data-ttu-id="02691-245">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="02691-245">VisualStateGroup Name</span></span>|<span data-ttu-id="02691-246">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-246">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши наведен на строку.|  
-|MouseOver\_CurrentRow|CommonStates|Указатель мыши наведен на строку, и строка является текущей.|  
-|MouseOver\_CurrentRow\_Selected|CommonStates|Указатель мыши наведен на строку, и строка является текущей и выбранной.|  
-|MouseOver\_EditingRow|CommonStates|Указатель мыши наведен на строку, и строка находится в режиме правки.|  
-|MouseOver\_Selected|CommonStates|Указатель мыши наведен на строку, и строка выбрана.|  
-|MouseOver\_Unfocused\_CurrentRow\_Selected|CommonStates|Указатель мыши наведен на строку, строка является текущей и выбранной и не имеет фокуса.|  
-|MouseOver\_Unfocused\_EditingRow|CommonStates|Указатель мыши наведен на строку, строка находится в режиме правки и не имеет фокуса.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|Указатель мыши наведен на строку, строка выбрана и не имеет фокуса.|  
-|Normal\_CurrentRow|CommonStates|Строка является текущей.|  
-|Normal\_CurrentRow\_Selected|CommonStates|Строка является текущей и выбранной.|  
-|Normal\_EditingRow|CommonStates|Строка находится в режиме правки.|  
-|Normal\_Selected|CommonStates|Строка выбрана.|  
-|Unfocused\_CurrentRow\_Selected|CommonStates|Строка является текущей, строка выбрана и не имеет фокуса.|  
-|Unfocused\_EditingRow|CommonStates|Строка находится в режиме правки и не имеет фокуса.|  
-|Unfocused\_Selected|CommonStates|Строка выбрана и не имеет фокуса.|  
-|InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Элемент управления не является допустимым и не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления является допустимым.|  
+|<span data-ttu-id="02691-247">Норм.</span><span class="sxs-lookup"><span data-stu-id="02691-247">Normal</span></span>|<span data-ttu-id="02691-248">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-248">CommonStates</span></span>|<span data-ttu-id="02691-249">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="02691-249">The default state.</span></span>|  
+|<span data-ttu-id="02691-250">MouseOver</span><span class="sxs-lookup"><span data-stu-id="02691-250">MouseOver</span></span>|<span data-ttu-id="02691-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-251">CommonStates</span></span>|<span data-ttu-id="02691-252">Указатель мыши наведен на строку.</span><span class="sxs-lookup"><span data-stu-id="02691-252">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="02691-253">MouseOver_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="02691-253">MouseOver_CurrentRow</span></span>|<span data-ttu-id="02691-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-254">CommonStates</span></span>|<span data-ttu-id="02691-255">Указатель мыши наведен на строку и текущей строки.</span><span class="sxs-lookup"><span data-stu-id="02691-255">The mouse pointer is positioned over the row and the row is the current row.</span></span>|  
+|<span data-ttu-id="02691-256">MouseOver_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-256">MouseOver_CurrentRow_Selected</span></span>|<span data-ttu-id="02691-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-257">CommonStates</span></span>|<span data-ttu-id="02691-258">Указатель мыши наведен на строку, и строка является текущей и выбранной.</span><span class="sxs-lookup"><span data-stu-id="02691-258">The mouse pointer is positioned over the row, and the row is current and selected.</span></span>|  
+|<span data-ttu-id="02691-259">MouseOver_EditingRow</span><span class="sxs-lookup"><span data-stu-id="02691-259">MouseOver_EditingRow</span></span>|<span data-ttu-id="02691-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-260">CommonStates</span></span>|<span data-ttu-id="02691-261">Указатель мыши наведен на строку, и строка находится в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="02691-261">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="02691-262">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-262">MouseOver_Selected</span></span>|<span data-ttu-id="02691-263">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-263">CommonStates</span></span>|<span data-ttu-id="02691-264">Указатель мыши наведен на строку и выбрана строка.</span><span class="sxs-lookup"><span data-stu-id="02691-264">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="02691-265">MouseOver_Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-265">MouseOver_Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="02691-266">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-266">CommonStates</span></span>|<span data-ttu-id="02691-267">Указатель мыши наведен на строку, строка является текущей и выбранной и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-267">The mouse pointer is positioned over the row, the row is current and selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-268">MouseOver_Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="02691-268">MouseOver_Unfocused_EditingRow</span></span>|<span data-ttu-id="02691-269">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-269">CommonStates</span></span>|<span data-ttu-id="02691-270">Указатель мыши наведен на строку, строка находится в режиме редактирования и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-270">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-271">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-271">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="02691-272">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-272">CommonStates</span></span>|<span data-ttu-id="02691-273">Указатель мыши наведен на строку, строка выбрана и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-273">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-274">Normal_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="02691-274">Normal_CurrentRow</span></span>|<span data-ttu-id="02691-275">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-275">CommonStates</span></span>|<span data-ttu-id="02691-276">Строка является текущей строки.</span><span class="sxs-lookup"><span data-stu-id="02691-276">The row is the current row.</span></span>|  
+|<span data-ttu-id="02691-277">Normal_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-277">Normal_CurrentRow_Selected</span></span>|<span data-ttu-id="02691-278">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-278">CommonStates</span></span>|<span data-ttu-id="02691-279">Строка является текущей строки и выбран.</span><span class="sxs-lookup"><span data-stu-id="02691-279">The row is the current row and is selected.</span></span>|  
+|<span data-ttu-id="02691-280">Normal_EditingRow</span><span class="sxs-lookup"><span data-stu-id="02691-280">Normal_EditingRow</span></span>|<span data-ttu-id="02691-281">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-281">CommonStates</span></span>|<span data-ttu-id="02691-282">Строка находится в режиме редактирования.</span><span class="sxs-lookup"><span data-stu-id="02691-282">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="02691-283">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-283">Normal_Selected</span></span>|<span data-ttu-id="02691-284">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-284">CommonStates</span></span>|<span data-ttu-id="02691-285">Выбрана строка.</span><span class="sxs-lookup"><span data-stu-id="02691-285">The row is selected.</span></span>|  
+|<span data-ttu-id="02691-286">Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-286">Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="02691-287">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-287">CommonStates</span></span>|<span data-ttu-id="02691-288">Строка является текущей, выбран и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-288">The row is the current row, is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-289">Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="02691-289">Unfocused_EditingRow</span></span>|<span data-ttu-id="02691-290">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-290">CommonStates</span></span>|<span data-ttu-id="02691-291">Строка находится в режиме редактирования и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-291">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-292">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="02691-292">Unfocused_Selected</span></span>|<span data-ttu-id="02691-293">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-293">CommonStates</span></span>|<span data-ttu-id="02691-294">Строка выбрана и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-294">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-295">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="02691-295">InvalidFocused</span></span>|<span data-ttu-id="02691-296">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-296">ValidationStates</span></span>|<span data-ttu-id="02691-297">Элемент управления не является допустимым и имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-297">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="02691-298">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="02691-298">InvalidUnfocused</span></span>|<span data-ttu-id="02691-299">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-299">ValidationStates</span></span>|<span data-ttu-id="02691-300">Элемент управления не является допустимым и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-300">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-301">Valid</span><span class="sxs-lookup"><span data-stu-id="02691-301">Valid</span></span>|<span data-ttu-id="02691-302">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-302">ValidationStates</span></span>|<span data-ttu-id="02691-303">Элемент управления является допустимым.</span><span class="sxs-lookup"><span data-stu-id="02691-303">The control is valid.</span></span>|  
   
-## Части DataGridColumnHeadersPresenter  
- В следующей таблице перечислены именованные части элемента <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+## <a name="datagridcolumnheaderspresenter-parts"></a><span data-ttu-id="02691-304">DataGridColumnHeadersPresenter частей</span><span class="sxs-lookup"><span data-stu-id="02691-304">DataGridColumnHeadersPresenter Parts</span></span>  
+ <span data-ttu-id="02691-305">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-305">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-306">Отделение</span><span class="sxs-lookup"><span data-stu-id="02691-306">Part</span></span>|<span data-ttu-id="02691-307">Тип</span><span class="sxs-lookup"><span data-stu-id="02691-307">Type</span></span>|<span data-ttu-id="02691-308">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-308">Description</span></span>|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Заполнитель для заголовков столбцов.|  
+|<span data-ttu-id="02691-309">PART_FillerColumnHeader</span><span class="sxs-lookup"><span data-stu-id="02691-309">PART_FillerColumnHeader</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|<span data-ttu-id="02691-310">Заполнитель для заголовков столбцов.</span><span class="sxs-lookup"><span data-stu-id="02691-310">The placeholder for column headers.</span></span>|  
   
-## Состояния DataGridColumnHeadersPresenter  
- В следующей таблице перечислены визуальные состояния элемента <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+## <a name="datagridcolumnheaderspresenter-states"></a><span data-ttu-id="02691-311">DataGridColumnHeadersPresenter состояний</span><span class="sxs-lookup"><span data-stu-id="02691-311">DataGridColumnHeadersPresenter States</span></span>  
+ <span data-ttu-id="02691-312">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-312">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-313">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="02691-313">VisualState Name</span></span>|<span data-ttu-id="02691-314">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="02691-314">VisualStateGroup Name</span></span>|<span data-ttu-id="02691-315">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-315">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|InvalidFocused|ValidationStates|Ячейка не является допустимой и имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Ячейка не является допустимой и не имеет фокуса.|  
-|Valid|ValidationStates|Ячейка является допустимой.|  
+|<span data-ttu-id="02691-316">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="02691-316">InvalidFocused</span></span>|<span data-ttu-id="02691-317">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-317">ValidationStates</span></span>|<span data-ttu-id="02691-318">Ячейка не является допустимым и имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-318">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="02691-319">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="02691-319">InvalidUnfocused</span></span>|<span data-ttu-id="02691-320">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-320">ValidationStates</span></span>|<span data-ttu-id="02691-321">Ячейка не является допустимым и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-321">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-322">Valid</span><span class="sxs-lookup"><span data-stu-id="02691-322">Valid</span></span>|<span data-ttu-id="02691-323">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-323">ValidationStates</span></span>|<span data-ttu-id="02691-324">Ячейка является допустимой.</span><span class="sxs-lookup"><span data-stu-id="02691-324">The cell is valid.</span></span>|  
   
-## Части DataGridColumnHeader  
- В следующей таблице перечислены именованные части элемента <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+## <a name="datagridcolumnheader-parts"></a><span data-ttu-id="02691-325">Направление элемента DataGridColumnHeader частей</span><span class="sxs-lookup"><span data-stu-id="02691-325">DataGridColumnHeader Parts</span></span>  
+ <span data-ttu-id="02691-326">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-326">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-327">Отделение</span><span class="sxs-lookup"><span data-stu-id="02691-327">Part</span></span>|<span data-ttu-id="02691-328">Тип</span><span class="sxs-lookup"><span data-stu-id="02691-328">Type</span></span>|<span data-ttu-id="02691-329">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-329">Description</span></span>|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка столбца слева.|  
-|PART\_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Элемент, используемый для изменения размера заголовка столбца справа.|  
+|<span data-ttu-id="02691-330">PART_LeftHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="02691-330">PART_LeftHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="02691-331">Элемент, используемый для изменения размера заголовка столбца слева.</span><span class="sxs-lookup"><span data-stu-id="02691-331">The element that is used to resize the column header from the left.</span></span>|  
+|<span data-ttu-id="02691-332">PART_RightHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="02691-332">PART_RightHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="02691-333">Элемент, используемый для изменения размера заголовка столбца справа.</span><span class="sxs-lookup"><span data-stu-id="02691-333">The element that is used to resize the column header from the right.</span></span>|  
   
-## Состояния DataGridColumnHeader  
- В следующей таблице перечислены визуальные состояния элемента <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+## <a name="datagridcolumnheader-states"></a><span data-ttu-id="02691-334">Направление элемента DataGridColumnHeader состояний</span><span class="sxs-lookup"><span data-stu-id="02691-334">DataGridColumnHeader States</span></span>  
+ <span data-ttu-id="02691-335">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> элемента.</span><span class="sxs-lookup"><span data-stu-id="02691-335">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="02691-336">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="02691-336">VisualState Name</span></span>|<span data-ttu-id="02691-337">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="02691-337">VisualStateGroup Name</span></span>|<span data-ttu-id="02691-338">Описание</span><span class="sxs-lookup"><span data-stu-id="02691-338">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
-|Pressed|CommonStates|Элемент управления нажат.|  
-|SortAscending|SortStates|Столбец сортируется в порядке возрастания.|  
-|SortDescending|SortStates|Столбец сортируется в порядке убывания.|  
-|Unsorted|SortStates|Столбец не сортируется.|  
-|InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Элемент управления не является допустимым и не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления является допустимым.|  
+|<span data-ttu-id="02691-339">Норм.</span><span class="sxs-lookup"><span data-stu-id="02691-339">Normal</span></span>|<span data-ttu-id="02691-340">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-340">CommonStates</span></span>|<span data-ttu-id="02691-341">Состояние по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="02691-341">The default state.</span></span>|  
+|<span data-ttu-id="02691-342">MouseOver</span><span class="sxs-lookup"><span data-stu-id="02691-342">MouseOver</span></span>|<span data-ttu-id="02691-343">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-343">CommonStates</span></span>|<span data-ttu-id="02691-344">Указатель мыши расположен в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="02691-344">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="02691-345">Нажато</span><span class="sxs-lookup"><span data-stu-id="02691-345">Pressed</span></span>|<span data-ttu-id="02691-346">CommonStates</span><span class="sxs-lookup"><span data-stu-id="02691-346">CommonStates</span></span>|<span data-ttu-id="02691-347">Элемент управления нажат.</span><span class="sxs-lookup"><span data-stu-id="02691-347">The control is pressed.</span></span>|  
+|<span data-ttu-id="02691-348">SortAscending</span><span class="sxs-lookup"><span data-stu-id="02691-348">SortAscending</span></span>|<span data-ttu-id="02691-349">SortStates</span><span class="sxs-lookup"><span data-stu-id="02691-349">SortStates</span></span>|<span data-ttu-id="02691-350">Столбец сортируется в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="02691-350">The column is sorted in ascending order.</span></span>|  
+|<span data-ttu-id="02691-351">SortDescending</span><span class="sxs-lookup"><span data-stu-id="02691-351">SortDescending</span></span>|<span data-ttu-id="02691-352">SortStates</span><span class="sxs-lookup"><span data-stu-id="02691-352">SortStates</span></span>|<span data-ttu-id="02691-353">Столбец сортируется в порядке убывания.</span><span class="sxs-lookup"><span data-stu-id="02691-353">The column is sorted in descending order.</span></span>|  
+|<span data-ttu-id="02691-354">Без сортировки</span><span class="sxs-lookup"><span data-stu-id="02691-354">Unsorted</span></span>|<span data-ttu-id="02691-355">SortStates</span><span class="sxs-lookup"><span data-stu-id="02691-355">SortStates</span></span>|<span data-ttu-id="02691-356">Столбец не отсортирован.</span><span class="sxs-lookup"><span data-stu-id="02691-356">The column is not sorted.</span></span>|  
+|<span data-ttu-id="02691-357">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="02691-357">InvalidFocused</span></span>|<span data-ttu-id="02691-358">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-358">ValidationStates</span></span>|<span data-ttu-id="02691-359">Элемент управления не является допустимым и имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="02691-359">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="02691-360">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="02691-360">InvalidUnfocused</span></span>|<span data-ttu-id="02691-361">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-361">ValidationStates</span></span>|<span data-ttu-id="02691-362">Элемент управления не является допустимым и не имеет фокуса.</span><span class="sxs-lookup"><span data-stu-id="02691-362">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="02691-363">Valid</span><span class="sxs-lookup"><span data-stu-id="02691-363">Valid</span></span>|<span data-ttu-id="02691-364">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="02691-364">ValidationStates</span></span>|<span data-ttu-id="02691-365">Элемент управления является допустимым.</span><span class="sxs-lookup"><span data-stu-id="02691-365">The control is valid.</span></span>|  
   
-## Пример шаблона ControlTemplate элемента управления DataGrid  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.DataGrid> и связанных с ним типов.  
+## <a name="datagrid-controltemplate-example"></a><span data-ttu-id="02691-366">Пример шаблона элемента управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="02691-366">DataGrid ControlTemplate Example</span></span>  
+ <span data-ttu-id="02691-367">В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.DataGrid> элемента управления и его связанных типов.</span><span class="sxs-lookup"><span data-stu-id="02691-367">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.DataGrid> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ <span data-ttu-id="02691-368">В предыдущем примере используется один или несколько из следующих ресурсов.</span><span class="sxs-lookup"><span data-stu-id="02691-368">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="02691-369">Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="02691-369">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="02691-370">См. также</span><span class="sxs-lookup"><span data-stu-id="02691-370">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="02691-371">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="02691-371">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="02691-372">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="02691-372">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="02691-373">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="02691-373">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="02691-374">Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="02691-374">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

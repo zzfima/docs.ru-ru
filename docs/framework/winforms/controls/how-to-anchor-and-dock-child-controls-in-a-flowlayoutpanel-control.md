@@ -1,74 +1,75 @@
 ---
-title: "Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "дочерние элементы управления, привязка и закрепление"
-  - "элементы управления [Windows Forms], дочерний"
-  - "FlowLayoutPanel - элемент управления [Windows Forms], дочерние элементы управления"
-  - "макет [Windows Forms], дочерние элементы управления"
+title: "Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [Windows Forms], child controls
+- FlowLayoutPanel control [Windows Forms], child controls
+- controls [Windows Forms], child
+- child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbf5f6f244d73935b11e11abf7ef0670758f7e13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
-Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a><span data-ttu-id="eb166-102">Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="eb166-102">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>
+<span data-ttu-id="eb166-103">Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.</span><span class="sxs-lookup"><span data-stu-id="eb166-103">The <xref:System.Windows.Forms.FlowLayoutPanel> control supports the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties in its child controls.</span></span>  
   
-### Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel  
+### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a><span data-ttu-id="eb166-104">Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="eb166-104">To anchor and dock child controls in a FlowLayoutPanel control</span></span>  
   
-1.  Создание элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> в форме.  
+1.  <span data-ttu-id="eb166-105">Создание элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> в форме.</span><span class="sxs-lookup"><span data-stu-id="eb166-105">Create a <xref:System.Windows.Forms.FlowLayoutPanel> control on your form.</span></span>  
   
-2.  Присвойте <xref:System.Windows.Forms.Control.Width%2A> для элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> значение 300 и для <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> значение <xref:System.Windows.Forms.FlowDirection>.  
+2.  <span data-ttu-id="eb166-106">Задать <xref:System.Windows.Forms.Control.Width%2A> из <xref:System.Windows.Forms.FlowLayoutPanel> управления **300**и задайте его <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> для <xref:System.Windows.Forms.FlowDirection.TopDown>.</span><span class="sxs-lookup"><span data-stu-id="eb166-106">Set the <xref:System.Windows.Forms.Control.Width%2A> of the <xref:System.Windows.Forms.FlowLayoutPanel> control to **300**, and set its <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> to <xref:System.Windows.Forms.FlowDirection.TopDown>.</span></span>  
   
-3.  Создайте два элемента управления <xref:System.Windows.Forms.Button> и поместите их в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
+3.  <span data-ttu-id="eb166-107">Создайте два элемента управления <xref:System.Windows.Forms.Button> и поместите их в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="eb166-107">Create two <xref:System.Windows.Forms.Button> controls, and place them in the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-4.  Присвойте свойству <xref:System.Windows.Forms.Control.Width%2A> первой кнопки значение 200.  
+4.  <span data-ttu-id="eb166-108">Задать <xref:System.Windows.Forms.Control.Width%2A> первой кнопки значение **200**.</span><span class="sxs-lookup"><span data-stu-id="eb166-108">Set the <xref:System.Windows.Forms.Control.Width%2A> of the first button to **200**.</span></span>  
   
-5.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение <xref:System.Windows.Forms.DockStyle>.  
+5.  <span data-ttu-id="eb166-109">Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="eb166-109">Set the <xref:System.Windows.Forms.Control.Dock%2A> property of the second button to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span>  
   
     > [!NOTE]
-    >  Вторая кнопка принимает ту же ширину, что и первая кнопка.  Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
+    >  <span data-ttu-id="eb166-110">Вторая кнопка принимает ту же ширину, что и первая кнопка.</span><span class="sxs-lookup"><span data-stu-id="eb166-110">The second button assumes the same width as the first button.</span></span> <span data-ttu-id="eb166-111">Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="eb166-111">It does not stretch across the width of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-6.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> второй кнопки значение `Нет`.  При этом кнопка примет исходную ширину.  
+6.  <span data-ttu-id="eb166-112">Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение `None`.</span><span class="sxs-lookup"><span data-stu-id="eb166-112">Set the <xref:System.Windows.Forms.Control.Dock%2A> property of the second button to `None`.</span></span> <span data-ttu-id="eb166-113">При этом кнопка примет исходную ширину.</span><span class="sxs-lookup"><span data-stu-id="eb166-113">This causes the button to assume its original width.</span></span>  
   
-7.  Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> второй кнопки значение `Слева, справа`.  
+7.  <span data-ttu-id="eb166-114">Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> первой кнопки значение `Left, Right`.</span><span class="sxs-lookup"><span data-stu-id="eb166-114">Set the <xref:System.Windows.Forms.Control.Anchor%2A> property of the second button to `Left, Right`.</span></span>  
   
     > [!IMPORTANT]
-    >  Вторая кнопка принимает ту же ширину, что и первая кнопка.  Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.  Общее правило для привязки и закрепления в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>: в вертикальном направлении элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет ширину предполагаемого столбца исходя из ширины самого широкого элемента управления в столбце.  Другие элементы управления в этом столбце со свойствами <xref:System.Windows.Forms.Control.Anchor%2A> или <xref:System.Windows.Forms.Control.Dock%2A> выравниваются или растягиваются до этого предполагаемого столбца.  Аналогичное поведение работает и в горизонтальном направлении.  Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет высоту предполагаемой строки на основе самого высокого дочернего элемента управления в строке, и все закрепленные или привязанные дочерние элементы управления в этой строке выравниваются или их размеры устанавливаются в соответствии с предполагаемой строкой.  
+    >  <span data-ttu-id="eb166-115">Вторая кнопка принимает ту же ширину, что и первая кнопка.</span><span class="sxs-lookup"><span data-stu-id="eb166-115">The second button assumes the same width as the first button.</span></span> <span data-ttu-id="eb166-116">Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="eb166-116">It does not stretch across the width of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="eb166-117">Общее правило для привязки и закрепления в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>: в вертикальном направлении элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет ширину предполагаемого столбца исходя из ширины самого широкого элемента управления в столбце.</span><span class="sxs-lookup"><span data-stu-id="eb166-117">This is the general rule for anchoring and docking in the <xref:System.Windows.Forms.FlowLayoutPanel> control: for vertical flow directions, the <xref:System.Windows.Forms.FlowLayoutPanel> control calculates the width of an implied column from the widest child control in the column.</span></span> <span data-ttu-id="eb166-118">Другие элементы управления в этом столбце со свойствами <xref:System.Windows.Forms.Control.Anchor%2A> или <xref:System.Windows.Forms.Control.Dock%2A> выравниваются или растягиваются до этого предполагаемого столбца.</span><span class="sxs-lookup"><span data-stu-id="eb166-118">All other controls in this column with <xref:System.Windows.Forms.Control.Anchor%2A> or <xref:System.Windows.Forms.Control.Dock%2A> properties are aligned or stretched to fit this implied column.</span></span> <span data-ttu-id="eb166-119">Аналогичное поведение работает и в горизонтальном направлении.</span><span class="sxs-lookup"><span data-stu-id="eb166-119">The behavior works in a similar way for horizontal flow directions.</span></span> <span data-ttu-id="eb166-120">Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет высоту предполагаемой строки на основе самого высокого дочернего элемента управления в строке, и все закрепленные или привязанные дочерние элементы управления в этой строке выравниваются или их размеры устанавливаются в соответствии с предполагаемой строкой.</span><span class="sxs-lookup"><span data-stu-id="eb166-120">The <xref:System.Windows.Forms.FlowLayoutPanel> control calculates the height of an implied row from the tallest child control in the row, and all docked or anchored child controls in this row are aligned or sized to fit the implied row.</span></span>  
   
-## Пример  
- На следующем рисунке показаны четыре кнопки, привязанный и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>.  Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection>.  
+## <a name="example"></a><span data-ttu-id="eb166-121">Пример</span><span class="sxs-lookup"><span data-stu-id="eb166-121">Example</span></span>  
+ <span data-ttu-id="eb166-122">На следующем рисунке показаны четыре кнопки, привязанные и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="eb166-122">The following illustration shows four buttons that are anchored and docked relative to the blue button in a <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span> <span data-ttu-id="eb166-123">Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection.LeftToRight>.</span><span class="sxs-lookup"><span data-stu-id="eb166-123">The <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> is <xref:System.Windows.Forms.FlowDirection.LeftToRight>.</span></span>  
   
- ![Закрепление FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.png "NET\_FLPanchorExp")  
+ <span data-ttu-id="eb166-124">![Закрепление FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.gif "NET_FLPanchorExp")</span><span class="sxs-lookup"><span data-stu-id="eb166-124">![FlowLayoutPanel anchoring](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.gif "NET_FLPanchorExp")</span></span>  
   
- На следующем рисунке показаны четыре кнопки, привязанные и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>.  Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection>.  
+ <span data-ttu-id="eb166-125">На следующем рисунке показаны четыре кнопки, привязанные и закрепленные по отношению к синей кнопке в <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="eb166-125">The following illustration shows four buttons that are anchored and docked relative to the blue button in a <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span> <span data-ttu-id="eb166-126">Значение параметра <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> — <xref:System.Windows.Forms.FlowDirection.TopDown>.</span><span class="sxs-lookup"><span data-stu-id="eb166-126">The <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> is <xref:System.Windows.Forms.FlowDirection.TopDown>.</span></span>  
   
- ![Закрепление FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-flpanchor2.png "VS\_FLPanchor2")  
+ <span data-ttu-id="eb166-127">![Закрепление FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-flpanchor2.gif "VS_FLPanchor2")</span><span class="sxs-lookup"><span data-stu-id="eb166-127">![FlowLayoutPanel anchoring](../../../../docs/framework/winforms/controls/media/vs-flpanchor2.gif "VS_FLPanchor2")</span></span>  
   
- В следующем примере кода демонстрируются все варианты свойства <xref:System.Windows.Forms.Control.Anchor%2A> для размещения элемента управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
+ <span data-ttu-id="eb166-128">В следующем примере кода демонстрируются все варианты свойства <xref:System.Windows.Forms.Control.Anchor%2A> для размещения элемента управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="eb166-128">The following code example demonstrates various <xref:System.Windows.Forms.Control.Anchor%2A> property values for a <xref:System.Windows.Forms.Button> control in a <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="eb166-129">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="eb166-129">Compiling the Code</span></span>  
+ <span data-ttu-id="eb166-130">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="eb166-130">This example requires:</span></span>  
   
--   Ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+-   <span data-ttu-id="eb166-131">ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="eb166-131">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Дополнительные сведения о построении данного примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] представлены в разделе [Построение из командной строки](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) или [Построение из командной строки с помощью csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  Данный пример можно также построить в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение скомпилированного примера кода Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228%20\(v=vs.110\)).  
+ <span data-ttu-id="eb166-132">Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Построение из командной строки с помощью файла csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="eb166-132">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="eb166-133">Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="eb166-133">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="eb166-134">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="eb166-134">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.FlowLayoutPanel>   
- [Общие сведения об элементе управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)
+## <a name="see-also"></a><span data-ttu-id="eb166-135">См. также</span><span class="sxs-lookup"><span data-stu-id="eb166-135">See Also</span></span>  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
+ [<span data-ttu-id="eb166-136">Общие сведения об элементе управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="eb166-136">FlowLayoutPanel Control Overview</span></span>](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)

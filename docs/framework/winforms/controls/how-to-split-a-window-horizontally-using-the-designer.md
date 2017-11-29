@@ -1,37 +1,38 @@
 ---
-title: "Практическое руководство. Разделение окна по горизонтали с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "разделенные окна, горизонтально"
-  - "SplitContainer - элемент управления [Windows Forms], горизонтальное разделение"
-  - "окна, горизонтальное разделение"
+title: "Практическое руководство. Разделение окна по горизонтали с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], horizontal splitting
+- split windows [Windows Forms], horizontal
+- windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aedf7c59533458b6c7ba97b9e921382e29460d06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Разделение окна по горизонтали с помощью конструктора
-В этом примере разделитель элемента управления <xref:System.Windows.Forms.SplitContainer> становится горизонтальным.  
+# <a name="how-to-split-a-window-horizontally-using-the-designer"></a><span data-ttu-id="5214f-102">Практическое руководство. Разделение окна по горизонтали с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="5214f-102">How to: Split a Window Horizontally Using the Designer</span></span>
+<span data-ttu-id="5214f-103">Этот пример делает разделитель <xref:System.Windows.Forms.SplitContainer> элемента управления по горизонтали.</span><span class="sxs-lookup"><span data-stu-id="5214f-103">This example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
   
 > [!NOTE]
->  Свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A> элемента управления <xref:System.Windows.Forms.SplitContainer> определяет направление разделителя, а не самого элемента управления.  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="5214f-104"><xref:System.Windows.Forms.SplitContainer.Orientation%2A> Свойство <xref:System.Windows.Forms.SplitContainer> управления определяет направление разделителя, а не самого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="5214f-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span> <span data-ttu-id="5214f-105">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="5214f-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="5214f-106">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="5214f-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="5214f-107">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="5214f-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Разделение окна по горизонтали  
+### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="5214f-108">Разделение окна по горизонтали</span><span class="sxs-lookup"><span data-stu-id="5214f-108">To split a window horizontally</span></span>  
   
-1.  В окне **Свойства** установите свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A> элемента управления <xref:System.Windows.Forms.SplitContainer> равным <xref:System.Windows.Forms.Orientation>.  
+1.  <span data-ttu-id="5214f-109">В **свойства** задайте <xref:System.Windows.Forms.SplitContainer.Orientation%2A> свойство <xref:System.Windows.Forms.SplitContainer> управления <xref:System.Windows.Forms.Orientation.Horizontal>.</span><span class="sxs-lookup"><span data-stu-id="5214f-109">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.SplitContainer>   
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5214f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="5214f-110">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="5214f-111">Элемент управления SplitContainer</span><span class="sxs-lookup"><span data-stu-id="5214f-111">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

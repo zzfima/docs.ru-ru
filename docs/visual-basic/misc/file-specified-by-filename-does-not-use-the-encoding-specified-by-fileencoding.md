@@ -1,25 +1,28 @@
 ---
-title: "Файл, указанный в параметре FileName, не использует кодировку, заданную параметром FileEncoding | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Файл, указанный в параметре FileName, не использует кодировку, заданную параметром FileEncoding"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 2129f8df-96cd-4c2e-a4ca-f08a49f07d3f
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: dfa6525a029f60fbe821e18f9d9a9cbb61d14432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Файл, указанный в параметре FileName, не использует кодировку, заданную параметром FileEncoding
-Предпринята попытка чтения из файла, но указанная кодировка не используется в этом файле.  
+# <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a><span data-ttu-id="03ff0-102">Файл, указанный в параметре FileName, не использует кодировку, заданную параметром FileEncoding</span><span class="sxs-lookup"><span data-stu-id="03ff0-102">File specified by FileName does not use the encoding specified by FileEncoding</span></span>
+<span data-ttu-id="03ff0-103">Предпринята попытка чтения из файла, но указанная кодировка не используется в этом файле.</span><span class="sxs-lookup"><span data-stu-id="03ff0-103">An attempt has been made to read from a file, but the specified encoding is not used by the file.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="03ff0-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="03ff0-104">To correct this error</span></span>  
   
--   Убедитесь в том, что вы указали правильную кодировку файла.  
+-   <span data-ttu-id="03ff0-105">Убедитесь в том, что вы указали правильную кодировку файла.</span><span class="sxs-lookup"><span data-stu-id="03ff0-105">Check to make sure you are supplying the correct file encoding.</span></span>  
   
-## См. также  
- [Метод My.Computer.FileSystem.ReadAllText](http://msdn.microsoft.com/ru-ru/3a7ac8be-fb1d-4087-bc65-167d6754d57f)   
- [Объект My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)   
- [Кодировки файлов](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)   
- [Практическое руководство. Чтение из текстовых файлов](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+## <a name="see-also"></a><span data-ttu-id="03ff0-106">См. также</span><span class="sxs-lookup"><span data-stu-id="03ff0-106">See Also</span></span>  
+ [<span data-ttu-id="03ff0-107">Метод My.Computer.FileSystem.ReadAllText</span><span class="sxs-lookup"><span data-stu-id="03ff0-107">My.Computer.FileSystem.ReadAllText Method</span></span>](http://msdn.microsoft.com/en-us/3a7ac8be-fb1d-4087-bc65-167d6754d57f)  
+ [<span data-ttu-id="03ff0-108">Объект My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="03ff0-108">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
+ [<span data-ttu-id="03ff0-109">Кодировки файлов</span><span class="sxs-lookup"><span data-stu-id="03ff0-109">File Encodings</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [<span data-ttu-id="03ff0-110">Практическое руководство. Чтение из текстовых файлов</span><span class="sxs-lookup"><span data-stu-id="03ff0-110">How to: Read from Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

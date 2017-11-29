@@ -1,33 +1,35 @@
 ---
-title: "Как проверить подлинность с использованием имени и пароля пользователя | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка подлинности [WCF], имя пользователя и пароль"
+title: "Практическое руководство. Проверка подлинности с использованием имени и пароля пользователя"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73ef3c3f4f4aeb9295cedbbf56635454869b3f4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как проверить подлинность с использованием имени и пароля пользователя
-В этом разделе показано, как включить службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для проверки подлинности клиента с помощью имени пользователя домена Windows и пароля.Предполагается, что это рабочая резидентная служба WCF.Пример создания базовой резидентной службы WCF см. в разделе [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md).В этом разделе предполагается, что служба настраивается в коде.Пример настройки похожей службы с помощью файла конфигурации см. в разделе [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a><span data-ttu-id="7e32a-102">Практическое руководство. Проверка подлинности с использованием имени и пароля пользователя</span><span class="sxs-lookup"><span data-stu-id="7e32a-102">How to: Authenticate with a User Name and Password</span></span>
+<span data-ttu-id="7e32a-103">В этом разделе показано, как включить службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для проверки подлинности клиента с помощью имени пользователя домена Windows и пароля.</span><span class="sxs-lookup"><span data-stu-id="7e32a-103">This topic demonstrates how to enable a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service to authenticate a client with a Windows domain username and password.</span></span> <span data-ttu-id="7e32a-104">Предполагается, что это рабочая резидентная служба WCF.</span><span class="sxs-lookup"><span data-stu-id="7e32a-104">It assumes you have a working, self-hosted WCF service.</span></span> <span data-ttu-id="7e32a-105">Пример создания основных резидентной WCF службы см. в разделе [учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="7e32a-105">For an example of creating a basic self-hosted WCF service see, [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span> <span data-ttu-id="7e32a-106">В этом разделе предполагается, что служба настраивается в коде.</span><span class="sxs-lookup"><span data-stu-id="7e32a-106">This topic assumes the service is configured in code.</span></span> <span data-ttu-id="7e32a-107">Если вы хотите проверить пример настройки аналогичную службу с помощью файла конфигурации см. раздел [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md)</span><span class="sxs-lookup"><span data-stu-id="7e32a-107">If you would like to see an example of configuring a similar service using a configuration file see [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md)</span></span>  
   
- Чтобы настроить службу для проверки подлинности клиентов по имени пользователя и паролю в домене Windows, используйте <xref:System.ServiceModel.WSHttpBinding>, установив свойство `Security.Mode` в значение `Message`.Кроме этого, необходимо указать сертификат X509, который будет использован для шифрования имени пользователя и пароля, так как они передаются от клиента к службе.  
+ <span data-ttu-id="7e32a-108">Чтобы настроить службу для проверки подлинности клиентов с помощью имени пользователя и пароля домена Windows, используйте <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> и задайте его `Security.Mode` свойства `Message`.</span><span class="sxs-lookup"><span data-stu-id="7e32a-108">To configure a service to authenticate its clients using Windows Domain username and passwords use the <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> and set its `Security.Mode` property to `Message`.</span></span> <span data-ttu-id="7e32a-109">Кроме того, необходимо указать сертификат X509, который будет использован для шифрования имени пользователя и пароля, так как они передаются от клиента к службе.</span><span class="sxs-lookup"><span data-stu-id="7e32a-109">In addition you must specify an X509 certificate that will be used to encrypt the username and password as they are sent from the client to the service.</span></span>  
   
- На стороне клиента необходимо запрашивать у пользователя учетные данные и указать учетные данные пользователя в клиентском классе\-посреднике WCF.  
+ <span data-ttu-id="7e32a-110">На стороне клиента необходимо запрашивать у пользователя учетные данные и указать учетные данные пользователя в клиентском классе-посреднике WCF.</span><span class="sxs-lookup"><span data-stu-id="7e32a-110">On the client, you must prompt the user for the username and password and specify the user’s credentials on the WCF client proxy.</span></span>  
   
-### Чтобы настроить службу WCF для проверки подлинности, используйте имя пользователя и пароль в домене Windows.  
+### <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a><span data-ttu-id="7e32a-111">Чтобы настроить службу WCF для проверки подлинности, используйте имя пользователя и пароль в домене Windows.</span><span class="sxs-lookup"><span data-stu-id="7e32a-111">To configure a WCF service to authenticate using Windows domain username and password.</span></span>  
   
-1.  Создайте экземпляр <xref:System.ServiceModel.WSHttpBinding>, установите режим безопасности привязки в `SecurityMode.Message`, установите `ClientCredentialType` привязки в значение `MessageCredentialType.UserName` и добавьте в узел службы конечную точку службы с помощью заданной привязки, как показано в следующем коде.  
+1.  <span data-ttu-id="7e32a-112">Создайте экземпляр класса <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, установите режим безопасности привязки, `SecurityMode.Message`, задайте `ClientCredentialType` привязки `MessageCredentialType.UserName`и добавить конечную точку службы с помощью заданной привязки к узлу службы, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="7e32a-112">Create an instance of the <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, set the security mode of the binding to `SecurityMode.Message`, set the `ClientCredentialType` of the binding to `MessageCredentialType.UserName`, and add a service endpoint using the configured binding to the service host as shown in the following code:</span></span>  
   
     ```  
     // ...  
@@ -38,7 +40,7 @@ caps.handback.revision: 18
     // ...  
     ```  
   
-2.  Задает сертификат сервера, используемый для шифрования имени пользователя и пароля, передаваемых по сети.Этот код должен непосредственно следовать за показанным выше кодом.В следующем примере используется сертификат, созданный файлом setup.bat из образца [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+2.  <span data-ttu-id="7e32a-113">Задает сертификат сервера, используемый для шифрования имени пользователя и пароля, передаваемых по сети.</span><span class="sxs-lookup"><span data-stu-id="7e32a-113">Specify the server certificate used to encrypt the username and password information sent over the wire.</span></span> <span data-ttu-id="7e32a-114">Этот код должен непосредственно следовать за показанным выше кодом.</span><span class="sxs-lookup"><span data-stu-id="7e32a-114">This code should immediately follow the code above.</span></span> <span data-ttu-id="7e32a-115">В следующем примере используется сертификат, созданный с помощью файла setup.bat из [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md) образца:</span><span class="sxs-lookup"><span data-stu-id="7e32a-115">The following example uses the certificate that is created by the setup.bat file from the [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md) sample:</span></span>  
   
     ```  
     // ...  
@@ -46,14 +48,14 @@ caps.handback.revision: 18
     // ...  
     ```  
   
-     Вы можете использовать собственный сертификат, просто укажите ссылку на него в коде.Дополнительные сведения о создании и использовании сертификатов см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).Убедитесь, что сертификат находится в хранилище сертификатов «Доверенные лица» для локального компьютера.Это вы можете сделать, запустив mmc.exe и выбрав в меню **Файл** пункт **Добавить или удалить оснастку...**.В диалоговом окне **Добавление или удаление оснастки** выберите **Оснастка диспетчера сертификатов** и нажмите кнопку **Добавить**.В диалоговом окне «Оснастка диспетчера сертификатов» выберите **Учетная запись компьютера**.По умолчанию сертификат, сформированный из образца «Безопасность сообщений с использованием имени пользователя», будет находиться в папке «Личные\/Сертификаты».Он будет указан как «localhost» в столбце «Выпущен» в окне ММС.Перетащите сертификат в папку **Доверенные лица**.Это позволит WCF считать сертификат доверенным при выполнении аутентификации.  
+     <span data-ttu-id="7e32a-116">Вы можете использовать собственный сертификат, просто укажите ссылку на него в коде.</span><span class="sxs-lookup"><span data-stu-id="7e32a-116">You can use your own certificate, just modify the code to refer to your certificate.</span></span> <span data-ttu-id="7e32a-117">Дополнительные сведения о создании и использовании сертификатов в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="7e32a-117">For more information about creating and using certificates see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span> <span data-ttu-id="7e32a-118">Убедитесь, что сертификат находится в хранилище сертификатов «Доверенные лица» для локального компьютера.</span><span class="sxs-lookup"><span data-stu-id="7e32a-118">Make sure the certificate is in the Trusted People certificate store for the Local Machine.</span></span> <span data-ttu-id="7e32a-119">Это можно сделать, запустив mmc.exe и выбрав **файл**, **добавить или удалить оснастку...**  элемента меню.</span><span class="sxs-lookup"><span data-stu-id="7e32a-119">You can do this by running mmc.exe and selecting the **File**, **Add/Remove Snap-in...** menu item.</span></span> <span data-ttu-id="7e32a-120">В **Добавление или удаление оснасток** диалогового окна выберите **оснастку сертификатов** и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="7e32a-120">In the **Add or Remove Snap-ins** dialog, select the **Certificates snap-in** and click **Add**.</span></span> <span data-ttu-id="7e32a-121">В диалоговом окне оснастки сертификатов выберите **учетная запись компьютера**.</span><span class="sxs-lookup"><span data-stu-id="7e32a-121">In the Certificates Snap-in dialog select **Computer account**.</span></span> <span data-ttu-id="7e32a-122">По умолчанию сертификат, сформированный из образца «Безопасность сообщений с использованием имени пользователя», будет находиться в папке «Личное или сертификаты».</span><span class="sxs-lookup"><span data-stu-id="7e32a-122">By default the certificate generated from the Message Security User name sample will be located in the Personal/Certificates folder.</span></span>  <span data-ttu-id="7e32a-123">Оно будет указано как «localhost» в разделе «выпущен» столбца в окне MMC.</span><span class="sxs-lookup"><span data-stu-id="7e32a-123">It will be listed as "localhost" under the Issued to column in the MMC window.</span></span> <span data-ttu-id="7e32a-124">Перетаскивание сертификат в **доверенные лица** папки.</span><span class="sxs-lookup"><span data-stu-id="7e32a-124">Drag and drop the certificate into the **Trusted People** folder.</span></span> <span data-ttu-id="7e32a-125">Это позволит WCF считать сертификат доверенным при выполнении проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="7e32a-125">This will allow WCF to treat the certificate as a trusted certificate when performing authentication.</span></span>  
   
-### Вызов службы с передачей имени пользователя и пароля  
+### <a name="to-call-the-service-passing-username-and-password"></a><span data-ttu-id="7e32a-126">Вызов службы с передачей имени пользователя и пароля</span><span class="sxs-lookup"><span data-stu-id="7e32a-126">To call the service passing username and password</span></span>  
   
-1.  Клиентское приложение должно предложить пользователю ввести имя пользователя и пароль.Следующий код запрашивает у пользователя имя пользователя и пароль.  
+1.  <span data-ttu-id="7e32a-127">Клиентское приложение должно предложить пользователю ввести имя пользователя и пароль.</span><span class="sxs-lookup"><span data-stu-id="7e32a-127">The client application must prompt the user for their username and password.</span></span> <span data-ttu-id="7e32a-128">Следующий код запрашивает у пользователя имя пользователя и пароль.</span><span class="sxs-lookup"><span data-stu-id="7e32a-128">The following code asks the user for username and password.</span></span>  
   
     > [!WARNING]
-    >  Этот код не следует использовать в рабочей среде, поскольку пароль во время ввода отображается на экране.  
+    >  <span data-ttu-id="7e32a-129">Этот код не следует использовать в рабочей среде, так как пароль во время ввода отображается на экране.</span><span class="sxs-lookup"><span data-stu-id="7e32a-129">This code should not be used in production as the password is displayed while being entered.</span></span>  
   
     ```  
     public static void GetPassword(out string username, out string password)  
@@ -65,10 +67,9 @@ caps.handback.revision: 18
                 password = Console.ReadLine();             
                 return;  
             }  
-  
     ```  
   
-2.  Создайте экземпляр клиентского класса\-посредника, указав учетные данные клиента, как это показано в следующем коде:  
+2.  <span data-ttu-id="7e32a-130">Создайте экземпляр клиентского класса-посредника, указав учетные данные клиента, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="7e32a-130">Create an instance of the client proxy specifying the client’s credentials as shown in the following code:</span></span>  
   
     ```  
     string username;  
@@ -89,15 +90,15 @@ caps.handback.revision: 18
     // Call the service operation using the proxy  
     ```  
   
-## См. также  
- <xref:System.ServiceModel.WsHttpBinding>   
- <xref:System.ServiceModel.WSHttpSecurity>   
- <xref:System.ServiceModel.SecurityMode>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>   
- <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>   
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>   
- [Безопасность транспорта с обычной проверкой подлинности](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)   
- [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)   
- [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+## <a name="see-also"></a><span data-ttu-id="7e32a-131">См. также</span><span class="sxs-lookup"><span data-stu-id="7e32a-131">See Also</span></span>  
+ <span data-ttu-id="7e32a-132"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span><span class="sxs-lookup"><span data-stu-id="7e32a-132"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span></span>  
+ <xref:System.ServiceModel.WSHttpSecurity>  
+ <xref:System.ServiceModel.SecurityMode>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
+ <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
+ <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
+ [<span data-ttu-id="7e32a-133">Безопасность транспорта с обычной проверкой подлинности</span><span class="sxs-lookup"><span data-stu-id="7e32a-133">Transport Security with Basic Authentication</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [<span data-ttu-id="7e32a-134">Защита распределенных приложений</span><span class="sxs-lookup"><span data-stu-id="7e32a-134">Distributed Application Security</span></span>](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [<span data-ttu-id="7e32a-135">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="7e32a-135">\<wsHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
