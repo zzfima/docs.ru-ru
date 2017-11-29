@@ -1,48 +1,54 @@
 ---
-title: "Практическое руководство. Сортировка данных в представлении | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка данных, группировка данных в представлениях"
-  - "привязка данных, сортировка данных в представлениях"
-  - "группировка данных в представлениях"
-  - "сортировка данных в представлениях"
-  - "представления, группирование данных"
-  - "представления, сортировка данных"
+title: "Практическое руководство. Сортировка данных в представлении"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data binding [WPF], sorting data in views
+- data binding [WPF], grouping data in views
+- grouping data in views [WPF]
+- views [WPF], sorting data
+- views [WPF], grouping data
+- sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2c39cec8aaf12b268790c19751562b16fa34cfdc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сортировка данных в представлении
+# <a name="how-to-sort-data-in-a-view"></a>Практическое руководство. Сортировка данных в представлении
 В этом примере описывается сортировка данных в представлении.  
   
-## Пример  
- В следующем примере создаются <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a>Пример  
+ В следующем примере создается простой <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.Button>:  
   
- [!code-xml[ListBoxSort_snip#HowTo](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxSort_snip/CSharp/Window1.xaml#howto)]  
+ [!code-xaml[ListBoxSort_snip#HowTo](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxSort_snip/CSharp/Window1.xaml#howto)]  
   
- Обработчик событий <xref:System.Windows.Controls.Primitives.ButtonBase.Click> кнопки содержит логику для сортировки элементов в <xref:System.Windows.Controls.ListBox> по убыванию.  Это можно сделать, так как добавление элементов в <xref:System.Windows.Controls.ListBox> таким образом добавляет их в <xref:System.Windows.Controls.ItemCollection> <xref:System.Windows.Controls.ListBox>, и <xref:System.Windows.Controls.ItemCollection> является производным от класса <xref:System.Windows.Data.CollectionView>.  При привязывании <xref:System.Windows.Controls.ListBox> к коллекцию с помощью свойства <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, можно использовать одинаковые технологии для сортировки.  
+ <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Обработчика событий кнопки содержит логику для сортировки элементов в <xref:System.Windows.Controls.ListBox> в порядке убывания. Это можно сделать, так как добавление элементов в <xref:System.Windows.Controls.ListBox> таким образом они добавляются в <xref:System.Windows.Controls.ItemCollection> из <xref:System.Windows.Controls.ListBox>, и <xref:System.Windows.Controls.ItemCollection> является производным от <xref:System.Windows.Data.CollectionView> класса. При привязке к <xref:System.Windows.Controls.ListBox> коллекцию с помощью <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойства, можно использовать ту же методику для сортировки.  
   
  [!code-csharp[ListBoxSort_snip#HowToCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxSort_snip/CSharp/Window1.xaml.cs#howtocode)]
  [!code-vb[ListBoxSort_snip#HowToCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListBoxSort_snip/visualbasic/window1.xaml.vb#howtocode)]  
   
- До тех пор, пока имеется ссылка на объект представления, можно использовать одинаковые технологии для сортировки содержимого других представлений коллекции.  Пример получения представления см. в разделе [Получение представления по умолчанию для коллекции данных](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).  Другой пример см. в разделе [Сортировка столбцов GridView при нажатии на заголовок](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).  Для получения дополнительных сведений о представлениях см. раздел Привязка к коллекции в [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Пока имеется ссылка на объект представления можно использовать ту же методику для сортировки содержимого других представлений коллекции. Пример получения представления см. в разделе [просмотреть представление по умолчанию сбор данных](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md). Еще один пример см. в разделе [сортировки GridView столбца по щелчку заголовка](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md). Дополнительные сведения о представлениях см [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Пример применения логики сортировки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] см. в разделе [Сортировка и группировка данных с помощью представления в XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md).  
+ Пример применения логики сортировки в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], в разделе [сортировки и группы с помощью представления в XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md).  
   
-## См. также  
- <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>   
- [Сортировка столбцов GridView при нажатии на заголовок](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Фильтрация данных в представлении](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)   
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>  
+ [Сортировка столбцов GridView при нажатии на заголовок](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Фильтрация данных в представлении](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 83da65d17d927e6afa8c669d5a3123d458246b31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 79d7aef2cf374acc4380fac6009615f75eaf1e81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Инструмент определения схемы XML (Xsd.exe) создает схему XML или классы CLR из файлов XDR, XML и XSD либо из классов в сборке среды выполнения.  
@@ -65,7 +64,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/enableDataBinding**|Реализует интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> для всех созданных типов для обеспечения привязки данных. Краткая форма: `/edb`.|  
 |**/enableLinqDataSet**|(Краткая форма: `/eld`.) Указывает, что созданный набор данных можно запросить с помощью LINQ to DataSet. Этот параметр используется только при указании параметра /dataset. Дополнительные сведения см. в разделах [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) и [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md). Общие сведения об использовании LINQ см. в разделе [LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Создает поля вместо свойств. По умолчанию создаются свойства.|  
-|**/l**[**anguage**]**:***язык*|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>|  
+|**/l**[**anguage**]**:***язык*|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**]**:***пространство имен*|Определяет пространство имен среды выполнения для создаваемых типов. Пространство имен по умолчанию — `Schemas`.|  
 |**/nologo**|Отключает баннер.|  
 |**/order**|Создает явные идентификаторы порядка для всех примитивных членов.|  
@@ -91,7 +90,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Создает классы CLR <xref:System.Data.DataSet> из файла схемы XSD. Создаваемые классы представляют собой объектную модель с широкими функциональными возможностями для обычных данных XML.  
   
  XSD в классы  
- Создает классы среды выполнения из файла схемы XSD. Созданные классы можно использовать совместно с <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> для чтения и записи кода XML, соответствующего схеме.  
+ Создает классы среды выполнения из файла схемы XSD. Созданные классы можно использовать совместно с <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> для чтения и записи кода XML, соответствующего схеме.  
   
  Классы в XSD  
  Создает схему XML из типа или типов в файле сборки среды выполнения. Созданная схема определяет формат XML, используемый `System.Xml.Serialization.XmlSerializer`.  
@@ -233,10 +232,9 @@ xsd myAssembly.dll
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>   
+ <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [Инструменты](../../../docs/framework/tools/index.md)      
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)   
- [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md)   
+ [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [LINQ to DataSet Обзор](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [Запросы к типизированным наборам данных](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
-

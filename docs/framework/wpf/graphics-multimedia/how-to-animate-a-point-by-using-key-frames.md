@@ -1,48 +1,54 @@
 ---
-title: "Практическое руководство. Анимация точки с помощью ключевых кадров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, объектов Point по ключевым кадрам"
-  - "ключевые кадры, анимация объектов Point"
-  - "Point - объекты, анимация по ключевым кадрам"
+title: "Практическое руководство. Анимация точки с помощью ключевых кадров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- key frames [WPF], animating Points with
+- Points [WPF], animating with key frames
+- animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f574f85a5840e8bbe2d6c026d57a4cc28bd8a797
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация точки с помощью ключевых кадров
-В этом примере показано использование класса <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> для анимации точки <xref:System.Windows.Point>.  
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Практическое руководство. Анимация точки с помощью ключевых кадров
+В этом примере показано, как использовать <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Point>.  
   
-## Пример  
- В следующем примере показано перемещение эллипса по треугольному пути.  В примере класс <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> используется для анимации свойства <xref:System.Windows.Media.EllipseGeometry.Center%2A> элемента управления <xref:System.Windows.Media.EllipseGeometry>.  В этой анимации используются три полных кадра следующим образом:  
+## <a name="example"></a>Пример  
+ В следующем примере эллипс перемещается по треугольному пути. В этом примере <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Media.EllipseGeometry.Center%2A> свойство <xref:System.Windows.Media.EllipseGeometry>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1.  В течение первой половины секунды используется экземпляр класса <xref:System.Windows.Media.Animation.LinearPointKeyFrame> для перемещения эллипса по пути с равномерной частотой из начального положения.  Линейные полные кадры, такие как <xref:System.Windows.Media.Animation.LinearPointKeyFrame>, создают плавную линейную интерполяцию по значениям.  
+1.  Во время первого полсекунды используется экземпляр <xref:System.Windows.Media.Animation.LinearPointKeyFrame> класса для перемещения эллипса в пути с постоянной скоростью, с его начальной позиции. Линейный ключевые кадры, такие как <xref:System.Windows.Media.Animation.LinearPointKeyFrame> создать smooth линейную интерполяцию между значениями.  
   
-2.  В конце следующей половины секунды используется экземпляр класса <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> для мгновенного перемещения эллипса в следующее положение вдоль пути.  Дискретные полные кадры, такие как <xref:System.Windows.Media.Animation.DiscretePointKeyFrame>, создают резкие переходы между значениями.  
+2.  Во время окончания следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> класса для мгновенного перемещения эллипса по путям к следующей позиции. Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> создают резкие переходы между значениями.  
   
-3.  В течение последних двух секунд используется экземпляр класса <xref:System.Windows.Media.Animation.SplinePointKeyFrame> для возврата эллипса в начальное положение.  Полные кадры со [сплайновой](GTMT) интерполяцией, такие как <xref:System.Windows.Media.Animation.SplinePointKeyFrame>, создают переменный переход между значениями в соответствии со значениями свойства <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>.  В этом примере анимация начинается медленно и ускоряется экспоненциально к концу временного отрезка.  
+3.  В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplinePointKeyFrame> класса для возврата эллипса в его начальное положение. Как и опорных кадров сплайна <xref:System.Windows.Media.Animation.SplinePointKeyFrame> создания переменного перехода между значениями согласно значениям <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> свойство. В этом примере анимация начинается медленно и ускоряется экспоненциально к концу временного отрезка.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]
- [!code-xml[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/PointAnimationUsingKeyFramesExample.xaml#pointanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/PointAnimationUsingKeyFramesExample.xaml#pointanimationusingkeyframeswholepage)]  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).  
   
- Для совместимости с другими примерами анимации версии кода этого примера используют объект <xref:System.Windows.Media.Animation.Storyboard>, чтобы применить кадры <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>.  Однако при применении одной анимации в коде проще использовать метод <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> вместо <xref:System.Windows.Media.Animation.Storyboard>.  Пример см. в разделе [Анимация свойства без раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+ Для совместимости с другими примерами анимации версии кода этого примера используют <xref:System.Windows.Media.Animation.Storyboard> объекта для применения <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Однако при применении одной анимации в коде, проще использовать <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод вместо <xref:System.Windows.Media.Animation.Storyboard>. Пример см. в разделе [Анимация свойства без использования раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## См. также  
- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>   
- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=fullName>   
- <xref:System.Windows.Media.EllipseGeometry>   
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Практические руководства, посвященные анимации по полным кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
+ <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Media.EllipseGeometry>  
+ [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

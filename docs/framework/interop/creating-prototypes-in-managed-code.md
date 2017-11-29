@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - prototypes in managed code
 - COM interop, DLL functions
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a3dcc625a838dc8823930e31541543b9c4c7f8f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 59cfb9160ccd84c41d71ad29b417b05fb4a17233
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/21/2017
  Чтобы обратиться к неуправляемой функции DLL из управляемого кода, нужно знать ее имя и имя библиотеки DLL, которая ее экспортирует. Имея эту информацию, можно приступать к написанию управляемого определения для неуправляемой функции, реализованной в библиотеке DLL. Кроме того, можно настроить способ, которым вызов неуправляемого кода создает функцию и маршалирует данные в функцию и обратно.  
   
 > [!NOTE]
->  Функции Win32 API, которые распределяют строку, позволяют освободить строку с помощью такого метода, как `LocalFree`. Вызов неуправляемого кода обрабатывает эти параметры иначе. Для вызовов неуправляемого кода следует использовать параметр типа `IntPtr`, а не `String`. Чтобы вручную преобразовать тип в строку и вручную освободить его, можно использовать методы, предоставленные классом <xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName>.  
+>  Функции Win32 API, которые распределяют строку, позволяют освободить строку с помощью такого метода, как `LocalFree`. Вызов неуправляемого кода обрабатывает эти параметры иначе. Для вызовов неуправляемого кода следует использовать параметр типа `IntPtr`, а не `String`. Чтобы вручную преобразовать тип в строку и вручную освободить его, можно использовать методы, предоставленные классом <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>.  
   
 ## <a name="declaration-basics"></a>Основы объявления  
  Как показано в примерах ниже, управляемые определения неуправляемых функций зависят от используемого языка. Более полные примеры кода представлены в разделе [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md).  
@@ -233,12 +230,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [Определение кодировки](../../../docs/framework/interop/specifying-a-character-set.md)   
- [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Вопросы безопасности при вызове неуправляемого кода](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)   
- [Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)   
- [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
+ [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [Определение кодировки](../../../docs/framework/interop/specifying-a-character-set.md)  
+ [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [Вопросы безопасности при вызове неуправляемого кода](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [Идентификация функций в библиотеках DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-

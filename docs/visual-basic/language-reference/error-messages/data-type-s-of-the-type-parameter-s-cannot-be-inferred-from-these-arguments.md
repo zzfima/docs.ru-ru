@@ -1,41 +1,40 @@
 ---
-title: "Типы данных параметров-типов не могут быть определены из этих аргументов | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36644"
-  - "bc36647"
-  - "vbc36647"
-  - "vbc36644"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36644"
-  - "BC36647"
+title: "Типы данных параметров типа не могут быть определены из этих аргументов"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36644
+- bc36647
+- vbc36647
+- vbc36644
+helpviewer_keywords:
+- BC36644
+- BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b290c25286dce2236823919e8287db9abefc0dd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Типы данных параметров-типов не могут быть определены из этих аргументов
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Типы данных параметров\-типов не могут быть определены из этих аргументов.Явное указание типов данных может исправить эту ошибку.  
+# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Типы данных параметров типа не могут быть определены из этих аргументов
+Типы данных параметров типа не могут выводиться из этих аргументов. Эту ошибку может исправить явное указание типов данных.  
   
- Эта ошибка появляется при неудачном разрешении перегрузки.  При этом появляется подчиненное сообщение с информацией о том, почему был исключен конкретный кандидат на перегрузку.  В сообщении об ошибке объясняется, что компилятору не удается использовать определение типа, чтобы найти типы данных для параметров типа.  
+ Эта ошибка возникает при неудачном разрешении перегрузки. Ошибка появляется в виде сообщения, в котором указывается, почему была исключена определенная потенциальная перегрузка. Сообщение об ошибке объясняется, компилятор не может использовать определение типа, чтобы найти типы данных для параметров типа.  
   
 > [!NOTE]
->  Когда аргументы являются обязательными \(например, в операторах запросов в выражениях запросов\), это сообщение об ошибке отображается без второго предложения.  
+>  Когда указание аргументов является обязательным (например, в операторах выражений запросов), это сообщение об ошибке появляется без второй фразы.  
   
- Данная ошибка показана в следующем коде.  
+ Эта ошибка демонстрируется в приведенном ниже коде.  
   
-```vb#  
+```vb  
 Module Module1  
   
     Sub Main()  
@@ -61,11 +60,11 @@ End Interface
   
  **Идентификатор ошибки:** BC36647 и BC36644  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 -   Попробуйте указать тип данных для параметра или параметров типа, вместо того чтобы полагаться на определение типа.  
   
-## См. также  
- [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Универсальные процедуры в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
- [Преобразование типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>См. также  
+ [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [Универсальные процедуры в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
+ [Преобразования типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

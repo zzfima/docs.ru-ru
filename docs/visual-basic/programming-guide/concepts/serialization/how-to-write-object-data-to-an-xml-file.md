@@ -1,33 +1,25 @@
 ---
-title: "Практическое руководство: запись данных объекта в XML-файл (Visual Basic) | Документы Microsoft"
+title: "Как: запись данных объекта в XML-файл (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 146ccb7b1999049106d5f0be1ce78e740dfcf060
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: df461f9b560dac45add0d7c82ff4938b0a7b1e62
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Практическое руководство: запись данных объекта в XML-файл (Visual Basic)
-Этот пример записывает объект из класса в XML-файл с помощью <xref:System.Xml.Serialization.XmlSerializer>класса.</xref:System.Xml.Serialization.XmlSerializer>  
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Как: запись данных объекта в XML-файл (Visual Basic)
+Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Пример  
   
@@ -55,23 +47,23 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Класс должен иметь открытый конструктор без параметров.  
+ У класса должен быть открытый конструктор без параметров.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Сериализуемый класс не имеет открытого конструктора без параметров.  
+-   В сериализуемом классе нет открытого конструктора без параметров.  
   
--   Файл существует и доступен только для чтения (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   Файл существует и является файлом только для чтения (<xref:System.IO.IOException>).  
   
--   Указан слишком длинный путь (<xref:System.IO.PathTooLongException>).</xref:System.IO.PathTooLongException>  
+-   Слишком длинный путь (<xref:System.IO.PathTooLongException>).  
   
--   Диск заполнен (<xref:System.IO.IOException>).</xref:System.IO.IOException>  
+-   Диск заполнен (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- В этом примере создается новый файл, если файл еще не существует. Если приложению требуется создать файл, оно должно `Create` доступ к папке. Если файл уже существует, приложению требуется только `Write` доступ меньшие привилегии. Там, где это возможно, безопаснее создать файл во время развертывания и предоставить `Read` доступа для одного файла, а не `Create` доступ к папке.  
+ В этом примере создается файл (если файл отсутствует). Если приложению требуется создать файл, оно должно иметь доступ к каталогу для создания файлов (`Create`). Если файл уже существует, то приложению достаточно иметь лишь доступ для записи файлов (`Write`), т. е. меньшие привилегии. Безопаснее создавать файл во время развертывания, если это возможно, а также предоставлять доступ `Read` к отдельному файлу вместо доступа `Create` к папке.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.IO.StreamWriter></xref:System.IO.StreamWriter>   
- [Практическое руководство: чтение данных объекта из файла XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:System.IO.StreamWriter>  
+ [How to: Read Object Data from an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (Visual Basic))  
  [Сериализация (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

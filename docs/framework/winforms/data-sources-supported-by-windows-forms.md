@@ -1,73 +1,73 @@
 ---
-title: "Источники данных, поддерживаемые Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "массивы [Windows Forms]"
-  - "коллекции [Windows Forms], привязка к"
-  - "данные [Windows Forms], поставщики данных"
-  - "поставщики данных [Windows Forms]"
-  - "источники данных [Windows Forms]"
-  - "DataColumn - класс"
-  - "DataSet - класс, связывание данных и Windows Forms"
-  - "DataTable - класс, связывание данных и Windows Forms"
-  - "DataView- класс, связывание данных и Windows Forms"
-  - "DataViewManager- класс, связывание данных и Windows Forms"
-  - "поставщики OLE DB, Windows Forms"
-  - "Windows Forms, привязка данных"
-  - "Windows Forms, исходные данные"
+title: "Источники данных, поддерживаемые Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Windows Forms], binding to
+- OLE DB providers [Windows Forms], Windows Forms
+- DataTable class [Windows Forms], binding and Windows Forms
+- Windows Forms, data binding
+- DataView class [Windows Forms], binding and Windows Forms
+- DataViewManager class [Windows Forms], binding and Windows Forms
+- Windows Forms, source data
+- arrays [Windows Forms]
+- data sources [Windows Forms]
+- data providers [Windows Forms]
+- DataSet class [Windows Forms], binding and Windows Forms
+- data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b02e492d0357c80776df0a1d0bd01ce228fa0b04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Источники данных, поддерживаемые Windows Forms
-Традиционно привязка данных используется в приложениях для получения преимуществ данных, хранящихся в базах данных.  Благодаря привязке данных в Windows Forms можно осуществлять доступ к данным, находящимся в базах данных, а также в других структурах, например в массивах или в коллекциях, при выполнении определенных минимальных требований.  
+# <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
+В большинстве случаев привязка данных использовалась в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в другие структуры, таких как массивы и коллекции, при условии, что выполнены определенные минимальные требования.  
   
-## Структуры для привязки  
- В Windows Forms можно выполнить привязку к самым разнообразными структурам — от простых объектов \(простая привязка\) до сложных списков, таких как таблицы данных ADO.NET \(сложная привязка\).  В случае простой привязки Windows Forms поддерживает привязку к общедоступным свойствам простого объекта.  При привязке Windows Forms на основе списков обычно требуется, чтобы объект поддерживал интерфейс <xref:System.Collections.IList> или <xref:System.ComponentModel.IListSource>.  Кроме того, если при привязке используется компонент <xref:System.Windows.Forms.BindingSource>, можно выполнить привязку к объекту, поддерживающему интерфейс <xref:System.Collections.IEnumerable>.  Дополнительные сведения об интерфейсах, связанных с привязкой данных, см. в разделе [Интерфейсы, относящиеся к связыванию данных](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+## <a name="structures-to-bind-to"></a>Структуры для привязки  
+ В Windows Forms можно привязать к широкий набор структур, от простых объектов (простая привязка) до сложных списков, таких как таблицы данных ADO.NET (сложная привязка). Простой привязки Windows Forms поддерживает привязку к общим свойствам простого объекта. Привязки на основе списка в Windows Forms обычно требуется, чтобы объект поддерживал <xref:System.Collections.IList> интерфейса или <xref:System.ComponentModel.IListSource> интерфейса. Кроме того при связывании с помощью <xref:System.Windows.Forms.BindingSource> компонента, можно привязать к объекту, который поддерживает <xref:System.Collections.IEnumerable> интерфейса. Дополнительные сведения об интерфейсах, относящиеся к привязке данных см. в разделе [интерфейсах, которые относятся к привязке данных](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
   
- В представленном ниже списке перечислены структуры, к которым можно выполнить привязку в Windows Forms.  
+ Ниже перечислены структуры можно привязать к в Windows Forms.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Компонент <xref:System.Windows.Forms.BindingSource> является наиболее распространенным источником данных Windows Forms. Он выполняет функцию прокси между источником данных и элементами управления Windows Forms.  Основной подход при использовании компонента <xref:System.Windows.Forms.BindingSource> заключается в том, чтобы привязать элементы управления к компоненту <xref:System.Windows.Forms.BindingSource>, а затем привязать компонент <xref:System.Windows.Forms.BindingSource> к источнику данных \(например, таблице данных ADO.NET или бизнес\-объекту\).  Компонент <xref:System.Windows.Forms.BindingSource> обеспечивает поддержку привязки данных и позволяет повысить уровень этой поддержки.  К примеру, такие элементы управления Windows Forms на основе списков, как <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.ComboBox>, не поддерживают привязку непосредственно к источникам данных <xref:System.Collections.IEnumerable>, однако такую привязку можно осуществить посредством компонента <xref:System.Windows.Forms.BindingSource>.  В этом случае компонент <xref:System.Windows.Forms.BindingSource> преобразует источник данных в интерфейс <xref:System.Collections.IList>.  
+ Объект <xref:System.Windows.Forms.BindingSource> является наиболее распространенным источником данных Windows Forms и выступает посредником между источником данных и элементы управления Windows Forms. Общие <xref:System.Windows.Forms.BindingSource> шаблон использования: для привязки элементов управления к <xref:System.Windows.Forms.BindingSource> и привязать <xref:System.Windows.Forms.BindingSource> к источнику данных (например, таблице данных ADO.NET или бизнес-объекта). <xref:System.Windows.Forms.BindingSource> Предоставляет службы и позволяет повысить уровень поддержки привязки данных. Например, список Windows Forms зависимости элементов управления, таких как <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.ComboBox> непосредственно не поддерживает привязку к <xref:System.Collections.IEnumerable> источники данных тем не менее, можно реализовать этот сценарий с помощью привязки через <xref:System.Windows.Forms.BindingSource>. В этом случае <xref:System.Windows.Forms.BindingSource> преобразует источник данных для <xref:System.Collections.IList>.  
   
  Простые объекты  
- Windows Forms поддерживает привязку свойств элементов управления к общедоступным свойствам экземпляра объекта с помощью типа <xref:System.Windows.Forms.Binding>.  Если используется компонент <xref:System.Windows.Forms.BindingSource>, Windows Forms также поддерживает привязку элементов управления на основе списка, таких как <xref:System.Windows.Forms.ListControl> к экземпляру объекта.  
+ Windows Forms поддерживает свойства элемента управления привязки данных к общим свойствам экземпляра объекта с помощью <xref:System.Windows.Forms.Binding> типа. Windows Forms также поддерживает привязка элементов управления на основе списка, например <xref:System.Windows.Forms.ListControl> на объект экземпляра, когда <xref:System.Windows.Forms.BindingSource> используется.  
   
- Массив или коллекция  
- Для использования в качестве источника данных список должен реализовывать интерфейс <xref:System.Collections.IList>; в качестве одного из примеров можно привести массив, который является экземпляром класса <xref:System.Array>.  Дополнительные сведения о массивах см. в разделе [How to: Create an Array of Objects \(Visual Basic\)](http://msdn.microsoft.com/ru-ru/6b64e069-0387-400c-9081-3bdc581020c3).  
+ массив или коллекция  
+ В качестве источника данных, список должен реализовывать <xref:System.Collections.IList> интерфейса; один примеров можно привести массив, который является экземпляром класса <xref:System.Array> класса. Дополнительные сведения о массивах см. в разделе [как: создать массив объектов (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- Как правило, при создании списков объектов для привязки данных необходимо использовать <xref:System.ComponentModel.BindingList%601>.  Класс <xref:System.ComponentModel.BindingList%601> представляет собой универсальную версию интерфейса <xref:System.ComponentModel.IBindingList>.  Интерфейс <xref:System.ComponentModel.IBindingList> является расширением интерфейса <xref:System.Collections.IList>, добавляя свойства, методы и события, необходимые для двусторонней привязки данных.  
+ В общем случае следует использовать <xref:System.ComponentModel.BindingList%601> при создании списков объектов для привязки данных. <xref:System.ComponentModel.BindingList%601>— универсальная версия <xref:System.ComponentModel.IBindingList> интерфейса. <xref:System.ComponentModel.IBindingList> Расширяет интерфейс <xref:System.Collections.IList> интерфейс, добавляя свойства, методы и события, необходимые для двусторонней привязки данных.  
   
  <xref:System.Collections.IEnumerable>  
- При использовании компонента <xref:System.Windows.Forms.BindingSource> элементы управления Windows Forms можно привязать к источникам данных, которые поддерживают только интерфейс <xref:System.Collections.IEnumerable>.  
+ Элементы управления Windows Forms можно привязать к источникам данных, которые поддерживают только <xref:System.Collections.IEnumerable> интерфейс, если они связаны через <xref:System.Windows.Forms.BindingSource> компонента.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Объекты данных  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] предлагает несколько структур данных, к которым можно выполнить привязку.  Каждая структура отличается своими возможностями и сложностью.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]объекты данных  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]предоставляет несколько структур данных, к которым можно выполнить привязку. Каждый зависит от его сложности и сложности.  
   
--   <xref:System.Data.DataColumn>.  Объект <xref:System.Data.DataColumn> является основным стандартным блоком для создания объекта <xref:System.Data.DataTable>, в котором несколько столбцов образуют таблицу.  Каждый объект <xref:System.Data.DataColumn> имеет свойство <xref:System.Data.DataColumn.DataType%2A>, которое определяет вид данных, содержащихся в столбце \(например, производителей автомобилей в таблице с описанием автомобилей\).  К столбцу в таблице можно осуществить простую привязку элемента управления \(например, свойства <xref:System.Windows.Forms.Control.Text%2A> элемента управления <xref:System.Windows.Forms.TextBox>\).  
+-   <xref:System.Data.DataColumn>. Объект <xref:System.Data.DataColumn> essential строительный блок <xref:System.Data.DataTable>, в котором несколько столбцов образуют таблицу. Каждый <xref:System.Data.DataColumn> имеет <xref:System.Data.DataColumn.DataType%2A> свойство, которое определяет, какие данные содержит столбец (например, производителей автомобилей в таблице с описанием автомобилей). Можно выполнить простую привязку элемента управления (таких как <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойство) к столбцу в таблице данных.  
   
--   <xref:System.Data.DataTable>.  Объект <xref:System.Data.DataTable> является представлением таблицы, содержащей строки и столбцы, в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  Таблица данных содержит две коллекции: <xref:System.Data.DataColumn>, представляющую столбцы данных в определенной таблице \(столбцы однозначно определяют виды данных, которые можно ввести в таблицу\), и <xref:System.Data.DataRow>, представляющую строки данных в определенной таблице.  К сведениям, содержащимся в таблице данных, можно осуществить сложную привязку \(например, привязку элемента управления <xref:System.Windows.Forms.DataGridView> к таблице данных\).  Однако при привязке к объекту <xref:System.Data.DataTable> фактически выполняется привязка к представлению таблицы по умолчанию.  
+-   <xref:System.Data.DataTable>. Объект <xref:System.Data.DataTable> является представлением таблицы, состоящей из строк и столбцов, в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Таблица данных содержит две коллекции: <xref:System.Data.DataColumn>, представляющую столбцы данных в определенной таблице (столбцы однозначно определяют виды данных, которые могут быть введены в этой таблице), и <xref:System.Data.DataRow>, представляющую строки данных в определенной таблице. Вы можете сложную привязку элемента управления к сведениям, содержащимся в таблице данных (например, привязка <xref:System.Windows.Forms.DataGridView> управления к таблице данных). Однако при привязке к <xref:System.Data.DataTable>, фактически выполняется привязка к представлению таблицы по умолчанию.  
   
--   <xref:System.Data.DataView>.  Объект <xref:System.Data.DataView> служит для настраиваемого представления единственной таблицы данных, которую можно отфильтровать или упорядочить.  Представление данных — это "моментальный снимок" данных, используемый элементами управления при сложной привязке.  К данным в представлении данных можно выполнить простую или сложную привязку, однако следует принять во внимание, что привязка осуществляется к "замороженному изображению" данных, а не к достоверному, обновляемому источнику данных.  
+-   <xref:System.Data.DataView>. Объект <xref:System.Data.DataView> служит для настраиваемого представления одну таблицу данных, можно отфильтровать или упорядочить. Представление данных — «моментальный снимок», используемый элементами управления сложной привязкой данных. Вы можете простую привязку или сложную привязку к данным в представлении данных, но имейте в виду, что привязка осуществляется к «основных изображению» данных, а не к источнику чистой, обновление данных.  
   
--   <xref:System.Data.DataSet>.  Объект <xref:System.Data.DataSet> представляет собой коллекцию таблиц, отношений и ограничений данных в базе данных.  К данным в наборе данных можно выполнить простую или сложную привязку, однако следует принять во внимание, что привязка осуществляется к выбранному по умолчанию объекту <xref:System.Data.DataViewManager> объекта <xref:System.Data.DataSet> \(см. следующий пункт\).  
+-   <xref:System.Data.DataSet>. Объект <xref:System.Data.DataSet> — это коллекция таблиц, связей и ограничений в базе данных. Вы можете простую привязку или сложную привязку к данным в наборе данных, но имейте в виду, что привязка осуществляется по умолчанию <xref:System.Data.DataViewManager> для <xref:System.Data.DataSet> (см. следующий пункт).  
   
--   <xref:System.Data.DataViewManager>.  Объект <xref:System.Data.DataViewManager> представляет собой настраиваемое представление всего объекта <xref:System.Data.DataSet>. Он аналогичен объекту <xref:System.Data.DataView>, но включает в себя отношения.  Коллекция <xref:System.Data.DataViewManager.DataViewSettings%2A> позволяет задавать фильтры по умолчанию и параметры сортировки для любых представлений, которые существуют в объекте <xref:System.Data.DataViewManager> для данной таблицы.  
+-   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> служит для настраиваемого представления всей <xref:System.Data.DataSet>, аналогично <xref:System.Data.DataView>, но с отношениями включены. С <xref:System.Data.DataViewManager.DataViewSettings%2A> коллекции, можно задать фильтры по умолчанию и параметры сортировки для любых представлений, <xref:System.Data.DataViewManager> для данной таблицы.  
   
-## См. также  
- [Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [Связывание данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Связывание элементов управления Windows Forms с данными](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>См. также  
+ [Уведомления об изменениях в привязке данных Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

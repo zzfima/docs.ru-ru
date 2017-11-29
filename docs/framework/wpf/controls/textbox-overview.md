@@ -1,79 +1,82 @@
 ---
-title: "Общие сведения о TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы управления, TextBox"
-  - "TextBox - элемент управления, сведения об элементе управления TextBox"
+title: "Общие сведения о TextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], TextBox
+- TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о TextBox
-Класс <xref:System.Windows.Controls.TextBox> позволяет отобразить или отредактировать неформатированный текст.  Часто <xref:System.Windows.Controls.TextBox> используется для изменения неформатированного текста в форме.  Например, форма запроса имени пользователя, номера телефона и т.д может использовать для ввода текста элемент управления <xref:System.Windows.Controls.TextBox>.  В этом разделе представляется класс <xref:System.Windows.Controls.TextBox> и приводятся примеры его использования в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
+# <a name="textbox-overview"></a>Общие сведения о TextBox
+<xref:System.Windows.Controls.TextBox> Класс позволяет отображения или редактирования неформатированного текста. Обычно <xref:System.Windows.Controls.TextBox> редактирования неформатированного текста в форме. Например, форма запроса имени пользователя, номер телефона и т. д может использовать <xref:System.Windows.Controls.TextBox> элементы управления для ввода текста. В этом разделе описываются <xref:System.Windows.Controls.TextBox> класса и приводятся примеры того, как использовать его как [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
   
-   
+ 
   
 <a name="textbox_or_richtextbox"></a>   
-## Textbox или RichTextBox?  
- Элементы управления <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> позволяют пользователям вводить текст, но они используются для различных скриптов.  Для <xref:System.Windows.Controls.TextBox> требуется меньших системных затрат, чем для <xref:System.Windows.Controls.RichTextBox>, поэтому он идеально подходит, если требуется отредактировать только обычный текст \(использование в форме\).  <xref:System.Windows.Controls.RichTextBox> является хорошим выбором при необходимости изменить форматированный текст, рисунки, таблицы или другие поддерживаемые типы содержимого.  Например, редактирование документа, статьи или блога, для которых требуются форматирование, рисунки и т.д., лучше всего выполнять с помощью <xref:System.Windows.Controls.RichTextBox>.  В нижеприведенной таблице перечислены основные возможности <xref:System.Windows.Controls.TextBox>и <xref:System.Windows.Controls.TextBox>.  
+## <a name="textbox-or-richtextbox"></a>TextBox или RichTextBox?  
+ Оба <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> позволяют пользователям вводить текст, но используются два элемента управления для различных сценариев. Объект <xref:System.Windows.Controls.TextBox> требует меньше системных ресурсов то <xref:System.Windows.Controls.RichTextBox> , это идеальный вариант, если требуется отредактировать только обычный текст (т. е. Использование в форме). Объект <xref:System.Windows.Controls.RichTextBox> является хорошим выбором при необходимости изменить форматированный текст, изображения, таблицы или другие поддерживаемые содержимого. Например, редактирование документа, статьи или блога, для которых требуются форматирование, изображений, и т.д., лучше всего выполнять с помощью <xref:System.Windows.Controls.RichTextBox>. В таблице ниже приведены основные возможности <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBox>.  
   
-|Элемент управления|Проверка орфографии в режиме реального времени|Контекстное меню|Форматирование команд как <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(CTRL \+ B\)|Содержимое <xref:System.Windows.Documents.FlowDocument>, такое как изображения, абзацы, таблицы и т.д.|  
-|------------------------|----------------------------------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Control|Проверка орфографии в режиме реального времени|Контекстное меню|Форматирование команд как <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>содержимого, такого как изображения, абзацы, таблицы, и т. д.|  
+|-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Да|Да|Нет|Нет.|  
-|<xref:System.Windows.Controls.RichTextBox>|Да|Да|Да \(см. [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)\)|Да \(см. [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)\)|  
+|<xref:System.Windows.Controls.RichTextBox>|Да|Да|Да (см. раздел [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|Да (см. раздел [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  
   
 > [!NOTE]
->  Хотя <xref:System.Windows.Controls.TextBox> не поддерживает форматирование, связанное с командами редактирования, такими как <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(Ctr \+ B\), многие основные команды поддерживаются обоими элементами управления, например <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  Дополнительные сведения см. в разделе <xref:System.Windows.Documents.EditingCommands>.  
+>  Несмотря на то что <xref:System.Windows.Controls.TextBox> выполняет команды поддерживает форматирование связанные изменения как <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B), многие основные команды поддерживаются обоими элементами управления, такие как <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>. Дополнительные сведения см. в разделе <xref:System.Windows.Documents.EditingCommands>.  
   
- Функции, поддерживаемые элементом <xref:System.Windows.Controls.TextBox>, рассматриваются в следующих разделах.  Дополнительные сведения о <xref:System.Windows.Controls.RichTextBox> см. в разделе [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md).  
+ Возможности, поддерживаемые различными <xref:System.Windows.Controls.TextBox> рассматриваются в следующих разделах. Дополнительные сведения о <xref:System.Windows.Controls.RichTextBox>, в разделе [Обзор RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md).  
   
-### Проверка орфографии в режиме реального времени  
- В <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> можно запустить проверку орфографии в режиме реального времени.  При включенной проверке орфографии все неправильно написанные слова подчеркиваются красной линией \(см. рисунок\).  
+### <a name="real-time-spellchecking"></a>Проверка орфографии в режиме реального времени  
+ Можно включить в режиме реального времени проверка орфографии в <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.RichTextBox>. При включенной проверке орфографии все слова с ошибками подчеркиваются красной линией (см. рисунок ниже).  
   
- ![Textbox с проверкой правописания](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing\_TextBox\_with\_Spellchecking")  
+ ![Текстовое поле с проверкой орфо&#45;графии](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
   
- Сведения о том, как включить проверку орфографии, см. в разделе [Включение проверки орфографии в элементе управления редактирования текста](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md).  
+ Чтобы научиться включать проверку правописания, см. раздел [Включение проверки орфографии в элементе управления редактирования текста](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md).  
   
-### Контекстное меню  
- По умолчанию и <xref:System.Windows.Controls.TextBox>, и <xref:System.Windows.Controls.RichTextBox> имеют контекстное меню, которое появляется при щелчке правой кнопкой мыши внутри элемента управления.  Контекстное меню предоставляет пользователю возможность вырезания, копирования или вставки \(см. рисунок\).  
+### <a name="context-menu"></a>Контекстное меню  
+ По умолчанию оба <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> имеют контекстное меню, которое отображается при щелчке внутри элемента управления. Контекстное меню дает пользователю возможность вырезания, копирования и вставки (см. рисунок ниже).  
   
- ![TextBox с контекстным меню](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing\_TextBox\_with\_Context\_Menu")  
+ ![TextBox с контекстным меню](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")  
   
- Можно создать собственное контекстное меню, чтобы переопределить поведение по умолчанию.  Дополнительные сведения см. в разделе [Использование пользовательского контекстного меню с элементом TextBox](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md).  
+ Можно создать собственное пользовательское контекстное меню, чтобы переопределить поведение по умолчанию. Дополнительные сведения см. в разделе [Использование пользовательского контекстного меню с элементом TextBox](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md).  
   
 <a name="creating_textboxes"></a>   
-## Создание элемента TextBox  
- Элемент <xref:System.Windows.Controls.TextBox> может состоять из одной или нескольких строк.  Однострочный <xref:System.Windows.Controls.TextBox> лучше всего подходит для ввода небольшого объема обычного текста \(такого как  "Имя", "Номер телефона" и т. д.  в форме\).  В следующем примере показано, как создать однострочный <xref:System.Windows.Controls.TextBox>.  
+## <a name="creating-textboxes"></a>Создание элементов TextBox  
+ Объект <xref:System.Windows.Controls.TextBox> может состоять из одной высоты или нескольких строк. Одна строка <xref:System.Windows.Controls.TextBox> лучше всего подходит для ввода небольшого объема обычного текста (т. е. "Имя", "Номер телефона" и т.д. в форме). В следующем примере демонстрируется создание одной строки <xref:System.Windows.Controls.TextBox>.  
   
- [!code-xml[TextBoxMiscSnippets_snip#BasicTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/basictextboxexample.xaml#basictextboxexamplewholepage)]  
+ [!code-xaml[TextBoxMiscSnippets_snip#BasicTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/basictextboxexample.xaml#basictextboxexamplewholepage)]  
   
- Также можно создать <xref:System.Windows.Controls.TextBox>, позволяющий пользователю вводить несколько строк текста.  Например, если форма запрашивает биографические сведения о пользователе, следует использовать <xref:System.Windows.Controls.TextBox>, поддерживающий несколько строк текста.  В этом примере показано, как использовать [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для определения элемента управления <xref:System.Windows.Controls.TextBox>, который будет автоматически расширяться, чтобы вместить несколько строк текста.  
+ Можно также создать <xref:System.Windows.Controls.TextBox> , позволяющий пользователю вводить несколько строк текста. Например, если форма запрашивает биографические пользователя, может потребоваться использовать <xref:System.Windows.Controls.TextBox> , поддерживающий несколько строк текста. В следующем примере показано, как использовать [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для определения <xref:System.Windows.Controls.TextBox> элемент управления, который автоматически расширяется, чтобы вместить несколько строк текста.  
   
- [!code-xml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
+ [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
- Установка для атрибута <xref:System.Windows.Controls.TextBox.TextWrapping%2A> значения `Wrap` вызовет перенос вводимого текста на новую строку при достижении края элемента управления <xref:System.Windows.Controls.TextBox>, при необходимости автоматически расширяя элемент управления <xref:System.Windows.Controls.TextBox>, чтобы он включал место для новой строки.  
+ Установка <xref:System.Windows.Controls.TextBox.TextWrapping%2A> атрибут `Wrap` вызывает текста по словам в новую строку при краем <xref:System.Windows.Controls.TextBox> управления достигается, автоматическое расширение <xref:System.Windows.Controls.TextBox> элемента управления, чтобы включить место для новой строки, при необходимости.  
   
- Установка атрибута <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> в значение `true` вызовет вставку новой строки при нажатии клавиши RETURN, при необходимости автоматически расширяя <xref:System.Windows.Controls.TextBox>, чтобы он включал место для новой строки.  
+ Установка <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> атрибут `true` вызывает строки должен быть вставлен при нажатии клавиши ВВОД, автоматически расширяя <xref:System.Windows.Controls.TextBox> при необходимости включите место для новой строки.  
   
- Атрибут <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> добавляет полосу прокрутки в <xref:System.Windows.Controls.TextBox> для просмотра содержимого <xref:System.Windows.Controls.TextBox>, если <xref:System.Windows.Controls.TextBox> превышает размеры рамки или окна, в котором он содержится.  
+ <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> Атрибут добавляет полосу прокрутки для <xref:System.Windows.Controls.TextBox>, после чего содержимое <xref:System.Windows.Controls.TextBox> прокручивать if <xref:System.Windows.Controls.TextBox> превышает размеры фрейма или окно, в котором он содержится.  
   
- Дополнительные сведения о различных задачах, связанных с использованием <xref:System.Windows.Controls.TextBox>, см. в разделе [Практические руководства](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md).  
+ Дополнительные сведения о различных задачах, связанных с использованием <xref:System.Windows.Controls.TextBox>, в разделе [инструкции](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md).  
   
 <a name="editing_commands"></a>   
-## Определение изменения содержимого  
- Обычно для обнаружения изменения текста в <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.RichTextBox> следует использовать событие <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>, а не <xref:System.Windows.UIElement.KeyDown>, как можно предположить.  Пример см. в разделе [Определение изменения текста в TextBox](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md).  
+## <a name="detect-when-content-changes"></a>Определение изменения содержимого  
+ Обычно <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> событие должно использоваться, чтобы определить, когда текст в <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.RichTextBox> изменяется, а затем <xref:System.Windows.UIElement.KeyDown> как можно ожидать. Пример см. в разделе [Определение изменения текста в TextBox](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md).  
   
-## См. также  
- [Практические руководства](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)   
+## <a name="see-also"></a>См. также  
+ [Разделы практического руководства](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

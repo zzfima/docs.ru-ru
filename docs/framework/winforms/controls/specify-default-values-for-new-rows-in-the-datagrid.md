@@ -1,48 +1,52 @@
 ---
-title: "Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "таблицы данных, значения по умолчанию для новых строк"
-  - "DataGridView - элемент управления [Windows Forms], ввод данных"
-  - "DataGridView - элемент управления [Windows Forms], значения по умолчанию для новых строк"
-  - "строки, задание значений по умолчанию"
+title: "Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data grids [Windows Forms], default values for new rows
+- DataGridView control [Windows Forms], data entry
+- rows [Windows Forms], specifying default values
+- DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 577d5c3bc4b4afef845cd51b62b7d48fcc9d4a7e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms
-Ввод данных упрощается, если приложение заполняет добавляемые строки значениями по умолчанию.  Благодаря классу <xref:System.Windows.Forms.DataGridView> можно заполнять строки значениями по умолчанию с помощью события <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>.  Это событие наступает при входе пользователя в строку для добавления новых записей.    С помощью обработчика этого события можно заполнить требуемые ячейки любыми значениями.  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms
+Ввод данных можно сделать более удобным при приложение по умолчанию заполняет значения для только что добавленных строк. С <xref:System.Windows.Forms.DataGridView> класса, можно заполнить по умолчанию значения с <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий. Это событие возникает, когда пользователь вводит строку для новых записей. С помощью обработчика этого события, можно заполнить требуемые ячейки со значениями по своему выбору.  
   
- В следующем примере кода демонстрируется способ задания значений по умолчаний для новых строк с помощью события <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>.  
+ В следующем примере кода демонстрируется задание значений по умолчанию для новых строк с помощью <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#120)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`.  
+-   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
   
--   Функция `NewCustomerId` для генерации уникальных значений для ячеек столбца `CustomerID`.  
+-   Объект `NewCustomerId` функции для создания уникальных `CustomerID` значения.  
   
--   Ссылки на сборки <xref:System?displayProperty=fullName> и <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=fullName>   
- [Ввод данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
+ [Ввод данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
  [Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

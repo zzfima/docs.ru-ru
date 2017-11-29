@@ -1,40 +1,24 @@
 ---
-title: "Файл, указанный в параметре FileName не является допустимым файлом XML | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Файл, указанный в FileName, не является допустимым XML-файлом"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2fa595ab411fdd300327db9e1fcca1e3156c7eed
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f3275608a1871ac981eb5b3aa39f0be6ab4e758e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Файл, указанный в FileName, не является допустимым XML-файлом
-Указанное имя файла не представляет допустимый XML-файл. Чтобы задать допустимую структуру и содержимое XML-документа, можно использовать схему DTD, Microsoft XML-Data Reduced (XDR) или языка определения схемы XML. XSD-схемы являются предпочтительным способом для указания грамматики XML в [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+Указанное имя файла не представляет допустимый XML-файл. Чтобы задать допустимую структуру и содержимое XML-документа, можно использовать схему DTD, Microsoft XML-Data Reduced (XDR) или языка определения схемы XML. Для указания грамматики XML в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]предпочтительнее использовать схемы XSD.  
   
 > [!NOTE]
->  В некоторых более ранних версиях Visual Studio **конструктор XML** — это конструктор для типизированных наборов данных и схемы XML. **Конструктор XML** по-прежнему можно использовать для создания и редактирования файлов схемы XML. Однако в [!INCLUDE[vs_current_long](../../csharp/misc/includes/vs_current_long_md.md)], конструктор для создания и редактирования типизированных наборов данных — **конструктора наборов данных**. Дополнительные сведения см. в разделе [создания и редактирования типизированных наборов DataSet](https://docs.microsoft.com/visualstudio/data-tools/creating-and-editing-typed-datasets).  
+>  В некоторых более ранних версиях Visual Studio **конструктор XML** — это конструктор для типизированных наборов данных и схемы XML. **Конструктор XML** по-прежнему можно использовать для создания и редактирования файлов схемы XML. Однако в [!INCLUDE[vs_current_long](~/includes/vs-current-long-md.md)]для создания и редактирования типизированных наборов данных используется **конструктор наборов данных**. Дополнительные сведения см. в разделе [Создание и изменение типизированных наборов данных](/visualstudio/data-tools/creating-and-editing-typed-datasets).  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
@@ -45,5 +29,5 @@ ms.lasthandoff: 03/13/2017
 -   Если XML-файл имеет связанную схему XML, удостоверьтесь, что элементы существуют в определенной структуре и что содержимое отдельных элементов соответствует объявленным типам данных, указанным в схеме.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Xml></xref:System.Xml>   
+ <xref:System.Xml>  
  [Практическое руководство. Анализ путей к файлам](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

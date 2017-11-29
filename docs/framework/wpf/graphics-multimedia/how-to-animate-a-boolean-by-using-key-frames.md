@@ -1,40 +1,46 @@
 ---
-title: "Практическое руководство. Анимация логического типа с помощью ключевых кадров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Boolean по ключевым кадрам"
-  - "Boolean, анимация по ключевым кадрам"
-  - "ключевые кадры, анимация Boolean по"
+title: "Практическое руководство. Анимация логического типа с помощью ключевых кадров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Booleans [WPF], animating with key frames
+- animation [WPF], Booleans with key frames
+- key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ac129bf133cca88a6d2f6a724d25ea2519cb72e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация логического типа с помощью ключевых кадров
-В этом примере демонстрируется анимация значения свойства логического типа элемента управления <xref:System.Windows.Controls.Button> с помощью полных кадров.  
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Практическое руководство. Анимация логического типа с помощью ключевых кадров
+В этом примере демонстрируется анимация значение логического свойства <xref:System.Windows.Controls.Button> элемента управления с помощью ключевых кадров.  
   
-## Пример  
- В следующем примере для анимации свойства <xref:System.Windows.UIElement.IsEnabled%2A> элемента управления <xref:System.Windows.Controls.Button> используется класс <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>.  Все полные кадры в этом примере используют экземпляр класса <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame>.  Дискретные полные кадры, такие как <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame>, создают внезапные переходы между значениями, т. е анимация выполняется рывками.  
+## <a name="example"></a>Пример  
+ В следующем примере используется <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.UIElement.IsEnabled%2A> свойства <xref:System.Windows.Controls.Button> элемента управления. Все ключевые кадры в этом примере используется экземпляр <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> класса. Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> создают резкие переходы между значениями, то есть, перемещение анимации рывками.  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]
- [!code-xml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## См. также  
- <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>   
- <xref:System.Windows.UIElement.IsEnabled%2A>   
- <xref:System.Windows.Controls.Button>   
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Практические руководства, посвященные анимации по полным кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
+ <xref:System.Windows.UIElement.IsEnabled%2A>  
+ <xref:System.Windows.Controls.Button>  
+ [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

@@ -1,157 +1,161 @@
 ---
-title: "Общие сведения о свойствах Alignment, Margin, Padding | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "выравнивание"
-  - "классы, FrameworkElement"
-  - "FrameworkElement - класс"
-  - "поля"
-  - "заполнение"
+title: "Общие сведения о свойствах Alignment, Margin, Padding"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- margins [WPF]
+- padding [WPF]
+- aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о свойствах Alignment, Margin, Padding
-Класс <xref:System.Windows.FrameworkElement> предоставляет ряд свойств, используемых для точного размещения дочерних элементов.  В этом разделе рассмотрены четыре наиболее важных свойства <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A> и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  Эффекты этих свойств важно понимать, поскольку они обеспечивают основу для контроля положения элементов в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="alignment-margins-and-padding-overview"></a>Общие сведения о свойствах Alignment, Margin, Padding
+<xref:System.Windows.FrameworkElement> Класс содержит несколько свойств, которые используются для точного размещения дочерних элементов. В этом разделе обсуждаются четыре наиболее важных свойства: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Очень важно иметь представление о результатах применения этих свойств, поскольку они обеспечивают основу для управления положением элементов в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
-   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
-## Введение в позиционирование элемента  
- Существуют разные способы позиционирования элементов с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Однако идеальный макет достигается не просто выбором правильного элемента класса <xref:System.Windows.Controls.Panel>.  Точное управление размещением требует понимания свойств <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A> <xref:System.Windows.Controls.Border.Padding%2A> и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  
+## <a name="introduction-to-element-positioning"></a>Введение в позиционирование элементов  
+ Существуют разные способы позиционирования элементов с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Однако идеальный макет достигается не просто выбором право <xref:System.Windows.Controls.Panel> элемента. Точное управление размещением требует понимания <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства.  
   
- На следующем изображении показан скрипт макета, использующий несколько свойств позиционирования.  
+ На следующем рисунке показан сценарий макета, использующий несколько свойств размещения.  
   
- ![Пример использования свойств позиционирования WPF](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic1.png "layout\_margins\_padding\_alignment\_graphic1")  
+ ![Пример свойств размещения WPF](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic1.PNG "layout_margins_padding_alignment_graphic1")  
   
- На первый взгляд, элементы <xref:System.Windows.Controls.Button> на этом изображении кажутся размещенными случайным образом.  Однако на самом деле их положения задаются с помощью комбинации выравниваний, внутренних и внешних границ.  
+ На первый взгляд <xref:System.Windows.Controls.Button> элементы на этом рисунке могут отображаться размещенными случайным образом. На самом деле их положение точно контролируется с помощью сочетания полей, выравнивания и заполнения.  
   
- В следующем примере описывается создание макета, показанного на предыдущем рисунке.  Элемент <xref:System.Windows.Controls.Border> инкапсулирует родительский <xref:System.Windows.Controls.StackPanel> со значением <xref:System.Windows.Controls.Border.Padding%2A> в 15 [аппаратно\-независимых пикселей](GTMT).  Это учитывается для узкой полосы цвета <xref:System.Windows.Media.Brushes.LightBlue%2A>, окружающей дочерний <xref:System.Windows.Controls.StackPanel>.  Дочерние элементы <xref:System.Windows.Controls.StackPanel> используются для демонстрации каждого из свойств позиционирования, рассматриваемых в данном разделе.  Три элемента <xref:System.Windows.Controls.Button> используются для демонстрации свойств <xref:System.Windows.FrameworkElement.Margin%2A> и <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>.  
+ В следующем примере демонстрируется создание макета, показанного на предыдущем рисунке. Объект <xref:System.Windows.Controls.Border> инкапсулирует родительский <xref:System.Windows.Controls.StackPanel>, с <xref:System.Windows.Controls.Border.Padding%2A> значение 15 аппаратно-независимых пикселях. Это учитывается для узкой <xref:System.Windows.Media.Brushes.LightBlue%2A> ленту, которая окружает дочерние <xref:System.Windows.Controls.StackPanel>. Дочерние элементы <xref:System.Windows.Controls.StackPanel> используются для иллюстрации каждого из различных свойств позиционирования, описанные в этом разделе. Три <xref:System.Windows.Controls.Button> элементы используются для демонстрации <xref:System.Windows.FrameworkElement.Margin%2A> и <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства.  
   
  [!code-csharp[MPALayoutSampleIntro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutSampleIntro/CSharp/MPA_Layout_Sample_Intro.cs#1)]
  [!code-vb[MPALayoutSampleIntro#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutSampleIntro/VisualBasic/MPALayoutIntro.vb#1)]  
   
- На следующей диаграмме приведено представление различных свойств позиционирования, которые использованы в предыдущем примере.  В последующих подразделах этого раздела подробно описывается использование каждого свойства позиционирования.  
+ Следующая схема обеспечивает подробное представление различных свойств размещения, примененных в предыдущем примере. В последующих разделах этой статьи более подробно описывается использование каждого свойства размещения.  
   
- ![Свойства размещения с экранными вызовами](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.png "layout\_margins\_padding\_alignment\_graphic2")  
+ ![Свойства размещения с выносками](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-alignment-graphic2.PNG "layout_margins_padding_alignment_graphic2")  
   
 <a name="wcpsdk_layout_amp_alignment_properties"></a>   
-## Общее представление о свойствах Alignment  
- Свойства <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> описывают, как дочерний элемент должен располагаться в выделенном родительскому элементу пространстве макета.  Используя эти свойства вместе, можно точно расположить дочерние элементы.  Например, дочерние элементы <xref:System.Windows.Controls.DockPanel> можно задать четырьмя различными горизонтальными выравниваниями: <xref:System.Windows.HorizontalAlignment>, <xref:System.Windows.HorizontalAlignment> или <xref:System.Windows.HorizontalAlignment>, или <xref:System.Windows.HorizontalAlignment> для заполнения доступного места.  Аналогичные значения доступны для вертикального выравнивания.  
+## <a name="understanding-alignment-properties"></a>Общие сведения о свойствах Alignment  
+ <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> И <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства описывают, как дочерний элемент должен располагаться в родительском элементе выделенного пространства макета. При совместном использовании этих свойств можно точно расположить дочерние элементы. Например, дочерние элементы <xref:System.Windows.Controls.DockPanel> можно указать четыре разных горизонтальное выравнивание: <xref:System.Windows.HorizontalAlignment.Left>, <xref:System.Windows.HorizontalAlignment.Right>, или <xref:System.Windows.HorizontalAlignment.Center>, или <xref:System.Windows.HorizontalAlignment.Stretch> доступное пространство. Аналогичные значения доступны для вертикального размещения.  
   
 > [!NOTE]
->  Явно заданные свойства <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Width%2A> элемента имеют приоритет над значением свойства <xref:System.Windows.HorizontalAlignment>.  Попытка задать <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A> и значение <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> `Stretch` приводит к игнорированию запроса `Stretch`.  
+>  Явно набор <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Width%2A> свойства для элемента имеют приоритет над <xref:System.Windows.HorizontalAlignment.Stretch> значение свойства. Попытка задать <xref:System.Windows.FrameworkElement.Height%2A>, <xref:System.Windows.FrameworkElement.Width%2A>и <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> значение `Stretch` приводит к `Stretch` игнорированию запроса.  
   
 <a name="wcpsdk_layout_amp_horizontalalignment_properties"></a>   
-### Свойство HorizontalAlignment  
- Свойство <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> описывает характеристики горизонтального выравнивания, которые нужно применить к дочерним элементам.  В следующей таблице приведены все возможные значения свойства <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>.  
+### <a name="horizontalalignment-property"></a>Свойство HorizontalAlignment  
+ <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Свойство объявляет характеристик выравнивания по горизонтали для применения к дочерним элементам. В следующей таблице показаны каждого из возможных значений <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойство.  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|<xref:System.Windows.HorizontalAlignment>|Дочерние элементы выравниваются по левому краю выделенного родительскому элементу пространства макета.|  
-|<xref:System.Windows.HorizontalAlignment>|Дочерние элементы выравниваются по центру выделенного родительскому элементу пространства макета.|  
-|<xref:System.Windows.HorizontalAlignment>|Дочерние элементы выравниваются по правому краю выделенного родительскому элементу пространства макета.|  
-|<xref:System.Windows.HorizontalAlignment> \(по умолчанию\)|Дочерние элементы растягиваются для заполнения выделенного родительскому элементу пространства макета.  Явные значения <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> имеют приоритет.|  
+|Член|Описание|  
+|------------|-----------------|  
+|<xref:System.Windows.HorizontalAlignment.Left>|Дочерние элементы выравниваются по левому краю выделенного пространства макета родительского элемента.|  
+|<xref:System.Windows.HorizontalAlignment.Center>|Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.|  
+|<xref:System.Windows.HorizontalAlignment.Right>|Дочерние элементы выравниваются по правому краю выделенного пространства макета родительского элемента.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch>(По умолчанию)|Дочерние элементы растягиваются для заполнения выделенного пространства макета родительского элемента. Явные <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значения имеют более высокий приоритет.|  
   
- В следующем примере показано, как применять свойство <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> к элементам <xref:System.Windows.Controls.Button>.  Каждое значение атрибута отображается для наглядного представления различного поведения при отрисовке.  
+ В следующем примере показано, как применить <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства <xref:System.Windows.Controls.Button> элементов. Показаны все значения атрибутов, чтобы проиллюстрировать различные режимы отрисовки.  
   
  [!code-csharp[MPALayoutHorizontalAlignment#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/CSharp/MPA_Layout_HorizontalAlignment.cs#2)]
  [!code-vb[MPALayoutHorizontalAlignment#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutHorizontalAlignment/VisualBasic/MPA_Layout_HorizontalAlignment.vb#2)]  
   
- Приведенный выше код создает макет, похожий на приведенный выше рисунок.  На рисунке видны эффекты позиционирования каждого значения <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>.  
+ Приведенный выше код создает макет, похожий на следующий рисунок. Эффекты позиционирования каждого <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> значение видны на рисунке.  
   
- ![Пример HorizontalAlignment](../../../../docs/framework/wpf/advanced/media/layout-horizontal-alignment-graphic.png "layout\_horizontal\_alignment\_graphic")  
+ ![Пример HorizontalAlignment](../../../../docs/framework/wpf/advanced/media/layout-horizontal-alignment-graphic.PNG "layout_horizontal_alignment_graphic")  
   
 <a name="wcpsdk_layout_amp_verticalalignment_properties"></a>   
-### Свойство VerticalAlignment  
- Свойство <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> описывает характеристики вертикального выравнивания, которые нужно применить к дочерним элементам.  В следующей таблице приведены все возможные значения свойства <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  
+### <a name="verticalalignment-property"></a>Свойство VerticalAlignment  
+ <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Свойство описывает характеристики выравнивания по вертикали для применения к дочерним элементам. В следующей таблице приведены все возможные значения для <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства.  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|<xref:System.Windows.VerticalAlignment>|Дочерние элементы выравниваются по верхнему краю выделенного родительскому элементу пространства макета.|  
-|<xref:System.Windows.VerticalAlignment>|Дочерние элементы выравниваются по центру выделенного родительскому элементу пространства макета.|  
-|<xref:System.Windows.VerticalAlignment>|Дочерние элементы выравниваются по нижнему краю выделенного родительскому элементу пространства макета.|  
-|<xref:System.Windows.VerticalAlignment> \(по умолчанию\)|Дочерние элементы растягиваются для заполнения выделенного родительскому элементу пространства макета.  Явные значения <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> имеют приоритет.|  
+|Член|Описание|  
+|------------|-----------------|  
+|<xref:System.Windows.VerticalAlignment.Top>|Дочерние элементы выравниваются по верхнему краю выделенного пространства макета родительского элемента.|  
+|<xref:System.Windows.VerticalAlignment.Center>|Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.|  
+|<xref:System.Windows.VerticalAlignment.Bottom>|Дочерние элементы выравниваются по нижнему краю выделенного пространства макета родительского элемента.|  
+|<xref:System.Windows.VerticalAlignment.Stretch>(По умолчанию)|Дочерние элементы растягиваются для заполнения выделенного пространства макета родительского элемента. Явные <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значения имеют более высокий приоритет.|  
   
- В следующем примере показано, как применять свойство <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> к элементам <xref:System.Windows.Controls.Button>.  Каждое значение атрибута отображается для наглядного представления различного поведения при отрисовке.  В этом примере элемент <xref:System.Windows.Controls.Grid> с видимым линиями сетки используется в качестве родительского для лучшей иллюстрации поведения каждого значения свойства.  
+ В следующем примере показано, как применить <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства <xref:System.Windows.Controls.Button> элементов. Показаны все значения атрибутов, чтобы проиллюстрировать различные режимы отрисовки. Для данного примера <xref:System.Windows.Controls.Grid> с видимым линиями сетки используется в качестве родительского элемента, чтобы лучше проиллюстрировать поведения каждого значения свойства.  
   
  [!code-csharp[MPALayoutVerticalAlignment#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MPALayoutVerticalAlignment/CSharp/MPA_Layout_VerticalAlignment.cs#2)]
  [!code-vb[MPALayoutVerticalAlignment#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MPALayoutVerticalAlignment/VisualBasic/MPA_Layout_VerticalAlignment.vb#2)]
- [!code-xml[MPALayoutVerticalAlignment#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MPALayoutVerticalAlignment/XAML/default.xaml#2)]  
+ [!code-xaml[MPALayoutVerticalAlignment#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MPALayoutVerticalAlignment/XAML/default.xaml#2)]  
   
- Приведенный выше код создает макет, похожий на приведенный выше рисунок.  На рисунке видны эффекты позиционирования каждого значения <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  
+ Приведенный выше код создает макет, похожий на следующий рисунок. Эффекты позиционирования каждого <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> значение видны на рисунке.  
   
- ![Пример свойства VerticalAlignment](../../../../docs/framework/wpf/advanced/media/layout-vertical-alignment-graphic.png "layout\_vertical\_alignment\_graphic")  
+ ![Пример свойства VerticalAlignment](../../../../docs/framework/wpf/advanced/media/layout-vertical-alignment-graphic.PNG "layout_vertical_alignment_graphic")  
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
-## Общее представление о свойствах Margin  
- Свойство <xref:System.Windows.FrameworkElement.Margin%2A> описывает расстояние между элементом и его дочерним элементом или узлами.  Значения свойства <xref:System.Windows.FrameworkElement.Margin%2A> могут быть унифицированы путем использования такого синтаксиса, как `Margin="20"`.  При помощи этого синтаксиса к элементу будет применено универсальное свойство <xref:System.Windows.FrameworkElement.Margin%2A> 20 [аппаратно\-независимых пикселей](GTMT).  Значения свойства <xref:System.Windows.FrameworkElement.Margin%2A> могут также быть четырьмя различными значениями, описывающими различные поля: левое, верхнее, правое и нижнее \(в таком порядке\), например `Margin="0,10,5,25"`.  Соответствующее использование свойства <xref:System.Windows.FrameworkElement.Margin%2A> позволяет точно управлять отрисовкой положения элемента подготовки и положения его соседних и дочерних элементов.  
+## <a name="understanding-margin-properties"></a>Основные сведения о свойствах Margin  
+ <xref:System.Windows.FrameworkElement.Margin%2A> Свойство описывает расстояние между элемента и его дочерние или одноранговых узлов. <xref:System.Windows.FrameworkElement.Margin%2A>значения могут быть универсальный, с помощью синтаксиса, подобного `Margin="20"`. Со следующим синтаксисом равномерного <xref:System.Windows.FrameworkElement.Margin%2A> 20 устройства независимых пикселях будут применяться к элементу. <xref:System.Windows.FrameworkElement.Margin%2A>значения могут также принимать форму четырьмя различными значениями, описывающими различные поля слева, сверху, справа и нижнее (в таком порядке), как `Margin="0,10,5,25"`. Правильное использование <xref:System.Windows.FrameworkElement.Margin%2A> свойство позволяет точно управлять отрисовкой положения элемента и положения его соседних и дочерних элементов.  
   
 > [!NOTE]
->  Ненулевое значение задает поля вне <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> элемента.  
+>  Задает поля ненулевое значение в элементе <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
   
- В следующем примере показано, как применить единые поля к группе элементов <xref:System.Windows.Controls.Button>.  Элементы <xref:System.Windows.Controls.Button> расположены равномерно на расстоянии в 10 пикселей в каждом направлении.  
+ В следующем примере показано, как применить единые поля группы <xref:System.Windows.Controls.Button> элементов. <xref:System.Windows.Controls.Button> Равномерно элементы с буфером 10 точек в каждом направлении.  
   
  [!code-cpp[MarginPaddingAlignmentSample#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#1)]
  [!code-csharp[MarginPaddingAlignmentSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#1)]
  [!code-vb[MarginPaddingAlignmentSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#1)]
- [!code-xml[MarginPaddingAlignmentSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#1)]  
+ [!code-xaml[MarginPaddingAlignmentSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#1)]  
   
- Во многих случаях универсальные поля не подходят.  В этих случаях могут быть применены неоднородные интервалы.  В следующем примере показано, как применять неоднородные поля к дочерним элементам.  Поля описываются в следующем порядке: \(левое, верхнее, правое и нижнее\).  
+ Во многих случаях универсальные поля не подходят. В этих случаях можно применять неоднородные интервалы. В следующем примере показано применение неоднородных полей к дочерним элементам. Поля описываются в следующем порядке: слева, сверху, справа, снизу.  
   
  [!code-cpp[MarginPaddingAlignmentSample#2](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#2)]
  [!code-csharp[MarginPaddingAlignmentSample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#2)]
  [!code-vb[MarginPaddingAlignmentSample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#2)]
- [!code-xml[MarginPaddingAlignmentSample#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#2)]  
+ [!code-xaml[MarginPaddingAlignmentSample#2](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#2)]  
   
 <a name="wcpsdk_layout_amp_padding_properties"></a>   
-## Общее представление о свойстве Padding  
- Внутренние поля \(Padding\) во многом похожи на <xref:System.Windows.FrameworkElement.Margin%2A>.  Свойство Padding предоставляется только в нескольких классах, главным образом для удобства: <xref:System.Windows.Documents.Block>, <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Control> и <xref:System.Windows.Controls.TextBlock> являются примерами классов, которые предоставляют свойство Padding.  Свойство <xref:System.Windows.Controls.Border.Padding%2A> увеличивает эффективный размер дочернего элемента на заданное значение <xref:System.Windows.Thickness>.  
+## <a name="understanding-the-padding-property"></a>Основные сведения о свойстве Padding  
+ Заполнение аналогичен <xref:System.Windows.FrameworkElement.Margin%2A> во многом. Свойства Padding предоставляется только в нескольких классах, главным образом для удобства: <xref:System.Windows.Documents.Block>, <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Control>, и <xref:System.Windows.Controls.TextBlock> являются примерами классов, которые предоставляют свойство Padding. <xref:System.Windows.Controls.Border.Padding%2A> Свойство увеличивает эффективный размер дочернего элемента с помощью указанного <xref:System.Windows.Thickness> значение.  
   
- В следующем примере показано применение свойства <xref:System.Windows.Controls.Border.Padding%2A> к родительскому элементу элемента <xref:System.Windows.Controls.Border>.  
+ В следующем примере показано, как применить <xref:System.Windows.Controls.Border.Padding%2A> к родительскому элементу <xref:System.Windows.Controls.Border> элемента.  
   
  [!code-cpp[MarginPaddingAlignmentSample#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#3)]
  [!code-csharp[MarginPaddingAlignmentSample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#3)]
  [!code-vb[MarginPaddingAlignmentSample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#3)]
- [!code-xml[MarginPaddingAlignmentSample#3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
+ [!code-xaml[MarginPaddingAlignmentSample#3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#3)]  
   
 <a name="wcpsdk_layout_amp_summary"></a>   
-## Использование свойств Alignment, Margin и Padding в приложении  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A> и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> предоставляют управление позиционированием, необходимое для создания сложного [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Можно использовать эффекты каждого свойства для изменения позиционирования потомков элементов, обеспечивая гибкость создания динамических приложений и возможностей пользователя.  
+## <a name="using-alignment-margins-and-padding-in-an-application"></a>Использование свойств Alignment, Margin и Padding в приложении  
+ <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> предоставляют управление позиционированием, необходимое для создания сложного [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Эффекты каждого свойства позволяют изменить размещение дочерних элементов, обеспечивая гибкость создания динамических приложений и интерфейсов пользователя.  
   
- В следующем примере показано каждое понятие, подробно описанное в данном разделе.  Основываясь на инфраструктуре первого примера данного раздела, этот пример добавляет элемент <xref:System.Windows.Controls.Grid> в качестве дочернего элемента <xref:System.Windows.Controls.Border> из первого примера.  Свойство <xref:System.Windows.Controls.Border.Padding%2A> применяется к родительскому элементу <xref:System.Windows.Controls.Border>.  Элемент <xref:System.Windows.Controls.Grid> используется для разделения пространства между тремя дочерними элементами <xref:System.Windows.Controls.StackPanel>.  Элементы <xref:System.Windows.Controls.Button> повторно используются для отображения различных результатов свойств <xref:System.Windows.FrameworkElement.Margin%2A> и <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>.  Элементы <xref:System.Windows.Controls.TextBlock> добавляются каждому классу <xref:System.Windows.Controls.ColumnDefinition> для лучшего определения различных свойств, применяемых к элементам <xref:System.Windows.Controls.Button> в каждом столбце.  
+ В следующем примере демонстрируются понятия, описанные в этом разделе. Основываясь на инфраструктуре в первом примере в этом разделе, в этом примере добавляется <xref:System.Windows.Controls.Grid> элемента в качестве дочернего элемента <xref:System.Windows.Controls.Border> в первом примере. <xref:System.Windows.Controls.Border.Padding%2A>применяется к родительскому <xref:System.Windows.Controls.Border> элемента. <xref:System.Windows.Controls.Grid> Используется для разделения пространства между тремя дочерними <xref:System.Windows.Controls.StackPanel> элементов. <xref:System.Windows.Controls.Button>элементы снова используются для отображения различных результатов из <xref:System.Windows.FrameworkElement.Margin%2A> и <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>. <xref:System.Windows.Controls.TextBlock>элементы добавляются к каждому <xref:System.Windows.Controls.ColumnDefinition> чтобы лучше определить различные свойства, применяемые к <xref:System.Windows.Controls.Button> элементов в каждом столбце.  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]
  [!code-vb[MarginPaddingAlignmentSample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarginPaddingAlignmentSample/VisualBasic/MarginPaddingAlignment.vb#4)]
- [!code-xml[MarginPaddingAlignmentSample#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#4)]  
+ [!code-xaml[MarginPaddingAlignmentSample#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/MarginPaddingAlignmentSample/XAML/default.xaml#4)]  
   
- При компиляции приведенное выше приложение создает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который выглядит как на следующем рисунке.  Эффекты различных значений свойств выражены в пространстве между элементами, а значительные значения свойств элементов в каждом столбце отображаются внутри элементов <xref:System.Windows.Controls.TextBlock>.  
+ При компиляции приведенное выше приложение создает [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], который показан на рисунке ниже. Влияние различных значений свойств выражены в пространстве между элементами, а значительные значения свойств элементов в каждом столбце отображаются внутри <xref:System.Windows.Controls.TextBlock> элементов.  
   
- ![Несколько свойств размещения в одном приложении](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-aligment-graphic3.png "layout\_margins\_padding\_aligment\_graphic3")  
+ ![Несколько свойств размещения в одном приложении](../../../../docs/framework/wpf/advanced/media/layout-margins-padding-aligment-graphic3.PNG "layout_margins_padding_aligment_graphic3")  
   
 <a name="wcpsdk_layout_amp_alignment_whatsnext"></a>   
-## Что дальше?  
- Свойства позиционирования, определенные классом <xref:System.Windows.FrameworkElement>, обеспечивают точное управление размещением элементов в приложениях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Можно использовать несколько методов для лучшего расположения элементов с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="whats-next"></a>Что дальше?  
+ Свойства позиционирования, определенные <xref:System.Windows.FrameworkElement> класса обеспечивают точное управление размещением элементов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений. Вы получаете в свое распоряжение несколько способов, позволяющих более эффективно размещать элементы с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Доступны дополнительные ресурсы, в которых подробно объясняется макет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Раздел [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md) содержит более подробные сведения о различных элементах <xref:System.Windows.Controls.Panel>.  В разделе [Пошаговое руководство. Начало работы с WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) рассмотрены дополнительные методы, использующие элементы макета для позиционирования компонентов и привязки их действий к источникам данных.  
+ Доступны дополнительные ресурсы, в которых макет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рассматривается более подробно. [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md) раздел содержит дополнительные сведения о различных <xref:System.Windows.Controls.Panel> элементов. Раздел [Пошаговое руководство: My первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) предоставляет дополнительные методы, использующие элементы макета для позиционирования компонентов и привязки их действий к источникам данных.  
   
-## См. также  
- <xref:System.Windows.FrameworkElement>   
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>   
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>   
- <xref:System.Windows.FrameworkElement.Margin%2A>   
- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)   
- [WPF Layout Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement>  
+ <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
+ <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
+ <xref:System.Windows.FrameworkElement.Margin%2A>  
+ [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Пример коллекции макетов WPF](http://go.microsoft.com/fwlink/?LinkID=160054)

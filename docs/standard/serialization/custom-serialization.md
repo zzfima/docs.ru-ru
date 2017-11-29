@@ -4,8 +4,8 @@ ms.date: 03/30/2017
 ms.prod: .net
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - binary serialization, custom serialization
 - custom serialization
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: dceb97f877a456cae5f0c01fda12a6402affed48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 85ca84865305b588a9214db6e6f4e28b47937827
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="custom-serialization"></a>Пользовательская сериализация
 Пользовательской сериализацией называется процесс управления сериализацией и десериализацией типа. Управление сериализацией позволяет обеспечить совместимость сериализации, в результате чего становится возможной сериализация и десериализация между различными версиями типа без нарушения основных функциональных возможностей типа. Например, в первой версии типа может быть только два поля. В следующей версии типа добавлено еще несколько полей. Во второй версии приложения должна быть предусмотрена возможность сериализации и десериализации обоих типов. В следующих разделах объясняется, как управлять сериализацией.
@@ -191,7 +190,6 @@ End Class
  Объекты воссоздаются изнутри, вызов методов во время десериализации может привести к нежелательным побочным эффектам, поскольку вызываемые объекты могут относиться к ссылкам на объекты, которые не были десериализованы на момент вызова. Если в десериализуемом классе реализовано <xref:System.Runtime.Serialization.IDeserializationCallback>, во время десериализации всего графа объекта автоматически вызывается метод <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*>. На этом этапе все дочерние объекты, на которые имеются ссылки, полностью восстановлены. Типичным примером класса, который сложно десериализовать без использования прослушивателя событий, служит хэш-таблица. Вызов пар "ключ-значение" во время десериализации не представляет сложности, однако добавление таких объектов обратно в хэш-таблицу может быть затруднительным, поскольку нет никаких гарантий, что производные на основе хэш-таблицы классы десериализованы. Поэтому на данном этапе не рекомендуется вызывать методы для хэш-таблицы.  
   
 ## <a name="see-also"></a>См. также  
- [Двоичная сериализация](binary-serialization.md)   
- [Сериализация XML и SOAP](xml-and-soap-serialization.md)   
+ [Двоичная сериализация](binary-serialization.md)  
+ [Сериализация XML и SOAP](xml-and-soap-serialization.md)  
  [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)
-

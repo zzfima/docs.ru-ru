@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - images [.NET Framework], debugging
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e844cde5f33c1accb8addf953b5a72415f4dc301
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>Упрощение отладки образов
 При компиляции неуправляемого кода можно настроить исполняемый образ для отладки, задав параметры командной строки или интегрированной среды разработки. Например, параметр командной строки /**Zi** в Visual C++ служит для создания файлов с отладочными символами (с расширением PDB). Аналогичным образом параметр командной строки /**Od** отключает оптимизацию компилятора. В результате выполнение кода происходит медленнее, однако это упрощает его отладку, если она понадобится.  
@@ -59,7 +52,7 @@ AllowOptimize=0
 >  В .NET Framework версии 2.0 JIT-компилятор всегда генерирует сведения об отслеживании независимо от значения `GenerateTrackingInfo`, однако значение `AllowOptimize` по-прежнему действует. При использовании [Ngen.exe (средства для создания образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) для предварительной компиляции образа в машинном коде без оптимизации INI-файл, содержащий параметр `AllowOptimize=0`, должен находиться в целевой папке во время выполнения Ngen.exe. При предварительной компиляции сборки без оптимизации следует удалить предварительно скомпилированный код с помощью параметра NGen.exe **/uninstall**, прежде чем перезапускать Ngen.exe для предварительной компиляции оптимизированного кода. Если файл INI отсутствует в папке, Ngen.exe по умолчанию предварительно компилирует код как оптимизированный.  
   
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=fullName> управляет параметрами для сборки. **DebuggableAttribute** содержит два поля для записи параметров, определяющих, выполняет ли JIT-компилятор оптимизацию и создает ли он сведения об отслеживании. В .NET Framework версии 2.0 JIT-компилятор всегда генерирует сведения об отслеживании.  
+>  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> управляет параметрами для сборки. **DebuggableAttribute** содержит два поля для записи параметров, определяющих, выполняет ли JIT-компилятор оптимизацию и создает ли он сведения об отслеживании. В .NET Framework версии 2.0 JIT-компилятор всегда генерирует сведения об отслеживании.  
   
 > [!NOTE]
 >  Для окончательных сборок параметры **DebuggableAttribute** не задаются компилятором. По умолчанию JIT-компилятор настроен для обеспечения максимальной производительности, что затрудняет отладку машинного кода. Включение JIT-отслеживания несколько снижает производительность; отключение оптимизации снижает производительность значительно.  
@@ -71,7 +64,6 @@ AllowOptimize=0
 >  В .NET Framework версии 1.0 **DebuggableAttribute** добавляется компилятором Microsoft Visual C++, если указаны параметры компилятора **/clr** и **/Zi**. В .NET Framework версии 1.1 **DebugabbleAttribute** можно добавить как вручную (в коде), так и с помощью параметра **/ASSEMBLYDEBUG** компоновщика.  
   
 ## <a name="see-also"></a>См. также  
- [Отладка, трассировка и профилирование](../../../docs/framework/debug-trace-profile/index.md)   
- [Включение отладки с JIT-присоединением](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)   
+ [Отладка, трассировка и профилирование](../../../docs/framework/debug-trace-profile/index.md)  
+ [Включение отладки с JIT-присоединением](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [Включение профилирования](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
-

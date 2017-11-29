@@ -1,38 +1,41 @@
 ---
-title: "Практическое руководство. Изменение завершения отрезка в конце линии или сегмента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "графика, Shape - законцовки"
-  - "Shape - элементы, законцовки"
-  - "Shape - элементы, концы"
+title: "Практическое руководство. Изменение завершения отрезка в конце линии или сегмента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Shape elements [WPF], ends
+- Shape elements [WPF], caps
+- graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e062b82e698a99705a2b06588aa9aae3a0c93157
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение завершения отрезка в конце линии или сегмента
-В этом примере демонстрируется изменение фигуры в начале или в конце открытого элемента <xref:System.Windows.Shapes.Shape>.  Для изменения завершения отрезка в начале открытой <xref:System.Windows.Shapes.Shape>, используйте свойство <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>.  Для изменения завершения отрезка в конце открытой <xref:System.Windows.Shapes.Shape> используйте свойство <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>.  Доступные завершения отрезков представлены в перечислении <xref:System.Windows.Media.PenLineCap>.  
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Практическое руководство. Изменение завершения отрезка в конце линии или сегмента
+В этом примере показано, как изменить форму в начале или конце открытой <xref:System.Windows.Shapes.Shape> элемента. Чтобы изменить ограничение начала открытого <xref:System.Windows.Shapes.Shape>, использовать его <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> свойство. Чтобы изменить ограничение в конце открытого <xref:System.Windows.Shapes.Shape>, использовать его <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> свойство. Для просмотра доступных отрезков см <xref:System.Windows.Media.PenLineCap> перечисления.  
   
 > [!NOTE]
->  Это свойство влияет только на открытые фигуры, такие как <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Polyline> или открытый элемент <xref:System.Windows.Shapes.Path>.  
+>  Это свойство влияет только на открытые фигуры, такие как <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Polyline>, или открытый <xref:System.Windows.Shapes.Path> элемента.  
   
- В следующем примере рисуется четыре элемента <xref:System.Windows.Shapes.Polyline> и используется разный набор фигур в конце каждого.  
+ В следующем примере рисуется четыре <xref:System.Windows.Shapes.Polyline> элементы и использует разный набор фигур в конце каждого.  
   
-## Пример  
- [!code-xml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
+## <a name="example"></a>Пример  
+ [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
- Этот пример является фрагментом большего примера; полный пример см. на веб\-странице [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов фигуры](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## См. также  
- <xref:System.Windows.Shapes.Polyline>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Shapes.Polyline>  
  <xref:System.Windows.Media.PenLineCap>

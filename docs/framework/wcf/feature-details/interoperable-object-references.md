@@ -1,25 +1,28 @@
 ---
-title: "Справочные сведения о взаимодействии объектов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Справочные сведения о взаимодействии объектов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6d55ffb6ed08b4642bc72c1eabb60164b6c744c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Справочные сведения о взаимодействии объектов
-По умолчанию <xref:System.Runtime.Serialization.DataContractSerializer> сериализует объекты по значению.  Можно использовать свойство <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>, чтобы сериализатор контракта данных сохранял ссылки на объекты во время сериализации объектов этого типа.  
+# <a name="interoperable-object-references"></a>Справочные сведения о взаимодействии объектов
+По умолчанию <xref:System.Runtime.Serialization.DataContractSerializer> сериализует объекты по значению. Можно использовать свойство <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>, чтобы сериализатор контракта данных сохранял ссылки на объекты во время сериализации объектов этого типа.  
   
-## Созданный идентификатор XML  
+## <a name="generated-xml"></a>Созданный идентификатор XML  
  В качестве примера рассмотрим следующий объект:  
   
 ```  
@@ -36,12 +39,11 @@ public class X
 public class SomeClass   
 {  
 }  
-  
 ```  
   
- Если <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> задано как `false` \(по умолчанию\), создается следующий код XML:  
+ Если <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> задано как `false` (по умолчанию), создается следующий код XML:  
   
-```  
+```xml  
 <X>  
    <A>contents of someInstance</A>  
    <B>contents of someInstance</B>  
@@ -50,7 +52,7 @@ public class SomeClass
   
  Если <xref:System.Runtime.Serialization.DataContractSerializer.PreserveObjectReferences%2A> задано как `true`, создается следующий код XML:  
   
-```  
+```xml  
 <X>  
    <A id="1">contents of someInstance</A>  
    <B ref="1" />  
@@ -59,8 +61,8 @@ public class SomeClass
   
  Однако <xref:System.Runtime.Serialization.XsdDataContractExporter> не описывает атрибуты `id` и `ref` в этой схеме, даже если свойство `preserveObjectReferences` задано как `true`.  
   
-## Использование IsReference  
- Чтобы создать информацию о ссылке на объект, допустимую согласно схеме, которая ее описывает, примените атрибут <xref:System.Runtime.Serialization.DataContractAttribute> к типу и задайте флаг <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> как `true`.  Использование `IsReference` в предыдущем примере класса `X`:  
+## <a name="using-isreference"></a>Использование IsReference  
+ Чтобы создать информацию о ссылке на объект, допустимую согласно схеме, которая ее описывает, примените атрибут <xref:System.Runtime.Serialization.DataContractAttribute> к типу и задайте флаг <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> как `true`. Использование `IsReference` в предыдущем примере класса `X`:  
   
  `[DataContract(IsReference=true)] public class X`  
   
@@ -100,10 +102,10 @@ public class SomeClass
   
  `</X>`  
   
- Использование `IsReference` обеспечивает совместимость для цикла обработки сообщений.  В противном случае при создании типа из схемы то, что отправляется обратно как XML для этого типа, может быть несовместимым с изначально предполагаемой схемой.  Другими словами, несмотря на сериализацию атрибутов `id` и `ref`, первоначальная схема могла предотвратить появление этих атрибутов \(или всех атрибутов\) в XML.  Когда `IsReference` применен к члену данных, во время передачи туда и обратно член по\-прежнему распознается как член, на который можно дать ссылку.  
+ Использование `IsReference` обеспечивает совместимость для цикла обработки сообщений. В противном случае при создании типа из схемы то, что отправляется обратно как XML для этого типа, может быть несовместимым с изначально предполагаемой схемой. Другими словами, несмотря на сериализацию атрибутов `id` и `ref`, первоначальная схема могла предотвратить появление этих атрибутов (или всех атрибутов) в XML. Когда `IsReference` применен к члену данных, во время передачи туда и обратно член по-прежнему распознается как член, на который можно дать ссылку.  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>   
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.CollectionDataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>

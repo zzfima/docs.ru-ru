@@ -1,39 +1,39 @@
 ---
-title: "Архитектура элемента управления ToolStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolStrip - элемент управления [Windows Forms], архитектура"
+title: "Архитектура элемента управления ToolStrip"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-caps.latest.revision: 32
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6884598e6b883ab5e6369be5f2f796a194c7f930
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Архитектура элемента управления ToolStrip
-Классы <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.ToolStripItem> предоставляют гибкую, расширяемую систему для отображения пунктов меню, панели инструментов и строки состояния.  Все эти классы содержатся в пространстве имен <xref:System.Windows.Forms> и обычно именуются с префиксом "ToolStrip" \(например, <xref:System.Windows.Forms.ToolStripOverflow>\) или суффиксом "Strip" \(например, <xref:System.Windows.Forms.MenuStrip>\).  
+# <a name="toolstrip-control-architecture"></a>Архитектура элемента управления ToolStrip
+<xref:System.Windows.Forms.ToolStrip> И <xref:System.Windows.Forms.ToolStripItem> классы предоставляют гибкую расширяемую систему для отображения элементов на панели инструментов, меню и строки состояния. Эти классы содержатся в <xref:System.Windows.Forms> пространство имен и они обычно именуются с префиксом «ToolStrip» (такие как <xref:System.Windows.Forms.ToolStripOverflow>) или с суффиксом «Полосы» (например, <xref:System.Windows.Forms.MenuStrip>).  
   
-## ToolStrip  
- В следующих разделах описывается <xref:System.Windows.Forms.ToolStrip> и производные от него элементы управления.  
+## <a name="toolstrip"></a>ToolStrip  
+ В следующих разделах описываются <xref:System.Windows.Forms.ToolStrip> и элементов управления, производных от него.  
   
- <xref:System.Windows.Forms.ToolStrip> является абстрактным базовым классом для <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip> и <xref:System.Windows.Forms.ContextMenuStrip>.  В следующей объектной модели показана иерархия наследования <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStrip>— Абстрактный базовый класс для <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, и <xref:System.Windows.Forms.ContextMenuStrip>. Следующие объектной модели показана <xref:System.Windows.Forms.ToolStrip> иерархии наследования.  
   
- ![Модель объекта ToolStrip](../../../../docs/framework/winforms/controls/media/toolstripobjectmodel.png "ToolStripObjectModel")  
-Модель объекта ToolStrip  
+ ![Модель объекта ToolStrip](../../../../docs/framework/winforms/controls/media/toolstripobjectmodel.gif "ToolStripObjectModel")  
+Объектная модель элемента управления ToolStrip  
   
- Можно получить доступ ко всем элементам <xref:System.Windows.Forms.ToolStrip> с помощью коллекции <xref:System.Windows.Forms.ToolStrip.Items%2A>.  Можно получить доступ ко всем элементам <xref:System.Windows.Forms.ToolStripDropDownItem> с помощью коллекции <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A>.  В классе, производном от <xref:System.Windows.Forms.ToolStrip>, свойство <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> можно использовать только для доступа к элементам, отображаемым в данный момент.  Это элементы, которые не находятся в настоящий момент в меню переполнения.  
+ Доступны все элементы в <xref:System.Windows.Forms.ToolStrip> через <xref:System.Windows.Forms.ToolStrip.Items%2A> коллекции. Доступны все элементы в <xref:System.Windows.Forms.ToolStripDropDownItem> через <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> коллекции. В классе, производном от <xref:System.Windows.Forms.ToolStrip>, можно также использовать <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> свойство для доступа к только элементов, отображаемых в текущий момент. Ниже перечислены элементы, которые в настоящее время не находятся в меню переполнения.  
   
- Следующие элементы специально предназначены для универсального применения с объектами <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех ориентациях.  По умолчанию они доступны во время разработки для элемента управления <xref:System.Windows.Forms.ToolStrip>:  
+ Следующие элементы специально предназначены для интегрированной работы с <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех направлениях. Они доступны по умолчанию во время разработки для <xref:System.Windows.Forms.ToolStrip> управления:  
   
 -   <xref:System.Windows.Forms.ToolStripButton>  
   
@@ -49,10 +49,10 @@ caps.handback.revision: 32
   
 -   <xref:System.Windows.Forms.ToolStripComboBox>  
   
-### MenuStrip  
- <xref:System.Windows.Forms.MenuStrip> является контейнером верхнего уровня, замещающим <xref:System.Windows.Forms.MainMenu>.  Он также предоставляет возможности управления ключами и возможности интерфейса MDI.  Функционально <xref:System.Windows.Forms.ToolStripDropDownItem> и <xref:System.Windows.Forms.ToolStripMenuItem> работают вместе с <xref:System.Windows.Forms.MenuStrip>, несмотря на то, что являются производными от <xref:System.Windows.Forms.ToolStripItem>.  
+### <a name="menustrip"></a>MenuStrip  
+ <xref:System.Windows.Forms.MenuStrip>является контейнером верхнего уровня, которое заменяет <xref:System.Windows.Forms.MainMenu>. Он также предоставляет управления ключами и несколько документов возможности интерфейса (MDI). С функциональной <xref:System.Windows.Forms.ToolStripDropDownItem> и <xref:System.Windows.Forms.ToolStripMenuItem> работают вместе с <xref:System.Windows.Forms.MenuStrip>, несмотря на то, что они являются производными от <xref:System.Windows.Forms.ToolStripItem>.  
   
- Следующие элементы специально предназначены для универсального применения с объектами <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех ориентациях.  По умолчанию они доступны во время разработки для элемента управления <xref:System.Windows.Forms.MenuStrip>:  
+ Следующие элементы специально предназначены для интегрированной работы с <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех направлениях. Они доступны по умолчанию во время разработки для <xref:System.Windows.Forms.MenuStrip> управления:  
   
 -   <xref:System.Windows.Forms.ToolStripMenuItem>  
   
@@ -60,10 +60,10 @@ caps.handback.revision: 32
   
 -   <xref:System.Windows.Forms.ToolStripComboBox>  
   
-### StatusStrip  
- <xref:System.Windows.Forms.StatusStrip> заменяет элемент управления <xref:System.Windows.Forms.StatusBar>.  Специальные возможности <xref:System.Windows.Forms.StatusStrip> включают пользовательскую структуру таблицы, поддержку изменения размера формы и перемещения захватов, а также свойство `Spring` позволяющее <xref:System.Windows.Forms.ToolStripStatusLabel> автоматически заполнять доступное место.  
+### <a name="statusstrip"></a>StatusStrip  
+ <xref:System.Windows.Forms.StatusStrip>заменяет <xref:System.Windows.Forms.StatusBar> элемента управления. Специальные возможности <xref:System.Windows.Forms.StatusStrip> включают пользовательскую структуру таблицы, поддержку изменения размера и перемещения захватов, формы и `Spring` свойство, которое обеспечивает <xref:System.Windows.Forms.ToolStripStatusLabel> для автоматического заполнения доступного пространства.  
   
- Следующие элементы специально предназначены для универсального применения с объектами <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех ориентациях.  По умолчанию они доступны во время разработки для элемента управления <xref:System.Windows.Forms.StatusStrip>:  
+ Следующие элементы специально предназначены для интегрированной работы с <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех направлениях. Они доступны по умолчанию во время разработки для <xref:System.Windows.Forms.StatusStrip> управления:  
   
 -   <xref:System.Windows.Forms.ToolStripStatusLabel>  
   
@@ -73,10 +73,10 @@ caps.handback.revision: 32
   
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
-### ContextMenuStrip  
- Объект <xref:System.Windows.Forms.ContextMenuStrip> заменяет <xref:System.Windows.Forms.ContextMenu>.  <xref:System.Windows.Forms.ContextMenuStrip> можно привязать к любому элементу управления. Щелчок правой кнопкой мыши будет автоматически выводить на экран всплывающее меню \(или контекстное меню\).  Объект <xref:System.Windows.Forms.ContextMenuStrip> можно отобразить программным путем с помощью метода <xref:System.Windows.Forms.ToolStripDropDown.Show%2A>.  <xref:System.Windows.Forms.ContextMenuStrip> поддерживает события <xref:System.Windows.Forms.ToolStripDropDown.Opening> и <xref:System.Windows.Forms.ToolStripDropDown.Closing> с возможностью отмены, чтобы обрабатывать динамическое заполнение и ситуации с несколькими щелчками.  <xref:System.Windows.Forms.ContextMenuStrip> поддерживает изображения, установку флажков для элементов меню, текст, клавиши доступа, сочетания клавиш и вложенные меню.  
+### <a name="contextmenustrip"></a>ContextMenuStrip  
+ <xref:System.Windows.Forms.ContextMenuStrip>заменяет <xref:System.Windows.Forms.ContextMenu>. Можно связать <xref:System.Windows.Forms.ContextMenuStrip> с любым элементом управления и правой кнопкой мыши щелкните автоматически отображает контекстное меню (или контекстное меню). Можно показать <xref:System.Windows.Forms.ContextMenuStrip> программно с помощью <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> метод. <xref:System.Windows.Forms.ContextMenuStrip>поддерживает отменяемого <xref:System.Windows.Forms.ToolStripDropDown.Opening> и <xref:System.Windows.Forms.ToolStripDropDown.Closing> событий для обработки динамическое заполнение и ситуации с несколькими щелчками. <xref:System.Windows.Forms.ContextMenuStrip>поддерживает изображения, состояние пометки элемента меню, текст, клавиши доступа, сочетания клавиш и вложенные меню.  
   
- Следующие элементы специально предназначены для универсального применения с объектами <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех ориентациях.  По умолчанию они доступны во время разработки для элемента управления <xref:System.Windows.Forms.ContextMenuStrip>:  
+ Следующие элементы специально предназначены для интегрированной работы с <xref:System.Windows.Forms.ToolStripSystemRenderer> и <xref:System.Windows.Forms.ToolStripProfessionalRenderer> во всех направлениях. Они доступны по умолчанию во время разработки для <xref:System.Windows.Forms.ContextMenuStrip> управления:  
   
 -   <xref:System.Windows.Forms.ToolStripMenuItem>  
   
@@ -86,34 +86,34 @@ caps.handback.revision: 32
   
 -   <xref:System.Windows.Forms.ToolStripComboBox>  
   
-### Общие возможности ToolStrip  
- В следующих разделах описываются возможности и поведение, являющиеся общими для <xref:System.Windows.Forms.ToolStrip> и производных элементов управления.  
+### <a name="toolstrip-generic-features"></a>Функции универсального элемента управления ToolStrip  
+ Описываются возможности и поведение, являющиеся общими для <xref:System.Windows.Forms.ToolStrip> и производных элементов управления.  
   
-#### Рисование  
- Пользовательское рисование в элементе управления <xref:System.Windows.Forms.ToolStrip> можно выполнять несколькими способами.  Как и другие элементы управления Windows Forms, <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.ToolStripItem> обладают переопределяемыми методами `OnPaint` и событиями `Paint`.  Как и в стандартной отрисовке, система координат привязана к клиентской области элемента управления, и началом координат \(0, 0\) служит левый верхний угол элемента управления.  Событие `Paint` и метод `OnPaint` для элементов <xref:System.Windows.Forms.ToolStripItem> работают аналогично другим событиям отрисовки элементов управления.  
+#### <a name="painting"></a>Рисование  
+ Можно сделать пользовательское оформление в <xref:System.Windows.Forms.ToolStrip> элементы управления несколькими способами. Как и для других элементов управления Windows Forms, <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.ToolStripItem> обладают переопределяемыми `OnPaint` методы и `Paint` события. Как при обычном рисовании система координат определяется относительно клиентской области элемента управления; левый верхний угол элемента управления является 0, 0. `Paint` Событий и `OnPaint` метод <xref:System.Windows.Forms.ToolStripItem> ведут себя как другие события рисования элемента управления.  
   
- Элемент управления <xref:System.Windows.Forms.ToolStrip> также предоставляет более подробный доступ к отрисовке элементов и контейнера с помощью класса <xref:System.Windows.Forms.ToolStripRenderer>, который обеспечивает переопределяемые методы рисования фона, фона элемента, изображения элемента, стрелки элемента, текста элемента и границы <xref:System.Windows.Forms.ToolStrip>.  Аргументы события таких методов предоставляют доступ к ряду свойств, таких как прямоугольники, цвета и текстовые форматы, которые можно настраивать нужным образом.  
+ <xref:System.Windows.Forms.ToolStrip> Элементов управления также предоставляет более подробный доступ к отрисовке элементов и контейнера с помощью <xref:System.Windows.Forms.ToolStripRenderer> класс, имеющий переопределяемые методы рисования фона, фоновый цвет элемента, изображения элемента, стрелки элемента, текста элемента и границей <xref:System.Windows.Forms.ToolStrip>. Аргументы событий для этих методов предоставляют несколько свойств, таких как прямоугольники, цвета и текстовые форматы, которые можно настроить желаемым образом.  
   
- Чтобы настроить только некоторые аспекты рисования элемента, обычно переопределяется класс <xref:System.Windows.Forms.ToolStripRenderer>.  
+ Чтобы настроить некоторые аспекты способ рисования элемента, обычно переопределяется <xref:System.Windows.Forms.ToolStripRenderer>.  
   
- Если при написании нового элемента требуется управление всеми аспектами рисования, можно переопределить метод `OnPaint`.  В методе `OnPaint` можно использовать методы из класса <xref:System.Windows.Forms.ToolStripRenderer>.  
+ При написании нового элемента и для управления всеми аспектами рисования, переопределить `OnPaint` метод. Изнутри `OnPaint`, можно использовать методы из <xref:System.Windows.Forms.ToolStripRenderer>.  
   
- Для <xref:System.Windows.Forms.ToolStrip> по умолчанию включена двойная буферизация для получения всех преимуществ параметра <xref:System.Windows.Forms.ControlStyles>.  
+ По умолчанию <xref:System.Windows.Forms.ToolStrip> включена двойная буферизация преимуществами <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> параметр.  
   
-#### Родительские связи  
- Понятия родительских связей и владения контейнером в элементах управления <xref:System.Windows.Forms.ToolStrip> более сложны, чем в других элементах управления контейнером Windows Forms.  Это требуется для поддержки динамических сценариев, например переполнения, совместного использования раскрывающихся элементов несколькими элементами <xref:System.Windows.Forms.ToolStrip> и поддержки генерации <xref:System.Windows.Forms.ContextMenuStrip> из элемента управления.  
+#### <a name="parenting"></a>Родительские связи  
+ Концепция родительских связей и владения контейнером является более сложными <xref:System.Windows.Forms.ToolStrip> определяет, чем в других контейнерных элементов управления Windows Forms. Это требуется для поддержки динамических сценариев, например переполнения, совместного использования элементов раскрывающегося списка в нескольких <xref:System.Windows.Forms.ToolStrip> элементов, а также для поддержки создания <xref:System.Windows.Forms.ContextMenuStrip> из элемента управления.  
   
- В следующем списке приводится описание членов, связанных родительскими связями, с объяснением их использования.  
+ В следующем списке описываются элементы, связанные с родительских связей и объясняет их использование.  
   
--   <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A> осуществляет доступ к элементу, который является источником раскрывающегося элемента.  Это похоже на <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>, но вместо элемента управления возвращается <xref:System.Windows.Forms.ToolStripItem>.  
+-   <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A>Получает элемент, который является источником раскрывающегося элемента. Это похоже на <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>, но вместо возвращения элемента управления, он возвращает <xref:System.Windows.Forms.ToolStripItem>.  
   
--   <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A> определяет, какой из элементов управления является источником для <xref:System.Windows.Forms.ContextMenuStrip> при совместном использовании <xref:System.Windows.Forms.ContextMenuStrip> несколькими элементами управления.  
+-   <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>Определяет, какой элемент управления является источником для <xref:System.Windows.Forms.ContextMenuStrip> при нескольких элементов управления имеют одинаковое <xref:System.Windows.Forms.ContextMenuStrip>.  
   
--   <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A> является методом доступа только для чтения к свойству <xref:System.Windows.Forms.ToolStripItem.Parent%2A>.  Родительский элемент отличается от владельца тем, что родительский элемент обозначает возвращенный текущий <xref:System.Windows.Forms.ToolStrip>, в котором отображается элемент \(это может производиться в области переполнения\).  
+-   <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A>метод доступа только для чтения к <xref:System.Windows.Forms.ToolStripItem.Parent%2A> свойство. Родительский элемент отличается от владельца, что родительский элемент обозначает возвращенный текущий <xref:System.Windows.Forms.ToolStrip> , в котором отображается элемент, который может быть в области переполнения.  
   
--   <xref:System.Windows.Forms.ToolStripItem.Owner%2A> возвращает <xref:System.Windows.Forms.ToolStrip>, коллекция элементов которого содержит текущий <xref:System.Windows.Forms.ToolStripItem>.  Это лучший способ создания ссылки на <xref:System.Windows.Forms.ToolStrip.ImageList%2A> или на другие свойства в <xref:System.Windows.Forms.ToolStrip> верхнего уровня, не требующий написания специальных кодов обработки переполнения.  
+-   <xref:System.Windows.Forms.ToolStripItem.Owner%2A>Возвращает <xref:System.Windows.Forms.ToolStrip> коллекция элементов которого содержит текущий <xref:System.Windows.Forms.ToolStripItem>. Это лучший способ ссылки <xref:System.Windows.Forms.ToolStrip.ImageList%2A> или других свойств на верхнем уровне <xref:System.Windows.Forms.ToolStrip> без написания специального кода обработки переполнения.  
   
-#### Поведение унаследованных элементов управления  
+#### <a name="behavior-of-inherited-controls"></a>Поведение унаследованных элементов управления  
  Следующие элементы управления блокируются при каждом использовании в наследовании:  
   
 -   <xref:System.Windows.Forms.ToolStrip>  
@@ -124,156 +124,156 @@ caps.handback.revision: 32
   
 -   <xref:System.Windows.Forms.StatusStrip>  
   
--   <xref:System.Windows.Forms.ToolStripPanel> содержит в <xref:System.Windows.Forms.ToolStripContainer> панели, а также отдельные элементы управления <xref:System.Windows.Forms.ToolStripPanel>.  
+-   <xref:System.Windows.Forms.ToolStripPanel>включающий панелей в <xref:System.Windows.Forms.ToolStripContainer> а также отдельные <xref:System.Windows.Forms.ToolStripPanel> элементов управления.  
   
- Например, создайте новое приложение Windows Forms, используя один или несколько элементов управления из приведенного выше списка.  Задайте `public` или `protected` в качестве значения модификатора доступа одного или нескольких элементов управления, затем выполните построение проекта.  Добавьте форму, наследуемую из первой формы, затем выберите наследуемый элемент управления.  Элемент управления станет заблокированным, как если бы модификатору доступа было установлено значение `private`.  
+ Например создайте новое приложение Windows Forms с помощью одного или нескольких элементов управления из приведенного выше списка. Задайте модификатор доступа одного или нескольких элементов управления для `public` или `protected`, а затем постройте проект. Добавьте форму, которая наследуется из первой формы, а затем выберите наследуемый элемент управления. Элемент управления выглядит заблокированным, как если бы модификатору доступа было `private`.  
   
-#### Поддержка наследования ToolStripContainer  
- Элемент управления <xref:System.Windows.Forms.ToolStripContainer> поддерживает ограниченные сценарии наследования, подобные приведенным в следующем примере:  
+#### <a name="toolstripcontainer-support-of-inheritance"></a>Поддержка ToolStripContainer наследования  
+ <xref:System.Windows.Forms.ToolStripContainer> Элемент управления поддерживает ограниченные сценарии наследования, аналогичный приведенному ниже:  
   
-1.  Создание нового приложения Windows Forms.  
+1.  Создайте новое приложение Windows Forms.  
   
-2.  Добавьте элемент <xref:System.Windows.Forms.ToolStripContainer> в форму.  
+2.  Добавьте на форму элемент <xref:System.Windows.Forms.ToolStripContainer>.  
   
-3.  Задайте для модификатора доступа к <xref:System.Windows.Forms.ToolStripContainer> значение `public` или `protected`.  
+3.  Задайте модификатор доступа для <xref:System.Windows.Forms.ToolStripContainer> для `public` или `protected`.  
   
-4.  Добавьте любую комбинацию элементов управления <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> в области <xref:System.Windows.Forms.ToolStripPanel> для <xref:System.Windows.Forms.ToolStripContainer>.  
+4.  Добавьте любое сочетание <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, и <xref:System.Windows.Forms.ContextMenuStrip> элементы управления <xref:System.Windows.Forms.ToolStripPanel> областей <xref:System.Windows.Forms.ToolStripContainer>.  
   
 5.  Выполните построение проекта.  
   
 6.  Добавьте форму, которая наследуется из первой формы.  
   
-7.  Выберите унаследованный <xref:System.Windows.Forms.ToolStripContainer> в форме.  
+7.  Выберите наследуемого <xref:System.Windows.Forms.ToolStripContainer> в форме.  
   
-#### Унаследованное поведение дочерних элементов управления  
- После выполнения предыдущих шагов будет наблюдаться следующее унаследованное поведение:  
+#### <a name="inherited-behavior-of-child-controls"></a>Унаследованное поведение дочерних элементов управления  
+ После выполнения предыдущих шагов, наследуемые происходит следующее:  
   
--   Элемент управления появится в конструкторе с унаследованным значком.  
+-   В конструкторе отображается элемент управления с унаследованным значком.  
   
--   Элементы управления <xref:System.Windows.Forms.ToolStripPanel> блокируются, выбирать или изменять порядок их содержимого невозможно.  
+-   <xref:System.Windows.Forms.ToolStripPanel> Заблокированные элементы управления, недоступны для выбора или изменения порядка их содержимое.  
   
--   Можно добавлять элементы управления к <xref:System.Windows.Forms.ToolStripContentPanel>, перемещать элементы управления и делать их дочерними элементами управления элемента <xref:System.Windows.Forms.ToolStripContentPanel>.  
+-   Можно добавить элементы управления для <xref:System.Windows.Forms.ToolStripContentPanel>, перемещать элементы управления и сделать их дочерние элементы управления <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 -   Изменения сохранятся после сборки формы.  
   
     > [!NOTE]
-    >  Удалите модификатор доступа из всех элементов управления <xref:System.Windows.Forms.ToolStripPanel>, являющихся частью <xref:System.Windows.Forms.ToolStripContainer>.  Модификатор доступа к <xref:System.Windows.Forms.ToolStripContainer> управляет всем элементом управления.  
+    >  Удалите модификатор доступа из всех <xref:System.Windows.Forms.ToolStripPanel> элементов управления, которые являются частью <xref:System.Windows.Forms.ToolStripContainer>. Модификатор доступа для <xref:System.Windows.Forms.ToolStripContainer> управляет весь элемент управления.  
   
-#### Частичное доверие  
- Ограничения `ToolStrip` при частичном доверии позволяют предотвратить случайный ввод личных сведений, которые могут быть использованы неавторизованными пользователями или службами.  Используются следующие защитные меры:  
+#### <a name="partial-trust"></a>Частичное доверие  
+ Ограничения `ToolStrip`при частичном доверии позволяют предотвратить случайный ввод личных сведений, которые могут быть использованы неавторизованными пользователями или службами. Защитные меры, как показано ниже:  
   
--   Элементам управления `ToolStripDropDown` требуется <xref:System.Security.Permissions.UIPermissionWindow> для отображения элементов в <xref:System.Windows.Forms.ToolStripControlHost>.  Это относится как ко встроенным элементам управления, например, <xref:System.Windows.Forms.ToolStripTextBox>, <xref:System.Windows.Forms.ToolStripComboBox> и <xref:System.Windows.Forms.ToolStripProgressBar>, так и к элементам управления, созданным пользователем.  Если данное требование не удовлетворяется, эти элементы не отображаются.  Исключение не создается.  
+-   `ToolStripDropDown`элементы управления требуют <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> для отображения элементов в <xref:System.Windows.Forms.ToolStripControlHost>. Это относится к обоих встроенные элементы управления, такие как <xref:System.Windows.Forms.ToolStripTextBox>, <xref:System.Windows.Forms.ToolStripComboBox>, и <xref:System.Windows.Forms.ToolStripProgressBar> как хорошо созданным пользователем элементы управления. Если это требование не выполнено, эти элементы не отображаются. Исключение не возникает.  
   
--   Задание свойству <xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A> значения `false` не разрешается, а отменяемый параметр события <xref:System.Windows.Forms.ToolStripDropDown.Closing> игнорируется.  Это не позволяет вводить более одного нажатия клавиш без отключения раскрывающегося элемента.  Если данное требование не удовлетворяется, такие элементы не отображаются.  Исключение не создается.  
+-   Установка <xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A> свойства `false` не разрешен, а Отменяемый <xref:System.Windows.Forms.ToolStripDropDown.Closing> событие параметр учитывается. Это делает невозможным ввод более одного нажатия клавиш без отключения раскрывающегося элемента. Если это требование не соблюдается, то такие элементы не отображаются. Исключение не возникает.  
   
--   Многие элементы обработки нажатий клавиш не вызываются, если они появляются в контексте с частичным доверием, отличном от <xref:System.Security.Permissions.UIPermissionWindow>.  
+-   Многие нажатие клавиши, обработка событий не вызываются, если они встречаются в контексте с частичным доверием, отличный от <xref:System.Security.Permissions.UIPermissionWindow.AllWindows>.  
   
--   Клавиши доступа не обрабатываются, если не получено <xref:System.Security.Permissions.UIPermissionWindow>.  
+-   Клавиши доступа не обрабатываются, если <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> не предоставляется.  
   
-#### Использование  
- Следующие шаблоны использования влияют на структуру <xref:System.Windows.Forms.ToolStrip>, взаимодействие с клавиатурой и пользовательское поведение:  
+#### <a name="usage"></a>Использование  
+ Следующие шаблоны использования иметь влияют на <xref:System.Windows.Forms.ToolStrip> макет, взаимодействие с клавиатурой и пользовательское поведение:  
   
--   Объединение в <xref:System.Windows.Forms.ToolStripPanel>  
+-   Объединить<xref:System.Windows.Forms.ToolStripPanel>  
   
-     Положение <xref:System.Windows.Forms.ToolStrip> можно изменять внутри <xref:System.Windows.Forms.ToolStripPanel> и между панелями <xref:System.Windows.Forms.ToolStripPanel>.  Свойство `Dock` игнорируется, а если свойство <xref:System.Windows.Forms.ToolStrip.Stretch%2A> равняется `false`, размер <xref:System.Windows.Forms.ToolStrip> увеличивается по мере добавления элементов на <xref:System.Windows.Forms.ToolStripPanel>.  Обычно <xref:System.Windows.Forms.ToolStrip> не участвует в последовательности перехода.  
+     <xref:System.Windows.Forms.ToolStrip> Может быть перемещен в пределах <xref:System.Windows.Forms.ToolStripPanel> и через <xref:System.Windows.Forms.ToolStripPanel>s. `Dock` Свойство игнорируется и если <xref:System.Windows.Forms.ToolStrip.Stretch%2A> свойство `false`, размер <xref:System.Windows.Forms.ToolStrip> увеличивается по мере добавления элементов <xref:System.Windows.Forms.ToolStripPanel>. Как правило <xref:System.Windows.Forms.ToolStrip> не участвует в последовательности табуляции.  
   
--   Закрепление  
+-   Закрепленное  
   
-     <xref:System.Windows.Forms.ToolStrip> помещается с одной стороны контейнера в фиксированном положении, а его размер увеличивается по всему краю закрепления.  Обычно <xref:System.Windows.Forms.ToolStrip> не участвует в последовательности перехода.  
+     <xref:System.Windows.Forms.ToolStrip> Помещается на одной стороне контейнера в фиксированном положении, а его размер увеличивается по всему краю, к которой она закреплена. Как правило <xref:System.Windows.Forms.ToolStrip> не участвует в последовательности табуляции.  
   
--   Абсолютное положение  
+-   Абсолютное позиционирование  
   
-     <xref:System.Windows.Forms.ToolStrip> аналогичен другим элементам управления. При размещении свойством <xref:System.Windows.Forms.Control.Location%2A> он приобретает фиксированный размер и обычно участвует в последовательности перехода.  
+     <xref:System.Windows.Forms.ToolStrip> — Как и другие элементы управления, в том, что он помещает <xref:System.Windows.Forms.Control.Location%2A> , имеет фиксированный размер и обычно участвует в последовательности табуляции.  
   
-#### Взаимодействие с клавиатурой  
+#### <a name="keyboard-interaction"></a>Взаимодействие с клавиатурой  
   
-##### Клавиши доступа  
- Сочетания клавиш позволяют активировать элемент управления с клавиатуры нажатием вместе с клавишей ALT или после нее.  <xref:System.Windows.Forms.ToolStrip> поддерживает как явные, так и неявные сочетания клавиш.  Явное определение использует символ амперсанда \(&\) перед буквой.  Неявное определение использует алгоритм, который пытается найти соответствующий элемент на основании порядка символов в данном свойстве `Text`.  
+##### <a name="access-keys"></a>Клавиши доступа  
+ Клавиши доступа, вместе с или после клавишу ALT, это единственный способ активации элемента управления с помощью клавиатуры. <xref:System.Windows.Forms.ToolStrip>поддерживает явные и неявные клавиш. Явное определение использует символ амперсанда (&) перед буквой. Неявное определение использует алгоритм, который пытается найти соответствующий элемент на основании порядка символов в данной `Text` свойство.  
   
-##### Сочетания клавиш  
- Для определения сочетания клавиш, используемого <xref:System.Windows.Forms.MenuStrip>, применяется комбинация перечисления <xref:System.Windows.Forms.Keys> \(не зависящая от порядка\).  Также можно использовать свойство <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> для отображения сочетания клавиш только с текстом, например, для отображения "Del" вместо "Delete".  
+##### <a name="shortcut-keys"></a>Сочетания клавиш  
+ Сочетания клавиш, используемые <xref:System.Windows.Forms.MenuStrip> используется сочетание <xref:System.Windows.Forms.Keys> перечисления (который не зависящая от порядка) для определения сочетания клавиш. Можно также использовать <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> свойство для отображения сочетания клавиш только с текстом, например, отображение «Del» вместо «Удалить».  
   
-##### Навигация  
- Клавиша ALT активирует <xref:System.Windows.Forms.MenuStrip> на который указывает <xref:System.Windows.Forms.Form.MainMenuStrip%2A>.  Затем сочетание клавиш CTRL\+TAB используется для перехода между элементами управления <xref:System.Windows.Forms.ToolStrip> внутри `ToolStripPanel`.  Клавиша TAB и клавиши со стрелками на цифровой клавиатуре используются для перехода между элементами в <xref:System.Windows.Forms.ToolStrip>.  Специальный алгоритм обрабатывает навигацию в области переполнения.  Пробел используется для выбора <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton> или <xref:System.Windows.Forms.ToolStripSplitButton>.  
+##### <a name="navigation"></a>Навигация  
+ Клавиша ALT активирует <xref:System.Windows.Forms.MenuStrip> , на который указывает <xref:System.Windows.Forms.Form.MainMenuStrip%2A>. Здесь сочетание клавиш CTRL + TAB переходит между <xref:System.Windows.Forms.ToolStrip> управления внутри `ToolStripPanel`s. Нажатие клавиши TAB и клавиш со стрелками на цифровой клавиатуре переходить между элементами в <xref:System.Windows.Forms.ToolStrip>. Специальный алгоритм обрабатывает навигацию в области переполнения. Выбирает пробел <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, или <xref:System.Windows.Forms.ToolStripSplitButton>.  
   
-##### Фокус и проверки  
- При активации клавишей ALT, <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ToolStrip> обычно не переключает фокус с элемента управления, на котором в данный момент находится фокус.  Если имеется элемент управления, размещенный в <xref:System.Windows.Forms.MenuStrip> или в раскрывающемся элементе <xref:System.Windows.Forms.MenuStrip>, то фокус переходит на элемент управления, когда пользователь нажимает клавишу TAB.  В общем случае события <xref:System.Windows.Forms.Control.GotFocus>, <xref:System.Windows.Forms.Control.LostFocus>, <xref:System.Windows.Forms.Control.Enter> и <xref:System.Windows.Forms.Control.Leave>, относящиеся к <xref:System.Windows.Forms.MenuStrip>, могут быть не вызваны при активации с клавиатуры.  В таких случаях вместо них следует использовать события <xref:System.Windows.Forms.MenuStrip.MenuActivate> и <xref:System.Windows.Forms.MenuStrip.MenuDeactivate>.  
+##### <a name="focus-and-validation"></a>Фокус и проверки  
+ При активации клавишей ALT <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ToolStrip> обычно не переключает фокус с элемента управления, который в настоящее время находится в фокусе. Если имеется элемент управления, размещенные на <xref:System.Windows.Forms.MenuStrip> или раскрывающемся <xref:System.Windows.Forms.MenuStrip>, элемент управления получает фокус, когда пользователь нажимает клавишу TAB. Как правило <xref:System.Windows.Forms.Control.GotFocus>, <xref:System.Windows.Forms.Control.LostFocus>, <xref:System.Windows.Forms.Control.Enter>, и <xref:System.Windows.Forms.Control.Leave> события <xref:System.Windows.Forms.MenuStrip> могут не возникать при активации с помощью клавиатуры. В таких случаях использовать <xref:System.Windows.Forms.MenuStrip.MenuActivate> и <xref:System.Windows.Forms.MenuStrip.MenuDeactivate> события вместо него.  
   
- По умолчанию параметр <xref:System.Windows.Forms.ToolStrip.CausesValidation%2A> имеет значение `false`.  Чтобы выполнить проверку, явно вызовите <xref:System.Windows.Forms.ContainerControl.Validate%2A> на форме.  
+ По умолчанию <xref:System.Windows.Forms.ToolStrip.CausesValidation%2A> — `false`. Вызовите <xref:System.Windows.Forms.ContainerControl.Validate%2A> явным образом в форме для выполнения проверки.  
   
-#### Макет  
- Чтобы управлять структурой <xref:System.Windows.Forms.ToolStrip>, выберите один из членов <xref:System.Windows.Forms.ToolStripLayoutStyle> со свойством <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>.  
+#### <a name="layout"></a>Макет  
+ Вы управляете <xref:System.Windows.Forms.ToolStrip> макета, выбрав один из членов <xref:System.Windows.Forms.ToolStripLayoutStyle> с <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> свойство.  
   
-##### Макеты "Стопка"  
- Размещение в стопку — это расположение элементов рядом друг с другом между концами <xref:System.Windows.Forms.ToolStrip>.  В следующем списке описываются типы размещения в стопку.  
+##### <a name="stack-layouts"></a>Макеты стека  
+ Размещения — это расположение элементов рядом друг с другом на обоих концах <xref:System.Windows.Forms.ToolStrip>. Следующий список описывает макеты стека.  
   
--   По умолчанию — <xref:System.Windows.Forms.ToolStripLayoutStyle>.  Эта настройка приводит к автоматическому изменению макета <xref:System.Windows.Forms.ToolStrip> в соответствии со свойством <xref:System.Windows.Forms.ToolStrip.Orientation%2A> для обработки скриптов перетаскивания и закрепления.  
+-   Значение по умолчанию — <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow>. Этот параметр вызывает <xref:System.Windows.Forms.ToolStrip> изменять его макет автоматически в соответствии с <xref:System.Windows.Forms.ToolStrip.Orientation%2A> свойства для обработки скриптов перетаскивания и закрепления.  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle> отображает элементы <xref:System.Windows.Forms.ToolStrip> по вертикали рядом друг с другом.  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>Подготавливает к просмотру <xref:System.Windows.Forms.ToolStrip> элементы рядом друг с другом по вертикали.  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle> отображает элементы <xref:System.Windows.Forms.ToolStrip> по горизонтали рядом друг с другом.  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow>Подготавливает к просмотру <xref:System.Windows.Forms.ToolStrip> элементы рядом друг с другом по горизонтали.  
   
-##### Другие функции макетов "стопка"  
- <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> определяет конец объекта <xref:System.Windows.Forms.ToolStrip>, по которому выравнивается элемент.  
+##### <a name="other-features-of-stack-layouts"></a>Другие функции макетов стека  
+ <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>Определяет конец <xref:System.Windows.Forms.ToolStrip> выравнивание элемента.  
   
- Если элементы не помещаются внутри <xref:System.Windows.Forms.ToolStrip>, автоматически появляется кнопка переполнения.  Значение свойства <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> определяет, отображается ли элемент в области переполнения при необходимости.  
+ Если элементы не соответствуют размерам <xref:System.Windows.Forms.ToolStrip>, автоматически появляется кнопка переполнения. <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> Значение свойства определяет, отображается ли элемент в области переполнения при необходимости или никогда.  
   
- В событии <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> можно проверить свойство <xref:System.Windows.Forms.ToolStripItem.Placement%2A>, чтобы определить, расположен элемент в основном <xref:System.Windows.Forms.ToolStrip>, в области переполнения <xref:System.Windows.Forms.ToolStrip>, или не отображается в данный момент.  Обычно элемент может не отображаться, если он не помещается в основном <xref:System.Windows.Forms.ToolStrip> и его свойству <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> было задано значение <xref:System.Windows.Forms.ToolStripItemOverflow>.  
+ В <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> событий, вы можете проверить <xref:System.Windows.Forms.ToolStripItem.Placement%2A> свойства, чтобы определить, был ли элемент расположен в основном <xref:System.Windows.Forms.ToolStrip>, переполнения <xref:System.Windows.Forms.ToolStrip>, или если она не отображается в данный момент вообще. Типичные причины, почему элемент не отображается, что он не помещается в основном <xref:System.Windows.Forms.ToolStrip> и его <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> было задано значение <xref:System.Windows.Forms.ToolStripItemOverflow.Never>.  
   
- Сделайте <xref:System.Windows.Forms.ToolStrip> перемещаемым, поместив в <xref:System.Windows.Forms.ToolStripPanel> и задав его <xref:System.Windows.Forms.ToolStrip.GripStyle%2A> значение <xref:System.Windows.Forms.ToolStripGripStyle>.  
+ Сделать <xref:System.Windows.Forms.ToolStrip> перемещаемым, поместив <xref:System.Windows.Forms.ToolStripPanel> и присвоения его <xref:System.Windows.Forms.ToolStrip.GripStyle%2A> для <xref:System.Windows.Forms.ToolStripGripStyle.Visible>.  
   
-##### Другие параметры макетов  
- Другими параметрами макетов являются <xref:System.Windows.Forms.ToolStripLayoutStyle> и <xref:System.Windows.Forms.ToolStripLayoutStyle>.  
+##### <a name="other-layout-options"></a>Другие параметры структуры  
+ Параметры макета, являются <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> и <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>.  
   
-##### Последовательное размещение  
- Макет <xref:System.Windows.Forms.ToolStripLayoutStyle> является макетом по умолчанию для <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu> и <xref:System.Windows.Forms.ToolStripOverflow>.  Такой макет аналогичен <xref:System.Windows.Forms.FlowLayoutPanel>.  Возможности макета <xref:System.Windows.Forms.ToolStripLayoutStyle> приведены ниже:  
+##### <a name="flow-layout"></a>Последовательное размещение  
+ <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow>разметка используется по умолчанию для <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, и <xref:System.Windows.Forms.ToolStripOverflow>. Это похоже на <xref:System.Windows.Forms.FlowLayoutPanel>. Функции <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> макета, следующим образом:  
   
--   Все возможности <xref:System.Windows.Forms.FlowLayoutPanel> предоставляются свойством <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>.  Класс <xref:System.Windows.Forms.LayoutSettings> необходимо привести к классу <xref:System.Windows.Forms.FlowLayoutSettings>.  
+-   Все функции <xref:System.Windows.Forms.FlowLayoutPanel> предоставляемых <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> свойство. Необходимо привести <xref:System.Windows.Forms.LayoutSettings> класса <xref:System.Windows.Forms.FlowLayoutSettings> класса.  
   
--   Свойства <xref:System.Windows.Forms.ToolStripItem.Dock%2A> и <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> можно использовать в коде для выравнивания элементов внутри строки.  
+-   Можно использовать <xref:System.Windows.Forms.ToolStripItem.Dock%2A> и <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> свойства в коде для выравнивания элементов внутри строки.  
   
--   Свойство <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> игнорируется.  
+-   Свойство <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> не учитывается.  
   
--   В событии <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> можно проверить свойство <xref:System.Windows.Forms.ToolStripItem.Placement%2A>, чтобы определить, был элемент расположен в основном <xref:System.Windows.Forms.ToolStrip> или не поместился.  
+-   В <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> событий, вы можете проверить <xref:System.Windows.Forms.ToolStripItem.Placement%2A> свойства, чтобы определить, был ли элемент расположен в основном <xref:System.Windows.Forms.ToolStrip> или не соответствующие.  
   
--   Захват не отображается, и поэтому расположение <xref:System.Windows.Forms.ToolStrip> в стиле макета <xref:System.Windows.Forms.ToolStripLayoutStyle> в <xref:System.Windows.Forms.ToolStripPanel> нельзя изменить.  
+-   Захват не отображается и поэтому <xref:System.Windows.Forms.ToolStrip> в <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> стиля макета в <xref:System.Windows.Forms.ToolStripPanel> не может быть перемещен.  
   
--   Кнопка переполнения <xref:System.Windows.Forms.ToolStrip> не отображается, а <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> игнорируется.  
+-   <xref:System.Windows.Forms.ToolStrip> Кнопки переполнения, не отображается, и <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> учитывается.  
   
-##### Табличный макет  
- Макет <xref:System.Windows.Forms.ToolStripLayoutStyle> является макетом по умолчанию для <xref:System.Windows.Forms.StatusStrip>.  Он аналогичен <xref:System.Windows.Forms.TableLayoutPanel>.  Возможности макета <xref:System.Windows.Forms.ToolStripLayoutStyle> приведены ниже:  
+##### <a name="table-layout"></a>Табличный макет  
+ <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>разметка используется по умолчанию для <xref:System.Windows.Forms.StatusStrip>. Это похоже на <xref:System.Windows.Forms.TableLayoutPanel>. Функции <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> макета, следующим образом:  
   
--   Все возможности <xref:System.Windows.Forms.TableLayoutPanel> предоставляются свойством <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>.  Класс <xref:System.Windows.Forms.LayoutSettings> необходимо привести к классу <xref:System.Windows.Forms.TableLayoutSettings>.  
+-   Все функции <xref:System.Windows.Forms.TableLayoutPanel> предоставляемых <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> свойство. Необходимо привести <xref:System.Windows.Forms.LayoutSettings> класса <xref:System.Windows.Forms.TableLayoutSettings> класса.  
   
--   Свойства <xref:System.Windows.Forms.ToolStripItem.Dock%2A> и <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> можно использовать в коде для выравнивания элементов пределах ячейки таблицы.  
+-   Можно использовать <xref:System.Windows.Forms.ToolStripItem.Dock%2A> и <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> свойствам в коде для выравнивания элементов в пределах ячейки таблицы.  
   
--   Свойство <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> игнорируется.  
+-   Свойство <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> не учитывается.  
   
--   В событии <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> можно проверить свойство <xref:System.Windows.Forms.ToolStripItem.Placement%2A>, чтобы определить, был элемент расположен в основном <xref:System.Windows.Forms.ToolStrip> или не поместился.  
+-   В <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> событий, вы можете проверить <xref:System.Windows.Forms.ToolStripItem.Placement%2A> свойства, чтобы определить, был ли элемент расположен в основном <xref:System.Windows.Forms.ToolStrip> или не соответствующие.  
   
--   Захват не отображается, и поэтому расположение <xref:System.Windows.Forms.ToolStrip> в стиле структуры <xref:System.Windows.Forms.ToolStripLayoutStyle> в <xref:System.Windows.Forms.ToolStripPanel> нельзя изменить.  
+-   Захват не отображается и поэтому <xref:System.Windows.Forms.ToolStrip> в <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> стиля макета в <xref:System.Windows.Forms.ToolStripPanel> не может быть перемещен.  
   
--   Кнопка переполнения <xref:System.Windows.Forms.ToolStrip> не отображается, а <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> игнорируется.  
+-   <xref:System.Windows.Forms.ToolStrip> Кнопки переполнения, не отображается, и <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> учитывается.  
   
-## Элемент ToolStrip  
- В следующих разделах описывается <xref:System.Windows.Forms.ToolStripItem> и производные от него элементы управления.  
+## <a name="toolstripitem"></a>ToolStripItem  
+ В следующих разделах описываются <xref:System.Windows.Forms.ToolStripItem> и элементов управления, производных от него.  
   
- <xref:System.Windows.Forms.ToolStripItem> является абстрактным базовым классом для всех элементов, входящих в <xref:System.Windows.Forms.ToolStrip>.  В следующей объектной модели показана иерархия наследования <xref:System.Windows.Forms.ToolStripItem>.  
+ <xref:System.Windows.Forms.ToolStripItem>— Абстрактный базовый класс для всех элементов, входящих в <xref:System.Windows.Forms.ToolStrip>. Следующие объектной модели показана <xref:System.Windows.Forms.ToolStripItem> иерархии наследования.  
   
- ![Модель объекта ToolStripItem](../../../../docs/framework/winforms/controls/media/toolstripitemobjectmodel.png "ToolStripItemObjectModel")  
+ ![Модель объекта ToolStripItem](../../../../docs/framework/winforms/controls/media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
 Модель объекта ToolStripItem  
   
- Классы <xref:System.Windows.Forms.ToolStripItem> наследуются напрямую из <xref:System.Windows.Forms.ToolStripItem>, или косвенно из <xref:System.Windows.Forms.ToolStripItem> с помощью <xref:System.Windows.Forms.ToolStripControlHost> или <xref:System.Windows.Forms.ToolStripDropDownItem>.  
+ <xref:System.Windows.Forms.ToolStripItem>классы наследуются напрямую из <xref:System.Windows.Forms.ToolStripItem>, или они неявно наследуют от <xref:System.Windows.Forms.ToolStripItem> через <xref:System.Windows.Forms.ToolStripControlHost> или <xref:System.Windows.Forms.ToolStripDropDownItem>.  
   
- Элементы управления <xref:System.Windows.Forms.ToolStripItem> должны содержаться в <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip> или <xref:System.Windows.Forms.ContextMenuStrip>, они не могут добавляться в форму напрямую.  Различные классы контейнеров предназначены для хранения соответствующего подмножества элементов управления <xref:System.Windows.Forms.ToolStripItem>.  
+ <xref:System.Windows.Forms.ToolStripItem>элементы управления, содержащиеся в <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, или <xref:System.Windows.Forms.ContextMenuStrip> и не может быть добавлен непосредственно в форму. Различные классы контейнеров предназначены для хранения соответствующего подмножества <xref:System.Windows.Forms.ToolStripItem> элементов управления.  
   
- В следующей таблице перечислены элементы управления хранением <xref:System.Windows.Forms.ToolStripItem> и контейнеры, лучше всего подходящие для их отображения.  Хотя любой элемент <xref:System.Windows.Forms.ToolStrip> может размещаться в любом контейнере, производном от <xref:System.Windows.Forms.ToolStrip>, внешний вид этих элементов был разработан для использования со следующими контейнерами:  
+ В следующей таблице перечислены акции <xref:System.Windows.Forms.ToolStripItem> элементов управления и контейнеры, в которых они выглядят рекомендации. Хотя любой <xref:System.Windows.Forms.ToolStrip> элемент можно разместить в любом <xref:System.Windows.Forms.ToolStrip>-контейнере, производном этих элементов был разработан для поиска наиболее в следующих контейнерах:  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripDropDown> не отображается в панели инструментов конструктора.  
+>  <xref:System.Windows.Forms.ToolStripDropDown>не отображается в области элементов конструктора.  
   
 |Элемент в контейнере|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
-|--------------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
+|--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
 |<xref:System.Windows.Forms.ToolStripButton>|Да|Нет|Нет|Нет|Да|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|Да|Да|Да|Нет|Да|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Да|Нет|Нет|Да|Да|  
@@ -286,56 +286,56 @@ caps.handback.revision: 32
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Да|Нет|Нет|Да|Нет|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|Да|Да|Нет|Да|Да|  
   
-### ToolStripButton  
- <xref:System.Windows.Forms.ToolStripButton> является элементом кнопки для <xref:System.Windows.Forms.ToolStrip>.  Этот элемент можно отображать с различными стилями границы и использовать для представления и активирования рабочих состояний.  Также можно определить наличие фокуса на этом элементе по умолчанию.  
+### <a name="toolstripbutton"></a>ToolStripButton  
+ <xref:System.Windows.Forms.ToolStripButton>является элементом кнопки для <xref:System.Windows.Forms.ToolStrip>. Его можно вывести на экран с различными стилями границы, и его можно использовать для представления и активирования рабочих состояний. Можно также определить, он должен иметь фокус по умолчанию.  
   
-### ToolStripLabel  
- <xref:System.Windows.Forms.ToolStripLabel> обеспечивает функциональные возможности метки в элементах управления <xref:System.Windows.Forms.ToolStrip>.  <xref:System.Windows.Forms.ToolStripLabel>, как и <xref:System.Windows.Forms.ToolStripButton>, не получает фокус по умолчанию и не отображается в нажатом или выделенном состоянии.  
+### <a name="toolstriplabel"></a>ToolStripLabel  
+ <xref:System.Windows.Forms.ToolStripLabel> Обеспечивает функциональные возможности метки в <xref:System.Windows.Forms.ToolStrip> элементов управления. <xref:System.Windows.Forms.ToolStripLabel> Подобно <xref:System.Windows.Forms.ToolStripButton> , не получает фокус по умолчанию и не отображается в нажатом или выделенном.  
   
- <xref:System.Windows.Forms.ToolStripLabel> поддерживает клавиши доступа, как размещенный элемент.  
+ <xref:System.Windows.Forms.ToolStripLabel>как размещенный элемент поддерживает ключи доступа.  
   
- Используйте свойства <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> и <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> на <xref:System.Windows.Forms.ToolStripLabel>, чтобы обеспечить поддержку элемента управления ссылки в <xref:System.Windows.Forms.ToolStrip>.  
+ Используйте <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>, и <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> свойства <xref:System.Windows.Forms.ToolStripLabel> для поддержки элемента управления ссылки в <xref:System.Windows.Forms.ToolStrip>.  
   
-### ToolStripStatusLabel  
- <xref:System.Windows.Forms.ToolStripStatusLabel> является версией <xref:System.Windows.Forms.ToolStripLabel>, созданной специально для использования в <xref:System.Windows.Forms.StatusStrip>.  Специальные возможности включают <xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>, <xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A> и <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>.  
+### <a name="toolstripstatuslabel"></a>ToolStripStatusLabel  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>— Это версия <xref:System.Windows.Forms.ToolStripLabel> разработан специально для использования в <xref:System.Windows.Forms.StatusStrip>. Специальные возможности включают <xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>, <xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>, и <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>.  
   
-### ToolStripSeparator  
- <xref:System.Windows.Forms.ToolStripSeparator> добавляет в панель инструментов или в меню вертикальную или горизонтальную линию в зависимости от ориентации.  Такая линия обеспечивает группирование или разделение элементов, например пунктов меню.  
+### <a name="toolstripseparator"></a>ToolStripSeparator  
+ <xref:System.Windows.Forms.ToolStripSeparator> Добавляет вертикальной или горизонтальной линией в панели инструментов или меню, в зависимости от ориентации. Он обеспечивает группирование или разделение элементов, например пунктов меню.  
   
- Можно добавить <xref:System.Windows.Forms.ToolStripSeparator> во время разработки, выбрав из раскрывающегося списка.  Однако, <xref:System.Windows.Forms.ToolStripSeparator> также можно создать, введя дефис \(\-\) в узел шаблона конструктора или в метод <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>.  
+ Можно добавить <xref:System.Windows.Forms.ToolStripSeparator> во время разработки, выбрав его из раскрывающегося списка. Тем не менее, можно автоматически создать <xref:System.Windows.Forms.ToolStripSeparator> , введя дефис (-) в узел шаблона конструктора или в <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод.  
   
-### ToolStripControlHost  
- <xref:System.Windows.Forms.ToolStripControlHost> является абстрактным базовым классом для <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> и <xref:System.Windows.Forms.ToolStripProgressBar>.  Другие элементы управления, включая пользовательские элементы управления, можно разместить в <xref:System.Windows.Forms.ToolStripControlHost> двумя способами:  
+### <a name="toolstripcontrolhost"></a>Руководство.  
+ <xref:System.Windows.Forms.ToolStripControlHost>— Абстрактный базовый класс для <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, и <xref:System.Windows.Forms.ToolStripProgressBar>. <xref:System.Windows.Forms.ToolStripControlHost>можно размещать другие элементы управления, включая пользовательские элементы управления двумя способами:  
   
--   Создайте <xref:System.Windows.Forms.ToolStripControlHost> с помощью класса, производного от <xref:System.Windows.Forms.Control>.  Чтобы получить полный доступ к размещенным элементу управления и свойствам, свойство <xref:System.Windows.Forms.ToolStripControlHost.Control%2A> необходимо привести обратно к реальному классу, который оно представляет.  
+-   Создать <xref:System.Windows.Forms.ToolStripControlHost> с классом, который является производным от <xref:System.Windows.Forms.Control>. Для полного доступа к размещенным элементом управления и свойств, необходимо привести <xref:System.Windows.Forms.ToolStripControlHost.Control%2A> свойство обратно к реальному классу, который оно представляет.  
   
--   Создайте расширение <xref:System.Windows.Forms.ToolStripControlHost> и в конструкторе унаследованного класса по умолчанию вызовите конструктор базового класса, передающий класс, который является производным от <xref:System.Windows.Forms.Control>.  Эта функция позволяет включить общие методы и свойства элементов управления в <xref:System.Windows.Forms.ToolStrip> для облегчения доступа.  
+-   Расширить <xref:System.Windows.Forms.ToolStripControlHost>и в конструкторе унаследованного класса по умолчанию, вызывает конструктор базового класса, передающий класс, производный от <xref:System.Windows.Forms.Control>. Этот параметр позволяет включить общие методы управления и свойства для упрощения доступа в <xref:System.Windows.Forms.ToolStrip>.  
   
-### ToolStripComboBox  
- <xref:System.Windows.Forms.ToolStripComboBox> является <xref:System.Windows.Forms.ComboBox>, оптимизированным для размещения в <xref:System.Windows.Forms.ToolStrip>.  Подмножество свойств и событий размещаемого элемента управления представляется на уровне <xref:System.Windows.Forms.ToolStripComboBox>, однако полный доступ к лежащему в основе элементу управления <xref:System.Windows.Forms.ComboBox> осуществляется с помощью свойства <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A>.  
+### <a name="toolstripcombobox"></a>ToolStripComboBox  
+ <xref:System.Windows.Forms.ToolStripComboBox>— <xref:System.Windows.Forms.ComboBox> оптимизированным для размещения в <xref:System.Windows.Forms.ToolStrip>. Подмножество свойств размещенного элемента управления и события представлены на <xref:System.Windows.Forms.ToolStripComboBox> уровень, но базовый <xref:System.Windows.Forms.ComboBox> управления полностью доступна с помощью <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A> свойство.  
   
-### ToolStripTextBox  
- <xref:System.Windows.Forms.ToolStripTextBox> является <xref:System.Windows.Forms.TextBox>, оптимизированным для размещения в <xref:System.Windows.Forms.ToolStrip>.  Подмножество свойств и событий размещаемого элемента управления представляется на уровне <xref:System.Windows.Forms.ToolStripTextBox>, однако полный доступ к лежащему в основе элементу управления <xref:System.Windows.Forms.TextBox> осуществляется с помощью свойства <xref:System.Windows.Forms.ToolStripTextBox.TextBox%2A>.  
+### <a name="toolstriptextbox"></a>ToolStripTextBox  
+ <xref:System.Windows.Forms.ToolStripTextBox>— <xref:System.Windows.Forms.TextBox> оптимизированным для размещения в <xref:System.Windows.Forms.ToolStrip>. Подмножество свойств размещенного элемента управления и события представлены на <xref:System.Windows.Forms.ToolStripTextBox> уровень, но базовый <xref:System.Windows.Forms.TextBox> управления полностью доступна с помощью <xref:System.Windows.Forms.ToolStripTextBox.TextBox%2A> свойство.  
   
-### ToolStripProgressBar  
- <xref:System.Windows.Forms.ToolStripProgressBar> является <xref:System.Windows.Forms.ProgressBar>, оптимизированным для размещения в <xref:System.Windows.Forms.ToolStrip>.  Подмножество свойств и событий размещаемого элемента управления представляется на уровне <xref:System.Windows.Forms.ToolStripProgressBar>, однако полный доступ к лежащему в основе элементу управления <xref:System.Windows.Forms.ProgressBar> осуществляется с помощью свойства <xref:System.Windows.Forms.ToolStripProgressBar.ProgressBar%2A>.  
+### <a name="toolstripprogressbar"></a>ToolStripProgressBar  
+ <xref:System.Windows.Forms.ToolStripProgressBar>— <xref:System.Windows.Forms.ProgressBar> оптимизированным для размещения в <xref:System.Windows.Forms.ToolStrip>. Подмножество свойств размещенного элемента управления и события представлены на <xref:System.Windows.Forms.ToolStripProgressBar> уровень, но базовый <xref:System.Windows.Forms.ProgressBar> управления полностью доступна с помощью <xref:System.Windows.Forms.ToolStripProgressBar.ProgressBar%2A> свойство.  
   
-### ToolStripDropDownItem  
- <xref:System.Windows.Forms.ToolStripDropDownItem> является абстрактным базовым классом для <xref:System.Windows.Forms.ToolStripMenuItem>, <xref:System.Windows.Forms.ToolStripDropDownButton> и <xref:System.Windows.Forms.ToolStripSplitButton>, в котором можно разместить элементы напрямую или разместить дополнительные элементы в раскрывающемся контейнере.  Это можно сделать, задав свойству <xref:System.Windows.Forms.ToolStripDropDownItem.DropDown%2A> значение <xref:System.Windows.Forms.ToolStripDropDown> и свойству <xref:System.Windows.Forms.ToolStrip.Items%2A> значение <xref:System.Windows.Forms.ToolStripDropDown>.  Доступ к этим раскрывающимся элементам осуществляется непосредственно через свойство <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A>.  
+### <a name="toolstripdropdownitem"></a>ToolStripDropDownItem  
+ <xref:System.Windows.Forms.ToolStripDropDownItem>— Абстрактный базовый класс для <xref:System.Windows.Forms.ToolStripMenuItem>, <xref:System.Windows.Forms.ToolStripDropDownButton>, и <xref:System.Windows.Forms.ToolStripSplitButton>, который можно разместить элементы непосредственно или узла дополнительные элементы в контейнере раскрывающегося списка. Это можно сделать, задав <xref:System.Windows.Forms.ToolStripDropDownItem.DropDown%2A> свойства <xref:System.Windows.Forms.ToolStripDropDown> и параметр <xref:System.Windows.Forms.ToolStrip.Items%2A> свойство <xref:System.Windows.Forms.ToolStripDropDown>. Доступ к этим напрямую с помощью раскрывающегося списка элементам <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> свойство.  
   
-### ToolStripMenuItem  
- <xref:System.Windows.Forms.ToolStripMenuItem> является <xref:System.Windows.Forms.ToolStripDropDownItem>, работающим с <xref:System.Windows.Forms.ToolStripDropDownMenu> и <xref:System.Windows.Forms.ContextMenuStrip> для обработки специального выделения, структуры и расположения столбцов в меню.  
+### <a name="toolstripmenuitem"></a>ToolStripMenuItem  
+ <xref:System.Windows.Forms.ToolStripMenuItem>— <xref:System.Windows.Forms.ToolStripDropDownItem> , которые работают с <xref:System.Windows.Forms.ToolStripDropDownMenu> и <xref:System.Windows.Forms.ContextMenuStrip> для обработки особым соглашением выделение, макет и столбец для меню.  
   
-### ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> выглядит аналогично <xref:System.Windows.Forms.ToolStripButton>, но отображает раскрывающуюся область, когда пользователь щелкает по нему.  Скрыть или показать стрелку раскрывающегося списка можно с помощью свойства <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A>.  В элементе <xref:System.Windows.Forms.ToolStripDropDownButton> размещается кнопка <xref:System.Windows.Forms.ToolStripOverflowButton>, отображающая элементы, выходящие за пределы <xref:System.Windows.Forms.ToolStrip>.  
+### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
+ <xref:System.Windows.Forms.ToolStripDropDownButton>выглядит как <xref:System.Windows.Forms.ToolStripButton>, но он демонстрирует раскрывающейся области, когда пользователь нажимает кнопку. Скрыть или отобразить стрелку раскрывающегося списка, установив <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> свойство. <xref:System.Windows.Forms.ToolStripDropDownButton>узлы <xref:System.Windows.Forms.ToolStripOverflowButton> , отображающая элементы, выходящие за пределы <xref:System.Windows.Forms.ToolStrip>.  
   
-### ToolStripSplitButton  
- <xref:System.Windows.Forms.ToolStripSplitButton> сочетает функциональные возможности обычной кнопки и кнопки раскрывающегося списка.  
+### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
+ <xref:System.Windows.Forms.ToolStripSplitButton>объединяет кнопки и функциональности кнопки раскрывающегося списка.  
   
- Для синхронизации события <xref:System.Windows.Forms.Control.Click> выбранного раскрывающегося элемента с изображенным на кнопке элементом используйте свойство <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A>.  
+ Используйте <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A> свойств для синхронизации <xref:System.Windows.Forms.Control.Click> событие выбранный элемент списка с элемента, показанное на кнопке.  
   
-### Общие возможности ToolStripItem  
- <xref:System.Windows.Forms.ToolStripItem> предоставляет наследующим элементам управления следующие общие возможности и параметры:  
+### <a name="toolstripitem-generic-features"></a>ToolStripItem универсальные функции  
+ <xref:System.Windows.Forms.ToolStripItem>предоставляет следующие общие возможности и параметры для наследуемого элемента управления.  
   
 -   Основные события  
   
@@ -347,51 +347,51 @@ caps.handback.revision: 32
   
 -   Стиль отображения  
   
-#### Основные события  
- Элементы управления <xref:System.Windows.Forms.ToolStripItem> получают собственные события нажатия кнопки, мыши и рисования, а также могут выполнять предварительную обработку клавиатуры.  
+#### <a name="core-events"></a>Основные события  
+ <xref:System.Windows.Forms.ToolStripItem>элементы управления получать свои собственные нажмите кнопку мыши и событиями рисования и можно выполнить предварительную обработку также клавиатуры.  
   
-#### Обработка изображений  
- Свойства <xref:System.Windows.Forms.ToolStripItem.Image%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageKey%2A> и <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> относятся к различным аспектам обработки изображений.  Чтобы использовать изображения в элементах управления <xref:System.Windows.Forms.ToolStrip>, напрямую задайте эти свойства или задайте свойство <xref:System.Windows.Forms.ToolStrip.ImageList%2A> во время выполнения.  
+#### <a name="image-handling"></a>Обработка изображений  
+ <xref:System.Windows.Forms.ToolStripItem.Image%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageKey%2A>, И <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> свойства относится к различным аспектам обработки изображений. Использование изображений в <xref:System.Windows.Forms.ToolStrip> элементов управления, настройка этих свойств напрямую или задав выполнения времени — только <xref:System.Windows.Forms.ToolStrip.ImageList%2A> свойство.  
   
- Масштабирование изображения определяется взаимодействием свойств в <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.ToolStripItem> следующим образом:  
+ Масштабирование изображения определяется взаимодействием свойств в обоих <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.ToolStripItem>, как показано ниже:  
   
--   Масштаб <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> конечного изображения определяется сочетанием параметра изображения <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> и параметра контейнера <xref:System.Windows.Forms.ToolStrip.AutoSize%2A>.  
+-   <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A>Масштаб конечного изображения определяется сочетанием изображения <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> и параметра контейнера <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> параметр.  
   
-    -   Если <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> задано значение `true` \(значение по умолчанию\), а <xref:System.Windows.Forms.ToolStripItemImageScaling> задано значение <xref:System.Windows.Forms.ToolStripItemImageScaling>, то масштабирование производиться не будет, а размером <xref:System.Windows.Forms.ToolStrip> будет размер самого большого элемента или предписанный минимальный размер.  
+    -   Если <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> — `true` (по умолчанию) и <xref:System.Windows.Forms.ToolStripItemImageScaling> — <xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>, то масштабирование производиться и <xref:System.Windows.Forms.ToolStrip> является размер самого большого элемента или предписанный минимальный размер.  
   
-    -   Если <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> задано значение `false`, а <xref:System.Windows.Forms.ToolStripItemImageScaling> задано значение <xref:System.Windows.Forms.ToolStripItemImageScaling>, то масштабирование ни изображения, ни <xref:System.Windows.Forms.ToolStrip> производиться не будет.  
+    -   Если <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> — `false` и <xref:System.Windows.Forms.ToolStripItemImageScaling> — <xref:System.Windows.Forms.ToolStripItemImageScaling.None>, ни изображения, ни <xref:System.Windows.Forms.ToolStrip> масштабирование происходит.  
   
-#### Выравнивание  
- Значение свойства <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> определяет конец объекта <xref:System.Windows.Forms.ToolStrip> около которого отображается элемент.  Свойство <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> работает только тогда, когда в качестве значения стиля структуры <xref:System.Windows.Forms.ToolStrip> задано одно из значений переполнения стека.  
+#### <a name="alignment"></a>Выравнивание  
+ Значение <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> свойство определяет конец <xref:System.Windows.Forms.ToolStrip> в которой появляется элемент. <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Работает только если свойство стиля макета <xref:System.Windows.Forms.ToolStrip> имеет одно из значений переполнения стека.  
   
- Элементы размещаются на <xref:System.Windows.Forms.ToolStrip> в порядке своего появления коллекции элементов.  Чтобы изменить расположение элемента программным способом, переместите элемент внутри коллекции, используя метод <xref:System.Windows.Forms.ToolStripItemCollection.Insert%2A>.  Указанный метод перемещает элемент, но не дублирует его.  
+ Элементы размещаются на <xref:System.Windows.Forms.ToolStrip> в том порядке, в котором отображаются элементы в коллекции элементов. Для программного изменения, где располагается элемент, используйте <xref:System.Windows.Forms.ToolStripItemCollection.Insert%2A> метод, чтобы переместить элемент в коллекции. Этот метод перемещает элемент, но не происходит дублирования.  
   
-#### Связь текста и изображений  
- Свойство <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> определяет относительное расположение изображения относительно текста на <xref:System.Windows.Forms.ToolStripItem>.  Элементы, в которых отсутствует текст, изображение или и то и другое, рассматриваются как особые случаи, чтобы <xref:System.Windows.Forms.ToolStripItem> не отображал пустую область на месте отсутствующего элемента или элементов.  
+#### <a name="text-and-image-relationship"></a>Текст и изображение связи  
+ <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> Свойство определяет относительный положение изображения относительно текста на <xref:System.Windows.Forms.ToolStripItem>. Элементы, которых не хватает изображения и текст, рассматриваются как особые случаи, чтобы <xref:System.Windows.Forms.ToolStripItem> не отображает пустую область на месте отсутствующего элемента или элементов.  
   
-#### Стиль отображения  
- <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> позволяет задать значения свойств текста и изображения элемента. При этом отображаются только требуемые элементы.  Эта возможность обычно используется для изменения только стиля отображения при выводе того же элемента на экран в другом контексте.  
+#### <a name="display-style"></a>Стиль отображения  
+ <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>позволяет задавать значения свойств элемента текста и изображения при отображении сведений, которые требуется. Обычно используется для изменения только стиля отображения при отображении тот же элемент в другом контексте.  
   
-## Вспомогательные классы  
- Следующие классы предоставляют различные дополнительные функциональные возможности:  
+## <a name="accessory-classes"></a>Вспомогательные классы  
+ Классы, которые предоставляют различные дополнительные функциональные возможности включают:  
   
--   <xref:System.Windows.Forms.ToolStripManager> поддерживает задачи, связанные с <xref:System.Windows.Forms.ToolStrip> всего приложения, например определение параметров слияния, настроек и отображения.  
+-   <xref:System.Windows.Forms.ToolStripManager>поддерживает <xref:System.Windows.Forms.ToolStrip>-связанные задачи для всего приложения, такие как слияние, параметры и модуль подготовки отчетов.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> позволяет применить к <xref:System.Windows.Forms.ToolStrip> определенный стиль или тему.  
+-   <xref:System.Windows.Forms.ToolStripRenderer>позволяет применять определенный стиль или тему, <xref:System.Windows.Forms.ToolStrip> легко.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> создает перья и кисти на основании заменяемой таблицы цветов \(<xref:System.Windows.Forms.ProfessionalColorTable>\).  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer>создает перья и кисти на основании заменяемой таблицы цветов (<xref:System.Windows.Forms.ProfessionalColorTable>).  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> применяет системные цвета и плоский визуальный стиль к приложениям <xref:System.Windows.Forms.ToolStrip>.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer>применяет системные цвета и плоский визуальный стиль к <xref:System.Windows.Forms.ToolStrip> приложений.  
   
--   <xref:System.Windows.Forms.ToolStripContainer> аналогичен <xref:System.Windows.Forms.SplitContainer>.  Для создания типового расположения используются четыре закрепленные боковые панели \(экземпляры <xref:System.Windows.Forms.ToolStripPanel>\) и одна центральная панель \(экземпляр <xref:System.Windows.Forms.ToolStripContentPanel>\).  Боковые панели невозможно удалить, но можно скрыть.  Центральную панель невозможно ни удалить, ни скрыть.  Можно упорядочить один или несколько элементов управления <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.StatusStrip> на боковой панели, центральную панель можно использовать для размещения других элементов управления.  Панель <xref:System.Windows.Forms.ToolStripContentPanel> также предоставляет возможность размещения обработчика отображения в форме для получения согласованного внешнего вида.  <xref:System.Windows.Forms.ToolStripContainer> не поддерживает интерфейс MDI.  
+-   <xref:System.Windows.Forms.ToolStripContainer>Аналогично <xref:System.Windows.Forms.SplitContainer>. Она использует четыре закрепленные боковые панели (экземпляры <xref:System.Windows.Forms.ToolStripPanel>) и одна центральная панель (экземпляр <xref:System.Windows.Forms.ToolStripContentPanel>) для создания типового расположения. Не удается удалить боковые панели, но их можно скрыть. Можно удалить ни скрыть центральную панель. Можно упорядочить один или несколько <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, или <xref:System.Windows.Forms.StatusStrip> центра панель элементов управления в боковые панели, а также можно использовать для других элементов управления. <xref:System.Windows.Forms.ToolStripContentPanel> Также предоставляет способ для получения поддержки модуля подготовки отчетов в текст для согласованного внешнего вида формы. <xref:System.Windows.Forms.ToolStripContainer>не поддерживает многодокументный интерфейс (MDI).  
   
--   <xref:System.Windows.Forms.ToolStripPanel> предоставляет пространство для перемещения и расположения элементов управления <xref:System.Windows.Forms.ToolStrip>.  Можно использовать только одну панель, причем <xref:System.Windows.Forms.ToolStripPanel> хорошо работает в сценариях MDI.  
+-   <xref:System.Windows.Forms.ToolStripPanel>Предоставляет место для перемещения и расположения <xref:System.Windows.Forms.ToolStrip> элементов управления. Если это необходимо, можно использовать только одну панель и <xref:System.Windows.Forms.ToolStripPanel> хорошо работает в сценариях MDI.  
   
-## См. также  
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)   
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)   
- [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [Элемент управления StatusStrip](../../../../docs/framework/winforms/controls/statusstrip-control.md)   
- [Элемент управления ContextMenuStrip](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)  
+ [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [Элемент управления StatusStrip](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
+ [Элемент управления ContextMenuStrip](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
  [Элемент управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)

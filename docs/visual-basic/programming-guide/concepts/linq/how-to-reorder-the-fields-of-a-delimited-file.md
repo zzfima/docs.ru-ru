@@ -1,39 +1,31 @@
 ---
-title: "Практическое руководство: изменение порядка полей файла с разделителями (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: изменение порядка полей файла с разделителями (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9abb0510ed3944cd80d6658238ef79d64dc0ca27
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f308495a21b671edf03fbd791ef77d668d55388d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Практическое руководство: изменение порядка полей файла с разделителями (LINQ) (Visual Basic)
-Файл значений с разделителями запятыми (CSV) — это текстовый файл, который часто используется для хранения данных электронной таблицы или других табличных данных, представленных строками и столбцами. С помощью <xref:System.String.Split%2A>метод для разделения полей, очень легко запросы и управлять ими CSV-файлов с помощью LINQ.</xref:System.String.Split%2A> На самом деле та же технология может использоваться для изменения порядка частей любой структурированной строки текста. не ограничена CSV-файлами.  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Как: изменение порядка полей файла с разделителями (LINQ) (Visual Basic)
+CSV-файл — это текстовый файл, который часто используется для хранения данных электронных таблиц или других табличных данных, представленных строками и столбцами. Использование метода <xref:System.String.Split%2A> для разделения полей упрощает создание запросов к CSV-файлам и управление ими с помощью LINQ. Фактически та же технология может использоваться для изменения порядка частей любой структурированной строки текста, а не только CSV-файлов.  
   
- В следующем примере предполагается, что три столбца представляют студентов «last name,» «first name» и «код». Поля являются в алфавитном порядке по фамилии студентов. Запрос создает новую последовательность, в которой сначала идет столбец идентификатора, следуют второй столбец, который объединяет имя и фамилия учащегося. Строки переупорядочиваются в соответствии с полем идентификатора. Результаты сохраняются в новый файл и исходные данные не изменяются.  
+ В следующем примере предполагается, что три столбца представляют "фамилию", "имя" и "идентификатор" учащихся. Поля группируются в алфавитном порядке по фамилии учащихся. Запрос создает новую последовательность, в которой столбец идентификатора отображается первым, за ним следует второй столбец, который объединяет имя и фамилию учащегося. Порядок строк изменен в соответствии с полем идентификатора. Результаты сохраняются в новый файл, и исходные данные не изменяются.  
   
 ### <a name="to-create-the-data-file"></a>Создание файла данных  
   
-1.  Скопируйте следующие строки в текстовый файл с именем spreadsheet1.csv. Сохраните файл в папке проекта.  
+1.  Скопируйте следующие строки в обычный текстовый файл с именем spreadsheet1.csv. Сохраните файл в папке проекта.  
   
     ```  
     Adams,Terry,120  
@@ -94,6 +86,6 @@ End Class
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
 ## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)   
+ [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [Практическое руководство. Создание кода XML из CSV-файлов](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

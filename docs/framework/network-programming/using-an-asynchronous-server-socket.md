@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Использование асинхронных сокетов сервера
 Асинхронные сокеты сервера используют асинхронную модель программирования платформы .NET Framework для обработки запросов сетевых служб. Класс <xref:System.Net.Sockets.Socket> соответствует стандартному шаблону асинхронного именования платформы .NET Framework. Например, синхронный метод <xref:System.Net.Sockets.Socket.Accept%2A> соответствует асинхронным методам <xref:System.Net.Sockets.Socket.BeginAccept%2A> и <xref:System.Net.Sockets.Socket.EndAccept%2A>.  
@@ -69,7 +66,7 @@ listener.BeginAccept(
     listener);  
 ```  
   
- Асинхронные сокеты используют потоки из системного пула потоков для обработки входящих подключений. Один поток отвечает за принятие подключений, другой — за обработку каждого входящего соединения, а еще один — за получение данных по соединению. Это может быть один и тот же поток, если пул потоков назначил его для выполнения всех трех задач. В приведенном ниже примере класс <xref:System.Threading.ManualResetEvent?displayProperty=fullName> приостанавливает выполнение главного потока и сообщает, когда оно может быть продолжено.  
+ Асинхронные сокеты используют потоки из системного пула потоков для обработки входящих подключений. Один поток отвечает за принятие подключений, другой — за обработку каждого входящего соединения, а еще один — за получение данных по соединению. Это может быть один и тот же поток, если пул потоков назначил его для выполнения всех трех задач. В приведенном ниже примере класс <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> приостанавливает выполнение главного потока и сообщает, когда оно может быть продолжено.  
   
  В этом примере показан асинхронный метод, который создает на локальном компьютере асинхронный сокет TCP/IP и начинает принимать соединения. В нем предполагается, что существует глобальный экземпляр класса **ManualResetEvent** с именем `allDone`, метод является членом класса `SocketListener` и определен метод обратного вызова с именем `acceptCallback`.  
   
@@ -274,8 +271,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [Пример асинхронного сокета сервера](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Работа с потоками](../../../docs/standard/threading/index.md)   
+ [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Пример асинхронного сокета сервера](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [Работа с потоками](../../../docs/standard/threading/index.md)  
  [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
-

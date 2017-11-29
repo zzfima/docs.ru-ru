@@ -1,47 +1,46 @@
 ---
-title: "Возвращаемые значения функции CStr (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CStr - функция"
-  - "Date - тип данных, преобразование"
-  - "даты [Visual Basic]"
-  - "даты [Visual Basic], возвращаемые значения функции CStr"
-  - "String - тип данных, преобразование"
-  - "строки [Visual Basic], возвращаемое значение"
-  - "значения времени, возвращаемые значения функции CStr"
-  - "преобразование типов"
+title: "Возвращаемые значения функции CStr (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- times [Visual Basic], CStr Function return values
+- type conversion [Visual Basic]
+- dates [Visual Basic], CStr Function return values
+- CStr function
+- strings [Visual Basic], return value
+- Date data type [Visual Basic], converting
+- dates [Visual Basic]
+- String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b498c9b1b7916467c96ed2c645c7131192a5e8b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Возвращаемые значения функции CStr (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В следующей таблице описаны возвращаемые значения `CStr` для различных типов данных параметра `expression`.  
+# <a name="return-values-for-the-cstr-function-visual-basic"></a>Возвращаемые значения функции CStr (Visual Basic)
+В следующей таблице описаны возвращаемые значения для `CStr` для различных типов данных из `expression`.  
   
-|Если тип `expression`,|возвращается `CStr`:|  
-|----------------------------|--------------------------|  
-|[Тип данных Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Строка, содержащая "True" или "False".|  
-|[Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|Строка, содержащая значение типа `Date` \(дата и время\) в кратком формате даты для данной системы.|  
-|[Числовые типы данных](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Строка, представляющая число.|  
+|Если `expression` тип|`CStr`Возвращает|  
+|-----------------------------|--------------------|  
+|[Логический тип данных](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Строка, содержащая «True» или «False».|  
+|[Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|Строка, содержащая `Date` значение (Дата и время) в формате короткой даты системы.|  
+|[Числовые типы данных](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Строка, содержащая число.|  
   
-## CStr и Date  
- Тип данных `Date` всегда включает сведения о дате и времени.  При преобразовании типов в Visual Basic *нейтральным значением* даты считается 1\/1\/1 \(1 января 1 года\), а нейтральным значением времени — 00:00:00 \(полночь\).  `CStr` не включает нейтральные значения в результирующую строку.  Например, при преобразовании значения `#January 1, 0001 9:30:00#` в строку, будет возвращен результат "9:30:00"; дата отбрасывается.  При этом сведения о дате останутся в исходном значении `Date` и могут быть извлечены с помощью таких функций, как <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr и даты  
+ `Date` Типа всегда содержит сведения о дате и времени. В целях преобразования типов Visual Basic рассматривает 1/1/0001 (1 января 1 года) быть *нейтральным значением* для даты и 00:00:00 (полночь) будет нейтральным значением времени. `CStr`не включает нейтральные значения в результирующую строку. Например, если вы преобразуете `#January 1, 0001 9:30:00#` в строку, результат будет «9:30:00 AM»; дата отбрасывается. Тем не менее, сведения о дате по-прежнему присутствует в исходной коллекции `Date` значение и может быть восстановлен с помощью функции например <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
->  Функция `CStr` выполняет преобразование на основе настроек текущей языковой среды для приложения.  Чтобы получить строковое представление числа для определенного языка, используйте метод `ToString(IFormatProvider)` этого числа.  Например, используйте <xref:System.Double.ToString%2A?displayProperty=fullName> при преобразовании значения типа `Double` к `String`.  
+>  `CStr` Функция выполняет преобразование на основе текущих параметров языка и региональных параметров для приложения. Чтобы получить строковое представление числа в определенного языка и региональных параметров, используйте число `ToString(IFormatProvider)` метод. Например, использовать <xref:System.Double.ToString%2A?displayProperty=nameWithType> при преобразовании значения типа `Double` для `String`.  
   
-## См. также  
- <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Тип данных Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>  
+ [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Логический тип данных](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
  [Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md)

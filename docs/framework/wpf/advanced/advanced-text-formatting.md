@@ -1,103 +1,109 @@
 ---
-title: "Дополнительное форматирование текста | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "форматирование [WPF]"
-  - "текст [WPF]"
-  - "оформление, форматирование текста"
+title: "Дополнительное форматирование текста"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- formatting [WPF]
+- text [WPF]
+- typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1828b6ffe2d24c2bfb98b4668a9540adf5978e5f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Дополнительное форматирование текста
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] предоставляет [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] — набор надежных инструментов для включения текста в приложение.  Макет и [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], такие как <xref:System.Windows.Controls.TextBlock>, предоставляют наиболее типично и обще\-используемые элементы для представления текста.  [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] для рисования, например <xref:System.Windows.Media.GlyphRunDrawing> и <xref:System.Windows.Media.FormattedText>, предоставляют возможность включения в рисунки форматированного текста.  На наиболее продвинутом уровне [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет расширенный механизм форматирования текста для управления каждым аспектом представления текста: управление хранением и исполнением форматирования текста, и управление внедренным объектом.  
+# <a name="advanced-text-formatting"></a>Дополнительное форматирование текста
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Предоставляет широкий набор [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] для включения текста в приложении. Макет и [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], такие как <xref:System.Windows.Controls.TextBlock>, обеспечивают наиболее распространенные и использовать общие элементы для представления текста. Рисование [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], такие как <xref:System.Windows.Media.GlyphRunDrawing> и <xref:System.Windows.Media.FormattedText>, предоставляют средства для включения в рисунки форматированного текста. Наиболее продвинутом уровне [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет расширяемый механизм форматирования текста для управления каждым аспектом представления текста: управление хранением, исполнением форматирования текста и внедренного объекта управления.  
   
- В этом разделе представлено введение в форматирование текста [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Основное внимание уделяется реализации клиента и использовании механизма форматирования текста [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ В этом разделе содержатся вводные [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] форматирование текста. Этот раздел посвящен реализации клиента и использовании [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] процессор форматирования текста.  
   
 > [!NOTE]
->  Все примеры кода в этом документе можно найти в разделе [Пример расширенного форматирования текста](http://go.microsoft.com/fwlink/?LinkID=159965).  
+>  Все примеры кода в этот документ можно найти в [расширенный пример форматирование текста](http://go.microsoft.com/fwlink/?LinkID=159965).  
   
-   
+
   
 <a name="prereq"></a>   
-## Предварительные требования  
- Чтение этого раздела предполагает знакомство с верхним уровнем [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], использующегося для представлении текста.  Большинство пользовательских скриптов не потребует дополнительного форматирования текста [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], рассмотренного в этом разделе.  Для введения в другой текст [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] см. [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+## <a name="prerequisites"></a>Предварительные требования  
+ В этом разделе предполагается, что вы знакомы с высоким уровнем [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] используется для представления текста. Большинство пользовательских скриптов не потребует дополнительного форматирования текста [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] рассматриваются в данном разделе. Введение в другой текстовой [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], в разделе [документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
 <a name="section1"></a>   
-## Дополнительное форматирование текста  
- Макет текста и элементы управления [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляют свойства форматирования, позволяющие легко включать в приложение форматированный текст.  Эти элементы управления предоставляют ряд свойств для обработки представления текста, включающие его гарнитуру, размер и цвет.  В обычных условиях эти элементы управления могут обрабатывать большинство представлений текста в приложении.  Однако в некоторых более сложных ситуациях требуется контроль процесса хранения текста наравне с контролем представления.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет для этой цели расширенный механизм форматирования текста.  
+## <a name="advanced-text-formatting"></a>Дополнительное форматирование текста  
+ Макет текста и [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элементы управления в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляют свойства форматирования, позволяющие легко включать в приложение форматированный текст. Эти элементы управления предоставляют ряд свойств для обработки представления текста, включая гарнитуру, размер и цвет. В обычных условиях эти элементы управления могут обрабатывать большинство вариантов представления текста в приложении. Тем не менее некоторые расширенные сценарии требуют управления хранением текста, а также его представлением. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет расширяемый механизм форматирования текста для этой цели.  
   
- Дополнительные функции форматирования текста, расположенные в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], состоят из механизма форматирования текста, хранилища текста, исполнения текста и свойств форматирования.  Механизм форматирования текста, <xref:System.Windows.Media.TextFormatting.TextFormatter>, создает строки текста, используемые для его представления.  Это достигается путем инициирования процесса форматирования строки и вызовом модуля форматирования текста <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>.  Модуль форматирования текста извлекает текстовые последовательности из хранилища текста путем вызова метода хранения <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>.  Затем объекты <xref:System.Windows.Media.TextFormatting.TextRun> преобразуются в объекты <xref:System.Windows.Media.TextFormatting.TextLine> с помощью модуля форматирования текста и передаются в приложение для проверки или отображения на экране.  
+ Найти дополнительные функции форматирования текста в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] состоят из механизма форматирования, текстовому хранилищу отрезками текста и свойств форматирования текста. Процессор, форматирования текста <xref:System.Windows.Media.TextFormatting.TextFormatter>, создает строки текста, используемый для представления. Это достигается путем запуска процесса форматирования строки и вызовом модуля форматирования текста <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>. Модуль форматирования текста извлекает отрезками текста из текстового хранилища путем вызова в хранилище <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> метод. <xref:System.Windows.Media.TextFormatting.TextRun> Объекты затем формируются в <xref:System.Windows.Media.TextFormatting.TextLine> объектов модулем форматирования текста и передаются в приложение для проверки или отображения.  
   
 <a name="section2"></a>   
-## Использование модуля форматирования текста  
- <xref:System.Windows.Media.TextFormatting.TextFormatter> является механизмом форматирования текста [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и служит для форматирования и разбивки строк текста.  Модуль форматирования текста поддерживает различные форматы текстовых знаков и стили абзацев, а также включает поддержку международного макета текста.  
+## <a name="using-the-text-formatter"></a>Использование модуля форматирования текста  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter>— [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] модуль форматирования текста и предоставляет службы для форматирования и разбивки текста на строки. Модуль форматирования текста может обрабатывать различные форматы текстовых символов и стили абзацев и включает поддержку международного макета текста.  
   
- В отличие от традиционного текстового [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], объект <xref:System.Windows.Media.TextFormatting.TextFormatter> взаимодействует с клиентом разметки текста через набор методов обратного вызова.  Для предоставления этих методов в реализации класса <xref:System.Windows.Media.TextFormatting.TextSource> требуется клиент.  Следующая диаграмма иллюстрирует взаимодействие разметки текста между клиентским приложением и объектом <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ В отличие от традиционного текстового [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> взаимодействует с клиентом разметки текста через набор методов обратного вызова. Требуется клиент для предоставления этих методов в реализации <xref:System.Windows.Media.TextFormatting.TextSource> класса. На следующей схеме показано взаимодействие разметки текста между клиентским приложением и <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Схема клиента структуры текста и TextFormatter](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
-Взаимодействие между приложением и объектом TextFormatter  
+Взаимодействие между приложением и TextFormatter  
   
- Модуль форматирования текста используется для извлечения форматированных строк текста из хранилища текста, которое является реализацией метода <xref:System.Windows.Media.TextFormatting.TextSource>.  Это осуществляется первоначальным созданием экземпляра модуля форматирования текста, путем использования метода <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A>.  Этот метод создает экземпляр модуля форматирования текста и задает максимальные значения высоты и ширины строки.  Как только экземпляр модуля форматирования текста создан, процесс создания строки запускается вызовом метода <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>.  Объект <xref:System.Windows.Media.TextFormatting.TextFormatter> выполняет обратный вызов метода к исходному тексту, чтобы извлечь текст и параметры форматирования для текстовых последовательностей, формирующих строку.  
+ Модуль форматирования текста используется для извлечения форматированных строк текста из хранилища текста, который является реализацией <xref:System.Windows.Media.TextFormatting.TextSource>. Это делается путем создания экземпляра модуля форматирования текста с помощью <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> метод. Этот метод создает экземпляр модуля форматирования текста и задает максимальные значения высоты и ширины строки. Как только создается экземпляр модуля форматирования текста, процесс создания строки запускается вызовом <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> метод. <xref:System.Windows.Media.TextFormatting.TextFormatter>Осуществляет обратный вызов для получения текста и параметры форматирования для блоков текста с исходным текстом этой формы строки.  
   
- В следующем примере показан процесс форматирования хранилища текста.  Объект <xref:System.Windows.Media.TextFormatting.TextFormatter> используется для извлечения строк текста из хранилища текста и последующего форматирования строк текста для перемещения в <xref:System.Windows.Media.DrawingContext>.  
+ В следующем примере показан процесс форматирования хранилища текста. <xref:System.Windows.Media.TextFormatting.TextFormatter> Объект используется для извлечения строк текста из хранилища текста и затем отформатировать строку текста для рисования в <xref:System.Windows.Media.DrawingContext>.  
   
  [!code-csharp[TextFormatterExample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
  [!code-vb[TextFormatterExample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
   
 <a name="section3"></a>   
-## Реализация клиентского хранилища текста  
- При расширении механизма форматирования текста потребуется реализовать и управлять аспектами хранилища текста.  Это нетривиальная задача.  Хранилище текста отвечает за отслеживание свойств исполнения текста, свойств абзаца, встроенных объектов и другого подобного содержимого.  Оно также предоставляет модуль форматирования текста с индивидуальными объектами <xref:System.Windows.Media.TextFormatting.TextRun>, которые модуль форматирования текста использует для создания объектов <xref:System.Windows.Media.TextFormatting.TextLine>.  
+## <a name="implementing-the-client-text-store"></a>Реализация клиентского хранилища текста  
+ При расширении механизма форматирования текста необходимо реализовать все аспекты хранилища текста и управлять ими. Это довольно сложная задача. Хранилище текста отвечает за отслеживание свойств фрагментов текста, свойств абзаца, встроенных объектов и других подобных элементов. Он также предоставляет модуль форматирования текста с отдельными <xref:System.Windows.Media.TextFormatting.TextRun> объекты, которые использует модуль форматирования текста для создания <xref:System.Windows.Media.TextFormatting.TextLine> объектов.  
   
- Для виртуализации хранилища текста оно должно быть производным от класса <xref:System.Windows.Media.TextFormatting.TextSource>.  Объект <xref:System.Windows.Media.TextFormatting.TextSource> задает метод, используемый модулем форматирования текста для извлечения текстовых последовательностей из хранилища текста.  Метод <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> используется модулем форматирования текста для извлечения текстовых последовательностей, используемых в форматировании строки.  Вызов <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> неоднократно осуществляется модулем форматирования текста до тех пор, пока не выполняется одно из следующих условий:  
+ Для виртуализации хранилища текста, хранилище текста должен быть производным от <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource>Задает метод, используемый модулем форматирования текста для извлечения текстовых последовательностей из хранилища текста. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>Представляет метод, используемый модулем форматирования текста для извлечения текста последовательностей, используемых в форматировании строки. Вызов <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> неоднократно осуществляется модулем форматирования текста, пока не произойдет одно из следующих условий:  
   
--   Возвращается <xref:System.Windows.Media.TextFormatting.TextEndOfLine> или подкласс.  
+-   Объект <xref:System.Windows.Media.TextFormatting.TextEndOfLine> или возвращаемых подкласс.  
   
--   Суммарная ширина исполнений текста превышает ширину строк, указанную или в вызове для создания модуля форматирования текста или в вызове метода <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> модуля форматирования текста.  
+-   Суммарная ширина отрезками текста превышает ширину строк, указанную в вызов для создания модуля форматирования текста или вызова для форматирования текста <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> метод.  
   
--   Возвращается новая последовательность [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)], такая как «CF», «LF», или «CRLF».  
+-   Объект [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] возвращается последовательность знаков, например «CF», «CRLF» или «LF».  
   
 <a name="section4"></a>   
-## Предоставление исполнений текста  
- Ядром процесса форматирования текста является взаимодействие между модулем форматирования текста и хранилищем текста.  Реализация <xref:System.Windows.Media.TextFormatting.TextSource> предоставляет модуля форматирования текста с объектами <xref:System.Windows.Media.TextFormatting.TextRun> и свойствами, с которыми форматируются исполнения текста.  Это взаимодействие обрабатывается методом <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>, который вызывается модулем форматирования текста.  
+## <a name="providing-text-runs"></a>Предоставление фрагментов текста  
+ Ядром процесса форматирования текста является взаимодействие между модулем форматирования текста и хранилищем текста. Реализация <xref:System.Windows.Media.TextFormatting.TextSource> предоставляет модуль форматирования текста с <xref:System.Windows.Media.TextFormatting.TextRun> объектов и свойств, с которыми форматируются исполнения текста. Это взаимодействие обрабатывается <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> метод, который вызывается модулем форматирования текста.  
   
- В следующей таблице представлены некоторые из предварительно определенных объектов <xref:System.Windows.Media.TextFormatting.TextRun>.  
+ В следующей таблице приведены некоторые из предварительно определенных <xref:System.Windows.Media.TextFormatting.TextRun> объектов.  
   
 |Тип TextRun|Использование|  
-|-----------------|-------------------|  
-|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Специализированное исполнение текста, используемое для обратной передачи глифов символа модулю форматирования текста.|  
-|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Специализированное исполнение текста используется для предоставления содержимого, в котором выполняются измерение, проверка наличия и рисование, такое как кнопка или изображения в тексте.|  
-|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Специализированное исполнение текста используется для отметки конца строки.|  
-|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Специализированное исполнение текста используется для отметки конца абзаца.|  
-|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Специализированное исполнение текста используется для отметки конца сегмента, такого как конец области, на который влияет предыдущее исполнение <xref:System.Windows.Media.TextFormatting.TextModifier>.|  
-|<xref:System.Windows.Media.TextFormatting.TextHidden>|Специализированное исполнение текста используется для отметки диапазона скрытых знаков.|  
-|<xref:System.Windows.Media.TextFormatting.TextModifier>|Специализированное исполнение текста используется для изменения свойств исполнений текста в его области.  Область расширяется до следующего соответствия исполнению текста <xref:System.Windows.Media.TextFormatting.TextEndOfSegment> или до следующего <xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>.|  
+|------------------|-----------|  
+|<xref:System.Windows.Media.TextFormatting.TextCharacters>|Специализированный фрагмент текста, который используется для передачи представления глифов символов обратно в модуль форматирования текста.|  
+|<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Специализированный фрагмент текста, который используется для предоставления содержимого, в котором измерение, проверка нажатия и рисование выполняются в целом (например, кнопка или изображение в тексте).|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfLine>|Специализированный фрагмент текста, который используется для обозначения конца строки.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>|Специализированный фрагмент текста, который используется для обозначения конца абзаца.|  
+|<xref:System.Windows.Media.TextFormatting.TextEndOfSegment>|Специализированное исполнение текста используется для обозначения конца сегмента, такие как конец области, затронутых предыдущим <xref:System.Windows.Media.TextFormatting.TextModifier> запуска.|  
+|<xref:System.Windows.Media.TextFormatting.TextHidden>|Специализированный фрагмент текста, который используется для отметки диапазона скрытых символов.|  
+|<xref:System.Windows.Media.TextFormatting.TextModifier>|Специализированный фрагмент текста, который используется для изменения свойств фрагментов текста в своей области. Область расширяется до следующего соответствия <xref:System.Windows.Media.TextFormatting.TextEndOfSegment> отрезка текста или следующей <xref:System.Windows.Media.TextFormatting.TextEndOfParagraph>.|  
   
- Любой из предварительно определенных объектов <xref:System.Windows.Media.TextFormatting.TextRun> может быть подклассом.  Это позволяет исходному тексту предоставлять модуль форматирования текста с исполнениями текста, включающими пользовательские данные.  
+ Готовых <xref:System.Windows.Media.TextFormatting.TextRun> объектов может быть подклассом. Это позволяет источнику текста предоставлять модуль форматирования текста с фрагментами текста, включающими пользовательские данные.  
   
- В следующем примере демонстрируется использование метода <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>.  Этот хранилище текста возвращает объекты <xref:System.Windows.Media.TextFormatting.TextRun> модулю форматирования текста для обработки.  
+ В следующем примере демонстрируется <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> метод. Этот хранилище текста возвращает <xref:System.Windows.Media.TextFormatting.TextRun> объектов для форматирования текста для обработки.  
   
  [!code-csharp[TextFormatterExample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
  [!code-vb[TextFormatterExample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
   
 > [!NOTE]
->  В этом примере, хранилище текста предоставляет те же свойства текста ко всему тексту.  Дополнительные хранилища текста потребуют реализации управления их собственным диапазоном для того, чтобы позволить индивидуальным знакам иметь различные свойства.  
+>  В этом примере хранилище текста предоставляет одни и те же свойства текста всему тексту. Расширенные хранилища текста могут потребоваться для реализации собственного управления диапазонами, чтобы позволить отдельным символам иметь разные свойства.  
   
 <a name="section5"></a>   
-## Определение свойств форматирования  
- Объекты <xref:System.Windows.Media.TextFormatting.TextRun> форматируются с помощью свойств, предоставляемых хранилищем текста.  Такие свойства бывают двух типов: <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> и <xref:System.Windows.Media.TextFormatting.TextRunProperties>.  Класс <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> обрабатывает внутренние свойства параграфа, например <xref:System.Windows.TextAlignment> и <xref:System.Windows.FlowDirection>.  Объект <xref:System.Windows.Media.TextFormatting.TextRunProperties> представляет свойства, которые могут отличаться для каждой текстовой последовательности внутри параграфа, например кисть переднего плана, <xref:System.Windows.Media.Typeface> и размер шрифта.  Для реализации пользовательских абзацев и пользовательских типов свойств исполнений текста, приложение должно создать классы, производные от <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> и <xref:System.Windows.Media.TextFormatting.TextRunProperties> соответственно.  
+## <a name="specifying-formatting-properties"></a>Задание свойств форматирования  
+ <xref:System.Windows.Media.TextFormatting.TextRun>объекты форматируются с помощью свойств, предоставляемых хранилищем текста. Эти свойства делятся на два типа <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> и <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>обрабатывает внутренние свойства параграфа, таких как <xref:System.Windows.TextAlignment> и <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties>являются свойствами, которые могут быть разными для каждого запуска в пределах абзаца, таких как кисть переднего плана текста <xref:System.Windows.Media.Typeface>и размер шрифта. Для реализации пользовательских абзацев и типы свойств пользовательского текста, приложение должно создать классы, производные от <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> и <xref:System.Windows.Media.TextFormatting.TextRunProperties> соответственно.  
   
-## См. также  
- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)   
+## <a name="see-also"></a>См. также  
+ [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

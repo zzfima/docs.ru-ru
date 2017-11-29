@@ -1,52 +1,58 @@
 ---
-title: "Практическое руководство. Определение изменения текста в TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обнаружение изменений в тексте"
-  - "изменения в тексте, обнаружение"
-  - "TextBox - элемент управления, обнаружение изменений в тексте"
+title: "Практическое руководство. Определение изменения текста в TextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TextBox control [WPF], detecting text change
+- text change [WPF], detecting
+- detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 92fc8995ab75cc25bac3bb21b1646052822c3721
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Определение изменения текста в TextBox
-В этом примере показан один способ использования события <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> для выполнения метода при каждом изменении текста в элементе управления <xref:System.Windows.Controls.TextBox>.  
+# <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Практическое руководство. Определение изменения текста в TextBox
+В этом примере показано, как использовать <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> событий для выполнения метода всякий раз, когда текст в <xref:System.Windows.Controls.TextBox> элемент управления был изменен.  
   
- В классе кода программной части для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], содержащем элемент управления <xref:System.Windows.Controls.TextBox>, в котором требуется отслеживать изменения, вставьте метод, вызываемый при активации события <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>.  Этот метод должен иметь подпись, которая соответствует той, которую ожидает делегат <xref:System.Windows.Controls.TextChangedEventHandler>.  
+ В классе кода для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , содержащий <xref:System.Windows.Controls.TextBox> управления, который требуется отслеживать изменения, вставьте метод, вызываемый при <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> события.  Этот метод должен иметь сигнатуру, которая совпадает с той, которую ожидает <xref:System.Windows.Controls.TextChangedEventHandler> делегата.  
   
- Обработчик событий вызывается для элемента управления <xref:System.Windows.Controls.TextBox> при его изменении его содержимого пользователем или программой.  
+ Обработчик событий вызывается всякий раз, когда содержимое <xref:System.Windows.Controls.TextBox> управления изменяются пользователем или программным путем.  
   
- **Примечание.** Данное событие вызывается при создании и первоначальном заполнении текстом элемента управления <xref:System.Windows.Controls.TextBox>.  
+ **Примечание:** это событие возникает при <xref:System.Windows.Controls.TextBox> создается и первоначальном заполнении текстом элемента управления.  
   
-## Пример  
- В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], который определяет элемент управления <xref:System.Windows.Controls.TextBox>, задайте для атрибута <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> значение, соответствующее имени метода обработчика событий.  
+## <a name="example"></a>Пример  
+ В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , определяющий вашей <xref:System.Windows.Controls.TextBox> контроля, указания <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> атрибут со значением, которое соответствует имени метода обработчика событий.  
   
- [!code-xml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
   
-## Пример  
- В классе кода программной части для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], содержащем элемент управления <xref:System.Windows.Controls.TextBox>, в котором требуется отслеживать изменения, вставьте метод, вызываемый при активации события <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>.  Этот метод должен иметь подпись, которая соответствует той, которую ожидает делегат <xref:System.Windows.Controls.TextChangedEventHandler>.  
+## <a name="example"></a>Пример  
+ В классе кода для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , содержащий <xref:System.Windows.Controls.TextBox> управления, который требуется отслеживать изменения, вставьте метод, вызываемый при <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> события.  Этот метод должен иметь сигнатуру, которая совпадает с той, которую ожидает <xref:System.Windows.Controls.TextChangedEventHandler> делегата.  
   
  [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
  [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
   
- Обработчик событий вызывается для элемента управления <xref:System.Windows.Controls.TextBox> при его изменении его содержимого пользователем или программой.  
+ Обработчик событий вызывается всякий раз, когда содержимое <xref:System.Windows.Controls.TextBox> управления изменяются пользователем или программным путем.  
   
- **Примечание.** Данное событие вызывается при создании и первоначальном заполнении текстом элемента управления <xref:System.Windows.Controls.TextBox>.  
+ **Примечание:** это событие возникает при <xref:System.Windows.Controls.TextBox> создается и первоначальном заполнении текстом элемента управления.  
   
  Комментарии  
   
-## См. также  
- <xref:System.Windows.Controls.TextChangedEventArgs>   
- [Общие сведения о TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Controls.TextChangedEventArgs>  
+ [Общие сведения о TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

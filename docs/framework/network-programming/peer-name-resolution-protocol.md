@@ -7,24 +7,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Протокол PNRP
+# <a name="peer-name-resolution-protocol"></a>Протокол PNRP
 В одноранговых средах одноранговые узлы используют определенные системы разрешения имен для определения сетевого расположения (адреса, протоколы и порты) друг друга на основе имен и идентификаторов других типов. Раньше разрешение имен одноранговых узлов было затруднено из-за временного характера подключений, а также других недостатков службы доменных имен (DNS).  
   
  Платформа одноранговых сетей Microsoft® Windows® решает эту проблему за счет применения протокола PNRP, который представляет собой безопасный масштабируемый динамический протокол регистрации и разрешения имен, изначально разработанный для Windows XP и позднее модернизированный для Windows Vista™. Принципы работы протокола PNRP значительно отличаются от других традиционных систем разрешения имен, что открывает перед разработчиками совершенно новые возможности.  
@@ -45,7 +39,7 @@ ms.lasthandoff: 08/21/2017
   
 -  
   
-## Пространство имен System.Net.PeerToPeer  
+## <a name="the-systemnetpeertopeer-namespace"></a>Пространство имен System.Net.PeerToPeer  
   
 -   Функции протокола PNRP определены в пространстве имен <xref:System.Net.PeerToPeer> на платформе .NET Framework версии 3.5. В этом пространстве имен представлен набор типов, которые могут использоваться для регистрации и разрешения имен одноранговых узлов с использованием доступной службы PNRP.  
   
@@ -73,9 +67,8 @@ ms.lasthandoff: 08/21/2017
   
 -  
   
-## См. также  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Пример технологии PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)
-
