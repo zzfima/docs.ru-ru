@@ -1,58 +1,62 @@
 ---
-title: "Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "клавиши доступа, создание для элементов управления"
-  - "клавиши доступа, Windows Forms"
-  - "элементы управления [Windows Forms], клавиши доступа"
-  - "элементы управления диалогового окна, назначенные клавиши"
-  - "сочетания клавиш, создание для элементов управления"
-  - "Label - элемент управления [Windows Forms], создание сочетаний клавиш"
-  - "назначенные клавиши"
-  - "назначенные клавиши, добавление элементов управления в диалоговые окна"
-  - "UseMnemonic - свойство, Label - элемент управления"
-  - "элементы управления Windows Forms, клавиши доступа"
+title: "Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [Windows Forms], access keys
+- dialog box controls [Windows Forms], mnemonics
+- access keys [Windows Forms], creating for controls
+- Label control [Windows Forms], creating access keys
+- mnemonics [Windows Forms], adding to dialog box controls
+- mnemonics
+- Windows Forms controls, access keys
+- UseMnemonic property [Windows Forms], Label control
+- keyboard shortcuts [Windows Forms], creating for controls
+- access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms
-Элементы управления форм Windows Forms <xref:System.Windows.Forms.Label> могут использоваться для определения клавиш быстрого доступа для других элементов управления.  Если в элементе управления "Label" определить клавишу быстрого доступа, пользователь с помощью сочетания клавиши ALT и заданной клавиши может передать фокус следующему в последовательности переходов элементу управления.  Поскольку метки не могут получать фокус, фокус автоматически передается следующему элементу управления в последовательности переходов.  Этот метод используется для присвоения сочетаний клавиш текстовым полям, полям со списком, спискам и наборам записей в табличном виде.  
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms
+Windows Forms <xref:System.Windows.Forms.Label> элементы управления можно использовать для определения клавиши доступа для других элементов управления. При определении клавиши доступа в элементе управления label, пользователь может нажать клавишу ALT в сочетании с символом, передать фокус элементу управления, следующему в последовательности табуляции. Поскольку метки не может получать фокус, фокус автоматически перемещается к следующему элементу управления в последовательности табуляции. Этот метод используется для присвоения ключи доступа для текстовых полей, поля со списком, списки и таблицы данных.  
   
-### Чтобы присвоить сочетание клавиш доступа элементу управления с помощью метки  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Чтобы назначить клавиши доступа к элементу управления с меткой  
   
-1.  Нарисуйте сначала метку, а затем другой элемент управления.  
+1.  Сначала нарисуйте метку, а затем другого элемента управления.  
   
-     \-или\-  
+     -или-  
   
-     Нарисуйте элементы управления в любом порядке и при свойте для свойства <xref:System.Windows.Forms.Control.TabIndex%2A> метки значение на единицу меньше, чем у другого элемента управления.  
+     Нарисуйте элементы управления в любом порядке и задайте <xref:System.Windows.Forms.Control.TabIndex%2A> свойство метки на единицу меньше, чем у элемента управления.  
   
-2.  Присвойстве свойству метки <xref:System.Windows.Forms.Label.UseMnemonic%2A> значение `true`.  
+2.  Задайте для свойства label <xref:System.Windows.Forms.Label.UseMnemonic%2A> свойства `true`.  
   
-3.  Для присвоения сочетания клавиш для метки используйте амперсанд \(&\) в свойстве <xref:System.Windows.Forms.Label.Text%2A> метки.  Дополнительные сведения содержатся в разделе [Создание сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
+3.  Используйте амперсанд (&) в метке <xref:System.Windows.Forms.Label.Text%2A> свойства, которому назначается ключ доступа для метки. Дополнительные сведения см. в разделе [Создание сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
   
     > [!NOTE]
-    >  Может понадобиться отображение амперсандов в элементе управления "Label" вместо использования их для создания клавиш быстрого доступа.  Такое может произойти, если элемент управления "Label" привязан к полю в наборе записей, включающем амперсанды.  Для отображения амперсандов в элементе управления "Label" установите свойству <xref:System.Windows.Forms.Label.UseMnemonic%2A> значение `false`.  Если требуется отобразить амперсанды, и назначить клавишу быстрого доступа, задайте для свойства <xref:System.Windows.Forms.Label.UseMnemonic%2A> значение `true` и укажите клавишу доступа с помощью одного амперсанда \(&\), а отображаемый амперсанд — с помощью двух знаков амперсанда.  
+    >  Может потребоваться отобразить амперсанды в элементе управления label, а не использовать их для создания ключей доступа. Это может произойти, если элемент управления label привязан к полю в наборе записей, включающем амперсанды. Для отображения в элементе управления label амперсанды <xref:System.Windows.Forms.Label.UseMnemonic%2A> свойства `false`. Если вы хотите отобразить амперсанды и назначить клавишу доступа, установите <xref:System.Windows.Forms.Label.UseMnemonic%2A> свойства `true` и укажите клавишу доступа с помощью одного амперсанда (&) и знак для отображения с помощью двух знаков амперсанда.  
   
     ```vb  
     Label1.UseMnemonic = True  
     Label1.Text = "&Print"  
     Label2.UseMnemonic = True  
     Label2.Text = "&Copy && Paste"  
-  
     ```  
   
     ```csharp  
@@ -60,7 +64,6 @@ caps.handback.revision: 11
     label1.Text = "&Print";  
     label2.UseMnemonic = true;  
     label2.Text = "&Copy && Paste";  
-  
     ```  
   
     ```cpp  
@@ -70,7 +73,7 @@ caps.handback.revision: 11
     label2->Text = "&Copy && Paste";  
     ```  
   
-## См. также  
- [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)   
- [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  [Элемент управления Label](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

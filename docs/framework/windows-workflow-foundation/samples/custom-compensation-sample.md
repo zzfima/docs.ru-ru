@@ -1,23 +1,27 @@
 ---
-title: "Образец настраиваемой компенсации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Образец настраиваемой компенсации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3a9745c0cdd3a2d7050aed083d2eee5dfd4aaaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец настраиваемой компенсации
-В этом образце показано, как использовать действие <xref:System.Activities.Statements.CompensableActivity> и его обработчик компенсации для определения пользовательской логики компенсации.В этом образце моделируется «Агентство по аренде грузовиков».  
+# <a name="custom-compensation-sample"></a>Образец настраиваемой компенсации
+В этом образце показано, как использовать действие <xref:System.Activities.Statements.CompensableActivity> и его обработчик компенсации для определения пользовательской логики компенсации. В этом образце моделируется «Агентство по аренде грузовиков».  
   
-## Подробные сведения об образце  
+## <a name="sample-details"></a>Подробные сведения об образце  
  Выполняется моделирование следующих шагов.  
   
 1.  Пользователь запрашивает тарифы на аренду грузовика на заданную дату.  
@@ -36,25 +40,25 @@ caps.handback.revision: 13
   
 8.  Если заказчик отменяет бронирование, выполняется пользовательская логика компенсации <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>, которая построена следующим образом.  
   
-    1.  Если у заказчика нет учетной записи PREMIUM\-класса, и до дня бронирования остается 10 дней или меньше, то с него взимается стоимость обслуживания, в противном случае приложение возмещает стоимость обслуживания.  
+    1.  Если у заказчика нет учетной записи PREMIUM-класса, и до дня бронирования остается 10 дней или меньше, то с него взимается стоимость обслуживания, в противном случае приложение возмещает стоимость обслуживания.  
   
-    2.  Оставшиеся компенсируемые действия \(заказ грузовика \+ оплата заказа\) выполняются в соответствии с логикой компенсации по умолчанию, которая заключается в компенсации в порядке, обратном порядку выполнения.  
+    2.  Оставшиеся компенсируемые действия (заказ грузовика + оплата заказа) выполняются в соответствии с логикой компенсации по умолчанию, которая заключается в компенсации в порядке, обратном порядку выполнения.  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Откройте решение CustomCompensation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].Файл с решением находится в папке \\WF\\Basic\\Compensation\\CustomCompensation.  
+1.  Откройте решение CustomCompensation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]. Файл с решением находится в папке \WF\Basic\Compensation\CustomCompensation.  
   
-2.  Чтобы построить решение, нажмите CTRL\+SHIFT\+B.  
+2.  Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
-3.  Нажмите CTRL \+ F5, чтобы запустить приложение.  
+3.  Нажмите CTRL + F5, чтобы запустить приложение.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`  
   
-## См. также
+## <a name="see-also"></a>См. также

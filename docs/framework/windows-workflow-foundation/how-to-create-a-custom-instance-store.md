@@ -1,30 +1,34 @@
 ---
-title: "Как создать настраиваемое хранилище экземпляров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как создать настраиваемое хранилище экземпляров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c383d3af92ba2f76f8ba09bc194220c170beaa0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как создать настраиваемое хранилище экземпляров
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> \- хранилище экземпляров SQL Server, которое используется для сохранения данных рабочих процессов.  Если приложению необходимо сохранить данные рабочего процесса в другой среде передачи, например базе данных или файловой системе, вы можете создать настраиваемое хранилище экземпляров.  Пользовательское хранилище экземпляров создается путем расширения абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> и реализации методов, которые необходимы для реализации.  Полную реализацию пользовательского хранилища экземпляров см. в образце [Процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  
+# <a name="how-to-create-a-custom-instance-store"></a>Как создать настраиваемое хранилище экземпляров
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> - хранилище экземпляров SQL Server, которое используется для сохранения данных рабочих процессов. Если приложению необходимо сохранить данные рабочего процесса в другой среде передачи, например базе данных или файловой системе, вы можете создать настраиваемое хранилище экземпляров. Пользовательское хранилище экземпляров создается путем расширения абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> и реализации методов, которые необходимы для реализации. Для завершения реализации пользовательского хранилища экземпляров см. в разделе [процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) образца.  
   
-## Реализация метода BeginTryCommand  
- <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> отправляется в хранилище экземпляров подсистемой сохраняемости.  Тип параметра `command` указывает, какая команда выполняется. Этот параметр может быть следующих типов:  
+## <a name="implementing-the-begintrycommand-method"></a>Реализация метода BeginTryCommand  
+ <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> отправляется в хранилище экземпляров подсистемой сохраняемости. Тип параметра `command` указывает, какая команда выполняется. Этот параметр может быть следующих типов:  
   
--   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>. Подсистема сохраняемости отправляет эту команду в хранилище экземпляров, когда рабочий процесс должен были сохранен в среде хранения.  Сведения о сохраняемости рабочего процесса передаются методу в участнике <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> параметра `command`.  
+-   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>. Подсистема сохраняемости отправляет эту команду в хранилище экземпляров, когда рабочий процесс должен были сохранен в среде хранения. Сведения о сохраняемости рабочего процесса передаются методу в участнике <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> параметра `command`.  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров при вызове рабочего процесса из среды хранения.  Идентификатор экземпляра рабочего процесса, который требуется загрузить, предоставляется методу в параметре `instanceId` свойства <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> параметра `context`.  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров при вызове рабочего процесса из среды хранения. Идентификатор экземпляра рабочего процесса, который требуется загрузить, предоставляется методу в параметре `instanceId` свойства <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> параметра `context`.  
   
--   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров, когда <xref:System.ServiceModel.Activities.WorkflowServiceHost> следует зарегистрировать в качестве владельца блокировки.  Идентификатор экземпляра текущего рабочего процесса должен быть передан в хранилище экземпляров с помощью метода <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> в параметре `context`.  
+-   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров, когда <xref:System.ServiceModel.Activities.WorkflowServiceHost> следует зарегистрировать в качестве владельца блокировки. Идентификатор экземпляра текущего рабочего процесса должен быть передан в хранилище экземпляров с помощью метода <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> в параметре `context`.  
   
      В следующем фрагменте кода показано, как реализовать команду CreateWorkflowOwner, чтобы назначить явного владельца блокировки.  
   
@@ -44,10 +48,9 @@ caps.handback.revision: 11
                                    createCommand,  
                                    TimeSpan.FromSeconds(30)).InstanceOwner;  
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров, если идентификатор экземпляра владельца блокировки может быть удален из хранилища экземпляров.  Как и в случае с <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, идентификатор владельца блокировки должен быть предоставлен приложением.  
+-   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров, если идентификатор экземпляра владельца блокировки может быть удален из хранилища экземпляров. Как и в случае с <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, идентификатор владельца блокировки должен быть предоставлен приложением.  
   
      В следующем фрагменте кода показано, как с помощью <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand> освободить блокировку.  
   
@@ -72,10 +75,9 @@ caps.handback.revision: 11
             store.DefaultInstanceOwner = null;  
         }  
     }  
-  
     ```  
   
-     Приведенный выше метод должен быть вызван в блоке try\/catch при запуске экземпляра дочернего действия.  
+     Приведенный выше метод должен быть вызван в блоке try/catch при запуске экземпляра дочернего действия.  
   
     ```  
     try  
@@ -90,14 +92,13 @@ caps.handback.revision: 11
     {  
         FreeHandleAndDeleteOwner(store, ownerHandle);  
     }  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров, когда экземпляр рабочего процесса необходимо загрузить с помощью ключа экземпляра рабочего процесса.  Идентификатор ключа экземпляра может быть указан с помощью параметра <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> команды.  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров, когда экземпляр рабочего процесса необходимо загрузить с помощью ключа экземпляра рабочего процесса. Идентификатор ключа экземпляра может быть указан с помощью параметра <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> команды.  
   
--   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров для извлечения параметров активации сохраненных рабочих процессов для создания узла рабочего процесса, который затем может загружать рабочие процессы.  Эта команда отправляется подсистемой в ответ на вызов хранилищем экземпляров <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> для узла, когда она выполняет поиск экземпляра, который можно активировать.  Хранилище экземпляров должно быть опрошено, чтобы определить, есть ли рабочие процессы, которые можно активировать.  
+-   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров для извлечения параметров активации сохраненных рабочих процессов для создания узла рабочего процесса, который затем может загружать рабочие процессы. Эта команда отправляется подсистемой в ответ на вызов хранилищем экземпляров <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> для узла, когда она выполняет поиск экземпляра, который можно активировать. Хранилище экземпляров должно быть опрошено, чтобы определить, есть ли рабочие процессы, которые можно активировать.  
   
--   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров для загрузки запускаемых экземпляров рабочих процессов.  Эта команда отправляется подсистемой в ответ на вызов хранилищем экземпляров <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> для узла, когда она выполняет поиск экземпляра, который можно выполнить.  Хранилище экземпляров должно сделать запрос рабочих процессов, которые можно выполнить.  Следующий фрагмент кода демонстрирует опрос в хранилище экземпляров рабочих процессов, которые можно выполнить или активировать.  
+-   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>. Механизм сохраняемости отправляет эту команду в хранилище экземпляров для загрузки запускаемых экземпляров рабочих процессов. Эта команда отправляется подсистемой в ответ на вызов хранилищем экземпляров <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> для узла, когда она выполняет поиск экземпляра, который можно выполнить. Хранилище экземпляров должно сделать запрос рабочих процессов, которые можно выполнить. Следующий фрагмент кода демонстрирует опрос в хранилище экземпляров рабочих процессов, которые можно выполнить или активировать.  
   
     ```  
     public void PollForEvents()  
@@ -135,10 +136,9 @@ caps.handback.revision: 11
             }  
         }  
     }  
-  
     ```  
   
-     В предыдущем фрагменте кода хранилище экземпляров запрашивает доступные события и проверяет каждое из них, определяя, является ли оно событием <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>.  Если событие обнаружено, <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> вызывается для подачи сигнала узлу для отправки команды в хранилище экземпляров.  Следующий фрагмент кода демонстрирует реализацию обработчика события для этой команды.  
+     В предыдущем фрагменте кода хранилище экземпляров запрашивает доступные события и проверяет каждое из них, определяя, является ли оно событием <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>. Если событие обнаружено, <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> вызывается для подачи сигнала узлу для отправки команды в хранилище экземпляров.  Следующий фрагмент кода демонстрирует реализацию обработчика события для этой команды.  
   
     ```  
     If (command is TryLoadRunnableWorkflowCommand)  
@@ -227,19 +227,17 @@ caps.handback.revision: 11
             break;  
         }  
     }  
-  
     ```  
   
-     В предыдущем фрагменте кода хранилище экземпляров выполняет поиск запускаемых экземпляров.  Если экземпляр найден, он связывается с контекстом выполнения и загружается.  
+     В предыдущем фрагменте кода хранилище экземпляров выполняет поиск запускаемых экземпляров. Если экземпляр найден, он связывается с контекстом выполнения и загружается.  
   
-## Использование пользовательского хранилища экземпляров  
- Чтобы реализовать пользовательское хранилище экземпляров, присвойте <xref:System.Activities.WorkflowApplication.InstanceStore%2A> экземпляр хранилища экземпляров и реализуйте метод <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>.  Подробности см. в учебнике [Как создать и запустить длительно выполняющийся рабочий процесс](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md).  
+## <a name="using-a-custom-instance-store"></a>Использование пользовательского хранилища экземпляров  
+ Чтобы реализовать пользовательское хранилище экземпляров, присвойте <xref:System.Activities.WorkflowApplication.InstanceStore%2A> экземпляр хранилища экземпляров и реализуйте метод <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>.  В разделе [как: Создание и запуск длительно выполняющегося рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) учебнике.  
   
-## Образец хранилища экземпляров  
- В следующем образце кода показана полная реализация хранилища экземпляров, взятая из образца [Процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  Это хранилище экземпляров сохраняет данные рабочих процессов в файл с помощью XML.  
+## <a name="a-sample-instance-store"></a>Образец хранилища экземпляров  
+ В следующем образце кода показана реализация хранилища полный экземпляр, взяты из [процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) образца. Это хранилище экземпляров сохраняет данные рабочих процессов в файл с помощью XML.  
   
 ```  
-  
 using System;  
 using System.Activities.DurableInstancing;  
 using System.Collections.Generic;  
@@ -400,5 +398,4 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         }  
     }  
 }  
-  
 ```

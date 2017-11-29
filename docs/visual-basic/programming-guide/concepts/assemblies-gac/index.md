@@ -1,31 +1,22 @@
 ---
 title: "Сборки и глобальный кэш сборок (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 8a53a153851973c735a430056520b01c27b1ef59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Сборки и глобальный кэш сборок (Visual Basic)
 Сборки представляют собой базовый элемент развертывания, управления версиями, повторного использования, назначения областей активации и прав доступа для приложения на основе платформы .NET. Сборки создаются в форме исполняемого файла (.exe) или файла динамической библиотеки (.dll) и являются составными частями .NET Framework. Они предоставляют сведения для среды CLR, которые нужны для распознавания реализаций типов. Сборку можно представить как коллекцию типов и ресурсов, которые предназначены для совместной работы и формируют логическую единицу функциональности.  
@@ -51,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Таблицу всех файлов, входящих в сборку. Сюда будут включаться другие ваши сборки, от которых зависит файл .exe или .dll, а также растровые изображения или файлы Readme.  
   
--   *Список ссылок сборки*, то есть список всех внешних зависимостей — библиотек или других файлов, созданных другими разработчиками, которые требуются для работы вашего приложения. Ссылки на сборки содержат ссылки на глобальные и частные объекты. Глобальные объекты находятся в глобальном кэше сборок. Эта область, как системный каталог System32, доступна для всех других приложений. Пространство имен <xref:Microsoft.VisualBasic?displayProperty=fullName> служит примером сборки в глобальном кэше сборок. Закрытые объекты должны находиться в каталоге установки приложения или в одном из его подкаталогов.  
+-   *Список ссылок сборки*, то есть список всех внешних зависимостей — библиотек или других файлов, созданных другими разработчиками, которые требуются для работы вашего приложения. Ссылки на сборки содержат ссылки на глобальные и частные объекты. Глобальные объекты находятся в глобальном кэше сборок. Эта область, как системный каталог System32, доступна для всех других приложений. Пространство имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType> служит примером сборки в глобальном кэше сборок. Закрытые объекты должны находиться в каталоге установки приложения или в одном из его подкаталогов.  
   
  Поскольку сборки содержат сведения о содержимом, управлении версиями и зависимостях, правильность работы созданных вами приложений на Visual Basic не зависит от значений в реестре Windows. Сборки снижают риск конфликта библиотек DLL, а также повышают надежность и простоту развертывания приложений. Во многих случаях для установки приложения на базе .NET достаточно просто скопировать его файлы на целевой компьютер.  
   
@@ -67,12 +58,11 @@ ms.lasthandoff: 07/28/2017
 >  Чтобы создать сборку в Visual Studio, выберите пункт **Сборка** из меню **Сборка**.  
   
 ## <a name="see-also"></a>См. также  
- [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)   
- [Friend Assemblies (Visual Basic)](friend-assemblies.md)  (Дружественные сборки (Visual Basic))  
- [How to: Share an Assembly with Other Applications (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  (Практическое руководство. Совместное использование сборки с другими приложениями (Visual Basic))  
- [How to: Load and Unload Assemblies (Visual Basic)](how-to-load-and-unload-assemblies.md)  (Практическое руководство. Загрузка и выгрузка сборок (Visual Basic))  
- [How to: Determine If a File Is an Assembly (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  (Практическое руководство. Как определить, является ли файл сборкой (Visual Basic))  
- [How to: Create and Use Assemblies Using the Command Line (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  (Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic))  
- [Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  (Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (Visual Basic))  
+ [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)  
+ [Дружественные сборки (Visual Basic)](friend-assemblies.md)  
+ [Как: совместное использование сборки с другими приложениями (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
+ [Как: загрузка и выгрузка сборок (Visual Basic)](how-to-load-and-unload-assemblies.md)  
+ [Как: определить, является ли файл сборкой (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
+ [Как: Создание и использование сборок с помощью командной строки (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+ [Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  [Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md) (Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (Visual Basic))
-

@@ -1,28 +1,31 @@
 ---
-title: "Расширяемость хранилища | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Расширяемость хранилища"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f6700fe67d151e78c8b216d93a4cd7098ed6401d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Расширяемость хранилища
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> позволяет пользователям повышать уровень относящихся к приложению пользовательских свойств, которые могут использоваться для создания запросов к экземплярам в базе данных сохраняемости.Благодаря действию по повышению уровня свойства значение становится доступным в специальном представлении в базе данных.Свойства с повышенным уровнем \(т.е. свойства, которые могут использоваться в пользовательских запросах\), могут относиться к простым типам, например к Int64, Guid, String, DateTime или к сериализованному двоичному типу \(byte\[\]\).  
+# <a name="store-extensibility"></a>Расширяемость хранилища
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> позволяет пользователям повышать уровень относящихся к приложению пользовательских свойств, которые могут использоваться для создания запросов к экземплярам в базе данных сохраняемости. Благодаря действию по повышению уровня свойства значение становится доступным в специальном представлении в базе данных. Свойства с повышенным уровнем (т.е. свойства, которые могут использоваться в пользовательских запросах), могут относиться к простым типам, например к Int64, Guid, String, DateTime или к сериализованному двоичному типу (byte[]).  
   
- Класс <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит метод <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A>, который может использоваться для повышения уровня свойства, чтобы его можно было использовать в запросах.Ниже приведен подробный пошаговый пример расширения хранилища.  
+ Класс <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит метод <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A>, который может использоваться для повышения уровня свойства, чтобы его можно было использовать в запросах. Ниже приведен подробный пошаговый пример расширения хранилища.  
   
-1.  В данном образце сценария приложение обработки документов содержит рабочие процессы, в каждом из которых для обработки документов применяются пользовательские действия.Эти рабочие процессы содержат набор переменных состояния, которые необходимо сделать доступными для конечных пользователей.Для этого приложение обработки документов предоставляет расширение экземпляра типа <xref:System.Activities.Persistence.PersistenceParticipant>, используемое действиями для предоставления переменных состояния.  
+1.  В данном образце сценария приложение обработки документов содержит рабочие процессы, в каждом из которых для обработки документов применяются пользовательские действия. Эти рабочие процессы содержат набор переменных состояния, которые необходимо сделать доступными для конечных пользователей. Для этого приложение обработки документов предоставляет расширение экземпляра типа <xref:System.Activities.Persistence.PersistenceParticipant>, используемое действиями для предоставления переменных состояния.  
   
     ```  
-  
     class DocumentStatusExtension : PersistenceParticipant  
     {  
         public string DocumentId;  
@@ -30,7 +33,6 @@ caps.handback.revision: 15
         public string UserName;  
         public DateTime LastUpdateTime;  
     }  
-  
     ```  
   
 2.  Затем к узлу добавляется новое расширение.  
@@ -40,31 +42,27 @@ caps.handback.revision: 15
     WorkflowApplication application = new WorkflowApplication(workflow);  
     DocumentStatusExtension documentStatusExtension = new DocumentStatusExtension ();  
     application.Extensions.Add(documentStatusExtension);  
-  
     ```  
   
-     Дополнительные сведения о добавлении нестандартного участника сохраняемости см. в образце [Участники сохраняемости](../../../docs/framework/windows-workflow-foundation//persistence-participants.md).  
+     Дополнительные сведения о добавлении участника настраиваемой сохраняемости см. в разделе [участников сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) образца.  
   
-3.  Пользовательские действия в приложении обработки документов заполняют различные поля состояния в методе **Execute**.  
+3.  Настраиваемые действия в приложение обработки Документов заполняют различные поля состояния в **Execute** метод.  
   
     ```  
-  
     public override void Execute(CodeActivityContext context)  
     {  
         // ...  
         context.GetExtension<DocumentStatusExtension>().DocumentId = Guid.NewGuid();  
         context.GetExtension<DocumentStatusExtension>().UserName = "John Smith";  
-        context.GetExtension<DocumentStatusExtension>().ApprovalStatus = “Approved”;  
+        context.GetExtension<DocumentStatusExtension>().ApprovalStatus = "Approved";  
         context.GetExtension<DocumentStatusExtension>().LastUpdateTime = DateTime.Now();  
         // ...  
     }  
-  
     ```  
   
-4.  Когда экземпляр рабочего процесса достигает точки сохраняемости, метод **CollectValues** участника сохраняемости **DocumentStatusExtension** сохраняет данные свойства в коллекцию данных сохраняемости.  
+4.  Когда экземпляр рабочего процесса достигает точки сохраняемости **CollectValues** метод **DocumentStatusExtension** участник сохраняемости сохраняет данные свойства в данных сохраняемости Коллекция.  
   
     ```  
-  
     class DocumentStatusExtension : PersistenceParticipant  
     {  
         const XNamespace xNS = XNamespace.Get("http://contoso.com/DocumentStatus");  
@@ -81,13 +79,12 @@ caps.handback.revision: 15
         }  
         // ...  
     }  
-  
     ```  
   
     > [!NOTE]
-    >  Все эти свойства передаются в хранилище **SqlWorkflowInstanceStore** платформой сохраняемости через коллекцию **SaveWorkflowCommand.InstanceData**.  
+    >  Эти свойства передаются в **SqlWorkflowInstanceStore** платформой сохраняемости через **SaveWorkflowCommand.InstanceData** коллекции.  
   
-5.  Приложение обработки документов инициализирует хранилище экземпляров рабочих процессов SQL и вызывает метод **Promote** для повышения уровня этих данных.  
+5.  Приложение обработки Документов инициализирует хранилище экземпляров рабочих процессов SQL и вызывает **Promote** для повышения уровня этих данных.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -103,30 +100,28 @@ caps.handback.revision: 15
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     Основываясь на сведениях о повышении уровня, **SqlWorkflowInstanceStore** помещает свойства данных в столбцах [Представление [System.Activities.DurableInstancing.InstancePromotedProperties]](../../../docs/framework/windows-workflow-foundation//store-extensibility.md#InstancePromotedProperties).  
+     На основе этих сведений рекламной акции **SqlWorkflowInstanceStore** помещает свойства данных в столбцах [InstancePromotedProperties](#InstancePromotedProperties) представления.
   
 6.  Чтобы создать запрос к подмножеству данных из таблицы повышения уровня, приложение обработки данных добавляет пользовательское представление к представлению повышения уровня.  
   
     ```  
-  
     create view [dbo].[DocumentStatus] with schemabinding  
     as  
-        select  P.[InstanceId] as [InstanceId],  
-            P.Value1 as [UserName],  
-            P.Value2 as [ApprovalStatus],  
-            P.Value3 as [DocumentId],  
-            P.Value4 as [LastUpdatedTime]  
+        select  P.[InstanceId] as [InstanceId],  
+            P.Value1 as [UserName],  
+            P.Value2 as [ApprovalStatus],  
+            P.Value3 as [DocumentId],  
+            P.Value4 as [LastUpdatedTime]  
     from [System.Activities.DurableInstancing].[InstancePromotedProperties] as P  
     where P.PromotionName = N'DocumentStatus'  
     go  
-  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> Представление \[System.Activities.DurableInstancing.InstancePromotedProperties\]  
+##  <a name="InstancePromotedProperties"></a>Представления [System.Activities.DurableInstancing.InstancePromotedProperties]  
   
 |Имя столбца|Тип столбца|Описание|  
-|-----------------|-----------------|--------------|  
+|-----------------|-----------------|-----------------|  
 |InstanceId|GUID|Экземпляр рабочего процесса, которому принадлежит это повышение уровня.|  
-|PromotionName|nvarchar\(400\)|Имя самого продвижения.|  
-|Value1, Value2, Value3,..,Value32|sql\_variant|Значение самого свойства, уровень которого повышен.Большинство примитивных типов данных SQL, за исключением больших двоичных объектов BLOB и строк длиной более 8000 байт, помещается в sql\_variant.|  
-|Value33, Value34, Value35, …, Value64|varbinary\(max\)|Значение свойств повышаемого уровня, явно объявленных, как varbinary\(max\).|
+|PromotionName|nvarchar(400)|Имя самого продвижения.|  
+|Value1, Value2, Value3,..,Value32|sql_variant|Значение самого свойства, уровень которого повышен. Большинство примитивных типов данных SQL, за исключением больших двоичных объектов BLOB и строк длиной более 8000 байт, помещается в sql_variant.|  
+|Value33, Value34, Value35, …, Value64|varbinary(max)|Значение свойств повышаемого уровня, явно объявленных, как varbinary(max).|

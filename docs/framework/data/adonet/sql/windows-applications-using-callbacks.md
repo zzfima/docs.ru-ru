@@ -1,36 +1,40 @@
 ---
-title: "Windows-приложения, использующие ответные вызовы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Приложения Windows, использующие обратные вызовы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Windows-приложения, использующие ответные вызовы
-В большинстве сценариев асинхронной обработки необходимо запустить операцию в базе данных и продолжить выполнение других процессов, не дожидаясь завершения данной операции.  Однако во многих случаях требуется выполнение каких\-либо действий после завершения операции в базе данных.  Например, в Windows\-приложении может потребоваться передать длительную операцию в фоновый поток, чтобы иметь возможность работать с пользовательским интерфейсом.  Однако по завершении операции в базе данных необходимо будет использовать результаты для заполнения формы.  В таких случаях лучше всего использовать ответный вызов.  
+# <a name="windows-applications-using-callbacks"></a>Приложения Windows, использующие обратные вызовы
+В большинстве сценариев асинхронной обработки необходимо запустить операцию в базе данных и продолжить выполнение других процессов, не дожидаясь завершения данной операции. Однако во многих случаях требуется выполнение каких-либо действий после завершения операции в базе данных. Например, в Windows-приложении может потребоваться передать длительную операцию в фоновый поток, чтобы иметь возможность работать с пользовательским интерфейсом. Однако по завершении операции в базе данных необходимо будет использовать результаты для заполнения формы. В таких случаях лучше всего использовать ответный вызов.  
   
- Ответный вызов определяется путем задания делегата <xref:System.AsyncCallback> в методе <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> или <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>.  Этот делегат вызывается по завершении операции.  Делегату можно передать ссылку на саму команду <xref:System.Data.SqlClient.SqlCommand>, чтобы облегчить доступ к объекту <xref:System.Data.SqlClient.SqlCommand> и вызов соответствующего метода `End` без необходимости использовать глобальную переменную.  
+ Ответный вызов определяется путем задания делегата <xref:System.AsyncCallback> в методе <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> или <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Этот делегат вызывается по завершении операции. Делегату можно передать ссылку на саму команду <xref:System.Data.SqlClient.SqlCommand>, чтобы облегчить доступ к объекту <xref:System.Data.SqlClient.SqlCommand> и вызов соответствующего метода `End` без необходимости использовать глобальную переменную.  
   
-## Пример  
- В следующем Windows\-приложении демонстрируется использование метода <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, выполняющего инструкцию Transact\-SQL, которая содержит задержку в несколько секунд \(имитируя длительную команду\).  
+## <a name="example"></a>Пример  
+ В следующем Windows-приложении демонстрируется использование метода <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, выполняющего инструкцию Transact-SQL, которая содержит задержку в несколько секунд (имитируя длительную команду).  
   
- В этом примере показаны несколько важных приемов, в том числе вызов метода, который взаимодействует с формой из отдельного потока.  Кроме того, в этом примере показано, как блокировать попытки пользователей одновременно выполнять команду несколько раз и как гарантировать, что форма не закроется до вызова процедуры ответного вызова.  
+ В этом примере показаны несколько важных приемов, в том числе вызов метода, который взаимодействует с формой из отдельного потока. Кроме того, в этом примере показано, как блокировать попытки пользователей одновременно выполнять команду несколько раз и как гарантировать, что форма не закроется до вызова процедуры ответного вызова.  
   
- Чтобы настроить этот пример, создайте новое Windows\-приложение.  Поместите в форму элемент управления <xref:System.Windows.Forms.Button> и два элемента управления <xref:System.Windows.Forms.Label> \(приняв для каждого из них имя по умолчанию\).  Добавьте в класс формы следующий код, изменив строку соединения в соответствии с вашей средой.  
+ Чтобы настроить этот пример, создайте новое Windows-приложение. Поместите в форму элемент управления <xref:System.Windows.Forms.Button> и два элемента управления <xref:System.Windows.Forms.Label> (приняв для каждого из них имя по умолчанию). Добавьте в класс формы следующий код, изменив строку соединения в соответствии с вашей средой.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## См. также  
- [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

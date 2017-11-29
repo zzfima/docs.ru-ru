@@ -1,25 +1,28 @@
 ---
-title: "Расширение среды | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Расширение среды"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ff52165ca4ff79d652eb1cd509bcd6898005650b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Расширение среды
+# <a name="extensibility"></a>Расширение среды
 Этот раздел содержит образцы кода, связанные с настраиваемой расширяемостью и другими функциями [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Расширяемость каналов](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Демонстрирует настраиваемые каналы.  
   
@@ -47,7 +50,7 @@ caps.handback.revision: 6
  [Расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
  Демонстрирует настраиваемые транспорты.  
   
- [Веб\-расширяемость](../../../../docs/framework/wcf/samples/web-extensibility.md)  
+ [Веб-расширяемость](../../../../docs/framework/wcf/samples/web-extensibility.md)  
  Демонстрирует настраиваемую функциональность Интернета.  
   
  [Модуль форматирования и селектор операции](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
@@ -62,7 +65,7 @@ caps.handback.revision: 6
  [Суррогат DataContract](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Показывает, как настроить такие процессы, как сериализация, десериализация, экспорт схемы и импорт схемы, с помощью суррогатного класса контракта данных.  
   
- [Повышение управляемости обработки ошибок и формирования сообщений об ошибках](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [Повышение управляемости обработки ошибок и отчетов](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  Демонстрируется, каким образом расширить управление обработкой ошибок и отчетами об ошибках в службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
   
  [Инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md)  

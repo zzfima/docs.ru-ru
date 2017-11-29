@@ -1,90 +1,92 @@
 ---
-title: "Элемент &lt;proxy&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<proxy> - элемент"
-  - "proxy - элемент"
+title: "&lt;прокси-сервер&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
+helpviewer_keywords:
+- <proxy> element
+- proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: 20
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7178527f369c698b0ab53aa41cb28dd0126436b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;proxy&gt; (параметры сети)
-Определение прокси\-сервера.  
+# <a name="ltproxygt-element-network-settings"></a>&lt;прокси-сервер&gt; элемент (параметры сети)
+Определяет прокси-сервер.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<прокси-сервера >  
   
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
+<proxy
+  autoDetect="true|false|unspecified" 
+  bypassonlocal="true|false|unspecified"
+  proxyaddress="uriString"
+  scriptLocation="uriString"
+  usesystemdefault="true|false|unspecified"
+/>
 ```  
   
-      <proxy   
-  autoDetect="true|false|unspecified"    
-  bypassonlocal="true|false|unspecified"   
-  proxyaddress="uriString"  
-  scriptLocation="uriString"   
-  usesystemdefault="true|false|unspecified "   
-/>  
-```  
-  
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`autoDetect`|Указывает, обнаруживается ли прокси\-сервер автоматически.  Значение по умолчанию — `unspecified`.|  
-|`bypassonlocal`|Указывает, используется ли прокси\-сервер для локальных ресурсов.  Адрес локального ресурса — это локальный адрес сервера \(http:\/\/localhost, http:\/\/loopback или http:\/\/127.0.0.1\) или URI без точки \(http:\/\/webserver\).  Значение по умолчанию — `unspecified`.|  
-|`proxyaddress`|Указывает URI, используемый прокси\-сервером.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`autoDetect`|Указывает, обнаруживается ли прокси-сервер автоматически. Значение по умолчанию — `unspecified`.|  
+|`bypassonlocal`|Указывает, пропускает ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер (http://localhost, http://loopback или http://127.0.0.1) и URI без точки (http://webserver). Значение по умолчанию — `unspecified`.|  
+|`proxyaddress`|Указывает URI, который используется прокси-сервер.|  
 |`scriptLocation`|Указывает расположение скрипта конфигурации.|  
-|`usesystemdefault`|Указывает, используются ли обозревателем Internet Explorer настройки прокси\-сервера.  Если используется значение `true`, следующие атрибуты переопределят настройки прокси\-сервера в обозревателе Internet Explorer.  Значение по умолчанию — `unspecified`.|  
+|`usesystemdefault`|Указывает, следует ли использовать параметры прокси-сервера обозревателя Internet Explorer. Если значение `true`, следующие атрибуты переопределят параметры прокси Internet Explorer. Значение по умолчанию — `unspecified`.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает протокол HTTP прокси\-сервера.|  
+|-----------------|---------------------|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
-## Текстовое значение  
+## <a name="text-value"></a>Текстовое значение  
   
-## Заметки  
- Элемент `proxy` определяет прокси\-сервер для приложения.  Если этот элемент отсутствует в файле конфигурации, то платформа .NET Framework использует настройки прокси\-сервера из обозревателя Internet Explorer.  
+## <a name="remarks"></a>Примечания  
+ `proxy` Элемент определяет прокси-сервер для приложения. Если этот элемент отсутствует в файле конфигурации, .NET Framework будет использовать параметры прокси-сервера в Internet Explorer.  
   
- Значение атрибута `proxyaddress` должно иметь правильный формат URI.  
+ Значение для `proxyaddress` атрибут должен иметь правильный формат унифицированного указателя ресурса (URI).  
   
- Атрибут `scriptLocation` задает автоматическое определение размещения скрипта конфигурации прокси\-сервера.  Если в обозревателе Internet Explorer установлена опция **Использовать скрипт автоматической настройки**, класс <xref:System.Net.WebProxy> попытается обнаружить скрипт конфигурации \(обычно с названием Wpad.dat\).  
+ `scriptLocation` Атрибут ссылается на автоматическое обнаружение сценариев настройки прокси-сервера. <xref:System.Net.WebProxy> Класс попытается обнаружить сценарий конфигурации (обычно именованный Wpad.dat) при **использовать сценарий автоматической настройки** флажок в Internet Explorer.  
   
- Используйте атрибут `usesystemdefault` для приложений .NET Framework версии 1.1 при переходе на версию 2.0.  
+ Используйте `usesystemdefault` атрибут для приложений .NET Framework версии 1.1, выполняется миграция в версии 2.0.  
   
- Если атрибут `proxyaddress` задает недопустимый прокси\-сервер по умолчанию, то возникает исключение.  Свойство <xref:System.Exception.InnerException%2A> при возникновении исключения должно содержать дополнительные сведения об основной причине ошибки.  
+ Исключение возникает, если `proxyaddress` атрибут указывает на недопустимое значение по умолчанию прокси-сервер. Свойство <xref:System.Exception.InnerException%2A> исключения должно иметь дополнительные сведения о корневой причине ошибки.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода показано использование настроек прокси\-сервера из Internet Explorer, задание адреса прокси\-сервера и отмена использования прокси\-сервера для локальных адресов и домена contoso.com.  
+## <a name="example"></a>Пример  
+ Следующий пример использует значения по умолчанию из прокси-сервера обозревателя Internet Explorer, указывает адрес прокси-сервера и обходит прокси-сервера для локального доступа.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -98,6 +100,6 @@ caps.handback.revision: 20
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

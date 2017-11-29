@@ -1,83 +1,88 @@
 ---
-title: "Общие сведения о заметках | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "документы, заметки"
-  - "выделение"
-  - "записки"
+title: "Общие сведения о заметках"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- highlights [WPF]
+- documents [WPF], annotations
+- sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc4ef4473a200a424134a16d64655a5acf1488b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о заметках
-Запись заметок или примечаний на печатных документах является таким обыденным действием, что мы воспринимаем это как само собой разумеющееся.  Эти примечания или комментарии являются «пояснениями», которые добавляются к документу для пометки информации или выделения интересующих элементов для последующего просмотра.  Хотя написание заметок на печатных документах является простым и обыденным, возможность добавлять личные примечания в электронные документы обычно очень ограничена, если вообще доступна.  
+# <a name="annotations-overview"></a>Общие сведения о заметках
+Добавление заметок или примечаний на печатные документы — это настолько обыденное действие, что мы воспринимаем его как должное. Такие примечания или комментарии являются "заметками", которые мы добавляем в документ для пометки информации или выделения интересующих элементов, к которым будем обращаться в дальнейшем. Хотя написание заметок на печатных документах является простым и обыденным, возможность добавлять личные примечания в электронные документы, как правило, очень ограниченна, если вообще доступна.  
   
- В этом разделе рассматриваются обычные типы заметок, особенно клейкие заметки и световые эффекты, и рассказывается, как [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] облегчает использование этих типов заметок в приложениях при помощи элементов управления просмотра документов [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  К элементам управления просмотра документов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], поддерживающим пользовательские заметки, относятся <xref:System.Windows.Controls.FlowDocumentReader> и <xref:System.Windows.Controls.FlowDocumentScrollViewer>, а также элементы управления, унаследованные от <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, как, например, <xref:System.Windows.Controls.DocumentViewer> и <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ В этом разделе рассматриваются распространенные типы заметок, в частности записки и выделения, и демонстрируется, каким образом [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] облегчает использование этих типов заметок в приложениях с помощью элементов управления для просмотра документа [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Включить просмотр документа элементы управления, которые поддерживают заметки <xref:System.Windows.Controls.FlowDocumentReader> и <xref:System.Windows.Controls.FlowDocumentScrollViewer>, а также, как элементы управления, производный от <xref:System.Windows.Controls.Primitives.DocumentViewerBase> например <xref:System.Windows.Controls.DocumentViewer> и <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
-   
   
 <a name="caf1_type_stickynotes"></a>   
-## Клейкие заметки  
- Обычная клейкая заметка содержит информацию, записанную на маленьком листе цветной бумаги, который затем «приклеивается» к документу.  Цифровые клейкие заметки предоставляют похожие функциональные возможности для электронных документов, но с возможностью включения многих других типов содержимого, таких как печатный текст, рукописные заметки \(например, «рукописные» штрихи [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]\) или веб\-ссылки.  
+## <a name="sticky-notes"></a>Записки  
+ Обычная записка содержит информацию, написанную на маленьком листке цветной бумаги, который затем "приклеивается" к документу. Цифровые записки предоставляют аналогичные функциональные возможности для электронных документов, однако обеспечивают дополнительную гибкость благодаря включению многих других типов содержимого, например печатного текста, рукописных заметок (например, рукописного ввода [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]) или веб-ссылок.  
   
- На следующем рисунке приведены некоторые примеры выделения текста, клейких заметок и рукописных заметок.  
+ Ниже показаны некоторые примеры заметок: выделение, текстовая записка и рукописная записка.  
   
- ![Заметки с маркировкой, текстовые и прикрепленные заметки.](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF\_StickyNote")  
+ ![Выделение, текстовая и рукописная записка](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
   
- В следующем примере показан метод, который можно использовать для включения поддержки примечаний в приложении.  
+ В следующем примере показан метод, который можно использовать для включения поддержки заметок в приложении.  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
-## Выделение текста  
- Люди используют различные способы пометки в печатных документах для привлечения внимания к интересующим элементам, такие как подчеркивание, выделение маркером, обводка слов в предложении или рисование пометок или примечаний на полях.  Пометки выделением текста в [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] предоставляют аналогичное средство пометки информации, отображаемой в элементах управления просмотром документов в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+## <a name="highlights"></a>Выделение  
+ Люди используют различные способы для привлечения внимания к интересующим элементам в бумажном документе, такие как подчеркивание, выделение, заключение слов в предложении в кружок или рисование пометок и примечаний на полях.  Заметки типа "выделение" в [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] предоставляют подобную функцию для информации, отображаемой в элементах управления для просмотра документа [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- На следующем рисунке показан пример выделения текста.  
+ На следующем рисунке показан пример заметки-выделения.  
   
- ![Маркировка заметок](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF\_Callouts")  
+ ![Заметка-выделение](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- Пользователи обычно создают примечания, сначала выбирая некоторый текст или интересующий элемент, а затем производя нажимая правую кнопку мыши для отображения <xref:System.Windows.Controls.ContextMenu> параметров примечания.  В следующем примере показан [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], который можно использовать для объявления <xref:System.Windows.Controls.ContextMenu> с маршрутизируемыми командами, доступными пользователям для создания заметок и управления ими.  
+ Пользователи обычно создают примечания, сначала выберите часть текста или для рассматриваемого элемента и щелкните правой кнопкой мыши для отображения <xref:System.Windows.Controls.ContextMenu> параметров примечания.  В следующем примере показан [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] можно использовать для объявления <xref:System.Windows.Controls.ContextMenu> маршрутизируемыми командами, пользователям для создания заметок и управления ими.  
   
- [!code-xml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
-## Закрепление данных  
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] привязывает примечания к выбранным пользователем данным, а не только к месту расположения.  Таким образом, если меняется режим отображения документа, например, когда пользователь прокручивает или изменяет размер окна отображения, примечание остается с выбранными данными, к которым оно было привязано.  Например, на следующем рисунке показана заметка, которую пользователь сделал на выделенном тексте.  При изменении отображения документа \(прокручивании, изменении размеров, масштабировании или перемещении\), заметка с помощью выделения перемещается вместе с исходным фрагментом данных.  
+## <a name="data-anchoring"></a>Привязка данных  
+ [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] привязывает заметки к данным, выбранным пользователем, а не только к расположению. Таким образом, при изменении представления документа, например когда пользователь прокручивает его или изменяет размер окна отображения, заметка остается привязанной к выбранным данным. Например, на следующем графике показана заметка, которую пользователь задал для выделенного текста. При изменении представления документа (прокрутка, изменение размера, масштаба и т. д.) заметка-выделение перемещается вместе с исходным фрагментом данных.  
   
- ![Прикрепление данных заметок](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF\_DataAnchoring")  
+ ![Привязка данных заметки](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
-## Сопоставление заметок с аннотируемыми объектами  
- Можно сопоставить заметки с соответствующими аннотируемыми объектами.  Например, рассмотрим простое приложение для чтения документа, имеющее область примечаний.  Область примечаний может иметь вид списка, в котором отображается текст связанных с документом заметок.  Если пользователь выбирает элемент в списке, приложение отображает абзац документа, к которому привязан соответствующий объект заметки.  
+## <a name="matching-annotations-with-annotated-objects"></a>Сопоставление заметок с объектами заметок  
+ Можно сопоставить заметки с соответствующими объектами заметок. Например, рассмотрим простое приложение для чтения документа, имеющее панель комментариев. Панель комментариев может быть полем со списком, в котором отображается текст из списка заметок, привязанных к документу. Когда пользователь выбирает элемент в списке, приложение загружает в представление абзац в документе, к которому привязан соответствующий объект заметки.  
   
- В следующем примере демонстрируется реализация обработчика событий такого списка, используемого в качестве области примечаний.  
+ Ниже приведен пример, демонстрирующий реализацию обработчика событий такого списка, который служит в качестве панели комментариев.  
   
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Другой скрипт касается приложений, позволяющих производить обмен по электронной почте примечаниями и клейкими заметками между читателями документа.  Эта возможность позволяет этим приложениям открывать страницу, содержащую присланное примечание.  
+ Другой пример сценария касается приложений, позволяющих производить обмен заметками и записками между читателями документа по электронной почте. Эта функция позволяет таким приложениям направлять пользователя на страницу, содержащую заметку для обмена.  
   
-## См. также  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>   
- <xref:System.Windows.Controls.DocumentViewer>   
- <xref:System.Windows.Controls.FlowDocumentPageViewer>   
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>   
- <xref:System.Windows.Controls.FlowDocumentReader>   
- <xref:System.Windows.Annotations.IAnchorInfo>   
- [Схема примечаний](../../../../docs/framework/wpf/advanced/annotations-schema.md)   
- [Общие сведения о ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)   
- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [How to: Add a Command to a MenuItem](http://msdn.microsoft.com/ru-ru/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
+ <xref:System.Windows.Controls.DocumentViewer>  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer>  
+ <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
+ <xref:System.Windows.Controls.FlowDocumentReader>  
+ <xref:System.Windows.Annotations.IAnchorInfo>  
+ [Схема примечаний](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+ [Общие сведения об элементе ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [Практическое руководство. Добавление команды в объект MenuItem](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)

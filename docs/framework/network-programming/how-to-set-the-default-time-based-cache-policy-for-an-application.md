@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - time-based cache policies
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f462c55919025b92014a99d73b9a6b779465f98e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ae864b5f22f469d9a60b9faba90a5a66c65e8172
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Практическое руководство. Установка политики кэша для приложения на основе времени по умолчанию
 Политики кэша на основе времени по умолчанию позволяют приложению определить поведение кэширования с помощью заголовков, которые отправляются с кэшируемым ресурсом. Поведение кэширования определяется в разделах 13 и 14 стандарта RFC 2616, который доступен на сайте [http://www.ietf.org](http://www.ietf.org/). Это поведение кэширования подходит для большинства приложений.  
@@ -75,9 +72,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)   
- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)  
+ [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

@@ -1,88 +1,95 @@
 ---
-title: "How to: Create and Run a Long Running Workflow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Create and Run a Long Running Workflow'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-caps.latest.revision: 40
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 40
+caps.latest.revision: "40"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4a266613b975065b37c176ec07ae404b5b17ddd7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Create and Run a Long Running Workflow
-Одной из основных особенностей [!INCLUDE[wf](../../../includes/wf-md.md)] является поддержка средой выполнения сохранения и выгрузки бездействующих рабочих процессов в базу данных. Действия, описанные в [Практическое руководство: выполнение рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) показаны основы размещения рабочих процессов с помощью консольного приложения. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.  
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
+Одной из основных особенностей [!INCLUDE[wf](../../../includes/wf-md.md)] является поддержка средой выполнения сохранения и выгрузки бездействующих рабочих процессов в базу данных. Действия, описанные в [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) демонстрируются основные принципы размещение рабочих процессов с помощью консольного приложения. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.  
   
 > [!NOTE]
->  Этот шаг руководства и последующие шаги использовать все три типа рабочего процесса из [Практическое руководство: Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow.md). Если вы не использовали все три типа можно загрузить полную версию шагов из [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Этот шаг руководства и последующие шаги использовать все три типа рабочего процесса из [как: Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md). Если вы не использовали все три типа можно загрузить полную версию шагов из [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
 > [!NOTE]
->  Чтобы загрузить полную версию или просмотреть пошаговое видео учебника, см. раздел [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Чтобы загрузить полную версию или просмотреть пошаговое видео учебника, см. [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   
--   [Чтобы создать базу данных сохранения состояния](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [Чтобы создать базу данных сохраняемости](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Добавление ссылки на сборки DurableInstancing](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [Добавление ссылки на сборки DurableInstancing](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Создание ведущей формы рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [Создание ведущей формы рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [Чтобы настроить хранилище экземпляров, обработчики жизненного цикла рабочего процесса и расширения](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Разрешение запуска и возобновления нескольких типов рабочих процессов](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [Чтобы включить запуск и возобновление нескольких типов рабочих процессов](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Запуск нового рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [Чтобы запустить новый рабочий процесс](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Возобновление рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [Чтобы возобновить рабочий процесс](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Завершение рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [Завершение рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Построение и запуск приложения](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [Построение и запуск приложения](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <a name="a-namebkmkcreatepersistencedatabasea-to-create-the-persistence-database"></a><a name="BKMK_CreatePersistenceDatabase"></a> Чтобы создать базу данных сохранения состояния  
+###  <a name="BKMK_CreatePersistenceDatabase"></a>Чтобы создать базу данных сохраняемости  
   
-1.  Откройте SQL Server Management Studio и подключитесь к локальному серверу, например **. \SQLEXPRESS**. Щелкните правой кнопкой мыши **баз данных** узла на локальный сервер и выберите **новую базу данных**. Имя новой базы данных **WF45GettingStartedTutorial**, примите все остальные значения и выберите **ОК**.  
+1.  Откройте SQL Server Management Studio и подключитесь к локальному серверу, например **. \SQLEXPRESS**. Щелкните правой кнопкой мыши **баз данных** узел локального сервера и выберите пункт **новой базы данных**. Имя новой базы данных **WF45GettingStartedTutorial**, примите все значения, а затем выберите **ОК**.  
   
     > [!NOTE]
     >  Убедитесь, что **Create Database** разрешение на локальном сервере, прежде чем создавать базу данных.  
   
-2.  Выберите **Откройте**, **файл** из **файла** меню. Перейдите в следующую папку: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2.  Выберите **откройте**, **файл** из **файл** меню. Перейдите в следующую папку: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
   
-     Выберите следующие два файла и нажмите кнопку **Open**.  
+     Выберите следующие два файла и нажмите кнопку **откройте**.  
   
     -   SqlWorkflowInstanceStoreLogic.sql  
   
     -   SqlWorkflowInstanceStoreSchema.sql  
   
-3.  Выберите **SqlWorkflowInstanceStoreSchema.sql** из **окна** меню. Убедитесь, что **WF45GettingStartedTutorial** установлен в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса** меню.  
+3.  Выберите **SqlWorkflowInstanceStoreSchema.sql** из **окна** меню. Убедитесь, что **WF45GettingStartedTutorial** выбран в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса**меню.  
   
-4.  Выберите **SqlWorkflowInstanceStoreLogic.sql** из **окна** меню. Убедитесь, что **WF45GettingStartedTutorial** установлен в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса** меню.  
+4.  Выберите **SqlWorkflowInstanceStoreLogic.sql** из **окна** меню. Убедитесь, что **WF45GettingStartedTutorial** выбран в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса**меню.  
   
     > [!WARNING]
     >  Важно выполнить предыдущие два шага в правильном порядке. Если выполнить запросы в неправильном порядке, произойдет ошибка и база данных сохраняемости не будет правильно настроена.  
   
-###  <a name="a-namebkmkaddreferencea-to-add-the-reference-to-the-durableinstancing-assemblies"></a><a name="BKMK_AddReference"></a> Добавление ссылки на сборки DurableInstancing  
+###  <a name="BKMK_AddReference"></a>Добавление ссылки на сборки DurableInstancing  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить ссылку**.  
+1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить ссылку**.  
   
-2.  Выберите **сборки** из **Добавить ссылку** и введите `DurableInstancing` в **Поиск сборок** поле. Сборки отфильтруются, и будет легче выбрать необходимые ссылки.  
+2.  Выберите **сборки** из **добавить ссылку** и введите `DurableInstancing` в **поиск сборок** поле. Сборки отфильтруются, и будет легче выбрать необходимые ссылки.  
   
-3.  Установите флажок рядом с **System.Activities.DurableInstancing** и **System.Runtime.DurableInstancing** из **Результаты поиска** списке и нажмите кнопку **ОК**.  
+3.  Установите флажок рядом с **System.Activities.DurableInstancing** и **System.Runtime.DurableInstancing** из **результатов поиска** и нажмите кнопку **ОК**.  
   
-###  <a name="a-namebkmkcreateforma-to-create-the-workflow-host-form"></a><a name="BKMK_CreateForm"></a> Создание ведущей формы рабочего процесса  
+###  <a name="BKMK_CreateForm"></a>Создание ведущей формы рабочего процесса  
   
 > [!NOTE]
->  В шагах этой процедуры показано, как добавить и настроить форму вручную. При необходимости можно загрузить файлы решений для учебника и добавить готовую форму в проект. Чтобы загрузить файлы учебника, см. раздел [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976). После загрузки файлов, щелкните правой кнопкой мыши **NumberGuessWorkflowHost** и выберите **Добавить ссылку**. Добавьте ссылку на **System.Windows.Forms** и **System.Drawing**. Эти ссылки добавляются автоматически при добавлении новой формы из **Добавить**, **новый элемент** меню, но должны быть добавлены вручную, при импорте формы. После добавления ссылок щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить**, **существующий элемент**. Перейдите к `Form` папки в файлах проекта, выберите **WorkflowHostForm.cs** (или **WorkflowHostForm.vb**) и нажмите кнопку **Добавить**. Если вы решили импортировать форму, а затем перейти к следующему разделу, можно пропустить [для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
+>  В шагах этой процедуры показано, как добавить и настроить форму вручную. При необходимости можно загрузить файлы решений для учебника и добавить готовую форму в проект. Чтобы загрузить файлы учебника, см. [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976). Когда файлы загрузятся, щелкните правой кнопкой мыши **NumberGuessWorkflowHost** и выберите **добавить ссылку**. Добавьте ссылку на **System.Windows.Forms** и **System.Drawing**. Эти ссылки добавляются автоматически при добавлении новой формы из **добавить**, **новый элемент** меню, но необходимо добавить вручную при импорте в форму. После добавления ссылок щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **существующий элемент**. Перейдите к `Form` папки в файлах проекта, выберите **WorkflowHostForm.cs** (или **WorkflowHostForm.vb**) и нажмите кнопку **добавить**. Если вы решили импортировать форму, а затем можно перейти к следующему разделу [для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить**, **новый элемент**.  
+1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **новый элемент**.  
   
-2.  В **установленные** шаблонов выберите **формы Windows Forms**, тип `WorkflowHostForm` в **имя** и нажмите кнопку **Добавить**.  
+2.  В **установленные** шаблонов выберите **формы Windows Forms**, тип `WorkflowHostForm` в **имя** и нажмите кнопку **добавить**.  
   
 3.  Задайте следующие свойства формы.  
   
@@ -96,34 +103,34 @@ caps.handback.revision: 40
   
     |Control|Свойство: значение|  
     |-------------|---------------------|  
-    |**Кнопка**|Имя: NewGame<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Текст: Новая игра|  
-    |**Метка**|Расположение: 94, 18<br /><br /> Текст: Угадать число от 1 до|  
-    |**Поле со списком**|Имя: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементов: 10, 100, 1000<br /><br /> Расположение: 228, 12<br /><br /> Размер: 143, 21|  
-    |**Метка**|Расположение: 13, 43<br /><br /> Текст: Тип рабочего процесса|  
-    |**Поле со списком**|Имя: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементы: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow FlowchartNumberGuessWorkflow,<br /><br /> Расположение: 94, 40<br /><br /> Размер: 277, 21|  
-    |**Метка**|Имя: WorkflowVersion<br /><br /> Расположение: 13, 362<br /><br /> Текст: Версия рабочего процесса|  
-    |**GroupBox**|Расположение: 13, 67<br /><br /> Размер: 358, 287<br /><br /> Текст: игра|  
+    |**Button**|Имя: NewGame<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Текст: Новая игра|  
+    |**Label**|Расположение: 94, 18<br /><br /> Текст: Угадайте число от 1 до|  
+    |**ComboBox**|Имя: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементов: 10, 100, 1000<br /><br /> Расположение: 228, 12<br /><br /> Размер: 143, 21|  
+    |**Label**|Расположение: 13, 43<br /><br /> Текст: Тип рабочего процесса|  
+    |**ComboBox**|Имя: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементы: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow FlowchartNumberGuessWorkflow,<br /><br /> Расположение: 94, 40<br /><br /> Размер: 277, 21|  
+    |**Label**|Имя: WorkflowVersion<br /><br /> Расположение: 13, 362<br /><br /> Текст: Версия рабочего процесса|  
+    |**GroupBox**|Расположение: 13, 67<br /><br /> Размер: 358, 287<br /><br /> Текст: игры|  
   
     > [!NOTE]
-    >  При добавлении следующих элементов управления, их следует поместите в GroupBox.  
+    >  При добавлении следующих элементов управления, их необходимо поместите в GroupBox.  
   
     |Control|Свойство: значение|  
     |-------------|---------------------|  
-    |**Метка**|Расположение: 7, 20<br /><br /> Текст: Идентификатор экземпляра рабочего процесса|  
-    |**Поле со списком**|Имя: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Расположение: 121, 17<br /><br /> Размер: 227, 21|  
-    |**Метка**|Расположение: 7, 47<br /><br /> Текст: угадать|  
-    |**Текстовое поле**|Имя: угадать<br /><br /> Расположение: 50, 44<br /><br /> Размер: 65, 20|  
-    |**Кнопка**|Имя: EnterGuess<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: Ввод догадки|  
-    |**Кнопка**|Имя: QuitGame<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: закройте|  
-    |**Текстовое поле**|Имя: WorkflowStatus<br /><br /> Расположение: 10, 73<br /><br /> Multiline: True<br /><br /> Только для чтения: True<br /><br /> Полосы прокрутки: вертикальные<br /><br /> Размер: 338, 208|  
+    |**Label**|Расположение: 7, 20<br /><br /> Текст: Идентификатор экземпляра рабочего процесса|  
+    |**ComboBox**|Имя: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Расположение: 121, 17<br /><br /> Размер: 227, 21|  
+    |**Label**|Расположение: 7, 47<br /><br /> Текст: угадать|  
+    |**TextBox**|Имя: угадать<br /><br /> Расположение: 50, 44<br /><br /> Размер: 65, 20|  
+    |**Button**|Имя: EnterGuess<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: Ввод догадки|  
+    |**Button**|Имя: QuitGame<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: закрыть|  
+    |**TextBox**|Имя: WorkflowStatus<br /><br /> Расположение: 10, 73<br /><br /> Многострочный: True<br /><br /> Только для чтения: True<br /><br /> Полосы прокрутки: вертикальная<br /><br /> Размер: 338, 208|  
   
-5.  Задайте **AcceptButton** формы для **EnterGuess**.  
+5.  Задать **AcceptButton** свойства формы для **EnterGuess**.  
   
  В следующем примере показана заполненная форма.  
   
- ![WorkflowHostForm из учебника Getting Started по WF45](../../../docs/framework/windows-workflow-foundation//media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![WF45 Приступая к работе по](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
-###  <a name="a-namebkmkaddhelpermethodsa-to-add-the-properties-and-helper-methods-of-the-form"></a><a name="BKMK_AddHelperMethods"></a> Для добавления свойств и вспомогательных методов формы  
+###  <a name="BKMK_AddHelperMethods"></a>Для добавления свойств и вспомогательных методов формы  
  В этом разделе показано, как добавить в класс формы свойства и вспомогательные методы, которые настраивают пользовательский интерфейс формы для запуска и возобновления рабочих процессов угадывания числа.  
   
 1.  Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите **Просмотр кода**.  
@@ -187,9 +194,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-      `InstanceId` Поле со списком Список идентификаторов экземпляров рабочего процесса, а `WorkflowInstanceId` возвращает текущий выбранный рабочий процесс.  
+     `InstanceId` Со списком отображает список идентификаторов экземпляров рабочего процесса и `WorkflowInstanceId` свойство возвращает выбранного рабочего процесса.  
   
-5.  Добавьте обработчик события `Load` формы. Чтобы добавить обработчик, перейдите в **режиме конструктора** формы, щелкните **события** значок в верхней части **Свойства** окна и дважды щелкните **нагрузки**.  
+5.  Добавьте обработчик события `Load` формы. Чтобы добавить обработчик, перейдите в **конструкторе** формы, щелкните **событий** значок в верхней части **свойства** окна и дважды щелкните **нагрузки**.  
   
     ```vb  
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load  
@@ -234,7 +241,7 @@ caps.handback.revision: 40
   
      Когда форма загружена, настраивается класс `SqlWorkflowInstanceStore`, для полей со списком диапазонов и типов рабочего процесса устанавливаются значения по умолчанию, а сохраненные экземпляры рабочих процессов добавляются в поле `InstanceId`.  
   
-7.  Добавьте обработчик событий `SelectedIndexChanged` для `InstanceId`. Чтобы добавить обработчик, перейдите в **режиме конструктора** формы, выберите `InstanceId` со списком, нажмите кнопку **события** значок в верхней части **Свойства** окна и дважды щелкните **SelectedIndexChanged**.  
+7.  Добавьте обработчик событий `SelectedIndexChanged` для `InstanceId`. Чтобы добавить обработчик, перейдите в **конструкторе** формы, выберите `InstanceId` со списком, нажмите кнопку **событий** значок в верхней части **свойства** окна, и Дважды щелкните **SelectedIndexChanged**.  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -424,7 +431,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkconfigureworkflowapplicationa-to-configure-the-instance-store-workflow-lifecycle-handlers-and-extensions"></a><a name="BKMK_ConfigureWorkflowApplication"></a> Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения  
+###  <a name="BKMK_ConfigureWorkflowApplication"></a>Чтобы настроить хранилище экземпляров, обработчики жизненного цикла рабочего процесса и расширения  
   
 1.  Добавьте метод `ConfigureWorkflowApplication` в класс формы.  
   
@@ -454,7 +461,7 @@ caps.handback.revision: 40
     wfApp.InstanceStore = store;  
     ```  
   
-3.  Затем создайте экземпляр класса `StringWriter` и добавьте его в коллекцию `Extensions` приложения `WorkflowApplication`. Когда `StringWriter` добавляется к расширениям, он записывает все `WriteLine` Выходные данные действия. Когда рабочий процесс становится неактивным, выходные данные `WriteLine` можно извлечь из `StringWriter` и показать на форме.  
+3.  Затем создайте экземпляр класса `StringWriter` и добавьте его в коллекцию `Extensions` приложения `WorkflowApplication`. Когда `StringWriter` добавляется к расширениям, он получает все `WriteLine` выходными данными действий. Когда рабочий процесс становится неактивным, выходные данные `WriteLine` можно извлечь из `StringWriter` и показать на форме.  
   
     ```vb  
     'Add a StringWriter to the extensions. This captures the output  
@@ -576,7 +583,7 @@ caps.handback.revision: 40
     };  
     ```  
   
-      <xref:System.Activities.PersistableIdleAction> перечисление имеет три значения: <xref:System.Activities.PersistableIdleAction>, <xref:System.Activities.PersistableIdleAction>, и <xref:System.Activities.PersistableIdleAction>. <xref:System.Activities.PersistableIdleAction> вызывает сохранение рабочего процесса, но не приводит к выгрузке рабочего процесса. <xref:System.Activities.PersistableIdleAction> вызывает сохранение и выгрузку рабочего процесса.  
+     Для перечисления <xref:System.Activities.PersistableIdleAction> существует три значения: <xref:System.Activities.PersistableIdleAction.None>,<xref:System.Activities.PersistableIdleAction.Persist> и <xref:System.Activities.PersistableIdleAction.Unload>. Значение <xref:System.Activities.PersistableIdleAction.Persist> вызывает сохранение рабочего процесса, но не его выгрузку. Значение <xref:System.Activities.PersistableIdleAction.Unload> вызывает сохранение и выгрузку рабочего процесса.  
   
      Ниже приведен полный пример метода `ConfigureWorkflowApplication`.  
   
@@ -693,10 +700,10 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkworkflowversionmapa-to-enable-starting-and-resuming-multiple-workflow-types"></a><a name="BKMK_WorkflowVersionMap"></a> Разрешение запуска и возобновления нескольких типов рабочих процессов  
- Чтобы возобновить экземпляр рабочего процесса, ведущее приложение должно предоставить определение рабочего процесса. В этом учебнике описано 3 типа рабочих процессов и далее предоставлено несколько версий этих типов. `WorkflowIdentity` позволяет ведущему приложению связать идентификационные данные с сохраненным экземпляром рабочего процесса. В этом разделе показано, как создать служебный класс, который поможет сопоставить идентификационные данные из сохраненного экземпляра рабочего процесса с соответствующим определением рабочего процесса. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`WorkflowIdentity` и управлении версиями см. в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation//using-workflowidentity-and-versioning.md).  
+###  <a name="BKMK_WorkflowVersionMap"></a>Чтобы включить запуск и возобновление нескольких типов рабочих процессов  
+ Чтобы возобновить экземпляр рабочего процесса, ведущее приложение должно предоставить определение рабочего процесса. В этом учебнике описано 3 типа рабочих процессов и далее предоставлено несколько версий этих типов. `WorkflowIdentity` позволяет ведущему приложению связать идентификационные данные с сохраненным экземпляром рабочего процесса. В этом разделе показано, как создать служебный класс, который поможет сопоставить идентификационные данные из сохраненного экземпляра рабочего процесса с соответствующим определением рабочего процесса. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`WorkflowIdentity` и управление версиями, в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить**, **класса**. Тип `WorkflowVersionMap` в **имя** и нажмите кнопку **Добавить**.  
+1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **класса**. Тип `WorkflowVersionMap` в **имя** и нажмите кнопку **добавить**.  
   
 2.  Добавьте следующие инструкции `using` или `Imports` в начало файла с другими инструкциями `using` или `Imports`.  
   
@@ -810,9 +817,9 @@ caps.handback.revision: 40
   
      `WorkflowVersionMap` содержит три удостоверения рабочего процесса, которые сопоставляются с тремя определениями рабочих процессов из этого учебника и используются в следующих разделах при запуске и возобновлении рабочих процессов.  
   
-###  <a name="a-namebkmkstartworkflowa-to-start-a-new-workflow"></a><a name="BKMK_StartWorkflow"></a> Запуск нового рабочего процесса  
+###  <a name="BKMK_StartWorkflow"></a>Чтобы запустить новый рабочий процесс  
   
-1.  Добавьте обработчик событий `Click` для `NewGame`. Чтобы добавить обработчик, перейдите в **режиме конструктора** для формы и дважды щелкните `NewGame`. Добавляется обработчик `NewGame_Click`, и активируется представление кода формы. Когда пользователь нажимает эту кнопку, запускается новый рабочий процесс.  
+1.  Добавьте обработчик событий `Click` для `NewGame`. Чтобы добавить обработчик, перейдите в **конструкторе** для формы и дважды щелкните `NewGame`. Добавляется обработчик `NewGame_Click`, и активируется представление кода формы. Когда пользователь нажимает эту кнопку, запускается новый рабочий процесс.  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -1005,9 +1012,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkresumeworkflowa-to-resume-a-workflow"></a><a name="BKMK_ResumeWorkflow"></a> Возобновление рабочего процесса  
+###  <a name="BKMK_ResumeWorkflow"></a>Чтобы возобновить рабочий процесс  
   
-1.  Добавьте обработчик событий `Click` для `EnterGuess`. Чтобы добавить обработчик, перейдите в **режиме конструктора** для формы и дважды щелкните `EnterGuess`. Когда пользователь нажимает эту кнопку, возобновляется рабочий процесс.  
+1.  Добавьте обработчик событий `Click` для `EnterGuess`. Чтобы добавить обработчик, перейдите в **конструкторе** для формы и дважды щелкните `EnterGuess`. Когда пользователь нажимает эту кнопку, возобновляется рабочий процесс.  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1221,9 +1228,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkterminateworkflowa-to-terminate-a-workflow"></a><a name="BKMK_TerminateWorkflow"></a> Завершение рабочего процесса  
+###  <a name="BKMK_TerminateWorkflow"></a>Завершение рабочего процесса  
   
-1.  Добавьте обработчик событий `Click` для `QuitGame`. Чтобы добавить обработчик, перейдите в **режиме конструктора** для формы и дважды щелкните `QuitGame`. Когда пользователь нажимает эту кнопку, рабочий процесс, выбранный на данный момент, завершается.  
+1.  Добавьте обработчик событий `Click` для `QuitGame`. Чтобы добавить обработчик, перейдите в **конструкторе** для формы и дважды щелкните `QuitGame`. Когда пользователь нажимает эту кнопку, рабочий процесс, выбранный на данный момент, завершается.  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1295,9 +1302,9 @@ caps.handback.revision: 40
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <a name="a-namebkmkbuildandruna-to-build-and-run-the-application"></a><a name="BKMK_BuildAndRun"></a> Построение и запуск приложения  
+###  <a name="BKMK_BuildAndRun"></a>Построение и запуск приложения  
   
-1.  Дважды щелкните **Program.cs** (или **Module1.vb**) в **обозревателе решений** для отображения кода.  
+1.  Дважды щелкните **Program.cs** (или **Module1.vb**) в **обозревателе решений** для вывода кода.  
   
 2.  Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).  
   
@@ -1309,7 +1316,7 @@ caps.handback.revision: 40
     using System.Windows.Forms;  
     ```  
   
-3.  Удалите или закомментируйте размещения кода из существующего рабочего процесса [Практическое руководство: выполнение рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md), и замените его следующим кодом.  
+3.  Удалите или закомментируйте размещения кода из существующего рабочего процесса [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)и замените его следующим кодом.  
   
     ```vb  
     Sub Main()  
@@ -1326,14 +1333,14 @@ caps.handback.revision: 40
     }  
     ```  
   
-4.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Свойства**. В **приложения** Укажите **приложения Windows** для **выходной тип**. Этот шаг не обязателен, но, если его не выполнить, вместе с формой отображается окно консоли.  
+4.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **свойства**. В **приложения** укажите **приложение Windows** для **тип вывода**. Этот шаг не обязателен, но, если его не выполнить, вместе с формой отображается окно консоли.  
   
 5.  Нажмите клавиши Ctrl+Shift+B, чтобы создать приложение.  
   
-6.  Убедитесь, что **NumberGuessWorkflowHost** задать в качестве запускаемого приложения, и нажмите сочетание клавиш Ctrl + F5 для запуска приложения.  
+6.  Убедитесь, что **NumberGuessWorkflowHost** присвоено значение при запуске приложения, и нажмите клавиши Ctrl + F5 для запуска приложения.  
   
-7.  Выберите диапазон для игры на угадывание и тип рабочего процесса для запуска и нажмите кнопку **Новая игра**. Введите догадку в **догадка** и нажмите кнопку **Go** Чтобы отправить догадку. Обратите внимание, что выходные данные действий `WriteLine` отображаются на форме.  
+7.  Выберите диапазон для игры на угадывание и тип рабочего процесса для запуска и нажмите кнопку **новая игра**. Введите догадку в **предположение** и нажмите кнопку **Go** Чтобы отправить догадку. Обратите внимание, что выходные данные действий `WriteLine` отображаются на форме.  
   
-8.  Запустите несколько рабочих процессов, с помощью разных типов рабочих процессов и диапазонов чисел, введите некоторые догадки и переключаться между рабочими процессами, выбирая из **идентификатор экземпляра рабочего процесса** списка.  
+8.  Запустите несколько рабочих процессов с помощью разных типов рабочих процессов и диапазонов чисел, введите некоторые догадки и переключайтесь между рабочими процессами, выбирая из **идентификатор экземпляра рабочего процесса** списка.  
   
-     Обратите внимание, что, если перейти к новому рабочему процессу, предыдущие догадки и ход выполнения рабочего процесса не отображаются в окне состояния. Состояние недоступно, так как оно не перехвачено и не сохранено. В следующем шаге руководства [как: создать настраиваемый участник отслеживания](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md), создание настраиваемого участника отслеживания, сохраняет эти сведения.
+     Обратите внимание, что, если перейти к новому рабочему процессу, предыдущие догадки и ход выполнения рабочего процесса не отображаются в окне состояния. Состояние недоступно, так как оно не перехвачено и не сохранено. В следующем шаге руководства [как: создать настраиваемый участник отслеживания](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md), создать настраиваемого участника отслеживания, сохраняет эти сведения.

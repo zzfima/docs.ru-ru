@@ -1,35 +1,39 @@
 ---
-title: "How to: Change the Borders of Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, changing the borders"
+title: "Практическое руководство. Изменение границ в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords: Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 94c95d1d938ff8038f1057ac7648082819562b98
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Change the Borders of Windows Forms
-При определении внешнего вида и поведения формы Windows Forms можно выбрать из нескольких стилей границы.  Изменив <xref:System.Windows.Forms.Form.FormBorderStyle%2A> свойство, можно управлять поведением изменения размеров формы.  Кроме того, параметр <xref:System.Windows.Forms.Form.FormBorderStyle%2A> влияет на способ отображения строки заголовка и кнопок, которые на нем могут отображаться.  Для получения дополнительной информации см. <xref:System.Windows.Forms.FormBorderStyle>.  
+# <a name="how-to-change-the-borders-of-windows-forms"></a>Практическое руководство. Изменение границ в Windows Forms
+При определении внешнего вида и поведения формы Windows Forms можно выбрать из нескольких стилей границы. Изменив <xref:System.Windows.Forms.Form.FormBorderStyle%2A> свойство, можно управлять поведением изменения размеров формы. Кроме того, параметр <xref:System.Windows.Forms.Form.FormBorderStyle%2A> влияет на способ отображения строки заголовка и кнопок, которые на нем могут отображаться. Для получения дополнительной информации см. <xref:System.Windows.Forms.FormBorderStyle>.  
   
  В [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] предусмотрена расширенная поддержка этой задачи.  
   
- См. также [Практическое руководство. Изменение границ формы Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).  
+ См. также [как: изменение границ формы Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\)).  
   
-### Установка стиля границ формы Windows Forms программными средствами  
+### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Установка стиля границ формы Windows Forms программными средствами  
   
--   Задайте для свойства <xref:System.Windows.Forms.Form.FormBorderStyle%2A> нужный стиль.  Следующий пример кода задает стиль границы формы`DlgBx1` в <xref:System.Windows.Forms.FormBorderStyle>.  
+-   Задайте для свойства <xref:System.Windows.Forms.Form.FormBorderStyle%2A> нужный стиль. В следующем примере кода задает стиль границы формы `DlgBx1` для <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  
@@ -44,11 +48,11 @@ caps.handback.revision: 12
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     См. также [Практическое руководство. Создание диалоговых окон во время разработки.](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
+     См. также [как: создание диалоговых окон во время разработки](http://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\)).  
   
-     Кроме того, если выбран стиль границы для формы, для которого кнопки **Свернуть** и **Развернуть** необязательны, то можно указать, требуются ли функционирование обеих или одной из этих кнопок.  Эти кнопки полезны в тех случаях, когда требуется точно управлять взаимодействием с пользователем.  Кнопки **Свернуть** и **Развернуть** включены по умолчанию и их функции изменяются с помощью окна **Свойства**.  
+     Кроме того Если выбран стиль границы для формы, которая предоставляет необязательный **свернуть** и **развернуть** кнопки, можно указать, хотите ли вы одной или обеих из этих кнопок, чтобы обеспечить работоспособность. Эти кнопки полезны в тех случаях, когда требуется точно управлять взаимодействием с пользователем. **Свернуть** и **развернуть** кнопки включены по умолчанию, и их функции изменяются с помощью **свойства** окна.  
   
-## См. также  
- <xref:System.Windows.Forms.FormBorderStyle>   
- <xref:System.Windows.Forms.FormBorderStyle>   
- [Getting Started with Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.FormBorderStyle>  
+ <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>  
+ [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

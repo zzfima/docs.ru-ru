@@ -1,41 +1,44 @@
 ---
-title: "201 — ClientMessageInspectorAfterReceiveInvoked | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 201 - ClientMessageInspectorAfterReceiveInvoked
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ff637f1-cc26-4400-ab9b-546f70e5057d
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 907f4404e234ada2cf084f531a4de8fcfc84d6c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 201 — ClientMessageInspectorAfterReceiveInvoked
-## Свойства  
+# <a name="201---clientmessageinspectorafterreceiveinvoked"></a>201 - ClientMessageInspectorAfterReceiveInvoked
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
-|ID|201|  
-|Keywords|Troubleshooting, ServiceModel|  
-|Level|Information|  
-|Channel|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Идентификатор|201|  
+|Ключевые слова|Troubleshooting, ServiceModel|  
+|Уровень|Сведения|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается после того, как модель службы вызывает метод `AfterReceiveReply` для инспектора сообщений клиента.  
   
-## Message  
+## <a name="message"></a>Сообщение  
  Диспетчер вызвал AfterReceiveReply относительно ClientMessageInspector типа «%1».  
   
-## Подробности  
+## <a name="details"></a>Подробные сведения  
   
 |Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
+|--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|Имя CLR FullName типа вызванного инспектора.|  
-|HostReference|`xs:string`|Для служб, размещенных на веб\-узле, это поле является уникальным идентификатором службы в веб\-иерархии.Ее формат определяется следующим образом: «имя веб\-сайта виртуальный путь приложения&#124;виртуальный путь службы&#124;ServiceName».«веб\-сайт по умолчанию\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService».|  
+|HostReference|`xs:string`|Для служб, размещенных на веб-узле, это поле является уникальным идентификатором службы в веб-иерархии. Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName ". Пример: "по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ".|  
 |AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

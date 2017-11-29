@@ -1,31 +1,27 @@
 ---
-title: "Предварительная атомизация объектов XName (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Предварительная атомизация объектов XName (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 519b64a96e03e098d7325cfb779bcd5d53db3741
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 967e41afc70290a4e4bdccabb8f3f4dd4ac4f6ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Предварительная атомизация объектов XName (LINQ to XML) (Visual Basic)
-Одним из способов повышения производительности в LINQ to XML является предварительная атомизация <xref:System.Xml.Linq.XName>объектов.</xref:System.Xml.Linq.XName> Предварительная атомизация присвоения строки для <xref:System.Xml.Linq.XName>Прежде чем создавать XML-дерево с помощью конструкторы <xref:System.Xml.Linq.XElement>и <xref:System.Xml.Linq.XAttribute>классы.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XName> Затем, вместо передачи строки конструктору, где будет выполнено ее неявное преобразование из строки в <xref:System.Xml.Linq.XName>, можно передать инициализированный <xref:System.Xml.Linq.XName>объекта.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName>  
+Одним из способов повышения производительности в LINQ to XML является предварительная атомизация объектов <xref:System.Xml.Linq.XName>. Предварительная атомизация состоит в том, что необходимо назначить строке объект <xref:System.Xml.Linq.XName>, прежде чем создавать XML-дерево с использованием конструкторов классов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute>. Затем, вместо того чтобы передавать строку в конструктор, где будет выполнено ее неявное преобразование в объект <xref:System.Xml.Linq.XName>, можно передать инициализированный объект <xref:System.Xml.Linq.XName>.  
   
- Таким способом можно повысить производительность при создании большого XML-дерева с рядом повторяющихся имен. Чтобы сделать это, необходимо объявить и инициализировать <xref:System.Xml.Linq.XName>объектов, прежде чем создавать XML-дерева, а затем используйте <xref:System.Xml.Linq.XName>объектов вместо строк имен элементов и атрибутов.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XName> Эта техника может дать существенный рост производительности, когда создается большое количество элементов (или атрибутов) с одним и тем же именем.  
+ Таким способом можно повысить производительность при создании большого XML-дерева с рядом повторяющихся имен. Для этого перед построением XML-дерева необходимо объявить и инициализировать объекты <xref:System.Xml.Linq.XName>, а затем в качестве имен элементов и атрибутов указать эти объекты <xref:System.Xml.Linq.XName> вместо строк. Эта техника может дать существенный рост производительности, когда создается большое количество элементов (или атрибутов) с одним и тем же именем.  
   
  Чтобы принять решение об использовании предварительной атомизации, протестируйте этот прием в вашем конкретном случае.  
   
@@ -100,5 +96,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)   
+ [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)  
  [Атомизация объекты XName и XNamespace (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

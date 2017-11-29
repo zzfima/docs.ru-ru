@@ -1,89 +1,91 @@
 ---
-title: "Стили и шаблоны элемента TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], TreeView"
-  - "части [WPF], TreeView"
-  - "состояния [WPF], TreeView"
-  - "стили [WPF], TreeView"
-  - "шаблоны [WPF], TreeView"
-  - "TreeView [WPF], стили и шаблоны"
+title: "Стили и шаблоны элемента TreeView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ControlTemplate [WPF], TreeView
+- templates [WPF], TreeView
+- parts [WPF], TreeView
+- states [WPF], TreeView
+- styles [WPF], TreeView
+- TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 78e5faf7aab684f2a8760204079a26a61b9c3fda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента TreeView
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.TreeView>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="treeview-styles-and-templates"></a>Стили и шаблоны элемента TreeView
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.TreeView> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Части TreeView  
- Элемент управления <xref:System.Windows.Controls.TreeView> не имеет именованных частей.  
+## <a name="treeview-parts"></a>Части TreeView  
+ <xref:System.Windows.Controls.TreeView> Управления не имеет именованных частей.  
   
- При создании шаблона <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.TreeView> шаблон может содержать часть <xref:System.Windows.Controls.ItemsPresenter> в элементе управления <xref:System.Windows.Controls.ScrollViewer>.  \(Элемент управления <xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в элементе управления <xref:System.Windows.Controls.TreeView>; элемент управления <xref:System.Windows.Controls.ScrollViewer> обеспечивает прокрутку в элементе управления\).  Если элемент управления <xref:System.Windows.Controls.ItemsPresenter> не является непосредственным дочерним элементом элемента управления <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить элементу управления <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TreeView>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.TreeView>; <xref:System.Windows.Controls.ScrollViewer> разрешает прокрутку в элементе управления).  Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, вы должны предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
   
-## Состояния TreeView  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.TreeView>.  
+## <a name="treeview-states"></a>Состояния TreeView  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TreeView> элемента управления.  
   
-||||  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+  
+## <a name="treeviewitem-parts"></a>Части TreeViewItem  
+ В следующей таблице перечислены именованные части <xref:System.Windows.Controls.TreeViewItem> элемента управления.  
+  
+|Отделение|Тип|Описание|  
+|----------|----------|-----------------|  
+|PART_Header|<xref:System.Windows.FrameworkElement>|Визуальный элемент, который содержит заголовок, содержимое <xref:System.Windows.Controls.TreeView> элемента управления.|  
+  
+## <a name="treeviewitem-states"></a>Состояния TreeViewItem  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.TreeViewItem> элемента управления.  
+  
 |Имя VisualState|Имя VisualStateGroup|Описание|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|----------------------|---------------------------|-----------------|  
+|Норм.|CommonStates|Состояние по умолчанию.|  
+|MouseOver|CommonStates|Указатель мыши наведен на <xref:System.Windows.Controls.TreeViewItem>.|  
+|Отключено|CommonStates|<xref:System.Windows.Controls.TreeViewItem> Отключена.|  
+|Focused|FocusStates|<xref:System.Windows.Controls.TreeViewItem> Имеет фокус.|  
+|Без фокуса ввода|FocusStates|<xref:System.Windows.Controls.TreeViewItem> Не имеет фокуса.|  
+|Развернуто|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> Элемент управления развернут.|  
+|Свернуто|ExpansionStates|<xref:System.Windows.Controls.TreeViewItem> Управления сворачивается.|  
+|Hasitems, доступное|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> Содержит элементы.|  
+|NoItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> Не имеет элементов.|  
+|Selected|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Выбран.|  
+|SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Выделен, но не активен.|  
+|Unselected|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> Не выбран.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
   
-## Части TreeViewItem  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.TreeViewItem>.  
+## <a name="treeview-controltemplate-example"></a>Пример шаблона элемента управления TreeView  
+ В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.TreeView> элемента управления и его связанных типов.  
   
-|Часть|Тип|Описание|  
-|-----------|---------|--------------|  
-|PART\_Header|<xref:System.Windows.FrameworkElement>|Визуальный элемент, включающий содержимое заголовка элемента управления <xref:System.Windows.Controls.TreeView>.|  
+ [!code-xaml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
   
-## Состояния TreeViewItem  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.TreeViewItem>.  
+ В предыдущем примере используется один или несколько из следующих ресурсов.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|---------------------|--------------------------|--------------|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши наведен на элемент управления <xref:System.Windows.Controls.TreeViewItem>.|  
-|Disabled|CommonStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> отключен.|  
-|Focused|FocusStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> не имеет фокуса.|  
-|разреженный|ExpansionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> развернут.|  
-|Collapsed|ExpansionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> свернут.|  
-|HasItems|HasItemsStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> имеет элементы.|  
-|NoItems|HasItemsStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> не имеет элементов.|  
-|Выбран|SelectionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> выбран.|  
-|SelectedInactive|SelectionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> выбран, но не активен.|  
-|Не выбран|SelectionStates|Элемент управления <xref:System.Windows.Controls.TreeViewItem> не выбран.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
-## Пример шаблона элемента управления ControlTemplate элемента TreeView  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.TreeView> и связанных с ним типов.  
+ Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
- [!code-xml[ControlTemplateExamples#TreeView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/treeview.xaml#treeview)]  
-  
- В предыдущем примере используется один или несколько следующих ресурсов.  
-  
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
-  
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
-  
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

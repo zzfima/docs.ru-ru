@@ -1,32 +1,37 @@
 ---
-title: "Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "флажки, определение установленного состояния"
-  - "CheckedListBox - элемент управления [Windows Forms], определение установленного состояния"
+title: "Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- check boxes [Windows Forms], determining checked state
+- CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f45006b437ad0a2fa537e6b8ea4312ab0060c882
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms
-Представляя данные в элементе управления Windows Forms <xref:System.Windows.Forms.CheckedListBox>, можно либо просмотреть коллекцию, сохраненную в свойстве <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>, либо пройти по списку с помощью метода <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>, чтобы определить, какие элементы помечены.  Метод <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> принимает номер элемента в качестве аргумента и возвращает значение `true` или `false`.  Вопреки ожиданиям, свойства <xref:System.Windows.Forms.ListBox.SelectedItems%2A> и <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> не определяют помеченные элементы: они определяют, какие элементы выделены.  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms
+Представляя данные в Windows Forms <xref:System.Windows.Forms.CheckedListBox> управления, можно либо пройти по коллекции, хранящейся в <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> свойства или просмотрите список, используя <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> метод, чтобы определить, какие элементы помечены. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Метод принимает номер элемента в качестве аргумента и возвращает `true` или `false`. В отличие от ожидаемого <xref:System.Windows.Forms.ListBox.SelectedItems%2A> и <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> свойства не определяют, какие элементы проверяются; они определяют, какие элементы будут выделены.  
   
-### Чтобы определить, какие элементы помечены в элементе управления CheckedListBox  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Чтобы определить, какие элементы в элементе управления CheckedListBox  
   
-1.  Пройдите по коллекции <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>, начав с 0, поскольку нумерация коллекции начинается с нуля.  Обратите внимание, что этот метод выдаст номер элемента в списке помеченных элементов, а не в полном списке.  Если первый элемент списка не помечен, но помечен второй, в приведенном ниже коде отобразится текст наподобие следующего: "Checked Item 1 \= MyListItem2".  
+1.  Итерации <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> коллекции, начиная с 0, поскольку коллекция начинается с нуля. Обратите внимание, что этот метод выдаст номер элемента в списке помеченных элементов, а не в полном списке. Если первый элемент в списке не проверяется, и второй элемент проверяется, приведенный ниже код будет отображать текст как «Checked Item 1 = MyListItem2».  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -39,7 +44,6 @@ caps.handback.revision: 14
        Next x  
        MessageBox.Show(s)  
     End If  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ caps.handback.revision: 14
        }  
     MessageBox.Show (s);  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,9 +76,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-     \-либо\-  
+     - или  
   
-2.  Пройдите по коллекции <xref:System.Windows.Forms.CheckedListBox.Items%2A>, начав с 0, поскольку нумерация коллекции начинается с нуля, и вызовите метод <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> для каждого элемента.  Обратите внимание, что этот метод выдаст номер элемента в полном списке; поэтому если первый элемент списка не помечен, но помечен второй, будет выведен текст наподобие следующего: "Item 2 \= MyListItem2".  
+2.  Пошаговое выполнение <xref:System.Windows.Forms.CheckedListBox.Items%2A> коллекции, начиная с 0, поскольку коллекция начинается с нуля и вызовите <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> для каждого элемента. Обратите внимание, что этот метод выдаст номер элемента в общий список, если первый элемент в списке не проверяется и второй элемент установлен, то он будет отображать примерно «элемент 2 = MyListItem2».  
   
     ```vb  
     Dim i As Integer  
@@ -87,7 +90,6 @@ caps.handback.revision: 14
        End If  
     Next  
     MessageBox.Show(s)  
-  
     ```  
   
     ```csharp  
@@ -102,7 +104,6 @@ caps.handback.revision: 14
        }  
     }  
     MessageBox.Show (s);  
-  
     ```  
   
     ```cpp  
@@ -120,5 +121,5 @@ caps.handback.revision: 14
     MessageBox::Show(s);  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

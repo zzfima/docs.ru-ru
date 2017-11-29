@@ -1,41 +1,36 @@
 ---
-title: "Практическое руководство: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c1ef9db560de02efa20dbe88ff0e73ffd9e7fff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: fcd7cc8d68e6eccd00abeacf3c5817d3625b8891
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Практическое руководство: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Как: поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
 Иногда требуется найти элементы на основании их позиции. Может понадобиться найти второй элемент или найти третий элемент через пятый.  
   
  Выражение XPath:  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Можно использовать <xref:System.Linq.Enumerable.Skip%2A>и <xref:System.Linq.Enumerable.Take%2A>можно использовать операторы, или <xref:System.Linq.Enumerable.Where%2A>перегрузку, принимающую индекса.</xref:System.Linq.Enumerable.Where%2A> </xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A> При использовании <xref:System.Linq.Enumerable.Where%2A>перегрузку, использовать лямбда-выражение, которое принимает два аргумента.</xref:System.Linq.Enumerable.Where%2A> Следующий пример показывает обе возможности выбора на основе позиции.  
+ Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Можно использовать операторы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> или перегруженный оператор <xref:System.Linq.Enumerable.Where%2A>, который потребляет индекс. При использовании перегрузки оператора <xref:System.Linq.Enumerable.Where%2A> необходимо использовать лямбда-выражение, которое имеет два аргумента. Следующий пример показывает обе возможности выбора на основе позиции.  
   
 ## <a name="example"></a>Пример  
  В данном примере производится поиск второго элемента через четвертый элемент `Test`. Результатом является коллекция элементов.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -94,4 +89,3 @@ Results are identical
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

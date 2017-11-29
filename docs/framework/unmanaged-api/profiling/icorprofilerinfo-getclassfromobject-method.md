@@ -1,0 +1,61 @@
+---
+title: "Метод ICorProfilerInfo::GetClassFromObject"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorProfilerInfo.GetClassFromObject
+api_location: mscorwks.dll
+api_type: COM
+f1_keywords: ICorProfilerInfo::GetClassFromObject
+helpviewer_keywords:
+- GetClassFromObject method [.NET Framework profiling]
+- ICorProfilerInfo::GetClassFromObject method [.NET Framework profiling]
+ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
+topic_type: apiref
+caps.latest.revision: "14"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 706118a197677ec97672cca36f5bcf6421a1c328
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
+---
+# <a name="icorprofilerinfogetclassfromobject-method"></a>Метод ICorProfilerInfo::GetClassFromObject
+Возвращает `ClassID` объекта, учитывая его `ObjectID`.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+HRESULT GetClassFromObject(  
+    [in]  ObjectID objectId,  
+    [out] ClassID *pClassId);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ `objectId`  
+ [in] Идентификатор объекта, для которого нужно получить `ClassID`.  
+  
+ `pClassId`  
+ [out] Указатель на возвращаемый `ClassID`.  
+  
+## <a name="remarks"></a>Примечания  
+ Значение null `pClassId` указывает, что `objectId` имеет тип, который будет выгружен.  
+  
+## <a name="requirements"></a>Требования  
+ **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Заголовок:** CorProf.idl, CorProf.h  
+  
+ **Библиотека:** CorGuids.lib  
+  
+ **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>См. также  
+ [ICorProfilerInfo-интерфейс](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
@@ -52,7 +45,7 @@ ms.lasthandoff: 08/21/2017
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Чтобы получить дополнительные сведения об элементах манифеста и их атрибутах, выполните поиск строки "Справочник по манифестам приложения" в библиотеке MSDN.  
+     Сведения об элементах манифеста и их атрибутов см. в разделе [манифесты приложения](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
   
 3.  Определите владельца манифеста. В следующем примере владельцем файла манифеста является `myComApp` версии 1.  
   
@@ -92,7 +85,7 @@ ms.lasthandoff: 08/21/2017
   
 5.  Сохраните файл манифеста под соответствующим именем. Имя манифеста приложения состоит из имени исполняемого файла сборки и расширения manifest. Например, для приложения myComApp.exe файл манифеста будет носить имя myComApp.exe.manifest.  
   
- Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Дополнительные сведения см. в разделах, посвященных использованию параллельных сборок, в библиотеке MSDN.  
+ Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. За дополнительной информацией, Дополнительные сведения см. в разделе [о сборках Side-by-Side](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
   
 #### <a name="to-create-a-component-manifest"></a>Создание манифеста компонента  
   
@@ -120,7 +113,7 @@ ms.lasthandoff: 08/21/2017
   
 4.  Определите каждый класс в сборке. Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке. Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.  
   
-    |Атрибут|Описание|Обязательное|  
+    |Атрибут|Описание|Обязательно|  
     |---------------|-----------------|--------------|  
     |`clsid`|Идентификатор, который задает активируемый класс.|Да|  
     |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|Нет|  
@@ -188,8 +181,7 @@ ms.lasthandoff: 08/21/2017
      Файл, содержащий внедренный ресурс, также будет носить имя `myresource.res`.  
   
 ## <a name="see-also"></a>См. также  
- [COM-взаимодействие без регистрации](../../../docs/framework/interop/registration-free-com-interop.md)   
- [Требования для COM-взаимодействия без регистрации](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [Настройка COM-компонентов для активации без регистрации](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
+ [COM-взаимодействие без регистрации](../../../docs/framework/interop/registration-free-com-interop.md)  
+ [Требования для взаимодействия с COM-Взаимодействия без регистрации](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [Настройка COM-компонентов для активации без регистрации](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [Пошаговое руководство. Активация компонентов на основе платформы .NET без регистрации](http://go.microsoft.com/fwlink/?LinkId=158812)
-

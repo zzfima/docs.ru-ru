@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ec275cb904b90b87193e3ed72ef89a127d1fbea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#.  
@@ -33,7 +31,8 @@ ms.lasthandoff: 08/21/2017
   
  Когда конечные пользователи взаимодействуют с приложением, они ожидают, что оно отреагирует на их действия.  Ввод кода или обработка команд не должны блокироваться ни в каких ситуациях.  Справка должна отображаться быстро или пропадать, если пользователь продолжает ввод.  Ваше приложение не должно блокировать поток пользовательского интерфейса длительными вычислительными операциями, так как пользователь воспринимает такое приложение как работающее медленно.  
   
- Если вы хотите подробнее узнать о новых компиляторах, посетите [проект с открытым кодом — платформа компиляторов .NET (Roslyn)](http://roslyn.codeplex.com/).  
+ Дополнительные сведения о компиляторах Roslyn [dotnet/roslyn](https://github.com/dotnet/roslyn) репозитория в GitHub.
+ <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Только факты  
  Принимайте эти факты во внимание во время подстройки производительности и создания приложений .NET Framework, активно реагирующих на действия пользователя.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="boxing"></a>Упаковка  
  [Упаковка-преобразование](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) происходит, когда типы значения, которые обычно находятся в стеке или структурах данных, упаковываются в объект.  То есть вы выделяете объект для хранения данных, а затем возвращаете указатель на этот объект.  Платформа .NET Framework иногда выполняет упаковку-преобразование значений в связи с сигнатурой метода или типом выделения хранилища.  Упаковка типа значения в объект приводит к выделению памяти.  Многие операции упаковки-преобразования могут приводить к выделению мегабайт и гигабайт памяти в приложении, что увеличит объем сборки мусора. Платформа .NET Framework и компиляторы языков стараются по возможности не использовать упаковку-преобразование, но иногда оно возникает в самый неожиданный момент.  
   
- Чтобы просмотреть упаковку-преобразование в PerfView, откройте трассировку и просмотрите "GC Heap Alloc Stacks" (Стеки выделения кучи сборки мусора) под именем процесса вашего приложения (помните, что PerfView включает в отчет все процессы).  Если в выделениях видны такие типы, как <xref:System.Int32?displayProperty=fullName> и <xref:System.Char?displayProperty=fullName>, значит, вы выполняете упаковку-преобразование типов значения.  При выборе одного из этих типов отображаются стеки и функции, в которые выполнено упаковка-преобразование.  
+ Чтобы просмотреть упаковку-преобразование в PerfView, откройте трассировку и просмотрите "GC Heap Alloc Stacks" (Стеки выделения кучи сборки мусора) под именем процесса вашего приложения (помните, что PerfView включает в отчет все процессы).  Если в выделениях видны такие типы, как <xref:System.Int32?displayProperty=nameWithType> и <xref:System.Char?displayProperty=nameWithType>, значит, вы выполняете упаковку-преобразование типов значения.  При выборе одного из этих типов отображаются стеки и функции, в которые выполнено упаковка-преобразование.  
   
  **Пример 1: строковые методы и аргументы типов значения**  
   
@@ -135,7 +134,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- Другой распространенной причиной упаковки-преобразования типов перечисления является метод <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName>.  Передаваемый в <xref:System.Enum.HasFlag%28System.Enum%29> аргумент подлежит упаковке-преобразованию.  В большинстве случаев замена вызовов <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> на побитовое тестирование упрощает код и не требует выделения памяти.  
+ Другой распространенной причиной упаковки-преобразования типов перечисления является метод <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType>.  Передаваемый в <xref:System.Enum.HasFlag%28System.Enum%29> аргумент подлежит упаковке-преобразованию.  В большинстве случаев замена вызовов <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> на побитовое тестирование упрощает код и не требует выделения памяти.  
   
  Не забывайте о первом факте о производительности (не проводить преждевременную оптимизацию) и не начинайте переписывать весь свой код таким образом.    Помните о ресурсоемкости упаковки-преобразования, но изменения в код вносите только после профилирования приложения и выявления актуальных проблем.  
   
@@ -334,7 +333,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  Два выделения `new` (одно для класса среды и одно для делегата) теперь являются явными.  
   
- Теперь рассмотрим вызов `FirstOrDefault`. Этот метод расширения в типе <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> также вызывает выделение.  Поскольку `FirstOrDefault` принимает объект <xref:System.Collections.Generic.IEnumerable%601> в качестве своего первого аргумента, вы можете развернуть вызов в следующий код (он немного упрощен для облегчения восприятия):  
+ Теперь рассмотрим вызов `FirstOrDefault`. Этот метод расширения в типе <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> также вызывает выделение.  Поскольку `FirstOrDefault` принимает объект <xref:System.Collections.Generic.IEnumerable%601> в качестве своего первого аргумента, вы можете развернуть вызов в следующий код (он немного упрощен для облегчения восприятия):  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -421,7 +420,7 @@ class Compilation { /*...*/
   
  **Исправление для примера 6**  
   
- Чтобы удалить завершенное выделение <xref:System.Threading.Tasks.Task>, можно кэшировать объект задачи с завершенным результатом:  
+ Чтобы удалить завершенное <xref:System.Threading.Tasks.Task> распределения, которые можно кэшировать объект задачи с завершенным результатом:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -471,13 +470,12 @@ class Compilation { /*...*/
 -   Выделения памяти значат больше всего — именно на них команда разработчиков платформы компиляторов потратила больше всего времени, стремясь повысить производительность новых компиляторов.  
   
 ## <a name="see-also"></a>См. также  
- [Видеозапись презентации по этому разделу](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)   
- [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Производительность](../../../docs/framework/performance/index.md)   
- [Советы по производительности .NET](http://msdn.microsoft.com/library/ms973839.aspx)   
- [Средство анализа производительности Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)   
- [Поиск ограничений приложений с профилировщиком Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)   
- [Учебники по PerfView на Channel 9](http://channel9.msdn.com/Series/PerfView-Tutorial)   
- [Общие рекомендации по повышению производительности](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)   
- [Проект с открытым кодом — платформа компиляторов .NET (Roslyn)](http://roslyn.codeplex.com/)
-
+ [Видео представления этого раздела](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [Производительность](../../../docs/framework/performance/index.md)  
+ [Советы по повышению производительности .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Средство анализа производительности для Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Поиск ограничений приложений с профилировщиком Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Канал 9 учебники по](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Советы по повышению производительности высокого уровня](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [DotNet/roslyn репозитория в GitHub](https://github.com/dotnet/roslyn)

@@ -1,70 +1,72 @@
 ---
-title: "Элемент &lt;clear&gt; для bypasslist (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, clear - элемент"
-  - "<clear> - элемент, bypasslist"
-  - "bypasslist, clear - элемент"
-  - "clear - элемент, bypasslist"
+title: "&lt;Очистить&gt; элемент для bypasslist (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, bypasslist
+- <clear> element, bypasslist
+- <bypasslist>, clear element
+- bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5ee20b9177d519010c40351e335973dce10256f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;clear&gt; для bypasslist (параметры сети)
-Удаляет список пропускаемых адресов.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Очистить&gt; элемент для bypasslist (параметры сети)
+Очищает список обхода прокси-сервера.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<bypasslist >  
+\<Очистить >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Набор регулярных выражений, описывающих адреса, пропускаемые прокси\-сервером.|  
+|-----------------|---------------------|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
-## Заметки  
- Элемент `clear` удаляет все записи из списка пропускаемых адресов.  
+## <a name="remarks"></a>Примечания  
+ `clear` Элемент удаляет все записи из списка обхода.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода сначала выполняется очистка списка пропускаемых адресов, а затем – добавление в него двух адресов.  Первая запись отменяет использование прокси\-сервера для всех серверов домена contoso.com, а вторая — для всех серверов, IP\-адреса которых начинаются с 192.168.  
+## <a name="example"></a>Пример  
+ В следующем примере очищает список обхода и затем добавляет два адреса в список обхода. Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адрес начинается с 192.168.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -78,6 +80,6 @@ caps.handback.revision: 14
 </configuration>   
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

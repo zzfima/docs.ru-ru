@@ -1,48 +1,47 @@
 ---
-title: "&lt;paramref&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<paramref> - XML-тег"
-  - "paramref - XML-тег"
+title: '&lt;paramref&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- paramref XML tag
+- <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3bf3d4f04997a03f442cf7fd2a1586604198d3fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;paramref&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="ltparamrefgt-visual-basic"></a>&lt;paramref&gt; (Visual Basic)
 Форматирует слово как параметр.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <paramref name="name"/>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `name`  
- Имя параметра, на который нужна ссылка.  Заключите имя в двойные кавычки \(" "\).  
+ Имя параметра, на который указывается ссылка. Имя заключается в двойные кавычки (" ").  
   
-## Заметки  
- Тег `<paramref>` дает возможность указать, что слово — это параметр.  Чтобы форматировать этот параметр некоторым конкретным образом, может быть обработан XML\-файл.  
+## <a name="remarks"></a>Примечания  
+ `<paramref>` Тег дает возможность указать, что слово является параметром. Чтобы этот параметр некоторым конкретным образом могут обрабатываться XML-файл.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- В этом примере тег `<paramref>` используется для ссылки на параметр `id`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<paramref>` тег для обращения к `id` параметра.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -1,43 +1,44 @@
 ---
-title: "Ограничения свойства Interval компонента Timer в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Interval - свойство, ограничения"
-  - "Timer - компонент [Windows Forms], ограничения свойства Interval"
-  - "таймеры, интервалы событий"
-  - "таймеры, для Windows"
+title: "Ограничения компонента Timer в Windows Forms & #39; свойства Interval s"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- timers [Windows Forms], event intervals
+- Interval property [Windows Forms], limitations
+- timers [Windows Forms], Windows-based
+- Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72af16b7dcb7709dd132a3748a454eda57acc168
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Ограничения свойства Interval компонента Timer в Windows Forms
-Компонент Windows Forms <xref:System.Windows.Forms.Timer> имеет свойство <xref:System.Windows.Forms.Timer.Interval%2A>, указывающее время в миллисекундах, которое проходит между двумя следующими друг за другом событиями таймера.  Если компонент не отключен, таймер получает событие <xref:System.Windows.Forms.Timer.Tick> через приблизительно равные интервалы времени.  
+# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Ограничения компонента Timer в Windows Forms & #39; свойства Interval s
+Windows Forms <xref:System.Windows.Forms.Timer> компонент имеет <xref:System.Windows.Forms.Timer.Interval%2A> свойство, которое указывает количество миллисекунд, которое проходит между событие таймера один, а затем. Если компонент не отключен, таймер для получения <xref:System.Windows.Forms.Timer.Tick> событий через приблизительно равные интервалы времени.  
   
- Этот компонент предназначен для среды Windows Forms.  Если требуется таймер для серверной среды, см. раздел [Introduction to Server\-Based Timers](http://msdn.microsoft.com/ru-ru/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+ Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
-## Свойство Interval  
- Свойство <xref:System.Windows.Forms.Timer.Interval%2A> имеет несколько ограничений, которые необходимо учитывать при программировании компонента <xref:System.Windows.Forms.Timer>.  
+## <a name="the-interval-property"></a>Свойство Interval  
+ <xref:System.Windows.Forms.Timer.Interval%2A> Свойство имеет несколько ограничений, которые следует учитывать при программировании <xref:System.Windows.Forms.Timer> компонента:  
   
--   Если какое\-либо приложение интенсивно потребляет системные ресурсы \(например, использует длинные циклы, выполняет большие объемы вычислений или производит доступ к диску, сети или порту\), события таймера могут поступать не так часто, как указывается свойством <xref:System.Windows.Forms.Timer.Interval%2A>.  
+-   Если приложение или другое приложение интенсивно потребляет системы — например длинные циклы, большим объемом вычислений, или диск, сети или доступа к портам — приложение не может получить события таймера так часто, как <xref:System.Windows.Forms.Timer.Interval%2A> указывает свойство.  
   
--   Нет гарантии, что интервал истечет точно вовремя.  Чтобы обеспечить точность, таймер должен сверяться по мере необходимости с системными часами, а не пытаться отслеживать прошедшее время внутренними средствами.  
+-   Интервал истечет точно вовремя не гарантируется. Для обеспечения точности таймера должна Проверьте системные часы, при необходимости, а не повторите для отслеживания накопленные временные внутренним образом.  
   
--   Точность свойства <xref:System.Windows.Forms.Timer.Interval%2A> измеряется миллисекундами.  Некоторые компьютеры имеют счетчики высокого разрешения, обеспечивающие более высокую точность.  Доступность такого счетчика определяется характеристиками компьютерного процессора.  Подробные сведения см. в статье 172338 базы знаний Майкрософт "How To Use QueryPerformanceCounter to Time Code" \(http:\/\/support.microsoft.com\).  
+-   Точность <xref:System.Windows.Forms.Timer.Interval%2A> свойство указывается в миллисекундах. Некоторые компьютеры имеют счетчики высокого с разрешением более высокую точность. Доступность такого счетчика зависит от оборудования процессора компьютера. Дополнительные сведения см. в статье 172338 «Как для использования QueryPerformanceCounter для код времени» в базе знаний Майкрософт на http://support.microsoft.com.  
   
-## См. также  
- <xref:System.Windows.Forms.Timer>   
- [Компонент Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Timer>  
+ [Компонент Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
  [Общие сведения о компоненте Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

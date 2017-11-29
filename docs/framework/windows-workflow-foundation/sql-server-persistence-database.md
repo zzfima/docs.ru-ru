@@ -1,29 +1,33 @@
 ---
-title: "База данных постоянного хранения SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "База данных постоянного хранения SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 26feff95fb6d6584f487a408566aee089a57ad7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# База данных постоянного хранения SQL Server
+# <a name="sql-server-persistence-database"></a>База данных постоянного хранения SQL Server
 В этом разделе приведены сведения об общих представлениях базы данных, поддерживаемых хранилищем экземпляров рабочих процессов SQL, и показано, как проводить десериализацию примитивных свойств данных экземпляров и как обращаться с запросами к несохраняемым экземплярам.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
   
--   [Схема базы данных постоянного хранения](../../../docs/framework/windows-workflow-foundation//persistence-database-schema.md)  
+-   [Схема базы данных сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
   
--   [Как десериализовать свойства данных экземпляра](../../../docs/framework/windows-workflow-foundation//how-to-deserialize-instance-data-properties.md)  
+-   [Практическое руководство. Десериализация свойств данных экземпляра](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
   
--   [Как обращаться с запросом к несохраняемым экземплярам](../../../docs/framework/windows-workflow-foundation//how-to-query-for-non-persisted-instances.md)  
+-   [Практическое руководство. Запросы для несохраняемых экземпляров](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## См. также  
- [База данных постоянного хранения SQL Server для App Fabric](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x419)
+## <a name="see-also"></a>См. также  
+ [База данных сохраняемости фабрики приложений SQL Server](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

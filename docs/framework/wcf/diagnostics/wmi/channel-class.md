@@ -1,25 +1,28 @@
 ---
-title: "Класс Channel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Класс Channel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1df634a61cce695fca74fdfe53beea6c0f83d082
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Класс Channel
+# <a name="channel-class"></a>Класс Channel
 Канал  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class Channel  
@@ -32,52 +35,52 @@ class Channel
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс Channel не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс Channel имеет следующие свойства.  
   
-### LocalAddress  
+### <a name="localaddress"></a>LocalAddress  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Локальная конечная точка канала.  
   
-### ref  
+### <a name="ref"></a>ref  
  Тип данных: Endpoint  
   
  Тип доступа: только для чтения  
   
  Ссылка на конечную точку, к которой подключается канал.  
   
-### RemoteAddress  
+### <a name="remoteaddress"></a>RemoteAddress  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Удаленный адрес, связанный с каналом.  
   
-### SessionId  
+### <a name="sessionid"></a>SessionId  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Идентификатор текущего сеанса, если он существует.  
   
-### Тип  
+### <a name="type"></a>Тип  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Тип канала.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.ChannelBase>

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - maximum staleness
 - freshness of cached resources
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 834deeff69687e0edf1671b35328d41842914b4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: baec376501feb70e4a9ceb3f33ac66fa76b91ac1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Взаимодействие с политикой кэша: максимальный возраст и устаревание
 Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований к повторной проверке сервера всегда применяется наиболее консервативная политика кэша. Все примеры в этом разделе иллюстрируют политику кэша для ресурса, который кэшируется 1 января и срок действия которого истекает 4 января.  
@@ -51,10 +45,9 @@ ms.lasthandoff: 08/21/2017
 -   Если политика кэша задает значения `maxAge` и `maxStale` равными 1 дню, содержимое повторно проверяется 2 января.  
   
 ## <a name="see-also"></a>См. также  
- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)   
- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)  
+ [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
-

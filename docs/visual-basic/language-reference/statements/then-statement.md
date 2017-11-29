@@ -1,33 +1,31 @@
 ---
-title: "Оператор Then | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Then - ключевое слово"
+title: "Оператор Then"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: daaa3f14e87334e3e37d6e77e483605f922d8230
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Оператор Then
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Обозначает компилируемый или выполняемый блок операторов, если проверяемое условие истинно.  
+# <a name="then-statement"></a>Оператор Then
+Представляет блок операторов для компиляции или выполнения, если условие истинно.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Ключевое слово `Then` можно использовать в следующих контекстах:  
   
- [Директива \#If...Then...\#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Then... #Else-директива](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

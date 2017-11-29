@@ -1,89 +1,93 @@
 ---
-title: "Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "поля со списком, доступ к объектам в раскрывающихся списках DataGridViewComboBoxCell"
-  - "поля со списком, в элементе управления DataGridView"
-  - "DataGridView - элемент управления [Windows Forms], доступ к объектам в ячейках с полями со списками"
+title: "Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], accessing objects in combo box cells
+- combo boxes [Windows Forms], in DataGridView control
+- combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a0fac2e73e76ad49a5b1ce6942f3ae2b4c0584e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms
-Аналогично элементу управления <xref:System.Windows.Forms.ComboBox> типы <xref:System.Windows.Forms.DataGridViewComboBoxColumn> и <xref:System.Windows.Forms.DataGridViewComboBoxCell> позволяют добавлять в раскрывающиеся списки произвольные объекты.  С помощью этой функции можно отображать в раскрывающемся списке сложные состояния, не храня при этом соответствующие объекты в отдельной коллекции.  
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms
+Как <xref:System.Windows.Forms.ComboBox> управления <xref:System.Windows.Forms.DataGridViewComboBoxColumn> и <xref:System.Windows.Forms.DataGridViewComboBoxCell> типы позволяют добавлять произвольные объекты в свой список раскрывающегося списка. С помощью этой функции может представлять сложных состояний в раскрывающемся списке без сохранения соответствующие объекты в отдельной коллекции.  
   
- В отличие от элемента управления <xref:System.Windows.Forms.ComboBox> типы <xref:System.Windows.Forms.DataGridView> не имеют свойства <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> для восстановления текущего выбранного объекта.  Вместо этого необходимо задать для свойства <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=fullName> или <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=fullName> имя свойства бизнес\-объекта.  При выборе объекта пользователем указанное свойство бизнес\-объекта присваивает значение свойству <xref:System.Windows.Forms.DataGridViewCell.Value%2A> ячейки.  
+ В отличие от <xref:System.Windows.Forms.ComboBox> управления <xref:System.Windows.Forms.DataGridView> типы не имеют <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> свойство для извлечения текущего выбранного объекта. Вместо этого необходимо задать <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> или <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> на имя свойства бизнес-объекта. Когда пользователь выбирает, заданное свойство бизнес-объекта задает ячейку <xref:System.Windows.Forms.DataGridViewCell.Value%2A> свойство.  
   
- Чтобы извлечь бизнес\-объект с помощью значения ячейки, свойство `ValueMember` должно указывать на свойство, возвращающее ссылку на сам бизнес\-объект.  Таким образом, если нельзя управлять типом бизнес\-объекта, необходимо добавить такое свойство, расширив тип путем наследования.  
+ Для получения бизнес-объекта по значению ячейки, `ValueMember` свойство должно указывать свойство, возвращающее ссылку на сам бизнес-объект. Таким образом Если тип бизнес-объекта не под вашим управлением, необходимо добавить такое свойство, расширив тип путем наследования.  
   
- В приведенных ниже процедурах демонстрируется заполнение раскрывающегося списка с использованием бизнес\-объектов, а также извлечение объектов с помощью свойства <xref:System.Windows.Forms.DataGridViewCell.Value%2A> ячейки.  
+ Следующие процедуры демонстрируют, как для заполнения раскрывающегося списка с бизнес-объектов и извлечение объектов с помощью ячейки <xref:System.Windows.Forms.DataGridViewCell.Value%2A> свойство.  
   
-### Чтобы добавить бизнес\-объекты в раскрывающийся список, выполните следующие действия:  
+### <a name="to-add-business-objects-to-the-drop-down-list"></a>Добавление бизнес-объектов в раскрывающемся списке  
   
-1.  Создайте новый элемент <xref:System.Windows.Forms.DataGridViewComboBoxColumn> и заполните его коллекцию <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>.  Можно также задать для свойства столбца <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> коллекцию бизнес\-объектов.  Однако в этом случае нельзя добавить в раскрывающийся список значение "без присвоения", не создав соответствующий бизнес\-объект в коллекции.  
+1.  Создайте новый <xref:System.Windows.Forms.DataGridViewComboBoxColumn> и заполнить его <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> коллекции. Кроме того, можно задать столбец <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> коллекция бизнес-объектов. В этом случае тем не менее, вы не может добавить «неназначенные» в раскрывающемся списке без создания соответствующего бизнес-объекта в коллекции.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  Установите свойства <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> и <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>.  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> обозначает свойство бизнес\-объекта, отображаемое в раскрывающемся списке.  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> обозначает свойство, которое возвращает ссылку на бизнес\-объект.  
+2.  Задайте свойства <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> и <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>Указывает свойство бизнес-объекта для отображения в раскрывающемся списке. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>обозначает свойство, которое возвращает ссылку на бизнес-объекта.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  Убедитесь, что тип бизнес\-объекта содержит свойство, возвращающее ссылку на текущий экземпляр.  Имя этого свойство должно иметь значение, назначенное свойству <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> на предыдущем этапе.  
+3.  Убедитесь, что ваш тип бизнес-объекта содержит свойство, возвращающее ссылку на текущий экземпляр. Это свойство должно с именем, и значение, присваиваемое <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> на предыдущем шаге.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
   
-### Чтобы извлечь текущий выбранный бизнес\-объект, выполните следующие действия:  
+### <a name="to-retrieve-the-currently-selected-business-object"></a>Для получения текущего выбранного бизнес-объекта  
   
--   Получите свойство <xref:System.Windows.Forms.DataGridViewCell.Value%2A> ячейки и приведите его к типу бизнес\-объекта.  
+-   Получить ячейку <xref:System.Windows.Forms.DataGridViewCell.Value%2A> свойство и приведите его тип бизнес-объекта.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
-## Пример  
- В развернутом примере описано использование бизнес\-объектов в раскрывающемся списке.  В этом примере элемент управления <xref:System.Windows.Forms.DataGridView> связан с коллекцией объектов `Task`.  Каждый объект `Task` имеет свойство `AssignedTo`, указывающее объект `Employee`, которому назначена эта задача.  В столбце `Assigned To` отображается значение свойства `Name` для каждого назначенного сотрудника или значение "без присвоения", если свойство `Task.AssignedTo` имеет значение `null`.  
+## <a name="example"></a>Пример  
+ Полный пример демонстрирует использование бизнес-объектов в раскрывающемся списке. В примере <xref:System.Windows.Forms.DataGridView> элемент управления привязан к коллекции `Task` объектов. Каждый `Task` объект имеет `AssignedTo` свойство, которое показывает `Employee` объекта, назначенный этой задачи. `Assigned To` Столбец отображает `Name` назначить значение свойства для каждого сотрудника, или «неназначенные», если `Task.AssignedTo` значение свойства `null`.  
   
  Чтобы просмотреть работу этого примера, выполните следующие действия:  
   
-1.  Измените назначения в столбце `Assigned To`, выбрав другие значения в раскрывающихся списках или нажав CTRL\+0 в ячейке с раскрывающимся списком.  
+1.  Измените назначения в `Assigned To` столбца путем выбора различных значений из раскрывающихся списков или нажав клавиши CTRL + 0 в ячейке с раскрывающимся списком.  
   
-2.  Щелкните `Generate Report`, чтобы отобразить текущие назначения.  Этот пример демонстрирует, как изменение в столбце `Assigned To` автоматически меняет коллекцию `tasks`.  
+2.  Щелкните `Generate Report` для отображения текущих назначений. Этот пример демонстрирует изменение `Assigned To` автоматически обновляет столбец `tasks` коллекции.  
   
-3.  Нажмите кнопку `Request Status` для вызова метода `RequestStatus` текущего объекта `Employee` для этой строки.  Это показывает, что выбранный объект был успешно извлечен.  
+3.  Нажмите кнопку `Request Status` кнопку, чтобы вызвать `RequestStatus` метод текущего `Employee` объекта для этой строки. Это показывает, что выбранный объект был успешно извлечен.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Ссылки на сборки System и System.Windows.Forms.  
+-   ссылки на сборки System и System.Windows.Forms.  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewComboBoxCell>   
- <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ComboBox>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxCell.Items%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxCell.DataSource%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ComboBox>  
  [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)

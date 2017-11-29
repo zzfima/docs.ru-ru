@@ -5,30 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d71b83231140dcc18e6d2351091fbfd4985e90a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9c41b9c0c9abe3fc80d16dbd847c35c8b2da7038
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-session-management"></a>Управление сеансами WIF
-При первой попытке клиента получить доступ к защищенному ресурсу, размещаемому проверяющей стороной, этот клиент прежде всего должен пройти проверку подлинности в службе маркеров безопасности (STS), которая является доверенной для проверяющей стороны. Затем служба STS выдает клиенту токен безопасности. Клиент предъявляет этот токен проверяющей стороне, и та предоставляет клиенту доступ к защищенному ресурсу. Однако такая ситуация, когда клиент вынужден повторно проходить проверку подлинности в службе STS для каждого запроса, является нежелательной, особенно с учетом того, что клиент и проверяющая сторона могут работать на разных компьютерах или в разных доменах. Вместо этого WIF обеспечивает установку сеанса клиентом и проверяющей стороной, в ходе которого клиент использует токен безопасности сеанса в целях проверки своей подлинности для проверяющей стороны для всех запросов, следующих после первого запроса. Проверяющая сторона может использовать этот токен, хранящийся в файле cookie, для воссоздания <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> клиента.  
+При первой попытке клиента получить доступ к защищенному ресурсу, размещаемому проверяющей стороной, этот клиент прежде всего должен пройти проверку подлинности в службе маркеров безопасности (STS), которая является доверенной для проверяющей стороны. Затем служба STS выдает клиенту токен безопасности. Клиент предъявляет этот токен проверяющей стороне, и та предоставляет клиенту доступ к защищенному ресурсу. Однако такая ситуация, когда клиент вынужден повторно проходить проверку подлинности в службе STS для каждого запроса, является нежелательной, особенно с учетом того, что клиент и проверяющая сторона могут работать на разных компьютерах или в разных доменах. Вместо этого WIF обеспечивает установку сеанса клиентом и проверяющей стороной, в ходе которого клиент использует токен безопасности сеанса в целях проверки своей подлинности для проверяющей стороны для всех запросов, следующих после первого запроса. Проверяющая сторона может использовать этот токен, хранящийся в файле cookie, для воссоздания <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> клиента.  
   
  Служба STS определяет, какой тип проверки подлинности должен пройти клиент. Однако у клиента может быть несколько наборов учетных данных, с помощью которых он может пройти проверку подлинности в службе STS. Например, клиент может иметь токен из учетной записи Windows Live, имя пользователя и пароль, сертификат и смарт-ключ. В этом случае служба STS предоставляет клиенту несколько удостоверений, каждое из которых соответствует одному набору учетных данных, предъявленных клиентом. Проверяющая сторона может использовать одно или несколько из этих удостоверений для предоставления клиенту того или иного уровня доступа.  
   
- Токен <xref:System.IdentityModel.Tokens.SessionSecurityToken?displayProperty=fullName> используется для воссоздания объекта <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=fullName> клиента, содержащего все удостоверения клиента в коллекции <xref:System.Security.Claims.ClaimsPrincipal.Identities%2A>. Каждое удостоверение <xref:System.Security.Claims.ClaimsIdentity?displayProperty=fullName> в коллекции содержит токены начальной загрузки, связанные с данным удостоверением.  
+ Токен <xref:System.IdentityModel.Tokens.SessionSecurityToken?displayProperty=nameWithType> используется для воссоздания объекта <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> клиента, содержащего все удостоверения клиента в коллекции <xref:System.Security.Claims.ClaimsPrincipal.Identities%2A>. Каждое удостоверение <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> в коллекции содержит токены начальной загрузки, связанные с данным удостоверением.  
   
- Если выдается новый токен сеанса с ИД сеанса исходного токена, обработчик <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=fullName> не обновляет токен сеанса в кэше токенов. Экземпляр токена сеанса всегда должен создаваться с уникальным ИД сеанса.  
+ Если выдается новый токен сеанса с ИД сеанса исходного токена, обработчик <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=nameWithType> не обновляет токен сеанса в кэше токенов. Экземпляр токена сеанса всегда должен создаваться с уникальным ИД сеанса.  
   
 > [!NOTE]
 >  Session.SecurityTokenHandler.ReadToken вызывает исключение <xref:System.Xml.XmlException> в случае получения недопустимых входных данных, например если файл cookie, содержащий токен сеанса, поврежден. Рекомендуется перехватить это исключение и обеспечить соответствующую реакцию в приложении.  
@@ -38,7 +36,6 @@ ms.lasthandoff: 08/21/2017
  Для работы в режиме ссылки корпорация Майкрософт рекомендует реализовать обработчик события <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> в файле **global.asax.cs** и задать свойство **IsReferenceMode** в токене, передаваемом в свойстве <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A>. В результате этих изменений токен будет работать в режиме ссылки для каждого запроса. Использовать такой вариант предпочтительнее, чем просто задавать свойство <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> в модуле проверки подлинности сеанса.  
   
 ## <a name="extensibility"></a>Расширение среды  
- Механизм управления сеансами можно расширить. Это может потребоваться, например, для повышения производительности. Допустим, требуется создать пользовательский обработчик файлов cookie, который будет преобразовывать или оптимизировать токен безопасности сеанса между его состоянием в памяти и содержимым файлов cookie. Для этого следует настроить свойство <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=fullName> модуля <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=fullName> для использования пользовательского обработчика файлов cookie, производного от <xref:System.IdentityModel.Services.CookieHandler?displayProperty=fullName>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=fullName> является обработчиком файлов cookie по умолчанию, так как размер этих файлов превышает допустимый размер для протокола HTTP. Если вместо этого применяется пользовательский обработчик, необходимо прибегнуть к разделению на блоки.  
+ Механизм управления сеансами можно расширить. Это может потребоваться, например, для повышения производительности. Допустим, требуется создать пользовательский обработчик файлов cookie, который будет преобразовывать или оптимизировать токен безопасности сеанса между его состоянием в памяти и содержимым файлов cookie. Для этого следует настроить свойство <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> модуля <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> для использования пользовательского обработчика файлов cookie, производного от <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> является обработчиком файлов cookie по умолчанию, так как размер этих файлов превышает допустимый размер для протокола HTTP. Если вместо этого применяется пользовательский обработчик, необходимо прибегнуть к разделению на блоки.  
   
  Чтобы получить дополнительные сведения, обратитесь к примеру [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408). В этом примере демонстрируется готовый к применению в ферме кэш сеанса (вместо tokenreplycache), который позволяет использовать сеансы по ссылке, а не обмениваться большими файлами cookie. Также показан более простой способ защиты файлов cookie в ферме. Кэш сеанса основан на WCF. Что касается безопасности сеансов, в примере демонстрируется имеющаяся в WIF 4.5 новая возможность преобразования файлов cookie на основе MachineKey, которую можно активировать, просто вставив соответствующий фрагмент кода в файл web.config. Сам образец не размещен в ферме, однако показывает, что нужно сделать, чтобы приложение можно было использовать в ферме.
-

@@ -1,42 +1,34 @@
 ---
-title: "Сериализация графов объектов, содержащих объекты XElement (Visual Basic) | Документы Microsoft"
+title: "Сериализация графов объектов, содержащих объекты XElement (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3767df8b412afedb72bb41916157a38a9b2b8e29
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 44a30e3c79eb1f68f968e83c50a55f24da9275cb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>Сериализация графов объектов, содержащих объекты XElement (Visual Basic)
-В этом разделе описаны возможности сериализации графов объектов, содержащих ссылки на объекты типа <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> Для обеспечения сериализации этого типа <xref:System.Xml.Linq.XElement>реализует <xref:System.Xml.Serialization.IXmlSerializable>интерфейса.</xref:System.Xml.Serialization.IXmlSerializable> </xref:System.Xml.Linq.XElement>  
+В этом разделе описаны возможности сериализации графов объектов, содержащих ссылки на объекты с типом <xref:System.Xml.Linq.XElement>. Для обеспечения сериализации этого типа класс <xref:System.Xml.Linq.XElement> реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>.  
   
- Обратите внимание, что только <xref:System.Xml.Linq.XElement>класс реализует сериализации.</xref:System.Xml.Linq.XElement>  
+ Обратите внимание, что сериализацию реализует только класс <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="in-this-section"></a>Содержание  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство: сериализовать с помощью XmlSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Xml.Serialization.XmlSerializer>.</xref:System.Xml.Serialization.XmlSerializer>|  
-|[Практическое руководство: сериализация с использованием DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.</xref:System.Runtime.Serialization.DataContractSerializer>|  
+|[Как: сериализация с использованием XmlSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Xml.Serialization.XmlSerializer>.|  
+|[Как: сериализация с использованием DataContractSerializer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="see-also"></a>См. также  
- [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Дополнительно LINQ to XML, программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

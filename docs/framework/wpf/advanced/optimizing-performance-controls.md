@@ -1,91 +1,94 @@
 ---
-title: "Оптимизация производительности: элементы управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "повторное использование контейнера"
-  - "элементы управления [WPF], повышение производительности"
-  - "визуализация пользовательского интерфейса"
+title: "Оптимизация производительности: элементы управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], improving performance
+- container recycling [WPF]
+- user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оптимизация производительности: элементы управления
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает множество общих компонентов интерфейса пользователя, которые используются в большинстве приложений Windows.  В этом разделе содержатся методы повышения производительности пользовательского интерфейса.  
+# <a name="optimizing-performance-controls"></a>Оптимизация производительности: элементы управления
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает множество общих компонентов пользовательского интерфейса (UI), которые используются в большинстве приложений Windows. В этом разделе описываются методы повышения производительности пользовательского интерфейса.  
   
-   
+ 
   
 <a name="Displaying"></a>   
-## Отображение больших наборов данных  
- Элементы управления WPF, такие как <xref:System.Windows.Controls.ListView> и <xref:System.Windows.Controls.ComboBox>, используются для отображения списков элементов в приложении.  Если список для отображения большой, это может повлиять на производительность приложения.  Это происходит потому, что стандартная система разметки создает контейнер разметки для каждого элемента, связанного с элементом управления в списке, и вычисляет размер и позицию разметки.  Обычно не требуется отображать все элементы одновременно, вместо этого отображается некоторое подмножество, и пользователь прокручивает список.  В этом случае, затрагивается *виртуализация* пользовательского интерфейса, и в результате генерирование контейнера элементов и вычисление связанной разметки замедляется, пока отображается элемент.  
+## <a name="displaying-large-data-sets"></a>Отображение больших наборов данных  
+ Элементы управления WPF, таких как <xref:System.Windows.Controls.ListView> и <xref:System.Windows.Controls.ComboBox> используются для отображения списков элементов в приложении. Если отображаемый список большой, это может повлиять на производительность приложения. Причина этого в том, что стандартная система макета создает контейнер макета для каждого элемента, связанного с элементом управления «Список», и вычисляет размер и положение его макета. Как правило, не требуется отображать все элементы одновременно; можно отображать подмножество элементов, и пользователь будет прокручивать список. В этом случае имеет смысл использовать *виртуализацию* пользовательского интерфейса, что означает, что создание контейнера элемента и вычисление связанной разметки для элемента откладывается до тех пор, пока этот элемент не станет видимым.  
   
- Виртуализация пользовательского интерфейса является важным аспектом элементов управления списка.  Виртуализация пользовательского интерфейса не должна служить помехой виртуализации данных.  Виртуализация пользовательского интерфейса хранит только видимые элементы в памяти, но в скриптах привязки данных в памяти сохраняется вся структура данных.  Наоборот, виртуализация данных сохраняет в памяти только элементы данных, которые отображаются на экране.  
+ Виртуализация пользовательского интерфейса является важным аспектом элементов управления «Список». Не следует путать виртуализацию пользовательского интерфейса с виртуализацией данных. Виртуализация пользовательского интерфейса хранит в памяти только видимые элементы, но в сценариях привязки данных хранит в памяти всю структуру данных. В отличие от этого виртуализация данных хранит в памяти только элементы данных, которые отображаются.  
   
- По умолчанию виртуализация пользовательского интерфейса включена для элементов управления <xref:System.Windows.Controls.ListView> и <xref:System.Windows.Controls.ListBox>, если их элементы списка привязаны к данным.  Виртуализацию <xref:System.Windows.Controls.TreeView> можно включить, присвоив вложенному свойству <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=fullName> значение `true`.  Если нужно включить виртуализацию пользовательского интерфейса для настраиваемых элементов управления, производных от класса <xref:System.Windows.Controls.ItemsControl>, или существующих элементов управления, использующих класс <xref:System.Windows.Controls.StackPanel>, таких как <xref:System.Windows.Controls.ComboBox>, можно установить свойство <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> для класса <xref:System.Windows.Controls.VirtualizingStackPanel> и задать для свойства <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> значение `true`.  К сожалению, можно отключить виртуализацию пользовательского интерфейса, не зная этого.  Далее представлен список условий, отключающих виртуализацию пользовательского интерфейса.  
+ По умолчанию Виртуализация пользовательского интерфейса включена для <xref:System.Windows.Controls.ListView> и <xref:System.Windows.Controls.ListBox> элементы управления, если их элементы списка привязаны к данным. <xref:System.Windows.Controls.TreeView>можно включить виртуализацию, задав <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> --> `IsVirtualizing` присоединенному свойству `true`. Если вы хотите включить виртуализацию пользовательского интерфейса для пользовательских элементов управления, которые являются производными от <xref:System.Windows.Controls.ItemsControl> или существующих элементов управления, использующих <xref:System.Windows.Controls.StackPanel> класса, такие как <xref:System.Windows.Controls.ComboBox>, можно задать <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> для <xref:System.Windows.Controls.VirtualizingStackPanel> и задайте <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> для `true`. К сожалению, вы можете отключить виртуализацию пользовательского интерфейса для этих элементов управления, не осознавая этого. Ниже приведен список условий, отключающих виртуализацию пользовательского интерфейса.  
   
--   Контейнеры элементов добавляются напрямую к элементу управления <xref:System.Windows.Controls.ItemsControl>.  Например, если приложение явно добавляет объекты <xref:System.Windows.Controls.ListBoxItem> к <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> не будет виртуализировать объекты <xref:System.Windows.Controls.ListBoxItem>.  
+-   Контейнеры элементов добавляются к <xref:System.Windows.Controls.ItemsControl>. Например, если приложение явно добавляет <xref:System.Windows.Controls.ListBoxItem> объектов <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> виртуализировать <xref:System.Windows.Controls.ListBoxItem> объектов.  
   
--   Объект <xref:System.Windows.Controls.ItemsControl> содержит контейнеры элементов различных типов.  Например, объект <xref:System.Windows.Controls.Menu>, использующий объекты <xref:System.Windows.Controls.Separator>, не может реализовать повторное использование элементов, так как <xref:System.Windows.Controls.Menu> содержит объекты типа <xref:System.Windows.Controls.Separator> и <xref:System.Windows.Controls.MenuItem>.  
+-   Элемент контейнеров в <xref:System.Windows.Controls.ItemsControl> принадлежат к разным типам. Например <xref:System.Windows.Controls.Menu> , использующий <xref:System.Windows.Controls.Separator> объектов не может реализовать повторное использование элементов <xref:System.Windows.Controls.Menu> содержит объекты типа <xref:System.Windows.Controls.Separator> и <xref:System.Windows.Controls.MenuItem>.  
   
--   Установка для свойства <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> значения `false`.  
+-   Установка <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> для `false`.  
   
--   Установка для свойства <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A> значения `false`.  
+-   Установка <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` для `false`.    
   
- Важные соображения по virtualize контейнеров элементов имеется дополнительные сведения о состоянии, связанные с контейнером элемента, который принадлежит данному элементу.  В этом случае, необходимо сохранить дополнительное состояние.  Например, элемент может находиться в элементе управления <xref:System.Windows.Controls.Expander>, и состояние <xref:System.Windows.Controls.Expander.IsExpanded%2A> привязано к контейнеру элемента, а не к самому элементу.  Если контейнер повторно используется для нового элемента, текущее значение свойства <xref:System.Windows.Controls.Expander.IsExpanded%2A> используется для нового элемента.  Дополнительно, старый элемент теряет правильное значение <xref:System.Windows.Controls.Expander.IsExpanded%2A>.  
+ Важным аспектом при виртуализации контейнеров элементов является наличие информации о дополнительном состоянии, связанной с контейнером элемента, принадлежащим этому элементу. В этом случае необходимо сохранить это дополнительное состояние. Например, может потребоваться элемента, содержащегося в <xref:System.Windows.Controls.Expander> управления и <xref:System.Windows.Controls.Expander.IsExpanded%2A> состояние привязанного элемента контейнера, а не сам элемент. Когда контейнер используется повторно для нового элемента, текущее значение <xref:System.Windows.Controls.Expander.IsExpanded%2A> используется для нового элемента. Кроме того, старый элемент теряет правильное <xref:System.Windows.Controls.Expander.IsExpanded%2A> значение.  
   
- В настоящее время элементы управления WPF не предлагают встроенную поддержку виртуализации данных.  
+ В настоящее время элементы управления WPF не предоставляют встроенную поддержку виртуализации данных.  
   
 <a name="Container"></a>   
-## Повторное использование контейнера  
- В пакет обновления 1 \(SP1\) для платформы .NET Framework 3.5 добавлена оптимизация виртуализации пользовательского интерфейса для элементов управления, наследующих от класса <xref:System.Windows.Controls.ItemsControl>, — *повторное использование контейнера*, также это может повысить быстродействие прокрутки.  Когда объект <xref:System.Windows.Controls.ItemsControl>, использующий виртуализацию пользовательского интерфейса, заполняется, создается контейнер элементов для каждого отображаемого при прокрутке элемента, и контейнер элементов удаляется, когда элемент в результате прокрутки не отображается.  *Повторное использование контейнера* позволяет элементу управления повторно использовать существующие контейнеры элементов для различных элементов данных, чтобы контейнеры элементов не создавались и не удалялись постоянно при прокрутке пользователем объекта <xref:System.Windows.Controls.ItemsControl>.  Можно выбрать включение элемент рециркулируя установкой <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> присоединенное свойство  <xref:System.Windows.Controls.VirtualizationMode>.  
+## <a name="container-recycling"></a>Повторное использование контейнера  
+ Оптимизация виртуализации пользовательского интерфейса, добавленных в .NET Framework 3.5 SP1 для элементов управления, которые наследуют от <xref:System.Windows.Controls.ItemsControl> — *повторное использование контейнера* также, что может повысить быстродействие прокрутки.  Когда <xref:System.Windows.Controls.ItemsControl> виртуализации пользовательского интерфейса использует заполняется, создается контейнер элементов для каждого элемента, который прокручивается в представлении и уничтожает контейнер элементов для каждого элемента, который прокрутки не отображается. *Повторное использование контейнера* позволяет повторно использовать существующие контейнеры элементов для различных элементов данных, чтобы постоянно не создаются и удаляются при прокрутке пользователем контейнеры элементов управления <xref:System.Windows.Controls.ItemsControl>. Можно выбрать, установив повторное использование элементов <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> присоединенному свойству <xref:System.Windows.Controls.VirtualizationMode.Recycling>.  
   
- Любой объект <xref:System.Windows.Controls.ItemsControl>, поддерживающий виртуализацию, может повторно использовать контейнер.  Пример, как включить повторное использование контейнера для <xref:System.Windows.Controls.ListBox>, см. в разделе [Улучшение производительности прокрутки ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md).  
+ Любой <xref:System.Windows.Controls.ItemsControl> , поддерживающих эту технологию виртуализации может повторно использовать контейнер.  Пример того, как включить повторное использование контейнера для <xref:System.Windows.Controls.ListBox>, в разделе [повышения производительности прокрутки ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md).  
   
 <a name="Supporting"></a>   
-## Поддержка двунаправленной виртуализации  
- <xref:System.Windows.Controls.VirtualizingStackPanel> предлагает встроенную поддержку виртуализации пользовательского интерфейса в одном направлении — горизонтально или вертикально.  Если нужно использовать двунаправленную виртуализацию для элементов управления, необходимо реализовать настраиваемую панель, расширяющую класс <xref:System.Windows.Controls.VirtualizingStackPanel>.  Класс <xref:System.Windows.Controls.VirtualizingStackPanel> предоставляет виртуальные методы, такие как <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A> и <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>.Эти виртуальные методы позволяют обнаружить изменение в видимой части списка и соответственно его обработать.  
+## <a name="supporting-bidirectional-virtualization"></a>Поддержка двунаправленной виртуализации  
+ <xref:System.Windows.Controls.VirtualizingStackPanel>предоставляет встроенную поддержку виртуализации пользовательского интерфейса в одном направлении, горизонтально или вертикально. Если вы хотите использовать виртуализацию двунаправленный для элементов управления, необходимо реализовать пользовательскую панель, которая расширяет <xref:System.Windows.Controls.VirtualizingStackPanel> класса. <xref:System.Windows.Controls.VirtualizingStackPanel> Класс предоставляет виртуальные методы, такие как <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, и <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Эти виртуальные методы позволяют обнаруживать изменения в видимой части списка и обработать его соответствующим образом.  
   
 <a name="Optimizing"></a>   
-## Оптимизация шаблонов  
- Визуальное дерево содержит все визуальные элементы в приложении.  Дополнительно к непосредственно созданным объектам оно также содержит объекты для возможного расширения шаблона.  Например, при создании объекта <xref:System.Windows.Controls.Button> в визуальном дереве также создаются объекты <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> и <xref:System.Windows.Controls.ContentPresenter>.  Без оптимизации шаблонов элементов управления в визуальном дереве может быть создано большое число дополнительных ненужных объектов.  Дополнительные сведения о визуальном дереве см. в разделе [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+## <a name="optimizing-templates"></a>Оптимизация шаблонов  
+ Визуальное дерево содержит все визуальные элементы приложения.  В дополнение к непосредственно созданным объектам оно также содержит объекты, возникшие из-за расширения шаблона.  Например, при создании <xref:System.Windows.Controls.Button>, можно также получить <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> и <xref:System.Windows.Controls.ContentPresenter> объекты в визуальном дереве.  Без оптимизации шаблонов элементов управления может быть создано большое число дополнительных ненужных объектов в визуальном дереве.   Дополнительные сведения см. в разделе [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
 <a name="Deferred"></a>   
-## Отложенная прокрутка  
- По умолчанию, когда пользователь перетаскивает бегунок в полосе прокрутки, представление содержимого постоянно обновляется.  Если скорость прокрутки в элементе управления низкая, рассмотрите возможность использования отложенной прокрутки.  При отложенной прокрутке содержимое обновляется, только когда пользователь отпускает бегунок.  
+## <a name="deferred-scrolling"></a>Отложенная прокрутка  
+ По умолчанию, когда пользователь перетаскивает бегунок в полосе прокрутки, представление содержимого постоянно обновляется.  Если скорость прокрутки в элементе управления низкая, рассмотрите возможность использования отложенной прокрутки.  При отложенной прокрутке содержимое обновляется только в том случае, когда пользователь отпускает бегунок.  
   
- Чтобы реализовать отложенную прокрутку, задайте для свойства <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> значение `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> является вложенным свойством и может быть задано в объекте <xref:System.Windows.Controls.ScrollViewer> и в любом элементе управления с <xref:System.Windows.Controls.ScrollViewer> в его шаблоне элементов управления.  
+ Чтобы реализовать отложенную прокрутку, задайте <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> свойства `true`.  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>является присоединенным свойством и может быть задано на <xref:System.Windows.Controls.ScrollViewer> и любой элемент управления, который имеет <xref:System.Windows.Controls.ScrollViewer> в его шаблон элемента управления.  
   
 <a name="Controls"></a>   
-## Элементы управления, реализующие настройку производительности  
- В следующей таблице перечислены общие элементы управления для отображения данных и их поддержка настройки производительности.  Сведения о том, как включить эти настройки, см. в предыдущих разделах.  
+## <a name="controls-that-implement-performance-features"></a>Элементы управления, реализующие функции производительности  
+ В следующей таблице приведены общие элементы управления для отображения данных и их поддержка функций производительности.  Сведения о том, как включать эти функции, см. в предыдущих разделах.  
   
-|Элемент управления|Виртуализация|Повторное использование контейнера|Отложенная прокрутка|  
-|------------------------|-------------------|----------------------------------------|--------------------------|  
+|Control|Виртуализация|Повторное использование контейнера|Отложенная прокрутка|  
+|-------------|--------------------|-------------------------|------------------------|  
 |<xref:System.Windows.Controls.ComboBox>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.ContextMenu>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.DocumentViewer>|Недоступно|Недоступно|Можно включить|  
-|<xref:System.Windows.Controls.ListBox>|Default|Можно включить|Можно включить|  
-|<xref:System.Windows.Controls.ListView>|Default|Можно включить|Можно включить|  
+|<xref:System.Windows.Controls.ListBox>|По умолчанию|Можно включить|Можно включить|  
+|<xref:System.Windows.Controls.ListView>|По умолчанию|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.TreeView>|Можно включить|Можно включить|Можно включить|  
 |<xref:System.Windows.Controls.ToolBar>|Недоступно|Недоступно|Можно включить|  
   
 > [!NOTE]
->  Пример, как включить виртуализацию и повторное использование контейнера для <xref:System.Windows.Controls.TreeView>, см. в разделе [Повышение производительности элемента управления TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md).  
+>  Пример того, как включить виртуализацию и повторное использование контейнера для <xref:System.Windows.Controls.TreeView>, в разделе [повысить производительность TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md).  
   
-## См. также  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)   
- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Элементы управления](../../../../docs/framework/wpf/controls/index.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>См. также  
+ [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Элементы управления](../../../../docs/framework/wpf/controls/index.md)  
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Пошаговое руководство. Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

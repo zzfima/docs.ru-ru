@@ -1,25 +1,28 @@
 ---
-title: "Конечная точка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Конечная точка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef4e27f6e7a45fe705aa09827702a64c960b6a16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Конечная точка
+# <a name="endpoint"></a>Конечная точка
 Конечная точка  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class Endpoint  
@@ -39,102 +42,102 @@ class Endpoint
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс Endpoint определяет следующий метод.  
   
 |Метод|Описание|  
-|-----------|--------------|  
+|------------|-----------------|  
 |[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Извлекает имя экземпляра счетчика производительности операций|  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс Endpoint имеет следующие свойства.  
   
-### Адрес  
+### <a name="address"></a>Адрес  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Универсальный код ресурса \(URI\), содержащий адрес конечной точки.  
+ Универсальный код ресурса (URI), содержащий адрес конечной точки.  
   
-### AddressHeaders  
+### <a name="addressheaders"></a>AddressHeaders  
  Тип данных: массив строк  
   
  Тип доступа: только для чтения  
   
  Коллекция заголовков адреса, прикрепленных к этой конечной точке.  
   
-### AddressIdentity  
+### <a name="addressidentity"></a>AddressIdentity  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Удостоверение конечной точки.  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Идентификатор домена приложения, который размещает конечную точку.  
   
-### Поведения  
+### <a name="behaviors"></a>Поведения  
  Тип данных: массив Behavior  
   
  Тип доступа: только для чтения  
   
  Коллекция поведений, реализуемых этой конечной точкой.  
   
-### Привязка  
+### <a name="binding"></a>Привязка  
  Тип данных: Binding  
   
  Тип доступа: только для чтения  
   
  Привязка, используемая этой конечной точкой.  
   
-### ContractName  
+### <a name="contractname"></a>ContractName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Строка, в которой указывается, какой контракт предоставляется этой конечной точкой.  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя экземпляра счетчиков производительности конечной точки.  
   
-### ListenUri  
+### <a name="listenuri"></a>ListenUri  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Универсальный код ресурса \(URI\), от которого данная конечная точка ожидает передачи данных.  
+ Универсальный код ресурса (URI), от которого данная конечная точка ожидает передачи данных.  
   
-### Имя  
+### <a name="name"></a>Имя  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Уникальное имя конечной точки.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Возвращает идентификатор процесса, который размещает конечную точку.  
   
-### ref  
+### <a name="ref"></a>ref  
  Тип данных: Contract  
   
  Тип доступа: только для чтения  
   
  Контракт, предоставляемый этой конечной точкой.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|

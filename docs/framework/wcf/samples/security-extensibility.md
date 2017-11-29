@@ -1,25 +1,28 @@
 ---
-title: "Расширяемость средств обеспечения безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Расширяемость средств обеспечения безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Расширяемость средств обеспечения безопасности
+# <a name="security-extensibility"></a>Расширяемость средств обеспечения безопасности
 Образцы в этом разделе демонстрируют пользовательский режим безопасности в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Пользовательский поставщик маркеров](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  Демонстрируется, как реализовать пользовательский поставщик маркеров, выданных клиентом.  
   
@@ -27,18 +30,18 @@ caps.handback.revision: 7
  Демонстрируется, как реализовать пользовательский поставщик маркеров SAML клиента.  
   
  [Вспомогательные маркеры](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
- Демонстрируется, как добавить дополнительные маркеры в сообщение, использующее WS\-Security.  
+ Демонстрируется, как добавить дополнительные маркеры в сообщение, использующее WS-Security.  
   
- [Структура проверки подлинности маркера](../../../../docs/framework/wcf/samples/token-authenticator.md)  
+ [Средство проверки подлинности маркеров](../../../../docs/framework/wcf/samples/token-authenticator.md)  
  Демонстрируется, как реализовать пользовательскую структуру проверки подлинности маркеров.  
   
  [Поставщик маркеров](../../../../docs/framework/wcf/samples/token-provider.md)  
  Демонстрируется, как реализовать пользовательский поставщик маркеров.  
   
- [Проверяющий элемент управления для имен пользователей и паролей](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
+ [Проверяющий элемент управления пароль для имени пользователя](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
  Демонстрируется, как реализовать пользовательский проверяющий элемент управления для имени пользователя и пароля.  
   
- [Проверяющий элемент управления для сертификатов X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
+ [Средство проверки сертификатов X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
  Демонстрируется, как реализовать пользовательскую структуру проверки подлинности сертификатов X.509.  
   
  [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)  

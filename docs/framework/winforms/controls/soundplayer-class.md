@@ -1,34 +1,32 @@
 ---
-title: "Класс SoundPlayer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SoundPlayer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SoundPlayer - класс"
-  - "звуки, воспроизведение"
+title: "Класс SoundPlayer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SoundPlayer
+helpviewer_keywords: sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6fccf64215c38a3aee0b367866dd2371b483b0a7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Класс SoundPlayer
+# <a name="soundplayer-class"></a>Класс SoundPlayer
 Класс `SoundPlayer` позволяет облегчить добавление звуков в приложениях.  
   
  Можно также использовать класс <xref:System.Media.SystemSounds> для воспроизведения системных звуков, в том числе звукового сигнала.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о классе SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
  Представляет класс и описывает его часто используемые свойства, методы и события.  
   
@@ -45,20 +43,20 @@ caps.handback.revision: 18
  Приводится код для воспроизведения одного из системных звуков.  
   
  [Практическое руководство. Асинхронная загрузка звука в Windows Forms](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- Приводится код для асинхронной загрузки звука по URL\-адресу и его воспроизведения.  
+ Приводится код для асинхронной загрузки звука по URL-адресу и его воспроизведения.  
   
  [Практическое руководство. Циклическое воспроизведение звука в Windows Forms](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
  Приводится код для повторного воспроизведения звука.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Media.SoundPlayer>  
  Описание класса и ссылки на все его члены.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Ссылки на разделы, посвященные элементам управления, разработанным специально для работы с Windows Forms.  
+ Ссылки на разделы, посвященные элементам управления, которые предназначены специально для работы с Windows Forms.  
   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы с описанием их применения.  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- См. также [Объект My.Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) или [Объект My.Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ См. также [гиперссылка «http://msdn.microsoft.com/library/11bxex12 (v=vs.110)» объект My.Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) или [объект My.Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

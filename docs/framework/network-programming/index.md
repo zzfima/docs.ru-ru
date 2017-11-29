@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - Internet
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b63aeadb795e5457266bd75d1f2bf0e695eac7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/18/2017
-
+ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
@@ -55,7 +49,7 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Описание использования трассировки сети для получения сведений о вызовах методов и о сетевом трафике, созданном управляемым приложением.  
   
  [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- Описание использования кэширования для приложений, которые используют классы <xref:System.Net.WebClient?displayProperty=fullName>, <xref:System.Net.WebRequest?displayProperty=fullName>и <xref:System.Net.HttpWebRequest?displayProperty=fullName> .  
+ Описание использования кэширования для приложений, которые используют классы <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
   
  [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Описание использования стандартных методов безопасности и аутентификации в Интернете.  
@@ -67,31 +61,31 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Описание порядка настройки прокси.  
   
  [NetworkInformation](../../../docs/framework/network-programming/networkinformation.md)  
- Описание порядка сбора информации о событиях, изменениях, статистике и свойствах сети, а также порядка определения доступности удаленного узла с помощью класса <xref:System.Net.NetworkInformation.Ping?displayProperty=fullName> .  
+ Описание порядка сбора информации о событиях, изменениях, статистике и свойствах сети, а также порядка определения доступности удаленного узла с помощью класса <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
   
  [Изменения пространства имен System.Uri в версии 2.0](../../../docs/framework/network-programming/changes-to-the-system-uri-namespace-in-version-2-0.md)  
- Описание нескольких изменений, внесенных в класс <xref:System.Uri?displayProperty=fullName> в версии 2.0 для устранения неправильного поведения, повышения удобства работы и безопасности.  
+ Описание нескольких изменений, внесенных в класс <xref:System.Uri?displayProperty=nameWithType> в версии 2.0 для устранения неправильного поведения, повышения удобства работы и безопасности.  
   
  [Поддержка международного кода ресурса в System.Uri](../../../docs/framework/network-programming/international-resource-identifier-support-in-system-uri.md)  
- Описание усовершенствований класса <xref:System.Uri?displayProperty=fullName> в версиях 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1), касающихся поддержки международного идентификатора ресурсов (IRI) и международных доменных имен (IDN).  
+ Описание усовершенствований класса <xref:System.Uri?displayProperty=nameWithType> в версиях 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1), касающихся поддержки международного идентификатора ресурсов (IRI) и международных доменных имен (IDN).  
   
  [Улучшения производительности сокетов в версии 3.5](../../../docs/framework/network-programming/socket-performance-enhancements-in-version-3-5.md)  
- Описание набора усовершенствований класса <xref:System.Net.Sockets.Socket?displayProperty=fullName> в версиях 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1), которые предоставляют альтернативный шаблон асинхронной модели, который может использоваться специализированными высокопроизводительными приложениями сокетов.  
+ Описание набора усовершенствований класса <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> в версиях 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1), которые предоставляют альтернативный шаблон асинхронной модели, который может использоваться специализированными высокопроизводительными приложениями сокетов.  
   
  [Протокол PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
- Описание появившейся в версии 3.5 поддержки протокола PNRP, динамической регистрации имен и регистрации имен без сервера, а также протокола разрешения имен. Эти новые функции поддерживаются пространством имен <xref:System.Net.PeerToPeer?displayProperty=fullName> .  
+ Описание появившейся в версии 3.5 поддержки протокола PNRP, динамической регистрации имен и регистрации имен без сервера, а также протокола разрешения имен. Эти новые функции поддерживаются пространством имен <xref:System.Net.PeerToPeer?displayProperty=nameWithType>.  
   
  [Одноранговая совместная работа](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
- Описание появившейся в версии 3.5 поддержки одноранговой совместной работы на базе протокола PNRP. Эти новые функции поддерживаются пространством имен <xref:System.Net.PeerToPeer.Collaboration?displayProperty=fullName> .  
+ Описание появившейся в версии 3.5 поддержки одноранговой совместной работы на базе протокола PNRP. Эти новые функции поддерживаются пространством имен <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>.  
   
  [Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- Описание изменений безопасности в версии 3.5 с пакетом обновления 1 (SP1), влияющих на обработку интегрированной аутентификации Windows классами <xref:System.Net.HttpWebRequest?displayProperty=fullName>, <xref:System.Net.HttpListener?displayProperty=fullName>, <xref:System.Net.Security.NegotiateStream?displayProperty=fullName>и связанными классами в пространстве имен System.Net.  
+ Описание изменений безопасности в версии 3.5 с пакетом обновления 1 (SP1), влияющих на обработку интегрированной аутентификации Windows классами <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> и связанными классами в пространстве имен System.Net.  
   
  [Встроенная аутентификация Windows с расширенной защитой](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- Описание усовершенствований расширенной защиты, влияющих на обработку интегрированной аутентификации классами <xref:System.Net.HttpWebRequest?displayProperty=fullName>, <xref:System.Net.HttpListener?displayProperty=fullName>, <xref:System.Net.Mail.SmtpClient?displayProperty=fullName>, <xref:System.Net.Security.SslStream?displayProperty=fullName>, <xref:System.Net.Security.NegotiateStream?displayProperty=fullName>и связанными классами в пространстве имен <xref:System.Net?displayProperty=fullName> и связанных пространствах имен.  
+ Описание усовершенствований расширенной защиты, влияющих на обработку интегрированной аутентификации классами <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> и связанными классами в пространстве имен <xref:System.Net?displayProperty=nameWithType> и связанных пространствах имен.  
   
  [Обход NAT с помощью IPv6 и Teredo](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- Описание усовершенствований, добавленных в пространства имен <xref:System.Net?displayProperty=fullName>, <xref:System.Net.NetworkInformation?displayProperty=fullName>и <xref:System.Net.Sockets?displayProperty=fullName> для поддержки обхода преобразования сетевых адресов (NAT) с помощью IPv6 и Teredo.  
+ Описание усовершенствований, добавленных в пространства имен <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType> и <xref:System.Net.Sockets?displayProperty=nameWithType> для поддержки обхода преобразования сетевых адресов (NAT) с помощью IPv6 и Teredo.  
   
  [Сетевая изоляция для приложений Магазина Windows](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  Описание последствий сетевой изоляции, когда классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http>и <xref:System.Net.Http.Headers> используются в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] .  
@@ -100,57 +94,56 @@ Microsoft .NET Framework обеспечивает многоуровневую, 
  Ссылки на загружаемые примеры программ, в которых используются классы из пространств имен <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> .  
   
 ## <a name="reference"></a>Ссылка  
- <xref:System.Net?displayProperty=fullName>  
- Предоставляет простой программный интерфейс для многих современных сетевых протоколов. Классы <xref:System.Net.WebRequest?displayProperty=fullName> и <xref:System.Net.WebResponse?displayProperty=fullName> в этом пространстве имен являются основой для подключаемых протоколов.  
+ <xref:System.Net?displayProperty=nameWithType>  
+ Предоставляет простой программный интерфейс для многих современных сетевых протоколов. Классы <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.WebResponse?displayProperty=nameWithType> в этом пространстве имен являются основой для подключаемых протоколов.  
   
- <xref:System.Net.Cache?displayProperty=fullName>  
- Определение типов и перечислений, используемых для определения политик кэширования ресурсов, получаемых с помощью классов <xref:System.Net.WebRequest?displayProperty=fullName> и <xref:System.Net.HttpWebRequest?displayProperty=fullName> .  
+ <xref:System.Net.Cache?displayProperty=nameWithType>  
+ Определение типов и перечислений, используемых для определения политик кэширования ресурсов, получаемых с помощью классов <xref:System.Net.WebRequest?displayProperty=nameWithType> и <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
   
- <xref:System.Net.Configuration?displayProperty=fullName>  
+ <xref:System.Net.Configuration?displayProperty=nameWithType>  
  Классы, используемые в приложениях для программного доступа к параметрам конфигурации пространств имен System.Net и обновления этих параметров.  
   
- <xref:System.Net.Http?displayProperty=fullName>  
+ <xref:System.Net.Http?displayProperty=nameWithType>  
  Классы, которые обеспечивают интерфейс программирования для современных приложений HTTP.  
   
- <xref:System.Net.Http.Headers?displayProperty=fullName>  
- Обеспечивает поддержку коллекций заголовков HTTP, используемых пространством имен <xref:System.Net.Http?displayProperty=fullName>  
+ <xref:System.Net.Http.Headers?displayProperty=nameWithType>  
+ Обеспечивает поддержку коллекций заголовков HTTP, используемых пространством имен <xref:System.Net.Http?displayProperty=nameWithType>  
   
- <xref:System.Net.Mail?displayProperty=fullName>  
+ <xref:System.Net.Mail?displayProperty=nameWithType>  
  Классы, формирующие и отправляющие почту по протоколу SMTP.  
   
- <xref:System.Net.Mime?displayProperty=fullName>  
- Определяет типы, используемые для представления заголовков MIME (Multipurpose Internet Mail Exchange), которые используются классами в пространстве имен <xref:System.Net.Mail?displayProperty=fullName> .  
+ <xref:System.Net.Mime?displayProperty=nameWithType>  
+ Определяет типы, используемые для представления заголовков MIME (Multipurpose Internet Mail Exchange), которые используются классами в пространстве имен <xref:System.Net.Mail?displayProperty=nameWithType>.  
   
- <xref:System.Net.NetworkInformation?displayProperty=fullName>  
+ <xref:System.Net.NetworkInformation?displayProperty=nameWithType>  
  Классы для программного сбора информации о событиях, изменениях, статистике и свойствах сети.  
   
- <xref:System.Net.PeerToPeer?displayProperty=fullName>  
+ <xref:System.Net.PeerToPeer?displayProperty=nameWithType>  
  Предоставляет управляемую реализацию протокола PNRP для разработчиков.  
   
- <xref:System.Net.PeerToPeer.Collaboration?displayProperty=fullName>  
+ <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>  
  Предоставляет управляемую реализацию интерфейса одноранговой совместной работы для разработчиков.  
   
- <xref:System.Net.Security?displayProperty=fullName>  
+ <xref:System.Net.Security?displayProperty=nameWithType>  
  Классы, обеспечивающие сетевые потоки для безопасного взаимодействия между узлами.  
   
- <xref:System.Net.Sockets?displayProperty=fullName>  
+ <xref:System.Net.Sockets?displayProperty=nameWithType>  
  Предоставляет управляемую реализацию интерфейса сокетов Windows (Winsock) для разработчиков, которым нужно обеспечивать контроль доступа к сети.  
   
- <xref:System.Net.WebSockets?displayProperty=fullName>  
+ <xref:System.Net.WebSockets?displayProperty=nameWithType>  
  Предоставляет управляемую реализацию интерфейса WebSocket для разработчиков.  
   
- <xref:System.Uri?displayProperty=fullName>  
+ <xref:System.Uri?displayProperty=nameWithType>  
  Обеспечивает объектное представление универсального кода ресурсов (URI), а также простой доступ к его частям.  
   
- <xref:System.Security.Authentication.ExtendedProtection?displayProperty=fullName>  
+ <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  Обеспечивает поддержку аутентификации за счет расширенной защиты приложений.  
   
- <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=fullName>  
+ <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Обеспечивает поддержку настройки аутентификации с помощью расширенной защиты приложений.  
   
 ## <a name="see-also"></a>См. также  
- [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Примеры сетевых приложений для .NET в галерее кода MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)   
+ [Программирование разделы руководства по сети](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Примеры сетевых приложений для .NET в галерее кода MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
  [Пример HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
-

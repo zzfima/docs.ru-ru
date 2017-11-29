@@ -1,44 +1,36 @@
 ---
-title: "Практическое руководство: выполнять потоковое преобразование больших XML-документов (Visual Basic) | Документы Microsoft"
+title: "Как: выполнение потокового преобразования крупных XML-документов (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Практическое руководство: выполнять потоковое преобразование больших XML-документов (Visual Basic)
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Как: выполнение потокового преобразования крупных XML-документов (Visual Basic)
 Иногда необходимо преобразовывать большие XML-файлы, при этом приложение должно быть написано так, чтобы используемый им объем памяти был прогнозируемым. Если вставить в XML-дерево очень большой XML-файл, то объем используемой памяти будет пропорциональным размеру файла (то есть чрезмерным). Поэтому следует вместо этого использовать потоки.  
   
- Использование потоков лучше всего уместно в ситуациях, когда требуется обработать исходный документ только один раз, и элементы можно обрабатывать в порядке их следования в документе. Некоторые стандартные операторы запроса, такие как <xref:System.Linq.Enumerable.OrderBy%2A>, проходят через источник, собирать все данные, сортируют их и выдают первый элемент в последовательности.</xref:System.Linq.Enumerable.OrderBy%2A> Отметим, что при использовании оператора запроса, который материализует свой источник перед тем, как выдать первый элемент, приложение снова будет использовать большой объем памяти.  
+ Использование потоков лучше всего уместно в ситуациях, когда требуется обработать исходный документ только один раз, и элементы можно обрабатывать в порядке их следования в документе. Некоторые стандартные операторы запросов, например <xref:System.Linq.Enumerable.OrderBy%2A>, проходят через источник, собирают все данные, сортируют их и выдают первый элемент последовательности. Отметим, что при использовании оператора запроса, который материализует свой источник перед тем, как выдать первый элемент, приложение снова будет использовать большой объем памяти.  
   
- Даже при использовании метода, описанного в [как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), если попытаться собрать дерево XML, содержащее преобразованный документ, объем используемой памяти будет слишком большим.  
+ Даже при использовании метода, описанного в [как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)при попытке сборки XML-дерева, содержащего преобразованный документ, объем используемой памяти будет слишком большим.  
   
- Существует два основных подхода. Один подход заключается в использовании возможностей отложенной обработки объекта <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement> Другой подход заключается в создании <xref:System.Xml.XmlWriter>и использовать возможности [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] для записи элементов <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> В этом разделе рассказывается об обоих подходах.  
+ Существует два основных подхода. Один подход заключается в использовании возможностей отложенной обработки объекта <xref:System.Xml.Linq.XStreamingElement>. Другой подход состоит в создании <xref:System.Xml.XmlWriter> и использовании возможностей [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для записи элементов в модуле <xref:System.Xml.XmlWriter>. В этом разделе рассказывается об обоих подходах.  
   
 ## <a name="example"></a>Пример  
  Следующий пример основан на примере в [как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- В этом примере возможности отложенной обработки объекта <xref:System.Xml.Linq.XStreamingElement>для создания выходного потока.</xref:System.Xml.Linq.XStreamingElement> Данный пример может преобразовать очень большой документ при незначительном использовании памяти.  
+ В этом примере возможности отложенной обработки объекта <xref:System.Xml.Linq.XStreamingElement> используются для создания выходного потока. Данный пример может преобразовать очень большой документ при незначительном использовании памяти.  
   
  Заметьте, что пользовательская ось (`StreamCustomerItem`) специально написана таким образом, что ожидает документа с элементами `Customer`, `Name` и `Item`, упорядоченными, как в следующем документе Source.xml. Однако более надежная реализации должна предусматривать такую ситуацию, что при проведении синтаксического анализа встретится документ, не прошедший проверку правильности.  
   
@@ -265,13 +257,13 @@ End Class
 ## <a name="example"></a>Пример  
  Следующий пример также основан на примере в [как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- В этом примере используются возможности [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] для записи элементов <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> Данный пример может преобразовать очень большой документ при незначительном использовании памяти.  
+ В этом примере используются возможности [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] по записи элементов в <xref:System.Xml.XmlWriter>. Данный пример может преобразовать очень большой документ при незначительном использовании памяти.  
   
  Заметьте, что пользовательская ось (`StreamCustomerItem`) специально написана таким образом, что ожидает документа с элементами `Customer`, `Name` и `Item`, упорядоченными, как в следующем документе Source.xml. Однако при более надежной реализации должна быть либо выполнена проверка правильности исходного документа с помощью XSD, либо проведена подготовка на тот случай, что при проведении синтаксического анализа встретится документ, не прошедший проверку правильности.  
   
  В этом примере используется тот же исходный документ, Source.xml, как и в предыдущем примере этого раздела. Он также выдает точно такие же выходные данные.  
   
- Использование <xref:System.Xml.Linq.XStreamingElement>для потоковой передачи выходных данных XML является предпочтительным по сравнению с написанием на <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XStreamingElement>  
+ Использование <xref:System.Xml.Linq.XStreamingElement> для создания выходного потока итогового XML-документа предпочтительнее, чем запись в <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Module Module1  
@@ -457,4 +449,4 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Дополнительно LINQ to XML, программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

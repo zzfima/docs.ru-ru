@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Security.SecurityActiveServerSessionRemoved | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Security.SecurityActiveServerSessionRemoved
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f62789ea-d455-43f5-ab6c-21588184b528
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 612dfe1c11e133da5920cecd4231637070a4f933
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Security.SecurityActiveServerSessionRemoved
+# <a name="systemservicemodelsecuritysecurityactiveserversessionremoved"></a>System.ServiceModel.Security.SecurityActiveServerSessionRemoved
 System.ServiceModel.Security.SecurityActiveServerSessionRemoved  
   
-## Описание  
+## <a name="description"></a>Описание  
  Активный сеанс безопасности удален сервером.  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>См. также  
+ [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

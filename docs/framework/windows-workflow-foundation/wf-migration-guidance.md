@@ -1,0 +1,31 @@
+---
+title: "Руководство по переносу Windows Workflow Foundation (WF)"
+ms.date: 06/19/2017
+ms.prod: .net-framework
+ms.topic: article
+ms.assetid: 1da7f5ff-5a67-44ba-b165-f3e5de008e4a
+caps.latest.revision: "7"
+author: guardrex
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 9c5c0fa33150d3c6e78fb00040065ffd4499196e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
+---
+# <a name="windows-workflow-foundation-wf-migration-guidance"></a>Руководство по переносу Windows Workflow Foundation (WF)
+
+Этот раздел содержит подразделы, в которых описывается миграция рабочих процессов из предыдущих версий Windows Workflow Foundation (WF).
+
+[Руководство по миграции](~/docs/framework/windows-workflow-foundation/migration-guidance.md)   
+Содержит список ссылок на технические документы по вопросам миграции.
+
+[С помощью действия WF для .NET Framework 3.0 в .NET Framework 4 с действием Interop](~/docs/framework/windows-workflow-foundation/net-framework-3-0-wf-in-net-framework-4-interop.md)   
+Содержит сведения о том, как использование действия Interop для внедрения действий .NET Framework 3.5 в рабочем процессе .NET Framework 4.6.1.
+
+[Использование действия Interop в рабочем процессе .NET Framework 4](~/docs/framework/windows-workflow-foundation/using-the-interop-activity-in-a-net-framework-4-workflow.md)   
+Описывает, как использовать правила .NET Framework 3.5 в .NET Framework 4.6.1.
+
+[Запись в проектах, предназначенных для .NET Framework 3.0 и 3.5 в Visual Studio 2010](~/docs/framework/windows-workflow-foundation/projects-targeting-dotnet-in-vs.md)   
+Описание использования Visual Studio 2010 для создания проектов, предназначенных для .NET Framework версии 3.0 или 3.5.

@@ -1,32 +1,27 @@
 ---
-title: "Практическое руководство: получить Неглубокое значение элемента (Visual Basic) | Документы Microsoft"
+title: "Как: получить Неглубокое значение элемента (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 39a0648bb3fd09b9e323560b447be3cc445d5b7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 673b890ab842d1c18c8020eefe03d90086d1bf4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Практическое руководство: получить Неглубокое значение элемента (Visual Basic)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Как: получить Неглубокое значение элемента (Visual Basic)
 В этом разделе показано, как получить неглубокое значение элемента. Неглубокое значение - это значение только конкретного элемента, в отличие от глубокого значения, которое содержит значения всех элементов-потомков, объединенные в одной строке.  
   
- При получении значения элемента при помощи приведения или <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>Свойства, извлечение глубокого значения.</xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> Чтобы получить неглубокое значение, можно использовать метод расширений `ShallowValue`, как это показано в следующем примере. Извлечение неглубокого значения полезно тогда, когда требуется выбрать элементы в зависимости от их содержимого.  
+ При получении значения элемента при помощи приведения или свойства <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> выполняется извлечение глубокого значения. Чтобы получить неглубокое значение, можно использовать метод расширений `ShallowValue`, как это показано в следующем примере. Извлечение неглубокого значения полезно тогда, когда требуется выбрать элементы в зависимости от их содержимого.  
   
  В следующем примере объявляется метод расширений, который извлекает неглубокое значение элемента. После этого метод расширения используется в запросе, чтобы вывести список всех элементов с вычисленным значением.  
   

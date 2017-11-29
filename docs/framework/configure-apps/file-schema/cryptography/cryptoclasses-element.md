@@ -1,67 +1,71 @@
 ---
-title: "Элемент &lt;cryptoClasses&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClasses"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoClasses> - элемент"
-  - "cryptoClasses - элемент"
+title: "&lt;cryptoClasses&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClasses
+helpviewer_keywords:
+- <cryptoClasses> element
+- cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7ed25fa1a2bdedc410fccf48802742766287c438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;cryptoClasses&gt;
-Содержит список криптографических классов, сопоставленных с понятными именами, указанным в элементе [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
+# <a name="ltcryptoclassesgt-element"></a>&lt;cryptoClasses&gt; элемент
+Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
   
-## Синтаксис  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<cryptoNameMapping >  
+\<cryptoClasses >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <cryptoClasses>   
 </cryptoClasses>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<cryptoClass\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе **\<nameEntry\>**.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`cryptographySettings`|Этот элемент содержит параметры криптографии.|  
-|`cryptoNameMapping`|Сопоставление классов с понятными именами.|  
-|`mscorlib`|Содержит элемент `cryptographySettings`.|  
+|-------------|-----------------|  
+|[\<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе **\<nameEntry>**.|  
   
-## Пример  
- В следующем примере показано, как использовать элемент **\<cryptoClass\>**, чтобы ссылаться на криптографический класс и конфигурировать среду выполнения.  В этом случае можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для получения объекта `MyCryptoRSAClass`.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-```  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`cryptographySettings`|Содержит параметры шифрования.|  
+|`cryptoNameMapping`|Содержит сопоставления классов с понятными именами.|  
+|`mscorlib`|Содержит `cryptographySettings` элемента.|  
+  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как использовать  **\<cryptoClass >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -82,10 +86,10 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Security.Cryptography>   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)   
- [System.Security.Cryptography.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Security.Cryptography>  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)  
+ [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
  [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

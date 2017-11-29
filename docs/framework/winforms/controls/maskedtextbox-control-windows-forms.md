@@ -1,44 +1,44 @@
 ---
-title: "Элемент управления MaskedTextBox (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MaskedTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MaskedTextBox - элемент управления [Windows Forms]"
-  - "текстовые поля, проверка пользовательского ввода"
-  - "ввод данных пользователем, проверка в Windows Forms"
-  - "проверка пользовательского ввода, Windows Forms"
+title: "Элемент управления MaskedTextBox (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MaskedTextBox
+helpviewer_keywords:
+- MaskedTextBox control [Windows Forms]
+- user input [Windows Forms], validating in Windows Forms
+- validating user input [Windows Forms], Windows Forms
+- text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 668d1b2184c2ae3e089c9996854eef9c28b5a5f4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Элемент управления MaskedTextBox (Windows Forms)
-Этот раздел содержит ссылки на другие разделы, посвященные элементу управления `MaskedTextBox`.  
+# <a name="maskedtextbox-control-windows-forms"></a>Элемент управления MaskedTextBox (Windows Forms)
+Этот раздел содержит ссылки на другие о `MaskedTextBox` элемента управления.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Пример. Работа с элементом управления MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- Демонстрируются ключевые возможности элемента управления `MaskedTextBox`.  
+ Демонстрирует ключевые функции `MaskedTextBox` элемента управления.  
   
  [Практическое руководство. Связывание данных с элементом управления MaskedTextBox](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- Показано, как изменять формат данных, когда данные в базе данных не соответствует формату, ожидаемому определенной маской.  
+ Описание способа изменения формата данных, когда данные из базы данных не соответствует формату, ожидаемому определением маски.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MaskedTextBox>  
- Основной класс для реализации элемента управления текстового поля с маской.  
+ Основной класс для реализации элемента управления скрытого текстового поля.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

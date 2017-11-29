@@ -1,35 +1,33 @@
 ---
-title: "Предложение As (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.as"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "As - ключевое слово"
-  - "As - ключевое слово, синтаксис оператора"
-  - "ограничения, универсальные типы в Visual Basic"
+title: "Предложение As (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.as
+helpviewer_keywords:
+- constraints, Visual Basic generic types
+- As keyword [Visual Basic], statement syntax
+- As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 73f0a59dae5e95fe8e4be49afeebd2c29f8a1a7f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение As (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Представляет условие `As`, которое определяет тип данных в операторе объявления или списке ограничений по базовому параметру типа.  
+# <a name="as-clause-visual-basic"></a>Предложение As (Visual Basic)
+Представляет `As` предложение, которое определяет тип данных в операторе объявления или список ограничений для параметра универсального типа.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Ключевое слово `As` можно использовать в следующих контекстах:  
   
- [Статистическое предложение](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
  [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -45,11 +43,11 @@ caps.handback.revision: 19
   
  [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Операторы For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Для... Next-операторы](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [Операторы For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Для каждого... Next-операторы](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
- [Условие From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
  [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -57,7 +55,7 @@ caps.handback.revision: 19
   
  [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
  [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -65,12 +63,12 @@ caps.handback.revision: 19
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Операторы Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Конструкция TRY... CATCH... Finally-операторы](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## См. также  
- [Практическое руководство. Создание новой переменной](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)   
- [Типы данных](../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Объявление переменной](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)   
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Создание переменной](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
+ [Типы данных](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [Объявление переменных](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Список типов](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
  [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

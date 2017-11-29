@@ -1,56 +1,59 @@
 ---
-title: "How to: Specify the Security Context for Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows Service applications, security"
-  - "security [Visual Studio], contexts"
-  - "contexts, Visual Studio security"
-  - "security [Visual Studio], service applications"
-  - "ServiceProcessInstaller class, security context"
-  - "services, security"
-  - "ServiceInstaller class, security context"
+title: "Практическое руководство. Назначение службам контекста безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Service applications, security
+- security [Visual Studio], contexts
+- contexts, Visual Studio security
+- security [Visual Studio], service applications
+- ServiceProcessInstaller class, security context
+- services, security
+- ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Specify the Security Context for Services
-По умолчанию службы Windows выполняются в отдельном контексте безопасности, отличном от контекста безопасности вошедшего пользователя.  Службы запускаются в контексте системной учетной записи по умолчанию, называемой `LocalSystem`, что дает им права доступа к системным ресурсам, отличающиеся от прав доступа для пользователя.  Чтобы это изменить, можно указать учетную запись пользователя, от имени которой будет запускаться служба.  
+# <a name="how-to-specify-the-security-context-for-services"></a>Практическое руководство. Назначение службам контекста безопасности
+По умолчанию службы запускаются в контексте безопасности, отличном от пользователя, вошедшего в систему. Службы выполняются в контексте системной учетной записи по умолчанию называется `LocalSystem`, что дает им разные права доступа к ресурсам системы от пользователя. Можно изменить таким образом, чтобы указать учетную запись пользователя, под которой будет запускаться служба.  
   
- Контекст безопасности задается путем изменения значения свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> процесса, в котором выполняется служба.  Это свойство позволяет запускать службу от имени четырех типов учетных записей:  
+ Задать контекст безопасности, управляя <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> свойство для процесса, в котором выполняется служба. Это свойство позволяет задать один из четырех типов учетных записей службы:  
   
--   `User` — при установке службы система запрашивает имя и пароль существующего пользователя. Служба будет запускаться от имени учетной записи этого пользователя.  
+-   `User`, чего система запрашивает допустимое имя пользователя и пароль, когда служба устанавливается и запускается в контексте учетной записи, указанной пользователем по сети;  
   
--   `LocalService` — служба выполняется в контексте учетной записи, аналогичной учетной записи непривилегированного пользователя текущего компьютера. Удаленным серверам при этом передаются учетные данные анонимного пользователя.  
+-   `LocalService`, который выполняется в контексте учетной записи, которая действует как непривилегированного пользователя локального компьютера и предоставляет учетные данные для анонимного доступа к удаленным серверам;  
   
--   `LocalSystem`, который выполняется в контексте учетной записи, которая предоставляет широкие локальные привилегии и представляет учетные данные компьютера к любому удаленному серверу;  
+-   `LocalSystem`, который выполняется в контексте учетной записи, которая предоставляет широкие локальные привилегии и передает учетные данные компьютера удаленным серверам;  
   
--   `NetworkService` — служба выполняется в контексте учетной записи, аналогичной учетной записи непривилегированного пользователя текущего компьютера. Удаленным серверам при этом передаются учетные данные этого компьютера.  
+-   `NetworkService`, который выполняется в контексте учетной записи, которая действует как непривилегированного пользователя локального компьютера и предоставляет учетные данные компьютера удаленным серверам.  
   
- Дополнительные сведения см. в разделе <xref:System.ServiceProcess.ServiceAccount>.  
+ Дополнительные сведения см. в описании перечисления <xref:System.ServiceProcess.ServiceAccount>.  
   
-### Чтобы указать контекст безопасности для службы, выполните следующие действия:  
+### <a name="to-specify-the-security-context-for-a-service"></a>Чтобы указать контекст безопасности для службы  
   
-1.  После создания службы добавьте в нее необходимые установщики.  Дополнительные сведения см. в разделе [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  После создания службы, добавьте установщики, необходимые для него. Дополнительные сведения см. в разделе [как: добавление установщиков к приложению службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Выберите в конструкторе класс службы `ProjectInstaller` и щелкните установщик процессов службы.  
+2.  В конструкторе, доступ к `ProjectInstaller` класса и нажмите кнопку установщик процессов службы для службы, вы работаете.  
   
     > [!NOTE]
-    >  У любого приложения службы класс `ProjectInstaller` содержит по меньшей мере два установочных компонента — компонент, устанавливающий процессы для всех служб в проекте, и установщик для каждой службы, содержащейся в приложении.  В этом случае следует выбрать <xref:System.ServiceProcess.ServiceProcessInstaller>.  
+    >  Для каждого приложения служб есть по крайней мере два компонента установки в `ProjectInstaller` класса — компонент, устанавливающий процессы для всех служб в проекте и установщик для каждой службы, приложение содержит. В этом случае нужно выбрать <xref:System.ServiceProcess.ServiceProcessInstaller>.  
   
-3.  В окне **Свойства** задайте соответствующее значение свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>.  
+3.  В **свойства** задайте <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> соответствующее значение.  
   
-## См. также  
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [How to: Create Windows Services](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>См. также  
+ [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Как: добавление установщиков в приложение службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [Как: создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

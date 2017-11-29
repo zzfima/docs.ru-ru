@@ -1,76 +1,75 @@
 ---
-title: "Оператор Resume | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Resume"
-  - "vb.ResumeNext"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Error - оператор, и Resume - оператор"
-  - "ошибки [Visual Basic], возобновление после"
-  - "выполнение"
-  - "выполнение, возобновление"
-  - "Next - оператор, Возобновить"
-  - "Resume Next - оператор"
-  - "Resume - оператор"
-  - "Resume - оператор, синтаксис"
-  - "ошибки во время выполнения, возобновление после"
+title: "Оператор Resume"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Resume
+- vb.ResumeNext
+helpviewer_keywords:
+- Next statement [Visual Basic], Resume
+- Resume Next statement [Visual Basic]
+- execution [Visual Basic], resuming
+- run-time errors [Visual Basic], resuming after
+- Resume statement [Visual Basic], syntax
+- errors [Visual Basic], resuming after
+- Error statement [Visual Basic], and Resume statement
+- execution
+- Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Resume
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Возобновляет выполнение по окончании процедуры обработки ошибки.  
+# <a name="resume-statement"></a>Оператор Resume
+Возобновление выполнения после завершения процедуры обработки ошибок.  
   
- Рекомендуется ознакомиться с использовать структурную обработку исключений в коде если возможно, вместо использования и неструктурная обработка исключений `On Error` и  `Resume` выписки.  Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Мы рекомендуем использовать структурированная обработка исключений в коде, когда это возможно, вместо использования неструктурированной обработки исключений и `On Error` и `Resume` инструкции. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Resume [ Next | line ]  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `Resume`  
- Обязательный.  Если ошибка произошла в той же процедуре, в которой находится обработчик ошибок, то выполнение возобновляется с оператора, который вызвал ошибку.  Если ошибка возникла в вызываемой процедуре, то выполнение возобновляется с оператора, который последним вызвал процедуру, содержащую обработчик ошибок.  
+ Обязательный. Если ошибка произошла в той же процедуре обработчик ошибок, выполнение возобновляется с оператора, который вызвал ошибку. Если ошибка возникла в вызываемой процедуре, выполнение возобновляется с оператора, который последним вызвал процедуру, содержащую обработчик ошибок.  
   
  `Next`  
- Необязательный.  Если ошибка возникла в той же процедуре, в которой находится обработчик ошибок, то выполнение возобновляется с оператора, непосредственно следующего за оператором, вызвавшим ошибку.  Если ошибка возникла в вызываемой процедуре, то выполнение возобновляется с оператора, непосредственно следующего за оператором, который последним вызвал процедуру, содержащую обработчик ошибок \(или оператор `On Error Resume Next`\).  
+ Необязательно. Если ошибка произошла в той же процедуре обработчик ошибок, выполнение возобновляется с оператора, следующего оператора, который вызвал ошибку. Если ошибка возникла в вызываемой процедуре, выполнение возобновляется с оператора, следующего оператора, который последним вызвал процедуру, содержащую обработчик ошибок (или `On Error Resume Next` инструкции).  
   
  `line`  
- Необязательный.  Выполнение возобновляется со строки, указанной в аргументе `line`.  Аргумент `line` является меткой или номером строки, которая должна находиться в той же процедуре, что и обработчик ошибок.  
+ Необязательно. Выполнение возобновляется строки, указанной в обязательном `line` аргумент. `line` Аргумент представляет собой метку или номер строки и должно быть в той же процедуре обработчик ошибок.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Рекомендуется использовать структурную обработку исключений в коде если возможно, вместо использования и неструктурная обработка исключений `On Error` и  `Resume` выписки.  Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+>  Мы рекомендуем использовать структурированная обработка исключений в коде, когда это возможно, вместо использования неструктурированной обработки исключений и `On Error` и `Resume` инструкции. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
- Если оператор `Resume` используется в месте, отличном от подпрограммы обработки ошибок, возникает ошибка.  
+ Если вы используете `Resume` инструкции в любом отличный от в процедуру обработки ошибок, возникает ошибка.  
   
- Оператор `Resume` нельзя использовать в процедуре, содержащей инструкцию `Try...Catch...Finally`.  
+ `Resume` Оператор не может использоваться в процедуре, содержащей `Try...Catch...Finally` инструкции.  
   
-## Пример  
- В этом примере инструкция `Resume` используется для окончания обработки ошибки в процедуре и возобновления выполнения, начиная с вызвавшего ошибку оператора.  Ошибка номер 55 генерируется, чтобы проиллюстрировать использование оператора `Resume`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `Resume` инструкции для окончания обработки ошибки в процедуре, а затем возобновить выполнение с инструкцией, вызвавшей ошибку. Чтобы проиллюстрировать использование создается ошибка номер 55 `Resume` инструкции.  
   
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Сборка:** библиотека времени выполнения Visual Basic \(в Microsoft.VisualBasic.dll\)  
+ **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
   
-## См. также  
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Оператор Error](../../../visual-basic/language-reference/statements/error-statement.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Оператор Error](../../../visual-basic/language-reference/statements/error-statement.md)  
  [Оператор On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)

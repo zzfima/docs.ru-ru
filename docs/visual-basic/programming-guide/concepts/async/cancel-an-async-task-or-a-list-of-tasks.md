@@ -1,67 +1,59 @@
 ---
-title: "Отмена асинхронной задачи или списка задач (Visual Basic) | Документы Microsoft"
+title: "Отмена асинхронной задачи или списка задач (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe2df73aaf49f1b61dafcad9a6c6e0f3d014f8ec
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 916577107bd65559aed71dc9bb2921969a117e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
-Можно настроить кнопки, который можно использовать для отмены асинхронного приложения, если вы не хотите ждать его завершения. Выполнив следующие примеры в этом разделе, можно добавить кнопку отмены для приложения, которое загружает содержимое из одного веб-сайта или список веб-сайтов.  
+Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения. Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.  
   
  В примерах используется пользовательский Интерфейс, [Fine-Tuning асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) описание.  
   
 > [!NOTE]
->  Для выполнения примеров, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.  
+>  Для выполнения примеров необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.  
   
-##  <a name="BKMK_CancelaTask"></a>Отмена задачи  
- Первый пример связывает **отменить** кнопка с задачей «загрузки». При нажатии кнопки при загрузке содержимого приложения загрузки отменяется.  
+##  <a name="BKMK_CancelaTask"></a> Отмена задачи  
+ Код в первом примере связывает кнопку **Отмена** с отдельной задачей загрузки. Если нажать эту кнопку, когда приложение загружает содержимое, загрузка будет отменена.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Можно загрузить весь проект Windows Presentation Foundation (WPF) из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046) и затем выполните следующие действия.  
+ Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046), а затем выполнить необходимые действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
 2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В **открыть проект** диалоговом откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.  
   
-4.  В **обозревателе решений**, откройте контекстное меню для **CancelATask** проекта, а затем выберите **Назначить запускаемым проектом**.  
+4.  В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.  
   
 5.  Нажмите клавишу F5, чтобы запустить проект.  
   
-     Нажмите сочетание клавиш Ctrl + F5 для запуска проекта без его отладки.  
+     Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.  
   
  Если вы не хотите загрузить проект, можно просмотреть файлы MainWindow.xaml.vb в конце этого раздела.  
   
 ### <a name="building-the-example"></a>Построение примера  
- Добавьте следующие изменения **отменить** кнопку, чтобы приложение, которое загружает веб-сайта. Если не требуется загружать или построения примера, можно просмотреть окончательный продукт в разделе «Примеры завершения» в конце этого раздела. Звездочки пометить изменения в коде.  
+ Следующие изменения добавляют кнопку **Отмена** в приложение, загружающее веб-сайт. Если вы не хотите загружать или собирать пример, просмотрите конечный результат в разделе "Завершенные примеры" в конце раздела. Звездочками отмечены изменения в коде.  
   
- Для построения примера самостоятельно, шаг за шагом, следуйте инструкциям в разделе «Загрузка пример», но выбрать **StarterCode** как **запускаемый проект** вместо **CancelATask**.  
+ Для самостоятельной сборки примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но в качестве **запускаемого проекта** выберите проект **StarterCode**, а не **CancelATask**.  
   
  Затем добавьте следующие изменения в файл MainWindow.xaml.vb этого проекта.  
   
-1.  Объявите `CancellationTokenSource` переменной, `cts`, в области для всех методов, которые к нему доступ.  
+1.  Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.  
   
     ```vb  
     Class MainWindow  
@@ -70,7 +62,7 @@ ms.lasthandoff: 03/13/2017
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Добавьте следующий обработчик событий для **отменить** кнопки. Обработчик событий использует <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>метод для уведомления `cts` когда пользователь запрашивает отмену.</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+2.  Добавьте следующий обработчик событий для кнопки **Отмена**. Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -82,16 +74,16 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-3.  Сделать следующие изменения в событии обработчик для **запустить** кнопки `startButton_Click`.  
+3.  Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.  
   
-    -   Создать экземпляр `CancellationTokenSource`, `cts`.  
+    -   Создайте экземпляр `CancellationTokenSource`, `cts`.  
   
         ```vb  
         ' ***Instantiate the CancellationTokenSource.  
         cts = New CancellationTokenSource()  
         ```  
   
-    -   При вызове `AccessTheWebAsync`, которое загружает содержимое указанной веб-сайта, отправляют <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName>свойство `cts` как аргумент.</xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> `Token` Свойство распространяется сообщение при запросе отмены. Добавьте блок catch, который отображает сообщение, если пользователь решает отменить операцию загрузки. В следующем коде показано изменения.  
+    -   В вызове `AccessTheWebAsync`, который скачивает содержимое заданного веб-сайта, отправьте свойство <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> объекта `cts` в качестве аргумента. Если запрашивается отмена, свойство `Token` распространяет сообщение. Добавьте блок catch, который отображает сообщение в случае, если пользователь решает отменить операцию загрузки. Эти изменения показаны в следующем примере кода.  
   
         ```vb  
         Try  
@@ -110,9 +102,9 @@ ms.lasthandoff: 03/13/2017
         End Try  
         ```  
   
-4.  В `AccessTheWebAsync`, используйте <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName>перегрузки `GetAsync` метод <xref:System.Net.Http.HttpClient>типа, чтобы загрузить содержимое веб-сайта.</xref:System.Net.Http.HttpClient> </xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> Передайте `ct`, <xref:System.Threading.CancellationToken>параметр `AccessTheWebAsync`, как второй аргумент.</xref:System.Threading.CancellationToken> Маркер содержит сообщение, если пользователь нажимает кнопку **отменить** кнопки.  
+4.  В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта. Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.  
   
-     В следующем коде показано изменения в `AccessTheWebAsync`.  
+     Эти изменения в `AccessTheWebAsync` показаны в следующем примере кода.  
   
     ```vb  
     ' ***Provide a parameter for the CancellationToken.  
@@ -138,42 +130,42 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-5.  Если не отменить программы, он выдает следующий результат.  
+5.  Если программа не отменяется, она выдает представленный ниже результат.  
   
     ```  
     Ready to download.  
     Length of the downloaded string: 158125.  
     ```  
   
-     При выборе **отменить** кнопки, прежде чем программа завершает загрузку содержимого, программа выдает следующие результаты.  
+     Если вы нажмете кнопку **Отмена**, прежде чем программа завершит загрузку содержимого, будет выдан представленный ниже результат.  
   
     ```  
     Ready to download.  
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a>Отмена список задач  
- Вы можете расширить предыдущий пример, чтобы отменить многие задачи, связав же `CancellationTokenSource` экземпляра для каждой задачи. При выборе **отменить** кнопку Отменить все задачи, которые еще не завершено.  
+##  <a name="BKMK_CancelaListofTasks"></a> Отмена список задач  
+ Вы можете расширить предыдущий пример до отмены сразу нескольких задач, связав с каждой из них один и тот же экземпляр `CancellationTokenSource`. В этом случае кнопка **Отмена** отменяет сразу все незавершенные задачи.  
   
 ### <a name="downloading-the-example"></a>Загрузка примера  
- Можно загрузить весь проект Windows Presentation Foundation (WPF) из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046) и затем выполните следующие действия.  
+ Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046), а затем выполнить необходимые действия.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
 2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В **открыть проект** диалоговом откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.  
   
-4.  В **обозревателе решений**, откройте контекстное меню для **CancelAListOfTasks** проекта, а затем выберите **Назначить запускаемым проектом**.  
+4.  В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.  
   
 5.  Нажмите клавишу F5, чтобы запустить проект.  
   
-     Нажмите сочетание клавиш Ctrl + F5 для запуска проекта без его отладки.  
+     Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.  
   
  Если вы не хотите загрузить проект, можно просмотреть файлы MainWindow.xaml.vb в конце этого раздела.  
   
 ### <a name="building-the-example"></a>Построение примера  
- Чтобы распространить пример самостоятельно, шаг за шагом, следуйте инструкциям в разделе «Загрузка пример», но выбрать **CancelATask** как **запускаемый проект**. Добавьте следующие изменения для этого проекта. Звездочки отметить изменения в программе.  
+ Для самостоятельного построения примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но выберите **CancelATask** как **запускаемый проект**. Добавьте в проект указанные ниже изменения. Звездочками отмечены изменения в программе.  
   
 1.  Добавьте метод для создания списка веб-адресов.  
   
@@ -202,7 +194,7 @@ ms.lasthandoff: 03/13/2017
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  Добавьте следующий цикл в `AccessTheWebAsync` для обработки каждого веб-адрес в списке.  
+3.  Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -220,19 +212,21 @@ ms.lasthandoff: 03/13/2017
     Next  
     ```  
   
-4.  Поскольку `AccessTheWebAsync` отображает длину, метод не требуется возвращать. Удалите оператор return и изменить тип возврата метода, чтобы <xref:System.Threading.Tasks.Task>вместо <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task>  
+4.  Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
-     Вызовите метод из `startButton_Click` с помощью инструкции вместо выражения.  
+    ```vb  
+    Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
+    ```  
+  
+     Вызовите метод из `startButton_Click`, используя не выражение, а оператор.  
   
     ```vb  
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  Если не отменить программы, он выдает следующий результат.  
+5.  Если программа не отменяется, она выдает представленный ниже результат.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -248,10 +242,9 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
-     При выборе **отменить** кнопки до завершения загрузки, выходные данные содержат длин всех загружаемых файлов, до отмены.  
+     При нажатии кнопки **Отмена** до завершения загрузки выходные данные будут включать объем данных, загруженных до отмены.  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -261,16 +254,15 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a>Полные примеры  
- Следующие разделы содержат код для каждого из предыдущего примера. Обратите внимание, что необходимо добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http>  
+##  <a name="BKMK_CompleteExamples"></a> Полные примеры  
+ Следующие разделы содержат код каждого из приведенных выше примеров. Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
- Вы можете загрузить проекты из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Проекты можно загрузить со страницы [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046).  
   
-### <a name="cancel-a-task-example"></a>Отмена пример задач  
- Ниже приведен полный файл MainWindow.xaml.vb, например, которая отменяет одну задачу.  
+### <a name="cancel-a-task-example"></a>Пример отмены задачи  
+ Ниже приведен полный файл MainWindow.xaml.vb для примера, который отменяет одну задачу.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -353,8 +345,8 @@ End Class
 ' Download canceled.  
 ```  
   
-### <a name="cancel-a-list-of-tasks-example"></a>Отмена список пример задач  
- Ниже приведен полный файл MainWindow.xaml.vb пример отменяет список задач.  
+### <a name="cancel-a-list-of-tasks-example"></a>Примеры отмены списка задач  
+ Ниже приведен полный файл MainWindow.xaml.vb для примера, который отменяет список задач.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -472,8 +464,8 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading.CancellationTokenSource></xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken></xref:System.Threading.CancellationToken>   
- [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Пример асинхронности: Точная настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Пример использования async. Тонкая настройка асинхронного приложения)

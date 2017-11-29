@@ -1,28 +1,31 @@
 ---
-title: "Отключение объекта RealTimeStylus для WPF-приложений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Отключение объекта RealTimeStylus для WPF-приложений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-caps.latest.revision: 3
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 01a4d8f6d98eb341021442d9b7964816dd673374
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Отключение объекта RealTimeStylus для WPF-приложений
-Windows Presentation Foundation \(WPF\) имеет встроенную поддержку обработки сенсорного ввода Windows 7. Поддержка проходит по вводу пера в режиме реального времени планшетной платформы как события <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A> и <xref:System.Windows.UIElement.OnStylusMove%2A>.  Windows 7 также предоставляет мультисенсорный ввод как сообщения окна WM\_TOUCH Win32.  Эти два API являются взаимоисключающими при одном и том же HWND.  Включение сенсорного ввода с помощью планшетной платформы \(состояние по умолчанию для приложений WPF\) отключает сообщения WM\_TOUCH.  В результате, чтобы использовать WM\_TOUCH для получения сенсорных сообщений от окна WPF, необходимо отключить встроенную поддержку пера в WPF.  Это применяется в таких сценариях, как, например, окно WPF, содержащее компонент, который использует WM\_TOUCH.  
+# <a name="disable-the-realtimestylus-for-wpf-applications"></a>Отключение объекта RealTimeStylus для WPF-приложений
+Windows Presentation Foundation (WPF) содержит встроенную поддержку Windows 7 сенсорный ввод. Поддержка проходит по ввод от пера в режиме реального времени платформы планшета как <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, и <xref:System.Windows.UIElement.OnStylusMove%2A> события. Windows 7 также предоставляет мультисенсорный ввод как окна WM_TOUCH Win32. Эти два API являются взаимоисключающими для того же HWND. Включение сенсорного ввода с помощью платформы планшета (по умолчанию для приложений WPF) отключает сообщения WM_TOUCH. В результате Чтобы использовать WM_TOUCH для получения сенсорных сообщений от окна WPF, необходимо отключить встроенную поддержку пера в WPF. Это применимо в сценарии, например компонент, который использует WM_TOUCH окна WPF.  
   
- Чтобы отключить прослушивание WPF ввода пера, следует удалить всю поддержку планшета, добавленную окном WPF.  
+ Чтобы отключить прослушивание ввод от пера WPF, удалите всю поддержку планшета, добавленные в окне WPF.  
   
-## Пример  
- В следующем примере кода показывается, как удалить поддержку планшетной платформы, установленную по умолчанию, с помощью отражения.  
+## <a name="example"></a>Пример  
+ В следующем примере кода показано, как удалить поддержку платформы планшета по умолчанию с помощью отражения.  
   
 ```  
 public static void DisableWPFTabletSupport()  
@@ -59,5 +62,5 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Перехват ввода, осуществляемого пером](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)

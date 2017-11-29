@@ -1,35 +1,27 @@
 ---
-title: "Практическое руководство: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00fbffa99ade302db536f7e56a4d004071efb2c6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76fb89136e05ee803c1bb2c91674e6b216e4ed2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Практическое руководство: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
-В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, организующие данные по-новому.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Как: Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
+В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.  
   
-### <a name="to-create-the-data-files"></a>Для создания файлов данных  
+### <a name="to-create-the-data-files"></a>Создание файлов данных  
   
 1.  Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:  
   
@@ -46,7 +38,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта: Обратите внимание, что два файла имеют некоторые общие имена.  
+2.  Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта. Обратите внимание на то, что имена этих двух файлов похожи.  
   
     ```  
     Liu, Jinghao  
@@ -130,11 +122,11 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- Программа записывает отдельный файл для каждой группы в той же папке, что и файлы данных.  
+ Программа записывает отдельный файл для каждой группы в ту же папку, где находятся файлы данных.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

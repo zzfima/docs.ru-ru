@@ -1,59 +1,61 @@
 ---
-title: "Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, изменение внешнего вида во время выполнения"
-  - "DataRepeater, настройка"
+title: "Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, customizing
+- DataRepeater, changing run time appearance
 ms.assetid: 2af6dfce-760b-489e-b863-8da967f315c3
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 585ff4c942185f3199fe6e9e47a4ebd9f1f0a478
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Внешний вид элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> можно изменить во время разработки путем настройки свойств или во время выполнения при помощи обработки события <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>.  
+# <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Практическое руководство. Изменение внешнего вида элемента управления DataRepeater (Visual Studio)
+Можно изменить внешний вид <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления во время разработки путем задания свойств или во время выполнения путем обработки <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событий.  
   
- Свойства, установленные во время разработки при выборе подраздела шаблонов элементов управляющего элемента, будут повторены для каждого элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> во время выполнения.  Связанные с внешним видом свойства элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> будут видны во время выполнения только в том случае, если часть контейнера останется открытой \(например, если свойство <xref:System.Windows.Forms.Control.Padding%2A> устанавливает максимальное значение\).  
+ Свойства, которые заданы во время разработки, при выборе области шаблона элемента управления будет повторяться для каждого <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> во время выполнения. Связанные свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> сам элемент управления будет отображаться во время выполнения остается только если часть контейнера были выявлены (например, если <xref:System.Windows.Forms.Control.Padding%2A> задано большое значение).  
   
- Во время выполнения свойства, связанные с отображением, можно установить в зависимости от ситуации.  Например, в приложении по планированию можно изменить цвет фона элемента для предупреждения пользователей о просроченных элементах.  В обработчике событий <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>, если значение свойства задается в условном операторе, например, `If…Then`, необходимо также использовать предложение `Else`, чтобы указать вид элемента, если условие не будет выполнено.  
+ Во время выполнения внешнего свойства могут задаваться на основе от условий. Например в такие приложения, можно изменить цвет фона элемента предупреждать пользователей, когда элемент просрочен. В <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> обработчик событий, если задать свойство в условном операторе например `If…Then`, необходимо также использовать `Else` предложение для указания внешнего вида, если условие не выполнено.  
   
-### Чтобы изменить внешний вид во время разработки  
+### <a name="to-change-the-appearance-at-design-time"></a>Чтобы изменить внешний вид во время разработки  
   
-1.  В конструкторе Windows Forms выберите вверху область шаблона элемента для управляющего элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+1.  В конструкторе Windows Forms выберите область шаблона (верхнем) из <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
   
-2.  В окне "Свойства" выберите свойство и измените его значение.  Общие свойства, влияющие на внешний вид, включая <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A> и <xref:System.Windows.Forms.Control.ForeColor%2A>.  
+2.  В окне «Свойства» выберите свойство и измените значение. Включать общие свойства, определяющие внешний вид <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A>, и <xref:System.Windows.Forms.Control.ForeColor%2A>.  
   
-### Чтобы изменить внешний вид во время выполнения  
+### <a name="to-change-the-appearance-at-run-time"></a>Чтобы изменить внешний вид во время выполнения  
   
-1.  В редакторе кода в раскрывающемся списке "Событие" выберите **DrawItem**.  
+1.  В редакторе кода в раскрывающемся списке выберите **DrawItem**.  
   
-2.  В обработчик событий <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> добавьте код, чтобы установить свойства:  
+2.  В <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> обработчика событий, добавьте код для задания свойств:  
   
-     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
-## Пример  
- Некоторые стандартные настройки для элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> включают возможности отображения строк различными цветами и изменения цвета поля на основе условия.  Выполнение этих настроек показано в следующем примере.  Пример предполагает наличие элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, привязанного к таблице "Продукты" в базе данных Northwind  
+## <a name="example"></a>Пример  
+ Некоторые стандартные настройки для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления включают возможности отображения строк различными цветами и изменения цвета поля на основе условия. В следующем примере показано, как выполнять эти настройки. В этом примере предполагается, что <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления с привязкой к таблице Products базы данных Northwind.  
   
  [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
- [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
+ [!code-csharp[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
- Обратите внимание, что для всех этих настроек следует предоставить код, чтобы установить свойства в зависимости от значения условия.  Если условие `Else` не указано, во время выполнения могут возникнуть непредсказуемые результаты.  
+ Обратите внимание, что для всех этих настроек необходимо предоставить код для задания свойств для обеих сторон условия. Если вы не укажете `Else` условие, во время выполнения могут возникнуть непредсказуемые результаты.  
   
-## См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>   
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
+ [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
  [Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)

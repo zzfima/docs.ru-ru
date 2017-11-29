@@ -1,93 +1,96 @@
 ---
-title: "x:Type Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:TypeExtension"
-  - "Type"
-  - "x:Type"
-  - "xType"
-  - "TypeExtension"
-helpviewer_keywords: 
-  - "x:Type markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Type markup extension"
-  - "XAML [XAML Services], TargetType attribute"
-  - "TargetType attribute [XAML Services]"
-  - "Type markup extension in XAML [XAML Services]"
+title: "Расширение разметки x:Type"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:TypeExtension
+- Type
+- x:Type
+- xType
+- TypeExtension
+helpviewer_keywords:
+- x:Type markup extension [XAML Services]
+- XAML [XAML Services], x:Type markup extension
+- XAML [XAML Services], TargetType attribute
+- TargetType attribute [XAML Services]
+- Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: 27
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# x:Type Markup Extension
-Предоставляет объект <xref:System.Type> среды CLR, который является базовым типом для указанного типа XAML.  
+# <a name="xtype-markup-extension"></a>Расширение разметки x:Type
+Среда CLR предоставляет <xref:System.Type> объект, который является базовым типом для указанного типа XAML.  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
-```  
-<object property="{x:Type prefix:typeNameValue}" .../>  
-```  
-  
-## Использование элемента объекта XAML  
-  
-```  
-<x:Type TypeName="prefix:typeNameValue"/>  
+```xaml  
+<object property="{x:Type prefix:typeNameValue}" .../>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-object-element-usage"></a>Использование элемента объекта XAML  
+  
+```xaml  
+<x:Type TypeName="prefix:typeNameValue"/>  
+```  
+  
+## <a name="xaml-values"></a>Значения XAML  
   
 |||  
 |-|-|  
-|`prefix`|Необязательный.  Префикс, который сопоставляет пространство имен XML, не являющееся пространством имен по умолчанию.  Указание префикса зачастую необязательно.  См. примечания.|  
-|`typeNameValue`|Обязательный.  Имя типа, которое разрешается в текущее пространство имен XAML по умолчанию или в указанный сопоставленный префикс, если предоставляется `prefix`.|  
+|`prefix`|Необязательно. Префикс, который сопоставляет пространство имен XAML не по умолчанию. Указание префикса часто не является обязательным. См. заметки.|  
+|`typeNameValue`|Обязательный. Имя типа, которое разрешается до текущего пространства имен XAML по умолчанию; или указанного сопоставленного префикса, если `prefix` предоставляется.|  
   
-## Заметки  
- Расширение разметки `x:Type` имеет функцию, аналогичную оператору `typeof()` в [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] или оператору `GetType` в [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+## <a name="remarks"></a>Примечания  
+ `x:Type` Расширение разметки получает аналогичные функции для `typeof()` оператор в [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] или `GetType` оператор в [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
   
- Расширение разметки `x:Type` выполняет преобразование из строки для свойств, принимающих тип <xref:System.Type>.  На входе используется тип XAML.  Связь между типом входных данных XAML и <xref:System.Type> вывода CLR заключается в том, что выходные данные <xref:System.Type> являются свойством <xref:System.Xaml.XamlType.UnderlyingType%2A> входного <xref:System.Xaml.XamlType>, после поиска необходимых <xref:System.Xaml.XamlType> на основе контекста схемы XAML и службы <xref:System.Windows.Markup.IXamlTypeResolver>, предоставляемых контекстом.  
+ `x:Type` Расширение разметки предоставляет поведение преобразования из строки для свойств, которые принимают тип <xref:System.Type>. Входные данные — это тип XAML. Связь между тип входных данных XAML и выходных данных CLR <xref:System.Type> выводится, <xref:System.Type> — <xref:System.Xaml.XamlType.UnderlyingType%2A> входного <xref:System.Xaml.XamlType>, поиск необходимого <xref:System.Xaml.XamlType> на основе контекста схемы XAML и <xref:System.Windows.Markup.IXamlTypeResolver>предоставляет контекст службы.  
   
- В службах XAML .NET Framework обработка этого расширения разметки определяется классом <xref:System.Windows.Markup.TypeExtension>.  
+ В службах XAML .NET Framework, определяется обработка для данного расширения разметки <xref:System.Windows.Markup.TypeExtension> класса.  
   
- В конкретных реализациях платформы некоторые свойства, принимающие <xref:System.Type> в качестве значения, способны принять имя типа напрямую \(строковое значение типа `Name`\).  Тем не менее реализация такого поведения является сложным сценарием.  Примеры см. ниже в подразделе "Примечания об использовании WPF".  
+ В реализациях конкретной платформы, некоторые свойства, принимающие <xref:System.Type> как значения можно принять имя типа напрямую (строковое значение типа `Name`). Тем не менее для реализации этого поведения является сложным сценарием. Примеры см. в следующем разделе «Примечания об использовании WPF».  
   
- Синтаксис атрибута является наиболее распространенным синтаксисом, который используется с этим расширением разметки.  маркер строки, указанный после идентификатора строки `x:Type`, получает значение <xref:System.Windows.Markup.TypeExtension.TypeName%2A> базового класса расширения <xref:System.Windows.Markup.TypeExtension>.  В контексте схемы XAML по умолчанию для служб XAML .NET Framework, которая основана на типах среды CLR, значение этого атрибута равно <xref:System.Reflection.MemberInfo.Name%2A> требуемого типа или содержит <xref:System.Reflection.MemberInfo.Name%2A>, которому предшествует префикс для сопоставления пространства имен XAML не по умолчанию.  
+ Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `x:Type`, присваивается в качестве значения <xref:System.Windows.Markup.TypeExtension.TypeName%2A> соответствующего класса расширения <xref:System.Windows.Markup.TypeExtension>. В контексте схемы XAML по умолчанию для служб XAML .NET Framework, который основан на типах CLR, значение этого атрибута является <xref:System.Reflection.MemberInfo.Name%2A> нужного типа, или содержит, <xref:System.Reflection.MemberInfo.Name%2A> предшествует префикс для пространства имен XAML не по умолчанию сопоставление.  
   
- Расширение разметки `x:Type` можно использовать в синтаксисе элементов объекта.  В этом случае для правильной инициализации расширения требуется указать значение свойства <xref:System.Windows.Markup.TypeExtension.TypeName%2A>.  
+ `x:Type` Расширения разметки может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.Markup.TypeExtension.TypeName%2A> свойства, необходимые для правильной инициализации расширения.  
   
- Расширение разметки `x:Type` может также использоваться как подробный атрибут; однако такое использование не является типичным: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ `x:Type` Расширения разметки также может использоваться как атрибут verbose; Однако такое использование не является типичным: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
-## Примечания об использовании WPF  
+## <a name="wpf-usage-notes"></a>Примечания об использовании WPF  
   
-### Сопоставление типов и пространства имен XAML по умолчанию  
- Пространства имен XAML по умолчанию для программирования WPF содержит большинство типов XAML, необходимых для типичных сценариев XAML, поэтому часто можно не указывать префиксы при ссылке на значения типов XAML.  Сопоставление префикса может потребоваться при ссылке на тип из пользовательской сборки, а также для типов, существующих в сборке WPF, но происходящих из пространства имен CLR, которое не было сопоставлено как пространство имен XAML по умолчанию.  Дополнительные сведения о префиксах, пространствах имен XAML и сопоставлении пространств имен среды CLR см. в разделе [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+### <a name="default-xaml-namespace-and-type-mapping"></a>Сопоставление типов и пространства имен XAML по умолчанию  
+ Пространство имен XAML по умолчанию для программирования WPF содержит большинство типов XAML, что нужно для типовых сценариев XAML; Таким образом часто можно избежать префиксы при ссылке на значения типа XAML. Может потребоваться сопоставление префикса, если ссылка на тип из пользовательской сборки, а также для типов, существующих в сборке WPF, но из пространства имен CLR, которое не было сопоставлено пространству имен XAML по умолчанию. Дополнительные сведения о префиксы пространства имен языка XAML и сопоставление пространств имен CLR см. в разделе [пространства имен XAML и сопоставление пространства имен для WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-### Свойства типов, поддерживающие имя типа в виде строки  
- WPF поддерживает методы, позволяющие указывать значения некоторых свойств типа <xref:System.Type> без необходимости использования расширения разметки `x:Type`.  Вместо этого можно указать значение в виде строки с именем типа.  К подобным примерам относятся <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> и <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>.  Поддержка этого поведения не обеспечивается через преобразователи типов или расширения разметки.  Вместо этого это поведение откладывания реализуется через <xref:System.Windows.FrameworkElementFactory>.  
+### <a name="type-properties-that-support-typename-as-string"></a>Свойства этой поддержки Typename как строки типа  
+ WPF поддерживает методы, позволяющие указывать значения некоторых свойств типа <xref:System.Type> без необходимости `x:Type` использование расширения разметки. Вместо этого можно указать значение как строка с именем типа. Примером <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> и <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Поддержка этого поведения не обеспечивается через преобразователи типов или расширения разметки. Вместо этого это реализуется с помощью поведения отсрочки <xref:System.Windows.FrameworkElementFactory>.  
   
- Silverlight поддерживает аналогичную конвенцию  Фактически Silverlight в настоящее время не поддерживает `{x:Type}` в поддержке языка XAML и не принимает вхождения `{x:Type}` за исключением некоторых случаев, которые предусмотрены для поддержки миграции XAML между WPF и Silverlight.  Следовательно, поведение "имя типа в виде строки" присуще всем оценкам внутренних свойств Silverlight, где значением является <xref:System.Type>.  
+ Silverlight поддерживает аналогичные соглашения. На самом деле Silverlight не поддерживается `{x:Type}` в его поддержки языка XAML и не принимает `{x:Type}` варианты использования за пределами в некоторых случаях, которые предназначены для поддержки миграции XAML WPF Silverlight. Таким образом, поведение typename как строки встроенных все ознакомительную версию Silverlight встроенного свойства где <xref:System.Type> значение.  
   
-## XAML 2009  
- XAML 2009 обеспечивает дополнительную поддержку универсальных типов и изменяет поведение `x:TypeArguments` и `x:Type` для предоставления этой поддержки.  
+## <a name="xaml-2009"></a>XAML 2009  
+ XAML 2009 обеспечивает дополнительную поддержку для универсальные типы и изменяет поведение функции `x:TypeArguments` и `x:Type` поддержки.  
   
--   `x:TypeArguments` и элемент связанного объекта для создания экземпляра универсального объекта могут быть в элементах, отличных от корневого.  Дополнительные сведения см. в подразделе "XAML 2009" раздела [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments`и элемент связанного объекта для создания экземпляра универсального объекта могут быть в элементах, отличные от корневого. Дополнительные сведения см. раздел «XAML 2009» [директива x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
--   XAML 2009 поддерживает синтаксис для указания ограничения универсального типа в разметке.  Это может использоваться `x:TypeArguments`, `x:Type` или двумя компонентами в сочетании.  
+-   XAML 2009 поддерживает синтаксис для указания ограничения универсального типа в разметку. Это может использоваться `x:TypeArguments`, `x:Type`, или эти две функции в сочетании.  
   
--   Реализация WPF XAML при обработке XAML 2009 для загрузки также добавляет эту возможность при неявном преобразовании типов для определенных свойств платформы, которые используют тип <xref:System.Type>.  
+-   Реализация WPF XAML при обработке XAML 2009 для загрузки также добавляет эту возможность неявного преобразования типов для определенных свойств платформы, которые используют тип <xref:System.Type>.  
   
- В WPF можно использовать возможности XAML 2009, но только для свободного XAML \(XAML без компилированной разметки\).  XAML с компилированной разметкой для WPF и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и возможности XAML 2009.  
+ В WPF можно использовать возможности XAML 2009, но только для свободного XAML (XAML, который не является компилированной разметки). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009.  
   
-## См. также  
- <xref:System.Windows.Style>   
- [Стилизация и использование шаблонов](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
- [Общие сведения о языке XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Расширения разметки и XAML WPF](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Style>  
+ [Стилизация и использование шаблонов](../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

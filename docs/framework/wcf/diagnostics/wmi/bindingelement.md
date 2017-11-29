@@ -1,25 +1,28 @@
 ---
-title: "BindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: BindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fdbfde0c-2e52-4fc5-9eb8-14b42e647263
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 75b3c712d5d72c07b68f91cec19eb5bddcd69ce1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# BindingElement
+# <a name="bindingelement"></a>BindingElement
 BindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class BindingElement  
@@ -27,14 +30,14 @@ class BindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс BindingElement наследуется, но не определяет дополнительных методов и свойств.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.Binding>

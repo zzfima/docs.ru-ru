@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Практическое руководство. Включение обнаружения воспроизведения маркеров
 ## <a name="applies-to"></a>Применение  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/21/2017
 2.  Нажмите кнопку **Назад** в браузере. Появится страница **Ошибка сервера в приложении "/"** со следующим описанием: *ID1062: обнаружено повторение: Token: "System.IdentityModel.Tokens.SamlSecurityToken"*, *AssertionId*, *Issuer*.  
   
      Эта страница появляется в том случае, если было обнаружено воспроизведение маркера безопасности и возникло исключение <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException>. Эта ошибка происходит при попытке повторно отправить первоначальный запрос POST, для которого сначала был предоставлен маркер безопасности. Такое поведение не наблюдается при нажатии кнопки **Назад** для последующих запросов к серверу.
-

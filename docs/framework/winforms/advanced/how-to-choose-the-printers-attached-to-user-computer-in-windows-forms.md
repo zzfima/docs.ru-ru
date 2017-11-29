@@ -1,38 +1,43 @@
 ---
-title: "Практическое руководство. Выбор принтера, подключенного к компьютеру пользователя, в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "печать [Windows Forms], выбор принтеров"
-  - "принтеры, выбор"
+title: "Как: Выбор принтера, подключенного к пользователя &#39; s компьютера в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- printing [Windows Forms], choosing printers
+- printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec334ff65095e11855d706f445fda1d4b7ea1472
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Выбор принтера, подключенного к компьютеру пользователя, в Windows Forms
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>Как: Выбор принтера, подключенного к пользователя &#39; s компьютера в Windows Forms
 Часто для печати пользователям требуется выбрать принтер, отличный от используемого по умолчанию. С помощью компонента <xref:System.Windows.Forms.PrintDialog> можно разрешить пользователям выбрать один из установленных принтеров. Компонент <xref:System.Windows.Forms.PrintDialog> позволяет зафиксировать <xref:System.Windows.Forms.DialogResult> компонента <xref:System.Windows.Forms.PrintDialog> и использовать его для выбора принтера.  
   
- В следующей процедуре выбирается текстовый файл для печати на принтер по умолчанию. После этого создается экземпляр класса <xref:System.Windows.Forms.PrintDialog>.  
+ В следующей процедуре выбирается текстовый файл для печати на принтер по умолчанию. После этого создается экземпляр класса <xref:System.Windows.Forms.PrintDialog> .  
   
-### Выбор принтера и печать файла  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a>Выбор принтера и печать файла  
   
-1.  Выберите нужный принтер с помощью компонента<xref:System.Windows.Forms.PrintDialog>.  
+1.  Выберите принтер для использования с помощью <xref:System.Windows.Forms.PrintDialog> компонента.  
   
-     В следующем примере кода обрабатываются два события. В первом \(событие <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button>\) создается экземпляр класса<xref:System.Windows.Forms.PrintDialog>, а выбранный пользователем принтер фиксируется в свойстве<xref:System.Windows.Forms.DialogResult>.  
+     В следующем примере кода обрабатываются два события. В первом <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий, <xref:System.Windows.Forms.PrintDialog> создается экземпляр класса и принтера, выбранного пользователем захватывается в <xref:System.Windows.Forms.DialogResult> свойство.  
   
-     Во втором событии \(событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> компонента<xref:System.Drawing.Printing.PrintDocument>\) образец документа распечатывается на указанном принтере.  
+     Во втором событии <xref:System.Drawing.Printing.PrintDocument.PrintPage> событие <xref:System.Drawing.Printing.PrintDocument> компонента на указанном принтере печатается образец документа.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -49,7 +54,6 @@ caps.handback.revision: 19
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
        e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))          
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ caps.handback.revision: 19
        e.Graphics.FillRectangle(Brushes.Red,   
          new Rectangle(500, 500, 500, 500));  
     }  
-  
     ```  
   
     ```cpp  
@@ -96,14 +99,13 @@ caps.handback.revision: 19
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
        System.Drawing.Printing.PrintPageEventHandler  
        (this.printDocument1_PrintPage);  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -114,5 +116,5 @@ caps.handback.revision: 19
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## См. также  
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>См. также  
+ [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

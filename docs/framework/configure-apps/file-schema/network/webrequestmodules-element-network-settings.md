@@ -1,75 +1,76 @@
 ---
-title: "Элемент &lt;webRequestModules&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#webRequestModules"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<webRequestModules> - элемент"
-  - "webRequestModules - элемент"
+title: "&lt;webRequestModules&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#webRequestModules
+helpviewer_keywords:
+- webRequestModules element
+- <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ac20d3da42b150734abbbd36c4ec9fc2e60b6216
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;webRequestModules&gt; (параметры сети)
+# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; элемент (параметры сети)
 Задает модули, используемые для запроса данных от сетевых узлов.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<webRequestModules >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <webRequestModules>   
+```xml  
+<webRequestModules>   
 </webRequestModules>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[добавление;](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Добавляет в приложение пользовательский модуль веб\-запросов.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Удаляет из приложения все зарегистрированные модули веб\-запросов.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Удаляет из приложения пользовательский модуль веб\-запросов.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры, определяющие способ подключения платформы .NET Framework к сети.|  
+|-----------------|---------------------|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Добавляет в приложение пользовательский модуль веб-запросов.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Удаляет все зарегистрированные модули веб-запросов из приложения.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Удаляет пользовательский модуль веб-запросов из приложения.|  
   
-## Заметки  
- Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать информацию о запросах к сетевым узлам.  Модули веб\-запросов должны реализовывать интерфейс <xref:System.Net.IWebRequestCreate>.  
+### <a name="parent-elements"></a>Родительские элементы  
   
- В состав платформы .NET Framework входят модули веб\-запросов для URI, начинающихся с http:\/\/, https:\/\/ и file:\/\/.  Модули по умолчанию можно переопределить исключительно путем регистрации в файле конфигурации пользовательского модуля.  
+|**Элемент**|**Описание**|  
+|-----------------|---------------------|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="remarks"></a>Примечания  
+ Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов необходимо реализовать <xref:System.Net.IWebRequestCreate> интерфейса.  
   
-## Пример  
- Код в следующем примере регистрирует модуль HTTP по умолчанию.  Необходимо заменить значения для параметров Version и PublicKeyToken правильными значениями для указанного модуля.  
+ Платформа .NET Framework включает модули веб-запросов для URI, который начинается с http://, https:// и file://. Модули по умолчанию можно переопределить только зарегистрировав пользовательский модуль в файле конфигурации.  
   
-```  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
+  
+## <a name="example"></a>Пример  
+ В следующем примере регистрируется модуль HTTP по умолчанию. Следует заменить значения для Version и PublicKeyToken правильные значения для указанного модуля.  
+  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -82,7 +83,7 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.IWebRequestCreate>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.IWebRequestCreate>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

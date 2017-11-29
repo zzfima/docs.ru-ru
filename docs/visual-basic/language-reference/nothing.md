@@ -1,65 +1,64 @@
 ---
-title: "Nothing (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Nothing"
-  - "vb.Nothing"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Nothing - ключевое слово"
-  - "Nothing - ключевое слово, синтаксис"
+title: Nothing (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Nothing
+- vb.Nothing
+helpviewer_keywords:
+- Nothing keyword [Visual Basic]
+- Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: 31
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Nothing (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-Представляет значение по умолчанию любого типа данных.  Для ссылочных типов значение по умолчанию `null` ссылка.  Для типов значений, зависят от значений по умолчанию, является ли тип значения null.  
+# <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
+Представляет значение по умолчанию для любого типа данных. Для ссылочных типов значение по умолчанию — `null` ссылки. Для типов значений значение по умолчанию зависит от того, является ли тип значения допускает значения NULL.  
   
 > [!NOTE]
->  Для типов значений, не допускающие значения null `Nothing` в Visual Basic отличается от  `null` в c\#.  В Visual Basic, если нужно задать переменную типа значения null `Nothing`переменная имеет значение по умолчанию для своего объявленного типа.  В c\# при присвоении переменной значения типа null `null`возникает ошибка времени компиляции.  
+>  Для типов значений, не допускающим `Nothing` в Visual Basic, отличается от `null` в C#. В Visual Basic, если задать для переменной типа значения, не допускающим значения `Nothing`, переменной присваивается значение по умолчанию для объявленного типа. В C#, если присвоить переменной типа значения, не допускающим значения `null`, то возникает ошибка времени компиляции.  
   
-## Заметки  
- `Nothing` представляет значение по умолчанию для типа данных.  Зависит от значений по умолчанию, является ли переменная типа значения или ссылочного типа.  
+## <a name="remarks"></a>Примечания  
+ `Nothing`Представляет значение по умолчанию для типа данных. Значение по умолчанию зависит от того, является ли переменная типа значения или ссылочного типа.  
   
- Переменная a *тип значения* непосредственно содержащий его значение.  Типы значений включают все числовые типы данных `Boolean`"  `Char`"  `Date`все структуры и перечисления.  Переменная a *ссылочный тип* хранит ссылку на экземпляр объекта в памяти.  Ссылочные типы включают классы, массивы, делегаты и строки.  Дополнительные сведения см. в разделе [Типы значений и ссылочные типы](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+ Переменная *тип значения* непосредственно содержащего его значение. Значение типам относятся все числовые типы данных, `Boolean`, `Char`, `Date`, все структуры и всех перечислениях. Переменная *ссылочному типу* хранит ссылку на экземпляр объекта в памяти. Ссылочные типы включают классы, массивы, делегаты и строк. Для получения дополнительной информации см. [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
- Если переменная типа значения, то применяются расширения функциональности `Nothing` зависит от того, является ли переменная типа данных значения null.  Для представления значения null тип значения, добавьте a `?` модификатор к имени типа.  Присвоить `Nothing` присваивает значение переменной значение null  `null`.  Дополнительные сведения и примеры см. в разделе [Типы значения, допускающие Null](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
+ Если переменная имеет значение тип, поведение `Nothing` зависит от того, является ли переменная имеет тип данных допускает значения NULL. Чтобы представить тип, допускающий значение, добавьте `?` модификатор к имени типа. Назначение `Nothing` для переменной со значением NULL задает значение, равное `null`. Дополнительные сведения и примеры см. в разделе [значение](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).  
   
- Если переменная типа значения, не допускает значения null, присвоить `Nothing` на него задается значение по умолчанию для своего объявленного типа.  Если тип содержит элементы переменных, для них задаются соответствующие значения по умолчанию.  Следующий пример иллюстрирует это для скалярных типов.  
+ Если переменная имеет тип значения, который не допускает значения NULL, назначение `Nothing` чтобы он устанавливает его значение по умолчанию для объявленного типа. Если тип содержит члены переменной, они задаются все значения по умолчанию. Следующий пример иллюстрирует это для скалярных типов.  
   
  [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
- Если переменная ссылочного типа, то присвоить `Nothing` к переменным наборам его к a  `null` ссылка на тип переменной.  Переменная, которой присваивается a `null` ссылка не связана с любым объектом.  Это показано в приведенном ниже примере.  
+ Если переменная имеет ссылочный тип, назначение `Nothing` переменной задается значение `null` ссылку на тип переменной. Переменная, которой присваивается `null` ссылка не связан с любым объектом. В следующем примере это показано.  
   
  [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
- Проверяющий, является ли переменная ссылки или типа значения \(null\) `null`не используйте  `= Nothing` OR  `<> Nothing`.  Всегда пользуйтесь `Is Nothing` OR  `IsNot Nothing`.  
+ При проверке ссылки (или введите значение NULL), переменная `null`, не используйте `= Nothing` или `<> Nothing`. Всегда используйте `Is Nothing` или `IsNot Nothing`.  
   
- Для строк в Visual Basic, равно пустой строке `Nothing`.  Следовательно, `"" = Nothing` \- true.  
+ Для строк в Visual Basic, равняется пустая строка `Nothing`. Таким образом `"" = Nothing` имеет значение true.  
   
- В следующем примере показаны сравнения с использованием операторов `Is` и `IsNot`.  
+ В следующем примере показано сравнение с использованием `Is` и `IsNot` операторы.  
   
  [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
- Если объявить переменную без использования предложения `As` и задать ей значение `Nothing`, переменная имеет тип `Object`.  Примером этого является `Dim something = Nothing`.  Ошибка времени компиляции в этом случае при возникновении `Option Strict` и  `Option Infer` .  
+ Если переменная объявлена без использования `As` предложения и присвойте ему значение `Nothing`, переменная имеет тип `Object`. Примером этого является `Dim something = Nothing`. В этом случае возникает ошибка времени компиляции при `Option Strict` включен и `Option Infer` отключен.  
   
- При присвоении объектной переменной ключевого слова `Nothing` она больше не ссылается на какой\-либо экземпляр объекта.  Если переменная ранее содержала ссылку на экземпляр, задание ключевого слова `Nothing` не удаляет экземпляр как таковой.  Использование экземпляра прекращается, и связанные с ним память и системные ресурсы освобождаются только после того, как сборщик мусора \(GC\) обнаружит, что не осталось активных ссылок на экземпляр.  
+ При назначении `Nothing` переменной объекта, он больше не ссылается на любой экземпляр объекта. Если переменная содержалась ссылка на экземпляр, задание `Nothing` не прекращает самого экземпляра. Выполнение экземпляра завершается и освобождаются ресурсы памяти и системы, связанные с ним, только после того, что сборщик мусора (GC) обнаружит, что не осталось активных ссылок.  
   
- `Nothing` отличается от  <xref:System.DBNull> объект, который представляет неинициализированных версий или несуществующий столбец базы данных.  
+ `Nothing`отличается от <xref:System.DBNull> объект, который представляет неинициализированный вариант или несуществующий столбец базы данных.  
   
-## См. также  
- [Оператор Dim](../../visual-basic/language-reference/statements/dim-statement.md)   
- [Время существования: создание и уничтожение объектов](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
- [Время существования в Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Оператор Is](../../visual-basic/language-reference/operators/is-operator.md)   
- [Оператор IsNot](../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Типы значения, допускающие Null](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>См. также  
+ [Оператор Dim](../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Время существования. Создание и уничтожение объектов](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [Время существования в Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [Оператор Is](../../visual-basic/language-reference/operators/is-operator.md)  
+ [Оператор IsNot](../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Типы значений, допускающие значение NULL](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

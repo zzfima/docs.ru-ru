@@ -1,47 +1,50 @@
 ---
-title: "Практическое руководство. Создание кривой Безье второго порядка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Кривые Безье, создание"
-  - "графика [WPF], кривые Безье второго порядка"
-  - "кривые Безье второго порядка, создание"
+title: "Практическое руководство. Создание кривой Безье второго порядка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Bezier curves [WPF], creating
+- quadratic Bezier curves [WPF], creating
+- graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8320889f931e4482091b15bd9295c77a36d6d1e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание кривой Безье второго порядка
-В этом примере демонстрируется создание кривой Безье второго порядка.  Чтобы создать кривую Безье второго порядка, используйте классы <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure> и <xref:System.Windows.Media.QuadraticBezierSegment>.  
+# <a name="how-to-create-a-quadratic-bezier-curve"></a>Практическое руководство. Создание кривой Безье второго порядка
+В этом примере показано, как создать кривую Безье второго порядка.  Чтобы создать кривую Безье второго порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.QuadraticBezierSegment> классы.  
   
-## Пример  
- В следующих примерах кривая Безье второго порядка строится от точки с координатами \(10,100\) до точки \(300,100\).  Кривая имеет контрольную точку с координатами \(200,200\).  
+## <a name="example"></a>Пример  
+ В следующих примерах кривая Безье второго порядка строится от (10, 100) для (300,100). Кривая имеет контрольную точку с координатами (200,200).  
   
- \[xaml\]  
+ [xaml]  
   
- В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для описания пути можно использовать синтаксис атрибута.  
+ В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], можно использовать синтаксис атрибутов для описания пути.  
   
- [!code-xml[GeometrySample#54](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#54)]  
+ [!code-xaml[GeometrySample#54](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#54)]  
   
- \[xaml\]  
+ [xaml]  
   
- \(Обратите внимание, что этот синтаксис атрибута фактически создает <xref:System.Windows.Media.StreamGeometry>, облегченную версию <xref:System.Windows.Media.PathGeometry>.  Дополнительные сведения см. на странице [Синтаксис разметки пути](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)\).  
+ (Обратите внимание, что этот синтаксис атрибута фактически создает <xref:System.Windows.Media.StreamGeometry>, облегченную версию из <xref:System.Windows.Media.PathGeometry>. Дополнительные сведения см. на странице [Синтаксис разметки пути](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md).)  
   
- В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] можно также создать кривую Безье второго порядка, используя синтаксис элемента объекта.  Ниже приведен эквивалент предыдущего примера кода [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], может также нарисовать кривую Безье второго порядка, используя синтаксис элемента объекта. Следующий пример эквивалентен предыдущему примеру [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xml[GeometrySample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
+ [!code-xaml[GeometrySample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
- Этот пример является фрагментом большего примера; полный пример см. на веб\-странице [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](http://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## См. также  
- [Создание эллиптической дуги](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)   
+## <a name="see-also"></a>См. также  
+ [Создание эллиптической дуги](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
  [Создание кривой Безье третьего порядка](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

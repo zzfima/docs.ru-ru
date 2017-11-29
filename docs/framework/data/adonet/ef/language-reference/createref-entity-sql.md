@@ -1,44 +1,42 @@
 ---
-title: "CREATEREF (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: CREATEREF (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9fe960d5b19f5119f2337ec410738a2df31f20c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# CREATEREF (Entity SQL)
+# <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Формирует ссылки на сущность в наборе сущностей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `entityset_identifier`  
  Идентификатор набора сущностей, а не строковый литерал.  
   
  `row_typed_expression`  
  Выражение типа строки таблицы, соответствующее свойствам ключа типа сущности.  
   
-## Заметки  
- Выражение `row_typed_expression` должно быть структурно эквивалентно типу ключа для данной сущности. Это значит, что оно должно иметь такое же число и типы полей, расположенные в том же порядке, как и ключи сущности.  
+## <a name="remarks"></a>Примечания  
+ Выражение`row_typed_expression` должно быть структурно эквивалентно типу ключа для данной сущности. Это значит, что оно должно иметь такое же число и типы полей, расположенные в том же порядке, как и ключи сущности.  
   
  В приведенном далее примере Orders и BadOrders являются наборами сущностей типа Order, и предполагается, что идентификатор Id является единственным свойством ключа для типа Order. Этот пример иллюстрирует, как можно сформировать ссылку на сущность в наборе сущностей BadOrders. Отметим, что ссылка может быть висячей.  Это значит, что в действительности ссылка может не указывать на конкретную сущность. В этом случае оператор `DEREF` для этой ссылки возвратит значение null.  
   
@@ -47,17 +45,17 @@ select CreateRef(LOB.BadOrders, row(o.Id))
 from LOB.Orders as o   
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор CREATEREF используется для формирования ссылок на сущность в наборе сущностей. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру из статьи [Как выполнить запрос, возвращающий результаты типа StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery`:  
+2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
   
-## См. также  
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)   
- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
+ [КЛЮЧ](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
  [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)

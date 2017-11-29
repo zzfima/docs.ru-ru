@@ -1,64 +1,63 @@
 ---
-title: "Общие сведения об элементе управления SplitContainer (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SplitContainer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer - элемент управления [Windows Forms], сведения об элементе управления SplitContainer"
+title: "Общие сведения об элементе управления SplitContainer (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SplitContainer
+helpviewer_keywords: SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления SplitContainer (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.SplitContainer> состоит из двух панелей, разделенных подвижной полосой.  При наведении указателя мыши на строку, форма курсора изменяется, чтобы показать, что строка является перемещаемой.  
+# <a name="splitcontainer-control-overview-windows-forms"></a>Общие сведения об элементе управления SplitContainer (Windows Forms)
+Элемент управления Windows Forms <xref:System.Windows.Forms.SplitContainer> состоит из двух панелей, разделенных подвижной полосой. При наведении указателя мыши на полосу его форма изменяется, показывая, что полоса является перемещаемой.  
   
 > [!IMPORTANT]
->  В **Панели инструментов** элемент управления <xref:System.Windows.Forms.SplitContainer> заменяет элемент <xref:System.Windows.Forms.Splitter>, присутствующий в предыдущей версии [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  Элемент управления <xref:System.Windows.Forms.SplitContainer> является намного более предпочтительным, чем <xref:System.Windows.Forms.Splitter>.  Класс <xref:System.Windows.Forms.Splitter> по\-прежнему присутствует в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для обеспечения совместимости с существующими приложениями, но для новых проектов настоятельно рекомендуется использовать элемент управления <xref:System.Windows.Forms.SplitContainer>.  
+>  В **элементов**, <xref:System.Windows.Forms.SplitContainer> элемент управления заменяет <xref:System.Windows.Forms.Splitter> , присутствующий в предыдущей версии [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Элемент управления <xref:System.Windows.Forms.SplitContainer> намного предпочтительнее, чем элемент управления <xref:System.Windows.Forms.Splitter>. <xref:System.Windows.Forms.Splitter> Класс по-прежнему включен в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для обеспечения совместимости с существующими приложениями, но настоятельно рекомендуется использовать <xref:System.Windows.Forms.SplitContainer> управления для новых проектов.  
   
- При помощи элемента управления <xref:System.Windows.Forms.SplitContainer> можно создавать сложные пользовательские интерфейсы. Часто, выбор в одной панели определяет объекты, отображаемые в другой панели.  Это сочетание является весьма эффективным для отображения и просмотра информации.  Две панели для сбора информации в областях, а также строка или разделитель упрощают изменение размера панелей.  
+ С <xref:System.Windows.Forms.SplitContainer> элемента управления, можно создавать сложные пользовательские интерфейсы; часто выбор на одной панели определяет объекты, отображаемые на панели «». Такой подход является весьма эффективным для отображения и просмотра информации. Две панели для сбора информации в областях и панель или «, «разделитель упрощают изменение размера панелей.  
   
- Кроме того, допускается вложение более чем одного элемента управления <xref:System.Windows.Forms.SplitContainer>, причем для второго элемента управления <xref:System.Windows.Forms.SplitContainer> может устанавливаться ориентация по горизонтали, что позволяет создать верхнюю и нижнюю панель.  
+ Существует несколько <xref:System.Windows.Forms.SplitContainer> управления могут быть вложенными, со вторым <xref:System.Windows.Forms.SplitContainer> элемента управления, имеет горизонтальную ориентацию, создание верхней и нижней панелях.  
   
- Обратите внимание, что по умолчанию управление элементом <xref:System.Windows.Forms.SplitContainer> осуществляется с клавиатуры. Пользователь может использовать клавиши со стрелками для перемещения разделителя, если свойству <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> присвоено значение `false`.  
+ Имейте в виду, что <xref:System.Windows.Forms.SplitContainer> управления клавиатуры по умолчанию, пользователи могут используйте клавиши со стрелками для перемещения разделителя, если <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> свойству `false`.  
   
- Свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A> элемента управления <xref:System.Windows.Forms.SplitContainer> определяет направление разделителя, а не самого элемента управления.  Соответственно, если этому свойству присвоено значение <xref:System.Windows.Forms.Orientation>, разделитель будет направлен сверху вниз, разделяя область на левую и правую панели.  
+ <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Свойство <xref:System.Windows.Forms.SplitContainer> управления определяет направление разделителя, а не самого элемента управления. Таким образом, если это свойство имеет значение <xref:System.Windows.Forms.Orientation.Vertical>, выполняется разделителя сверху вниз, создание левой и правой панели.  
   
- Кроме того, обратите внимание, что значение свойства <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> изменяется в зависимости от значения свойства <xref:System.Windows.Forms.SplitContainer.Orientation%2A>.  Дополнительные сведения см. в описании свойства <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>.  
+ Кроме того, имейте в виду, значение <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> свойство изменяется в зависимости от значения <xref:System.Windows.Forms.SplitContainer.Orientation%2A> свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> свойство.  
   
- Можно также ограничить размер и перемещение элемента управления <xref:System.Windows.Forms.SplitContainer>.  Свойство <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> определяет, какая из панелей будет сохранять размер при изменении размера элемента управления <xref:System.Windows.Forms.SplitContainer>, в то время как свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> определяет возможность перемещения разделителя с помощью клавиатуры или мыши.  
+ Также можно ограничить размер и перемещение <xref:System.Windows.Forms.SplitContainer> элемента управления. <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Свойство определяет, какая панель останется один и тот же размер после <xref:System.Windows.Forms.SplitContainer> размера элемента управления и <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> свойство определяет, является ли разделитель перемещаемым, клавиатуры или мыши.  
   
 > [!NOTE]
->  Даже если свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> имеет значение `true`, разделитель можно перемещать программным способом, например с помощью свойства <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>.  
+>  Даже если <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> свойству `true`, разделителя может по-прежнему переместить программными средствами, например с помощью <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> свойство.  
   
- Наконец, каждая панель элемента управления <xref:System.Windows.Forms.SplitContainer> имеет свойства, определяющие размер соответствующей панели.  
+ Наконец, каждая панель <xref:System.Windows.Forms.SplitContainer> элемент управления имеет свойства, чтобы определить его размер отдельных.  
   
-## Часто используемые свойства, методы и события  
+## <a name="commonly-used-properties-methods-and-events"></a>Часто используемые свойства, методы и события  
   
 |Имя|Описание|  
-|---------|--------------|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Определяет, какая из панелей будет сохранять размер при изменении размера элемента управления <xref:System.Windows.Forms.SplitContainer>.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет возможность перемещения разделителя при помощи клавиатуры или мыши.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Определяет расположение разделителя по вертикали или по горизонтали.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Определяет расстояние от левой или верхней границы до перемещаемой полосы\-разделителя в пикселях.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Определяет минимальное расстояние, на которое разделитель может быть перемещен пользователем, в пикселях.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Определяет толщину разделителя в пикселях.|  
+|----------|-----------------|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Определяет, какая панель останется тем же размером после <xref:System.Windows.Forms.SplitContainer> размер элемента управления.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет, если разделитель может быть перемещен с помощью клавиатуры или мыши.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Определяет, если расположение разделителя вертикально или горизонтально.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Определяет расстояние в пикселях от левой или верхней границы для перемещаемой полосы-разделителя.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Определяет минимальное расстояние в пикселях, что разделитель может быть перемещен пользователем.|  
+|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Определяет ширину в пикселях от разделителя.|  
 |Событие <xref:System.Windows.Forms.SplitContainer.SplitterMoving>|Происходит при перемещении разделителя.|  
-|Событие <xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Происходит по завершении перемещения разделителя.|  
+|Событие <xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Происходит, когда перемещения разделителя.|  
   
-## См. также  
- <xref:System.Windows.Forms.SplitContainer>   
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [SplitContainer Control Sample](http://msdn.microsoft.com/ru-ru/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [Пример элемента управления SplitContainer](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)

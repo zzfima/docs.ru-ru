@@ -1,43 +1,47 @@
 ---
-title: "Практическое руководство. Рисование существующего точечного рисунка на экране | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "растровые изображения [Windows Forms], отображение в формах Windows Forms"
-  - "растровые изображения [Windows Forms], загрузка в приложения Windows Forms"
-  - "изображения [Windows Forms], отображение в формах Windows Forms"
+title: "Практическое руководство. Рисование существующего точечного рисунка на экране"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitmaps [Windows Forms], displaying in Windows Forms
+- bitmaps [Windows Forms], loading in Windows Forms applications
+- images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f435c397832e8f64b2bf911a59aae7578ffd3bdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование существующего точечного рисунка на экране
-Существующее изображение очень просто нарисовать на экране.  Сначала необходимо создать объект <xref:System.Drawing.Bitmap> с помощью конструктора растрового изображения, который принимает имя файла, <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>.  Этот конструктор поддерживает изображения нескольких форматов, включая BMP, GIF, JPEG, PNG, TIFF.  После создания объекта <xref:System.Drawing.Bitmap>, передайте такой объект <xref:System.Drawing.Bitmap> в метод <xref:System.Drawing.Graphics.DrawImage%2A> объекта <xref:System.Drawing.Graphics>.  
+# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Практическое руководство. Рисование существующего точечного рисунка на экране
+Можно легко нарисовать существующее изображение на экране. Сначала необходимо создать <xref:System.Drawing.Bitmap> объекта, используя конструктор точечного рисунка, который принимает имя файла, <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Этот конструктор поддерживает изображения нескольких форматов, включая BMP, GIF, JPEG, PNG и TIFF. После создания <xref:System.Drawing.Bitmap> объекта, передать этот <xref:System.Drawing.Bitmap> объект <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта.  
   
-## Пример  
- В этом примере создается объект <xref:System.Drawing.Bitmap> на основе файла в формате JPEG и на экране рисуется соответствующее растровое изображение с верхним левым углом в точке \(60, 10\).  
+## <a name="example"></a>Пример  
+ В этом примере создается <xref:System.Drawing.Bitmap> объекта из файла в формате JPEG и рисуется растровое изображение, с его верхнего левого угла в (60, 10).  
   
- На следующем рисунке показано растровое изображение, выведенное на экран в указанном месте.  
+ На следующем рисунке точечный рисунок рисуется в указанном месте.  
   
  ![Положение изображения](../../../../docs/framework/winforms/advanced/media/csimageposition1.png "csimageposition1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.WorkingWithImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#21)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
-## См. также  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>См. также  
+ [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

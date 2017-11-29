@@ -1,31 +1,34 @@
 ---
-title: "Ссылки на объекты | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ссылки на объекты"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 643cdf80900a02f269887aa6c95832429060fc8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Ссылки на объекты
-В данном образце показано, как передать объекты по ссылкам между сервером и клиентом.В данном образце используются смоделированные *социальные сети*.Социальная сеть состоит из класса `Person`, содержащего список друзей, в котором каждый друг является экземпляром класса `Person` с собственным списком друзей.Таким образом создается граф объектов.Служба предоставляет операции для этих социальных сетей.  
+# <a name="object-references"></a>Ссылки на объекты
+В данном образце показано, как передать объекты по ссылкам между сервером и клиентом. Данном образце используются смоделированные *социальных сетей*. Социальная сеть состоит из класса `Person`, содержащего список друзей, в котором каждый друг является экземпляром класса `Person` с собственным списком друзей. Таким образом создается граф объектов. Служба предоставляет операции для этих социальных сетей.  
   
- В этом образце служба размещается в службах IIS, а клиентом является консольное приложение \(EXE\).  
+ В этом образце служба размещается в службах IIS, а клиентом является консольное приложение (EXE).  
   
 > [!NOTE]
->  Процедура установки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
-## Служба  
- К классу `Person` применен атрибут<xref:System.Runtime.Serialization.DataContractAttribute>. Полю <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> присвоено значение `true`, объявляющее его ссылочным типом.Ко всем свойствам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+## <a name="service"></a>Служба  
+ К классу `Person` применен атрибут<xref:System.Runtime.Serialization.DataContractAttribute>. Полю <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> присвоено значение `true`, объявляющее его ссылочным типом. Ко всем свойствам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
 ```  
 [DataContract(IsReference=true)]  
@@ -85,7 +88,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- Операция `GetCommonFriends` принимает список типа `Person`.Предполагается, что в списке присутствует два объекта `Person`.Операция возвращает список объектов `Person`, находящихся в списках `friends` обоих объектов `Person`, в списке ввода.  
+ Операция `GetCommonFriends` принимает список типа `Person`. Предполагается, что в списке присутствует два объекта `Person`. Операция возвращает список объектов `Person`, находящихся в списках `friends` обоих объектов `Person`, в списке ввода.  
   
 ```  
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -98,28 +101,28 @@ public List<Person> GetCommonFriends(List<Person> people)
 }  
 ```  
   
-## Клиент  
- Клиентский прокси\-класс создается с помощью функции [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]**Добавить ссылку на службу**.  
+## <a name="client"></a>"Клиент";  
+ Клиентский прокси-класс создается с помощью **добавить ссылку на службу** функция [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
   
- Создается социальная сеть, состоящая из пяти объектов `Person`.Клиент вызывает каждый из трех методов службы.  
+ Создается социальная сеть, состоящая из пяти объектов `Person`. Клиент вызывает каждый из трех методов службы.  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>   
- [Справочные сведения о взаимодействии объектов](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
+ [Ссылки на объекты с возможностью взаимодействия](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

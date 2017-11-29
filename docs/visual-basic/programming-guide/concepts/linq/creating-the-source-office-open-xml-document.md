@@ -1,33 +1,29 @@
 ---
-title: "Создание исходного документа Open XML Office (Visual Basic) | Документы Microsoft"
+title: "Создание документа Office Open XML источника (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 928a3c34836464e7603c485b64c9c426913ae7b2
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: c573f703ea3d7550dabd994f538e28e197874715
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание исходного документа Open XML Office (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание документа Office Open XML источника (Visual Basic)
 В этом разделе показано создание документа Office Open XML WordprocessingML, который используется в примерах этого учебника. Если следовать приведенным ниже инструкциям, выходные данные будут соответствовать выходным данным каждого примера.  
   
  Тем не менее примеры в этом учебнике работают с любым допустимым документом WordprocessingML.  
   
- Чтобы создать документ, который используется в этом учебнике, необходимо установить Microsoft Office 2007 или более поздней версии, или необходимо установить Microsoft Office 2003 с пакетом совместимости Microsoft Office для Word, Excel и PowerPoint 2007 форматов.  
+ Чтобы создать документ, который используется в этом учебнике, необходимо иметь установленный выпуск 2007 системы Microsoft Office или более поздней версии либо Microsoft Office 2003 с пакетом обеспечения совместимости Microsoft Office для форматов файлов Word, Excel и PowerPoint 2007.  
   
 ## <a name="creating-the-wordprocessingml-document"></a>Создание документа WordprocessingML  
   
@@ -57,14 +53,14 @@ ms.lasthandoff: 03/13/2017
   
 3.  Отформатируйте первую строку стилем «Заголовок 1».  
   
-4.  Выберите строки, которые содержат код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — «End Class». Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
+4.  Выделите строки, содержащие код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — «End Class». Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
   
 5.  Наконец, выделите всю строку, содержащую выходные данные, и отформатируйте ее стилем `Code`.  
   
 6.  Сохраните документ с именем SampleDoc.docx.  
   
     > [!NOTE]
-    >  Если вы используете Microsoft Word 2003, выберите **документ Word 2007** в **тип** раскрывающегося списка.  
+    >  Если используется Microsoft Word 2003, в раскрывающемся списке **Тип файла** выберите **Документ Word 2007**.  
   
 ## <a name="see-also"></a>См. также  
- [Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

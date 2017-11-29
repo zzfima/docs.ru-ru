@@ -1,37 +1,42 @@
 ---
-title: "Практическое руководство. Удаление объекта класса Adorner из элемента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "декоративные элементы, удаление"
+title: "Практическое руководство. Удаление объекта класса Adorner из элемента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe11dc8df1a29518ba05792877bd26670f96b29d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Удаление объекта класса Adorner из элемента
-В данном примере показано, как программными средствами удалить определенный декоративный элемент из указанного объекта <xref:System.Windows.UIElement>.  
+# <a name="how-to-remove-an-adorner-from-an-element"></a>Практическое руководство. Удаление объекта класса Adorner из элемента
+В этом примере показано, как программно удалить определенный декоративный элемент из указанного <xref:System.Windows.UIElement>.  
   
-## Пример  
- Этот подробный пример кода удаляет первый декоративный элемент из массива декоративных элементов, возвращаемого методом <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.  В данном примере графические объекты получаются в <xref:System.Windows.UIElement>, который называется *myTextBox*.  Если у элемента, указанного в вызове <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>, нет графических объектов, возвращается `null`.  Этот код явно проверяет пустой массив и наилучшим образом подходит для приложений, где пустой массив может возникать относительно часто.  
+## <a name="example"></a>Пример  
+ Этот подробный пример кода удаляет первый декоративный элемент в массив декоративных элементов, возвращенных <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.  В этом примере происходит с графические <xref:System.Windows.UIElement> с именем *myTextBox*.  Если у элемента, указанного в вызове <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> нет графических объектов, `null` возвращается.  Этот код явно проверяет пустой массив и наилучшим образом подходит для приложений, где пустой массив должен быть относительно часто.  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornerlong)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerLong](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornerlong)]  
   
-## Пример  
- Данный сжатый пример кода функционально эквивалентен подробному примеру, приведенному выше.  Этот код не проверяет явно пустой массив, поэтому возможно возникновение исключения <xref:System.NullReferenceException>.  Этот код наилучшим образом подходит для приложений, где пустой массив возникает редко.  
+## <a name="example"></a>Пример  
+ Данный сжатый пример кода функционально эквивалентен подробному примеру, приведенному выше. Этот код не проверяет явно пустой массив, поэтому возможно, <xref:System.NullReferenceException> может быть вызвано исключение.  Этот код является наилучшим образом подходит для приложений, где пустой массив, ожидается редко.  
   
  [!code-csharp[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removespecificadornershort)]
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения о декоративных элементах](../../../../docs/framework/wpf/controls/adorners-overview.md)

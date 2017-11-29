@@ -1,36 +1,28 @@
 ---
-title: "Таймеры (Visual Basic) потоков | Документы Microsoft"
+title: "Таймеры потоков (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 809cba93-cc93-4e21-afda-f299f9a39818
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ea657482d4e8e1465d9bc6ae3f94915badee512
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b828476301424ca767e2b581c173d6a2dcd184ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-timers-visual-basic"></a>Таймеры потоков (Visual Basic)
-<xref:System.Threading.Timer?displayProperty=fullName>Класс полезен для периодического запуска задач в отдельном потоке.</xref:System.Threading.Timer?displayProperty=fullName> Например можно использовать таймер потока для проверки состояния и целостности базы данных или резервное копирование важных файлов.  
+Класс <xref:System.Threading.Timer?displayProperty=nameWithType> полезно использовать для периодического выполнения задачи в отдельном потоке. Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.  
   
 ## <a name="thread-timer-example"></a>Пример таймера потока  
- В следующем примере задача запускается каждые две секунды и использует флаг для инициирования <xref:System.IDisposable.Dispose%2A>метод, который останавливает таймер.</xref:System.IDisposable.Dispose%2A> В этом примере состояние отображается в окне вывода.  
+ В следующем примере задача запускается каждые две секунды и использует флаг для инициализации метода <xref:System.IDisposable.Dispose%2A>, который останавливает таймер. В этом примере сведения о состояния отображаются в окне вывода.  
   
 ```vb  
 Private Class StateObjClass  
@@ -76,8 +68,8 @@ Private Sub TimerTask(ByVal StateObj As Object)
 End Sub  
 ```  
   
- Таймеры потоков особенно полезны при <xref:System.Windows.Forms.Timer?displayProperty=fullName>объект недоступен, например при разработке консольных приложений.</xref:System.Windows.Forms.Timer?displayProperty=fullName>  
+ Таймеры потоков особенно полезны в случае отсутствия доступа к объекту <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>, например при разработке консольных приложений.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading></xref:System.Threading>   
- [Многопоточные приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)
+ <xref:System.Threading>  
+ [Многопоточные приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)

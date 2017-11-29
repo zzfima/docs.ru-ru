@@ -8,24 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c840792182c012ba74b3ba3ef297748f58e4b92a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2102fce150f512a49093eb2b214258ac35e276e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Практическое руководство. Отправка данных с помощью класса WebRequest
 В следующей процедуре описаны действия, используемые для отправки данных на сервер. Эта процедура обычно используется для отправки данных на веб-страницу.  
@@ -136,7 +133,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
     > [!NOTE]
-    >  После завершения работы с объектом <xref:System.Net.WebResponse> его необходимо закрыть путем вызова метода <xref:System.Net.WebResponse.Close%2A>. Кроме того, полученный поток ответа из объекта ответа можно закрыть путем вызова метода <xref:System.IO.Stream.Close%2A?displayProperty=fullName>. Если не закрыть ответ или поток, у приложения могут закончиться подключения к серверу и оно не сможет обрабатывать новые запросы.  
+    >  После завершения работы с объектом <xref:System.Net.WebResponse> его необходимо закрыть путем вызова метода <xref:System.Net.WebResponse.Close%2A>. Кроме того, полученный поток ответа из объекта ответа можно закрыть путем вызова метода <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Если не закрыть ответ или поток, у приложения могут закончиться подключения к серверу и оно не сможет обрабатывать новые запросы.  
   
 10. Можно получить доступ к свойствам объекта **WebResponse** или привести объект **WebResponse** к связанному с определенным протоколом экземпляру для считывания свойств для определенного протокола. Например, чтобы получить доступ к свойствам, определенным для протокола HTTP, для <xref:System.Net.HttpWebResponse>, приведите **WebRequest** к ссылке **HttpWebRequest**.  
   
@@ -268,9 +265,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)   
+ [Создание Интернет-запросов](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)  
  [Практическое руководство. Запрос данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-

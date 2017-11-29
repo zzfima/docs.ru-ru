@@ -1,33 +1,25 @@
 ---
-title: "Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML) | Документы Microsoft"
+title: "Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e20d0c0b670d63ebe2be137a48dc1a1a9a861b9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 376a6d2dfbca22fb8efc6395f478839d716e14d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Работа с глобальными пространствами имен (Visual Basic) (LINQ to XML)
-Одной из ключевых особенностей XML-литералов в Visual Basic является возможность объявлять пространства имен XML с помощью `Imports` инструкции. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
+Одним из ключевых особенностей XML-литералов в Visual Basic является возможность объявлять пространства имен XML с помощью `Imports` инструкции. Используя эту возможность, можно объявить либо пространство имен XML, использующее префикс, либо пространство имен XML по умолчанию.  
   
  Данная возможность полезна в двух ситуациях. Во-первых, пространства имен, объявленные в XML-литералах, не переносятся во внедренные выражения. Применение деклараций глобальных пространств имен способствует снижению объема работы, которую необходимо выполнить в целях использования внедренных выражений с пространствами имен. Во-вторых, необходимо объявить глобальные пространства имен в целях использования пространств имен с XML-свойствами.  
   
@@ -35,10 +27,10 @@ ms.lasthandoff: 03/13/2017
   
  При использовании XML-литералов или XML-свойств, находящихся в пространствах имен, объявленных глобально, можно видеть развернутое имя XML-литералов или свойств при наведении на них курсора в Visual Studio. Развернутое имя отобразится в подсказке.  
   
- Можно получить <xref:System.Xml.Linq.XNamespace>объекта, который соответствует глобальное пространство имен с помощью `GetXmlNamespace` метод.</xref:System.Xml.Linq.XNamespace>  
+ С помощью метода <xref:System.Xml.Linq.XNamespace> можно вызвать объект `GetXmlNamespace`, соответствующий глобальному пространству имен.  
   
 ## <a name="examples-of-global-namespaces"></a>Примеры глобальных пространств имен  
- В следующем примере объявляется глобальное пространство имен по умолчанию с помощью `Imports` инструкции, а затем используется XML-литерал для инициализации <xref:System.Xml.Linq.XElement>объект в этом пространстве имен:</xref:System.Xml.Linq.XElement>  
+ В следующем примере объявляется глобальное пространство имен по умолчанию с помощью инструкции `Imports`, а затем используется XML-литерал для инициализации объекта <xref:System.Xml.Linq.XElement> в данном пространстве имен:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -194,7 +186,7 @@ End Module
 ```  
   
 ## <a name="xnamespace-and-global-namespaces"></a>XNamespace и глобальные пространства имен  
- Можно получить <xref:System.Xml.Linq.XNamespace>объекта с помощью `GetXmlNamespace` метод:</xref:System.Xml.Linq.XNamespace>  
+ Объект <xref:System.Xml.Linq.XNamespace> можно получить с помощью метода `GetXmlNamespace`:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

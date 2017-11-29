@@ -1,41 +1,23 @@
 ---
 title: "Интерфейсы (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, interfaces
-- interfaces, Visual Basic
+- interfaces [Visual Basic], Visual Basic
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 0b3f13cd69564a61da1a961e35c5319e4c2d79aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="interfaces-visual-basic"></a>Интерфейсы (Visual Basic)
 *Интерфейсы* определяют свойства, методы и события, которые можно реализовать в классах. Интерфейсы позволяют определить возможности в виде небольших групп тесно связанных свойств, методов и событий. Это снижает число проблем совместимости, так как можно создавать усовершенствованные реализации интерфейсов без изменения существующего кода. Вы можете добавлять новые функции в любое время с помощью дополнительных интерфейсов и реализаций.  
@@ -108,4 +90,3 @@ ms.lasthandoff: 08/11/2017
 |-----------|-----------------|  
 |[Пошаговое руководство. Создание и реализация интерфейсов](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Содержит подробные процедуры, которые помогут вам определить и реализовать собственный интерфейс.|  
 |[Расхождение в универсальных интерфейсах](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|В этом разделе описываются ковариация и контрвариация в универсальных интерфейсах, а также представлен список вариативных универсальных интерфейсов платформы .NET Framework.|
-

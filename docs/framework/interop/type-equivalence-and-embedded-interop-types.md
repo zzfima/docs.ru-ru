@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - type equivalence
 - embedded interop types
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9a7b39047edcd8e2c770e17a33dd73e75ee5083
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Эквивалентность типов и внедренные типы взаимодействия
 Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], среда CLR поддерживает внедрение сведений о типах COM непосредственно в управляемые сборки и не требует получения управляемыми сборками сведений о типах COM из сборок взаимодействия. Так как внедренные сведения о типах включают в себя только типы и члены, которые действительно используются в управляемой сборке, в двух управляемых сборках могут быть очень разные представления одного типа COM. Все управляемые сборки имеют разные объекты <xref:System.Type> для обозначения представления типа COM. Среда CLR поддерживает эквивалентность типов между этими разными представлениями для интерфейсов, структур, перечислений и делегатов.  
@@ -53,9 +46,9 @@ ms.lasthandoff: 08/21/2017
   
  Если у типа нет атрибута <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> или атрибут <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> не определяет область и идентификатор, то определение эквивалентности типа все же возможно:  
   
--   Для интерфейсов вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName> используется значение <xref:System.Runtime.InteropServices.GuidAttribute>, а вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName> используется свойство <xref:System.Type.FullName%2A?displayProperty=fullName> (то есть имя типа, включая пространство имен).  
+-   Для интерфейсов вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType> используется значение <xref:System.Runtime.InteropServices.GuidAttribute>, а вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType> используется свойство <xref:System.Type.FullName%2A?displayProperty=nameWithType> (то есть имя типа, включая пространство имен).  
   
--   Для структур, перечислений и делегатов вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> используется атрибут <xref:System.Runtime.InteropServices.GuidAttribute> содержащей сборки, а вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> используется свойство <xref:System.Type.FullName%2A?displayProperty=fullName>.  
+-   Для структур, перечислений и делегатов вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> используется атрибут <xref:System.Runtime.InteropServices.GuidAttribute> содержащей сборки, а вместо свойства <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> используется свойство <xref:System.Type.FullName%2A?displayProperty=nameWithType>.  
   
 <a name="type_equiv"></a>   
 ### <a name="marking-com-types-for-type-equivalence"></a>Пометка типов COM для эквивалентности типов  
@@ -66,7 +59,6 @@ ms.lasthandoff: 08/21/2017
 -   Сделайте тип типом импорта COM. Интерфейс является типом импорта COM, если у него есть атрибут <xref:System.Runtime.InteropServices.ComImportAttribute>. Интерфейсы, структуры, перечисления или делегаты являются типами импорта COM, если сборка, в которой они заданы, имеет атрибут <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Type.IsEquivalentTo%2A>   
- [Использование COM-типов в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
+ <xref:System.Type.IsEquivalentTo%2A>  
+ [Использование типов COM в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Импорт библиотеки типов в виде сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-

@@ -1,66 +1,70 @@
 ---
-title: "Практическое руководство. Получение метрик шрифтов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "метрики шрифтов, получение"
-  - "шрифты, получение метрик"
+title: "Практическое руководство. Получение метрик шрифтов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [Windows Forms], obtaining metrics
+- font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b45f3f903c02d056fc457b652b01fb7b59413a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Получение метрик шрифтов
-Класс <xref:System.Drawing.FontFamily> предоставляет следующие методы для получения различных метрик для некоторой комбинации "семейство шрифтов — начертание".  
+# <a name="how-to-obtain-font-metrics"></a>Практическое руководство. Получение метрик шрифтов
+<xref:System.Drawing.FontFamily> Класс предоставляет следующие методы для получения различных метрик для определенного семейства и стиля сочетания:  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>\(FontStyle\)  
+-   <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>\(FontStyle\)  
+-   <xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>\(FontStyle\)  
+-   <xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>\(FontStyle\)  
+-   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- Численные значения, возвращаемые этими методами, приводятся в специальных единицах, применяемых при разработке шрифта, поэтому они не зависят от размера и единиц измерения конкретного объекта <xref:System.Drawing.Font>.  
+ Номера, возвращаемые этими методами, в единицах измерения конструктора, поэтому они не зависят от размера и единиц измерения конкретного <xref:System.Drawing.Font> объекта.  
   
- Различные метрики шрифтов показаны на следующем рисунке.  
+ На следующем рисунке различные метрики.  
   
  ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")  
   
-## Пример  
- В следующем примере отображаются метрики обычного начертания шрифтов семейства Arial.  Кодом также создается объект <xref:System.Drawing.Font> \(на основе семейства шрифтов Arial\) с размером в 16 пикселей и отображаются метрики \(в пикселях\) для этого объекта <xref:System.Drawing.Font>.  
+## <a name="example"></a>Пример  
+ В следующем примере отображаются метрики для семейства шрифтов Arial обычного стиля. Код также создает <xref:System.Drawing.Font> объекта (на основании семейства шрифтов Arial) с размером в 16 пикселей и отображаются метрики (в пикселях) для этой конкретной <xref:System.Drawing.Font> объекта.  
   
- На следующем рисунке показан результат выполнения примера кода.  
+ Ниже показан результат выполнения примера кода.  
   
  ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")  
   
- Обратите внимание на две первые строки текста из приведенного выше рисунка.  Объект <xref:System.Drawing.Font> возвращает в качестве размера 16, а объект <xref:System.Drawing.FontFamily> возвращает размер максимального пробела, равный 2048.  Указанные два числа \(16 и 2048\) являются основой для преобразования между единицами измерения, применяемыми при разработке шрифта, и единицами измерения объекта <xref:System.Drawing.Font> \(в данном случае это пиксели\).  
+ Обратите внимание, первые две строки выходных данных на предыдущем рисунке. <xref:System.Drawing.Font> Размер 16, возвращает объект и <xref:System.Drawing.FontFamily> объект возвращает максимального пробела, равный 2048. Эти два числа (16 и 2048) являются основой для преобразования между единицах измерения конструктора и единиц (в данном случае это пиксели) <xref:System.Drawing.Font> объекта.  
   
- Например, можно преобразовать проектные единицы измерения верхнего выносного элемента в пиксели следующим образом.  
+ Например можно преобразовать единицах измерения конструктора Восхождение точек следующим образом:  
   
  ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")  
   
- Приведенный выше код располагает текст по вертикали, устанавливая значение члена <xref:System.Drawing.PointF.Y%2A> объекта <xref:System.Drawing.PointF>.  Координата y увеличивается на значение `font.Height` для каждой новой строки текста.  Свойство <xref:System.Drawing.Font.Height%2A> объекта <xref:System.Drawing.Font> возвращает межстрочный интервал \(в пикселях\) для рассматриваемого объекта <xref:System.Drawing.Font>.  В данном примере возвращаемое значение <xref:System.Drawing.Font.Height%2A> равно 19.  Обратите внимание, что оно равно численному значению \(округленному до большего целого\), получаемому при преобразовании метрики межстрочного интервала в пиксели.  
+ Следующий код располагает текст по вертикали, устанавливая <xref:System.Drawing.PointF.Y%2A> данными-членом <xref:System.Drawing.PointF> объекта. Координата y увеличивается на `font.Height` для каждой новой строки текста. <xref:System.Drawing.Font.Height%2A> Свойство <xref:System.Drawing.Font> объект возвращает межстрочный интервал (в пикселях) для этой конкретной <xref:System.Drawing.Font> объекта. В этом примере возвращаемое значение <xref:System.Drawing.Font.Height%2A> равно 19. Обратите внимание, что это то же самое число (округляется в сторону увеличения до целого), получаемому при преобразовании метрики межстрочного интервала в пикселях.  
   
- Обратите также внимание, что размер максимального пробела \(называемый также эм\-размером\) не равен сумме размеров верхнего и нижнего выносных элементов.  Сумма размеров верхнего и нижнего выносных элементов называется высотой клетки.  Размер максимального пробела вычисляется как разность между высотой клетки и внутренним интерлиньяжем.  Сумма высоты клетки и внешнего интерлиньяжа равна междустрочному интервалу.  
+ Обратите внимание, что (также называемые размер размер или em) не является сумма Восхождение и спуск. Сумма размеров верхнего и спуск называется высота ячейки. Высота ячейки минус внутренней начальные равно высоту максимального пробела. Высота ячейки, а также внешних начальные равно межстрочный интервал.  
   
  [!code-csharp[System.Drawing.FontsAndText#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.FontsAndText#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a>См. также  
+ [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

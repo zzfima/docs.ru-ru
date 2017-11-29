@@ -1,35 +1,33 @@
 ---
-title: "Недопустимо длинная строка | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30494"
-  - "vbc30494"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30494"
+title: "Недопустимо длинная строка"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30494
+- vbc30494
+helpviewer_keywords: BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 63399e40f94b9596582762ce9f056f3ac9f4a371
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Недопустимо длинная строка
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Длина строк исходного кода не может превышать 65 535 знаков.  
+# <a name="line-is-too-long"></a>Недопустимо длинная строка
+Длина строк исходного кода не может превышать 65535 символов.  
   
- **Идентификатор ошибки**: BC30494  
+ **Идентификатор ошибки:** BC30494  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Сократите строку, чтобы ее длина не превышала 65 535 знаков.  
+-   Сократите длину строки, чтобы 65535 символов или меньше.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)

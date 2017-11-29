@@ -1,40 +1,31 @@
 ---
-title: "Практическое руководство: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic) | Документы Microsoft"
+title: "Как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Практическое руководство: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Как: поток XML-фрагментов с доступом к сведениям заголовка (Visual Basic)
 Иногда приходится считывать достаточно большие XML-файлы и разрабатывать приложения таким образом, чтобы объем памяти, используемой этим приложением, был прогнозируемым. Если попытаться заполнить XML-дерево большим XML-файлом, используемый объем памяти будет пропорционален размеру файла, то есть излишним. Поэтому следует вместо этого использовать потоки.  
   
- Один из вариантов — написать приложение, используя <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> Тем не менее, может потребоваться использовать [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] для запроса XML-дерева. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [как: запись LINQ в методе оси XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Одна из возможностей состоит в том, чтобы разработать приложение с использованием метода <xref:System.Xml.XmlReader>. При этом для запроса XML-дерева можно использовать метод [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [как: запись метода оси XML (Visual Basic) LINQ](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
- Чтобы написать собственный метод оси, необходимо написать небольшой метод, который использует <xref:System.Xml.XmlReader>для считывания узлов, пока достигнет одного из узлов, в которых вы заинтересованы.</xref:System.Xml.XmlReader> Затем метод вызывает метод <xref:System.Xml.Linq.XNode.ReadFrom%2A>, который читает из <xref:System.Xml.XmlReader>и создает экземпляр фрагмента XML.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> После этого можно написать запросы в LINQ на основе пользовательского метода оси.  
+ Чтобы написать собственный метод оси, нужно написать небольшой метод, который использует метод <xref:System.Xml.XmlReader> для считывания узлов, до тех пор пока не достигнет одного из интересующих вас узлов. Затем метод вызывает метод <xref:System.Xml.Linq.XNode.ReadFrom%2A>, который читает из объекта <xref:System.Xml.XmlReader> и создает экземпляр фрагмента XML. После этого можно написать запросы в LINQ на основе пользовательского метода оси.  
   
- Использование потоков лучше всего уместно в ситуациях, когда требуется обработать исходный документ только один раз, и элементы можно обрабатывать в порядке их следования в документе. Некоторые стандартные операторы запроса, такие как <xref:System.Linq.Enumerable.OrderBy%2A>, проходят через источник, собирать все данные, сортируют их и выдают первый элемент в последовательности.</xref:System.Linq.Enumerable.OrderBy%2A> Обратите внимание, что, если вы используете оператор запроса, который материализует источник раньше, чем выбирает первый элемент, вы не сохраните малый объем используемой памяти.  
+ Использование потоков лучше всего уместно в ситуациях, когда требуется обработать исходный документ только один раз, и элементы можно обрабатывать в порядке их следования в документе. Некоторые стандартные операторы запросов, например <xref:System.Linq.Enumerable.OrderBy%2A>, проходят через источник, собирают все данные, сортируют их и выдают первый элемент последовательности. Обратите внимание, что, если вы используете оператор запроса, который материализует источник раньше, чем выбирает первый элемент, вы не сохраните малый объем используемой памяти.  
   
 ## <a name="example"></a>Пример  
  Иногда проблема становится немного интереснее. В следующем XML-документе потребитель пользовательского метода оси должен знать имя клиента, которому принадлежит каждый элемент.  
@@ -249,5 +240,4 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+ [Дополнительно LINQ to XML, программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

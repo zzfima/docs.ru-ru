@@ -1,45 +1,48 @@
 ---
-title: "Практическое руководство. Анимация контекстного меню | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Popup - элементы управления"
-  - "Popup - элемент управления, анимирование"
+title: "Практическое руководство. Анимация контекстного меню"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Popup control [WPF], animating
+- animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 276c1a54cfdddcde84c0702f4e84f1dc6174bbda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация контекстного меню
-В этом примере показаны два способа анимации элемента управления <xref:System.Windows.Controls.Primitives.Popup>.  
+# <a name="how-to-animate-a-popup"></a>Практическое руководство. Анимация контекстного меню
+В этом примере показаны два способа анимации <xref:System.Windows.Controls.Primitives.Popup> элемента управления.  
   
-## Пример  
- В примере свойству <xref:System.Windows.Controls.Primitives.PopupAnimation> присваивается значение <xref:System.Windows.Controls.Primitives.PopupAnimation>, в результате чего достигается эффект «скольжения» при появлении элемента <xref:System.Windows.Controls.Primitives.Popup>.  
+## <a name="example"></a>Пример  
+ В следующем примере задается <xref:System.Windows.Controls.Primitives.PopupAnimation> свойство в значение <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, чего <xref:System.Windows.Controls.Primitives.Popup> для «слайд в» когда он появится.  
   
- Чтобы повернуть элемент управления <xref:System.Windows.Controls.Primitives.Popup>, в этом примере значение <xref:System.Windows.Media.RotateTransform> присваивается свойству <xref:System.Windows.UIElement.RenderTransform%2A> объекта <xref:System.Windows.Controls.Canvas>, который является дочерним элементом <xref:System.Windows.Controls.Primitives.Popup>.  
+ Чтобы повернуть <xref:System.Windows.Controls.Primitives.Popup>, этот пример назначает <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.UIElement.RenderTransform%2A> свойство <xref:System.Windows.Controls.Canvas>, который является дочерним элементом элемента <xref:System.Windows.Controls.Primitives.Popup>.  
   
- Для корректной работы преобразования в примере необходимо присвоить свойству <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> значение `true`.  Кроме того, в свойстве <xref:System.Windows.FrameworkElement.Margin%2A> содержимого объекта <xref:System.Windows.Controls.Canvas> должно быть задано достаточно места для поворота элемента <xref:System.Windows.Controls.Primitives.Popup>.  
+ Для корректной работы преобразования в примере необходимо присвоить <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> свойства `true`. Кроме того <xref:System.Windows.FrameworkElement.Margin%2A> на <xref:System.Windows.Controls.Canvas> содержимого необходимо указать достаточно места для <xref:System.Windows.Controls.Primitives.Popup> для поворота.  
   
- [!code-xml[AnimatedPopup#RotateTransform2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
+ [!code-xaml[AnimatedPopup#RotateTransform2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
   
- В следующем примере показано, как событие <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, которое возникает при щелчке кнопки <xref:System.Windows.Controls.Button>, инициирует событие <xref:System.Windows.Media.Animation.Storyboard>, запускающее анимацию.  
+ В следующем примере показан способ <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, возникающее при <xref:System.Windows.Controls.Button> нажатии триггеры <xref:System.Windows.Media.Animation.Storyboard> , запускающее анимацию.  
   
- [!code-xml[AnimatedPopup#RotateTransform1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
+ [!code-xaml[AnimatedPopup#RotateTransform1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
   
-## См. также  
- <xref:System.Windows.UIElement.RenderTransform%2A>   
- <xref:System.Windows.Controls.Primitives.BulletDecorator>   
- <xref:System.Windows.Media.RotateTransform>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- <xref:System.Windows.Controls.Primitives.Popup>   
- [Практические руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.UIElement.RenderTransform%2A>  
+ <xref:System.Windows.Controls.Primitives.BulletDecorator>  
+ <xref:System.Windows.Media.RotateTransform>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ <xref:System.Windows.Controls.Primitives.Popup>  
+ [Разделы практического руководства](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
  [Общие сведения о контекстном меню](../../../../docs/framework/wpf/controls/popup-overview.md)

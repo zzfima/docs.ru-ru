@@ -1,34 +1,37 @@
 ---
-title: "Настройка служб WCF в коде | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка служб WCF в коде"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 134de9fce41ccdcd9c26277c6a52d67823199da3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Настройка служб WCF в коде
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.Файлы конфигурации используются, если необходимо настроить службу после ее развертывания.При использовании файлов конфигурации IT\-работнику требуется только обновить файл конфигурации, без необходимости в повторной компиляции.Файлы конфигурации однако, могут быть сложными и требовать больших усилий при обслуживании.Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации.[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также позволяет настраивать службы в коде.В предыдущих версиях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] \(4.0 и ранее\) настройка служб легко выполнялась в коде в случае сценариев резидентных служб, класс <xref:System.ServiceModel.ServiceHost> позволял настроить конечные точки и поведения до вызова метода ServiceHost.Open.В сценариях с веб\-размещением нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>.Чтобы настроить службу, размещенную в сети, приходится создавать класс <xref:System.ServiceModel.ServiceHostFactory>, который создавал <xref:System.ServiceModel.ServiceHost> и выполнял необходимые настройки.Начиная с версии .NET 4.5 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет более простой способ настройки как для резидентных служб, так и для служб, размещаемых в сети.  
+# <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также позволяет настраивать службы в коде. В предыдущих версиях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 и ранее) настройка служб легко выполнялась в коде в случае сценариев резидентных служб, класс <xref:System.ServiceModel.ServiceHost> позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с версии .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет более простой способ настройки как для резидентных служб, так и для служб, размещаемых в сети.  
   
-## Метод конфигурации  
+## <a name="the-configure-method"></a>Метод конфигурации  
  Просто определите открытый статический метод с именем `Configure` со следующей сигнатурой в классе реализации службы.  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Метод принимает экземпляр <xref:System.ServiceModel.ServiceConfiguration>, что позволяет разработчикам добавлять конечные точки и поведения.Этот метод вызывается [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] перед открытием узла службы.Если он задан, то никакие параметры конфигурации службы, определенные в файле app.config или web.config, учитываться не будут.  
+ Метод принимает экземпляр <xref:System.ServiceModel.ServiceConfiguration>, что позволяет разработчикам добавлять конечные точки и расширения функциональности. Этот метод вызывается [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] перед открытием узла службы. Если он задан, то никакие параметры конфигурации службы, определенные в файле app.config или web.config, не учитываются.  
   
- В следующем фрагменте кода показано, как определить метод `Configure` и добавить конечную точку службы, поведение конечной точки и поведения служб.  
+ В следующем фрагменте кода показано, как определить метод `Configure` и добавить конечную точку службы, поведение конечной точки и расширения функциональности служб.  
   
 ```csharp  
 public class Service1 : IService1  
@@ -63,7 +66,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Чтобы включить для службы протокол \(например HTTPS\), следует явно добавить конечную точку, использующую протокол, или автоматически добавить конечные точки с помощью привязки ServiceConfiguration.EnableProtocol, которая добавляет конечную точку для каждого базового адреса, совместимого с использованием определенного протокола и каждого контракта службы.В следующем примере кода показывается, как использовать метод ServiceConfiguration.EnableProtocol:  
+ Чтобы включить для службы протокол (например, HTTPS), следует явно добавить конечную точку, использующую протокол, или автоматически добавить конечные точки с помощью привязки ServiceConfiguration.EnableProtocol, которая добавляет конечную точку для каждого базового адреса, совместимого с использованием определенного протокола и каждого контракта службы. В следующем примере кода показывается, как использовать метод ServiceConfiguration.EnableProtocol:  
   
 ```csharp  
 public class Service1 : IService1   
@@ -71,7 +74,7 @@ public class Service1 : IService1
     public string GetData(int value);   
     public static void Configure(ServiceConfiguration config)   
     {   
-        // Enable “Add Service Reference” support   
+        // Enable "Add Service Reference" support   
        config.Description.Behaviors.Add( new ServiceMetadataBehavior { HttpGetEnabled = true });   
        // set up support for http, https, net.tcp, net.pipe   
        config.EnableProtocol(new BasicHttpBinding());   
@@ -84,7 +87,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Параметры в разделе \<`protocolMappings`\> используются только в том случае, если конечные точки приложения не добавлены в <xref:System.ServiceModel.ServiceConfiguration>. При необходимости вы можете загружать конфигурацию службы из файла конфигурации приложения по умолчанию с помощью метода <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>, затем их можно изменять.Класс <xref:System.ServiceModel.ServiceConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации.В следующем примере кода показано, как реализуется подобный подход.  
+ Параметры в <`protocolMappings`> раздела используются только в том случае, если добавляются конечные точки приложения не <xref:System.ServiceModel.ServiceConfiguration> программными средствами. При необходимости можно загрузить конфигурацию службы из файла конфигурации приложения по умолчанию путем вызова <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> и измените параметры. Класс <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации. В следующем примере кода показано, как это реализовать.  
   
 ```  
 public class Service1 : IService1   
@@ -95,22 +98,21 @@ public class Service1 : IService1
           config.LoadFromConfiguration(ConfigurationManager.OpenMappedExeConfiguration(new ExeConfigurationFileMap { ExeConfigFilename = @"c:\sharedConfig\MyConfig.config" }, ConfigurationUserLevel.None));   
     }   
 }  
-  
 ```  
   
 > [!IMPORTANT]
->  Обратите внимание, что метод <xref:System.ServiceModel.LoadFromConfiguration%2A> не учитывает настройки \<`host`\> внутри тега \<`service`\> объекта \<`system.serviceModel`\>.По существу, \<`host`\> описывает конфигурацию узла, а не конфигурацию службы, и он загружается до выполнения метода Configure.  
+>  Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует <`host`> Параметры <`service`> тег <`system.serviceModel`>. По существу <`host`> — о конфигурации узла, не конфигурации службы и он получает загрузить до выполнения метода Настройка.  
   
-## См. также  
- [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)   
- [Настройка поведений клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)   
- [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)   
- [Активация на основе конфигурации](../../../docs/framework/wcf/samples/configuration-based-activation.md)   
- [Конфигурация](../../../docs/framework/wcf/samples/configuration-sample.md)   
- [Активация на основе конфигурации в IIS и WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)   
- [Конфигурация и поддержка метаданных](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)   
- [Конфигурация](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)   
- [Как задать привязку службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)   
- [Практическое руководство. Создание конечной точки службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)   
- [Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [Как указывать привязки клиента в конфигурации](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+## <a name="see-also"></a>См. также  
+ [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
+ [Настройка поведения клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)  
+ [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)  
+ [Активация на основе конфигурации](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
+ [Конфигурация](../../../docs/framework/wcf/samples/configuration-sample.md)  
+ [Активация на основе конфигурации в IIS и WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [Конфигурация и поддержка метаданных](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
+ [Конфигурация](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
+ [Практическое руководство. Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [Как: создать конечную точку службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Как: публикация метаданных для службы с помощью файла конфигурации](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Практическое руководство. Указание привязки клиента в конфигурации](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

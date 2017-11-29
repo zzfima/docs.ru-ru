@@ -1,33 +1,33 @@
 ---
-title: "How to: Create a Windows Forms Application from the Command Line | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, application development from command line"
-  - "Windows Forms, getting started"
-  - "Windows Forms, creating basic form"
+title: "Как: Создание приложения Windows Forms из командной строки"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-winforms
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, application development from command line
+- Windows Forms, getting started
+- Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6ddb27f724e30071be339ac753cfd85599ccd86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Windows Forms Application from the Command Line
-В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки.  Visual Studio предлагает расширенную поддержку этих процедур.  См. также [Пошаговое руководство. Создание простой формы в Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.110\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Как: Создание приложения Windows Forms из командной строки
+В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  См. также [Пошаговое руководство: создание простой формы Windows Forms](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
-## Процедура  
+## <a name="procedure"></a>Процедура  
   
-#### Создание формы  
+#### <a name="to-create-the-form"></a>Создание формы  
   
 1.  В пустом файле кода введите следующие операторы import или using:  
   
@@ -57,26 +57,26 @@ caps.handback.revision: 10
      [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
-#### Компиляция и запуск приложения  
+#### <a name="to-compile-and-run-the-application"></a>Компиляция и запуск приложения  
   
 1.  В командной строке .NET Framework перейдите к папке, в которой содержится класс `Form1`.  
   
 2.  Скомпилируйте форму.  
   
-    -   При использования языка C\# введите `csc form1.cs`  
+    -   Если вы используете C#, введите:`csc form1.cs`  
   
-         `-или-`  
+         `-or-`  
   
-    -   Если используется Visual Basic, введите `vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   Если вы используете Visual Basic, введите:`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
   
-3.  В командной строке введите `Form1.exe`  
+3.  В командной строке введите следующую команду:`Form1.exe`  
   
-## Добавление элемента управления и обработка события  
- В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее.  В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него.  Подробнее об элементах управления, которые можно добавить в форму Windows Forms, см. в разделе [Элементы управления Windows Forms](../../../docs/framework/winforms/controls/index.md).  
+## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события  
+ В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Дополнительные сведения об элементах управления, можно добавить в форму Windows Forms см. в разделе [элементов управления Windows Forms](../../../docs/framework/winforms/controls/index.md).  
   
- Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем.  Подробнее см. в разделах [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md) и [Обработка введенных пользователем данных](../../../docs/framework/winforms/controls/handling-user-input.md).  
+ Помимо понимания способов создания приложений Windows Forms, следует обладать общими знаниями о программировании на основе событий и способах обработки данных, введенных пользователем. Дополнительные сведения см. в разделе [Создание обработчиков событий в Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), и [Обработка введенных пользователем данных](../../../docs/framework/winforms/controls/handling-user-input.md)  
   
-#### Объявление элемента управления типа "Кнопка" и обработка событий щелчка мышью для нее  
+#### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>Объявление элемента управления типа "Кнопка" и обработка событий щелчка мышью для нее  
   
 1.  Объявите элемент управления типа "Кнопка" с именем `button1`.  
   
@@ -107,19 +107,19 @@ caps.handback.revision: 10
   
 7.  Скомпилируйте и запустите приложение, как описано в предыдущей процедуре.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В примере кода ниже полностью представлены все предыдущие процедуры.  
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a>Компиляция кода  
   
 -   Для компиляции кода следуйте инструкциям из предыдущей процедуры, описывающим, как скомпилировать и запустить приложение.  
   
-## См. также  
- <xref:System.Windows.Forms.Form>   
- <xref:System.Windows.Forms.Control>   
- [Changing the Appearance of Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)   
- [Enhancing Windows Forms Applications](../../../docs/framework/winforms/advanced/index.md)   
- [Getting Started with Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Form>  
+ <xref:System.Windows.Forms.Control>  
+ [Изменение внешнего вида Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Усовершенствование приложений Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
+ [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

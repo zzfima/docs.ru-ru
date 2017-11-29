@@ -1,47 +1,50 @@
 ---
-title: "Практическое руководство. Анимация изменений размера с использованием ключевых кадров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, изменение размеров с помощью ключевых кадров"
-  - "ключевые кадры, анимация изменения размеров"
-  - "изменение размеров, анимация по ключевым кадрам"
+title: "Практическое руководство. Анимация изменений размера с использованием ключевых кадров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- key frames [WPF], animating size changes with
+- animation [WPF], size changes with key frames
+- size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9577f9f08fa1d19aa214bda5a1aef997c2cfa2a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация изменений размера с использованием ключевых кадров
-В этом примере показано, как анимировать изменения размера с использованием полных кадров.  
+# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Практическое руководство. Анимация изменений размера с использованием ключевых кадров
+В этом примере показано, как можно анимировать изменения размера с использованием ключевых кадров.  
   
-## Пример  
- В следующем примере для анимации свойства <xref:System.Windows.Media.ArcSegment.Size%2A> элемента управления <xref:System.Windows.Media.ArcSegment> используется класс <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>.  В этой анимации используются три полных кадра следующим образом:  
+## <a name="example"></a>Пример  
+ В следующем примере используется <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Media.ArcSegment.Size%2A> свойство <xref:System.Windows.Media.ArcSegment>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1.  В течение первой половины секунды анимации используется экземпляр класса <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>, чтобы плавно увеличить размер дуги.  Линейные полные кадры, такие как <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>, создают плавный линейный переход между значениями.  
+1.  Во время первого полсекунды анимации, используется экземпляр <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> класс постепенно увеличить размер дуги. Линейный ключевые кадры, такие как <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> Создание линейной плавный переход между значениями.  
   
-2.  В конце следующей половины секунды используется экземпляр класса <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>, чтобы резко увеличить размер дуги.  Дискретные полные кадры, такие как <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>, создают резкие переходы между значениями, то есть изменения размера происходят внезапно и не остаются незамеченными.  
+2.  В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> класс внезапно увеличение размера дуги. Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> создают резкие переходы между значениями, то есть, изменения размера происходят внезапно и не остаются незамеченными.  
   
-3.  В течение последних двух секунд используется экземпляр класса <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> для увеличения размера дуги.  Полные [сплайновые](GTMT) кадры, такие как <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>, создают переменный переход между значениями в соответствии со значениями свойства <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A>.  В этом примере увеличение размера дуги сначала происходит медленно, а затем экспоненциально ускоряется к концу временного сегмента.  
+3.  Через последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> класса, чтобы увеличить размер дуги. Как и опорных кадров сплайна <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> создания переменного перехода между значениями согласно значениям <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> свойство. В этом примере размер дуги сначала увеличивается медленно, а ближе к концу временного сегмента — экспоненциально.  
   
- [!code-xml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## См. также  
- <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>   
- <xref:System.Windows.Media.ArcSegment.Size%2A>   
- <xref:System.Windows.Media.ArcSegment>   
- <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>   
- <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>   
- <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>   
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Практические руководства, посвященные анимации по полным кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>  
+ <xref:System.Windows.Media.ArcSegment.Size%2A>  
+ <xref:System.Windows.Media.ArcSegment>  
+ <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>  
+ <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>  
+ <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>  
+ [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Практические руководства, посвященные анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

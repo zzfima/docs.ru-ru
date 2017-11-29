@@ -1,35 +1,38 @@
 ---
-title: "3556 - CreateWorkflowServiceHostStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3556 - CreateWorkflowServiceHostStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bac6387b-1096-4e17-9907-8e464ee780db
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 21211a9228fcfaf112574544901cfc3115b7b0ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3556 - CreateWorkflowServiceHostStop
-## Свойства  
+# <a name="3556---createworkflowservicehoststop"></a>3556 - CreateWorkflowServiceHostStop
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3556|  
 |Ключевые слова|WebHost|  
 |Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается при остановке CreateWorkflowServiceHost.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Остановка CreateWorkflowServiceHost  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

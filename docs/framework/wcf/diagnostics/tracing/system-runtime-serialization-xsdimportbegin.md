@@ -1,28 +1,31 @@
 ---
-title: "System.Runtime.Serialization.XsdImportBegin | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.Runtime.Serialization.XsdImportBegin
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4b0c97d-2aab-42c3-a921-724a11e40fce
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 48b4e0e2d03c339e5db2fcee26c4117e6f9d1831
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.Runtime.Serialization.XsdImportBegin
+# <a name="systemruntimeserializationxsdimportbegin"></a>System.Runtime.Serialization.XsdImportBegin
 System.Runtime.Serialization.XsdImportBegin  
   
-## Описание  
+## <a name="description"></a>Описание  
  Начало импорта схемы.  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>См. также  
+ [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

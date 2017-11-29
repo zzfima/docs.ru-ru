@@ -1,37 +1,40 @@
 ---
-title: "Практическое руководство. Использование системных цветов в градиенте | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "градиенты, системные цвета"
-  - "системные цвета в градиентах"
+title: "Практическое руководство. Использование системных цветов в градиенте"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- gradients [WPF], system colors in
+- system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 105e22588f68d999811f5482342d53851a4d25eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование системных цветов в градиенте
-Чтобы использовать системный цвет в градиенте, используются статические свойства класса <xref:System.Windows.SystemColors> *\<SystemColor\>*Color и *\<SystemColor\>*ColorKey для получения ссылки на цвет, где *\<SystemColor\>* является именем необходимого системного цвета.  Используйте свойства *\<SystemColor\>*ColorKey, если необходимо создать динамическую ссылку, которая обновляется автоматически по мере изменения темы системы.  В противном случае, используйте свойства *\<SystemColor\>*Color.  
+# <a name="how-to-use-system-colors-in-a-gradient"></a>Практическое руководство. Использование системных цветов в градиенте
+Чтобы использовать системный цвет в градиенте, используйте  *\<SystemColor >*цвета и  *\<SystemColor >*ColorKey статических свойств <xref:System.Windows.SystemColors> для получения ссылки на цвет, где  *\<SystemColor >* имя необходимого системного цвета. Используйте  *\<SystemColor >*ColorKey свойства, если вы хотите создать динамическую ссылку, которая обновляется автоматически по мере изменения темы системы. В противном случае используйте  *\<SystemColor >*свойства цветов.  
   
-## Пример  
- В следующем примере используются динамические ресурсы цвета системы для создания градиента.  
+## <a name="example"></a>Пример  
+ В следующем примере для создания градиента используются динамические ресурсы системных цветов.  
   
- [!code-xml[brushsamples_snip#GraphicsMMDynamicSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemColorExample.xaml#graphicsmmdynamicsystemcolorgradientexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMDynamicSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/DynamicSystemColorExample.xaml#graphicsmmdynamicsystemcolorgradientexamplewholepage)]  
   
- В следующем примере используются статические ресурсы цвета системы для создания градиента.  
+ В следующем примере для создания градиента используются статические ресурсы системных цветов.  
   
- [!code-xml[brushsamples_snip#GraphicsMMStaticSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemColorExample.xaml#graphicsmmstaticsystemcolorgradientexamplewholepage)]  
+ [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorGradientExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemColorExample.xaml#graphicsmmstaticsystemcolorgradientexamplewholepage)]  
   
-## См. также  
- <xref:System.Windows.SystemColors>   
- [Закраска области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.SystemColors>  
+ [Заливка области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
  [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

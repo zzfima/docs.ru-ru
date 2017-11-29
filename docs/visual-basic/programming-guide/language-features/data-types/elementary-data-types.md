@@ -1,51 +1,34 @@
 ---
-title: "Простые типы данных (Visual Basic) | Документы Microsoft"
+title: "Простые типы данных (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- elementary data types
+- elementary data types [Visual Basic]
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e99954c86345076f5702212e35a51d2c4b25deca
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 732d367a86d16897d26e0613289440084c7ac442
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="elementary-data-types-visual-basic"></a>Простые типы данных (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет набор стандартных типов данных, которые можно использовать для многих элементов программирования. В этом разделе описываются эти типы и способы их использования.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет набор стандартных типов данных, которые можно использовать для многих элементов программирования. В этом разделе описываются эти типы и способы их использования.  
   
 > [!NOTE]
->  Каждый простой тип данных в Visual Basic поддерживается структуры или класса, который находится в <xref:System>имен.</xref:System> Компилятор использует каждое ключевое слово типа данных как псевдоним для базовой структуры или класса. Например, объявление переменной с помощью ключевого слова `Byte` является таким же, как его объявления с помощью полным именем структуры <xref:System.Byte?displayProperty=fullName>.</xref:System.Byte?displayProperty=fullName>  
+>  Каждый простой тип данных в Visual Basic поддерживается структура или класс, который находится в <xref:System> пространства имен. Компилятор использует каждое ключевое слово типа данных как псевдоним для базовой структуры или класса. Например, объявление переменной с помощью ключевого слова `Byte` совпадает со значением его объявления с помощью полным именем структуры <xref:System.Byte?displayProperty=nameWithType>.  
   
 ## <a name="in-this-section"></a>Содержание  
  [Числовые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- Описание целых и не интегрированные числовых типов.  
+ Описание целочисленного типа и не интегрированные числовых типов.  
   
  [Символьные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
  Описывает `Char` и `String` типов.  
@@ -55,7 +38,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Представляет [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] типы данных и инструкции по их использованию.  
+ Представляет [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] типы данных и описывает их использование.  
   
  [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Обзор простейших типов данных [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].
+ Общие сведения о простых типов данных предоставляемые [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].

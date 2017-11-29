@@ -1,25 +1,28 @@
 ---
-title: "HttpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b1542406caf9bb3684ccf2d97ed441f1dc3d0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# HttpTransportBindingElement
+# <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class HttpTransportBindingElement : TransportBindingElement  
@@ -39,101 +42,101 @@ class HttpTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс HttpTransportBindingElement не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс HttpTransportBindingElement имеет следующие свойства.  
   
-### AllowCookies  
+### <a name="allowcookies"></a>AllowCookies  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Значение, указывающее, принимает ли клиент файлы cookie, и распространяет ли он их по запросу.  
+ Значение, определяющее, принимает ли клиент файлы Cookie и распространяет ли он их на будущие запросы.  
   
-### AuthenticationScheme  
+### <a name="authenticationscheme"></a>AuthenticationScheme  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых HTTP\-прослушивателем.  
+ Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых HTTP-прослушивателем.  
   
-### BypassProxyOnLocal  
+### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Значение, указывающее, игнорируются ли прокси\-серверы для локальных адресов.  
+ Значение, указывающее, игнорируются ли прокси-серверы для локальных адресов.  
   
-### HostNameComparisonMode  
+### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Значение, указывающее, используется ли имя узла для доступа к службе при сопоставлении по универсальному коду ресурса \(URI\).  
+ Значение, указывающее, используется ли имя узла для доступа к службе при сопоставлении по универсальному коду ресурса (URI).  
   
-### KeepAliveEnabled  
+### <a name="keepaliveenabled"></a>KeepAliveEnabled  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Когда включено, соединения HTTP остаются в активном состоянии независимо от уровня активности.  
   
-### MaxBufferSize  
+### <a name="maxbuffersize"></a>MaxBufferSize  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальный размер буферного пула.  
   
-### ProxyAddress  
+### <a name="proxyaddress"></a>ProxyAddress  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Универсальный код ресурса \(URI\), который содержит адрес прокси\-сервера, используемого для выполнения HTTP\-запросов.  
+ Универсальный код ресурса (URI), который содержит адрес прокси-сервера, используемого для выполнения HTTP-запросов.  
   
-### ProxyAuthenticationScheme  
+### <a name="proxyauthenticationscheme"></a>ProxyAuthenticationScheme  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых прокси\-сервером HTTP.  
+ Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых прокси-сервером HTTP.  
   
-### Realm  
+### <a name="realm"></a>Realm  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Область проверки подлинности.  
   
-### TransferMode  
+### <a name="transfermode"></a>TransferMode  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Значение, указывающее статус сообщения: помещено в буфер или поток, запрос или ответ.  
   
-### UnsafeConnectionNtlmAuthentication  
+### <a name="unsafeconnectionntlmauthentication"></a>UnsafeConnectionNtlmAuthentication  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Значение, указывающее, разрешено ли на сервере совместное использование небезопасных подключений.  
   
-### UseDefaultWebProxy  
+### <a name="usedefaultwebproxy"></a>UseDefaultWebProxy  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Значение, указывающее, используются ли параметры прокси\-сервера компьютера или пользователя.  
+ Значение, указывающее, используются ли параметры прокси-сервера компьютера или пользователя.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

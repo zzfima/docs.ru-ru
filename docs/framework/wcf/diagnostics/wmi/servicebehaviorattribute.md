@@ -1,25 +1,28 @@
 ---
-title: "ServiceBehaviorAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceBehaviorAttribute
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f7401acd5aefcb7a8c02ea6c05a94374e41d9b9d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceBehaviorAttribute
+# <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class ServiceBehaviorAttribute : Behavior  
@@ -42,121 +45,121 @@ class ServiceBehaviorAttribute : Behavior
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс ServiceBehaviorAttribute не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс ServiceBehaviorAttribute имеет следующие свойства.  
   
-### AutomaticSessionShutdown  
+### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, следует ли автоматически закрывать сеанс, когда клиент закрывает выходной сеанс.  
   
-### ConcurrencyMode  
+### <a name="concurrencymode"></a>ConcurrencyMode  
  Тип данных: string  
 Тип доступа: только для чтения  
   
  Указывает, поддерживает служба один поток, несколько потоков или повторные входящие вызовы.  
   
-### ConfigurationName  
+### <a name="configurationname"></a>ConfigurationName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя конфигурации службы.  
   
-### IgnoreExtensionDataObject  
+### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, требуется ли передать неизвестные данные сериализации по сети.  
   
-### IncludeExceptionDetailInFaults  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, включать ли информацию об управляемых исключениях в сведения об ошибках SOAP, возвращаемые клиентам для отладки.  
   
-### InstanceContextMode  
+### <a name="instancecontextmode"></a>InstanceContextMode  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Указывает, когда создается новый объект службы.  
   
-### MaxItemsInObjectGraph  
+### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное количество элементов, допустимое в сериализованном объекте.  
   
-### Name  
+### <a name="name"></a>Имя  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя атрибута службы в WSDL.  
   
-### Namespace  
+### <a name="namespace"></a>Пространство имен  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Целевое пространство имен службы в WSDL.  
   
-### ReleaseServiceInstanceOnTransactionComplete  
+### <a name="releaseserviceinstanceontransactioncomplete"></a>ReleaseServiceInstanceOnTransactionComplete  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, производится ли повторное использование объекта службы после завершения текущей транзакции.  
   
-### TransactionAutoCompleteOnSessionClose  
+### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, завершаются ли ожидающие транзакции при закрытии текущего сеанса.  
   
-### TransactionIsolationLevel  
+### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Указывает уровень изоляции транзакции.  
   
-### TransactionTimeout  
+### <a name="transactiontimeout"></a>TransactionTimeout  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Период времени, в течение которого транзакция должна быть завершена.  
   
-### UseSynchronizationContext  
+### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, использовать ли текущий контекст синхронизации для выбора потока выполнения.  
   
-### ValidateMustUnderstand  
+### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, кем выполняется принудительная обработка заголовка SOAP MustUnderstand: системой или приложением.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>

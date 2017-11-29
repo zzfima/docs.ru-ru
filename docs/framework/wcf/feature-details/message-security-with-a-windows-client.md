@@ -1,54 +1,60 @@
 ---
-title: "Безопасность сообщений с клиентом Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность сообщений с клиентом Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f2a9f2f44f5dfd44f00ae580423b1d2781ae5bd7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность сообщений с клиентом Windows
-В этом сценарии показывается клиент и сервер [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные режимом безопасности сообщений.Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.  
+# <a name="message-security-with-a-windows-client"></a>Безопасность сообщений с клиентом Windows
+В этом сценарии показывается клиент и сервер [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], защищенные режимом безопасности сообщений. Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.  
   
- ![Безопасность сообщений с клиентом Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4\-0005\-4022\-beb6\-32fd087a8c3c")  
+ ![Безопасность с клиентом Windows сообщений](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Характеристика|Описание|  
-|--------------------|--------------|  
+|--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
 |Взаимодействие|Только [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Проверка подлинности \(сервера\)|Взаимная проверка подлинности сервера и клиента|  
-|Проверка подлинности \(клиента\)|Взаимная проверка подлинности сервера и клиента|  
+|Проверка подлинности (сервера)|Взаимная проверка подлинности сервера и клиента|  
+|Проверка подлинности (клиента)|Взаимная проверка подлинности сервера и клиента|  
 |Целостность|Да, используется общий контекст безопасности|  
 |Конфиденциальность|Да, используется общий контекст безопасности|  
-|Транспорт|NET.TCP|  
+|Transport|NET.TCP|  
 |Привязка|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="service"></a>Служба  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 -   Создайте автономную службу, используя код без конфигурации.  
   
 -   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано создание конечной точки службы, которая использует безопасность сообщений для установления защищенного контекста с компьютером Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### Конфигурация  
+### <a name="configuration"></a>Конфигурация  
  Вместо кода для настройки службы можно использовать следующую конфигурацию:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -76,26 +82,26 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## Клиент  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="client"></a>Клиент  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
--   Создайте автономный клиент, используя код \(и код клиента\).  
+-   Создайте автономный клиент, используя код (и код клиента).  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек.Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.Пример:  
+-   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Код  
- Следующий код служит для создания клиента.Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `Windows`.  
+### <a name="code"></a>Код  
+ Следующий код служит для создания клиента. Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `Windows`.  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### Конфигурация  
+### <a name="configuration"></a>Конфигурация  
  Следующая конфигурация используется для задания свойств клиента.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -120,6 +126,6 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,42 +1,48 @@
 ---
-title: "Практическое руководство. Переопределение метаданных для свойств зависимости | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойства зависимостей, переопределение метаданных"
-  - "метаданные, переопределение для свойств зависимостей"
-  - "свойства зависимостей - переопределение"
+title: "Практическое руководство. Переопределение метаданных для свойств зависимости"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- metadata [WPF], overriding for dependency properties
+- dependency properties [WPF], overriding metadata for
+- overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8e7cb01c81b5fb24830cbe0cc39befbadaf4405e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Переопределение метаданных для свойств зависимости
-В этом примере демонстрируется переопределение метаданных свойства зависимости по умолчанию зависимости, взятых из наследованного класса, с помощью вызова метода <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> и предоставления метаданных определенного типа.  
+# <a name="how-to-override-metadata-for-a-dependency-property"></a>Практическое руководство. Переопределение метаданных для свойств зависимости
+В этом примере показан способ переопределения метаданных свойства зависимостей по умолчанию, поступающие из наследованного класса путем вызова <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> метод и предоставление метаданных определенного типа.  
   
-## Пример  
- Путем определения <xref:System.Windows.PropertyMetadata> класс может определить поведение [свойства зависимости](GTMT), например, обратные вызовы значения по умолчанию и системы свойств.  Многие классы свойства зависимости уже имеют метаданные по умолчанию, установленные как часть процесса их регистрации.  Это включает свойства зависимости, которые являются частью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)].  Класс, который наследует свойство зависимости через наследование, может переопределить исходные метаданные, так что характеристики свойства, которые могут изменяться через метаданные, будут соответствовать любым особым требованиям подкласса.  
+## <a name="example"></a>Пример  
+ Определив его <xref:System.Windows.PropertyMetadata>, класс может определить поведения свойства зависимостей, такие как его по умолчанию значение свойства обратные вызовы и системы. Многие классы свойств зависимостей уже имеют метаданные по умолчанию, заданные во время процесса их регистрации. К ним относятся свойства зависимостей, которые являются частью [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Класс, который наследует свойство зависимости при наследовании класса, может переопределить исходные метаданные, так что характеристики свойства, которые могут изменяться посредством метаданных, будут соответствовать любым особым требованиям подкласса.  
   
- Переопределение метаданных в свойстве зависимости должно быть выполнена для этого свойства, используемого системой свойств \(это соответствует случаю, когда создаются определенные экземпляры объектов, регистрирующие свойство\).  Вызов <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> должен быть выполнен в статическом конструкторе типа, предоставляющего себя в качестве параметра `forType` для <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>.  При попытке изменить созданные метаданные существующего типа\-владельца не возникнет исключения, но это приведет к несогласованному поведению в системе свойства.  Кроме того, метаданные могут переопределяться один раз для каждого типа.  Последующие попытки перезаписать метаданные для того же типа вызовут исключение.  
+ Переопределение метаданных в свойстве зависимости должно быть выполнено до того, как свойство начнет использоваться системой свойств (то есть до того момента, когда будут созданы определенные экземпляры объектов, регистрирующие свойство). Вызовы <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> должны быть выполнены в статическом конструкторе типа, предоставляющего себя в качестве `forType` параметр <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>. При попытке изменить метаданные существующих экземпляров типа-владельца не возникнет исключения, но это приведет к несогласованному поведению системы свойств. Кроме того, метаданные могут переопределяться один раз для каждого типа. Последующие попытки переопределить метаданные для того же типа вызовут исключение.  
   
- В следующем примере пользовательский класс `MyAdvancedStateControl` переопределяет метаданные для `StateProperty` с помощью `MyAdvancedStateControl` с новыми метаданными свойства.  Например, значение `StateProperty` по умолчанию является теперь `true`, если свойству поступает запрос на создание нового экземпляра `MyAdvancedStateControl`.  
+ В приведенном ниже примере пользовательский класс `MyAdvancedStateControl` переопределяет метаданные, предоставленные свойству `StateProperty` классом `MyAdvancedStateControl`, новыми метаданными свойства. Например, значение `StateProperty` по умолчанию теперь является `true`, если это свойство запрашивается для нового экземпляра `MyAdvancedStateControl`.  
   
  [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
  [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
 [!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
-## См. также  
- <xref:System.Windows.DependencyProperty>   
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [Практические руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.DependencyProperty>  
+ [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

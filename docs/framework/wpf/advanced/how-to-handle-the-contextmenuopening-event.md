@@ -1,69 +1,71 @@
 ---
-title: "Практическое руководство. Событие ContextMenuOpening | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenuOpening - событие"
+title: "Практическое руководство. Событие ContextMenuOpening"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Событие ContextMenuOpening
-Событие <xref:System.Windows.FrameworkElement.ContextMenuOpening> может быть обработано в приложении либо для корректировки существующего контекстного меню перед отображением, либо для подавления меню, которое отображалось бы в противном случае, путем установки для свойства <xref:System.Windows.RoutedEventArgs.Handled%2A> значения `true` в данных события.  Обычно причиной задания для <xref:System.Windows.RoutedEventArgs.Handled%2A> значения `true` в данных события является необходимость полной замены меню новым объектом <xref:System.Windows.Controls.ContextMenu>, который иногда требует отмены операции и запуска нового открытия.  При написании обработчиков для события <xref:System.Windows.FrameworkElement.ContextMenuOpening>, то следует иметь в виду проблемы синхронизации между элементом управления <xref:System.Windows.Controls.ContextMenu> и службой, которая отвечает за открытие и позиционирование контекстных меню для элементов управления в целом.  В этом разделе проиллюстрированы некоторые технические приемы написания кода для различных скриптов открытия контекстного меню, а также случаи, в которых возникают проблемы синхронизации.  
+# <a name="how-to-handle-the-contextmenuopening-event"></a>Практическое руководство. Событие ContextMenuOpening
+<xref:System.Windows.FrameworkElement.ContextMenuOpening> Событие может быть обработано в приложении либо для корректировки существующего контекстного меню перед для отображения или подавления меню, которое будет отображаться в противном случае, задав <xref:System.Windows.RoutedEventArgs.Handled%2A> свойства `true` в данных события. Обычно причиной задания для <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` событий данных является замена меню полностью новый <xref:System.Windows.Controls.ContextMenu> объекта, который иногда требует отмены операции и запуска нового открытия. При записи дескрипторов для <xref:System.Windows.FrameworkElement.ContextMenuOpening> события, которые необходимо учитывать проблемы синхронизации между <xref:System.Windows.Controls.ContextMenu> управления и службу, которая отвечает за открытие и позиционирование контекстных меню для элементов управления в целом. В этом разделе рассмотрены некоторые способы кода для различных скриптов открытия контекстного меню и демонстрирует ситуацию, где ошибки синхронизации вступает в действие.  
   
- Существует несколько скриптов для обработки события <xref:System.Windows.FrameworkElement.ContextMenuOpening>:  
+ Существует несколько сценариев для обработки <xref:System.Windows.FrameworkElement.ContextMenuOpening> событий:  
   
--   Корректировка элементов меню перед отображением.  
+-   Настройка элементов меню перед отображением.  
   
 -   Замена всего меню перед отображением.  
   
--   Полное подавление любых существующих контекстных меню и отсутствие отображения контекстного меню.  
+-   Полностью подавление любых существующих контекстных меню и отсутствие отображения контекстного меню.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-## Корректировка элементов меню перед отображением  
- Корректировка существующих элементов меню достаточно проста и является, вероятно, наиболее распространенным скриптом.  Корректировка может выполняться для добавления или удаления команд контекстного меню в соответствии с информацией о текущем состоянии приложения или конкретном состоянии, которая доступна как свойство объекта, для которого запрашивается контекстное меню.  
+## <a name="adjusting-the-menu-items-before-display"></a>Корректировка элементов меню перед отображением.  
+ Настройка существующих элементов меню достаточно проста и, вероятно, является наиболее распространенным сценарием. Это нужно для добавления и удаления команд контекстного меню в ответ сведения о текущем состоянии приложения или определенного состояния информацию, которая доступна как свойство объекта, когда запрашиваются в контекстном меню.  
   
- Основным методом является получение источника события, то есть определенного элемента управления, на котором был произведен щелчок правой кнопкой мыши, и получение его свойства <xref:System.Windows.FrameworkElement.ContextMenu%2A>.  Как правило, требуется проверить коллекцию <xref:System.Windows.Controls.ItemsControl.Items%2A> для просмотра уже существующих в меню элементов контекстного меню, а затем добавить в коллекцию или удалить из нее соответствующие новые элементы <xref:System.Windows.Controls.MenuItem>.  
+ Основным методом является источник события, который является конкретного элемента управления, который был правой кнопкой мыши, и получите <xref:System.Windows.FrameworkElement.ContextMenu%2A> свойство из него. Обычно требуется проверить <xref:System.Windows.Controls.ItemsControl.Items%2A> коллекцию позволяет определить, какие элементы контекстного меню уже существует в меню и затем добавить или удалить соответствующие новые <xref:System.Windows.Controls.MenuItem> элементы или из коллекции.  
   
  [!code-csharp[ContextMenuOpeningHandlers#AddItemNoHandle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#additemnohandle)]  
   
-## Замена всего меню перед отображением  
- В некоторых случаях требуется заменить контекстное меню целиком.  Разумеется, здесь также можно использовать вариант предыдущего кода для удаления каждого элемента существующего контекстного меню и добавления новых, начиная с нулевого элемента.  Но более естественным подходом для замены всех элементов в контекстном меню является создание нового <xref:System.Windows.Controls.ContextMenu>, заполнение его элементами и последующая установка свойства <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName> элемента управления для нового <xref:System.Windows.Controls.ContextMenu>.  
+## <a name="replacing-the-entire-menu-before-display"></a>Замена всего меню перед отображением.  
+ Альтернативного сценария является то, следует ли заменить контекстное меню целиком. Конечно может также использовать вариант предыдущего кода для удаления каждого элемента существующего контекстного меню и добавления новых, начиная с нулевого элемента. Но более естественным подходом для замены всех элементов в контекстном меню для создания нового <xref:System.Windows.Controls.ContextMenu>, заполнение ее элементов и установите <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> свойства элемента управления для нового <xref:System.Windows.Controls.ContextMenu>.  
   
- Ниже приведен код простого обработчика для замены <xref:System.Windows.Controls.ContextMenu>.  Код ссылается на пользовательский метод `BuildMenu`, который обособлен, поскольку вызывается несколькими обработчиками примера.  
+ Ниже приведен код простого обработчика для замены <xref:System.Windows.Controls.ContextMenu>. Код ссылается на пользовательское `BuildMenu` метод, который отделяется out, так как он вызывается более одного обработчиками примера.  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceNoReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacenoreopen)]  
   
  [!code-csharp[ContextMenuOpeningHandlers#BuildMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#buildmenu)]  
   
- Однако при использовании этого стиля обработчика для <xref:System.Windows.FrameworkElement.ContextMenuOpening> есть вероятность возникновения проблем синхронизации, если объект, в котором задано свойство <xref:System.Windows.Controls.ContextMenu>, не имеет уже существующего контекстного меню.  При щелчке элемента управления правой кнопкой мыши событие <xref:System.Windows.FrameworkElement.ContextMenuOpening> возникает даже в том случае, если существующее <xref:System.Windows.Controls.ContextMenu> пусто или имеет значение null.  Но в этом случае любое новое <xref:System.Windows.Controls.ContextMenu>, установленное на исходном элементе, поступает слишком поздно для отображения.  Кроме того, если пользователь щелкнет правой кнопкой мыши второй раз, то появится новое <xref:System.Windows.Controls.ContextMenu>, с отличным от null значением, и при повторном выполнении обработчика замена и отображение меню будут выполнены правильно.  Это предполагает два возможных способа решения проблемы:  
+ Тем не менее при использовании этого стиля обработчика для <xref:System.Windows.FrameworkElement.ContextMenuOpening>, потенциально возникновения проблем синхронизации, если объект, где вы настраиваете <xref:System.Windows.Controls.ContextMenu> имеет уже существующего контекстного меню. При щелчке элемента управления <xref:System.Windows.FrameworkElement.ContextMenuOpening> возникает даже в том случае, если существующий <xref:System.Windows.Controls.ContextMenu> пустой или имеет значение null. Но в этом случае любое новое <xref:System.Windows.Controls.ContextMenu> установленное на исходном элементе, поступает слишком поздно для отображения. Кроме того, если пользователь щелкнет правой кнопкой мыши второй раз, это время ваш новый <xref:System.Windows.Controls.ContextMenu> , это значение равно null, не являющихся и отображается обработчиком правильно заменит и отобразить меню при выполнении обработчика еще раз. Это предлагает два способа решения:  
   
-1.  Убедитесь, что обработчики <xref:System.Windows.FrameworkElement.ContextMenuOpening> всегда запускаются для элементов управления, имеющих хотя бы местозаполнитель <xref:System.Windows.Controls.ContextMenu>, предназначенный для замены кодом обработчика.  В этом случае можно по\-прежнему использовать обработчик из предыдущего примера, но обычно требуется назначить местозаполнитель <xref:System.Windows.Controls.ContextMenu> в первоначальном макете:  
+1.  Убедитесь, что <xref:System.Windows.FrameworkElement.ContextMenuOpening> всегда запускаются для элементов управления, имеющих хотя бы местозаполнитель обработчики <xref:System.Windows.Controls.ContextMenu> доступно, предназначенный для замены кодом обработчика. В этом случае можно по-прежнему использовать обработчик, показанный в предыдущем примере, но обычно требуется назначить местозаполнитель <xref:System.Windows.Controls.ContextMenu> в первоначальном макете:  
   
-     [!code-xml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
+     [!code-xaml[ContextMenuOpeningHandlers#XAMLWithInitCM](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
   
-2.  Предположим, что исходным значением <xref:System.Windows.Controls.ContextMenu> может быть null по некоторой предварительной логике.  Можно либо проверить <xref:System.Windows.Controls.ContextMenu> на null, либо использовать флаг в коде для проверки, был ли обработчик запущен хоть раз.  Поскольку предполагается, что <xref:System.Windows.Controls.ContextMenu> будет отображаться, то обработчик задает для <xref:System.Windows.RoutedEventArgs.Handled%2A> значение `true` в данных события.  Для <xref:System.Windows.Controls.ContextMenuService>, отвечающего за отображение контекстного меню, значение `true` для <xref:System.Windows.RoutedEventArgs.Handled%2A> в данных события представляет собой запрос отмены отображения для сочетания контекстного меню и элемента управления, вызвавшего событие.  
+2.  Предполагается, что начальный <xref:System.Windows.Controls.ContextMenu> может иметь значение null, на основе некоторые предварительные логики. Можно либо проверить <xref:System.Windows.Controls.ContextMenu> на null, либо использовать флаг в коде, чтобы проверить, был ли ваш обработчик запустить по крайней мере один раз. Так как предполагается, что <xref:System.Windows.Controls.ContextMenu> о будет отображаться, ваш обработчик затем задает <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` в данных события. Чтобы <xref:System.Windows.Controls.ContextMenuService> , отвечает за отображение контекстного меню, `true` значение для <xref:System.Windows.RoutedEventArgs.Handled%2A> событий данных представляет собой запрос отмены отображения для контекстного меню или управлять сочетания, создавший событие.  
   
- После подавления возможного появления контекстного меню следующим шагом является предоставление нового контекстного меню и его отображение.  Настройка нового меню выполняется в общем так же, как для предыдущего обработчика: строится новый объект <xref:System.Windows.Controls.ContextMenu>, который указывается в качестве значения свойства <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName> источника элемента управления.  Дополнительным шагом является принудительное отображение контекстного меню, поскольку первая попытка подавляется.  Для принудительного отображения присвойте свойству <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=fullName> значение `true` внутри обработчика.  Будьте внимательны при этом, так как открытие контекстного меню в обработчике снова вызывает событие <xref:System.Windows.FrameworkElement.ContextMenuOpening>.  В случае повторного входа в обработчик это приведет к бесконечной рекурсии.  Поэтому необходимо всегда выполнять проверку на `null` или использовать флаг, если контекстное меню открывается из обработчика событий <xref:System.Windows.FrameworkElement.ContextMenuOpening>.  
+ Теперь, когда вы отменили потенциально подозрительные контекстного меню, следующим шагом является предоставление нового, затем отобразить ее. Настройка нового один существенно не отличается от предыдущего обработчика: выполняется построение новой <xref:System.Windows.Controls.ContextMenu> и задать источник управления <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> свойство с ним. Дополнительным шагом является, принудительное отображение контекстного меню, поскольку первая попытка подавляется. Для принудительного отображения, задать <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=nameWithType> свойства `true` обработчика. Будьте внимательны, когда это сделать, так как Открытие контекстного меню в обработчике вызывает <xref:System.Windows.FrameworkElement.ContextMenuOpening> событий еще раз. Если вы повторного входа в обработчик, он бесконечной рекурсии. Поэтому всегда необходимо выполнять поиск `null` или использовать флаг, если открыть контекстное меню внутри <xref:System.Windows.FrameworkElement.ContextMenuOpening> обработчика событий.  
   
-## Полное подавление любых существующих контекстных меню и отсутствие отображения контекстного меню  
- Последний скрипт — написание обработчика, который полностью подавляет меню, — является редким.  Если отображение контекстного меню для данного элемента управления не требуется, вероятно, существуют более подходящие способы обеспечить это, чем подавление меню при его запросе пользователем.  Но если необходимо использовать обработчик для подавления контекстного меню без отображения, обработчик просто должен задавать для <xref:System.Windows.RoutedEventArgs.Handled%2A> значение `true` в данных события.  <xref:System.Windows.Controls.ContextMenuService>, который отвечает за отображение контекстного меню, будет проверять данные события, возникшего в элементе управления.  Если событие было помечено как <xref:System.Windows.RoutedEventArgs.Handled%2A> где\-либо вдоль маршрута, то действие по открытию контекстного меню, инициирующее данное событие, будет подавляться.  
+## <a name="suppressing-any-existing-context-menu-and-displaying-no-context-menu"></a>Подавление любых существующих контекстных меню и отсутствие отображения контекстного меню  
+ Последний сценарий — написание обработчика, который полностью, подавляет меню редко. Если данный элемент управления не предназначен для вызова контекстного меню, существует, возможно, более подходящие способы обеспечить это, чем подавление меню только в том случае, когда пользователь запрашивает ее. Но если вы хотите использовать обработчик для подавления контекстного меню без отображения, то обработчик просто должен задавать <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` в данных события. <xref:System.Windows.Controls.ContextMenuService> , Отвечает за отображение контекстного меню будет проверять данные события, возникшего в элементе управления. Если событие было помечено как <xref:System.Windows.RoutedEventArgs.Handled%2A> в любом месте на маршруте, то действие по открытию контекстного меню, инициировавшего событие будет подавляться.  
   
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
-## См. также  
- <xref:System.Windows.Controls.ContextMenu>   
- <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=fullName>   
- [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)   
- [Общие сведения о ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Controls.ContextMenu>  
+ <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>  
+ [Общие сведения о базовых элементах](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Общие сведения об элементе ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)

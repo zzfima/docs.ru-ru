@@ -1,33 +1,25 @@
 ---
-title: "AttributeUsage (Visual Basic) | Документы Microsoft"
+title: AttributeUsage (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf56f40033f9d1547d63fccd25e3c0561bb62cb1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: aef00d201c3dea82f67395bee0d85f8989afa01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
-Определяет, как можно использовать класс настраиваемых атрибутов. `AttributeUsage`— Это атрибут, который может применяться к определениям настраиваемого атрибута для управления применения нового атрибута. При применении явно, по умолчанию выглядеть следующим образом:  
+Определяет, как можно использовать пользовательский класс атрибутов. Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута. При явном применении параметры по умолчанию выглядят следующим образом:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All,   
@@ -38,9 +30,9 @@ Class NewAttribute
 End Class  
 ```  
   
- В этом примере `NewAttribute` класс может быть применен к любой сущности кода, но может применяться только один раз для каждой сущности. Он наследуется производными классами при применении к базовому классу.  
+ В этом примере класс `NewAttribute` можно применить к любой сущности кода с атрибутами, но только один раз к каждой сущности. Он наследуется производными классами при применении к базовому классу.  
   
- `AllowMultiple` И `Inherited` аргументы являются необязательными, поэтому этот код имеет тот же эффект:  
+ Аргументы `AllowMultiple` и `Inherited` являются необязательными, так что этот код имеет тот же результат:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.All)>   
@@ -49,7 +41,7 @@ Class NewAttribute
 End Class  
 ```  
   
- Первый `AttributeUsage` аргумент должен быть один или несколько элементов <xref:System.AttributeTargets>перечисления.</xref:System.AttributeTargets> Несколько целевых типов можно связать вместе с оператором OR следующим образом:  
+ Первый аргумент `AttributeUsage` должен состоять из одного или нескольких элементов перечисления <xref:System.AttributeTargets>. Несколько целевых типов можно связать с помощью оператора OR следующим образом:  
   
 ```vb  
 Imports System  
@@ -62,7 +54,7 @@ Class NewPropertyOrFieldAttribute
 End Class  
 ```  
   
- Если `AllowMultiple` аргумент имеет значение `true`, а затем полученный атрибут может применяться несколько раз к одной сущности следующим образом:  
+ Если аргументу `AllowMultiple` присвоено значение `true`, то результирующий атрибут можно применить несколько раз к одной сущности следующим образом:  
   
 ```vb  
 Imports System  
@@ -79,9 +71,9 @@ Class Class1
 End Class  
 ```  
   
- В этом случае `MultiUseAttr` может применяться несколько раз, так как `AllowMultiple` равен `true`. Оба формата для применения нескольких атрибутов являются допустимыми.  
+ В этом случае `MultiUseAttr` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`. Для применения нескольких атрибутов допускаются оба показанных формата.  
   
- Если `Inherited` равен `false`, то атрибут не наследуется классами, производными от класса, который имеет атрибуты. Пример:  
+ Если `Inherited` имеет значение `false`, то атрибут не наследуется классами, производными от класса с атрибутами. Пример:  
   
 ```vb  
 Imports System  
@@ -103,15 +95,15 @@ Class DClass
 End Class  
 ```  
   
- В этом случае `Attr1` не применяется к `DClass` через наследование.  
+ В этом случае `Attr1` не применяется к `DClass` путем наследования.  
   
 ## <a name="remarks"></a>Примечания  
- `AttributeUsage` Является атрибутом однократного использования — он не может применяться несколько раз в тот же класс. `AttributeUsage`является псевдонимом для <xref:System.AttributeUsageAttribute>.</xref:System.AttributeUsageAttribute>  
+ Атрибут `AttributeUsage` можно использовать только один раз — его нельзя повторно применять к одному и тому же классу. `AttributeUsage` является псевдонимом для <xref:System.AttributeUsageAttribute>.  
   
- Дополнительные сведения см. в разделе [доступ к атрибутам с помощью отражения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+ Дополнительные сведения см. в статье [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic)).  
   
 ## <a name="example"></a>Пример  
- В следующем примере демонстрируется влияние `Inherited` и `AllowMultiple` аргументы `AttributeUsage` атрибут и как можно перечислить настраиваемых атрибутов, примененных к классу.  
+ В приведенном ниже примере демонстрируется действие аргументов `Inherited` и `AllowMultiple` по отношению к атрибуту `AttributeUsage`, а также способ перечисления настраиваемых атрибутов, примененных к классу.  
   
 ```vb  
 Imports System  
@@ -179,11 +171,11 @@ A2
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Attribute></xref:System.Attribute>   
- <xref:System.Reflection></xref:System.Reflection>   
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)   
- [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Создание настраиваемых атрибутов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Доступ к атрибутам с помощью отражения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
+ [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))

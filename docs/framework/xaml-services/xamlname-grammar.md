@@ -1,32 +1,35 @@
 ---
-title: "Грамматика XamlName | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DottedXamlName - грамматика [службы XAML]"
-  - "грамматика [службы XAML], DottedXamlName"
-  - "грамматика [службы XAML], XamlName"
-  - "имена в языке XAML [службы XAML]"
-  - "XamlName - грамматика [службы XAML]"
+title: "Грамматика XamlName"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DottedXamlName grammar [XAML Services]
+- grammar [XAML Services], DottedXamlName
+- grammar [XAML Services], XamlName
+- names in XAML [XAML Services]
+- XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-caps.latest.revision: 13
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 92327c8ff6232e64bf8b6b2a9d78e4a9eb30f3e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Грамматика XamlName
-Грамматика XamlName является определенной грамматикой, заданной в спецификации языка XAML \[MS\-XAML\], которая воспроизведена здесь для удобства.  
+# <a name="xamlname-grammar"></a>Грамматика XamlName
+Грамматика XamlName является определенной грамматикой, определенные в спецификации языка XAML [MS-XAML], которая воспроизводится здесь для удобства.  
   
-## Из спецификации XAML  
- Спецификация \[MS\-XAML\] определяет грамматику XamlName для определения набора разрешенных символьных идентификаторов, используемых для типов и свойств.  
+## <a name="from-the-xaml-specification"></a>Из спецификации XAML  
+ В спецификации [MS-XAML] определяет грамматику XamlName для определения набора разрешенных символьных идентификаторов, используемых для типов и свойств.  
   
  Строковые значения типа XamlName должны соответствовать следующей грамматике:  
   
@@ -37,13 +40,11 @@ NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter
 LetterCharacter ::= UnicodeLu | UnicodeLl | UnicodeLo | UnicodeLt | UnicodeNl   
 DecimalDigit ::= UnicodeNd   
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
-  
 ```  
   
- которая допускает следующие общие значения категорий, определенных в базе знаков Юникод  
+ Предполагается следующие общие значения категорий, как определено в базе данных символов Юникода  
   
 ```  
-  
 Lu  
 Letter, Uppercase  
 Ll  
@@ -64,7 +65,7 @@ Nl
 Number, Letter  
 ```  
   
- Язык XAML определяет вторую грамматику, DottedXamlName, которая используется для ссылок, определяемых свойством и событием, а также для вложенных членов.  Дополнительные сведения см. в разделах <xref:System.Windows.DependencyProperty> и [Общие сведения о языке XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Код XAML определяет вторую грамматику, DottedXamlName, который используется для свойства и события ссылок на, а также для вложенных элементов. Дополнительные сведения см. в разделе <xref:System.Windows.DependencyProperty> и [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
  Строковые значения типа DottedXamlName должны соответствовать следующей грамматике:  
   
@@ -72,5 +73,5 @@ Number, Letter
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## Заметки  
- Полную спецификацию см. в разделе [\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).
+## <a name="remarks"></a>Примечания  
+ Полную спецификацию в разделе [ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).

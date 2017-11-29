@@ -1,62 +1,65 @@
 ---
-title: "x:XData Intrinsic XAML Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:XData"
-  - "XData"
-  - "xXData"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:XData directive element"
-  - "XData in XAML [XAML Services]"
-  - "x:XData XAML directive element [XAML Services]"
+title: "Встроенный тип XAML x:XData"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:XData
+- XData
+- xXData
+helpviewer_keywords:
+- XAML [XAML Services], x:XData directive element
+- XData in XAML [XAML Services]
+- x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-caps.latest.revision: 17
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# x:XData Intrinsic XAML Type
-Разрешает размещение островов данных XML в пределах производства XAML.  Элементы XML внутри данного элемента `x:XData` не должны рассматриваться средствами обработки XAML как часть действующего по умолчанию пространства имен XAML или любого другого пространства имен XAML.  `x:XData` может содержать произвольный корректный XML.  
+# <a name="xxdata-intrinsic-xaml-type"></a>Встроенный тип XAML x:XData
+Обеспечивает размещение острова данных XML в пределах рабочей среды XAML. XML-элементы в `x:XData` не следует обрабатывать обработчиками XAML, как если бы они были частью пространства имен XAML по умолчанию действующего или любое другое пространство имен XAML. `x:XData`может содержать произвольный корректный XML.  
   
-## Использование элемента объекта XAML  
+## <a name="xaml-object-element-usage"></a>Использование элемента объекта XAML  
   
 ```  
 <x:XData>  
-  <elementDataRoot>  
-    [elementData]  
-  </elementDataRoot>  
+  <elementDataRoot>  
+    [elementData]  
+  </elementDataRoot>  
 </x:XData>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-values"></a>Значения XAML  
   
 |||  
 |-|-|  
-|`elementDataRoot`|Один корневой элемент вложенного острова данных.  Для большинства конечным потребителей XML, который имеет один корневой элемент, считается недопустимым.  В частности, требуется единственный корень, если предполагается, что `x:XData` будет источником данных XML для WPF или многих других технологий, которые используют источники XML для привязки данных.|  
-|`[elementData]`|Необязательный.  XML, представляющий данные XML.  Любое число элементов может содержаться в качестве данных элемента, и вложенные элементы могут содержаться в других элементах. Однако применяются общие правила XML.|  
+|`elementDataRoot`|Единственный корневой элемент вложенной области данных. Для большинства окончательной потребителей XML, который имеет один корневой считается недействительным. В частности, один корень является обязательным, если `x:XData` предназначен как источник данных XML для WPF и многих других технологий, использующих источники XML для привязки данных.|  
+|`[elementData]`|Необязательно. XML-ФАЙЛ, который представляет XML-данные. Как элемент данных может содержаться любое количество элементов и вложенные элементы, которые могут содержаться в других элементах; Однако применить общие правила XML.|  
   
-## Заметки  
- XML\-элементы в объекте `x:XData` могут повторно объявлять все возможные пространства имен и префиксы внешней XML DOM в пределах данных.  
+## <a name="remarks"></a>Примечания  
+ XML-элементы в `x:XData` объекта могут повторно объявлять все возможные пространства имен и префиксы внешней XML DOM в данных.  
   
- Программный доступ к XML\-данным и встроенному типу XAML `x:XData` осуществляется в службах XAML .NET Framework через класс <xref:System.Windows.Markup.XData>.  
+ Программный доступ к XML-данных и `x:XData` возможен встроенный тип XAML в службах XAML .NET Framework по <xref:System.Windows.Markup.XData> класса.  
   
-## Примечания об использовании WPF  
- Объект `x:XData` главным образом используется как дочерний объект поставщика <xref:System.Windows.Data.XmlDataProvider> или как дочерний объект свойства <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> \(в XAML обычно выражается в синтаксисе элемента свойства\).  
+## <a name="wpf-usage-notes"></a>Примечания об использовании WPF  
+ `x:XData` Объекта в основном используется как дочерний объект <xref:System.Windows.Data.XmlDataProvider>, то же, как дочерний объект <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> свойство (XAML, это обычно выражается в синтаксис элемента свойства).  
   
- Как правило, данные должны переопределять базовый XML\-код в острове данных таким образом, чтобы он стал новым XML\-кодом по умолчанию \(присваивается пустая строка\).  Это легче всего осуществить с островами простых данных, поскольку выражения <xref:System.Windows.Data.Binding.XPath%2A>, используемые для ссылки и привязки к данным, могут использоваться без префиксов.  В более сложных островах данных можно определить несколько префиксов для данных и использовать специальный префикс для пространства имен XML в корневом элементе.  В этом случае все ссылки выражения <xref:System.Windows.Data.Binding.XPath%2A> должны включать соответствующий префикс пространства имен.  Дополнительные сведения см. в разделе [Общие сведения о связывании данных](../../../ocs/framework/wpf/data/data-binding-overview.md).  
+ Как правило, данные должны переопределять базовое пространство имен XML в пределах острова данных для нового пространства имен XML по умолчанию (задается пустая строка). Это проще всего для простых данных о-ва поскольку <xref:System.Windows.Data.Binding.XPath%2A> выражениям, используемым для ссылки и привязки к данным можно избежать префиксов. Более сложные острова данных может определить несколько префиксов для данных и использовать специальный префикс для пространства имен XML в корне. В этом случае все <xref:System.Windows.Data.Binding.XPath%2A> ссылках в выражениях следует включить соответствующий префикс сопоставлены пространств имен. Более подробную информацию см. в разделе [Общие сведения о связывании данных](../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- С технической точки зрения `x:XData` можно использовать как содержимое любого свойства типа <xref:System.Xml.Serialization.IXmlSerializable>.  Однако, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> является единственной значимой реализацией.  
+ С технической точки зрения `x:XData` можно использовать в качестве содержимого любого свойства типа <xref:System.Xml.Serialization.IXmlSerializable>. Тем не менее <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> является только Показательным реализацией.  
   
-## См. также  
- <xref:System.Windows.Data.XmlDataProvider>   
- [Общие сведения о связывании данных](../../../ocs/framework/wpf/data/data-binding-overview.md)   
- [Привязка расширения разметки](../../../ocs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Data.XmlDataProvider>  
+ [Общие сведения о привязке данных](../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Привязка расширения разметки](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

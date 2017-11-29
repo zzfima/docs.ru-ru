@@ -1,23 +1,26 @@
 ---
-title: "Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
-Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализация прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В данном разделе создается служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которая отправляет сообщения объявления (`Hello` и `Bye`) на прокси-сервер обнаружения, вызывающие ее регистрацию и отмену регистрации на прокси-сервере обнаружения.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
+Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В данном разделе создается служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которая отправляет сообщения объявления (`Hello` и `Bye`) на прокси-сервер обнаружения, вызывающие ее регистрацию и отмену регистрации на прокси-сервере обнаружения.  
   
 ### <a name="to-define-the-service-contract"></a>Определение контракта службы  
   
@@ -33,14 +36,14 @@ caps.handback.revision: 14
   
 4.  Добавьте следующие инструкции using.  
   
-    ```  
+    ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
 5.  В файле CalculatorService.cs определите контракт службы.  
   
-    ```  
+    ```csharp  
     // Define a service contract.  
         [ServiceContract(Namespace = "http://Microsoft.Samples.Discovery")]  
         public interface ICalculatorService  
@@ -54,12 +57,11 @@ caps.handback.revision: 14
             [OperationContract]  
             double Divide(double n1, double n2);  
         }  
-  
     ```  
   
 6.  Также в файле CalculatorService.cs реализуйте контракт службы.  
   
-    ```  
+    ```csharp  
     // Service class which implements the service contract.      
         public class CalculatorService : ICalculatorService  
         {  
@@ -95,7 +97,6 @@ caps.handback.revision: 14
                 return result;  
             }  
         }  
-  
     ```  
   
 ### <a name="to-host-the-service"></a>Размещение службы  
@@ -104,18 +105,16 @@ caps.handback.revision: 14
   
 2.  Добавьте следующие инструкции using.  
   
-    ```  
+    ```csharp 
     using System;  
     using System.ServiceModel;  
     using System.ServiceModel.Description;  
     using System.ServiceModel.Discovery;  
-  
     ```  
   
 3.  В метод `Main()` добавьте следующий код.  
   
-    ```  
-  
+    ```csharp  
     // Define the base address of the service  
     Uri baseAddress = new Uri("net.tcp://localhost:9002/CalculatorService/" + Guid.NewGuid().ToString());  
     // Define the endpoint address where announcement messages will be sent  
@@ -170,7 +169,7 @@ caps.handback.revision: 14
 ## <a name="example"></a>Пример  
  Далее приведен полный код, используемый в этом подразделе.  
   
-```  
+```csharp  
 // CalculatorService.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -231,10 +230,9 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -295,10 +293,8 @@ namespace Microsoft.Samples.Discovery
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>См. также  
- [Обнаружение WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)   
- [Практическое руководство: реализация обнаружения прокси-сервера](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Практическое руководство: реализации клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [Обнаружение WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [Как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Как: реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

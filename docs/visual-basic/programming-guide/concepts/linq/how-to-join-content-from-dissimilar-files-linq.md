@@ -1,37 +1,29 @@
 ---
-title: "Практическое руководство: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00a3e776afbed3fd87a1f91eb83ada5d505aadfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Практическое руководство: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
-В этом примере показано, как объединить данные из двух файлов с разделителями запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот метод может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла в новый файл имеет другой формат. Можно изменить способ работы с любым типом структурированного текста.  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Как: объединение содержимого из файлов разных форматов (LINQ) (Visual Basic)
+В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
   
-### <a name="to-create-the-data-files"></a>Для создания файлов данных  
+### <a name="to-create-the-data-files"></a>Создание файлов данных  
   
-1.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папку проекта. Этот файл представляет данные электронной таблицы. Столбец 1 является Идентификатором студента, а столбцы со 2 по 5 отображают результаты тестирования.  
+1.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта. Этот файл представляет данные электронной таблицы. Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ ms.lasthandoff: 03/13/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папку проекта. Этот файл представляет электронную таблицу, содержащую фамилии учащегося, имя и учащихся.  
+2.  Скопируйте следующие строки в файл с именем names.csv и сохраните его в папке проекта. Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -135,8 +127,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

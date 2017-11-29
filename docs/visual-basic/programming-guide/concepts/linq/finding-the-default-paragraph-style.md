@@ -1,38 +1,34 @@
 ---
-title: "Поиск стиля абзаца по умолчанию (Visual Basic) | Документы Microsoft"
+title: "Поиск стиля абзаца по умолчанию (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 041e99f4fd70008208a8f661f6763159ac7f4479
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: cd22a545f8162352050ba698717fb0ceb3a72cfc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Поиск стиля абзаца по умолчанию (Visual Basic)
-Первая задача в управление данными в учебнике документа WordprocessingML заключается в поиске стиля абзацев по умолчанию в документе.  
+Первая задача в учебнике "Обработка информации в документе WordprocessingML" заключается в поиске стиля абзацев по умолчанию в документе.  
   
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В следующем примере открывается документ Office Open XML WordprocessingML, осуществляется поиск секций с документом и стилями в пакете, а затем выполняется запрос, который находит имя стиля по умолчанию. Сведения о пакетах документа Office Open XML и они состоят из частей см. в разделе [сведения Office Open XML документов WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+ В следующем примере открывается документ Office Open XML WordprocessingML, осуществляется поиск секций с документом и стилями в пакете, а затем выполняется запрос, который находит имя стиля по умолчанию. Сведения о пакетах документа Office Open XML и частей, они состоят из см. в разделе [сведения об Office Open XML документов WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
- Этот запрос находит узел с именем `w:style`, который имеет атрибут `w:type` со значением «paragraph», а также имеет атрибут `w:default` со значением «1». Поскольку будет существовать только один узел XML со следующими атрибутами, запрос использует <xref:System.Linq.Enumerable.First%2A?displayProperty=fullName>оператор для преобразования коллекции в одноэлементный.</xref:System.Linq.Enumerable.First%2A?displayProperty=fullName> Затем он возвращает значение атрибута `w:styleId`.  
+ Этот запрос находит узел с именем `w:style`, который имеет атрибут `w:type` со значением «paragraph», а также имеет атрибут `w:default` со значением «1». Так как XML-узел с этими атрибутами будет только один, запрос использует оператор <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType>, чтобы преобразовать коллекцию в один элемент. Затем он возвращает значение атрибута `w:styleId`.  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ### <a name="code"></a>Код  
   
@@ -100,9 +96,9 @@ The default style is: Normal
 ```  
   
 ## <a name="next-steps"></a>Дальнейшие действия  
- В следующем примере создается похожий запрос, который ищет все абзацы в документе и их стили:  
+ В следующем примере будет создан похожий запрос, который ищет все абзацы в документе и их стили:  
   
 -   [Извлечение абзацев и стилей (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+ [Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

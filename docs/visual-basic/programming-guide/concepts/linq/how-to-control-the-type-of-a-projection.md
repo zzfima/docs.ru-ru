@@ -1,34 +1,30 @@
 ---
-title: "Практическое руководство: управление типом проекции (Visual Basic) | Документы Microsoft"
+title: "Как: возможности управлять типом проекции (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1dd461b51c661121497f9c641d64124f8aee44cb
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 32c2c747fd2f1137fbf2ead28886669c041d065c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Практическое руководство: управление типом проекции (Visual Basic)
-Проекция - это процесс, включающий выбор одного набора данных, его фильтрацию, изменение его формы и даже изменение его типа. Почти все выражения запросов выполняют операции проекции. Для вычисления почти всех выражений, представленных в этом разделе <xref:System.Collections.Generic.IEnumerable%601>из <xref:System.Xml.Linq.XElement>, но можно управлять типом проекции для создания коллекций других типов.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> В настоящем разделе показано, как это делается.  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Как: возможности управлять типом проекции (Visual Basic)
+Проекция - это процесс, включающий выбор одного набора данных, его фильтрацию, изменение его формы и даже изменение его типа. Почти все выражения запросов выполняют операции проекции. Результатом вычисления почти всех выражений, представленных в этом разделе, должен быть элемент <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, но пользователь может управлять типом проекции для создания коллекций других типов. В настоящем разделе показано, как это делается.  
   
 ## <a name="example"></a>Пример  
- В следующем примере определяется новый тип - `Customer`. Затем выражение запроса создает новые экземпляры `Customer` в предложении `Select`. В результате тип выражения запроса для <xref:System.Collections.Generic.IEnumerable%601>из `Customer`.</xref:System.Collections.Generic.IEnumerable%601>  
+ В следующем примере определяется новый тип - `Customer`. Затем выражение запроса создает новые экземпляры `Customer` в предложении `Select`. В результате тип выражения запроса определяется как <xref:System.Collections.Generic.IEnumerable%601> `Customer`.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: Customers и Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -88,7 +84,6 @@ Sub Main()
         Console.WriteLine(cust)  
     Next  
 End Sub  
-  
 ```  
   
  Этот код выводит следующие результаты:  
@@ -101,5 +96,5 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
  [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

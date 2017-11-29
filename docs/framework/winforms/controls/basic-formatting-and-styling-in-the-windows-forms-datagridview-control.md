@@ -1,70 +1,71 @@
 ---
-title: "Базовое форматирование и оформление элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "таблицы данных, форматирование"
-  - "DataGridView - элемент управления [Windows Forms], форматирование и применение стилей"
+title: "Базовое форматирование и оформление элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], formatting and styling
+- data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Базовое форматирование и оформление элемента управления DataGridView в Windows Forms
-Элемент управления `DataGridView` упрощает определение основного внешнего вида ячеек и форматирования отображения значений ячеек.  Можно задать внешний вид и стили форматирования для отдельных ячеек, для ячеек в определенных столбцах и строках, а также для всех ячеек в элементе управления, настроив нужным образом значения свойств объектов `DataGridViewCellStyle`, доступ к которым осуществляется через различные свойства элемента управления `DataGridView`.  Кроме того, путем обработки события `CellFormatting` можно динамически менять эти стили в зависимости, например, от значения ячейки.  
+# <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Базовое форматирование и оформление элемента управления DataGridView в Windows Forms
+`DataGridView` Управления упрощает определение основного внешнего вида ячеек и форматирования отображения значений ячеек. Можно задать внешний вид и стили форматирования для отдельных ячеек, для ячеек в определенных столбцах и строках или для всех ячеек в элементе управления, задав свойства `DataGridViewCellStyle` объектов, доступных через различные `DataGridView` свойств элемента управления. Кроме того, можно изменить эти стили, динамически на основе таких факторов значение ячейки, обрабатывая `CellFormatting` событий.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
- Описание настройки свойств `DataGridView`, определяющих внешний вид границы элемента управления и разделительных линий между ячейками.  
+ Описывает, как задать `DataGridView` свойства, определяющие внешний вид границы элемента управления и разделительных линий между ячейками.  
   
  [Стили ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- Описание класса `DataGridViewCellStyle` и влияния свойств этого типа на определение внешнего вида ячеек в элементе управления.  
+ Описывает `DataGridViewCellStyle` класса и взаимодействие свойств этого типа, чтобы определить способ отображения ячеек в элементе управления.  
   
  [Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- Описание использования свойств `DataGridViewCellStyle` для определения внешнего вида по умолчанию ячеек в определенных строках и столбцах, а также во всем элементе управления.  
+ Описывает использование `DataGridViewCellStyle` свойства, определяющие внешний вид ячеек по умолчанию в определенных строках и столбцах и всего элемента управления.  
   
  [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
- Описание форматирования отображения значений ячеек с помощью свойств `DataGridViewCellStyle`.  
+ Описание форматирования отображения значений ячеек с помощью `DataGridViewCellStyle` свойства.  
   
  [Практическое руководство. Настройка шрифтов и цветов в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
- Описание использования свойства `DefaultCellStyle` для настройки основных характеристик отображения для всех ячеек в элементе управления.  
+ Описывает использование `DefaultCellStyle` свойство, чтобы задать основные отобразить характеристики всех ячеек в элементе управления.  
   
  [Практическое руководство. Настройка формата отображения четных строк для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
- Описание использования в элементе управления эффекта бухгалтерской книги, при котором чередующиеся строки отображаются по\-разному.  
+ Описывает, как для создания эффекта подобном бухгалтерским книгам: в элементе управления с помощью чередующихся строк, которые отображаются по-разному.  
   
  [Практическое руководство. Применение шаблонов строк для настройки отображения строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
- Описание использования свойства `RowTemplate` для настройки свойств строки, которые будут использоваться для всех строк элемента управления.  
+ Описывает использование `RowTemplate` свойства для настройки свойств строки, которые будут использоваться для всех строк в элементе управления.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.DataGridView>  
- Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
+ Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
- Справочная документация по классу <xref:System.Windows.Forms.DataGridViewCellStyle>.  
+ Содержит справочную документацию по <xref:System.Windows.Forms.DataGridViewCellStyle> класса.  
   
  <xref:System.Windows.Forms.DataGridView.CellFormatting>  
- Справочная документация по событию <xref:System.Windows.Forms.DataGridView.CellFormatting>.  
+ Содержит справочную документацию по <xref:System.Windows.Forms.DataGridView.CellFormatting> событий.  
   
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
- Справочная документация по свойству <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>.  
+ Содержит справочную документацию по <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> свойство.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Настройка элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- Список разделов, в которых описывается пользовательская окраска ячеек и строк <xref:System.Windows.Forms.DataGridView> и создание производных типов ячеек, строк и столбцов.  
+ Разделы, описывающие пользовательскую отрисовку ячеек и строк <xref:System.Windows.Forms.DataGridView>, а также создание производных ячеек, столбцов и типов строк.  
   
  [Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Разделы, описывающие часто используемые свойства ячеек, строк и столбцов.  
+ Содержит разделы, описывающие часто используемые свойства ячеек, строк и столбцов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

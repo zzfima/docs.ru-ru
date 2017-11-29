@@ -1,25 +1,28 @@
 ---
-title: "AppDomainInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AppDomainInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97818cf1fc6fa1c59b8b0eeaab69a73b21360151
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# AppDomainInfo
+# <a name="appdomaininfo"></a>AppDomainInfo
 Сведения о домене приложения  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class AppDomainInfo  
@@ -39,98 +42,98 @@ class AppDomainInfo
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс AppDomainInfo не определяет никакие методы.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс AppDomainInfo имеет следующие свойства.  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Идентификатор домена приложения.  
   
-### IsDefault  
+### <a name="isdefault"></a>IsDefault  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Указывает, является ли домен приложения доменом приложения, используемым по умолчанию.  
   
-### LogMalformedMessages  
+### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Тип данных: boolean  
   
- Тип доступа: чтение\/запись  
+ Тип доступа: чтение/запись  
   
  Значение, указывающее, заносятся ли в журнал неправильные сообщения.  
   
-### LogMessagesAtServiceLevel  
+### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Тип данных: boolean  
   
- Тип доступа: чтение\/запись  
+ Тип доступа: чтение/запись  
   
- Значение, указывающее, трассируются ли сообщения на уровне службы \(перед шифрованием и преобразованиями, связанными с транспортом\).  
+ Значение, указывающее, трассируются ли сообщения на уровне службы (перед шифрованием и преобразованиями, связанными с транспортом).  
   
-### LogMessagesAtTransportLevel  
+### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Тип данных: boolean  
   
- Тип доступа: чтение\/запись  
+ Тип доступа: чтение/запись  
   
  Значение, указывающее, трассируются ли сообщения на уровне транспорта.  
   
-### MessageLoggingTraceListeners  
+### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
  Тип данных: массив TraceListener  
   
  Тип доступа: только для чтения  
   
  Коллекция прослушивателей трассировки, которые ожидают передачи данных источнику трассировки System.Wmi.MessageLogging.  
   
-### Name  
+### <a name="name"></a>Имя  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя домена приложения.  
   
-### PerformanceCounters  
+### <a name="performancecounters"></a>PerformanceCounters  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Область активных счетчиков производительности в домене приложения.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Идентификатор процесса.  
   
-### ServiceConfigPath  
+### <a name="serviceconfigpath"></a>ServiceConfigPath  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Путь к конфигурации службы.  
   
-### TraceLevel  
+### <a name="tracelevel"></a>TraceLevel  
  Тип данных: string  
   
- Тип доступа: чтение\/запись  
+ Тип доступа: чтение/запись  
   
  Уровень трассировки источника трассировки System.Wmi.  
   
-### ServiceModelTraceListeners  
+### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
  Тип данных: массив TraceListener  
   
  Тип доступа: только для чтения  
   
  Коллекция прослушивателей, ожидающих передачи данных от источника трассировки System.ServiceModel.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|

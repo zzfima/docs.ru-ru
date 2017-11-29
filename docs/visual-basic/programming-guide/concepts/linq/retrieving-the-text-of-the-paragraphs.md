@@ -1,44 +1,40 @@
 ---
-title: "Извлечение текста абзацев (Visual Basic) | Документы Microsoft"
+title: "Извлечение текста абзацев (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 147c8e60e44fd71869df84cbee9836213d96c0fd
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 492fc0dffd007f0ccdb7454c62e86cac753ca06b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Извлечение текста абзацев (Visual Basic)
 Этот пример основан на предыдущем примере [извлечение абзацев и их стили (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). В этом примере текст каждого абзаца получается в строку.  
   
- Чтобы получить текст, в этом примере добавляется дополнительный запрос, который последовательно проходит по коллекции анонимных типов и проецирует новую коллекцию анонимного типа с добавлением нового члена, `Text`. Он использует <xref:System.Linq.Enumerable.Aggregate%2A>стандартного оператора запроса для объединения нескольких строк в одну строку.</xref:System.Linq.Enumerable.Aggregate%2A>  
+ Чтобы получить текст, в этом примере добавляется дополнительный запрос, который последовательно проходит по коллекции анонимных типов и проецирует новую коллекцию анонимного типа с добавлением нового члена, `Text`. Он использует стандартный оператор запроса <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну.  
   
  Этот способ (т. е. сначала проецирование в коллекцию анонимного типа, затем использование этой коллекции для проекции в новую коллекцию анонимного типа) широко распространен и полезен. Этот запрос не удалось бы создать без создания проекции к первому анонимному типу. Однако из-за применения неспешных вычислений это не требует много дополнительных вычислительных мощностей. Происходит создание большего количества кратковременных объектов в куче, однако производительность при этом снижается незначительно.  
   
  Конечно, было бы возможным создать единичный запрос, который содержит функциональные возможности получать абзацы, стиль и текст каждого абзаца. Однако часто полезно разбить более сложный запрос на несколько запросов, поскольку при этом результирующий код выглядит более модульным и легким для поддержки. Более того, если потребуется повторно использовать часть запроса, будет легче выполнить оптимизацию кода.  
   
- Эти запросы, которые соединены вместе, используйте модель обработки, рассматриваются в разделе [учебника: отложенного выполнения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
+ Эти запросы, которые соединены вместе, использовать модель обработки, которая рассматривается в разделе [учебника: отложенного выполнения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).  
   
 ## <a name="example"></a>Пример  
  В этом примере выполняется обработка документа WordprocessingML, определение узла элемента, имени стиля и текста каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Новый запрос выявляется в комментариях в нижеприведенном коде.  
   
- Инструкции по созданию исходного документа для данного примера см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Инструкции по созданию исходного документа для этого примера см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -129,7 +125,7 @@ Module Module1
 End Module  
 ```  
   
- В этом примере выводятся следующие выходные данные при применении к документу, описанному в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ В этом примере выводятся следующие выходные данные при применении к документу, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -150,10 +146,10 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="next-steps"></a>Дальнейшие действия  
- В следующем примере показано, как использовать метод расширения вместо <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну строку.</xref:System.Linq.Enumerable.Aggregate%2A>  
+ В следующем примере показано, как использовать метод расширений вместо <xref:System.Linq.Enumerable.Aggregate%2A>, чтобы объединить несколько строк в одну.  
   
--   [Оптимизация кода с помощью метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+-   [Рефакторинг с использованием метода расширения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [Учебник: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [Отложенное выполнение и отложенное вычисление в LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

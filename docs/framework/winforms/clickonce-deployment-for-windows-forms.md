@@ -1,80 +1,81 @@
 ---
-title: "ClickOnce Deployment for Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ClickOnce deployment [Windows Forms]"
-  - "Windows Forms, ClickOnce deployment"
-  - "walkthroughs [Windows Forms], ClickOnce deployment"
+title: "Развертывание ClickOnce для форм Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ClickOnce deployment [Windows Forms]
+- Windows Forms, ClickOnce deployment
+- walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 550ef4951cc7d5b0a9b25c5e7d038588b0a911f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# ClickOnce Deployment for Windows Forms
+# <a name="clickonce-deployment-for-windows-forms"></a>Развертывание ClickOnce для форм Windows Forms
 В приведенных ниже разделах описывается технология [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], предназначенная для простого развертывания приложений Windows Forms на клиентских компьютерах.  
   
-## Связанные подразделы  
- [Выбор стратегии развертывания ClickOnce](../Topic/Choosing%20a%20ClickOnce%20Deployment%20Strategy.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Выбор стратегии развертывания ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
  Приводятся несколько вариантов развертывания приложений [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [Выбор стратегии обновления ClickOnce](../Topic/Choosing%20a%20ClickOnce%20Update%20Strategy.md)  
+ [Выбор стратегии обновления ClickOnce](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
  Приводятся несколько вариантов обновления приложений [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [Защита приложений ClickOnce](../Topic/Securing%20ClickOnce%20Applications.md)  
+ [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)  
  Объясняется влияние развертывания [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] на безопасность.  
   
- [Устранение неполадок развертывания ClickOnce](../Topic/Troubleshooting%20ClickOnce%20Deployments.md)  
+ [Устранение неполадок развертывания ClickOnce](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
  Описываются различные проблемы, которые могут возникнуть при развертывании приложений [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], и приводится список сообщений об ошибках верхнего уровня, создаваемых при развертывании [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [ClickOnce и параметры приложения](../Topic/ClickOnce%20and%20Application%20Settings.md)  
+ [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings)  
  Описывается, как развертывание [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] работает с параметрами приложения, в которых хранятся настройки приложения и пользователя для будущего извлечения.  
   
- [Общие сведения о развертывании доверенных приложений](../Topic/Trusted%20Application%20Deployment%20Overview.md)  
+ [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview)  
  Описывается средство [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], позволяющее надежным приложениям выполняться на клиентских компьютерах с повышенным уровнем разрешений.  
   
- [ClickOnce и технология Authenticode](../Topic/ClickOnce%20and%20Authenticode.md)  
+ [ClickOnce и технология Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Описывается использование технологии Authenticode при развертывании надежных приложений.  
   
- [Разбор примера: развертывание вручную приложения ClickOnce](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)  
+ [Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Демонстрируется применение командной строки и средств SDK для развертывания приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] без использования Visual Studio.  
   
- [Инструкции: добавление надежного издателя на клиентский компьютер для приложений ClickOnce](../Topic/How%20to:%20Add%20a%20Trusted%20Publisher%20to%20a%20Client%20Computer%20for%20ClickOnce%20Applications.md)  
+ [Инструкции: добавление надежного издателя на клиентский компьютер для приложений ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Демонстрируется однократная настройка клиентских компьютеров, необходимая для развертывания надежных приложений.  
   
- [Практическое руководство. Задание альтернативного местоположения для обновлений развертывания](../Topic/How%20to:%20Specify%20an%20Alternate%20Location%20for%20Deployment%20Updates.md)  
+ [Практическое руководство. Задание альтернативного местоположения для обновлений развертывания](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Демонстрируется настройка приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] с помощью средств SDK с целью проверки другого расположения на предмет наличия новых версий приложения.  
   
- [Пошаговое руководство. Загрузка сборок по требованию с помощью API развертывания ClickOnce](../Topic/Walkthrough:%20Downloading%20Assemblies%20on%20Demand%20with%20the%20ClickOnce%20Deployment%20API.md)  
+ [Пошаговое руководство. Загрузка сборок по требованию с помощью API развертывания ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Демонстрируется использование вызовов API для получения сборки при первой попытке приложения загрузить ее.  
   
- [Практическое руководство. Извлечение сведений строки запроса в интернет\-приложении ClickOnce](../Topic/How%20to:%20Retrieve%20Query%20String%20Information%20in%20an%20Online%20ClickOnce%20Application.md)  
- Демонстрируется извлечение параметров, используемых для запуска приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], из URL\-адреса.  
+ [Практическое руководство. Извлечение сведений строки запроса в интернет-приложении ClickOnce](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ Демонстрируется извлечение параметров, используемых для запуска приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], из URL-адреса.  
   
- [Общие сведения о кэше ClickOnce](../Topic/ClickOnce%20Cache%20Overview.md)  
+ [Общие сведения о кэше ClickOnce](/visualstudio/deployment/clickonce-cache-overview)  
  Описывается кэш, используемый для хранения приложений [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] на локальном компьютере.  
   
- [Доступ к локальным и удаленным данным в приложениях ClickOnce](../Topic/Accessing%20Local%20and%20Remote%20Data%20in%20ClickOnce%20Applications.md)  
+ [Доступ к локальным и удаленным данным в приложениях ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  Описывается, как получить доступ к локальным файлам данных и удаленным источникам данных из приложения [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [Практическое руководство. Включение файла данных в приложение ClickOnce](../Topic/How%20to:%20Include%20a%20Data%20File%20in%20a%20ClickOnce%20Application.md)  
+ [Практическое руководство. Включение файла данных в приложение ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Демонстрируется, как пометить файл так, чтобы он был доступен в каталоге данных [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
-## См. также  
- [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)   
- [Публикация ClickOnce\-приложений](../Topic/Publishing%20ClickOnce%20Applications.md)   
- [Построение ClickOnce\-приложений из командной строки](../Topic/Building%20ClickOnce%20Applications%20from%20the%20Command%20Line.md)   
- [Отладка ClickOnce\-приложений, использующих System.Deployment.Application](../Topic/Debugging%20ClickOnce%20Applications%20That%20Use%20System.Deployment.Application.md)   
- [Развертывание компонентов COM с помощью ClickOnce](../Topic/Deploying%20COM%20Components%20with%20ClickOnce.md)   
- [Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](../Topic/How%20to:%20Publish%20a%20ClickOnce%20Application%20using%20the%20Publish%20Wizard.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
+ [Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)  
+ [Построение ClickOnce-приложений из командной строки](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
+ [Отладка ClickOnce-приложений, использующих System.Deployment.Application](http://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
+ [Развертывание компонентов COM с помощью ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
+ [Практическое руководство. Публикация приложения ClickOnce с помощью мастера публикации](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

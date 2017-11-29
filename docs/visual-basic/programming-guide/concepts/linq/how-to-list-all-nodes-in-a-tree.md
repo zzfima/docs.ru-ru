@@ -1,31 +1,27 @@
 ---
-title: "Практическое руководство: список всех узлов дерева (Visual Basic) | Документы Microsoft"
+title: "Как: список всех узлов дерева (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Практическое руководство: список всех узлов дерева (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Как: список всех узлов дерева (Visual Basic)
 Иногда нужно вывести список всех узлов дерева. Это полезно, если требуется узнать, как метод или свойство повлияли на дерево. Одним из подходов для вывода списка всех узлов в текстовом формате является создание выражения XPath, которое точно определяет каждый конкретный узел дерева.  
   
- Не слишком удобно выполнять выражения XPath с помощью [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Выражения XPath имеют более низкую производительность, чем запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], к тому же запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] являются более мощными. Однако для определения узлов в XML-дереве выражения XPath подходят хорошо.  
+ Не слишком удобно выполнять выражения XPath с помощью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Выражения XPath имеют более низкую производительность, чем запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], к тому же запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] являются более мощными. Однако для определения узлов в XML-дереве выражения XPath подходят хорошо.  
   
 ## <a name="example"></a>Пример  
  В этом примере показана функция с именем `GetXPath`, создающая конкретное выражение XPath для каждого узла XML-дерева. Она формирует соответствующие выражения XPath, даже если узлы находятся в пространстве имен. Выражения XPath создаются с помощью префиксов пространства имен.  
@@ -245,7 +241,7 @@ End Module
   
  В этом примере выводятся следующие данные:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

@@ -1,67 +1,70 @@
 ---
-title: "Стили и шаблоны элемента CheckBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CheckBox [WPF], стили и шаблоны"
-  - "ControlTemplate [WPF], CheckBox"
-  - "части [WPF], CheckBox"
-  - "состояния [WPF], CheckBox"
-  - "стили [WPF], CheckBox"
-  - "шаблоны [WPF], CheckBox"
+title: "Стили и шаблоны элемента CheckBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], CheckBox
+- templates [WPF], CheckBox
+- parts [WPF], CheckBox
+- ControlTemplate [WPF], CheckBox
+- CheckBox [WPF], styles and templates
+- styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c901d710e96cd111104b9fef2219b157377adc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента CheckBox
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.CheckBox>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="checkbox-styles-and-templates"></a>Стили и шаблоны элемента CheckBox
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.CheckBox> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Части CheckBox  
- Элемент управления <xref:System.Windows.Controls.CheckBox> не имеет именованных частей.  
+## <a name="checkbox-parts"></a>Флажок частей  
+ <xref:System.Windows.Controls.CheckBox> Управления не имеет именованных частей.  
   
-## Состояния CheckBox  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.CheckBox>.  
+## <a name="checkbox-states"></a>Состояния CheckBox  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.CheckBox> элемента управления.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
-|---------------------|--------------------------|--------------|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
+|----------------------|---------------------------|-----------------|  
+|Норм.|CommonStates|Состояние по умолчанию.|  
 |MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
-|Pressed|CommonStates|Элемент управления нажат.|  
-|Disabled|CommonStates|Элемент управления отключен.|  
+|Нажато|CommonStates|Элемент управления нажат.|  
+|Отключено|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления не имеет фокуса.|  
-|Установлен|CheckStates|Параметр <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `true`.|  
-|Снят|CheckStates|Параметр <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `false`.|  
-|Indeterminate|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> равно `true`, а <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> равно `null`.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
+|Помечено|CheckStates|Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `true`.|  
+|флажок снят|CheckStates|Свойство <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> имеет значение `false`.|  
+|Неопределенный|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>— `true`, и <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> — `null`.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
   
-## Пример шаблона ControlTemplate CheckBox  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.CheckBox>.  
+## <a name="checkbox-controltemplate-example"></a>Пример шаблона элемента управления CheckBox  
+ В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.CheckBox> элемента управления.  
   
- [!code-xml[ControlTemplateExamples#CheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/checkbox.xaml#checkbox)]  
+ [!code-xaml[ControlTemplateExamples#CheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/checkbox.xaml#checkbox)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ В предыдущем примере используется один или несколько из следующих ресурсов.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

@@ -1,185 +1,188 @@
 ---
-title: "Общие сведения о закраске сплошным цветом и градиентом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кисти, закрашивание с градиентом"
-  - "кисти, закраска сплошным цветом"
-  - "градиенты, рисование с помощью"
-  - "закрашивание с градиентом"
-  - "закраска сплошным цветом"
-  - "сплошной цвет, рисование с помощью"
+title: "Общие сведения о закраске сплошным цветом и градиентом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- solid colors [WPF], painting with
+- painting with gradients [WPF]
+- gradients [WPF], painting with
+- brushes [WPF], painting with solid colors
+- brushes [WPF], painting with gradients
+- painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f26ab394ea94b27257b6d0b662f3a78f3e68ca99
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о закраске сплошным цветом и градиентом
-В этом разделе описано использование объектов <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush> для закраски сплошным цветом, линейным градиентом и радиальным градиентом.  
+# <a name="painting-with-solid-colors-and-gradients-overview"></a>Общие сведения о закраске сплошным цветом и градиентом
+В этом разделе описывается использование <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, и <xref:System.Windows.Media.RadialGradientBrush> объектов для рисования сплошным цветом, линейным градиентом и радиального градиента.  
   
-   
+
   
 <a name="solidcolor"></a>   
-## Закраска области сплошным цветом  
- Одной из наиболее общих операций в любой платформе является закраска области сплошным <xref:System.Windows.Media.Color>.  Для выполнения этой задачи [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет класс <xref:System.Windows.Media.SolidColorBrush>.  В следующих разделах описаны различные способы закраски с помощью <xref:System.Windows.Media.SolidColorBrush>.  
+## <a name="painting-an-area-with-a-solid-color"></a>Закрашивание области сплошным цветом  
+ Одним из наиболее распространенных операций на любой платформе является закраска области сплошным <xref:System.Windows.Media.Color>. Для выполнения этой задачи [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет <xref:System.Windows.Media.SolidColorBrush> класса. В следующих разделах описаны различные способы закраски с <xref:System.Windows.Media.SolidColorBrush>.  
   
 <a name="solidcolorinxaml"></a>   
-### Использование SolidColorBrush в "XAML"  
- Для закраски области сплошным цветом в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] воспользуйтесь одним из следующих параметров.  
+### <a name="using-a-solidcolorbrush-in-xaml"></a>Использование SolidColorBrush в XAML  
+ Чтобы закрасить область сплошным цветом в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте один из следующих вариантов.  
   
--   Выберите стандартную сплошную цветную кисть по имени.  Например, можно установить для <xref:System.Windows.Controls.Control.Background%2A> кнопки значение "Red" или "MediumBlue".  Список других стандартных сплошных цветных кистей содержатся в разделе статических свойств класса <xref:System.Windows.Media.Brushes>.  Пример.  
+-   Выберите стандартную сплошную цветную кисть по имени.  Например, можно задать кнопки <xref:System.Windows.Controls.Control.Background%2A> «Red» или «MediumBlue».  Список других предварительно сплошные цветные кисти, в разделе статических свойств <xref:System.Windows.Media.Brushes> класса. Пример.  
   
-     [!code-xml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Выберите цвет из 32\-разрядной цветовой палитры, указав количество красного, зеленого и синего компонентов для объединения в один сплошной цвет.  Формат для указания цвета из 32\-разрядной палитры имеет вид "*\#RRGGBB*", где *RR* — две цифры шестнадцатеричного числа, задающего относительный объем красного цвета, *GG* задает объем зеленого, а *BB* задает объем синего цвета.  Кроме того, цвет может быть указан в виде "\#*AARRGGBB*",где *AA* указывает значение *альфа*, или прозрачность, цвета.  Этот подход позволяет создавать частично прозрачные цвета.  В следующем примере для <xref:System.Windows.Controls.Control.Background%2A> элемента управления<xref:System.Windows.Controls.Button> устанавливается значение полностью непрозрачного красного цвета с помощью шестнадцатеричного формата.  
+-   Выберите цвет из 32-разрядной цветовой палитры, указав насыщенность красной, зеленой и синей составляющих для смешения в сплошной цвет.  Формат для указания цвета из 32-разрядной палитры — *#rrggbb*, где *rr* — шестнадцатеричное число из двух цифр, представляющее относительное количество красного цвета, *gg* — зеленого, *bb* — синего.  Кроме того, цвет можно указать в формате #*aarrggbb*, где *aa* представляет *альфа-канал*, или прозрачность, цвета. Этот подход позволяет создавать частично прозрачные цвета.  В следующем примере <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button> устанавливается в полностью непрозрачный красный, с помощью шестнадцатеричного формата.  
   
-     [!code-xml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Используйте синтаксис тега свойства для описания <xref:System.Windows.Media.SolidColorBrush>.  Этот синтаксис является более подробным, но он позволяет указать дополнительные параметры, такие как непрозрачность кисти.  В следующем примере для свойств <xref:System.Windows.Controls.Control.Background%2A> двух элементов <xref:System.Windows.Controls.Button> устанавливается значение полностью непрозрачного красного.  Цвет первой кисти описан с использованием имени стандартного цвета.  Цвет второй кисти описаны с помощью шестнадцатеричного формата.  
+-   Используйте синтаксис тега свойства для описания <xref:System.Windows.Media.SolidColorBrush>. Этот синтаксис требует более подробного описания, но позволяет указать дополнительные параметры, например непрозрачность кисти. В следующем примере <xref:System.Windows.Controls.Control.Background%2A> свойства двух <xref:System.Windows.Controls.Button> элементам присваивается значение полностью непрозрачного красного цвета. Цвет первой кисти описан с использованием имени стандартного цвета. Цвет второй кисти описан с помощью шестнадцатеричного формата.  
   
-     [!code-xml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
 <a name="solidcolorsincode"></a>   
-### Закраска с помощью SolidColorBrush в коде  
- Для закраски области сплошным цветом в коде воспользуйтесь одним из следующих параметров.  
+### <a name="painting-with-a-solidcolorbrush-in-code"></a>Закрашивание с использованием SolidColorBrush в коде  
+ Чтобы закрасить область сплошным цветом в коде, используйте один из следующих вариантов.  
   
--   Воспользуйтесь одной из стандартных кистей, предоставленных классом <xref:System.Windows.Media.Brushes>.  В следующем примере свойство <xref:System.Windows.Controls.Control.Background%2A> элемента управления <xref:System.Windows.Controls.Button> установлено в значение <xref:System.Windows.Media.Brushes.Red%2A>.  
+-   Используйте один из стандартных кистей, предоставленных <xref:System.Windows.Media.Brushes> класса. В следующем примере <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button> равно <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Создайте <xref:System.Windows.Media.SolidColorBrush> и задайте его свойство <xref:System.Windows.Media.SolidColorBrush.Color%2A> с помощью структуры <xref:System.Windows.Media.Color>.  Можно использовать стандартный цвет из класса <xref:System.Windows.Media.Colors> или можно создать <xref:System.Windows.Media.Color> с помощью статического метода <xref:System.Windows.Media.Color.FromArgb%2A>.  
+-   Создание <xref:System.Windows.Media.SolidColorBrush> и задайте его <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойства с помощью <xref:System.Windows.Media.Color> структуры. Можно использовать стандартный цвет в <xref:System.Windows.Media.Colors> класса или создать <xref:System.Windows.Media.Color> с помощью статического <xref:System.Windows.Media.Color.FromArgb%2A> метод.  
   
-     В следующем примере показано, как установить свойство <xref:System.Windows.Media.SolidColorBrush.Color%2A> класса <xref:System.Windows.Media.SolidColorBrush> с использованием стандартного цвета.  
+     Следующий пример показывает, как задать <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойство <xref:System.Windows.Media.SolidColorBrush> с помощью стандартных цветов.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]  
   
- Статический <xref:System.Windows.Media.Color.FromArgb%2A> позволяет указать значения [альфа](GTMT), красной, зеленой и синей составляющих цвета.  Обычно диапазон для каждого из этих значений составляет от 0 до 255.  Например, значение [альфа](GTMT), равное 0, указывает, что цвет является полностью прозрачным, в то время как значение 255 указывает на полностью непрозрачный цвет.  Аналогично, значение красного, равное 0, указывает, что цвет не имеет красной составляющей, в то время как значение 255 указывает на то, что цвет имеет максимальный объем красной составляющей.  В следующем примере цвет кисти цвета описан путем указания значений альфа, красной, зеленой и синей составляющих.  
+ Статический <xref:System.Windows.Media.Color.FromArgb%2A> дает возможность указать значения альфа, красного, зеленого и синего цвета. Обычный диапазон для этих значений — от 0 до 255. Значение 0 указывает, что цвет полностью прозрачен, а значение 255 — что он полностью непрозрачен. Аналогично значение 0 для красного цвета указывает, что цвет не имеет красной составляющей, а значение 255 означает, что цвет имеет максимальную насыщенность красной составляющей.  В следующем примере цвет кисти описан путем указания значения альфа и значений красного, зеленого и синего цветов.  
   
  [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]  
   
- Дополнительные способы задания цвета содержатся в разделе с описанием <xref:System.Windows.Media.Color>.  
+ Другие способы задания цвета в разделе <xref:System.Windows.Media.Color> справочном разделе.  
   
 <a name="gradient"></a>   
-## Закраска области градиентом  
- Кисть градиента закрашивает область несколькими цветами, сливающимися друг с другом вдоль оси.  Можно использовать их для создания впечатления света и тени, что представляет элемент управления в трехмерном виде.  Их также можно использовать для имитации стекла, хрома, воды и других гладких поверхностей.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет два типа градиентных кистей: <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>.  
+## <a name="painting-an-area-with-a-gradient"></a>Закрашивание области с помощью градиента  
+ Градиентные кисти закрашивают область разными цветами, которые переходят из одного в другой по некоторой оси. Их можно использовать для создания картины света и теней, которая придает элементам управления трехмерный вид. Их также можно использовать для имитации стекла, хрома, воды и других гладких поверхностей.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]предоставляет два типа градиентных кистей: <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
-## Линейный градиент  
- <xref:System.Windows.Media.LinearGradientBrush> закрашивает область градиентом, определенным вдоль линии, *оси градиента*.  Необходимо указать цвета градиента и их расположение вдоль оси градиента с помощью объектов <xref:System.Windows.Media.GradientStop>.  Можно также изменить ось градиента, которая позволяет создавать горизонтальный и вертикальные градиенты и обращать направление градиента.  Ось градиента описан в следующем разделе.  По умолчанию создается диагональный градиент.  
+## <a name="linear-gradients"></a>Линейные градиенты  
+ Объект <xref:System.Windows.Media.LinearGradientBrush> закрашивает область градиентом, определенным вдоль линии, *ось градиента*.  Укажите цвета градиента и их расположение вдоль оси градиента с помощью <xref:System.Windows.Media.GradientStop> объектов.  Ось градиента можно изменить, чтобы создать горизонтальный или вертикальный градиент, или обратить направление градиента. Ось градиента описана в следующем разделе. По умолчанию создается диагональный градиент.  
   
- В следующем примере показан код, создающий линейный градиент четырьмя цветами.  
+ В следующем примере показан код, создающий линейный градиент с четырьмя цветами.  
   
- [!code-xml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
   
- В результате получается следующий градиент.  
+ Этот код создает следующий градиент.  
   
- ![Диагональный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.png "wcpsdk\_graphicsmm\_diaglgradient\_nolabel")  
+ ![Диагональный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
- **Примечание:**В примерах градиента в этом разделе используется система координат по умолчанию для установки начальной и конечной точки.  Система координат по умолчанию связана с ограничивающим прямоугольником: 0 указывает 0 процентов ограничивающего прямоугольника и 1 — 100 процентов.  Можно изменить эту систему координат, задав свойству <xref:System.Windows.Media.GradientBrush.MappingMode%2A> значение <xref:System.Windows.Media.BrushMappingMode>.  Абсолютная система координат определяется не относительно ограничивающего прямоугольника.  Значения интерпретируются непосредственно в локальной области.  
+ **Примечание.** В примерах с градиентом в этом разделе для определения начальной и конечной точек используется система координат, заданная по умолчанию. Система координат по умолчанию вводится относительно ограничивающего прямоугольника: 0 означает 0 процентов ограничивающего прямоугольника, 1 — 100 процентов. Можно изменить эту систему координат, задав <xref:System.Windows.Media.GradientBrush.MappingMode%2A> значение <xref:System.Windows.Media.BrushMappingMode.Absolute>. Абсолютная система координат не привязана к ограничивающему прямоугольнику. Значения интерпретируются непосредственно в локальной области.  
   
- <xref:System.Windows.Media.GradientStop> представляет основные блоки построения кисти градиента.  Позиция градиента указывает <xref:System.Windows.Media.GradientStop.Color%2A> на <xref:System.Windows.Media.GradientStop.Offset%2A> вдоль оси градиента.  
+ <xref:System.Windows.Media.GradientStop> Основной строительный блок кисти градиента.  Указывает градиента <xref:System.Windows.Media.GradientStop.Color%2A> в <xref:System.Windows.Media.GradientStop.Offset%2A> по оси градиента.  
   
--   Свойство <xref:System.Windows.Media.GradientStop.Color%2A> позиции градиент определяет цвет позиции градиента.  Можно установить цвет с помощью стандартного цвета \(предоставленного классом <xref:System.Windows.Media.Colors>\) или путем указания значений ScRGB или ARGB.  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] можно также использовать шестнадцатиричный формат для описания цвета.  Дополнительные сведения см. в разделе <xref:System.Windows.Media.Color>.  
+-   Ограничения градиента <xref:System.Windows.Media.GradientStop.Color%2A> свойство определяет цвет градиента. Можно установить цвет с помощью стандартного цвета (предоставляемые <xref:System.Windows.Media.Colors> класс) или путем указания значений ScRGB или ARGB. В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для описания цвета можно также использовать шестнадцатеричный формат. Дополнительные сведения см. в разделе <xref:System.Windows.Media.Color> структуры.  
   
--   Свойство <xref:System.Windows.Media.GradientStop.Offset%2A> позиции градиента указывает положение цвета позиции градиента на оси градиента.  Смещение представлено типом <xref:System.Double> в диапазоне от 0 до 1.  Чем ближе значение смещения ограничения градиента к 0, тем ближе цвет к началу градиента.  Чем ближе значение смещения градиента к 1, тем ближе цвет к концу градиента.  
+-   Ограничения градиента <xref:System.Windows.Media.GradientStop.Offset%2A> свойство определяет позицию цвета градиента на оси градиента. Значением offset является <xref:System.Double> диапазоне от 0 до 1. Чем ближе значение смещения ограничения градиента к 0, тем ближе цвет находится к началу градиента. Чем ближе значение смещения градиента к 1, тем ближе цвет находится к окончанию градиента.  
   
- Цвет каждой точки между позициями градиента является линейно интерполируемой, как сочетание цвета, указанное двумя ограниченными позициями градиента.  На следующем рисунке выделяются позиции градиент из предыдущего примера.  Круги помечают расположение позиции градиента, а пунктирная линия показывает ось градиента.  
+ Цвет каждой точки между ограничениями градиента подчиняется закону линейной интерполяции как сочетание цветов, заданных двумя ограничивающими положениями градиента. На следующем рисунке показаны ограничения градиента, используемые в предыдущем примере. Кружками отмечены положения ограничений градиента, а пунктирной линией обозначена ось градиента.  
   
- ![Ограничения градиента в линейном градиенте](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk\_graphicsmm\_4gradientstops")  
+ ![Ограничения градиента в линейном градиенте](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
   
- Первая позиция градиента определяет желтый цвет на некотором смещении от `0.0`.  Вторая позиция градиента определяет красный цвет на некотором смещении от `0.25`.  Точки между этими двумя позициями постепенно изменяются с желтого на красный при перемещении слева направо вдоль оси градиента.  Третья позиция градиента определяет синий цвет на некотором смещении от `0.75`.  Точки между второй и третьей позициями градиента постепенно изменяются от красного к голубому.  Четвертая позиция градиента определяет цвет зеленого лайма на некотором смещении от `1.0`.  Точки между третьей и четвертой позициями градиента постепенно изменяются от синего к цвету зеленого лайма.  
+ Первое ограничение градиента задает желтый цвет в точке со смещением `0.0`.  Второе ограничение градиента задает красный цвет в точке со смещением `0.25`.  Цвета между этими двумя ограничениями постепенно меняются от желтого к красному при движении слева направо вдоль оси градиента.  Третье ограничение градиента задает синий цвет в точке со смещением `0.75`.  Цвета между вторым и третьим ограничениями градиента постепенно меняются от красного к синему. Четвертое ограничение градиента задает зеленый цвет в точке со смещением `1.0`. Цвета между третьим и четвертым ограничениями градиента постепенно меняются от синего к зеленому.  
   
 <a name="gradientaxis"></a>   
-### Ось градиента  
- Как было упомянуто выше, позиции градиента кисти линейного градиента расположены вдоль линии, оси градиента.  Можно изменить ориентацию и размер строки с помощью свойств <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> кисти.  Управляя свойствами <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> кисти, можно создавать горизонтальные и вертикальные градиенты, разворачивать направление градиента, сжимать градиент и многое другое.  
+### <a name="the-gradient-axis"></a>Ось градиента  
+ Как было сказано ранее, ограничения градиента кисти линейного градиента располагаются вдоль линии, называемой осью градиента. Можно изменить ориентацию и размер строки, с использованием кисти <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> свойства. Управляя кисти <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, можно создать горизонтальные и вертикальные градиенты обратное направление градиента, уменьшать градиента распространение и многое другое.  
   
- По умолчанию свойства <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> кисти линейного градиента кисти относятся к области закраски.  Точка \(0,0\) представляет верхний левый угол закрашиваемой области, а \(1,1\) — правый нижний угол закрашиваемой области.  <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> элемента <xref:System.Windows.Media.LinearGradientBrush> по умолчанию равна \(0,0\), а его <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> по умолчанию равна \(1,1\), что создает градиент по диагонали, начиная из верхнего левого угла и распространяясь в правый нижний угол области закрашивания.  На следующем рисунке показана ось градиента кисти линейного градиента со свойствами <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> по умолчанию.  
+ По умолчанию кисти линейного градиента в <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> относительно закрашиваемой области. Точка (0, 0) представляет верхний левый угол закрашиваемой области, а точка (1, 1) — правый нижний угол. Значение по умолчанию <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> из <xref:System.Windows.Media.LinearGradientBrush> — (0,0) и значение по умолчанию <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> — (1,1), при котором создается Диагональный градиент, начиная с верхнего левого угла и расширение в правый нижний угол закрашиваемой области. На следующем рисунке показан оси градиента кисти линейного градиента по умолчанию <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>.  
   
- ![Ось градиента для диагонального линейного градиента](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk\_graphicsmm\_diagonalgradientaxis")  
+ ![Ось диагонального линейного градиента](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
- В следующем примере показано, как создать горизонтальный градиент, указав свойства <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> кисти.  Обратите внимание, что позиции градиента такте же, как и в предыдущих примерах; просто изменяя <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, градиент был изменен с диагонального на горизонтальный.  
+ В следующем примере демонстрируется создание горизонтального градиента, указав кисти <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>. Обратите внимание, что позиции градиента таким же, как показано в предыдущих примерах; При простом изменении <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, градиент был изменен с диагональной на горизонтальную.  
   
- [!code-xml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
- На следующем рисунке показан созданный градиент.  Ось градиента помечается пунктирной линией, а позиции градиента отмечаются кругами.  
+ На приведенном ниже рисунке показан созданный градиент. Ось градиента отмечена пунктирной линией, а ограничения градиента отмечены кружками.  
   
- ![Ось градиента для горизонтального линейного градиента](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-horizontalgradient.png "wcpsdk\_graphicsmm\_horizontalgradient")  
+ ![Ось горизонтального линейного градиента](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")  
   
- В следующем примере показано создание вертикального градиента.  
+ В следующем примере показано, как создать вертикальный градиент.  
   
- [!code-xml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
- На следующем рисунке показан созданный градиент.  Ось градиента помечается пунктирной линией, а позиции градиента отмечаются кругами.  
+ На приведенном ниже рисунке показан созданный градиент. Ось градиента отмечена пунктирной линией, а ограничения градиента отмечены кружками.  
   
- ![Ось градиента для вертикального градиента](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-verticalgradient.png "wcpsdk\_graphicsmm\_verticalgradient")  
+ ![Ось вертикального градиента](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
   
 <a name="radialgradients"></a>   
-## Радиальные градиенты  
- Как и <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush> закрашивает область цветами, которые переходят друг в друга вдоль оси.  В предыдущих примерах показано, что ось кисти линейного градиента является прямой линией.  Ось кисти радиального градиента определяется кругом; цвета расходятся по кругу от начала координат.  
+## <a name="radial-gradients"></a>Радиальные градиенты  
+ Как <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush> закрашивает область с цветами, которые переходят друг в друга вдоль оси. В предыдущих примерах показано, что ось кисти линейного градиента является прямой линией. Ось кисти радиального градиента определяется кругом. Цвета меняются в разные стороны от точки начала.  
   
  В следующем примере кисть радиального градиента используется для закрашивания внутренней части прямоугольника.  
   
- [!code-xml[GradientBrushExamples_snip#RadialGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#RadialGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#RadialGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/RadialGradientBrushExample.cs#radialgradient1csharp)]  
   
- Ниже показан градиент, созданный в предыдущем примере.  Позиции градиента кисти подсвечены.  Обратите внимание, что, несмотря на то, что результаты различаются, позиции градиента в этом примере идентичны позициям градиента в предыдущих примерах кисти линейного градиента.  
+ На следующем рисунке показан градиент, созданный в предыдущем примере. Ограничения градиента кисти выделены. Обратите внимание, что, хотя результаты различаются, ограничения градиента в этом примере совпадают с ограничениями градиента в предыдущих примерах использования кисти линейного градиента.  
   
- ![Остановки градиента в радиусном градиенте](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk\_graphicsmm\_4gradientstops\_rg")  
+ ![Ограничения градиента в радиальном градиенте](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
- <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> задает начальную точку оси градиента кисти линейного градиента.  Ось градиента расходится по кругу от начала градиента к кругу градиента.  Круг градиента кисти определяется свойствами <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A> и <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A>.  
+ <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> Указывает начальную точку оси градиента кисти линейного градиента. Ось градиента располагается от начала градиента к его окружности. Круг градиента кисти определяется его <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, и <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> свойства.  
   
- На следующем рисунке показано несколько радиальных градиентов с разными параметрами <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>, <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A> и <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A>.  
+ На следующем рисунке показано несколько радиальных градиентов с разными <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>, <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, и <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> параметры.  
   
- ![Параметры RadialGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-originscirclesandradii.png "wcpsdk\_graphicsmm\_originscirclesandradii")  
-RadialGradientBrushes с различными параметрами GradientOrigin, Center, RadiusX и RadiusY.  
+ ![Параметры RadialGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
+Кисти RadialGradientBrush с различными значениями параметров GradientOrigin, Center, RadiusX и RadiusY.  
   
 <a name="specifyinggradientcolors"></a>   
-## Задание прозрачных или частично прозрачных позиций градиента  
- Поскольку позиции градиента не предоставляют свойство непрозрачности, необходимо указать альфа\-канал цветов с помощью шестнадцатеричного формата [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] в разметке или использовать метод <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=fullName> для создания позиций градиента, которые являются частично прозрачными или прозрачными.  В следующих разделах даны более подробные инструкции по созданию частично прозрачных позиций градиента в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и коде.  Сведения о настройке прозрачности кисти содержатся в разделе [Задание прозрачности кисти](#brushesAndOpacity).  
+## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Задание прозрачных и частично прозрачных ограничений градиента  
+ Поскольку позиции градиента не предоставляют свойство непрозрачности, необходимо указать альфа-канал цветов с помощью [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] шестнадцатеричного формата в разметке или использовать <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> метод для создания градиента, которые являются прозрачным или полупрозрачным. Ниже описаны процедуры по созданию частично прозрачных ограничений градиента в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и код.  
   
 <a name="argbsyntax"></a>   
-### Указание непрозрачности цвета в "XAML"  
- В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используется шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] для указания прозрачности отдельных цветов.  Шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] использует следующий синтаксис.  
+### <a name="specifying-color-opacity-in-xaml"></a>Задание непрозрачности цвета в XAML  
+ В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] можно использовать шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] для указания непрозрачности отдельных цветов. В шестнадцатеричном формате [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] используется следующий синтаксис.  
   
- `#`**aa** *rrggbb*  
+ `#` **aa** *rrggbb*  
   
- *aa* в предыдущей строке представляет двузначное шестнадцатеричное значение, используемое для указания непрозрачности цвета.  *rr*, *gg*, и *bb* представляют собой двузначные шестнадцатеричные значения, используемые для указания красной, зеленой и синей компоненты цвета.  Каждая шестнадцатеричная цифра может иметь значение от 0 до 9 либо от A до F.  0 соответствует наименьшему значению, а F — наибольшему.  Альфа\-значение 00 указывает на то, что цвет является полностью прозрачным, в то время как альфа\-значение FF создает цвет, который является полностью непрозрачным.  В следующем примере шестнадцатеричная форма записи [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] используется для задания двух цветов.  Первый — частично прозрачный \(он имеет альфа\-значение x20\), в то время как второй — полностью непрозрачный.  
+ Здесь *aa* — двузначное шестнадцатеричное значение, используемое для указания непрозрачности цвета. *rr*, *gg* и *bb* — двузначные шестнадцатеричные значения, используемые для указания насыщенности красного, зеленого и синего цветов. Шестнадцатеричная цифра может принимать значения от 0 до F (сначала цифры от 0 до 9, затем буквы от A до F). Наименьшее значение — 0, наибольшее — F. Альфа-значение 00 задает полностью прозрачный цвет, а альфа-значение FF — полностью непрозрачный цвет.  В следующем примере используется шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] для задания двух цветов. Первый — частично прозрачный (он имеет альфа-значение x20). Второй — полностью непрозрачный.  
   
- [!code-xml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   
 <a name="fromscrgbsyntax"></a>   
-### Задание непрозрачности цвета в коде  
- При использовании кода статический метод <xref:System.Windows.Media.Color.FromArgb%2A> позволяет задать значение альфа при создании цвета.  Метод принимает четыре параметра типа <xref:System.Byte>.  Первый параметр задает альфа\-канал цвета; другие три параметра определяют значения красной, зеленой и синей компоненты цвета.  Каждое значение должно быть в диапазоне от 0 до 255, включительно.  Альфа\-значение, равное 0, указывает на то, что цвет является полностью прозрачным, в то время как альфа\-значение FF создает цвет, который является полностью непрозрачным.  В следующем примере метод <xref:System.Windows.Media.Color.FromArgb%2A> используется для создания двух цветов.  Первый цвет является частично прозрачным \(он имеет значение альфа\-32\), в то время как второй — полностью непрозрачный.  
+### <a name="specifying-color-opacity-in-code"></a>Задание непрозрачности цвета в коде  
+ При использовании кода, статический <xref:System.Windows.Media.Color.FromArgb%2A> метод позволяет задать значение альфа при создании цвета. Этот метод принимает четыре параметра типа <xref:System.Byte>. Первый параметр задает альфа-канал цвета. Другие три параметра определяют значения красного, зеленого и синего цветов. Все значения должны быть в диапазоне от 0 до 255 включительно. Значение альфа, равное 0, указывает, что цвет полностью прозрачен, а значение 255 — что он полностью непрозрачен. В следующем примере <xref:System.Windows.Media.Color.FromArgb%2A> метод используется для создания двух цветов. Первый цвет — частично прозрачный (он имеет альфа-значение x32). Второй — полностью непрозрачный.  
   
  [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]  
   
- Кроме того, можно использовать метод <xref:System.Windows.Media.Color.FromScRgb%2A>, который позволяет использовать значения ScRGB для создания цвета.  
+ Кроме того, вы можете использовать <xref:System.Windows.Media.Color.FromScRgb%2A> метод, который позволяет использовать значения ScRGB для создания цвета.  
   
 <a name="otherbrushes"></a>   
-## Закраска с использованием изображений, рисунков, визуализаций и шаблонов  
- Классы <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush> позволяют закрашивать область, используя изображения, рисунки или визуализации.  Сведения о закрашивании с использованием изображений, рисунков и шаблонов содержатся в разделе [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+## <a name="painting-with-images-drawings-visuals-and-patterns"></a>Закрашивание с помощью объектов Image, Drawing, Visual и Pattern  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> классы позволяют Закраска области с изображения, рисунки или визуальных элементов. Сведения о закрашивании с использованием изображений, рисунков и шаблонов см. в разделе [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## См. также  
- <xref:System.Windows.Media.Brush>   
- <xref:System.Windows.Media.SolidColorBrush>   
- <xref:System.Windows.Media.LinearGradientBrush>   
- <xref:System.Windows.Media.RadialGradientBrush>   
- [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [Общие сведения о преобразованиях объекта Brush](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.Brush>  
+ <xref:System.Windows.Media.SolidColorBrush>  
+ <xref:System.Windows.Media.LinearGradientBrush>  
+ <xref:System.Windows.Media.RadialGradientBrush>  
+ [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Общие сведения о преобразованиях кистей](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
  [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)

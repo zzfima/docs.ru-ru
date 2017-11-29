@@ -1,33 +1,25 @@
 ---
-title: "Практическое руководство: запрос файлов с указанными атрибутами или именем (Visual Basic) | Документы Microsoft"
+title: "Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db0e3f415df80e8e4c551bd8493814cb3f4fe5ee
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2b46750876e683e8ca5801d5c37267bf3d681cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Практическое руководство: запрос файлов с указанными атрибутами или именем (Visual Basic)
-В этом примере показано, как найти все файлы, имеющие расширение указанного файла (например, «.txt») в указанном дереве каталогов. Также показано, как вернуть новый или старый файл в дереве на основе времени создания.  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Как: запрос файлов с помощью указанного атрибута или имени (Visual Basic)
+В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов. Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.  
   
 ## <a name="example"></a>Пример  
   
@@ -78,8 +70,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте в проекте, ориентированном на .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,68 +1,71 @@
 ---
-title: "Ведущее приложение WPF (PresentationHost.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PresentationHost.exe"
-  - "WPF - ведущее приложение"
+title: "Ведущее приложение WPF (PresentationHost.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF Host application [WPF]
+- PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b7662213d7204675de7e8681b6fc8141f04dd21
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Ведущее приложение WPF (PresentationHost.exe)
-Приложение [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Host \(PresentationHost.exe\) позволяет размещать приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в совместимых браузерах \(включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздние версии\).  По умолчанию [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Host зарегистрирован в качестве оболочки и обработчика [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] для браузерного [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимого, которое включает:  
+# <a name="wpf-host-presentationhostexe"></a>Ведущее приложение WPF (PresentationHost.exe)
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Ведущее приложение (PresentationHost.exe) — это приложение, которое позволяет размещать приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в совместимых браузерах (включая [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] и более поздние версии). По умолчанию ведущее приложение [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] регистрируется в качестве оболочки и обработчика [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] для размещенного в браузере [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимого, которое включает:  
   
--   Свободные \(нескомпилированные\) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы \(.xaml\).  
+-   Свободные (нескомпилированные) файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml).  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] \(.xbap\).  
+-   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap).  
   
- Для файлов этих типов, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Host:  
+ Для файлов этих типов ведущее приложение [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]:  
   
--   Запускает зарегистрированный [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] обработчик для размещения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] содержимого.  
+-   Запускает зарегистрированный обработчик [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] для размещения содержимого [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
   
--   Загружает верные версии требуемых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] сборок.  
+-   Загружает правильные версии требуемых сборок [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
   
--   Обеспечивает установку соответствующих уровней разрешений для зоны развертывания.  
+-   Обеспечивает наличие соответствующих уровней разрешений для зоны развертывания.  
   
- В этом разделе описываются параметры командной строки, которые могут быть использованы с PresentationHost.exe.  
+ В этом разделе описываются параметры командной строки, которые можно использовать с PresentationHost.exe.  
   
-## Использование  
+## <a name="usage"></a>Использование  
  `PresentationHost.exe [parameters] uri|filename`  
   
-## Параметры  
+## <a name="parameters"></a>Параметры  
   
 |Параметр|Описание|  
-|--------------|--------------|  
-|filename|Путь к активируемому файлу.  Также может быть [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
-|\-отладка|При активации приложения не фиксировать или не запускать его из хранилища.  Это работает только тогда, когда активируется локальный файл.|  
-|\-debugSecurityZoneURL \<url\>|Используется со значением [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] для обозначения PresentationHost.exe, что приложение должно быть отлажено, как если бы оно было развернуто из указанного [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)].  Это определяет зону развертывания и начальный веб\-узел.|  
-|\-embedding|Требуется при OLE.  Если указан параметр `-event` или `-debug`, то указывать параметр `-embedding` необязательно, поскольку он устанавливается внутри.|  
-|\-событие \<имя\_события\>|Откройте событие с указанным именем и укажите его при инициализации и готовности PresentationHost.exe разместить [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] содержимое.  PresentationHost.exe будет завершен, если произошла ошибка при открытии события, например, если оно еще не было создано.|  
-|\-launchApplication \<url\>|Запускает автономное приложение [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] с указанного URL\-адреса.  Применяется политика безопасности [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] и WinINet в отношении приложений .NET.|  
+|---------------|-----------------|  
+|filename|Путь к файлу, который нужно активировать. Также может быть [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
+|-debug|При активации приложения не фиксирует его в хранилище и не запускает из хранилища. Работает только при активации локального файла.|  
+|-debugSecurityZoneURL \<url>|Используется со значением [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] для указания необходимости отладки PresentationHost.exe, как при развертывании из указанного [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]. Это определяет как зону развертывания, так и исходный узел.|  
+|-embedding|Требуется для OLE. Если указан параметр `-event` или `-debug`, то не обязательно указывать параметр `-embedding`, поскольку он устанавливается внутренне.|  
+|-event \<eventname>|Открывает событие с указанным именем и сигнализирует ему при инициализации PresentationHost.exe и готовности к размещению содержимого [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Работа PresentationHost.exe будет прервана в случае ошибки при открытии события, например, если оно еще не создано.|  
+|-launchApplication \<url>|Запускает автономное приложение [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] с указанного URL-адреса. Применяется политика безопасности [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] и WinINet для приложений .NET.|  
   
-## Сценарии  
+## <a name="scenarios"></a>Сценарии  
   
-### Обработчик оболочки  
+### <a name="shell-handler"></a>Обработчик оболочки  
  `PresentationHost.exe example.xbap`  
   
-### обработчик MIME  
+### <a name="mime-handler"></a>Обработчик MIME  
  `PresentationHost.exe -embedding example.xbap`  
   
-### Отладка Visual Studio  
+### <a name="visual-studio-debugging"></a>Отладка в Visual Studio  
  `PresentationHost.exe -debug example.xbap`  
   
-### Отладка Visual Studio в Зоне  
+### <a name="visual-studio-debugging-in-zone"></a>Visual Studio, отладка в зоне  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Безопасность](../../../../docs/framework/wpf/security-wpf.md)

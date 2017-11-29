@@ -1,42 +1,41 @@
 ---
-title: "Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "базовые классы, доступ к элементам"
-  - "объявленные элементы, создание ссылок"
-  - "имена элементов, квалификация"
-  - "квалификация, имен элементов"
-  - "ссылки, объявленные элементы"
-  - "переменные [Visual Basic], доступ к скрытым"
+title: "Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- base classes [Visual Basic], accessing elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declared elements [Visual Basic], referencing
+- variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0f94e45fcb0a26b0d59789e101c37aceba219250
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Когда код в производном классе обращается к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, \(т.е. доступную версию, отличающуюся от обращающегося класса на минимальное количество производных действий\).  Если переменная определена в производном классе, код обычно обращается к этому определению.  
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
+Когда код в производном классе получает доступ к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, то есть доступный минимальное количество производных действий назад от обращающегося класса. Если переменная определена в производном классе, код обычно обращается к этому определению.  
   
- Если переменная производного класса затеняет переменную в базовом классе, она скрывает версию базового класса.  Однако можно получить доступ к переменной базового класса путем определения ее с помощью ключевого слова `MyBase`.  
+ Если переменная производного класса затеняет переменную в базовом классе, он скрывает версии базового класса. Тем не менее, можно получить доступ к переменной базового класса путем определения ее с `MyBase` ключевое слово.  
   
-### Чтобы обратиться к переменной базового класса, скрытой производным классом  
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Чтобы получить доступ к переменной базового класса, скрытой производным классом  
   
--   В выражении или операторе присваивания укажите перед именем переменной ключевое слово `MyBase` и точку \(`.`\).  
+-   В выражение или оператор присваивания, перед именем переменной с `MyBase` ключевое слово и точку (`.`).  
   
      Компилятор разрешает ссылку на версию базового класса переменной.  
   
-     В следующем примере показано затенение через наследование.  Производятся два обращения: одно — к затеняющей переменной, другое же обходит затенение.  
+     В следующем примере показано затемнения посредством наследования. Он делает две ссылки, который обращается к переменной затенения, а другой обходит затенение.  
   
     ```  
     Public Class shadowBaseClass  
@@ -53,18 +52,18 @@ caps.handback.revision: 20
     End Class  
     ```  
   
-     В этом примере переменная `shadowString`, объявленная в базовом классе, скрывается в производном классе.  Процедура `showStrings` в производном классе отображает версию затеняющую версию строки, если имя `shadowString` не квалифицировано полностью.  Затем затененная версия отображается, если `shadowString` определяется с помощью ключевого слова `MyBase` .  
+     В предыдущем примере объявляются переменная `shadowString` в базовом классе, скрывается в производном классе. Процедура `showStrings` в производном классе отображает версию затенения строки, если имя `shadowString` не обработаны квалификатором. Затем отображается затененная версия при `shadowString` квалифицируется `MyBase` ключевое слово.  
   
-## Отказоустойчивость  
- Чтобы понизить риск ссылки на неправильную версию затененной переменной, можно полностью определить все ссылки на затененную переменную.  Затенение представляет несколько версий переменной с тем же именем.  Если оператор кода ссылается на имя переменной, то версия переменной, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение оператора кода и наличие строки с именем квалификации.  Это может увеличить риск ссылки на неправильную версию переменной.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ Чтобы снизить риск ссылки на неправильную версию затененной переменной, можно полностью определить все ссылки на затененную переменную. Затенение представляет несколько версий переменной с тем же именем. Когда оператор кода ссылается на имя переменной, версии, для которого компилятор разрешает ссылку зависит от факторов, таких как расположение оператора кода и наличие уточняющей строки. Это может увеличить риск ссылки на неправильную версию переменной.  
   
-## См. также  
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Различия между сокрытием и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
+## <a name="see-also"></a>См. также  
+ [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Переопределения](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [Основы наследования](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

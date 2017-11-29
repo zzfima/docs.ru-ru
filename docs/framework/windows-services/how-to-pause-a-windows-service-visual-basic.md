@@ -1,58 +1,61 @@
 ---
-title: "How to: Pause a Windows Service (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController.Pause"
-helpviewer_keywords: 
-  - "Windows Service applications, pausing"
-  - "pausing Windows Service applications"
+title: "Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: ServiceController.Pause
+helpviewer_keywords:
+- Windows Service applications, pausing
+- pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
-caps.latest.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: d44358d3f76f50a06ede5e7d720f4f48d80893de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Pause a Windows Service (Visual Basic)
-В этом примере компонент <xref:System.ServiceProcess.ServiceController> используется для приостановки службы IIS Admin на локальном компьютере.  
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
+В этом примере используется <xref:System.ServiceProcess.ServiceController> компонента, чтобы приостановить службу IIS Admin на локальном компьютере.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- Данный пример кода доступен также в качестве фрагмента кода IntelliSense.  В средстве выбора фрагмента кода он расположен в разделе **Операционная система Windows \> Службы Windows**.  Дополнительные сведения см. в разделе [Фрагменты кода](../Topic/Code%20Snippets.md).  
+ Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он находится в **операционная система Windows > службы Windows**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Ссылка на System.serviceprocess.dll;  
+-   Ссылка проекта System.serviceprocess.dll.  
   
--   Доступ к элементам пространства имен <xref:System.ServiceProcess>.  Добавьте оператор `Imports`, если в коде не используются полностью квалифицированные имена элементов.  Дополнительные сведения см. в разделе [Оператор Imports \(пространство имен .NET и тип\)](../../../ocs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+-   Доступ к членам пространства имен <xref:System.ServiceProcess>. Добавьте оператор `Imports`, если в коде не используются полные имена членов. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
-## Отказоустойчивость  
- Свойство <xref:System.ServiceProcess.ServiceController.MachineName%2A> класса <xref:System.ServiceProcess.ServiceController> по умолчанию соответствует локальному компьютеру.  Чтобы обратиться к службам Windows на другом компьютере, следует изменить значение свойства <xref:System.ServiceProcess.ServiceController.MachineName%2A> на имя этого компьютера.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ <xref:System.ServiceProcess.ServiceController.MachineName%2A> Свойство <xref:System.ServiceProcess.ServiceController> класса — локальный компьютер по умолчанию. Чтобы обратиться к службам Windows на другом компьютере, измените <xref:System.ServiceProcess.ServiceController.MachineName%2A> на имя этого компьютера.  
   
- При следующих условиях возможно возникновение исключения.  
+ При следующих условиях возможно возникновение исключения:  
   
--   Приостановка службы невозможна  \([класс InvalidOperationException](frlrfSystemInvalidOperationExceptionClassTopic)\);  
+-   Служба не может быть приостановлена. (<xref:System.InvalidOperationException>)  
   
--   Произошла ошибка при обращении к системному API   \([класс Win32Exception](frlrfSystemComponentModelWin32ExceptionClassTopic)\).  
+-   Произошла ошибка при обращении к API-интерфейсу системы. (<xref:System.ComponentModel.Win32Exception>)  
   
-## Безопасность платформы .NET Framework  
- Управление службами на компьютере может быть ограничено с помощью [перечисления ServiceControllerPermissionAccess](frlrfSystemServiceProcessServiceControllerPermissionAccessClassTopic), используемого для задания разрешений в [классе ServiceControllerPermission](frlrfSystemServiceProcessServiceControllerPermissionClassTopic).  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+ Управление службами на компьютере может быть ограничен с помощью <xref:System.ServiceProcess.ServiceControllerPermissionAccess> для задания разрешений в <xref:System.ServiceProcess.ServiceControllerPermission>.  
   
- Доступ к сведениям о службе может быть ограничен с помощью [перечисления PermissionState](frlrfSystemSecurityPermissionsPermissionStateClassTopic), используемого для задания разрешений в [классе SecurityPermission](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic).  
+ Доступ к сведениям служб может быть ограничен с помощью <xref:System.Security.Permissions.PermissionState> для задания разрешений в <xref:System.Security.Permissions.SecurityPermission>.  
   
-## См. также  
- <xref:System.ServiceProcess.ServiceController>   
- <xref:System.ServiceProcess.ServiceControllerStatus>   
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>   
- [How to: Continue a Windows Service \(Visual Basic\)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceProcess.ServiceController>  
+ <xref:System.ServiceProcess.ServiceControllerStatus>  
+ <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
+ [Как: возобновление выполнения службы Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

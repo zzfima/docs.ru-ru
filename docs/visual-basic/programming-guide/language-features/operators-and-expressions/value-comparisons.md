@@ -1,61 +1,60 @@
 ---
-title: "Сравнение значений (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "операторы сравнения, сравнение выражений"
-  - "выражения [Visual Basic], сравнение"
-  - "числовые выражения"
-  - "операторы [Visual Basic], сравнение"
-  - "переменные [Visual Basic], сравнение значений"
-  - "код Visual Basic, выражения"
-  - "код Visual Basic, операторы"
+title: "Сравнение значений (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], comparing values
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- comparison operators [Visual Basic], comparing expressions
+- numeric expressions
+- operators [Visual Basic], comparison
+- expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c11f12bbaf261c0853e96802f03322c5e7fdc706
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сравнение значений (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Операторы сравнения используются для создания выражений, которые сравнивают значения числовых переменных.  Эти выражения возвращают значение `Boolean`, указывающее какое из значений имеет результат сравнения \(true или false\).  Примеры таких выражений приведены ниже.  
+# <a name="value-comparisons-visual-basic"></a>Сравнение значений (Visual Basic)
+Операторы сравнения можно использовать для создания выражений, которые сравнивают значения числовых переменных. Эти выражения возвращают `Boolean` значение на основании результат сравнения-ИСТИНА или ЛОЖЬ. Ниже приводятся примеры таких выражений.  
   
  `45 > 26`  
   
  `26 > 45`  
   
- Результатом вычисления первого выражения является значение `True`, поскольку 45 больше 26.  Результатом вычисления второго выражения является значение `False`, поскольку 26 не больше 45.  
+ Первое выражение, результатом которого является `True`, поскольку 45 больше 26. Во втором примере вычисляется `False`, поскольку 26 не больше 45.  
   
- Таким же способом можно сравнивать числовые выражения.  Сравниваемые выражения могут быть сложными, например:  
+ Вы также можете сравнить числовых выражений таким образом. Выражения могут быть сложными, как в следующем примере.  
   
  `x / 45 * (y +17) >= System.Math.Sqrt(z) / (p - (x * 16))`  
   
- Данное сложное выражение содержит литералы, переменные и вызовы функций.  Сначала вычисляются обе части оператора сравнения, а затем полученные значения сравниваются с помощью этого оператора `>=` .  Если значение выражения в левой части больше или равно значению выражения в правой, то все выражение принимает значение `True`; в противном случае — значение `False`.  
+ Сложное выражение содержит литералы, переменные и вызовы функций. Вычисляются выражения с обеих сторон оператора сравнения, а полученные значения сравниваются с помощью `>=` оператор сравнения. Если значение выражения в левой части больше или равно значению выражения справа, все выражение принимает значение `True`; в противном случае он возвращает `False`.  
   
- Выражения, сравнивающие значения, часто используются в операторах `If...Then`, например:  
+ Выражения, сравнивающие значения чаще всего используются в `If...Then` конструкциях, как показано в следующем примере.  
   
  [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
- Знак `=` является оператором сравнения, а также оператором назначения.  При использовании в качестве оператора сравнения он вычисляет, равно ли значение слева значению справа, например:  
+ `=` Входа является оператором сравнения, а также оператор присваивания. При использовании в качестве оператора сравнения, он определяет, является ли значение слева равно значению справа, как показано в следующем примере.  
   
  [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
- Можно также использовать выражения сравнения везде, где необходимо использовать значение `Boolean`, например в операторе `If`, `While`, `Loop` или `ElseIf`, либо при назначении или передаче значения переменной `Boolean`.  В следующем примере значение, возвращенное выражением сравнения, назначается переменной `Boolean`.  
+ Можно также использовать выражения сравнения в любом `Boolean` значение, например, как и в `If`, `While`, `Loop`, или `ElseIf` инструкции, или при назначении или передачи значения `Boolean` переменной. В следующем примере присваивается значение, возвращаемое выражением сравнения `Boolean` переменной.  
   
  [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
-## См. также  
- [Логические выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   
- [Операторы и выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Практическое руководство. Вычисление числовых значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)   
- [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a>См. также  
+ [Логические выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
+ [Операторы и выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Практическое руководство. Вычисление числовых значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)  
+ [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)

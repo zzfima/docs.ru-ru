@@ -1,57 +1,81 @@
 ---
-title: "Тип данных SByte (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.sbyte"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "типы данных [Visual Basic], интеграл"
-  - "целые числа"
-  - "целые числа, типы данных"
-  - "целые числа, типы"
-  - "целочисленные типы данных"
-  - "числа, целочисленный"
-  - "числа, целый"
-  - "SByte тип данных"
-  - "целое число"
+title: "Тип данных SByte (Visual Basic)"
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.sbyte
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Тип данных SByte (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+# <a name="sbyte-data-type-visual-basic"></a>Тип данных SByte (Visual Basic)
 
-Содержит 8\-разрядные \(1\-байтовые\) целые числа со знаком в диапазоне от\-128 до 127.  
+Содержит знаком 8-разрядное (1-байтовые) целые числа в диапазоне от -128 до 127.  
   
-## Заметки  
- Используйте тип данных `SByte` для хранения целых значений, которые не требуют полного размера `Integer` или даже половины размера типа данных `Short`.  В некоторых случаях общая среда исполнения может использовать возможность упаковки переменных `SByte` вместе для уменьшения потребления памяти.  
+## <a name="remarks"></a>Примечания
+
+Используйте `SByte` тип данных для хранения целых значений, которые не требуют полного размера `Integer` или даже половины данных ширина `Short`. В некоторых случаях среда можно упаковать вашей `SByte` переменные тесном контакте и снизить потребление памяти.
+
+Значение по умолчанию для типа `SByte` — 0.
+
+## <a name="literal-assignments"></a>Литерал назначения
   
- Значение по умолчанию для типа `SByte` равно 0.  
+Можно объявить и инициализировать `SByte` переменной, назначив его десятичное литералом, Шестнадцатеричный литерал восьмеричного литерала, или (начиная с Visual Basic 2017 г) двоичный литерал.
+
+В следующем примере целых чисел, равные-102, представленное в десятичном, шестнадцатеричном виде, и двоичные литералы назначены `SByte` значения. Для этого примера требуются компиляции с параметром `/removeintchecks` переключатель компилятора.
+
+[!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]  
+
+> [!NOTE] 
+> Используйте префикс `&h` или `&H` для обозначения Шестнадцатеричный литерал префиксом `&b` или `&B` для обозначения двоичный литерал и префикс `&o` или `&O` для обозначения восьмеричного литерала. У десятичных литералов префиксов нет.
+
+Начиная с Visual Basic 2017 г., можно также использовать знак подчеркивания `_`, как разделитель для повышения удобства чтения, как в следующем примере показано.
+
+[!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+
+Если целочисленный литерал выходит за пределы диапазона `SByte` (то есть, если он меньше <xref:System.SByte.MinValue?displayProperty=nameWithType> или больше <xref:System.SByte.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции. Если целочисленный литерал не имеет суффикса, [целое](integer-data-type.md) выводится. Если целочисленный литерал находится за пределами диапазона `Integer` типа, [длинные](long-data-type.md) выводится. Это означает, что в предыдущих примерах, числовые литералы `0x9A` и `0b10011010` интерпретируются как 32-разрядных целых чисел со знаком со значением 156, что превышает <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Для успешной компиляции кода, например, назначающий целое число без десятичного `SByte`, можно выполнить одно из следующих действий:
+
+- Отключение проверки границ для целочисленных значений при компиляции с `/removeintchecks` переключатель компилятора.
+
+- Используйте [символ типа](../../programming-guide\language-features\data-types/type-characters.md) явно задать литеральное значение, которое вы хотите назначить `SByte`. В следующем примере присваивается отрицательное литерал `Short` значение `SByte`. Обратите внимание, что для отрицательных чисел, необходимо задать старших битов высокого порядка слова числового литерала. В случае в нашем примере это имеет тип bit 15 литерала `Short` значение.
+
+   [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
+
+## <a name="programming-tips"></a>Советы по программированию
   
-## Советы по программированию  
+-   **CLS-совместимости.** `SByte` Тип данных не является частью [спецификации CLS](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который его использует.
+
+-   **Расширяющие.** `SByte` Тип данных может быть расширен до `Short`, `Integer`, `Long`, `Decimal`, `Single`, и `Double`. Это означает, что можно преобразовать `SByte` на любой из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.
   
--   **CLS\-совместимость**. Тип данных `SByte` не является частью [Независимость от языка и независимые от языка компоненты](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\), поэтому в CLS\-совместимом коде нельзя использовать компонент, который его использует.  
+-   **Символы типов.** `SByte`не имеет знак типа литерала или знак типа идентификатора.  
   
--   **Расширение**. Тип данных`SByte` расширяется до типов `Short`, `Integer`, `Long`, `Decimal`, `Single` и `Double`.  Это означает, что можно преобразовать `SByte` к любому из этих типов без появления ошибки <xref:System.OverflowException?displayProperty=fullName>.  
+-   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=nameWithType>.
   
--   **Символы типа.** `SByte` не имеет символов типа литерала или символов типа идентификатора.  
-  
--   **Тип Framework.**. В .NET Framework данный тип соответствует структуре <xref:System.SByte?displayProperty=fullName>.  
-  
-## См. также  
- <xref:System.SByte?displayProperty=fullName>   
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
- [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)   
+## <a name="see-also"></a>См. также
+
+ <xref:System.SByte?displayProperty=nameWithType>  
+ [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

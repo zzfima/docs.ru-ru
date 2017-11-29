@@ -1,54 +1,58 @@
 ---
-title: "Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "средства просмотра документов"
-  - "WebBrowser - элемент управления [Windows Forms], создание средства просмотра документа HTML"
-  - "Windows Forms, создание средств просмотра документов"
+title: "Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], creating an HTML document viewer
+- document viewers
+- Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e06fbfde68c0d02a94f8c7e4657e2907cd3fa7eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms
-Элемент управления <xref:System.Windows.Forms.WebBrowser> может использоваться как средство для отображения и печати HTML\-документов с ограниченными возможностями веб\-браузера.  Это может оказаться полезным в том случае, если необходимо воспользоваться возможностями форматирования HTML, ограничив в то же время доступ пользователей к произвольным веб\-страницам, которые могут содержать небезопасные веб\-элементы управления или потенциально вредоносный код скрипта.  Подобное ограничение возможностей элемента управления <xref:System.Windows.Forms.WebBrowser> может быть необходимым, например, при его использовании в качестве средства просмотра электронной почты либо при организации справочной системы приложения в формате HTML.  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms
+Можно использовать <xref:System.Windows.Forms.WebBrowser> управления для отображения и печати HTML-документов с ограниченными возможностями обозревателя. Это полезно в том случае, если необходимо воспользоваться возможностями форматирования HTML, но запретить пользователям произвольным веб-страницам, которые могут содержать ненадежных веб-элементы управления или потенциально вредоносный код скрипта. Может потребоваться ограничить возможности <xref:System.Windows.Forms.WebBrowser> управления таким образом, например, для использования в качестве средства просмотра электронной почты HTML или для предоставления справки формате HTML в приложении.  
   
-### Создание средства просмотра HTML\-документов  
+### <a name="to-create-an-html-document-viewer"></a>Создание средства просмотра документа HTML  
   
-1.  Установите для свойства <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не мог открывать файлы, перетаскиваемые на его поверхность.  
+1.  Задать <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> свойства `false` для предотвращения <xref:System.Windows.Forms.WebBrowser> управления открывать файлы, которые перетаскиваются на него.  
   
      [!code-csharp[WebBrowserMisc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2.  В качестве значения свойства <xref:System.Windows.Forms.WebBrowser.Url%2A> укажите размещение первого отображаемого файла.  
+2.  Задать <xref:System.Windows.Forms.WebBrowser.Url%2A> свойства нужный исходный файл для отображения.  
   
      [!code-csharp[WebBrowserMisc#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Элемент управления <xref:System.Windows.Forms.WebBrowser> с именем `webBrowser1`.  
+-   элемент управления <xref:System.Windows.Forms.WebBrowser> с именем `webBrowser1`;  
   
--   Ссылки на сборки `System` и `System.Windows.Forms`.  
+-   ссылки на сборки `System` и `System.Windows.Forms`.  
   
-## См. также  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>   
- <xref:System.Windows.Forms.WebBrowser.Url%2A>   
- [Общие сведения об элементе управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)   
- [Безопасность элемента управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)   
- [Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>  
+ <xref:System.Windows.Forms.WebBrowser.Url%2A>  
+ [Общие сведения об элементе управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [Безопасность элемента управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
+ [Практическое руководство. Переход по заданному URL-адресу с помощью элемента управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  [Практическое руководство. Печать с использованием элемента управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

@@ -1,26 +1,25 @@
 ---
-title: "Форматирование веб-объектов HTTP WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Форматирование WCF Web HTTP"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a41c6c7304234535993d83329c4faa464218e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Форматирование веб-объектов HTTP WCF
-Модель веб\-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы.  Поддерживается два метода для определения формата: автоматический и явный.  
+# <a name="wcf-web-http-formatting"></a>Форматирование WCF Web HTTP
+Модель веб-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы. Поддерживается два метода для определения формата: автоматический и явный.  
   
-## Автоматическое форматирование  
- Если выбран этот метод, автоматическое форматирование выбирает наилучший формат возврата ответа.  Наилучший формат определяется путем проверки в следующем порядке.  
+## <a name="automatic-formatting"></a>Автоматическое форматирование  
+ Если выбран этот метод, автоматическое форматирование выбирает наилучший формат возврата ответа. Наилучший формат определяется путем проверки в следующем порядке.  
   
 1.  Типы носителей в заголовке Accept сообщения запроса.  
   
@@ -30,9 +29,9 @@ caps.handback.revision: 8
   
 4.  Параметр формата по умолчанию в WebHttpBehavior.  
   
- Если сообщение запроса содержит заголовок Accept, то инфраструктура [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] выполняет поиск поддерживаемого им типа.  Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются.  Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса.  Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции.  Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>.  Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>.  Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  Если это свойство имеет значение `true`, инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] определяет лучший формат для использования.  Автоматический выбор формата отключен по умолчанию в целях обратной совместимости.  Автоматический выбор формата можно включить программно или через конфигурацию.  В следующем примере показано включение автоматического выбора формата в коде.  
+ Если сообщение запроса содержит заголовок Accept, то инфраструктура [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] выполняет поиск поддерживаемого им типа. Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
   
-```  
+```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     
 Uri baseAddress = new Uri("http://localhost:8000");  
   
@@ -60,14 +59,13 @@ try
 }  
   catch(CommunicationException ex)  
   {  
-     Console.WriteLine(“An exception occurred: “ + ex.Message());  
+     Console.WriteLine("An exception occurred: " + ex.Message());  
   }  
-  
 ```  
   
- Автоматический выбор формата также можно включить через конфигурацию.  Можно задать свойство <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> напрямую в <xref:System.ServiceModel.Description.WebHttpBehavior> или с помощью <xref:System.ServiceModel.Description.WebHttpEndpoint>.  В следующем примере показано включение автоматического выбора формата в <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ Автоматический выбор формата также можно включить через конфигурацию. Можно задать свойство <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> напрямую в <xref:System.ServiceModel.Description.WebHttpBehavior> или с помощью <xref:System.ServiceModel.Description.WebHttpEndpoint>. В следующем примере показано включение автоматического выбора формата в <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
-```  
+```xml  
 <system.serviceModel>  
   <behaviors>  
     <endpointBehaviors>  
@@ -87,7 +85,7 @@ try
   
  В следующем примере показано включение автоматического выбора формата с помощью <xref:System.ServiceModel.Description.WebHttpEndpoint>.  
   
-```  
+```xml  
 <system.serviceModel>  
     <standardEndpoints>  
       <webHttpEndpoint>  
@@ -98,12 +96,12 @@ try
   </system.serviceModel>  
 ```  
   
-## Явное форматирование  
- Как следует из названия, в явном форматировании разработчик определяет наилучший формат для использования внутри кода операции.  Если лучшим форматом является формат XML или JSON, разработчик устанавливает <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> в формат <xref:System.ServiceModel.Web.WebMessageFormat> либо <xref:System.ServiceModel.Web.WebMessageFormat>.  Если свойство <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> явно не задано, то используется формат операции по умолчанию.  
+## <a name="explicit-formatting"></a>Явное форматирование  
+ Как следует из названия, в явном форматировании разработчик определяет наилучший формат для использования внутри кода операции. Если лучшим форматом является формат XML или JSON, разработчик устанавливает <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> в формат <xref:System.ServiceModel.Web.WebMessageFormat.Xml> либо <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Если свойство <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> явно не задано, то используется формат операции по умолчанию.  
   
- В следующем примере для определения формата, который нужно использовать, проверяется параметр строки запроса формата.  Если этот параметр был указан, формат операции задается свойством <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
+ В следующем примере для определения формата, который нужно использовать, проверяется параметр строки запроса формата. Если этот параметр был указан, формат операции задается свойством <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
   
-```  
+```csharp
 public class Service : IService  
 {  
     [WebGet]  
@@ -131,7 +129,7 @@ public class Service : IService
     }  
 ```  
   
- Если необходимо поддерживать форматы, отличающиеся от XML или JSON, операцию нужно определить таким образом, чтобы она возвращала тип <xref:System.ServiceModel.Channels.Message>.  Внутри кода операции определите соответствующий формат для использования и создайте объект <xref:System.ServiceModel.Channels.Message> с помощью одного из следующих методов:  
+ Если необходимо поддерживать форматы, отличающиеся от XML или JSON, операцию нужно определить таким образом, чтобы она возвращала тип <xref:System.ServiceModel.Channels.Message>. Внутри кода операции определите соответствующий формат для использования и создайте объект <xref:System.ServiceModel.Channels.Message> с помощью одного из следующих методов:  
   
 -   `WebOperationContext.CreateAtom10Response`  
   
@@ -143,10 +141,9 @@ public class Service : IService
   
 -   `WebOperationContext.CreateXmlResponse`  
   
- Каждый из этих методов принимает содержимое и создает сообщение соответствующего формата.  Метод `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` можно использовать для получения списка форматов, предпочитаемых клиентом в порядке снижения предпочтения.  В следующем примере показано применение `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` для определения используемого формата, а затем используется соответствующий метод создания ответа для создания ответного сообщения.  
+ Каждый из этих методов принимает содержимое и создает сообщение соответствующего формата. Метод `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` можно использовать для получения списка форматов, предпочитаемых клиентом в порядке снижения предпочтения. В следующем примере показано применение `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` для определения используемого формата, а затем используется соответствующий метод создания ответа для создания ответного сообщения.  
   
-```  
-  
+```csharp
 public class Service : IService  
 {  
     public Message EchoListWithGet(string list)  
@@ -170,13 +167,12 @@ public class Service : IService
     return CreateXmlResponse(returnList);  
     }  
 }  
-  
 ```  
   
-## См. также  
- <xref:System.UriTemplate>   
- <xref:System.UriTemplateMatch>   
- [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)   
- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.UriTemplate>  
+ <xref:System.UriTemplateMatch>  
+ [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

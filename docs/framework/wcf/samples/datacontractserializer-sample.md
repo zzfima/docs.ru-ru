@@ -1,28 +1,27 @@
 ---
-title: "Пример DataContractSerializer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "модуль форматирования XML"
+title: "Пример DataContractSerializer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-caps.latest.revision: 37
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 37
+caps.latest.revision: "37"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2cb8ae40cb62c65bf6dbd394055fffadd7202f16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пример DataContractSerializer
-В образце DataContractSerializer показывается сериализатор <xref:System.Runtime.Serialization.DataContractSerializer>, выполняющий службы общей сериализации и десериализации для классов контракта данных.  В образце создается объект `Record` , сериализуется в поток памяти, который десериализуется в другой объект `Record`, чтобы продемонстрировать использование <xref:System.Runtime.Serialization.DataContractSerializer>.  Затем в образце объект `Record` сериализуется с помощью модуля записи двоичных данных, чтобы продемонстрировать, как этот модуль влияет на сериализацию.  
+# <a name="datacontractserializer-sample"></a>Пример DataContractSerializer
+В образце DataContractSerializer показывается сериализатор <xref:System.Runtime.Serialization.DataContractSerializer>, выполняющий службы общей сериализации и десериализации для классов контракта данных. В этом примере создается `Record` объект, сериализует его в поток памяти и десериализуется в другой `Record` объекта, чтобы продемонстрировать использование <xref:System.Runtime.Serialization.DataContractSerializer>. Затем в образце объект `Record` сериализуется с помощью модуля записи двоичных данных, чтобы продемонстрировать, как этот модуль влияет на сериализацию.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -87,7 +86,6 @@ internal class Record
 ```  
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
-  
 ```  
   
  После этого в образце используется <xref:System.Runtime.Serialization.DataContractSerializer> для сериализации `record1` в поток памяти.  
@@ -98,7 +96,6 @@ MemoryStream stream1 = new MemoryStream();
 //Serialize the Record object to a memory stream using DataContractSerializer.  
 DataContractSerializer serializer = new DataContractSerializer(typeof(Record));  
 serializer.WriteObject(stream1, record1);  
-  
 ```  
   
  Затем в образце используется <xref:System.Runtime.Serialization.DataContractSerializer> для десериализации потока памяти в новый объект `Record`, который затем отображается.  
@@ -110,10 +107,9 @@ stream1.Position = 0;
 Record record2 = (Record)serializer.ReadObject(stream1);  
   
 Console.WriteLine("Deserialized record: {0}", record2.ToString());  
-  
 ```  
   
- По умолчанию `DataContractSerializer` кодирует объекты в поток с помощью текстового представления XML.  Однако на кодирование XML можно повлиять, передав его другому модулю записи данных.  В этом образце создается модель записи двоичных данных путем вызова <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.  Затем этот модуль и объект записи передаются сериализатору при вызове <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.  Наконец, выполняется очистка модуля записи данных и отчетов согласно размеру потоков.  
+ По умолчанию `DataContractSerializer` кодирует объекты в поток с помощью текстового представления XML. Однако на кодирование XML можно повлиять, передав его другому модулю записи данных. В этом образце создается модель записи двоичных данных путем вызова <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>. Затем этот модуль и объект записи передаются сериализатору при вызове <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Наконец, выполняется очистка модуля записи данных и отчетов согласно размеру потоков.  
   
 ```  
 MemoryStream stream2 = new MemoryStream();  
@@ -127,7 +123,7 @@ Console.WriteLine("Text Stream is {0} bytes long", stream1.Length);
 Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);  
 ```  
   
- При запуске образца отображаются исходная и десериализованная запись с последующем сравнением длины текстового и двоичного кодирования.  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При запуске образца отображаются исходная и десериализованная запись с последующем сравнением длины текстового и двоичного кодирования. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
 Original record: Record: 1 + 2 = 3  
@@ -138,21 +134,21 @@ Binary Stream is 156 bytes long
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы запустить пример, запустите клиент из командной строки, введя client\\bin\\client.exe.  
+3.  Чтобы запустить пример, запустите клиент из командной строки, введя client\bin\client.exe.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
   
-## См. также
+## <a name="see-also"></a>См. также

@@ -1,53 +1,57 @@
 ---
-title: "Интеграция WPF и WF в XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Интеграция WPF и WF в XAML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f2fc2399dc1c98ad8890034ca3a9915d4ce86162
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Интеграция WPF и WF в XAML
-Этот образец демонстрирует, как создать приложение, которое использует функциональность [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] и [!INCLUDE[wf](../../../../includes/wf-md.md)] в единственном документе XAML.Для этого в образце используется расширяемость XAML и [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+# <a name="wpf-and-wf-integration-in-xaml"></a>Интеграция WPF и WF в XAML
+Этот образец демонстрирует, как создать приложение, которое использует функциональность [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] и [!INCLUDE[wf](../../../../includes/wf-md.md)] в единственном документе XAML. Для этого в образце используется расширяемость XAML и [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## Подробные сведения об образце  
- Файл ShowWindow.xaml десериализуется в действие <xref:System.Activities.Statements.Sequence> с двумя строковыми переменными, которыми управляют действия последовательности: `ShowWindow` и `WriteLine`.Действие <xref:System.Activities.Statements.WriteLine> выводит в окно консоли выражение, которое оно назначает свойству <xref:System.Activities.Statements.WriteLine.Text%2A>.Действие `ShowWindow` отображает окно [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] как часть его логики выполнения.Контекст <xref:System.Activities.ActivityContext.DataContext%2A> окна включает переменные, объявленные в последовательности.В элементах управления окна, объявленных в действии `ShowWindow`, используется привязка данных для управления этими переменными.Наконец, окно содержит элемент управления в виде кнопки.Событие `Click` для кнопки обрабатывается с помощью <xref:System.Activities.ActivityDelegate> с именем `MarkupExtension`, содержащего действие `CloseWindow`.`MarkUpExtension` вызывает содержащееся действие, которое предоставляет в качестве контекста любые объекты, обозначенные `x:Name`, а также <xref:System.Activities.ActivityContext.DataContext%2A> содержащего окна.Таким образом, окно `CloseWindow.InArgument<Window>` может быть привязано с использованием выражения, которое ссылается на имя окна.  
+## <a name="sample-details"></a>Подробные сведения об образце  
+ Файл ShowWindow.xaml десериализуется в действие <xref:System.Activities.Statements.Sequence> с двумя строковыми переменными, которыми управляют действия последовательности: `ShowWindow` и `WriteLine`. Действие <xref:System.Activities.Statements.WriteLine> выводит в окно консоли выражение, которое оно назначает свойству <xref:System.Activities.Statements.WriteLine.Text%2A>. Действие `ShowWindow` отображает окно [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] как часть его логики выполнения. Контекст <xref:System.Activities.ActivityContext.DataContext%2A> окна включает переменные, объявленные в последовательности. В элементах управления окна, объявленных в действии `ShowWindow`, используется привязка данных для управления этими переменными. Наконец, окно содержит элемент управления в виде кнопки. Событие `Click` для кнопки обрабатывается с помощью <xref:System.Activities.ActivityDelegate> с именем `MarkupExtension`, содержащего действие `CloseWindow`. `MarkUpExtension` вызывает содержащееся действие, которое предоставляет в качестве контекста любые объекты, обозначенные `x:Name`, а также <xref:System.Activities.ActivityContext.DataContext%2A> содержащего окна. Таким образом, окно `CloseWindow.InArgument<Window>` может быть привязано с использованием выражения, которое ссылается на имя окна.  
   
- Действие `ShowWindow` порождается от класса <xref:System.Activities.AsyncCodeActivity%601> для отображения окна [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] и завершается при закрытии окна.Свойство `Window` имеет тип `Func<Window>`, который позволяет создавать окно по запросу для каждого выполнения действия.Свойство `Window` использует <xref:System.Xaml.XamlDeferringLoader> для включения этой модели отсроченной оценки.Загрузчик `FuncFactoryDeferringLoader` позволяет перехватывать модуль `XamlReader` в течение сериализации, а затем выполнять чтение в ходе выполнения действия.  
+ Действие `ShowWindow` порождается от класса <xref:System.Activities.AsyncCodeActivity%601> для отображения окна [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] и завершается при закрытии окна. Свойство `Window` имеет тип `Func<Window>`, который позволяет создавать окно по запросу для каждого выполнения действия. Свойство `Window` использует <xref:System.Xaml.XamlDeferringLoader> для включения этой модели отсроченной оценки. Загрузчик `FuncFactoryDeferringLoader` позволяет перехватывать модуль `XamlReader` в течение сериализации, а затем выполнять чтение в ходе выполнения действия.  
   
- Правильно запрограммированное действие никогда не блокирует поток\-планировщик.Однако действие `ShowWindow` не может завершиться, пока окно, в котором оно отображается, не будет закрыто.Действие `ShowWindow` достигает этого поведения следующим образом: оно порождается от <xref:System.Activities.AsyncCodeActivity>, вызывает метод <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> в методе <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и отображает модальное окно.Делегат вызывается с помощью WPF <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>.Активность `ShowWindow` назначает свойство <xref:System.Activities.ActivityContext.DataContext%2A> свойству `Window.DataContext` для обеспечения доступа любым связанным элементам управления данных к переменным в области.  
+ Правильно запрограммированное действие никогда не блокирует поток-планировщик. Однако действие `ShowWindow` не может завершиться, пока окно, в котором оно отображается, не будет закрыто. Действие `ShowWindow` достигает этого поведения следующим образом: оно порождается от <xref:System.Activities.AsyncCodeActivity>, вызывает метод <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> в методе <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и отображает модальное окно. Делегат вызывается с помощью WPF <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>. Активность `ShowWindow` назначает свойство <xref:System.Activities.ActivityContext.DataContext%2A> свойству `Window.DataContext` для обеспечения доступа любым связанным элементам управления данных к переменным в области.  
   
- Последняя особенность, представляющая интерес в этом образце, состоит в том, что расширение <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension> вызывается расширением `DelegateActivityExtension`.Метод `ProvideValue` этого расширения разметки возвращает делегат, который вызывает внедренное действие.Это действие эксплуатируется в среде, которая включает контекст данных [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] и любые значения `x:Name` в области.В методе `GenericInvoke` эта среда предоставляется действию через расширение <xref:System.Activities.Hosting.SymbolResolver>.Это расширение добавляется к объекту <xref:System.Activities.WorkflowInvoker>, который затем используется для вызова внедренного действия при каждом вызове делегата расширения разметки.  
+ Последняя особенность, представляющая интерес в этом образце, состоит в том, что расширение <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension> вызывается расширением `DelegateActivityExtension`. Метод `ProvideValue` этого расширения разметки возвращает делегат, который вызывает внедренное действие. Это действие эксплуатируется в среде, которая включает контекст данных [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] и любые значения `x:Name` в области. В методе `GenericInvoke` эта среда предоставляется действию через расширение <xref:System.Activities.Hosting.SymbolResolver>. Это расширение добавляется к объекту <xref:System.Activities.WorkflowInvoker>, который затем используется для вызова внедренного действия при каждом вызове делегата расширения разметки.  
   
 > [!NOTE]
 >  Конструктор по умолчанию не поддерживает действие ShowWindow. Файл ShowWindow.Xaml как таковой не отображается правильно в конструкторе.  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a>Использование этого образца  
   
 1.  Откройте в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] файл решения WPFWFIntegration.sln.  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  Для построения решения нажмите CTRL+SHIFT+B.  
   
 3.  Чтобы запустить решение, нажмите клавишу F5.  
   
 4.  Введите свои имя и фамилию в диалоговом окне.  
   
-5.  Закройте диалоговое окно, и консоль выполнит эхо\-повтор вашего имени.  
+5.  Закройте диалоговое окно, и консоль выполнит эхо-повтор вашего имени.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`  
   
-## См. также
+## <a name="see-also"></a>См. также

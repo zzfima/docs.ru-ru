@@ -1,59 +1,42 @@
 ---
-title: "Явные и неявные преобразования (Visual Basic) | Документы Microsoft"
+title: "Явные и неявные преобразования (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- conversions, type
+- conversions [Visual Basic], type
 - variables [Visual Basic], changing data type
 - casting
-- conversions, data type
-- type conversion, implicit conversions
-- CType function, conversions
+- conversions [Visual Basic], data type
+- type conversion [Visual Basic], implicit conversions
+- CType function [Visual Basic], conversions
 - casting, data types
-- data type conversion, explicit
-- type conversion, explicit conversions
+- data type conversion [Visual Basic], explicit
+- type conversion [Visual Basic], explicit conversions
 - data types [Visual Basic], casting
-- conversions, implicit
-- explicit data type conversions
-- conversions
-- changing data types
-- conversions, explicit
-- data type conversion, implicit
-- implicit data type conversions
+- conversions [Visual Basic], implicit
+- explicit data type conversions [Visual Basic]
+- conversions [Visual Basic]
+- changing data types [Visual Basic]
+- conversions [Visual Basic], explicit
+- data type conversion [Visual Basic], implicit
+- implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 24c434df4be480c290b3e4e36bd9f294d12b99ef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Явные и неявные преобразования (Visual Basic)
-*Неявное преобразование* не требуют специального синтаксиса в исходном коде. В следующем примере [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] неявно преобразует значение `k` в значение с плавающей запятой одиночной точности, перед назначением их `q`.  
+*Неявное преобразование* не требует специального синтаксиса в исходном коде. В следующем примере [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] неявно преобразует значение `k` значение с плавающей запятой одиночной точности перед назначением их `q`.  
   
 ```  
 Dim k As Integer  
@@ -63,9 +46,9 @@ k = 432
 q = k  
 ```  
   
- *Явное преобразование* используется ключевое слово преобразования типа. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет несколько зарезервированных слов, которые приводят выражение в скобках для нужного типа данных. Эти ключевые слова действуют аналогично функциям, но компилятор создает встроенный код, поэтому выполнение будет несколько быстрее, чем при вызове функции.  
+ *Явное преобразование* используется ключевое слово преобразования типа. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет несколько зарезервированных слов, которые приводят выражение в скобках для нужного типа данных. Эти ключевые слова действуют аналогично функциям, но компилятор создает встроенный код, поэтому выполнение будет несколько быстрее, чем при вызове функции.  
   
- В следующем расширении предыдущего примера `CInt` ключевое слово преобразует значение `q` обратно в целое перед его присвоением `k`.  
+ В следующем расширении предыдущего примера `CInt` ключевое слово преобразует значение `q` обратно в целое перед назначением их `k`.  
   
 ```  
 ' q had been assigned the value 432 from k.  
@@ -75,7 +58,7 @@ k = CInt(q)
 ```  
   
 ## <a name="conversion-keywords"></a>Ключевые слова преобразований  
- В следующей таблице показаны допустимые зарезервированные слова преобразования.  
+ В следующей таблице показаны ключевые слова преобразование невозможно.  
   
 |Ключевое слово преобразования типа|Преобразует выражение в тип данных|Допустимые типы данных преобразуемого выражения|  
 |---|---|---|  
@@ -92,7 +75,7 @@ k = CInt(q)
 |`CShort`|[Тип данных Short](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
 |`CSng`|[Тип данных Single](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
 |`CStr`|[Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `Char`, `Char` массива, `Date`,`Object`|  
-|`CType`|Тип, заданный после запятой (`,`)|При преобразовании в *простой тип данных* (включая массив простейших типов), же типы, которые разрешены для соответствующих зарезервированных слов преобразования<br /><br /> При преобразовании в *составного типа*, он реализует интерфейсы и классы, от которых они наследуются<br /><br /> При преобразовании класса или структуры, в которой имеются перегруженные `CType`, класса или структуры|  
+|`CType`|Тип, заданный после запятой (`,`)|При преобразовании в *простейший тип данных* типов (включая массив простейших типов), то, как для соответствующих зарезервированных слов преобразования<br /><br /> При преобразовании в *составного типа*, он реализует интерфейсы и классы, от которых они наследуются<br /><br /> При преобразовании в классе или структуре, в которой имеются перегруженные `CType`, класса или структуры|  
 |`CUInt`|[Тип данных UInteger](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
 |`CULng`|[Тип данных ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
 |`CUShort`|[Тип данных UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Любой числовой тип (включая `Byte`, `SByte`и типы перечисления), `Boolean`, `String`,`Object`|  
@@ -100,9 +83,9 @@ k = CInt(q)
 ## <a name="the-ctype-function"></a>Функция CType  
  [Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) имеет два аргумента. Во-первых, преобразуемое выражение, а второй — класс тип или объект назначения данных. Обратите внимание, что первый аргумент должен быть выражением, а не тип.  
   
- `CType`— *встроенная функция*, то есть скомпилированный код делает преобразование, часто без создания функции вызова. Это повышает производительность.  
+ `CType`— *встроенная функция*, то есть скомпилированный код делает преобразование, часто без создания функции вызова. Это улучшает производительность.  
   
- Сравнение `CType` с другим типом зарезервированных слов преобразования, в разделе [оператор DirectCast](../../../../visual-basic/language-reference/operators/directcast-operator.md) и [оператор TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ Сравнение `CType` с других ключевых слов преобразования типов, в разделе [оператор DirectCast](../../../../visual-basic/language-reference/operators/directcast-operator.md) и [оператор TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
 ### <a name="elementary-types"></a>Простые типы  
  В следующем примере показано использование функции `CType`.  
@@ -114,7 +97,7 @@ f = CType(w, Label)
 ```  
   
 ### <a name="composite-types"></a>Составные типы  
- Можно использовать `CType` для преобразования значений в составной данных типов, а также простые типы. Его также можно использовать для присвоения класса объекта типу одного из его интерфейсов, как показано в следующем примере.  
+ Можно использовать `CType` для преобразования значений в составные типы данных также относительно простыми типами. Можно также используется для присвоения класса объекта типу одного из его интерфейсов, как показано в следующем примере.  
   
 ```  
 ' Assume class cZone implements interface iZone.  
@@ -126,7 +109,7 @@ h = CType(cZ, iZone)
 ```  
   
 ### <a name="array-types"></a>Типы массивов  
- `CType`также можно преобразовать типы данных массивов, как показано в следующем примере.  
+ `CType`также можно преобразовывать типы данных массивов, как показано в следующем примере.  
   
 ```  
 Dim v() As classV  
@@ -139,26 +122,26 @@ If TypeOf obArray Is classV()
 End If  
 ```  
   
- Дополнительные сведения и пример см. в разделе [преобразования массива](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
+ Дополнительные сведения и пример см. в разделе [преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).  
   
 ### <a name="types-defining-ctype"></a>Типы, определение CType  
- Можно определить `CType` в классе или структуре, определенных вами. Это дает возможность преобразования значений из типа класса или структуры. Дополнительные сведения и пример см. в разделе [Практическое руководство: определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Можно определить `CType` в классе или структуре, определенных вами. Это дает возможность преобразования значения в тип класса или структуры. Дополнительные сведения и пример см. в разделе [как: определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
 > [!NOTE]
->  Значения, используемые с ключевым словом преобразования должен быть допустимым для целевого типа данных, или произошла ошибка. Например, если при попытке преобразовать `Long` для `Integer`, значение `Long` должно быть в пределах допустимого диапазона для `Integer` тип данных.  
+>  Значения, которые используются с ключевым словом преобразование должно быть допустимым для целевого типа данных, или произошла ошибка. Например, если при попытке преобразовать `Long` для `Integer`, значение `Long` должно быть в пределах допустимого диапазона для `Integer` тип данных.  
   
 > [!CAUTION]
->  Указание `CType` для преобразования из одного типа класса в другой вызовет ошибку во время выполнения, если тип источника не является производным от конечного типа. Такой сбой вызовет исключение <xref:System.InvalidCastException>исключение.</xref:System.InvalidCastException>  
+>  Указание `CType` для преобразования из одного типа класса в другой вызовет ошибку во время выполнения, если тип источника не является производным от типа назначения. Такой сбой вызывает <xref:System.InvalidCastException> исключение.  
   
- Тем не менее если один из типов является структурой или определения класса, а определены `CType` для структуры или класса, преобразование может быть успешным, если оно удовлетворяет требованиям вашего `CType`. В разделе [Практическое руководство: определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
+ Тем не менее если один из типов является структурой или классом, определены, и если вы определили `CType` для структуры или класса, преобразование может быть успешным, если он соответствует требованиям вашей `CType`. В разделе [как: определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).  
   
- Выполнение явного преобразования называется также *приведение* выражение для данных типа или объект класса.  
+ Выполнение явного преобразования называется также *приведения* выражение для данных типа или объекта класса.  
   
 ## <a name="see-also"></a>См. также  
- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Преобразование между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [Практическое руководство: преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)   
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
+ [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Как: преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

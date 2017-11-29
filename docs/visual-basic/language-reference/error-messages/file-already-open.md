@@ -1,34 +1,32 @@
 ---
-title: "Файл уже открыт | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID55"
-dev_langs: 
-  - "VB"
+title: "Файл уже открыт"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3305831e840510e3f0b5bcb8bf847e39ea3ee4ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Файл уже открыт
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В некоторых случаях файл необходимо закрыть прежде чем выполнять `FileOpen` или другую операцию.  Возможные причины появления этой ошибки:  
+# <a name="file-already-open"></a>Файл уже открыт
+В некоторых случаях файл необходимо закрыть перед другим `FileOpen` или другую операцию. Некоторые из возможных причин этой ошибки:  
   
--   Операция `FileOpen` режима последовательного вывода была выполнена для уже открытого файла.  
+-   Режим последовательного вывода `FileOpen` операция была выполнена для файла, который уже открыт  
   
 -   Оператор ссылается на открытый файл.  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Закройте файл прежде чем выполнять оператор.  
+1.  Закройте файл перед выполнением инструкции.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>

@@ -1,60 +1,61 @@
 ---
-title: "Стандартная функциональность элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "таблицы данных, стандартная функциональность элемента управления DataGridView"
-  - "DataGridView - элемент управления [Windows Forms], стандартная функциональность"
+title: "Стандартная функциональность элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], default functionality in DataGridView control
+- DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d6b15085c301f074ef6fcf9e60a75299c4b245b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стандартная функциональность элемента управления DataGridView в Windows Forms
-Элемент управления Windows Forms <xref:System.Windows.Forms.DataGridView> предоставляет пользователям широкую функциональность по умолчанию.  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Стандартная функциональность элемента управления DataGridView в Windows Forms
+Windows Forms <xref:System.Windows.Forms.DataGridView> управления предоставляет пользователям широкую функциональность по умолчанию.  
   
-## Функциональность по умолчанию  
- По умолчанию элемент управления <xref:System.Windows.Forms.DataGridView> имеет следующие возможности.  
+## <a name="default-functionality"></a>Функциональные возможности по умолчанию  
+ По умолчанию <xref:System.Windows.Forms.DataGridView> управления:  
   
--   Автоматическое отображение заголовков столбцов и строк, которые остаются видимыми при вертикальной прокрутке таблицы.  
+-   Автоматически отображает заголовки столбцов и заголовки строк, которые остаются видимыми при прокрутке таблицы по вертикали.  
   
--   Заголовок строки с указателем выбора для текущей строки.  
+-   Содержит заголовок строки с указателем выбора для текущей строки.  
   
--   Прямоугольник выделения в первой ячейке.  
+-   Содержит прямоугольник выделения в первой ячейке.  
   
--   Столбцы с возможностью автоматического изменения размера при двойном щелчке мышью на разделителях столбцов.  
+-   Есть столбцы, которые могут быть изменены автоматически при двойном щелчке разделителей столбцов.  
   
--   Автоматическая поддержка визуальных стилей операционных систем семейства Windows Server 2003 и Windows XP при вызове метода <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> из метода `Main` приложения.  
+-   Автоматическая поддержка визуальных стилей в Windows XP и семейства Windows Server 2003 при <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод вызывается из приложения `Main` метод.  
   
- Кроме того, по умолчанию применимы следующие способы редактирования содержимого элемента управления <xref:System.Windows.Forms.DataGridView>.  
+ Кроме того, содержимое <xref:System.Windows.Forms.DataGridView> управления могут редактироваться по умолчанию:  
   
--   При двойном щелчке мышью по ячейке, либо при нажатии клавиши F2, когда фокус находится на ячейке, элемент управления автоматически переводит данную ячейку в режим редактирования и обновляет ее содержимое в процессе ввода данных пользователем с клавиатуры.  
+-   Если пользователь дважды щелкает или нажимает клавишу F2 в ячейке, элемент управления автоматически переводит ячейку в режим редактирования и обновляет содержимое ячейки при вводе.  
   
--   При прокрутке сетки до конца отображается строка для добавления новых записей.  При щелчке мышью по этой строке к элементу управления <xref:System.Windows.Forms.DataGridView> добавляется новая строка со значениями по умолчанию.  При нажатии клавиши ESC новая строка удаляется.  
+-   Если пользователь выполняет прокрутку к концу сетки, пользователь увидит наличии строка для добавления новых записей. Когда пользователь нажимает эту строку, добавляется новая строка <xref:System.Windows.Forms.DataGridView> управления со значениями по умолчанию. При нажатии клавиши ESC новая строка удаляется.  
   
--   При щелчке мышью по заголовку строки выбирается вся строка.  
+-   При нажатии кнопки в заголовке строки выбирается целой строки.  
   
- При связывании элемента управления <xref:System.Windows.Forms.DataGridView> с источником данных путем задания свойства <xref:System.Windows.Forms.DataGridView.DataSource%2A> происходит следующее.  
+ При привязке <xref:System.Windows.Forms.DataGridView> управления к источнику данных, установив его <xref:System.Windows.Forms.DataGridView.DataSource%2A> свойства:  
   
--   Элемент управления автоматически использует имена столбцов источника данных в качестве текста заголовков столбцов.  
+-   Автоматически использует имена столбцов источника данных в виде текста заголовка столбца.  
   
--   Заполняется содержимым источника данных.  Для каждого столбца источника данных создается соответствующий столбец в элементе управления <xref:System.Windows.Forms.DataGridView>.  
+-   Заполняется содержимым источника данных. <xref:System.Windows.Forms.DataGridView>столбцы создаются автоматически для каждого столбца в источнике данных.  
   
--   Для каждой видимой строки таблицы создается строка в элементе управления.  
+-   Создает строку для каждой видимой строки в таблице.  
   
--   При щелчке мышью по заголовку столбца элемент управления производит автоматическую сортировку строк на основании соответствующих данных.  
+-   Автоматически сортирует строки на основе базовых данных при щелчке заголовка столбца.  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
  [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

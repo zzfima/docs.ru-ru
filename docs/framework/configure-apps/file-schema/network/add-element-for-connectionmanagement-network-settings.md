@@ -1,89 +1,91 @@
 ---
-title: "Элемент &lt;add&gt; для connectionManagement (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> - элемент, connectionManagement"
-  - "<connectionManagement>, add - элемент"
-  - "add - элемент, connectionManagement"
-  - "connectionManagement, add - элемент"
+title: "&lt;Добавить&gt; элемент для connectionManagement (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/add
+helpviewer_keywords:
+- <add> element, connectionManagement
+- <connectionManagement>, add element
+- add element, connectionManagement
+- connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: aec29ed6836671831130226a601358d5f6a1d3dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;add&gt; для connectionManagement (параметры сети)
-Добавляет IP\-адрес или DNS\-имя в список управления подключениями.  
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Добавить&gt; элемент для connectionManagement (параметры сети)
+Добавляет IP-адрес или DNS-имя в список управления подключениями.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<connectionManagement >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-        <add   
-   address = "address expression"   
-   maxconnection = integer   
+```xml  
+<add   
+  address="address expression"   
+  maxconnection="integer"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`address`|Строка, описывающая IP\-адрес или DNS\-имя.|  
-|`maxconnection`|Максимальное число разрешенных подключений к серверу.  Если значение не предоставлено, используется значение по умолчанию 2.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`address`|Строка, описывающая IP-адрес или DNS-имя.|  
+|`maxconnection`|Максимальное число разрешенных подключений к серверу. Если значение не предоставлено, используется значение по умолчанию 2.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
+|-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к сетевому узлу.|  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  В качестве значения атрибута `address` должна быть задана либо звездочка, указывающая все подключения, либо строка в форме `<schema>://<idn_hostname>[:<port>]`.  
   
- Если URI, переданный в какие\-либо API HTTP, содержит символы Юникода, то имя будет преобразовано внутренним образом с помощью свойства <xref:System.Uri.DnsSafeHost%2A>, которое может возвращать строку Punycode \(поведение, зависящее от текущей конфигурации IDN\).  
+ Если URI, переданный в какие-либо API HTTP, содержит символы Юникода, то имя будет преобразовано внутренним образом с помощью свойства <xref:System.Uri.DnsSafeHost%2A>, которое может возвращать строку Punycode (поведение, зависящее от текущей конфигурации IDN).  
   
-## Файлы конфигурации  
- Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода приложение настраивается для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем другим серверам.  
+## <a name="example"></a>Пример  
+ Следующий пример настраивает приложение для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем другим серверам.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <connectionManagement>  
-      <add address = "http://www.contoso.com" maxconnection = "4" />  
-      <add address = "*" maxconnection = "2" />  
+      <add address="http://www.contoso.com" maxconnection="4" />  
+      <add address="*" maxconnection="2" />  
     </connectionManagement>  
   </system.net>  
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.ServicePoint>   
- <xref:System.Net.ServicePointManager>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.ServicePoint>  
+ <xref:System.Net.ServicePointManager>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

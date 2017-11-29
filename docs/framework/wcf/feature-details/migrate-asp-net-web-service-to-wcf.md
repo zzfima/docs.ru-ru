@@ -1,35 +1,38 @@
 ---
-title: "Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 94d6cc499caddc8b3cbbf8ba7845e4de5441165c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation
-Ниже описано, как перенести веб\-службу ASP.NET на платформу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .  
+# <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>Практическое руководство. Миграция кода веб-службы ASP.NET на платформу Windows Communication Foundation
+Ниже описано, как перенести веб-службу ASP.NET на платформу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .  
   
-## Процедура  
+## <a name="procedure"></a>Процедура  
   
-#### Перенос кода службы ASP.NET в WCF  
+#### <a name="to-migrate-aspnet-web-service-code-to-wcf"></a>Перенос кода службы ASP.NET в WCF  
   
 1.  Проверьте наличие полного набора тестов для службы.  
   
 2.  Создайте код WSDL для службы и сохраните копию в той же папке, что и файл ASMX службы.  
   
-3.  Обновите веб\-службу ASP.NET для использования .NET 2.0.  Сначала разверните .NET Framework 2.0 в приложение в службах IIS, а затем с помощью Visual Studio 2005 автоматически преобразуйте код, как описано в документе [Пошаговое руководство по преобразованию веб\-проектов из Visual Studio .NET 2002\/2003 в Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492).  Выполните набор тестов.  
+3.  Обновите веб-службу ASP.NET для использования .NET 2.0. Сначала разверните .NET Framework 2.0 приложение в службах IIS, а затем использовать Visual Studio 2005 для автоматизации процесса преобразования кода, как описано в [Пошаговое руководство по преобразованию веб-проектов из Visual Studio .NET 2002/2003 в Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=96492). Выполните набор тестов.  
   
-4.  Задайте явные значения параметров `Namespace` и `Name` атрибутов <xref:System.Web.Services.WebService>, если они еще не заданы.  Выполните те же действия для параметра `MessageName` атрибута <xref:System.Web.Services.WebMethodAttribute>.  Если явные значения еще не заданы в HTTP\-заголовках SOAPAction, с помощью которых запросы перенаправляются в методы, явным образом укажите значение по умолчанию параметра `Action` с атрибутом <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.  
+4.  Задайте явные значения параметров `Namespace` и `Name` атрибутов <xref:System.Web.Services.WebService>, если они еще не заданы. Выполните те же действия для параметра `MessageName` атрибута <xref:System.Web.Services.WebMethodAttribute>. Если явные значения еще не заданы в HTTP-заголовках SOAPAction, с помощью которых запросы перенаправляются в методы, явным образом укажите значение по умолчанию параметра `Action` с атрибутом <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -81,9 +84,9 @@ caps.handback.revision: 8
   
 7.  Протестируйте изменения.  
   
-8.  Добавьте ссылки на сборки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System.ServiceModel и System.Runtime.Serialization в проект веб\-службы ASP.NET.  
+8.  Добавьте ссылки на сборки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] System.ServiceModel и System.Runtime.Serialization в проект веб-службы ASP.NET.  
   
-9. Запустите средство [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), чтобы создать класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из кода WSDL.  Добавьте модуль созданного класса в решение.  
+9. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] класс клиента из WSDL. Добавьте модуль созданного класса в решение.  
   
 10. Модуль класса, созданный на предыдущем шаге, содержит определение интерфейса.  
   
@@ -98,7 +101,7 @@ caps.handback.revision: 8
     }  
     ```  
   
-     Измените определение класса веб\-службы ASP.NET, чтобы класс был определен как реализация этого интерфейса, как показано в следующем примере кода.  
+     Измените определение класса веб-службы ASP.NET, чтобы класс был определен как реализация этого интерфейса, как показано в следующем примере кода.  
   
     ```  
     [WebService(Namespace = "http://tempuri.org/", Name = "Adder")]  
@@ -120,7 +123,7 @@ caps.handback.revision: 8
     }  
     ```  
   
-11. Скомпилируйте проект.  Могут обнаружиться некоторые ошибки, связанные с кодом, созданным на шаге девять, когда были скопированы некоторые определения.  Исправьте эти ошибки. Обычно для этого достаточно удалить ранее заданные определения типов.  Протестируйте изменения.  
+11. Скомпилируйте проект. Могут обнаружиться некоторые ошибки, связанные с кодом, созданным на шаге девять, когда были скопированы некоторые определения. Исправьте эти ошибки. Обычно для этого достаточно удалить ранее заданные определения типов. Протестируйте изменения.  
   
 12. Удалите атрибуты, относящиеся к ASP.NET, например <xref:System.Web.Services.WebService>, <xref:System.Web.Services.WebMethodAttribute> и <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>.  
   
@@ -141,7 +144,7 @@ caps.handback.revision: 8
     }  
     ```  
   
-13. Настройте класс, которые теперь является типом службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], чтобы он требовал режима совместимости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с ASP.NET, если веб\-служба ASP.NET использовала какие\-либо компоненты из следующего списка:  
+13. Настройте класс, которые теперь является типом службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], чтобы он требовал режима совместимости [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с ASP.NET, если веб-служба ASP.NET использовала какие-либо компоненты из следующего списка:  
   
     -   класс <xref:System.Web.HttpContext>;  
   
@@ -165,14 +168,14 @@ caps.handback.revision: 8
   
 15. Создайте файл службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], присвойте ему расширение ASMX и сохраните его в корневой папке приложения в IIS.  
   
-    ```  
+    ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. Добавьте конфигурацию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы в файл Web.config.  Настройте службу, чтобы она использовала элемент [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), файл службы с расширением ASMX, созданный на предыдущих шагах, и не создавала для себя код WSDL, используя вместо этого код WSDL, полученный на шаге два.  Кроме того, при необходимости настройте режим совместимости ASP.NET.  
+16. Добавьте конфигурацию [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы в файл Web.config. Настройте службу на использование [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), для использования службы файла с расширением .asmx, созданные на предыдущем шаге и не формирует WSDL-код для себя, но для использования WSDL из шага 2. Кроме того, при необходимости настройте режим совместимости ASP.NET.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
      <system.web>  
@@ -193,7 +196,7 @@ caps.handback.revision: 8
       <service name="MyOrganization.Adder "  
         behaviorConfiguration="AdderBehavior">  
        <endpoint   
-        address="”  
+        address=""  
         binding="basicHttpBinding"  
         contract="AdderSoap "/>  
        </service>  
@@ -212,7 +215,6 @@ caps.handback.revision: 8
        aspNetCompatibilityEnabled ="true"/>  
      </system.serviceModel>  
     </configuration>  
-  
     ```  
   
 17. Сохраните конфигурацию.  
@@ -221,5 +223,5 @@ caps.handback.revision: 8
   
 19. Выполните набор тестов, чтобы убедиться, что все изменения работают.  
   
-## См. также  
- [Практическое руководство. Миграция кода клиента веб\-службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)
+## <a name="see-also"></a>См. также  
+ [Как: Миграция кода клиента службы ASP.NET на платформу Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

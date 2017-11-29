@@ -1,44 +1,48 @@
 ---
-title: "Как использовать SystemParameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы, SystemParameters"
-  - "SystemParameters - класс"
+title: "Как использовать SystemParameters"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как использовать SystemParameters
-В этом примере показывается, как получить доступ к свойствам <xref:System.Windows.SystemParameters> и использовать их, чтобы разработать или настроить кнопку.  
+# <a name="how-to-use-systemparameters"></a>Как использовать SystemParameters
+В этом примере показано, как получить доступ и использование свойств объекта <xref:System.Windows.SystemParameters> для изменения стиля или настроек кнопки.  
   
-## Пример  
- Системные ресурсы предоставляют несколько параметров системы в виде ресурсов, способствующих созданию визуальных элементов с учетом параметров системы.  <xref:System.Windows.SystemParameters> представляет собой класс, содержащий как свойства значений параметров системы, так и ключи ресурсов, привязанные к этим значениям.  Например, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> является значением свойства <xref:System.Windows.SystemParameters>, а <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> является соответствующим ключом ресурса.  
+## <a name="example"></a>Пример  
+ Системные ресурсы предоставляют несколько параметров системы в виде ресурсов, помогающих создавать визуальные элементы с учетом параметров системы. <xref:System.Windows.SystemParameters>— Это класс, содержащий свойства значений параметров системы и ключи ресурсов, которые привязаны к значениям. Например <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> — <xref:System.Windows.SystemParameters> значение свойства и <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> является соответствующим ключом ресурса.  
   
- В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] можно использовать члены объекта <xref:System.Windows.SystemParameters> как статическое свойство или динамические ссылки на ресурс \(со статическим значением свойства в качестве ключа\).  Используйте динамическую ссылку на ресурс, если требуется системное значение для автоматического обновления во время выполнения приложения; в противном случае, используйте статическую ссылку.  Ключи ресурсов имеют суффикс `Key`, добавленный к имени свойства.  
+ В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], можно использовать члены <xref:System.Windows.SystemParameters> как статическое свойство или динамические ссылки на ресурс (со статическим значением свойства в качестве ключа). Используйте ссылку на динамический ресурс, если требуется системное значение для автоматического обновления во время выполнения приложения. В противном случае используйте статическую ссылку. Ключи ресурсов имеют суффикс `Key` добавляется к имени свойства.  
   
- Следующий пример показывает, как получить доступ и использовать статические значения объекта <xref:System.Windows.SystemParameters> для разработки или настройки кнопки.  Этот пример разметки изменяет размер кнопки, применяя к ней значения <xref:System.Windows.SystemParameters>.  
+ Приведенный ниже показано, как получить доступ и использовать статические значения <xref:System.Windows.SystemParameters> для стиля или настройки кнопки. Этот пример разметки изменяет размер кнопки, применяя <xref:System.Windows.SystemParameters> кнопке значения.  
   
- [!code-xml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
- Чтобы использовать значения объекта <xref:System.Windows.SystemParameters> в коде, нет необходимости использовать статические или динамические ссылки на ресурс.  Вместо этого используйте значения класса <xref:System.Windows.SystemParameters>.  Хотя неключевые свойства, по всей видимости, определены как статические, поведение во время выполнения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], размещенного системой, будет пересчитывать свойства в режиме реального времени и правильно учитывать управляемые пользователем изменения значений системы. В следующем примере показано, как задать ширину и высоту кнопки с помощью значений <xref:System.Windows.SystemParameters>.  
+ Чтобы использовать значения из <xref:System.Windows.SystemParameters> в коде, не нужно использовать статические или динамические ссылки на ресурс. Вместо этого используйте значения <xref:System.Windows.SystemParameters> класса. Хотя неключевые свойства очевидно определены как статические, поведение среды выполнения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , размещенного в системе будет пересчитывать свойства в режиме реального времени и правильно учитывать управляемые пользователем изменения значений системы. В следующем примере показано, как задать ширину и высоту кнопки с помощью <xref:System.Windows.SystemParameters> значения.  
   
  [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
  [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
-## См. также  
- <xref:System.Windows.SystemParameters>   
- [Закраска области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [Использование SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)   
- [Использование разделов системных параметров](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)   
- [Практические руководства](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.SystemParameters>  
+ [Заливка области с помощью системной кисти](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [Использование SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [Использование разделов системных параметров](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

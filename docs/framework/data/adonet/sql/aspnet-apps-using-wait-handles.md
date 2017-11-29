@@ -1,40 +1,44 @@
 ---
-title: "Приложения ASP.NET, использующие дескрипторы ожидания | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Приложения ASP.NET, использующие дескрипторы ожидания"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 01244b06085614ea5e36bdde3e3b2fe196c0c0f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Приложения ASP.NET, использующие дескрипторы ожидания
-Модели ответного вызова и опроса для обработки асинхронных операций полезны, если приложение в определенный момент времени обрабатывает только одну асинхронную операцию.  Модели ожидания предоставляют более гибкий способ обработки нескольких асинхронных операций.  Существует две модели ожидания, называемые по именам методов <xref:System.Threading.WaitHandle>, используемых для их реализации: Wait \(Any\) и Wait \(All\).  
+# <a name="aspnet-applications-using-wait-handles"></a>Приложения ASP.NET, использующие дескрипторы ожидания
+Модели ответного вызова и опроса для обработки асинхронных операций полезны, если приложение в определенный момент времени обрабатывает только одну асинхронную операцию. Модели ожидания предоставляют более гибкий способ обработки нескольких асинхронных операций. Существует две модели ожидания, называемые по именам методов <xref:System.Threading.WaitHandle>, используемых для их реализации: Wait (Any) и Wait (All).  
   
- Для использования модели ожидания любого вида необходимо использовать свойство <xref:System.IAsyncResult.AsyncWaitHandle%2A> объекта <xref:System.IAsyncResult>, возвращаемого методом <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> или <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>.  Оба метода, и <xref:System.Threading.WaitHandle.WaitAny%2A>, и <xref:System.Threading.WaitHandle.WaitAll%2A>, требуют пересылки объектов <xref:System.Threading.WaitHandle> как аргументов, сгруппированных в массив.  
+ Для использования модели ожидания любого вида необходимо использовать свойство <xref:System.IAsyncResult.AsyncWaitHandle%2A> объекта <xref:System.IAsyncResult>, возвращаемого методом <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> или <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Оба метода, и <xref:System.Threading.WaitHandle.WaitAny%2A>, и <xref:System.Threading.WaitHandle.WaitAll%2A>, требуют пересылки объектов <xref:System.Threading.WaitHandle> как аргументов, сгруппированных в массив.  
   
- Оба метода Wait наблюдают за асинхронными операциями, ожидая завершения.  Метод <xref:System.Threading.WaitHandle.WaitAny%2A> ожидает завершения или истечения времени ожидания какой\-либо операции.  Если известно, что конкретная операция завершена, можно обработать ее результаты, а затем ждать завершения следующей операции или истечения времени ожидания.  Метод <xref:System.Threading.WaitHandle.WaitAll%2A> до продолжения работы ожидает завершения или истечения времени ожидания для всех процессов в массиве экземпляров <xref:System.Threading.WaitHandle>.  
+ Оба метода Wait наблюдают за асинхронными операциями, ожидая завершения. Метод <xref:System.Threading.WaitHandle.WaitAny%2A> ожидает завершения или истечения времени ожидания какой-либо операции. Если известно, что конкретная операция завершена, можно обработать ее результаты, а затем ждать завершения следующей операции или истечения времени ожидания. Метод <xref:System.Threading.WaitHandle.WaitAll%2A> до продолжения работы ожидает завершения или истечения времени ожидания для всех процессов в массиве экземпляров <xref:System.Threading.WaitHandle>.  
   
- Преимущество модели ожидания наиболее впечатляюще, когда нужно запустить несколько операций с некоторой длительностью на разных серверах или когда сервер достаточно производителен, чтобы обработать все запросы за одно и то же время.  В представленных здесь примерах три запроса моделируют долгие процессы добавлением команд WAITFOR переменной длины в несущественные запросы SELECT.  
+ Преимущество модели ожидания наиболее впечатляюще, когда нужно запустить несколько операций с некоторой длительностью на разных серверах или когда сервер достаточно производителен, чтобы обработать все запросы за одно и то же время. В представленных здесь примерах три запроса моделируют долгие процессы добавлением команд WAITFOR переменной длины в несущественные запросы SELECT.  
   
-## Пример. Модель ожидания Wait \(Any\)  
- В следующем примере иллюстрируется модель ожидания Wait \(Any\).  После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAny%2A> ожидания завершения одного из них.  При завершении каждого процесса вызывается метод <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> и считывается объект <xref:System.Data.SqlClient.SqlDataReader> результата.  В этот момент реальное приложение, вероятнее всего, использовало бы метод <xref:System.Data.SqlClient.SqlDataReader> для заполнения части страницы.  В этом простом примере время завершения процесса добавляется в текстовое поле, соответствующее процессу.  Вместе эти значения времени в текстовых полях показывают, что код выполняется после каждого завершения процесса.  
+## <a name="example-wait-any-model"></a>Пример. Модель ожидания Wait (Any)  
+ В следующем примере иллюстрируется модель ожидания Wait (Any). После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAny%2A> ожидания завершения одного из них. При завершении каждого процесса вызывается метод <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> и считывается объект <xref:System.Data.SqlClient.SqlDataReader> результата. В этот момент реальное приложение, вероятнее всего, использовало бы метод <xref:System.Data.SqlClient.SqlDataReader> для заполнения части страницы. В этом простом примере время завершения процесса добавляется в текстовое поле, соответствующее процессу. Вместе эти значения времени в текстовых полях показывают, что код выполняется после каждого завершения процесса.  
   
- Для настройки данного примера создайте новый проект веб\-узла ASP.NET.  Поместите на страницу элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> \(приняв для каждого из них имя по умолчанию\).  
+ Для настройки данного примера создайте новый проект веб-узла ASP.NET. Поместите на страницу элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> (приняв для каждого из них имя по умолчанию).  
   
  Добавьте в класс формы следующий код, изменив строку соединения в соответствии с вашей средой.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -165,9 +169,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -320,18 +322,16 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## Пример. Модель ожидания Wait \(All\)  
- В следующем примере иллюстрируется модель ожидания Wait \(All\).  После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAll%2A> ожидания завершения процессов или истечения их времени ожидания.  
+## <a name="example-wait-all-model"></a>Пример. Модель ожидания Wait (All)  
+ В следующем примере иллюстрируется модель ожидания Wait (All). После запуска трех асинхронных процессов вызывается метод <xref:System.Threading.WaitHandle.WaitAll%2A> ожидания завершения процессов или истечения их времени ожидания.  
   
- Как и в примере модели ожидания Wait \(Any\), время завершения процесса добавляется в текстовое поле, соответствующее процессу.  Как уже упоминалось выше, значения времени в текстовых полях показывают, что код, следующий за методом <xref:System.Threading.WaitHandle.WaitAny%2A>, выполняется только после завершения всех процессов.  
+ Как и в примере модели ожидания Wait (Any), время завершения процесса добавляется в текстовое поле, соответствующее процессу. Как уже упоминалось выше, значения времени в текстовых полях показывают, что код, следующий за методом <xref:System.Threading.WaitHandle.WaitAny%2A>, выполняется только после завершения всех процессов.  
   
- Для настройки данного примера создайте новый проект веб\-узла ASP.NET.  Поместите на страницу элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> \(приняв для каждого из них имя по умолчанию\).  
+ Для настройки данного примера создайте новый проект веб-узла ASP.NET. Поместите на страницу элемент управления <xref:System.Web.UI.WebControls.Button> и четыре элемента управления <xref:System.Web.UI.WebControls.TextBox> (приняв для каждого из них имя по умолчанию).  
   
  Добавьте в класс формы следующий код, изменив строку соединения в соответствии с вашей средой.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class  
 Imports System  
 Imports System.Data  
@@ -452,9 +452,7 @@ Imports System.Threading
     End Sub  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 // Add the following using statements, if they are not already there.  
 using System;  
 using System.Data;  
@@ -591,6 +589,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## См. также  
- [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

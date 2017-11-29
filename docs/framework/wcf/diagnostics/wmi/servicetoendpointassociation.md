@@ -1,25 +1,28 @@
 ---
-title: "ServiceToEndpointAssociation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceToEndpointAssociation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d2755294ba02b4d67bd7f62cf020a44525874d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceToEndpointAssociation
+# <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
 Сопоставляет службу конечной точке.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class ServiceToEndpointAssociation  
@@ -29,13 +32,13 @@ class ServiceToEndpointAssociation
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс ServiceToEndpointAssociation не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс ServiceToEndpointAssociation имеет следующие свойства.  
   
-### ref  
+### <a name="ref"></a>ref  
  Тип данных: Service  
   
  Тип доступа: только для чтения  
@@ -43,7 +46,7 @@ class ServiceToEndpointAssociation
   
  Служба, связанная с конечной точкой.  
   
-### ref  
+### <a name="ref"></a>ref  
  Тип данных: Endpoint  
   
  Тип доступа: только для чтения  
@@ -51,8 +54,8 @@ class ServiceToEndpointAssociation
   
  Конечная точка, связанная со службой.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|

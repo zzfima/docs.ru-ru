@@ -1,25 +1,28 @@
 ---
-title: "Практическое руководство. Сериализация и десериализация данных JSON | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Сериализация и десериализация данных JSON"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 14029250f3bc26ff8598e0b8d4ccce8e9fcca331
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сериализация и десериализация данных JSON
+# <a name="how-to-serialize-and-deserialize-json-data"></a>Практическое руководство. Сериализация и десериализация данных JSON
 JSON - эффективный формат кодирования данных, обеспечивающий быстрый обмен небольшими объемами данных между клиентскими браузерами и веб-службами с поддержкой AJAX.  
   
- В этом разделе показано, как сериализовать объекты типов .NET в данные в кодировке JSON и последующей десериализации данных в формате JSON обратно в экземпляры типов .NET с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. В этом примере показана сериализация и десериализация пользовательского типа `Person` с помощью контракта данных.  
+ В этом разделе показано, как сериализовать объекты типов .NET в данные с кодировкой JSON, а затем десериализовать формат JSON обратно в экземпляры типов .NET с помощью сериализатора <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. В этом примере показана сериализация и десериализация пользовательского типа `Person` с помощью контракта данных.  
   
  Обычно сериализация и десериализация JSON обрабатывается автоматически в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] при использовании типов контрактов данных в операциях службы, предоставляемых через конечные точки с поддержкой AJAX. Впрочем, в некоторых случаях может потребоваться работать с данными JSON напрямую. Именно этот сценарий рассмотрен в данном примере.  
   
@@ -30,7 +33,7 @@ JSON - эффективный формат кодирования данных, 
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>Определение контракта для типа Person  
   
-1.  Определение контракта данных для `Person` путем присоединения <xref:System.Runtime.Serialization.DataContractAttribute> класс и <xref:System.Runtime.Serialization.DataMemberAttribute> атрибутов к членам, которые требуется сериализовать. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]контракты данных в разделе [разработке контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).  
+1.  Определите контракт данных для типа `Person`, применив атрибут <xref:System.Runtime.Serialization.DataContractAttribute> к классу и атрибут <xref:System.Runtime.Serialization.DataMemberAttribute> к элементам, которые требуется сериализовать. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]контрактах данных см. в разделе [проектирование контрактов службы](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
     ```  
     [DataContract]  
@@ -54,14 +57,14 @@ JSON - эффективный формат кодирования данных, 
     p.age = 42;  
     ```  
   
-2.  Сериализация `Person` объекта в поток памяти с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2.  Сериализуйте объект `Person` в поток памяти с помощью сериализатора <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  Используйте <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> метода для записи данных JSON в поток.  
+3.  С помощью метода <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> запишите данные JSON в поток.  
   
     ```  
     ser.WriteObject(stream1, p);  
@@ -78,7 +81,7 @@ JSON - эффективный формат кодирования данных, 
   
 ### <a name="to-deserialize-an-instance-of-type-person-from-json"></a>Десериализация экземпляра типа Person из формата JSON  
   
-1.  Десериализуйте данные в кодировке JSON в новый экземпляр `Person` с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> метод <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+1.  Десериализуйте данные в кодировке JSON в новый экземпляр типа `Person` с помощью метода <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> сериализатора <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```  
     stream1.Position = 0;  
@@ -125,7 +128,6 @@ public static User ReadToObject(string json)
     ms.Close();  
     return deserializedUser;  
 }  
-  
 ```  
   
 > [!NOTE]
@@ -147,5 +149,5 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Автономная сериализация JSON](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)   
+ [Автономная сериализация JSON](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
  [Поддержка JSON и других данных форматов передачи](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

@@ -1,34 +1,37 @@
 ---
-title: "Образцы Windows Communication Foundation (WCF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Образцы Windows Communication Foundation (WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d90b133819df2997ed4d3a880d891d97b06a22c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образцы Windows Communication Foundation (WCF)
+# <a name="windows-communication-foundation-wcf-samples"></a>Образцы Windows Communication Foundation (WCF)
 В этих образцах приведены инструкции по различным аспектам [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
--   C# версии примеров в разделе [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780).  
+-   Для C# версии примеров, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780).  
   
--   Примеры на языке Visual Basic, см. в [примеры Visual Basic 2010](http://go.microsoft.com/fwlink/?LinkID=193373) и нажмите кнопку **_WCF_Samples.zip WF гиперссылка «javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$FileNameLink','')»**.  
+-   Версии примеров в Visual Basic, см. в [примеры Visual Basic 2010](http://go.microsoft.com/fwlink/?LinkID=193373) и нажмите кнопку **WF гиперссылка «javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$ FileNameLink', '')» _WCF_Samples.zip**.  
   
- [!INCLUDE[wf](../../../../includes/wf-md.md)] [Приложения](../../../../docs/framework/windows-workflow-foundation/samples/application.md) примеры также демонстрируют некоторые [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]функции.  
+ [!INCLUDE[wf](../../../../includes/wf-md.md)] [Приложения](../../../../docs/framework/windows-workflow-foundation/samples/application.md) примерах также демонстрируется несколько [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]функции.  
   
- Чтобы установить изолированную версию документации и средства просмотра справки, загрузите [Microsoft Windows SDK версии 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).  
+ Установка изолированной версии документация и средства просмотра справки, загрузите [v Microsoft Windows SDK 7.1](http://go.microsoft.com/fwlink/?LinkID=194146).  
   
 ## <a name="in-this-section"></a>Содержание  
- [Основные](../../../../docs/framework/wcf/samples/basic.md)  
+ [Основы](../../../../docs/framework/wcf/samples/basic.md)  
  Содержит образцы, иллюстрирующие базовые функции [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  Расширение среды  

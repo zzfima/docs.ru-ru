@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - design-time attributes
 - .NET Framework, exposing components to COM
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dffb4cc5408e78e794cae0d28ef54150d38b2c6c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 160a9597ff22ffc044cf3a35d345ba7d7e1606e4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="applying-interop-attributes"></a>Применение атрибутов взаимодействия
 В пространстве имен <xref:System.Runtime.InteropServices> представлены три категории атрибутов взаимодействия: атрибуты, применяемые разработчиком во время разработки, API и средствами COM-взаимодействия в процессе преобразования, а также разработчиком или средой COM-взаимодействия.  
@@ -83,9 +76,8 @@ ms.lasthandoff: 08/21/2017
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Содержит флаги **VARFLAGS**, которые были первоначально импортированы для этой переменной из библиотеки типов COM.|  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices>   
- [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Атрибуты](../../../docs/standard/attributes/index.md)   
- [Уточнение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices>  
+ [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Атрибуты](../../../docs/standard/attributes/index.md)  
+ [Oпределение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-

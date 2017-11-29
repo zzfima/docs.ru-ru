@@ -1,35 +1,33 @@
 ---
-title: "&lt;имяТипа&gt; является типом и не может использоваться в качестве выражения | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30108"
-  - "vbc30108"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30108"
+title: "&#39; &lt;typename&gt;&#39; является типом и не может использоваться как выражение"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30108
+- vbc30108
+helpviewer_keywords: BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2cffc528055b78fccb9953ee781dbec0af416002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;имяТипа&gt; является типом и не может использоваться в качестве выражения
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Имя типа используется там, где необходимо использование выражения.  Выражение должно состоять из сочетания переменных, констант, литералов, свойств и вызовов процедуры `Function`.  
+# <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39; &lt;typename&gt;&#39; является типом и не может использоваться как выражение
+Там, где требуется выражение, используется имя типа. Выражение должно состоять из сочетания переменных, констант, литералов, свойств и вызовов процедур `Function` .  
   
- **Идентификатор ошибки**: BC30108  
+ **Идентификатор ошибки:** BC30108  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Удалите имя типа и создайте выражение с использованием правильных элементов.  
+-   Удалите имя типа и создайте выражение, используя допустимые элементы.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

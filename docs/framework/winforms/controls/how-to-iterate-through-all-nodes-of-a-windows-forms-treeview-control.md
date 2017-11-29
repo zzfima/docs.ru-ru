@@ -1,39 +1,44 @@
 ---
-title: "Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], TreeView - элемент управления"
-  - "узлы дерева в элементе управления TreeView, перебор"
-  - "TreeView - элемент управления [Windows Forms], перебор узлов"
+title: "Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- TreeView control [Windows Forms], iterating through nodes
+- tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 057612bfb28333df0aebaa5ca19555f4c4951687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
-Время от времени рекомендуется проверять каждый узел в элементе управления Windows Forms <xref:System.Windows.Forms.TreeView> для выполнения некоторых вычислений для значений узлов.  Эта операция может быть выполнена с помощью рекурсивной процедуры \(рекурсивного метода в C\# и C\+\+\), в ходе которой просматривается каждый узел в каждой коллекции дерева.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
+Иногда бывает полезно просмотреть каждый узел в Windows Forms <xref:System.Windows.Forms.TreeView> управления для выполнения некоторых вычислений для значений узлов. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  
   
- Каждый объект <xref:System.Windows.Forms.TreeNode>, представленный в дереве просмотра, имеет свойства <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A> и <xref:System.Windows.Forms.TreeNode.Parent%2A>, которые можно использовать для перемещения по дереву.  Свойство <xref:System.Windows.Forms.TreeNode.Parent%2A> определяет родительский узел текущего узла.  Если у текущего узла есть дочерние узлы, они указаны в его свойстве <xref:System.Windows.Forms.TreeNode.Nodes%2A>.  У самого элемента управления <xref:System.Windows.Forms.TreeView> имеется свойство <xref:System.Windows.Forms.TreeView.TopNode%2A>, определяющее корневой узел для всего дерева.  
+ Каждый <xref:System.Windows.Forms.TreeNode> в виде дерева имеет свойства, которые можно использовать для перемещения по дереву: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, и <xref:System.Windows.Forms.TreeNode.Parent%2A>. Значение <xref:System.Windows.Forms.TreeNode.Parent%2A> свойства – это родительский узел текущего узла. Дочерние узлы текущего узла, если таковые имеются, перечисленных в его <xref:System.Windows.Forms.TreeNode.Nodes%2A> свойство. <xref:System.Windows.Forms.TreeView> Сам элемент управления имеет <xref:System.Windows.Forms.TreeView.TopNode%2A> свойство, которое является корневой узел всего дерева.  
   
-### Итерация всех узлов элемента управления TreeView  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Перебор всех узлов элемента управления в представлении в виде дерева  
   
-1.  Создайте рекурсивную процедуру \(в C\# и C\+\+ — рекурсивный метод\) для проверки каждого узла.  
+1.  Создайте рекурсивную процедуру (рекурсивный метод в C# и C++) для проверки каждого узла.  
   
-2.  Вызовите эту процедуру.  
+2.  Вызовите процедуру.  
   
-     В следующем примере показано, как вывести на печать значение свойства <xref:System.Windows.Forms.TreeNode.Text%2A> каждого объекта <xref:System.Windows.Forms.TreeNode>:  
+     Приведенный ниже показано, как печатать <xref:System.Windows.Forms.TreeNode> объекта <xref:System.Windows.Forms.TreeNode.Text%2A> свойство:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -52,7 +57,6 @@ caps.handback.revision: 14
           PrintRecursive(n)  
        Next  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -78,7 +82,6 @@ caps.handback.revision: 14
           PrintRecursive(n);  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -130,6 +133,6 @@ caps.handback.revision: 14
        }  
     ```  
   
-## См. также  
- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Рекурсивные процедуры](../Topic/Recursive%20Procedures%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>См. также  
+ [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [Рекурсивные процедуры](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

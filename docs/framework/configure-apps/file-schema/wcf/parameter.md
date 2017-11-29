@@ -1,67 +1,76 @@
 ---
-title: "&lt;параметр&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;параметр&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e9db1921e2a6ee1ae2780f744c45fdb25efbf797
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;параметр&gt;
+# <a name="ltparametergt"></a>&lt;параметр&gt;
 Указывает общий параметр, если объявленный тип является общим типом.  
   
-## Синтаксис  
+ \<System.Runtime.Serialization >  
+\<dataContractSerializer >  
+\<declaredTypes > элемент  
+\<Добавить > элемент для \<declaredTypes >  
+\<knownType > элемент  
+\<параметр > элемент  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <parameter index="integer"  
                       type=String" />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
+|---------------|-----------------|  
 |индекс|Если объявленный тип является общим типом, указывает общий параметр, который возвращает известный тип.|  
 |тип|Строка, которая описывает известный тип, используемый для сериализации и десериализации.|  
   
-## Атрибут index  
+## <a name="index-attribute"></a>Атрибут index  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|"0"|Первый параметр в общем типе.  Например, у <xref:System.Collections.Generic.List%601> есть только один параметр.  Если он используется как объявленный тип, индексу присваивается значение 0.|  
-|"1"|Второй параметр в общем типе.  Например, у <xref:System.Collections.Generic.Dictionary%602> есть два параметра.  Если известный тип возвращается вторым параметром, атрибуту index присваивается значение 1.|  
+|-----------|-----------------|  
+|"0"|Первый параметр в общем типе. Например, у <xref:System.Collections.Generic.List%601> есть только один параметр. Если он используется как объявленный тип, индексу присваивается значение 0.|  
+|"1"|Второй параметр в общем типе. Например, у <xref:System.Collections.Generic.Dictionary%602> есть два параметра. Если известный тип возвращается вторым параметром, атрибуту index присваивается значение 1.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<knownType\>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Указывает известный тип, который может возвращаться полем или свойством объявленного типа.|  
+|-------------|-----------------|  
+|[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Указывает известный тип, который может возвращаться полем или свойством объявленного типа.|  
   
-## Заметки  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] известных типах\[см. в разделах [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
+## <a name="remarks"></a>Примечания  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]известных типах см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Пример использования этого элемента см. в разделе [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md).  
+ В разделе [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) пример использования этого элемента.  
   
- У данного элемента конфигурации не может одновременно быть оба атрибута.  Если заданы оба атрибута, возникает исключение <xref:System.Configuration.ConfigurationErrorsException>.  
+ У данного элемента конфигурации не может одновременно быть оба атрибута. Если заданы оба атрибута, возникает исключение <xref:System.Configuration.ConfigurationErrorsException>.  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)   
- [\<добавление;\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

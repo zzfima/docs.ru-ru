@@ -1,58 +1,64 @@
 ---
-title: "Настройка параметров и типы данных параметров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка параметров и типы данных параметров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Настройка параметров и типы данных параметров
+# <a name="configuring-parameters-and-parameter-data-types"></a>Настройка параметров и типы данных параметров
 Объекты команды используют параметры для передачи значений в выражения SQL или хранимые процедуры, обеспечивая проверку типов и правильности. В отличие от текста команд, входные параметры обрабатываются как буквенные значения, а не как исполняемый код. Это помогает защищаться от атак путем внедрения кода SQL, при которых злоумышленник вставляет в инструкцию SQL команду, ставящую под угрозу безопасность сервера.  
   
  Параметризованные команды также позволяют повысить производительность при выполнении запроса, поскольку при их использовании сервер баз данных может точно сопоставить входящей команде правильный кэшированных план запроса. Дополнительные сведения см. в разделах [Кэширование и повторное использование плана выполнения](http://go.microsoft.com/fwlink/?LinkId=120424) и [Повторное использование параметров и плана выполнения](http://go.microsoft.com/fwlink/?LinkId=120423) электронной документации по SQL Server. Помимо повышения безопасности и производительности параметризованные команды обеспечивают удобный метод организации значений, передающихся в источник данных.  
   
- Объект <xref:System.Data.Common.DbParameter> можно создать при помощи конструктора или путем добавления его в коллекцию <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> с помощью метода `Add` коллекции <xref:System.Data.Common.DbParameterCollection>. Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра \- в зависимости от поставщика данных.  
+ Объект <xref:System.Data.Common.DbParameter> можно создать при помощи конструктора или путем добавления его в коллекцию <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> с помощью метода `Add` коллекции <xref:System.Data.Common.DbParameterCollection> . Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра - в зависимости от поставщика данных.  
   
-## Указание свойства ParameterDirection  
- При добавлении параметров необходимо указать свойство <xref:System.Data.ParameterDirection> для параметров, не являющихся входными. В следующей таблице показаны значения `ParameterDirection`, которые можно использовать с перечислением <xref:System.Data.ParameterDirection>.  
+## <a name="supplying-the-parameterdirection-property"></a>Указание свойства ParameterDirection  
+ При добавлении параметров необходимо указать свойство <xref:System.Data.ParameterDirection> для параметров, не являющихся входными. В следующей таблице показаны значения `ParameterDirection` , которые можно использовать с перечислением <xref:System.Data.ParameterDirection> .  
   
 |Имя члена|Описание|  
-|---------------|--------------|  
-|<xref:System.Data.ParameterDirection>|Параметр является входным. Это значение по умолчанию.|  
-|<xref:System.Data.ParameterDirection>|Параметр можно использовать как для ввода, так и для вывода.|  
-|<xref:System.Data.ParameterDirection>|Параметр является выходным.|  
-|<xref:System.Data.ParameterDirection>|Параметр представляет значение, возвращаемое как результат операции, например хранимой процедуры, встроенной функции или определяемой пользователем функции.|  
+|-----------------|-----------------|  
+|<xref:System.Data.ParameterDirection.Input>|Параметр является входным. Это значение по умолчанию.|  
+|<xref:System.Data.ParameterDirection.InputOutput>|Параметр можно использовать как для ввода, так и для вывода.|  
+|<xref:System.Data.ParameterDirection.Output>|Параметр является выходным.|  
+|<xref:System.Data.ParameterDirection.ReturnValue>|Параметр представляет значение, возвращаемое как результат операции, например хранимой процедуры, встроенной функции или определяемой пользователем функции.|  
   
-## Работа с местозаполнителями параметров  
+## <a name="working-with-parameter-placeholders"></a>Работа с местозаполнителями параметров  
  Синтаксис местозаполнителей параметров зависит от источника данных. Для поставщиков данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] используются разные способы задания имен и указания параметров и их местозаполнителей. Синтаксис зависит от конкретного источника данных, как описано в следующей таблице.  
   
 |Поставщик данных|Синтаксис именования параметров|  
-|----------------------|-------------------------------------|  
+|-------------------|-----------------------------|  
 |<xref:System.Data.SqlClient>|Использует именованные параметры в формате `@`*имяпараметра*.|  
-|<xref:System.Data.OleDb>|Использует маркеры позиционных параметров, указываемые знаком вопроса \(`?`\).|  
-|<xref:System.Data.Odbc>|Использует маркеры позиционных параметров, указываемые знаком вопроса \(`?`\).|  
-|<xref:System.Data.OracleClient>|Использует именованные параметры в формате `:`*имяпараметра* \(или *имяпараметра*\).|  
+|<xref:System.Data.OleDb>|Использует маркеры позиционных параметров, указываемые знаком вопроса (`?`).|  
+|<xref:System.Data.Odbc>|Использует маркеры позиционных параметров, указываемые знаком вопроса (`?`).|  
+|<xref:System.Data.OracleClient>|Использует именованные параметры в формате `:`*имяпараметра* (или *имяпараметра*).|  
   
-## Указание типов данных параметров  
- Тип данных параметра зависит от поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. При указании типа значение `Parameter` преобразуется в тип поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] до передачи значения в источник данных. Можно также указать тип `Parameter` универсальным способом, задав свойству `DbType` объекта `Parameter` определенное значение <xref:System.Data.DbType>.  
+## <a name="specifying-parameter-data-types"></a>Указание типов данных параметров  
+ Тип данных параметра зависит от поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . При указании типа значение `Parameter` преобразуется в тип поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] до передачи значения в источник данных. Можно также указать тип `Parameter` универсальным способом, задав свойству `DbType` объекта `Parameter` определенное значение <xref:System.Data.DbType>.  
   
- Тип поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] объекта `Parameter` выводится из типа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] значения `Value` объекта `Parameter` или из `DbType` объекта `Parameter`. Следующая таблица показывает тип `Parameter`, выводимый из объекта, переданного как значение `Parameter`, или указанного значения `DbType`.  
+ Тип поставщика данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] объекта `Parameter` выводится из типа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] значения `Value` объекта `Parameter` или из `DbType` объекта `Parameter` . Следующая таблица показывает тип `Parameter` , выводимый из объекта, переданного как значение `Parameter` , или указанного значения `DbType`.  
   
 |Тип платформы .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|  
-|----------------------------------|------------|---------------|---------------|--------------|----------------|  
+|-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Разряд|Boolean|Разряд|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte\[\]|Binary|VarBinary`.` Это неявное преобразование не будет выполнено, если размер массива байтов превышает максимальный размер VarBinary, что составляет 8000 байт.Для массивов байтов, превышающих 8000 байт, необходимо явно указать тип <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
+|byte[]|Binary|VarBinary`.` это неявное преобразование завершится ошибкой, если массив байтов больше, чем максимальный размер varbinary, который составляет 8000 байт. Байтовые массивы, размер которых превышает 8000 байт, явно задать <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
 |<xref:System.Char>|``|Вывод типа <xref:System.Data.SqlDbType> из типа char не поддерживается.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|Тип DateTimeOffset в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа DateTimeOffset не поддерживается в версиях SQL Server до SQL Server 2008.|||DateTime|  
@@ -60,11 +66,11 @@ caps.handback.revision: 6
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Числовой|  
 |<xref:System.Object>|Объект|Вариант|Вариант|Вывод типа OdbcType из типа Object не поддерживается.|Blob|  
-|<xref:System.String>|Строка|NVarChar. Это неявное преобразование завершится ошибкой, если строка превышает максимальный размер для типа NVarChar \(4000 символов\). Для строк длиннее 4000 символов явно установите значение <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
+|<xref:System.String>|Строка|NVarChar. Это неявное преобразование завершится ошибкой, если строка превышает максимальный размер для типа NVarChar (4000 символов). Для строк длиннее 4000 символов явно установите значение <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
 |<xref:System.TimeSpan>|Время|Тип Time в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа TimeSpan не поддерживается в версиях SQL Server до SQL Server 2008.|DBTime|Время|DateTime|  
 |<xref:System.UInt16>|UInt16|Вывод типа <xref:System.Data.SqlDbType> из типа UInt16 не поддерживается.|UnsignedSmallInt|Int|UInt16|  
 |<xref:System.UInt32>|UInt32|Вывод типа <xref:System.Data.SqlDbType> из типа UInt32 не поддерживается.|UnsignedInt|BigInt|UInt32|  
@@ -72,41 +78,41 @@ caps.handback.revision: 6
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|  
 ||AnsiStringFixedLength|Char|Char|Char|Char|  
 |``|Валюта|Money|Валюта|Вывод типа `OdbcType` из типа `Currency` не поддерживается.|Числовой|  
-|``|Дата|Тип Date в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Date не поддерживается в версиях SQL Server до SQL Server 2008.|DBDate|дата.|DateTime|  
+|``|Дата|Тип Date в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Date не поддерживается в версиях SQL Server до SQL Server 2008.|DBDate|Дата|DateTime|  
 |``|SByte|Вывод типа <xref:System.Data.SqlDbType> из типа SByte не поддерживается.|TinyInt|Вывод типа `OdbcType` из типа SByte не поддерживается.|SByte|  
 ||StringFixedLength|NChar|WChar|NChar|NChar|  
 ||Время|Тип Time в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа Time не поддерживается в версиях SQL Server до SQL Server 2008.|DBTime|Время|DateTime|  
 ||VarNumeric|Вывод типа <xref:System.Data.SqlDbType> из типа VarNumeric не поддерживается.|VarNumeric|Вывод типа `OdbcType` из типа VarNumeric не поддерживается.|Числовой|  
-|определяемый пользователем тип \(объект с <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Объект или строка в зависимости от поставщика \(SqlClient всегда возвращает объект, ODBC всегда возвращает строку, а поставщик данных, управляемый OleDb, может вернуть и то и другое\).|SqlDbType.Udt, если присутствует <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute>, в противном случае Variant|OleDbType.VarWChar \(при значении NULL\), в противном случае OleDbType.Variant.|OdbcType.NVarChar|не поддерживается|  
+|определяемый пользователем тип (объект с <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Объект или строка в зависимости от поставщика (SqlClient всегда возвращает объект, ODBC всегда возвращает строку, а поставщик данных, управляемый OleDb, может вернуть и то и другое).|SqlDbType.Udt, если присутствует <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> , в противном случае Variant|OleDbType.VarWChar (при значении NULL), в противном случае OleDbType.Variant.|OdbcType.NVarChar|не поддерживается|  
   
 > [!NOTE]
->  Преобразования из типа decimal в другие типы являются сужающими. Они округляют десятичное значение до ближайшего целого в направлении нуля. Если результат преобразования нельзя представить в целевом типе, возникает исключение <xref:System.OverflowException>.  
+>  Преобразования из типа decimal в другие типы являются сужающими. Они округляют десятичное значение до ближайшего целого в направлении нуля. Если результат преобразования нельзя представить в целевом типе, возникает исключение <xref:System.OverflowException> .  
   
 > [!NOTE]
->  При передаче на сервер значения null в качестве параметра необходимо указать значение <xref:System.DBNull>, а не `null` \(`Nothing` в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\). В системе значение null \- это пустой объект, не имеющий значения. Для представления значений null используется тип <xref:System.DBNull>. Дополнительные сведения о значении NULL базы данных см. в разделе [Обработка значений NULL](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  При передаче на сервер значения null в качестве параметра необходимо указать значение <xref:System.DBNull>, а не `null` (`Nothing` в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). В системе значение null - это пустой объект, не имеющий значения. Для представления значений null используется тип<xref:System.DBNull> . Дополнительные сведения о значении NULL базы данных см. в разделе [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
-## Выведение информации о параметрах  
- Информацию о параметрах можно вывести из хранимой процедуры с помощью класса `DbCommandBuilder`. Оба класса, `SqlCommandBuilder` и `OleDbCommandBuilder`, обеспечивают статический метод `DeriveParameters`, который автоматически заполняет коллекцию параметров объекта команд, использующего информацию о параметрах от хранимой процедуры. Обратите внимание, что метод `DeriveParameters` перезаписывает существующую информацию о параметрах для команды.  
+## <a name="deriving-parameter-information"></a>Выведение информации о параметрах  
+ Информацию о параметрах можно вывести из хранимой процедуры с помощью класса `DbCommandBuilder` . Оба класса, `SqlCommandBuilder` и `OleDbCommandBuilder` , обеспечивают статический метод `DeriveParameters`, который автоматически заполняет коллекцию параметров объекта команд, использующего информацию о параметрах от хранимой процедуры. Обратите внимание, что метод `DeriveParameters` перезаписывает существующую информацию о параметрах для команды.  
   
 > [!NOTE]
 >  Выведение информации о параметрах снижает производительность, так как для этого требуется дополнительный обмен данных с источником данных. Если информация о параметрах известна во время разработки, можно увеличить производительность приложения, задав параметры явным образом.  
   
- Дополнительные сведения см. в разделе [Создание команд с помощью объекта CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Дополнительные сведения см. в разделе [создание команд с помощью построителей команд](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
-## Использование параметров с объектом SqlCommand и хранимой процедурой  
+## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Использование параметров с объектом SqlCommand и хранимой процедурой  
  Хранимые процедуры дают множество преимуществ в приложениях, управляемых данными. С помощью хранимых процедур операции с базой данных можно инкапсулировать в одну команду, оптимизированную для производительности и обладающую повышенной безопасностью. Хотя хранимые процедуры можно вызывать и с помощью инструкции SQL, указывая в ней имя процедуры и ее аргументы, использование коллекции <xref:System.Data.Common.DbCommand.Parameters%2A> объекта [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в <xref:System.Data.Common.DbCommand> позволяет более явно задать параметры процедуры, а также обращаться к выходным параметрам и возвращаемым значениям.  
   
 > [!NOTE]
->  Параметризованные инструкции выполняются на сервере с помощью хранимой процедуры `sp_executesql,` которая позволяет повторно использовать планы запросов. Локальные курсоры или переменные в пакете `sp_executesql` недоступны пакету, вызвавшему `sp_executesql`. Изменения в контексте базы данных длятся только до завершения выполнения инструкции `sp_executesql`. Дополнительные сведения см. в электронной документации по SQL Server.  
+>  Параметризованные инструкции выполняются на сервере с помощью хранимой процедуры `sp_executesql,` которая позволяет повторно использовать планы запросов. Локальные курсоры или переменные в пакете `sp_executesql` недоступны пакету, вызвавшему `sp_executesql`. Изменения в контексте базы данных длятся только до завершения выполнения инструкции `sp_executesql` . Дополнительные сведения см. в электронной документации по SQL Server.  
   
- Если параметры используются с объектом <xref:System.Data.SqlClient.SqlCommand> для выполнения хранимой процедуры SQL Server, то имена параметров, добавляемых в коллекцию <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>, должны соответствовать именам маркеров параметров в хранимой процедуре. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server не поддерживает местозаполнитель \(?\) для передачи параметров в инструкции SQL и хранимые процедуры. Он обрабатывает параметры в хранимой процедуре как именованные параметры и ищет соответствующие маркеры параметров. Например, хранимая процедура `CustOrderHist` определяется с использованием параметра `@CustomerID`. Когда программа выполняет эта хранимую процедуру, она также должна использовать параметр `@CustomerID`.  
+ Если параметры используются с объектом <xref:System.Data.SqlClient.SqlCommand> для выполнения хранимой процедуры SQL Server, то имена параметров, добавляемых в коллекцию <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> , должны соответствовать именам маркеров параметров в хранимой процедуре. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server не поддерживает местозаполнитель (?) для передачи параметров в инструкции SQL и хранимые процедуры. Он обрабатывает параметры в хранимой процедуре как именованные параметры и ищет соответствующие маркеры параметров. Например, хранимая процедура `CustOrderHist` определяется с использованием параметра `@CustomerID`. Когда программа выполняет эта хранимую процедуру, она также должна использовать параметр `@CustomerID`.  
   
 ```  
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)  
 ```  
   
-### Пример  
- Этот пример показывает, как вызвать хранимую процедуру SQL Server в образце базы данных `Northwind`. Имя хранимой процедуры – `dbo.SalesByCategory`. Она имеет входной параметр `@CategoryName` с типом данных `nvarchar(15)`. Код создает создает новый объект класса <xref:System.Data.SqlClient.SqlConnection> в блоке Using, чтобы в конце процедуры соединение удалялось. Создаются объекты <xref:System.Data.SqlClient.SqlCommand> и <xref:System.Data.SqlClient.SqlParameter> устанавливаются их свойства. Объект класса <xref:System.Data.SqlClient.SqlDataReader> выполняет `SqlCommand` и возвращает результирующий набор из хранимой процедуры, отображая выходные данные в окне консоли.  
+### <a name="example"></a>Пример  
+ Этот пример показывает, как вызвать хранимую процедуру SQL Server в образце базы данных `Northwind` . Имя хранимой процедуры – `dbo.SalesByCategory` . Она имеет входной параметр `@CategoryName` с типом данных `nvarchar(15)`. Код создает создает новый объект класса <xref:System.Data.SqlClient.SqlConnection> в блоке Using, чтобы в конце процедуры соединение удалялось. Создаются объекты <xref:System.Data.SqlClient.SqlCommand> и <xref:System.Data.SqlClient.SqlParameter> устанавливаются их свойства. Объект класса <xref:System.Data.SqlClient.SqlDataReader> выполняет `SqlCommand` и возвращает результирующий набор из хранимой процедуры, отображая выходные данные в окне консоли.  
   
 > [!NOTE]
 >  Вместо того, чтобы создавать объекты `SqlCommand` и `SqlParameter` и затем задавать их свойства в отдельных инструкциях, можно использовать один из перегруженных конструкторов и задать свойства в одной инструкции.  
@@ -114,18 +120,18 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
  [!code-csharp[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  
   
-## Использование параметров с OleDbCommand или OdbcCommand  
- Если с объектами <xref:System.Data.OleDb.OleDbCommand> или <xref:System.Data.Odbc.OdbcCommand> используются параметры, порядок параметров, добавляемых в коллекцию `Parameters`, должен соответствовать порядку параметров, заданных в хранимой процедуре. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB и поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC обрабатывают параметры в хранимой процедуре как местозаполнители и применяют значения параметров в правильном порядке. Кроме того, параметры возвращаемых значений должны быть первыми параметрами, добавляемыми в коллекцию `Parameters`.  
+## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Использование параметров с OleDbCommand или OdbcCommand  
+ Если с объектами <xref:System.Data.OleDb.OleDbCommand> или <xref:System.Data.Odbc.OdbcCommand>используются параметры, порядок параметров, добавляемых в коллекцию `Parameters` , должен соответствовать порядку параметров, заданных в хранимой процедуре. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB и поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC обрабатывают параметры в хранимой процедуре как местозаполнители и применяют значения параметров в правильном порядке. Кроме того, параметры возвращаемых значений должны быть первыми параметрами, добавляемыми в коллекцию `Parameters` .  
   
- Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB и поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC не поддерживают именованные параметры для передачи параметров в инструкции SQL и хранимые процедуры. В этом случае необходимо использовать местозаполнитель \(?\), как в следующем примере.  
+ Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для OLE DB и поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для ODBC не поддерживают именованные параметры для передачи параметров в инструкции SQL и хранимые процедуры. В этом случае необходимо использовать местозаполнитель (?), как в следующем примере.  
   
 ```  
 SELECT * FROM Customers WHERE CustomerID = ?  
 ```  
   
- В результате порядок добавления объектов `Parameter` в коллекцию `Parameters` должен строго соответствовать позиции местозаполнителя параметра \(?\).  
+ В результате порядок добавления объектов `Parameter` в коллекцию `Parameters` должен строго соответствовать позиции местозаполнителя параметра (?).  
   
-### Пример OleDb  
+### <a name="oledb-example"></a>Пример OleDb  
   
 ```vb  
 Dim command As OleDbCommand = New OleDbCommand( _  
@@ -162,7 +168,7 @@ parameter = command.Parameters.Add(
 parameter.Direction = ParameterDirection.Output;  
 ```  
   
-## Пример Odbc  
+## <a name="odbc-example"></a>Пример Odbc  
   
 ```vb  
 Dim command As OdbcCommand = New OdbcCommand( _  
@@ -199,8 +205,8 @@ parameter = command.Parameters.Add( _
 parameter.Direction = ParameterDirection.Output;  
 ```  
   
-## См. также  
- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Параметры DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)   
- [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
+## <a name="see-also"></a>См. также  
+ [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Параметры DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

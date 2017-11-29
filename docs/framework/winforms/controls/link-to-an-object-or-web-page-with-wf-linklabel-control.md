@@ -1,49 +1,53 @@
 ---
-title: "Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], LinkLabel - элемент управления"
-  - "связывание, с другими формами"
-  - "LinkLabel - элемент управления [Windows Forms], примеры"
-  - "LinkLabel - элемент управления [Windows Forms], связывание со объектом или веб-страницей"
-  - "связи, с другими формами"
-  - "элемент управления для связи с веб-страницей"
-  - "Windows Forms, связывание с объектами"
-  - "Windows Forms, создание связи с веб-страницей"
+title: "Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Windows Forms, linking to objects
+- Web page link control
+- linking [Windows Forms], to other forms
+- Windows Forms, linking to Web pages
+- links [Windows Forms], to other forms
+- LinkLabel control [Windows Forms], linking to object or Web page
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04566d96fe9031821b904df3bf9ec93244b62cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms
-Элемент управления форм Windows Forms <xref:System.Windows.Forms.LinkLabel> позволяет создать в форме ссылки в стиле веб.  При выполнении щелчка на ссылке имеется возможность изменения ее цвета, чтобы указать, что к этой ссылке уже обращались.  Дополнительные сведения об изменении цвета ссылки см. в разделе [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms
+Windows Forms <xref:System.Windows.Forms.LinkLabel> управления позволяет создавать веб-ссылок в форме. При щелчке ссылки, можно изменить его цвет, чтобы указать, что она была открыта. Дополнительные сведения об изменении цвета см. в разделе [как: изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
   
-## Создание связи с другой формой  
+## <a name="linking-to-another-form"></a>Связывание с другой формой  
   
-#### Создание связи с другой формой с помощью элемента управления LinkLabel  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>Для связи с другой формой с помощью элемента управления LinkLabel  
   
-1.  Присвойте соответствующее значение заголовка свойству <xref:System.Windows.Forms.LinkLabel.Text%2A>.  
+1.  Задать <xref:System.Windows.Forms.LinkLabel.Text%2A> свойства соответствующий заголовок.  
   
-2.  Укажите, какая часть заголовка будет представлена в качестве ссылки, используя свойство <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>.  Представление ссылки зависит от определяющих внешний вид свойств метки ссылки.  Значение <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> представлено объектом <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, включающим два числа: начальную позицию знаков и их количество.  Свойство <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> может быть задано в окне "Свойства" или в коде следующим образом:  
+2.  Задать <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> свойства, чтобы определить, какая часть заголовка будет представлена в качестве ссылки. Как указывается зависит от свойств внешнего метки ссылки. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Значение которого представлено параметром <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> объект, содержащий два числа, начальной позицией знака и количество символов. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Свойство можно задать в окне «Свойства» или в коде аналогично следующему:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
     ' at the first character and extend for eight characters.  
     ' You may need to modify this based on the text entered in Step 1.  
     LinkLabel1.LinkArea = New LinkArea(0, 8)  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ caps.handback.revision: 11
     // at the first character and extend for eight characters.  
     // You may need to modify this based on the text entered in Step 1.  
     linkLabel1.LinkArea = new LinkArea(0,8);  
-  
     ```  
   
     ```cpp  
@@ -61,10 +64,10 @@ caps.handback.revision: 11
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  В обработчике событий <xref:System.Windows.Forms.LinkLabel.LinkClicked> вызовите метод <xref:System.Windows.Forms.Form.Show%2A>, чтобы открыть другую форму в проекте, и задайте для свойства <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> значение `true`.  
+3.  В <xref:System.Windows.Forms.LinkLabel.LinkClicked> обработчик событий вызова <xref:System.Windows.Forms.Form.Show%2A> метод, чтобы открыть другую форму в проекте и задать <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства `true`.  
   
     > [!NOTE]
-    >  Экземпляр класса <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> переносит ссылку в элемент управления <xref:System.Windows.Forms.LinkLabel>, на котором выполнен щелчок мышью, поэтому не требуется приводить объект `sender` .  
+    >  Экземпляр <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> несет ссылку на класс <xref:System.Windows.Forms.LinkLabel> управления, которая была нажата, поэтому нет необходимости для приведения `sender` объекта.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -75,7 +78,6 @@ caps.handback.revision: 11
        f2.Show  
        LinkLabel1.LinkVisited = True  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -86,7 +88,6 @@ caps.handback.revision: 11
        f2.Show();  
        linkLabel1.LinkVisited = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -101,19 +102,19 @@ caps.handback.revision: 11
        }  
     ```  
   
-## Создание связи с веб\-страницей  
- Элемент управления <xref:System.Windows.Forms.LinkLabel> также может применяться для отображения веб\-страницы с помощью используемого по умолчанию браузера.  
+## <a name="linking-to-a-web-page"></a>Связывание с веб-страницы  
+ <xref:System.Windows.Forms.LinkLabel> Элемент управления может также использоваться для отображения веб-страницы с помощью браузера по умолчанию.  
   
-#### Запуск Internet Explorer и создание связи с веб\-страницей с помощью элемента управления LinkLabel  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Чтобы запустить Internet Explorer и ссылку на веб-страницу с помощью элемента управления LinkLabel  
   
-1.  Присвойте соответствующее значение заголовка свойству <xref:System.Windows.Forms.LinkLabel.Text%2A>.  
+1.  Задать <xref:System.Windows.Forms.LinkLabel.Text%2A> свойства соответствующий заголовок.  
   
-2.  Укажите, какая часть заголовка будет представлена в качестве ссылки, используя свойство <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>.  
+2.  Задать <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> свойства, чтобы определить, какая часть заголовка будет представлена в качестве ссылки.  
   
-3.  В блоке обработки исключений обработчика событий <xref:System.Windows.Forms.LinkLabel.LinkClicked> вызовите вторую процедуру, которая задает для свойства <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> значение `true` и использует метод <xref:System.Diagnostics.Process.Start%2A> для запуска используемого по умолчанию браузера по URL.  Для использования метода <xref:System.Diagnostics.Process.Start%2A> необходимо добавить ссылку на пространство имен <xref:System.Diagnostics?displayProperty=fullName>.  
+3.  В <xref:System.Windows.Forms.LinkLabel.LinkClicked> обработчика событий блок обработки исключений, вызовите вторую процедуру, которая задает <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства `true` и использует <xref:System.Diagnostics.Process.Start%2A> метод, чтобы запустить браузер по умолчанию с URL-адреса. Для использования <xref:System.Diagnostics.Process.Start%2A> необходимо добавить ссылку на метод <xref:System.Diagnostics?displayProperty=nameWithType> пространства имен.  
   
     > [!IMPORTANT]
-    >  Если приведенный ниже код выполняется в среде частичного доверия \(например, на диске c общим доступом\), при вызове метода `VisitLink` произойдет сбой компилятора JIT.  Инструкция`System.Diagnostics.Process.Start` вызывает запрос на ссылку, который не проходит.  Используемый в приведенном ниже фрагменте кода перехват исключения обработчиком catch при вызове метода `VisitLink` гарантирует, что в случае сбоя компилятора JIT ошибка будет постепенно обработана.  
+    >  Если приведенный ниже код выполняется в среде с частичным доверием (например, на общем диске), JIT-компилятор происходит отказ при `VisitLink` вызывается метод. `System.Diagnostics.Process.Start` Инструкция вызывает требование связывания, завершаются с ошибкой. Перехват исключения при `VisitLink` вызывается метод, приведенный ниже код гарантирует, что при сбое JIT-компилятором, ошибка будет постепенно обработана.  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -135,7 +136,6 @@ caps.handback.revision: 11
        ' with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -160,7 +160,6 @@ caps.handback.revision: 11
        //with a URL:  
        System.Diagnostics.Process.Start("http://www.microsoft.com");  
     }  
-  
     ```  
   
     ```cpp  
@@ -189,8 +188,8 @@ caps.handback.revision: 11
        }  
     ```  
   
-## См. также  
- <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName>   
- [Общие сведения об элементе управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)   
- [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
+ [Общие сведения об элементе управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
+ [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
  [Элемент управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

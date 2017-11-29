@@ -1,72 +1,73 @@
 ---
-title: "Практическое руководство. Привязка элементов управления в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Author - свойство, включение форм изменяемого размера"
-  - "элементы управления [Windows Forms], привязка"
-  - "элементы управления [Windows Forms], размещение"
-  - "формы, изменение размеров"
-  - "изменение размеров форм"
-  - "разрешение экрана и отображение элементов управления"
-  - "элементы управления Windows Forms, разрешения экрана"
-  - "элементы управления Windows Forms, размер"
-  - "Windows Forms, изменение размеров"
+title: "Практическое руководство. Привязка элементов управления в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Anchor property [Windows Forms], enabling resizable forms
+- Windows Forms controls, screen resolutions
+- resizing forms [Windows Forms]
+- Windows Forms controls, size
+- screen resolution and control display
+- controls [Windows Forms], anchoring
+- forms [Windows Forms], resizing
+- Windows Forms, resizing
+- controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Привязка элементов управления в формах Windows Forms
-При разработке формы, размер которой может быть изменен пользователем во время выполнения, элементы управления в этой форме должны соответственно изменять свой размер и местоположение.  Чтобы динамически изменить размер элементов управления в форме, можно использовать свойство <xref:System.Windows.Forms.Control.Anchor%2A> элементов управления Windows Forms.  Свойство <xref:System.Windows.Forms.Control.Anchor%2A> определяет положение прикрепления для элемента управления.  В случае, когда элемент управления прикреплен к форме, а форма изменяет свой размер, элемент управления сохраняет промежуток между элементом управления и положениями прикрепления.  Например, если элемент управления <xref:System.Windows.Forms.TextBox> прикреплен к левому, правому и нижнему краям формы, при изменении размера формы элемент управления <xref:System.Windows.Forms.TextBox> изменяет свой горизонтальный размер таким образом, чтобы сохранить одинаковое расстояние до правой и левой сторон формы.  Кроме того, элемент управления располагается вертикально таким образом, что расстояние от него до нижнего края формы всегда одинаково.  Если элемент управления не прикреплен и форма изменяет свой размер, положение элемента управления относительно краев формы меняется.  
+# <a name="how-to-anchor-controls-on-windows-forms"></a>Практическое руководство. Привязка элементов управления в формах Windows Forms
+При разработке формы, пользователь может сделать во время выполнения, элементы управления формы следует изменять размер и положение должным образом. Чтобы изменить размер элементов управления, динамически с формой, можно использовать <xref:System.Windows.Forms.Control.Anchor%2A> свойства элементов управления Windows Forms. <xref:System.Windows.Forms.Control.Anchor%2A> Свойство определяет положение прикрепления для элемента управления. Если элемент управления привязан к форме и изменении размера формы, элемент управления поддерживает расстояние между элементом управления и положениями прикрепления. Например, если у вас есть <xref:System.Windows.Forms.TextBox> управления, привязанный к левое, правое и нижней границ формы как формы изменяется, <xref:System.Windows.Forms.TextBox> элемент управления по горизонтали таким образом, чтобы сохранить одинаковое расстояние до правой и левой сторон формы. Кроме того элемент управления размещает сам по вертикали, чтобы ее расположение всегда такое же расстояние от нижнего края формы. Если элемент управления не привязан и изменении размера формы, изменяется положение элемента управления относительно края формы.  
   
- Свойство <xref:System.Windows.Forms.Control.Anchor%2A> взаимодействует со свойством <xref:System.Windows.Forms.Control.AutoSize%2A>.  Дополнительные сведения см. в разделе [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ <xref:System.Windows.Forms.Control.Anchor%2A> Свойство взаимодействует с <xref:System.Windows.Forms.Control.AutoSize%2A> свойство. Дополнительные сведения см. в разделе [Общие](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы прикрепить элемент управления в форме, выполните следующие действия.  
+### <a name="to-anchor-a-control-on-a-form"></a>Чтобы привязать элемент управления на форме  
   
-1.  Выберите элемент управления, который необходимо прикрепить.  
+1.  Выберите элемент управления, который нужно закрепить.  
   
     > [!NOTE]
-    >  Можно прикрепить несколько элементов управления одновременно. Для этого нужно нажать клавишу CTRL, и, удерживая ее, щелкнуть мышью каждый элемент управления, а затем проделать остальную часть этой процедуры.  
+    >  Можно прикрепить несколько элементов одновременно, при нажатой клавише CTRL, щелкните каждый элемент управления, чтобы выбрать его и выполнив оставшуюся часть этой процедуры.  
   
-2.  В окне **Свойства** щелкните стрелку справа от свойства <xref:System.Windows.Forms.Control.Anchor%2A>.  
+2.  В **свойства** окно, щелкните стрелку справа от <xref:System.Windows.Forms.Control.Anchor%2A> свойство.  
   
-     В появившемся редакторе будет показан крестик.  
+     Откроется редактор покажет крестик.  
   
-3.  Для прикрепления щелкните верхнюю, левую, правую или нижнюю часть крестика.  
+3.  Чтобы задать элемент привязки, щелкните сверху, слева, справа или нижнюю часть крестика.  
   
-     По умолчанию элементы управления прикрепляются слева и сверху.  
+     Элементы управления привязаны к верхней и оставить по умолчанию.  
   
-4.  Чтобы отменить прикрепление с какой\-либо стороны, щелкните соответствующую часть крестика.  
+4.  Чтобы очистить стороны элемента управления, была привязана, щелкните соответствующую часть крестика.  
   
-5.  Еще раз щелкните имя свойства <xref:System.Windows.Forms.Control.Anchor%2A>, чтобы закрыть редактор свойства <xref:System.Windows.Forms.Control.Anchor%2A>.  
+5.  Чтобы закрыть <xref:System.Windows.Forms.Control.Anchor%2A> редактор свойств, нажмите кнопку <xref:System.Windows.Forms.Control.Anchor%2A> снова имя свойства.  
   
- При отображении формы во время выполнения элемент управления изменяет свой размер, оставаясь на одинаковом расстоянии от края формы.  Расстояние от прикрепленного края всегда остается равным расстоянию, определенному при расположении элемента управления в конструкторе Windows Forms.  
+ При отображении формы во время выполнения элемент управления меняет размер, оставаясь на одинаковом расстоянии от края формы. Расстояние от прикрепленного края всегда остается равным расстоянию, определенному при расположении элемента управления в конструкторе Windows Forms.  
   
 > [!NOTE]
->  Размер некоторых элементов управления, например <xref:System.Windows.Forms.ComboBox>, ограничен по высоте.  Прикреплением элемента управления внизу формы или контейнера нельзя добиться превышения его предельной высоты.  
+>  Некоторые элементы управления, такие как <xref:System.Windows.Forms.ComboBox> контроля, ограничен по высоте. Прикреплением элемента управления в нижней части формы или контейнера нельзя к превышению ограничения высоты.  
   
- Только наследуемые элементы управления с модификатором доступа `Protected` могут быть прикреплены.  Чтобы изменить уровень доступа элемента управления, установите его свойство `Modifiers` в окне **Свойства**.  
+ Наследуемые элементы управления должны быть `Protected` могли быть прикреплены. Чтобы изменить уровень доступа элемента управления, установите его `Modifiers` свойство в **свойства** окна.  
   
-## См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Расположение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Практическое руководство. Закрепление элементов управления в формах Windows Forms.](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств "Padding", "Margins" и "AutoSize"](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>См. также  
+ [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Свойство AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Практическое руководство. Закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

@@ -1,22 +1,28 @@
 ---
-title: "Практическое руководство. Включение потоковой передачи | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Включение потоковой передачи"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Включение потоковой передачи
+# <a name="how-to-enable-streaming"></a>Практическое руководство. Включение потоковой передачи
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет передавать сообщения в режиме буферизованной или потоковой передачи. По умолчанию используется режим буферизованной передачи, в случае которого сообщение должно быть доставлено полностью, прежде чем получатель сможет его прочитать. При использовании режима потоковой передачи получатель может начать обработку сообщения до того, как оно будет доставлено полностью. Режим потоковой передачи полезно использовать при большой длине передаваемых данных, которые могут обрабатываться последовательно. Режим потоковой передачи также может быть полезен, когда размер сообщения слишком велик для выполнения полной буферизации.  
   
  Для включения потоковой передачи необходимо соответствующим образом определить контракт операции `OperationContract` и включить потоковую передачу на транспортном уровне.  
@@ -27,7 +33,7 @@ caps.handback.revision: 13
   
     1.  Параметр, в котором содержатся данные для потоковой передачи, должен быть единственным в методе. Например, если требуется выполнить потоковую передачу входного сообщения, операция должна иметь точно один входной параметр. Аналогично, если требуется выполнить потоковую передачу выходного сообщения, операция должна иметь точно один выходной параметр или возвращать значение.  
   
-    2.  По крайней мере один из типов параметров и возвращаемых значений должны быть либо <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, или <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2.  Параметр и возвращаемое значение должны принадлежать по крайней мере к одному из следующих типов: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> или <xref:System.Xml.Serialization.IXmlSerializable>.  
   
      Ниже приведен пример контракта для потоковой передачи данных.  
   
@@ -52,7 +58,7 @@ caps.handback.revision: 13
   
     1.  В следующем фрагменте конфигурации из примера показано задание для свойства `TransferMode` значения потоковой передачи в привязке `basicHttpBinding` и пользовательской привязке HTTP.  
   
-         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
     2.  В следующем фрагменте кода показано задание для свойства `TransferMode` значения потоковой передачи в привязке `basicHttpBinding` и пользовательской привязке HTTP.  
   
@@ -71,7 +77,7 @@ caps.handback.revision: 13
   
 ### <a name="writing-a-custom-stream"></a>Создание пользовательского потока  
   
-1.  Для специальной обработки каждого фрагмента потока данных во время отправки или получения необходимо создать производный класс от класса пользовательского потока <xref:System.IO.Stream>. В следующем примере кода пользовательского потока используется метод `GetReversedStream` и класс `ReverseStream`.  
+1.  Для специальной обработки каждого фрагмента потока данных во время его отправки или получения необходимо создать производный класс на основе класса <xref:System.IO.Stream>. В следующем примере кода пользовательского потока используется метод `GetReversedStream` и класс `ReverseStream`.  
   
      Метод `GetReversedStream` создает и возвращает новый экземпляр класса `ReverseStream`. Фактическая обработка происходит, когда система считывает данные из объекта `ReverseStream`. Метод `ReverseStream.Read` считывает фрагмент байтов из исходного файла, обращает их, а затем возвращает байты, представленные в обратном порядке. Этот метод не обращает все содержимое файла; он обращает один фрагмент байтов за раз. В этом примере показано, как можно выполнить потоковую обработку во время чтения или записи содержимого из потока.  
   
@@ -79,5 +85,5 @@ caps.handback.revision: 13
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>См. также  
- [Большие объемы данных и потоковой передачи](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)   
+ [Большие объемы данных и потоковой передачи](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [Поток](../../../../docs/framework/wcf/samples/stream.md)

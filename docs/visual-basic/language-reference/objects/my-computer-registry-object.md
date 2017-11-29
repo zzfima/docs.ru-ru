@@ -1,57 +1,40 @@
 ---
-title: "Объект My.Computer.Registry | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Объект My.Computer.Registry"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- DeleteSetting function, increasing performance
+- DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e416f3044024f3e24b945077a350bfb2e500fd65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1881bd3eadbecc4d6128fc8e09cca612494d4e24
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="mycomputerregistry-object"></a>Объект My.Computer.Registry
-Предоставляет свойства и методы для управления реестром.  
+Включает свойства и методы для управления реестром.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `My.Computer.Registry` объекта см. в разделе <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ Дополнительные сведения о методах и свойствах `My.Computer.Registry` см. в разделе <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
  Дополнительные сведения см. в разделе [чтение и запись в реестр](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
   
 > [!NOTE]
->  Реестр можно управлять с помощью методов <xref:Microsoft.Win32.Registry?displayProperty=fullName>класса.</xref:Microsoft.Win32.Registry?displayProperty=fullName>  
+>  Реестр можно управлять с помощью методов <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> класса.  
   
 ## <a name="requirements"></a>Требования  
- **Пространство имен:**<xref:Microsoft.VisualBasic.MyServices></xref:Microsoft.VisualBasic.MyServices>  
+ **Пространство имен:**<xref:Microsoft.VisualBasic.MyServices>  
   
- **Класс:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>(предоставляет доступ к <xref:Microsoft.Win32.Registry>)</xref:Microsoft.Win32.Registry> </xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ **Класс:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (предоставляет доступ к <xref:Microsoft.Win32.Registry>)  
   
- **Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ **Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

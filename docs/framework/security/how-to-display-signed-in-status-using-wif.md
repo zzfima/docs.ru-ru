@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Практическое руководство. Отображение состояния входа с помощью WIF
 ## <a name="applies-to"></a>Применение  
@@ -165,4 +163,3 @@ ms.lasthandoff: 08/21/2017
 1.  В Visual Studio нажмите клавишу **F5**, чтобы запустить отладку приложения. Если не будут обнаружены ошибки, откроется новое окно браузера.  
   
 2.  Обратите внимание, что браузер автоматически перенаправляет запрос к службе маркеров безопасности, после чего открывает страницу Default.aspx. Если платформа WIF правильно настроена, появится страница сайта с текстом **"Вход выполнен"**.
-

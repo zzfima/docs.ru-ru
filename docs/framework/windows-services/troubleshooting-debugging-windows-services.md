@@ -1,35 +1,38 @@
 ---
-title: "Troubleshooting: Debugging Windows Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "debugging Windows Service applications"
-  - "debugging [Visual Studio], Windows services"
-  - "troubleshooting service applications"
-  - "services, troubleshooting"
-  - "troubleshooting debugging, Windows Services"
-  - "Windows Service applications, debugging"
-  - "services, debugging"
-  - "Windows Service applications, troubleshooting"
+title: "Разрешение вопросов. Отладка служб Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- debugging Windows Service applications
+- debugging [Visual Studio], Windows services
+- troubleshooting service applications
+- services, troubleshooting
+- troubleshooting debugging, Windows Services
+- Windows Service applications, debugging
+- services, debugging
+- Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: 51c28f6e9b6fa2974fb9861716b2c9fc2a38fe1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Troubleshooting: Debugging Windows Services
-При отладке приложения службы Windows отлаживаемая служба взаимодействует с **диспетчером служб Windows**.  **Диспетчер служб** запускает службу, вызывая ее метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. После этого он в течение 30 секунд ожидает завершения метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.  Если в течение этого времени метод не завершит работу, диспетчер служб выдает сообщение о невозможности запустить службу.  
+# <a name="troubleshooting-debugging-windows-services"></a>Разрешение вопросов. Отладка служб Windows
+При отладке приложения службы Windows, службы и **Windows Service Manager** взаимодействия. **Service Manager** запускает службу путем вызова <xref:System.ServiceProcess.ServiceBase.OnStart%2A> метода, а затем — 30 секунд для ожидания <xref:System.ServiceProcess.ServiceBase.OnStart%2A> метод для возврата. Если метод не возвращает в течение этого времени, диспетчер отображает ошибку, что служба не запущена.  
   
- При отладке метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A> в соответствии с руководством [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md) необходимо помнить об этом 30\-секундном периоде.  Если поместить точку останова в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и не пройти ее за 30 секунд, то диспетчер служб не запустит службу.  
+ При отладке <xref:System.ServiceProcess.ServiceBase.OnStart%2A> метода, как описано в [как: отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), необходимо иметь в виду этого 30-секундного периода. Если установить точку останова в <xref:System.ServiceProcess.ServiceBase.OnStart%2A> метода и не пройти ее за 30 секунд, служба не запускается диспетчер.  
   
-## См. также  
- [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)   
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a>См. также  
+ [Как: отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

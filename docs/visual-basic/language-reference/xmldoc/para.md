@@ -1,48 +1,47 @@
 ---
-title: "&lt;para&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<para> - XML-тег"
-  - "para - XML-тег"
+title: '&lt;para&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <para> XML tag
+- para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e2a034974ed94b18da374fbd372063ea4d575440
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;para&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="ltparagt-visual-basic"></a>&lt;para&gt; (Visual Basic)
 Указывает, что содержимое отформатировано как абзац.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <para>content</para>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `content`  
  Текст абзаца.  
   
-## Заметки  
- Тег `<para>` предназначен для использования внутри тега, такого как [\<summary\>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks\>](../../../visual-basic/language-reference/xmldoc/remarks.md) или [\<returns\>](../../../visual-basic/language-reference/xmldoc/returns.md) и позволяет добавлять структуру в текст.  
+## <a name="remarks"></a>Примечания  
+ `<para>` Тег предназначен для использования внутри тега, например [ \<сводки >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<Примечания >](../../../visual-basic/language-reference/xmldoc/remarks.md), или [ \<возвращает >](../../../visual-basic/language-reference/xmldoc/returns.md), и позволяет добавить структуру к тексту.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- В этом примере тег `<para>` используется для разбиения области примечаний для метода `UpdateRecord` на два абзаца.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<para>` тег для разбиения в разделе "Примечания" `UpdateRecord` метод на два абзаца.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

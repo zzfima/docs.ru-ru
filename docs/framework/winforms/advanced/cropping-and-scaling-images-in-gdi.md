@@ -1,57 +1,61 @@
 ---
-title: "Обрезка и масштабирование изображений в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "сжатие данных, изображения"
-  - "GDI+, обрезка изображений"
-  - "GDI+, масштабирование изображений"
-  - "изображения [Windows Forms], сжатие"
-  - "изображения [Windows Forms], обрезка"
-  - "изображения [Windows Forms], раскрытие"
-  - "изображения [Windows Forms], масштабирование"
-  - "прямоугольники, назначение"
-  - "прямоугольники, источник"
+title: "Обрезка и масштабирование изображений в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI+, scaling images
+- GDI+, cropping images
+- images [Windows Forms], cropping
+- compressing data [Windows Forms], images
+- images [Windows Forms], expansion
+- images [Windows Forms], scaling
+- rectangles [Windows Forms], source
+- rectangles [Windows Forms], destination
+- images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63e1e55e57d586cbbca87361b95c18f0f53b8c75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обрезка и масштабирование изображений в GDI+
-Метод <xref:System.Drawing.Graphics.DrawImage%2A> класса <xref:System.Drawing.Graphics> позволяет рисовать и размещать векторные и растровые изображения.  Метод <xref:System.Drawing.Graphics.DrawImage%2A> перегружен, поэтому он поддерживает различные варианты передачи аргументов.  
+# <a name="cropping-and-scaling-images-in-gdi"></a>Обрезка и масштабирование изображений в GDI+
+Можно использовать <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> класса для рисования и размещения векторных и растровых изображений. <xref:System.Drawing.Graphics.DrawImage%2A>— перегружаемый метод, поэтому существует несколько способов передачи аргументов.  
   
-## Варианты DrawImage  
- Один из вариантов метода <xref:System.Drawing.Graphics.DrawImage%2A> принимает объекты <xref:System.Drawing.Bitmap> и <xref:System.Drawing.Rectangle>.  Прямоугольник задает область, в которой должно быть нарисовано изображение.  Если размер прямоугольника назначения отличается от размеров исходного изображения, изображение масштабируется, чтобы соответствовать прямоугольнику назначения.  В приведенном ниже примере кода демонстрируется три способа рисования одного изображения: рисование без масштабирования, рисование с увеличением и рисование со сжатием.  
+## <a name="drawimage-variations"></a>DrawImage вариантов  
+ Один из вариантов <xref:System.Drawing.Graphics.DrawImage%2A> метод получает <xref:System.Drawing.Bitmap> и <xref:System.Drawing.Rectangle>. Прямоугольник определяет место назначения для операции рисования; то есть он указывает прямоугольник, в котором будет рисоваться изображение. Если размер прямоугольника назначения отличается от размера исходного изображения, изображение масштабируется по размерам прямоугольника назначения. В следующем примере кода показано, как рисовать тот же образ три раза: один раз без масштабирования, рисование с увеличением и рисование со сжатием:  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
- На приведенном ниже рисунке изображены три полученных изображения.  
+ На следующем рисунке три изображения.  
   
- ![Масштабирование](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.png "AboutGdip03\_Art06")  
+ ![Масштабирование](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
   
- Некоторые варианты метода <xref:System.Drawing.Graphics.DrawImage%2A> получают в качестве параметров не только конечный, но и исходный прямоугольник.  Исходный прямоугольник задает часть исходного изображения, которая должна быть нарисована.  Прямоугольник назначения задает прямоугольник, в котором должна быть нарисована эта часть изображения.  Если размер прямоугольника назначения отличается от размера исходного прямоугольника, изображение масштабируется, чтобы соответствовать размеру прямоугольника назначения.  
+ Некоторые варианты <xref:System.Drawing.Graphics.DrawImage%2A> метод иметь исходный прямоугольник, а также параметр прямоугольника назначения. Исходный прямоугольник задает часть исходного изображения для рисования. Прямоугольник назначения задает прямоугольник, в которой выводится часть изображения. Если размер прямоугольника назначения отличается от размера исходного прямоугольника, изображение масштабируется по размерам прямоугольника назначения.  
   
- Приведенный ниже пример кода демонстрирует создание объекта <xref:System.Drawing.Bitmap> из файла Runner.jpg.  Изображение из файла рисуется целиком, без масштабирования, с привязкой к точке с координатами \(0, 0\).  Затем небольшой фрагмент изображения отображается дважды: один раз — со сжатием, второй раз — с увеличением.  
+ В следующем примере кода показано создание <xref:System.Drawing.Bitmap> из файла Runner.jpg. Все изображение рисуется без масштабирования на (0, 0). Затем небольшую часть изображения отображается дважды: один раз со сжатием и один раз с помощью расширения.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
- На приведенном ниже рисунке изображен немасштабированный рисунок, а также сжатая и увеличенная части рисунка.  
+ На следующем рисунке зависимым изображения и сжатые и увеличенная части рисунка.  
   
- ![Обрезка и масштабирование](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.png "AboutGdip03\_Art07")  
+ ![Обрезка и масштабирование](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>См. также  
+ [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

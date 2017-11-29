@@ -1,30 +1,34 @@
 ---
-title: "Ошибка при обработке асинхронных действий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ошибка при обработке асинхронных действий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7606aeeeb3e2e583f9a217b78bcae4aebc6d8662
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Ошибка при обработке асинхронных действий
-Обеспечение обработки ошибок в <xref:System.Activities.AsyncCodeActivity> включает маршрутизацию ошибки в системе обратного вызова действия.В этом разделе описывается, как возвратить ошибку, вызванную в асинхронной операции, обратно в узел, используя образец действия SendMail.  
+# <a name="error-handling-in-asynchronous-activities"></a>Ошибка при обработке асинхронных действий
+Обеспечение обработки ошибок в <xref:System.Activities.AsyncCodeActivity> включает маршрутизацию ошибки в системе обратного вызова действия. В этом разделе описывается, как возвратить ошибку, вызванную в асинхронной операции, обратно в узел, используя образец действия SendMail.  
   
-## Возвращение ошибки, вызванной в асинхронном действии, обратно на узел  
+## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>Возвращение ошибки, вызванной в асинхронном действии, обратно на узел  
  Маршрутизация ошибки в асинхронной операции обратно на узел в образце действия SendMail включает следующие шаги.  
   
--   Добавьте свойство «Исключение» к классу `SendMailAsyncResult`.  
+-   Добавьте свойство Exception к классу `SendMailAsyncResult`.  
   
--   Скопируйте вызванную ошибку в это свойство в обработчике события `SendCompleted`.  
+-   Скопируйте вызванную ошибку в это свойство в обработчике событий `SendCompleted`.  
   
--   Создайте исключение в обработчике события `EndExecute`.  
+-   Создайте исключение в обработчике событий `EndExecute`.  
   
  Ниже приведен конечный код.  
   
@@ -52,5 +56,4 @@ class SendMailAsyncResult : IAsyncResult
                 throw sendMailResult.Error;   
         }  
     }  
-  
 ```

@@ -1,32 +1,35 @@
 ---
-title: "Повышение управляемости обработки ошибок и формирования сообщений об ошибках | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Повышение управляемости обработки ошибок и формирования сообщений об ошибках"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: acd45c82983cb122844866b9db4a356b746a10eb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Повышение управляемости обработки ошибок и формирования сообщений об ошибках
-В этом образце показано, как расширить управление обработкой ошибок и отчетами об ошибках в службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>.Этот образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), однако в службу был добавлен код для обработки ошибок.Клиент вызывает несколько ошибок.Служба перехватывает эти ошибки и регистрирует их в файле.  
+# <a name="extending-control-over-error-handling-and-reporting"></a>Повышение управляемости обработки ошибок и формирования сообщений об ошибках
+В этом образце показано, как расширить управление обработкой ошибок и отчетами об ошибках в службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) с дополнительный программный код, добавленный в службу для обработки ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> позволяет службам перехватывать ошибки, обрабатывать их и определять, каким образом будут создаваться отчеты об этих ошибках.Интерфейс позволяет реализовать два метода: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> и <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>.Метод <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> служит для добавления, изменения и подавления сообщений ошибках, создаваемых в результате исключений.Метод <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> служит для обработки ошибки в случае ее возникновения и позволяет определять, требуется ли дополнительная обработка ошибок.  
+ Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> позволяет службам перехватывать ошибки, обрабатывать их и определять, каким образом будут создаваться отчеты об этих ошибках. Интерфейс позволяет реализовать два метода: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> и <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. Метод <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> служит для добавления, изменения и подавления сообщений ошибках, создаваемых в результате исключений. Метод <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> служит для обработки ошибки в случае ее возникновения и позволяет определять, требуется ли дополнительная обработка ошибок.  
   
- В этом образце тип `CalculatorErrorHandler` реализует интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler>.В  
+ В этом образце тип `CalculatorErrorHandler` реализует интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler>. В  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> обработчик `CalculatorErrorHandler` записывает ошибку в текстовый файл Error.txt в папке c:\\logs.Обратите внимание, что этот образец регистрирует ошибку в журнале и не подавляет ее, чтобы о ней можно было уведомить клиент.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> обработчик `CalculatorErrorHandler` записывает ошибку в текстовый файл Error.txt в папке c:\logs. Обратите внимание, что этот образец регистрирует ошибку в журнале и не подавляет ее, чтобы о ней можно было уведомить клиент.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -56,7 +59,7 @@ public class CalculatorErrorHandler : IErrorHandler
     }  
 ```  
   
- Атрибут `ErrorBehaviorAttribute` выполняет роль механизма регистрации обработчика ошибок в службе.Этот атрибут принимает параметр единственного типа.Этот тип должен быть реализацией интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler> и должен иметь открытый пустой конструктор.В этом случае атрибут создает экземпляр типа обработчика ошибок и устанавливает его в службе.Для этого он реализует интерфейс <xref:System.ServiceModel.Description.IServiceBehavior> и с помощью метода <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> добавляет экземпляры в обработчик ошибок в службе.  
+ Атрибут `ErrorBehaviorAttribute` выполняет роль механизма регистрации обработчика ошибок в службе. Этот атрибут принимает параметр единственного типа. Этот тип должен быть реализацией интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler> и должен иметь открытый пустой конструктор. В этом случае атрибут создает экземпляр типа обработчика ошибок и устанавливает его в службе. Для этого он реализует интерфейс <xref:System.ServiceModel.Description.IServiceBehavior> и с помощью метода <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> добавляет экземпляры в обработчик ошибок в службе.  
   
 ```  
 // This attribute can be used to install a custom error handler for a service.  
@@ -103,7 +106,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
 }  
 ```  
   
- Этот образец реализует службу калькулятора.Клиент намеренно вызывает в службе две ошибки путем предоставления параметров с недопустимыми значениями.`CalculatorErrorHandler` с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler> записывает ошибки в локальный файл и позволяет уведомить клиент об этих ошибках.Клиент вызывает ошибки типа "деление на ноль" и "аргумент вне диапазона".  
+ Этот образец реализует службу калькулятора. Клиент намеренно вызывает в службе две ошибки путем предоставления параметров с недопустимыми значениями. `CalculatorErrorHandler` с помощью интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler> записывает ошибки в локальный файл и позволяет уведомить клиент об этих ошибках. Клиент вызывает ошибки типа "деление на ноль" и "аргумент вне диапазона".  
   
 ```  
 try  
@@ -125,7 +128,7 @@ catch (Exception e)
 }  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.При этом будут появляться ошибки типа "деление на ноль" и "аргумент вне диапазона".Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. При этом будут появляться ошибки типа "деление на ноль" и "аргумент вне диапазона". Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
 Add(15,3) = 18  
@@ -139,30 +142,30 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Файл c:\\logs\\errors.txt содержит записанные службой сведения об ошибках.Обратите внимание: чтобы служба могла вести запись в определенном каталоге, у процесса, в котором выполняется служба \(обычно это ASP.NET или Network Service\) должны быть разрешения на запись для этого каталога.  
+ Файл c:\logs\errors.txt содержит записанные службой сведения об ошибках. Обратите внимание: чтобы служба могла вести запись в определенном каталоге, у процесса, в котором выполняется служба (обычно это ASP.NET или Network Service) должны быть разрешения на запись для этого каталога.  
   
 ```  
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы выполнить построение решения, следуйте инструкциям раздела [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Проверьте, что создан каталог c:\\logs для файла error.txt.Либо измените имя файла, используемое в `CalculatorErrorHandler.HandleError`.  
+3.  Проверьте, что создан каталог c:\logs для файла error.txt. Либо измените имя файла, используемое в `CalculatorErrorHandler.HandleError`.  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   
-## См. также
+## <a name="see-also"></a>См. также

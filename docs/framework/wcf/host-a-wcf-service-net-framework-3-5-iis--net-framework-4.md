@@ -1,39 +1,42 @@
 ---
-title: "Как разместить службу WCF, написанную для.NET Framework 3.5 в IIS, которая работает в среде в .NET Framework 4 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как разместить службу WCF, написанную для.NET Framework 3.5 в IIS, которая работает в среде в .NET Framework 4"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e2c9dbf92ddaf1c23cb09184f046cb536717015
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как разместить службу WCF, написанную для.NET Framework 3.5 в IIS, которая работает в среде в .NET Framework 4
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Как разместить службу WCF, написанную для.NET Framework 3.5 в IIS, которая работает в среде в .NET Framework 4
 При размещении службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], написанной для платформы [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] на компьютере, на котором установлена платформа [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], может возникнуть исключение <xref:System.ServiceModel.ProtocolException> со следующим текстом.  
   
 ```Output  
-Необработанное исключение: System.ServiceModel.ProtocolException: Тип содержимого ответного сообщения, text/html; charset=utf-8, не соответствует типу содержимого привязки (application/soap+xml; charset=utf-8).При использовании пользовательского кодировщика убедитесь, что метод IsContentTypeSupported реализован надлежащим образом.Первые 1024 байта ответа: <html>    <заголовок>        <название>Домен или пул приложения в настоящий момент использует .NET Framework версии 4 или более поздней.Это может произойти, если параметры служб IIS были заданы на 4.0 или более позднюю версию для этого веб-приложения либо если используется ASP.NET Web Development Server версии 4.0 или более поздней.Элемент <compilation> в файле Web.config для этого веб-приложения не содержит требуемый атрибут «targetFrameworkMoniker» для этой версии .NET Framework (например, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">').Дополните файл Web.config этим атрибутом или настройте веб-приложение на использование другой версии .NET Framework.</название>...  
+Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
- При попытке перехода к SVC\-файлу службы может отобразиться страница ошибки со следующим текстом.  
+ При попытке перехода к SVC-файлу службы может отобразиться страница ошибки со следующим текстом.  
   
 ```Output  
-Домен или пул приложения в настоящий момент использует .NET Framework 4.0 или более позднюю версию.Это может произойти, если параметры служб IIS были заданы на 4.0 или более позднюю версию для этого веб-приложения либо если используется ASP.NET Web Development Server версии 4.0 или более поздней.Элемент <compilation> в файле Web.config для этого веб-приложения не содержит требуемый атрибут «targetFrameworkMoniker» для этой версии .NET Framework (например, «<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">»).Дополните файл Web.config этим атрибутом или настройте в веб-приложении использование другой версии .NET Framework.  
+The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
- Эти ошибки возникают из\-за работы домена приложения служб IIS под управлением платформы [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], в то время как службе WCF требуется платформа [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].В этом разделе описываются изменения, которые необходимо выполнить для запуска службы.  
+ Эти ошибки возникают из-за работы домена приложения служб IIS под управлением платформы [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], в то время как службе WCF требуется платформа [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. В этом разделе описываются изменения, которые необходимо выполнить для запуска службы.  
   
- Затем следует найти элемент \<`compilers`\> и изменить параметр поставщика CompilerVersion, задав для него значение 4.0.По умолчанию в элементе \<`compilers`\> есть два элемента \<`compiler`\>.Необходимо обновить параметр поставщика CompilerVersion для обоих элементов, как показано в следующем примере.  
+ Найдите <`compilers`> элемент и изменить параметр поставщика CompilerVersion должен иметь значение 4.0. По умолчанию имеется два <`compiler`> элементов в разделе <`compilers`> элемент. Необходимо обновить параметр поставщика CompilerVersion для обоих элементов, как показано в следующем примере.  
   
-```  
+```xml  
 <system.codedom>  
       <compilers>  
         <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4"  
@@ -51,13 +54,13 @@ caps.handback.revision: 5
     </system.codedom>  
 ```  
   
-### Добавьте необходимый атрибут targetFramework  
+### <a name="add-the-required-targetframework-attribute"></a>Добавьте необходимый атрибут targetFramework  
   
-1.  Откройте файл службы Web.config и найдите элемент \<`compilation`\>.  
+1.  Откройте файл Web.config службы и найдите <`compilation`> элемент.  
   
-2.  Добавьте атрибут `targetFramework` к элементу \<`compilation`\>, как показано в следующем примере.  
+2.  Добавить `targetFramework` атрибут <`compilation`> элемента, как показано в следующем примере.  
   
-    ```  
+    ```xml  
     <compilation debug="false"  
             targetFramework="4.0">  
   
@@ -71,9 +74,9 @@ caps.handback.revision: 5
           </compilation>  
     ```  
   
-3.  Найдите элемент \<`compilers`\> и измените параметр поставщика CompilerVersion, задав для него значение 4.0.По умолчанию в элементе \<`compilers`\> есть два элемента \<`compiler`\>.Необходимо обновить параметр поставщика CompilerVersion для обоих элементов, как показано в следующем примере.  
+3.  Найти <`compilers`> элемент и изменить параметр поставщика CompilerVersion должен иметь значение 4.0. По умолчанию имеется два <`compiler`> элементов в разделе <`compilers`> элемент. Необходимо обновить параметр поставщика CompilerVersion для обоих элементов, как показано в следующем примере.  
   
-    ```  
+    ```xml  
     <system.codedom>  
           <compilers>  
             <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4"  

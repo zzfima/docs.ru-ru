@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-and-compilation"></a>Машинный код .NET и компиляция
 Приложения Windows 8.1 и классические приложения Windows, предназначенные для платформы .NET Framework, создаются на определенном языке программирования и компилируются в промежуточный язык (IL). Перед выполнением какого-либо метода в первый раз JIT-компилятор компилирует IL-код в машинный код для локального компьютера. В противоположность этому цепочка инструментов .NET Native преобразует исходный код в машинный код во время компиляции. В этом разделе сравнивается .NET Native с другими технологиями компиляции, доступными для приложений .NET Framework, а также детально рассматривается, как цепочка инструментов .NET Native создает исходный код, что поможет вам понять, почему исключения, возникающие в коде, скомпилированном .NET Native, не возникают в JIT-скомпилированном коде.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/21/2017
   
  Во время преобразования приложения из промежуточного языка в машинный код цепочка инструментов .NET Native выполняет следующие операции:  
   
--   Для некоторых ветвей кода  заменяется код, основанный на отражении и метаданных, на статический машинный код. Например, если тип значения не переопределяет метод <xref:System.ValueType.Equals%2A?displayProperty=fullName>, то стандартный тест на эквивалентность использует отражение для получения объектов <xref:System.Reflection.FieldInfo>, представляющих поля этого типа значения, а затем сравнивает значения полей двух экземпляров. При компиляции в машинный код  цепочка инструментов .NET Native заменяет код отражения и метаданные на статическое сравнение значений полей.  
+-   Для некоторых ветвей кода  заменяется код, основанный на отражении и метаданных, на статический машинный код. Например, если тип значения не переопределяет метод <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, то стандартный тест на эквивалентность использует отражение для получения объектов <xref:System.Reflection.FieldInfo>, представляющих поля этого типа значения, а затем сравнивает значения полей двух экземпляров. При компиляции в машинный код  цепочка инструментов .NET Native заменяет код отражения и метаданные на статическое сравнение значений полей.  
   
 -   Везде, где возможно, делается попытка исключить все метаданные.  
   
@@ -111,8 +109,7 @@ ms.lasthandoff: 08/21/2017
 -   Образы NGEN, как правило, хрупкие. Например, обновление или изменение зависимости обычно требует, чтобы сборки, которые его используют, также были пересозданы NGEN. Это особенно верно для системных сборок в библиотеке классов .NET Framework. В противоположность этому .NET Native позволяет обслуживать приложения независимо друг от друга.  
   
 ## <a name="see-also"></a>См. также  
- [Метаданные и компоненты с самоописанием](../../../docs/standard/metadata-and-self-describing-components.md)   
- [Внутри .NET Native (видео Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)   
- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
+ [Метаданные и компоненты с самоописанием](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [Внутри .NET Native (видео Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native. Устранение общих неполадок](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
-

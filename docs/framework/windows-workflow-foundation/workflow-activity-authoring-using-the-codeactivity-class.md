@@ -1,24 +1,28 @@
 ---
-title: "Разработка действий рабочих процессов с помощью класса CodeActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Разработка действий рабочих процессов с помощью класса CodeActivity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f9894926ba93461d332eaac248c71d20ea4e7d30
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Разработка действий рабочих процессов с помощью класса CodeActivity
+# <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Разработка действий рабочих процессов с помощью класса CodeActivity
 Действия, созданные путем наследования от <xref:System.Activities.CodeActivity>, могут реализовывать базовое императивное поведение путем переопределения метода <xref:System.Activities.CodeActivity.Execute%2A>.  
   
-## Использование CodeActivityContext  
- Доступ к функциям среды выполнения рабочего процесса можно получить из метода <xref:System.Activities.CodeActivity.Execute%2A> при помощи элементов параметра `context` типа <xref:System.Activities.CodeActivityContext>.Функции, доступные посредством <xref:System.Activities.CodeActivityContext>:  
+## <a name="using-codeactivitycontext"></a>Использование CodeActivityContext  
+ Доступ к функциям среды выполнения рабочего процесса можно получить из метода <xref:System.Activities.CodeActivity.Execute%2A> при помощи элементов параметра `context` типа <xref:System.Activities.CodeActivityContext>. Функции, доступные посредством <xref:System.Activities.CodeActivityContext>:  
   
 -   Возврат и задание значений аргументов и переменных.  
   
@@ -26,15 +30,15 @@ caps.handback.revision: 11
   
 -   Доступ к свойствам выполнения действия с помощью <xref:System.Activities.CodeActivityContext.GetProperty%2A>.  
   
-#### Создание настраиваемого действия, которое наследуется от CodeActivity  
+#### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Создание настраиваемого действия, которое наследуется от CodeActivity  
   
-1.  Откройте среду [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Откройте [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Выберите **Файл**, **Создать**, а затем **Проект**.Выберите **Workflow 4.0** в списке **Visual C\#** в разделе **Типы проектов**, затем выберите узел **v2010**.В окне **Шаблоны** выберите **Библиотека действий**.Задайте имя для нового проекта HelloActivity.  
+2.  Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.  
   
-3.  Щелкните правой кнопкой мыши файл Activity1.xaml в проекте HelloActivity и выберите команду **Удалить**.  
+3.  Щелкните правой кнопкой мыши файл Activity1.xaml в проекте HelloActivity и выберите **удалить**.  
   
-4.  Right\-click the HelloActivity project and select **Add**, and then **Class**.Задайте имя для нового класса HelloActivity.cs.  
+4.  Щелкните правой кнопкой мыши в проекте HelloActivity и выберите **добавить** , а затем **класса**. Задайте имя для нового класса HelloActivity.cs.  
   
 5.  В файле HelloActivity.cs добавьте следующие директивы `using`.  
   
@@ -68,5 +72,4 @@ caps.handback.revision: 11
         record.Data.Add(new KeyValuePair<String, Object>("ExecutionTime", DateTime.Now));  
         context.Track(record);  
     }  
-  
     ```

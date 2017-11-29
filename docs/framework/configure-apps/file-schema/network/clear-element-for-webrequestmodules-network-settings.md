@@ -1,70 +1,71 @@
 ---
-title: "Элемент &lt;clear&gt; для webRequestModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> - элемент, webRequestModules"
-  - "<webRequestModules>, clear - элемент"
-  - "clear - элемент, webRequestModules"
-  - "webRequestModules, clear - элемент"
+title: "&lt;Очистить&gt; элемент для webRequestModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- <clear> element, webRequestModules
+- <webRequestModules>, clear element
+- webRequestModules, clear element
+- clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c88792663b07ace7250b6ee4065e60d6cfb90afd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;clear&gt; для webRequestModules (параметры сети)
-Удаляет из приложения все зарегистрированные модули веб\-запросов.  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Очистить&gt; элемент для webRequestModules (параметры сети)
+Удаляет все зарегистрированные модули веб-запросов из приложения.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<webRequestModules >  
+\<Очистить >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
+|-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
   
-## Заметки  
- Элемент `clear` удаляет все зарегистрированные модули веб\-запросов, определенные ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
+## <a name="remarks"></a>Примечания  
+ `clear` Элемент удаляет все зарегистрированные модули веб-запросов, определенные ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода сначала очищаются все модули веб\-запросов, а затем выполняется регистрация модуля веб\-запросов для HTTP.  
+## <a name="example"></a>Пример  
+ Следующий пример удаляет все модули веб-запросов и затем регистрирует модуль веб-запросов для HTTP.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -78,6 +79,6 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebRequest>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

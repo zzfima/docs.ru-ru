@@ -1,35 +1,38 @@
 ---
-title: "3325 - DispatchFormatterSerializeReplyStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3325 - DispatchFormatterSerializeReplyStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c96ffb5f-24e2-4c54-92ba-66277b1cea91
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0922c831fe711eccb93b39772390211f1f87a7f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3325 - DispatchFormatterSerializeReplyStop
-## Свойства  
+# <a name="3325---dispatchformatterserializereplystop"></a>3325 - DispatchFormatterSerializeReplyStop
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3325|  
 |Ключевые слова|ServiceModel|  
 |Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается, когда диспетчер завершает сериализацию ответного сообщения.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Диспетчер завершил сериализацию ответного сообщения.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

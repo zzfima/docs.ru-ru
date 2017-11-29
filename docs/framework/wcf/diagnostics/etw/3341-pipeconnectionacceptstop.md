@@ -1,35 +1,38 @@
 ---
-title: "3341 - PipeConnectionAcceptStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3341 - PipeConnectionAcceptStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 85d20b28-53c2-4206-90bc-8564a03dcb49
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f5b361ebc5e56c985d55c9966c313c7ad5056000
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3341 - PipeConnectionAcceptStop
-## Свойства  
+# <a name="3341---pipeconnectionacceptstop"></a>3341 - PipeConnectionAcceptStop
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3341|  
 |Ключевые слова|Канал|  
 |Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается при остановке принятия соединения по каналу.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Соединение по каналу принято.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

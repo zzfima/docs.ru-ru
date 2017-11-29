@@ -1,61 +1,65 @@
 ---
-title: "More Secure File and Data Access in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [Windows Forms], file access"
-  - "registry [Windows Forms]"
-  - "data access [Windows Forms]"
-  - "database access (Windows Forms security)"
-  - "data [Windows Forms], secure access"
-  - "file access [Windows Forms]"
-  - "security [Windows Forms], data access"
+title: "Более безопасный доступ к файлам и данным в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- security [Windows Forms], file access
+- registry [Windows Forms]
+- data access [Windows Forms]
+- database access (Windows Forms security)
+- data [Windows Forms], secure access
+- file access [Windows Forms]
+- security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# More Secure File and Data Access in Windows Forms
-В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения.  То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений.  Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.  
+# <a name="more-secure-file-and-data-access-in-windows-forms"></a>Более безопасный доступ к файлам и данным в Windows Forms
+В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения. То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений. Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.  
   
- При возникновении ограничения безопасности есть два варианта: подтверждение разрешения \(при условии что оно было предоставлено приложению\) или использование версии кода, созданной для работы в режиме частичного доверия.  В следующих разделах рассматриваются способы доступа к файлам, базам данных и реестру из приложений, работающих в среде с частичным доверием.  
-  
-> [!NOTE]
->  По умолчанию средства, создающие развертывания [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], требуют полного доверия от компьютеров, на которых они запущены.  Если необходимы средства обеспечения повышенной безопасности при работе с частичным доверием, следует изменить стандартное поведение либо в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], либо в одном из средств [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] \(Mage.exe или MageUI.exe\).  Подробнее о безопасности Windows Forms и о том, как определить оптимальный уровень доверия для приложения, см. раздел [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
-  
-## Доступ к файлам  
- Класс <xref:System.Security.Permissions.FileIOPermission> контролирует доступ к файлам и папкам в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  По умолчанию система безопасности не предоставляет разрешение <xref:System.Security.Permissions.FileIOPermission> в средах с частичным доверием, таких как зона локальной интрасети или Интернет.  Однако приложение, которому требуется доступ к файлам, может работать в таких средах, если изменить структуру приложения или использовать другие методы доступа к файлам.  По умолчанию зоне локальной интрасети предоставляется право на доступ к тому же сайту и к той же папке, на подключение к исходному сайту и чтение данных из папки установки.  Приложениям в зоне Интернета по умолчанию разрешено подключаться только к исходному сайту.  
-  
-### Файлы, определенные пользователем  
- Один из способов решения проблемы, связанной с отсутствием доступа к файлам, — запросить у пользователя сведения о конкретном файле с помощью объекта <xref:System.Windows.Forms.OpenFileDialog> или <xref:System.Windows.Forms.SaveFileDialog>.  Взаимодействие с пользователем помогает получить некоторую уверенность в том, что приложение не сможет несанкционированно загрузить личные файлы или перезаписать важные файлы.  Методы <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> и <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> предоставляют доступ для чтения и записи файла, открывая файловый поток для файла, указанного пользователем.  Эти методы также помогают защитить файл пользователя, скрывая путь к файлу.  
+ При возникновении ограничения безопасности есть два варианта: подтверждение разрешения (при условии что оно было предоставлено приложению) или использование версии кода, созданной для работы в режиме частичного доверия. В следующих разделах рассматриваются способы доступа к файлам, базам данных и реестру из приложений, работающих в среде с частичным доверием.  
   
 > [!NOTE]
->  Эти разрешения зависят от того, в какой зоне находится приложение: интрасеть или Интернет.  Приложения зоны Интернета могут использовать только класс <xref:System.Windows.Forms.OpenFileDialog>, тогда как приложения интрасети имеют неограниченное разрешение на использование файловых диалоговых окон.  
+>  По умолчанию средства, создающие развертывания [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], требуют полного доверия от компьютеров, на которых они запущены. Если необходимы средства обеспечения повышенной безопасности при работе с частичным доверием, следует изменить стандартное поведение либо в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], либо в одном из средств [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] (Mage.exe или MageUI.exe). Дополнительные сведения о безопасности форм Windows Forms и о том, как определить оптимальный уровень доверия для приложения см. в разделе [безопасности в Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
- Класс <xref:System.Security.Permissions.FileDialogPermission> указывает, какой тип файлового диалогового окна может использовать приложение.  В таблице ниже показаны значения, которые необходимо использовать для каждого класса <xref:System.Windows.Forms.FileDialog>.  
+## <a name="file-access"></a>Доступ к файлам  
+ Класс <xref:System.Security.Permissions.FileIOPermission> контролирует доступ к файлам и папкам в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. По умолчанию система безопасности не предоставляет разрешение <xref:System.Security.Permissions.FileIOPermission> в средах с частичным доверием, таких как зона локальной интрасети или Интернет. Однако приложение, которому требуется доступ к файлам, может работать в таких средах, если изменить структуру приложения или использовать другие методы доступа к файлам. По умолчанию зоне локальной интрасети предоставляется право на доступ к тому же сайту и к той же папке, на подключение к исходному сайту и чтение данных из папки установки. Приложениям в зоне Интернета по умолчанию разрешено подключаться только к исходному сайту.  
+  
+### <a name="user-specified-files"></a>Файлы, определенные пользователем  
+ Один из способов решения проблемы, связанной с отсутствием доступа к файлам, — запросить у пользователя сведения о конкретном файле с помощью объекта <xref:System.Windows.Forms.OpenFileDialog> или <xref:System.Windows.Forms.SaveFileDialog>. Взаимодействие с пользователем помогает получить некоторую уверенность в том, что приложение не сможет несанкционированно загрузить личные файлы или перезаписать важные файлы. Методы <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> и <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> предоставляют доступ для чтения и записи файла, открывая файловый поток для файла, указанного пользователем. Эти методы также помогают защитить файл пользователя, скрывая путь к файлу.  
+  
+> [!NOTE]
+>  Эти разрешения зависят от того, в какой зоне находится приложение: интрасеть или Интернет. Приложения зоны Интернета могут использовать только класс <xref:System.Windows.Forms.OpenFileDialog>, тогда как приложения интрасети имеют неограниченное разрешение на использование файловых диалоговых окон.  
+  
+ Класс <xref:System.Security.Permissions.FileDialogPermission> указывает, какой тип файлового диалогового окна может использовать приложение. В таблице ниже показаны значения, которые необходимо использовать для каждого класса <xref:System.Windows.Forms.FileDialog>.  
   
 |Класс|Необходимое значение для доступа|  
-|-----------|--------------------------------------|  
-|<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess>|  
-|<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess>|  
+|-----------|---------------------------|  
+|<xref:System.Windows.Forms.OpenFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Open>|  
+|<xref:System.Windows.Forms.SaveFileDialog>|<xref:System.Security.Permissions.FileDialogPermissionAccess.Save>|  
   
 > [!NOTE]
 >  Конкретные разрешения не запрашиваются до тех пор, пока не будет вызван метод <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>.  
   
- Разрешение на вывод файлового диалогового окна не дает приложению полный доступ ко всем членам классов <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> и <xref:System.Windows.Forms.SaveFileDialog>.  Точные разрешения, необходимые для вызова каждого метода, представлены в справочном разделе по этому методу в документации по библиотеке классов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Разрешение на вывод файлового диалогового окна не дает приложению полный доступ ко всем членам классов <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> и <xref:System.Windows.Forms.SaveFileDialog>. Точные разрешения, необходимые для вызова каждого метода, представлены в справочном разделе по этому методу в документации по библиотеке классов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- В примере кода ниже метод <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> используется для открытия указанного пользователем файла в элементе управления <xref:System.Windows.Forms.RichTextBox>.  Для этого требуется разрешение <xref:System.Security.Permissions.FileDialogPermission> и связанное с ним значение перечисления <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>.  В примере показано, как обрабатывать исключение <xref:System.Security.SecurityException> для определения того, нужно ли отключить функцию сохранения.  В этом примере требуется, чтобы форма <xref:System.Windows.Forms.Form> содержала элемент управления <xref:System.Windows.Forms.Button> с именем `ButtonOpen` и элемент управления <xref:System.Windows.Forms.RichTextBox> с именем `RtfBoxMain`.  
+ В примере кода ниже метод <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> используется для открытия указанного пользователем файла в элементе управления <xref:System.Windows.Forms.RichTextBox>. Для этого требуется разрешение <xref:System.Security.Permissions.FileDialogPermission> и связанное с ним значение перечисления <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>. В примере показано, как обрабатывать исключение <xref:System.Security.SecurityException> для определения того, нужно ли отключить функцию сохранения. В этом примере требуется, чтобы форма <xref:System.Windows.Forms.Form> содержала элемент управления <xref:System.Windows.Forms.Button> с именем `ButtonOpen` и элемент управления <xref:System.Windows.Forms.RichTextBox> с именем `RtfBoxMain`.  
   
 > [!NOTE]
 >  Программная логика для функции сохранения в примере не представлена.  
@@ -95,7 +99,6 @@ Private Sub ButtonOpen_Click(ByVal sender As System.Object, _
         End Try  
     End If  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -140,12 +143,12 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  В [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] убедитесь в том, что код для включения обработчика событий добавлен.  Следующий код показывает, как с помощью кода из предыдущего примера включить обработчик событий: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  В [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] убедитесь в том, что код для включения обработчика событий добавлен. Следующий код показывает, как с помощью кода из предыдущего примера включить обработчик событий: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
-### Другие файлы  
- Иногда необходимо считывать или записывать файлы, которые не указываются пользователем, например если требуется сохранить параметры приложения.  В зонах локальной интрасети и Интернета приложение не имеет разрешения сохранять данные в локальном файле.  Тем не менее приложение может сохранять данные в изолированном хранилище.  Изолированное хранилище — это абстрактная секция данных \(а не конкретное хранилище\), содержащая один или несколько изолированных файлов хранения, называемых хранилищами, которые содержат сведения о действительных папках размещения данных.  Разрешения на доступ к файлам, такие как <xref:System.Security.Permissions.FileIOPermission>, не обязательны; вместо этого класс <xref:System.Security.Permissions.IsolatedStoragePermission> управляет разрешениями для изолированного хранилища.  По умолчанию приложения, запущенные в зонах локальной интрасети и Интернета, могут хранить данные с помощью изолированного хранилища. Однако такие параметры, как дисковая квота, могут меняться.  Подробнее об изолированном хранилище см. в разделе [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md).  
+### <a name="other-files"></a>Другие файлы  
+ Иногда необходимо считывать или записывать файлы, которые не указываются пользователем, например если требуется сохранить параметры приложения. В зонах локальной интрасети и Интернета приложение не имеет разрешения сохранять данные в локальном файле. Тем не менее приложение может сохранять данные в изолированном хранилище. Изолированное хранилище — это абстрактная секция данных (а не конкретное хранилище), содержащая один или несколько изолированных файлов хранения, называемых хранилищами, которые содержат сведения о действительных папках размещения данных. Разрешения на доступ к файлам, такие как <xref:System.Security.Permissions.FileIOPermission>, не обязательны; вместо этого класс <xref:System.Security.Permissions.IsolatedStoragePermission> управляет разрешениями для изолированного хранилища. По умолчанию приложения, запущенные в зонах локальной интрасети и Интернета, могут хранить данные с помощью изолированного хранилища. Однако такие параметры, как дисковая квота, могут меняться. Дополнительные сведения об изолированном хранилище см. в разделе [изолированное хранилище](../../../docs/standard/io/isolated-storage.md).  
   
- В примере ниже для записи данных в файл, расположенный в хранилище, используется изолированное хранилище.  Для этого примера требуется разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission> и значение перечисления <xref:System.Security.Permissions.IsolatedStorageContainment>.  В примере демонстрируется чтение и запись определенных значений свойств элемента управления <xref:System.Windows.Forms.Button> в файл в изолированном хранилище.  Функция `Read` может быть вызвана после запуска приложения, а функция `Write` — до окончания работы приложения.  В этом примере требуется существование функций `Read` и `Write` как членов формы <xref:System.Windows.Forms.Form>, которая содержит элемент управления <xref:System.Windows.Forms.Button>с именем `MainButton`.  
+ В примере ниже для записи данных в файл, расположенный в хранилище, используется изолированное хранилище. Для этого примера требуется разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission> и значение перечисления <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. В примере демонстрируется чтение и запись определенных значений свойств элемента управления <xref:System.Windows.Forms.Button> в файл в изолированном хранилище. Функция `Read` может быть вызвана после запуска приложения, а функция `Write` — до окончания работы приложения. В этом примере требуется `Read` и `Write` функции существует как члены <xref:System.Windows.Forms.Form> , содержащий <xref:System.Windows.Forms.Button> управления с именем `MainButton`.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -242,7 +245,6 @@ Public Sub Write()
         writer.Close()  
     End Try  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -356,20 +358,20 @@ public void Write()
 }  
 ```  
   
-## Доступ к базе данных  
- Разрешения, необходимые для доступа к базе данных, различаются в зависимости от поставщика базы данных. Однако только приложения с соответствующими разрешениями могут получить доступ к базе данных через подключение данных.  Подробнее о разрешениях, необходимых для доступа к базе данных, см в разделе [Управление доступом для кода и ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+## <a name="database-access"></a>Доступ к базе данных  
+ Разрешения, необходимые для доступа к базе данных, различаются в зависимости от поставщика базы данных. Однако только приложения с соответствующими разрешениями могут получить доступ к базе данных через подключение данных. Дополнительные сведения о разрешениях, необходимых для доступа к базе данных см. в разделе [управления доступом для кода и ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Если невозможно получить доступ к базе данных напрямую, так как требуется, чтобы приложение работало в среде с частичным доверием, можно использовать веб\-службу как альтернативное средство доступа к данным.  Веб\-служба — это программа, доступ к которой можно получить программными средствами по сети.  С помощью веб\-служб приложения могут совместно использовать данные из различных зон групп кода.  По умолчанию приложения в зонах локальной интрасети и Интернета получают право на доступ к исходным сайтам, что позволяет им вызывать веб\-службы, размещенные на том же сервере.  Подробнее см. в разделе [Веб\-службы в ASP.NET AJAX](http://msdn.microsoft.com/ru-ru/8290e543-7eff-47a4-aace-681f3c07229b) или [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Если невозможно получить доступ к базе данных напрямую, так как требуется, чтобы приложение работало в среде с частичным доверием, можно использовать веб-службу как альтернативное средство доступа к данным. Веб-служба — это программа, доступ к которой можно получить программными средствами по сети. С помощью веб-служб приложения могут совместно использовать данные из различных зон групп кода. По умолчанию приложения в зонах локальной интрасети и Интернета получают право на доступ к исходным сайтам, что позволяет им вызывать веб-службы, размещенные на том же сервере. Дополнительные сведения см. [веб-служб в ASP.NET AJAX](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) или [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
-## Доступ к реестру  
- Класс <xref:System.Security.Permissions.RegistryPermission> управляет доступом к реестру операционной системы.  По умолчанию доступ к реестру могут получить только приложения, которые работают локально.  Разрешение <xref:System.Security.Permissions.RegistryPermission> предоставляет приложению право всего лишь попытаться получить доступ к реестру, но не гарантирует, что доступ будет успешно получен, потому что операционная система принудительно обеспечивает безопасность реестра.  
+## <a name="registry-access"></a>Доступ к реестру  
+ Класс <xref:System.Security.Permissions.RegistryPermission> управляет доступом к реестру операционной системы. По умолчанию доступ к реестру могут получить только приложения, которые работают локально.  Разрешение <xref:System.Security.Permissions.RegistryPermission> предоставляет приложению право всего лишь попытаться получить доступ к реестру, но не гарантирует, что доступ будет успешно получен, потому что операционная система принудительно обеспечивает безопасность реестра.  
   
- Так как в среде с частичным доверием доступ к реестру получить невозможно, могут потребоваться другие способы хранения данных.  Для хранения параметров приложения используйте вместо реестра изолированное хранилище.  Изолированное сохранение можно использовать также для хранения файлов, относящихся к приложению.  Можно хранить общие сведения приложения о сервере или исходном сайте, так как по умолчанию приложение имеет право на доступ к исходному сайту.  
+ Так как в среде с частичным доверием доступ к реестру получить невозможно, могут потребоваться другие способы хранения данных. Для хранения параметров приложения используйте вместо реестра изолированное хранилище. Изолированное сохранение можно использовать также для хранения файлов, относящихся к приложению. Можно хранить общие сведения приложения о сервере или исходном сайте, так как по умолчанию приложение имеет право на доступ к исходному сайту.  
   
-## См. также  
- [More Secure Printing in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)   
- [Additional Security Considerations in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)   
- [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md)   
- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)   
- [Mage.exe \(средство создания и редактирования манифеста\)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)   
- [MageUI.exe \(Manifest Generation and Editing Tool, Graphical Client\)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>См. также  
+ [Более безопасная печать в Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Дополнительные вопросы безопасности в формах Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Общие сведения о безопасности в Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Безопасность Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Mage.exe (средство создания и редактирования манифеста)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

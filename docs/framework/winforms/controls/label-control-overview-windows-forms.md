@@ -1,38 +1,38 @@
 ---
-title: "Общие сведения об элементе управления Label (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Label"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "изображения [Windows Forms], отображение в надписях"
-  - "Label - элемент управления [Windows Forms], об элементе управления Label"
-  - "подписи"
+title: "Общие сведения об элементе управления Label (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Label
+helpviewer_keywords:
+- images [Windows Forms], displaying in labels
+- labels
+- Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f55cfb6afa8ad533aac84b391a7cd6fef83d72d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления Label (Windows Forms)
-Элементы управления Windows Forms <xref:System.Windows.Forms.Label> предназначены для отображения текста или изображений, которые пользователь не может изменить с клавиатуры.  Они используются для идентификации объектов в форме — например, для описания, что произойдет с элементом управления после выполнения на нем щелчка мышью, или для отображения сведений в ответ на процесс или событие времени выполнения в приложении.  Например, имеется возможность использовать надписи для добавления описательных заголовков в текстовые поля, списки, поля со списком и т.д.  Кроме того, возможно написание кода, который изменяет текст, отображаемый в надписи, в ответ на события во время выполнения.  Например, если приложению требуется несколько минут на обработку изменения, можно отобразить в надписи сообщение о статусе обработки.  
+# <a name="label-control-overview-windows-forms"></a>Общие сведения об элементе управления Label (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.Label> элементы управления используются для отображения текста или изображений, которые не может быть изменена пользователем. Они используются для идентификации объектов в форме — для предоставления описание какие определенный элемент управления будет выполнять при щелчке, например или для отображения сведений в ответ на событие во время выполнения или процесса в приложении. Например метки можно использовать для добавления описательных заголовков в текстовые поля, списки, поля со списком и т. д. Также можно написать код, который изменяет текст, отображаемый в метке в ответ на события во время выполнения. Например если приложение использует несколько минут, чтобы обрабатывать изменения, можно отобразить сообщение о состоянии обработки в метке.  
   
-## Работа с элементом управления Label  
- Так как элемент управления <xref:System.Windows.Forms.Label> не может получать фокус, он может также использоваться для создания клавиш доступа для других элементов управления.  Клавиша доступа позволяет пользователю выбрать другой элемент управления, используя сочетание клавиши ALT и заданной клавиши.  Дополнительные сведения содержатся в разделе [Создание сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) и [Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).  
+## <a name="working-with-the-label-control"></a>Работа с элементом управления Label  
+ Поскольку <xref:System.Windows.Forms.Label> управления не может получать фокус, он может также использоваться для создания клавиш доступа для других элементов управления. Клавиша доступа позволяет пользователю выбрать другой элемент управления, нажав клавишу ALT, с помощью ключа доступа. Дополнительные сведения см. в разделе [Создание сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) и [как: создать клавиши доступа, с помощью элементов управления Windows Forms метка](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).  
   
- Отображаемый в надписи текст содержится в свойстве <xref:System.Windows.Forms.Label.Text%2A>.  Свойство <xref:System.Windows.Forms.Label.TextAlign%2A> позволяет задать выравнивание текста в надписи.  Дополнительные сведения см. в разделе [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Заголовок, отображаемый в метке содержится в <xref:System.Windows.Forms.Label.Text%2A> свойство. <xref:System.Windows.Forms.Label.TextAlign%2A> Свойство позволяет задать выравнивание текста в метке. Дополнительные сведения см. в разделе [как: значение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## См. также  
- <xref:System.Windows.Forms.Label>   
- [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Label>  
+ [Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  [Практическое руководство. Определение клавиш доступа с помощью элементов управления Label в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)

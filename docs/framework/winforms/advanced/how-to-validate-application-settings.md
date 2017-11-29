@@ -1,60 +1,64 @@
 ---
-title: "How to: Validate Application Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "validating application settings"
-  - "application settings, Windows Forms"
-  - "application settings, validating"
+title: "Практическое руководство. Проверка параметров приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating application settings
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Validate Application Settings
+# <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
   
- Поскольку параметры приложений являются строго типизированными, имеется некоторая уверенность, что пользователи не смогут назначить тому или иному параметру данные неверного типа.  Однако пользователь по\-прежнему может пытаться присвоить параметру значение, которое находится вне допустимых границ, — например, задать дату рождения, которая произойдет в будущем.  Родительский класс всех классов параметров приложений, <xref:System.Configuration.ApplicationSettingsBase>, предоставляет четыре события для поддержки проверки допустимости данных.  Обработка этих событий помещает весь код проверки в одном месте, а не разбрасывает его по всему проекту.  
+ Поскольку параметры приложений являются строго типизированными, это дает некоторую уверенность в том, что пользователи не могут назначить тому или иному параметру данные неверного типа. Тем не менее, пользователь по-прежнему может попытаться присвоить значение вне допустимого диапазона, наприме указать дату рождения в будущем. <xref:System.Configuration.ApplicationSettingsBase>, родительским классом для всех классов параметров приложения предоставляет четыре события для поддержки проверки допустимости. Благодаря обработке этих событий весь код проверки размещается в одном месте, а не в разных частях проекта.  
   
- Используемое событие зависит от момента проверки параметров, как описано в следующей таблице.  
+ Используемое событие зависит от времени, когда необходимо проверить параметры, как описано в следующей таблице.  
   
-|Событие|Возникновение и использование|  
-|-------------|-----------------------------------|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Возникает после начальной загрузки группы свойств параметров.<br /><br /> Используйте это событие для проверки начальных значений для всей группы свойств, прежде чем они будут использованы в приложении.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Возникает перед изменением значения одного свойства параметра.<br /><br /> Используйте это событие для проверки одного свойства до его изменения.  Это позволяет предоставить немедленный отклик пользователям относительно их действий и решений.|  
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Возникает после изменения значения одного свойства параметра.<br /><br /> Используйте это событие для проверки одного свойства после его изменения.  Это событие редко используется для проверки кроме случаев, когда требуется продолжительный процесс асинхронной проверки.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Возникает перед сохранением группы свойств параметров.<br /><br /> Используйте это событие для проверки значений для всей группы свойств, прежде чем они сохранятся на диске.|  
+|Событие|Вхождение и использование|  
+|-----------|------------------------|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Возникает после начальной загрузки группы свойств параметров.<br /><br /> Используйте это событие для проверки начальных значений для всей группы свойств перед их применением в приложении.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Происходит перед изменением значения одного свойства параметров.<br /><br /> Используйте это событие для проверки одного свойства до его изменения. Оно позволяет пользователям немедленно получить сведения о своих действиях и решениях.|  
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Происходит после изменения значения одного свойства параметра.<br /><br /> Используйте это событие для проверки одного свойства после его изменения. Это событие редко используется для проверки, если не требуется длительный процесс асинхронной проверки.|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Возникает перед сохранением группы свойств параметров.<br /><br /> Используйте это событие для проверки значений для всей группы свойств перед их сохранением на диске.|  
   
- Как правило, не требуется использовать все эти события для целей проверки в одном приложении.  Например, часто удается выполнить все требования проверки, обрабатывая только событие <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>.  
+ Как правило, в целях проверки все эти события внутри одного приложения не используются. Например, часто бывает невозможно выполнить все требования проверки, обрабатывая только <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
   
  Обычно при обнаружении недопустимого значения обработчик событий выполняет одно из следующих действий.  
   
--   Автоматически предоставляет значение, которое заведомо правильно, например значение по умолчанию.  
+-   Автоматически предоставляет заведомо правильное значение, например значение по умолчанию.  
   
 -   Повторно запрашивает сведения у пользователя серверного кода.  
   
--   Для событий, возникающих до связанных с ними действий, таких как <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> и <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, аргумент <xref:System.ComponentModel.CancelEventArgs> используется для отмены операции.  
+-   Для событий, возникающих до связанных с ними действий, таких как <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> и <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, использует <xref:System.ComponentModel.CancelEventArgs> аргумент для отмены операции.  
   
- Дополнительные сведения об обработке событий см. в разделе [Event Handlers Overview](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Дополнительные сведения об обработке событий см. в разделе [Общие сведения об обработчиках событий](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- Следующие процедуры показывают, как проверить допустимость даты рождения с помощью события <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> или <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>.  Процедуры были написаны в предположении, что параметры приложения уже созданы; в этом примере будет выполнена проверка границ для параметра с именем  `DateOfBirth`.  Дополнительные сведения о создании параметров см. в разделе [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Следующие процедуры показывают, как проверить допустимость даты рождения с помощью <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> или <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий. В этих процедурах предполагается, что вы уже создали параметры приложения. В этом примере будет выполнена проверка границ для параметра с именем `DateOfBirth`. Дополнительные сведения о создании параметров см. в разделе [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
   
-### Для получения объекта параметров приложения выполните следующие действия.  
+### <a name="to-obtain-the-application-settings-object"></a>Получение объекта параметров приложения  
   
--   Получите ссылку на объект параметров приложения \(экземпляр класса\-оболочки\), выполнив один из следующих пунктов маркированного списка.  
+-   Для получения ссылки на объект параметров приложения (экземпляр программы-оболочки) выполните одно из следующих действий:  
   
-    -   Если параметры были созданы с помощью диалогового окна "Параметры приложения" Visual Studio в **редакторе свойств**, можно получить объект параметров по умолчанию, созданный для текущего языка с помощью следующего выражения.  
+    -   Если вы создали параметры в диалоговом окне «Параметры приложения Visual Studio» в **редакторе свойств**, объект параметров по умолчанию, созданный для вашего языка, можно получить с помощью следующего выражения.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -64,13 +68,13 @@ caps.handback.revision: 17
         MySettings.Default   
         ```  
   
-         \-или\-  
+         -или-  
   
-    -   Разработчики на языке Visual Basic, создающие параметры приложения с помощью конструктора проектов, могут извлечь параметры настройки с помощью объекта [Объект My.Settings](../../../../ocs/visual-basic/language-reference/objects/my-settings-object.md).  
+    -   Если вы являетесь разработчиком на Visual Basic и создали параметры приложения с помощью конструктора проектов, для извлечения параметров можно использовать [объект My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         \-или\-  
+         -или-  
   
-    -   Если параметры были созданы путем непосредственного наследования от класса <xref:System.Configuration.ApplicationSettingsBase>, необходимо создать экземпляр класса вручную.  
+    -   Если параметры были созданы путем наследования от <xref:System.Configuration.ApplicationSettingsBase> напрямую, необходимо создать экземпляр класса вручную.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -80,15 +84,15 @@ caps.handback.revision: 17
         Dim Settings as New MyCustomSettings()  
         ```  
   
- Следующие процедуры были написаны в предположении, что объект параметров приложения был получен путем выполнения последнего пункта приведенного выше маркированного списка.  
+ В следующих процедурах предполагается, что объект параметров приложения получен путем выполнения последнего действия в этой процедуре.  
   
-### Чтобы проверить параметры приложения во время изменения параметра, выполните следующие действия.  
+### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Проверка параметров приложения при изменении параметра  
   
-1.  Если разработка осуществляется на C\#, в событии `Load` формы или элемента управления добавьте обработчик событий для события <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>.  
+1.  Если разработка осуществляется на C#, в формы или элемента управления `Load` события, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> события.  
   
-     \-или\-  
+     -или-  
   
-     Если разработка осуществляется на Visual Basic, следует объявить переменную `Settings` с помощью зарезервированного слова `WithEvents`.  
+     Если вы являетесь разработчиком на Visual Basic, объявите переменную `Settings` с помощью ключевого слова `WithEvents`.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -103,7 +107,7 @@ caps.handback.revision: 17
     End Sub   
     ```  
   
-2.  Определите обработчик событий и напишите внутри него код для выполнения проверки границ даты рождения.  
+2.  Определите обработчик событий и напишите внутри него код для выполнения проверки границ для даты рождения.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -130,9 +134,9 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-### Чтобы проверить параметры приложения во время сохранения, выполните следующие действия.  
+### <a name="to-validate-application-settings-when-a-save-occurs"></a>Проверка параметров приложения в ходе сохранения  
   
-1.  В событии `Load` формы или элемента управления добавьте обработчик событий для события <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>.  
+1.  В форме или элемента управления `Load` события, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> события.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -147,7 +151,7 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-2.  Определите обработчик событий и напишите внутри него код для выполнения проверки границ даты рождения.  
+2.  Определите обработчик событий и напишите внутри него код для выполнения проверки границ для даты рождения.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  
@@ -166,6 +170,6 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-## См. также  
- [Creating Event Handlers in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>См. также  
+ [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

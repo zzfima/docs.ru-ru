@@ -1,53 +1,57 @@
 ---
-title: "Использование действия &#171;Interop&#187; в рабочем процессе платформы .NET Framework 4 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование действия «Interop» в рабочем процессе платформы .NET Framework 4"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c485a1c2c69169812e69c3bc1ea9969d12467d53
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование действия &#171;Interop&#187; в рабочем процессе платформы .NET Framework 4
-Действия, созданные с помощью [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] или [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] может использоваться в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] рабочего процесса с помощью <xref:System.Activities.Statements.Interop> действия. В этом разделе содержатся сведения об использовании <xref:System.Activities.Statements.Interop> действия.  
+# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Использование действия «Interop» в рабочем процессе платформы .NET Framework 4
+Действия, созданные в [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] или в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], могут использоваться в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] посредством использования действия <xref:System.Activities.Statements.Interop>. В этом разделе приведены общие сведения об использовании действия <xref:System.Activities.Statements.Interop>.  
   
 > [!NOTE]
->   <xref:System.Activities.Statements.Interop> действия не отображается в области элементов конструктора рабочих процессов, если проект рабочего процесса содержит его **Требуемая версия .NET Framework** задано значение **.Net Framework 4** или более поздней версии.  
+>  <xref:System.Activities.Statements.Interop> Действия не отображается в области элементов конструктора рабочих процессов, если проект рабочего процесса имеет его **требуемой версии .NET Framework** задано значение **.Net Framework 4** или более поздней версии.  
   
 ## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>Использование действия Interop в рабочих процессах платформы .NET Framework 4.5  
- В данном разделе создается библиотека действий [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], содержащая действие `DiscountCalculator`.  `DiscountCalculator` Вычисляет скидку, основанную на приобретений и состоит из <xref:System.Workflow.Activities.SequenceActivity> содержащий <xref:System.Workflow.Activities.PolicyActivity>.  
+ В данном разделе создается библиотека действий [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], содержащая действие `DiscountCalculator`. Действие `DiscountCalculator` вычисляет скидку на основе стоимости приобретений и состоит из действия <xref:System.Workflow.Activities.SequenceActivity>, содержащего действие <xref:System.Workflow.Activities.PolicyActivity>.  
   
 > [!NOTE]
->   [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Действие, созданный в данном разделе использует <xref:System.Workflow.Activities.PolicyActivity> для реализации логики действия. Он не требуется для использования пользовательского [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] действия или <xref:System.Activities.Statements.Interop> действие, чтобы использовать правила в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] рабочего процесса. Пример использования правил в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] рабочего процесса без использования <xref:System.Activities.Statements.Interop> действие, в разделе [действие политики в .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) образца.  
+>  Действие [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], создаваемое в этом разделе, использует действие <xref:System.Workflow.Activities.PolicyActivity> для реализации логики действия. Для использования правил в рабочем процессе [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] не обязательно использовать пользовательское действие <xref:System.Activities.Statements.Interop> или действие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Пример использования правила в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] рабочего процесса без использования <xref:System.Activities.Statements.Interop> действия, в разделе [действие политики в .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) образца.  
   
 #### <a name="to-create-the-net-framework-35-activity-library-project"></a>Создание проекта библиотеки действий платформы .NET Framework 3.5  
   
-1.  Откройте [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и выберите **New** и затем **проекта...** из **файла** меню.  
+1.  Откройте [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и выберите **New** и затем **проекта...** из **файл** меню.  
   
-2.  Разверните **другие типы проектов** узел в **Установленные шаблоны** панели и выберите **решения Visual Studio**.  
+2.  Разверните **другие типы проектов** узел в **установленные шаблоны** области и выберите команду **решения Visual Studio**.  
   
 3.  Выберите **пустое решение** из **решения Visual Studio** списка. Тип `PolicyInteropDemo` в **имя** и нажмите кнопку **ОК**.  
   
-4.  Щелкните правой кнопкой мыши **PolicyInteropDemo** в **обозревателе решений** и выберите **Добавить** и затем **Создать проект...**.  
+4.  Щелкните правой кнопкой мыши **PolicyInteropDemo** в **обозревателе решений** и выберите **добавить** и затем **новый проект...** .  
   
     > [!TIP]
-    >  Если **обозревателе решений** окно не отображается, выберите пункт **обозревателе решений** из **представления** меню.  
+    >  Если **обозревателе решений** окно не отображается, выберите пункт **обозревателе решений** из **представление** меню.  
   
-5.  В **Установленные шаблоны** выберите **Visual C#** и затем **рабочего процесса**. Выберите **.NET Framework 3.5** раскрывающемся списке версий .NET Framework, а затем выберите **Библиотека действий рабочих процессов** из **шаблонов** списка.  
+5.  В **установленные шаблоны** выберите **Visual C#** и затем **рабочего процесса**. Выберите **.NET Framework 3.5** в раскрывающемся списке версий .NET Framework, а затем выберите **библиотека действий рабочих процессов** из **шаблоны** списка.  
   
 6.  Тип `PolicyActivityLibrary` в **имя** и нажмите кнопку **ОК**.  
   
-7.  Щелкните правой кнопкой мыши **Activity1.cs** в **обозревателе решений** и выберите **Удаление**. Нажмите кнопку **ОК** для подтверждения.  
+7.  Щелкните правой кнопкой мыши **Activity1.cs** в **обозревателе решений** и выберите **удалить**. Нажмите кнопку **ОК** для подтверждения.  
   
 #### <a name="to-create-the-discountcalculator-activity"></a>Создание действия DiscountCalculator  
   
-1.  Щелкните правой кнопкой мыши **PolicyActivityLibrary** в **обозревателе решений** и выберите **Добавить** и затем **действие...**.  
+1.  Щелкните правой кнопкой мыши **PolicyActivityLibrary** в **обозревателе решений** и выберите **добавить** и затем **действия...** .  
   
 2.  Выберите **действие (с разделением кода)** из **элементы Visual C#** списка. Тип `DiscountCalculator` в **имя** и нажмите кнопку **ОК**.  
   
@@ -64,25 +68,25 @@ caps.handback.revision: 20
     }  
     ```  
   
-5.  Щелкните правой кнопкой мыши **DiscountCalculator.xoml** в **обозревателе решений** и выберите **Конструктор представлений**.  
+5.  Щелкните правой кнопкой мыши **DiscountCalculator.xoml** в **обозревателе решений** и выберите **конструктор представлений**.  
   
-6.  Перетащите **политика** действие из **Windows Workflow v3.0** раздел **элементов** и поместите его **DiscountCalculator** действия.  
+6.  Перетащите **политики** действия из **Windows Workflow v3.0** раздел **элементов** и поместите его **DiscountCalculator** действия .  
   
     > [!TIP]
-    >  Если **элементов** окно не отображается, выберите пункт **элементов** из **представления** меню.  
+    >  Если **элементов** окно не отображается, выберите пункт **элементов** из **представление** меню.  
   
 #### <a name="to-configure-the-rules"></a>Настройка правил  
   
-1.  Щелкните только что добавленном **политика** действие, выберите его, если он еще не выбран.  
+1.  Щелкните только что добавленном **политики** действия, чтобы выбрать его, если он еще не выбран.  
   
-2.  Щелкните **RuleSetReference** Свойства **Свойства** окно, чтобы выбрать его и нажмите кнопку с многоточием справа от свойства.  
+2.  Нажмите кнопку **RuleSetReference** свойство в **свойства** окно, чтобы выбрать ее и нажмите кнопку с многоточием справа от свойства.  
   
     > [!TIP]
-    >  Если **Свойства** окно не отображается, выберите **окно свойств** из **представления** меню.  
+    >  Если **свойства** окно не отображается, выберите **окно свойств** из **представление** меню.  
   
-3.  Выберите **нажмите кнопку Создать...**.  
+3.  Выберите **щелкните Добавить...** .  
   
-4.  Щелкните **Добавить правило**.  
+4.  Нажмите кнопку **добавить правило**.  
   
 5.  Введите следующее выражение в **условие** поле.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
     this.DiscountPercent = 0.075  
     ```  
   
-7.  Щелкните **Добавить правило**.  
+7.  Нажмите кнопку **добавить правило**.  
   
 8.  Введите следующее выражение в **условие** поле.  
   
@@ -110,7 +114,7 @@ caps.handback.revision: 20
     this.DiscountPercent = 0.15  
     ```  
   
-10. Щелкните **Добавить правило**.  
+10. Нажмите кнопку **добавить правило**.  
   
 11. Введите следующее выражение в **условие** поле.  
   
@@ -130,9 +134,9 @@ caps.handback.revision: 20
     this.Total = this.Subtotal  
     ```  
   
-14. Щелкните **ОК** Закрыть **Редактор набора правил** диалоговое окно.  
+14. Нажмите кнопку **ОК** закрыть **редактор набора правил** диалоговое окно.  
   
-15. Убедитесь, что только что созданный <xref:System.Workflow.Activities.Rules.RuleSet> выбран в **имя** и выберите **ОК**.  
+15. Убедитесь, что вновь созданные <xref:System.Workflow.Activities.Rules.RuleSet> выбран в **имя** списке и нажмите кнопку **ОК**.  
   
 16. Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
@@ -150,37 +154,37 @@ Rule3: IF this.DiscountPercent > 0
        ELSE this.Total = this.Subtotal  
 ```  
   
- Когда <xref:System.Workflow.Activities.PolicyActivity> выполняет эти три правила оценить и модифицировать `Subtotal`, `DiscountPercent`, и `Total` значения свойств `DiscountCalculator` Действие вычисления требуемой скидки.  
+ При выполнении действия <xref:System.Workflow.Activities.PolicyActivity> выполняется оценка этих трех правил, которые соответственно изменяют значения свойств `Subtotal`, `DiscountPercent` и `Total` для действия `DiscountCalculator` с целью вычисления требуемой скидки.  
   
 ## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a>Использование действия DiscountCalculator совместно с действием Interop  
- Для использования `DiscountCalculator` действия внутри [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] рабочего процесса, <xref:System.Activities.Statements.Interop> используется действие. В этом разделе создаются два рабочих процесса, один с помощью кода и один в конструкторе рабочих процессов, которые демонстрируют использование <xref:System.Activities.Statements.Interop> действия `DiscountCalculator` действия. Для обоих рабочих процессов используется одно ведущее приложение.  
+ Чтобы использовать действие `DiscountCalculator` в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], используется действие <xref:System.Activities.Statements.Interop>. В данном разделе создаются два рабочих процесса (один с использованием кода и один с помощью конструктора рабочего процесса), которые демонстрируют использование действия <xref:System.Activities.Statements.Interop> совместно с действием `DiscountCalculator`. Для обоих рабочих процессов используется одно ведущее приложение.  
   
 #### <a name="to-create-the-host-application"></a>Создание ведущего приложения  
   
-1.  Щелкните правой кнопкой мыши **PolicyInteropDemo** в **обозревателе решений** и выберите **Добавить**, а затем **Создать проект...**.  
+1.  Щелкните правой кнопкой мыши **PolicyInteropDemo** в **обозревателе решений** и выберите **добавить**, а затем **новый проект...** .  
   
-2.  Убедитесь, что **.NET Framework 4.5** выбран в раскрывающемся списке версий .NET Framework и выберите  **Консольное приложение рабочего процесса** из **элементы Visual C#** списка.  
+2.  Убедитесь, что **.NET Framework 4.5** выбран в раскрывающемся списке версий .NET Framework и выберите **консольное приложение рабочего процесса** из **элементы Visual C#** списка.  
   
 3.  Тип `PolicyInteropHost` в **имя** и нажмите кнопку **ОК**.  
   
-4.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **Свойства**.  
+4.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **свойства**.  
   
-5.  В **Требуемая версия .NET framework** раскрывающийся список, измените выделенный фрагмент из **клиентский профиль .NET Framework 4** для **.NET Framework 4.5**. Щелкните **Да** для подтверждения.  
+5.  В **требуемой версии .NET framework** раскрывающемся списке, измените выбранный вариант с **клиентский профиль .NET Framework 4** для **.NET Framework 4.5**. Нажмите кнопку **Да** для подтверждения.  
   
-6.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **Добавить ссылку**.  
+6.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **добавить ссылку...** .  
   
 7.  Выберите **PolicyActivityLibrary** из **проекты** и нажмите кнопку **ОК**.  
   
-8.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **Добавить ссылку**.  
+8.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **добавить ссылку...** .  
   
-9. Выберите **System.Workflow.Activities**, **System.Workflow.ComponentModel**, а затем **System.Workflow.Runtime** из **.NET** и нажмите кнопку **ОК**.  
+9. Выберите **System.Workflow.Activities**, **System.Workflow.ComponentModel**, а затем **System.Workflow.Runtime** из **.NET**и нажмите кнопку **ОК**.  
   
 10. Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **Назначить запускаемым проектом**.  
   
 11. Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
 ### <a name="using-the-interop-activity-in-code"></a>Использование действия Interop в коде  
- В этом примере создается определение рабочего процесса с помощью кода, который содержит <xref:System.Activities.Statements.Interop> действия и `DiscountCalculator` действия. Этот рабочий процесс вызывается с помощью <xref:System.Activities.WorkflowInvoker> и результаты оценки правила записываются в консоль с помощью <xref:System.Activities.Statements.WriteLine> действия.  
+ В данном примере определение рабочего процесса создается с использованием кода, содержащего действия <xref:System.Activities.Statements.Interop> и `DiscountCalculator`. Этот рабочий процесс вызывается с помощью <xref:System.Activities.WorkflowInvoker>, а результаты оценки правила записываются в консоль с использованием действия <xref:System.Activities.Statements.WriteLine>.  
   
 ##### <a name="to-use-the-interop-activity-in-code"></a>Использование действия Interop в коде  
   
@@ -251,7 +255,7 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
     > [!NOTE]
-    >   `Subtotal`, `DiscountPercent`, И `Total` Свойства `DiscountCalculator` действия отображаются как аргументы <xref:System.Activities.Statements.Interop> действия и привязанные к локальным переменным рабочего процесса в <xref:System.Activities.Statements.Interop> действия <xref:System.Activities.Statements.Interop.ActivityProperties%2A> коллекции. `Subtotal` добавляется как <xref:System.Activities.ArgumentDirection> аргумент из-за `Subtotal` данные перемещаются в <xref:System.Activities.Statements.Interop> действия, и `DiscountPercent` и `Total` добавляются как <xref:System.Activities.ArgumentDirection> аргументы, так как их потоки данных из <xref:System.Activities.Statements.Interop> действия. Обратите внимание, что два <xref:System.Activities.ArgumentDirection> Аргументы добавляются с именами `DiscountPercentOut` и `TotalOut` для указания, что они представляют <xref:System.Activities.ArgumentDirection> аргументы.  `DiscountCalculator` Тип определяется как <xref:System.Activities.Statements.Interop> действия <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
+    >  Свойства `Subtotal`, `DiscountPercent` и `Total` действия `DiscountCalculator` отображаются как аргументы действия <xref:System.Activities.Statements.Interop>, привязанные к переменным локального рабочего процесса в коллекции <xref:System.Activities.Statements.Interop> действия <xref:System.Activities.Statements.Interop.ActivityProperties%2A>. `Subtotal` добавляется как аргумент <xref:System.Activities.ArgumentDirection.In>, поскольку данные `Subtotal` направляются действию <xref:System.Activities.Statements.Interop>, а `DiscountPercent` и `Total` добавляются как аргументы <xref:System.Activities.ArgumentDirection.Out>, так как их потоки данных происходят из действия <xref:System.Activities.Statements.Interop>. Следует заметить, что аргументы <xref:System.Activities.ArgumentDirection.Out> добавляются с именами `DiscountPercentOut` и `TotalOut` чтобы показать, что они представляют аргументы с направлением <xref:System.Activities.ArgumentDirection.Out>. Тип `DiscountCalculator` указан как тип <xref:System.Activities.Statements.Interop> действия <xref:System.Activities.Statements.Interop.ActivityType%2A>.  
   
 5.  Нажмите клавиши CTRL+F5 для сборки и запуска приложения. Подставляя различные значения в качестве значения `Subtotal`, можно проверить различные уровни скидок, реализуемые действием `DiscountCalculator`.  
   
@@ -264,51 +268,51 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
 ### <a name="using-the-interop-activity-in-the-workflow-designer"></a>Использование действия Interop в конструкторе рабочих процессов  
- В данном примере рабочий процесс создается с использованием конструктора рабочих процессов. Этот рабочий процесс выполняет аналогичен предыдущему примеру, за исключением того, вместо использования <xref:System.Activities.Statements.WriteLine> мероприятие для отображения скидки ведущее приложение получает и отображает сведения о скидке при завершении рабочего процесса. Также локальные переменные рабочего процесса не используются для хранения данных. Вместо этого аргументы создаются в конструкторе рабочих процессов, а значения передаются из ведущего приложения при вызове рабочего процесса.  
+ В данном примере рабочий процесс создается с использованием конструктора рабочих процессов. Рабочий процесс выполняет те же функции, что и предыдущий пример, за одним исключением: вместо использования действия <xref:System.Activities.Statements.WriteLine> для отображения скидки ведущее приложение получает и отображает сведения о скидке при завершении рабочего процесса. Также локальные переменные рабочего процесса не используются для хранения данных. Вместо этого аргументы создаются в конструкторе рабочих процессов, а значения передаются из ведущего приложения при вызове рабочего процесса.  
   
 ##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a>Размещение PolicyActivity с использованием рабочего процесса, созданного в конструкторе рабочих процессов  
   
-1.  Щелкните правой кнопкой мыши **Workflow1.xaml** в **обозревателе решений** и выберите **Удаление**. Нажмите кнопку **ОК** для подтверждения.  
+1.  Щелкните правой кнопкой мыши **Workflow1.xaml** в **обозревателе решений** и выберите **удалить**. Нажмите кнопку **ОК** для подтверждения.  
   
-2.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **Добавить**, **новый элемент...**.  
+2.  Щелкните правой кнопкой мыши **PolicyInteropHost** в **обозревателе решений** и выберите **добавить**, **новый элемент...** .  
   
-3.  Разверните **элементы Visual C#** и выберите команду **рабочего процесса**. Выберите **действия** из **элементы Visual C#** списка.  
+3.  Разверните **элементы Visual C#** , а затем выберите **рабочего процесса**. Выберите **действия** из **элементы Visual C#** списка.  
   
-4.  Тип `DiscountWorkflow` в **имя** и нажмите кнопку **Добавить**.  
+4.  Тип `DiscountWorkflow` в **имя** и нажмите кнопку **добавить**.  
   
-5.  Щелкните **аргументы** кнопки в нижнем левом углу конструктора рабочих процессов для отображения **аргументы** области.  
+5.  Нажмите кнопку **аргументы** кнопки в нижнем левом углу конструктора рабочих процессов для отображения **аргументы** области.  
   
-6.  Щелкните **Создать аргумент**.  
+6.  Нажмите кнопку **создать аргумент**.  
   
-7.  Тип `Subtotal` в **имя** выберите **в** из **направление** раскрывающийся список, выберите **двойные** из **тип аргумента** раскрывающегося списка и нажмите клавишу ВВОД, чтобы сохранить аргумент.  
-  
-    > [!NOTE]
-    >  Если **двойные** не находится в **тип аргумента** раскрывающемся списке выберите **Обзор типов …**, тип `System.Double` в **имя типа** и нажмите кнопку **ОК**.  
-  
-8.  Щелкните **Создать аргумент**.  
-  
-9. Тип `DiscountPercent` в **имя** выберите **Out** из **направление** раскрывающийся список, выберите **двойные** из **тип аргумента** раскрывающегося списка и нажмите клавишу ВВОД, чтобы сохранить аргумент.  
-  
-10. Щелкните **Создать аргумент**.  
-  
-11. Тип `Total` в **имя** выберите **Out** из **направление** раскрывающийся список, выберите **двойные** из **тип аргумента** раскрывающегося списка и нажмите клавишу ВВОД, чтобы сохранить аргумент.  
-  
-12. Щелкните **аргументы** кнопки в нижнем левом углу конструктора рабочих процессов, чтобы закрыть **аргументы** области.  
-  
-13. Перетащите **последовательность** действия из **поток управления** раздел **элементов** и поместите его на поверхность конструктора рабочих процессов.  
-  
-14. Перетащите **взаимодействия** действия из **миграции** раздел **элементов** и поместите его **последовательность** действия.  
-  
-15. Щелкните **взаимодействия** действие на **щелкните для просмотра...** Метка, введите **DiscountCalculator** в **имя типа** и нажмите кнопку **ОК**.  
+7.  Тип `Subtotal` в **имя** выберите **в** из **направление** раскрывающийся список, выберите **двойные** из **Тип аргумента** раскрывающегося списка, а затем нажмите клавишу ВВОД, чтобы сохранить аргумент.  
   
     > [!NOTE]
-    >  При <xref:System.Activities.Statements.Interop> добавляется действие рабочего процесса и `DiscountCalculator` тип определяется как его <xref:System.Activities.Statements.Interop.ActivityType%2A>,  <xref:System.Activities.Statements.Interop> действие предоставляет три <xref:System.Activities.ArgumentDirection> аргументы и три <xref:System.Activities.ArgumentDirection> аргументы, представляющие три открытых свойства `DiscountCalculator` действия.  <xref:System.Activities.ArgumentDirection> аргументы имеют имя, совпадающее с именем три открытых свойства, а также три <xref:System.Activities.ArgumentDirection> аргументы имеют те же имена с **ожидания** добавляется к имени свойства. В следующих шагах аргументы рабочего процесса, созданный на предыдущих шагах, привязываются к <xref:System.Activities.Statements.Interop> аргументов действия.  
+    >  Если **двойные** не находится в **тип аргумента** раскрывающемся списке выберите **поиск типов...** , тип `System.Double` в **имя типа** и нажмите кнопку **ОК**.  
   
-16. Тип `DiscountPercent` в **Введите выражение VB** поле справа от **DiscountPercentOut** свойство и нажмите клавишу TAB.  
+8.  Нажмите кнопку **создать аргумент**.  
   
-17. Тип `Subtotal` в **Введите выражение VB** поле справа от **Subtotal** свойство и нажмите клавишу TAB.  
+9. Тип `DiscountPercent` в **имя** выберите **Out** из **направление** раскрывающийся список, выберите **двойные** из **Тип аргумента** раскрывающегося списка, а затем нажмите клавишу ВВОД, чтобы сохранить аргумент.  
   
-18. Тип `Total` в **Введите выражение VB** поле справа от **TotalOut** свойство и нажмите клавишу TAB.  
+10. Нажмите кнопку **создать аргумент**.  
+  
+11. Тип `Total` в **имя** выберите **Out** из **направление** раскрывающийся список, выберите **двойные** из **Тип аргумента** раскрывающегося списка, а затем нажмите клавишу ВВОД, чтобы сохранить аргумент.  
+  
+12. Нажмите кнопку **аргументы** кнопки в нижнем левом углу конструктора рабочих процессов, чтобы закрыть **аргументы** области.  
+  
+13. Перетащите **последовательности** действия из **поток управления** раздел **элементов** и поместите его на поверхность конструктора рабочих процессов.  
+  
+14. Перетащите **взаимодействия** действия из **миграции** раздел **элементов** и поместите его **последовательности** действия.  
+  
+15. Нажмите кнопку **взаимодействия** действия на **нажмите, чтобы просмотреть...** Метка, введите **DiscountCalculator** в **имя типа** и нажмите кнопку **ОК**.  
+  
+    > [!NOTE]
+    >  Если действие <xref:System.Activities.Statements.Interop> добавляется в рабочий процесс, а тип `DiscountCalculator` указан в качестве типа <xref:System.Activities.Statements.Interop.ActivityType%2A>, то действие <xref:System.Activities.Statements.Interop> предоставит три аргумента <xref:System.Activities.ArgumentDirection.In> и три аргумента <xref:System.Activities.ArgumentDirection.Out>, представляющие три открытых свойства действия `DiscountCalculator`. <xref:System.Activities.ArgumentDirection.In> Аргументы имеют имя, совпадающее с именем и три открытых свойства, а также три <xref:System.Activities.ArgumentDirection.Out> аргументы имеют те же имена с **Out** добавляется к имени свойства. В ходе последующих шагов аргументы рабочего процесса, созданные ранее, привязываются к аргументам действия <xref:System.Activities.Statements.Interop>.  
+  
+16. Тип `DiscountPercent` в **введите выражение VB** поле справа от **DiscountPercentOut** свойство и нажмите клавишу TAB.  
+  
+17. Тип `Subtotal` в **введите выражение VB** поле справа от **Subtotal** свойство и нажмите клавишу TAB.  
+  
+18. Тип `Total` в **введите выражение VB** поле справа от **TotalOut** свойство и нажмите клавишу TAB.  
   
 19. Щелкните правой кнопкой мыши **Program.cs** в **обозревателе решений** и выберите **Просмотр кода**.  
   
@@ -365,10 +369,10 @@ Rule3: IF this.DiscountPercent > 0
 |Возможность правил|Документация|  
 |-------------------|-------------------|  
 |Общие сведения о правилах|[Введение в обработчик правил Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[Использование наборов правил в рабочих процессах](http://go.microsoft.com/fwlink/?LinkId=178516) и <xref:System.Workflow.Activities.Rules.RuleSet>|  
-|Оценка правил|[Оценка правил в наборах правил](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|Цепочки правил|[Управление прямой цепочкой](http://go.microsoft.com/fwlink/?LinkId=178518) и [правил прямой цепочки](http://go.microsoft.com/fwlink/?LinkId=178519)|  
+|RuleSet|[Использование наборов правил в рабочих процессах](http://go.microsoft.com/fwlink/?LinkId=178516) и<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|Оценка правил|[Вычисление правил в наборы правил](http://go.microsoft.com/fwlink/?LinkId=178517)|  
+|Цепочки правил|[Прямой цепочки управления](http://go.microsoft.com/fwlink/?LinkId=178518) и [прямые логические цепочки правил](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |Обработка коллекций в правилах|[Обработка коллекций в правилах](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Использование действия PolicyActivity|[Использование действия PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) и <xref:System.Workflow.Activities.PolicyActivity>|  
+|Использование действия PolicyActivity|[Использование действия PolicyActivity](http://go.microsoft.com/fwlink/?LinkId=178521) и<xref:System.Workflow.Activities.PolicyActivity>|  
   
- Рабочие процессы, созданные в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] не использовать все возможности правил, предоставляемых [!INCLUDE[wf1](../../../includes/wf1-md.md)], например декларативных условий действий и условные действия, такие как <xref:System.Workflow.Activities.ConditionedActivityGroup> и <xref:System.Workflow.Activities.ReplicatorActivity>. При необходимости можно воспользоваться этими функциональными возможностями в рабочих процессах, созданных с помощью [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] и [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Руководство по миграции](../../../docs/framework/windows-workflow-foundation//migration-guidance.md).
+ Рабочие процессы, созданные в [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], используют не все предоставляемые в [!INCLUDE[wf1](../../../includes/wf1-md.md)] возможности правил, например они не реализуют декларативные условия действий и условные действия, такие как <xref:System.Workflow.Activities.ConditionedActivityGroup> и <xref:System.Workflow.Activities.ReplicatorActivity>. При необходимости можно воспользоваться этими функциональными возможностями в рабочих процессах, созданных с помощью [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] и [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

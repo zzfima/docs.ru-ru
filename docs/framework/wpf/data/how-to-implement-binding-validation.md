@@ -1,49 +1,52 @@
 ---
-title: "Практическое руководство. Реализация проверки привязки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка, проверка"
-  - "привязка данных, проверка привязки"
-  - "проверка привязки"
+title: "Практическое руководство. Реализация проверки привязки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validation of binding [WPF]
+- data binding [WPF], validation of binding
+- binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Реализация проверки привязки
-В этом примере показано использование <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и триггера стиля для предоставления визуальной обратной связи на основе настраиваемого правила проверки, предназначенной для уведомления пользователя о том, что введено недопустимое значение.  
+# <a name="how-to-implement-binding-validation"></a>Практическое руководство. Реализация проверки привязки
+В этом примере показано, как использовать <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и триггера стиля для предоставления визуальную обратную связь, чтобы информировать пользователей при вводе недопустимого значения на основании пользовательского правила проверки.  
   
-## Пример  
- Текстовое содержимое <xref:System.Windows.Controls.TextBox> в следующем примере привязано к свойству `Age` \(типа int\) объекта [источника привязки](GTMT) `ods`.  Привязка настроена на использование правила проверки `AgeRangeRule` таким образом, что при вводе нечисловых символов или значения меньше 21 или больше 130 рядом с текстовым полем появится красный восклицательный знак. Кроме того, когда пользователь поместит указатель мыши над текстовым полем, отобразится всплывающая подсказка с сообщением об ошибке.  
+## <a name="example"></a>Пример  
+ Текстовое содержимое <xref:System.Windows.Controls.TextBox> в следующем примере привязан к `Age` свойство (тип int) объекта источника привязки с именем `ods`. Привязка настроена на использование правила проверки с именем `AgeRangeRule` так, чтобы при вводе нечисловых символов или значения меньше 21 или больше 130 рядом с текстовым полем появился красный восклицательный знак и подсказка с сообщением об ошибке, когда пользователь наводит указатель мыши на текстовое поле.  
   
- [!code-xml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
+ [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
   
- В следующем примере показана реализация объекта `AgeRangeRule`, который наследуется от <xref:System.Windows.Controls.ValidationRule> и переопределяет метод <xref:System.Windows.Controls.ValidationRule.Validate%2A>.  Метод Int32.Parse\(\) вызывается для значения, чтобы убедиться, что оно не содержит недопустимых символов.  Метод <xref:System.Windows.Controls.ValidationRule.Validate%2A> возвращает <xref:System.Windows.Controls.ValidationResult>, который указывает на допустимость значения на основе того, было ли перехвачено исключение при синтаксическом анализе и не выходит ли оно за пределы нижней и верхней границы.  
+ В следующем примере показана реализация `AgeRangeRule`, который наследует от <xref:System.Windows.Controls.ValidationRule> и переопределяет <xref:System.Windows.Controls.ValidationRule.Validate%2A> метод. Метод Int32.Parse() вызывается для значения, чтобы убедиться в том, что он не содержит недопустимых символов. <xref:System.Windows.Controls.ValidationRule.Validate%2A> Возвращает <xref:System.Windows.Controls.ValidationResult> , указывающее, если значение допустимо на основе ли исключение перехватывается во время синтаксического анализа и ли оно за пределами нижнюю и верхнюю границу.  
   
  [!code-csharp[BindValidation#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
   
- В следующем примере показан пользовательский <xref:System.Windows.Controls.ControlTemplate> `validationTemplate`, который создает красный восклицательный знак для уведомления пользователя об ошибке проверки.  Шаблоны элемента управления используются для переопределения внешнего вида элемента управления.  
+ В следующем примере показано пользовательское <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` , создающего красный восклицательный знак для уведомления пользователя об ошибке проверки. Шаблоны элементов управления используются для переопределения внешнего вида элемента управления.  
   
- [!code-xml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
+ [!code-xaml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
   
- Как показано в следующем примере, <xref:System.Windows.Controls.ToolTip>, отображающий сообщение об ошибке, создается с использованием стиля `textBoxInError`.  Если значение <xref:System.Windows.Controls.Validation.HasError%2A> равно `true`, триггер задает подсказке текущего <xref:System.Windows.Controls.TextBox> значение первой ошибки проверки.  <xref:System.Windows.Data.Binding.RelativeSource%2A> устанавливается в значение <xref:System.Windows.Data.RelativeSourceMode>, указывающее на текущий элемент.  
+ Как показано в следующем примере <xref:System.Windows.Controls.ToolTip> , показано сообщение об ошибке создается с использованием стиля с именем `textBoxInError`. Если значение <xref:System.Windows.Controls.Validation.HasError%2A> — `true`, триггер задает подсказке текущего <xref:System.Windows.Controls.TextBox> для первой ошибки проверки. <xref:System.Windows.Data.Binding.RelativeSource%2A> Равно <xref:System.Windows.Data.RelativeSourceMode.Self>, ссылающийся на текущий элемент.  
   
- [!code-xml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+ [!code-xaml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
   
- Полный пример см. в разделе [Пример проверки данных с использованием привязки](http://go.microsoft.com/fwlink/?LinkID=159972).  
+ Полный пример см. в [Примере проверки привязки](http://go.microsoft.com/fwlink/?LinkID=159972).  
   
- Обратите внимание, что если не предоставляется пользовательский <xref:System.Windows.Controls.Validation.ErrorTemplate%2A>, то отображается шаблон ошибки по умолчанию для предоставления пользователю отчета о том, что произошла ошибка проверки.  См. подраздел «Проверка данных» в разделе [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md) для получения дополнительных сведений.  Кроме того, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет встроенное правило проверки, которое отслеживает исключения, созданные во время обновления свойства источника привязки.  Дополнительные сведения см. в разделе <xref:System.Windows.Controls.ExceptionValidationRule>.  
+ Обратите внимание, что если не указать настраиваемый <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> отображается шаблон ошибки по умолчанию для предоставления пользователю визуальную обратную связь при ошибке проверки. См. "Проверка данных" в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md). Кроме того, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет встроенное правило проверки, которое отслеживает исключения, получаемые во время обновления свойства источника привязки. Для получения дополнительной информации см. <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
-## См. также  
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

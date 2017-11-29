@@ -1,81 +1,78 @@
 ---
-title: "Оператор TypeOf (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "TypeOf"
-  - "vb.TypeOf"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "операторы сравнения"
-  - "совместимые типы данных"
-  - "типы данных [Visual Basic], совместимый"
-  - "TypeOf - оператор [Visual Basic]"
-  - "TypeOf...Is - выражение"
-  - "типы [Visual Basic], совместимый"
+title: "Оператор TypeOf (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- TypeOf
+- vb.TypeOf
+helpviewer_keywords:
+- types [Visual Basic], compatible
+- comparison operators [Visual Basic]
+- TypeOf...Is expression
+- data types [Visual Basic], compatible
+- TypeOf operator [Visual Basic]
+- compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор TypeOf (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="typeof-operator-visual-basic"></a>Оператор TypeOf (Visual Basic)
 Сравнивает переменную ссылки на объект с типом данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 result = TypeOf objectexpression Is typename  
 ```  
   
 ```  
-  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `result`  
- Возвращено.  Значение `Boolean`.  
+ Возвращено. Значение `Boolean`.  
   
  `objectexpression`  
- Обязательный.  Любое выражение, результатом которого является тип ссылки.  
+ Обязательный. Любое выражение, результатом которого является тип ссылки.  
   
  `typename`  
- Обязательный.  Любое имя типа данных.  
+ Обязательный. Любое имя типа данных.  
   
-## Заметки  
- Оператор `TypeOf` определяет, совместим ли тип времени выполнения `objectexpression` с `typename`.  Совместимость зависит от категории типа `typename`.  В следующей таблице показано, как определяется совместимость.  
+## <a name="remarks"></a>Примечания  
+ Оператор `TypeOf` определяет, совместим ли тип времени выполнения `objectexpression` с `typename`. Совместимость зависит от категории типа `typename`. В следующей таблице показано, как определяется совместимость.  
   
 |Категория типа `typename`|Критерий совместимости|  
-|-------------------------------|----------------------------|  
+|---------------------------------|-----------------------------|  
 |Класс|`objectexpression` типа `typename` или наследует от `typename`|  
 |Структура|`objectexpression` типа `typename`|  
 |Интерфейс|`objectexpression` реализует `typename` или наследует от класса, реализующего `typename`|  
   
- Если тип времени выполнения `objectexpression` удовлетворяет критерию совместимости, `result` является `True`.  В противном случае `result` является `False`.  Если `objectexpression` имеет значение null, то `TypeOf`...`Is` возвращает `False`, а ...`IsNot` возвращает `True`.  
+ Если тип времени выполнения `objectexpression` удовлетворяет критерию совместимости, `result` является `True`. В противном случае `result` является `False`.  Если `objectexpression` имеет значение null, то `TypeOf`...`Is` возвращает `False`, а ...`IsNot` возвращает `True`.  
   
  `TypeOf` всегда используется с ключевым словом `Is` для создания выражения `TypeOf`...`Is` или с ключевым словом `IsNot` для создания выражения `TypeOf`...`IsNot`.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере выражение `TypeOf`...`Is` используется для проверки на совместимость типов двух переменных ссылок на объекты с различными типами данных.  
   
  [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
   
- Переменная `refInteger` имеет тип времени выполнения `Integer`.  Она совместима с `Integer`, но не с `Double`.  Переменная `refForm` имеет тип времени выполнения <xref:System.Windows.Forms.Form>.  Она совместима с <xref:System.Windows.Forms.Form>, так как это ее тип, с <xref:System.Windows.Forms.Control>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.Windows.Forms.Control>, и с <xref:System.ComponentModel.IComponent>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.ComponentModel.Component>, который реализует <xref:System.ComponentModel.IComponent>.  Однако `refForm` несовместима с <xref:System.Windows.Forms.Label>.  
+ Переменная `refInteger` имеет тип времени выполнения `Integer`. Она совместима с `Integer`, но не с `Double`. Переменная `refForm` имеет тип времени выполнения <xref:System.Windows.Forms.Form>. Она совместима с <xref:System.Windows.Forms.Form>, так как это ее тип, с <xref:System.Windows.Forms.Control>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.Windows.Forms.Control>, и с <xref:System.ComponentModel.IComponent>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.ComponentModel.Component>, который реализует <xref:System.ComponentModel.IComponent>. Однако `refForm` несовместима с <xref:System.Windows.Forms.Label>.  
   
-## См. также  
- [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)   
- [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [Оператор IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Операторы сравнения в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

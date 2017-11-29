@@ -1,49 +1,41 @@
 ---
-title: "Коллекции (Visual Basic) | Документы Microsoft"
+title: "Коллекции (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: 6
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b3c8de3e22075d576f86bcd4eb599946740ebe16
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collections-visual-basic"></a>Коллекции (Visual Basic)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
   
- Массивы удобнее всего использовать для создания и работы с фиксированным числом строго типизированных объектов. Сведения о массивах см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Массивы удобнее всего использовать для создания и работы с фиксированным числом строго типизированных объектов. Информацию о массивах см. в разделе [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
  Коллекции предоставляют более гибкий способ работы с группами объектов. В отличие от массивов, коллекция, с которой вы работаете, может расти или уменьшаться динамически при необходимости. Некоторые коллекции допускают назначение ключа любому объекту, который добавляется в коллекцию, чтобы в дальнейшем можно было быстро извлечь связанный с ключом объект из коллекции.  
   
  Коллекция является классом, поэтому необходимо объявить экземпляр класса перед добавлением в коллекцию элементов.  
   
- Если коллекция содержит элементы только одного типа данных, можно использовать один из классов в <xref:System.Collections.Generic?displayProperty=fullName>имен.</xref:System.Collections.Generic?displayProperty=fullName> Универсальная коллекция обеспечивает строгую типизацию, так что в нее нельзя добавить другие типы данных. При извлечении элемента из универсальной коллекции не нужно определять или преобразовывать его тип данных.  
+ Если коллекция содержит элементы только одного типа данных, можно использовать один из классов в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType>. Универсальная коллекция обеспечивает строгую типизацию, так что в нее нельзя добавить другие типы данных. При извлечении элемента из универсальной коллекции не нужно определять или преобразовывать его тип данных.  
   
 > [!NOTE]
->  Примеры в этом разделе, включают [импорта](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкции для `System.Collections.Generic` и `System.Linq` пространства имен.  
+>  Примеры в этом разделе, включают [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкции для `System.Collections.Generic` и `System.Linq` пространства имен.  
   
  **Содержание раздела**  
   
--   [С помощью простой коллекции](#BKMK_SimpleCollection)  
+-   [Использование простой коллекции](#BKMK_SimpleCollection)  
   
--   [Типы коллекций](#BKMK_KindsOfCollections)  
+-   [Виды коллекций](#BKMK_KindsOfCollections)  
   
     -   [Классы System.Collections.Generic](#BKMK_Generic)  
   
@@ -51,9 +43,9 @@ ms.lasthandoff: 03/13/2017
   
     -   [Классы System.Collections](#BKMK_Collections)  
   
-    -   [Класс коллекции Visual Basic](#BKMK_VisualBasic)  
+    -   [Класс Collection в Visual Basic](#BKMK_VisualBasic)  
   
--   [Реализации коллекции пар «ключ значение»](#BKMK_KeyValuePairs)  
+-   [Реализация коллекции пар "ключ-значение"](#BKMK_KeyValuePairs)  
   
 -   [Использование LINQ для доступа к коллекции](#BKMK_LINQ)  
   
@@ -65,7 +57,7 @@ ms.lasthandoff: 03/13/2017
   
 <a name="BKMK_SimpleCollection"></a>
 ## <a name="using-a-simple-collection"></a>Использование простой коллекции  
- В примерах этого раздела используется универсальный <xref:System.Collections.Generic.List%601>класс, который позволяет работать со строго типизированный список объектов.</xref:System.Collections.Generic.List%601>  
+ В примерах этого раздела используется универсальный класс <xref:System.Collections.Generic.List%601>, который позволяет работать со строго типизированными списками объектов.  
   
  В следующем примере создается список строк и затем выполняется перебор строк с помощью [For Each... Далее](../../../visual-basic/language-reference/statements/for-each-next-statement.md) инструкции.  
   
@@ -84,7 +76,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Если содержимое коллекции известны заранее, можно использовать *инициализатора коллекции* для инициализации коллекции. Дополнительные сведения см. в разделе [инициализаторы](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
+ Если содержимое коллекции известно заранее, для ее инициализации можно использовать *инициализатор коллекции*. Дополнительные сведения см. в разделе [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
  Следующий пример аналогичен предыдущему за исключением того, что для добавления элементов в коллекцию используется инициализатор коллекции.  
   
@@ -100,9 +92,9 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Можно использовать [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) инструкции вместо `For Each` инструкции для прохода по коллекции. Для этого доступ к элементам коллекции осуществляется по позиции индекса. Индекс элементов начинается с 0 и заканчивается числом, равным количеству элементов минус 1.  
+ Можно использовать [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) инструкции, а не `For Each` инструкции для выполнения итерации по коллекции. Для этого доступ к элементам коллекции осуществляется по позиции индекса. Индекс элементов начинается с 0 и заканчивается числом, равным количеству элементов минус 1.  
   
- Следующий пример итерацию по элементам коллекции с помощью `For…Next` вместо `For Each`.  
+ В приведенном ниже примере выполняется перебор элементов коллекции с помощью оператора `For…Next` вместо `For Each`.  
   
 ```vb  
 Dim salmons As New List(Of String) From  
@@ -132,7 +124,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- В приведенном ниже примере удаляются элементы из универсального списка. Вместо `For Each` инструкции [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) используется инструкция, проходящий по убыванию. Это вызвано <xref:System.Collections.Generic.List%601.RemoveAt%2A>метод вызывает элементы после удаленный элемент должен иметь значение нижнего индекса.</xref:System.Collections.Generic.List%601.RemoveAt%2A>  
+ В приведенном ниже примере удаляются элементы из универсального списка. Вместо `For Each` инструкции [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) используется оператор, выполняющий перебор в порядке убывания. Связано это с тем, что в результате работы метода <xref:System.Collections.Generic.List%601.RemoveAt%2A> элементы, следующие за удаленным элементом, получают меньшее значение индекса.  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -155,7 +147,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8  
 ```  
   
- Для типа элементов массива <xref:System.Collections.Generic.List%601>можно также определить собственный класс.</xref:System.Collections.Generic.List%601> В следующем примере `Galaxy` класс, используемый <xref:System.Collections.Generic.List%601>определяется в коде.</xref:System.Collections.Generic.List%601>  
+ Для типа элементов в <xref:System.Collections.Generic.List%601> можно также определить собственный класс. В приведенном ниже примере класс `Galaxy`, который используется объектом <xref:System.Collections.Generic.List%601>, определен в коде.  
   
 ```vb  
 Private Sub IterateThroughList()  
@@ -192,73 +184,73 @@ End Class
   
  В этом разделе описываются следующие часто используемые классы коллекций:  
   
--   @System.Collections.Genericклассы  
+-   Классы <xref:System.Collections.Generic>  
   
--   @System.Collections.Concurrentклассы  
+-   Классы <xref:System.Collections.Concurrent>  
   
--   @System.Collectionsклассы  
+-   Классы <xref:System.Collections>  
   
 -   Visual Basic `Collection` класса  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Классы System.Collections.Generic  
 
- Можно создать универсальную коллекцию с помощью одного из классов в <xref:System.Collections.Generic>имен.</xref:System.Collections.Generic> Универсальная коллекция применяется в том случае, если все элементы в коллекции имеют одинаковый тип данных. Универсальная коллекция обеспечивает строгую типизацию, позволяя добавлять данные только необходимого типа.  
+ Универсальную коллекцию можно создать, используя один из классов в пространстве имен <xref:System.Collections.Generic>. Универсальная коллекция применяется в том случае, если все элементы в коллекции имеют одинаковый тип данных. Универсальная коллекция обеспечивает строгую типизацию, позволяя добавлять данные только необходимого типа.  
   
- В следующей таблице перечислены некоторые часто используемые классы <xref:System.Collections.Generic?displayProperty=fullName>пространство имен:</xref:System.Collections.Generic?displayProperty=fullName>  
+ В таблице ниже перечислены некоторые из часто используемых классов пространства имен <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 |Класс|Описание|  
 |---|---|  
-|<xref:System.Collections.Generic.Dictionary%602></xref:System.Collections.Generic.Dictionary%602>|Предоставляет коллекцию пар «ключ-значение», которые упорядочены по ключу.|  
-|<xref:System.Collections.Generic.List%601></xref:System.Collections.Generic.List%601>|Представляет список объектов, доступных по индексу. Предоставляет методы для поиска по списку, его сортировки и изменения.|  
-|<xref:System.Collections.Generic.Queue%601></xref:System.Collections.Generic.Queue%601>|Представляет коллекцию объектов, которая обслуживается в порядке поступления (FIFO).|  
-|<xref:System.Collections.Generic.SortedList%602></xref:System.Collections.Generic.SortedList%602>|Представляет коллекцию пар "ключ значение", упорядоченных по ключу на основе <xref:System.Collections.Generic.IComparer%601>реализацию.</xref:System.Collections.Generic.IComparer%601>|  
-|<xref:System.Collections.Generic.Stack%601></xref:System.Collections.Generic.Stack%601>|Представляет коллекцию объектов, которая обслуживается в обратном порядке (LIFO).|  
+|<xref:System.Collections.Generic.Dictionary%602>|Предоставляет коллекцию пар «ключ-значение», которые упорядочены по ключу.|  
+|<xref:System.Collections.Generic.List%601>|Представляет список объектов, доступных по индексу. Предоставляет методы для поиска по списку, его сортировки и изменения.|  
+|<xref:System.Collections.Generic.Queue%601>|Представляет коллекцию объектов, которая обслуживается в порядке поступления (FIFO).|  
+|<xref:System.Collections.Generic.SortedList%602>|Представляет коллекцию пар "ключ-значение", упорядоченных по ключу на основе реализации <xref:System.Collections.Generic.IComparer%601>.|  
+|<xref:System.Collections.Generic.Stack%601>|Представляет коллекцию объектов, которая обслуживается в обратном порядке (LIFO).|  
   
- Дополнительные сведения см. в разделе [часто используемые типы коллекций](http://msdn.microsoft.com/library/f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55), [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)и <xref:System.Collections.Generic?displayProperty=fullName>.</xref:System.Collections.Generic?displayProperty=fullName>  
+ Дополнительные сведения см. в разделе [Часто используемые типы коллекций](../../../standard/collections/commonly-used-collection-types.md), [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md) и <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>Классы System.Collections.Concurrent   
- В платформе .NET Framework 4 или более поздней версии, в коллекции <xref:System.Collections.Concurrent>пространства имен предоставляют эффективный потокобезопасные операции для доступа к элементам коллекций из нескольких потоков.</xref:System.Collections.Concurrent>  
+ В .NET Framework 4 или более поздней версии коллекции пространства имен <xref:System.Collections.Concurrent> предоставляют эффективные потокобезопасные операции для доступа к элементам коллекции из нескольких потоков.  
   
- Классы в <xref:System.Collections.Concurrent>имен следует использовать вместо соответствующих типов в <xref:System.Collections.Generic?displayProperty=fullName>и <xref:System.Collections?displayProperty=fullName>пространства имен, когда несколько потоков параллельно обращаются к коллекции.</xref:System.Collections?displayProperty=fullName> </xref:System.Collections.Generic?displayProperty=fullName> </xref:System.Collections.Concurrent> Дополнительные сведения см. в разделе [потокобезопасных коллекций](../../../standard/collections/threadsafe/index.md) и <xref:System.Collections.Concurrent>.</xref:System.Collections.Concurrent>  
+ Классы пространства имен <xref:System.Collections.Concurrent> следует использовать вместо соответствующих типов пространств имен <xref:System.Collections.Generic?displayProperty=nameWithType> и <xref:System.Collections?displayProperty=nameWithType>, если несколько потоков параллельно обращаются к такой коллекции. Дополнительные сведения см. в статьях [Потокобезопасные коллекции](../../../standard/collections/thread-safe/index.md) и <xref:System.Collections.Concurrent>.  
   
- Некоторые классы, включенные в <xref:System.Collections.Concurrent>пространства имен являются <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>и <xref:System.Collections.Concurrent.ConcurrentStack%601>.</xref:System.Collections.Concurrent.ConcurrentStack%601> </xref:System.Collections.Concurrent.ConcurrentQueue%601> </xref:System.Collections.Concurrent.ConcurrentDictionary%602> </xref:System.Collections.Concurrent.BlockingCollection%601> </xref:System.Collections.Concurrent>  
+ Некоторые из классов, входящих в пространство имен <xref:System.Collections.Concurrent>, — это <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> и <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>Классы System.Collections    
- Классы в <xref:System.Collections?displayProperty=fullName>пространства имен не храните элементы конкретно типизированных объектов, а объекты типа `Object`.</xref:System.Collections?displayProperty=fullName>  
+ Классы в пространстве имен <xref:System.Collections?displayProperty=nameWithType> хранят элементы не в виде конкретно типизированных объектов, а как объекты типа `Object`.  
   
- По возможности следует использовать универсальные коллекции в <xref:System.Collections.Generic?displayProperty=fullName>пространства имен или <xref:System.Collections.Concurrent>имен вместо устаревших типов в `System.Collections` имен.</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ Везде, где это возможно, следует использовать универсальные коллекции пространства имен <xref:System.Collections.Generic?displayProperty=nameWithType> или пространства имен <xref:System.Collections.Concurrent> вместо устаревших типов пространства имен `System.Collections`.  
   
- В следующей таблице перечислены некоторые часто используемые классы в `System.Collections` пространство имен:  
+ В следующей таблице перечислены некоторые из часто используемых классов пространства имен `System.Collections`:  
   
 |Класс|Описание|  
 |---|---|  
-|<xref:System.Collections.ArrayList></xref:System.Collections.ArrayList>|Представляет массив объектов, размер которого динамически увеличивается по мере необходимости.|  
-|<xref:System.Collections.Hashtable></xref:System.Collections.Hashtable>|Представляет коллекцию пар «ключ-значение», которые упорядочены по хэш-коду ключа.|  
-|<xref:System.Collections.Queue></xref:System.Collections.Queue>|Представляет коллекцию объектов, которая обслуживается в порядке поступления (FIFO).|  
-|<xref:System.Collections.Stack></xref:System.Collections.Stack>|Представляет коллекцию объектов, которая обслуживается в обратном порядке (LIFO).|  
+|<xref:System.Collections.ArrayList>|Представляет массив объектов, размер которого динамически увеличивается по мере необходимости.|  
+|<xref:System.Collections.Hashtable>|Представляет коллекцию пар «ключ-значение», которые упорядочены по хэш-коду ключа.|  
+|<xref:System.Collections.Queue>|Представляет коллекцию объектов, которая обслуживается в порядке поступления (FIFO).|  
+|<xref:System.Collections.Stack>|Представляет коллекцию объектов, которая обслуживается в обратном порядке (LIFO).|  
   
- <xref:System.Collections.Specialized>Пространство имен предоставляет классы, специализированные и строго типизированные коллекции, такие как коллекции строк и связанные списки и гибридные словари.</xref:System.Collections.Specialized>  
+ Пространство имен <xref:System.Collections.Specialized> предоставляет специализированные и строго типизированные классы коллекций, такие как коллекции строк, связанные списки и гибридные словари.  
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Класс Collection в Visual Basic  
- Можно использовать Visual Basic <xref:Microsoft.VisualBasic.Collection>класса для доступа к коллекции элементов с помощью числовой индекс или объект `String` ключ.</xref:Microsoft.VisualBasic.Collection> Элементы можно добавлять в объект коллекции с указанием или без указания ключа. Если добавить объект без ключа, необходимо использовать его числовой индекс для доступа к нему.  
+ В Visual Basic можно использовать <xref:Microsoft.VisualBasic.Collection> класса для доступа к элементу коллекции по числовому индексу или `String` ключа. Элементы можно добавлять в объект коллекции с указанием или без указания ключа. Если добавить объект без ключа, необходимо использовать его числовой индекс для доступа к нему.  
   
- Visual Basic `Collection` класс хранит все его элементы как тип `Object`, поэтому можно добавить элемент любого типа данных. Нет никакой защиты от добавления неподходящих типов данных.  
+ В Visual Basic `Collection` класс хранит все его элементы как тип `Object`, поэтому можно добавить элемент любого типа данных. Нет никакой защиты от добавления неподходящих типов данных.  
   
  При использовании Visual Basic `Collection` класс, первый элемент в коллекции имеет индекс 1. Этим он отличается от классов коллекций платформы .NET Framework, для которых начальный индекс равен 0.  
   
- По возможности следует использовать универсальные коллекции в <xref:System.Collections.Generic?displayProperty=fullName>пространства имен или <xref:System.Collections.Concurrent>имен вместо Visual Basic `Collection` класса</xref:System.Collections.Concurrent> </xref:System.Collections.Generic?displayProperty=fullName>  
+ По возможности следует использовать универсальные коллекции в <xref:System.Collections.Generic?displayProperty=nameWithType> пространства имен или <xref:System.Collections.Concurrent> пространства имен, а не в Visual Basic `Collection` класса.  
   
- Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Collection>.</xref:Microsoft.VisualBasic.Collection>  
+ Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Collection>.  
   
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Реализация коллекции пар «ключ-значение»   
- <xref:System.Collections.Generic.Dictionary%602>Обеспечивает доступ к элементам в коллекции с помощью ключа каждого элемента универсальной коллекции.</xref:System.Collections.Generic.Dictionary%602> Каждый элемент, добавляемый в словарь, состоит из значения и связанного с ним ключа. Получение значения, используя свой ключ — быстро, так как `Dictionary` класс реализован в виде хэш-таблицы.  
+ Универсальная коллекция <xref:System.Collections.Generic.Dictionary%602> позволяет получить доступ к элементам коллекции с помощью ключа каждого элемента. Каждый элемент, добавляемый в словарь, состоит из значения и связанного с ним ключа. Извлечение значения по его ключу происходит быстро, так как класс `Dictionary` реализован как хэш-таблица.  
   
- В следующем примере создается `Dictionary` коллекции и перебор элементов словаря с помощью `For Each` инструкции.  
+ В приведенном ниже примере создается коллекция `Dictionary` и выполняется перебор словаря с помощью оператора `For Each`.  
   
 ```vb  
 Private Sub IterateThroughDictionary()  
@@ -304,7 +296,7 @@ Public Class Element
 End Class  
 ```  
   
- Вместо этого использовать инициализатор коллекции для создания `Dictionary` коллекции, можно заменить `BuildDictionary` и `AddToDictionary` методов, с помощью следующего метода.  
+ Чтобы вместо этого использовать инициализатор коллекции для создания коллекции `Dictionary`, можно заменить методы `BuildDictionary` и `AddToDictionary` приведенным ниже методом.  
   
 ```vb  
 Private Function BuildDictionary2() As Dictionary(Of String, Element)  
@@ -322,7 +314,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- В следующем примере используется <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A>метод и <xref:System.Collections.Generic.Dictionary%602.Item%2A>Свойства `Dictionary` быстро найти элемент с ключом.</xref:System.Collections.Generic.Dictionary%602.Item%2A> </xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> `Item` Позволяет доступ к элементу в `elements` коллекции с помощью `elements(symbol)` кода в Visual Basic.  
+ В приведенном ниже примере используется метод <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> и свойство <xref:System.Collections.Generic.Dictionary%602.Item%2A> `Dictionary` для быстрого поиска элемента по ключу. `Item` Позволяет доступ к элементу в `elements` коллекции с помощью `elements(symbol)` кода в Visual Basic.  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -337,7 +329,7 @@ Private Sub FindInDictionary(ByVal symbol As String)
 End Sub  
 ```  
   
- В следующем примере используется вместо <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>метод быстро найти элемент с ключом.</xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>  
+ В приведенном ниже примере вместо этого используется метод <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> для быстрого поиска элемента по ключу.  
   
 ```vb  
 Private Sub FindInDictionary2(ByVal symbol As String)  
@@ -356,7 +348,7 @@ End Sub
 ##  <a name="using-linq-to-access-a-collection"></a>Использование LINQ для доступа к коллекции  
  Для доступа к коллекции можно использовать язык LINQ. Запросы LINQ обеспечивают возможности фильтрации, упорядочения и группировки. Дополнительные сведения см. в разделе [Приступая к работе с LINQ в Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
- В следующем примере выполняется запрос LINQ к универсальным `List`. Запрос LINQ возвращает другую коллекцию, содержащую результаты.  
+ В приведенном ниже примере выполняется запрос LINQ применительно к универсальной коллекции `List`. Запрос LINQ возвращает другую коллекцию, содержащую результаты.  
   
 ```vb  
 Private Sub ShowLINQ()  
@@ -400,11 +392,11 @@ End Class
   
  <a name="BKMK_Sorting"></a> 
 ## <a name="sorting-a-collection"></a>Сортировка коллекции  
- Приведенный ниже пример демонстрирует процедуру сортировки коллекции. В примере выполняется сортировка экземпляров `Car` класса, которые хранятся в папке <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> `Car` Реализует <xref:System.IComparable%601>интерфейс, который требует <xref:System.IComparable%601.CompareTo%2A>метод будет реализован.</xref:System.IComparable%601.CompareTo%2A> </xref:System.IComparable%601>  
+ Приведенный ниже пример демонстрирует процедуру сортировки коллекции. В примере сортируются экземпляры класса `Car`, которые хранятся в <xref:System.Collections.Generic.List%601>. Класс `Car` реализует интерфейс <xref:System.IComparable%601>, который требует реализации метода <xref:System.IComparable%601.CompareTo%2A>.  
   
- Каждый вызов <xref:System.IComparable%601.CompareTo%2A>метод делает одну сравнения, используемый для сортировки.</xref:System.IComparable%601.CompareTo%2A> Пользовательский код в `CompareTo` метод возвращает значение для каждого сравнения текущего объекта с другим объектом. Возвращаемое значение меньше нуля, если текущий объект меньше другого объекта, больше нуля, если текущий объект больше другого объекта, и равняется нулю, если объекты равны. Это позволяет определить в коде условия для отношения «больше», «меньше» и «равно».  
+ Каждый вызов метода <xref:System.IComparable%601.CompareTo%2A> выполняет одно сравнение, используемое для сортировки. Написанный пользователем код в методе `CompareTo` возвращает значение для каждого сравнения текущего объекта с другим объектом. Возвращаемое значение меньше нуля, если текущий объект меньше другого объекта, больше нуля, если текущий объект больше другого объекта, и равняется нулю, если объекты равны. Это позволяет определить в коде условия для отношения «больше», «меньше» и «равно».  
   
- В `ListCars` метода `cars.Sort()` инструкция сортирует список. Этот вызов <xref:System.Collections.Generic.List%601.Sort%2A>метод <xref:System.Collections.Generic.List%601>вызывает `CompareTo` метод, который вызывается автоматически для `Car` объектов в `List`.</xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.List%601.Sort%2A>  
+ В методе `ListCars` оператор `cars.Sort()` сортирует список. Этот вызов метода <xref:System.Collections.Generic.List%601.Sort%2A> <xref:System.Collections.Generic.List%601> приводит к тому, что метод `CompareTo` вызывается автоматически для объектов `Car` в `List`.  
   
 ```vb  
 Public Sub ListCars()  
@@ -478,13 +470,13 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Определение настраиваемой коллекции  
- Можно определить коллекцию путем реализации <xref:System.Collections.Generic.IEnumerable%601>или <xref:System.Collections.IEnumerable>интерфейса.</xref:System.Collections.IEnumerable> </xref:System.Collections.Generic.IEnumerable%601> Дополнительные сведения см. в разделе [перечисление коллекции](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Вы можете определить коллекцию, реализовав интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Collections.IEnumerable>. Дополнительные сведения см. в разделе [перечисление коллекции](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Несмотря на то, что можно определить пользовательскую коллекцию, обычно лучше вместо этого использовать коллекций, включенных в .NET Framework, которые описаны в [типов коллекций](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) ранее в этом разделе.  
+ Хотя можно определить настраиваемую коллекцию, обычно лучше использовать коллекции, входящие в .NET Framework, которые описаны в подразделе [Виды коллекций](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) ранее в этом разделе.  
   
- В следующем примере определяется пользовательский класс коллекции с именем `AllColors`. Этот класс реализует <xref:System.Collections.IEnumerable>интерфейс, который требует <xref:System.Collections.IEnumerable.GetEnumerator%2A>метод будет реализован.</xref:System.Collections.IEnumerable.GetEnumerator%2A> </xref:System.Collections.IEnumerable>  
+ В приведенном ниже примере определяется настраиваемый класс коллекции с именем `AllColors`. Этот класс реализует интерфейс <xref:System.Collections.IEnumerable>, который требует реализации метода <xref:System.Collections.IEnumerable.GetEnumerator%2A>.  
   
- `GetEnumerator` Метод возвращает экземпляр `ColorEnumerator` класса. `ColorEnumerator`реализует <xref:System.Collections.IEnumerator>интерфейс, который требует <xref:System.Collections.IEnumerator.Current%2A>свойство, <xref:System.Collections.IEnumerator.MoveNext%2A>метод, и <xref:System.Collections.IEnumerator.Reset%2A>метод будет реализован.</xref:System.Collections.IEnumerator.Reset%2A> </xref:System.Collections.IEnumerator.MoveNext%2A> </xref:System.Collections.IEnumerator.Current%2A> </xref:System.Collections.IEnumerator>  
+ Метод `GetEnumerator` возвращает экземпляр класса `ColorEnumerator`. Класс `ColorEnumerator` реализует интерфейс <xref:System.Collections.IEnumerator>, который требует реализации свойства <xref:System.Collections.IEnumerator.Current%2A>, метода <xref:System.Collections.IEnumerator.MoveNext%2A> и метода <xref:System.Collections.IEnumerator.Reset%2A>.  
   
 ```vb  
 Public Sub ListColors()  
@@ -556,13 +548,13 @@ End Class
   
 <a name="BKMK_Iterators"></a>
 ##  <a name="iterators"></a>Итераторы  
- *Итератор* используется для выполнения пользовательских итерации по коллекции. Метод может быть итератора или `get` доступа. Использует итератор [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) инструкции для возврата каждого элемента коллекции одной за раз.  
+ *Итератор* используется для выполнения настраиваемого перебора коллекции. Итератор может быть методом или методом доступа `get`. Итератор использует [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) инструкции для возврата всех элементов коллекции по одному за раз.  
   
- Итератор вызывается с помощью [For Each... Далее](../../../visual-basic/language-reference/statements/for-each-next-statement.md) инструкции. Каждая итерация `For Each` цикл вызывает итератор. Когда `Yield` достижении оператора в итераторе, выражения возвращается и сохраняется текущее расположение в коде. При следующем вызове итератора выполнение возобновляется с этого места.  
+ Итератор вызывается с помощью [For Each... Далее](../../../visual-basic/language-reference/statements/for-each-next-statement.md) инструкции. Каждая итерация цикла `For Each` вызывает итератор. При достижении оператора `Yield` в итераторе возвращается выражение, и текущее расположение в коде сохраняется. При следующем вызове итератора выполнение возобновляется с этого места.  
   
  Дополнительные сведения см. в разделе [итераторы (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).  
   
- В приведенном ниже примере используется метод-итератор. Метод итератора имеет `Yield` оператор, находящийся внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. В `ListEvenNumbers` метод, каждая итерация `For Each` тела оператора создает вызов метода итератора, который переходит к следующему `Yield` инструкции.  
+ В приведенном ниже примере используется метод-итератор. Метод-итератор содержит `Yield` инструкцию, которая находится внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. В методе `ListEvenNumbers` каждая итерация тела оператора `For Each` создает вызов метода-итератора, который переходит к следующему оператору `Yield`.  
   
 ```vb  
 Public Sub ListEvenNumbers()  
@@ -587,13 +579,13 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [Основные понятия программирования (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)   
- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Параллельный LINQ (PLINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
- [Коллекции и структуры данных](../../../standard/collections/index.md)   
- [Создание коллекций и управление ими](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
- [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)   
- [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)   
+ [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [Основные понятия программирования (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
+ [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+ [Коллекции и структуры данных](../../../standard/collections/index.md)  
+ [Создание и управление коллекциями](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Выбор класса коллекции](../../../standard/collections/selecting-a-collection-class.md)  
+ [Сравнение и сортировка в коллекциях](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)

@@ -1,54 +1,57 @@
 ---
-title: "x:Reference Markup Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Reference markup extension [XAML Services]"
-  - "XAML [XAML Services], x:Reference Markup Extension"
-  - "Reference markup extension [XAML Services]"
+title: "расширение разметки x:Reference"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Reference markup extension [XAML Services]
+- XAML [XAML Services], x:Reference Markup Extension
+- Reference markup extension [XAML Services]
 ms.assetid: 2982e68b-d26b-4aa3-826a-34c57a9c5199
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 06e59e7686004f8fd44473bd9572ed07a0118d1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# x:Reference Markup Extension
-Ссылается на экземпляр, который объявлен в другом месте в разметке XAML.  Ссылка на `x:Name` элемента.  
+# <a name="xreference-markup-extension"></a>расширение разметки x:Reference
+Ссылается на экземпляр, который объявлен в другом месте в разметке XAML. Ссылка на элемент `x:Name`.  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
+```xaml  
+<object property="{x:Reference instancexName}" .../>  
 ```  
-<object property="{x:Reference instancexName}" .../>  
-```  
   
-## Использование элемента объекта XAML  
+## <a name="xaml-object-element-usage"></a>Использование элемента объекта XAML  
   
-```  
+```xaml  
 <object>  
   <object.property>  
-    <x:Reference Name="instancexName"/>  
+    <x:Reference Name="instancexName"/>  
   </object.property>  
 </object>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-values"></a>Значения XAML  
   
 |||  
 |-|-|  
-|`instancexName`|Значение `x:Name` \(или значение свойства, определяемого <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>\) экземпляра, на который указывает ссылка.|  
+|`instancexName`|`x:Name` Значение (или значение <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>-определенных свойств) экземпляра, на который указывает ссылка.|  
   
-## Заметки  
- `x:Reference` обеспечивает поддержку уровня языка XAML для концепции ссылки элемента, которая в определенных платформах была реализована иначе, например в WPF.  
+## <a name="remarks"></a>Примечания  
+ `x:Reference`обеспечивает поддержку уровня языка XAML понятие ссылки элемента, в противном случае было реализовано в конкретных платформах, таких как WPF.  
   
-## x:Reference и WPF  
- В WPF и XAML 2006 ссылки элемента реализуются функцией уровня среды привязки <xref:System.Windows.Data.Binding.ElementName%2A>.  Для большинства приложений и сценариев WPF по\-прежнему необходимо использовать привязку <xref:System.Windows.Data.Binding.ElementName%2A>.  Исключениями из этого общего правила могут быть случаи, в которых контекст данных или другие соображения делают привязку данных непрактичной, и случаи, когда не включена компиляция разметки.  
+## <a name="xreference-and-wpf"></a>x: Reference и WPF  
+ В WPF и XAML 2006, ссылки на элемент адресуются с помощью функции уровня инфраструктуры <xref:System.Windows.Data.Binding.ElementName%2A> привязки. Для большинства приложений WPF и сценарии <xref:System.Windows.Data.Binding.ElementName%2A> привязки должен использоваться. Исключения из этого общего правила могут быть случаи, где существует контекст данных или другие соображения, которые делают привязку данных непрактичной и где компиляции разметки не участвует.  
   
- `x:Reference` — это конструкция, определенная в XAML 2009.  В WPF можно использовать возможности XAML 2009, но только для кода XAML, который не является компилированной разметкой WPF.  XAML с компилированной разметкой и форма BAML языка XAML в настоящее время не поддерживают ключевые слова и функции языка XAML 2009.
+ `x:Reference`Это конструкция, определенные в XAML 2009. В WPF можно использовать возможности XAML 2009, но только для кода XAML, не скомпилированного с разметкой WPF. Скомпилированный XAML с разметкой и форма BAML кода XAML пока не поддерживают ключевые слова языка и компоненты XAML 2009.

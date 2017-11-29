@@ -1,44 +1,51 @@
 ---
-title: "Практическое руководство. Кодирование и декодирование изображения в формате WDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "декодирование форматов изображения"
-  - "декодирование изображений WDP"
-  - "кодирование форматов изображения"
-  - "кодирование изображений WDP"
-  - "декодирование WDP"
-  - "кодирование WDP"
+title: "Практическое руководство. Кодирование и декодирование изображения в формате WDP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- WDP encoding [WPF]
+- WDP decoding [WPF]
+- encoding image formats [WPF]
+- decoding WDP images [WPF]
+- decoding image formats [WPF]
+- encoding WDP images [WPF]
 ms.assetid: 911777d1-516b-49db-a87b-b54e31b18532
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b97f730da7e2a305ad26b56a6ccdc14851355b5
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Кодирование и декодирование изображения в формате WDP
-В следующих примерах показано, как декодировать и кодировать изображение [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], используя особые объекты <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> и <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.  
+# <a name="how-to-encode-and-decode-a-wdp-image"></a>Практическое руководство. Кодирование и декодирование изображения в формате WDP
+Следующие примеры показывают, как декодировать и кодировать [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] изображения, используя заданный <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> и <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> объектов.  
   
-## Пример  
- В этом примере показано, как декодировать изображение [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] с помощью объекта <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> из объекта <xref:System.Uri>.  
+## <a name="example"></a>Пример  
+ В этом примере показано, как декодировать [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] изображения с помощью <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> из <xref:System.Uri>.  
   
  [!code-cpp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#1)]
  [!code-csharp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#1)]
  [!code-vb[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#1)]  
   
-## Пример  
- В данном примере показано, как кодировать <xref:System.Windows.Media.Imaging.BitmapSource> в изображение в формате [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] с помощью объекта <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.  
+## <a name="example"></a>Пример  
+ В этом примере показано, как кодировать <xref:System.Windows.Media.Imaging.BitmapSource> в [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] изображения с помощью <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.  
   
  [!code-cpp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#4)]
  [!code-csharp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#4)]
  [!code-vb[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#4)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

@@ -1,41 +1,47 @@
 ---
-title: "Практическое руководство. Анимирование размера ArcSegment | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, размер ArcSegment"
-  - "ArcSegment, размер анимации"
-  - "графика [WPF], анимация"
+title: "Практическое руководство. Анимирование размера ArcSegment"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], animation
+- animation [WPF], ArcSegment size
+- ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f71f910dca651b66d02971d05fb83a8d7bbc5f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимирование размера ArcSegment
-В этом примере демонстрируется анимация свойства <xref:System.Windows.Media.ArcSegment.Size%2A> элемента <xref:System.Windows.Media.ArcSegment>.  
+# <a name="how-to-animate-the-size-of-an-arcsegment"></a>Практическое руководство. Анимирование размера ArcSegment
+В этом примере демонстрируется анимация <xref:System.Windows.Media.ArcSegment.Size%2A> свойство <xref:System.Windows.Media.ArcSegment>.  
   
-## Пример  
- В следующем примере создается <xref:System.Windows.Media.ArcSegment>, анимирующий свой <xref:System.Windows.Media.ArcSegment.Size%2A> при загрузке на экране.  
+## <a name="example"></a>Пример  
+ В следующем примере создается <xref:System.Windows.Media.ArcSegment> анимирования его <xref:System.Windows.Media.ArcSegment.Size%2A> при загрузке на экране.  
   
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- Дополнительные примеры, посвященные геометрии и анимации, см. на странице [Примеры работы с геометрическими объектами](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Дополнительные геометрии и анимации, в разделе [примеры](http://go.microsoft.com/fwlink/?LinkID=159989).  
   
-## См. также  
- <xref:System.Windows.Media.ArcSegment.Size%2A>   
- <xref:System.Windows.Media.ArcSegment>   
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)   
- [Animation and Timing](http://msdn.microsoft.com/ru-ru/7d83765b-d5ae-41b1-b423-80206e1124aa)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.ArcSegment.Size%2A>  
+ <xref:System.Windows.Media.ArcSegment>  
+ [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Анимация и расчет времени](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

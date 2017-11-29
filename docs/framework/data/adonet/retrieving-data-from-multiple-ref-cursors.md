@@ -1,23 +1,27 @@
 ---
-title: "Извлечение данных из нескольких курсоров REF CURSOR с помощью OracleDataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Извлечение данных нескольких REF CURSOR с использованием OracleDataReader"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 361e9bd4-447d-44b7-8629-3c11f1a7ffbb
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 502ddb1bd3c271c0d5dbd082eb401f18591594b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Извлечение данных из нескольких курсоров REF CURSOR с помощью OracleDataReader
-Этот пример на языке Microsoft Visual Basic выполняет хранимую процедуру PL\/SQL, возвращающую два параметра REF CURSOR и считывающую значения, используя класс <xref:System.Data.OracleClient.OracleDataReader>.  
+# <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a>Извлечение данных нескольких REF CURSOR с использованием OracleDataReader
+Этот пример на языке Microsoft Visual Basic выполняет хранимую процедуру PL/SQL, возвращающую два параметра REF CURSOR и считывающую значения, используя класс <xref:System.Data.OracleClient.OracleDataReader>.  
   
 ```vb  
 Private Sub Button1_Click( _  
@@ -55,6 +59,6 @@ Private Sub Button1_Click( _
 End Sub   
 ```  
   
-## См. также  
- [Курсоры REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

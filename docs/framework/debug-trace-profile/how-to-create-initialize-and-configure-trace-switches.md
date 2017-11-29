@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - trace switches, configuring
 - tracing [.NET Framework], trace switches
@@ -21,29 +18,28 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5ba232e3c84f7bfa089822d4a4f792b179bf32
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f5fa8a0fbe6dc08811162ba9b1d4198af9256fc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Практическое руководство. Создание, инициализация и настройка переключателей трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки.  
   
 <a name="create"></a>   
 ## <a name="creating-and-initializing-a-trace-switch"></a>Создание и инициализация переключателей трассировки  
- Чтобы использовать переключатели трассировки, необходимо сначала создать их и разместить в коде. Существуют два предварительно определенных класса, с помощью которых можно создавать объекты переключателей: <xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> и <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName>. Класс <xref:System.Diagnostics.BooleanSwitch> используется, когда требуется определить лишь факт отображения сообщений трассировки; если необходимо различать уровни трассировки, используется класс <xref:System.Diagnostics.TraceSwitch>. При использовании класса <xref:System.Diagnostics.TraceSwitch> можно определить собственные сообщения отладки и связать их с различными уровнями трассировки. Оба типа переключателей можно использовать как с трассировкой, так и с отладкой. По умолчанию класс <xref:System.Diagnostics.BooleanSwitch> отключен, а класс <xref:System.Diagnostics.TraceSwitch> имеет значение <xref:System.Diagnostics.TraceLevel.Off?displayProperty=fullName>. Переключатели трассировки можно создавать и помещать в любую часть кода, которая может их использовать.  
+ Чтобы использовать переключатели трассировки, необходимо сначала создать их и разместить в коде. Существуют два предварительно определенных класса, с помощью которых можно создавать объекты переключателей: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> и <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Класс <xref:System.Diagnostics.BooleanSwitch> используется, когда требуется определить лишь факт отображения сообщений трассировки; если необходимо различать уровни трассировки, используется класс <xref:System.Diagnostics.TraceSwitch>. При использовании класса <xref:System.Diagnostics.TraceSwitch> можно определить собственные сообщения отладки и связать их с различными уровнями трассировки. Оба типа переключателей можно использовать как с трассировкой, так и с отладкой. По умолчанию класс <xref:System.Diagnostics.BooleanSwitch> отключен, а класс <xref:System.Diagnostics.TraceSwitch> имеет значение <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. Переключатели трассировки можно создавать и помещать в любую часть кода, которая может их использовать.  
   
  Хотя допускается настройка уровней трассировки и других параметров конфигурации непосредственно в коде, для управления состоянием переключателей рекомендуется использовать файл конфигурации. Управление настройкой параметров в системе конфигурации обеспечивает большую гибкость — возможность включать и отключать различные переключатели и изменять уровни без перекомпиляции приложения.  
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Создание и инициализация переключателя трассировки  
   
-1.  Определите тип переключателя (<xref:System.Diagnostics.BooleanSwitch?displayProperty=fullName> или <xref:System.Diagnostics.TraceSwitch?displayProperty=fullName>) и задайте его имя и описание.  
+1.  Определите тип переключателя (<xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> или <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>) и задайте его имя и описание.  
   
 2.  Настройте переключатель трассировки. Дополнительные сведения см. в разделе [Настройка переключателей трассировки](#configure).  
   
@@ -72,7 +68,7 @@ ms.lasthandoff: 08/21/2017
   
  В развернутом приложении вы включаете код трассировки путем повторной настройки объектов переключателей, когда приложение не запущено. Обычно это подразумевает включение и отключение объектов переключателей или изменение уровней трассировки, а затем перезапуск приложения.  
   
- При создании экземпляра переключателя вы также инициализируете его, указывая два аргумента: *displayName* и *description*. Аргумент *displayName* конструктора устанавливает свойство <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=fullName> экземпляра класса <xref:System.Diagnostics.Switch>. Аргумент *displayName* — это имя, которое используется для настройки переключателя в файле .config, а аргумент *description* должен возвращать краткое описание переключателя и тип сообщений, которыми он управляет.  
+ При создании экземпляра переключателя вы также инициализируете его, указывая два аргумента: *displayName* и *description*. Аргумент *displayName* конструктора устанавливает свойство <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> экземпляра класса <xref:System.Diagnostics.Switch>. Аргумент *displayName* — это имя, которое используется для настройки переключателя в файле .config, а аргумент *description* должен возвращать краткое описание переключателя и тип сообщений, которыми он управляет.  
   
  Помимо указания имени переключателя для настройки вы также должны указать значение для этого переключателя. Это значение представляет собой целое число. Для <xref:System.Diagnostics.BooleanSwitch> значение 0 соответствует значению **Off** (отключено), а любое ненулевое значение соответствует значению **On** (включено). Для <xref:System.Diagnostics.TraceSwitch> числа 0, 1, 2, 3 и 4 означают **Off** (отключено), **Error** (ошибка), **Warning** (предупреждение), **Info** (сведения) и **Verbose** (подробные сведения), соответственно. Любое число больше 4 интерпретируется как значение **Verbose** (подробно), а любое число меньше нуля — как значение **Off** (отключено).  
   
@@ -138,8 +134,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)   
+ [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [Как: добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [Схема параметров трассировки и отладки](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-

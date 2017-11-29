@@ -1,52 +1,55 @@
 ---
-title: "Модель веб-программирования HTTP WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "POX"
-  - "REST"
-  - "модель программирования веб-служб [WCF]"
+title: "Модель веб-программирования HTTP WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- web services programming model [WCF]
+- POX
+- REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f51ad4a228de0a4a2fae0fb325d045bb09263b3d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Модель веб-программирования HTTP WCF
-Модель веб\-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет разработчикам обрабатывать операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для конечных точек, не являющихся конечными точками SOAP.Эта возможность подробно описана в следующих подразделах.  
+# <a name="wcf-web-http-programming-model"></a>Модель веб-программирования HTTP WCF
+Модель веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет разработчикам обрабатывать операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для конечных точек, не являющихся конечными точками SOAP. Эта возможность подробно описана в следующих подразделах.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Содержит общие сведения о модели веб\-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Содержит общие сведения о модели веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
  [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Описывает модель веб\-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и принципы ее работы.  
+ Описывает модель веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и принципы ее работы.  
   
- [Как создать простую веб\-службу WCF HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [Как: Создание веб-службы HTTP Basic WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  Порядок написания простой службы, предоставляющей конечную точку, не являющуюся конечной точкой SOAP.  
   
- [Практическое руководство. Предоставление контрактов SOAP\- и веб\-клиентам](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ [Как: предоставление контрактов SOAP и веб-клиентов](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
  Порядок написания простой службы, предоставляющей один и тот же контракт клиентам SOAP и клиентам, не работающим по протоколу SOAP.  
   
  [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- Описание управления универсальными кодами ресурсов \(URI\) с помощью классов <xref:System.UriTemplate> и <xref:System.UriTemplateTable>.  
+ Описание управления универсальными кодами ресурсов (URI) с помощью классов <xref:System.UriTemplate> и <xref:System.UriTemplateTable>.  
   
- [Поддержка кэширования для веб\-служб HTTP WCF](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
- Описывает, как указать порядок кэширования для веб\-службы HTTP WCF.  
+ [Поддержка кэширования для веб-службы HTTP WCF](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
+ Описывает, как указать порядок кэширования для веб-службы HTTP WCF.  
   
- [Форматирование веб\-объектов HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- Описывает, как указать формат ответа от веб\-службы HTTP WCF.  
+ [Форматирование WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ Описывает, как указать формат ответа от веб-службы HTTP WCF.  
   
- [Обработка ошибок веб\-протокола HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
- Описывает, как возвращать ошибки веб\-клиентам WCF, включающие коды состояния HTTP и дополнительные, определяемые пользователями данные ошибок.  
+ [Обработка ошибок HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
+ Описывает, как возвращать ошибки веб-клиентам WCF, включающие коды состояния HTTP и дополнительные, определяемые пользователями данные ошибок.  
   
- [Вызов службы в стиле REST из службы WCF](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
- Описывает, как вызвать REST\-службу из службы WCF.
+ [Вызов REST-службы из службы WCF](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
+ Описывает, как вызвать REST-службу из службы WCF.

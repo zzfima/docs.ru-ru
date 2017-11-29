@@ -1,28 +1,31 @@
 ---
-title: "Практическое руководство. Задание учетных данных безопасности канала | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Задание учетных данных безопасности канала"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Задание учетных данных безопасности канала
-Моникер служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет приложениям COM вызывать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Большинство служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] требуют, чтобы клиент указывал учетные данные для проверки подлинности и авторизации. При вызове службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы из приложения COM, можно использовать <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейс, чтобы указать учетные данные. В этом разделе описаны различные способы указания учетных данных с помощью <xref:System.ServiceModel.ComIntegration.IChannelCredentials> интерфейса.  
+# <a name="how-to-specify-channel-security-credentials"></a>Практическое руководство. Задание учетных данных безопасности канала
+Моникер служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет приложениям COM вызывать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Большинство служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] требуют, чтобы клиент указывал учетные данные для проверки подлинности и авторизации. При вызове службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно указать эти учетные данные в управляемом коде или в файле конфигурации приложения. При вызове службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] из приложения COM можно использовать интерфейс <xref:System.ServiceModel.ComIntegration.IChannelCredentials>, чтобы указать учетные данные. В данном разделе описаны различные способы указания учетных данных с использованием интерфейса <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> является IDispatch-интерфейс и не будет функциональных возможностях IntelliSense в среде Visual Studio.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> - это интерфейс, основанный на IDispatch, и получение функциональных возможностей IntelliSense в среде Visual Studio невозможно.  
   
- В этой статье будет использовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, определенные в [пример безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Эта статья будет использовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, определенные в [образец безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Задание сертификата клиента  
   
@@ -30,7 +33,7 @@ caps.handback.revision: 18
   
 2.  Откройте проект безопасности сообщений.  
   
-3.  Добавить `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` для `ICalculator` определение интерфейса.  
+3.  Добавить `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` для `ICalculator` определением интерфейса.  
   
 4.  Добавить `bindingNamespace=``http://Microsoft.ServiceModel.Samples` в тег конечной точки в файле App.config для службы.  
   
@@ -57,7 +60,7 @@ caps.handback.revision: 18
   
 7.  Запустите приложение Visual Basic и проверьте результаты.  
   
-     Приложение Visual Basic отобразит окно сообщений с результатом вызова Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> или <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> также может использоваться вместо <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> для установки сертификата клиента:  
+     Приложение Visual Basic отобразит окно сообщений с результатом вызова Add(3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> или <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> также можно использовать вместо <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> для задания сертификата клиента:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -98,7 +101,7 @@ caps.handback.revision: 18
 4.  Запустите приложение Visual Basic и проверьте результаты. Приложение Visual Basic отобразит окно сообщений с результатом вызова Add(3, 4).  
   
     > [!NOTE]
-    >  Привязка, заданная в моникере служб в этом примере, изменена на WSHttpBinding_ICalculator. Также Обратите внимание, что необходимо предоставить действительные имя пользователя и пароль в вызове <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
+    >  Привязка, заданная в моникере служб в этом примере, изменена на WSHttpBinding_ICalculator. Также обратите внимание, что необходимо предоставить действительные имя пользователя и пароль в вызове метода <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
   
 ### <a name="to-specify-windows-credentials"></a>Задание учетных данных Windows  
   
@@ -130,7 +133,7 @@ caps.handback.revision: 18
   
 1.  Маркеры вопроса используются только для приложений с федеративной безопасностью. Дополнительные сведения о федеративной безопасности см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) и [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-     В следующем примере кода Visual Basic показано, как вызвать <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> метод:  
+     В следующем примере кода Visual Basic показано, как вызывать метод <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -142,11 +145,11 @@ caps.handback.revision: 18
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Дополнительные сведения о параметрах данного метода см. в разделе <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
+     Дополнительные сведения о параметрах для этого метода см. в разделе <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>См. также  
- [Федерации](../../../../docs/framework/wcf/feature-details/federation.md)   
- [Практическое руководство: Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
- [Практическое руководство: создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
+ [Федерации](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [Как: настройте учетные данные для службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Как: создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

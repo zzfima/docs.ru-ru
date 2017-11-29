@@ -1,72 +1,73 @@
 ---
-title: "Использование управляемых графических классов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, управляемые классы"
-  - "графика, управляемые классы"
-  - "графика, использование в Windows Forms"
+title: "Использование управляемых графических классов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, managed classes
+- graphics [Windows Forms], using in Windows Forms
+- graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Использование управляемых графических классов
-В следующих разделах описывается, как использовать API\-интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в структуре управляемых классов.  
+# <a name="using-managed-graphics-classes"></a>Использование управляемых графических классов
+Ниже описаны способы использования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API в структуре управляемых классов.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Приступая к программированию графики](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Выполнение базовых задач с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Описывает, как выполнять основные задачи с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
  [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Создание пера и его использование для рисования различных линий и фигур.  
+ Демонстрирует создание пера и его использование для рисования различных линий и фигур.  
   
  [Использование кисти для заливки фигур](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
- Создание кисти и заливка фигур с использованием различных эффектов.  
+ В этой статье демонстрируется создание кисти и заливка фигур с использованием различных эффектов.  
   
  [Заливка фигур с помощью градиентной кисти](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Создание и использование градиентных кистей различных типов.  
+ Показано, как создавать и использовать различные типы градиента кисти.  
   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Создание изображений и управление ими.  
+ [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
+ Описание способа создания и управления ими.  
   
- [Альфа\-смешение цвета для линий и заливок](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Реализация прозрачности фигур и линий.  
+ [Альфа-смешение цвета для линий и заливок](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
+ Демонстрируется реализация прозрачности фигур и линий.  
   
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- Рисование текста и использование шрифтов и их семейств.  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ Показано, как рисование текста и использование шрифтов и их семейств.  
   
  [Построение и рисование кривых](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Рисование фундаментальных сплайнов и сплайнов Безье.  
+ Показано, как рисовать фундаментальный и сплайнов Безье.  
   
  [Построение и рисование контуров](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- Создание фигур с помощью контуров.  
+ Показано, как создание фигур с помощью пути.  
   
- [Использование преобразований в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ [Использование преобразований в управляемом GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
  Преобразование матриц.  
   
  [Использование графических контейнеров](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
- Управление состоянием объекта Graphics и вложенными графическими контейнерами.  
+ Показано, как управлять графический объект состояния и вложенных графических контейнеров.  
   
  [Использование областей](../../../../docs/framework/winforms/advanced/using-regions.md)  
- Проверка попадания и обрезка с использованием областей.  
+ Демонстрируется проверка попадания и задание области обрезки.  
   
- [Перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
  Описание различных аспектов управления цветами.  
   
- [Применение кодировщиков и декодеров изображений в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Управление изображениями с помощью кодировщиков и декодеров.  
+ [Применение кодировщиков и декодеров изображений в управляемом GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ Показано, как использовать кодировщиков и декодеров изображений для управления ими.  
   
  [Двойная буферизация графики](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Снижение мерцания с помощью двойной буферизации.
+ Показано, как снижение мерцания с помощью двойной буферизации.

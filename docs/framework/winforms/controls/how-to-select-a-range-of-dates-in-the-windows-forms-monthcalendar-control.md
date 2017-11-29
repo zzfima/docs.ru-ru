@@ -1,34 +1,39 @@
 ---
-title: "Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "календари, выбор диапазона дат"
-  - "даты, выбор диапазона в элементах управления календарем"
-  - "примеры [Windows Forms], Calendar - элементы управления"
-  - "MonthCalendar - элемент управления [Windows Forms], выбор диапазона дат"
+title: "Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- dates [Windows Forms], selecting range in calendar controls
+- examples [Windows Forms], calendar controls
+- calendars [Windows Forms], selecting date range
+- MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d6a8d156e6e9a8c5331bd3db1c8e584be5ac154
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms
-Основная особенность элемента управления Windows Forms <xref:System.Windows.Forms.MonthCalendar> заключается в том, что пользователь имеет возможность выбрать диапазон дат.  Эта функция является улучшением функции выбора дат элемента управления <xref:System.Windows.Forms.DateTimePicker>, который позволяет пользователю выбрать только единственное значение даты или времени.  Можно задать диапазон дат или получить диапазон выбора пользователем при помощи свойств элемента управления <xref:System.Windows.Forms.MonthCalendar>.  Следующий пример кода демонстрирует как задать диапазон выбора.  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms
+Важной характеристикой Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления является то, что пользователь может выбрать диапазон дат. Эта функция является улучшением функции выбора дат элемента <xref:System.Windows.Forms.DateTimePicker> элемента управления, который позволяет пользователю выбрать значение одной даты и времени. Можно задать диапазон дат или получить диапазон выбора пользователем с помощью свойства <xref:System.Windows.Forms.MonthCalendar> элемента управления. В следующем примере кода показано, как задать диапазон выбора.  
   
-### Выбор диапазона дат  
+### <a name="to-select-a-range-of-dates"></a>Чтобы выбрать диапазон дат  
   
-1.  Создайте объекты <xref:System.DateTime>, предоставляющие начальную и конечную даты этого диапазона.  
+1.  Создание <xref:System.DateTime> объекты, представляющие начальную и конечную даты в диапазоне.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -60,7 +65,7 @@ caps.handback.revision: 17
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     —либо—  
+     – или –  
   
      Задайте свойства <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> и <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
   
@@ -79,8 +84,8 @@ caps.handback.revision: 17
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## См. также  
- [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)   
- [Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)   
+## <a name="see-also"></a>См. также  
+ [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
+ [Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
  [Практическое руководство. Отображение более чем одного месяца в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

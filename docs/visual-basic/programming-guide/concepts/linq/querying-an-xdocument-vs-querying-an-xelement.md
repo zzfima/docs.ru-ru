@@ -1,34 +1,30 @@
 ---
-title: "Сравнение запросов к XML-документам Запросов к XElement (Visual Basic) | Документы Microsoft"
+title: "Сравнение запросов к XML-документам Запросов к XElement (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29044cd118bfd8ecc12bddca722ee3656d455e0f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3ee3c0c1cda12a74f50b4937263d80f526b5d7ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Сравнение запросов к XML-документам Запросов к XElement (Visual Basic)
-При загрузке документа через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, можно заметить, что нужно будет написать запросы немного иначе, чем при загрузке через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>  
+При загрузке документа через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> обратите внимание на то, что запросы придется составлять не так, как при загрузке через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Сравнение XDocument.Load и XElement.Load  
- При загрузке XML-документа в <xref:System.Xml.Linq.XElement>через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XElement>в корне XML-дерева содержит корневой элемент загруженного документа.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement> Однако при загрузке же XML-документа в <xref:System.Xml.Linq.XDocument>через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>корень дерева является <xref:System.Xml.Linq.XDocument>узел, а элемент корня загруженного документа является один разрешенный дочерний <xref:System.Xml.Linq.XElement>узел <xref:System.Xml.Linq.XDocument>.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> </xref:System.Xml.Linq.XDocument> Оси [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] работают в зависимости от корневого узла.  
+ При загрузке XML-документа в <xref:System.Xml.Linq.XElement> через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> <xref:System.Xml.Linq.XElement> в корне XML-дерева содержит корневой элемент загруженного документа. Однако при загрузке этого же XML-документа в <xref:System.Xml.Linq.XDocument> через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> корень дерева - это узел <xref:System.Xml.Linq.XDocument>, а элемент корня загруженного документа - это один разрешенный дочерний узел <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XDocument>. Оси [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] работают в зависимости от корневого узла.  
   
- В первом примере загружает XML-дерево с помощью <xref:System.Xml.Linq.XElement.Load%2A>.</xref:System.Xml.Linq.XElement.Load%2A> Затем выполняется запрос по дочерним элементам корня дерева.  
+ В этом первом примере выполняется загрузка XML-дерева при помощи <xref:System.Xml.Linq.XElement.Load%2A>. Затем выполняется запрос по дочерним элементам корня дерева.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -59,7 +55,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- Ниже приведена та же выше, за тем исключением, что XML-дерево загружается в <xref:System.Xml.Linq.XDocument>вместо <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument>  
+ Следующий пример такой же, как и пример выше, за исключением того, что XML-дерево загружается в <xref:System.Xml.Linq.XDocument>, а не в <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -94,7 +90,7 @@ Querying tree loaded with XDocument.Load
   
  Обратите внимание, что при таком же запросе выводится только узел `Root`, а не три дочерних узла.  
   
- При этом один из подходов является использование <xref:System.Xml.Linq.XDocument.Root%2A>свойство перед обращением к методам оси, следующим образом:</xref:System.Xml.Linq.XDocument.Root%2A>  
+ Одним из подходов при этом может быть использование свойства <xref:System.Xml.Linq.XDocument.Root%2A> перед доступом к методам оси:  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -115,7 +111,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Теперь выполняет этот запрос в том же так, как запрос дерева, корнем <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> Пример выводит следующие результаты:  
+ Теперь на этот запрос выводятся те же результаты, что и при запросе по дереву, корень которого размещен в <xref:System.Xml.Linq.XElement>. Пример выводит следующие результаты:  
   
 ```  
 Querying tree loaded with XDocument.Load  

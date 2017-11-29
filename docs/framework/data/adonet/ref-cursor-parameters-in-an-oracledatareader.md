@@ -1,23 +1,27 @@
 ---
-title: "Параметры REF CURSOR в OracleDataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Параметры REF CURSOR в объекте OracleDataReader"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bebc77755f376cdb13b97ce4532cd79307fc7ec3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Параметры REF CURSOR в OracleDataReader
-Этот пример на языке Microsoft Visual Basic выполняет хранимую процедуру PL\/SQL, возвращающую параметр REF CURSOR, и считывает значение в виде <xref:System.Data.OracleClient.OracleDataReader>.  
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Параметры REF CURSOR в объекте OracleDataReader
+Этот пример на языке Microsoft Visual Basic выполняет хранимую процедуру PL/SQL, возвращающую параметр REF CURSOR, и считывает значение в виде <xref:System.Data.OracleClient.OracleDataReader>.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -48,6 +52,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
 End Sub  
 ```  
   
-## См. также  
- [Курсоры REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

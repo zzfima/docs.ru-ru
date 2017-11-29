@@ -1,93 +1,99 @@
 ---
-title: "Пошаговое руководство. Создание первого приложения для обработки касаний | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "создание приложения для сенсорного экрана [WPF]"
-  - "создание приложения для экрана, чувствительного к касаниям [WPF]"
-  - "приложения для сенсорного экрана [WPF], создание"
-  - "приложения для экрана, чувствительного к касаниям [WPF], создание"
+title: "Пошаговое руководство. Создание первого приложения для обработки касаний"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating a touch-sensitive application [WPF]
+- touchscreen applications [WPF], creating
+- touch-sensitive applications [WPF], creating
+- creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Создание первого приложения для обработки касаний
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет приложениям реагировать на сенсорный ввод.  Например, можно взаимодействовать с приложением, используя пальцы на экране, чувствительном к касаниям, например на сенсорном экране. В данном пошаговом руководстве создается приложение, которое позволяет пользователям перемещать, изменять размеры и выполнять циклический сдвиг одного объекта с использованием касания.  
+# <a name="walkthrough-creating-your-first-touch-application"></a>Пошаговое руководство. Создание первого приложения для обработки касаний
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]позволяет приложениям реагировать на сенсорный ввод. Например может взаимодействовать с приложением с помощью одного или несколько пальцев на сенсорные устройства, например сенсорный экран, в данном пошаговом руководстве создается приложение, которое позволяет пользователю перемещать, изменять размер или поворот объекта с использованием сенсорного ввода.  
   
-## Предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
 -   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
   
 -   Windows 7.  
   
--   Устройство, принимающее сенсорный ввод, например сенсорный экран с поддержкой технологии касания Windows.  
+-   Устройство, которое принимает сенсорного ввода, например сенсорный экран, который поддерживает технологии касания Windows.  
   
- Кроме того, необходимо иметь базовое понимание процесса создания приложения в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], особенно такие его аспекты, как подписывание и обработка события.  Дополнительные сведения см. в разделе [Пошаговое руководство. Начало работы с WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Кроме того, необходимо иметь базовое представление о том, как создать приложение в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], особенно как подписывание и обработка события. Дополнительные сведения см. в разделе [Пошаговое руководство: My первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## Создание приложения  
+## <a name="creating-the-application"></a>Создание приложения  
   
-#### Чтобы создать приложение  
+#### <a name="to-create-the-application"></a>Создание приложения  
   
-1.  Создайте в Visual Basic или Visual C\# новый проект приложения WPF с именем `BasicManipulation`.  Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/ru-ru/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Создайте проект приложения WPF на Visual Basic или Visual C# с именем `BasicManipulation`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
-2.  Замените содержимое файла MainWindow.xaml следующим XAML.  
+2.  Замените содержимое файла MainWindow.XAML на следующий код XAML.  
   
-     Разметка создает простое приложение, содержащее красный прямоугольник <xref:System.Windows.Shapes.Rectangle> на канве <xref:System.Windows.Controls.Canvas>.  Свойство <xref:System.Windows.UIElement.IsManipulationEnabled%2A> этого объекта <xref:System.Windows.Shapes.Rectangle> установлено в значение "true", так что он будет получать события манипулирования.  Приложение подписывается на события <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta> и <xref:System.Windows.UIElement.ManipulationInertiaStarting>.  Эти события содержат логику перемещения объекта <xref:System.Windows.Shapes.Rectangle>, когда пользователь им манипулирует.  
+     Эта разметка создает простое приложение, которое содержит красной <xref:System.Windows.Shapes.Rectangle> на <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.UIElement.IsManipulationEnabled%2A> Свойство <xref:System.Windows.Shapes.Rectangle> имеет значение true, чтобы он будет получать события манипуляции. Приложение подписывается на <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, и <xref:System.Windows.UIElement.ManipulationInertiaStarting> события. Эти события содержат логику, чтобы переместить <xref:System.Windows.Shapes.Rectangle> когда пользователь выполняет операции с ним.  
   
-     [!code-xml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Если используется Visual Basic, замените `x:Class="BasicManipulation.MainWindow"` в первой строке файла MainWindow.xaml на `x:Class="MainWindow"`.  
+3.  При использовании Visual Basic в первой строке файла MainWindow.XAML замените `x:Class="BasicManipulation.MainWindow"` с `x:Class="MainWindow"`.  
   
-4.  В класс `MainWindow` добавьте следующий обработчик событий <xref:System.Windows.UIElement.ManipulationStarting>.  
+4.  В `MainWindow` класса, добавьте следующий <xref:System.Windows.UIElement.ManipulationStarting> обработчика событий.  
   
-     Событие <xref:System.Windows.UIElement.ManipulationStarting> возникает, когда [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обнаруживает, что сенсорный ввод начал манипулирование объектом.  Этот код задает, что положение манипуляции должно быть относительно <xref:System.Windows.Window>, путем установки свойства <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>.  
+     <xref:System.Windows.UIElement.ManipulationStarting> Событие возникает при [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обнаруживает, что сенсорный ввод начал манипулирование объектом. Код указывает, что положение манипуляции должно быть относительно <xref:System.Windows.Window> , установив <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> свойство.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
   
-5.  В класс `MainWindow` добавьте следующий обработчик событий <xref:System.Windows.Input.ManipulationDelta>.  
+5.  В `MainWindow` класса, добавьте следующий <xref:System.Windows.Input.ManipulationDelta> обработчика событий.  
   
-     Событие <xref:System.Windows.Input.ManipulationDelta> возникает, когда сенсорный ввод изменяет положение, и может возникать несколько раз в течение манипуляции.  Это событие также может возникать после отрыва пальца от экрана.  Например, если пользователь перемещает палец по экрану, событие <xref:System.Windows.Input.ManipulationDelta> возникает несколько раз за время перемещения пальца.  Когда пользователь отрывает палец от экрана, событие <xref:System.Windows.Input.ManipulationDelta> продолжает возникать для имитации инерции.  
+     <xref:System.Windows.Input.ManipulationDelta> Событие возникает, когда сенсорный ввод изменяет положение и может встречаться несколько раз во время обработки. Это событие также может возникать после возникновения палец. Например, если пользователь перетаскивает пальцем по экрану <xref:System.Windows.Input.ManipulationDelta> событие возникает несколько раз за перемещения пальца. Когда пользователь отрывает палец с экрана, <xref:System.Windows.Input.ManipulationDelta> событие продолжает возникать для имитации инерции.  
   
-     Этот код применяет свойство <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> к свойству <xref:System.Windows.UIElement.RenderTransform%2A> объекта <xref:System.Windows.Shapes.Rectangle>, чтобы перемещать его, как пользователь перемещает сенсорный ввод.  Он также выполняет проверку, не находится ли объект <xref:System.Windows.Shapes.Rectangle> за пределами границ окна <xref:System.Windows.Window>, когда событие возникает вследствие инерции.  Если это так, то приложение вызывает метод [имеет значение M:System.Windows.Input.ManipulationDeltaEventArgs.Complete](assetId:///имеет значение M:System.Windows.Input.ManipulationDeltaEventArgs.Complete?qualifyHint=True&autoUpgrade=True), чтобы завершить манипуляцию.  
+     В коде применяется <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> для <xref:System.Windows.UIElement.RenderTransform%2A> из <xref:System.Windows.Shapes.Rectangle> Чтобы переместить его, когда пользователь перемещает сенсорный ввод. Он также проверяет, является ли <xref:System.Windows.Shapes.Rectangle> находится за пределами границ <xref:System.Windows.Window> при возникновении события во время инерции. Если Да, приложение вызывает <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> для завершения манипуляции.  
   
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
   
-6.  В класс `MainWindow` добавьте следующий обработчик событий <xref:System.Windows.UIElement.ManipulationInertiaStarting>.  
+6.  В `MainWindow` класса, добавьте следующий <xref:System.Windows.UIElement.ManipulationInertiaStarting> обработчика событий.  
   
-     Событие <xref:System.Windows.UIElement.ManipulationInertiaStarting> возникает, когда пользователь отрывает от экрана все пальцы.  Код устанавливает исходную скорость и замедление для движения, расширения и поворота прямоугольника.  
+     <xref:System.Windows.UIElement.ManipulationInertiaStarting> Событие происходит, когда пользователь отрывает все пальца на экране. Код задает начальную скорость и замедление для перемещения, расширения и поворота прямоугольника.  
   
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
   
-7.  Выполните построение и запуск проекта.  
+7.  Постройте и запустите проект.  
   
-     В окне должен появиться красный квадрат.  
+     Вы увидите красный квадрат отображаются в окне.  
   
-## Тестирование приложения  
- Чтобы протестировать приложение, попытайтесь выполнить следующие манипуляции.  Следует отметить, что одновременно можно выполнять несколько приведенных ниже действий.  
+## <a name="testing-the-application"></a>Тестирование приложения  
+ Чтобы проверить приложение, попробуйте следующие манипуляции. Обратите внимание, что можно сделать более одного из следующих действий, в то же время.  
   
--   Чтобы переместить объект <xref:System.Windows.Shapes.Rectangle>, поместите палец на <xref:System.Windows.Shapes.Rectangle> и перемещайте его по экрану.  
+-   Чтобы переместить <xref:System.Windows.Shapes.Rectangle>, поместите палец на <xref:System.Windows.Shapes.Rectangle> и перемещайте его по экрану.  
   
--   Чтобы изменить размер объекта <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и перемещайте пальцы ближе друг к другу или дальше друг от друга.  
+-   Чтобы изменить размер <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и Сведите ближе к другу или дальше отстоят друг от друга.  
   
--   Чтобы повернуть объект <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и поворачивайте пальцы друг вокруг друга.  
+-   Значение поворота <xref:System.Windows.Shapes.Rectangle>, поместите два пальца на <xref:System.Windows.Shapes.Rectangle> и Поворачивайте пальцы вокруг друг с другом.  
   
- Чтобы вызвать инерцию, быстро оторвите пальцы от экрана во время выполнения предыдущих манипуляций.  Объект <xref:System.Windows.Shapes.Rectangle> будет продолжать перемещаться, изменять размер или поворачиваться еще несколько секунд, прежде чем остановится.  
+ Чтобы вызвать инерцию, быстро вызывать пальцев на экране при выполнении предыдущих манипуляций. <xref:System.Windows.Shapes.Rectangle> Будет продолжать перемещения, размер или поворачивать на несколько секунд, прежде чем остановится.  
   
-## См. также  
- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=fullName>
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

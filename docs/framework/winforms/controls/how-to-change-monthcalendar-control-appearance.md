@@ -1,36 +1,37 @@
 ---
-title: "Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], Calendar - элементы управления"
-  - "MonthBackColor - свойство"
-  - "MonthCalendar - элемент управления [Windows Forms], форматирование изображения"
-  - "TitleBackColor - свойство"
-  - "TitleForeColor - свойство"
-  - "TrailingForeColor - свойство"
+title: "Как: изменение элемента управления Windows Forms MonthCalendar &#39; s внешний вид"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], calendar controls
+- MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38cddb4222077c21d72828371a8fe025184c4f75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение внешнего вида элемента управления MonthCalendar в Windows Forms
-Предусмотрено множество возможностей настройки внешнего вида элемента управления Windows Forms <xref:System.Windows.Forms.MonthCalendar>.  Например, предоставляется возможность выбора цветовой схемы, а также отображения или скрытия номеров недель или текущей даты.  
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Как: изменение элемента управления Windows Forms MonthCalendar &#39; s внешний вид
+Windows Forms <xref:System.Windows.Forms.MonthCalendar> управления позволяет настраивать внешний вид календаря различными способами. Например можно задать цвет и вывести на экран или скрытия номеров недель или текущей даты.  
   
-### Чтобы изменить цветовую схему календаря  
+### <a name="to-change-the-month-calendars-color-scheme"></a>Чтобы изменить цветовую схему месячный календарь  
   
--   Установите свойства <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> и <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>.  Свойство <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> также определяет цвет шрифта для дней недели.  Свойство <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> определяет цвет дат, предшествующих и следующих за отображаемым месяцем или месяцами.  
+-   Задайте свойства, такие как <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> и <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> Свойство определяет цвет шрифта для дней недели. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> Свойство определяет цвет дат, которые предшествуют и следуют за отображаемый месяц или месяцы.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -51,11 +52,11 @@ caps.handback.revision: 17
     ```  
   
     > [!NOTE]
-    >  Начиная с Windows Vista и в зависимости от темы, при задании некоторых свойств внешний вид календаря может не изменяться.  Например, если ОС Windows настроена для использования темы Aero, задание свойств <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> или <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> не оказывает никакого влияния.  Это объясняется тем, что отображается внешний вид обновленной версии календаря, полученный во время выполнения от текущей темы операционной системы.  Если требуется использовать эти свойства и включить более раннюю версию календаря, можно отключить стили форматирования приложения.  Отключение стилей форматирования может повлиять на внешний вид и поведение других элементов управления приложения.  Чтобы отключить стили форматирования в Visual Basic, откройте конструктор проектов и снимите флажок **Включить XP\-стили визуального представления**.  Чтобы отключить стили форматирования в C\#, откройте Program.cs и закомментируйте `Application.EnableVisualStyles();`.  Дополнительные сведения о стилях форматирования см. в разделе [How to: Enable Windows XP Visual Styles](http://msdn.microsoft.com/ru-ru/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  Начиная с Windows Vista и в зависимости от темы, установки некоторых свойств может не изменить внешний вид календаря. Например, если Windows настроена на использование темы Aero, задание <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, или <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> свойства не оказывает влияния. Это происходит потому обновленную версию календаря визуализируется с внешний вид, который является производным от текущей темы операционной системы во время выполнения. Если вы хотите использовать эти свойства и включить более раннюю версию календаря, можно отключить визуальные стили для приложения. Отключение визуальных стилей может повлиять на внешний вид и поведение других элементов управления в приложении. Чтобы отключить визуальные стили в Visual Basic, откройте конструктор проектов и снимите флажки **включить визуальные стили XP** флажок. Чтобы отключить визуальные стили в C#, откройте файл Program.cs и закомментируйте `Application.EnableVisualStyles();`. Дополнительные сведения о стилях см. в разделе [как: включить визуальные стили XP Windows](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
   
-### Чтобы отобразить текущую дату внизу элемента управления  
+### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Для отображения текущей даты в нижней части элемента управления  
   
--   Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> значение `true`.  В приведенном ниже примере переключение между отображением и скрытием текущей даты происходит при выполнении двойного щелчка на форме.  
+-   Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> значение `true`. В приведенном ниже примере переключение между отображением и скрытием текущей даты происходит при двойном щелчке формы.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -83,7 +84,7 @@ caps.handback.revision: 17
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Добавьте в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -94,9 +95,9 @@ caps.handback.revision: 17
        &Form1::Form1_DoubleClick);  
     ```  
   
-### Чтобы отобразить номера недель  
+### <a name="to-display-week-numbers"></a>Чтобы отображать номера недель  
   
--   Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> значение `true`.  Это свойство можно задать в коде или в окне "Свойства".  
+-   Задайте для свойства <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> значение `true`. Это свойство можно задать в коде или в окне «Свойства».  
   
      Номера недель отображаются в отдельном столбце слева от первого дня недели.  
   
@@ -112,8 +113,8 @@ caps.handback.revision: 17
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## См. также  
- [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)   
- [Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)   
+## <a name="see-also"></a>См. также  
+ [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Практическое руководство. Выбор диапазона дат в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ [Практическое руководство. Отображение определенных дней полужирным шрифтом в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
  [Практическое руководство. Отображение более чем одного месяца в элементе управления MonthCalendar в Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

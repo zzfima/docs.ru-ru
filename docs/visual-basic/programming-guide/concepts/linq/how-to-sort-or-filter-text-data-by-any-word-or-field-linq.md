@@ -1,37 +1,29 @@
 ---
-title: "Практическое руководство: сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 541da47893217e2915a6b001d1141eaadfa9e9e8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 19224bf51c95acdccbeb019631fdc884231610b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
-В следующем примере показано, как сортировка строк структурированного текста, например разделенных запятыми значений, по любому полю в строке. Поле может быть динамически указано во время выполнения. Предположим, что поля в файле scores.csv представляют идентификатор студента, за которым следует ряд из четырех результатов тестирования.  
+В следующем примере демонстрируется сортировка строк структурированного текста, таких как значения, разделенные запятыми, по любому полю в строке. Поле можно указывать в среде выполнения динамически. Допустим, поля в файле scores.csv содержат идентификационные номера учащихся и баллы, которые они набрали в результате четырех тестов.  
   
-### <a name="to-create-a-file-that-contains-data"></a>Чтобы создать файл, содержащий данные  
+### <a name="to-create-a-file-that-contains-data"></a>Создание файла с данными  
   
-1.  Скопируйте данные файла scores.csv из раздела [Практическое руководство: присоединение содержимого из разных форматов файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) и сохраните его в папке решения.  
+1.  Скопируйте данные файла scores.csv из раздела [как: присоединение содержимого из различных файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) и сохраните его в папке решения.  
   
 ## <a name="example"></a>Пример  
   
@@ -86,10 +78,10 @@ End Class
 ' 115, 35, 72, 91, 70  
 ```  
   
- Этот пример также демонстрирует возвращение переменных запроса из функции.  
+ Этот пример также демонстрирует способы возврата переменную запроса из функции.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
  [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

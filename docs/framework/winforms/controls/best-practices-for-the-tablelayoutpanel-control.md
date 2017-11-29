@@ -1,69 +1,70 @@
 ---
-title: "Советы по использованию элемента управления TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "автоматическое изменение размеров"
-  - "AutoSize - свойство, TableLayoutPanel - элемент управления"
-  - "рекомендации, TableLayoutPanel - элемент управления"
-  - "элементы управления [Windows Forms], установка размеров"
-  - "формы, рекомендации"
-  - "макет [Windows Forms]"
-  - "макет [Windows Forms], рекомендации"
-  - "макет [Windows Forms], AutoSize"
-  - "установка размеров, автоматическая"
-  - "TableLayoutPanel - элемент управления [Windows Forms], рекомендации"
-  - "TableLayoutPanel - элемент управления [Windows Forms], поведение AutoSize"
+title: "Советы по использованию элемента управления TableLayoutPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- layout [Windows Forms]
+- TableLayoutPanel control [Windows Forms], best practices
+- forms [Windows Forms], best practices
+- AutoSize property [Windows Forms], tableLayoutPanel control
+- controls [Windows Forms], sizing
+- TableLayoutPanel control [Windows Forms], AutoSize behavior
+- layout [Windows Forms], AutoSize
+- layout [Windows Forms], best practices
+- best practices [Windows Forms], tableLayoutPanel control
+- sizing [Windows Forms], automatic
+- automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 802cc501b695f6c5cfe990bf72a4d9d2af68ba2b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Советы по использованию элемента управления TableLayoutPanel
-Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> предоставляет мощный набор функций подготовки макета, которые следует внимательно изучить перед началом работы с Windows Forms.  
+# <a name="best-practices-for-the-tablelayoutpanel-control"></a>Советы по использованию элемента управления TableLayoutPanel
+<xref:System.Windows.Forms.TableLayoutPanel> Управления предоставляет набор мощных функций, которые следует внимательно изучить перед использованием в Windows Forms.  
   
-## Рекомендации  
- Приведенные ниже рекомендации помогут вам в применении элемента управления <xref:System.Windows.Forms.TableLayoutPanel> с целью наиболее полного использования его преимуществ.  
+## <a name="recommendations"></a>Рекомендации  
+ Следующие рекомендации помогут вам использовать <xref:System.Windows.Forms.TableLayoutPanel> управления ее преимущества.  
   
-### Целевое использование  
- Используйте элемент управления <xref:System.Windows.Forms.TableLayoutPanel> только в случае необходимости.  Не следует повсеместно использовать его для создания макетов с возможностью изменения размера.  В приведенном ниже списке перечислены макеты, в которых элемент управления <xref:System.Windows.Forms.TableLayoutPanel> наиболее полезен:  
+### <a name="targeted-use"></a>Целевое использование  
+ Используйте <xref:System.Windows.Forms.TableLayoutPanel> управлять только в случае необходимости. Его не следует использовать во всех ситуациях, для создания макетов. В следующем списке описываются макеты, получить выгоду от использования <xref:System.Windows.Forms.TableLayoutPanel> управления:  
   
--   Макеты, имеющие несколько частей формы, размер которых меняется пропорционально друг другу.  
+-   Макеты, в которых состоит из нескольких частей формы, пропорциональное изменение размеров друг с другом.  
   
--   Макеты, меняющиеся или формирующиеся динамически во время выполнения, например формы ввода данных, которые имеют настраиваемые поля, добавляемые или убираемые в зависимости от пользовательских настроек.  
+-   Макеты, которые будут изменены или формируется динамически во время выполнения, например формы для ввода данных, имеющих настраиваемые поля, добавляется или вычитается на основе параметров.  
   
--   Макеты, общий размер которых должен оставаться неизменным.  Например, диалоговое окно, в которое необходимо добавить локализованные строки, но размер которого не должен превышать 800 x 600.  
+-   Макеты, которые должны оставаться в общую фиксированный размер. Например имеется диалоговым окном, которое должно остаться меньше, чем 800 x 600, но для поддержки локализованных строк.  
   
- В приведенном ниже списке перечислены макеты, в которых использование элемента управления <xref:System.Windows.Forms.TableLayoutPanel> не имеет особого смысла:  
+ В следующем списке описываются макеты, которые не выигрывают от использования значительно <xref:System.Windows.Forms.TableLayoutPanel> управления:  
   
--   Простые формы ввода данных с одним столбцом подписей и одним столбцом с областями для ввода текста.  
+-   Простые формы ввода данных с одним столбцом меток и один столбец областей ввода текста.  
   
--   Формы с одной большой областью отображения, которая при изменении размера будет занимать все свободное пространство.  Примером такой формы является форма, в которой отображается один элемент управления <xref:System.Windows.Forms.PropertyGrid>.  В этом случае лучше использовать привязку, поскольку никакие другие области не должны расширяться при изменении размера формы.  
+-   Формы с одной большой областью отображения, которая должно заполнять все доступное пространство, при изменении размера. Примером этого является форма, отображающая один <xref:System.Windows.Forms.PropertyGrid> элемента управления. В этом случае используйте привязку, так как ничего должны расширяться при изменении размера формы.  
   
- Тщательно выбирайте элементы управления, которые необходимо включить в элемент управления <xref:System.Windows.Forms.TableLayoutPanel>.  Если имеется достаточно места для увеличения текста на 30 % с использованием привязки, рекомендуется использовать только свойство <xref:System.Windows.Forms.Control.Anchor%2A>.  Если можно оценить необходимое для макета пространство, проще использовать свойства <xref:System.Windows.Forms.Control.Dock%2A> и <xref:System.Windows.Forms.Control.Anchor%2A>, чем детально оценивать оставшееся пространство и поведение свойства <xref:System.Windows.Forms.Control.AutoSize%2A>.  
+ Тщательно выбирать, какие элементы управления должны быть <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. Если имеется достаточно места для увеличения на 30% с использованием привязки текста, рассмотрите возможность использования <xref:System.Windows.Forms.Control.Anchor%2A> только свойство. Если можно оценить пространство, необходимое для макета, использование <xref:System.Windows.Forms.Control.Dock%2A> и <xref:System.Windows.Forms.Control.Anchor%2A> проще, чем оценка сведения оставшегося пространства и <xref:System.Windows.Forms.Control.AutoSize%2A> поведение.  
   
- В любом случае, при разработке макета с использованием элемента управления <xref:System.Windows.Forms.TableLayoutPanel> старайтесь сделать его как можно проще.  
+ В целом при разработке макета с <xref:System.Windows.Forms.TableLayoutPanel> контроля, упрощения разработки.  
   
-### Использование окна структуры документа  
- В окне "Структура документа" отображается дерево макета, в котором можно менять z\-порядок и отношения "родители\-потомки" элементов управления.  В меню **Вид** выберите **Другие окна** и выберите команду **Структура документа**.  
+### <a name="use-the-document-outline-window"></a>Используйте окно структуры документа  
+ Окно «Структура документа» дает древовидное представление макета, в котором можно использовать для работы с z порядка и иерархические связи элементов управления. Из **меню "Вид"**выберите **другие окна**, а затем выберите **Структура документа**.  
   
-### Избегайте вложенности  
- Старайтесь не использовать другие элементы управления <xref:System.Windows.Forms.TableLayoutPanel> внутри элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  Отладка вложенных макетов может быть весьма затруднительной.  
+### <a name="avoid-nesting"></a>Старайтесь не использовать  
+ Старайтесь не использовать другие <xref:System.Windows.Forms.TableLayoutPanel> управления внутри <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. Отладка вложенных макетов может быть затруднено.  
   
-### Избегайте визуального наследования  
- Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> не поддерживает визуальное наследование в конструкторе Windows Forms.  Во время разработки элемент управления <xref:System.Windows.Forms.TableLayoutPanel> в производном классе будет заблокирован.  
+### <a name="avoid-visual-inheritance"></a>Избегайте визуального наследования  
+ <xref:System.Windows.Forms.TableLayoutPanel> Управления не поддерживает визуальное наследование в конструкторе Windows Forms. Объект <xref:System.Windows.Forms.TableLayoutPanel> элемент управления в производном классе, как «заблокирован» во время разработки.  
   
-## См. также  
- <xref:System.Windows.Forms.TableLayoutPanel>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel>

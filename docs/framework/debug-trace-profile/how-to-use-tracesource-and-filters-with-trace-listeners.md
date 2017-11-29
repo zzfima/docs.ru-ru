@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - initializing trace listeners
 - configuration files [.NET Framework], trace listeners
@@ -27,16 +21,15 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73a91d081a1e59995d52f3ef6927db12dd7e4599
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4b557a9f9f462df2d1afe6d6b61871e0e9f40174
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки
 Одной из новых функций в платформе .NET Framework версии 2.0 является расширенная система трассировки. Основное условие осталось неизменным: сообщения трассировки отправляются через переключатели к прослушивателям, которые передают данные соответствующему выходному носителю. Для версии 2.0 основное отличие заключается в том, что трассировку можно инициировать через экземпляры класса <xref:System.Diagnostics.TraceSource>. Класс <xref:System.Diagnostics.TraceSource> представляет собой улучшенную систему трассировки и может использоваться вместо статических методов более старых классов трассировки <xref:System.Diagnostics.Trace> и <xref:System.Diagnostics.Debug>. Знакомые классы <xref:System.Diagnostics.Trace> и <xref:System.Diagnostics.Debug> сохранены, но для трассировки рекомендуется использовать класс <xref:System.Diagnostics.TraceSource>.  
@@ -114,7 +107,7 @@ ms.lasthandoff: 08/21/2017
   
 ### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Изменение уровня записи сообщения трассировки для прослушивателя  
   
-1.  Файл конфигурации инициализирует настройки для источника трассировки во время инициализации приложения. Чтобы изменить эти параметры, необходимо изменить файл конфигурации и перезапустить приложение или обновить приложение программными средствами с помощью метода <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=fullName>. Приложение может динамически изменить набор свойств с помощью файла конфигурации, чтобы переопределить любые настройки, заданные пользователем.  Например, может потребоваться, чтобы важные сообщения всегда отправлялись в текстовый файл, независимо от текущих параметров конфигурации.  
+1.  Файл конфигурации инициализирует настройки для источника трассировки во время инициализации приложения. Чтобы изменить эти параметры, необходимо изменить файл конфигурации и перезапустить приложение или обновить приложение программными средствами с помощью метода <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. Приложение может динамически изменить набор свойств с помощью файла конфигурации, чтобы переопределить любые настройки, заданные пользователем.  Например, может потребоваться, чтобы важные сообщения всегда отправлялись в текстовый файл, независимо от текущих параметров конфигурации.  
   
     ```  
     using System;  
@@ -179,10 +172,9 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventTypeFilter>   
- [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventTypeFilter>  
+ [Как: Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-

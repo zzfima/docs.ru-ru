@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - authentication [.NET Framework], classes
 - IAuthenticationModule interface
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a26811b5dd62e30b371af88bc79d06843ef58d05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="internet-authentication"></a>Аутентификация в Интернете
 Классы <xref:System.Net> поддерживают ряд механизмов проверки подлинности клиентов, включая стандартные методы проверки подлинности в Интернете: базовая проверка подлинности, дайджест-проверка подлинности, проверка подлинности согласованием, проверка подлинности NTLM, проверка подлинности Kerberos, а также создаваемые пользовательские методы.  
@@ -46,7 +40,7 @@ ms.lasthandoff: 08/21/2017
   
  Класс **CredentialCache** хранит коллекцию учетных записей для различных веб-ресурсов. При вызове метода <xref:System.Net.CredentialCache.GetCredential%2A> класс **CredentialCache** возвращает правильный набор учетных данных, как это определяется URI веб-ресурса и запрошенной схемой проверки подлинности. Приложения, использующие множество интернет-ресурсов с разными схемами проверки подлинности, получают эффект от класса **CredentialCache**, поскольку он хранит все учетные записи и предоставляет их по запросу.  
   
- Когда интернет-ресурс запрашивает проверку подлинности, метод <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> отправляет <xref:System.Net.WebRequest> в **AuthenticationManager** вместе с запросом учетных данных. Затем запрос проходит проверку подлинности согласно следующей процедуре.  
+ Когда интернет-ресурс запрашивает проверку подлинности, метод <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> отправляет <xref:System.Net.WebRequest> в **AuthenticationManager** вместе с запросом учетных данных. Затем запрос проходит проверку подлинности согласно следующей процедуре.  
   
 1.  **AuthenticationManager** вызывает метод <xref:System.Net.IAuthenticationModule.Authenticate%2A> в каждом из зарегистрированных модулей проверки подлинности в порядке их регистрации. **AuthenticationManager** использует первый модуль, который не возвращает **null**, для выполнения процесса проверки подлинности. Детали процесса зависят от типа используемого модуля проверки подлинности.  
   
@@ -55,7 +49,6 @@ ms.lasthandoff: 08/21/2017
  Некоторые схемы проверки могут проверять пользователя без выполнения запроса на доступ к ресурсу. Приложение может сэкономить время за счет предварительной проверки подлинности пользователя на доступ к ресурсу, устраняя по меньшей мере один цикл обращения к серверу. Или оно может провести проверку подлинности во время запуска программы для более оперативного реагирования на запросы пользователя позднее. Схемы проверки подлинности, которые могут использовать предварительную проверку подлинности, задают для свойства <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> значение **true**.  
   
 ## <a name="see-also"></a>См. также  
- [Обычная и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [Проверка подлинности NTLM и Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [Основные и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [NTLM и проверка подлинности Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)
-

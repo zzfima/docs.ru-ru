@@ -1,25 +1,28 @@
 ---
-title: "PeerTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: PeerTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 48364c2bcfa50476ac5f9f00f87c17f97dc14017
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# PeerTransportBindingElement
+# <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class PeerTransportBindingElement : TransportBindingElement  
@@ -30,38 +33,38 @@ class PeerTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс PeerTransportBindingElement не определяет никакие методы.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс PeerTransportBindingElement имеет следующие свойства.  
   
-### ListenIPAddress  
+### <a name="listenipaddress"></a>ListenIPAddress  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- IP\-адрес, на котором одноранговый узел будет ожидать сообщения.  
+ IP-адрес, на котором одноранговый узел будет ожидать сообщения.  
   
-### Порт  
+### <a name="port"></a>Порт  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Порт сетевого интерфейса, на котором эта привязка будет обрабатывать сообщения однорангового канала.  
   
-### Безопасность  
+### <a name="security"></a>Безопасность  
  Тип данных: PeerSecuritySettings  
   
  Тип доступа: только для чтения  
   
  Параметры безопасности однорангового транспорта.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.PeerTransportBindingElement>

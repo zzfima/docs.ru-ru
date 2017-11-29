@@ -1,70 +1,74 @@
 ---
-title: "Элемент &lt;oidEntry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidEntry> - элемент"
-  - "oidEntry - элемент"
+title: "&lt;oidEntry&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry
+helpviewer_keywords:
+- <oidEntry> element
+- oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;oidEntry&gt;
-Сопоставляет идентификатор объекта ASN.1 с понятным именем.  
+# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; элемент
+Сопоставляет идентификатор объекта (OID) ASN.1 с понятным именем.  
   
-## Синтаксис  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<oidMap >  
+\<oidEntry >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|**OID**|Обязательный атрибут.<br /><br /> Указывает идентификатор объекта ASN.1, соответствующий реализованному в классе алгоритму.|  
-|**name**|Обязательный атрибут.<br /><br /> Задает значение атрибута **name** в теге [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).|  
+|---------------|-----------------|  
+|**ИДЕНТИФИКАТОР ОБЪЕКТА**|Обязательный атрибут.<br /><br /> Указывает идентификатор Объекта ASN.1, соответствующий алгоритм, реализованный класс.|  
+|**name**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибута в [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) тег.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`cryptographySettings`|Этот элемент содержит параметры криптографии.|  
-|`mscorlib`|Содержит элемент `cryptographySettings`.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`cryptographySettings`|Содержит параметры шифрования.|  
+|`mscorlib`|Содержит `cryptographySettings` элемента.|  
 |`oidMap`|Содержит сопоставления идентификатора объекта ASN.1 с классами.|  
   
-## Заметки  
- Идентификаторы объектов ASN.1 определяют алгоритмы в некоторых криптографических форматах.  Идентификаторы объектов сопоставляются с понятными именами для тех алгоритмов, которые необходимо определить.  Дополнительные сведения об идентификаторах объектов см. в библиотеке MSDN.  
+## <a name="remarks"></a>Примечания  
+ Идентификаторы объектов ASN.1 определяют алгоритмы в некоторых криптографических форматах. Понятные имена алгоритмов, которые нужно определить сопоставления идентификаторов объектов.  
   
-## Пример  
- В следующем примере показан способ использования элемента **\<oidEntry\>** для сопоставления идентификатора объекта хэш\-алгоритма RIPEMD\-160 с реализацией этого алгоритма.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать  **\<oidEntry >** элемент для сопоставления идентификатора объекта хэш-алгоритма RIPEMD-160 с реализацией этого алгоритма.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -84,9 +88,9 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)   
- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>См. также  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)  
+ [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [Отображение идентификаторов объектов на криптографические алгоритмы](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

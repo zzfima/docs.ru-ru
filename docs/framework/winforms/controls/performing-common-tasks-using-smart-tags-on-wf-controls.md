@@ -1,82 +1,83 @@
 ---
-title: "Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "действия конструктора"
-  - "объектная модель действий конструктора"
-  - "смарт-теги"
+title: "Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DesignerAction object model
+- smart tags
+- designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms
-При создании форм и элементов управления для приложений Windows Forms многие задания приходится выполнять неоднократно.  В ряд самых распространенных выполняемых заданий входит:  
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms
+При разработке форм и элементов управления для приложения Windows Forms, существует много задач, которые выполняются несколько раз. Ниже приведено несколько наиболее типичных задач, которые указываются:  
   
--   Добавление или удаление вкладки на <xref:System.Windows.Forms.TabControl>.  
+-   Добавление или удаление вкладки <xref:System.Windows.Forms.TabControl>.  
   
--   Закрепление элемента управления в родительском элементе.  
+-   Закрепление элемента управления своему родителю.  
   
--   Изменение ориентации элемента управления <xref:System.Windows.Forms.SplitContainer>.  
+-   Изменение ориентации элемента <xref:System.Windows.Forms.SplitContainer> элемента управления.  
   
- Для ускорения процесса разработки во многих элементах управления содержатся смарт\-теги. Это контекстные меню, позволяющие во время разработки выполнять подобные распространенные задания одним щелчком мыши.  Эти задачи называются *командами смарт\-тегов*.  
+ Для ускорения разработки, многие элементы управления обладают смарт-тегов, которые находятся в контекстных меню, которые позволяют выполнять общие задачи, такие как их в одном жест во время разработки. Эти задачи называются *командами смарт тегов*.  
   
- Смарт\-теги остаются прикрепленными к экземпляру элемента управления на протяжении его времени существования в конструкторе и всегда доступны.  
+ Смарт-теги остаются прикрепленными к экземпляру элемента управления для существования в конструкторе и всегда доступны.  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ В данном пошаговом руководстве представлены следующие задачи.  
   
--   создание проекта типа Windows Forms;  
+-   Создание проекта Windows Forms  
   
--   Использование смарт\-тегов  
+-   С помощью смарт-тегов  
   
--   Подключение и отключение смарт\-тегов  
+-   Включение и отключение смарт-тегов  
   
- По завершению процесса ознакомления вы получите представление о роли, которую играют эти важные средства работы с макетами.  
+ После завершения вы будете понимать роль, которую играют эти важные функции макета.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Создание проекта  
- Для начала следует создать проект и подготовить форму.  
+## <a name="creating-the-project"></a>Создание проекта  
+ Первым шагом является создание проекта и настройка формы.  
   
-#### Создание проекта  
+#### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  Создайте проект приложения на базе Windows и назовите его "SmartTagsExample".  Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Создайте проект приложения Windows с названием «SmartTagsExample». Дополнительные сведения см. в разделе [Практическое руководство. Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  В конструкторе **Windows Forms** выберите форму.  
+2.  Выберите форму в **конструктор Windows Forms**.  
   
-## Использование смарт\-тегов  
- Смарт\-теги всегда доступны во время разработки, если элемент управления их содержит.  
+## <a name="using-smart-tags"></a>С помощью смарт-тегов  
+ Смарт-теги всегда доступны во время разработки для элементов управления, которые их содержат.  
   
-#### Чтобы использовать сматр\-теги  
+#### <a name="to-use-smart-tags"></a>Использование смарт-тегов  
   
-1.  Перетащите <xref:System.Windows.Forms.TabControl> из **панели элементов** в форму.  Обратите внимание на глиф смарт\-тега \(![Глиф смарт&#45;тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\), появляющийся на краю <xref:System.Windows.Forms.TabControl>.  
+1.  Перетащите <xref:System.Windows.Forms.TabControl> из **элементов** на форму. Обратите внимание, глиф смарт тега (![глиф смарт-тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), которая отображается на краю <xref:System.Windows.Forms.TabControl>.  
   
-2.  Щелкните глиф смарт\-тега.  Из контекстного меню, появившегося рядом с глифом, выберите элемент **Добавить вкладку**.  Убедитесь, что к <xref:System.Windows.Forms.TabControl> была добавлена новая страница вкладки.  
+2.  Щелкните глиф смарт тега. Выберите в контекстном меню рядом с глифом, **добавить вкладку** элемента. Обратите внимание, что добавляется новую страницу вкладки <xref:System.Windows.Forms.TabControl>.  
   
-3.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в форму.  
+3.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.  
   
-4.  Щелкните глиф смарт\-тега.  Из контекстного меню, появившегося рядом с глифом, выберите элемент **Добавить столбец**.  Убедитесь, что к элементу управления <xref:System.Windows.Forms.TableLayoutPanel> добавляется новый столбец.  
+4.  Щелкните глиф смарт тега. Выберите в контекстном меню рядом с глифом, **добавить столбец** элемента. Обратите внимание, что новый столбец будет добавлен <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
   
-5.  Перетащите элемент управления <xref:System.Windows.Forms.SplitContainer> из **панели элементов** в форму.  
+5.  Перетащите <xref:System.Windows.Forms.SplitContainer> управления из **элементов** на форму.  
   
-6.  Щелкните глиф смарт\-тега.  Из контекстного меню, появившегося рядом с глифом, выберите элемент **Ориентация горизонтального разделителя**.  Убедитесь, что теперь полоса разделения элемента управления <xref:System.Windows.Forms.SplitContainer> ориентирована по горизонтали.  
+6.  Щелкните глиф смарт тега. Выберите в контекстном меню рядом с глифом, **Ориентация горизонтального разделителя** элемента. Обратите внимание, что <xref:System.Windows.Forms.SplitContainer> элемента управления разделителя — теперь имеет горизонтальную ориентацию.  
   
-## См. также  
- <xref:System.Windows.Forms.TextBox>   
- <xref:System.Windows.Forms.TabControl>   
- <xref:System.Windows.Forms.SplitContainer>   
- <xref:System.ComponentModel.Design.DesignerActionList>   
- [Walkthrough: Adding Smart Tags to a Windows Forms Component](../Topic/Walkthrough:%20Adding%20Smart%20Tags%20to%20a%20Windows%20Forms%20Component.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:System.Windows.Forms.TabControl>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ <xref:System.ComponentModel.Design.DesignerActionList>  
+ [Пошаговое руководство: Добавление смарт-тегов в компонент Windows Forms](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

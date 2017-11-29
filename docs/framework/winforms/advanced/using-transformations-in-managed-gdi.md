@@ -1,36 +1,37 @@
 ---
-title: "Использование преобразований в управляемом GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], преобразования"
-  - "преобразования"
+title: "Использование преобразований в управляемом GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transformations
+- examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b25e6b3b09c4e39b53bab182ac70bb135f5f130c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование преобразований в управляемом GDI+
-Аффинные преобразования — это поворот, масштабирование, отражение, наклон и сдвиг.  В интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] класс <xref:System.Drawing.Drawing2D.Matrix> предоставляет основные средства для осуществления аффинных преобразований над векторными рисунками, изображениями и текстом.  
+# <a name="using-transformations-in-managed-gdi"></a>Использование преобразований в управляемом GDI+
+Аффинные преобразования включают поворот, масштабирование, отражение, наклон и преобразования. В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], <xref:System.Drawing.Drawing2D.Matrix> класс предоставляет основу для осуществления аффинных преобразований векторные рисунки, изображения и текст.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Использование объемного преобразования](../../../../docs/framework/winforms/advanced/using-the-world-transformation.md)  
- Масштабирование и поворот графических элементов с помощью матрицы преобразования пространства.  
+ Описывает, как масштабирование и поворот изображений с помощью матрицы преобразования пространства.  
   
  [Значение порядка преобразований](../../../../docs/framework/winforms/advanced/why-transformation-order-is-significant.md)  
- Объяснение важности порядка следования операций преобразования.  
+ Показано, почему важен порядок операций преобразования.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Drawing2D.Matrix>  
- Описание класса и ссылки на разделы с описаниями всех его членов.
+ Описывает данный класс и содержит ссылки на все его члены.

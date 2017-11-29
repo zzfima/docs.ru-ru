@@ -1,55 +1,61 @@
 ---
-title: "Безопасность сообщений с анонимным клиентом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность сообщений с анонимным клиентом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность сообщений с анонимным клиентом
-В следующем сценарии показаны клиент и служба, защищенные с помощью системы безопасности сообщений [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  Задача, поставленная при разработке, заключается в использовании безопасности сообщений, а не безопасности транспорта, чтобы в будущем возможно было использование более глубокой модели, использующей утверждения.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании утверждений с широкими функциональными возможностями для авторизации см. в разделе [Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+# <a name="message-security-with-an-anonymous-client"></a>Безопасность сообщений с анонимным клиентом
+В следующем сценарии показаны клиент и служба, защищенные с помощью системы безопасности сообщений [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Задача, поставленная при разработке, заключается в использовании безопасности сообщений, а не безопасности транспорта, чтобы в будущем возможно было использование более глубокой модели, использующей утверждения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]с помощью форматированного утверждений для авторизации, в разделе [управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
- Пример приложения см. в разделе [Безопасность сообщений с возможностью анонимного доступа](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
+ Пример приложения см. в разделе [анонимной безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
- ![Безопасность сообщений с анонимным клиентом](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565\-831c\-4c10\-90d7\-66d8eeece0a1")  
+ ![Безопасность с анонимным клиентом сообщений](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
   
 |Характеристика|Описание|  
-|--------------------|--------------|  
+|--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
 |Взаимодействие|Только [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Проверка подлинности \(сервера\)|Первоначальное согласование возможно только после проверки подлинности сервера, но не клиента|  
-|Проверка подлинности \(клиента\)|Нет|  
+|Проверка подлинности (сервера)|Первоначальное согласование возможно только после проверки подлинности сервера, но не клиента|  
+|Проверка подлинности (клиента)|Нет|  
 |Целостность|Да, используется общий контекст безопасности|  
 |Конфиденциальность|Да, используется общий контекст безопасности|  
 |Transport|HTTP|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.  Выполните одно из следующих действий.  
+## <a name="service"></a>Служба  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 -   Создайте автономную службу, используя код без конфигурации.  
   
 -   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано, как создать конечную точку службы, которая использует безопасность сообщений.  
   
  [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
-### Конфигурация  
- Вместо кода можно использовать следующую конфигурацию.  Элемент поведения службы используется для указания сертификата, который используется для проверки подлинности службы для клиента.  Элемент службы должен задавать поведение с помощью атрибута `behaviorConfiguration`.  Элемент привязки указывает, что типу учетных данных клиента присвоено значение `None`, позволяя анонимному клиенту использовать службу.  
+### <a name="configuration"></a>Конфигурация  
+ Вместо кода можно использовать следующую конфигурацию. Элемент поведения службы используется для указания сертификата, который используется для проверки подлинности службы для клиента. Элемент службы должен задавать поведение с помощью атрибута `behaviorConfiguration`. Элемент привязки указывает, что типу учетных данных клиента присвоено значение `None`, позволяя анонимному клиенту использовать службу.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -88,26 +94,26 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## Клиент  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.  Выполните одно из следующих действий.  
+## <a name="client"></a>Клиент  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
--   Создайте автономный клиент, используя код \(и код клиента\).  
+-   Создайте автономный клиент, используя код (и код клиента).  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек.  Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.  Например:  
+-   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Код  
- В следующем примере кода создается экземпляр клиента.  Привязка использует безопасность режима сообщений, и тип учетных данных клиента задан как None.  
+### <a name="code"></a>Код  
+ В следующем примере кода создается экземпляр клиента. Привязка использует безопасность режима сообщений, и тип учетных данных клиента задан как None.  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
   
-### Конфигурация  
+### <a name="configuration"></a>Конфигурация  
  Следующий код служит для настройки клиента.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -135,9 +141,9 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)   
- [Безопасность сообщений с возможностью анонимного доступа](../../../../docs/framework/wcf/samples/message-security-anonymous.md)   
- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Анонимного обеспечения безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [Службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

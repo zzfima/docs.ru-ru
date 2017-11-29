@@ -1,48 +1,53 @@
 ---
-title: "Практическое руководство. Применение преобразования к элементу при возникновении события | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "графика, преобразования в качестве реакции на события"
-  - "LayoutTransform - свойство"
-  - "свойства, LayoutTransform"
-  - "свойства, RenderTransform"
-  - "RenderTransform - свойство"
-  - "преобразования в качестве реакции на события"
+title: "Практическое руководство. Применение преобразования к элементу при возникновении события"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], transformations as event responses
+- properties [WPF], LayoutTransform
+- transformations as event responses [WPF]
+- properties [WPF], RenderTransform
+- LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Применение преобразования к элементу при возникновении события
-В этом примере демонстрируется применение <xref:System.Windows.Media.ScaleTransform> при возникновении события.  Показанная здесь концепция совпадает с той, которая используется для применения других типов преобразований.  Дополнительные сведения о доступных типах преобразований см. в описании класса <xref:System.Windows.Media.Transform> или в разделе [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Практическое руководство. Применение преобразования к элементу при возникновении события
+В этом примере показано, как применить <xref:System.Windows.Media.ScaleTransform> при возникновении события. Показанный подход аналогичен тому, который используется при применении других типов преобразований. Дополнительные сведения о доступных типах преобразований см. в разделе <xref:System.Windows.Media.Transform> класса или [преобразует Обзор](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
   
- Существует два способа применения преобразования к элементу.  
+ Преобразование можно применить к элементу любым из двух следующих способов:  
   
--   Если *не* требуется, чтобы преобразование оказывало влияние на макет, то следует использовать свойство <xref:System.Windows.UIElement.RenderTransform%2A> элемента.  
+-   Если сделать *не* требуется преобразование влияет на макет, используйте <xref:System.Windows.UIElement.RenderTransform%2A> свойство элемента.  
   
--   Если необходимо, чтобы преобразование оказывало влияние на макет, то следует использовать свойство <xref:System.Windows.FrameworkElement.LayoutTransform%2A> элемента.  
+-   Преобразование, влияет на макет, используйте <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойство элемента.  
   
- В следующем примере <xref:System.Windows.Media.ScaleTransform> применяется к свойству <xref:System.Windows.UIElement.RenderTransform%2A> кнопки.  При наведении указателя мыши на кнопку свойства <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> у <xref:System.Windows.Media.ScaleTransform> устанавливаются в значение `2`, что приводит к увеличению кнопки.  При перемещении указателя мыши с кнопки свойства <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> устанавливаются в значение `1`, что восстанавливает исходный размер кнопки.  
+ В следующем примере применяется <xref:System.Windows.Media.ScaleTransform> для <xref:System.Windows.UIElement.RenderTransform%2A> свойства кнопки. При перемещении указателя мыши на кнопку <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> свойства <xref:System.Windows.Media.ScaleTransform> присваиваются `2`, что приводит к увеличению кнопки. При перемещении указателя мыши с кнопки <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> присваивается значение `1`, которое вызывает кнопку, чтобы вернуться к исходному размеру.  
   
-## Пример  
- [!code-xml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
+## <a name="example"></a>Пример  
+ [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
   
  [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
  [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
-## См. также  
- <xref:System.Windows.Media.Transform>   
- <xref:System.Windows.Media.ScaleTransform>   
- [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.ScaleTransform>  
+ [Общие сведения о классах Transform](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
  [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

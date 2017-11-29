@@ -1,25 +1,28 @@
 ---
-title: "Получение и изменение данных в ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Извлечение и изменение данных в ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 35de20b1cb35fdcd87a653f1ac202c01d345c317
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Получение и изменение данных в ADO.NET
-Основной функцией любого приложения базы данных является соединение с источником данных и извлечение данных, которые он содержит.  Поставщики данных .NET Framework ADO.NET обеспечивают взаимодействие между приложением и источником данных, позволяя выполнять команды и получать данные с помощью **DataReader** или **DataAdapter**.  Ключевой функцией любого приложения базы данных является возможность обновления данных, хранимых в базе данных.  В ADO.NET обновление данных включает использование **DataAdapter** и <xref:System.Data.DataSet>, а также объектов **Command**. Обновление может включать использование транзакций.  
+# <a name="retrieving-and-modifying-data-in-adonet"></a>Извлечение и изменение данных в ADO.NET
+Основной функцией любого приложения базы данных является соединение с источником данных и извлечение данных, которые он содержит. Поставщики данных .NET Framework для ADO.NET служат в качестве моста между приложением и источником данных, что позволяет выполнять команды и получать данные с помощью **DataReader** или **DataAdapter** . Ключевой функцией любого приложения базы данных является возможность обновления данных, хранимых в базе данных. В ADO.NET обновление данных включает использование **DataAdapter** и <xref:System.Data.DataSet>, и **команда** объектов; может также включать использование транзакций.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  Описывается установка подключения к источнику данных и работа с событиями подключения.  
   
@@ -38,11 +41,11 @@ caps.handback.revision: 5
  [Транзакции и параллелизм](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  Содержит разделы, в которых описывается выполнение локальных транзакций, распределенных транзакций и работа с оптимистичным параллелизмом.  
   
- [Получение значений идентификаторов или автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Содержит пример сопоставления значений, созданных для столбца **identity** таблицы [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] или для поля **Autonumber** таблицы Microsoft Access, со столбцом строки, вставленной в таблицу.  Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
+ [Извлечение идентификации или значений автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ Пример сопоставления значений, созданных для **удостоверение** столбца в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] таблицы или для **Autonumber** в таблицы Microsoft Access, со столбцом вставленной строки в таблице. Рассматривается слияние значений идентификаторов в объекте `DataTable`.  
   
  [Получение двоичных данных](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- Описывается извлечение двоичных данных или крупных структур данных с помощью метода `CommandBehavior`.`SequentialAccess` для изменения поведения по умолчанию объекта `DataReader`.  
+ Описывается извлечение двоичных данных или крупных структур данных с помощью `CommandBehavior`.`SequentialAccess` для изменения поведения по умолчанию `DataReader`.  
   
  [Изменение данных с помощью хранимых процедур](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  Описывается использование входных и выходных параметров хранимой процедуры для вставки строки в базу данных с возвратом нового значения идентификатора.  
@@ -50,7 +53,7 @@ caps.handback.revision: 5
  [Получение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  Описывает получение доступных баз данных или каталогов, таблиц и представлений базы данных, существующих ограничений для таблиц и других сведений о схеме из источника данных.  
   
- [Объекты DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Описывается модель фабрики поставщика и демонстрируется использование базовых классов в пространстве имен `System.Data.Common`.  
   
  [Трассировка данных в ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md)  
@@ -65,9 +68,9 @@ caps.handback.revision: 5
  [Поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Описывает, как создавать приложения с потоком данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] без полной загрузки в память.  
   
-## См. также  
- [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [Объекты DataSet, DataTable и DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

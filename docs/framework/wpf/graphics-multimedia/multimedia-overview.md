@@ -1,125 +1,128 @@
 ---
-title: "Общие сведения о мультимедиа | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "носители"
-  - "мультимедиа"
+title: "Общие сведения о мультимедиа"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multimedia [WPF]
+- media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7097f5bd58573315681c61d0380e58638a4c4fb1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о мультимедиа
-Мультимедийные возможности [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяют интегрировать в приложения звук и видео, чтобы повысить эффективность работы с ними. В этом разделе представлено описание мультимедийных возможностей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="multimedia-overview"></a>Общие сведения о мультимедиа
+Мультимедийные возможности [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяют интегрировать аудио и видео в приложения для расширения возможностей пользователя. В этом разделе представлены мультимедийные возможности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-   
+ 
   
 <a name="mediaapi"></a>   
-## Мультимедийный интерфейс API  
- Классы <xref:System.Windows.Controls.MediaElement> и <xref:System.Windows.Media.MediaPlayer> используются для представления звукового и видеосодержимого.  Управление этими классами может осуществляться интерактивно или с помощью часов.  Эти классы могут использовать элемент управления [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 для воспроизведения мультимедиа. Используемый класс зависит от конкретного сценария.  
+## <a name="media-api"></a>API мультимедиа  
+ <xref:System.Windows.Controls.MediaElement> И <xref:System.Windows.Media.MediaPlayer> классы используются для представления содержимого аудио и видео. Этими классами можно управлять в интерактивном режиме или с помощью часов. Эти классы можно использовать в элементе управления 10 в [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] для воспроизведения мультимедиа. Выбор класса зависит от сценария.  
   
- Элемент управления <xref:System.Windows.Controls.MediaElement> является элементом <xref:System.Windows.UIElement>, который поддерживается [Макет](../../../../docs/framework/wpf/advanced/layout.md) и используется как содержимое многими элементами управления.  Его также можно использовать в разметке [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] или в программном коде. <xref:System.Windows.Media.MediaPlayer>, напротив, предназначен для объектов <xref:System.Windows.Media.Drawing>, и в нем отсутствует поддержка макетов.  Объекты мультимедиа, загруженные с помощью <xref:System.Windows.Media.MediaPlayer>, можно отобразить только при помощи <xref:System.Windows.Media.VideoDrawing> или при непосредственном взаимодействии с <xref:System.Windows.Media.DrawingContext>.  <xref:System.Windows.Media.MediaPlayer> нельзя использовать в языке XAML.  
+ <xref:System.Windows.Controls.MediaElement>— <xref:System.Windows.UIElement> , поддерживаемую [макета](../../../../docs/framework/wpf/advanced/layout.md) и могут быть использованы в качестве содержимого многие элементы управления. Его можно также использовать в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] наряду с программным кодом. <xref:System.Windows.Media.MediaPlayer>, с другой стороны, предназначен для <xref:System.Windows.Media.Drawing> объектов и не предоставляет поддержку макета. Носитель, загруженный с помощью <xref:System.Windows.Media.MediaPlayer> могут быть представлены только с помощью <xref:System.Windows.Media.VideoDrawing> или путем непосредственного взаимодействия с <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer>не может использоваться в XAML.  
   
- Дополнительные сведения о графических объектах и контексте рисования см. разделе [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Дополнительные сведения о графических объектах и контексте рисования см. в разделе [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
 > [!NOTE]
->  При распространении мультимедиа вместе с приложением нельзя использовать файл мультимедиа в качестве ресурса проекта.  Вместо этого в файле проекта необходимо задать для типа мультимедиа значение `Content` и для `CopyToOutputDirectory` значение `PreserveNewest` или `Always`.  
+>  При распространении мультимедиа вместе с приложением файл мультимедиа нельзя использовать как ресурс проекта. Вместо этого в файле проекта необходимо выбрать тип мультимедиа `Content` и задать для `CopyToOutputDirectory` значение `PreserveNewest` или `Always`.  
   
 <a name="mediaplaybackmodes"></a>   
-## Режимы воспроизведения объектов мультимедиа  
+## <a name="media-playback-modes"></a>Режимы воспроизведения мультимедиа  
   
 > [!NOTE]
->  И <xref:System.Windows.Controls.MediaElement>, и <xref:System.Windows.Media.MediaPlayer> содержат похожие члены.  Ссылки в этом разделе относятся к членам класса <xref:System.Windows.Controls.MediaElement>.  Если не указано обратного, то члены, связанные в классе <xref:System.Windows.Controls.MediaElement>, можно также найти и в классе <xref:System.Windows.Media.MediaPlayer>.  
+>  Оба <xref:System.Windows.Controls.MediaElement> и <xref:System.Windows.Media.MediaPlayer> содержат похожие члены. Ссылки в этом разделе, относятся к <xref:System.Windows.Controls.MediaElement> члены класса. Если не указано обратное, элементы, связанные в <xref:System.Windows.Controls.MediaElement> класса также могут находиться в <xref:System.Windows.Media.MediaPlayer> класса.  
   
- Чтобы понять принцип воспроизведения мультимедиа в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], необходимо знание о различных режимах, в которых можно воспроизводить мультимедиа.  И <xref:System.Windows.Controls.MediaElement>, и <xref:System.Windows.Media.MediaPlayer> могут использоваться в двух различных режимах: независимом режиме и режиме часов.  Режим мультимедиа определяется свойством <xref:System.Windows.Controls.MediaElement.Clock%2A>.  Если <xref:System.Windows.Controls.MediaElement.Clock%2A> имеет значение `null`, то объект мультимедиа находится в независимом режиме.  Если <xref:System.Windows.Controls.MediaElement.Clock%2A> имеет значение, отличное от NULL, то объект мультимедиа находится в режиме часов.  По умолчанию объекты мультимедиа находятся в независимом режиме.  
+ Чтобы понимать принципы воспроизведения мультимедиа в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], необходимо знание о различных режимах, в которых может воспроизводиться содержимое мультимедиа. Оба <xref:System.Windows.Controls.MediaElement> и <xref:System.Windows.Media.MediaPlayer> можно использовать в двух различных режимах: независимом режиме и режиме синхронизации. Режим мультимедиа определяется <xref:System.Windows.Controls.MediaElement.Clock%2A> свойство. Когда <xref:System.Windows.Controls.MediaElement.Clock%2A> — `null`, объект мультимедиа находится в независимом режиме. Когда <xref:System.Windows.Controls.MediaElement.Clock%2A> имеет значение null, объект мультимедиа находится в режиме часов. По умолчанию объекты мультимедиа находятся в независимом режиме.  
   
-### Независимый режим  
- В независимом режиме содержимое мультимедиа управляет воспроизведением мультимедиа.  Независимый режим позволяет следующее:  
+### <a name="independent-mode"></a>Независимый режим  
+ В независимом режиме содержимое мультимедиа управляет своим воспроизведением. Независимый режим имеет следующие параметры.  
   
--   Класс <xref:System.Uri> мультимедиа можно указывать непосредственно.  
+-   Мультимедиа <xref:System.Uri> можно указывать непосредственно.  
   
 -   Воспроизведением мультимедиа можно управлять напрямую.  
   
--   Свойства <xref:System.Windows.Controls.MediaElement.Position%2A> и <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> мультимедиа можно изменять.  
+-   Мультимедиа <xref:System.Windows.Controls.MediaElement.Position%2A> и <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> свойства могут быть изменены.  
   
- Мультимедиа загружается присвоением значения свойству <xref:System.Windows.Controls.MediaElement.Source%2A> объекта <xref:System.Windows.Controls.MediaElement> или путем вызова метода <xref:System.Windows.Media.MediaPlayer.Open%2A> объекта <xref:System.Windows.Media.MediaPlayer>.  
+ Носитель присвоением значения <xref:System.Windows.Controls.MediaElement> объекта <xref:System.Windows.Controls.MediaElement.Source%2A> свойства или путем вызова <xref:System.Windows.Media.MediaPlayer> объекта <xref:System.Windows.Media.MediaPlayer.Open%2A> метод.  
   
- Для управления воспроизведением мультимедиа в независимом режиме можно использовать управляющие методы объекта мультимедиа.  Доступные управляющие методы: <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A> <xref:System.Windows.Controls.MediaElement.Close%2A> и <xref:System.Windows.Controls.MediaElement.Stop%2A>.  Для <xref:System.Windows.Controls.MediaElement> интерактивное управление с использованием этих методов доступно только если <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> имеет значение <xref:System.Windows.Controls.MediaState>.  Эти методы недоступны, если объект мультимедиа находится в режиме часов.  
+ Для управления воспроизведением мультимедиа в независимом режиме можно использовать управляющие методы объекта мультимедиа. Доступные методы управления <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, и <xref:System.Windows.Controls.MediaElement.Stop%2A>. Для <xref:System.Windows.Controls.MediaElement>, с помощью этих методов интерактивный элемент управления доступен только тогда, когда <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> равно <xref:System.Windows.Controls.MediaState.Manual>. Эти методы недоступны, если объект мультимедиа находится в режиме часов.  
   
- Пример независимого режима см. в разделе [Управление элементом MediaElement \(воспроизведение, пауза, остановка, громкость и скорость\)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md).  
+ Пример использования независимого режима см. в разделе [Управление элементом MediaElement (воспроизведение, пауза, стоп, громкость и скорость)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md).  
   
-### Режим часов  
- В режиме часов <xref:System.Windows.Media.MediaTimeline> управляет воспроизведением мультимедиа.  Режим часов имеет следующие характеристики:  
+### <a name="clock-mode"></a>Режим часов  
+ В режиме часов <xref:System.Windows.Media.MediaTimeline> дисков воспроизведения мультимедиа. Режим часов имеет следующие характеристики.  
   
--   Класс <xref:System.Uri> мультимедиа задается неявно с помощью <xref:System.Windows.Media.MediaTimeline>.  
+-   Мультимедиа <xref:System.Uri> задан косвенно через <xref:System.Windows.Media.MediaTimeline>.  
   
--   Воспроизведение мультимедиа может управляться часами.  Управляющие методы объекта мультимедиа использовать нельзя.  
+-   Воспроизведением мультимедиа можно управлять с помощью часов. Нельзя использовать управляющие методы объекта мультимедиа.  
   
--   Объект мультимедиа загружается присвоением значения свойству <xref:System.Windows.Media.MediaTimeline.Source%2A> объекта <xref:System.Windows.Media.MediaTimeline>, созданием часов из временной шкалы и назначением часов объекту мультимедиа.  Объект мультимедиа также загружается таким образом, если <xref:System.Windows.Media.MediaTimeline> в <xref:System.Windows.Media.Animation.Storyboard> обращается в <xref:System.Windows.Controls.MediaElement>.  
+-   Носитель, задав <xref:System.Windows.Media.MediaTimeline> объекта <xref:System.Windows.Media.MediaTimeline.Source%2A> свойство созданием часов из временной шкалы и назначением часов объекту мультимедиа. Также носитель таким образом при <xref:System.Windows.Media.MediaTimeline> внутри <xref:System.Windows.Media.Animation.Storyboard> цели <xref:System.Windows.Controls.MediaElement>.  
   
- Для управления воспроизведением мультимедиа в режиме часов должны использоваться управляющие методы класса <xref:System.Windows.Media.Animation.ClockController>.  <xref:System.Windows.Media.Animation.ClockController> берется из свойства <xref:System.Windows.Media.Animation.ClockController> элемента <xref:System.Windows.Media.MediaClock>.  При попытке использовать управляющие методы объектов <xref:System.Windows.Controls.MediaElement> или <xref:System.Windows.Media.MediaPlayer> в режиме часов будет вызвано <xref:System.InvalidOperationException>.  
+ Для управления воспроизведением мультимедиа в режиме часов <xref:System.Windows.Media.Animation.ClockController> необходимо использовать методы управления. Объект <xref:System.Windows.Media.Animation.ClockController> берется из <xref:System.Windows.Media.Animation.ClockController> свойство <xref:System.Windows.Media.MediaClock>. При попытке использовать методы управления либо <xref:System.Windows.Controls.MediaElement> или <xref:System.Windows.Media.MediaPlayer> объекта в режиме часов <xref:System.InvalidOperationException> будет создано.  
   
- Дополнительные сведения о часах и временных шкалах см. в разделе общих сведений [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Дополнительные сведения о часах и временных шкалах см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
- Пример режима часов см. в разделе [Управление элементом MediaElement с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md).  
+ Пример использования режима часов см. в разделе [Управление элементом MediaElement с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md).  
   
 <a name="mediaelement"></a>   
-## Класс MediaElement  
- Добавить мультимедиа в приложение просто: нужно добавить элемент управления <xref:System.Windows.Controls.MediaElement> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] приложения и предоставить <xref:System.Uri> объекту мультимедиа, который требуется включить.  Все типы объектов мультимедиа, поддерживаемые программой [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10, поддерживаются и в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В следующем примере показано простое использование элемента управления <xref:System.Windows.Controls.MediaElement> в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+## <a name="mediaelement-class"></a>Класс MediaElement  
+ Добавление приложения мультимедиа простым добавлением <xref:System.Windows.Controls.MediaElement> управления [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] приложения и предоставляя <xref:System.Uri> на носитель, которые требуется включить. Все типы мультимедиа, поддерживаемые [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10, также поддерживаются в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. В следующем примере показано простое использование элемента <xref:System.Windows.Controls.MediaElement> в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
- В этом примере объект мультимедиа воспроизводится автоматически по мере его загрузки.  После завершения воспроизведения мультимедиа закрывается и все ресурсы, используемые мультимедиа, освобождаются \(включая видеопамять\).  Это поведение по умолчанию для объекта <xref:System.Windows.Controls.MediaElement> и оно управляется свойствами <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> и <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>.  
+ В этом примере содержимое мультимедиа воспроизводится автоматически по мере его загрузки. После завершения воспроизведения содержимое мультимедиа закрывается, а все ресурсы мультимедиа освобождаются (включая видеопамять). Это поведение по умолчанию <xref:System.Windows.Controls.MediaElement> объекта и определяется <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> и <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> свойства.  
   
-### Управление MediaElement  
- Свойства <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> и <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> управляют поведением <xref:System.Windows.Controls.MediaElement>, когда <xref:System.Windows.FrameworkElement.IsLoaded%2A> имеет значение `true` или `false` соответственно.  Свойства <xref:System.Windows.Controls.MediaState> устанавливаются, чтобы повлиять на поведение воспроизведения объектов мультимедиа.  Например, <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> по умолчанию имеет значение <xref:System.Windows.Controls.MediaState>, а <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> по умолчанию имеет значение <xref:System.Windows.Controls.MediaState>.  Это означает, что после загрузки <xref:System.Windows.Controls.MediaElement> и завершения [предварительной пробы](GTMT) начинается воспроизведение мультимедиа.  После завершения воспроизведения мультимедиа закрывается и освобождаются все ресурсы, используемые мультимедиа.  
+### <a name="controlling-a-mediaelement"></a>Управление объектом MediaElement  
+ <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> И <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> свойства управляют поведением <xref:System.Windows.Controls.MediaElement> при <xref:System.Windows.FrameworkElement.IsLoaded%2A> — `true` или `false`соответственно. <xref:System.Windows.Controls.MediaState> Свойства устанавливаются для влияния на поведение воспроизведения мультимедиа. Например, значение по умолчанию <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> — <xref:System.Windows.Controls.MediaState.Play> и значение по умолчанию <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> — <xref:System.Windows.Controls.MediaState.Close>. Это означает, что как только <xref:System.Windows.Controls.MediaElement> загружена и выполнена предварительной пробы, начинается воспроизведение мультимедиа. После завершения воспроизведения содержимое мультимедиа закрывается и освобождаются все ресурсы мультимедиа.  
   
- Свойства <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> и <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> не являются единственным способом управления воспроизведением мультимедиа.  В режиме часов часы могут управлять объектом <xref:System.Windows.Controls.MediaElement>, а интерактивные управляющие методы получают управление, если свойство <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> имеет значение <xref:System.Windows.Controls.MediaState>.  <xref:System.Windows.Controls.MediaElement> обрабатывает конкуренцию за управление, вычисляя следующие приоритеты.  
+ <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> И <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> свойства не являются единственным способом управления воспроизведением мультимедиа. В режиме часов часы могут управлять <xref:System.Windows.Controls.MediaElement> и интерактивные управляющие методы получают управление, если <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> — <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement>обрабатывает конкуренцию за управление, вычисляя следующие приоритеты.  
   
-1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>.  В случае выгрузки мультимедиа.  Гарантирует, что все ресурсы мультимедиа освобождаются по умолчанию, даже если <xref:System.Windows.Media.MediaClock> сопоставлен с <xref:System.Windows.Controls.MediaElement>.  
+1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. В случае, когда содержимое мультимедиа выгружается. Это гарантирует, что все ресурсы мультимедиа освобождаются по умолчанию, даже если <xref:System.Windows.Media.MediaClock> связан с <xref:System.Windows.Controls.MediaElement>.  
   
-2.  <xref:System.Windows.Media.MediaClock>.  В случае, когда мультимедиа имеет <xref:System.Windows.Controls.MediaElement.Clock%2A>.  Если мультимедиа выгружен, то <xref:System.Windows.Media.MediaClock> будет иметь эффект, пока <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> имеет значение <xref:System.Windows.Controls.MediaState>.  Режим часов всегда переопределяет загруженное поведение <xref:System.Windows.Controls.MediaElement>.  
+2.  <xref:System.Windows.Media.MediaClock>. В случае, когда мультимедиа имеет <xref:System.Windows.Controls.MediaElement.Clock%2A>. Если мультимедиа выгружен, <xref:System.Windows.Media.MediaClock> вступят в силу при условии, что <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> — <xref:System.Windows.Controls.MediaState.Manual>. Режим часов всегда переопределяет загруженное поведение <xref:System.Windows.Controls.MediaElement>.  
   
-3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>.  В случае загрузки мультимедиа.  
+3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. В случае, когда содержимое мультимедиа загружается.  
   
-4.  Интерактивные управляющие методы.  В случае, если <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> имеет значение <xref:System.Windows.Controls.MediaState>.  Доступные управляющие методы: <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A> <xref:System.Windows.Controls.MediaElement.Close%2A> и <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
+4.  Интерактивные управляющие методы. В случае, если <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> — <xref:System.Windows.Controls.MediaState.Manual>. Доступные методы управления <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, и <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
   
-### Отображение свойств MediaElement  
- Для отображения <xref:System.Windows.Controls.MediaElement> он должен иметь содержимое для отображения и значения его свойств <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> будут равными нулю до тех пор, пока не будет загружено содержимое.  Для содержимого, содержащего только звук, эти свойства всегда равны нулю.  Для видео после вызова события <xref:System.Windows.Controls.MediaElement.MediaOpened> свойства <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> сообщат размер загруженного мультимедиа.  Это означает, что до тех пор, пока объект мультимедиа не будет загружен, объект <xref:System.Windows.Controls.MediaElement> не повлияет на [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], так как не потребует физического пространства в нем, если только не заданы свойства <xref:System.Windows.FrameworkElement.Width%2A> или <xref:System.Windows.FrameworkElement.Height%2A>.  
+### <a name="displaying-a-mediaelement"></a>Отображение объекта MediaElement  
+ Для отображения <xref:System.Windows.Controls.MediaElement> он должен иметь содержимое, преобразовываемое и будет иметь его <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> свойства установлено в ноль, пока загрузится содержимое. Для содержимого, в составе которого есть только звук, эти свойства всегда имеют нулевое значение. Для видео после <xref:System.Windows.Controls.MediaElement.MediaOpened> события <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> сообщат размер загруженного мультимедиа. Это означает, что пока носитель, <xref:System.Windows.Controls.MediaElement> не займет физического пространства в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Если <xref:System.Windows.FrameworkElement.Width%2A> или <xref:System.Windows.FrameworkElement.Height%2A> свойств.  
   
- Присвоение значения и свойству <xref:System.Windows.FrameworkElement.Width%2A>, и свойству <xref:System.Windows.FrameworkElement.Height%2A> приведет к растягиванию мультимедиа для заполнения области, предоставленной для <xref:System.Windows.Controls.MediaElement>.  Чтобы сохранить исходные [пропорции](GTMT) мультимедиа, одно из свойств <xref:System.Windows.FrameworkElement.Width%2A> или <xref:System.Windows.FrameworkElement.Height%2A> должно быть задано, но не оба одновременно.  Присвоение значения и свойству <xref:System.Windows.FrameworkElement.Width%2A>, и свойству <xref:System.Windows.FrameworkElement.Height%2A> приведет к отображению мультимедиа в элементе фиксированного размера, а это может быть нежелательным.  
+ Установка <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства приведет к носитель растягиваются для заполнения области, предоставленной для <xref:System.Windows.Controls.MediaElement>. Для сохранения носителя исходные пропорции, либо <xref:System.Windows.FrameworkElement.Width%2A> или <xref:System.Windows.FrameworkElement.Height%2A> свойство должно иметь значение, но не оба. Установка <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства приведет к отображению мультимедиа в элементе фиксированного размера, который может быть нежелательно.  
   
- Чтобы избежать элемента фиксированного размера, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может [сделать предварительную пробу](GTMT) мультимедиа.  Это делается путем задания для <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> значения <xref:System.Windows.Controls.MediaState> или <xref:System.Windows.Controls.MediaState>.  В состоянии <xref:System.Windows.Controls.MediaState> мультимедиа делает предварительную пробу и показывает первый кадр.  В состоянии <xref:System.Windows.Controls.MediaState> мультимедиа [сделает предварительную пробу](GTMT) и начнет воспроизведение.  
+ Чтобы избежать отображения элемента фиксированного размера, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может сделать предварительную пробу содержимого мультимедиа. Это можно сделать, настроив <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> либо <xref:System.Windows.Controls.MediaState.Play> или <xref:System.Windows.Controls.MediaState.Pause>. В <xref:System.Windows.Controls.MediaState.Pause> состояние носителя будет пробу и передачей первого кадра. В <xref:System.Windows.Controls.MediaState.Play> состоянии, будет Проба и начнет воспроизведение мультимедиа.  
   
 <a name="mediaplayer"></a>   
-## Класс MediaPlayer  
- Класс <xref:System.Windows.Controls.MediaElement> является элементом структуры, а класс <xref:System.Windows.Media.MediaPlayer> предназначен для использования в объектах <xref:System.Windows.Media.Drawing>.  Рисованные объекты используются, когда можно пожертвовать возможностями уровня среды ради улучшения производительности или если требуются функции <xref:System.Windows.Freezable>.  <xref:System.Windows.Media.MediaPlayer> позволяет воспользоваться преимуществами этих функций, предоставляя при этом мультимедийное содержимое для приложений.  Как и <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> может использоваться в независимом режиме или режиме часов, но он не располагает состояниями "выгружен" и "загружен", которые есть у объекта <xref:System.Windows.Controls.MediaElement>.  Это уменьшает сложность управления воспроизведением <xref:System.Windows.Media.MediaPlayer>.  
+## <a name="mediaplayer-class"></a>Класс MediaPlayer  
+ При этом <xref:System.Windows.Controls.MediaElement> класса является элементом структуры <xref:System.Windows.Media.MediaPlayer> класс предназначен для использования в <xref:System.Windows.Media.Drawing> объектов. Графические объекты используются, когда можно пожертвовать возможностями уровня среды, чтобы повысить производительность, а также при необходимости <xref:System.Windows.Freezable> функции. <xref:System.Windows.Media.MediaPlayer>позволяет воспользоваться преимуществами этих функций, предоставляя мультимедийное содержимое для приложений. Как <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> может использоваться в независимом или режиме часов, но может не иметь <xref:System.Windows.Controls.MediaElement> выгрузки и загрузки состояния объекта. Это снижает сложность управления воспроизведением <xref:System.Windows.Media.MediaPlayer>.  
   
-### Управление MediaPlayer  
- Поскольку <xref:System.Windows.Media.MediaPlayer> не имеет определенного состояния, существуют только два способа управления воспроизведением мультимедиа.  
+### <a name="controlling-mediaplayer"></a>Управление объектом MediaPlayer  
+ Поскольку <xref:System.Windows.Media.MediaPlayer> — без сохранения состояния, существуют только два способа управления воспроизведением мультимедиа.  
   
-1.  Интерактивные управляющие методы.  Доступны в независимом режиме \(свойство `null` <xref:System.Windows.Media.MediaPlayer.Clock%2A>\).  
+1.  Интерактивные управляющие методы. На месте в независимом режиме (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> свойство).  
   
-2.  <xref:System.Windows.Media.MediaClock>.  В случае, когда мультимедиа имеет <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+2.  <xref:System.Windows.Media.MediaClock>. В случае, когда мультимедиа имеет <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
-### Отображение MediaPlayer  
- С технической точки зрения <xref:System.Windows.Media.MediaPlayer> не может быть отображен, так как он не имеет физического представления.  Тем не менее, его можно использовать для отображения мультимедиа в <xref:System.Windows.Media.Drawing> с помощью класса <xref:System.Windows.Media.VideoDrawing>.  В следующем примере демонстрируется использование <xref:System.Windows.Media.VideoDrawing> для отображения мультимедиа.  
+### <a name="displaying-a-mediaplayer"></a>Отображение объекта MediaPlayer  
+ С технической точки зрения <xref:System.Windows.Media.MediaPlayer> невозможно, так как он не имеет физического представления. Тем не менее, он может использоваться для отображения мультимедиа в <xref:System.Windows.Media.Drawing> с помощью <xref:System.Windows.Media.VideoDrawing> класса. В следующем примере показано использование <xref:System.Windows.Media.VideoDrawing> для отображения мультимедиа.  
   
  [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Дополнительные сведения об объектах <xref:System.Windows.Media.Drawing> см. в разделе общих сведений [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ В разделе [Общие сведения об объектах Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md) Дополнительные сведения о <xref:System.Windows.Media.Drawing> объектов.  
   
-## См. также  
- <xref:System.Windows.Media.DrawingGroup>   
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.DrawingGroup>  
+ [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)

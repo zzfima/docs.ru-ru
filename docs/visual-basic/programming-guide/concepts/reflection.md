@@ -1,34 +1,26 @@
 ---
-title: "Отражение (Visual Basic) | Документы Microsoft"
+title: "Отражение (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ae042933575849e105d7b681634a61319c1d6ee
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b7b94e25d2ca9563cd50f454c94092f18e295863
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-visual-basic"></a>Отражение (Visual Basic)
-Отражение предоставляет объекты (типа <xref:System.Type>), описывающие сборки, модули и типы.</xref:System.Type> Можно использовать отражение для динамически создать экземпляр типа, привязки типа к существующему объекту или получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение позволяет получить к ним доступ. Дополнительные сведения см. в разделе [атрибуты](https://msdn.microsoft.com/library/5x6cd29c).  
+Механизм отражения позволяет получать объекты (типа <xref:System.Type>), которые описывают сборки, модули и типы. Отражение можно использовать для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам. Если в коде используются атрибуты, отражение обеспечивает доступ к ним. Дополнительные сведения см. в разделе [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c).  
   
- Ниже приведен простой пример отражения с помощью статического метода `GetType` - наследуемый всеми типами из `Object` базового класса — для получения типа переменной:  
+ Вот простой пример отражения, в котором для получения типа переменной используется статический метод `GetType`, наследуемый всеми типами от базового класса `Object`.  
   
 ```vb  
 ' Using GetType to obtain type information:  
@@ -37,11 +29,11 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- Выводится следующий результат:  
+ Результат.  
   
  `System.Int32`  
   
- В следующем примере отражение используется для получения полного имени загруженной сборки.  
+ В этом примере отражение используется для получения полного имени загруженной сборки.  
   
 ```vb  
 ' Using Reflection to get information from an Assembly:  
@@ -49,34 +41,34 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- Выводится следующий результат:  
+ Результат.  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 ## <a name="reflection-overview"></a>Общие сведения об отражении  
- Отражение полезно в следующих ситуациях:  
+ Отражение удобно использовать в следующих ситуациях:  
   
--   При наличии доступа к атрибутам в метаданных программы. Дополнительные сведения см. в разделе [извлечение информации, сохраненной в атрибуте](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c).  
+-   При необходимости доступа к атрибутам в метаданных программы. Дополнительные сведения см. в разделе [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
   
 -   Для проверки и создания экземпляров типов в сборке.  
   
--   Для создания новых типов во время выполнения. Используйте классы <xref:System.Reflection.Emit>.</xref:System.Reflection.Emit>  
+-   Для создания типов во время выполнения. Используйте классы в <xref:System.Reflection.Emit>.  
   
--   Для выполнения позднего связывания, доступ к методам в типах, созданных во время выполнения. См. в разделе [динамическая загрузка и использование типов](http://msdn.microsoft.com/library/db985bec-5942-40ec-b13a-771ae98623dc).  
+-   Для выполнения позднего связывания, которое обеспечивает доступ к методам в типах, созданных во время выполнения. См. раздел [Динамическая загрузка и использование типов](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
--   [Отражение](http://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775)  
+-   [Отражение](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [Просмотр сведений о типах](http://msdn.microsoft.com/library/7e7303a9-4064-4738-b4e7-b75974ed70d2)  
+-   [Просмотр сведений о типах](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [Отражение и универсальные типы](http://msdn.microsoft.com/library/f7180fc5-dd41-42d4-8a8e-1b34288e06de)  
+-   [Отражение и универсальные типы](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit></xref:System.Reflection.Emit>  
+-   <xref:System.Reflection.Emit>  
   
--   [Извлечение информации, сохраненной в атрибуте](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)  
+-   [Извлечение информации, сохраненной в атрибуте](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)   
+ [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)  
  [Сборки в среде CLR](https://msdn.microsoft.com/library/k3677y81)

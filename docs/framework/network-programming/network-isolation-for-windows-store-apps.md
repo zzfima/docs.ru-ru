@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Сетевая изоляция для приложений Магазина Windows
 Классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http> и <xref:System.Net.Http.Headers> можно использовать для разработки классических приложений или приложений для Магазина Windows. При использовании в приложениях для Магазина Windows к классам из этих пространств имен применяется сетевая изоляция, которая является одной из составляющих модели обеспечения безопасности приложений в [!INCLUDE[win8](../../../includes/win8-md.md)]. Чтобы обеспечить доступ к сети, в манифесте приложения для Магазина Windows необходимо включить соответствующие сетевые возможности.  
@@ -41,10 +35,9 @@ ms.lasthandoff: 08/21/2017
  Дополнительные сведения о средствах настройки сетевых возможностей и изоляции, которые используются для устранения неполадок с сетевой изоляцией, см. в разделе [Практическое руководство. Настройка возможностей сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265) в документации разработчика [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Соединение с веб-службой](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [Контрольный список для настройки сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [Краткое руководство. Подключение с помощью HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [Как использовать обработчики HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [Как защитить подключения HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [Подключение к веб-службы](http://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Рекомендации и контрольный список для сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Краткое руководство: Подключение с помощью HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Как использовать обработчики HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Как защитить подключения HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [Пример HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
-

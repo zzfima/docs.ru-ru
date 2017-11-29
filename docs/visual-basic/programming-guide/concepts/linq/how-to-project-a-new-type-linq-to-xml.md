@@ -1,34 +1,30 @@
 ---
-title: "Практическое руководство: создать проекцию нового типа (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: проецирование нового типа (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a7cbbce130aa78a7e14ffd61a1dcd76b969e1b35
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 73b677e45be1d457d54de01331c93f60348e6bfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Практическое руководство: создать проекцию нового типа (LINQ to XML) (Visual Basic)
-Другие примеры в этом разделе показаны запросы, возвращающие результаты в виде <xref:System.Collections.Generic.IEnumerable%601>из <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601>из `string`, и <xref:System.Collections.Generic.IEnumerable%601>из `int`.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> Это наиболее распространенные типы результатов, но подходят не для всех сценариев. Во многих случаях требуется запросы, возвращающие <xref:System.Collections.Generic.IEnumerable%601>другого типа.</xref:System.Collections.Generic.IEnumerable%601>  
+# <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Как: проецирование нового типа (LINQ to XML) (Visual Basic)
+В других примерах данного раздела показаны запросы, возвращающие результаты в виде значений <xref:System.Collections.Generic.IEnumerable%601> типа <xref:System.Xml.Linq.XElement>, значений <xref:System.Collections.Generic.IEnumerable%601> типа `string` и значений <xref:System.Collections.Generic.IEnumerable%601> типа `int`. Это наиболее распространенные типы результатов, но подходят не для всех сценариев. Во многих случаях требуется, чтобы запросы возвращали <xref:System.Collections.Generic.IEnumerable%601> какого-то другого типа.  
   
 ## <a name="example"></a>Пример  
  В данном примере показано, как создавать экземпляры объектов в предложении `Select`. Сначала в коде определяется новый класс с помощью конструктора, а затем модифицируется инструкция `Select`, чтобы это выражение представляло новый экземпляр нового класса.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Public Class NameQty  
@@ -56,7 +52,7 @@ Public Class Program
 End Class  
 ```  
   
- В этом примере используется `M:System.Xml.Linq.XElement.Element` метод, который был представлен в разделе [Практическое руководство: извлечение одного дочернего элемента (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). В нем также используется приведение для получения значений элементов, возвращаемых методом `M:System.Xml.Linq.XElement.Element`.  
+ В этом примере используется `M:System.Xml.Linq.XElement.Element` метода, которая была представлена в разделе [как: извлечение одного дочернего элемента (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md). В нем также используется приведение для получения значений элементов, возвращаемых методом `M:System.Xml.Linq.XElement.Element`.  
   
  В этом примере выводятся следующие данные:  
   

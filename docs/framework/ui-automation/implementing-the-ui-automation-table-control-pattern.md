@@ -1,32 +1,35 @@
 ---
-title: "Реализация шаблона элемента управления таблицы автоматизации пользовательского интерфейса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Шаблона элемента управления таблицы автоматизации пользовательского интерфейса"
-  - "шаблоны элементов управления, таблицы"
-  - "TableControl - шаблон"
+title: "Реализация шаблона элемента управления таблицы автоматизации пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, Table control pattern
+- control patterns, Table
+- TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 4a1fbe175abf07eaccfd177c6e32f5515e88c4ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Реализация шаблона элемента управления таблицы автоматизации пользовательского интерфейса
+# <a name="implementing-the-ui-automation-table-control-pattern"></a>Реализация шаблона элемента управления таблицы автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, которые хотят использовать управляемый [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] классы, определенные в <xref:System.Windows.Automation> пространства имен. Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], в разделе [API автоматизации Windows: автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- В этом разделе рассматриваются рекомендации и правила для реализации <xref:System.Windows.Automation.Provider.ITableProvider>, включая сведения о свойствах, методы и события. Ссылки на дополнительные материалы перечислены в конце раздела.  
+ В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.ITableProvider>, включая сведения о свойствах, методах и событиях. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- <xref:System.Windows.Automation.TablePattern> шаблон элемента управления используется для поддержки элементов управления, которые действуют как контейнеры для коллекции дочерних элементов. Дочерние элементы данного элемента должны реализовать <xref:System.Windows.Automation.Provider.ITableItemProvider> и быть организованы в двумерную логическую систему координат, к которой можно обращаться по строкам и столбцам. Этот шаблон элемента управления является аналогом <xref:System.Windows.Automation.Provider.IgridProvider>, с той разницей, что любой элемент управления, реализующий <xref:System.Windows.Automation.Provider.ITableProvider> также должен предоставлять отношение заголовка столбца и строки для каждого дочернего элемента. Примеры элементов управления, реализующие данный шаблон элемента управления в разделе [управления шаблон сопоставления для клиентов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.TablePattern> Шаблон элемента управления используется для поддержки элементов управления, которые действуют как контейнеры для коллекции дочерних элементов. Дочерние элементы данного элемента должны реализовывать <xref:System.Windows.Automation.Provider.ITableItemProvider> и быть организованы в двумерной логической системе координат, к которой можно обращаться по строкам и столбцам. Этот шаблон элемента управления является аналогом <xref:System.Windows.Automation.Provider.IGridProvider>, с той разницей, что любой элемент управления, реализующий <xref:System.Windows.Automation.Provider.ITableProvider> также должен предоставлять отношение заголовка столбца и строки для каждого дочернего элемента. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -39,14 +42,14 @@ caps.handback.revision: 18
 -   Заголовки столбцов и строк могут включать и основной заголовок, и любые поддерживаемые заголовки.  
   
 > [!NOTE]
->  Эта концепция становится понятной в [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] таблицы, в которой пользователь определил столбец «First name». Теперь этот столбец имеет два заголовка: заголовок "Имя", определенный пользователем, и алфавитно-цифровое обозначение этого столбца, назначенное приложением.  
+>  Эта концепция становится понятной в [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] электронную таблицу, которой пользователь определил столбец «Имя». Теперь этот столбец имеет два заголовка: заголовок "Имя", определенный пользователем, и алфавитно-цифровое обозначение этого столбца, назначенное приложением.  
   
--   В разделе [реализация шаблона элемента управления сеткой автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) для функциональных возможностях связанной сетки.  
+-   В разделе [реализация шаблона элемента управления сеткой автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) о связанной функциональности сетки.  
   
- ![Таблица со сложными элементами верхнего колонтитула.](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.png "UIA_TablePattern_Complex_Column_Headers")  
+ ![Таблица со сложными элементами верхнего колонтитула. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Пример таблицы со сложными заголовками столбцов  
   
- ![Таблица с неоднозначным свойством roworcolumnmajor.](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.png "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Таблица с неоднозначным свойством RowOrColumnMajor. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Пример таблицы с неоднозначным свойством RowOrColumnMajor.  
   
 <a name="Required_Members_for_ITableProvider"></a>   
@@ -66,10 +69,10 @@ caps.handback.revision: 18
  Этот шаблон элемента управления не имеет связанных исключений.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о шаблонах элементов управления автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [Шаблоны модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Реализация шаблона элемента управления TableItem автоматизированного пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)   
- [Реализация шаблона элемента управления сеткой автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)   
- [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
+ [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [Реализация шаблона элемента управления TableItem автоматизированного пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)  
+ [Реализация шаблона элемента управления сеткой автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)  
+ [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
  [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

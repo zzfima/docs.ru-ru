@@ -1,35 +1,36 @@
 ---
-title: "Элемент управления ToolStripStatusLabel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "строки состояния"
-  - "ToolStrip - элемент управления [Windows Forms], ToolStripStatusLabel"
-  - "ToolStripStatusLabel - элемент управления [Windows Forms]"
+title: "Элемент управления ToolStripStatusLabel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripStatusLabel control [Windows Forms]
+- status bars
+- ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: efdde6367d54d4cdc8d9992d2b3f44a366227069
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент управления ToolStripStatusLabel
-<xref:System.Windows.Forms.ToolStripStatusLabel> предоставляет в <xref:System.Windows.Forms.StatusStrip> область отображения для текста и изображений.  
+# <a name="toolstripstatuslabel-control"></a>Элемент управления ToolStripStatusLabel
+<xref:System.Windows.Forms.ToolStripStatusLabel> Содержит область отображения <xref:System.Windows.Forms.StatusStrip> для текста и изображений.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления ToolStripStatusLabel](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control-overview.md)  
- Содержит ссылки на разделы с описанием цели и основных понятий элемента управления Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel>.  
+ Приводятся разделы с описанием назначения элемента управления Windows Forms <xref:System.Windows.Forms.ToolStripStatusLabel> и основных понятий, связанных с ним.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.ToolStripStatusLabel>.  
   
@@ -37,7 +38,7 @@ caps.handback.revision: 4
  Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.StatusStrip>.  
   
  <xref:System.Windows.Forms.ToolStripProgressBar>  
- Справочная документация по элементу управления <xref:System.Windows.Forms.ToolStripProgressBar>.  
+ Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.ToolStripProgressBar>.  
   
-## См. также  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

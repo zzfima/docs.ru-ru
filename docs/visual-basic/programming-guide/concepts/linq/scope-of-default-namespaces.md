@@ -1,29 +1,25 @@
 ---
-title: "Область действия пространств имен по умолчанию в Visual Basic | Документы Microsoft"
+title: "Область действия пространств имен по умолчанию в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c0152250cf7cfb4b6cadbcaab60eaad8ec2fb5ee
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3aaf5395f1216b0cb56f2d1f003e42ed30790012
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Область действия пространств имен по умолчанию в Visual Basic
-Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов. Если имеется XML, который находится в пространстве имен по умолчанию, то необходимо объявить <xref:System.Xml.Linq.XNamespace>переменной и использовать ее в сочетании с локальным именем для получения полного имени для использования в запросе.</xref:System.Xml.Linq.XNamespace>  
+Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов. Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.  
   
  Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.  
   

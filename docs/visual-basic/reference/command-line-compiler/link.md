@@ -1,14 +1,11 @@
 ---
-title: "/ LINK (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: /link (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - l compiler option [Visual Basic]
 - EmbedInteropTypes
@@ -19,31 +16,17 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e98c855f0a0185e9d1b6682df9fc734e9f1f07bc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: effaeae48bdeb1dfd0f8cda31fedf2436e7deaca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="link-visual-basic"></a>/link (Visual Basic)
-Указывает компилятору сделать доступными для проекта, компилируемого в текущий момент сведения о типах COM в указанных сборках.  
+Дает компилятору указание сделать всю информацию о типах COM из указанных сборок доступной компилируемому проекту.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,63 +40,63 @@ ms.lasthandoff: 03/13/2017
   
 |Термин|Определение|  
 |---|---|  
-|`fileList`|Обязательный. Разделенный запятыми список имен файлов сборки. Если имя файла содержит пробел, заключите имя в кавычки.|  
+|`fileList`|Обязательный. Список всех имен файлов сборки, разделенных запятыми. Если имя файла содержит пробел, заключите его в кавычки.|  
   
 ## <a name="remarks"></a>Примечания  
- `/link` Позволяет развернуть приложение, содержащее внедренные сведения о типе. Затем приложение может использовать типы в сборке среды выполнения, реализующие внедренные сведения о типах, не ссылаясь на сборку среды выполнения. Если опубликовано несколько версий сборки среды выполнения, приложение, содержащее внедренные сведения о типах может работать с различными версиями без перекомпиляции. Например, в разделе [Пошаговое руководство: внедрение типов из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+ Параметр `/link` позволяет развернуть приложение, содержащее внедренные сведения о типе. После этого приложение может использовать типы из сборки среды выполнения, реализующей информацию о внедренных типах, без ссылки на эту сборку. Если опубликовано несколько версий сборки среды выполнения, приложение, содержащее сведения о внедренных типах, может работать с различными версиями без перекомпиляции. Пример см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
- С помощью `/link` параметр особенно полезен при работе с COM-взаимодействия. Типы COM можно внедрять, чтобы приложение больше не требуется основной сборки взаимодействия (PIA) на конечном компьютере. `/link` Предписывает компилятору внедрить сведения о типах COM из указанной сборки взаимодействия в полученный скомпилированный код. Тип модели COM определяется значение CLSID (идентификатор GUID). В результате приложение может выполняться на конечном компьютере, на который установлен те же типы COM с теми же значениями CLSID. Приложения, автоматизирующие Microsoft Office — хороший пример. Так приложений, таких как Office обычно одно и то же значение CLSID в различных версиях, приложение может использовать ссылочных типов COM, как долго, как .NET Framework 4 или более поздней версии установлен на целевом компьютере и приложение использует методы, свойства или события, включенные в ссылочные типы COM.  
+ Параметр `/link` особенно полезен при работе с COM-взаимодействием. COM-типы внедряются для того, чтобы приложению не требовалась основная сборка взаимодействия (PIA) на целевом компьютере. Параметр `/link` предписывает компилятору внедрить сведения о COM-типах из указанной сборки взаимодействия в полученный скомпилированный код. COM-тип определяется значением CLSID (GUID). Это позволяет запускать приложение на целевом компьютере, где установлены те же COM-типы с такими же значениями CLSID. В качестве примера можно привести приложения, автоматизирующие Microsoft Office. Поскольку в приложениях типа Office значение CLSID обычно не зависит от версии, ваше приложение сможет использовать COM-типы по ссылке до тех пора, пока на целевом компьютере установлена платформа .NET Framework 4 или более поздней версии, а приложение работает с методами, свойствами или событиями, включенными в эти COM-типы.  
   
- `/link` Позволяет внедрять только интерфейсы, структуры и делегаты. Внедрение COM-классов не поддерживается.  
+ Параметр `/link` внедряет только интерфейсы, структуры и делегаты. Внедрение COM-классов не поддерживается.  
   
 > [!NOTE]
->  При создании экземпляра внедренного типа COM в коде, необходимо создать экземпляр, используя соответствующий интерфейс. Попытка создать экземпляр внедренного типа COM с помощью компонентного класса приводит к ошибке.  
+>  Если в коде создается экземпляр внедренного COM-типа, его следует создавать, используя соответствующий интерфейс. При попытке создать экземпляр внедренного COM-типа с помощью компонентного класса возникнет ошибка.  
   
- Чтобы задать `/link` параметр в [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], добавьте ссылку на сборку и задайте `Embed Interop Types` свойства **true**. Значение по умолчанию для `Embed Interop Types` свойство **false**.  
+ Чтобы задать параметр `/link` в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], добавьте ссылку на сборку и задайте для свойства `Embed Interop Types` значение **true**. По умолчанию для свойства `Embed Interop Types` задается значение **false**.  
   
- Если ссылка на сборку COM (сборку A) который сам ссылается на другую сборку COM (сборку Б), необходимо также ссылку на сборку Б, если выполняется любое из следующих действий:  
+ Ссылаясь на COM-сборку (сборку A), которая, в свою очередь, ссылается на другую COM-сборку (сборку Б), необходимо также добавить ссылку на сборку Б, если выполняется любое из следующих условий:  
   
--   Из сборки A тип наследуется от типа или реализует интерфейс из сборки б.  
+-   Тип из сборки A наследуется из типа или реализует интерфейс сборки Б.  
   
--   Вызывается поле, свойство, событие или метод, который имеет возвращаемый тип или параметр типа из сборки Б.  
+-   Вызывается поле, свойство, событие или метод, имеющий тип возвращаемого значения или тип параметра из сборки Б.  
   
- Используйте [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) указать каталог, в котором находится один или несколько ссылки на сборки.  
+ Используйте [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) для указания каталога, в котором находится один или несколько ссылок на сборки.  
   
- Как [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора `/link` использует файл ответов Vbc.rsp, который ссылается на часто используемые [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] сборки. Используйте [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) параметр компилятора, если не хотите, чтобы компилятор использовал файл Vbc.rsp.  
+ Как [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора `/link` компилятора использует файл ответов Vbc.rsp, который ссылается на часто используемые [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки. Используйте [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) параметр компилятора, если не хотите, чтобы компилятор использовал файл Vbc.rsp.  
   
- Краткая форма `/link` — `/l`.  
+ Краткой формой `/link` является `/l`.  
   
 ## <a name="generics-and-embedded-types"></a>Универсальные и внедренные типы  
- В следующих разделах описаны ограничения на использование универсальных типов в приложениях, внедрение типов взаимодействия.  
+ В следующих разделах описаны ограничения на использование универсальных типов в приложениях с внедренными типами взаимодействия.  
   
 ### <a name="generic-interfaces"></a>Универсальные интерфейсы  
- Нельзя использовать универсальные интерфейсы, внедренные из сборки взаимодействия. Эти действия показаны в следующем примере.  
+ Использовать универсальные интерфейсы, внедренные из сборки взаимодействия, нельзя. Эти действия показаны в следующем примере.  
   
- [!code-vb[VbLinkCompiler&#1;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
 ### <a name="types-that-have-generic-parameters"></a>Типы с универсальными параметрами  
- Типы, которые имеют общий параметр, тип которого внедрен из сборки взаимодействия не может использоваться при, тип из внешней сборки. Это ограничение не применяется к интерфейсам. Например, рассмотрим <xref:Microsoft.Office.Interop.Excel.Range>интерфейс, который определен в <xref:Microsoft.Office.Interop.Excel>сборки.</xref:Microsoft.Office.Interop.Excel> </xref:Microsoft.Office.Interop.Excel.Range> Если библиотека содержит внедренные типы взаимодействия из <xref:Microsoft.Office.Interop.Excel>и предоставляет метод, возвращающий универсальный тип, который имеет параметр, тип которого является <xref:Microsoft.Office.Interop.Excel.Range>интерфейс, что метод должен возвращать универсальный интерфейс, как показано в следующем примере кода.</xref:Microsoft.Office.Interop.Excel.Range> </xref:Microsoft.Office.Interop.Excel>  
+ Типы с универсальным параметром, тип которого внедрен из сборки взаимодействия, нельзя использовать, если он относится к внешней сборке. Это ограничение не относится к интерфейсам. Например, рассмотрим интерфейс <xref:Microsoft.Office.Interop.Excel.Range>, который определен в сборке <xref:Microsoft.Office.Interop.Excel>. Если библиотека содержит внедренные типы взаимодействия из сборки <xref:Microsoft.Office.Interop.Excel> и предоставляет метод, возвращающий универсальный тип с параметром, типом которого является интерфейс <xref:Microsoft.Office.Interop.Excel.Range>, этот метод должен возвращать универсальный интерфейс, как показано в следующем примере кода.  
   
- [!code-vb[VbLinkCompiler&#2;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
-[!code-vb[VbLinkCompiler&#3;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
-[!code-vb[VbLinkCompiler&#4;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
- В следующем примере клиентский код может вызывать метод, возвращающий <xref:System.Collections.IList>универсальный интерфейс без ошибок.</xref:System.Collections.IList>  
+ В следующем примере клиентский код может вызывать метод, возвращающий универсальный интерфейс <xref:System.Collections.IList> без ошибок.  
   
- [!code-vb[VbLinkCompiler&#5;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует исходный файл `OfficeApp.vb` и ссылки на сборки из `COMData1.dll` и `COMData2.dll` для создания `OfficeApp.exe`.  
+ Следующий код компилирует исходный файл `OfficeApp.vb` и ссылочные сборки из `COMData1.dll` и `COMData2.dll` и создает, таким образом, файл `OfficeApp.exe`.  
   
 ```vb  
 vbc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Пошаговое руководство: Внедрение типов из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [/ noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [/ LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
+ [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
+ [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

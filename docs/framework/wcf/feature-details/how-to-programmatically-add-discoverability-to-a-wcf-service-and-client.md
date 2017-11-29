@@ -1,39 +1,42 @@
 ---
-title: "Как программно добавить возможность обнаружения к службе и клиенту WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как программно добавить возможность обнаружения к службе и клиенту WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f94d99542a07711f618bc02316e6f61f6df647d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как программно добавить возможность обнаружения к службе и клиенту WCF
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
 В этом разделе описано, как сделать службу [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] доступной для обнаружения. Он основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
 1.  Откройте решение резидентного размещения в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться следующее сообщение об ошибке: «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] указанного проекта...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемая версия .NET Framework** — [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2.  Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] отличные от указанных в проект...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** — [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3.  Откройте файл Service.cs и добавьте следующую инструкцию `using`.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  В `Main()` метод, внутри `using` инструкции, добавьте <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> экземпляр к узлу службы.  
+4.  В методе `Main()` в инструкции `using` добавьте экземпляр <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> в узел службы.  
   
-    ```  
+    ```csharp  
     public static void Main()  
     {  
         // Create a ServiceHost for the CalculatorService type.  
@@ -47,11 +50,11 @@ caps.handback.revision: 13
     }  
     ```  
   
-     <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> указывает, что служба применяется для обнаружения.  
+     <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> указывает, что служба, к которой оно применяется, доступна для обнаружения.  
   
-5.  Добавить <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> узел службы сразу после кода, который добавляет <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
+5.  Добавьте <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в узел службы сразу после кода, добавляющего <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
-    ```  
+    ```csharp  
     // Add ServiceDiscoveryBehavior  
     serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());  
   
@@ -67,22 +70,21 @@ caps.handback.revision: 13
   
 2.  Добавьте ссылку на сборки `System.ServiceModel.dll` и `System.ServiceModel.Discovery.dll`.  
   
-3.  Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Чтобы сделать это, щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**и выберите **DiscoveryClientApp** проект, щелкните правой кнопкой мыши и выберите **вставить**.  
+3.  Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**и выберите **DiscoveryClientApp** проекта, щелкните правой кнопкой мыши и выберите **Вставить**.  
   
 4.  Откройте файл Program.cs.  
   
 5.  Добавьте следующие инструкции `using`.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
     using System.ServiceModel.Discovery;  
     using Microsoft.ServiceModel.Samples;  
-  
     ```  
   
 6.  Добавьте статический метод с именем `FindCalculatorServiceAddress()` в класс `Program`.  
   
-    ```  
+    ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
     {  
     }  
@@ -90,9 +92,9 @@ caps.handback.revision: 13
   
      Этот метод использует обнаружение для поиска службы `CalculatorService`.  
   
-7.  Внутри `FindCalculatorServiceAddress` метод, создайте новый <xref:System.ServiceModel.Discovery.DiscoveryClient> экземпляра, передавая <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в конструктор.  
+7.  Внутри метода `FindCalculatorServiceAddress` создайте новый экземпляр <xref:System.ServiceModel.Discovery.DiscoveryClient>, передав <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в конструктор.  
   
-    ```  
+    ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
     {  
         // Create DiscoveryClient  
@@ -100,18 +102,18 @@ caps.handback.revision: 13
     }  
     ```  
   
-     В этом случае [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , <xref:System.ServiceModel.Discovery.DiscoveryClient> класс должен использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
+     Это указывает [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], что классу <xref:System.ServiceModel.Discovery.DiscoveryClient> следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений об обнаружении.  
   
-8.  В следующей строке вызовите <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> метод и укажите <xref:System.ServiceModel.Discovery.FindCriteria> экземпляр, содержащий контракт службы, который требуется найти. В данном случае укажите `ICalculator`.  
+8.  В следующей строке вызовите метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> и укажите экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий контракт службы, который необходимо найти. В данном случае укажите `ICalculator`.  
   
-    ```  
+    ```csharp  
     // Find ICalculatorService endpoints              
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
-9. После вызова <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, проверьте, существует ли хотя бы одной соответствующей службы и вернуть <xref:System.ServiceModel.EndpointAddress> первой службы сопоставления. В противном случае верните значение `null`.  
+9. После вызова <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> проверьте наличие хотя бы одной соответствующей службы и верните <xref:System.ServiceModel.EndpointAddress> первой из найденных. В противном случае верните значение `null`.  
   
-    ```  
+    ```csharp  
     if (findResponse.Endpoints.Count > 0)  
     {  
         return findResponse.Endpoints[0].Address;  
@@ -124,7 +126,7 @@ caps.handback.revision: 13
   
 10. Добавьте статический метод с именем `InvokeCalculatorService` в класс `Program`.  
   
-    ```  
+    ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
     {  
     }  
@@ -134,21 +136,21 @@ caps.handback.revision: 13
   
 11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца. Он был сформирован с помощью программы Svcutil.exe.  
   
-    ```  
+    ```csharp  
     // Create a client  
     CalculatorClient client = new CalculatorClient();  
     ```  
   
 12. В следующей строке укажите адрес конечной точки клиента в адресе конечной точки, возвращенном методом `FindCalculatorServiceAddress()`.  
   
-    ```  
+    ```csharp  
     // Connect to the discovered service endpoint  
     client.Endpoint.Address = endpointAddress;  
     ```  
   
 13. Сразу после кода предыдущего шага вызовите методы, доступные через службу калькулятора.  
   
-    ```  
+    ```csharp  
     Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress);  
   
     double value1 = 100.00D;  
@@ -177,7 +179,7 @@ caps.handback.revision: 13
   
 14. Добавьте в метод `Main()` класса `Program` код для вызова `FindCalculatorServiceAddress`.  
   
-    ```  
+    ```csharp  
     public static void Main()  
     {  
         EndpointAddress endpointAddress = FindCalculatorServiceAddress();  
@@ -186,7 +188,7 @@ caps.handback.revision: 13
   
 15. В следующей строке вызовите метод `InvokeCalculatorService()` и передайте конечной точке адрес, возвращенный методом `FindCalculatorServiceAddress()`.  
   
-    ```  
+    ```csharp  
     if (endpointAddress != null)  
     {  
         InvokeCalculatorService(endpointAddress);  
@@ -228,10 +230,9 @@ caps.handback.revision: 13
     ```  
   
 ## <a name="example"></a>Пример  
- Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) примера перечислены только те файлы, которые будут изменены. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Пример резидентного размещения в разделе [инструкции по установке](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) примера перечислены только те файлы, которые будут изменены. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Пример резидентного размещения, в разделе [инструкции по установке](http://go.microsoft.com/fwlink/?LinkId=145522).  
   
-```  
-  
+```csharp  
 // Service.cs  
 using System;  
 using System.Configuration;  
@@ -267,7 +268,7 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 using System;  
 using System.Collections.Generic;  
@@ -348,9 +349,7 @@ namespace DiscoveryClientApp
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>См. также  
- [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
+ [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
  [Модель объектов обнаружения WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

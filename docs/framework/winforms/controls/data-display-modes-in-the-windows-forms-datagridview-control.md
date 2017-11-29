@@ -1,64 +1,65 @@
 ---
-title: "Режимы отображения данных в элементе управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], режимы отображения"
-  - "таблицы данных, режимы отображения"
-  - "DataGridView - элемент управления [Windows Forms], режимы отображения"
+title: "Режимы отображения данных в элементе управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], display modes
+- data grids [Windows Forms], display modes
+- DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc7fd3d3012053d8c40edf5fdce8af45c62c98c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Режимы отображения данных в элементе управления DataGridView в Windows Forms
-Элемент управления <xref:System.Windows.Forms.DataGridView> может отображать данные в трех разных режимах: в связанном, несвязанном и виртуальном.  При выборе приемлемого метода следует исходить из конкретных потребностей.  
+# <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Режимы отображения данных в элементе управления DataGridView в Windows Forms
+<xref:System.Windows.Forms.DataGridView> Элемент управления может отображать данные в трех разных режимах: связанном, свободных и виртуальном. Выберите наиболее подходящий режим, в зависимости от требований.  
   
-## Несвязанный режим  
- Несвязанный режим подходит для отображения относительно небольших объемов данных, управляемых программным образом.  Элемент управления <xref:System.Windows.Forms.DataGridView> не присоединяется напрямую к источнику данных в несвязанном режиме.  Вместо этого элемент управления необходимо заполнить самостоятельно, что обычно делается при помощи метода <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=fullName>.  
+## <a name="unbound"></a>Отсутствует привязка  
+ Несвязанный режим подходит для отображения сравнительно небольших объемов данных, в которой можно управлять программно. Не присоединять <xref:System.Windows.Forms.DataGridView> элемент управления источником данных, как в режиме привязки. Вместо этого вы должны самостоятельно заполнить элемент управления, обычно с помощью <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> метод.  
   
- Несвязанный режим может оказаться особенно полезным для статичных данных, предназначенных только для чтения, или когда для взаимодействия с внешнем хранилищем данных требуется собственный код.  При этом, чтобы пользователи могли взаимодействовать с внешним хранилищем данных, как правило, используется связанный режим.  
+ Несвязанный режим может быть особенно полезен для статических, только для чтения данных, или если вы хотите предоставить кода, взаимодействующая с во внешнем хранилище данных. Если требуется, чтобы пользователи могли взаимодействовать с внешним источником данных, однако обычно используется связанный режим.  
   
- Пример, в котором используется несвязанный режим только для чтения <xref:System.Windows.Forms.DataGridView>, см. в разделе [Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Пример, в котором используется только для чтения несвязанных <xref:System.Windows.Forms.DataGridView>, в разделе [как: создание свободного элемента управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## Связанный режим  
- Связанный режим подходит для управления данными посредством автоматического взаимодействия с хранилищем данных.  Элемент управления <xref:System.Windows.Forms.DataGridView> можно присоединить непосредственно к его источнику данных путем настройки свойства <xref:System.Windows.Forms.DataGridView.DataSource%2A>.  Когда элемент управления привязан к данным, строки с данными передаются и принимаются без необходимости явного управления со стороны пользователя.  Если свойство <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> имеет значение `true`, каждый столбец в источнике данных будет вызывать создание соответствующего столбца в элементе управления.  Если необходимо создать собственные столбцы, этому свойству можно присвоить значение `false` и использовать свойство <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> для привязки каждого столбца по мере его настройки.  Это полезно, когда требуется использовать тип столбца, отличный от типов, создаваемых по умолчанию.  Дополнительные сведения см. в разделе [Типы столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).  
+## <a name="bound"></a>Привязки  
+ Связанный режим подходит для управления данными посредством автоматического взаимодействия с хранилищем данных. Можно присоединить <xref:System.Windows.Forms.DataGridView> элемент управления источником данных, задав <xref:System.Windows.Forms.DataGridView.DataSource%2A> свойство. Когда элемент управления с привязкой к данным, строки данных помещаются и принимаются без необходимости явного управления со стороны пользователя. Когда <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> свойство `true`, каждый столбец в источнике данных вызовет соответствующего столбца в элементе управления. Если вы предпочитаете создавать свои собственные столбцы, можно установить это свойство в `false` и использовать <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> свойство для привязки каждого столбца при его настройке. Это полезно в том случае, если требуется использовать тип столбца, отличным от типов, которые создаются по умолчанию. Дополнительные сведения см. в разделе [типов столбцов в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).  
   
- Пример с использованием связанного элемента управления <xref:System.Windows.Forms.DataGridView> см. в разделе [Пример. Проверка данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+ Пример с использованием связанного <xref:System.Windows.Forms.DataGridView> управления см. в разделе [Пошаговое руководство: проверка данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
- Кроме того, несвязанные столбцы можно добавить в элемент управления <xref:System.Windows.Forms.DataGridView> в связанном режиме.  Это может оказаться полезным, когда требуется отобразить столбец с кнопками или ссылками, позволяющими пользователям выполнять действия с определенными строками.  Кроме того, это может пригодиться для отображения столбцов со значениями, рассчитанными из связанных столбцов.  Значения ячеек для рассчитанных столбцов можно заполнить в обработчике для события <xref:System.Windows.Forms.DataGridView.CellFormatting>.  Даже если в качестве источника данных используется <xref:System.Data.DataSet> или <xref:System.Data.DataTable>, может возникнуть необходимость использования свойства <xref:System.Data.DataColumn.Expression%2A?displayProperty=fullName> для создания рассчитанного столбца.  В этом случае, элемент управления <xref:System.Windows.Forms.DataGridView> будет обращаться с рассчитанным столбцом, как с любым другим столбцом в источнике данных.  
+ Можно также добавить несвязанные столбцы для <xref:System.Windows.Forms.DataGridView> элемента управления в режиме привязки. Это полезно в том случае, если требуется отобразить столбец кнопки или ссылки, которые позволяют пользователям выполнять действия на отдельные строки. Также полезно для отображения столбцов со значениями, рассчитанными из связанных столбцов. Можно заполнить при помощи значений ячеек для вычисляемых столбцов в обработчике <xref:System.Windows.Forms.DataGridView.CellFormatting> событий. Если вы используете <xref:System.Data.DataSet> или <xref:System.Data.DataTable> как источник данных, однако может потребоваться использовать <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> свойство Создание вычисляемого столбца. В этом случае <xref:System.Windows.Forms.DataGridView> элемент управления будет обрабатывать вычисляемый столбец, так же, как и любой другой столбец в источнике данных.  
   
- Сортировка по несвязанным столбцам в связанном режиме не поддерживается.  Если создать связанный столбец, содержащий изменяемые пользователем значения, в несвязанном режиме, потребуется реализовать виртуальный режим для сохранения этих значений при сортировке элемента управления по связанному столбцу.  
+ Сортировка по несвязанным столбцам в связанном режиме не поддерживается. Если создание непривязанного столбца в режиме привязки, содержащий изменяемые пользователем значения, необходимо реализовать виртуальный режим для сохранения этих значений при сортировке элемента управления по связанному столбцу.  
   
-## Виртуальный режим  
- Виртуальный режим позволит реализовать собственные операций по управлению данными.  Этот режим необходим для сохранения значений несвязанных столбцов в связанном режиме при сортировке элемента управления по связанным столбцам.  Однако виртуальный режим в большинстве случаев используется для оптимизации производительности при взаимодействии с большими объемами данных.  
+## <a name="virtual"></a>Виртуальный  
+ Виртуальный режим позволяет реализовать собственные операции управления данными. Это необходимо для сохранения значений несвязанных столбцов в связанном режиме при сортировке элемента управления по связанным столбцам. Виртуальный режим в основном используются, то для оптимизации производительности при взаимодействии с большими объемами данных.  
   
- Элемент управления <xref:System.Windows.Forms.DataGridView> присоединяется к управляемому кэшу, и код управляет отправкой и получением строк данных.  Чтобы поддерживать небольшой объем памяти, размер кэша должен соответствовать количеству отображаемых строк.  Когда пользователь прокручивает на экране новые строки, код запрашивает новые данные из кэша и может очистить память от старых данных.  
+ Можно присоединить <xref:System.Windows.Forms.DataGridView> управления кэша, в которой можно управлять и код управляет отправкой и получением строк данных. Чтобы сохранить небольшой объем памяти, кэш должен быть похожего размера на число строк, отображаемых в данный момент. При прокрутке новых строк в представлении, код запрашивает новые данные из кэша и при необходимости очищает старые данные из памяти.  
   
- При реализации виртуального режима необходимо отслеживать потребность в строке для добавления новых записей в соответствии с моделью данных, а также потребность в откате добавления строки.  Конкретная реализация данных функциональных возможностей будет зависеть от реализации модели данных и соответствующей семантики транзакций модели данных, например, используется ли область фиксации на уровне ячеек или на уровне строк.  
+ При реализации виртуального режима необходимо отслеживать, если новая строка требуется в модели данных и при откате добавления новой строки. Конкретная реализация этой функции будет зависеть от реализации модели данных и семантика транзакций модели данных. является ли область фиксации на уровне ячейки или строки.  
   
- Дополнительные сведения о виртуальном режиме содержатся в разделе [Виртуальный режим элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).  Пример, показывающий использование событий виртуального режима содержится в разделе [Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Дополнительные сведения о виртуальном режиме см. в разделе [виртуальный режим в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md). Пример, показывающий, как использовать виртуальный режим события см. в разделе [Пошаговое руководство: реализация виртуального режима в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=fullName>   
- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Типы столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)   
- [Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)   
- [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)   
- [Виртуальный режим элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)   
- [Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>  
+ [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Типы столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ [Виртуальный режим элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)

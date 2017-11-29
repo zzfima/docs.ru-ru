@@ -1,42 +1,24 @@
 ---
-title: "&lt;PARAM&gt; (Visual Basic) | Документы Microsoft"
+title: '&lt;PARAM&gt; (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41852a7fc41595050940d87f9e741df5cb23361c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 09c7473cd88a701d8e46251be9b1c268c2dc8805
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="ltparamgt-visual-basic"></a>&lt;PARAM&gt; (Visual Basic)
 Определяет имя параметра и описание.  
@@ -49,26 +31,26 @@ ms.lasthandoff: 03/13/2017
   
 #### <a name="parameters"></a>Параметры  
  `name`  
- Имя параметра метода. Заключите имя в двойные кавычки (» «).  
+ Имя параметра метода. Имя заключается в двойные кавычки (" ").  
   
  `description`  
  Описание параметра.  
   
 ## <a name="remarks"></a>Примечания  
- `<param>` Тегов следует использовать в комментариях объявления метода для описания параметров для метода.  
+ `<param>` Тег должен использоваться в комментарии в объявлении метода для описания параметров для метода.  
   
  Текст для `<param>` тег будет отображаться в следующих местах:  
   
--   Сведения о параметрах технологии IntelliSense. Дополнительные сведения см. в статье [Using IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense) (Использование IntelliSense).  
+-   Сведения о параметрах из IntelliSense. Дополнительные сведения см. в статье [Using IntelliSense](/visualstudio/ide/using-intellisense) (Использование IntelliSense).  
   
--   Обозреватель объектов. Дополнительные сведения см. в разделе [Просмотр структуры кода](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).  
+-   Обозреватель объектов. Дополнительные сведения см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Скомпилируйте с [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) чтобы обработать комментарии документации в файл.  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<param>` тегов для описания `id` параметр.  
+ В этом примере используется `<param>` тегов для описания `id` параметра.  
   
- [!code-vb[VbVbcnXmlDocComments №&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
  [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

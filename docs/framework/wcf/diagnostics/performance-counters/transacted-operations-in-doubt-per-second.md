@@ -1,27 +1,30 @@
 ---
-title: "Количество операций с поддержкой транзакций с сомнительным результатом в секунду | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Количество операций с поддержкой транзакций с сомнительным результатом в секунду"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e6b0716-c107-42e5-a21d-31d988e7a691
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d42046d2d636d507aa682c349f29dcecedca657
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Количество операций с поддержкой транзакций с сомнительным результатом в секунду
+# <a name="transacted-operations-in-doubt-per-second"></a>Количество операций с поддержкой транзакций с сомнительным результатом в секунду
 Имя счетчика: Количество операций с поддержкой транзакций с сомнительным результатом в секунду.  
   
-## Описание  
+## <a name="description"></a>Описание  
  Количество операций с поддержкой транзакций, имеющих сомнительный результат, возникающих в данной службе за секунду.  
   
- Этот счетчик является счетчиком производительности типа [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по приведенной ниже формуле.  
+ Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

@@ -1,55 +1,53 @@
 ---
-title: "Friend (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Friend"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Friend - ключевое слово"
-  - "Friend - модификатор доступа"
-  - "ключевое слово Friend, синтаксис"
-  - "сочетание ключевых слов Protected Friend"
-  - "ключевое слово Friend, и Protected"
+title: Friend (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Friend
+helpviewer_keywords:
+- Friend keyword [Visual Basic]
+- Friend access modifier
+- Friend keyword [Visual Basic], syntax
+- Protected Friend keyword combination
+- Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 32f993e4b9bcd126ebb6d70310fc0781e8b137b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Friend (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает на то, что один или несколько элементов доступны только из сборки, которая содержит их объявления.  
+# <a name="friend-visual-basic"></a>Friend (Visual Basic)
+Указывает, что один или несколько объявленных программных элементов доступны только из внутри сборки, содержащей их объявления.  
   
-## Заметки  
- В большинстве случаев требуются элементы программирования, такие как классы и структуры, используемые всей сборкой, а не только компонентом, объявляющим их.  Однако может потребоваться не их быть доступны кода извне сборки \(например, если приложение собственническо\).  Если требуется ограничить доступ к элементу таким образом, можно объявить его с помощью модификатора `Friend`.  
+## <a name="remarks"></a>Примечания  
+ Во многих случаях требуется программных элементов, таких как классы и структуры, используемые всей сборке, не только компонентом, который объявляет их. Тем не менее могут не хотелось бы быть доступны для кода за пределами сборки (например, если приложение является собственным). Если вы хотите ограничить доступ к элементу таким образом, можно объявить его с помощью `Friend` модификатор.  
   
- Код в других классах, структурах и модулях, которые компилируются к той же сборке, может иметь доступ ко всем элементам `Friend` в этой сборке.  
+ Код в других классах, структурах и модули, скомпилированные с тем же сборке может получать доступ ко всем `Friend` элементы в этой сборке.  
   
- метод доступа `Friend` часто оптимальный уровень программных элементов приложения и `Friend` уровень доступа по умолчанию интерфейса, модуля, класса или структуры.  
+ `Friend`доступ часто является предпочтительным уровнем для элементов программирования приложений, и `Friend` — доступ по умолчанию уровне интерфейса, модуля, класса или структуры.  
   
- `Friend` можно использовать только в модуле, интерфейса или уровне пространства имен.  Поэтому контекст объявления элемента `Friend` должен быть файл источника, пространства имен, интерфейса, модуль, класс или структура; не может быть процедурой.  
+ Можно использовать `Friend` только на уровне модуля, интерфейсом или пространством имен. Таким образом, что контекст объявления для `Friend` элемент должен быть исходный файл, пространство имен, интерфейсом, модуля, класса или структуры; он не может быть процедурой.  
   
- Можно использовать модификатор `Friend` вместе с модификатором [Protected](../../../visual-basic/language-reference/modifiers/protected.md) в одном объявлении.  Это сочетание совещается оба метода доступа `Friend` и защищенный доступ на объявленных элементов, поэтому они доступны из любого места внутри одной и той же сборки, из своего класса и из производных классов.  Можно указать `Protected Friend` только для элементов классов.  
+ Можно использовать `Friend` модификатор вместе с [Protected](../../../visual-basic/language-reference/modifiers/protected.md) модификатор в объявлении. Указанное сочетание задает оба `Friend` доступа и защищенный доступ к объявленным элементам, поэтому они доступны в любом месте той же сборки, из собственного класса и из производных классов. Можно указать `Protected Friend` только для членов классов.  
   
- Для сравнения `Friend` и других модификаторов доступа см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Сравнение `Friend` и другие модификаторы доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Можно указать, что другая сборка дружественной сборки, которая позволяет его, чтобы получить все типы и члены, которые помечены как `Friend`.  Для получения дополнительной информации см. [Дружественные сборки](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md).  
+>  Можно указать, что другая сборка является дружественной сборки, что позволяет получить доступ к все типы и члены, помеченные как `Friend`. Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
-## Пример  
- Следующий класс использует модификатор `Friend`, позволяющие другими элементами программирования в одной сборке получить доступ к определенным элементам.  
+## <a name="example"></a>Пример  
+ Следующий класс использует `Friend` модификатор, чтобы разрешить другими элементами программирования в одной и той же сборки для доступа к определенным элементам.  
   
  [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
-## Использование  
- Модификатор `Friend` можно использовать в таких контекстах:  
+## <a name="usage"></a>Использование  
+ Можно использовать `Friend` модификатор в следующих контекстах:  
   
  [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -77,12 +75,12 @@ caps.handback.revision: 25
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

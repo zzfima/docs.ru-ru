@@ -5,29 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72b9cf51936df7b3b2055823ff33f7561640608f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-arrays"></a>Маршалинг по умолчанию для массивов
 Если приложение полностью состоит из управляемого кода, общеязыковая среда выполнения (CLR) передает типы массивов в качестве параметров ввода-вывода. В отличие от этого, маршалер взаимодействия по умолчанию передает массив в качестве параметров ввода.  
@@ -46,7 +42,7 @@ ms.lasthandoff: 08/21/2017
   
 <a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Управляемые массивы  
- Управляемые массивы могут иметь разные типы, однако базовым для всех этих типов является класс <xref:System.Array?displayProperty=fullName>. Класс **System.Array** имеет свойства, определяющие ранг, длину, нижнюю и верхнюю границы массива, а также методы доступа, сортировки, поиска, копирования и создания массивов.  
+ Управляемые массивы могут иметь разные типы, однако базовым для всех этих типов является класс <xref:System.Array?displayProperty=nameWithType>. Класс **System.Array** имеет свойства, определяющие ранг, длину, нижнюю и верхнюю границы массива, а также методы доступа, сортировки, поиска, копирования и создания массивов.  
   
  Эти типы массивов являются динамическими и не имеют соответствующих статических типов в библиотеке базовых классов. В качестве уникального типа массива удобно рассматривать сочетание типа элементов и ранга. Соответственно, тип одномерного массива целых чисел отличается от типа одномерного массива чисел типа double. Аналогичным образом, его тип будет отличаться от типа двухмерного массива целых чисел. При сравнении типов не учитываются границы массивов.  
   
@@ -103,7 +99,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Многомерные массивы или безопасные массивы с отличной от нуля границей могут маршалироваться в управляемый код, если сигнатура метода, создаваемая с помощью программы Tlbimp.exe, изменяется, указывая на тип элементов **ELEMENT_TYPE_ARRAY** вместо **ELEMENT_TYPE_SZARRAY**. Кроме того, можно использовать параметр **/sysarray** с программой Tlbimp.exe для импорта всех массивов в качестве объектов <xref:System.Array?displayProperty=fullName>. Если передаваемый массив заведомо является многомерным, можно изменить код MSIL, создаваемый программой Tlbimp.exe, а затем повторно скомпилировать его. Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ Многомерные массивы или безопасные массивы с отличной от нуля границей могут маршалироваться в управляемый код, если сигнатура метода, создаваемая с помощью программы Tlbimp.exe, изменяется, указывая на тип элементов **ELEMENT_TYPE_ARRAY** вместо **ELEMENT_TYPE_SZARRAY**. Кроме того, можно использовать параметр **/sysarray** с программой Tlbimp.exe для импорта всех массивов в качестве объектов <xref:System.Array?displayProperty=nameWithType>. Если передаваемый массив заведомо является многомерным, можно изменить код MSIL, создаваемый программой Tlbimp.exe, а затем повторно скомпилировать его. Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
   
 ### <a name="c-style-arrays"></a>Массивы в стиле C  
  При импорте массива в стиле C из библиотеки типов в сборку .NET массив преобразуется в **ELEMENT_TYPE_SZARRAY**.  
@@ -210,7 +206,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип предоставляется в сигнатуре. Ранг всегда равен 1, а нижняя граница всегда — 0. Размер всегда известен во время выполнения.|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип, ранг и границы предоставляются в сигнатуре. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=fullName>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
   
  В OLE-автоматизации существует ограничение в отношении массивов структур, которые содержат LPSTR или LPWSTR.  Таким образом, поля **String** должны маршалироваться как **UnmanagedType.BSTR**. В противном случае будет создаваться исключение.  
   
@@ -336,7 +332,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- При экспорте метода, содержащего параметр <xref:System.Array?displayProperty=fullName>, из сборки .NET в библиотеку типов параметр массива преобразуется в интерфейс **_Array**. Содержимое этого управляемого массива доступно только через методы и свойства интерфейса **_Array**. Массив **System.Array** также может маршалироваться как **SAFEARRAY** с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>. При маршалинге безопасного массива его элементы маршалируются как варианты. Например:  
+ При экспорте метода, содержащего параметр <xref:System.Array?displayProperty=nameWithType>, из сборки .NET в библиотеку типов параметр массива преобразуется в интерфейс **_Array**. Содержимое этого управляемого массива доступно только через методы и свойства интерфейса **_Array**. Массив **System.Array** также может маршалироваться как **SAFEARRAY** с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>. При маршалинге безопасного массива его элементы маршалируются как варианты. Например:  
   
 #### <a name="managed-signature"></a>Управляемая сигнатура  
   
@@ -385,8 +381,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)
-

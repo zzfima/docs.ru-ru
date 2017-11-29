@@ -1,35 +1,39 @@
 ---
-title: "Метод GetSchema и коллекции схем | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Коллекции GetSchema и Schema"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4790195d5f02ac1f68f8ab4c5ef39499052cd725
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Метод GetSchema и коллекции схем
-Классы **Connection** в каждом из управляемых поставщиков .NET Framework реализуют метод **GetSchema**, который используется для получения сведений о схеме базы данных, с которой в данный момент установлено соединение, и метод **GetSchema** возвращает сведения о схеме в виде объекта <xref:System.Data.DataTable>.  **GetSchema** — перегружаемый метод, содержащий необязательные параметры для указания возвращаемой коллекции схем и ограничения объема возвращаемых сведений.  
+# <a name="getschema-and-schema-collections"></a>Коллекции GetSchema и Schema
+**Подключения** классы в каждом из управляемых поставщиков .NET Framework реализует **GetSchema** метод, который используется для получения сведений о базе данных, в данный момент подключен, схеме и Возвращает сведения о схеме **GetSchema** представляются в виде <xref:System.Data.DataTable>. **GetSchema** это перегруженный метод, содержащий необязательные параметры для указания возвращаемой коллекции схем и ограничения объема возвращаемых сведений.  
   
-## Указание коллекций схем  
- Первым необязательным параметром метода **GetSchema** является имя коллекции, указанное в виде строки.  Существует два типа коллекций схем: стандартные \(общие для всех поставщиков\) и специальные \(определенные для каждого поставщика\).  
+## <a name="specifying-the-schema-collections"></a>Указание коллекций схем  
+ Первым необязательным параметром метода **GetSchema** метод является имя коллекции, указанное в виде строки. Существует два типа коллекций схем: стандартные (общие для всех поставщиков) и специальные (определенные для каждого поставщика).  
   
- Можно запросить управляемый поставщик .NET Framework для определения списка поддерживаемых коллекций схем, вызвав метод **GetSchema** без аргументов или с именем коллекции схем MetaDataCollections.  При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
+ Можно запросить управляемый поставщик .NET Framework для определения списка поддерживаемых коллекций схем, вызвав **GetSchema** без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
   
-### Получение примера коллекций схем  
- В следующем примере демонстрируется использование метода <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> поставщика данных .NET Framework для SQL Server класса <xref:System.Data.SqlClient.SqlConnection> для получения сведений схем обо всех таблицах, содержащихся в образце базы данных **AdventureWorks**:  
+### <a name="retrieving-schema-collections-example"></a>Получение примера коллекций схем  
+ Следующие примеры демонстрируют, как использовать <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> метод поставщика данных .NET Framework для SQL Server <xref:System.Data.SqlClient.SqlConnection> класса для извлечения сведений о всех таблиц, содержащихся в схеме **AdventureWorks**образца базы данных:  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -65,9 +69,7 @@ Module Module1
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -112,6 +114,6 @@ class Program
 }  
 ```  
   
-## См. также  
- [Получение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Получение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

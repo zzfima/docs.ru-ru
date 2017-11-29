@@ -1,41 +1,42 @@
 ---
-title: "Работа с растровыми и векторными изображениями | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "растровые изображения [Windows Forms], работа с"
-  - "примеры [Windows Forms], растровые изображения"
-  - "примеры [Windows Forms], изображения"
-  - "примеры [Windows Forms], метафайлы"
-  - "изображения [Windows Forms], работа с"
-  - "метафайлы, работа с"
+title: "Работа с растровыми и векторными изображениями"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metafiles [Windows Forms], working with
+- examples [Windows Forms], bitmaps
+- examples [Windows Forms], images
+- bitmaps [Windows Forms], working with
+- images [Windows Forms], working with
+- examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Работа с растровыми и векторными изображениями
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет класс `Bitmap` для работы с растровыми изображениями и класс `Metafile` для работы с векторными изображениями.  Классы `Bitmap` и `Metafile` являются производными от класса `Image`.  
+# <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Работа с растровыми и векторными изображениями
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет класс `Bitmap` для работы с растровыми изображениями и класс `Metafile` для работы с векторными изображениями. Классы `Bitmap` и `Metafile` являются производными от класса `Image`.  
   
-## В этом подразделе  
- [Практическое руководство. Рисование существующего точечного рисунка на экране](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
+## <a name="in-this-section"></a>Содержание  
+ [Практическое руководство. Рисование существующего растрового изображения на экране](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
  Описано, как загружать и отображать точечные рисунки.  
   
  [Практическое руководство. Загрузка и отображение метафайлов](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
  Описано, как загружать и отображать метафайлы.  
   
- [Обрезка и масштабирование изображений в GDI\+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
+ [Обрезка и масштабирование изображений в GDI+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
  Описано, как обрезать и масштабировать векторные и растровые изображения.  
   
  [Практическое руководство. Поворот, отражение и наклон изображений](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
@@ -59,7 +60,7 @@ caps.handback.revision: 17
  [Практическое руководство. Извлечение связанного с файлом значка в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
  Описано, как извлекать значок, являющийся внедренным ресурсом файла.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Image>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
@@ -69,6 +70,6 @@ caps.handback.revision: 17
  <xref:System.Drawing.Bitmap>  
  Описывает данный класс и предоставляет ссылки на все его члены.  
   
-## Связанные подразделы  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  Содержит ссылки на разделы с описанием различных типов растровых изображений и способов работы с ними в приложениях.

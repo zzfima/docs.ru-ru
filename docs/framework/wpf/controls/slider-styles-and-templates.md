@@ -1,69 +1,71 @@
 ---
-title: "Стили и шаблоны элемента Slider | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], Slider"
-  - "части [WPF], Slider"
-  - "Ползунок [WPF], стили и шаблоны"
-  - "состояния [WPF], Slider"
-  - "стили [WPF], Slider"
-  - "шаблоны [WPF], Slider"
+title: "Стили и шаблоны элемента Slider"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], Slider
+- states [WPF], Slider
+- Slider [WPF], styles and templates
+- styles [WPF], Slider
+- templates [WPF], Slider
+- ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9dfa340cf42e5e7ed105bf14eb0f7a24ea85a1b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента Slider
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.Slider>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="slider-styles-and-templates"></a>Стили и шаблоны элемента Slider
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Slider> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Части Slider  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.Slider>.  
+## <a name="slider-parts"></a>Ползунок частей  
+ В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Slider> элемента управления.  
   
-||||  
+|Отделение|Тип|Описание|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, который указывает положение элемента <xref:System.Windows.Controls.Slider>.|  
-|PART\_SelectionRange|<xref:System.Windows.FrameworkElement>|Элемент, отображающий диапазон выделения в элементе управления <xref:System.Windows.Controls.Slider>.  Диапазон выделения отображается, только если значение свойства <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> равно `true`.|  
+|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, который указывает положение <xref:System.Windows.Controls.Slider>.|  
+|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Элемент, который отображает диапазон выбора вдоль <xref:System.Windows.Controls.Slider>.  Диапазон выбора отображается только тогда, когда <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> свойство `true`.|  
   
-## Состояния Slider  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.Slider>.  
+## <a name="slider-states"></a>Ползунок состояний  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Slider> элемента управления.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
-|---------------------|--------------------------|--------------|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
-|Disabled|CommonStates|Элемент управления отключен.|  
+|----------------------|---------------------------|-----------------|  
+|Норм.|CommonStates|Состояние по умолчанию.|  
+|MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  
+|Отключено|CommonStates|Элемент управления отключен.|  
 |Focused|FocusStates|Элемент управления имеет фокус.|  
-|Unfocused|FocusStates|Элемент управления не имеет фокуса.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|Без фокуса ввода|FocusStates|Элемент управления не имеет фокуса.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
   
-## Пример шаблона ControlTemplate "Ползунок"  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.Slider>.  
+## <a name="slider-controltemplate-example"></a>Пример шаблона элемента управления "ползунок"  
+ В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Slider> элемента управления.  
   
- [!code-xml[ControlTemplateExamples#Slider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
+ [!code-xaml[ControlTemplateExamples#Slider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ В предыдущем примере используется один или несколько из следующих ресурсов.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

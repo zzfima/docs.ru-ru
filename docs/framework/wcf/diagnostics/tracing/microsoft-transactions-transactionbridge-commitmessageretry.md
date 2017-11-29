@@ -1,31 +1,34 @@
 ---
-title: "Microsoft.Transactions.TransactionBridge.CommitMessageRetry | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Microsoft.Transactions.TransactionBridge.CommitMessageRetry
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4abe01f0-6398-4fba-b2f3-c054b7f7e971
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: be874cc0b3fb15f80bb5cd6b97174b515703385c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Microsoft.Transactions.TransactionBridge.CommitMessageRetry
+# <a name="microsofttransactionstransactionbridgecommitmessageretry"></a>Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 Повторная попытка сообщения фиксации была отправлена участнику, который не отвечает.  
   
-## Описание  
+## <a name="description"></a>Описание  
  Трассируется, если локальному диспетчеру транзакций потребовалось заново отправить сообщение фиксации подчиненному участнику, так как за заданное время не был получен отклик.  
   
-## Устранение неполадок  
- Рассмотрите потенциальные проблемы с сетью или продуктом, которые могут препятствовать своевременной доставке отклика.Если таких сообщений много, это может указывать на проблемы инфраструктуры или чрезмерно большое время отклика.Обе проблемы значительно снижают пропускную способность транзакций в системе.  
+## <a name="troubleshooting"></a>Устранение неполадок  
+ Рассмотрите потенциальные проблемы с сетью или продуктом, которые могут препятствовать своевременной доставке отклика.  Если таких сообщений много, это может указывать на проблемы инфраструктуры или чрезмерно большое время отклика. Обе проблемы значительно снижают пропускную способность транзакций в системе.  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>См. также  
+ [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

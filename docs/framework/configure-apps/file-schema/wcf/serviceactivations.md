@@ -1,77 +1,82 @@
 ---
-title: "&lt;serviceActivations&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;serviceActivations&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2a4f05b8164c0920893ea5b379017b1eb91f1b37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceActivations&gt;
-Элемент конфигурации, позволяющий добавлять настройки, которые определяют параметры активации виртуальной службы, сопоставляющиеся с типами служб [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  Это позволяет активировать службы, расположенные в WAS\/IIS, без SVC\-файла.  
+# <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
+Элемент конфигурации, позволяющий добавлять настройки, которые определяют параметры активации виртуальной службы, сопоставляющиеся с типами служб [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Это позволяет активировать службы, расположенные в WAS/IIS, без SVC-файла.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<serviceHostingEnvironment >  
+\<serviceActivations >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <serviceHostingEnvironment>   
    <serviceActivations>  
       <add factory="String"  
            service="String"/>  
    </serviceActivations>  
 </serviceHostingEnvironment>  
-  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
  Отсутствует.  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<добавление;\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|Добавляет элемент конфигурации, который задает активацию приложения службы.|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|Добавляет элемент конфигурации, который задает активацию приложения службы.|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<serviceHostingEnvironment\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Определяет, какой тип среда размещения служб создает для конкретного транспорта.|  
+|-------------|-----------------|  
+|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Определяет, какой тип среда размещения служб создает для конкретного транспорта.|  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  В следующем примере показано, как настроить параметры активации в файле web.config.  
   
-```  
+```xml  
 <configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
+  <system.serviceModel>  
+    <serviceHostingEnvironment>  
+      <serviceActivations>  
+        <add service="GreetingService"/>  
+      </serviceActivations>  
+    </serviceHostingEnvironment>  
+  </system.serviceModel>  
 </configuration>  
 ```  
   
- Использование этой конфигурации позволяет активировать GreetingService без SVC\-файла.  
+ Использование этой конфигурации позволяет активировать GreetingService без SVC-файла.  
   
- Следует отметить, что `<serviceHostingEnvironment>` является конфигурацией на уровне приложения.  Необходимо разместить файл `web.config`, содержащий конфигурацию в корневом каталоге виртуального приложения.  Помимо этого, `serviceHostingEnvironment` является наследуемым разделом machinetoApplication.  Если зарегистрировать одну службу в корневом каталоге компьютера, каждая служба в приложении унаследует эту службу.  
+ Следует отметить, что `<serviceHostingEnvironment>` является конфигурацией на уровне приложения. Необходимо разместить файл `web.config`, содержащий конфигурацию в корневом каталоге виртуального приложения. Помимо этого, `serviceHostingEnvironment` является наследуемым разделом machinetoApplication. Если зарегистрировать одну службу в корневом каталоге компьютера, каждая служба в приложении унаследует эту службу.  
   
- Активация на основе конфигурации поддерживает активацию как по протоколу HTTP, так и по протоколу, отличному от HTTP.  В relatativeAddress требуется расширение  SVC, XOML или XAMLX.  Можно сопоставить пользовательские модули с известными поставщиками buildProvider, что впоследствии позволит активировать службу через любой модуль.  При возникновении конфликта раздел `<serviceActivations>` переопределяет записи в SVC\-файле.  
+ Активация на основе конфигурации поддерживает активацию как по протоколу HTTP, так и по протоколу, отличному от HTTP. Требует расширений в relatativeAddress, т.е. SVC, XOML или XAMLX. Можно сопоставить пользовательские расширения с известными поставщиками buildProvider, что впоследствии позволит активировать службу через любое расширение. При возникновении конфликта раздел `<serviceActivations>` переопределяет записи в SVC-файле.  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>   
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>

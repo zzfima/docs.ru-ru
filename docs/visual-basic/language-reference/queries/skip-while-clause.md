@@ -1,61 +1,58 @@
 ---
-title: "Предложение Skip While (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySkipWhile"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "запросы [Visual Basic], Skip While"
-  - "Skip While - предложение"
-  - "Skip While - оператор"
+title: "Предложение Skip While (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySkipWhile
+helpviewer_keywords:
+- Skip While statement [Visual Basic]
+- Skip While clause [Visual Basic]
+- queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f447a6d9b2eb58fa546ced6c96b987caf68fb3e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение Skip While (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Пропускает элементы в коллекции, пока заданное условие является `true` и затем возвращает оставшиеся элементы.  
+# <a name="skip-while-clause-visual-basic"></a>Предложение Skip While (Visual Basic)
+Пропускает элементы в коллекции, если заданное условие имеет значение `true`, и возвращает остальные элементы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Skip While expression  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`expression`|Обязательный.  Выражение, представляющее условие для проверки элементов.  Выражение должно возвращать значение `Boolean` или функциональный эквивалент, например `Integer`, обрабатываемый как `Boolean`.|  
+|---|---|  
+|`expression`|Обязательный. Выражение, представляющее условие для проверки элементов. Выражение должно возвращать `Boolean` значение или функциональный эквивалент, таких как `Integer` будут вычисляться как `Boolean`.|  
   
-## Заметки  
- Предложение `Skip While` обходит элементы от начала результата запроса до тех пор, пока `expression` не вернет `false`.  После возврата `expression` значения `false`, запрос возвращает все оставшиеся элементы.  `expression` игнорируется для оставшихся результатов.  
+## <a name="remarks"></a>Примечания  
+ `Skip While` Предложение пропускает элементы от начала результата запроса до предоставленного `expression` возвращает `false`. После `expression` возвращает `false`, запрос возвращает все оставшиеся элементы. `expression` Игнорируется для оставшихся результатов.  
   
- Предложение `Skip While` отличается от предложения `Where` тем, что предложение `Where` может быть использовано для исключения из запроса всех элементов, которые не удовлетворяют определенному условию.  Предложение `Skip While` исключает элементы только до тех пор, пока условие не будет выполнено в первый раз.  Предложение `Skip While` наиболее полезно при работе с упорядоченным результатом запроса.  
+ `Skip While` Предложение отличается от `Where` предложение в том, что `Where` предложение может использоваться, чтобы исключить все элементы из запроса, который не удовлетворяют определенному условию. `Skip While` Предложение исключает элементы только до момента первого, условие не выполняется. `Skip While` Предложение наиболее полезно при работе с упорядоченным результатом запроса.  
   
- Можно пропустить определенное количество результатов в начале результата запроса с помощью предложения `Skip`.  
+ Можно пропустить определенное количество результатов в начале результата запроса с помощью `Skip` предложения.  
   
-## Пример  
- В следующем примере кода предложение `Skip While` используется для обхода результатов до первого заказчика, который находится в США.  
+## <a name="example"></a>Пример  
+ Следующий пример кода использует `Skip While` предложение для обхода результатов, пока не будет найден первого заказчика из США.  
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
-## См. также  
- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)   
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Предложение Where](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>См. также  
+ [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+ [Запросы](../../../visual-basic/language-reference/queries/queries.md)  
+ [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)

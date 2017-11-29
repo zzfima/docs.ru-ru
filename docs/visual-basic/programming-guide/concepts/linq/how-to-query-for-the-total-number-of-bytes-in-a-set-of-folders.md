@@ -1,36 +1,28 @@
 ---
-title: "Практическое руководство: запрос общее количество байтов в наборе папок (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: запрос общее число байтов в наборе папок (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 668a8a4d89f7b81c3aef9b4e1a46ad749c4a8341
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b200581f4876400727c63e86e3ccf4a44c67914b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Практическое руководство: запрос общее количество байтов в наборе папок (LINQ) (Visual Basic)
-В этом примере показано, как получить общее число байтов, используемых все файлы в указанной папке и всех ее подпапках.  
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Как: запрос общее число байтов в наборе папок (LINQ) (Visual Basic)
+В этом примере показано, как получить общее число байтов, используемое всеми файлами в указанной папке и всех ее вложенных папках.  
   
 ## <a name="example"></a>Пример  
- <xref:System.Linq.Enumerable.Sum%2A>Метод складывает значения всех элементов, выбранных в `select` предложение.</xref:System.Linq.Enumerable.Sum%2A> Вы легко можете изменить этот запрос для получения наибольшего или наименьшего файла в дереве каталогов путем вызова <xref:System.Linq.Enumerable.Min%2A>или <xref:System.Linq.Enumerable.Max%2A>вместо <xref:System.Linq.Enumerable.Sum%2A>.</xref:System.Linq.Enumerable.Sum%2A> </xref:System.Linq.Enumerable.Max%2A> </xref:System.Linq.Enumerable.Min%2A>  
+ Метод <xref:System.Linq.Enumerable.Sum%2A> суммирует значения всех элементов, выбранных в предложении `select`. Этот запрос можно легко изменить, чтобы получить самый большой или маленький файл в заданном дереве каталогов, вызвав метод <xref:System.Linq.Enumerable.Min%2A> или <xref:System.Linq.Enumerable.Max%2A> вместо <xref:System.Linq.Enumerable.Sum%2A>.  
   
 ```vb  
 Module QueryTotalBytes  
@@ -84,13 +76,13 @@ Module QueryTotalBytes
 End Module  
 ```  
   
- При наличии только число байтов в указанном дереве каталогов, можно сделать это более эффективно без создания запроса LINQ, который вносит дополнительную нагрузку, связанную с созданием коллекции списков в качестве источника данных. Полезность этого подхода LINQ увеличивается по мере более сложный запрос или при необходимости выполнения нескольких запросов к одному источнику данных.  
+ Если требуется только подсчитать число байтов в указанном дереве каталогов, можно сделать это более эффективно без создания запроса LINQ, который вносит дополнительные издержки, связанные с созданием коллекции списков в качестве источника данных. Практичность подхода LINQ увеличивается по мере усложнения запроса или при необходимости выполнения нескольких запросов к одному источнику данных.  
   
- Запрос вызывает отдельный метод для получения длины файла. Это делается для обработки возможных исключений, которые могут возникнуть, если файл был удален в другом потоке после <xref:System.IO.FileInfo>объект был создан в вызове `GetFiles`.</xref:System.IO.FileInfo> Несмотря на то что <xref:System.IO.FileInfo>объект уже создан, исключение может возникнуть из-за <xref:System.IO.FileInfo>будет пытаться обновить его <xref:System.IO.FileInfo.Length%2A>свойство с самую последнюю длину при первом обращении к свойству.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Поместив эту операцию в блок try-catch вне запроса, код следует правилу избежать операции в запросах, которые могут вызвать побочные эффекты. В общем случае отлично необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться в том, что приложение не остается в неизвестном состоянии.  
+ Для получения длины файла запрос вызывает отдельный метод. Это необходимо для обработки возможных исключений, которые могут возникнуть из-за удаления файла в другом потоке после создания объекта <xref:System.IO.FileInfo> вызовом `GetFiles`. Даже если объект <xref:System.IO.FileInfo> уже создан, может возникнуть исключение, так как объект <xref:System.IO.FileInfo> будет пытаться обновить свойство <xref:System.IO.FileInfo.Length%2A>, используя самую последнюю длину при первом обращении к свойству. При помещении этой операции в блок try-catch вне запроса будет выполнено правило исключения использования в запросах операций, которые могут вызвать побочные эффекты. В целом необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться, что приложение не остается в неизвестном состоянии.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте в проекте, ориентированном на .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

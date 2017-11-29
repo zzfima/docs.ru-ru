@@ -1,40 +1,43 @@
 ---
-title: "Определение значений по умолчанию с помощью методов ShouldSerialize и Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms], методы свойств"
-  - "Reset - метод"
-  - "ShouldPersist - метод"
+title: "Определение значений по умолчанию с помощью методов ShouldSerialize и Reset"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], property methods
+- ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d082b0e3db1e1c115d28446cf515cf6acf60a7d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Определение значений по умолчанию с помощью методов ShouldSerialize и Reset
-`ShouldSerialize` и `Reset` — необязательные методы, которые могут использоваться свойством, если оно не имеет простого значения по умолчанию.  Если свойство имеет простое значение по умолчанию, следует воспользоваться атрибутом <xref:System.ComponentModel.DefaultValueAttribute> и применить значение по умолчанию для конструктора класса атрибутов.  Любой из этих механизмов позволяет реализовать следующие возможности конструктора.  
+# <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Определение значений по умолчанию с помощью методов ShouldSerialize и Reset
+`ShouldSerialize`и `Reset` — необязательные методы, которые могут использоваться для свойства, в том случае, если свойство не имеет значения по умолчанию. Если свойство имеет значение по умолчанию, необходимо применить <xref:System.ComponentModel.DefaultValueAttribute> и вместо этого укажите значение по умолчанию для конструктора класса атрибутов. Любой из этих механизмов обеспечивает следующие возможности в конструкторе:  
   
--   При изменении значения свойства по умолчанию в обозревателе свойств появляется соответствующая визуальная индикация.  
+-   Свойство позволяет получить визуальное представление в браузере свойств, если он был изменен со значения по умолчанию.  
   
--   Пользователь может восстановить значение свойства по умолчанию, щелкнув его правой кнопкой мыши и выбрав **Сброс**.  
+-   Пользователь может щелкнуть свойство и выберите **Сброс** восстановить значение по умолчанию значение свойства.  
   
 -   Конструктор создает более эффективный код.  
   
     > [!NOTE]
-    >  Применение атрибута <xref:System.ComponentModel.DefaultValueAttribute> либо добавление методов `Reset`*имяСвойства* и `ShouldSerialize`*имяСвойства*.  Не используйте их вместе.  
+    >  Либо применить <xref:System.ComponentModel.DefaultValueAttribute> или предоставить `Reset` *PropertyName* и `ShouldSerialize` *PropertyName* методы. Не используйте их вместе.  
   
- Метод `Reset`*имяСвойства* восстанавливает значение свойства по умолчанию, как показано в следующем фрагменте кода.  
+ `Reset` *PropertyName* метод задает свойство к значению по умолчанию, как показано в следующем фрагменте кода.  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -49,9 +52,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Если свойство не имеет метода `Reset`, не помечено атрибутом <xref:System.ComponentModel.DefaultValueAttribute> и не имеет значения по умолчанию, указанного в его объявлении, параметр `Reset` для этого свойства отключается в контекстном меню окна **Свойства** в конструкторе Windows Forms в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Если свойство не имеет `Reset` метод, не помеченный <xref:System.ComponentModel.DefaultValueAttribute>и не имеет значения по умолчанию, указанного в его объявлении `Reset` для этого свойства отключен в контекстном меню **свойства** окно конструктора Windows Forms в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
- Конструкторы, такие как [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], с помощью метода `ShouldSerialize`*имяСвойства* проверяют, было ли изменено значение свойства по умолчанию, и записывают код в форму только в случае положительного ответа. Таким образом обеспечивается более эффективное создание кода.  Примеры.  
+ Конструкторы, такие как [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] использовать `ShouldSerialize` *PropertyName* метода проверьте, изменено ли значение свойства по умолчанию, и писать код в форме, только если свойство изменяется, что позволяет более эффективно Создание кода. Пример:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -69,7 +72,7 @@ public bool ShouldSerializeMyFont() {
 }  
 ```  
   
- Пример готового кода выглядит следующим образом.  
+ Полный пример кода ниже.  
   
 ```vb  
 Option Explicit  
@@ -148,9 +151,9 @@ public class MyControl : Control {
 }  
 ```  
   
- В этом случае, даже если закрытая переменная, полученная при обращении к свойству `MyFont`, имеет значение `null`, в обозревателе это значение `null` не отображается, а отображается свойство <xref:System.Windows.Forms.Control.Font%2A> родительского элемента, если оно отлично от значения `null`, либо значение <xref:System.Windows.Forms.Control.Font%2A> по умолчанию, определенное в <xref:System.Windows.Forms.Control>.  Таким образом, значение по умолчанию для свойства `MyFont` нельзя просто установить; также к нему нельзя применить атрибут <xref:System.ComponentModel.DefaultValueAttribute>.  Вместо этого для свойства `MyFont` должны быть реализованы методы `ShouldSerialize` и `Reset`.  
+ В этом случае даже в том случае, если значение переменной закрытого обращается к `MyFont` свойство `null`, не отображается в обозревателе свойств `null`; вместо этого отображается <xref:System.Windows.Forms.Control.Font%2A> свойство родительского элемента, если он не `null`, или значение по умолчанию <xref:System.Windows.Forms.Control.Font%2A> значения, определенного в <xref:System.Windows.Forms.Control>. Таким образом, значение по умолчанию для `MyFont` нельзя просто установить и <xref:System.ComponentModel.DefaultValueAttribute> не может применяться к этому свойству. Вместо этого `ShouldSerialize` и `Reset` методы должны быть реализованы для `MyFont` свойства.  
   
-## См. также  
- [Свойства элементов управления Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Определение свойства](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)   
+## <a name="see-also"></a>См. также  
+ [Свойства элементов управления Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Определение свойства](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
  [События изменения свойств](../../../../docs/framework/winforms/controls/property-changed-events.md)

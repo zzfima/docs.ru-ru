@@ -1,29 +1,30 @@
 ---
-title: "Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms — элементы управления, специальные возможности"
-  - "элементы управления [Windows Forms], специальные возможности"
-  - "специальные возможности, элементы управления Windows Forms"
+title: "Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, accessibility
+- controls [Windows Forms], accessibility
+- accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d7afc8cc67dc3a428e4995230345938075fbcc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
-Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  
+# <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms
+Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры. Примеры: средства чтения с экрана для слепых и служебные программы голосового ввода для людей, использующих голосовые команды вместо мыши и клавиатуры. Специальные возможности взаимодействуют со свойствами специальных возможностей, представленными элементами управления Windows Forms. К этим свойствам относятся следующие.  
   
 -   **AccessibilityObject**  
   
@@ -35,10 +36,10 @@ caps.handback.revision: 8
   
 -   **AccessibleRole**  
   
-## Свойство AccessibilityObject  
- Это свойство, доступное только для чтения, содержит экземпляр [класса AccessibleObject](frlrfSystemWindowsFormsAccessibleObjectClassTopic).**AccessibleObject** реализует интерфейс <xref:Accessibility.IAccessible>, предоставляющий описание элементов управления, расположение на экране, возможности навигации и значение. Конструктор задает это значение при добавлении элемента управления в форму.  
+## <a name="accessibilityobject-property"></a>Свойство AccessibilityObject  
+ Это свойство, доступное только для чтения, содержит экземпляр <xref:System.Windows.Forms.AccessibleObject> . **AccessibleObject** реализует интерфейс <xref:Accessibility.IAccessible> , предоставляющий описание элементов управления, расположение на экране, возможности навигации и значение. Конструктор задает это значение при добавлении элемента управления в форму.  
   
-## Свойство AccessibleDefaultActionDescription  
+## <a name="accessibledefaultactiondescription-property"></a>Свойство AccessibleDefaultActionDescription  
  Эта строка описывает действие элемента управления. Она не отображается в окне "Свойства", и ее можно задать только в коде. В следующем примере это свойство задается для элемента управления "Кнопка".  
   
 ```  
@@ -55,7 +56,7 @@ button1->AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```  
   
-## Свойство AccessibleDescription  
+## <a name="accessibledescription-property"></a>Свойство AccessibleDescription  
  Эта строка описывает элемент управления. Его можно задать в окне "Свойства" или в коде следующим образом.  
   
 ```  
@@ -69,7 +70,7 @@ Button1.AccessibleDescription = "A button with text 'Exit'";
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
-## Свойство AccessibleName  
+## <a name="accessiblename-property"></a>Свойство AccessibleName  
  Это имя элемента управления, переданное специальным возможностям. Его можно задать в окне "Свойства" или в коде следующим образом.  
   
 ```  
@@ -83,8 +84,8 @@ Button1.AccessibleName = "Order";
 button1->AccessibleName = "Order";  
 ```  
   
-## Свойство AccessibleRole  
- Это свойство, содержащее [перечисление AccessibleRole](frlrfSystemWindowsFormsAccessibleRoleClassTopic), описывает роль пользовательского интерфейса для элемента управления. Для нового элемента управления задано значение `Default`. Это означает, что по умолчанию элемент управления **Кнопка** работает как **Кнопка**. Возможно, потребуется сбросить это свойство, если у элемента управления есть другая роль. Например, вы можете использовать элемент управления **PictureBox** в качестве **Chart** и вам может потребоваться, чтобы специальные возможности передавали роль как **Chart**, а не как **PictureBox**. Возможно, вы захотите указать это свойство для разработанных пользовательских элементов управления. Это свойство можно задать в окне "Свойства" или в коде следующим образом.  
+## <a name="accessiblerole-property"></a>Свойство AccessibleRole  
+ Это свойство, содержащее <xref:System.Windows.Forms.AccessibleRole> , описывает роль пользовательского интерфейса для элемента управления. Для нового элемента управления задано значение `Default`. Это означает, что по умолчанию элемент управления **Кнопка** работает как **Кнопка**. Возможно, потребуется сбросить это свойство, если у элемента управления есть другая роль. Например, вы можете использовать элемент управления **PictureBox** в качестве **Chart**и вам может потребоваться, чтобы специальные возможности передавали роль как **Chart**, а не как **PictureBox**. Возможно, вы захотите указать это свойство для разработанных пользовательских элементов управления. Это свойство можно задать в окне "Свойства" или в коде следующим образом.  
   
 ```  
 ' Visual Basic  
@@ -97,11 +98,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## См. также  
- <xref:System.Windows.Forms.AccessibleObject>   
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.AccessibleObject>  
+ <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.AccessibleRole>

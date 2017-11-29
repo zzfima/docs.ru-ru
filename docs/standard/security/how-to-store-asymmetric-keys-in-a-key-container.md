@@ -1,55 +1,56 @@
 ---
-title: "How to: Store Asymmetric Keys in a Key Container | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "cryptography [.NET Framework], asymmetric keys"
-  - "storing asymmetric keys"
-  - "keys, asymmetric"
-  - "encryption keys"
-  - "keys, storing in key containers"
-  - "asymmetric keys [.NET Framework]"
-  - "encryption [.NET Framework], asymmetric keys"
-  - "decryption keys"
+title: "Практическое руководство. Хранение асимметричных ключей в контейнере ключей"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cryptography [.NET Framework], asymmetric keys
+- storing asymmetric keys
+- keys, asymmetric
+- encryption keys
+- keys, storing in key containers
+- asymmetric keys [.NET Framework]
+- encryption [.NET Framework], asymmetric keys
+- decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Store Asymmetric Keys in a Key Container
-Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере.  Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа.  Дополнительные сведения о контейнерах ключей см. в разделе [Understanding Machine\-Level and User\-Level RSA Key Containers](../Topic/Understanding%20Machine-Level%20and%20User-Level%20RSA%20Key%20Containers.md).  
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Практическое руководство. Хранение асимметричных ключей в контейнере ключей
+Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере. Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа. Дополнительные сведения о контейнерах ключей см. в разделе [Общие сведения о контейнерах ключей RSA уровня компьютера и пользователя](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
-### Порядок создания асимметричного ключа и сохранения его в контейнере ключей  
+### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Порядок создания асимметричного ключа и сохранения его в контейнере ключей  
   
-1.  Создайте новый экземпляр класса <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое должно вызывать контейнер ключей, в поле <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=fullName>.  
+1.  Создать новый экземпляр <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое должно вызывать контейнер ключей для <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> поля.  
   
-2.  Создайте новый экземпляр класса, производного от класса <xref:System.Security.Cryptography.AsymmetricAlgorithm> \(обычно это **RSACryptoServiceProvider** или **DSACryptoServiceProvider**\) и передайте ранее созданный объект **CspParameters** в его конструктор.  
+2.  Создать новый экземпляр класса, производного от <xref:System.Security.Cryptography.AsymmetricAlgorithm> класса (обычно **RSACryptoServiceProvider** или **DSACryptoServiceProvider**) и передайте ранее созданный  **CspParameters** объекта в его конструктор.  
   
-### Порядок удаления ключа из контейнера ключей  
+### <a name="to-delete-the-key-from-a-key-container"></a>Порядок удаления ключа из контейнера ключей  
   
 1.  Создайте новый экземпляр класса **CspParameters** и передайте имя, которое должно вызывать контейнер ключей, в поле **CspParameters.KeyContainerName**.  
   
-2.  Создайте новый экземпляр класса, производного от класса **AsymmetricAlgorithm** \(обычно это **RSACryptoServiceProvider** или **DSACryptoServiceProvider**\) и передайте ранее созданный объект **CspParameters** в его конструктор.  
+2.  Создайте новый экземпляр класса, производного от класса **AsymmetricAlgorithm** (обычно это **RSACryptoServiceProvider** или **DSACryptoServiceProvider**) и передайте ранее созданный объект **CspParameters** в его конструктор.  
   
-3.  Установите для свойства **PersistKeyInCSP** класса, являющегося производным от **AsymmetricAlgorithm**, значение **false** \(**False** в Visual Basic\).  
+3.  Установите для свойства **PersistKeyInCSP** класса, являющегося производным от **AsymmetricAlgorithm**, значение **false** (**False** в Visual Basic).  
   
-4.  Вызовите метод **Clear** класса, производного от **AsymmetricAlgorithm**.  Этот метод освобождает все ресурсы класса и очищает контейнер ключей.  
+4.  Вызовите метод **Clear** класса, производного от **AsymmetricAlgorithm**. Этот метод освобождает все ресурсы класса и очищает контейнер ключей.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как создать асимметричный ключ, сохранить его в контейнере ключей, затем извлечь ключ и удалить его из контейнера.  
   
  Обратите внимание, что код в методах `GenKey_SaveInContainer` и `GetKeyFromContainer` совпадает.  Если указать имя контейнера ключей для объекта <xref:System.Security.Cryptography.CspParameters> и передать его в объект <xref:System.Security.Cryptography.AsymmetricAlgorithm>, когда свойство <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> или <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> имеет значение true, происходит следующее.  Если контейнер ключей с указанным именем не существует, он создается, а ключ сохраняется.  Если контейнер ключей с указанным именем существует, то ключ в этом контейнере автоматически загружается в текущий объект <xref:System.Security.Cryptography.AsymmetricAlgorithm>.  Таким образом, код в методе `GenKey_SaveInContainer` сохраняет ключ, так как он выполняется первым, а код в методе `GetKeyFromContainer` загружает ключ, так как он выполняется вторым.  
@@ -130,7 +131,6 @@ Public Class StoreKey
         Console.WriteLine("Key deleted.")  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -220,18 +220,18 @@ public class StoreKey
 ```  
   
 ```Output  
-  
-            Ключ добавляется в контейнер:  
-<RSAKeyValue> Информация о ключе А</RSAKeyValue>  
-Ключ извлекается из контейнера:  
-<RSAKeyValue> Информация о ключе А</RSAKeyValue>  
-Ключ удаляется.  Ключ добавляется в контейнер:  
-<RSAKeyValue> Информация о ключе Б</RSAKeyValue>  
-Ключ удаляется.    
+Key added to container:  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key retrieved from container :  
+<RSAKeyValue> Key Information A</RSAKeyValue>  
+Key deleted.  
+Key added to container:  
+<RSAKeyValue> Key Information B</RSAKeyValue>  
+Key deleted.  
 ```  
   
-## См. также  
- [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)   
- [Encrypting Data](../../../docs/standard/security/encrypting-data.md)   
- [Decrypting Data](../../../docs/standard/security/decrypting-data.md)   
- [Службы криптографии](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также  
+ [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+ [Шифрование данных](../../../docs/standard/security/encrypting-data.md)  
+ [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)  
+ [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

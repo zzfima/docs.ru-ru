@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
 ms.openlocfilehash: 1e7a223248b574e30c266c3c9ac66bf317f1d19f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] добавляет ряд функциональных возможностей в Windows Workflow Foundation. В этом документе описываются некоторые новые функциональные возможности и приведены подробные сведения о сценариях, в которых они могут оказаться полезными.  
@@ -353,7 +352,7 @@ ms.lasthandoff: 09/25/2017
   
     1.  Будет использован профиль по умолчанию.  
   
-    2.  Откройте средство просмотра событий и включите канал аналитики для следующего узла: **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows **, **Сервер приложений-приложения**. Щелкните правой кнопкой мыши **аналитический** и выберите **включить журнал**.  
+    2.  Откройте средство просмотра событий и включите канал аналитики для следующего узла: **средство просмотра событий**, **журналы приложений и служб**, **Microsoft**, **Windows** , **Сервер приложений-приложения**. Щелкните правой кнопкой мыши **аналитический** и выберите **включить журнал**.  
   
     3.  Запустите службу рабочего процесса.  
   
@@ -373,4 +372,3 @@ ms.lasthandoff: 09/25/2017
 2.  Примеры: [сохраняемости](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
 3.  Основная документация: [хранилище экземпляров рабочих процессов SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
-

@@ -1,35 +1,38 @@
 ---
-title: "507 - HostedTransportConfigurationManagerConfigInitStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 507 - HostedTransportConfigurationManagerConfigInitStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf8956cd-2f97-4536-af17-1f42618b4f11
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f0bfc757eeb809bdd51be7786a4fa7c9a424e904
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 507 - HostedTransportConfigurationManagerConfigInitStart
-## Свойства  
+# <a name="507---hostedtransportconfigurationmanagerconfiginitstart"></a>507 - HostedTransportConfigurationManagerConfigInitStart
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|507|  
 |Ключевые слова|WebHost|  
 |Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается при начале инициализации HostedTransportConfigurationManager.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Запуск инициализации конфигурации HostedTransportConfigurationManager.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

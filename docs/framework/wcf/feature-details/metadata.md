@@ -1,27 +1,29 @@
 ---
-title: "Метаданные | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "метаданные [WCF]"
+title: "Метаданные"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36428e30f19de438ce78f2af24fe0865120e5b2b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Метаданные
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает инфраструктуру для экспорта, публикации, получения и импорта метаданных служб.Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
+# <a name="metadata"></a>Метаданные
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает инфраструктуру для экспорта, публикации, получения и импорта метаданных служб. Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
   
-## В этом разделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  Высокоуровневое общее описание архитектуры метаданных.  
   
@@ -34,7 +36,7 @@ caps.handback.revision: 10
  [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  Описание способов публикации метаданных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Извлечение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ [Получение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Описание различных способов извлечения метаданных.  
   
  [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
@@ -43,5 +45,5 @@ caps.handback.revision: 10
  [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  Описание важных вопросов безопасности при работе с метаданными службы.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

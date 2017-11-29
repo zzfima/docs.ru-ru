@@ -1,31 +1,29 @@
 ---
-title: "Как размещать и запускать базовую службу Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "службы WCF [WCF]"
-  - "службы WCF [WCF], выполнение"
+title: "Практическое руководство. Размещение и запуск базовой службы Windows Communication Foundation"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF services [WCF]
+- WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-caps.latest.revision: 58
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 58
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f0368e2e605f3f5c5b5a7b0d8c05f7276d8df22d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как размещать и запускать базовую службу Windows Communication Foundation
-Это третий из шести шагов, необходимый для создания приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].Общие сведения обо всех шести шагах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Практическое руководство. Размещение и запуск базовой службы Windows Communication Foundation
+Это третий из шести шагов, необходимый для создания приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
   
- В этом разделе описывается размещение службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] в консольном приложении.Эта процедура состоит из следующих шагов:  
+ В этом разделе описывается размещение службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] в консольном приложении. Эта процедура состоит из следующих шагов:  
   
 -   Создайте консольное приложение для размещения службы.  
   
@@ -37,23 +35,23 @@ caps.handback.revision: 58
   
  Полный список кодов, составленных при выполнении этой задачи, приведен в примере после описания процедуры.  
   
-### Создайте консольное приложение для размещения службы.  
+## <a name="to-create-a-new-console-application-to-host-the-service"></a>Создайте новое консольное приложение для размещения службы.  
   
-1.  Создайте новый проект консольного приложения, щелкнув правой кнопкой мыши решение «Приступая к работе» и выбрав элементы **Добавить**, **Создать проект**.В диалоговом окне **Добавить новый проект** в левой части окна выберите **Windows** во вкладке **C\#** или **VB**.В центральной части диалогового окна выберите **Консольное приложение**.Задайте имя для проекта GettingStartedHost.  
+1.  Создайте новый проект консольного приложения, щелкнув решение Приступая к работе, выбрав, **добавить**, **новый проект**. В **Добавление нового проекта** диалогового окна в левой части окна выберите **Windows** под **C#** или **VB**. В центральной части диалогового окна выберите **консольное приложение**. Задайте имя для проекта GettingStartedHost.  
   
-2.  Выберите требуемую версию GettingStartedHost .NET Framework — .NET Framework 4.5, щелкнув правой кнопкой мыши **GettingStartedHost** в обозревателе решений и выбрав элемент **Свойства**.В раскрывающемся списке **Требуемая версия .NET Framework** выберите значение **.NET Framework 4.5**.Установка требуемой версии .NET Framework для проекта Visual Basic несколько отличается от варианта, приведенного выше. В диалоговом окне «Свойства» проекта GettingStartedHost перейдите на вкладку **Компиляция**, а затем нажмите кнопку **Дополнительные параметры компиляции** в нижнем левом углу диалогового окна.Выберите пункт **.NET Framework 4.5** в раскрывающемся списке **Требуемая версия .Net Framework**.  
+2.  Значение целевой платформы проекта GettingStartedHost .NET Framework 4.5, щелкнув правой кнопкой мыши **GettingStartedHost** в обозревателе решений и выбрав **свойства**. В раскрывающемся списке **требуемой версии .NET Framework** выберите **.NET Framework 4.5**. Установка требуемой версии .NET framework для проекта Visual Basic несколько отличается, в диалоговом окне свойств проекта GettingStartedHost, щелкните **компиляции** с левой стороны экрана, а затем щелкните **Advanced компиляции Параметры** кнопки в левом нижнем углу диалогового окна. Выберите **.NET Framework 4.5** в раскрывающемся списке **требуемой версии .NET Framework**.  
   
-     Указание требуемой версии .NET Framework приведет к перезагрузке решения в среде [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Нажмите кнопку **ОК**, когда появится соответствующий запрос.  
+     Настройка целевой версии .NET framework приведет к [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] к перезагрузке решения, нажмите клавишу **ОК** при появлении запроса.  
   
-3.  Добавьте ссылку на проект GettingStartedLib в проект GettingStartedHost, щелкните правой кнопкой мыши папку **Ссылки** в проекте GettingStartedHost в обозревателе решений и выберите **Добавить ссылку**.В диалоговом окне **Добавить ссылку** выберите **Решение** на левой стороне диалогового окна, выберите GettingStartedLib в центральной части окна и нажмите кнопку **Добавить**.Это делает типы, определенные в GettingStartedLib, доступными в проекте GettingStartedHost.  
+3.  Добавьте ссылку на проект GettingStartedLib в проект gettingstartedhost, щелкните правой кнопкой мыши **ссылки** папки в проекте GettingStartedHost в обозревателе решений и выберите **Добавление ссылки** . В **добавить ссылку** диалогового окна выберите **решения** с левой стороны диалогового окна, выберите GettingStartedLib в центральной части окна и нажмите кнопку **добавить**. Это делает типы, определенные в GettingStartedLib, доступными в проекте GettingStartedHost.  
   
-4.  Добавьте в проект GettingStartedHost ссылку на сборку System.ServiceModel. Для этого в обозревателе решений щелкните правой кнопкой мыши папку **Ссылка** проекта GettingStartedHost и выберите пункт **Добавить** ссылку.В диалоговом окне **Добавить ссылку** выберите в левой стороне диалогового окна пункт **Платформа**.В текстовом поле «Поиск сборок» введите `System.ServiceModel`.В центральной части диалогового окна выберите **System.ServiceModel**, нажмите кнопку **Добавить**, а затем кнопку **Закрыть**.Сохраните решение, нажав кнопку Сохранить все под главным меню.  
+4.  Добавить ссылку на сборку System.ServiceModel в проекте GettingStartedHost, щелкните правой кнопкой мыши **ссылки** папки в проекте GettingStartedHost в обозревателе решений и выберите **добавить** Ссылка. В **добавить ссылку** окна выберите **Framework** с левой стороны диалогового окна. В текстовом поле «Поиск сборок» введите `System.ServiceModel`. В центральной части диалогового окна выберите **System.ServiceModel**, нажмите кнопку **добавить** и нажмите кнопку **закрыть** кнопки. Сохраните решение, нажав кнопку «Сохранить все» под главным меню.  
   
-### Размещение службы  
+### <a name="to-host-the-service"></a>Размещение службы  
   
 -   Откройте файл Program.cs или Module.vb и введите следующий код:  
   
-    ```  
+    ```csharp
     // program.cs  
     using System;  
     using System.Collections.Generic;  
@@ -103,11 +101,10 @@ caps.handback.revision: 58
             }  
         }  
     }  
-  
     ```  
   
-    ```  
-    ‘Module1.vb  
+    ```vb
+    'Module1.vb  
     Imports System  
     Imports System.ServiceModel  
     Imports System.ServiceModel.Description  
@@ -153,34 +150,33 @@ caps.handback.revision: 58
         End Class  
   
     End Module  
-  
     ```  
   
-    1.  Создайте экземпляр класса с именем с базовым адресом службы.Службы задаются URL\-адресом, содержащим базовый адрес и дополнительный универсальный код ресурса \(URI\).Базовый адрес форматирование следующим образом: \[транспорт\]:\/\/\[имя компьютера или домена\]\[:необязательно порт \#\]\/\[необязательный фрагмент универсального кода ресурса \(URI\)\]. Базовый адрес службы калькулятора использует транспорт HTTP, localhost, порт 8000, и сегмент URI «приступая к работе»  
+    1.  Шаг 1. Создает экземпляр класса с именем с базовым адресом службы. Службы задаются URL-адресом, содержащим базовый адрес и дополнительный универсальный код ресурса (URI). Базовый адрес имеет следующий формат: [транспорт] :// [имя компьютера или домена] [: необязательно порт #] / [необязательно-сегмент URI] базовый адрес службы калькулятора использует транспорт HTTP, localhost, порт 8000 и сегмент URI «Приступая к работе»  
   
-    2.  Шаг 2 — создает экземпляр класса <xref:System.ServiceModel.ServicHost> для размещения службы.Конструктор принимает 2 параметра: тип класса, который реализует контракт службы, и базовый адрес службы.  
+    2.  Шаг 2. Создает экземпляр класса <xref:System.ServiceModel.ServiceHost> для размещения службы. Конструктор принимает 2 параметра: тип класса, который реализует контракт службы, и базовый адрес службы.  
   
-    3.  Шаг 3 — создает новый экземпляр <xref:System.ServiceModel.ServiceEndpoint>.Конечная точка — это комбинация контракта службы, привязки и адреса.Таким образом, конструктор <xref:System.ServiceModel.ServiceEndpoint> принимает тип интерфейса контракта службы, привязки и адреса конечной точки.Контракт службы — `ICalculator`, который определен в реализации службы и типа.В этом образце используется встроенная привязка <xref:System.ServiceModel.WSHttpBinding>, подключаемая к конечным точкам, соответствующим спецификациями WS\-\*.Дополнительные сведения об WCF см. в разделе [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md).Адрес добавляется к базовому адресу для определения конечной точки.Адрес, указанный в этом коде «калькулятор», полный адрес конечной точки `“http://localhost:8000/GettingStartedService/Calculator”`  
+    3.  Шаг 3 – создает <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` экземпляра. Конечная точка службы состоит из адреса, привязки и контракта службы. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Таким образом конструктор принимает тип интерфейса контракта службы, привязку и адрес. Контракт службы - `ICalculator`. Он определен и реализуется в типе службы. В этом образце используется встроенная привязка <xref:System.ServiceModel.WSHttpBinding> для подключения к конечным точкам, соответствующим спецификациями WS-*. Дополнительные сведения о привязках WCF см. в разделе [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md). Адрес добавляется к базовому адресу для определения конечной точки. Адрес, указанный в этом коде является «CalculatorService», поэтому полного адреса конечной точки `"http://localhost:8000/GettingStarted/CalculatorService"` Добавление конечной точки службы, обязательно при использовании .NET Framework 4.0 или более поздней версии. В этих версиях, если конечные точки не заданы в коде или в конфигурации, WCF добавляет одну конечную точку по умолчанию для каждого базового адреса в каждом контракте, реализованном в службе. Дополнительные сведения о умолчанию конечные точки в разделе [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
         > [!IMPORTANT]
-        >  Добавление конечной точки службы не обязательно при использовании .NET Framework 4 или более поздней версии.Если конечные точки не заданы в коде или в конфигурации, то среда выполнения добавляет одну конечную точку по умолчанию для каждого базового адреса в каждом контракте службы, реализованном в службе.Дополнительные сведения о конечных точках метаданных см. в разделе [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и поведениях см. в разделах [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  Добавление конечной точки службы не обязательно при использовании .NET Framework 4 или более поздней версии. В этих версиях, если конечные точки не заданы в коде или в конфигурации, WCF добавляет одну конечную точку по умолчанию для каждого базового адреса в каждом контракте, реализованном в службе. Дополнительные сведения о умолчанию конечные точки в разделе [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-    4.  Шаг 4 — включение обмена метаданными.Клиенты могут использовать обмен метаданными \(MEX\) для создания прокси\-объектов, которые будут использоваться для вызова операции службы.Для поддержки обмена метаданными создайте экземпляр <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, установите <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> в значении `true`, добавьте поведение в коллекцию <xref:System.ServiceModel.ServiceHost.Behaviors%2A> экземпляр <xref:System.ServiceModel.ServiceHost>.  
+    4.  Шаг 4. Включение обмена метаданными. Клиенты могут использовать обмен метаданными для создания прокси-объектов, которые будут использоваться для вызова операции службы. Включение обмена метаданными создайте <xref:System.ServiceModel.Description.ServiceMetadataBehavior> экземпляра, установите его на <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> свойства `true`и добавьте поведение <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` коллекцию <xref:System.ServiceModel.ServiceHost> экземпляра.  
   
-    5.  Шаг 5 — откройте <xref:System.ServiceModel.ServiceHost>, чтобы прослушивать входящие сообщения.Обратите внимание, что код ожидает пока пользователь не нажмет ENTER.Если этого не сделать, то приложение немедленно закроется и служба завершит работу. Также обратите внимание, что используется блок try\/catch.После создания экземпляра <xref:System.ServiceModel.ServiceHost> другой код находится в блоке try\/catch.Дополнительные сведения о перехвате исключений, формируемых системой безопасности <xref:System.ServiceModel.ServiceHost> см. в разделе [Предотвращение проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+    5.  Шаг 5. Откройте <xref:System.ServiceModel.ServiceHost>, чтобы прослушивать входящие сообщения. Обратите внимание, что код ожидает, пока пользователь не нажмет ENTER. Если этого не сделать, то приложение немедленно закроется и служба завершит работу. Также обратите внимание, что используется блок try/catch. После создания экземпляра <xref:System.ServiceModel.ServiceHost> другой код находится в блоке try/catch. Дополнительные сведения о перехвате исключений, вызванных безопасно <xref:System.ServiceModel.ServiceHost>, в разделе [как избежать проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
-### Проверка работы службы  
+### <a name="to-verify-the-service-is-working"></a>Проверка работы службы  
   
-1.  Запустите консольное приложение GettingStartedHost с [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].В [!INCLUDE[wv](../../../includes/wv-md.md)] и более поздних операционных системах служба должна запускаться пользователем с правами администратора.Так как [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] была запущена пользователем с правами администратора, GettingStartedHost также запускается пользователем с правами администратора.Вы также можете запустить новую командную строку с правами администратора, а затем в ней запустить service.exe.  
+1.  Запустите консольное приложение GettingStartedHost с [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. В [!INCLUDE[wv](../../../includes/wv-md.md)] и более поздних операционных системах служба должна запускаться пользователем с правами администратора. Так как [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] была запущена с правами администратора, GettingStartedHost также запускается с правами администратора. Вы также можете запустить новую командную строку с правами администратора, а затем в ней запустить service.exe.  
   
-2.  Откройте Internet Explorer и перейдите на страницу отладки службы по адресу. `http://localhost:8000/GettingStarted/CalculatorService`.  
+2.  Откройте Internet Explorer и перейдите на страницу отладки службы по адресу `http://localhost:8000/GettingStarted/CalculatorService`.  
   
-## Пример  
- Нижеприведенный пример иллюстрирует создание контракта службы и ее реализацию \(см. предыдущие шаги в руководстве\), а также размещение службы в консольном приложении.  
+## <a name="example"></a>Пример  
+ Нижеприведенный пример иллюстрирует создание контракта службы и ее реализацию (см. предыдущие шаги в руководстве), а также размещение службы в консольном приложении.  
   
- Для компиляции с помощью компилятора командной строки скомпилируйте IService1.cs и Service2.cs в библиотеку классов, ссылающуюся на `System.ServiceModel.dll`.и скомпилируйте Program.cs в консольное приложение.  
+ Для компиляции с помощью компилятора командной строки, скомпилируйте IService1.cs и Service1.cs в библиотеке класса ссылки на `System.ServiceModel.dll`. Затем скомпилируйте Program.cs в консольное приложение.  
   
-```  
+```csharp
 // IService1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -204,10 +200,9 @@ namespace GettingStartedLib
             double Divide(double n1, double n2);  
         }  
 }  
-  
 ```  
   
-```  
+```csharp
 // Service1.cs  
 using System;  
 using System.Collections.Generic;  
@@ -254,10 +249,9 @@ namespace GettingStartedLib
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp
 //Program.cs  
 using System;  
 using System.Collections.Generic;  
@@ -307,11 +301,10 @@ namespace GettingStartedHost
         }  
     }  
 }  
-  
 ```  
   
-```  
-‘IService1.vb  
+```vb
+'IService1.vb  
 Imports System  
 Imports System.ServiceModel  
   
@@ -330,11 +323,10 @@ Namespace GettingStartedLib
         Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
     End Interface  
 End Namespace  
-  
 ```  
   
-```  
-‘Service1.vb  
+```vb
+'Service1.vb  
 Imports System  
 Imports System.ServiceModel  
   
@@ -376,11 +368,10 @@ Namespace GettingStartedLib
         End Function  
     End Class  
 End Namespace  
-  
 ```  
   
-```  
-‘Module1.vb  
+```vb
+'Module1.vb  
 Imports System  
 Imports System.ServiceModel  
 Imports System.ServiceModel.Description  
@@ -427,14 +418,13 @@ Module Service
     End Class  
   
 End Module  
-  
 ```  
   
 > [!NOTE]
->  Подобные службы требуют разрешения на регистрацию на компьютере HTTP\-адресов, на которые будет ожидаться передача данных.Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP.[!INCLUDE[crabout](../../../includes/crabout-md.md)] настройке резервирования пространства имен см. в разделе [Настройка HTTP и HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).Запуск файла service.exe на [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] возможен только при наличии прав администратора.  
+>  Подобные службы требуют разрешения на регистрацию на компьютере HTTP-адресов, на которые будет ожидаться передача данных. Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]как настроить резервирование пространства имен см. в разделе [Настройка протоколов HTTP и HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Запуск файла service.exe на [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] возможен только при наличии прав администратора.  
   
- Сейчас служба запущена.Перейти к [Как создать клиент](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).Сведения по устранению неполадок см. в разделе [Устранение неполадок, связанных с учебником по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
+ Сейчас служба запущена. Перейти к [как: создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Сведения об устранении неполадок в разделе [Устранение неполадок учебник по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   
-## См. также  
- [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)   
+## <a name="see-also"></a>См. также  
+ [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)

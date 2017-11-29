@@ -1,41 +1,47 @@
 ---
-title: "Практическое руководство. Привязка графического элемента к элементу | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "декоративные элементы, привязка к указанным элементам UIElement"
-  - "UIElements, привязка декоративных элементов"
+title: "Практическое руководство. Привязка графического элемента к элементу"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- UIElements [WPF], binding adorners to
+- adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2b1da3216ce6d3507c304ff957728d33ba1b9bd9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Привязка графического элемента к элементу
-В этом примере описывается порядок программной привязки графического элемента к заданному объекту <xref:System.Windows.UIElement>.  
+# <a name="how-to-bind-an-adorner-to-an-element"></a>Практическое руководство. Привязка графического элемента к элементу
+В этом примере показано, как программным способом привязки графического элемента с заданным <xref:System.Windows.UIElement>.  
   
-## Пример  
- Для привязки графического элемента к конкретному объекту <xref:System.Windows.UIElement> выполните следующие действия:  
+## <a name="example"></a>Пример  
+ Для привязки к конкретному графический элемент <xref:System.Windows.UIElement>, выполните следующие действия:  
   
-1.  Вызовите статический \(`static`\) метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>, чтобы получить объект <xref:System.Windows.Documents.AdornerLayer> для оформляемого объекта <xref:System.Windows.UIElement>.  Метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> перемещается вверх по визуальному дереву, начиная с заданного **элемента пользовательского интерфейса**, и возвращает первый найденный слой графических элементов.  \(Если уровни графических элементов не найдены, метод возвращает значение null.\)  
+1.  Вызовите `static` метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> для получения <xref:System.Windows.Documents.AdornerLayer> для объекта <xref:System.Windows.UIElement> оформляемого. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>перемещается вверх по дереву visual, начиная с указанного **UIElement**и возвращает первый слой графических элементов, которые найдет. (Если слои декоративных элементов не найдены, метод возвращает значение 0.)  
   
-2.  Вызовите метод <xref:System.Windows.Documents.AdornerLayer.Add%2A> для привязки графического элемента к нужному объекту **UIElement**.  
+2.  Вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метода для привязки к целевому декоратора **UIElement**.  
   
- В следующем примере выполняется привязка объекта SimpleCircleAdorner \(см. выше\) к объекту <xref:System.Windows.Controls.TextBox> с именем *myTextBox*.  
+ Следующий пример привязывает (показано выше) для SimpleCircleAdorner <xref:System.Windows.Controls.TextBox> с именем *myTextBox*.  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
->  Использование [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для привязки элемента оформления к другому элементу в текущей версии не поддерживается.  
+>  Использование [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] для привязки декоративного элемента к другому элементу в настоящее время не поддерживается.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения о декоративных элементах](../../../../docs/framework/wpf/controls/adorners-overview.md)

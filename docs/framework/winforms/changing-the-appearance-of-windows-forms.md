@@ -1,57 +1,57 @@
 ---
-title: "Changing the Appearance of Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, changing the appearance of"
+title: "Изменение внешнего вида Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ceeedf3d6b73d08ce8aeade74288dc797d462123
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Changing the Appearance of Windows Forms
+# <a name="changing-the-appearance-of-windows-forms"></a>Изменение внешнего вида Windows Forms
 Внешний вид приложений Windows Forms можно настраивать различными способами. Например, можно изменять границы, прозрачность, форму, стиль или фоновое изображение.  
   
-## В этом подразделе  
- [How to: Change the Borders of Windows Forms](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
+## <a name="in-this-section"></a>Содержание  
+ [Практическое руководство. Изменение границ в Windows Forms](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
  Показано, как изменить стиль границ формы.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.Form>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ Описывает данный класс и предоставляет ссылки на все его члены.  
   
  <xref:System.Windows.Forms.FormBorderStyle>  
  Описывается это перечисление и все его члены.  
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ Описывает данный класс и предоставляет ссылки на все его члены.  
   
  <xref:System.Drawing.Image>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ Описывает данный класс и предоставляет ссылки на все его члены.  
   
  <xref:System.Drawing.Region>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ Описывает данный класс и предоставляет ссылки на все его члены.  
   
  <xref:System.Drawing.Color>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ Описывает данный класс и предоставляет ссылки на все его члены.  
   
-## Связанные подразделы  
- [Adjusting the Size and Scale of Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Настройка размера и масштаба формы Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
  Ссылки на разделы, в которых показано, как изменить размер и масштаб формы.  
   
  [Объекты Graphics и Drawing в Windows Forms](../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  Ссылки на разделы, в которых описываются способы рисования в Windows Forms.  
   
- [Элементы управления Windows Forms со встроенной поддержки рисования владельцем](../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [Элементы управления со встроенной поддержкой рисования владельцем](../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
  Описывается поддержка рисования владельцем в элементах управления Windows Forms.

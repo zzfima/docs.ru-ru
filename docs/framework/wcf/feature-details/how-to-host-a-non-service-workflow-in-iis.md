@@ -1,45 +1,48 @@
 ---
-title: "Как разместить не являющийся службой рабочий процесс в службах IIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как разместить не являющийся службой рабочий процесс в службах IIS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как разместить не являющийся службой рабочий процесс в службах IIS
-Рабочие процессы, которые не являются службами рабочих процессов, должны быть размещены в службах IIS\/WAS.  Это может оказаться полезным, если нужно разместить рабочий процесс, разработанный кем\-то другим.  Например, если необходимо повторно разместить конструктор рабочих процессов и разрешить пользователям создавать собственные рабочие процессы.  Размещение не являющихся службами рабочих процессов в службах IIS обеспечивает поддержку таких функций, как перезапуск процессов, завершение работы при ожидании, наблюдение за работоспособностью процессов и активация на основе сообщений.  Службы рабочих процессов, размещенные в службах IIS, содержат действия <xref:System.ServiceModel.Activities.Receive> и активируются в момент получения сообщения службами IIS.  Не являющиеся службами рабочие процессы не содержат действий обмена сообщениями и по умолчанию не могут быть активированы отправкой сообщения.  Чтобы создать экземпляр рабочего процесса, необходимо создать класс, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, и определить контракт службы, содержащий операции.  В этом разделе подробно рассматривается создание простого рабочего процесса, определение контракта службы, который может быть использован клиентом для активации рабочего процесса, а затем создание класса, производного от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, использующего контракт службы для прослушивания запросов на создание рабочего процесса.  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a>Как разместить не являющийся службой рабочий процесс в службах IIS
+Рабочие процессы, которые не являются службами рабочих процессов, должны быть размещены в службах IIS/WAS. Это может оказаться полезным, если нужно разместить рабочий процесс, разработанный кем-то другим. Например, если необходимо повторно разместить конструктор рабочих процессов и разрешить пользователям создавать собственные рабочие процессы.  Размещение не являющихся службами рабочих процессов в службах IIS обеспечивает поддержку таких функций, как перезапуск процессов, завершение работы при ожидании, наблюдение за работоспособностью процессов и активация на основе сообщений. Службы рабочих процессов, размещенные в службах IIS, содержат действия <xref:System.ServiceModel.Activities.Receive> и активируются в момент получения сообщения службами IIS. Не являющиеся службами рабочие процессы не содержат действий обмена сообщениями и по умолчанию не могут быть активированы отправкой сообщения.  Чтобы создать экземпляр рабочего процесса, необходимо создать класс, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, и определить контракт службы, содержащий операции. Этот раздел содержит пошаговое руководство по созданию простого рабочего процесса, определение контракта службы, клиент может использовать для активации рабочего процесса и создания класса, производного от класса <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> для прослушивания запросов на создание рабочего процесса, которая использует контракт службы.  
   
-### Создание простого рабочего процесса  
+### <a name="create-a-simple-workflow"></a>Создание простого рабочего процесса  
   
 1.  Создайте пустое решение [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с именем `CreationEndpointTest`.  
   
-2.  Добавьте в него новый проект служебного приложения рабочего процесса WCF под названием `SimpleWorkflow`.  Откроется конструктор рабочих процессов.  
+2.  Добавьте в него новый проект служебного приложения рабочего процесса WCF под названием `SimpleWorkflow`. Откроется конструктор рабочих процессов.  
   
-3.  Удалите действия ReceiveRequest и SendResponse.  Это как раз те действия, которые делают рабочий процесс службой.  Поскольку мы не работаем со службами рабочих процессов, они нам не нужны.  
+3.  Удалите действия ReceiveRequest и SendResponse. Это как раз те действия, которые делают рабочий процесс службой. Поскольку мы не работаем со службами рабочих процессов, они нам не нужны.  
   
 4.  Установите свойство DisplayName действия последовательности в значение «Sequential Workflow».  
   
 5.  Переименуйте файл Service1.xamlx в Workflow1.xamlx.  
   
-6.  Щелкните конструктор за пределами действия последовательности и задайте для свойств Name и ConfigurationName значение «Workflow1».  
+6.  Щелкните конструктор за пределами действия последовательности и задайте свойства Name и ConfigurationName для «Workflow1».  
   
-7.  Перетащите действие <xref:System.Activities.Statements.WriteLine> в раздел <xref:System.Activities.Statements.Sequence>.  Действие <xref:System.Activities.Statements.WriteLine> можно найти в разделе **Базовые функции** области элементов.  Задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> действия <xref:System.Activities.Statements.WriteLine> значение «Hello, world».  
+7.  Перетащите действие <xref:System.Activities.Statements.WriteLine> в раздел <xref:System.Activities.Statements.Sequence>. <xref:System.Activities.Statements.WriteLine> Действия можно найти в **примитивы** области элементов. Задать <xref:System.Activities.Statements.WriteLine.Text%2A> свойство <xref:System.Activities.Statements.WriteLine> действие «Hello, world».  
   
      После этого рабочий процесс должен выглядеть так, как показано на следующей схеме.  
   
      ![Простой рабочий процесс](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
   
-### Создайте контракт службы создания рабочего процесса  
+### <a name="create-the-workflow-creation-service-contract"></a>Создайте контракт службы создания рабочего процесса  
   
 1.  Добавьте новый проект библиотеки классов с названием `Shared` в решение `CreationEndpointTest`.  
   
@@ -69,11 +72,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-     Данный контракт определяет две операции, обе из которых служат для создания нового экземпляра вновь созданного рабочего процесса, не являющегося службой.  Один из них создает новый экземпляр с созданием идентификатора экземпляра, а второй позволяет указать идентификатор для нового экземпляра рабочего процесса.  Оба метода позволяют передавать параметры новому экземпляру рабочего процесса.  Этот контракт будет доступен через <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, что позволяет клиентам создавать новые экземпляры рабочих процессов, не являющихся службами.  
+     Данный контракт определяет две операции, обе из которых служат для создания нового экземпляра вновь созданного рабочего процесса, не являющегося службой. Один из них создает новый экземпляр с созданием идентификатора экземпляра, а второй позволяет указать идентификатор для нового экземпляра рабочего процесса.  Оба метода позволяют передавать параметры новому экземпляру рабочего процесса. Этот контракт будет доступен через <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> разрешить клиентам для создания новых экземпляров рабочего процесса, не относящиеся к службе.  
   
-### Создайте класс, производный от WorkflowHostingEndpoint  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a>Создайте класс, производный от WorkflowHostingEndpoint  
   
-1.  Добавьте новый класс с названием `CreationEndpoint`, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, в проект `Shared`.  
+1.  Добавьте новый класс с именем `CreationEndpoint` производными <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> для `Shared` проекта.  
   
     ```  
     using System;  
@@ -101,7 +104,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-3.  Добавьте следующий конструктор в класс `CreationEndpoint`.  Обратите внимание, что в вызове конструктора базового класса указан контракт службы `IWorkflowCreation`.  
+3.  Добавьте следующий конструктор в класс `CreationEndpoint`. Обратите внимание, что в вызове конструктора базового класса указан контракт службы `IWorkflowCreation`.  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -120,7 +123,7 @@ caps.handback.revision: 7
        }  
     ```  
   
-5.  Добавьте статическое свойство `DefaultBaseUri` в класс `CreationEndpoint`.  Это свойство будет использоваться для хранения базового URI по умолчанию, если он не указан.  
+5.  Добавьте статическое свойство `DefaultBaseUri` в класс `CreationEndpoint`. Это свойство будет использоваться для хранения базового URI по умолчанию, если он не указан.  
   
     ```  
     static Uri DefaultBaseUri  
@@ -148,7 +151,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-7.  Переопределите метод <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>, чтобы он возвращал идентификатор экземпляра рабочего процесса.  Если заголовок `Action` заканчивается на «Create», возвращается пустой идентификатор GUID; если заголовок `Action` заканчивается на «CreateWithInstanceId», возвращается идентификатор GUID, переданный в метод.  В противном случае формируется исключение <xref:System.InvalidOperationException>.  Эти заголовки `Action` соответствуют двум операциям, определенным в контракте службы `IWorkflowCreation`.  
+7.  Переопределите метод <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>, чтобы он возвращал идентификатор экземпляра рабочего процесса. Если `Action` заголовок заканчивается на «Создать» возвращают пустой идентификатор GUID, если `Action` заголовок заканчивается на «CreateWithInstanceId» возвращают идентификатор GUID, переданный в метод. В противном случае формируется исключение <xref:System.InvalidOperationException>. Эти заголовки `Action` соответствуют двум операциям, определенным в контракте службы `IWorkflowCreation`.  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -198,11 +201,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-### Создайте элемент стандартной конечной точки, чтобы получить возможность настройки WorkflowCreationEndpoint.  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a>Создайте элемент стандартной конечной точки, чтобы получить возможность настройки WorkflowCreationEndpoint.  
   
 1.  Добавьте ссылку на класс Shared в проект `CreationEndpoint`.  
   
-2.  Добавьте новый класс с именем `CreationEndpointElement`, производный от <xref:System.ServiceModel.Configuration.StandardEndpointElement>, в проект `CreationEndpoint`.  Этот класс будет представлять `CreationEndpoint` в файле web.config.  
+2.  Добавьте новый класс с именем `CreationEndpointElement`, производный от <xref:System.ServiceModel.Configuration.StandardEndpointElement>, в проект `CreationEndpoint`. Этот класс будет представлять `CreationEndpoint` в файле web.config.  
   
     ```  
     using System;  
@@ -236,10 +239,9 @@ caps.handback.revision: 7
     {  
        return new CreationEndpoint();  
     }  
-  
     ```  
   
-5.  Переопределите методы <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> и <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.  Эти методы нужно просто определить, не нужно заполнять их каким\-либо кодом.  
+5.  Переопределите методы <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> и <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>. Эти методы нужно просто определить, не нужно заполнять их каким-либо кодом.  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -259,7 +261,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-6.  Добавьте класс коллекции для `CreationEndpoint` в файл CreationEndpointElement.cs в проекте `CreationEndpoint`.  Этот класс используется конфигурацией для хранения числа экземпляров `CreationEndpoint` в файле web.config.  
+6.  Добавьте класс коллекции для `CreationEndpoint` в файл CreationEndpointElement.cs в проекте `CreationEndpoint`. Этот класс используется конфигурацией для хранения числа экземпляров `CreationEndpoint` в файле web.config.  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,13 +271,13 @@ caps.handback.revision: 7
   
 7.  Постройте решение.  
   
-### Размещение рабочего процесса в службах IIS  
+### <a name="host-the-workflow-in-iis"></a>Размещение рабочего процесса в службах IIS  
   
 1.  Создайте в службах IIS новое приложение с именем `MyCreationEndpoint`.  
   
 2.  Скопируйте файл workflow1.xaml, созданный конструктором рабочих процессов, в каталог приложения и переименуйте его в workflow1.xamlx.  
   
-3.  Скопируйте файлы shared.dll и CreationEndpoint.dll в каталог bin приложения \(создайте этот каталог, если он отсутствует\).  
+3.  Скопируйте файлы shared.dll и CreationEndpoint.dll в каталог bin приложения (создайте этот каталог, если он отсутствует).  
   
 4.  Замените содержимое файла Web.config в проекте `CreationEndpoint` следующим кодом.  
   
@@ -290,7 +292,7 @@ caps.handback.revision: 7
   
 5.  После элемента `<system.web>` зарегистрируйте `CreationEndpoint`, добавив следующий код конфигурации.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <!--register CreationEndpoint-->  
         <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
@@ -300,24 +302,22 @@ caps.handback.revision: 7
           </endpointExtensions>  
         </extensions>  
     </system.serviceModel>  
-  
     ```  
   
      Этот код зарегистрирует класс `CreationEndpointCollection`, чтобы можно было настроить `CreationEndpoint` в файле web.config.  
   
-6.  Добавьте элемент `<service>` \(после тега \<\/extensions\>\) с атрибутом `CreationEndpoint`, который будет прослушивать входящие сообщения.  
+6.  Добавить `<service>` элемент (после \</extensions > тег) с `CreationEndpoint` который будет прослушивать входящие сообщения.  
   
-    ```  
+    ```xml  
     <services>  
           <!-- add endpoint to service-->  
           <service name="Workflow1" behaviorConfiguration="basicConfig" >  
             <endpoint kind="creationEndpoint" binding="basicHttpBinding" address=""/>  
           </service>  
         </services>  
-  
     ```  
   
-7.  Добавьте элемент \<behaviors\> \(после тега \<\/services\>\), чтобы включить метаданные службы.  
+7.  Добавить \<поведения > элемент (после  \< /services > тег) чтобы включить метаданные службы.  
   
     ```xml  
     <behaviors>  
@@ -327,22 +327,21 @@ caps.handback.revision: 7
             </behavior>  
           </serviceBehaviors>  
         </behaviors>  
-  
     ```  
   
 8.  Скопируйте файл web.config в каталог приложения IIS.  
   
-9. Проверьте, работает ли создание конечной точки, запустив Internet Explorer и прейдя по адресу http:\/\/localhost\/MyCreationEndpoint\/Workflow1.xamlx.  Internet Explorer должен отобразить следующий экран.  
+9. Проверьте, работает ли создание конечной точки, запустив Internet Explorer и прейдя по адресу http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer должен отобразить следующий экран.  
   
      ![Тестирование службы](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   
-### Создайте клиента, который будет вызывать CreationEndpoint.  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a>Создайте клиента, который будет вызывать CreationEndpoint.  
   
 1.  Добавьте новое консольное приложение в решение `CreationEndpointTest`.  
   
 2.  Добавьте ссылки на сборки System.ServiceModel.dll, System.ServiceModel.Activities и проект `Shared`.  
   
-3.  В методе `Main` создайте <xref:System.ServiceModel.ChannelFactory%601> типа `IWorkflowCreation` и вызовите метод <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.  Будет возвращена учетная запись\-посредник.  Затем можно вызвать метод `Create` этой учетной записи\-посредника, чтобы создать экземпляр рабочего процесса, размещенного в службах IIS:  
+3.  В `Main` создать метод <xref:System.ServiceModel.ChannelFactory%601> типа `IWorkflowCreation` и вызвать <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>. Будет возвращена учетная запись-посредник. Затем можно вызвать метод `Create` этой учетной записи-посредника, чтобы создать экземпляр рабочего процесса, размещенного в службах IIS:  
   
     ```  
     using System.Text;  
@@ -374,18 +373,16 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  Запустите приложение CreationEndpointClient.  Этот вывод должен выглядеть так:  
+4.  Запустите приложение CreationEndpointClient. Этот вывод должен выглядеть так:  
   
     ```Output  
-  
-                Workflow Instance created using CreationEndpoint added in config.  Идентификатор экземпляра: 0875dac0-2b8b-473e-b3cc-abcb235e9693  
-    Нажмите ввод, чтобы выйти…    
+    Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
     >  Вывод рабочего процесса не будет отображаться, поскольку он выполняется в службах IIS, не осуществляющих вывода на консоль.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Ниже приведен полный код для этого образца.  
   
 ```xaml  
@@ -430,7 +427,6 @@ caps.handback.revision: 7
     <p:WriteLine sap:VirtualizedContainerService.HintSize="211,61" Text="Hello, world" />  
   </p:Sequence>  
 </WorkflowService>  
-  
 ```  
   
 ```csharp  
@@ -488,7 +484,6 @@ namespace CreationEndpointTest
     {  
     }  
 }  
-  
 ```  
   
 ```xml  
@@ -521,7 +516,6 @@ namespace CreationEndpointTest
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ```csharp  
@@ -545,7 +539,6 @@ namespace Shared
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -649,7 +642,6 @@ namespace Shared
         }  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -686,17 +678,16 @@ namespace CreationClient
     }  
   
 }  
-  
 ```  
   
- Данный пример может показаться неправильным, потому что в нем не реализована служба, реализующая интерфейс `IWorkflowCreation`.  Это было автоматически сделано в методе `CreationEndpoint`.  
+ Данный пример может показаться неправильным, потому что в нем не реализована служба, реализующая интерфейс `IWorkflowCreation`. Это было автоматически сделано в методе `CreationEndpoint`.  
   
-## См. также  
- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [Архитектура рабочих процессов Windows](../../../../docs/framework/windows-workflow-foundation//architecture.md)   
- [Закладка возобновления для конечной точки WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)   
- [Повторное размещение конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Общие сведения о Windows Workflow](../../../../docs/framework/windows-workflow-foundation//overview.md)
+## <a name="see-also"></a>См. также  
+ [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Инструкции по размещению IIS службы Интернета](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Архитектура Windows Workflow Foundation](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [Закладка возобновления для конечной точки WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [Отдельное размещение конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Обзор Windows Workflow Foundation](../../../../docs/framework/windows-workflow-foundation/overview.md)

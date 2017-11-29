@@ -1,38 +1,42 @@
 ---
-title: "Создание действия в среде выполнения с динамическим действием | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание действия в среде выполнения с динамическим действием"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c984d235521a86c9657630d7ace3341c68f806ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание действия в среде выполнения с динамическим действием
-<xref:System.Activities.DynamicActivity> представляет собой конкретный запечатанный класс с открытым конструктором.<xref:System.Activities.DynamicActivity> может использоваться для объединения функций действий во время выполнения с помощью действия DOM.  
+# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Создание действия в среде выполнения с динамическим действием
+<xref:System.Activities.DynamicActivity> представляет собой конкретный запечатанный класс с открытым конструктором. <xref:System.Activities.DynamicActivity> может использоваться для объединения функций действий во время выполнения с помощью действия DOM.  
   
-## Функции DynamicActivity  
+## <a name="dynamicactivity-features"></a>Функции DynamicActivity  
  <xref:System.Activities.DynamicActivity> имеет доступ к свойствам, аргументам и переменным выполнения, но не имеет доступа к службам среды выполнения, таким как дочерние действия планирования и отслеживание.  
   
- Значения свойств верхнего уровня можно задавать при помощи объектов рабочих процессов <xref:System.Activities.Argument>.В императивном коде эти аргументы создаются при помощи свойств среды CLR в новом типе.На языке XAML такие аргументы объявляются при помощи тегов `x:Class` и `x:Member`.  
+ Значения свойств верхнего уровня можно задавать при помощи объектов рабочих процессов <xref:System.Activities.Argument>. В императивном коде эти аргументы создаются при помощи свойств среды CLR в новом типе. На языке XAML такие аргументы объявляются при помощи тегов `x:Class` и `x:Member`.  
   
- Действия, построенные при помощи интерфейса <xref:System.Activities.DynamicActivity> в конструкторе, использующем <xref:System.ComponentModel.ICustomTypeDescriptor>.Действия, созданные в конструкторе, можно загружать динамически с помощью <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, как показано в следующей процедуре.  
+ Действия, построенные при помощи интерфейса <xref:System.Activities.DynamicActivity> в конструкторе, использующем <xref:System.ComponentModel.ICustomTypeDescriptor>. Действия, созданные в конструкторе, можно загружать динамически с помощью <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, как показано в следующей процедуре.  
   
-#### Создание действия во время выполнения при помощи императивного кода  
+#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Создание действия во время выполнения при помощи императивного кода  
   
-1.  Откройте среду [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Откройте [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Выберите **Файл**, **Создать**, **Проект**.Выберите **Workflow 4.0** в списке **Visual C\#** в разделе **Типы проектов**, затем выберите узел **v2010**.В окне **Шаблоны** выберите пункт **Консольное приложение последовательных рабочих процессов**.Задайте имя для нового проекта DynamicActivitySample.  
+2.  Выберите **файл**, **новый**, **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **консольного приложения последовательного рабочего процесса** в **шаблоны** окна. Задайте имя для нового проекта DynamicActivitySample.  
   
-3.  Щелкните правой кнопкой мыши файл Workflow1.xaml в проекте HelloActivity и выберите команду **Удалить**.  
+3.  Щелкните правой кнопкой мыши файл Workflow1.xaml в проекте HelloActivity и выберите **удалить**.  
   
-4.  Откройте файл Program.cs.Добавьте следующую директиву в начало файла.  
+4.  Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
   
     ```  
     using System.Collections.Generic;  
@@ -69,22 +73,21 @@ caps.handback.revision: 9
     //Execute the activity with a parameter dictionary  
                 WorkflowInvoker.Invoke(dynamicWorkflow, new Dictionary<string, object> { { "Text", "Hello World!" } });  
                 Console.ReadLine();  
-  
     ```  
   
-6.  Выполните приложение.Откроется окно консоли с текстом «Здравствуй, мир\!».  
+6.  Выполните приложение. Окно консоли с текстом «Hello World!» Отображает.  
   
-#### Создание действия во время выполнения при помощи языка XAML  
+#### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Создание действия во время выполнения при помощи языка XAML  
   
 1.  Откройте [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Выберите **Файл**, **Создать**, **Проект**.Выберите **Workflow 4.0** в списке **Visual C\#** в разделе **Типы проектов**, затем выберите узел **v2010**.В окне **Шаблоны** выберите пункт **Консольное приложение рабочих процессов**.Задайте имя для нового проекта DynamicActivitySample.  
+2.  Выберите **файл**, **новый**, **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **консольное приложение рабочего процесса** в **шаблоны** окна. Задайте имя для нового проекта DynamicActivitySample.  
   
-3.  Откройте файл Workflow1.xaml в проекте HelloActivity.В нижней части конструктора выберите параметр **Аргументы**.Создайте новый аргумент `In`, вызываемый методом `TextToWrite` типа `String`.  
+3.  Откройте файл Workflow1.xaml в проекте HelloActivity. Нажмите кнопку **аргументы** в нижней части конструктора. Создайте новый аргумент `In`, вызываемый методом `TextToWrite` типа `String`.  
   
-4.  Перетащите действие **WriteLine** из раздела **Примитивы** области элементов в область конструктора.Присвойте значение `TextToWrite` свойству **Текст** данного действия.  
+4.  Перетащите **WriteLine** действия из **примитивы** области элементов в область конструктора. Присвойте значение `TextToWrite` для **текст** свойства действия.  
   
-5.  Откройте файл Program.cs.Добавьте следующую директиву в начало файла.  
+5.  Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
   
     ```  
     using System.Activities.XamlIntegration;  
@@ -98,10 +101,10 @@ caps.handback.revision: 9
     Console.ReadLine();  
     ```  
   
-7.  Выполните приложение.Откроется окно консоли с текстом «Здравствуй, мир\!».  
+7.  Выполните приложение. Окно консоли с текстом «Hello World!» отображается.  
   
-8.  Щелкните правой кнопкой мыши файл Workflow1.xaml в **обозревателе решений** и выберите команду **Посмотреть код**.Следует отметить, что класс действия создается при помощи `x:Class`, а свойство — при помощи `x:Property`.  
+8.  Щелкните правой кнопкой мыши файл Workflow1.xaml в **обозревателе решений** и выберите **Просмотр кода**. Следует отметить, что класс действия создается при помощи `x:Class`, а свойство - при помощи `x:Property`.  
   
-## См. также  
- [Разработка рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)   
+## <a name="see-also"></a>См. также  
+ [Разработка рабочих процессов, действий и выражений с использованием императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
  [Создание действия DynamicActivity](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
