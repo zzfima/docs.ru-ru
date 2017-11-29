@@ -1,78 +1,59 @@
 ---
 title: "Предложение from (справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - from_CSharpKeyword
 - from
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f718f50d2b8d6f5c612113414a2106fed37fe0fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0165144acfa8d0928015e8222179f7e69f19644
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="from-clause-c-reference"></a>Предложение from (справочник по C#)
-Выражение запроса должно начинаться с предложения `from`. Кроме того, выражение запроса может содержать вложенные запросы, которые также начинаются с предложения `from`. Предложение `from` определяет следующее:  
+# <a name="from-clause-c-reference"></a><span data-ttu-id="2490b-102">Предложение from (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2490b-102">from clause (C# Reference)</span></span>
+<span data-ttu-id="2490b-103">Выражение запроса должно начинаться с предложения `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-103">A query expression must begin with a `from` clause.</span></span> <span data-ttu-id="2490b-104">Кроме того, выражение запроса может содержать вложенные запросы, которые также начинаются с предложения `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-104">Additionally, a query expression can contain sub-queries, which also begin with a `from` clause.</span></span> <span data-ttu-id="2490b-105">Предложение `from` определяет следующее:</span><span class="sxs-lookup"><span data-stu-id="2490b-105">The `from` clause specifies the following:</span></span>  
   
--   Источник данных, в отношении которого будет выполнен запрос или вложенный запрос.  
+-   <span data-ttu-id="2490b-106">Источник данных, в отношении которого будет выполнен запрос или вложенный запрос.</span><span class="sxs-lookup"><span data-stu-id="2490b-106">The data source on which the query or sub-query will be run.</span></span>  
   
--   Локальная *переменная диапазона*, которая представляет каждый элемент в последовательности источника.  
+-   <span data-ttu-id="2490b-107">Локальная *переменная диапазона*, которая представляет каждый элемент в последовательности источника.</span><span class="sxs-lookup"><span data-stu-id="2490b-107">A local *range variable* that represents each element in the source sequence.</span></span>  
   
- Переменная диапазона и источник данных строго типизированы. Источник данных, на который ссылается предложение `from`, должен иметь тип <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> или производный от них тип, например <xref:System.Linq.IQueryable%601>.  
+ <span data-ttu-id="2490b-108">Переменная диапазона и источник данных строго типизированы.</span><span class="sxs-lookup"><span data-stu-id="2490b-108">Both the range variable and the data source are strongly typed.</span></span> <span data-ttu-id="2490b-109">Источник данных, на который ссылается предложение `from`, должен иметь тип <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> или производный от них тип, например <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="2490b-109">The data source referenced in the `from` clause must have a type of <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, or a derived type such as <xref:System.Linq.IQueryable%601>.</span></span>  
   
- В следующем примере `numbers` — это источник данных, а `num` — переменная диапазона. Обратите внимание, что обе переменные строго типизированы, даже несмотря на использование ключевого слова [var](../../../csharp/language-reference/keywords/var.md).  
+ <span data-ttu-id="2490b-110">В следующем примере `numbers` — это источник данных, а `num` — переменная диапазона.</span><span class="sxs-lookup"><span data-stu-id="2490b-110">In the following example, `numbers` is the data source and `num` is the range variable.</span></span> <span data-ttu-id="2490b-111">Обратите внимание, что обе переменные строго типизированы, даже несмотря на использование ключевого слова [var](../../../csharp/language-reference/keywords/var.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-111">Note that both variables are strongly typed even through the [var](../../../csharp/language-reference/keywords/var.md) keyword is used.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
-## <a name="the-range-variable"></a>Переменная диапазона  
- Компилятор выводит тип переменной диапазона, если источник данных реализует <xref:System.Collections.Generic.IEnumerable%601>. Например, если источник данных имеет тип `IEnumerable<Customer>`, выводится переменная диапазона `Customer`. Явно задавать тип необходимо только в том случае, если источник имеет не являющийся универсальным тип `IEnumerable`, например <xref:System.Collections.ArrayList>. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ](http://msdn.microsoft.com/library/c318b79a-fa4d-4de3-b62d-c1162beb267e).  
+## <a name="the-range-variable"></a><span data-ttu-id="2490b-112">Переменная диапазона</span><span class="sxs-lookup"><span data-stu-id="2490b-112">The Range Variable</span></span>  
+ <span data-ttu-id="2490b-113">Компилятор выводит тип переменной диапазона, если источник данных реализует <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="2490b-113">The compiler infers the type of the range variable when the data source implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="2490b-114">Например, если источник данных имеет тип `IEnumerable<Customer>`, выводится переменная диапазона `Customer`.</span><span class="sxs-lookup"><span data-stu-id="2490b-114">For example, if the source has a type of `IEnumerable<Customer>`, then the range variable is inferred to be `Customer`.</span></span> <span data-ttu-id="2490b-115">Явно задавать тип необходимо только в том случае, если источник имеет не являющийся универсальным тип `IEnumerable`, например <xref:System.Collections.ArrayList>.</span><span class="sxs-lookup"><span data-stu-id="2490b-115">The only time that you must specify the type explicitly is when the source is a non-generic `IEnumerable` type such as <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="2490b-116">Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-116">For more information, see [How to: Query an ArrayList with LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).</span></span>  
   
- В предыдущем примере `num` выводится к типу `int`. Поскольку переменная диапазона строго типизирована, вы можете использовать ее в вызовах методов и других операциях. Например, вместо кода `select num` можно использовать запись `select num.ToString()`, в результате чего выражение запроса будет возвращать последовательность строк вместо целых чисел. Также можно использовать запись `select n + 10`, в результате чего выражение будет возвращать последовательность 14, 11, 13, 12, 10. Дополнительные сведения см. в разделе [Предложение select](../../../csharp/language-reference/keywords/select-clause.md).  
+ <span data-ttu-id="2490b-117">В предыдущем примере `num` выводится к типу `int`.</span><span class="sxs-lookup"><span data-stu-id="2490b-117">In the previous example `num` is inferred to be of type `int`.</span></span> <span data-ttu-id="2490b-118">Поскольку переменная диапазона строго типизирована, вы можете использовать ее в вызовах методов и других операциях.</span><span class="sxs-lookup"><span data-stu-id="2490b-118">Because the range variable is strongly typed, you can call methods on it or use it in other operations.</span></span> <span data-ttu-id="2490b-119">Например, вместо кода `select num` можно использовать запись `select num.ToString()`, в результате чего выражение запроса будет возвращать последовательность строк вместо целых чисел.</span><span class="sxs-lookup"><span data-stu-id="2490b-119">For example, instead of writing `select num`, you could write `select num.ToString()` to cause the query expression to return a sequence of strings instead of integers.</span></span> <span data-ttu-id="2490b-120">Также можно использовать запись `select n + 10`, в результате чего выражение будет возвращать последовательность 14, 11, 13, 12, 10.</span><span class="sxs-lookup"><span data-stu-id="2490b-120">Or you could write `select n + 10` to cause the expression to return the sequence 14, 11, 13, 12, 10.</span></span> <span data-ttu-id="2490b-121">Дополнительные сведения см. в разделе [Предложение select](../../../csharp/language-reference/keywords/select-clause.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-121">For more information, see [select clause](../../../csharp/language-reference/keywords/select-clause.md).</span></span>  
   
- Переменные диапазона схожи с переменными итерации в инструкции [foreach](../../../csharp/language-reference/keywords/foreach-in.md), за исключением одного важного отличия: в переменной диапазона никогда не хранятся фактические данные из источника. Это лишь способ оптимизировать код, позволяющий запросу описывать действия, которые произойдут при выполнении запроса. Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+ <span data-ttu-id="2490b-122">Переменные диапазона схожи с переменными итерации в инструкции [foreach](../../../csharp/language-reference/keywords/foreach-in.md), за исключением одного важного отличия: в переменной диапазона никогда не хранятся фактические данные из источника.</span><span class="sxs-lookup"><span data-stu-id="2490b-122">The range variable is like an iteration variable in a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement except for one very important difference: a range variable never actually stores data from the source.</span></span> <span data-ttu-id="2490b-123">Это лишь способ оптимизировать код, позволяющий запросу описывать действия, которые произойдут при выполнении запроса.</span><span class="sxs-lookup"><span data-stu-id="2490b-123">It just a syntactic convenience that enables the query to describe what will occur when the query is executed.</span></span> <span data-ttu-id="2490b-124">Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-124">For more information, see [Introduction to LINQ Queries (C#)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
-## <a name="compound-from-clauses"></a>Составные предложения from  
- В некоторых случаях каждый элемент в последовательности источника может сам представлять собой последовательность или содержать ее. Например, в качестве источника данных может выступать `IEnumerable<Student>`, в котором каждый объект учащегося представляет собой последовательность, содержащую список полученных оценок. Для доступа к внутреннему списку каждого элемента `Student` можно использовать составные предложения `from`. Этот способ аналогичен использованию вложенных предложений [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Для фильтрации результатов можно добавить предложения [where](../../../csharp/language-reference/keywords/partial-method.md) или [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) в любое из предложений `from`. В следующем примере показана последовательность объектов `Student`, каждый из которых содержит внутренний список `List` с целыми числами, соответствующими оценкам. Для доступа к внутреннему списку следует использовать предложение `from`. При необходимости вы можете вставлять предложения между двумя предложениями `from`.  
+## <a name="compound-from-clauses"></a><span data-ttu-id="2490b-125">Составные предложения from</span><span class="sxs-lookup"><span data-stu-id="2490b-125">Compound from Clauses</span></span>  
+ <span data-ttu-id="2490b-126">В некоторых случаях каждый элемент в последовательности источника может сам представлять собой последовательность или содержать ее.</span><span class="sxs-lookup"><span data-stu-id="2490b-126">In some cases, each element in the source sequence may itself be either a sequence or contain a sequence.</span></span> <span data-ttu-id="2490b-127">Например, в качестве источника данных может выступать `IEnumerable<Student>`, в котором каждый объект учащегося представляет собой последовательность, содержащую список полученных оценок.</span><span class="sxs-lookup"><span data-stu-id="2490b-127">For example, your data source may be an `IEnumerable<Student>` where each student object in the sequence contains a list of test scores.</span></span> <span data-ttu-id="2490b-128">Для доступа к внутреннему списку каждого элемента `Student` можно использовать составные предложения `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-128">To access the inner list within each `Student` element, you can use compound `from` clauses.</span></span> <span data-ttu-id="2490b-129">Этот способ аналогичен использованию вложенных предложений [foreach](../../../csharp/language-reference/keywords/foreach-in.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-129">The technique is like using nested [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statements.</span></span> <span data-ttu-id="2490b-130">Для фильтрации результатов можно добавить предложения [where](../../../csharp/language-reference/keywords/partial-method.md) или [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) в любое из предложений `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-130">You can add [where](../../../csharp/language-reference/keywords/partial-method.md) or [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) clauses to either `from` clause to filter the results.</span></span> <span data-ttu-id="2490b-131">В следующем примере показана последовательность объектов `Student`, каждый из которых содержит внутренний список `List` с целыми числами, соответствующими оценкам.</span><span class="sxs-lookup"><span data-stu-id="2490b-131">The following example shows a sequence of `Student` objects, each of which contains an inner `List` of integers representing test scores.</span></span> <span data-ttu-id="2490b-132">Для доступа к внутреннему списку следует использовать предложение `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-132">To access the inner list, use a compound `from` clause.</span></span> <span data-ttu-id="2490b-133">При необходимости вы можете вставлять предложения между двумя предложениями `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-133">You can insert clauses between the two `from` clauses if necessary.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
-## <a name="using-multiple-from-clauses-to-perform-joins"></a>Использование нескольких предложений from для выполнения соединений  
- Составное предложение `from` используется для доступа к внутренним коллекциям в одном источнике данных. Тем не менее запрос может содержать несколько предложений `from`, которые создают дополнительные запросы из независимых источников данных. Такой способ позволяет выполнять определенные типы операций соединения, которые нельзя выполнить с помощью [предложения join](../../../csharp/language-reference/keywords/join-clause.md).  
+## <a name="using-multiple-from-clauses-to-perform-joins"></a><span data-ttu-id="2490b-134">Использование нескольких предложений from для выполнения соединений</span><span class="sxs-lookup"><span data-stu-id="2490b-134">Using Multiple from Clauses to Perform Joins</span></span>  
+ <span data-ttu-id="2490b-135">Составное предложение `from` используется для доступа к внутренним коллекциям в одном источнике данных.</span><span class="sxs-lookup"><span data-stu-id="2490b-135">A compound `from` clause is used to access inner collections in a single data source.</span></span> <span data-ttu-id="2490b-136">Тем не менее запрос может содержать несколько предложений `from`, которые создают дополнительные запросы из независимых источников данных.</span><span class="sxs-lookup"><span data-stu-id="2490b-136">However, a query can also contain multiple `from` clauses that generate supplemental queries from independent data sources.</span></span> <span data-ttu-id="2490b-137">Такой способ позволяет выполнять определенные типы операций соединения, которые нельзя выполнить с помощью [предложения join](../../../csharp/language-reference/keywords/join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-137">This technique enables you to perform certain types of join operations that are not possible by using the [join clause](../../../csharp/language-reference/keywords/join-clause.md).</span></span>  
   
- В следующем примере показано, как можно выполнить полное перекрестное соединение двух источников данных с помощью двух предложений `from`.  
+ <span data-ttu-id="2490b-138">В следующем примере показано, как можно выполнить полное перекрестное соединение двух источников данных с помощью двух предложений `from`.</span><span class="sxs-lookup"><span data-stu-id="2490b-138">The following example shows how two `from` clauses can be used to form a complete cross join of two data sources.</span></span>  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
- Дополнительные сведения об операциях соединения, использующих несколько предложений `from`, см. в разделе [Практическое руководство. Выполнение пользовательских операций соединения](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
+ <span data-ttu-id="2490b-139">Дополнительные сведения об операциях соединения, использующих несколько предложений `from`, см. в разделе [Практическое руководство. Выполнение пользовательских операций соединения](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).</span><span class="sxs-lookup"><span data-stu-id="2490b-139">For more information about join operations that use multiple `from` clauses, see [How to: Perform Custom Join Operations](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Ключевые слова запроса (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="2490b-140">См. также</span><span class="sxs-lookup"><span data-stu-id="2490b-140">See Also</span></span>  
+ [<span data-ttu-id="2490b-141">Ключевые слова запроса (LINQ)</span><span class="sxs-lookup"><span data-stu-id="2490b-141">Query Keywords (LINQ)</span></span>](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [<span data-ttu-id="2490b-142">Выражения запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="2490b-142">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)

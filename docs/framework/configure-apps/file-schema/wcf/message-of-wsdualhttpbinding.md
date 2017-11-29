@@ -1,28 +1,37 @@
 ---
-title: "&lt;message&gt; для &lt;wsDualHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;message&gt; для &lt;wsDualHttpBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c2d4eda0a1975da4518d077b6cfa779a8e764a66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;message&gt; для &lt;wsDualHttpBinding&gt;
-Определяет безопасность на уровне сообщений для [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+# <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="0b9c3-102">&lt;message&gt; для &lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0b9c3-102">&lt;message&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="0b9c3-103">Определяет безопасность на уровне сообщений для [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="0b9c3-103">Defines message-level security for the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="0b9c3-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0b9c3-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-105">\<bindings></span></span>  
+<span data-ttu-id="0b9c3-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="0b9c3-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-107">\<binding></span></span>  
+<span data-ttu-id="0b9c3-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-108">\<security></span></span>  
+<span data-ttu-id="0b9c3-109">\<сообщение ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0b9c3-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0b9c3-110">Syntax</span></span>  
   
+```xml  
 <message   
       clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
      negotiateServiceCredential="Boolean"  
@@ -30,67 +39,67 @@ caps.handback.revision: 12
 </message>  
 ```  
   
-## Тип  
+## <a name="type"></a><span data-ttu-id="0b9c3-111">Тип</span><span class="sxs-lookup"><span data-stu-id="0b9c3-111">Type</span></span>  
  <xref:System.ServiceModel.MessageSecurityOverHttp>  
   
-## Атрибуты и элементы  
- В следующих разделах описываются атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0b9c3-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0b9c3-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="0b9c3-113">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="0b9c3-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0b9c3-114">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|algorithmSuite|Необязательно.  Задает алгоритмы шифрования сообщений и ключей.  Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности \(WS\-SecurityPolicy\).<br /><br /> Возможные значения приводятся ниже.  Значение по умолчанию — `Basic256`.|  
-|clientCredentialType|Необязательно.  Задает тип учетных данных, которые должны использоваться при проверке подлинности клиента с помощью режима безопасности `Message`.  Возможные значения приводятся ниже.  Значение по умолчанию — `Windows`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
-|negotiateServiceCredential|Необязательно.  Логическое значение, которое указывает, предоставляются ли учетные данные службы клиенту по внештатному каналу, или же клиент получает их от службы в процессе согласования.  Подобное согласование происходит перед обычным обменом сообщениями.<br /><br /> Если атрибут `clientCredentialType` имеет значение None, Username или Certificate, то установка для данного атрибута значения `false` подразумевает, что сертификат службы доступен для клиента по внештатному каналу и что клиент должен указать сертификат службы \(при помощи элемента [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\) в поведении службы [\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  Данный режим совместим со стеками SOAP, которые реализуют WS\-Trust и WS\-SecureConversation.<br /><br /> Если атрибут `ClientCredentialType` имеет значение `Windows`, то установка для данного атрибута значения `false` задает проверку подлинности на основе Kerberos.  Это означает, что клиент и служба должны относиться к одному домену Kerberos.  Данный режим совместим со стеками SOAP, которые реализуют профиль маркера Kerberos \(в соответствии с определением в OASIS WSS TC\), а также WS\-Trust и WS\-SecureConversation.  Когда данный атрибут равен `true`, то происходит согласование .NET SOAP, при котором обмен SPNego производится при помощи сообщений SOAP.<br /><br /> Значение по умолчанию — `true`.|  
+|<span data-ttu-id="0b9c3-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0b9c3-115">Attribute</span></span>|<span data-ttu-id="0b9c3-116">Описание</span><span class="sxs-lookup"><span data-stu-id="0b9c3-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="0b9c3-117">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="0b9c3-117">algorithmSuite</span></span>|<span data-ttu-id="0b9c3-118">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-118">Optional.</span></span> <span data-ttu-id="0b9c3-119">Задает алгоритмы шифрования сообщений и ключей.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-119">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="0b9c3-120">Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-120">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="0b9c3-121">Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).</span><span class="sxs-lookup"><span data-stu-id="0b9c3-121">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="0b9c3-122">Возможные значения приводятся ниже.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-122">See below for possible values.</span></span> <span data-ttu-id="0b9c3-123">Значение по умолчанию — `Basic256`.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-123">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="0b9c3-124">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="0b9c3-124">clientCredentialType</span></span>|<span data-ttu-id="0b9c3-125">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-125">Optional.</span></span> <span data-ttu-id="0b9c3-126">Задает тип учетных данных, которые должны использоваться при проверке подлинности клиента с помощью режима безопасности `Message`.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-126">Specifies the type of credential to be used when performing client authentication using the security mode is `Message`.</span></span> <span data-ttu-id="0b9c3-127">Возможные значения приводятся ниже.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-127">See below for possible values.</span></span> <span data-ttu-id="0b9c3-128">Значение по умолчанию — `Windows`.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-128">The default is `Windows`.</span></span><br /><br /> <span data-ttu-id="0b9c3-129">Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-129">This attribute is of type <xref:System.ServiceModel.MessageCredentialType>.</span></span>|  
+|<span data-ttu-id="0b9c3-130">negotiateServiceCredential</span><span class="sxs-lookup"><span data-stu-id="0b9c3-130">negotiateServiceCredential</span></span>|<span data-ttu-id="0b9c3-131">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-131">Optional.</span></span> <span data-ttu-id="0b9c3-132">Логическое значение, которое указывает, предоставляются ли учетные данные службы клиенту по внештатному каналу, или же клиент получает их от службы в процессе согласования.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-132">A Boolean value that specifies whether the service credential is provisioned at the client out of band or is obtained from the service to the client through a process of negotiation.</span></span> <span data-ttu-id="0b9c3-133">Подобное согласование происходит перед обычным обменом сообщениями.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-133">Such a negotiation is a precursor to the usual message exchange.</span></span><br /><br /> <span data-ttu-id="0b9c3-134">Если `clientCredentialType` атрибут имеет значение None, имя пользователя или сертификата, задав этому атрибуту значение `false` означает, что сертификат службы доступен клиентов за пределами диапазона, и клиенту необходимо указать сертификат службы (с помощью [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) в [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) поведение службы.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-134">If the `clientCredentialType` attribute equals to None, Username, or Certificate, setting this attribute to `false` implies that the service certificate is available at the client out of band and that the client needs to specify the service certificate (using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in the [\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) service behavior.</span></span> <span data-ttu-id="0b9c3-135">Данный режим совместим со стеками SOAP, которые реализуют WS-Trust и WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-135">This mode is interoperable with SOAP stacks which implement WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="0b9c3-136">Если атрибут `ClientCredentialType` имеет значение `Windows`, то установка для данного атрибута значения `false` задает проверку подлинности на основе Kerberos.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-136">If the `ClientCredentialType` attribute is set to `Windows`, setting this attribute to `false` specifies Kerberos based authentication.</span></span> <span data-ttu-id="0b9c3-137">Это означает, что клиент и служба должны относиться к одному домену Kerberos.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-137">This means that the client and service must be part of the same Kerberos domain.</span></span> <span data-ttu-id="0b9c3-138">Данный режим совместим со стеками SOAP, которые реализуют профиль маркера Kerberos (в соответствии с определением в OASIS WSS TC), а также WS-Trust и WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-138">This mode is interoperable with SOAP stacks which implement the Kerberos token profile (as defined at OASIS WSS TC) as well as WS-Trust and WS-SecureConversation.</span></span> <span data-ttu-id="0b9c3-139">Когда данный атрибут равен `true`, то происходит согласование .NET SOAP, при котором обмен SPNego производится при помощи сообщений SOAP.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-139">When this attribute is `true`, it causes a .NET SOAP negotiation that tunnels SPNego exchange over SOAP messages.</span></span><br /><br /> <span data-ttu-id="0b9c3-140">Значение по умолчанию — `true`.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-140">The default is `true`.</span></span>|  
   
-## Атрибут algorithmSuite  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="0b9c3-141">Атрибут algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="0b9c3-141">algorithmSuite Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|Basic128|Используется шифрование Aes128, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic192|Используется шифрование Aes192, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic256|Используется шифрование Aes256, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic256Rsa15|Используется Aes256 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|Basic192Rsa15|Используется Aes192 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDes|Используется шифрование TripleDes, Sha1 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic128Rsa15|Используется Aes128 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDesRsa15|Используется TripleDes для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|Basic128Sha256|Используется Aes256 для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic192Sha256|Используется Aes192 для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic256Sha256|Используется Aes256 для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|TripleDesSha256|Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa\-oaep\-mgf1p для шифрования ключа.|  
-|Basic128Sha256Rsa15|Используется Aes128 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|Basic192Sha256Rsa15|Используется Aes192 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|Basic256Sha256Rsa15|Используется Aes256 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDesSha256Rsa15|Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
+|<span data-ttu-id="0b9c3-142">Значение</span><span class="sxs-lookup"><span data-stu-id="0b9c3-142">Value</span></span>|<span data-ttu-id="0b9c3-143">Описание</span><span class="sxs-lookup"><span data-stu-id="0b9c3-143">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="0b9c3-144">Basic128</span><span class="sxs-lookup"><span data-stu-id="0b9c3-144">Basic128</span></span>|<span data-ttu-id="0b9c3-145">Используется шифрование Aes128, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-145">Use Aes128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-146">Basic192</span><span class="sxs-lookup"><span data-stu-id="0b9c3-146">Basic192</span></span>|<span data-ttu-id="0b9c3-147">Используется шифрование Aes192, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-147">Use Aes192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-148">Basic256</span><span class="sxs-lookup"><span data-stu-id="0b9c3-148">Basic256</span></span>|<span data-ttu-id="0b9c3-149">Используется шифрование Aes256, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-149">Use Aes256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-150">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-150">Basic256Rsa15</span></span>|<span data-ttu-id="0b9c3-151">Используется Aes256 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-151">Use Aes256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-152">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-152">Basic192Rsa15</span></span>|<span data-ttu-id="0b9c3-153">Используется Aes192 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-153">Use Aes192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-154">TripleDes</span><span class="sxs-lookup"><span data-stu-id="0b9c3-154">TripleDes</span></span>|<span data-ttu-id="0b9c3-155">Используется шифрование TripleDes, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-155">Use TripleDes encryption, , Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-156">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-156">Basic128Rsa15</span></span>|<span data-ttu-id="0b9c3-157">Используется Aes128 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-157">Use Aes128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-158">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-158">TripleDesRsa15</span></span>|<span data-ttu-id="0b9c3-159">Используется TripleDes для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-159">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-160">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="0b9c3-160">Basic128Sha256</span></span>|<span data-ttu-id="0b9c3-161">Используется Aes256 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-161">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-162">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="0b9c3-162">Basic192Sha256</span></span>|<span data-ttu-id="0b9c3-163">Используется Aes192 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-163">Use Aes192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-164">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="0b9c3-164">Basic256Sha256</span></span>|<span data-ttu-id="0b9c3-165">Используется Aes256 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-165">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-166">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="0b9c3-166">TripleDesSha256</span></span>|<span data-ttu-id="0b9c3-167">Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-167">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-168">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-168">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="0b9c3-169">Используется Aes128 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-169">Use Aes128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-170">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-170">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="0b9c3-171">Используется Aes192 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-171">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-172">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-172">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="0b9c3-173">Используется Aes256 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-173">Use Aes256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="0b9c3-174">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="0b9c3-174">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="0b9c3-175">Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-175">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-## Атрибут clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="0b9c3-176">Атрибут clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="0b9c3-176">clientCredentialType Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|Нет|Данный атрибут позволяет службе взаимодействовать с анонимными клиентами.  Для службы это означает, что она не требует учетных данных клиента.  Для клиента это означает, что он не должен предоставлять никаких учетных данных.|  
-|Windows|Атрибут позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows.  Если атрибут `negotiateServiceCredential` имеет значение `true`, то происходит согласование SSPI или используется Kerberos \(совместимый стандарт\).|  
-|UserName|Позволяет службе запрашивать проверку подлинности клиента на основе учетных данных типа UserName.  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] не поддерживает передачу дайджеста пароля или получение ключей с использованием пароля и использование таких ключей для обеспечения безопасности сообщений.  Таким образом, служба [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность транспорта при использовании учетных данных UserName.  Результатом использования такого режима работы с учетными данными является либо обмен с возможностью взаимодействия, либо согласование без возможности взаимодействия в зависимости от атрибута `negotiateServiceCredential`.|  
-|Сертификат|Позволяет службе требовать проверки подлинности клиента с помощью сертификата.  Если используется режим безопасности сообщений и атрибут `negotiateServiceCredential` имеет значение `false`, то клиенту должен быть предоставлен сертификат службы.|  
-|IssuedToken|Задает пользовательский маркер, который обычно выдается службой маркеров безопасности.|  
+|<span data-ttu-id="0b9c3-177">Значение</span><span class="sxs-lookup"><span data-stu-id="0b9c3-177">Value</span></span>|<span data-ttu-id="0b9c3-178">Описание</span><span class="sxs-lookup"><span data-stu-id="0b9c3-178">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="0b9c3-179">Нет</span><span class="sxs-lookup"><span data-stu-id="0b9c3-179">None</span></span>|<span data-ttu-id="0b9c3-180">Данный атрибут позволяет службе взаимодействовать с анонимными клиентами.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-180">This allows the service to interact with anonymous clients.</span></span> <span data-ttu-id="0b9c3-181">Для службы это означает, что она не требует учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-181">On the service side, this indicates that the service does not require any client credential.</span></span> <span data-ttu-id="0b9c3-182">Для клиента это означает, что он не должен предоставлять никаких учетных данных.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-182">On the client, this indicates that the client does not provide any client credential.</span></span>|  
+|<span data-ttu-id="0b9c3-183">Windows</span><span class="sxs-lookup"><span data-stu-id="0b9c3-183">Windows</span></span>|<span data-ttu-id="0b9c3-184">Атрибут позволяет проводить обмен сообщениями SOAP, если выполнена проверка подлинности с помощью учетных данных Windows.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-184">Allows the SOAP exchanges to be under the authenticated context of a Windows credential.</span></span> <span data-ttu-id="0b9c3-185">Если атрибут `negotiateServiceCredential` имеет значение `true`, то происходит согласование SSPI или используется Kerberos (совместимый стандарт).</span><span class="sxs-lookup"><span data-stu-id="0b9c3-185">If the `negotiateServiceCredential` attribute is set to `true`, this either performs an SSPI Negotiation or Kerberos (an interoperable standard).</span></span>|  
+|<span data-ttu-id="0b9c3-186">UserName</span><span class="sxs-lookup"><span data-stu-id="0b9c3-186">UserName</span></span>|<span data-ttu-id="0b9c3-187">Позволяет службе запрашивать проверку подлинности клиента на основе учетных данных типа UserName.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-187">Allows the service to require that the client be authenticated using a UserName credential.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="0b9c3-188"> не поддерживает передачу дайджеста пароля или получение ключей с использованием пароля и использование таких ключей для обеспечения безопасности сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-188"> does not support sending a password digest or deriving keys using password and using such keys for message security.</span></span> <span data-ttu-id="0b9c3-189">Таким образом, служба [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность транспорта при использовании учетных данных UserName.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-189">As such, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport is secured when using UserName credentials.</span></span> <span data-ttu-id="0b9c3-190">Результатом использования такого режима работы с учетными данными является либо обмен с возможностью взаимодействия, либо согласование без возможности взаимодействия в зависимости от атрибута `negotiateServiceCredential`.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-190">This credential mode results in either an interoperable exchange or a non-interoperable negotiation based on the `negotiateServiceCredential` attribute.</span></span>|  
+|<span data-ttu-id="0b9c3-191">Сертификат</span><span class="sxs-lookup"><span data-stu-id="0b9c3-191">Certificate</span></span>|<span data-ttu-id="0b9c3-192">Позволяет службе требовать проверки подлинности клиента с помощью сертификата.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-192">Allows the service to require that the client be authenticated using a certificate.</span></span> <span data-ttu-id="0b9c3-193">Если используется режим безопасности сообщений и атрибут `negotiateServiceCredential` имеет значение `false`, то клиенту должен быть предоставлен сертификат службы.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-193">If message security mode is used and the `negotiateServiceCredential` attribute is set to `false`, the client needs to be provisioned with the service certificate.</span></span>|  
+|<span data-ttu-id="0b9c3-194">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="0b9c3-194">IssuedToken</span></span>|<span data-ttu-id="0b9c3-195">Задает пользовательский маркер, который обычно выдается службой маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-195">Specifies a custom token, usually issued by a Security Token Service.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="0b9c3-196">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0b9c3-196">Child Elements</span></span>  
+ <span data-ttu-id="0b9c3-197">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="0b9c3-197">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="0b9c3-198">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0b9c3-198">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<безопасность\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|Определяет возможности безопасности для элемента [\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|<span data-ttu-id="0b9c3-199">Элемент</span><span class="sxs-lookup"><span data-stu-id="0b9c3-199">Element</span></span>|<span data-ttu-id="0b9c3-200">Описание</span><span class="sxs-lookup"><span data-stu-id="0b9c3-200">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0b9c3-201">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-201">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|<span data-ttu-id="0b9c3-202">Определяет возможности безопасности [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="0b9c3-202">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>   
- <xref:System.ServiceModel.MessageSecurityOverHttp>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="0b9c3-203">См. также</span><span class="sxs-lookup"><span data-stu-id="0b9c3-203">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>  
+ <xref:System.ServiceModel.MessageSecurityOverHttp>  
+ [<span data-ttu-id="0b9c3-204">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="0b9c3-204">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="0b9c3-205">Привязки</span><span class="sxs-lookup"><span data-stu-id="0b9c3-205">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="0b9c3-206">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="0b9c3-206">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="0b9c3-207">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="0b9c3-207">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="0b9c3-208">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="0b9c3-208">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

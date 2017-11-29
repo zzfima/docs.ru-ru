@@ -1,1 +1,1 @@
-Магазин Windows
+<span data-ttu-id="0981f-101">Магазин Windows</span><span class="sxs-lookup"><span data-stu-id="0981f-101">Windows Store</span></span>

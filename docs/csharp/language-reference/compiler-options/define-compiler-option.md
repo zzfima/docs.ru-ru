@@ -1,14 +1,10 @@
 ---
 title: "-define (параметры компилятора C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /define
-dev_langs:
-- CSharp
+f1_keywords: /define
 helpviewer_keywords:
 - -define compiler option [C#]
 - /define compiler option [C#]
@@ -17,70 +13,55 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d4c7e4e646e6796cff6bbfbe05038ff361fa80c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dbe5532114864d9f76c6d9e19b669c46489709b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="define-c-compiler-options"></a>/define (параметры компилятора C#)
-Параметр **/define** определяет `name` как символ во всех файлах исходного кода программы.  
+# <a name="define-c-compiler-options"></a><span data-ttu-id="1ee19-102">/define (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="1ee19-102">/define (C# Compiler Options)</span></span>
+<span data-ttu-id="1ee19-103">Параметр **/define** определяет `name` как символ во всех файлах исходного кода программы.</span><span class="sxs-lookup"><span data-stu-id="1ee19-103">The **/define** option defines `name` as a symbol in all source code files your program.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="1ee19-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1ee19-104">Syntax</span></span>  
   
 ```console  
 /define:name[;name2]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
- `name`, `name2`  
- Имя одного или нескольких символов, которые требуется определить.  
+## <a name="arguments"></a><span data-ttu-id="1ee19-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="1ee19-105">Arguments</span></span>  
+ <span data-ttu-id="1ee19-106">`name`, `name2`</span><span class="sxs-lookup"><span data-stu-id="1ee19-106">`name`, `name2`</span></span>  
+ <span data-ttu-id="1ee19-107">Имя одного или нескольких символов, которые требуется определить.</span><span class="sxs-lookup"><span data-stu-id="1ee19-107">The name of one or more symbols that you want to define.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Параметр компилятора **/define** действует так же, как директива препроцессора [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), однако, в отличие от нее, применяется ко всем файлам проекта. Символ остается определенным в файле исходного кода до тех пор, пока определение не будет отменено с помощью директивы [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) в файле исходного кода. При использовании параметра /define директива `#undef` в одном файле не действует для других файлов исходного кода в проекте.  
+## <a name="remarks"></a><span data-ttu-id="1ee19-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="1ee19-108">Remarks</span></span>  
+ <span data-ttu-id="1ee19-109">Параметр компилятора **/define** действует так же, как директива препроцессора [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), однако, в отличие от нее, применяется ко всем файлам проекта.</span><span class="sxs-lookup"><span data-stu-id="1ee19-109">The **/define** option has the same effect as using a [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) preprocessor directive except that the compiler option is in effect for all files in the project.</span></span> <span data-ttu-id="1ee19-110">Символ остается определенным в файле исходного кода до тех пор, пока определение не будет отменено с помощью директивы [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) в файле исходного кода.</span><span class="sxs-lookup"><span data-stu-id="1ee19-110">A symbol remains defined in a source file until an [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) directive in the source file removes the definition.</span></span> <span data-ttu-id="1ee19-111">При использовании параметра /define директива `#undef` в одном файле не действует для других файлов исходного кода в проекте.</span><span class="sxs-lookup"><span data-stu-id="1ee19-111">When you use the /define option, an `#undef` directive in one file has no effect on other source code files in the project.</span></span>  
   
- Вы можете использовать символы, созданные этим параметром, с директивами [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) и [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) для условной компиляции исходных файлов.  
+ <span data-ttu-id="1ee19-112">Вы можете использовать символы, созданные этим параметром, с директивами [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) и [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) для условной компиляции исходных файлов.</span><span class="sxs-lookup"><span data-stu-id="1ee19-112">You can use symbols created by this option with [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), and [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) to compile source files conditionally.</span></span>  
   
- **/d** является краткой формой **/define**.  
+ <span data-ttu-id="1ee19-113">**/d** является краткой формой **/define**.</span><span class="sxs-lookup"><span data-stu-id="1ee19-113">**/d** is the short form of **/define**.</span></span>  
   
- Вы можете определить несколько символов с помощью **/define**, разделяя их имена точкой с запятой или запятой. Пример:  
+ <span data-ttu-id="1ee19-114">Вы можете определить несколько символов с помощью **/define**, разделяя их имена точкой с запятой или запятой.</span><span class="sxs-lookup"><span data-stu-id="1ee19-114">You can define multiple symbols with **/define** by using a semicolon or comma to separate symbol names.</span></span> <span data-ttu-id="1ee19-115">Пример:</span><span class="sxs-lookup"><span data-stu-id="1ee19-115">For example:</span></span>  
   
 ```console  
 /define:DEBUG;TUESDAY  
 ```  
   
- Компилятор C# сам по себе не определяет символы и макросы, которые можно использовать в исходном коде. Все такие определения задаются пользователем.  
+ <span data-ttu-id="1ee19-116">Компилятор C# сам по себе не определяет символы и макросы, которые можно использовать в исходном коде. Все такие определения задаются пользователем.</span><span class="sxs-lookup"><span data-stu-id="1ee19-116">The C# compiler itself defines no symbols or macros that you can use in your source code; all symbol definitions must be user-defined.</span></span>  
   
 > [!NOTE]
->  C# `#define` не поддерживает присваивание значения символу, как, например, в языке C++. Например, с помощью директивы `#define` нельзя создать макрос или определить константу. Чтобы определить константу, используйте переменную `enum`. Для создания макросов в стиле C++ необходимо использовать альтернативные способы, например универсальные шаблоны. Поскольку макросы по своей природе подвержены ошибкам, в C# они запрещены, однако вместо них предлагаются более безопасные альтернативы.  
+>  <span data-ttu-id="1ee19-117">C# `#define` не поддерживает присваивание значения символу, как, например, в языке C++.</span><span class="sxs-lookup"><span data-stu-id="1ee19-117">The C# `#define` does not allow a symbol to be given a value, as in languages such as C++.</span></span> <span data-ttu-id="1ee19-118">Например, с помощью директивы `#define` нельзя создать макрос или определить константу.</span><span class="sxs-lookup"><span data-stu-id="1ee19-118">For example, `#define` cannot be used to create a macro or to define a constant.</span></span> <span data-ttu-id="1ee19-119">Чтобы определить константу, используйте переменную `enum`.</span><span class="sxs-lookup"><span data-stu-id="1ee19-119">If you need to define a constant, use an `enum` variable.</span></span> <span data-ttu-id="1ee19-120">Для создания макросов в стиле C++ необходимо использовать альтернативные способы, например универсальные шаблоны.</span><span class="sxs-lookup"><span data-stu-id="1ee19-120">If you want to create a C++ style macro, consider alternatives such as generics.</span></span> <span data-ttu-id="1ee19-121">Поскольку макросы по своей природе подвержены ошибкам, в C# они запрещены, однако вместо них предлагаются более безопасные альтернативы.</span><span class="sxs-lookup"><span data-stu-id="1ee19-121">Since macros are notoriously error-prone, C# disallows their use but provides safer alternatives.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="1ee19-122">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="1ee19-122">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Откройте страницу **Свойства** проекта.  
+1.  <span data-ttu-id="1ee19-123">Откройте страницу **Свойства** проекта.</span><span class="sxs-lookup"><span data-stu-id="1ee19-123">Open the project's **Properties** page.</span></span>  
   
-2.  На вкладке **Сборка** введите символ, который требуется определить, в поле **Символы условной компиляции**. Например, для представленного ниже примера кода просто введите `xx` в текстовое поле.  
+2.  <span data-ttu-id="1ee19-124">На вкладке **Сборка** введите символ, который требуется определить, в поле **Символы условной компиляции**.</span><span class="sxs-lookup"><span data-stu-id="1ee19-124">On the **Build** tab, type the symbol that is to be defined in the **Conditional compilation symbols** box.</span></span> <span data-ttu-id="1ee19-125">Например, для представленного ниже примера кода просто введите `xx` в текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="1ee19-125">For example, if you are using the code example that follows, just type `xx` into the text box.</span></span>  
   
- Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
+ <span data-ttu-id="1ee19-126">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.</span><span class="sxs-lookup"><span data-stu-id="1ee19-126">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="1ee19-127">Пример</span><span class="sxs-lookup"><span data-stu-id="1ee19-127">Example</span></span>  
   
 ```csharp  
 // preprocessor_define.cs  
@@ -101,7 +82,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-
+## <a name="see-also"></a><span data-ttu-id="1ee19-128">См. также</span><span class="sxs-lookup"><span data-stu-id="1ee19-128">See Also</span></span>  
+ [<span data-ttu-id="1ee19-129">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="1ee19-129">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="1ee19-130">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="1ee19-130">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

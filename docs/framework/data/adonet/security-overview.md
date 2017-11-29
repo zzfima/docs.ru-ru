@@ -1,115 +1,118 @@
 ---
-title: "Общие сведения о безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Overview2 безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d7288eeffeb642d1e897e11153802633d71747bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о безопасности
-Процесс обеспечения безопасности приложения является буквально нескончаемым.  Разработчик никогда не сможет гарантировать полную защищенность приложения от всех атак, поскольку невозможно предсказать, какие типы атак появятся в будущем в связи с развитием новых технологий.  И наоборот, на основании того, что до сих пор никто не обнаружил \(или не опубликовал\) сведения о каких\-то уязвимых местах в системе, не следует делать вывод об их отсутствии или невозможности возникновения.  Необходимо запланировать обеспечение безопасности на этапе проектирования, а также продумать способы поддержания безопасности на протяжении всего жизненного цикла приложения.  
+# <a name="security-overview"></a><span data-ttu-id="7c99d-102">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="7c99d-102">Security Overview</span></span>
+<span data-ttu-id="7c99d-103">Процесс обеспечения безопасности приложения является буквально нескончаемым.</span><span class="sxs-lookup"><span data-stu-id="7c99d-103">Securing an application is an ongoing process.</span></span> <span data-ttu-id="7c99d-104">Разработчик никогда не сможет гарантировать полную защищенность приложения от всех атак, поскольку невозможно предсказать, какие типы атак появятся в будущем в связи с развитием новых технологий.</span><span class="sxs-lookup"><span data-stu-id="7c99d-104">There will never be a point where a developer can guarantee that an application is safe from all attacks, because it is impossible to predict what kinds of future attacks new technologies will bring about.</span></span> <span data-ttu-id="7c99d-105">И наоборот, на основании того, что до сих пор никто не обнаружил (или не опубликовал) сведения о каких-то уязвимых местах в системе, не следует делать вывод об их отсутствии или невозможности возникновения.</span><span class="sxs-lookup"><span data-stu-id="7c99d-105">Conversely, just because nobody has yet discovered (or published) security flaws in a system does not mean that none exist or could exist.</span></span> <span data-ttu-id="7c99d-106">Необходимо запланировать обеспечение безопасности на этапе проектирования, а также продумать способы поддержания безопасности на протяжении всего жизненного цикла приложения.</span><span class="sxs-lookup"><span data-stu-id="7c99d-106">You need to plan for security during the design phase of the project, as well as plan how security will be maintained over the lifetime of the application.</span></span>  
   
-## Проектирование безопасности  
- Одна из крупнейших проблем разработки безопасных приложений заключается в том, что о реализации безопасности часто думают после того, как код проекта уже написан.  Отказ от встраивания безопасности в приложение приводит к созданию незащищенных приложений, потому что с самого начала безопасности придавалось второстепенное значение.  
+## <a name="design-for-security"></a><span data-ttu-id="7c99d-107">Проектирование безопасности</span><span class="sxs-lookup"><span data-stu-id="7c99d-107">Design for Security</span></span>  
+ <span data-ttu-id="7c99d-108">Одна из крупнейших проблем разработки безопасных приложений заключается в том, что о реализации безопасности часто думают после того, как код проекта уже написан.</span><span class="sxs-lookup"><span data-stu-id="7c99d-108">One of the biggest problems in developing secure applications is that security is often an afterthought, something to implement after a project is code-complete.</span></span> <span data-ttu-id="7c99d-109">Отказ от встраивания безопасности в приложение приводит к созданию незащищенных приложений, потому что с самого начала безопасности придавалось второстепенное значение.</span><span class="sxs-lookup"><span data-stu-id="7c99d-109">Not building security into an application at the outset leads to insecure applications because little thought has been given to what makes an application secure.</span></span>  
   
- Реализация защиты приложения в последнюю минуту ведет к увеличению числа ошибок по мере того, как приложение «разваливается» под грузом новых ограничений, либо его приходится переписывать, чтобы дополнить не предусмотренной с самого начала функциональностью.  Каждая строка пересмотренного кода может содержать новую ошибку, а следовательно, потенциальную уязвимость.  По этой причине необходимо учитывать вопросы безопасности на этапе проектирования, чтобы реализация средств защиты осуществлялась неразрывно с разработкой новых возможностей.  
+ <span data-ttu-id="7c99d-110">Реализация защиты приложения в последнюю минуту ведет к увеличению числа ошибок по мере того, как приложение «разваливается» под грузом новых ограничений, либо его приходится переписывать, чтобы дополнить не предусмотренной с самого начала функциональностью.</span><span class="sxs-lookup"><span data-stu-id="7c99d-110">Last minute security implementation leads to more bugs, as software breaks under the new restrictions or has to be rewritten to accommodate unanticipated functionality.</span></span> <span data-ttu-id="7c99d-111">Каждая строка пересмотренного кода может содержать новую ошибку, а следовательно, потенциальную уязвимость.</span><span class="sxs-lookup"><span data-stu-id="7c99d-111">Every line of revised code contains the possibility of introducing a new bug.</span></span> <span data-ttu-id="7c99d-112">По этой причине необходимо учитывать вопросы безопасности на этапе проектирования, чтобы реализация средств защиты осуществлялась неразрывно с разработкой новых возможностей.</span><span class="sxs-lookup"><span data-stu-id="7c99d-112">For this reason, you should consider security early in the development process so that it can proceed in tandem with the development of new features.</span></span>  
   
-### Моделирование угроз  
- Невозможно защитить систему от атаки, не выяснив, каким возможным атакам она подвержена.  Процесс оценки угроз безопасности называется *моделированием угроз*; он необходим для определения вероятности и последствий нарушений защиты в приложении ADO.NET.  
+### <a name="threat-modeling"></a><span data-ttu-id="7c99d-113">Моделирование угроз</span><span class="sxs-lookup"><span data-stu-id="7c99d-113">Threat Modeling</span></span>  
+ <span data-ttu-id="7c99d-114">Невозможно защитить систему от атаки, не выяснив, каким возможным атакам она подвержена.</span><span class="sxs-lookup"><span data-stu-id="7c99d-114">You cannot protect a system against attack unless you understand all the potential attacks that it is exposed to.</span></span> <span data-ttu-id="7c99d-115">Процесс оценки угроз безопасности называется *моделирование угроз*, необходим для определения вероятности и последствий нарушений защиты в приложении ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="7c99d-115">The process of evaluating security threats, called *threat modeling*, is necessary to determine the likelihood and ramifications of security breaches in your ADO.NET application.</span></span>  
   
- Моделирование угроз состоит из трех шагов высокого уровня: понимание точки зрения противника, описание защиты системы и определение угроз.  
+ <span data-ttu-id="7c99d-116">Моделирование угроз состоит из трех шагов высокого уровня: понимание точки зрения противника, описание защиты системы и определение угроз.</span><span class="sxs-lookup"><span data-stu-id="7c99d-116">Threat modeling is composed of three high-level steps: understanding the adversary’s view, characterizing the security of the system, and determining threats.</span></span>  
   
- Моделирование угроз \- это постоянно повторяющийся процесс оценки уязвимостей приложения с целью найти самые опасные бреши, угрожающие наиболее конфиденциальным данным.  После обнаружения уязвимостей их следует упорядочить по степени серьезности и создать распределенный по приоритетам набор контрмер для противодействия угрозам.  
+ <span data-ttu-id="7c99d-117">Моделирование угроз - это постоянно повторяющийся процесс оценки уязвимостей приложения с целью найти самые опасные бреши, угрожающие наиболее конфиденциальным данным.</span><span class="sxs-lookup"><span data-stu-id="7c99d-117">Threat modeling is an iterative approach to assessing vulnerabilities in your application to find those that are the most dangerous because they expose the most sensitive data.</span></span> <span data-ttu-id="7c99d-118">После обнаружения уязвимостей их следует упорядочить по степени серьезности и создать распределенный по приоритетам набор контрмер для противодействия угрозам.</span><span class="sxs-lookup"><span data-stu-id="7c99d-118">Once you identify the vulnerabilities, you rank them in order of severity and create a prioritized set of countermeasures to counter the threats.</span></span>  
   
- Дополнительные сведения см. в следующих ресурсах.  
+ <span data-ttu-id="7c99d-119">Дополнительные сведения см. в следующих ресурсах.</span><span class="sxs-lookup"><span data-stu-id="7c99d-119">For more information, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|Веб\-сайт [Моделирование угроз](http://go.microsoft.com/fwlink/?LinkId=98353) в центре разработчиков безопасности MSDN|Ресурсы на этой странице помогут понять процесс моделирования угроз и построить модели угроз, которые можно использовать для защиты приложений.|  
+|<span data-ttu-id="7c99d-120">Ресурс</span><span class="sxs-lookup"><span data-stu-id="7c99d-120">Resource</span></span>|<span data-ttu-id="7c99d-121">Описание</span><span class="sxs-lookup"><span data-stu-id="7c99d-121">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="7c99d-122">[Моделирование угроз](http://go.microsoft.com/fwlink/?LinkId=98353) сайт в центре разработчиков безопасности MSDN</span><span class="sxs-lookup"><span data-stu-id="7c99d-122">The [Threat Modeling](http://go.microsoft.com/fwlink/?LinkId=98353) site on the MSDN Security Developer Center</span></span>|<span data-ttu-id="7c99d-123">Ресурсы на этой странице помогут понять процесс моделирования угроз и построить модели угроз, которые можно использовать для защиты приложений.</span><span class="sxs-lookup"><span data-stu-id="7c99d-123">The resources on this page will help you understand the threat modeling process and build threat models that you can use to secure your own applications</span></span>|  
   
-## Принцип минимальных привилегий  
- При проектировании, построении и развертывании приложения необходимо исходить из того, что оно будет атаковано.  Часто атаки проводятся с помощью злонамеренного кода, который выполняется с разрешениями пользователя, запустившего этот код.  Другие атаки могут исходить из кода, разработанного с благими намерениями, который в действительности был использован потенциальным взломщиком для осуществления одного из приемов атаки.  При планировании защиты всегда следует предполагать возможность реализации самого худшего сценария.  
+## <a name="the-principle-of-least-privilege"></a><span data-ttu-id="7c99d-124">Принцип минимальных привилегий</span><span class="sxs-lookup"><span data-stu-id="7c99d-124">The Principle of Least Privilege</span></span>  
+ <span data-ttu-id="7c99d-125">При проектировании, построении и развертывании приложения необходимо исходить из того, что оно будет атаковано.</span><span class="sxs-lookup"><span data-stu-id="7c99d-125">When you design, build, and deploy your application, you must assume that your application will be attacked.</span></span> <span data-ttu-id="7c99d-126">Часто атаки проводятся с помощью злонамеренного кода, который выполняется с разрешениями пользователя, запустившего этот код.</span><span class="sxs-lookup"><span data-stu-id="7c99d-126">Often these attacks come from malicious code that executes with the permissions of the user running the code.</span></span> <span data-ttu-id="7c99d-127">Другие атаки могут исходить из кода, разработанного с благими намерениями, который в действительности был использован потенциальным взломщиком для осуществления одного из приемов атаки.</span><span class="sxs-lookup"><span data-stu-id="7c99d-127">Others can originate with well-intentioned code that has been exploited by an attacker.</span></span> <span data-ttu-id="7c99d-128">При планировании защиты всегда следует предполагать возможность реализации самого худшего сценария.</span><span class="sxs-lookup"><span data-stu-id="7c99d-128">When planning security, always assume the worst-case scenario will occur.</span></span>  
   
- Одной из контрмер может быть возведение как можно большего числа защитных барьеров вокруг кода на основе эксплуатации приложения с наименьшими правами доступа.  Принцип наименьших прав доступа состоит в том, что каждое конкретное право доступа должно предоставляться к наименьшему объему кода на самый короткий отрезок времени, который требуется для выполнения задания.  
+ <span data-ttu-id="7c99d-129">Одной из контрмер может быть возведение как можно большего числа защитных барьеров вокруг кода на основе эксплуатации приложения с наименьшими правами доступа.</span><span class="sxs-lookup"><span data-stu-id="7c99d-129">One counter-measure you can employ is to try to erect as many walls around your code as possible by running with least privilege.</span></span> <span data-ttu-id="7c99d-130">Принцип наименьших прав доступа состоит в том, что каждое конкретное право доступа должно предоставляться к наименьшему объему кода на самый короткий отрезок времени, который требуется для выполнения задания.</span><span class="sxs-lookup"><span data-stu-id="7c99d-130">The principle of least privilege says that any given privilege should be granted to the least amount of code necessary for the shortest duration of time that is required to get the job done.</span></span>  
   
- Настоятельно рекомендуется начинать создание защищенных приложений вообще без каких\-либо разрешений, а затем добавлять минимальные разрешения для конкретной выполняемой задачи.  В отличие от этого, начать разработку с предоставления всех разрешений, а затем отзывать их по отдельности означает создать незащищенное, плохо тестируемое приложение, которое трудно обслуживать из\-за уязвимостей защиты, существующих вследствие избыточных разрешений.  
+ <span data-ttu-id="7c99d-131">Настоятельно рекомендуется начинать создание защищенных приложений вообще без каких-либо разрешений, а затем добавлять минимальные разрешения для конкретной выполняемой задачи.</span><span class="sxs-lookup"><span data-stu-id="7c99d-131">The best practice for creating secure applications is to start with no permissions at all and then add the narrowest permissions for the particular task being performed.</span></span> <span data-ttu-id="7c99d-132">В отличие от этого, начать разработку с предоставления всех разрешений, а затем отзывать их по отдельности означает создать незащищенное, плохо тестируемое приложение, которое трудно обслуживать из-за уязвимостей защиты, существующих вследствие избыточных разрешений.</span><span class="sxs-lookup"><span data-stu-id="7c99d-132">By contrast, starting with all permissions and then denying individual ones leads to insecure applications that are difficult to test and maintain because security holes may exist from unintentionally granting more permissions than required.</span></span>  
   
- Дополнительные сведения об обеспечении безопасности приложения см. в одном из следующих ресурсов.  
+ <span data-ttu-id="7c99d-133">Дополнительные сведения об обеспечении безопасности приложения см. в одном из следующих ресурсов.</span><span class="sxs-lookup"><span data-stu-id="7c99d-133">For more information on securing your applications, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Защита приложений](../Topic/Securing%20Applications.md)|Содержит ссылки на общие разделы по безопасности.  Также содержит ссылки на разделы по безопасности распределенных приложений, веб\-приложений, приложений для мобильных устройств и приложений для рабочего стола.|  
+|<span data-ttu-id="7c99d-134">Ресурс</span><span class="sxs-lookup"><span data-stu-id="7c99d-134">Resource</span></span>|<span data-ttu-id="7c99d-135">Описание</span><span class="sxs-lookup"><span data-stu-id="7c99d-135">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="7c99d-136">Защита приложений</span><span class="sxs-lookup"><span data-stu-id="7c99d-136">Securing Applications</span></span>](/visualstudio/ide/securing-applications)|<span data-ttu-id="7c99d-137">Содержит ссылки на общие разделы по безопасности.</span><span class="sxs-lookup"><span data-stu-id="7c99d-137">Contains links to general security topics.</span></span> <span data-ttu-id="7c99d-138">Также содержит ссылки на разделы по безопасности распределенных приложений, веб-приложений, приложений для мобильных устройств и приложений для рабочего стола.</span><span class="sxs-lookup"><span data-stu-id="7c99d-138">Also contains links to topics for securing distributed applications, Web applications, mobile applications, and desktop applications.</span></span>|  
   
-## CAS \(Code Access Security — безопасность доступа кода\)  
- Управление доступом для кода \(CAS\) представляет собой механизм, позволяющий ограничить доступ, который имеет этот код в целях защиты ресурсов и операций.  В .NET Framework средства CAS выполняют следующие функции.  
+## <a name="code-access-security-cas"></a><span data-ttu-id="7c99d-139">CAS (Code Access Security — безопасность доступа кода)</span><span class="sxs-lookup"><span data-stu-id="7c99d-139">Code Access Security (CAS)</span></span>  
+ <span data-ttu-id="7c99d-140">Управление доступом для кода (CAS) представляет собой механизм, позволяющий ограничить доступ, который имеет этот код в целях защиты ресурсов и операций.</span><span class="sxs-lookup"><span data-stu-id="7c99d-140">Code access security (CAS) is a mechanism that helps limit the access that code has to protected resources and operations.</span></span> <span data-ttu-id="7c99d-141">В .NET Framework средства CAS выполняют следующие функции.</span><span class="sxs-lookup"><span data-stu-id="7c99d-141">In the .NET Framework, CAS performs the following functions:</span></span>  
   
--   Определяет разрешения и наборы разрешений, представляющих право доступа к различным системным ресурсам.  
+-   <span data-ttu-id="7c99d-142">Определяет разрешения и наборы разрешений, представляющих право доступа к различным системным ресурсам.</span><span class="sxs-lookup"><span data-stu-id="7c99d-142">Defines permissions and permission sets that represent the right to access various system resources.</span></span>  
   
--   Дает возможность администраторам настраивать политику безопасности, связывая наборы разрешений с группами кода.  
+-   <span data-ttu-id="7c99d-143">Дает возможность администраторам настраивать политику безопасности, связывая наборы разрешений с группами кода.</span><span class="sxs-lookup"><span data-stu-id="7c99d-143">Enables administrators to configure security policy by associating sets of permissions with groups of code (code groups).</span></span>  
   
--   Позволяет в коде запрашивать разрешения, необходимые для выполнения, и другие разрешения, которые желательно было бы иметь, а также указывать, какие разрешения для кода категорически запрещены.  
+-   <span data-ttu-id="7c99d-144">Позволяет в коде запрашивать разрешения, необходимые для выполнения, и другие разрешения, которые желательно было бы иметь, а также указывать, какие разрешения для кода категорически запрещены.</span><span class="sxs-lookup"><span data-stu-id="7c99d-144">Enables code to request the permissions it requires in order to run, as well as the permissions that would be useful to have, and specifies which permissions the code must never have.</span></span>  
   
--   Предоставляет разрешения каждой загружаемой сборке на основе разрешений, запрошенных кодом, и операций, разрешенных политикой безопасности.  
+-   <span data-ttu-id="7c99d-145">Предоставляет разрешения каждой загружаемой сборке на основе разрешений, запрошенных кодом, и операций, разрешенных политикой безопасности.</span><span class="sxs-lookup"><span data-stu-id="7c99d-145">Grants permissions to each assembly that is loaded, based on the permissions requested by the code and on the operations permitted by security policy.</span></span>  
   
--   Дает возможность представить в коде требование, чтобы вызывающие его объекты имели какие\-то конкретные разрешения.  
+-   <span data-ttu-id="7c99d-146">Дает возможность представить в коде требование, чтобы вызывающие его объекты имели какие-то конкретные разрешения.</span><span class="sxs-lookup"><span data-stu-id="7c99d-146">Enables code to demand that its callers have specific permissions.</span></span>  
   
--   Дает возможность представить в коде требование, чтобы вызывающие объекты имели цифровую сигнатуру, позволяя таким образом вызывать защищенный код только пользователям из конкретной организации или веб\-узла.  
+-   <span data-ttu-id="7c99d-147">Дает возможность представить в коде требование, чтобы вызывающие объекты имели цифровую сигнатуру, позволяя таким образом вызывать защищенный код только пользователям из конкретной организации или веб-узла.</span><span class="sxs-lookup"><span data-stu-id="7c99d-147">Enables code to demand that its callers possess a digital signature, thus allowing only callers from a particular organization or site to call the protected code.</span></span>  
   
--   Вводит ограничения кода во время выполнения, сравнивая предоставленные разрешения каждого участника в стеке вызовов с разрешениями, которые участники должны иметь.  
+-   <span data-ttu-id="7c99d-148">Вводит ограничения кода во время выполнения, сравнивая предоставленные разрешения каждого участника в стеке вызовов с разрешениями, которые участники должны иметь.</span><span class="sxs-lookup"><span data-stu-id="7c99d-148">Enforces restrictions on code at run time by comparing the granted permissions of every caller on the call stack to the permissions that callers must have.</span></span>  
   
- Чтобы свести к минимуму повреждения в случае успешной атаки, выбирайте контекст для кода, предоставляющий доступ только к тем ресурсам, которые необходимы для выполнения задачи, но не более того.  
+ <span data-ttu-id="7c99d-149">Чтобы свести к минимуму повреждения в случае успешной атаки, выбирайте контекст для кода, предоставляющий доступ только к тем ресурсам, которые необходимы для выполнения задачи, но не более того.</span><span class="sxs-lookup"><span data-stu-id="7c99d-149">To minimize the amount of damage that can occur if an attack succeeds, choose a security context for your code that grants access only to the resources it needs to get its work done and no more.</span></span>  
   
- Дополнительные сведения см. в следующих ресурсах.  
+ <span data-ttu-id="7c99d-150">Дополнительные сведения см. в следующих ресурсах.</span><span class="sxs-lookup"><span data-stu-id="7c99d-150">For more information, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Управление доступом для кода и ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Описывает взаимодействие между управлением доступом для кода, безопасности на основе ролей и частично доверенными средами с точки зрения приложения ADO.NET.|  
-|[Code Access Security](http://msdn.microsoft.com/ru-ru/23a20143-241d-4fe5-9d9f-3933fd594c03)|Содержит ссылки на дополнительные разделы по CAS в .NET Framework.|  
+|<span data-ttu-id="7c99d-151">Ресурс</span><span class="sxs-lookup"><span data-stu-id="7c99d-151">Resource</span></span>|<span data-ttu-id="7c99d-152">Описание</span><span class="sxs-lookup"><span data-stu-id="7c99d-152">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="7c99d-153">Безопасность доступа кода и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7c99d-153">Code Access Security and ADO.NET</span></span>](../../../../docs/framework/data/adonet/code-access-security.md)|<span data-ttu-id="7c99d-154">Описывает взаимодействие между управлением доступом для кода, безопасности на основе ролей и частично доверенными средами с точки зрения приложения ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="7c99d-154">Describes the interactions between code access security, role-based security, and partially trusted environments from the perspective of an ADO.NET application.</span></span>|  
+|[<span data-ttu-id="7c99d-155">Управление доступом для кода</span><span class="sxs-lookup"><span data-stu-id="7c99d-155">Code Access Security</span></span>](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|<span data-ttu-id="7c99d-156">Содержит ссылки на дополнительные разделы по CAS в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7c99d-156">Contains links to additional topics describing CAS in the .NET Framework.</span></span>|  
   
-## Безопасность базы данных  
- Принцип наименьших прав доступа также применяется к источнику данных.  Ниже приводятся некоторые рекомендации по безопасности базы данных.  
+## <a name="database-security"></a><span data-ttu-id="7c99d-157">Безопасность базы данных</span><span class="sxs-lookup"><span data-stu-id="7c99d-157">Database Security</span></span>  
+ <span data-ttu-id="7c99d-158">Принцип наименьших прав доступа также применяется к источнику данных.</span><span class="sxs-lookup"><span data-stu-id="7c99d-158">The principle of least privilege also applies to your data source.</span></span> <span data-ttu-id="7c99d-159">Ниже приводятся некоторые рекомендации по безопасности базы данных.</span><span class="sxs-lookup"><span data-stu-id="7c99d-159">Some general guidelines for database security include:</span></span>  
   
--   Создавайте учетные записи с минимально возможными правами доступа.  
+-   <span data-ttu-id="7c99d-160">Создавайте учетные записи с минимально возможными правами доступа.</span><span class="sxs-lookup"><span data-stu-id="7c99d-160">Create accounts with the lowest possible privileges.</span></span>  
   
--   Не предоставляйте пользователям доступ к административным учетным записям только для того, чтобы обеспечить работоспособность кода.  
+-   <span data-ttu-id="7c99d-161">Не предоставляйте пользователям доступ к административным учетным записям только для того, чтобы обеспечить работоспособность кода.</span><span class="sxs-lookup"><span data-stu-id="7c99d-161">Do not allow users access to administrative accounts just to get code working.</span></span>  
   
--   Не возвращайте серверные сообщения об ошибках в клиентские приложения.  
+-   <span data-ttu-id="7c99d-162">Не возвращайте серверные сообщения об ошибках в клиентские приложения.</span><span class="sxs-lookup"><span data-stu-id="7c99d-162">Do not return server-side error messages to client applications.</span></span>  
   
--   Проверяйте весь ввод как на сервере, так и на клиенте.  
+-   <span data-ttu-id="7c99d-163">Проверяйте весь ввод как на сервере, так и на клиенте.</span><span class="sxs-lookup"><span data-stu-id="7c99d-163">Validate all input at both the client and the server.</span></span>  
   
--   Используйте параметризованные команды и избегайте применения динамических инструкций SQL.  
+-   <span data-ttu-id="7c99d-164">Используйте параметризованные команды и избегайте применения динамических инструкций SQL.</span><span class="sxs-lookup"><span data-stu-id="7c99d-164">Use parameterized commands and avoid dynamic SQL statements.</span></span>  
   
--   Включайте аудит безопасности и ведение журнала в используемой базе данных, чтобы получать предупреждения об уязвимостях.  
+-   <span data-ttu-id="7c99d-165">Включайте аудит безопасности и ведение журнала в используемой базе данных, чтобы получать предупреждения об уязвимостях.</span><span class="sxs-lookup"><span data-stu-id="7c99d-165">Enable security auditing and logging for the database you are using so that you are alerted to any security breaches.</span></span>  
   
- Дополнительные сведения см. в следующих ресурсах.  
+ <span data-ttu-id="7c99d-166">Дополнительные сведения см. в следующих ресурсах.</span><span class="sxs-lookup"><span data-stu-id="7c99d-166">For more information, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Безопасность SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Предоставляет общие сведения о безопасности SQL Server со сценариями приложения, которые дают представление о создании безопасных приложений ADO.NET, работающих с SQL Server.|  
-|[Recommendations for Data Access Strategies](http://msdn.microsoft.com/ru-ru/72411f32-d12a-4de8-b961-e54fca7faaf5)|Содержит рекомендации для доступа к данным и выполнения операций над базой данных.|  
+|<span data-ttu-id="7c99d-167">Ресурс</span><span class="sxs-lookup"><span data-stu-id="7c99d-167">Resource</span></span>|<span data-ttu-id="7c99d-168">Описание</span><span class="sxs-lookup"><span data-stu-id="7c99d-168">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="7c99d-169">Безопасность SQL Server</span><span class="sxs-lookup"><span data-stu-id="7c99d-169">SQL Server Security</span></span>](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|<span data-ttu-id="7c99d-170">Предоставляет общие сведения о безопасности SQL Server со сценариями приложения, которые дают представление о создании безопасных приложений ADO.NET, работающих с SQL Server.</span><span class="sxs-lookup"><span data-stu-id="7c99d-170">Provides an overview of SQL Server security with application scenarios that provide guidance for creating secure ADO.NET applications that target SQL Server.</span></span>|  
+|[<span data-ttu-id="7c99d-171">Рекомендации по стратегиям доступа к данным</span><span class="sxs-lookup"><span data-stu-id="7c99d-171">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|<span data-ttu-id="7c99d-172">Содержит рекомендации для доступа к данным и выполнения операций над базой данных.</span><span class="sxs-lookup"><span data-stu-id="7c99d-172">Provides recommendations for accessing data and performing database operations.</span></span>|  
   
-## Политика безопасности и администрирование  
- Неправильная реализация управления доступом для кода \(CAS\) может создать потенциальные уязвимости безопасности.  После развертывания приложения следует использовать методы слежения за безопасностью и оценивать риски по мере возникновения новых угроз.  
+## <a name="security-policy-and-administration"></a><span data-ttu-id="7c99d-173">Политика безопасности и администрирование</span><span class="sxs-lookup"><span data-stu-id="7c99d-173">Security Policy and Administration</span></span>  
+ <span data-ttu-id="7c99d-174">Неправильная реализация управления доступом для кода (CAS) может создать потенциальные уязвимости безопасности.</span><span class="sxs-lookup"><span data-stu-id="7c99d-174">Improperly administering code access security (CAS) policy can potentially create security weaknesses.</span></span> <span data-ttu-id="7c99d-175">После развертывания приложения следует использовать методы слежения за безопасностью и оценивать риски по мере возникновения новых угроз.</span><span class="sxs-lookup"><span data-stu-id="7c99d-175">Once an application is deployed, techniques for monitoring security should be used and risks evaluated as new threats emerge.</span></span>  
   
- Дополнительные сведения см. в следующих ресурсах.  
+ <span data-ttu-id="7c99d-176">Дополнительные сведения см. в следующих ресурсах.</span><span class="sxs-lookup"><span data-stu-id="7c99d-176">For more information, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[NIB: Security Policy Management](http://msdn.microsoft.com/ru-ru/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Содержит сведения о создании и реализации политики безопасности.|  
-|[NIB: Security Policy Best Practices](http://msdn.microsoft.com/ru-ru/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Предоставляет ссылки на описание реализации политики безопасности.|  
+|<span data-ttu-id="7c99d-177">Ресурс</span><span class="sxs-lookup"><span data-stu-id="7c99d-177">Resource</span></span>|<span data-ttu-id="7c99d-178">Описание</span><span class="sxs-lookup"><span data-stu-id="7c99d-178">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="7c99d-179">NIB: Управление политиками безопасности</span><span class="sxs-lookup"><span data-stu-id="7c99d-179">NIB: Security Policy Management</span></span>](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|<span data-ttu-id="7c99d-180">Содержит сведения о создании и реализации политики безопасности.</span><span class="sxs-lookup"><span data-stu-id="7c99d-180">Provides information on creating and administering security policy.</span></span>|  
+|[<span data-ttu-id="7c99d-181">NIB: Политики по обеспечению безопасности</span><span class="sxs-lookup"><span data-stu-id="7c99d-181">NIB: Security Policy Best Practices</span></span>](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|<span data-ttu-id="7c99d-182">Предоставляет ссылки на описание реализации политики безопасности.</span><span class="sxs-lookup"><span data-stu-id="7c99d-182">Provides links describing how to administer security policy.</span></span>|  
   
-## См. также  
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Безопасность в машинном коде и коде .NET Framework](http://msdn.microsoft.com/ru-ru/bd61be84-c143-409a-a75a-44253724f784)   
- [Безопасность SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7c99d-183">См. также</span><span class="sxs-lookup"><span data-stu-id="7c99d-183">See Also</span></span>  
+ [<span data-ttu-id="7c99d-184">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7c99d-184">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="7c99d-185">Безопасность PAVE в машинном коде и коде .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7c99d-185">PAVE Security in Native and .NET Framework Code</span></span>](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [<span data-ttu-id="7c99d-186">Безопасность SQL Server</span><span class="sxs-lookup"><span data-stu-id="7c99d-186">SQL Server Security</span></span>](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [<span data-ttu-id="7c99d-187">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="7c99d-187">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

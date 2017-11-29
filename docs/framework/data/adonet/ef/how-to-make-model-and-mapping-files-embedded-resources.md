@@ -1,58 +1,55 @@
 ---
-title: "Как сделать файлы модели и сопоставления внедренными ресурсами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: "Практическое руководство. Создание встроенных ресурсов файлов модели и сопоставления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 98fb3ada369279a34ed08110644aabcbbe72a501
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как сделать файлы модели и сопоставления внедренными ресурсами
-Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] позволяет развертывать файлы моделей и сопоставления как внедренные ресурсы приложения.  Сборка с внедренными файлами моделей и сопоставления должна быть загружена в том же домене приложения, что и соединение сущности.  Для получения дополнительной информации см. [Строки соединения](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  По умолчанию средства [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] внедряют файлы модели и сопоставления. При определении файлов модели и сопоставления вручную следует использовать данную процедуру для обеспечения того, чтобы файлы были развернуты как внедренные ресурсы совместно с приложением [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a><span data-ttu-id="64cf9-102">Практическое руководство. Создание встроенных ресурсов файлов модели и сопоставления</span><span class="sxs-lookup"><span data-stu-id="64cf9-102">How to: Make Model and Mapping Files Embedded Resources</span></span>
+<span data-ttu-id="64cf9-103">[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Позволяет развертывать файлы модели и сопоставления как внедренные ресурсы приложения.</span><span class="sxs-lookup"><span data-stu-id="64cf9-103">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enables you to deploy model and mapping files as embedded resources of an application.</span></span> <span data-ttu-id="64cf9-104">Сборка с внедренными файлами моделей и сопоставления должна быть загружена в том же домене приложения, что и соединение сущности.</span><span class="sxs-lookup"><span data-stu-id="64cf9-104">The assembly with the embedded model and mapping files must be loaded in the same application domain as the entity connection.</span></span> <span data-ttu-id="64cf9-105">Дополнительные сведения см. в разделе [строки подключения](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="64cf9-105">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span> <span data-ttu-id="64cf9-106">По умолчанию средства [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] внедряют файлы модели и сопоставления.</span><span class="sxs-lookup"><span data-stu-id="64cf9-106">By default, the [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] tools embed the model and mapping files.</span></span> <span data-ttu-id="64cf9-107">При определении файлов модели и сопоставления вручную следует использовать данную процедуру для обеспечения того, чтобы файлы были развернуты как внедренные ресурсы совместно с приложением [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="64cf9-107">When you manually define the model and mapping files, use this procedure to ensure that the files are deployed as embedded resources together with an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application.</span></span>  
   
 > [!NOTE]
->  Чтобы обеспечить поддержку внедренных ресурсов, необходимо повторить эту процедуру после каждого изменения файлов модели и сопоставления.  
+>  <span data-ttu-id="64cf9-108">Чтобы обеспечить поддержку внедренных ресурсов, необходимо повторить эту процедуру после каждого изменения файлов модели и сопоставления.</span><span class="sxs-lookup"><span data-stu-id="64cf9-108">To maintain embedded resources, you must repeat this procedure whenever the model and mapping files are modified.</span></span>  
   
-### Внедрение файлов модели и сопоставления  
+### <a name="to-embed-model-and-mapping-files"></a><span data-ttu-id="64cf9-109">Внедрение файлов модели и сопоставления</span><span class="sxs-lookup"><span data-stu-id="64cf9-109">To embed model and mapping files</span></span>  
   
-1.  В окне **Обозревателя решений** выберите файл концептуальной модели с расширением CSDL.  
+1.  <span data-ttu-id="64cf9-110">В **обозревателе решений**, выберите файл концептуальной (CSDL).</span><span class="sxs-lookup"><span data-stu-id="64cf9-110">In **Solution Explorer**, select the conceptual (.csdl) file.</span></span>  
   
-2.  В области **Свойства** задайте для параметра **Действие сборки** значение **Внедренный ресурс**.  
+2.  <span data-ttu-id="64cf9-111">В **свойства** задайте **действие при построении** для **внедренный ресурс**.</span><span class="sxs-lookup"><span data-stu-id="64cf9-111">In the **Properties** pane, set **Build Action** to **Embedded Resource**.</span></span>  
   
-3.  Повторите шаги 1 и 2 для файла хранения с расширением SSDL и файла сопоставления с расширением MSL.  
+3.  <span data-ttu-id="64cf9-112">Повторите шаги 1 и 2 для файла хранения с расширением SSDL и файла сопоставления с расширением MSL.</span><span class="sxs-lookup"><span data-stu-id="64cf9-112">Repeat steps 1 and 2 for the storage (.ssdl) file and the mapping (.msl) file.</span></span>  
   
-4.  В окне **Обозреватель решений** дважды щелкните файл App.config, а затем задайте параметр `Metadata` в атрибуте `connectionString` в одном из следующих форматов.  
+4.  <span data-ttu-id="64cf9-113">В **обозревателе решений**, дважды щелкните файл App.config и затем изменить `Metadata` параметр в `connectionString` атрибут на основе одного из следующих форматов:</span><span class="sxs-lookup"><span data-stu-id="64cf9-113">In **Solution Explorer**, double-click the App.config file and then modify the `Metadata` parameter in the `connectionString` attribute based on one of the following formats:</span></span>  
   
-    -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
+    -   <span data-ttu-id="64cf9-114">`Metadata=` `res://<assemblyFullName>/<resourceName>;`</span><span class="sxs-lookup"><span data-stu-id="64cf9-114">`Metadata=` `res://<assemblyFullName>/<resourceName>;`</span></span>  
   
-    -   `Metadata=` `res://*/<resourceName>;`  
+    -   <span data-ttu-id="64cf9-115">`Metadata=` `res://*/<resourceName>;`</span><span class="sxs-lookup"><span data-stu-id="64cf9-115">`Metadata=` `res://*/<resourceName>;`</span></span>  
   
     -   `Metadata=res://*;`  
   
-     Для получения дополнительной информации см. [Строки соединения](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+     <span data-ttu-id="64cf9-116">Дополнительные сведения см. в разделе [строки подключения](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="64cf9-116">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
-## Пример  
- В следующей строке соединения применяется ссылка на внедренные файлы модели и сопоставления для модели [AdventureWorks Sales](http://msdn.microsoft.com/ru-ru/f16cd988-673f-4376-b034-129ca93c7832).  Эта строка соединения хранится в файле App.config проекта.  
+## <a name="example"></a><span data-ttu-id="64cf9-117">Пример</span><span class="sxs-lookup"><span data-stu-id="64cf9-117">Example</span></span>  
+ <span data-ttu-id="64cf9-118">Следующая строка подключения ссылается на внедренные файлы модели и сопоставления для [модели AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).</span><span class="sxs-lookup"><span data-stu-id="64cf9-118">The following connection string references embedded model and mapping files for the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).</span></span> <span data-ttu-id="64cf9-119">Эта строка соединения хранится в файле App.config проекта.</span><span class="sxs-lookup"><span data-stu-id="64cf9-119">This connection string is stored in the project's App.config file.</span></span>  
   
   
   
-## См. также  
- [Моделирование и сопоставление](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)   
- [Как определить строки соединения.](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)   
- [Как построить строку соединения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/ru-ru/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="64cf9-120">См. также</span><span class="sxs-lookup"><span data-stu-id="64cf9-120">See Also</span></span>  
+ [<span data-ttu-id="64cf9-121">Моделирование и сопоставление</span><span class="sxs-lookup"><span data-stu-id="64cf9-121">Modeling and Mapping</span></span>](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
+ [<span data-ttu-id="64cf9-122">Как: определение строки соединения</span><span class="sxs-lookup"><span data-stu-id="64cf9-122">How to: Define the Connection String</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
+ [<span data-ttu-id="64cf9-123">Как: построение строки подключения EntityConnection</span><span class="sxs-lookup"><span data-stu-id="64cf9-123">How to: Build an EntityConnection Connection String</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [<span data-ttu-id="64cf9-124">Средства работы с моделью EDM ADO.NET</span><span class="sxs-lookup"><span data-stu-id="64cf9-124">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

@@ -1,61 +1,64 @@
 ---
-title: "Элемент &lt;remove&gt; для &lt;namedCaches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> - элемент для namedCaches"
-  - "remove - элемент для namedCaches"
+title: "&lt;Удалить&gt; элемент для &lt;namedCaches&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remove element for namedCaches
+- <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6170b59e87948225708c9e697cba1542d756d2f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент &lt;remove&gt; для &lt;namedCaches&gt;
-Удаляет запись именованного кэша из коллекции `namedCaches` для кэша памяти.  
+# <a name="ltremovegt-element-for-ltnamedcachesgt"></a><span data-ttu-id="8b931-102">&lt;Удалить&gt; элемент для &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="8b931-102">&lt;remove&gt; Element for &lt;namedCaches&gt;</span></span>
+<span data-ttu-id="8b931-103">Удаляет элемент именованного кэша из коллекции `namedCaches` для кэша памяти.</span><span class="sxs-lookup"><span data-stu-id="8b931-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="8b931-104">\<System.Runtime.Caching ></span><span class="sxs-lookup"><span data-stu-id="8b931-104">\<system.runtime.caching></span></span>  
+<span data-ttu-id="8b931-105">\<memoryCache ></span><span class="sxs-lookup"><span data-stu-id="8b931-105">\<memoryCache></span></span>  
+<span data-ttu-id="8b931-106">\<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="8b931-106">\<namedCaches></span></span>  
+<span data-ttu-id="8b931-107">\<Удалите ></span><span class="sxs-lookup"><span data-stu-id="8b931-107">\<remove></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="8b931-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8b931-108">Syntax</span></span>  
+  
+```xml  
 <namedCaches>  
     <remove name="default" />  
     <!-- child elements -->  
  </namedCaches>  
 ```  
   
-## Тип  
+## <a name="type"></a><span data-ttu-id="8b931-109">Тип</span><span class="sxs-lookup"><span data-stu-id="8b931-109">Type</span></span>  
  `None`  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8b931-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="8b931-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="8b931-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="8b931-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="8b931-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="8b931-112">Attributes</span></span>  
  `None`  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="8b931-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="8b931-113">Child Elements</span></span>  
  `None`  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="8b931-114">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="8b931-114">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<namedCaches\>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованных экземпляров <xref:System.Runtime.Caching.MemoryCache>.|  
+|<span data-ttu-id="8b931-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="8b931-115">Element</span></span>|<span data-ttu-id="8b931-116">Описание</span><span class="sxs-lookup"><span data-stu-id="8b931-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="8b931-117">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="8b931-117">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="8b931-118">Содержит коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров.</span><span class="sxs-lookup"><span data-stu-id="8b931-118">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## Заметки  
- Элемент `remove` удаляет запись `namedCache` из коллекции именованных кэшей для кэша памяти.  
+## <a name="remarks"></a><span data-ttu-id="8b931-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="8b931-119">Remarks</span></span>  
+ <span data-ttu-id="8b931-120">`remove` Элемент удаляет `namedCache` записи из коллекции именованных кэшей для кэша памяти.</span><span class="sxs-lookup"><span data-stu-id="8b931-120">The `remove` element removes a `namedCache` entry from the named cache collection for a memory cache.</span></span>  
   
-## См. также  
- [Элемент \<namedCaches\> \(параметры кэша\)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="8b931-121">См. также</span><span class="sxs-lookup"><span data-stu-id="8b931-121">See Also</span></span>  
+ [<span data-ttu-id="8b931-122">\<namedCaches > элемент (параметры кэша)</span><span class="sxs-lookup"><span data-stu-id="8b931-122">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

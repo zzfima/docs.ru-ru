@@ -1,29 +1,35 @@
 ---
-title: "Синхронизация DataSet и XmlDataDocument | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Синхронизация набора данных и XmlDataDocument"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Синхронизация DataSet и XmlDataDocument
-ADO.NET <xref:System.Data.DataSet> обеспечивает реляционное представление данных.  Для доступа к иерархическим данным можно использовать классы XML, доступные на платформе .NET Framework.  Исторически эти два представления данных использовались раздельно.  Однако платформа .NET Framework обеспечивает динамический синхронный доступ, как к реляционным, так и иерархическим представлениям данных через объект **DataSet** и объект <xref:System.Xml.XmlDataDocument> соответственно.  
+# <a name="dataset-and-xmldatadocument-synchronization"></a><span data-ttu-id="d6751-102">Синхронизация набора данных и XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="d6751-102">DataSet and XmlDataDocument Synchronization</span></span>
+<span data-ttu-id="d6751-103">ADO.NET <xref:System.Data.DataSet> обеспечивает реляционное представление данных.</span><span class="sxs-lookup"><span data-stu-id="d6751-103">The ADO.NET <xref:System.Data.DataSet> provides you with a relational representation of data.</span></span> <span data-ttu-id="d6751-104">Для доступа к иерархическим данным можно использовать классы XML, доступные на платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d6751-104">For hierarchical data access, you can use the XML classes available in the .NET Framework.</span></span> <span data-ttu-id="d6751-105">Исторически эти два представления данных использовались раздельно.</span><span class="sxs-lookup"><span data-stu-id="d6751-105">Historically, these two representations of data have been used separately.</span></span> <span data-ttu-id="d6751-106">Тем не менее, платформа .NET Framework обеспечивает динамический синхронный доступ в реляционном и иерархическом представлении данных с помощью **DataSet** объекта и <xref:System.Xml.XmlDataDocument> соответственно.</span><span class="sxs-lookup"><span data-stu-id="d6751-106">However, the .NET Framework enables real-time, synchronous access to both the relational and hierarchical representations of data through the **DataSet** object and the <xref:System.Xml.XmlDataDocument> object, respectively.</span></span>  
   
- Когда объект **DataSet** синхронизирован с объектом **XmlDataDocument**, оба они работают с одним набором данных.  Это означает, что при изменении в объекте **DataSet** изменения отражаются в **XmlDataDocument** и наоборот.  Взаимосвязь между объектами **DataSet** и **XmlDataDocument** обеспечивает высокую гибкость, так как одно приложение, использующее один набор данных, может обращаться ко всему комплексу служб, построенных на основе **DataSet** \(например, элементов управления Web Forms и Windows Forms, конструкторов Visual Studio .NET\), а также комплексу XML\-служб, в том числе расширяемому языку таблицы стилей \(XSL\), преобразованиям XSL \(XSLT\) и языку XML Path \(XPath\).  Не обязательно выбирать конкретный набор служб для приложения. Доступны оба.  
+ <span data-ttu-id="d6751-107">Когда **DataSet** синхронизируется с **XmlDataDocument**, оба они работают с одним набором данных.</span><span class="sxs-lookup"><span data-stu-id="d6751-107">When a **DataSet** is synchronized with an **XmlDataDocument**, both objects are working with a single set of data.</span></span> <span data-ttu-id="d6751-108">Это означает, что при внесении изменений в **DataSet**, изменения будут отражены в **XmlDataDocument**и наоборот.</span><span class="sxs-lookup"><span data-stu-id="d6751-108">This means that if a change is made to the **DataSet**, the change will be reflected in the **XmlDataDocument**, and vice versa.</span></span> <span data-ttu-id="d6751-109">Связь между **DataSet** и **XmlDataDocument** создает большую гибкость, позволяя одного приложения, использование одного набора данных, для доступа к полный набор служб, встроенных вокруг **набора данных** (такие как Web Forms и Windows Forms и конструкторов Visual Studio .NET), а также набор служб XML, включая Extensible Stylesheet Language (XSL), преобразованиям XSL (XSLT) и пути XML Language (XPath).</span><span class="sxs-lookup"><span data-stu-id="d6751-109">The relationship between the **DataSet** and the **XmlDataDocument** creates great flexibility by allowing a single application, using a single set of data, to access the entire suite of services built around the **DataSet** (such as Web Forms and Windows Forms controls, and Visual Studio .NET designers), as well as the suite of XML services including Extensible Stylesheet Language (XSL), XSL Transformations (XSLT), and XML Path Language (XPath).</span></span> <span data-ttu-id="d6751-110">Не обязательно выбирать конкретный набор служб для приложения. Доступны оба.</span><span class="sxs-lookup"><span data-stu-id="d6751-110">You do not have to choose which set of services to target with the application; both are available.</span></span>  
   
- Есть несколько способов синхронизации **DataSet** с **XmlDataDocument**.  Можно выполнить следующие действия.  
+ <span data-ttu-id="d6751-111">Существует несколько способов, которые можно синхронизировать **DataSet** с **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="d6751-111">There are several ways that you can synchronize a **DataSet** with an **XmlDataDocument**.</span></span> <span data-ttu-id="d6751-112">Можно выполнить следующие действия.</span><span class="sxs-lookup"><span data-stu-id="d6751-112">You can:</span></span>  
   
--   Заполнить объект **DataSet** схемой \(то есть, реляционной структурой\) и данными, а затем синхронизировать его с новым объектом **XmlDataDocument**.  Это обеспечивает иерархическое представление существующих реляционных данных.  Например:  
+-   <span data-ttu-id="d6751-113">Заполнение **DataSet** со схемой (то есть, реляционной структурой) и данными, а затем синхронизировать его с новым **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="d6751-113">Populate a **DataSet** with schema (that is, a relational structure) and data and then synchronize it with a new **XmlDataDocument**.</span></span> <span data-ttu-id="d6751-114">Это обеспечивает иерархическое представление существующих реляционных данных.</span><span class="sxs-lookup"><span data-stu-id="d6751-114">This provides a hierarchical view of existing relational data.</span></span> <span data-ttu-id="d6751-115">Пример:</span><span class="sxs-lookup"><span data-stu-id="d6751-115">For example:</span></span>  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -41,11 +47,11 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   Заполните объект **DataSet** только схемой \(например, строго типизированным **DataSet**\), синхронизируйте его с **XmlDataDocument**, а затем загрузите объект **XmlDataDocument** из XML\-документа.  Это обеспечивает реляционное представление существующих иерархических данных.  Имена таблиц и имена столбцов в схеме **DataSet** должны соответствовать именам XML\-элементов, с которыми их нужно синхронизировать.  Это соответствие с учетом регистра.  
+-   <span data-ttu-id="d6751-116">Заполнение **набора данных** только со схемой (например, строго типизированным **набора данных**), синхронизируйте его с **XmlDataDocument**и затем загружать  **XmlDataDocument** из XML-документа.</span><span class="sxs-lookup"><span data-stu-id="d6751-116">Populate a **DataSet** with schema only (such as a strongly typed **DataSet**), synchronize it with an **XmlDataDocument**, and then load the **XmlDataDocument** from an XML document.</span></span> <span data-ttu-id="d6751-117">Это обеспечивает реляционное представление существующих иерархических данных.</span><span class="sxs-lookup"><span data-stu-id="d6751-117">This provides a relational view of existing hierarchical data.</span></span> <span data-ttu-id="d6751-118">Имена таблиц и имена столбцов в вашей **DataSet** схемы должны совпадать с именами элементов XML, то их нужно синхронизировать.</span><span class="sxs-lookup"><span data-stu-id="d6751-118">The table names and column names in your **DataSet** schema must match the names of the XML elements that you want them synchronized with.</span></span> <span data-ttu-id="d6751-119">Это соответствие с учетом регистра.</span><span class="sxs-lookup"><span data-stu-id="d6751-119">This matching is case-sensitive.</span></span>  
   
-     Обратите внимание, что схема **DataSet** должна соответствовать только XML\-элементам, которые нужно показать в реляционном представлении.  Таким образом, может существовать очень большой XML\-документ и очень малое реляционное «окно» для этого документа.  Объект **XmlDataDocument** сохраняет XML\-документ целиком, даже притом, что в объекте **DataSet** показана лишь малая его часть.  \(Подробный пример см. в разделе [Синхронизация DataSet с XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).\)  
+     <span data-ttu-id="d6751-120">Обратите внимание, что схема **набора данных** должна соответствовать XML-элементы, которые требуется предоставить в реляционное представление только.</span><span class="sxs-lookup"><span data-stu-id="d6751-120">Note that the schema of the **DataSet** only needs to match the XML elements that you want to expose in your relational view.</span></span> <span data-ttu-id="d6751-121">Таким образом, может существовать очень большой XML-документ и очень малое реляционное «окно» для этого документа.</span><span class="sxs-lookup"><span data-stu-id="d6751-121">This way, you can have a very large XML document and a very small relational "window" on that document.</span></span> <span data-ttu-id="d6751-122">**XmlDataDocument** позволяет сохранить весь документ XML, даже если **DataSet** предоставляет только малую часть.</span><span class="sxs-lookup"><span data-stu-id="d6751-122">The **XmlDataDocument** preserves the entire XML document even though the **DataSet** only exposes a small portion of it.</span></span> <span data-ttu-id="d6751-123">(Пример этого см. в разделе [синхронизация DataSet с XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)</span><span class="sxs-lookup"><span data-stu-id="d6751-123">(For a detailed example of this, see [Synchronizing a DataSet with an XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)</span></span>  
   
-     В следующем примере кода показаны шаги создания объекта **DataSet** и заполнения его схемы, а затем его синхронизации с объектом **XmlDataDocument**.  Обратите внимание, что схема **DataSet** должна соответствовать только элементам из **XmlDataDocument**, которые нужно показать с помощью объекта **DataSet**.  
+     <span data-ttu-id="d6751-124">В следующем примере кода показаны шаги создания **DataSet** и заполнения его схемы, а затем его синхронизации с **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="d6751-124">The following code example shows the steps for creating a **DataSet** and populating its schema, then synchronizing it with an **XmlDataDocument**.</span></span> <span data-ttu-id="d6751-125">Обратите внимание, что **DataSet** схема должна соответствовать только элементам из **XmlDataDocument** , которому требуется предоставить доступ с помощью **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d6751-125">Note that the **DataSet** schema only needs to match the elements from the **XmlDataDocument** that you want to expose using the **DataSet**.</span></span>  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -65,11 +71,11 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
-     Нельзя загрузить объект **XmlDataDocument**, если он синхронизирован с объектом **DataSet**, в котором есть данные.  В таком случае возникнет исключение.  
+     <span data-ttu-id="d6751-126">Не удается загрузить **XmlDataDocument** , если он синхронизирован с **набора данных** , содержащий данные.</span><span class="sxs-lookup"><span data-stu-id="d6751-126">You cannot load an **XmlDataDocument** if it is synchronized with a **DataSet** that contains data.</span></span> <span data-ttu-id="d6751-127">В таком случае возникнет исключение.</span><span class="sxs-lookup"><span data-stu-id="d6751-127">An exception will be thrown.</span></span>  
   
--   Создайте новый объект **XmlDataDocument** и загрузите его из XML\-документа, затем обратитесь к реляционному представлению данных с помощью свойства **DataSet** объекта **XmlDataDocument**.  Необходимо установить схему **DataSet** до того, как появится возможность просмотреть любые данные в **XmlDataDocument** с помощью **DataSet**.  Отметим еще раз: имена таблиц и имена столбцов в схеме **DataSet** должны соответствовать именам XML\-элементов, с которыми их нужно синхронизировать.  Это соответствие с учетом регистра.  
+-   <span data-ttu-id="d6751-128">Создайте новый **XmlDataDocument** и загрузить его из XML-документ и затем получить доступ к реляционному представлению данных с помощью **DataSet** свойство **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="d6751-128">Create a new **XmlDataDocument** and load it from an XML document, and then access the relational view of the data using the **DataSet** property of the **XmlDataDocument**.</span></span> <span data-ttu-id="d6751-129">Необходимо задать схему **DataSet** перед просмотром данных в **XmlDataDocument** с помощью **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d6751-129">You need to set the schema of the **DataSet** before you can view any of the data in the **XmlDataDocument** using the **DataSet**.</span></span> <span data-ttu-id="d6751-130">Опять же, имена таблиц и имена столбцов в вашей **DataSet** схемы должны совпадать с именами элементов XML, с которыми их нужно синхронизировать с.</span><span class="sxs-lookup"><span data-stu-id="d6751-130">Again, the table names and column names in your **DataSet** schema must match the names of the XML elements that you want them synchronized with.</span></span> <span data-ttu-id="d6751-131">Это соответствие с учетом регистра.</span><span class="sxs-lookup"><span data-stu-id="d6751-131">This matching is case-sensitive.</span></span>  
   
-     В следующем примере кода показано обращение к реляционному представлению данных в объекте **XmlDataDocument**.  
+     <span data-ttu-id="d6751-132">В следующем примере кода показано, как получить доступ к реляционному представлению данных в **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="d6751-132">The following code example shows how to access the relational view of the data in an **XmlDataDocument**.</span></span>  
   
     ```vb  
     Dim xmlDoc As XmlDataDocument = New XmlDataDocument  
@@ -78,7 +84,6 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
     ' Add code here to create the schema of the DataSet to view the data.  
   
     xmlDoc.Load("XMLDocument.xml")  
-  
     ```  
   
     ```csharp  
@@ -90,32 +95,32 @@ ADO.NET <xref:System.Data.DataSet> обеспечивает реляционно
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- Еще одно преимущество синхронизации **XmlDataDocument** с **DataSet** заключается в точном сохранении XML\-документа.  Если объект **DataSet** заполнен из XML\-документа с помощью **ReadXml**, то при обратной записи данных как XML\-документа с использованием **WriteXml** отличия от исходного XML\-документа могут быть существенными.  Причина в том, что **DataSet** не сохраняет элементов форматирования XML\-документа, в частности, пробелов или иерархических данных, например порядок элементов.  Объект **DataSet** также не содержит элементов из XML\-документа, которые были пропущены, поскольку не соответствуют схеме **Dataset**.  Синхронизация объекта **XmlDataDocument** с **DataSet** позволяет сохранить форматирование и иерархическую структуру элементов исходного XML\-документа в объекте **XmlDataDocument**, а объект **DataSet** содержит данные и сведения схемы, подходящие для объекта **DataSet**.  
+ <span data-ttu-id="d6751-133">Еще одно преимущество синхронизации **XmlDataDocument** с **DataSet** — точном сохранении XML-документа.</span><span class="sxs-lookup"><span data-stu-id="d6751-133">Another advantage of synchronizing an **XmlDataDocument** with a **DataSet** is that the fidelity of an XML document is preserved.</span></span> <span data-ttu-id="d6751-134">Если **DataSet** заполнен из XML-документа с помощью **ReadXml**, если данные обратной записи как XML-документа с помощью **WriteXml** он может значительно отличаться от исходный XML-документ.</span><span class="sxs-lookup"><span data-stu-id="d6751-134">If the **DataSet** is populated from an XML document using **ReadXml**, when the data is written back as an XML document using **WriteXml** it may differ dramatically from the original XML document.</span></span> <span data-ttu-id="d6751-135">Это вызвано **набора данных** не сохраняет элементов форматирования, например пробелы или иерархических данных, например порядок элементов из XML-документа.</span><span class="sxs-lookup"><span data-stu-id="d6751-135">This is because the **DataSet** does not maintain formatting, such as white space, or hierarchical information, such as element order, from the XML document.</span></span> <span data-ttu-id="d6751-136">**DataSet** также не содержит элементов из XML-документа, которые были пропущены, поскольку они не соответствует схеме **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d6751-136">The **DataSet** also does not contain elements from the XML document that were ignored because they did not match the schema of the **Dataset**.</span></span> <span data-ttu-id="d6751-137">Синхронизация **XmlDataDocument** с **DataSet** позволяет сохранить форматирование и иерархическую структуру элементов исходного XML-документа в **XmlDataDocument**, пока **DataSet** содержит только данные и сведения схемы, подходящие для **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d6751-137">Synchronizing an **XmlDataDocument** with a **DataSet** allows the formatting and hierarchical element structure of the original XML document to be maintained in the **XmlDataDocument**, while the **DataSet** contains only data and schema information appropriate to the **DataSet**.</span></span>  
   
- При синхронизации объекта **DataSet** с объектом **XmlDataDocument** могут быть получены различные результаты в зависимости от того, используются ли вложенные объекты <xref:System.Data.DataRelation>.  Для получения дополнительной информации см. [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ <span data-ttu-id="d6751-138">При синхронизации **DataSet** с **XmlDataDocument**, результаты могут отличаться в зависимости от того, нужно ли ваш <xref:System.Data.DataRelation> вложенные объекты.</span><span class="sxs-lookup"><span data-stu-id="d6751-138">When synchronizing a **DataSet** with an **XmlDataDocument**, results may differ depending on whether or not your <xref:System.Data.DataRelation> objects are nested.</span></span> <span data-ttu-id="d6751-139">Дополнительные сведения см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="d6751-139">For more information, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
-## В этом подразделе  
- [Синхронизация DataSet с XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
- Демонстрирует синхронизацию строго типизированного объекта **DataSet** с минимальной схемой, с объектом **XmlDataDocument**.  
+## <a name="in-this-section"></a><span data-ttu-id="d6751-140">Содержание</span><span class="sxs-lookup"><span data-stu-id="d6751-140">In This Section</span></span>  
+ [<span data-ttu-id="d6751-141">Синхронизация DataSet с XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="d6751-141">Synchronizing a DataSet with an XmlDataDocument</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ <span data-ttu-id="d6751-142">Демонстрирует синхронизацию строго типизированного **DataSet**, с минимальной схемой, с **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="d6751-142">Demonstrates synchronizing a strongly typed **DataSet**, with minimal schema, with an **XmlDataDocument**.</span></span>  
   
- [Выполнение запроса XPath над DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
- Демонстрирует выполнение запроса XPath к содержимому **DataSet**.  
+ [<span data-ttu-id="d6751-143">Выполнение запроса XPath к набору данных</span><span class="sxs-lookup"><span data-stu-id="d6751-143">Performing an XPath Query on a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ <span data-ttu-id="d6751-144">Демонстрирует выполнение запроса XPath к содержимому **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d6751-144">Demonstrates performing an XPath query on the contents of a **DataSet**.</span></span>  
   
- [Применение XSLT\-преобразования к набору данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
- Демонстрирует применение XSLT\-преобразования к содержимому **DataSet**.  
+ [<span data-ttu-id="d6751-145">Применение преобразования XSLT к набору данных</span><span class="sxs-lookup"><span data-stu-id="d6751-145">Applying an XSLT Transform to a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ <span data-ttu-id="d6751-146">Демонстрирует применение XSLT-преобразования к содержимому **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d6751-146">Demonstrates applying an XSLT transform to the contents of a **DataSet**.</span></span>  
   
-## Связанные подразделы  
- [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- Описывает взаимодействие объекта **DataSet** с XML как источником данных, в том числе загрузку и сохранение содержимого объекта **DataSet** как XML\-данных.  
+## <a name="related-sections"></a><span data-ttu-id="d6751-147">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="d6751-147">Related Sections</span></span>  
+ [<span data-ttu-id="d6751-148">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="d6751-148">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ <span data-ttu-id="d6751-149">Описывает способ **DataSet** взаимодействует с XML в качестве источника данных, включая загрузку и сохранение содержимого **набора данных** как XML-данных.</span><span class="sxs-lookup"><span data-stu-id="d6751-149">Describes how the **DataSet** interacts with XML as a data source, including loading and persisting the contents of a **DataSet** as XML data.</span></span>  
   
- [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- Показывает важность вложенных объектов **DataRelation** при представлении содержимого объекта **DataSet** как XML\-данных и описывает создание этих связей.  
+ [<span data-ttu-id="d6751-150">Вложение отношений DataRelation</span><span class="sxs-lookup"><span data-stu-id="d6751-150">Nesting DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ <span data-ttu-id="d6751-151">Объясняет значение вложенных **DataRelation** при представлении содержимого **DataSet** как XML-данных и описывает создание этих связей.</span><span class="sxs-lookup"><span data-stu-id="d6751-151">Discusses the importance of nested **DataRelation** objects when representing the contents of a **DataSet** as XML data, and describes how to create these relations.</span></span>  
   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Описывает объект **DataSet** и использование его для управления данными приложений и взаимодействием с источниками данных, в том числе с реляционными базами данных и XML.  
+ [<span data-ttu-id="d6751-152">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="d6751-152">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="d6751-153">Описывает **набора данных** и способ его использования для управления данными приложения и взаимодействия с источниками данных, включая реляционные базы данных и XML.</span><span class="sxs-lookup"><span data-stu-id="d6751-153">Describes the **DataSet** and how to use it to manage application data and to interact with data sources including relational databases and XML.</span></span>  
   
- [Класс XmlDataDocument](frlrfSystemXmlXmlDataDocumentClassTopic)  
- Содержит справочные сведения о классе **XmlDataDocument**.  
+ <xref:System.Xml.XmlDataDocument>  
+ <span data-ttu-id="d6751-154">Содержит справочные сведения о **XmlDataDocument** класса.</span><span class="sxs-lookup"><span data-stu-id="d6751-154">Contains reference information about the **XmlDataDocument** class.</span></span>  
   
-## См. также  
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d6751-155">См. также</span><span class="sxs-lookup"><span data-stu-id="d6751-155">See Also</span></span>  
+ [<span data-ttu-id="d6751-156">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d6751-156">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

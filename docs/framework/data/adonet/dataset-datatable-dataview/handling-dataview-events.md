@@ -1,29 +1,35 @@
 ---
-title: "Обработка событий DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обработка событий DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2abade8bbbf5ab8a9d2cf146271e89703ec34cb9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обработка событий DataView
-Событие <xref:System.Data.DataView.ListChanged> объекта <xref:System.Data.DataView> используется для определения того, было ли обновлено представление.  К обновлениям, которые вызывают это событие, относятся добавление, удаление или изменение строки в базовой таблице, добавление или удаление столбца из схемы базовой таблицы, изменение в родительской или дочерней связи.  Событие **ListChanged** также уведомляет о том, что рассматриваемый список строк существенно изменился в результате применения нового порядка сортировки или фильтра.  
+# <a name="handling-dataview-events"></a><span data-ttu-id="fd569-102">Обработка событий DataView</span><span class="sxs-lookup"><span data-stu-id="fd569-102">Handling DataView Events</span></span>
+<span data-ttu-id="fd569-103">Событие <xref:System.Data.DataView.ListChanged> объекта <xref:System.Data.DataView> используется для определения того, было ли обновлено представление.</span><span class="sxs-lookup"><span data-stu-id="fd569-103">You can use the <xref:System.Data.DataView.ListChanged> event of the <xref:System.Data.DataView> to determine if a view has been updated.</span></span> <span data-ttu-id="fd569-104">К обновлениям, которые вызывают это событие, относятся добавление, удаление или изменение строки в базовой таблице, добавление или удаление столбца из схемы базовой таблицы, изменение в родительской или дочерней связи.</span><span class="sxs-lookup"><span data-stu-id="fd569-104">Updates that raise the event include adding, deleting, or modifying a row in the underlying table; adding or deleting a column to the schema of the underlying table; and a change in a parent or child relationship.</span></span> <span data-ttu-id="fd569-105">**ListChanged** событий также уведомляет пользователя, если список строк существенно изменился из-за применения нового порядка сортировки или фильтра.</span><span class="sxs-lookup"><span data-stu-id="fd569-105">The **ListChanged** event also notifies you if the list of rows you are viewing has changed significantly due to the application of a new sort order or a filter.</span></span>  
   
- В событии **ListChanged** реализуется делегат **ListChangedEventHandler** пространства имен <xref:System.ComponentModel> и в качестве входа принимается объект <xref:System.ComponentModel.ListChangedEventArgs>.  Определить тип произошедшего изменения можно с помощью значения перечисления <xref:System.ComponentModel.ListChangedType> в свойстве **ListChangedType** объекта **ListChangedEventArgs**.  Что касается изменений, которые включают добавление, удаление или перемещение строк, то доступ к новому индексу добавленной или перемещенной строки и к прежнему индексу удаленной строки можно получить с помощью свойства **NewIndex** объекта **ListChangedEventArgs**.  В том случае, если произошло перемещение строки, доступ к прежнему индексу перемещенной строки можно получить с помощью свойства **OldIndex** объекта **ListChangedEventArgs**.  
+ <span data-ttu-id="fd569-106">**ListChanged** реализует событие **ListChangedEventHandler** делегат типа <xref:System.ComponentModel> пространства имен и принимает в качестве ввода <xref:System.ComponentModel.ListChangedEventArgs> объекта.</span><span class="sxs-lookup"><span data-stu-id="fd569-106">The **ListChanged** event implements the **ListChangedEventHandler** delegate of the <xref:System.ComponentModel> namespace and takes as input a <xref:System.ComponentModel.ListChangedEventArgs> object.</span></span> <span data-ttu-id="fd569-107">Чтобы выяснить, какие изменения фиксируется с помощью <xref:System.ComponentModel.ListChangedType> значения перечисления в **ListChangedType** свойство **ListChangedEventArgs** объекта.</span><span class="sxs-lookup"><span data-stu-id="fd569-107">You can determine what type of change has occurred using the <xref:System.ComponentModel.ListChangedType> enumeration value in the **ListChangedType** property of the **ListChangedEventArgs** object.</span></span> <span data-ttu-id="fd569-108">Для внесения изменений, которые включают добавление, удаление или перемещение строк, новому индексу добавленной или перемещенной строки и к прежнему индексу удаленной строки можно осуществлять с помощью **NewIndex** свойство **ListChangedEventArgs** объекта.</span><span class="sxs-lookup"><span data-stu-id="fd569-108">For changes that involve adding, deleting, or moving rows, the new index of the added or moved row and the previous index of the deleted row can be accessed using the **NewIndex** property of the **ListChangedEventArgs** object.</span></span> <span data-ttu-id="fd569-109">В случае перемещение строки, к прежнему индексу перемещенной строки можно осуществлять с помощью **OldIndex** свойство **ListChangedEventArgs** объекта.</span><span class="sxs-lookup"><span data-stu-id="fd569-109">In the case of a moved row, the previous index of the moved row can be accessed using the **OldIndex** property of the **ListChangedEventArgs** object.</span></span>  
   
- Объект **DataViewManager** предоставляет событие **ListChanged**, которое позволяет передавать уведомление о добавлении или удалении таблицы либо о внесении изменения в коллекцию **Relations** базового объекта **DataSet**.  
+ <span data-ttu-id="fd569-110">**DataViewManager** также предоставляет **ListChanged** событий для уведомления о том, если при добавлении или удалении таблицы или изменений и **отношений** коллекцию базовый **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="fd569-110">The **DataViewManager** also exposes a **ListChanged** event to notify you if a table has been added or removed, or if a change has been made to the **Relations** collection of the underlying **DataSet**.</span></span>  
   
- В следующем примере кода показано добавление обработчика событий **ListChanged**.  
+ <span data-ttu-id="fd569-111">В следующем примере кода показано, как добавить **ListChanged** обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="fd569-111">The following code example shows how to add a **ListChanged** event handler.</span></span>  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -39,7 +45,6 @@ Private Shared Sub OnListChanged( _
   Console.WriteLine(vbTab & "OldIndex = " & args.OldIndex)  
   Console.WriteLine(vbTab & "NewIndex = " & args.NewIndex)  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -56,8 +61,8 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## См. также  
- <xref:System.Data.DataView>   
- <xref:System.ComponentModel.ListChangedEventHandler>   
- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="fd569-112">См. также</span><span class="sxs-lookup"><span data-stu-id="fd569-112">See Also</span></span>  
+ <xref:System.Data.DataView>  
+ <xref:System.ComponentModel.ListChangedEventHandler>  
+ [<span data-ttu-id="fd569-113">Объекты DataView</span><span class="sxs-lookup"><span data-stu-id="fd569-113">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="fd569-114">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="fd569-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

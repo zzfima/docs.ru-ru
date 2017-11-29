@@ -1,37 +1,40 @@
 ---
-title: "Сопоставление неявных связей между вложенными элементами схемы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сопоставление неявных отношений между вложенными элементами схемы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3e3243384bd1dd55661a87ee67cc3052b94e923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сопоставление неявных связей между вложенными элементами схемы
-Схема на языке XSD может иметь сложные типы, вложенные друг в друга.  В этом случае процесс сопоставления применяет сопоставление по умолчанию и создает в объекте <xref:System.Data.DataSet>:  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="fb3c3-102">Сопоставление неявных отношений между вложенными элементами схемы</span><span class="sxs-lookup"><span data-stu-id="fb3c3-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="fb3c3-103">Схема на языке XSD может иметь сложные типы, вложенные друг в друга.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="fb3c3-104">В этом случае процесс сопоставления применяет сопоставление по умолчанию и создает в объекте <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="fb3c3-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   одну таблицу для каждого сложного типа \(родительского и дочернего\);  
+-   <span data-ttu-id="fb3c3-105">одну таблицу для каждого сложного типа (родительского и дочернего);</span><span class="sxs-lookup"><span data-stu-id="fb3c3-105">One table for each of the complex types (parent and child).</span></span>  
   
--   один дополнительный столбец *TableName*\_Id в первичном ключе на каждое определение таблицы, где *TableName* — это имя родительской таблицы, если для родительской таблицы не существует ограничения уникальности;  
+-   <span data-ttu-id="fb3c3-106">Если не существует ограничения уникальности в родительском, один дополнительный столбец первичного ключа в определение таблицы с именем *TableName*_Id где *TableName* имя родительской таблицы.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
--   ограничение первичного ключа для родительской таблицы, определяющее дополнительный столбец как часть первичного ключа \(путем задания свойству **IsPrimaryKey** значения **True**\).  Ограничению назначается имя Constraint*\#*, где *\#* — это 1, 2, 3 и т. д.  Например, имя первого ограничения по умолчанию \- Constraint1;  
+-   <span data-ttu-id="fb3c3-107">Ограничение первичного ключа в родительской таблице, определяющее дополнительный столбец в качестве первичного ключа (установив **IsPrimaryKey** свойства **True**).</span><span class="sxs-lookup"><span data-stu-id="fb3c3-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="fb3c3-108">Ограничению назначается имя Constraint *#*  где  *#*  — 1, 2, 3 и т. д.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-108">The constraint is named Constraint*#* where *#* is 1, 2, 3, and so on.</span></span> <span data-ttu-id="fb3c3-109">Например, имя первого ограничения по умолчанию - Constraint1;</span><span class="sxs-lookup"><span data-stu-id="fb3c3-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
--   ограничение внешнего ключа для дочерней таблицы, определяющее дополнительный столбец как внешний ключ, ссылающийся на первичный ключ родительской таблицы.  Ограничение имеет имя *ParentTable\_ChildTable*, где *ParentTable* — это имя родительской таблицы, а *ChildTable* — это имя дочерней таблицы;  
+-   <span data-ttu-id="fb3c3-110">ограничение внешнего ключа для дочерней таблицы, определяющее дополнительный столбец как внешний ключ, ссылающийся на первичный ключ родительской таблицы.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="fb3c3-111">Ограничению назначается имя *ParentTable_ChildTable* где *ParentTable* имя родительской таблицы и *ChildTable* имя дочерней таблицы.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
--   связи данных между родительскими и дочерними таблицами.  
+-   <span data-ttu-id="fb3c3-112">связи данных между родительскими и дочерними таблицами.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-112">A data relation between the parent and child tables.</span></span>  
   
- В следующем примере показывается схема, где **OrderDetail** \- это дочерний элемент таблицы **Order**.  
+ <span data-ttu-id="fb3c3-113">В следующем примере показано, схема которой **OrderDetail** является дочерним элементом элемента **порядок**.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,16 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- Процесс сопоставления схемы XML создает в объекте **DataSet**:  
+ <span data-ttu-id="fb3c3-114">Процесс сопоставления схем XML создает в **набора данных**:</span><span class="sxs-lookup"><span data-stu-id="fb3c3-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
--   Таблицы **Order** и **OrderDetail**.  
+-   <span data-ttu-id="fb3c3-115">**Порядок** и **OrderDetail** таблицы.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-115">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Ограничение уникальности на таблицу **Order**.  Отметим, что свойство **IsPrimaryKey** имеет значение **True**.  
+-   <span data-ttu-id="fb3c3-116">Ограничение уникальности на **порядок** таблицы.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="fb3c3-117">Обратите внимание, что **IsPrimaryKey** свойству **True**.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
     ```  
     ConstraintName: Constraint1  
@@ -80,7 +83,7 @@ caps.handback.revision: 4
     IsPrimaryKey: True  
     ```  
   
--   Ограничение внешнего ключа на таблицу **OrderDetail**.  
+-   <span data-ttu-id="fb3c3-118">Ограничение внешнего ключа для **OrderDetail** таблицы.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -91,7 +94,7 @@ caps.handback.revision: 4
     RelatedColumns: Order_Id   
     ```  
   
--   Связь между таблицами **Order** и **OrderDetail**.  Свойству **Nested** для данной связи устанавливается значение **True**, так как элементы **Order** и **OrderDetail** вложены в схему.  
+-   <span data-ttu-id="fb3c3-119">Связь между **порядок** и **OrderDetail** таблиц.</span><span class="sxs-lookup"><span data-stu-id="fb3c3-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="fb3c3-120">**Nested** для этого отношения свойству **True** из-за **порядок** и **OrderDetail** элементы являются вложенными в схеме .</span><span class="sxs-lookup"><span data-stu-id="fb3c3-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -104,7 +107,7 @@ caps.handback.revision: 4
     Nested: True  
     ```  
   
-## См. также  
- [Формирование связей DataSet на основе схемы XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Сопоставление ограничений схемы XML \(XSD\) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="fb3c3-121">См. также</span><span class="sxs-lookup"><span data-stu-id="fb3c3-121">See Also</span></span>  
+ [<span data-ttu-id="fb3c3-122">Создание отношений наборов данных из XML-схемы (XSD)</span><span class="sxs-lookup"><span data-stu-id="fb3c3-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="fb3c3-123">Сопоставление ограничений XML схемы (XSD) для ограничения набора данных</span><span class="sxs-lookup"><span data-stu-id="fb3c3-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="fb3c3-124">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="fb3c3-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

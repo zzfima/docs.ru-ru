@@ -5,223 +5,220 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="loader-etw-events"></a>События загрузчика (трассировка событий Windows)
-<a name="top"></a> Эти события собирают информацию, относящуюся к загрузке и выгрузке доменов приложений, сборок и модулей.  
+# <a name="loader-etw-events"></a><span data-ttu-id="2d07a-102">События загрузчика (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="2d07a-102">Loader ETW Events</span></span>
+<span data-ttu-id="2d07a-103"><a name="top"></a> Эти события собирают информацию, относящуюся к загрузке и выгрузке доменов приложений, сборок и модулей.</span><span class="sxs-lookup"><span data-stu-id="2d07a-103"><a name="top"></a> These events collect information relating to loading and unloading application domains, assemblies, and modules.</span></span>  
   
- Все события загрузчика создаются при использовании ключевого слова `LoaderKeyword` (0x8). События `DCStart` и `DCEnd` создаются при использовании ключевого слова `LoaderRundownKeyword` (0x8) с включенным ключевым словом `StartRundown`/`EndRundown` . (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ <span data-ttu-id="2d07a-104">Все события загрузчика создаются при использовании ключевого слова `LoaderKeyword` (0x8).</span><span class="sxs-lookup"><span data-stu-id="2d07a-104">All loader events are raised under the `LoaderKeyword` (0x8) keyword.</span></span> <span data-ttu-id="2d07a-105">События `DCStart` и `DCEnd` создаются при использовании ключевого слова `LoaderRundownKeyword` (0x8) с включенным ключевым словом `StartRundown`/`EndRundown` .</span><span class="sxs-lookup"><span data-stu-id="2d07a-105">The `DCStart` and the `DCEnd` events are raised under `LoaderRundownKeyword` (0x8) with `StartRundown`/`EndRundown` enabled.</span></span> <span data-ttu-id="2d07a-106">(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="2d07a-106">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
- События загрузчика делятся на следующие категории:  
+ <span data-ttu-id="2d07a-107">События загрузчика делятся на следующие категории:</span><span class="sxs-lookup"><span data-stu-id="2d07a-107">Loader events are subdivided into the following:</span></span>  
   
--   [События домена приложения](#application_domain_events)  
+-   [<span data-ttu-id="2d07a-108">События домена приложения</span><span class="sxs-lookup"><span data-stu-id="2d07a-108">Application Domain Events</span></span>](#application_domain_events)  
   
--   [События сборки загрузчика среды CLR](#clr_loader_assembly_events)  
+-   [<span data-ttu-id="2d07a-109">События сборки загрузчика среды CLR</span><span class="sxs-lookup"><span data-stu-id="2d07a-109">CLR Loader Assembly Events</span></span>](#clr_loader_assembly_events)  
   
--   [События модулей](#module_events)  
+-   [<span data-ttu-id="2d07a-110">События модулей</span><span class="sxs-lookup"><span data-stu-id="2d07a-110">Module Events</span></span>](#module_events)  
   
--   [События модулей домена среды CLR](#clr_domain_module_events)  
+-   [<span data-ttu-id="2d07a-111">События модулей домена среды CLR</span><span class="sxs-lookup"><span data-stu-id="2d07a-111">CLR Domain Module Events</span></span>](#clr_domain_module_events)  
   
--   [События диапазона модуля](#module_range_events)  
+-   [<span data-ttu-id="2d07a-112">События диапазона модуля</span><span class="sxs-lookup"><span data-stu-id="2d07a-112">Module Range Events</span></span>](#module_range_events)  
   
 <a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>События домена приложения  
- В таблице ниже показаны ключевое слово и уровень.  
+## <a name="application-domain-events"></a><span data-ttu-id="2d07a-113">События домена приложения</span><span class="sxs-lookup"><span data-stu-id="2d07a-113">Application Domain Events</span></span>  
+ <span data-ttu-id="2d07a-114">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="2d07a-114">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|<span data-ttu-id="2d07a-115">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="2d07a-115">Keyword for raising the event</span></span>|<span data-ttu-id="2d07a-116">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-116">Event</span></span>|<span data-ttu-id="2d07a-117">Уровень</span><span class="sxs-lookup"><span data-stu-id="2d07a-117">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` и `AppDomainUnLoad_V1`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Информационный (4)|  
+|<span data-ttu-id="2d07a-118">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="2d07a-118">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="2d07a-119">`AppDomainLoad_V1` и `AppDomainUnLoad_V1`</span><span class="sxs-lookup"><span data-stu-id="2d07a-119">`AppDomainLoad_V1` and `AppDomainUnLoad_V1`</span></span>|<span data-ttu-id="2d07a-120">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-120">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-121">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-121">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|<span data-ttu-id="2d07a-122">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-122">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-123">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-123">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|<span data-ttu-id="2d07a-124">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-124">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="2d07a-125">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="2d07a-125">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="2d07a-126">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-126">Event</span></span>|<span data-ttu-id="2d07a-127">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="2d07a-127">Event ID</span></span>|<span data-ttu-id="2d07a-128">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-128">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (регистрируется для всех доменов приложений)|156|Создается каждый раз, когда во время существования процесса создается домен приложения.|  
-|`AppDomainUnLoad_V1`|157|Создается каждый раз, когда во время существования процесса уничтожается домен приложения.|  
-|`AppDomainDCStart_V1`|157|Перечисляет домены приложений в течение очистки запуска.|  
-|`AppDomainDCEnd_V1`|158|Перечисляет домены приложений в течение очистки завершения.|  
+|<span data-ttu-id="2d07a-129">`AppDomainLoad_V1` (регистрируется для всех доменов приложений)</span><span class="sxs-lookup"><span data-stu-id="2d07a-129">`AppDomainLoad_V1` (logged for all application domains)</span></span>|<span data-ttu-id="2d07a-130">156</span><span class="sxs-lookup"><span data-stu-id="2d07a-130">156</span></span>|<span data-ttu-id="2d07a-131">Создается каждый раз, когда во время существования процесса создается домен приложения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-131">Raised whenever an application domain is created during the lifetime of a process.</span></span>|  
+|`AppDomainUnLoad_V1`|<span data-ttu-id="2d07a-132">157</span><span class="sxs-lookup"><span data-stu-id="2d07a-132">157</span></span>|<span data-ttu-id="2d07a-133">Создается каждый раз, когда во время существования процесса уничтожается домен приложения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-133">Raised whenever an application domain is destroyed during the lifetime of a process.</span></span>|  
+|`AppDomainDCStart_V1`|<span data-ttu-id="2d07a-134">157</span><span class="sxs-lookup"><span data-stu-id="2d07a-134">157</span></span>|<span data-ttu-id="2d07a-135">Перечисляет домены приложений в течение очистки запуска.</span><span class="sxs-lookup"><span data-stu-id="2d07a-135">Enumerates the application domains during a start rundown.</span></span>|  
+|`AppDomainDCEnd_V1`|<span data-ttu-id="2d07a-136">158</span><span class="sxs-lookup"><span data-stu-id="2d07a-136">158</span></span>|<span data-ttu-id="2d07a-137">Перечисляет домены приложений в течение очистки завершения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-137">Enumerates the application domains during an end rundown.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="2d07a-138">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="2d07a-138">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="2d07a-139">Имя поля</span><span class="sxs-lookup"><span data-stu-id="2d07a-139">Field name</span></span>|<span data-ttu-id="2d07a-140">Тип данных</span><span class="sxs-lookup"><span data-stu-id="2d07a-140">Data type</span></span>|<span data-ttu-id="2d07a-141">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-141">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AppDomainID|win:UInt64|Уникальный идентификатор домена приложения.|  
-|AppDomainFlags|win:UInt32|0x1: домен по умолчанию.<br /><br /> 0x2: исполняемый файл.<br /><br /> 0x4: домен приложения, бит 28–31: политика общего доступа этого домена.<br /><br /> 0: общий домен.|  
-|AppDomainName|win:UnicodeString|Понятное имя домена приложения. Может измениться в течение времени существования процесса.|  
-|AppDomainIndex|win:UInt32|Индекс этого домена приложения.|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="2d07a-142">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="2d07a-142">AppDomainID</span></span>|<span data-ttu-id="2d07a-143">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-143">win:UInt64</span></span>|<span data-ttu-id="2d07a-144">Уникальный идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-144">The unique identifier for an application domain.</span></span>|  
+|<span data-ttu-id="2d07a-145">AppDomainFlags</span><span class="sxs-lookup"><span data-stu-id="2d07a-145">AppDomainFlags</span></span>|<span data-ttu-id="2d07a-146">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-146">win:UInt32</span></span>|<span data-ttu-id="2d07a-147">0x1: домен по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2d07a-147">0x1: Default domain.</span></span><br /><br /> <span data-ttu-id="2d07a-148">0x2: исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="2d07a-148">0x2: Executable.</span></span><br /><br /> <span data-ttu-id="2d07a-149">0x4: домен приложения, бит 28–31: политика общего доступа этого домена.</span><span class="sxs-lookup"><span data-stu-id="2d07a-149">0x4: Application domain, bit 28-31: Sharing policy of this domain.</span></span><br /><br /> <span data-ttu-id="2d07a-150">0: общий домен.</span><span class="sxs-lookup"><span data-stu-id="2d07a-150">0: A shared domain.</span></span>|  
+|<span data-ttu-id="2d07a-151">AppDomainName</span><span class="sxs-lookup"><span data-stu-id="2d07a-151">AppDomainName</span></span>|<span data-ttu-id="2d07a-152">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-152">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-153">Понятное имя домена приложения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-153">Friendly application domain name.</span></span> <span data-ttu-id="2d07a-154">Может измениться в течение времени существования процесса.</span><span class="sxs-lookup"><span data-stu-id="2d07a-154">Might change during the lifetime of the process.</span></span>|  
+|<span data-ttu-id="2d07a-155">AppDomainIndex</span><span class="sxs-lookup"><span data-stu-id="2d07a-155">AppDomainIndex</span></span>|<span data-ttu-id="2d07a-156">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-156">Win:UInt32</span></span>|<span data-ttu-id="2d07a-157">Индекс этого домена приложения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-157">The index of this application domain.</span></span>|  
+|<span data-ttu-id="2d07a-158">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2d07a-158">ClrInstanceID</span></span>|<span data-ttu-id="2d07a-159">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2d07a-159">win:UInt16</span></span>|<span data-ttu-id="2d07a-160">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2d07a-160">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="2d07a-161">К началу</span><span class="sxs-lookup"><span data-stu-id="2d07a-161">Back to top</span></span>](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
-## <a name="clr-loader-assembly-events"></a>События сборки загрузчика среды CLR  
- В таблице ниже показаны ключевое слово и уровень.  
+## <a name="clr-loader-assembly-events"></a><span data-ttu-id="2d07a-162">События сборки загрузчика среды CLR</span><span class="sxs-lookup"><span data-stu-id="2d07a-162">CLR Loader Assembly Events</span></span>  
+ <span data-ttu-id="2d07a-163">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="2d07a-163">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|<span data-ttu-id="2d07a-164">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="2d07a-164">Keyword for raising the event</span></span>|<span data-ttu-id="2d07a-165">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-165">Event</span></span>|<span data-ttu-id="2d07a-166">Уровень</span><span class="sxs-lookup"><span data-stu-id="2d07a-166">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` и `AssemblyUnload`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Информационный (4)|  
+|<span data-ttu-id="2d07a-167">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="2d07a-167">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="2d07a-168">`AssemblyLoad` и `AssemblyUnload`</span><span class="sxs-lookup"><span data-stu-id="2d07a-168">`AssemblyLoad` and `AssemblyUnload`</span></span>|<span data-ttu-id="2d07a-169">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-169">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-170">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-170">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|<span data-ttu-id="2d07a-171">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-171">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-172">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-172">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|<span data-ttu-id="2d07a-173">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-173">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="2d07a-174">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="2d07a-174">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="2d07a-175">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-175">Event</span></span>|<span data-ttu-id="2d07a-176">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="2d07a-176">Event ID</span></span>|<span data-ttu-id="2d07a-177">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`AssemblyLoad_V1`|154|Наступает, когда сборка загружается.|  
-|`AssemblyUnload_V1`|155|Наступает, когда сборка выгружается.|  
-|`AssemblyDCStart_V1`|155|Перечисляет сборки во время очистки запуска.|  
-|`AssemblyDCEnd_V1`|156|Перечисляет сборки во время очистки завершения.|  
+|`AssemblyLoad_V1`|<span data-ttu-id="2d07a-178">154</span><span class="sxs-lookup"><span data-stu-id="2d07a-178">154</span></span>|<span data-ttu-id="2d07a-179">Наступает, когда сборка загружается.</span><span class="sxs-lookup"><span data-stu-id="2d07a-179">Raised when an assembly is loaded.</span></span>|  
+|`AssemblyUnload_V1`|<span data-ttu-id="2d07a-180">155</span><span class="sxs-lookup"><span data-stu-id="2d07a-180">155</span></span>|<span data-ttu-id="2d07a-181">Наступает, когда сборка выгружается.</span><span class="sxs-lookup"><span data-stu-id="2d07a-181">Raised when an assembly is unloaded.</span></span>|  
+|`AssemblyDCStart_V1`|<span data-ttu-id="2d07a-182">155</span><span class="sxs-lookup"><span data-stu-id="2d07a-182">155</span></span>|<span data-ttu-id="2d07a-183">Перечисляет сборки во время очистки запуска.</span><span class="sxs-lookup"><span data-stu-id="2d07a-183">Enumerates assemblies during a start rundown.</span></span>|  
+|`AssemblyDCEnd_V1`|<span data-ttu-id="2d07a-184">156</span><span class="sxs-lookup"><span data-stu-id="2d07a-184">156</span></span>|<span data-ttu-id="2d07a-185">Перечисляет сборки во время очистки завершения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-185">Enumerates assemblies during an end rundown.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="2d07a-186">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="2d07a-186">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="2d07a-187">Имя поля</span><span class="sxs-lookup"><span data-stu-id="2d07a-187">Field name</span></span>|<span data-ttu-id="2d07a-188">Тип данных</span><span class="sxs-lookup"><span data-stu-id="2d07a-188">Data type</span></span>|<span data-ttu-id="2d07a-189">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-189">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AssemblyID|win:UInt64|Уникальный идентификатор сборки.|  
-|AppDomainID|win:UInt64|Идентификатор домена этой сборки.|  
-|BindingID|win:UInt64|Идентификатор, уникальным образом определяющий привязку сборки.|  
-|AssemblyFlags|win:UInt32|0x1: сборка, не зависящая от домена.<br /><br /> 0x2: динамическая сборка.<br /><br /> 0x4: сборка с образом в машинном коде.<br /><br /> 0x8: собираемая сборка.|  
-|AssemblyName|win:UnicodeString|Полное имя сборки.|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="2d07a-190">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="2d07a-190">AssemblyID</span></span>|<span data-ttu-id="2d07a-191">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-191">win:UInt64</span></span>|<span data-ttu-id="2d07a-192">Уникальный идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="2d07a-192">Unique ID for the assembly.</span></span>|  
+|<span data-ttu-id="2d07a-193">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="2d07a-193">AppDomainID</span></span>|<span data-ttu-id="2d07a-194">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-194">win:UInt64</span></span>|<span data-ttu-id="2d07a-195">Идентификатор домена этой сборки.</span><span class="sxs-lookup"><span data-stu-id="2d07a-195">ID of the domain of this assembly.</span></span>|  
+|<span data-ttu-id="2d07a-196">BindingID</span><span class="sxs-lookup"><span data-stu-id="2d07a-196">BindingID</span></span>|<span data-ttu-id="2d07a-197">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-197">win:UInt64</span></span>|<span data-ttu-id="2d07a-198">Идентификатор, уникальным образом определяющий привязку сборки.</span><span class="sxs-lookup"><span data-stu-id="2d07a-198">ID that uniquely identifies the assembly binding.</span></span>|  
+|<span data-ttu-id="2d07a-199">AssemblyFlags</span><span class="sxs-lookup"><span data-stu-id="2d07a-199">AssemblyFlags</span></span>|<span data-ttu-id="2d07a-200">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-200">win:UInt32</span></span>|<span data-ttu-id="2d07a-201">0x1: сборка, не зависящая от домена.</span><span class="sxs-lookup"><span data-stu-id="2d07a-201">0x1: Domain neutral assembly.</span></span><br /><br /> <span data-ttu-id="2d07a-202">0x2: динамическая сборка.</span><span class="sxs-lookup"><span data-stu-id="2d07a-202">0x2: Dynamic assembly.</span></span><br /><br /> <span data-ttu-id="2d07a-203">0x4: сборка с образом в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="2d07a-203">0x4: Assembly has a native image.</span></span><br /><br /> <span data-ttu-id="2d07a-204">0x8: собираемая сборка.</span><span class="sxs-lookup"><span data-stu-id="2d07a-204">0x8: Collectible assembly.</span></span>|  
+|<span data-ttu-id="2d07a-205">AssemblyName</span><span class="sxs-lookup"><span data-stu-id="2d07a-205">AssemblyName</span></span>|<span data-ttu-id="2d07a-206">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-206">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-207">Полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="2d07a-207">Fully qualified assembly name.</span></span>|  
+|<span data-ttu-id="2d07a-208">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2d07a-208">ClrInstanceID</span></span>|<span data-ttu-id="2d07a-209">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2d07a-209">win:UInt16</span></span>|<span data-ttu-id="2d07a-210">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2d07a-210">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="2d07a-211">К началу</span><span class="sxs-lookup"><span data-stu-id="2d07a-211">Back to top</span></span>](#top)  
   
 <a name="module_events"></a>   
-## <a name="module-events"></a>События модулей  
- В таблице ниже показаны ключевое слово и уровень.  
+## <a name="module-events"></a><span data-ttu-id="2d07a-212">События модулей</span><span class="sxs-lookup"><span data-stu-id="2d07a-212">Module Events</span></span>  
+ <span data-ttu-id="2d07a-213">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="2d07a-213">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|<span data-ttu-id="2d07a-214">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="2d07a-214">Keyword for raising the event</span></span>|<span data-ttu-id="2d07a-215">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-215">Event</span></span>|<span data-ttu-id="2d07a-216">Уровень</span><span class="sxs-lookup"><span data-stu-id="2d07a-216">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` и `ModuleUnload_V2`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Информационный (4)|  
+|<span data-ttu-id="2d07a-217">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="2d07a-217">`LoaderKeyword` (0x8)</span></span>|<span data-ttu-id="2d07a-218">`ModuleLoad_V2` и `ModuleUnload_V2`</span><span class="sxs-lookup"><span data-stu-id="2d07a-218">`ModuleLoad_V2` and `ModuleUnload_V2`</span></span>|<span data-ttu-id="2d07a-219">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-219">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-220">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-220">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|<span data-ttu-id="2d07a-221">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-221">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-222">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-222">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|<span data-ttu-id="2d07a-223">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-223">Informational (4)</span></span>|  
 ||||  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="2d07a-224">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="2d07a-224">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="2d07a-225">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-225">Event</span></span>|<span data-ttu-id="2d07a-226">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="2d07a-226">Event ID</span></span>|<span data-ttu-id="2d07a-227">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-227">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleLoad_V2`|152|Вызывается при загрузке модуля в течение времени существования процесса.|  
-|`ModuleUnload_V2`|153|Вызывается при выгрузке модуля в течение времени существования процесса.|  
-|`ModuleDCStart_V2`|153|Перечисляет модули во время очистки запуска.|  
-|`ModuleDCEnd_V2`|154|Перечисляет модули во время очистки завершения.|  
+|`ModuleLoad_V2`|<span data-ttu-id="2d07a-228">152</span><span class="sxs-lookup"><span data-stu-id="2d07a-228">152</span></span>|<span data-ttu-id="2d07a-229">Вызывается при загрузке модуля в течение времени существования процесса.</span><span class="sxs-lookup"><span data-stu-id="2d07a-229">Raised when a module is loaded during the lifetime of a process.</span></span>|  
+|`ModuleUnload_V2`|<span data-ttu-id="2d07a-230">153</span><span class="sxs-lookup"><span data-stu-id="2d07a-230">153</span></span>|<span data-ttu-id="2d07a-231">Вызывается при выгрузке модуля в течение времени существования процесса.</span><span class="sxs-lookup"><span data-stu-id="2d07a-231">Raised when a module is unloaded during the lifetime of a process.</span></span>|  
+|`ModuleDCStart_V2`|<span data-ttu-id="2d07a-232">153</span><span class="sxs-lookup"><span data-stu-id="2d07a-232">153</span></span>|<span data-ttu-id="2d07a-233">Перечисляет модули во время очистки запуска.</span><span class="sxs-lookup"><span data-stu-id="2d07a-233">Enumerates modules during a start rundown.</span></span>|  
+|`ModuleDCEnd_V2`|<span data-ttu-id="2d07a-234">154</span><span class="sxs-lookup"><span data-stu-id="2d07a-234">154</span></span>|<span data-ttu-id="2d07a-235">Перечисляет модули во время очистки завершения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-235">Enumerates modules during an end rundown.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="2d07a-236">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="2d07a-236">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="2d07a-237">Имя поля</span><span class="sxs-lookup"><span data-stu-id="2d07a-237">Field name</span></span>|<span data-ttu-id="2d07a-238">Тип данных</span><span class="sxs-lookup"><span data-stu-id="2d07a-238">Data type</span></span>|<span data-ttu-id="2d07a-239">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-239">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|Уникальный идентификатор модуля.|  
-|AssemblyID|win:UInt64|Идентификатор сборки, в которой находится этот модуль.|  
-|ModuleFlags|win:UInt32|0x1: модуль, не зависящий от домена.<br /><br /> 0x2: модуль с образом в машинном коде.<br /><br /> 0x4: динамический модуль.<br /><br /> 0x8: модуль манифеста.|  
-|Reserved1|win:UInt32|Зарезервированное поле.|  
-|ModuleILPath|win:UnicodeString|Путь к образу языка MSIL для модуля или имя динамического модуля, если это динамическая сборка (строка, заканчивающаяся нулем).|  
-|ModuleNativePath|win:UnicodeString|Путь к образу модуля в машинном коде, если существует (строка, заканчивающаяся нулем).|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
-|ManagedPdbSignature|win:GUID|Подпись GUID управляемой базы данных программы (PDB), которая соответствует этому модулю. (См. раздел «Примечания».)|  
-|ManagedPdbAge|win:UInt32|Значение возраста, записанное в управляемую базу данных программы, соответствующую этому модулю. (См. раздел «Примечания».)|  
-|ManagedPdbBuildPath|win:UnicodeString|Путь к расположению, где была выполнена сборка управляемой базы данных программы, соответствующей этому модулю. В некоторых случаях это просто имя файла. (См. раздел «Примечания».)|  
-|NativePdbSignature|win:GUID|Подпись GUID базы данных программы для средства создания машинных образов (NGen), соответствующая этому модулю, если применимо. (См. раздел «Примечания».)|  
-|NativePdbAge|win:UInt32|Значение возраста, записанное в базе данных программы NGen, соответствующей этому модулю, если применимо. (См. раздел «Примечания».)|  
-|NativePdbBuildPath|win:UnicodeString|Путь к расположению, где была выполнена сборка базы данных программы NGen, соответствующей этому модулю, если применимо. В некоторых случаях это просто имя файла. (См. раздел «Примечания».)|  
+|<span data-ttu-id="2d07a-240">ModuleID</span><span class="sxs-lookup"><span data-stu-id="2d07a-240">ModuleID</span></span>|<span data-ttu-id="2d07a-241">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-241">win:UInt64</span></span>|<span data-ttu-id="2d07a-242">Уникальный идентификатор модуля.</span><span class="sxs-lookup"><span data-stu-id="2d07a-242">Unique ID for the module.</span></span>|  
+|<span data-ttu-id="2d07a-243">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="2d07a-243">AssemblyID</span></span>|<span data-ttu-id="2d07a-244">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-244">win:UInt64</span></span>|<span data-ttu-id="2d07a-245">Идентификатор сборки, в которой находится этот модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-245">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="2d07a-246">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="2d07a-246">ModuleFlags</span></span>|<span data-ttu-id="2d07a-247">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-247">win:UInt32</span></span>|<span data-ttu-id="2d07a-248">0x1: модуль, не зависящий от домена.</span><span class="sxs-lookup"><span data-stu-id="2d07a-248">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="2d07a-249">0x2: модуль с образом в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="2d07a-249">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="2d07a-250">0x4: динамический модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-250">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="2d07a-251">0x8: модуль манифеста.</span><span class="sxs-lookup"><span data-stu-id="2d07a-251">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="2d07a-252">Reserved1</span><span class="sxs-lookup"><span data-stu-id="2d07a-252">Reserved1</span></span>|<span data-ttu-id="2d07a-253">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-253">win:UInt32</span></span>|<span data-ttu-id="2d07a-254">Зарезервированное поле.</span><span class="sxs-lookup"><span data-stu-id="2d07a-254">Reserved field.</span></span>|  
+|<span data-ttu-id="2d07a-255">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="2d07a-255">ModuleILPath</span></span>|<span data-ttu-id="2d07a-256">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-256">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-257">Путь к образу языка MSIL для модуля или имя динамического модуля, если это динамическая сборка (строка, заканчивающаяся нулем).</span><span class="sxs-lookup"><span data-stu-id="2d07a-257">Path of the Microsoft intermediate language (MSIL) image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="2d07a-258">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="2d07a-258">ModuleNativePath</span></span>|<span data-ttu-id="2d07a-259">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-259">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-260">Путь к образу модуля в машинном коде, если существует (строка, заканчивающаяся нулем).</span><span class="sxs-lookup"><span data-stu-id="2d07a-260">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="2d07a-261">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2d07a-261">ClrInstanceID</span></span>|<span data-ttu-id="2d07a-262">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2d07a-262">win:UInt16</span></span>|<span data-ttu-id="2d07a-263">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2d07a-263">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="2d07a-264">ManagedPdbSignature</span><span class="sxs-lookup"><span data-stu-id="2d07a-264">ManagedPdbSignature</span></span>|<span data-ttu-id="2d07a-265">win:GUID</span><span class="sxs-lookup"><span data-stu-id="2d07a-265">win:GUID</span></span>|<span data-ttu-id="2d07a-266">Подпись GUID управляемой базы данных программы (PDB), которая соответствует этому модулю.</span><span class="sxs-lookup"><span data-stu-id="2d07a-266">GUID signature of the managed program database (PDB) that matches this module.</span></span> <span data-ttu-id="2d07a-267">(См. раздел «Примечания».)</span><span class="sxs-lookup"><span data-stu-id="2d07a-267">(See Remarks.)</span></span>|  
+|<span data-ttu-id="2d07a-268">ManagedPdbAge</span><span class="sxs-lookup"><span data-stu-id="2d07a-268">ManagedPdbAge</span></span>|<span data-ttu-id="2d07a-269">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-269">win:UInt32</span></span>|<span data-ttu-id="2d07a-270">Значение возраста, записанное в управляемую базу данных программы, соответствующую этому модулю.</span><span class="sxs-lookup"><span data-stu-id="2d07a-270">Age number written to the managed PDB that matches this module.</span></span> <span data-ttu-id="2d07a-271">(См. раздел «Примечания».)</span><span class="sxs-lookup"><span data-stu-id="2d07a-271">(See Remarks.)</span></span>|  
+|<span data-ttu-id="2d07a-272">ManagedPdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="2d07a-272">ManagedPdbBuildPath</span></span>|<span data-ttu-id="2d07a-273">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-273">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-274">Путь к расположению, где была выполнена сборка управляемой базы данных программы, соответствующей этому модулю.</span><span class="sxs-lookup"><span data-stu-id="2d07a-274">Path to the location where the managed PDB that matches this module was built.</span></span> <span data-ttu-id="2d07a-275">В некоторых случаях это просто имя файла.</span><span class="sxs-lookup"><span data-stu-id="2d07a-275">In some cases, this may just be a file name.</span></span> <span data-ttu-id="2d07a-276">(См. раздел «Примечания».)</span><span class="sxs-lookup"><span data-stu-id="2d07a-276">(See Remarks.)</span></span>|  
+|<span data-ttu-id="2d07a-277">NativePdbSignature</span><span class="sxs-lookup"><span data-stu-id="2d07a-277">NativePdbSignature</span></span>|<span data-ttu-id="2d07a-278">win:GUID</span><span class="sxs-lookup"><span data-stu-id="2d07a-278">win:GUID</span></span>|<span data-ttu-id="2d07a-279">Подпись GUID базы данных программы для средства создания машинных образов (NGen), соответствующая этому модулю, если применимо.</span><span class="sxs-lookup"><span data-stu-id="2d07a-279">GUID signature of the Native Image Generator (NGen) PDB that matches this module, if applicable.</span></span> <span data-ttu-id="2d07a-280">(См. раздел «Примечания».)</span><span class="sxs-lookup"><span data-stu-id="2d07a-280">(See Remarks.)</span></span>|  
+|<span data-ttu-id="2d07a-281">NativePdbAge</span><span class="sxs-lookup"><span data-stu-id="2d07a-281">NativePdbAge</span></span>|<span data-ttu-id="2d07a-282">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-282">win:UInt32</span></span>|<span data-ttu-id="2d07a-283">Значение возраста, записанное в базе данных программы NGen, соответствующей этому модулю, если применимо.</span><span class="sxs-lookup"><span data-stu-id="2d07a-283">Age number written to the NGen PDB that matches this module, if applicable.</span></span> <span data-ttu-id="2d07a-284">(См. раздел «Примечания».)</span><span class="sxs-lookup"><span data-stu-id="2d07a-284">(See Remarks.)</span></span>|  
+|<span data-ttu-id="2d07a-285">NativePdbBuildPath</span><span class="sxs-lookup"><span data-stu-id="2d07a-285">NativePdbBuildPath</span></span>|<span data-ttu-id="2d07a-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-286">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-287">Путь к расположению, где была выполнена сборка базы данных программы NGen, соответствующей этому модулю, если применимо.</span><span class="sxs-lookup"><span data-stu-id="2d07a-287">Path to the location where the NGen PDB that matches this module was built, if applicable.</span></span> <span data-ttu-id="2d07a-288">В некоторых случаях это просто имя файла.</span><span class="sxs-lookup"><span data-stu-id="2d07a-288">In some cases, this may just be a file name.</span></span> <span data-ttu-id="2d07a-289">(См. раздел «Примечания».)</span><span class="sxs-lookup"><span data-stu-id="2d07a-289">(See Remarks.)</span></span>|  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a><span data-ttu-id="2d07a-290">Примечания</span><span class="sxs-lookup"><span data-stu-id="2d07a-290">Remarks</span></span>  
   
--   Поля, в именах которых есть строка Pdb, могут использоваться средствами профилирования для поиска баз данных программ, соответствующих модулям, которые были загружены во время сеанса профилирования. Значения этих полей соответствуют данным, записанным в разделах IMAGE_DIRECTORY_ENTRY_DEBUG модуля и обычно используемым отладчиками для поиска баз данных программ, соответствующих загруженным модулям.  
+-   <span data-ttu-id="2d07a-291">Поля, в именах которых есть строка Pdb, могут использоваться средствами профилирования для поиска баз данных программ, соответствующих модулям, которые были загружены во время сеанса профилирования.</span><span class="sxs-lookup"><span data-stu-id="2d07a-291">The fields that have "Pdb" in their names can be used by profiling tools to locate PDBs that match the modules that were loaded during the profiling session.</span></span> <span data-ttu-id="2d07a-292">Значения этих полей соответствуют данным, записанным в разделах IMAGE_DIRECTORY_ENTRY_DEBUG модуля и обычно используемым отладчиками для поиска баз данных программ, соответствующих загруженным модулям.</span><span class="sxs-lookup"><span data-stu-id="2d07a-292">The values of these fields correspond to the data written into the IMAGE_DIRECTORY_ENTRY_DEBUG sections of the module normally used by debuggers to help locate PDBs that match the loaded modules.</span></span>  
   
--   Имена полей, которые начинаются с ManagedPdb, ссылаются на управляемую базу данных программы, соответствующую модулю MSIL, который был сформирован управляемым компилятором (например, компилятором C# или Visual Basic). Эта база данных программы использует управляемый формат PDB и описывает порядок сопоставления элементов (файлов, номеров строк и имен символов) из первоначального управляемого исходного кода с элементами MSIL, скомпилированными в модуль MSIL.  
+-   <span data-ttu-id="2d07a-293">Имена полей, которые начинаются с ManagedPdb, ссылаются на управляемую базу данных программы, соответствующую модулю MSIL, который был сформирован управляемым компилятором (например, компилятором C# или Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="2d07a-293">The field names that begin with "ManagedPdb" refer to the managed PDB corresponding to the MSIL module that was generated by the managed compiler (such as the C# or Visual Basic compiler).</span></span> <span data-ttu-id="2d07a-294">Эта база данных программы использует управляемый формат PDB и описывает порядок сопоставления элементов (файлов, номеров строк и имен символов) из первоначального управляемого исходного кода с элементами MSIL, скомпилированными в модуль MSIL.</span><span class="sxs-lookup"><span data-stu-id="2d07a-294">This PDB uses the managed PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to MSIL elements that are compiled into the MSIL module.</span></span>  
   
--   Имена полей, которые начинаются с NativePdb, ссылаются на базу данных программы NGen, созданную путем вызова метода `NGEN createPDB`. Эта база данных программы использует машинный формат PDB и описывает порядок сопоставления элементов (файлов, номеров строк и имен символов) из первоначального управляемого исходного кода с машинными элементами MSIL, скомпилированными в модуль NGen.  
+-   <span data-ttu-id="2d07a-295">Имена полей, которые начинаются с NativePdb, ссылаются на базу данных программы NGen, созданную путем вызова метода `NGEN createPDB`.</span><span class="sxs-lookup"><span data-stu-id="2d07a-295">The field names that begin with "NativePdb" refer to the NGen PDB generated by calling `NGEN createPDB`.</span></span> <span data-ttu-id="2d07a-296">Эта база данных программы использует машинный формат PDB и описывает порядок сопоставления элементов (файлов, номеров строк и имен символов) из первоначального управляемого исходного кода с машинными элементами MSIL, скомпилированными в модуль NGen.</span><span class="sxs-lookup"><span data-stu-id="2d07a-296">This PDB uses the native PDB format, and describes how elements from the original managed source code, such as files, line numbers, and symbol names, map to native elements that are compiled into the NGen module.</span></span>  
   
- [К началу](#top)  
+ [<span data-ttu-id="2d07a-297">К началу</span><span class="sxs-lookup"><span data-stu-id="2d07a-297">Back to top</span></span>](#top)  
   
 <a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>События модулей домена среды CLR  
- В таблице ниже показаны ключевое слово и уровень.  
+## <a name="clr-domain-module-events"></a><span data-ttu-id="2d07a-298">События модулей домена среды CLR</span><span class="sxs-lookup"><span data-stu-id="2d07a-298">CLR Domain Module Events</span></span>  
+ <span data-ttu-id="2d07a-299">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="2d07a-299">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|<span data-ttu-id="2d07a-300">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="2d07a-300">Keyword for raising the event</span></span>|<span data-ttu-id="2d07a-301">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-301">Event</span></span>|<span data-ttu-id="2d07a-302">Уровень</span><span class="sxs-lookup"><span data-stu-id="2d07a-302">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Информационный (4)|  
-|`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Информационный (4)|  
+|<span data-ttu-id="2d07a-303">`LoaderKeyword` (0x8)</span><span class="sxs-lookup"><span data-stu-id="2d07a-303">`LoaderKeyword` (0x8)</span></span>|`DomainModuleLoad_V1`|<span data-ttu-id="2d07a-304">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-304">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-305">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-305">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|<span data-ttu-id="2d07a-306">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-306">Informational (4)</span></span>|  
+|<span data-ttu-id="2d07a-307">`LoaderRundownKeyword` (0x8) +</span><span class="sxs-lookup"><span data-stu-id="2d07a-307">`LoaderRundownKeyword` (0x8) +</span></span><br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|<span data-ttu-id="2d07a-308">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-308">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="2d07a-309">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="2d07a-309">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="2d07a-310">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-310">Event</span></span>|<span data-ttu-id="2d07a-311">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="2d07a-311">Event ID</span></span>|<span data-ttu-id="2d07a-312">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-312">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`DomainModuleLoad_V1`|151|Вызывается при загрузке модуля для домена приложения.|  
-|`DomainModuleDCStart_V1`|151|Перечисляет модули, загруженные для домена приложения во время очистки запуска, и регистрируется для всех доменов приложений.|  
-|`DomainModuleDCEnd_V1`|152|Перечисляет модули, загруженные для домена приложения во время очистки завершения, и регистрируется для всех доменов приложений.|  
+|`DomainModuleLoad_V1`|<span data-ttu-id="2d07a-313">151</span><span class="sxs-lookup"><span data-stu-id="2d07a-313">151</span></span>|<span data-ttu-id="2d07a-314">Вызывается при загрузке модуля для домена приложения.</span><span class="sxs-lookup"><span data-stu-id="2d07a-314">Raised when a module is loaded for an application domain.</span></span>|  
+|`DomainModuleDCStart_V1`|<span data-ttu-id="2d07a-315">151</span><span class="sxs-lookup"><span data-stu-id="2d07a-315">151</span></span>|<span data-ttu-id="2d07a-316">Перечисляет модули, загруженные для домена приложения во время очистки запуска, и регистрируется для всех доменов приложений.</span><span class="sxs-lookup"><span data-stu-id="2d07a-316">Enumerates modules loaded for an application domain during a start rundown, and is logged for all application domains.</span></span>|  
+|`DomainModuleDCEnd_V1`|<span data-ttu-id="2d07a-317">152</span><span class="sxs-lookup"><span data-stu-id="2d07a-317">152</span></span>|<span data-ttu-id="2d07a-318">Перечисляет модули, загруженные для домена приложения во время очистки завершения, и регистрируется для всех доменов приложений.</span><span class="sxs-lookup"><span data-stu-id="2d07a-318">Enumerates modules loaded for an application domain during an end rundown, and is logged for all application domains.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="2d07a-319">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="2d07a-319">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="2d07a-320">Имя поля</span><span class="sxs-lookup"><span data-stu-id="2d07a-320">Field name</span></span>|<span data-ttu-id="2d07a-321">Тип данных</span><span class="sxs-lookup"><span data-stu-id="2d07a-321">Data type</span></span>|<span data-ttu-id="2d07a-322">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-322">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ModuleID|win:UInt64|Определяет сборку, к которой относится этот модуль.|  
-|AssemblyID|win:UInt64|Идентификатор сборки, в которой находится этот модуль.|  
-|AppDomainID|win:UInt64|Идентификатор домена приложения, в котором используется этот модуль.|  
-|ModuleFlags|win:UInt32|0x1: модуль, не зависящий от домена.<br /><br /> 0x2: модуль с образом в машинном коде.<br /><br /> 0x4: динамический модуль.<br /><br /> 0x8: модуль манифеста.|  
-|Reserved1|win:UInt32|Зарезервированное поле.|  
-|ModuleILPath|win:UnicodeString|Путь к образу языка MSIL для модуля или имя динамического модуля, если это динамическая сборка (строка, заканчивающаяся нулем).|  
-|ModuleNativePath|win:UnicodeString|Путь к образу модуля в машинном коде, если существует (строка, заканчивающаяся нулем).|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="2d07a-323">ModuleID</span><span class="sxs-lookup"><span data-stu-id="2d07a-323">ModuleID</span></span>|<span data-ttu-id="2d07a-324">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-324">win:UInt64</span></span>|<span data-ttu-id="2d07a-325">Определяет сборку, к которой относится этот модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-325">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="2d07a-326">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="2d07a-326">AssemblyID</span></span>|<span data-ttu-id="2d07a-327">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-327">win:UInt64</span></span>|<span data-ttu-id="2d07a-328">Идентификатор сборки, в которой находится этот модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-328">ID of the assembly in which this module resides.</span></span>|  
+|<span data-ttu-id="2d07a-329">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="2d07a-329">AppDomainID</span></span>|<span data-ttu-id="2d07a-330">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-330">win:UInt64</span></span>|<span data-ttu-id="2d07a-331">Идентификатор домена приложения, в котором используется этот модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-331">ID of the application domain in which this module is used.</span></span>|  
+|<span data-ttu-id="2d07a-332">ModuleFlags</span><span class="sxs-lookup"><span data-stu-id="2d07a-332">ModuleFlags</span></span>|<span data-ttu-id="2d07a-333">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-333">win:UInt32</span></span>|<span data-ttu-id="2d07a-334">0x1: модуль, не зависящий от домена.</span><span class="sxs-lookup"><span data-stu-id="2d07a-334">0x1: Domain neutral module.</span></span><br /><br /> <span data-ttu-id="2d07a-335">0x2: модуль с образом в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="2d07a-335">0x2: Module has a native image.</span></span><br /><br /> <span data-ttu-id="2d07a-336">0x4: динамический модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-336">0x4: Dynamic module.</span></span><br /><br /> <span data-ttu-id="2d07a-337">0x8: модуль манифеста.</span><span class="sxs-lookup"><span data-stu-id="2d07a-337">0x8: Manifest module.</span></span>|  
+|<span data-ttu-id="2d07a-338">Reserved1</span><span class="sxs-lookup"><span data-stu-id="2d07a-338">Reserved1</span></span>|<span data-ttu-id="2d07a-339">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-339">win:UInt32</span></span>|<span data-ttu-id="2d07a-340">Зарезервированное поле.</span><span class="sxs-lookup"><span data-stu-id="2d07a-340">Reserved field.</span></span>|  
+|<span data-ttu-id="2d07a-341">ModuleILPath</span><span class="sxs-lookup"><span data-stu-id="2d07a-341">ModuleILPath</span></span>|<span data-ttu-id="2d07a-342">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-342">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-343">Путь к образу языка MSIL для модуля или имя динамического модуля, если это динамическая сборка (строка, заканчивающаяся нулем).</span><span class="sxs-lookup"><span data-stu-id="2d07a-343">Path of the MSIL image for the module, or dynamic module name if it is a dynamic assembly (null-terminated).</span></span>|  
+|<span data-ttu-id="2d07a-344">ModuleNativePath</span><span class="sxs-lookup"><span data-stu-id="2d07a-344">ModuleNativePath</span></span>|<span data-ttu-id="2d07a-345">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-345">win:UnicodeString</span></span>|<span data-ttu-id="2d07a-346">Путь к образу модуля в машинном коде, если существует (строка, заканчивающаяся нулем).</span><span class="sxs-lookup"><span data-stu-id="2d07a-346">Path of the module native image, if present (null-terminated).</span></span>|  
+|<span data-ttu-id="2d07a-347">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2d07a-347">ClrInstanceID</span></span>|<span data-ttu-id="2d07a-348">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2d07a-348">win:UInt16</span></span>|<span data-ttu-id="2d07a-349">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2d07a-349">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="2d07a-350">К началу</span><span class="sxs-lookup"><span data-stu-id="2d07a-350">Back to top</span></span>](#top)  
   
 <a name="module_range_events"></a>   
-## <a name="module-range-events"></a>События диапазона модуля  
- В таблице ниже показаны ключевое слово и уровень.  
+## <a name="module-range-events"></a><span data-ttu-id="2d07a-351">События диапазона модуля</span><span class="sxs-lookup"><span data-stu-id="2d07a-351">Module Range Events</span></span>  
+ <span data-ttu-id="2d07a-352">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="2d07a-352">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Событие|Уровень|  
+|<span data-ttu-id="2d07a-353">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="2d07a-353">Keyword for raising the event</span></span>|<span data-ttu-id="2d07a-354">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-354">Event</span></span>|<span data-ttu-id="2d07a-355">Уровень</span><span class="sxs-lookup"><span data-stu-id="2d07a-355">Level</span></span>|  
 |-----------------------------------|-----------|-----------|  
-|`PerfTrackKeyWord`)|`ModuleRange`|Информационный (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCStart`|Информационный (4)|  
-|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|Информационный (4)|  
+|<span data-ttu-id="2d07a-356">`PerfTrackKeyWord`)</span><span class="sxs-lookup"><span data-stu-id="2d07a-356">`PerfTrackKeyWord`)</span></span>|`ModuleRange`|<span data-ttu-id="2d07a-357">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-357">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCStart`|<span data-ttu-id="2d07a-358">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-358">Informational (4)</span></span>|  
+|`PerfTrackKeyWord`|`ModuleRangeDCEnd`|<span data-ttu-id="2d07a-359">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="2d07a-359">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="2d07a-360">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="2d07a-360">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="2d07a-361">Событие</span><span class="sxs-lookup"><span data-stu-id="2d07a-361">Event</span></span>|<span data-ttu-id="2d07a-362">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="2d07a-362">Event ID</span></span>|<span data-ttu-id="2d07a-363">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-363">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ModuleRange`|158|Это событие присутствует, если загруженный образ генератора образов в машинном коде (NGen) был оптимизирован с помощью IBC, и содержит сведения об активных разделах образа NGen.|  
-|`ModuleRangeDCStart`|160|Событие `ModuleRange` , инициируемое в начале очистки.|  
-|`ModuleRangeDCEnd`|161|Событие `ModuleRange` , инициируемое в конце очистки.|  
+|`ModuleRange`|<span data-ttu-id="2d07a-364">158</span><span class="sxs-lookup"><span data-stu-id="2d07a-364">158</span></span>|<span data-ttu-id="2d07a-365">Это событие присутствует, если загруженный образ генератора образов в машинном коде (NGen) был оптимизирован с помощью IBC, и содержит сведения об активных разделах образа NGen.</span><span class="sxs-lookup"><span data-stu-id="2d07a-365">This event is present if a loaded Native Image Generator (NGen) image has been optimized with IBC and contains information about the hot sections of the NGen image.</span></span>|  
+|`ModuleRangeDCStart`|<span data-ttu-id="2d07a-366">160</span><span class="sxs-lookup"><span data-stu-id="2d07a-366">160</span></span>|<span data-ttu-id="2d07a-367">Событие `ModuleRange` , инициируемое в начале очистки.</span><span class="sxs-lookup"><span data-stu-id="2d07a-367">A `ModuleRange` event fired at the start of a rundown.</span></span>|  
+|`ModuleRangeDCEnd`|<span data-ttu-id="2d07a-368">161</span><span class="sxs-lookup"><span data-stu-id="2d07a-368">161</span></span>|<span data-ttu-id="2d07a-369">Событие `ModuleRange` , инициируемое в конце очистки.</span><span class="sxs-lookup"><span data-stu-id="2d07a-369">A `ModuleRange` event fired at the end of a rundown.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="2d07a-370">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="2d07a-370">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="2d07a-371">Имя поля</span><span class="sxs-lookup"><span data-stu-id="2d07a-371">Field name</span></span>|<span data-ttu-id="2d07a-372">Тип данных</span><span class="sxs-lookup"><span data-stu-id="2d07a-372">Data type</span></span>|<span data-ttu-id="2d07a-373">Описание</span><span class="sxs-lookup"><span data-stu-id="2d07a-373">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|Однозначно определяет конкретный экземпляр среды CLR в процессе, если загружено несколько экземпляров среды CLR.|  
-|ModuleID|win:UInt64|Определяет сборку, к которой относится этот модуль.|  
-|RangeBegin|win:UInt32|Смещение в модуле, представляющее начало диапазона для указанного типа диапазона.|  
-|RangeSize|win:UInt32|Размер указанного диапазона в байтах.|  
-|RangeType|win:UInt32|Одно значение, 0x4, используемое для представления неактивных диапазонов IBC. В будущем это поле может представлять больше значений.|  
-|RangeSize1|win:UInt32|0 обозначает недопустимые данные.|  
-|RangeBegin2|win:UnicodeString||  
+|<span data-ttu-id="2d07a-374">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2d07a-374">ClrInstanceID</span></span>|<span data-ttu-id="2d07a-375">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2d07a-375">win:UInt16</span></span>|<span data-ttu-id="2d07a-376">Однозначно определяет конкретный экземпляр среды CLR в процессе, если загружено несколько экземпляров среды CLR.</span><span class="sxs-lookup"><span data-stu-id="2d07a-376">Uniquely identifies a specific instance of the CLR in a process if multiple instances of the CLR are loaded.</span></span>|  
+|<span data-ttu-id="2d07a-377">ModuleID</span><span class="sxs-lookup"><span data-stu-id="2d07a-377">ModuleID</span></span>|<span data-ttu-id="2d07a-378">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2d07a-378">win:UInt64</span></span>|<span data-ttu-id="2d07a-379">Определяет сборку, к которой относится этот модуль.</span><span class="sxs-lookup"><span data-stu-id="2d07a-379">Identifies the assembly to which this module belongs.</span></span>|  
+|<span data-ttu-id="2d07a-380">RangeBegin</span><span class="sxs-lookup"><span data-stu-id="2d07a-380">RangeBegin</span></span>|<span data-ttu-id="2d07a-381">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-381">win:UInt32</span></span>|<span data-ttu-id="2d07a-382">Смещение в модуле, представляющее начало диапазона для указанного типа диапазона.</span><span class="sxs-lookup"><span data-stu-id="2d07a-382">The offset in the module that represents the start of the range for the specified range type.</span></span>|  
+|<span data-ttu-id="2d07a-383">RangeSize</span><span class="sxs-lookup"><span data-stu-id="2d07a-383">RangeSize</span></span>|<span data-ttu-id="2d07a-384">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-384">win:UInt32</span></span>|<span data-ttu-id="2d07a-385">Размер указанного диапазона в байтах.</span><span class="sxs-lookup"><span data-stu-id="2d07a-385">The size of the specified range in bytes.</span></span>|  
+|<span data-ttu-id="2d07a-386">RangeType</span><span class="sxs-lookup"><span data-stu-id="2d07a-386">RangeType</span></span>|<span data-ttu-id="2d07a-387">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-387">win:UInt32</span></span>|<span data-ttu-id="2d07a-388">Одно значение, 0x4, используемое для представления неактивных диапазонов IBC.</span><span class="sxs-lookup"><span data-stu-id="2d07a-388">A single value, 0x4, to represent Cold IBC ranges.</span></span> <span data-ttu-id="2d07a-389">В будущем это поле может представлять больше значений.</span><span class="sxs-lookup"><span data-stu-id="2d07a-389">This field can represent more values in the future.</span></span>|  
+|<span data-ttu-id="2d07a-390">RangeSize1</span><span class="sxs-lookup"><span data-stu-id="2d07a-390">RangeSize1</span></span>|<span data-ttu-id="2d07a-391">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2d07a-391">win:UInt32</span></span>|<span data-ttu-id="2d07a-392">0 обозначает недопустимые данные.</span><span class="sxs-lookup"><span data-stu-id="2d07a-392">0 indicates bad data.</span></span>|  
+|<span data-ttu-id="2d07a-393">RangeBegin2</span><span class="sxs-lookup"><span data-stu-id="2d07a-393">RangeBegin2</span></span>|<span data-ttu-id="2d07a-394">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2d07a-394">win:UnicodeString</span></span>||  
   
-### <a name="remarks"></a>Примечания  
- Если загруженный образ NGen в процессе .NET Framework был оптимизирован с помощью IBC, событие `ModuleRange` , которое содержит активные диапазоны в образе NGen, регистрируется с идентификаторами `moduleID` и `ClrInstanceID`.  Если образ NGen не оптимизирован с помощью IBC, это событие не регистрируется. Для определения имени модуля это событие необходимо сопоставить с событиями ETW загрузки модуля.  
+### <a name="remarks"></a><span data-ttu-id="2d07a-395">Примечания</span><span class="sxs-lookup"><span data-stu-id="2d07a-395">Remarks</span></span>  
+ <span data-ttu-id="2d07a-396">Если загруженный образ NGen в процессе .NET Framework был оптимизирован с помощью IBC, событие `ModuleRange` , которое содержит активные диапазоны в образе NGen, регистрируется с идентификаторами `moduleID` и `ClrInstanceID`.</span><span class="sxs-lookup"><span data-stu-id="2d07a-396">If a loaded NGen image in a .NET Framework process has been optimized with IBC, the `ModuleRange` event that contains the hot ranges in the NGen image is logged along with its `moduleID` and `ClrInstanceID`.</span></span>  <span data-ttu-id="2d07a-397">Если образ NGen не оптимизирован с помощью IBC, это событие не регистрируется.</span><span class="sxs-lookup"><span data-stu-id="2d07a-397">If the NGen image is not optimized with IBC, this event isn't logged.</span></span> <span data-ttu-id="2d07a-398">Для определения имени модуля это событие необходимо сопоставить с событиями ETW загрузки модуля.</span><span class="sxs-lookup"><span data-stu-id="2d07a-398">To determine the module name, this event must be collated with the module load ETW events.</span></span>  
   
- Размер полезной нагрузки для этого события различен; поле `Count` указывает число смещений диапазона, которые содержатся в событии.  Для определения фактических диапазонов это событие нужно сопоставить с событием Windows `IStart` . Событие загрузки образа Windows регистрируется при каждой загрузке образа и содержит виртуальный адрес загруженного образа.  
+ <span data-ttu-id="2d07a-399">Размер полезной нагрузки для этого события различен; поле `Count` указывает число смещений диапазона, которые содержатся в событии.</span><span class="sxs-lookup"><span data-stu-id="2d07a-399">The payload size for this event is variable; the `Count` field indicates the number of range offsets contained in the event.</span></span>  <span data-ttu-id="2d07a-400">Для определения фактических диапазонов это событие нужно сопоставить с событием Windows `IStart` .</span><span class="sxs-lookup"><span data-stu-id="2d07a-400">This event has to be collated with the Windows `IStart` event to determine the actual ranges.</span></span> <span data-ttu-id="2d07a-401">Событие загрузки образа Windows регистрируется при каждой загрузке образа и содержит виртуальный адрес загруженного образа.</span><span class="sxs-lookup"><span data-stu-id="2d07a-401">The Windows Image Load event is logged whenever an image is loaded, and contains the virtual address of the loaded image.</span></span>  
   
- События диапазона модуля инициируются при любом уровне ETW не ниже 4 и классифицируются как информационные.  
+ <span data-ttu-id="2d07a-402">События диапазона модуля инициируются при любом уровне ETW не ниже 4 и классифицируются как информационные.</span><span class="sxs-lookup"><span data-stu-id="2d07a-402">Module range events are fired under any ETW level greater than or equal to 4 and are classified as informational events.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="2d07a-403">См. также</span><span class="sxs-lookup"><span data-stu-id="2d07a-403">See Also</span></span>  
+ [<span data-ttu-id="2d07a-404">События трассировки событий Windows в среде CLR</span><span class="sxs-lookup"><span data-stu-id="2d07a-404">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

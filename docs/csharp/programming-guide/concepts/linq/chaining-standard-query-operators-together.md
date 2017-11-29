@@ -1,41 +1,37 @@
 ---
 title: "Связывание стандартных операторов запросов (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 47e936bffd79784b0ee6850bfc29d1d1f5b3224d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="chaining-standard-query-operators-together-c"></a>Связывание стандартных операторов запросов (C#)
-Это последний раздел учебника [Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
+# <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="060c3-102">Связывание стандартных операторов запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="060c3-102">Chaining Standard Query Operators Together (C#)</span></span>
+<span data-ttu-id="060c3-103">Это последний раздел учебника [Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).</span><span class="sxs-lookup"><span data-stu-id="060c3-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  
   
- Стандартные операторы запросов также можно объединять в цепочки. Например, можно вставить оператор <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, который также будет действовать как отложенный. Этот оператор не материализует промежуточные результаты.  
+ <span data-ttu-id="060c3-104">Стандартные операторы запросов также можно объединять в цепочки.</span><span class="sxs-lookup"><span data-stu-id="060c3-104">The standard query operators can also be chained together.</span></span> <span data-ttu-id="060c3-105">Например, можно вставить оператор <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>, который также будет действовать как отложенный.</span><span class="sxs-lookup"><span data-stu-id="060c3-105">For example, you can interject the <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operator, and it also operates in a lazy fashion.</span></span> <span data-ttu-id="060c3-106">Этот оператор не материализует промежуточные результаты.</span><span class="sxs-lookup"><span data-stu-id="060c3-106">No intermediate results are materialized by it.</span></span>  
   
-## <a name="example"></a>Пример  
- В данном примере метод <xref:System.Linq.Enumerable.Where%2A> вызывается до вызова метода `ConvertCollectionToUpperCase`. Метод <xref:System.Linq.Enumerable.Where%2A> действует практически так же, как отложенные методы, использовавшиеся в предыдущих примерах, приведенных в этом учебнике, `ConvertCollectionToUpperCase` и `AppendString`.  
+## <a name="example"></a><span data-ttu-id="060c3-107">Пример</span><span class="sxs-lookup"><span data-stu-id="060c3-107">Example</span></span>  
+ <span data-ttu-id="060c3-108">В данном примере метод <xref:System.Linq.Enumerable.Where%2A> вызывается до вызова метода `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="060c3-108">In this example, the <xref:System.Linq.Enumerable.Where%2A> method is called before calling `ConvertCollectionToUpperCase`.</span></span> <span data-ttu-id="060c3-109">Метод <xref:System.Linq.Enumerable.Where%2A> действует практически так же, как отложенные методы, использовавшиеся в предыдущих примерах, приведенных в этом учебнике, `ConvertCollectionToUpperCase` и `AppendString`.</span><span class="sxs-lookup"><span data-stu-id="060c3-109">The <xref:System.Linq.Enumerable.Where%2A> method operates in almost exactly the same way as the lazy methods used in previous examples in this tutorial, `ConvertCollectionToUpperCase` and `AppendString`.</span></span>  
   
- Отличие заключается в том, что в этом случае метод <xref:System.Linq.Enumerable.Where%2A> просматривает свою исходную коллекцию, определяет, что первый элемент не передает предикат, а затем переходит к следующему элементу, который предикат передает. После этого метод выдает второй элемент.  
+ <span data-ttu-id="060c3-110">Отличие заключается в том, что в этом случае метод <xref:System.Linq.Enumerable.Where%2A> просматривает свою исходную коллекцию, определяет, что первый элемент не передает предикат, а затем переходит к следующему элементу, который предикат передает.</span><span class="sxs-lookup"><span data-stu-id="060c3-110">One difference is that in this case, the <xref:System.Linq.Enumerable.Where%2A> method iterates through its source collection, determines that the first item does not pass the predicate, and then gets the next item, which does pass.</span></span> <span data-ttu-id="060c3-111">После этого метод выдает второй элемент.</span><span class="sxs-lookup"><span data-stu-id="060c3-111">It then yields the second item.</span></span>  
   
- Однако базовый принцип остался прежним: промежуточные коллекции материализуются только в случае необходимости.  
+ <span data-ttu-id="060c3-112">Однако базовый принцип остался прежним: промежуточные коллекции материализуются только в случае необходимости.</span><span class="sxs-lookup"><span data-stu-id="060c3-112">However, the basic idea is the same: Intermediate collections are not materialized unless they have to be.</span></span>  
   
- При использовании выражений запросов они преобразуются в вызовы стандартных операторов запросов, а затем применяется тот же принцип.  
+ <span data-ttu-id="060c3-113">При использовании выражений запросов они преобразуются в вызовы стандартных операторов запросов, а затем применяется тот же принцип.</span><span class="sxs-lookup"><span data-stu-id="060c3-113">When query expressions are used, they are converted to calls to the standard query operators, and the same principles apply.</span></span>  
   
- Во всех примерах, приведенных в этом разделе, в которых запрашиваются документы Office Open XML, используется один и тот же принцип. Отложенное выполнение и отложенное вычисление - это основополагающие принципы, которые необходимо понимать, чтобы эффективно использовать LINQ (и LINQ to XML).  
+ <span data-ttu-id="060c3-114">Во всех примерах, приведенных в этом разделе, в которых запрашиваются документы Office Open XML, используется один и тот же принцип.</span><span class="sxs-lookup"><span data-stu-id="060c3-114">All of the examples in this section that are querying Office Open XML documents use the same principle.</span></span> <span data-ttu-id="060c3-115">Отложенное выполнение и отложенное вычисление - это основополагающие принципы, которые необходимо понимать, чтобы эффективно использовать LINQ (и LINQ to XML).</span><span class="sxs-lookup"><span data-stu-id="060c3-115">Deferred execution and lazy evaluation are some of the fundamental concepts that you must understand  to use LINQ (and LINQ to XML) effectively.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -85,7 +81,7 @@ class Program
 }  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="060c3-116">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="060c3-116">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -98,6 +94,5 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
+## <a name="see-also"></a><span data-ttu-id="060c3-117">См. также</span><span class="sxs-lookup"><span data-stu-id="060c3-117">See Also</span></span>  
+ [<span data-ttu-id="060c3-118">Учебник. Объединение запросов в цепочки (C#)</span><span class="sxs-lookup"><span data-stu-id="060c3-118">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

@@ -7,48 +7,46 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: b3e903c15a7486faa279d47ad5e2e00c090b19af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-list-reference"></a>dotnet list reference
+# <a name="dotnet-list-reference"></a><span data-ttu-id="f8e5e-103">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="f8e5e-103">dotnet list reference</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a><span data-ttu-id="f8e5e-104">Имя</span><span class="sxs-lookup"><span data-stu-id="f8e5e-104">Name</span></span>
 
-`dotnet list reference` — перечисляет перекрестные ссылки между проектами.
+<span data-ttu-id="f8e5e-105">`dotnet list reference` — перечисляет перекрестные ссылки между проектами.</span><span class="sxs-lookup"><span data-stu-id="f8e5e-105">`dotnet list reference` - Lists project to project references.</span></span>
 
-## <a name="synopsis"></a>Краткий обзор
+## <a name="synopsis"></a><span data-ttu-id="f8e5e-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="f8e5e-106">Synopsis</span></span>
 
 `dotnet list [<PROJECT>] reference [-h|--help]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a><span data-ttu-id="f8e5e-107">Описание</span><span class="sxs-lookup"><span data-stu-id="f8e5e-107">Description</span></span>
 
-Команду `dotnet list reference` удобно использовать для перечисления ссылок на проекты для заданного проекта.
+<span data-ttu-id="f8e5e-108">Команду `dotnet list reference` удобно использовать для перечисления ссылок на проекты для заданного проекта.</span><span class="sxs-lookup"><span data-stu-id="f8e5e-108">The `dotnet list reference` command provides a convenient option to list project references for a given project.</span></span>
 
-## <a name="arguments"></a>Аргументы
+## <a name="arguments"></a><span data-ttu-id="f8e5e-109">Аргументы</span><span class="sxs-lookup"><span data-stu-id="f8e5e-109">Arguments</span></span>
 
 `PROJECT`
 
-Указывает файл проекта, используемый для перечисления ссылок. Если он не указан, команда ищет текущий каталог для него.
+<span data-ttu-id="f8e5e-110">Указывает файл проекта, используемый для перечисления ссылок.</span><span class="sxs-lookup"><span data-stu-id="f8e5e-110">Specifies the project file to use for listing references.</span></span> <span data-ttu-id="f8e5e-111">Если он не указан, команда ищет текущий каталог для него.</span><span class="sxs-lookup"><span data-stu-id="f8e5e-111">If not specified, the command will search the current directory for a project file.</span></span>
 
-## <a name="options"></a>Параметры
+## <a name="options"></a><span data-ttu-id="f8e5e-112">Параметры</span><span class="sxs-lookup"><span data-stu-id="f8e5e-112">Options</span></span>
 
 `-h|--help`
 
-Выводит краткую справку по команде.
+<span data-ttu-id="f8e5e-113">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="f8e5e-113">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a>Примеры
+## <a name="examples"></a><span data-ttu-id="f8e5e-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="f8e5e-114">Examples</span></span>
 
-Перечисление ссылок на проекты для указанного проекта:
+<span data-ttu-id="f8e5e-115">Перечисление ссылок на проекты для указанного проекта:</span><span class="sxs-lookup"><span data-stu-id="f8e5e-115">List the project references for the specified project:</span></span>
 
 `dotnet list app/app.csproj reference`
 
-Перечисление ссылок на проекты для проекта в текущем каталоге:
+<span data-ttu-id="f8e5e-116">Перечисление ссылок на проекты для проекта в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="f8e5e-116">List the project references for the project in the current directory:</span></span>
 
 `dotnet list reference`
-

@@ -1,48 +1,29 @@
 ---
 title: "Атрибут cref (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- cref [C#]
+helpviewer_keywords: cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0cffba9083b22813be3dd0379b244f4d078f8549
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cref-attribute-c-programming-guide"></a>Атрибут cref (Руководство по программированию на C#)
-Атрибут `cref` в теге XML-документации означает "кодовая ссылка". Он указывает, что текст внутри тега представляет собой элемент кода, например тип, метод или свойство. Средства создания документации, такие как [Sandcastle](https://github.com/EWSoftware/SHFB), используют атрибуты `cref` для автоматического создания гиперссылок на страницу, где документирован тип или член.  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="fd928-102">Атрибут cref (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="fd928-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="fd928-103">Атрибут `cref` в теге XML-документации означает "кодовая ссылка".</span><span class="sxs-lookup"><span data-stu-id="fd928-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="fd928-104">Он указывает, что текст внутри тега представляет собой элемент кода, например тип, метод или свойство.</span><span class="sxs-lookup"><span data-stu-id="fd928-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="fd928-105">Средства создания документации, такие как [Sandcastle](https://github.com/EWSoftware/SHFB), используют атрибуты `cref` для автоматического создания гиперссылок на страницу, где документирован тип или член.</span><span class="sxs-lookup"><span data-stu-id="fd928-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере показаны атрибуты `cref`, используемые в тегах [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
+## <a name="example"></a><span data-ttu-id="fd928-106">Пример</span><span class="sxs-lookup"><span data-stu-id="fd928-106">Example</span></span>  
+ <span data-ttu-id="fd928-107">В следующем примере показаны атрибуты `cref`, используемые в тегах [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="fd928-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- В результате компиляции программа создает следующий XML-файл. Обратите внимание, что атрибут `cref` метода `GetZero`, в частности, был преобразован компилятором в `"M:TestNamespace.TestClass.GetZero"`. Префикс "M:" означает "метод" и является условным обозначением, распознаваемым средствами документации, такими как Sandcastle. Полный список префиксов см. в разделе [Обработка XML-файла](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
+ <span data-ttu-id="fd928-108">В результате компиляции программа создает следующий XML-файл.</span><span class="sxs-lookup"><span data-stu-id="fd928-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="fd928-109">Обратите внимание, что атрибут `cref` метода `GetZero`, в частности, был преобразован компилятором в `"M:TestNamespace.TestClass.GetZero"`.</span><span class="sxs-lookup"><span data-stu-id="fd928-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="fd928-110">Префикс "M:" означает "метод" и является условным обозначением, распознаваемым средствами документации, такими как Sandcastle.</span><span class="sxs-lookup"><span data-stu-id="fd928-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="fd928-111">Полный список префиксов см. в разделе [Обработка XML-файла](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="fd928-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -141,7 +122,6 @@ ms.lasthandoff: 07/28/2017
 </doc>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="fd928-112">См. также</span><span class="sxs-lookup"><span data-stu-id="fd928-112">See Also</span></span>  
+ [<span data-ttu-id="fd928-113">Комментарии XML-документации</span><span class="sxs-lookup"><span data-stu-id="fd928-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [<span data-ttu-id="fd928-114">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="fd928-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

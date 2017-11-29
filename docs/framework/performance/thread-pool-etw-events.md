@@ -5,226 +5,223 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3dfd8b17e4ca01802651087ff20988744a411ed2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="thread-pool-etw-events"></a>События пула потоков (трассировка событий Windows)
-<a name="top"></a> Эти события собирают сведения о рабочих потоках и потоках ввода-вывода.  
+# <a name="thread-pool-etw-events"></a><span data-ttu-id="28486-102">События пула потоков (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="28486-102">Thread Pool ETW Events</span></span>
+<span data-ttu-id="28486-103"><a name="top"></a> Эти события собирают сведения о рабочих потоках и потоках ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="28486-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
   
- Имеется две группы событий пула потоков:  
+ <span data-ttu-id="28486-104">Имеется две группы событий пула потоков:</span><span class="sxs-lookup"><span data-stu-id="28486-104">There are two groups of thread pool events:</span></span>  
   
--   [события пула рабочих потоков](#worker), предоставляющие информацию о способе использования приложением пула потоков и влиянии рабочих нагрузок на управление параллелизмом;  
+-   <span data-ttu-id="28486-105">[события пула рабочих потоков](#worker), предоставляющие информацию о способе использования приложением пула потоков и влиянии рабочих нагрузок на управление параллелизмом;</span><span class="sxs-lookup"><span data-stu-id="28486-105">[Worker thread pool events](#worker), which provide information about how an application uses the thread pool, and the effect of workloads on concurrency control.</span></span>  
   
--   [события пула потоков ввода-вывода](#io), предоставляющие информацию о потоках ввода-вывода, создаваемых, завершаемых, повторно активируемых или прерываемых в пуле потоков.  
+-   <span data-ttu-id="28486-106">[события пула потоков ввода-вывода](#io), предоставляющие информацию о потоках ввода-вывода, создаваемых, завершаемых, повторно активируемых или прерываемых в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-106">[I/O thread pool events](#io), which provide information about I/O threads that are created, retired, unretired, or terminated in the thread pool.</span></span>  
   
 <a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>события пула рабочих потоков  
- Эти события связаны с пулом рабочих потоков среды выполнения и содержат уведомления о событиях потоков (например, когда поток создается или останавливается). Пул рабочих потоков использует адаптивный алгоритм для управления параллелизмом, в соответствии с которым число потоков рассчитывается в зависимости от измеренной пропускной способности. С помощью событий пула рабочих потоков можно понять, как приложение использует пул потоков, и оценить влияние конкретных нагрузок на управление параллелизмом.  
+## <a name="worker-thread-pool-events"></a><span data-ttu-id="28486-107">события пула рабочих потоков</span><span class="sxs-lookup"><span data-stu-id="28486-107">Worker Thread Pool Events</span></span>  
+ <span data-ttu-id="28486-108">Эти события связаны с пулом рабочих потоков среды выполнения и содержат уведомления о событиях потоков (например, когда поток создается или останавливается).</span><span class="sxs-lookup"><span data-stu-id="28486-108">These events relate to the runtime's worker thread pool and provide notifications for thread events (for example, when a thread is created or stopped).</span></span> <span data-ttu-id="28486-109">Пул рабочих потоков использует адаптивный алгоритм для управления параллелизмом, в соответствии с которым число потоков рассчитывается в зависимости от измеренной пропускной способности.</span><span class="sxs-lookup"><span data-stu-id="28486-109">The worker thread pool uses an adaptive algorithm for concurrency control, where the number of threads is calculated based on the measured throughput.</span></span> <span data-ttu-id="28486-110">С помощью событий пула рабочих потоков можно понять, как приложение использует пул потоков, и оценить влияние конкретных нагрузок на управление параллелизмом.</span><span class="sxs-lookup"><span data-stu-id="28486-110">Worker thread pool events can be used to understand how an application is using the thread pool, and the effect that certain workloads may have on concurrency control.</span></span>  
   
-### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart и ThreadPoolWorkerThreadStop  
- В таблице ниже показаны ключевые слова и уровни для этих событий. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a><span data-ttu-id="28486-111">ThreadPoolWorkerThreadStart и ThreadPoolWorkerThreadStop</span><span class="sxs-lookup"><span data-stu-id="28486-111">ThreadPoolWorkerThreadStart and ThreadPoolWorkerThreadStop</span></span>  
+ <span data-ttu-id="28486-112">В таблице ниже показаны ключевые слова и уровни для этих событий.</span><span class="sxs-lookup"><span data-stu-id="28486-112">The following table shows the keyword and level for these events.</span></span> <span data-ttu-id="28486-113">(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="28486-113">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-114">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-114">Keyword for raising the event</span></span>|<span data-ttu-id="28486-115">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-115">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-116">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-116">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-117">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-117">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-118">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-118">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="28486-119">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-119">Event</span></span>|<span data-ttu-id="28486-120">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-120">Event ID</span></span>|<span data-ttu-id="28486-121">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="28486-121">Raised when</span></span>|  
 |-|-|-|  
-|`ThreadPoolWorkerThreadStart`|50|Создается рабочий поток.|  
-|`ThreadPoolWorkerThreadStop`|51|Рабочий поток останавливается.|  
-|`ThreadPoolWorkerThreadRetirementStart`|52|Рабочий поток завершается.|  
-|`ThreadPoolWorkerThreadRetirementStop`|53|Завершенный рабочий поток снова становится активным.|  
+|`ThreadPoolWorkerThreadStart`|<span data-ttu-id="28486-122">50</span><span class="sxs-lookup"><span data-stu-id="28486-122">50</span></span>|<span data-ttu-id="28486-123">Создается рабочий поток.</span><span class="sxs-lookup"><span data-stu-id="28486-123">A worker thread is created.</span></span>|  
+|`ThreadPoolWorkerThreadStop`|<span data-ttu-id="28486-124">51</span><span class="sxs-lookup"><span data-stu-id="28486-124">51</span></span>|<span data-ttu-id="28486-125">Рабочий поток останавливается.</span><span class="sxs-lookup"><span data-stu-id="28486-125">A worker thread is stopped.</span></span>|  
+|`ThreadPoolWorkerThreadRetirementStart`|<span data-ttu-id="28486-126">52</span><span class="sxs-lookup"><span data-stu-id="28486-126">52</span></span>|<span data-ttu-id="28486-127">Рабочий поток завершается.</span><span class="sxs-lookup"><span data-stu-id="28486-127">A worker thread retires.</span></span>|  
+|`ThreadPoolWorkerThreadRetirementStop`|<span data-ttu-id="28486-128">53</span><span class="sxs-lookup"><span data-stu-id="28486-128">53</span></span>|<span data-ttu-id="28486-129">Завершенный рабочий поток снова становится активным.</span><span class="sxs-lookup"><span data-stu-id="28486-129">A retired worker thread becomes active again.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-130">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-130">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-131">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-131">Field name</span></span>|<span data-ttu-id="28486-132">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-132">Data type</span></span>|<span data-ttu-id="28486-133">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-133">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ActiveWorkerThreadCount|win:UInt32|Число рабочих потоков, доступных для выполнения процесса, включая уже работающие потоки.|  
-|RetiredWorkerThreadCount|win:UInt32|Число рабочих потоков, которые недоступны для выполнения процесса, но находятся в резерве на случай, если позже понадобятся дополнительные потоки.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-134">ActiveWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="28486-134">ActiveWorkerThreadCount</span></span>|<span data-ttu-id="28486-135">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="28486-135">win:UInt32</span></span>|<span data-ttu-id="28486-136">Число рабочих потоков, доступных для выполнения процесса, включая уже работающие потоки.</span><span class="sxs-lookup"><span data-stu-id="28486-136">Number of worker threads available to process work, including those that are already processing work.</span></span>|  
+|<span data-ttu-id="28486-137">RetiredWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="28486-137">RetiredWorkerThreadCount</span></span>|<span data-ttu-id="28486-138">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="28486-138">win:UInt32</span></span>|<span data-ttu-id="28486-139">Число рабочих потоков, которые недоступны для выполнения процесса, но находятся в резерве на случай, если позже понадобятся дополнительные потоки.</span><span class="sxs-lookup"><span data-stu-id="28486-139">Number of worker threads that are not available to process work, but that are being held in reserve in case more threads are needed later.</span></span>|  
+|<span data-ttu-id="28486-140">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-140">ClrInstanceID</span></span>|<span data-ttu-id="28486-141">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-141">Win:UInt16</span></span>|<span data-ttu-id="28486-142">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-142">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
- Эти события пула потоков содержат сведения для понимания и отладки поведения алгоритма вставки потока (управления параллелизмом). Эти сведения используются внутри пула рабочих потоков.  
+### <a name="threadpoolworkerthreadadjustment"></a><span data-ttu-id="28486-143">ThreadPoolWorkerThreadAdjustment</span><span class="sxs-lookup"><span data-stu-id="28486-143">ThreadPoolWorkerThreadAdjustment</span></span>  
+ <span data-ttu-id="28486-144">Эти события пула потоков содержат сведения для понимания и отладки поведения алгоритма вставки потока (управления параллелизмом).</span><span class="sxs-lookup"><span data-stu-id="28486-144">These thread pool events provide information for understanding and debugging the behavior of the thread injection (concurrency control) algorithm.</span></span> <span data-ttu-id="28486-145">Эти сведения используются внутри пула рабочих потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-145">The information is used internally by the worker thread pool.</span></span>  
   
-#### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
- В таблице ниже показаны ключевое слово и уровень.  
+#### <a name="threadpoolworkerthreadadjustmentsample"></a><span data-ttu-id="28486-146">ThreadPoolWorkerThreadAdjustmentSample</span><span class="sxs-lookup"><span data-stu-id="28486-146">ThreadPoolWorkerThreadAdjustmentSample</span></span>  
+ <span data-ttu-id="28486-147">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-147">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-148">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-148">Keyword for raising the event</span></span>|<span data-ttu-id="28486-149">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-149">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-150">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-150">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-151">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-151">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-152">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-152">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="28486-153">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-153">Event</span></span>|<span data-ttu-id="28486-154">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-154">Event ID</span></span>|<span data-ttu-id="28486-155">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-155">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentSample`|54|Указывает на сбор сведений для одного образца, то есть измерение пропускной способности с определенным уровнем параллелизма в некоторый момент времени.|  
+|`ThreadPoolWorkerThreadAdjustmentSample`|<span data-ttu-id="28486-156">54</span><span class="sxs-lookup"><span data-stu-id="28486-156">54</span></span>|<span data-ttu-id="28486-157">Указывает на сбор сведений для одного образца, то есть измерение пропускной способности с определенным уровнем параллелизма в некоторый момент времени.</span><span class="sxs-lookup"><span data-stu-id="28486-157">Refers to the collection of information for one sample; that is, a measurement of throughput with a certain concurrency level, in an instant of time.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-158">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-158">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-159">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-159">Field name</span></span>|<span data-ttu-id="28486-160">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-160">Data type</span></span>|<span data-ttu-id="28486-161">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-161">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Пропускная способность|win:Double|Число завершений в единицу времени.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-162">Пропускная способность</span><span class="sxs-lookup"><span data-stu-id="28486-162">Throughput</span></span>|<span data-ttu-id="28486-163">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-163">win:Double</span></span>|<span data-ttu-id="28486-164">Число завершений в единицу времени.</span><span class="sxs-lookup"><span data-stu-id="28486-164">Number of completions per unit of time.</span></span>|  
+|<span data-ttu-id="28486-165">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-165">ClrInstanceID</span></span>|<span data-ttu-id="28486-166">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-166">Win:UInt16</span></span>|<span data-ttu-id="28486-167">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-167">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-#### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
- В таблице ниже показаны ключевое слово и уровень.  
+#### <a name="threadpoolworkerthreadadjustmentadjustment"></a><span data-ttu-id="28486-168">ThreadPoolWorkerThreadAdjustmentAdjustment</span><span class="sxs-lookup"><span data-stu-id="28486-168">ThreadPoolWorkerThreadAdjustmentAdjustment</span></span>  
+ <span data-ttu-id="28486-169">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-169">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-170">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-170">Keyword for raising the event</span></span>|<span data-ttu-id="28486-171">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-171">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-172">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-172">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-173">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-173">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-174">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-174">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="28486-175">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-175">Event</span></span>|<span data-ttu-id="28486-176">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-176">Event ID</span></span>|<span data-ttu-id="28486-177">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Регистрирует изменение в управлении, когда алгоритм вставки потока (поиск экстремума) определяет, что произошло изменение уровня параллелизма.|  
+|`ThreadPoolWorkerThreadAdjustmentAdjustment`|<span data-ttu-id="28486-178">55</span><span class="sxs-lookup"><span data-stu-id="28486-178">55</span></span>|<span data-ttu-id="28486-179">Регистрирует изменение в управлении, когда алгоритм вставки потока (поиск экстремума) определяет, что произошло изменение уровня параллелизма.</span><span class="sxs-lookup"><span data-stu-id="28486-179">Records a change in control, when the thread injection (hill-climbing) algorithm determines that a change in concurrency level is in place.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-180">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-180">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-181">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-181">Field name</span></span>|<span data-ttu-id="28486-182">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-182">Data type</span></span>|<span data-ttu-id="28486-183">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-183">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AverageThroughput|win:Double|Средняя пропускная способность образца измерений.|  
-|NewWorkerThreadCount|win:UInt32|Новое число активных рабочих потоков.|  
-|Причина|win:UInt32|Причина корректировки:<br /><br /> 0x00 — прогрев;<br /><br /> 0x01 — инициализация;<br /><br /> 0x02 — случайное движение;<br /><br /> 0x03 — движение вверх;<br /><br /> 0x04 — точка изменения;<br /><br /> 0x05 — стабилизация;<br /><br /> 0x06 — перегрузка;<br /><br /> 0x07 — истекло время ожидания потока.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-184">AverageThroughput</span><span class="sxs-lookup"><span data-stu-id="28486-184">AverageThroughput</span></span>|<span data-ttu-id="28486-185">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-185">win:Double</span></span>|<span data-ttu-id="28486-186">Средняя пропускная способность образца измерений.</span><span class="sxs-lookup"><span data-stu-id="28486-186">Average throughput of a sample of measurements.</span></span>|  
+|<span data-ttu-id="28486-187">NewWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="28486-187">NewWorkerThreadCount</span></span>|<span data-ttu-id="28486-188">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="28486-188">win:UInt32</span></span>|<span data-ttu-id="28486-189">Новое число активных рабочих потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-189">New number of active worker threads.</span></span>|  
+|<span data-ttu-id="28486-190">Причина</span><span class="sxs-lookup"><span data-stu-id="28486-190">Reason</span></span>|<span data-ttu-id="28486-191">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="28486-191">win:UInt32</span></span>|<span data-ttu-id="28486-192">Причина корректировки:</span><span class="sxs-lookup"><span data-stu-id="28486-192">Reason for the adjustment.</span></span><br /><br /> <span data-ttu-id="28486-193">0x00 — прогрев;</span><span class="sxs-lookup"><span data-stu-id="28486-193">0x00 - Warmup.</span></span><br /><br /> <span data-ttu-id="28486-194">0x01 — инициализация;</span><span class="sxs-lookup"><span data-stu-id="28486-194">0x01 - Initializing.</span></span><br /><br /> <span data-ttu-id="28486-195">0x02 — случайное движение;</span><span class="sxs-lookup"><span data-stu-id="28486-195">0x02 - Random move.</span></span><br /><br /> <span data-ttu-id="28486-196">0x03 — движение вверх;</span><span class="sxs-lookup"><span data-stu-id="28486-196">0x03 - Climbing move.</span></span><br /><br /> <span data-ttu-id="28486-197">0x04 — точка изменения;</span><span class="sxs-lookup"><span data-stu-id="28486-197">0x04 - Change point.</span></span><br /><br /> <span data-ttu-id="28486-198">0x05 — стабилизация;</span><span class="sxs-lookup"><span data-stu-id="28486-198">0x05 - Stabilizing.</span></span><br /><br /> <span data-ttu-id="28486-199">0x06 — перегрузка;</span><span class="sxs-lookup"><span data-stu-id="28486-199">0x06 - Starvation.</span></span><br /><br /> <span data-ttu-id="28486-200">0x07 — истекло время ожидания потока.</span><span class="sxs-lookup"><span data-stu-id="28486-200">0x07 - Thread timed out.</span></span>|  
+|<span data-ttu-id="28486-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-201">ClrInstanceID</span></span>|<span data-ttu-id="28486-202">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-202">Win:UInt16</span></span>|<span data-ttu-id="28486-203">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-#### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
- В таблице ниже показаны ключевое слово и уровень.  
+#### <a name="threadpoolworkerthreadadjustmentstats"></a><span data-ttu-id="28486-204">ThreadPoolWorkerThreadAdjustmentStats</span><span class="sxs-lookup"><span data-stu-id="28486-204">ThreadPoolWorkerThreadAdjustmentStats</span></span>  
+ <span data-ttu-id="28486-205">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-205">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-206">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-206">Keyword for raising the event</span></span>|<span data-ttu-id="28486-207">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-207">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-208">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-208">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-209">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-209">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-210">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-210">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Описание|  
+|<span data-ttu-id="28486-211">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-211">Event</span></span>|<span data-ttu-id="28486-212">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-212">Event ID</span></span>|<span data-ttu-id="28486-213">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-213">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentStats`|56|Собирает данные по пулу потоков.|  
+|`ThreadPoolWorkerThreadAdjustmentStats`|<span data-ttu-id="28486-214">56</span><span class="sxs-lookup"><span data-stu-id="28486-214">56</span></span>|<span data-ttu-id="28486-215">Собирает данные по пулу потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-215">Gathers data on the thread pool.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-216">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-216">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-217">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-217">Field name</span></span>|<span data-ttu-id="28486-218">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-218">Data type</span></span>|<span data-ttu-id="28486-219">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-219">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Длительность|win:Double|Время в секундах, в течение которого выполнялся сбор статистики.|  
-|Пропускная способность|win:Double|Среднее число завершений в секунду в течение данного интервала.|  
-|ThreadWave|win:Double|Зарезервировано для внутреннего использования.|  
-|ThroughputWave|win:Double|Зарезервировано для внутреннего использования.|  
-|ThroughputErrorEstimate|win:Double|Зарезервировано для внутреннего использования.|  
-|AverageThroughputErrorEstimate|win:Double|Зарезервировано для внутреннего использования.|  
-|ThroughputRatio|win:Double|Относительное улучшение пропускной способности, вызванное изменениями числа активных рабочих потоков в течение этого интервала.|  
-|Confidence|win:Double|Мера обоснованности поля ThroughputRatio.|  
-|NewcontrolSetting|win:Double|Число активных рабочих потоков, которое будет служить основой для будущих изменений числа активных потоков.|  
-|NewThreadWaveMagnitude|Win:UInt16|Величина будущих изменений числа активных потоков.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-220">Длительность</span><span class="sxs-lookup"><span data-stu-id="28486-220">Duration</span></span>|<span data-ttu-id="28486-221">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-221">win:Double</span></span>|<span data-ttu-id="28486-222">Время в секундах, в течение которого выполнялся сбор статистики.</span><span class="sxs-lookup"><span data-stu-id="28486-222">Amount of time, in seconds, during which these statistics were collected.</span></span>|  
+|<span data-ttu-id="28486-223">Пропускная способность</span><span class="sxs-lookup"><span data-stu-id="28486-223">Throughput</span></span>|<span data-ttu-id="28486-224">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-224">win:Double</span></span>|<span data-ttu-id="28486-225">Среднее число завершений в секунду в течение данного интервала.</span><span class="sxs-lookup"><span data-stu-id="28486-225">Average number of completions per second during this interval.</span></span>|  
+|<span data-ttu-id="28486-226">ThreadWave</span><span class="sxs-lookup"><span data-stu-id="28486-226">ThreadWave</span></span>|<span data-ttu-id="28486-227">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-227">win:Double</span></span>|<span data-ttu-id="28486-228">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="28486-228">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="28486-229">ThroughputWave</span><span class="sxs-lookup"><span data-stu-id="28486-229">ThroughputWave</span></span>|<span data-ttu-id="28486-230">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-230">win:Double</span></span>|<span data-ttu-id="28486-231">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="28486-231">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="28486-232">ThroughputErrorEstimate</span><span class="sxs-lookup"><span data-stu-id="28486-232">ThroughputErrorEstimate</span></span>|<span data-ttu-id="28486-233">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-233">win:Double</span></span>|<span data-ttu-id="28486-234">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="28486-234">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="28486-235">AverageThroughputErrorEstimate</span><span class="sxs-lookup"><span data-stu-id="28486-235">AverageThroughputErrorEstimate</span></span>|<span data-ttu-id="28486-236">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-236">win:Double</span></span>|<span data-ttu-id="28486-237">Зарезервировано для внутреннего использования.</span><span class="sxs-lookup"><span data-stu-id="28486-237">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="28486-238">ThroughputRatio</span><span class="sxs-lookup"><span data-stu-id="28486-238">ThroughputRatio</span></span>|<span data-ttu-id="28486-239">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-239">win:Double</span></span>|<span data-ttu-id="28486-240">Относительное улучшение пропускной способности, вызванное изменениями числа активных рабочих потоков в течение этого интервала.</span><span class="sxs-lookup"><span data-stu-id="28486-240">The relative improvement in throughput caused by variations in active worker thread count during this interval.</span></span>|  
+|<span data-ttu-id="28486-241">Confidence</span><span class="sxs-lookup"><span data-stu-id="28486-241">Confidence</span></span>|<span data-ttu-id="28486-242">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-242">win:Double</span></span>|<span data-ttu-id="28486-243">Мера обоснованности поля ThroughputRatio.</span><span class="sxs-lookup"><span data-stu-id="28486-243">A measure of the validity of the ThroughputRatio field.</span></span>|  
+|<span data-ttu-id="28486-244">NewcontrolSetting</span><span class="sxs-lookup"><span data-stu-id="28486-244">NewcontrolSetting</span></span>|<span data-ttu-id="28486-245">win:Double</span><span class="sxs-lookup"><span data-stu-id="28486-245">win:Double</span></span>|<span data-ttu-id="28486-246">Число активных рабочих потоков, которое будет служить основой для будущих изменений числа активных потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-246">The number of active worker threads that will serve as the baseline for future variations in active thread count.</span></span>|  
+|<span data-ttu-id="28486-247">NewThreadWaveMagnitude</span><span class="sxs-lookup"><span data-stu-id="28486-247">NewThreadWaveMagnitude</span></span>|<span data-ttu-id="28486-248">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-248">Win:UInt16</span></span>|<span data-ttu-id="28486-249">Величина будущих изменений числа активных потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-249">The magnitude of future variations in active thread count.</span></span>|  
+|<span data-ttu-id="28486-250">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-250">ClrInstanceID</span></span>|<span data-ttu-id="28486-251">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-251">Win:UInt16</span></span>|<span data-ttu-id="28486-252">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-252">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="28486-253">К началу</span><span class="sxs-lookup"><span data-stu-id="28486-253">Back to top</span></span>](#top)  
   
 <a name="io"></a>   
-## <a name="io-thread-events"></a>События потоков ввода-вывода  
- Эти события пула потоков создаются для потоков в пуле потоков ввода-вывода (порты завершения), который является асинхронным.  
+## <a name="io-thread-events"></a><span data-ttu-id="28486-254">События потоков ввода-вывода</span><span class="sxs-lookup"><span data-stu-id="28486-254">I/O Thread Events</span></span>  
+ <span data-ttu-id="28486-255">Эти события пула потоков создаются для потоков в пуле потоков ввода-вывода (порты завершения), который является асинхронным.</span><span class="sxs-lookup"><span data-stu-id="28486-255">These thread pool events occur for threads in the I/O thread pool (completion ports), which is asynchronous.</span></span>  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="iothreadcreatev1"></a><span data-ttu-id="28486-256">IOThreadCreate_V1</span><span class="sxs-lookup"><span data-stu-id="28486-256">IOThreadCreate_V1</span></span>  
+ <span data-ttu-id="28486-257">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-257">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-258">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-258">Keyword for raising the event</span></span>|<span data-ttu-id="28486-259">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-259">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-260">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-260">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-261">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-261">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-262">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-262">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="28486-263">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-263">Event</span></span>|<span data-ttu-id="28486-264">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-264">Event ID</span></span>|<span data-ttu-id="28486-265">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="28486-265">Raised when</span></span>|  
 |-|-|-|  
-|`IOThreadCreate_V1`|44|Поток ввода-вывода создается в пуле потоков.|  
+|`IOThreadCreate_V1`|<span data-ttu-id="28486-266">44</span><span class="sxs-lookup"><span data-stu-id="28486-266">44</span></span>|<span data-ttu-id="28486-267">Поток ввода-вывода создается в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-267">An I/O thread is created in the thread pool.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-268">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-268">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-269">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-269">Field name</span></span>|<span data-ttu-id="28486-270">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-270">Data type</span></span>|<span data-ttu-id="28486-271">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-271">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Счетчик|win:UInt64|Число потоков ввода-вывода, включая вновь созданный поток.|  
-|NumRetired|win:UInt64|Число завершенных рабочих потоков.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-272">Счетчик</span><span class="sxs-lookup"><span data-stu-id="28486-272">Count</span></span>|<span data-ttu-id="28486-273">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-273">win:UInt64</span></span>|<span data-ttu-id="28486-274">Число потоков ввода-вывода, включая вновь созданный поток.</span><span class="sxs-lookup"><span data-stu-id="28486-274">Number of I/O threads, including the newly created thread.</span></span>|  
+|<span data-ttu-id="28486-275">NumRetired</span><span class="sxs-lookup"><span data-stu-id="28486-275">NumRetired</span></span>|<span data-ttu-id="28486-276">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-276">win:UInt64</span></span>|<span data-ttu-id="28486-277">Число завершенных рабочих потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-277">Number of retired worker threads.</span></span>|  
+|<span data-ttu-id="28486-278">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-278">ClrInstanceID</span></span>|<span data-ttu-id="28486-279">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-279">Win:UInt16</span></span>|<span data-ttu-id="28486-280">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-280">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="iothreadretirev1"></a><span data-ttu-id="28486-281">IOThreadRetire_V1</span><span class="sxs-lookup"><span data-stu-id="28486-281">IOThreadRetire_V1</span></span>  
+ <span data-ttu-id="28486-282">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-282">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-283">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-283">Keyword for raising the event</span></span>|<span data-ttu-id="28486-284">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-284">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-285">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-285">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-286">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-286">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-287">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-287">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="28486-288">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-288">Event</span></span>|<span data-ttu-id="28486-289">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-289">Event ID</span></span>|<span data-ttu-id="28486-290">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="28486-290">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadRetire_V1`|46|Поток ввода-вывода становится кандидатом на завершение.|  
+|`IOThreadRetire_V1`|<span data-ttu-id="28486-291">46</span><span class="sxs-lookup"><span data-stu-id="28486-291">46</span></span>|<span data-ttu-id="28486-292">Поток ввода-вывода становится кандидатом на завершение.</span><span class="sxs-lookup"><span data-stu-id="28486-292">An I/O thread becomes a retirement candidate.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-293">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-293">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-294">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-294">Field name</span></span>|<span data-ttu-id="28486-295">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-295">Data type</span></span>|<span data-ttu-id="28486-296">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-296">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Счетчик|win:UInt64|Число потоков ввода-вывода, остающихся в пуле потоков.|  
-|NumRetired|win:UInt64|Число завершенных потоков ввода-вывода.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-297">Счетчик</span><span class="sxs-lookup"><span data-stu-id="28486-297">Count</span></span>|<span data-ttu-id="28486-298">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-298">win:UInt64</span></span>|<span data-ttu-id="28486-299">Число потоков ввода-вывода, остающихся в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-299">Number of I/O threads remaining in the thread pool.</span></span>|  
+|<span data-ttu-id="28486-300">NumRetired</span><span class="sxs-lookup"><span data-stu-id="28486-300">NumRetired</span></span>|<span data-ttu-id="28486-301">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-301">win:UInt64</span></span>|<span data-ttu-id="28486-302">Число завершенных потоков ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="28486-302">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="28486-303">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-303">ClrInstanceID</span></span>|<span data-ttu-id="28486-304">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-304">Win:UInt16</span></span>|<span data-ttu-id="28486-305">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-305">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="iothreadunretirev1"></a><span data-ttu-id="28486-306">IOThreadUnretire_V1</span><span class="sxs-lookup"><span data-stu-id="28486-306">IOThreadUnretire_V1</span></span>  
+ <span data-ttu-id="28486-307">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-307">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-308">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-308">Keyword for raising the event</span></span>|<span data-ttu-id="28486-309">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-309">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-310">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-310">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-311">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-311">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-312">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-312">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="28486-313">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-313">Event</span></span>|<span data-ttu-id="28486-314">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-314">Event ID</span></span>|<span data-ttu-id="28486-315">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="28486-315">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadUnretire_V1`|47|Завершенный поток ввода-вывода повторно активируется из-за ввода-вывода, поступающего в течение периода ожидания после того, как поток стал кандидатом на завершение.|  
+|`IOThreadUnretire_V1`|<span data-ttu-id="28486-316">47</span><span class="sxs-lookup"><span data-stu-id="28486-316">47</span></span>|<span data-ttu-id="28486-317">Завершенный поток ввода-вывода повторно активируется из-за ввода-вывода, поступающего в течение периода ожидания после того, как поток стал кандидатом на завершение.</span><span class="sxs-lookup"><span data-stu-id="28486-317">An I/O thread is unretired because of I/O that arrives within a waiting period after the thread becomes a retirement candidate.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-318">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-318">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-319">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-319">Field name</span></span>|<span data-ttu-id="28486-320">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-320">Data type</span></span>|<span data-ttu-id="28486-321">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-321">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Счетчик|win:UInt64|Число потоков ввода-вывода в пуле потоков, включая этот поток.|  
-|NumRetired|win:UInt64|Число завершенных потоков ввода-вывода.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-322">Счетчик</span><span class="sxs-lookup"><span data-stu-id="28486-322">Count</span></span>|<span data-ttu-id="28486-323">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-323">win:UInt64</span></span>|<span data-ttu-id="28486-324">Число потоков ввода-вывода в пуле потоков, включая этот поток.</span><span class="sxs-lookup"><span data-stu-id="28486-324">Number of I/O threads in the thread pool, including this one.</span></span>|  
+|<span data-ttu-id="28486-325">NumRetired</span><span class="sxs-lookup"><span data-stu-id="28486-325">NumRetired</span></span>|<span data-ttu-id="28486-326">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-326">win:UInt64</span></span>|<span data-ttu-id="28486-327">Число завершенных потоков ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="28486-327">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="28486-328">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-328">ClrInstanceID</span></span>|<span data-ttu-id="28486-329">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-329">Win:UInt16</span></span>|<span data-ttu-id="28486-330">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-330">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadterminate"></a>IOThreadTerminate  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="iothreadterminate"></a><span data-ttu-id="28486-331">IOThreadTerminate</span><span class="sxs-lookup"><span data-stu-id="28486-331">IOThreadTerminate</span></span>  
+ <span data-ttu-id="28486-332">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="28486-332">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="28486-333">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="28486-333">Keyword for raising the event</span></span>|<span data-ttu-id="28486-334">Уровень</span><span class="sxs-lookup"><span data-stu-id="28486-334">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Информационный (4)|  
+|<span data-ttu-id="28486-335">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="28486-335">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="28486-336">Информационный (4)</span><span class="sxs-lookup"><span data-stu-id="28486-336">Informational (4)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="28486-337">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="28486-337">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="28486-338">Событие</span><span class="sxs-lookup"><span data-stu-id="28486-338">Event</span></span>|<span data-ttu-id="28486-339">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="28486-339">Event ID</span></span>|<span data-ttu-id="28486-340">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="28486-340">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Поток ввода-вывода создается в пуле потоков.|  
+|`IOThreadTerminate`|<span data-ttu-id="28486-341">45</span><span class="sxs-lookup"><span data-stu-id="28486-341">45</span></span>|<span data-ttu-id="28486-342">Поток ввода-вывода создается в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-342">An I/O thread is created in the thread pool.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="28486-343">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="28486-343">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="28486-344">Имя поля</span><span class="sxs-lookup"><span data-stu-id="28486-344">Field name</span></span>|<span data-ttu-id="28486-345">Тип данных</span><span class="sxs-lookup"><span data-stu-id="28486-345">Data type</span></span>|<span data-ttu-id="28486-346">Описание</span><span class="sxs-lookup"><span data-stu-id="28486-346">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Счетчик|win:UInt64|Число потоков ввода-вывода, остающихся в пуле потоков.|  
-|NumRetired|win:UInt64|Число завершенных потоков ввода-вывода.|  
-|ClrInstanceID|Win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="28486-347">Счетчик</span><span class="sxs-lookup"><span data-stu-id="28486-347">Count</span></span>|<span data-ttu-id="28486-348">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-348">win:UInt64</span></span>|<span data-ttu-id="28486-349">Число потоков ввода-вывода, остающихся в пуле потоков.</span><span class="sxs-lookup"><span data-stu-id="28486-349">Number of I/O threads remaining in the thread pool.</span></span>|  
+|<span data-ttu-id="28486-350">NumRetired</span><span class="sxs-lookup"><span data-stu-id="28486-350">NumRetired</span></span>|<span data-ttu-id="28486-351">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="28486-351">win:UInt64</span></span>|<span data-ttu-id="28486-352">Число завершенных потоков ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="28486-352">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="28486-353">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="28486-353">ClrInstanceID</span></span>|<span data-ttu-id="28486-354">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="28486-354">Win:UInt16</span></span>|<span data-ttu-id="28486-355">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="28486-355">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="28486-356">См. также</span><span class="sxs-lookup"><span data-stu-id="28486-356">See Also</span></span>  
+ [<span data-ttu-id="28486-357">События трассировки событий Windows в среде CLR</span><span class="sxs-lookup"><span data-stu-id="28486-357">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

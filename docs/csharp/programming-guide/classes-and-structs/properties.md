@@ -1,104 +1,84 @@
 ---
 title: "Свойства (Руководство по программированию в C#)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="properties-c-programming-guide"></a>Свойства (Руководство по программированию в C#)
+# <a name="properties-c-programming-guide"></a><span data-ttu-id="bbd21-102">Свойства (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="bbd21-102">Properties (C# Programming Guide)</span></span>
 
-Свойство — это член, предоставляющий гибкий механизм для чтения, записи или вычисления значения частного поля. Свойства можно использовать, как если бы они были членами общих данных, но фактически они представляют собой специальные методы, называемые *методами доступа*. Это позволяет легко получать доступ к данным и помогает повысить безопасность и гибкость методов.  
+<span data-ttu-id="bbd21-103">Свойство — это член, предоставляющий гибкий механизм для чтения, записи или вычисления значения частного поля.</span><span class="sxs-lookup"><span data-stu-id="bbd21-103">A property is a member that provides a flexible mechanism to read, write, or compute the value of a private field.</span></span> <span data-ttu-id="bbd21-104">Свойства можно использовать, как если бы они были членами общих данных, но фактически они представляют собой специальные методы, называемые *методами доступа*.</span><span class="sxs-lookup"><span data-stu-id="bbd21-104">Properties can be used as if they are public data members, but they are actually special methods called *accessors*.</span></span> <span data-ttu-id="bbd21-105">Это позволяет легко получать доступ к данным и помогает повысить безопасность и гибкость методов.</span><span class="sxs-lookup"><span data-stu-id="bbd21-105">This enables data to be accessed easily and still helps promote the safety and flexibility of methods.</span></span>  
 
-## <a name="properties-overview"></a>Общие сведения о свойствах  
+## <a name="properties-overview"></a><span data-ttu-id="bbd21-106">Общие сведения о свойствах</span><span class="sxs-lookup"><span data-stu-id="bbd21-106">Properties overview</span></span>  
   
-- Свойства позволяют классу предоставлять общий способ получения и задания значений, скрывая при этом код реализации или проверки.  
+- <span data-ttu-id="bbd21-107">Свойства позволяют классу предоставлять общий способ получения и задания значений, скрывая при этом код реализации или проверки.</span><span class="sxs-lookup"><span data-stu-id="bbd21-107">Properties enable a class to expose a public way of getting and setting values, while hiding implementation or verification code.</span></span>  
   
-- Метод доступа [get](../../../csharp/language-reference/keywords/get.md) используется для возврата значения свойства, а метод доступа [set](../../../csharp/language-reference/keywords/set.md) — для присвоения нового значения. Эти методы доступа могут иметь различные уровни доступа. Дополнительные сведения см. в разделе [Доступность методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- <span data-ttu-id="bbd21-108">Метод доступа [get](../../../csharp/language-reference/keywords/get.md) используется для возврата значения свойства, а метод доступа [set](../../../csharp/language-reference/keywords/set.md) — для присвоения нового значения.</span><span class="sxs-lookup"><span data-stu-id="bbd21-108">A [get](../../../csharp/language-reference/keywords/get.md) property accessor is used to return the property value, and a [set](../../../csharp/language-reference/keywords/set.md) property accessor is used to assign a new value.</span></span> <span data-ttu-id="bbd21-109">Эти методы доступа могут иметь различные уровни доступа.</span><span class="sxs-lookup"><span data-stu-id="bbd21-109">These accessors can have different access levels.</span></span> <span data-ttu-id="bbd21-110">Дополнительные сведения см. в разделе [Доступность методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).</span><span class="sxs-lookup"><span data-stu-id="bbd21-110">For more information, see [Restricting Accessor Accessibility](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).</span></span>  
   
-- Ключевое слово [value](../../../csharp/language-reference/keywords/value.md) используется для определения значения, присваиваемого методом доступа `set`.  
-- Свойства могут быть доступны для *чтения и записи* (они имеют оба метода доступа — `get` и `set`), *только для чтения* (они имеют метод доступа `get`, но не имеют метода доступа `set`) или *только для записи* (они имеют метод доступа `set`, но не имеют метода доступа `get`). Свойства только для записи встречаются редко и чаще всего используются для ограничения доступа к конфиденциальным данным.
+- <span data-ttu-id="bbd21-111">Ключевое слово [value](../../../csharp/language-reference/keywords/value.md) используется для определения значения, присваиваемого методом доступа `set`.</span><span class="sxs-lookup"><span data-stu-id="bbd21-111">The [value](../../../csharp/language-reference/keywords/value.md) keyword is used to define the value being assigned by the `set` accessor.</span></span>  
+- <span data-ttu-id="bbd21-112">Свойства могут быть доступны для *чтения и записи* (они имеют оба метода доступа — `get` и `set`), *только для чтения* (они имеют метод доступа `get`, но не имеют метода доступа `set`) или *только для записи* (они имеют метод доступа `set`, но не имеют метода доступа `get`).</span><span class="sxs-lookup"><span data-stu-id="bbd21-112">Properties can be *read-write* (they have both a `get` and a `set` accessor), *read-only* (they have a `get` accessor but no `set` accessor), or *write-only* (they have a `set` accessor, but no `get` accessor).</span></span> <span data-ttu-id="bbd21-113">Свойства только для записи встречаются редко и чаще всего используются для ограничения доступа к конфиденциальным данным.</span><span class="sxs-lookup"><span data-stu-id="bbd21-113">Write-only properties are rare and are most commonly used to restrict access to sensitive data.</span></span>
 
-- Простые свойства, не требующие пользовательского кода метода доступа, можно реализовать как определения текста выражений или как [автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).
+- <span data-ttu-id="bbd21-114">Простые свойства, не требующие пользовательского кода метода доступа, можно реализовать как определения текста выражений или как [автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="bbd21-114">Simple properties that require no custom accessor code can be implemented either as expression body definitions or as [auto-implemented properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span></span>
  
-## <a name="properties-with-backing-fields"></a>Свойства с резервными полями
+## <a name="properties-with-backing-fields"></a><span data-ttu-id="bbd21-115">Свойства с резервными полями</span><span class="sxs-lookup"><span data-stu-id="bbd21-115">Properties with backing fields</span></span>
 
-Одной из базовых схем реализации свойств является использование закрытого резервного поля для установки и извлечения значения свойства. Метод доступа `get` возвращает значение закрытого поля, а метод доступа `set` может выполнять определенные проверки данных до присвоения значению закрытого поля. Оба метода доступа также могут выполнять некоторые преобразования или вычисления данных до их сохранения или возвращения.
+<span data-ttu-id="bbd21-116">Одной из базовых схем реализации свойств является использование закрытого резервного поля для установки и извлечения значения свойства.</span><span class="sxs-lookup"><span data-stu-id="bbd21-116">One basic pattern for implementing a property involves using a private backing field for setting and retrieving the property value.</span></span> <span data-ttu-id="bbd21-117">Метод доступа `get` возвращает значение закрытого поля, а метод доступа `set` может выполнять определенные проверки данных до присвоения значению закрытого поля.</span><span class="sxs-lookup"><span data-stu-id="bbd21-117">The `get` accessor returns the value of the private field, and the `set` accessor may perform some data validation before assigning a value to the private field.</span></span> <span data-ttu-id="bbd21-118">Оба метода доступа также могут выполнять некоторые преобразования или вычисления данных до их сохранения или возвращения.</span><span class="sxs-lookup"><span data-stu-id="bbd21-118">Both accessors may also perform some conversion or computation on the data before it is stored or returned.</span></span>
 
-Это показано в следующем примере. В этом примере класс `TimePeriod` представляет интервал времени. На внутреннем уровне класс сохраняет интервал времени в секундах в закрытом поле с именем `seconds`. Свойство чтения и записи с именем `Hours` позволяет клиенту указывать временной интервал в часах. Методы доступа `get` и `set` выполняют необходимое преобразование между часами и секундами. Кроме того, метод доступа `set` проверяет данные и создает @System.ArgumentOutOfRangeException, если указано недопустимое количество часов. 
+<span data-ttu-id="bbd21-119">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="bbd21-119">The following example illustrates this pattern.</span></span> <span data-ttu-id="bbd21-120">В этом примере класс `TimePeriod` представляет интервал времени.</span><span class="sxs-lookup"><span data-stu-id="bbd21-120">In this example, the `TimePeriod` class represents an interval of time.</span></span> <span data-ttu-id="bbd21-121">На внутреннем уровне класс сохраняет интервал времени в секундах в закрытом поле с именем `seconds`.</span><span class="sxs-lookup"><span data-stu-id="bbd21-121">Internally, the class stores the time interval in seconds in a private field named `seconds`.</span></span> <span data-ttu-id="bbd21-122">Свойство чтения и записи с именем `Hours` позволяет клиенту указывать временной интервал в часах.</span><span class="sxs-lookup"><span data-stu-id="bbd21-122">A read-write property named `Hours` allows the customer to specify the time interval in hours.</span></span> <span data-ttu-id="bbd21-123">Методы доступа `get` и `set` выполняют необходимое преобразование между часами и секундами.</span><span class="sxs-lookup"><span data-stu-id="bbd21-123">Both the `get` and the `set` accessors perform the necessary conversion between hours and seconds.</span></span> <span data-ttu-id="bbd21-124">Кроме того, метод доступа `set` проверяет данные и создает <xref:System.ArgumentOutOfRangeException>, если указано недопустимое количество часов.</span><span class="sxs-lookup"><span data-stu-id="bbd21-124">In addition, the `set` accessor validates the data and throws an <xref:System.ArgumentOutOfRangeException> if the number of hours is invalid.</span></span> 
    
- [!code-cs[Свойства 1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
-## <a name="expression-body-definitions"></a>Определения текста выражений  
+## <a name="expression-body-definitions"></a><span data-ttu-id="bbd21-125">Определения текста выражений</span><span class="sxs-lookup"><span data-stu-id="bbd21-125">Expression body definitions</span></span>  
 
- Как правило, методы доступа к свойствам состоят из однострочных операторов, которые просто назначают или возвращают результат выражения. Эти свойства можно реализовать как члены, воплощающие выражение. Определения текста выражений состоят из символа `=>`, за которым идет выражение, назначаемое свойству или извлекаемое из него.
+ <span data-ttu-id="bbd21-126">Как правило, методы доступа к свойствам состоят из однострочных операторов, которые просто назначают или возвращают результат выражения.</span><span class="sxs-lookup"><span data-stu-id="bbd21-126">Property accessors often consist of single-line statements that just assign or return the result of an expression.</span></span> <span data-ttu-id="bbd21-127">Эти свойства можно реализовать как члены, воплощающие выражение.</span><span class="sxs-lookup"><span data-stu-id="bbd21-127">You can implement these properties as expression-bodied members.</span></span> <span data-ttu-id="bbd21-128">Определения текста выражений состоят из символа `=>`, за которым идет выражение, назначаемое свойству или извлекаемое из него.</span><span class="sxs-lookup"><span data-stu-id="bbd21-128">Expression body definitions consist of the `=>` symbol followed by the expression to assign to or retrieve from the property.</span></span>
 
- Начиная с версии C# 6 свойства только для чтения могут реализовывать метод доступа `get` как член, воплощающий выражение. В этом случае не используется ни ключевое слово метода доступа `get`, ни ключевое слово `return`. В следующем примере показана реализация свойства только для чтения `Name` в виде члена, воплощающего выражение.
+ <span data-ttu-id="bbd21-129">Начиная с версии C# 6 свойства только для чтения могут реализовывать метод доступа `get` как член, воплощающий выражение.</span><span class="sxs-lookup"><span data-stu-id="bbd21-129">Starting with C# 6, read-only properties can implement the `get` accessor as an expression-bodied member.</span></span> <span data-ttu-id="bbd21-130">В этом случае не используется ни ключевое слово метода доступа `get`, ни ключевое слово `return`.</span><span class="sxs-lookup"><span data-stu-id="bbd21-130">In this case, neither the `get` accessor keyword nor the `return` keyword is used.</span></span> <span data-ttu-id="bbd21-131">В следующем примере показана реализация свойства только для чтения `Name` в виде члена, воплощающего выражение.</span><span class="sxs-lookup"><span data-stu-id="bbd21-131">The following example implements the read-only `Name` property as an expression-bodied member.</span></span>
 
- [!code-cs[Свойства 2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- Начиная с C# 7 методы доступа `get` и `set` можно реализовывать в виде членов, воплощающих выражения. В этом случае необходимо указывать ключевые слова `get` и `set`. В следующем примере показано использование определений текста выражений для обоих методов доступа. Обратите внимание, что ключевое слово `return` не используется с методом доступа `get`.
+ <span data-ttu-id="bbd21-132">Начиная с C# 7 методы доступа `get` и `set` можно реализовывать в виде членов, воплощающих выражения.</span><span class="sxs-lookup"><span data-stu-id="bbd21-132">Starting with C# 7, both the `get` and the `set` accessor can be implemented as expression-bodied members.</span></span> <span data-ttu-id="bbd21-133">В этом случае необходимо указывать ключевые слова `get` и `set`.</span><span class="sxs-lookup"><span data-stu-id="bbd21-133">In this case, the `get` and `set` keywords must be present.</span></span> <span data-ttu-id="bbd21-134">В следующем примере показано использование определений текста выражений для обоих методов доступа.</span><span class="sxs-lookup"><span data-stu-id="bbd21-134">The following example illustrates the use of expression body definitions for both accessors.</span></span> <span data-ttu-id="bbd21-135">Обратите внимание, что ключевое слово `return` не используется с методом доступа `get`.</span><span class="sxs-lookup"><span data-stu-id="bbd21-135">Note that the `return` keyword is not used with the `get` accessor.</span></span>
  
-  [!code-cs[Свойства 3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
-## <a name="auto-implemented-properties"></a>Автоматически реализуемые свойства
+## <a name="auto-implemented-properties"></a><span data-ttu-id="bbd21-136">Автоматически реализуемые свойства</span><span class="sxs-lookup"><span data-stu-id="bbd21-136">Auto-implemented properties</span></span>
 
-В некоторых случаях свойство `get` и методы доступа `set` просто присваивают значение резервному полю или извлекают значение из него без включения дополнительной логики. С помощью автоматически реализуемых свойств можно упростить код, в то время как компилятор C# будет прозрачно предоставлять вам резервное поле. 
+<span data-ttu-id="bbd21-137">В некоторых случаях свойство `get` и методы доступа `set` просто присваивают значение резервному полю или извлекают значение из него без включения дополнительной логики.</span><span class="sxs-lookup"><span data-stu-id="bbd21-137">In some cases, property `get` and `set` accessors just assign a value to or retrieve a value from a backing field without including any additional logic.</span></span> <span data-ttu-id="bbd21-138">С помощью автоматически реализуемых свойств можно упростить код, в то время как компилятор C# будет прозрачно предоставлять вам резервное поле.</span><span class="sxs-lookup"><span data-stu-id="bbd21-138">By using auto-implemented properties, you can simplify your code while having the C# compiler transparently provide the backing field for you.</span></span> 
 
-Если у свойства есть методы доступа `get` и `set`, они оба должны быть автоматически реализованы. Автоматически реализуемое свойство определяется с помощью ключевых слов `get` и `set` без указания какой-либо реализации. Следующий пример аналогичен предыдущему, за исключением того, что `Name` и `Price` являются автоматически реализуемыми свойствами. Обратите внимание, что в примере также удаляется параметризованный конструктор, поэтому теперь объекты `SaleItem` инициализируются с помощью вызова конструктора по умолчанию и [инициализатора объекта](object-and-collection-initializers.md).
+<span data-ttu-id="bbd21-139">Если у свойства есть методы доступа `get` и `set`, они оба должны быть автоматически реализованы.</span><span class="sxs-lookup"><span data-stu-id="bbd21-139">If a property has both a `get` and a `set` accessor, both must be auto-implemented.</span></span> <span data-ttu-id="bbd21-140">Автоматически реализуемое свойство определяется с помощью ключевых слов `get` и `set` без указания какой-либо реализации.</span><span class="sxs-lookup"><span data-stu-id="bbd21-140">You define an auto-implemented property by using the `get` and `set` keywords without providing any implementation.</span></span> <span data-ttu-id="bbd21-141">Следующий пример аналогичен предыдущему, за исключением того, что `Name` и `Price` являются автоматически реализуемыми свойствами.</span><span class="sxs-lookup"><span data-stu-id="bbd21-141">The following example repeats the previous one, except that `Name` and `Price` are auto-implemented properties.</span></span> <span data-ttu-id="bbd21-142">Обратите внимание, что в примере также удаляется параметризованный конструктор, поэтому теперь объекты `SaleItem` инициализируются с помощью вызова конструктора по умолчанию и [инициализатора объекта](object-and-collection-initializers.md).</span><span class="sxs-lookup"><span data-stu-id="bbd21-142">Note that the example also removes the parameterized constructor, so that `SaleItem` objects are now initialized with a call to the default constructor and an [object initializer](object-and-collection-initializers.md).</span></span>
 
-  [!code-cs[Свойства 4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a><span data-ttu-id="bbd21-143">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="bbd21-143">Related sections</span></span>  
   
--   [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+-   [<span data-ttu-id="bbd21-144">Использование свойств</span><span class="sxs-lookup"><span data-stu-id="bbd21-144">Using Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+-   [<span data-ttu-id="bbd21-145">Свойства интерфейса</span><span class="sxs-lookup"><span data-stu-id="bbd21-145">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Сравнение свойств и индексаторов](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+-   [<span data-ttu-id="bbd21-146">Сравнение свойств и индексаторов</span><span class="sxs-lookup"><span data-stu-id="bbd21-146">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Ограничение доступности методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+-   [<span data-ttu-id="bbd21-147">Ограничение доступности методов доступа</span><span class="sxs-lookup"><span data-stu-id="bbd21-147">Restricting Accessor Accessibility</span></span>](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+-   [<span data-ttu-id="bbd21-148">Автоматически реализуемые свойства</span><span class="sxs-lookup"><span data-stu-id="bbd21-148">Auto-Implemented Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="bbd21-149">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="bbd21-149">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [Ключевое слово get](../../../csharp/language-reference/keywords/get.md)    
- [Ключевое слово set](../../../csharp/language-reference/keywords/set.md)    
-
+## <a name="see-also"></a><span data-ttu-id="bbd21-150">См. также</span><span class="sxs-lookup"><span data-stu-id="bbd21-150">See also</span></span>
+ [<span data-ttu-id="bbd21-151">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="bbd21-151">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="bbd21-152">Использование свойств</span><span class="sxs-lookup"><span data-stu-id="bbd21-152">Using Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [<span data-ttu-id="bbd21-153">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="bbd21-153">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ <span data-ttu-id="bbd21-154">[Ключевое слово get](../../../csharp/language-reference/keywords/get.md)  </span><span class="sxs-lookup"><span data-stu-id="bbd21-154">[get keyword](../../../csharp/language-reference/keywords/get.md)  </span></span>  
+ [<span data-ttu-id="bbd21-155">Ключевое слово set</span><span class="sxs-lookup"><span data-stu-id="bbd21-155">set keyword</span></span>](../../../csharp/language-reference/keywords/set.md)    

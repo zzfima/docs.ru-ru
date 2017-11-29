@@ -1,69 +1,49 @@
 ---
 title: "checked (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - checked_CSharpKeyword
 - checked
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- checked keyword [C#]
+helpviewer_keywords: checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0ae77894cdc94e41dfa281b92ed3304e0dc25731
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: abe34772c0f07b0a43f7299088bf5ea9a1d2aa78
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="checked-c-reference"></a>checked (Справочник по C#)
-Ключевое слово `checked` используется для явного включения проверки переполнения при выполнении арифметических операций и преобразований с данными целого типа.  
+# <a name="checked-c-reference"></a><span data-ttu-id="525ad-102">checked (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="525ad-102">checked (C# Reference)</span></span>
+<span data-ttu-id="525ad-103">Ключевое слово `checked` используется для явного включения проверки переполнения при выполнении арифметических операций и преобразований с данными целого типа.</span><span class="sxs-lookup"><span data-stu-id="525ad-103">The `checked` keyword is used to explicitly enable overflow checking for integral-type arithmetic operations and conversions.</span></span>  
   
- По умолчанию выражение, содержащее только константные значения, вызывает ошибку компилятора в том случае, если результат его вычисления выходит за допустимые пределы значений конечного типа. Если выражение содержит одно или несколько неконстантных значений, компилятор не выполняет проверку переполнения. Вычисление выражения, присвоенного переменной `i2` в приведенном ниже примере, не вызывает ошибку компилятора.  
+ <span data-ttu-id="525ad-104">По умолчанию выражение, содержащее только константные значения, вызывает ошибку компилятора в том случае, если результат его вычисления выходит за допустимые пределы значений конечного типа.</span><span class="sxs-lookup"><span data-stu-id="525ad-104">By default, an expression that contains only constant values causes a compiler error if the expression produces a value that is outside the range of the destination type.</span></span> <span data-ttu-id="525ad-105">Если выражение содержит одно или несколько неконстантных значений, компилятор не выполняет проверку переполнения.</span><span class="sxs-lookup"><span data-stu-id="525ad-105">If the expression contains one or more non-constant values, the compiler does not detect the overflow.</span></span> <span data-ttu-id="525ad-106">Вычисление выражения, присвоенного переменной `i2` в приведенном ниже примере, не вызывает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="525ad-106">Evaluating the expression assigned to `i2` in the following example does not cause a compiler error.</span></span>  
   
- [!code-cs[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]  
+ [!code-csharp[csrefKeywordsChecked#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_1.cs)]  
   
- По умолчанию эти неконстантные выражения также не проверяются на переполнение во время выполнения, и они не создают исключений переполнения. В предыдущем примере в качестве суммы двух положительных целых чисел выводится значение -2 147 483 639.  
+ <span data-ttu-id="525ad-107">По умолчанию эти неконстантные выражения также не проверяются на переполнение во время выполнения, и они не создают исключений переполнения.</span><span class="sxs-lookup"><span data-stu-id="525ad-107">By default, these non-constant expressions are not checked for overflow at run time either, and they do not raise overflow exceptions.</span></span> <span data-ttu-id="525ad-108">В предыдущем примере в качестве суммы двух положительных целых чисел выводится значение -2 147 483 639.</span><span class="sxs-lookup"><span data-stu-id="525ad-108">The previous example displays -2,147,483,639 as the sum of two positive integers.</span></span>  
   
- Проверку переполнения можно включить посредством параметров компилятора, настройки среды или использования ключевого слова `checked`. В следующих примерах демонстрируется использование выражения `checked` или блока `checked` для обнаружения переполнения, возникающего в результате предыдущего сложения во время выполнения. В обоих примерах создается исключение переполнения.  
+ <span data-ttu-id="525ad-109">Проверку переполнения можно включить посредством параметров компилятора, настройки среды или использования ключевого слова `checked`.</span><span class="sxs-lookup"><span data-stu-id="525ad-109">Overflow checking can be enabled by compiler options, environment configuration, or use of the `checked` keyword.</span></span> <span data-ttu-id="525ad-110">В следующих примерах демонстрируется использование выражения `checked` или блока `checked` для обнаружения переполнения, возникающего в результате предыдущего сложения во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="525ad-110">The following examples demonstrate how to use a `checked` expression or a `checked` block to detect the overflow that is produced by the previous sum at run time.</span></span> <span data-ttu-id="525ad-111">В обоих примерах создается исключение переполнения.</span><span class="sxs-lookup"><span data-stu-id="525ad-111">Both examples raise an overflow exception.</span></span>  
   
- [!code-cs[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]  
+ [!code-csharp[csrefKeywordsChecked#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_2.cs)]  
   
- Для запрета проверки переполнения можно использовать ключевое слово [unchecked](../../../csharp/language-reference/keywords/unchecked.md).  
+ <span data-ttu-id="525ad-112">Для запрета проверки переполнения можно использовать ключевое слово [unchecked](../../../csharp/language-reference/keywords/unchecked.md).</span><span class="sxs-lookup"><span data-stu-id="525ad-112">The [unchecked](../../../csharp/language-reference/keywords/unchecked.md) keyword can be used to prevent overflow checking.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере демонстрируется включение проверки переполнения во время выполнения посредством ключевого слова `checked`.  
+## <a name="example"></a><span data-ttu-id="525ad-113">Пример</span><span class="sxs-lookup"><span data-stu-id="525ad-113">Example</span></span>  
+ <span data-ttu-id="525ad-114">В этом примере демонстрируется включение проверки переполнения во время выполнения посредством ключевого слова `checked`.</span><span class="sxs-lookup"><span data-stu-id="525ad-114">This sample shows how to use `checked` to enable overflow checking at run time.</span></span>  
   
- [!code-cs[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]  
+ [!code-csharp[csrefKeywordsChecked#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/checked_3.cs)]  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="525ad-115">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="525ad-115">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)   
- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
-
+## <a name="see-also"></a><span data-ttu-id="525ad-116">См. также</span><span class="sxs-lookup"><span data-stu-id="525ad-116">See Also</span></span>  
+ [<span data-ttu-id="525ad-117">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="525ad-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="525ad-118">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="525ad-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="525ad-119">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="525ad-119">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="525ad-120">Операторы checked и unchecked</span><span class="sxs-lookup"><span data-stu-id="525ad-120">Checked and Unchecked</span></span>](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+ [<span data-ttu-id="525ad-121">unchecked</span><span class="sxs-lookup"><span data-stu-id="525ad-121">unchecked</span></span>](../../../csharp/language-reference/keywords/unchecked.md)

@@ -1,88 +1,90 @@
 ---
-title: "Элемент &lt;NetFx40_LegacySecurityPolicy&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<NetFx40_LegacySecurityPolicy> - элемент"
-  - "NetFx40_LegacySecurityPolicy - элемент"
+title: "&lt;NetFx40_LegacySecurityPolicy&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <NetFx40_LegacySecurityPolicy> element
+- NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cb59eb6e2a5e831f603747b3e0f9435bd076fbf8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;NetFx40_LegacySecurityPolicy&gt;
-Определяет, использует ли среда выполнения политику разграничения доступа кода \(CAS\) прежних версий.  
+# <a name="ltnetfx40legacysecuritypolicygt-element"></a><span data-ttu-id="2bd96-102">&lt;NetFx40_LegacySecurityPolicy&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="2bd96-102">&lt;NetFx40_LegacySecurityPolicy&gt; Element</span></span>
+<span data-ttu-id="2bd96-103">Указывает, использует ли среда выполнения устаревшую политику разграничения доступа кода.</span><span class="sxs-lookup"><span data-stu-id="2bd96-103">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="2bd96-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2bd96-104">\<configuration></span></span>  
+<span data-ttu-id="2bd96-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="2bd96-105">\<runtime></span></span>  
+<span data-ttu-id="2bd96-106"><NetFx40_LegacySecurityPolicy></span><span class="sxs-lookup"><span data-stu-id="2bd96-106"><NetFx40_LegacySecurityPolicy></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="2bd96-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2bd96-107">Syntax</span></span>  
+  
+```xml  
 <NetFx40_LegacySecurityPolicy  
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2bd96-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="2bd96-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2bd96-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="2bd96-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="2bd96-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2bd96-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Определяет, использует ли среда выполнения политику управления доступа для кода \(CAS\) предыдущей версии.|  
+|<span data-ttu-id="2bd96-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="2bd96-111">Attribute</span></span>|<span data-ttu-id="2bd96-112">Описание</span><span class="sxs-lookup"><span data-stu-id="2bd96-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="2bd96-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="2bd96-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="2bd96-114">Указывает, использует ли среда выполнения политику разграничения доступа кода прежних версий.</span><span class="sxs-lookup"><span data-stu-id="2bd96-114">Specifies whether the runtime uses legacy CAS policy.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="2bd96-115">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="2bd96-115">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|Среда выполнения не использует политику разграничения доступа кода \(CAS\).  Это значение по умолчанию.|  
-|`true`|Среда выполнения использует политику разграничения доступа кода \(CAS\) прежних версий.|  
+|<span data-ttu-id="2bd96-116">Значение</span><span class="sxs-lookup"><span data-stu-id="2bd96-116">Value</span></span>|<span data-ttu-id="2bd96-117">Описание</span><span class="sxs-lookup"><span data-stu-id="2bd96-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="2bd96-118">Среда выполнения не использует политику разграничения доступа кода прежних версий.</span><span class="sxs-lookup"><span data-stu-id="2bd96-118">The runtime does not use legacy CAS policy.</span></span> <span data-ttu-id="2bd96-119">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2bd96-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="2bd96-120">Среда выполнения использует политику разграничения доступа кода прежних версий.</span><span class="sxs-lookup"><span data-stu-id="2bd96-120">The runtime uses legacy CAS policy.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="2bd96-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="2bd96-121">Child Elements</span></span>  
+ <span data-ttu-id="2bd96-122">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="2bd96-122">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="2bd96-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="2bd96-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
+|<span data-ttu-id="2bd96-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="2bd96-124">Element</span></span>|<span data-ttu-id="2bd96-125">Описание</span><span class="sxs-lookup"><span data-stu-id="2bd96-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="2bd96-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2bd96-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="2bd96-127">Содержит сведения о параметрах инициализации среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="2bd96-127">Contains information about runtime initialization options.</span></span>|  
   
-## Заметки  
- В .NET Framework версии 3.5 и более ранних версиях политика разграничения доступа кода действует всегда.  В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] политика разграничения доступа кода должна быть включена.  
+## <a name="remarks"></a><span data-ttu-id="2bd96-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="2bd96-128">Remarks</span></span>  
+ <span data-ttu-id="2bd96-129">В .NET Framework версии 3.5 и более ранних версий политика разграничения доступа кода настроена на срабатывание всегда.</span><span class="sxs-lookup"><span data-stu-id="2bd96-129">In the .NET Framework version 3.5 and earlier versions, CAS policy is always in effect.</span></span> <span data-ttu-id="2bd96-130">В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], необходимо включить политику разграничения доступа кода.</span><span class="sxs-lookup"><span data-stu-id="2bd96-130">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], CAS policy must be enabled.</span></span>  
   
- Политика разграничения доступа кода зависит от версии.  Настраиваемые политики разграничения доступа кода, существующие в предыдущих версиях платформы .NET Framework, необходимо заново определить в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ <span data-ttu-id="2bd96-131">Политика разграничения доступа кода зависит от версии.</span><span class="sxs-lookup"><span data-stu-id="2bd96-131">CAS policy is version-specific.</span></span> <span data-ttu-id="2bd96-132">Настраиваемые политики CAS, которые существуют в более ранних версиях платформы .NET Framework, необходимо заново определить в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2bd96-132">Custom CAS policies that exist in earlier versions of the .NET Framework must be respecified in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>  
   
- Применение элемента `<NetFx40_LegacySecurityPolicy>` к сборке[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] не влияет на [прозрачный для системы безопасности код](../../../../../docs/framework/misc/security-transparent-code.md); по\-прежнему применяются правила прозрачности.  
+ <span data-ttu-id="2bd96-133">Применение `<NetFx40_LegacySecurityPolicy>` элемент [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] сборки не влияет на [прозрачный с точки зрения безопасности код](../../../../../docs/framework/misc/security-transparent-code.md); по-прежнему применяются правила прозрачности.</span><span class="sxs-lookup"><span data-stu-id="2bd96-133">Applying the `<NetFx40_LegacySecurityPolicy>` element to a [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] assembly does not affect [security-transparent code](../../../../../docs/framework/misc/security-transparent-code.md); the transparency rules still apply.</span></span>  
   
 > [!IMPORTANT]
->  Применение элемента `<NetFx40_LegacySecurityPolicy>` может привести к снижению производительности для сборок образов в машинном коде, созданных  [генератором образов в машинном коде \(Ngen.exe\)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md), которые не установлены в [глобальный кэш сборок](../../../../../docs/framework/app-domains/gac.md).  Снижение производительности вызвано невозможностью среды выполнения загружать сборки в виде образов в машинном коде при применении атрибута, что приводит к их загрузке в виде сборок JIT.  
+>  <span data-ttu-id="2bd96-134">Применение `<NetFx40_LegacySecurityPolicy>` элемента может привести к снижению производительности для сборки образов в машинном коде, созданные [генератором машинных образов (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) , которые не установлены в [глобальный кэш сборок ](../../../../../docs/framework/app-domains/gac.md).</span><span class="sxs-lookup"><span data-stu-id="2bd96-134">Applying the `<NetFx40_LegacySecurityPolicy>` element can result in significant performance penalties for native image assemblies created by the [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) that are not installed in the [global assembly cache](../../../../../docs/framework/app-domains/gac.md).</span></span> <span data-ttu-id="2bd96-135">Снижение производительности, вызванные невозможностью среды выполнения загружать сборки как образы в машинном коде при применении атрибута, что приводит к их загруженных сборок как just-in-time.</span><span class="sxs-lookup"><span data-stu-id="2bd96-135">The performance degradation is caused by the inability of the runtime to load the assemblies as native images when the attribute is applied, resulting in their being loaded as just-in-time assemblies.</span></span>  
   
 > [!NOTE]
->  Если в настройках проекта Visual Studio указать целевую версию платформы .NET Framework, более раннюю, чем [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], политика CAS будет включена, включая любые указанные для этой версии настраиваемые политики CAS.  При этом использование новых типов и участников [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] будет невозможным.  Более раннюю версию платформы .NET Framework также можно указать с помощью элемента [\<supportedRuntime\> element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) в схеме параметров запуска в [файла конфигурации приложения](../../../../../docs/framework/configure-apps/index.md).  
+>  <span data-ttu-id="2bd96-136">При указании целевой версии .NET Framework, выпущенной ранее [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] в параметрах проекта для проекта Visual Studio, политика разграничения доступа кода будет включена, включая любые настраиваемые политики управления доступом для кода, указанных для данной версии.</span><span class="sxs-lookup"><span data-stu-id="2bd96-136">If you specify a target .NET Framework version that is earlier than the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] in the project settings for your Visual Studio project, CAS policy will be enabled, including any custom CAS policies you specified for that version.</span></span> <span data-ttu-id="2bd96-137">Тем не менее, вы не сможете использовать новые [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] типы и члены.</span><span class="sxs-lookup"><span data-stu-id="2bd96-137">However, you will not be able to use new [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] types and members.</span></span> <span data-ttu-id="2bd96-138">Можно также указать более ранней версии платформы .NET Framework с помощью [ \<supportedRuntime > элемент](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) в схеме параметров запуска в вашей [файла конфигурации приложения](../../../../../docs/framework/configure-apps/index.md).</span><span class="sxs-lookup"><span data-stu-id="2bd96-138">You can also specify an earlier version of the .NET Framework by using the [\<supportedRuntime> element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in the startup settings schema in your [application configuration file](../../../../../docs/framework/configure-apps/index.md).</span></span>  
   
 > [!NOTE]
->  В файлах конфигурации учитывается регистр.  Следует использовать синтаксис, как показано в разделах, посвященных синтаксису и примерам.  
+>  <span data-ttu-id="2bd96-139">Синтаксис файлов конфигурации учитывается регистр.</span><span class="sxs-lookup"><span data-stu-id="2bd96-139">Configuration file syntax is case-sensitive.</span></span> <span data-ttu-id="2bd96-140">Следует использовать синтаксис, как указано в разделах «синтаксис» и пример.</span><span class="sxs-lookup"><span data-stu-id="2bd96-140">You should use the syntax as provided in the Syntax and Example sections.</span></span>  
   
-## Файл конфигурации  
- Этот элемент может использоваться только в файле конфигурации приложения.  
+## <a name="configuration-file"></a><span data-ttu-id="2bd96-141">Файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="2bd96-141">Configuration File</span></span>  
+ <span data-ttu-id="2bd96-142">Этот элемент может использоваться только в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="2bd96-142">This element can be used only in the application configuration file.</span></span>  
   
-## Пример  
- Следующий пример показывает, как включить политику управления доступом для кода \(CAS\) предыдущей версии для приложения.  
+## <a name="example"></a><span data-ttu-id="2bd96-143">Пример</span><span class="sxs-lookup"><span data-stu-id="2bd96-143">Example</span></span>  
+ <span data-ttu-id="2bd96-144">В следующем примере показано включение политику разграничения доступа кода прежних версий для приложения.</span><span class="sxs-lookup"><span data-stu-id="2bd96-144">The following example shows how to enable legacy CAS policy for an application.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_LegacySecurityPolicy enabled="true"/>  
@@ -90,6 +92,6 @@ caps.handback.revision: 21
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="2bd96-145">См. также</span><span class="sxs-lookup"><span data-stu-id="2bd96-145">See Also</span></span>  
+ [<span data-ttu-id="2bd96-146">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="2bd96-146">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="2bd96-147">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="2bd96-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

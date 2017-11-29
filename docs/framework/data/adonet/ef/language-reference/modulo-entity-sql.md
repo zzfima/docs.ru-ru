@@ -1,56 +1,51 @@
 ---
-title: "(Остаток от деления) (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "(Остаток от деления) (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: cff0e4eaadf601b7a90f3caa0ecd9cf2f48feab0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# (Остаток от деления) (Entity SQL)
-Возвращает остаток от деления значения одного выражения на другое.  
+# <a name="modulo-entity-sql"></a><span data-ttu-id="7f3c9-102">(Остаток от деления) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7f3c9-102">(Modulo) (Entity SQL)</span></span>
+<span data-ttu-id="7f3c9-103">Возвращает остаток от деления значения одного выражения на другое.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-103">Returns the remainder of one expression divided by another.</span></span>  
   
-## Синтаксис  
-  
-```  
-  
-dividend  
-%  
-divisor  
+## <a name="syntax"></a><span data-ttu-id="7f3c9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7f3c9-104">Syntax</span></span>  
   
 ```  
+dividend % divisor  
+```  
   
-## Аргументы  
+## <a name="arguments"></a><span data-ttu-id="7f3c9-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="7f3c9-105">Arguments</span></span>  
  `dividend`  
- Делимое числовое выражение.`dividend` \- любое допустимое выражение с любым числовым типом данных.  
+ <span data-ttu-id="7f3c9-106">Делимое числовое выражение.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-106">The numeric expression to divide.</span></span> <span data-ttu-id="7f3c9-107">`dividend` - любое допустимое выражение с любым числовым типом данных.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-107">`dividend` is any valid expression of any one of the numeric data types.</span></span>  
   
  `divisor`  
- Числовое выражение, на которое делится делимое.`divisor` \- любое допустимое выражение с любым числовым типом данных.  
+ <span data-ttu-id="7f3c9-108">Числовое выражение, на которое делится делимое.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-108">The numeric expression to divide the dividend by.</span></span> <span data-ttu-id="7f3c9-109">`divisor` - любое допустимое выражение с любым числовым типом данных.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-109">`divisor` is any valid expression of any one of the numeric data types.</span></span>  
   
-## Типы результата  
- Edm.Int32  
+## <a name="result-types"></a><span data-ttu-id="7f3c9-110">Типы результата</span><span class="sxs-lookup"><span data-stu-id="7f3c9-110">Result Types</span></span>  
+ <span data-ttu-id="7f3c9-111">Edm.Int32</span><span class="sxs-lookup"><span data-stu-id="7f3c9-111">Edm.Int32</span></span>  
   
-## Пример  
- В следующем запросе Entity SQL используется арифметический оператор % для получения остатка от деления одного выражения на другое. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+## <a name="example"></a><span data-ttu-id="7f3c9-112">Пример</span><span class="sxs-lookup"><span data-stu-id="7f3c9-112">Example</span></span>  
+ <span data-ttu-id="7f3c9-113">В следующем запросе Entity SQL используется арифметический оператор % для получения остатка от деления одного выражения на другое.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-113">The following Entity SQL query uses the % arithmetic operator to return the remainder of one expression divided by another.</span></span> <span data-ttu-id="7f3c9-114">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="7f3c9-115">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="7f3c9-115">To compile and run this query, follow these steps:</span></span>  
   
-1.  Выполните процедуру из статьи [Как выполнить запрос, возвращающий результаты типа StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="7f3c9-116">Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="7f3c9-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="7f3c9-117">Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="7f3c9-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
-## См. также  
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="7f3c9-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7f3c9-118">See Also</span></span>  
+ [<span data-ttu-id="7f3c9-119">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="7f3c9-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

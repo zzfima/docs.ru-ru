@@ -1,33 +1,32 @@
 ---
-title: "Securing Exception Handling | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "code security, exception handling"
-  - "security [.NET Framework], exception handling"
-  - "secure coding, exception handling"
-  - "exception handling, security"
+title: "Безопасность обработки исключений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- code security, exception handling
+- security [.NET Framework], exception handling
+- secure coding, exception handling
+- exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Securing Exception Handling
-В Visual C\+\+ и Visual Basic выражение фильтра, расположенное выше по стеку, вычисляется до выполнения любого оператора **finally**.  Блок **catch**, связанный с этим фильтром, выполняется после оператора **finally**.  Дополнительные сведения см. в разделе [Использование исключений, фильтруемых пользователем](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).  В этом разделе рассматриваются вопросы влияния такого порядка на обеспечение безопасности.  Рассмотрим следующий пример псевдокода, который иллюстрирует порядок выполнения операторов фильтров и операторов **finally**.  
+# <a name="securing-exception-handling"></a><span data-ttu-id="bc972-102">Безопасность обработки исключений</span><span class="sxs-lookup"><span data-stu-id="bc972-102">Securing Exception Handling</span></span>
+<span data-ttu-id="bc972-103">В Visual C++ и Visual Basic, выражение фильтра, расположенное по стеку, выполняется до любого **наконец** инструкции.</span><span class="sxs-lookup"><span data-stu-id="bc972-103">In Visual C++ and Visual Basic, a filter expression further up the stack runs before any **finally** statement.</span></span> <span data-ttu-id="bc972-104">**Перехватывать** блок, связанный с этим фильтром, выполняется после **наконец** инструкции.</span><span class="sxs-lookup"><span data-stu-id="bc972-104">The **catch** block associated with that filter runs after the **finally** statement.</span></span> <span data-ttu-id="bc972-105">Дополнительные сведения см. в разделе [Using User-Filtered исключения](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span><span class="sxs-lookup"><span data-stu-id="bc972-105">For more information, see [Using User-Filtered Exceptions](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md).</span></span> <span data-ttu-id="bc972-106">В этом разделе рассматривается влияние на безопасность данного заказа.</span><span class="sxs-lookup"><span data-stu-id="bc972-106">This section examines the security implications of this order.</span></span> <span data-ttu-id="bc972-107">Рассмотрим следующий пример псевдокода, который иллюстрирует порядок, в которой инструкций фильтра и **наконец** выполнения инструкций.</span><span class="sxs-lookup"><span data-stu-id="bc972-107">Consider the following pseudocode example that illustrates the order in which filter statements and **finally** statements run.</span></span>  
   
 ```cpp  
 void Main()   
@@ -59,7 +58,7 @@ void Sub()
 }                        
 ```  
   
- Этот код выводит следующие данные.  
+ <span data-ttu-id="bc972-108">Этот код выводит следующие данные.</span><span class="sxs-lookup"><span data-stu-id="bc972-108">This code prints the following.</span></span>  
   
 ```  
 Throw  
@@ -68,7 +67,7 @@ Finally
 Catch  
 ```  
   
- Фильтр выполняется перед оператором **finally**, поэтому любая ситуация, каким\-либо образом изменяющая состояние, может создать проблемы с безопасностью, так как этим может воспользоваться другой код.  Примеры.  
+ <span data-ttu-id="bc972-109">Фильтр выполняется перед **наконец** инструкции, поэтому проблемы безопасности могут быть вызваны все, что состояние может воспользоваться другой код.</span><span class="sxs-lookup"><span data-stu-id="bc972-109">The filter runs before the **finally** statement, so security issues can be introduced by anything that makes a state change where execution of other code could take advantage.</span></span> <span data-ttu-id="bc972-110">Пример:</span><span class="sxs-lookup"><span data-stu-id="bc972-110">For example:</span></span>  
   
 ```cpp  
 try   
@@ -87,7 +86,7 @@ finally
 }  
 ```  
   
- В этом псевдокоде фильтр, находящийся выше в стеке, может выполнять произвольный код.  Есть и другие примеры операций, в которых достигается аналогичный эффект: временная работа под другой идентификацией, установка внутреннего флага, отменяющего некоторые проверки защиты, смена языка и региональных параметров, связанных с потоком, и т.д.  Рекомендуемое решение — ввести обработчик исключения, изолирующий изменения в состоянии потока кода от блоков фильтрации вызывающих.  Однако важно правильно установить обработчик исключения, иначе решить эту проблему не удастся.  В следующем примере код переключает язык и региональные параметры пользовательского интерфейса, но аналогичным образом возможны и другие изменения состояния потока.  
+ <span data-ttu-id="bc972-111">В этом псевдокоде фильтр выше в стеке для выполнения произвольного кода.</span><span class="sxs-lookup"><span data-stu-id="bc972-111">This pseudocode allows a filter higher up the stack to run arbitrary code.</span></span> <span data-ttu-id="bc972-112">Другие примеры операций, которые будет иметь похожий эффект, являются временная имитация другого удостоверения, установка внутреннего флага, отменяющего некоторые проверки безопасности, или изменение языка и региональных параметров связанного с потоком.</span><span class="sxs-lookup"><span data-stu-id="bc972-112">Other examples of operations that would have a similar effect are temporary impersonation of another identity, setting an internal flag that bypasses some security check, or changing the culture associated with the thread.</span></span> <span data-ttu-id="bc972-113">Рекомендуемым решением является ввод обработчика исключений для изоляции изменений кода в состояние потока, от блоками фильтрации вызывающего.</span><span class="sxs-lookup"><span data-stu-id="bc972-113">The recommended solution is to introduce an exception handler to isolate the code's changes to thread state from callers' filter blocks.</span></span> <span data-ttu-id="bc972-114">Тем не менее важно, что исключения правильно установить обработчик, или эта проблема не будет устранена.</span><span class="sxs-lookup"><span data-stu-id="bc972-114">However, it is important that the exception handler be properly introduced or this problem will not be fixed.</span></span> <span data-ttu-id="bc972-115">Следующий пример переключает язык и региональные параметры пользовательского интерфейса, но подобным образом любые изменения состояния потока можно осуществить.</span><span class="sxs-lookup"><span data-stu-id="bc972-115">The following example switches the UI culture, but any kind of thread state change could be similarly exposed.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +100,6 @@ YourObject.YourMethod()
       Thread.CurrentThread.CurrentUICulture = saveCulture;  
    }  
 }  
-  
 ```  
   
 ```vb  
@@ -125,7 +123,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Правильным решением в этом случае является включение существующего блока **try**\/**finally** в блок **try**\/**catch**.  Простое указание **catch\-throw** в существующем блоке **try**\/**finally** не решает проблему, как показано в следующем примере.  
+ <span data-ttu-id="bc972-116">Правильным решением в данном случае является программы-оболочки для существующего **повторите**/**наконец** блока в **повторите**/**перехватывать** блок.</span><span class="sxs-lookup"><span data-stu-id="bc972-116">The correct fix in this case is to wrap the existing **try**/**finally** block in a **try**/**catch** block.</span></span> <span data-ttu-id="bc972-117">Простое указание **catch-throw** предложение с существующим **повторите**/**наконец** блок не решает проблему, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="bc972-117">Simply introducing a **catch-throw** clause into the existing **try**/**finally** block does not fix the problem, as shown in the following example.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -145,9 +143,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Проблема не решается, так как оператор **finally** не выполняется до тех пор, пока функция `FilterFunc` не получит управление.  
+ <span data-ttu-id="bc972-118">Проблема не устраняется, так как **наконец** оператор не выполняется до `FilterFunc` возвращает элемент управления.</span><span class="sxs-lookup"><span data-stu-id="bc972-118">This does not fix the problem because the **finally** statement has not run before the `FilterFunc` gets control.</span></span>  
   
- В следующем примере эта проблема устранена, так как оператор **finally** гарантировано выполняется до проверки исключения блоками фильтрации исключений вызывающего.  
+ <span data-ttu-id="bc972-119">В следующем примере устраняется проблему, проверьте **наконец** предложение выполняется до исключения блоками фильтрации исключений вызывающего.</span><span class="sxs-lookup"><span data-stu-id="bc972-119">The following example fixes the problem by ensuring that the **finally** clause has executed before offering an exception up the callers' exception filter blocks.</span></span>  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -169,5 +167,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## См. также  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="bc972-120">См. также</span><span class="sxs-lookup"><span data-stu-id="bc972-120">See Also</span></span>  
+ [<span data-ttu-id="bc972-121">Правила написания безопасного кода</span><span class="sxs-lookup"><span data-stu-id="bc972-121">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -1,143 +1,104 @@
 ---
-title: "Элемент &lt;runtime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<runtime> - элемент"
-  - "теги контейнеров, <runtime> - элемент"
-  - "runtime - элемент"
+title: "&lt;Среда выполнения&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime
+helpviewer_keywords:
+- <runtime> element
+- runtime element
+- container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-caps.latest.revision: 70
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 62
+caps.latest.revision: "70"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;runtime&gt;
-Элемент, содержащий сведения о привязке сборок и сборке мусора.  
+# <a name="ltruntimegt-element"></a><span data-ttu-id="bb787-102">&lt;Среда выполнения&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="bb787-102">&lt;runtime&gt; Element</span></span>
+<span data-ttu-id="bb787-103">Предоставляет сведения, используемые средой CLR для настройки приложений.</span><span class="sxs-lookup"><span data-stu-id="bb787-103">Provides information used by the common language runtime to configure applications.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="bb787-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bb787-104">\<configuration></span></span>  
+<span data-ttu-id="bb787-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="bb787-105">\<runtime></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="bb787-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bb787-106">Syntax</span></span>  
+  
+```xml  
 <runtime>  
 </runtime>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bb787-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="bb787-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="bb787-108">В следующих разделах описаны дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="bb787-108">The following sections describe child elements and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="bb787-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="bb787-109">Attributes</span></span>  
+ <span data-ttu-id="bb787-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="bb787-110">None.</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="bb787-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="bb787-111">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Указывает, что идентификация Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.|  
-|[\<appDomainManagerAssembly\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|Задает сборку, предоставляющую диспетчер домена приложения для домена приложения по умолчанию в процессе.|  
-|[\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|Задает тип, выполняющий функции диспетчера домена приложения для домена приложения по умолчанию.|  
-|[\<appDomainResourceMonitoring\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Указывает среде выполнения собирать статистические данные по всем доменам приложений в процессе за весь период существования процесса.|  
-|[\<assemblyBinding\>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Содержит сведения о перенаправлении версии сборки и о расположении сборок.|  
-|[\<bypassTrustedAppStrongNames\>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Определяет необходимость пропуска проверки строгих имен для доверенных сборок.|  
-|[\<CompatSortNLSVersion\>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Указывает, что среда выполнения должна использовать устаревшее поведение сортировки при выполнении сравнений строк.|  
-|[\<developmentMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Указывает, будет ли среда выполнять поиск сборок в папках, заданных в переменной среды DEVPATH.|  
-|[\<disableCachingBindingFailures\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Указывает, заблокировано ли кэширование привязки ошибок, которое по умолчанию выполняется в платформе .NET Framework версии 2.0.|  
-|[\<disableCommitThreadStack\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Указывает, сразу ли выделяется память, необходимая для хранения полного стека потока, при запуске этого потока.|  
-|[\<disableFusionUpdatesFromADManager\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Задает, отключено ли поведение по умолчанию, которое разрешает хост\-приложению среды выполнения переопределять параметры конфигурации для домена приложения.|  
-|[\<enforceFIPSPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|Указывает, следует ли включить обязательное исполнение требования конфигурации компьютера, чтобы криптографические алгоритмы соответствовали FIPS.|  
-|[\<etwEnable\>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Указывает, следует ли включать отслеживание событий для Windows \(трассировка событий Windows\) для событий среды CLR.|  
-|[\<forcePerformanceCounterUniqueSharedMemoryReads\>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|Указывает, использует ли PerfCounter.dll параметр реестра CategoryOptions в приложениях .NET Framework 1.1 для определения необходимости загрузки данных счетчиков производительности из общей памяти конкретной категории или глобальной памяти.|  
-|[\<gcAllowVeryLargeObjects\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|На 64 разрядных платформах, позволяет использовать массивы, размер которых превышает 2 гигабайта \(GB\).|  
-|[\<gcConcurrent\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Указывает, будет ли среда CLR производить параллельную сборку мусора.|  
-|[\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Определяет, поддерживает ли сборка мусора несколько групп ЦП.|  
-|[\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Указывает, будет ли среда CLR производить сборку мусора сервера.|  
-|[\<generatePublisherEvidence\>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Указание того, использует ли среда выполнения политику издателя по управлению доступом для кода \(CAS\).|  
-|[\<legacyCorruptedStateExceptionsPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|Задает, разрешает ли среда CLR управляемому коду перехватывать нарушения прав доступа и другие исключения поврежденного состояния.|  
-|[\<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|Указывает, что удостоверение Windows не проходит через асинхронные точки, независимо от параметров потока для контекста выполнения в текущем потоке.|  
-|[\<loadfromRemoteSources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|Указывает, следует ли все сборки с удаленных источников загружать с полным доверием.|  
-|[\<NetFx40\_LegacySecurityPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Определяет, использует ли среда выполнения политику разграничения доступа кода \(CAS\) прежних версий.|  
-|[\<NetFx40\_PInvokeStackResilience\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Указывает, будет ли среда выполнения автоматически исправлять неверные объявления вызова неуправляемого кода за счет более медленных переходов между управляемым и неуправляемым кодом.|  
-|[\<NetFx45\_CultureAwareComparerGetHashCode\_LongStrings\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Определяет, использует ли среда выполнения фиксированный объем памяти для вычисления хэш\-кода для метода <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>.|  
-|[\<PreferComInsteadOfRemoting\>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Указывает, будет ли среда выполнения использовать COM\-взаимодействие вместо удаленного взаимодействия за пределами границ домена приложения.|  
-|[\<relativeBindForResources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Оптимизирует поиск вспомогательных сборок.|  
-|[\<shadowCopyVerifyByTimeStamp\>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Указывает, используется ли при теневом копировании поведение при запуске по умолчанию, введенное в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], или осуществляется возврат к поведению при запуске, имевшему место в предыдущих версиях платформы .NET Framework.|  
-|[\<supportPortability\>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Указывает, что приложение может ссылаться на одну и ту же сборку в двух различных реализациях платформы .NET Framework путем отключения поведения по умолчанию, в котором в целях переносимости приложений эти сборки трактуются как эквивалентные.|  
-|[\<system.runtime.caching\>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Предоставляет сведения о конфигурации для объекта кэша в памяти по умолчанию.|  
-|[\<Thread\_UseAllCpuGroups\>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|Определяет, распределяет ли среда выполнения управляемые потоки по всем группам ЦП.|  
-|[\<ThrowUnobservedTaskExceptions\>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.|  
-|[\<TimeSpan\_LegacyFormatMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|Указывает, использует ли среда выполнения устаревшее форматирование для значений <xref:System.TimeSpan>.|  
-|[\<UseRandomizedStringHashAlgorithm\>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Указывает, вычисляет ли среда выполнения хэш\-коды для строк для каждого домена приложения.|  
-|[\<UseSmallInternalThreadStacks\>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Запрашивает использование средой выполнения явных размеров стека вместо размеров стека по умолчанию, когда создает определенные потоки, используемые на внутреннем уровне.|  
+|<span data-ttu-id="bb787-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="bb787-112">Element</span></span>|<span data-ttu-id="bb787-113">Описание</span><span class="sxs-lookup"><span data-stu-id="bb787-113">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="bb787-114">\<alwaysFlowImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="bb787-114">\<alwaysFlowImpersonationPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|<span data-ttu-id="bb787-115">Указывает, что удостоверение Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.</span><span class="sxs-lookup"><span data-stu-id="bb787-115">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>|  
+|[<span data-ttu-id="bb787-116">\<AppContextSwitchOverrides></span><span class="sxs-lookup"><span data-stu-id="bb787-116">\<AppContextSwitchOverrides></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|<span data-ttu-id="bb787-117">Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="bb787-117">Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.</span></span>|  
+|[<span data-ttu-id="bb787-118">\<appDomainManagerAssembly></span><span class="sxs-lookup"><span data-stu-id="bb787-118">\<appDomainManagerAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|<span data-ttu-id="bb787-119">Указывает сборку, предоставляющую диспетчер домена приложения для домена приложения, по умолчанию используемого в процессе.</span><span class="sxs-lookup"><span data-stu-id="bb787-119">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>|  
+|[<span data-ttu-id="bb787-120">\<appDomainManagerType></span><span class="sxs-lookup"><span data-stu-id="bb787-120">\<appDomainManagerType></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|<span data-ttu-id="bb787-121">Указывает тип, который служит диспетчером домена приложения для домена приложения, используемого по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bb787-121">Specifies the type that serves as the application domain manager for the default application domain.</span></span>|  
+|[<span data-ttu-id="bb787-122">\<appDomainResourceMonitoring></span><span class="sxs-lookup"><span data-stu-id="bb787-122">\<appDomainResourceMonitoring></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|<span data-ttu-id="bb787-123">Указывает среде собирать статистику для всех доменов приложений в процессе за весь период его существования.</span><span class="sxs-lookup"><span data-stu-id="bb787-123">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>|  
+|[<span data-ttu-id="bb787-124">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="bb787-124">\<assemblyBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|<span data-ttu-id="bb787-125">Содержит сведения о перенаправлении версии сборки и о расположениях сборок.</span><span class="sxs-lookup"><span data-stu-id="bb787-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|[<span data-ttu-id="bb787-126">\<bypassTrustedAppStrongNames></span><span class="sxs-lookup"><span data-stu-id="bb787-126">\<bypassTrustedAppStrongNames></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|<span data-ttu-id="bb787-127">Указывает, следует ли обходить проверку строгих имен для доверенных сборок.</span><span class="sxs-lookup"><span data-stu-id="bb787-127">Specifies whether strong name verification for trusted assemblies should be bypassed.</span></span>|  
+|[<span data-ttu-id="bb787-128">\<CompatSortNLSVersion></span><span class="sxs-lookup"><span data-stu-id="bb787-128">\<CompatSortNLSVersion></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|<span data-ttu-id="bb787-129">Указывает, что среда выполнения должна использовать устаревший порядок сортировки, при выполнении сравнения строк.</span><span class="sxs-lookup"><span data-stu-id="bb787-129">Specifies that the runtime should use legacy sorting behavior when performing string comparisons.</span></span>|  
+|[<span data-ttu-id="bb787-130">\<developmentMode></span><span class="sxs-lookup"><span data-stu-id="bb787-130">\<developmentMode></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|<span data-ttu-id="bb787-131">Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.</span><span class="sxs-lookup"><span data-stu-id="bb787-131">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>|  
+|[<span data-ttu-id="bb787-132">\<disableCachingBindingFailures></span><span class="sxs-lookup"><span data-stu-id="bb787-132">\<disableCachingBindingFailures></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|<span data-ttu-id="bb787-133">Указывает, отключено ли кэширование ошибок привязки, который является режимом по умолчанию в платформе .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="bb787-133">Specifies whether the caching of binding failures, which is the default behavior in the .NET Framework version 2.0, is disabled.</span></span>|  
+|[<span data-ttu-id="bb787-134">\<disableCommitThreadStack></span><span class="sxs-lookup"><span data-stu-id="bb787-134">\<disableCommitThreadStack></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|<span data-ttu-id="bb787-135">Указывает, фиксируется ли весь стек потоков при запуске потока.</span><span class="sxs-lookup"><span data-stu-id="bb787-135">Specifies whether the full thread stack is committed when a thread is started.</span></span>|  
+|[<span data-ttu-id="bb787-136">\<disableFusionUpdatesFromADManager></span><span class="sxs-lookup"><span data-stu-id="bb787-136">\<disableFusionUpdatesFromADManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|<span data-ttu-id="bb787-137">Указывает, отключено ли поведение по умолчанию, которое разрешает хост-приложению среды выполнения переопределять параметры конфигурации для домена приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-137">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>|  
+|[<span data-ttu-id="bb787-138">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="bb787-138">\<EnableAmPmParseAdjustment></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|<span data-ttu-id="bb787-139">Определяет, используют ли методы анализа даты и времени скорректированной набор правил для анализа строк даты, содержащих только день, месяц, час и указатель AM/PM.</span><span class="sxs-lookup"><span data-stu-id="bb787-139">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|[<span data-ttu-id="bb787-140">\<enforceFIPSPolicy></span><span class="sxs-lookup"><span data-stu-id="bb787-140">\<enforceFIPSPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|<span data-ttu-id="bb787-141">Указывает, нужно ли принудительно обеспечивать соблюдение требования конфигурации компьютера о том, что криптографические алгоритмы должны соответствовать стандартам FIPS.</span><span class="sxs-lookup"><span data-stu-id="bb787-141">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>|  
+|[<span data-ttu-id="bb787-142">\<etwEnable></span><span class="sxs-lookup"><span data-stu-id="bb787-142">\<etwEnable></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|<span data-ttu-id="bb787-143">Указывает, следует ли включить трассировку событий Windows для событий среды CLR.</span><span class="sxs-lookup"><span data-stu-id="bb787-143">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>|  
+|[<span data-ttu-id="bb787-144">\<forcePerformanceCounterUniqueSharedMemoryReads></span><span class="sxs-lookup"><span data-stu-id="bb787-144">\<forcePerformanceCounterUniqueSharedMemoryReads></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|<span data-ttu-id="bb787-145">Указывает, использует ли файл PerfCounter.dll параметр реестра CategoryOptions в приложении .NET Framework версии 1.1, чтобы определить, следует ли загружать данные счетчиков производительности из общей памяти конкретной категории или глобальной памяти.</span><span class="sxs-lookup"><span data-stu-id="bb787-145">Specifies whether PerfCounter.dll uses the CategoryOptions registry setting in a .NET Framework version 1.1 application to determine whether to load performance counter data from category-specific shared memory or global memory.</span></span>|  
+|[<span data-ttu-id="bb787-146">\<gcAllowVeryLargeObjects></span><span class="sxs-lookup"><span data-stu-id="bb787-146">\<gcAllowVeryLargeObjects></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|<span data-ttu-id="bb787-147">На 64 разрядных платформах позволяет использовать массивы, размер которых превышает 2 гигабайта (ГБ).</span><span class="sxs-lookup"><span data-stu-id="bb787-147">On 64-bit platforms, enables arrays that are greater than 2 gigabytes (GB) in total size.</span></span>|  
+|[<span data-ttu-id="bb787-148">\<gcConcurrent></span><span class="sxs-lookup"><span data-stu-id="bb787-148">\<gcConcurrent></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|<span data-ttu-id="bb787-149">Указывает, является ли общеязыковая среда выполнения выполняет сборку мусора параллельно.</span><span class="sxs-lookup"><span data-stu-id="bb787-149">Specifies whether the common language runtime runs garbage collection concurrently.</span></span>|  
+|[<span data-ttu-id="bb787-150">\<GCCpuGroup></span><span class="sxs-lookup"><span data-stu-id="bb787-150">\<GCCpuGroup></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|<span data-ttu-id="bb787-151">Определяет, поддерживает ли сборка мусора несколько групп ЦП.</span><span class="sxs-lookup"><span data-stu-id="bb787-151">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
+|[<span data-ttu-id="bb787-152">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="bb787-152">\<gcServer></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|<span data-ttu-id="bb787-153">Указывает, выполняет ли среда CLR сборку мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="bb787-153">Specifies whether the common language runtime runs server garbage collection.</span></span>|  
+|[<span data-ttu-id="bb787-154">\<generatePublisherEvidence></span><span class="sxs-lookup"><span data-stu-id="bb787-154">\<generatePublisherEvidence></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|<span data-ttu-id="bb787-155">Указывает, использует ли среда выполнения политику разграничения доступа кода, используемую издателем.</span><span class="sxs-lookup"><span data-stu-id="bb787-155">Specifies whether the runtime uses code access security (CAS) publisher policy.</span></span>|  
+|[<span data-ttu-id="bb787-156">\<legacyCorruptedStateExceptionsPolicy></span><span class="sxs-lookup"><span data-stu-id="bb787-156">\<legacyCorruptedStateExceptionsPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|<span data-ttu-id="bb787-157">Указывает, позволяет ли среда выполнения управляемому коду перехватывать нарушения прав доступа и другие исключения поврежденного состояния.</span><span class="sxs-lookup"><span data-stu-id="bb787-157">Specifies whether the runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>|  
+|[<span data-ttu-id="bb787-158">\<legacyImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="bb787-158">\<legacyImpersonationPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|<span data-ttu-id="bb787-159">Указывает, что удостоверение Windows не проходит через асинхронные точки, независимо от параметров потока для контекста выполнения в текущем потоке.</span><span class="sxs-lookup"><span data-stu-id="bb787-159">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>|  
+|[<span data-ttu-id="bb787-160">\<loadfromRemoteSources></span><span class="sxs-lookup"><span data-stu-id="bb787-160">\<loadfromRemoteSources></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|<span data-ttu-id="bb787-161">Указывает, загружены ли сборки из удаленных источников как полностью доверенные.</span><span class="sxs-lookup"><span data-stu-id="bb787-161">Specifies whether assemblies from remote sources are loaded as full trust.</span></span>|  
+|[<span data-ttu-id="bb787-162"><NetFx40_LegacySecurityPolicy></span><span class="sxs-lookup"><span data-stu-id="bb787-162"><NetFx40_LegacySecurityPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|<span data-ttu-id="bb787-163">Указывает, использует ли среда выполнения устаревшую политику разграничения доступа кода.</span><span class="sxs-lookup"><span data-stu-id="bb787-163">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>|  
+|[<span data-ttu-id="bb787-164"><NetFx40_PInvokeStackResilience></span><span class="sxs-lookup"><span data-stu-id="bb787-164"><NetFx40_PInvokeStackResilience></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|<span data-ttu-id="bb787-165">Указывает, исправляет ли автоматически среда выполнения неправильные объявления вызова неуправляемого кода во время выполнения за счет скорости перехода между управляемыми и неуправляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="bb787-165">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>|  
+|[<span data-ttu-id="bb787-166"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span><span class="sxs-lookup"><span data-stu-id="bb787-166"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|<span data-ttu-id="bb787-167">Определяет, использует ли среда выполнения постоянный объем памяти для вычисления хэш-кодов методом <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bb787-167">Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.</span></span>|  
+|[<span data-ttu-id="bb787-168">\<PreferComInsteadOfRemoting ></span><span class="sxs-lookup"><span data-stu-id="bb787-168">\<PreferComInsteadOfRemoting></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|<span data-ttu-id="bb787-169">Указывает, что среда выполнения должна использовать COM-взаимодействие вместо удаленного взаимодействия через границы домена приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-169">Specifies that the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|[<span data-ttu-id="bb787-170">\<relativeBindForResources></span><span class="sxs-lookup"><span data-stu-id="bb787-170">\<relativeBindForResources></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|<span data-ttu-id="bb787-171">Оптимизирует поиск вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="bb787-171">Optimizes the probe for satellite assemblies.</span></span>|  
+|[<span data-ttu-id="bb787-172">\<shadowCopyVerifyByTimeStamp></span><span class="sxs-lookup"><span data-stu-id="bb787-172">\<shadowCopyVerifyByTimeStamp></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|<span data-ttu-id="bb787-173">Указывает, использует ли теневое копирование поведение при запуске по умолчанию, представленное в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], или возвращается к поведению при запуске, используемому в предыдущих версиях .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bb787-173">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>|  
+|[<span data-ttu-id="bb787-174">\<supportPortability></span><span class="sxs-lookup"><span data-stu-id="bb787-174">\<supportPortability></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|<span data-ttu-id="bb787-175">Указывает, что приложение может ссылаться на ту же сборку в двух различных реализациях .NET Framework, отключая поведение по умолчанию, которое рассматривает сборки как эквивалент для переносимости приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-175">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>|  
+|[<span data-ttu-id="bb787-176">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="bb787-176">\<system.runtime.caching></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|<span data-ttu-id="bb787-177">Указывает сведения о конфигурации кэша объектов в памяти, используемого по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bb787-177">Provides configuration information for the default in-memory object cache.</span></span>|  
+|[<span data-ttu-id="bb787-178"><Thread_UseAllCpuGroups></span><span class="sxs-lookup"><span data-stu-id="bb787-178"><Thread_UseAllCpuGroups></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|<span data-ttu-id="bb787-179">Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.</span><span class="sxs-lookup"><span data-stu-id="bb787-179">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|  
+|[<span data-ttu-id="bb787-180">\<ThrowUnobservedTaskExceptions></span><span class="sxs-lookup"><span data-stu-id="bb787-180">\<ThrowUnobservedTaskExceptions></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|<span data-ttu-id="bb787-181">Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.</span><span class="sxs-lookup"><span data-stu-id="bb787-181">Specifies whether unhandled task exceptions should terminate a running process.</span></span>|  
+|[<span data-ttu-id="bb787-182"><TimeSpan_LegacyFormatMode></span><span class="sxs-lookup"><span data-stu-id="bb787-182"><TimeSpan_LegacyFormatMode></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element.md)|<span data-ttu-id="bb787-183">Указывает, использует ли среда выполнения устаревшее форматирование для значений <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="bb787-183">Specifies whether the runtime uses legacy formatting for <xref:System.TimeSpan> values.</span></span>|  
+|[<span data-ttu-id="bb787-184">\<useLegacyJit></span><span class="sxs-lookup"><span data-stu-id="bb787-184">\<useLegacyJit></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)|<span data-ttu-id="bb787-185">Определяет, использует ли среда CLR устаревший 64-разрядный JIT-компилятор для JIT-компиляции.</span><span class="sxs-lookup"><span data-stu-id="bb787-185">Determines whether the common language runtime uses the legacy 64-bit JIT compiler for just-in-time compilation.</span></span>|  
+|[<span data-ttu-id="bb787-186">\<UseRandomizedStringHashAlgorithm></span><span class="sxs-lookup"><span data-stu-id="bb787-186">\<UseRandomizedStringHashAlgorithm></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|<span data-ttu-id="bb787-187">Указывает, вычисляет ли среда выполнения хэш-коды для строк для каждого домена приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-187">Specifies whether the runtime calculates hash codes for strings on a per application domain basis.</span></span>|  
+|[<span data-ttu-id="bb787-188">\<UseSmallInternalThreadStacks></span><span class="sxs-lookup"><span data-stu-id="bb787-188">\<UseSmallInternalThreadStacks></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|<span data-ttu-id="bb787-189">Запрашивает использование средой выполнения явных размеров стека при создании определенных потоков, используемых для внутренних целей, вместо размер стека по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="bb787-189">Requests that the runtime use explicit stack sizes when it creates certain threads that it uses internally, instead of the default stack size.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="bb787-190">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="bb787-190">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
+|<span data-ttu-id="bb787-191">Элемент</span><span class="sxs-lookup"><span data-stu-id="bb787-191">Element</span></span>|<span data-ttu-id="bb787-192">Описание</span><span class="sxs-lookup"><span data-stu-id="bb787-192">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="bb787-193">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bb787-193">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## Заметки  
- В .NET Framework версии 2.0 олицетворенное удостоверение проходит через асинхронные точки в домене приложения.  В .NET Framework версии 2.0 можно включать или отключать прохождение олицетворения через асинхронные точки, конфигурируя должным образом элемент среды выполнения в файле machine.config или в файле конфигурации приложения.  Для ASP.NET поток олицетворения можно конфигурировать в файле aspnet.config, находящемся в папке \<Windows Folder\>\\Microsoft.NET\\Framework\\vx.x.xxxx.  
+## <a name="remarks"></a><span data-ttu-id="bb787-194">Примечания</span><span class="sxs-lookup"><span data-stu-id="bb787-194">Remarks</span></span>  
+ <span data-ttu-id="bb787-195">Дочерние элементы в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) раздел файла конфигурации используются средой CLR для настройки, как приложение выполняется.</span><span class="sxs-lookup"><span data-stu-id="bb787-195">The child elements in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of a configuration file are used by the common language runtime to configure how an application executes.</span></span> <span data-ttu-id="bb787-196">Например [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) элемент определяет, использует ли сборщик мусора рабочей станции или сервера сборщик мусора, [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) определяет, вычисляет ли среда хэш-кодов для строку для каждого приложения или отдельного на уровне домена приложения и `AppContextSwitchOverrides` элемент позволяет пользователям библиотеки подписаться на по или отказаться от измененные функциональные возможности, предоставляемые библиотекой.</span><span class="sxs-lookup"><span data-stu-id="bb787-196">For example, the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element determines whether the garbage collector uses workstation garbage collection or server garbage collection, the [\<UseRandomizedStringHashAlgorithm>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) element determines whether the common language runtime calculates hash codes for string on a per-application or a per-application domain basis, and the `AppContextSwitchOverrides` element allows library users to opt in or opt out of changed  functionality provided by a library.</span></span>  
   
- По умолчанию ASP.NET отключает поток олицетворения в файле aspnet.config, используя следующие параметры конфигурации:  
+ <span data-ttu-id="bb787-197">Элементы в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) раздел чтения автоматически средой CLR при запуске приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-197">The elements in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section are read automatically by the common language runtime at application startup.</span></span> <span data-ttu-id="bb787-198">Можно также определить файл конфигурации для домена приложения не по умолчанию, указав ее имя на <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> свойства; его параметры считываются автоматически при загрузке домена приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-198">You can also define the configuration file for a non-default application domain by supplying its name to the <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> property; its settings are read automatically when the application domain is loaded.</span></span> <span data-ttu-id="bb787-199">Следует редко, если вообще нет необходимости непосредственно прочитать параметры в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="bb787-199">You should rarely, if ever, have a need to directly read the settings in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section in your application's configuration file.</span></span>  
   
-```  
-configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="true"/>  
-      <alwaysFlowImpersonationPolicy enabled="false"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- В ASP.NET, если вместо этого существует намерение разрешить поток олицетворения, то необходимо явно использовать следующие параметры конфигурации:  
-  
-```  
-<configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="false"/>  
-      <alwaysFlowImpersonationPolicy enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- Дополнительные сведения см. в разделах [Элемент \<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) и [Элемент \<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
-  
-## Пример  
- В следующем примере показан способ перенаправления одной версии сборки на другую.  
-  
-```  
-<configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="myAssembly"  
-                              publicKeyToken="32ab4ba45e0a69a1"  
-                              culture="neutral" />  
-             <bindingRedirect oldVersion="1.0.0.0"  
-                              newVersion="2.0.0.0"/>  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
-</configuration>  
-```  
-  
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/ru-ru/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a><span data-ttu-id="bb787-200">См. также</span><span class="sxs-lookup"><span data-stu-id="bb787-200">See Also</span></span>  
+ [<span data-ttu-id="bb787-201">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="bb787-201">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="bb787-202">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="bb787-202">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

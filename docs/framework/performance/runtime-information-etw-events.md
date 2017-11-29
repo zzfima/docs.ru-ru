@@ -5,55 +5,52 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="runtime-information-etw-events"></a>События сведений времени выполнения (трассировка событий Windows)
-Эти события трассировки событий Windows регистрируют информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные. Если в процессе выполняется одновременно несколько сред выполнения, в этих событиях предоставляются сведения (ClrInstanceID), которые позволяют однозначно определить нужную среду.  
+# <a name="runtime-information-etw-events"></a><span data-ttu-id="15c59-102">События сведений времени выполнения (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="15c59-102">Runtime Information ETW Events</span></span>
+<span data-ttu-id="15c59-103">Эти события трассировки событий Windows регистрируют информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные.</span><span class="sxs-lookup"><span data-stu-id="15c59-103">These ETW events log information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.</span></span> <span data-ttu-id="15c59-104">Если в процессе выполняется одновременно несколько сред выполнения, в этих событиях предоставляются сведения (ClrInstanceID), которые позволяют однозначно определить нужную среду.</span><span class="sxs-lookup"><span data-stu-id="15c59-104">If multiple runtimes are executing within a process, the information provided by these events (the ClrInstanceID) helps disambiguate the runtimes.</span></span>  
   
- В таблице ниже представлены два события со сведениями о среде выполнения. Эти события могут вызываться с любым ключевым словом или маской. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ <span data-ttu-id="15c59-105">В таблице ниже представлены два события со сведениями о среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="15c59-105">The following table shows the two runtime information events.</span></span> <span data-ttu-id="15c59-106">Эти события могут вызываться с любым ключевым словом или маской.</span><span class="sxs-lookup"><span data-stu-id="15c59-106">The events can be raised under any keyword or mask.</span></span> <span data-ttu-id="15c59-107">(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="15c59-107">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Событие|Идентификатор события|Поставщик|Описание|  
+|<span data-ttu-id="15c59-108">Событие</span><span class="sxs-lookup"><span data-stu-id="15c59-108">Event</span></span>|<span data-ttu-id="15c59-109">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="15c59-109">Event ID</span></span>|<span data-ttu-id="15c59-110">Поставщик</span><span class="sxs-lookup"><span data-stu-id="15c59-110">Provider</span></span>|<span data-ttu-id="15c59-111">Описание</span><span class="sxs-lookup"><span data-stu-id="15c59-111">Description</span></span>|  
 |-----------|--------------|--------------|-----------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|Вызывается при загрузке среды выполнения.|  
-|`RuntimeInformationDCStart`|187|CLRRundown|Перечисляет загруженные среды выполнения.|  
+|`RuntimeInformationEvent`|<span data-ttu-id="15c59-112">187</span><span class="sxs-lookup"><span data-stu-id="15c59-112">187</span></span>|<span data-ttu-id="15c59-113">CLRRuntime</span><span class="sxs-lookup"><span data-stu-id="15c59-113">CLRRuntime</span></span>|<span data-ttu-id="15c59-114">Вызывается при загрузке среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="15c59-114">Raised when a runtime is loaded.</span></span>|  
+|`RuntimeInformationDCStart`|<span data-ttu-id="15c59-115">187</span><span class="sxs-lookup"><span data-stu-id="15c59-115">187</span></span>|<span data-ttu-id="15c59-116">CLRRundown</span><span class="sxs-lookup"><span data-stu-id="15c59-116">CLRRundown</span></span>|<span data-ttu-id="15c59-117">Перечисляет загруженные среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="15c59-117">Enumerates the runtimes that are loaded.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="15c59-118">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="15c59-118">The following table shows event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="15c59-119">Имя поля</span><span class="sxs-lookup"><span data-stu-id="15c59-119">Field name</span></span>|<span data-ttu-id="15c59-120">Тип данных</span><span class="sxs-lookup"><span data-stu-id="15c59-120">Data type</span></span>|<span data-ttu-id="15c59-121">Описание</span><span class="sxs-lookup"><span data-stu-id="15c59-121">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
-|Sku|win:UInt16|1 — Desktop CLR.<br /><br /> 2 — CoreCLR.|  
-|BclVersion — основной номер версии|win:UInt16|Основной номер версии библиотеки mscorlib.dll.|  
-|BclVersion — дополнительный номер версии|win:UInt16|Дополнительный номер версии библиотеки mscorlib.dll.|  
-|BclVersion — номер сборки|win:UInt16|Номер сборки библиотеки mscorlib.dll.|  
-|BclVersion — QFE|win:UInt16|Номер версии исправления библиотеки mscorlib.dll.|  
-|VMVersion — основной номер версии|win:UInt16|Версия clr.dll или coreclr.dll в зависимости от номера SKU.|  
-|VMVersion — дополнительный номер версии|win:UInt16|Дополнительный номер версии clr.dll или coreclr.dll в зависимости от номера SKU.|  
-|VMVersion — номер сборки|win:UInt16|Номер сборки библиотеки clr.dll или coreclr.dll.|  
-|VMVersion — QFE|win:UInt16|Номер исправления библиотеки clr.dll или coreclr.dll.|  
-|StartupFlags|win:UInt32|Флаги загрузки, определенные в mscoree.h.|  
-|StartupMode|win:UInt8|0x01 — управляемый исполняемый файл.<br /><br /> 0x02 — размещенная среда CLR.<br /><br /> 0x04 — управляемая модель взаимодействия C++.<br /><br /> 0x08 — активация COM.<br /><br /> 0x10 — другое.|  
-|CommandLine|win:UnicodeString|Отличное от NULL значение только для StartupMode=0x01.|  
-|ComObjectGUID|win:GUID|Отличное от NULL значение только для StartupMode=0x08.|  
-|RuntimeDLLPath|win:UnicodeString|Путь к DLL-файлу среды CLR, который был загружен в процесс.|  
+|<span data-ttu-id="15c59-122">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="15c59-122">ClrInstanceID</span></span>|<span data-ttu-id="15c59-123">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-123">win:UInt16</span></span>|<span data-ttu-id="15c59-124">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="15c59-124">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
+|<span data-ttu-id="15c59-125">Sku</span><span class="sxs-lookup"><span data-stu-id="15c59-125">Sku</span></span>|<span data-ttu-id="15c59-126">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-126">win:UInt16</span></span>|<span data-ttu-id="15c59-127">1 — Desktop CLR.</span><span class="sxs-lookup"><span data-stu-id="15c59-127">1 – Desktop CLR.</span></span><br /><br /> <span data-ttu-id="15c59-128">2 — CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="15c59-128">2 – CoreCLR.</span></span>|  
+|<span data-ttu-id="15c59-129">BclVersion — основной номер версии</span><span class="sxs-lookup"><span data-stu-id="15c59-129">BclVersion – Major Version</span></span>|<span data-ttu-id="15c59-130">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-130">win:UInt16</span></span>|<span data-ttu-id="15c59-131">Основной номер версии библиотеки mscorlib.dll.</span><span class="sxs-lookup"><span data-stu-id="15c59-131">Major version of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="15c59-132">BclVersion — дополнительный номер версии</span><span class="sxs-lookup"><span data-stu-id="15c59-132">BclVersion – Minor Version</span></span>|<span data-ttu-id="15c59-133">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-133">win:UInt16</span></span>|<span data-ttu-id="15c59-134">Дополнительный номер версии библиотеки mscorlib.dll.</span><span class="sxs-lookup"><span data-stu-id="15c59-134">Minor version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="15c59-135">BclVersion — номер сборки</span><span class="sxs-lookup"><span data-stu-id="15c59-135">BclVersion – Build Number</span></span>|<span data-ttu-id="15c59-136">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-136">win:UInt16</span></span>|<span data-ttu-id="15c59-137">Номер сборки библиотеки mscorlib.dll.</span><span class="sxs-lookup"><span data-stu-id="15c59-137">Build number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="15c59-138">BclVersion — QFE</span><span class="sxs-lookup"><span data-stu-id="15c59-138">BclVersion – QFE</span></span>|<span data-ttu-id="15c59-139">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-139">win:UInt16</span></span>|<span data-ttu-id="15c59-140">Номер версии исправления библиотеки mscorlib.dll.</span><span class="sxs-lookup"><span data-stu-id="15c59-140">Hotfix version number of mscorlib.dll.</span></span>|  
+|<span data-ttu-id="15c59-141">VMVersion — основной номер версии</span><span class="sxs-lookup"><span data-stu-id="15c59-141">VMVersion – Major Version</span></span>|<span data-ttu-id="15c59-142">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-142">win:UInt16</span></span>|<span data-ttu-id="15c59-143">Версия clr.dll или coreclr.dll в зависимости от номера SKU.</span><span class="sxs-lookup"><span data-stu-id="15c59-143">Version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="15c59-144">VMVersion — дополнительный номер версии</span><span class="sxs-lookup"><span data-stu-id="15c59-144">VMVersion – Minor Version</span></span>|<span data-ttu-id="15c59-145">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-145">win:UInt16</span></span>|<span data-ttu-id="15c59-146">Дополнительный номер версии clr.dll или coreclr.dll в зависимости от номера SKU.</span><span class="sxs-lookup"><span data-stu-id="15c59-146">Minor version of clr.dll or coreclr.dll, depending on SKU.</span></span>|  
+|<span data-ttu-id="15c59-147">VMVersion — номер сборки</span><span class="sxs-lookup"><span data-stu-id="15c59-147">VMVersion – Build Number</span></span>|<span data-ttu-id="15c59-148">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-148">win:UInt16</span></span>|<span data-ttu-id="15c59-149">Номер сборки библиотеки clr.dll или coreclr.dll.</span><span class="sxs-lookup"><span data-stu-id="15c59-149">Build number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="15c59-150">VMVersion — QFE</span><span class="sxs-lookup"><span data-stu-id="15c59-150">VMVersion – QFE</span></span>|<span data-ttu-id="15c59-151">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="15c59-151">win:UInt16</span></span>|<span data-ttu-id="15c59-152">Номер исправления библиотеки clr.dll или coreclr.dll.</span><span class="sxs-lookup"><span data-stu-id="15c59-152">Hotfix version number of clr.dll or coreclr.dll.</span></span>|  
+|<span data-ttu-id="15c59-153">StartupFlags</span><span class="sxs-lookup"><span data-stu-id="15c59-153">StartupFlags</span></span>|<span data-ttu-id="15c59-154">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="15c59-154">win:UInt32</span></span>|<span data-ttu-id="15c59-155">Флаги загрузки, определенные в mscoree.h.</span><span class="sxs-lookup"><span data-stu-id="15c59-155">Startup flags defined in mscoree.h.</span></span>|  
+|<span data-ttu-id="15c59-156">StartupMode</span><span class="sxs-lookup"><span data-stu-id="15c59-156">StartupMode</span></span>|<span data-ttu-id="15c59-157">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="15c59-157">win:UInt8</span></span>|<span data-ttu-id="15c59-158">0x01 — управляемый исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="15c59-158">0x01 - Managed executable.</span></span><br /><br /> <span data-ttu-id="15c59-159">0x02 — размещенная среда CLR.</span><span class="sxs-lookup"><span data-stu-id="15c59-159">0x02 - Hosted CLR.</span></span><br /><br /> <span data-ttu-id="15c59-160">0x04 — управляемая модель взаимодействия C++.</span><span class="sxs-lookup"><span data-stu-id="15c59-160">0x04 - C++ managed interop.</span></span><br /><br /> <span data-ttu-id="15c59-161">0x08 — активация COM.</span><span class="sxs-lookup"><span data-stu-id="15c59-161">0x08 - COM-activated.</span></span><br /><br /> <span data-ttu-id="15c59-162">0x10 — другое.</span><span class="sxs-lookup"><span data-stu-id="15c59-162">0x10 - Other.</span></span>|  
+|<span data-ttu-id="15c59-163">CommandLine</span><span class="sxs-lookup"><span data-stu-id="15c59-163">CommandLine</span></span>|<span data-ttu-id="15c59-164">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="15c59-164">win:UnicodeString</span></span>|<span data-ttu-id="15c59-165">Отличное от NULL значение только для StartupMode=0x01.</span><span class="sxs-lookup"><span data-stu-id="15c59-165">Non-null only if StartupMode=0x01.</span></span>|  
+|<span data-ttu-id="15c59-166">ComObjectGUID</span><span class="sxs-lookup"><span data-stu-id="15c59-166">ComObjectGUID</span></span>|<span data-ttu-id="15c59-167">win:GUID</span><span class="sxs-lookup"><span data-stu-id="15c59-167">win:GUID</span></span>|<span data-ttu-id="15c59-168">Отличное от NULL значение только для StartupMode=0x08.</span><span class="sxs-lookup"><span data-stu-id="15c59-168">Non-null only if StartupMode=0x08.</span></span>|  
+|<span data-ttu-id="15c59-169">RuntimeDLLPath</span><span class="sxs-lookup"><span data-stu-id="15c59-169">RuntimeDLLPath</span></span>|<span data-ttu-id="15c59-170">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="15c59-170">win:UnicodeString</span></span>|<span data-ttu-id="15c59-171">Путь к DLL-файлу среды CLR, который был загружен в процесс.</span><span class="sxs-lookup"><span data-stu-id="15c59-171">Path to the CLR .dll file that was loaded into the process.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="15c59-172">См. также</span><span class="sxs-lookup"><span data-stu-id="15c59-172">See Also</span></span>  
+ [<span data-ttu-id="15c59-173">События трассировки событий Windows в среде CLR</span><span class="sxs-lookup"><span data-stu-id="15c59-173">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

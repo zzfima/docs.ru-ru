@@ -1,65 +1,46 @@
 ---
 title: "Ограничения на использование уровней доступности (справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- access modifiers [C#], accessibility level restrictions
+helpviewer_keywords: access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8e49afd38fd776593b87f065a079da0d546df4a6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ограничения на использование уровней доступности (справочник по C#)
-При задании типа в объявлении необходимо проверить, зависит ли уровень доступности типа от уровня доступности члена или другого типа. Например, прямой базовый класс должен иметь по крайней мере такой же уровень доступности, как и производный класс. Следующие объявления вызывают ошибку компиляции, так как базовый класс `BaseClass` менее доступен, чем `MyClass`:  
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="5fbca-102">Ограничения на использование уровней доступности (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="5fbca-102">Restrictions on Using Accessibility Levels (C# Reference)</span></span>
+<span data-ttu-id="5fbca-103">При задании типа в объявлении необходимо проверить, зависит ли уровень доступности типа от уровня доступности члена или другого типа.</span><span class="sxs-lookup"><span data-stu-id="5fbca-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="5fbca-104">Например, прямой базовый класс должен иметь по крайней мере такой же уровень доступности, как и производный класс.</span><span class="sxs-lookup"><span data-stu-id="5fbca-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="5fbca-105">Следующие объявления вызывают ошибку компиляции, так как базовый класс `BaseClass` менее доступен, чем `MyClass`:</span><span class="sxs-lookup"><span data-stu-id="5fbca-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>  
   
 ```  
 class BaseClass {...}  
 public class MyClass: BaseClass {...} // Error  
 ```  
   
- В таблице ниже приведены все ограничения на объявленные уровни доступности.  
+ <span data-ttu-id="5fbca-106">В таблице ниже приведены все ограничения на объявленные уровни доступности.</span><span class="sxs-lookup"><span data-stu-id="5fbca-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>  
   
-|Контекст|Примечания|  
+|<span data-ttu-id="5fbca-107">Контекст</span><span class="sxs-lookup"><span data-stu-id="5fbca-107">Context</span></span>|<span data-ttu-id="5fbca-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="5fbca-108">Remarks</span></span>|  
 |-------------|-------------|  
-|[Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)|Прямой базовый класс для типа класса должен иметь по крайней мере такой же уровень доступности, как и сам тип класса.|  
-|[Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)|Явные базовые интерфейсы для типа интерфейса должны иметь по крайней мере такой же уровень доступности, как и сам тип интерфейса.|  
-|[Делегаты](../../../csharp/programming-guide/delegates/index.md)|Тип возвращаемого значения и типы параметров для типа делегата должны иметь по крайней мере такой же уровень доступности, как и сам тип делегата.|  
-|[Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)|Тип константы должен иметь по крайней мере такой же уровень доступности, как и сама константа.|  
-|[Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)|Тип поля должен иметь по крайней мере такой же уровень доступности, как и само поле.|  
-|[Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)|Тип возвращаемого значения и типы параметров для метода должны иметь по крайней мере такой же уровень доступности, как и сам метод.|  
-|[Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)|Тип свойства должен иметь по крайней мере такой же уровень доступности, как и само свойство.|  
-|[События](../../../csharp/programming-guide/events/index.md)|Тип события должен иметь по крайней мере такой же уровень доступности, как и само событие.|  
-|[Индексаторы](../../../csharp/programming-guide/indexers/index.md)|Тип и типы параметров для индексатора должны иметь по крайней мере такой же уровень доступности, как и сам индексатор.|  
-|[Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Тип возвращаемого значения и типы параметров для оператора должны иметь по крайней мере такой же уровень доступности, как и сам оператор.|  
-|[Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Типы параметров для конструктора должны иметь по крайней мере такой же уровень доступности, как и сам конструктор.|  
+|[<span data-ttu-id="5fbca-109">Классы</span><span class="sxs-lookup"><span data-stu-id="5fbca-109">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="5fbca-110">Прямой базовый класс для типа класса должен иметь по крайней мере такой же уровень доступности, как и сам тип класса.</span><span class="sxs-lookup"><span data-stu-id="5fbca-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|  
+|[<span data-ttu-id="5fbca-111">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="5fbca-111">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)|<span data-ttu-id="5fbca-112">Явные базовые интерфейсы для типа интерфейса должны иметь по крайней мере такой же уровень доступности, как и сам тип интерфейса.</span><span class="sxs-lookup"><span data-stu-id="5fbca-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|  
+|[<span data-ttu-id="5fbca-113">Делегаты</span><span class="sxs-lookup"><span data-stu-id="5fbca-113">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)|<span data-ttu-id="5fbca-114">Тип возвращаемого значения и типы параметров для типа делегата должны иметь по крайней мере такой же уровень доступности, как и сам тип делегата.</span><span class="sxs-lookup"><span data-stu-id="5fbca-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|  
+|[<span data-ttu-id="5fbca-115">Константы</span><span class="sxs-lookup"><span data-stu-id="5fbca-115">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="5fbca-116">Тип константы должен иметь по крайней мере такой же уровень доступности, как и сама константа.</span><span class="sxs-lookup"><span data-stu-id="5fbca-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|  
+|[<span data-ttu-id="5fbca-117">Поля</span><span class="sxs-lookup"><span data-stu-id="5fbca-117">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="5fbca-118">Тип поля должен иметь по крайней мере такой же уровень доступности, как и само поле.</span><span class="sxs-lookup"><span data-stu-id="5fbca-118">The type of a field must be at least as accessible as the field itself.</span></span>|  
+|[<span data-ttu-id="5fbca-119">Методы</span><span class="sxs-lookup"><span data-stu-id="5fbca-119">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="5fbca-120">Тип возвращаемого значения и типы параметров для метода должны иметь по крайней мере такой же уровень доступности, как и сам метод.</span><span class="sxs-lookup"><span data-stu-id="5fbca-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|  
+|[<span data-ttu-id="5fbca-121">Свойства</span><span class="sxs-lookup"><span data-stu-id="5fbca-121">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="5fbca-122">Тип свойства должен иметь по крайней мере такой же уровень доступности, как и само свойство.</span><span class="sxs-lookup"><span data-stu-id="5fbca-122">The type of a property must be at least as accessible as the property itself.</span></span>|  
+|[<span data-ttu-id="5fbca-123">События</span><span class="sxs-lookup"><span data-stu-id="5fbca-123">Events</span></span>](../../../csharp/programming-guide/events/index.md)|<span data-ttu-id="5fbca-124">Тип события должен иметь по крайней мере такой же уровень доступности, как и само событие.</span><span class="sxs-lookup"><span data-stu-id="5fbca-124">The type of an event must be at least as accessible as the event itself.</span></span>|  
+|[<span data-ttu-id="5fbca-125">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="5fbca-125">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)|<span data-ttu-id="5fbca-126">Тип и типы параметров для индексатора должны иметь по крайней мере такой же уровень доступности, как и сам индексатор.</span><span class="sxs-lookup"><span data-stu-id="5fbca-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|  
+|[<span data-ttu-id="5fbca-127">Операторы</span><span class="sxs-lookup"><span data-stu-id="5fbca-127">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="5fbca-128">Тип возвращаемого значения и типы параметров для оператора должны иметь по крайней мере такой же уровень доступности, как и сам оператор.</span><span class="sxs-lookup"><span data-stu-id="5fbca-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|  
+|[<span data-ttu-id="5fbca-129">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="5fbca-129">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="5fbca-130">Типы параметров для конструктора должны иметь по крайней мере такой же уровень доступности, как и сам конструктор.</span><span class="sxs-lookup"><span data-stu-id="5fbca-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|  
   
-## <a name="example"></a>Пример  
- В приведенном ниже примере содержатся ошибочные объявления различных типов. В комментарии после каждого объявления указывается предполагаемая ошибка компиляции.  
+## <a name="example"></a><span data-ttu-id="5fbca-131">Пример</span><span class="sxs-lookup"><span data-stu-id="5fbca-131">Example</span></span>  
+ <span data-ttu-id="5fbca-132">В приведенном ниже примере содержатся ошибочные объявления различных типов.</span><span class="sxs-lookup"><span data-stu-id="5fbca-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="5fbca-133">В комментарии после каждого объявления указывается предполагаемая ошибка компиляции.</span><span class="sxs-lookup"><span data-stu-id="5fbca-133">The comment following each declaration indicates the expected compiler error.</span></span>  
   
 ```  
 // Restrictions on Using Accessibility Levels  
@@ -124,19 +105,18 @@ public class A
 }  
 ```  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="5fbca-134">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="5fbca-134">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [Домен доступности](../../../csharp/language-reference/keywords/accessibility-domain.md)   
- [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)
-
+## <a name="see-also"></a><span data-ttu-id="5fbca-135">См. также</span><span class="sxs-lookup"><span data-stu-id="5fbca-135">See Also</span></span>  
+ [<span data-ttu-id="5fbca-136">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="5fbca-136">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="5fbca-137">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="5fbca-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="5fbca-138">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="5fbca-138">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="5fbca-139">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="5fbca-139">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [<span data-ttu-id="5fbca-140">Домен доступности</span><span class="sxs-lookup"><span data-stu-id="5fbca-140">Accessibility Domain</span></span>](../../../csharp/language-reference/keywords/accessibility-domain.md)  
+ [<span data-ttu-id="5fbca-141">Уровни доступности</span><span class="sxs-lookup"><span data-stu-id="5fbca-141">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [<span data-ttu-id="5fbca-142">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="5fbca-142">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [<span data-ttu-id="5fbca-143">public</span><span class="sxs-lookup"><span data-stu-id="5fbca-143">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
+ [<span data-ttu-id="5fbca-144">private</span><span class="sxs-lookup"><span data-stu-id="5fbca-144">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
+ [<span data-ttu-id="5fbca-145">protected</span><span class="sxs-lookup"><span data-stu-id="5fbca-145">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
+ [<span data-ttu-id="5fbca-146">internal</span><span class="sxs-lookup"><span data-stu-id="5fbca-146">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)

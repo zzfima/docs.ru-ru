@@ -1,41 +1,44 @@
 ---
-title: "Поддержка потоковой передачи SqlClient | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Поддержка потоковой передачи SqlClient"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Поддержка потоковой передачи SqlClient
-Поддержка потоковой передачи данных между [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и приложением \(новое в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]\) поддерживает неструктурированные данные на сервере \(документы, образы и файлы носителя\).  База данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] может хранить большие двоичные объекты \(BLOB\), но для выборки BLOB может потребоваться много памяти.  
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="3c79c-102">Поддержка потоковой передачи SqlClient</span><span class="sxs-lookup"><span data-stu-id="3c79c-102">SqlClient Streaming Support</span></span>
+<span data-ttu-id="3c79c-103">Поддержка потоковой передачи данных между [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и приложением (новое в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, образы и файлы носителя).</span><span class="sxs-lookup"><span data-stu-id="3c79c-103">Streaming support between [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] and an application (new in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="3c79c-104">База данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] может хранить большие двоичные объекты (BLOB), но для выборки BLOB может потребоваться много памяти.</span><span class="sxs-lookup"><span data-stu-id="3c79c-104">A [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>  
   
- Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и обратно упрощает написание приложений, в которых ведется потоковая передача данных, что позволяет обойтись без полной загрузки данных в память, а это приводит к менее частому появлению исключений, связанных с переполнением памяти.  
+ <span data-ttu-id="3c79c-105">Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] и обратно упрощает написание приложений, в которых ведется потоковая передача данных, что позволяет обойтись без полной загрузки данных в память, а это приводит к менее частому появлению исключений, связанных с переполнением памяти.</span><span class="sxs-lookup"><span data-stu-id="3c79c-105">Streaming support to and from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>  
   
- Поддержка потоковой передачи данных способствует также лучшему масштабированию приложений среднего уровня, особенно в сценариях, в которых бизнес\-объекты подключаются к SQL Azure для отправки, получения и обработки больших двоичных объектов.  
+ <span data-ttu-id="3c79c-106">Поддержка потоковой передачи данных способствует также лучшему масштабированию приложений среднего уровня, особенно в сценариях, в которых бизнес-объекты подключаются к SQL Azure для отправки, получения и обработки больших двоичных объектов.</span><span class="sxs-lookup"><span data-stu-id="3c79c-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>  
   
 > [!WARNING]
->  Асинхронные вызовы не поддерживаются, если в приложении также используется ключевое слово строки соединения `Context Connection`.  
+>  <span data-ttu-id="3c79c-107">Асинхронные вызовы не поддерживаются, если в приложении также используется ключевое слово строки соединения `Context Connection`.</span><span class="sxs-lookup"><span data-stu-id="3c79c-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
 >   
->  Элементы, добавленные для поддержки потоков, используются для получения данных из запросов и передачи параметров в запросы и хранимые процедуры.  Функциональные возможности потоковой передачи данных позволяют решать задачи в основных сценариях OLTP и в сценариях переноса данных, а также применимы в средах переноса данных на территории предприятия и за его пределами.  
+>  <span data-ttu-id="3c79c-108">Элементы, добавленные для поддержки потоков, используются для получения данных из запросов и передачи параметров в запросы и хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="3c79c-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="3c79c-109">Функциональные возможности потоковой передачи данных позволяют решать задачи в основных сценариях OLTP и в сценариях переноса данных, а также применимы в средах переноса данных на территории предприятия и за его пределами.</span><span class="sxs-lookup"><span data-stu-id="3c79c-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on premise and off premise data migrations.environments.</span></span>  
   
-## Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Поддержка потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] привела к появлению новых функциональных возможностей в классах <xref:System.Data.Common.DbDataReader> и <xref:System.Data.SqlClient.SqlDataReader> для получения объектов <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>и <xref:System.IO.TextReader> и реагирования на них.  Эти классы используются для получения данных из запросов.  В результате поддержка потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] позволяет обеспечивать работу сценариев OLTP и применяется в средах на территории предприятия и за его пределами.  
+## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="3c79c-110">Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c79c-110">Streaming Support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="3c79c-111">Поддержка потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] привела к появлению новых функциональных возможностей в классах <xref:System.Data.Common.DbDataReader> и <xref:System.Data.SqlClient.SqlDataReader> для получения объектов <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>и <xref:System.IO.TextReader> и реагирования на них.</span><span class="sxs-lookup"><span data-stu-id="3c79c-111">Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span>  <span data-ttu-id="3c79c-112">Эти классы используются для получения данных из запросов.</span><span class="sxs-lookup"><span data-stu-id="3c79c-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="3c79c-113">В результате поддержка потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] позволяет обеспечивать работу сценариев OLTP и применяется в средах на территории предприятия и за его пределами.</span><span class="sxs-lookup"><span data-stu-id="3c79c-113">As a result, Streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] addresses OLTP scenarios and applies to on-premise and off-premise environments.</span></span>  
   
- В <xref:System.Data.SqlClient.SqlDataReader> были добавлены следующие элементы для включения поддержки потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ <span data-ttu-id="3c79c-114">В <xref:System.Data.SqlClient.SqlDataReader> были добавлены следующие элементы для включения поддержки потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>  
   
@@ -45,7 +48,7 @@ caps.handback.revision: 14
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- В <xref:System.Data.Common.DbDataReader> были добавлены следующие элементы для включения поддержки потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ <span data-ttu-id="3c79c-115">В <xref:System.Data.Common.DbDataReader> были добавлены следующие элементы для включения поддержки потоковой передачи данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:</span></span>  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -53,35 +56,35 @@ caps.handback.revision: 14
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] привела к появлению новых функциональных возможностей класса <xref:System.Data.SqlClient.SqlParameter>, поэтому он может принимать и реагировать на объекты <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> и <xref:System.IO.TextReader>.  <xref:System.Data.SqlClient.SqlParameter> используется для передачи параметров в запросы и хранимые процедуры.  
+## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="3c79c-116">Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c79c-116">Streaming Support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="3c79c-117">Поддержка потоковой передачи данных в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] привела к появлению новых функциональных возможностей класса <xref:System.Data.SqlClient.SqlParameter>, поэтому он может принимать и реагировать на объекты <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> и <xref:System.IO.TextReader>.</span><span class="sxs-lookup"><span data-stu-id="3c79c-117">Streaming support to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="3c79c-118"><xref:System.Data.SqlClient.SqlParameter> используется для передачи параметров в запросы и хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="3c79c-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>  
   
- Удаление объекта <xref:System.Data.SqlClient.SqlCommand> или вызов <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> должны приводить к отмене любой потоковой операции.  Если приложение передает <xref:System.Threading.CancellationToken>, отмена не гарантируется.  
+ <span data-ttu-id="3c79c-119">Удаление объекта <xref:System.Data.SqlClient.SqlCommand> или вызов <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> должны приводить к отмене любой потоковой операции.</span><span class="sxs-lookup"><span data-stu-id="3c79c-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="3c79c-120">Если приложение передает <xref:System.Threading.CancellationToken>, отмена не гарантируется.</span><span class="sxs-lookup"><span data-stu-id="3c79c-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>  
   
- Следующие типы <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> могут принимать объект <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.IO.Stream>:  
+ <span data-ttu-id="3c79c-121">Следующие типы <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> могут принимать объект <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.IO.Stream>:</span><span class="sxs-lookup"><span data-stu-id="3c79c-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>  
   
--   **Binary**  
+-   <span data-ttu-id="3c79c-122">**Binary**</span><span class="sxs-lookup"><span data-stu-id="3c79c-122">**Binary**</span></span>  
   
--   **VarBinary**  
+-   <span data-ttu-id="3c79c-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="3c79c-123">**VarBinary**</span></span>  
   
- Следующие типы <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> могут принимать объект <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.IO.TextReader>:  
+ <span data-ttu-id="3c79c-124">Следующие типы <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> могут принимать объект <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.IO.TextReader>:</span><span class="sxs-lookup"><span data-stu-id="3c79c-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>  
   
--   **Char**  
+-   <span data-ttu-id="3c79c-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="3c79c-125">**Char**</span></span>  
   
--   **NChar**  
+-   <span data-ttu-id="3c79c-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="3c79c-126">**NChar**</span></span>  
   
--   **NVarChar**  
+-   <span data-ttu-id="3c79c-127">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="3c79c-127">**NVarChar**</span></span>  
   
--   **Xml**  
+-   <span data-ttu-id="3c79c-128">**XML**</span><span class="sxs-lookup"><span data-stu-id="3c79c-128">**Xml**</span></span>  
   
- Тип **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> принимает объект <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.Xml.XmlReader>.  
+ <span data-ttu-id="3c79c-129">**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> принимает <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="3c79c-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>  
   
- <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> может принимать значения типа <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> и <xref:System.IO.Stream>.  
+ <span data-ttu-id="3c79c-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> может принимать значения типа <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> и <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="3c79c-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>  
   
- Объекты <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> и <xref:System.IO.Stream> будут перенесены вплоть до значения, определяемого в <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
+ <span data-ttu-id="3c79c-131">Объекты <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> и <xref:System.IO.Stream> будут перенесены вплоть до значения, определяемого в <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c79c-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>  
   
-## Образец \- потоковая передача из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.  
+## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="3c79c-132">Образец - потоковая передача из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c79c-132">Sample -- Streaming from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="3c79c-133">Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.</span><span class="sxs-lookup"><span data-stu-id="3c79c-133">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
   
 ```  
 CREATE DATABASE [Demo]  
@@ -100,17 +103,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO  
 ```  
   
- В образце демонстрируется выполнение следующих действий.  
+ <span data-ttu-id="3c79c-134">В образце демонстрируется выполнение следующих действий.</span><span class="sxs-lookup"><span data-stu-id="3c79c-134">The sample shows how to do the following:</span></span>  
   
--   Избегайте блокирования потока пользовательского интерфейса путем предоставления асинхронного способа извлечения больших файлов.  
+-   <span data-ttu-id="3c79c-135">Избегайте блокирования потока пользовательского интерфейса путем предоставления асинхронного способа извлечения больших файлов.</span><span class="sxs-lookup"><span data-stu-id="3c79c-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>  
   
--   Перенос большого текстового файла из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="3c79c-136">Перенос большого текстового файла из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-136">Transfer a large text file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Перенос большого текстового XML\-файла из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="3c79c-137">Перенос большого текстового XML-файла из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-137">Transfer a large XML file from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Получение данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+-   <span data-ttu-id="3c79c-138">Получение данных из [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-138">Retrieve data from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].</span></span>  
   
--   Перенос файлов больших двоичных объектов из одной базы данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другую без нехватки памяти.  
+-   <span data-ttu-id="3c79c-139">Перенос файлов больших двоичных объектов из одной базы данных [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другую без нехватки памяти.</span><span class="sxs-lookup"><span data-stu-id="3c79c-139">Transfer large files (BLOBs) from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database to another without running out of memory.</span></span>  
   
 ```  
 using System;  
@@ -299,11 +302,10 @@ namespace StreamingFromServer {
       }  
    }  
 }  
-  
 ```  
   
-## Образец \- потоковая передача в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.  
+## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="3c79c-140">Образец - потоковая передача в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c79c-140">Sample -- Streaming to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="3c79c-141">Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.</span><span class="sxs-lookup"><span data-stu-id="3c79c-141">Use the following [!INCLUDE[tsql](../../../../includes/tsql-md.md)] to create the sample database:</span></span>  
   
 ```  
 CREATE DATABASE [Demo2]  
@@ -324,19 +326,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO  
 ```  
   
- В образце демонстрируется выполнение следующих действий.  
+ <span data-ttu-id="3c79c-142">В образце демонстрируется выполнение следующих действий.</span><span class="sxs-lookup"><span data-stu-id="3c79c-142">The sample shows how to do the following:</span></span>  
   
--   Передача больших двоичных объектов в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="3c79c-143">Передача больших двоичных объектов в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-143">Transferring a large BLOB to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Передача большого текстового файла в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   <span data-ttu-id="3c79c-144">Передача большого текстового файла в [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3c79c-144">Transferring a large text file to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
--   Использование новой асинхронной функции для передачи большого двоичного объекта.  
+-   <span data-ttu-id="3c79c-145">Использование новой асинхронной функции для передачи большого двоичного объекта.</span><span class="sxs-lookup"><span data-stu-id="3c79c-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>  
   
--   Использование новой асинхронной функции и ключевого слова await для передачи большого двоичного объекта.  
+-   <span data-ttu-id="3c79c-146">Использование новой асинхронной функции и ключевого слова await для передачи большого двоичного объекта.</span><span class="sxs-lookup"><span data-stu-id="3c79c-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>  
   
--   Отмена передачи большого двоичного объекта.  
+-   <span data-ttu-id="3c79c-147">Отмена передачи большого двоичного объекта.</span><span class="sxs-lookup"><span data-stu-id="3c79c-147">Cancelling the transfer of a large BLOB..</span></span>  
   
--   Потоковая передача из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой с помощью новой асинхронной функции.  
+-   <span data-ttu-id="3c79c-148">Потоковая передача из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой с помощью новой асинхронной функции.</span><span class="sxs-lookup"><span data-stu-id="3c79c-148">Streaming from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another using the new asynchronous feature.</span></span>  
   
 ```  
 using System;  
@@ -456,11 +458,10 @@ namespace StreamingToServer {
       }  
    }  
 }  
-  
 ```  
   
-## Образец: потоковая передача из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой объект [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- В этом примере показано, как асинхронно передавать большой двоичный объект из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой с поддержкой отмены.  
+## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a><span data-ttu-id="3c79c-149">Образец: потоковая передача из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой объект [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c79c-149">Sample -- Streaming From One [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to Another [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]</span></span>  
+ <span data-ttu-id="3c79c-150">В этом примере показано, как асинхронно передавать большой двоичный объект из одного объекта [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] в другой с поддержкой отмены.</span><span class="sxs-lookup"><span data-stu-id="3c79c-150">This sample demonstrates how to asynchronously stream a large BLOB from one [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] to another, with support for cancellation.</span></span>  
   
 ```  
 using System;  
@@ -523,8 +524,7 @@ namespace StreamingFromServerToAnother {
       }  
    }  
 }  
-  
 ```  
   
-## См. также  
- [Получение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+## <a name="see-also"></a><span data-ttu-id="3c79c-151">См. также</span><span class="sxs-lookup"><span data-stu-id="3c79c-151">See Also</span></span>  
+ [<span data-ttu-id="3c79c-152">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3c79c-152">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

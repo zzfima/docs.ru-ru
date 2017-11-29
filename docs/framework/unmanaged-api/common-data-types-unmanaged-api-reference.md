@@ -1,47 +1,48 @@
 ---
-title: "Общие типы данных (справочник по неуправляемым интерфейсам API) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Общие типы данных (справочник по неуправляемым интерфейсам API)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 03350825b3de4515a0d30e8644f34df71efa25db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Общие типы данных (справочник по неуправляемым интерфейсам API)
-В этом разделе перечислены простые типы данных, которые используются неуправляемыми API для платформы .NET Framework, определенными инструкциями C\/C\+\+ `typedef`. Эти типы данных, как правило, являются псевдонимами примитивных типов данных языка программирования C\/C\+\+. Как правило, значения этих типов данных непрозрачны, т. е. возвращаются конкретной функцией или методом таким образом, что могут быть переданы в другие функции или методы без изменений.  
+# <a name="common-data-types-unmanaged-api-reference"></a><span data-ttu-id="7e078-102">Общие типы данных (справочник по неуправляемым интерфейсам API)</span><span class="sxs-lookup"><span data-stu-id="7e078-102">Common Data Types (Unmanaged API Reference)</span></span>
+<span data-ttu-id="7e078-103">В этом разделе перечислены простые типы данных, которые используются неуправляемыми API для платформы .NET Framework, определенными инструкциями C/C++ `typedef`.</span><span class="sxs-lookup"><span data-stu-id="7e078-103">This topic lists simple data types used by the unmanaged APIs for the .NET Framework that are defined by C/C++ `typedef` statements.</span></span> <span data-ttu-id="7e078-104">Эти типы данных, как правило, являются псевдонимами примитивных типов данных языка программирования C/C++.</span><span class="sxs-lookup"><span data-stu-id="7e078-104">These data types are typically aliases for C/C++ primitive data types.</span></span> <span data-ttu-id="7e078-105">Как правило, значения этих типов данных непрозрачны, т. е. возвращаются конкретной функцией или методом таким образом, что могут быть переданы в другие функции или методы без изменений.</span><span class="sxs-lookup"><span data-stu-id="7e078-105">Typically, the values of these data types are opaque; that is, they are returned by a particular function or method so that they can be passed to other functions or methods without modification.</span></span>  
   
-|Тип данных|Определение|Определен в|Описание|  
-|----------------|-----------------|-----------------|--------------|  
-|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Идентификатор домена приложения.|  
-|AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Идентификатор сборки.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Идентификатор управляемого класса.|  
-|CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Идентификатор подключения для потока, подключенного к экземпляру Microsoft SQL Server.|  
-|ContextID|`typedef UINT_PTR ContextID;`|corprof.h|Идентификатор контекста, связанного с определенным управляемым потоком.|  
-|COR\_PRF\_ELT\_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|Непрозрачный дескриптор, представляющий сведения об определенном кадре стека.|  
-|COR\_PRF\_FRAME\_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|Непрозрачный дескриптор, который указывает на кадр стека. Допускается только при обратном вызове, к которому он передается.|  
-|CORDB\_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|Адрес в памяти.|  
-|CORDB\_CONTINUE\_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|Состояние продолжения.|  
-|CORDB\_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Значение регистра ЦП.|  
-|FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Идентификатор функции или метода.|  
-|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Обработчик сборки мусора.|  
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|Токен метаданных \(строка в таблице метаданных\).|  
-|ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|Идентификатор модуля сборки.|  
-|ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Идентификатор объекта.|  
-|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Идентификатор управляемого процесса.|  
-|ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Идентификатор функции, откомпилированной по требованию.|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Идентификатор экземпляра [ICLRTask](../../../ocs/framework/unmanaged-api/hosting/iclrtask-interface.md).|  
-|ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Идентификатор управляемого потока.|  
+|<span data-ttu-id="7e078-106">Тип данных</span><span class="sxs-lookup"><span data-stu-id="7e078-106">Data type</span></span>|<span data-ttu-id="7e078-107">Определение</span><span class="sxs-lookup"><span data-stu-id="7e078-107">Definition</span></span>|<span data-ttu-id="7e078-108">Определен в</span><span class="sxs-lookup"><span data-stu-id="7e078-108">Defined in</span></span>|<span data-ttu-id="7e078-109">Описание</span><span class="sxs-lookup"><span data-stu-id="7e078-109">Description</span></span>|  
+|---------------|----------------|----------------|-----------------|  
+|<span data-ttu-id="7e078-110">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="7e078-110">AppDomainID</span></span>|`typedef UINT_PTR AppDomainID;`|<span data-ttu-id="7e078-111">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-111">corprof.h</span></span>|<span data-ttu-id="7e078-112">Идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="7e078-112">The identifier of an application domain.</span></span>|  
+|<span data-ttu-id="7e078-113">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="7e078-113">AssemblyID</span></span>|`typedef UINT_PTR AssemblyID;`|<span data-ttu-id="7e078-114">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-114">corprof.h</span></span>|<span data-ttu-id="7e078-115">Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="7e078-115">The identifier of an assembly.</span></span>|  
+|<span data-ttu-id="7e078-116">ClassID</span><span class="sxs-lookup"><span data-stu-id="7e078-116">ClassID</span></span>|`typedef UINT_PTR ClassID;`|<span data-ttu-id="7e078-117">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-117">corprof.h</span></span>|<span data-ttu-id="7e078-118">Идентификатор управляемого класса.</span><span class="sxs-lookup"><span data-stu-id="7e078-118">The identifier of a managed class.</span></span>|  
+|<span data-ttu-id="7e078-119">CONNID</span><span class="sxs-lookup"><span data-stu-id="7e078-119">CONNID</span></span>|`typedef DWORD CONNID;`|<span data-ttu-id="7e078-120">cordebug.h, mscoree.h</span><span class="sxs-lookup"><span data-stu-id="7e078-120">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="7e078-121">Идентификатор подключения для потока, подключенного к экземпляру Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="7e078-121">The connection identifier for a thread that is connected to an instance of Microsoft SQL Server.</span></span>|  
+|<span data-ttu-id="7e078-122">ContextID</span><span class="sxs-lookup"><span data-stu-id="7e078-122">ContextID</span></span>|`typedef UINT_PTR ContextID;`|<span data-ttu-id="7e078-123">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-123">corprof.h</span></span>|<span data-ttu-id="7e078-124">Идентификатор контекста, связанного с определенным управляемым потоком.</span><span class="sxs-lookup"><span data-stu-id="7e078-124">The identifier of the context associated with a particular managed thread.</span></span>|  
+|<span data-ttu-id="7e078-125">COR_PRF_ELT_INFO</span><span class="sxs-lookup"><span data-stu-id="7e078-125">COR_PRF_ELT_INFO</span></span>|`typedef UINT_PTR COR_PRF_ELT_INFO;`|<span data-ttu-id="7e078-126">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-126">corprof.h</span></span>|<span data-ttu-id="7e078-127">Непрозрачный дескриптор, представляющий сведения об определенном кадре стека.</span><span class="sxs-lookup"><span data-stu-id="7e078-127">An opaque handle that represents information about a particular stack frame.</span></span>|  
+|<span data-ttu-id="7e078-128">COR_PRF_FRAME_INFO</span><span class="sxs-lookup"><span data-stu-id="7e078-128">COR_PRF_FRAME_INFO</span></span>|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|<span data-ttu-id="7e078-129">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-129">corprof.h</span></span>|<span data-ttu-id="7e078-130">Непрозрачный дескриптор, который указывает на кадр стека.</span><span class="sxs-lookup"><span data-stu-id="7e078-130">An opaque handle that points to a stack frame.</span></span> <span data-ttu-id="7e078-131">Допускается только при обратном вызове, к которому он передается.</span><span class="sxs-lookup"><span data-stu-id="7e078-131">It is valid only during the callback to which it is passed.</span></span>|  
+|<span data-ttu-id="7e078-132">CORDB_ADDRESS</span><span class="sxs-lookup"><span data-stu-id="7e078-132">CORDB_ADDRESS</span></span>|`typedef ULONG64 CORDB_ADDRESS;`|<span data-ttu-id="7e078-133">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="7e078-133">cordebug.h</span></span>|<span data-ttu-id="7e078-134">Адрес в памяти.</span><span class="sxs-lookup"><span data-stu-id="7e078-134">An address in memory.</span></span>|  
+|<span data-ttu-id="7e078-135">CORDB_CONTINUE_STATUS</span><span class="sxs-lookup"><span data-stu-id="7e078-135">CORDB_CONTINUE_STATUS</span></span>|`typedef DWORD CORDB_CONTINUE_STATUS;`|<span data-ttu-id="7e078-136">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="7e078-136">cordebug.h</span></span>|<span data-ttu-id="7e078-137">Состояние продолжения.</span><span class="sxs-lookup"><span data-stu-id="7e078-137">The continuation status.</span></span>|  
+|<span data-ttu-id="7e078-138">CORDB_REGISTER</span><span class="sxs-lookup"><span data-stu-id="7e078-138">CORDB_REGISTER</span></span>|`typedef ULONG64 CORDB_REGISTER;`|<span data-ttu-id="7e078-139">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="7e078-139">cordebug.h</span></span>|<span data-ttu-id="7e078-140">Значение регистра ЦП.</span><span class="sxs-lookup"><span data-stu-id="7e078-140">The value of a CPU register.</span></span>|  
+|<span data-ttu-id="7e078-141">FunctionID</span><span class="sxs-lookup"><span data-stu-id="7e078-141">FunctionID</span></span>|`typedef UINT_PTR FunctionID;`|<span data-ttu-id="7e078-142">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-142">corprof.h</span></span>|<span data-ttu-id="7e078-143">Идентификатор функции или метода.</span><span class="sxs-lookup"><span data-stu-id="7e078-143">The identifier of a function or method.</span></span>|  
+|<span data-ttu-id="7e078-144">GCHandleID</span><span class="sxs-lookup"><span data-stu-id="7e078-144">GCHandleID</span></span>|`typedef UINT_PTR GCHandleID;`|<span data-ttu-id="7e078-145">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-145">corprof.h</span></span>|<span data-ttu-id="7e078-146">Обработчик сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="7e078-146">A garbage collection handle.</span></span>|  
+|<span data-ttu-id="7e078-147">mdToken</span><span class="sxs-lookup"><span data-stu-id="7e078-147">mdToken</span></span>|`typedef UINT32 mdToken;`|<span data-ttu-id="7e078-148">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-148">corprof.h</span></span>|<span data-ttu-id="7e078-149">Токен метаданных (строка в таблице метаданных).</span><span class="sxs-lookup"><span data-stu-id="7e078-149">A   metadata token (a row in a metadata table).</span></span>|  
+|<span data-ttu-id="7e078-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="7e078-150">ModuleID</span></span>|`typedef UINT_PTR ModuleID;`|<span data-ttu-id="7e078-151">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-151">corprof.h</span></span>|<span data-ttu-id="7e078-152">Идентификатор модуля сборки.</span><span class="sxs-lookup"><span data-stu-id="7e078-152">The identifier of an assembly module.</span></span>|  
+|<span data-ttu-id="7e078-153">ObjectID</span><span class="sxs-lookup"><span data-stu-id="7e078-153">ObjectID</span></span>|`typedef UINT_PTR ObjectID;`|<span data-ttu-id="7e078-154">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-154">corprof.h</span></span>|<span data-ttu-id="7e078-155">Идентификатор объекта.</span><span class="sxs-lookup"><span data-stu-id="7e078-155">The identifier of an object.</span></span>|  
+|<span data-ttu-id="7e078-156">ProcessID</span><span class="sxs-lookup"><span data-stu-id="7e078-156">ProcessID</span></span>|`typedef UINT_PTR ProcessID;`|<span data-ttu-id="7e078-157">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-157">corprof.h</span></span>|<span data-ttu-id="7e078-158">Идентификатор управляемого процесса.</span><span class="sxs-lookup"><span data-stu-id="7e078-158">The identifier of a managed process.</span></span>|  
+|<span data-ttu-id="7e078-159">ReJITID</span><span class="sxs-lookup"><span data-stu-id="7e078-159">ReJITID</span></span>|`typedef UINT_PTR ReJITID;`|<span data-ttu-id="7e078-160">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-160">corprof.h</span></span>|<span data-ttu-id="7e078-161">Идентификатор функции, откомпилированной по требованию.</span><span class="sxs-lookup"><span data-stu-id="7e078-161">The identifier of a jitted function.</span></span>|  
+|<span data-ttu-id="7e078-162">TASKID</span><span class="sxs-lookup"><span data-stu-id="7e078-162">TASKID</span></span>|`typedef UINT64 TASKID;`|<span data-ttu-id="7e078-163">cordebug.h, mscoree.h</span><span class="sxs-lookup"><span data-stu-id="7e078-163">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="7e078-164">Идентификатор [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="7e078-164">The identifier of an [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>|  
+|<span data-ttu-id="7e078-165">ThreadID</span><span class="sxs-lookup"><span data-stu-id="7e078-165">ThreadID</span></span>|`typedef UINT_PTR ThreadID;`|<span data-ttu-id="7e078-166">corprof.h</span><span class="sxs-lookup"><span data-stu-id="7e078-166">corprof.h</span></span>|<span data-ttu-id="7e078-167">Идентификатор управляемого потока.</span><span class="sxs-lookup"><span data-stu-id="7e078-167">The identifier of a managed thread.</span></span>|  
   
-## См. также  
- [Справочник по неуправляемым API](../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a><span data-ttu-id="7e078-168">См. также</span><span class="sxs-lookup"><span data-stu-id="7e078-168">See Also</span></span>  
+ [<span data-ttu-id="7e078-169">Справочник по неуправляемым API</span><span class="sxs-lookup"><span data-stu-id="7e078-169">Unmanaged API Reference</span></span>](../../../docs/framework/unmanaged-api/index.md)

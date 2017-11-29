@@ -1,45 +1,43 @@
 ---
-title: "Указание расположения сборки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "конфигурация приложений [платформа .NET Framework]"
-  - "сборки [платформа .NET Framework], указание места"
-  - "конфигурация [платформа .NET Framework], приложения"
+title: "Указание сборки &#39; расположение s"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration [.NET Framework], applications
+- application configuration [.NET Framework]
+- assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f747d921e9c131edaa8a1749c5adc5eae14623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Указание расположения сборки
-Существует два способа задания расположения сборок.  
+# <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="fc5e2-102">Указание сборки &#39; расположение s</span><span class="sxs-lookup"><span data-stu-id="fc5e2-102">Specifying an Assembly&#39;s Location</span></span>
+<span data-ttu-id="fc5e2-103">Указание расположения сборки двумя способами.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-103">There are two ways to specify an assembly's location:</span></span>  
   
--   Использование элемента [\<codeBase\>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
+-   <span data-ttu-id="fc5e2-104">С помощью [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-104">Using the [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element.</span></span>  
   
--   Использование элемента [\<probing\>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md).  
+-   <span data-ttu-id="fc5e2-105">С помощью [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-105">Using the [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element.</span></span>  
   
- Можно также использовать [инструмент настройки платформы платформы .NET Framework \(Mscorcfg.msc\)](http://msdn.microsoft.com/ru-ru/a7106c52-68da-490e-b129-971b2c743764), чтобы задавать расположение сборки или расположения для поиска средой CLR.  
+ <span data-ttu-id="fc5e2-106">Можно также использовать [средства настройки .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) чтобы задавать расположение сборки или расположения для поиск сборок CLR.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-106">You can also use the [.NET Framework Configuration Tool (Mscorcfg.msc)](http://msdn.microsoft.com/en-us/a7106c52-68da-490e-b129-971b2c743764) to specify assembly locations or specify locations for the common language runtime to probe for assemblies.</span></span>  
   
-## Использование элемента \<codeBase\>  
- Элемент **\<codeBase\>** можно использовать только в файле конфигурации компьютера или файле политики издателя, которые также предоставляют перенаправление версии сборки.  Когда среда выполнения определит, какая из версий сборок будет использоваться, она применяет параметр базы кода из файла, определяющего версию.  Если база кода не указана, среда выполняет поиск сборки обычным образом.  Дополнительные сведения содержатся в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a><span data-ttu-id="fc5e2-107">С помощью \<codeBase > элемент</span><span class="sxs-lookup"><span data-stu-id="fc5e2-107">Using the \<codeBase> Element</span></span>  
+ <span data-ttu-id="fc5e2-108">Можно использовать  **\<codeBase >** элемент только в машине конфигурации или файле политики издателя, также предоставляют перенаправление версии сборки.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-108">You can use the **\<codeBase>** element only in machine configuration or publisher policy files that also redirect the assembly version.</span></span> <span data-ttu-id="fc5e2-109">Среда выполнения определяет, какие версии сборки для использования, применяется параметр базы кода из файла, который определяет версию.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-109">When the runtime determines which assembly version to use, it applies the code base setting from the file that determines the version.</span></span> <span data-ttu-id="fc5e2-110">Если база кода не указана, среда выполнения проверяет наличие сборки обычным способом.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-110">If no code base is indicated, the runtime probes for the assembly in the normal way.</span></span> <span data-ttu-id="fc5e2-111">Дополнительные сведения см. в разделе [как среда выполнения находит сборки](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="fc5e2-111">For details, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- В следующем примере показан способ задания расположения сборки.  
+ <span data-ttu-id="fc5e2-112">В следующем примере показано, как указание расположения сборки.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-112">The following example shows how to specify an assembly's location.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -55,17 +53,17 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- Атрибут **version** требуется для всех сборок со строгим именем, но должен быть опущен для сборок, не имеющих строгих имен.  Элементу **\<codeBase\>** требуется атрибут **href**.  В элементе **\<codeBase\>** нельзя определить диапазон версий.  
+ <span data-ttu-id="fc5e2-113">**Версии** атрибут является обязательным для всех сборок со строгими именами, но должен быть опущен для сборок, которые не имеют строгие имена.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-113">The **version** attribute is required for all strong-named assemblies but should be omitted for assemblies that are not strong-named.</span></span> <span data-ttu-id="fc5e2-114">**\<CodeBase >** элемента требуется **href** атрибута.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-114">The **\<codeBase>** element requires the **href** attribute.</span></span> <span data-ttu-id="fc5e2-115">Нельзя определить диапазон версий в  **\<codeBase >** элемента.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-115">You cannot specify version ranges in the **\<codeBase>** element.</span></span>  
   
 > [!NOTE]
->  Подсказка базы кода, если она предоставлена для сборки без строгого имени, должна указывать на базу приложения или на подкаталог каталога базы приложения.  
+>  <span data-ttu-id="fc5e2-116">Если вы указали подсказка базы кода для сборки, не имеет строгого имени, должна указывать базовой папки приложения или является подкаталогом базового каталога приложения.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-116">If you are supplying a code base hint for an assembly that is not strong-named, the hint must point to the application base or a subdirectory of the application base directory.</span></span>  
   
-## Использование элемента \<probing\>  
- Среда выполнения определяет расположение сборок, не имеющих базы кода, путем поиска.  Дополнительные сведения о поиске содержатся в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a><span data-ttu-id="fc5e2-117">С помощью \<probing > элемент</span><span class="sxs-lookup"><span data-stu-id="fc5e2-117">Using the \<probing> Element</span></span>  
+ <span data-ttu-id="fc5e2-118">Среда выполнения ищет сборки, которые не имеют базы кода при проверке.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-118">The runtime locates assemblies that do not have a code base by probing.</span></span> <span data-ttu-id="fc5e2-119">Дополнительные сведения о поиске см. в разделе [как среда выполнения находит сборки](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="fc5e2-119">For more information about probing, see [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).</span></span>  
   
- Для указания подкаталогов, которые среда выполнения должна использовать при определении расположения сборки, может быть использован элемент [\<probing\>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) в файле конфигурации приложения.  В следующем примере показан способ задания каталогов, в которых среда выполнения должна производить поиск.  
+ <span data-ttu-id="fc5e2-120">Можно использовать [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) в файле конфигурации приложения для указания подкаталогов, среда выполнения должна использовать при определении расположения сборки.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-120">You can use the [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element in the application configuration file to specify subdirectories the runtime should search when locating an assembly.</span></span> <span data-ttu-id="fc5e2-121">Приведенный ниже показано, как указать каталоги, в которых среда выполнения должна выполнять поиск.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-121">The following example shows how to specify directories the runtime should search.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -75,10 +73,10 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- Атрибут **privatePath** содержит те каталоги, в которых среда выполнения должна осуществлять поиск сборок.  Если приложение находится в C:\\Program Files\\MyApp, среда выполнения будет искать сборки, в которых не указана база кода, по адресам C:\\Program Files\\MyApp\\Bin, C:\\Program Files\\MyApp\\Bin2\\Subbin и C:\\Program Files\\MyApp\\Bin3.  Каталоги, заданные в **privatePath**, должны являться подкаталогами для каталога базы приложения.  
+ <span data-ttu-id="fc5e2-122">**PrivatePath** атрибут содержит каталоги, которые среда выполнения будет выполняться поиск сборок.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-122">The **privatePath** attribute contains the directories that the runtime should search for assemblies.</span></span> <span data-ttu-id="fc5e2-123">Если приложение находится в C:\Program Files\MyApp, среда выполнения ищет сборки, которые не указаны базы кода в C:\Program Files\MyApp\Bin C:\Program Files\MyApp\Bin2\Subbin и C:\Program Files\MyApp\Bin3.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-123">If the application is located at C:\Program Files\MyApp, the runtime will look for assemblies that do not specify a code base in C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin, and C:\Program Files\MyApp\Bin3.</span></span> <span data-ttu-id="fc5e2-124">Каталоги, заданные в **privatePath** должны быть подкаталогами базовой папки приложения.</span><span class="sxs-lookup"><span data-stu-id="fc5e2-124">The directories specified in **privatePath** must be subdirectories of the application base directory.</span></span>  
   
-## См. также  
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/ru-ru/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a><span data-ttu-id="fc5e2-125">См. также</span><span class="sxs-lookup"><span data-stu-id="fc5e2-125">See Also</span></span>  
+ [<span data-ttu-id="fc5e2-126">Сборки в среде CLR</span><span class="sxs-lookup"><span data-stu-id="fc5e2-126">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [<span data-ttu-id="fc5e2-127">Программирование с использованием сборок</span><span class="sxs-lookup"><span data-stu-id="fc5e2-127">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="fc5e2-128">Обнаружение сборок в среде выполнения</span><span class="sxs-lookup"><span data-stu-id="fc5e2-128">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="fc5e2-129">Настройка приложений .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fc5e2-129">Configuring .NET Framework Apps</span></span>](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

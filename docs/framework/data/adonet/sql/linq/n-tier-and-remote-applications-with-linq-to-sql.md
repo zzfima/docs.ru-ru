@@ -1,44 +1,47 @@
 ---
-title: "Многоуровневые и удаленные приложения с LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "N-уровневые и удаленные приложения и LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f44b6da8ecc8d036a9550856f71b2981770e9478
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Многоуровневые и удаленные приложения с LINQ to SQL
-Существует возможность создания многоуровневых приложений, использующих [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], контекст данных, классы сущностей и логики конструкций запросов обычно размещаются на среднем уровне, являющемся уровнем доступа к данным \(DAL\).  Бизнес\-логика и непостоянные данные могут быть полностью реализованы в разделяемых классах, методах сущностей, контексте данных либо в отдельных классах.  
+# <a name="n-tier-and-remote-applications-with-linq-to-sql"></a><span data-ttu-id="3fce2-102">N-уровневые и удаленные приложения и LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="3fce2-102">N-Tier and Remote Applications with LINQ to SQL</span></span>
+<span data-ttu-id="3fce2-103">Существует возможность создания многоуровневых приложений, использующих [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fce2-103">You can create n-tier or multitier applications that use [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="3fce2-104">Как правило [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] контекст данных, классы сущностей и логики конструкций запросов расположены на среднем уровне доступа к данным (DAL).</span><span class="sxs-lookup"><span data-stu-id="3fce2-104">Typically, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] data context, entity classes, and query construction logic are located on the middle tier as the data access layer (DAL).</span></span> <span data-ttu-id="3fce2-105">Бизнес-логика и непостоянные данные могут быть полностью реализованы в разделяемых классах, методах сущностей, контексте данных либо в отдельных классах.</span><span class="sxs-lookup"><span data-stu-id="3fce2-105">Business logic and any non-persistent data can be implemented completely in partial classes and methods of entities and the data context, or it can be implemented in separate classes.</span></span>  
   
- Уровень клиента или представления вызывает методы в удаленном интерфейсе среднего уровня; DAL в этом интерфейсе выполнит запросы или хранимые процедуры, сопоставленные методам <xref:System.Data.Linq.DataContext>.  Обычно средний уровень возвращает данные клиентам в виде XML\-представлений сущностей или прокси\-объектов.  
+ <span data-ttu-id="3fce2-106">Уровень клиента или представления вызывает методы в удаленном интерфейсе среднего уровня; DAL в этом интерфейсе выполнит запросы или хранимые процедуры, сопоставленные методам <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="3fce2-106">The client or presentation layer calls methods on the middle-tier's remote interface, and the DAL on that tier will execute queries or stored procedures that are mapped to <xref:System.Data.Linq.DataContext> methods.</span></span> <span data-ttu-id="3fce2-107">Обычно средний уровень возвращает данные клиентам в виде XML-представлений сущностей или прокси-объектов.</span><span class="sxs-lookup"><span data-stu-id="3fce2-107">The middle tier returns the data to clients typically as XML representations of entities or proxy objects.</span></span>  
   
- На среднем уровне сущности создаются при помощи контекста данных, который отслеживает их состояние и управляет отложенной загрузкой из базы данных и передачей изменений в базу данных.  Эти сущности присоединены к `DataContext`.  Однако после отправки сущностей на другой уровень с помощью сериализации происходит их отсоединение, означающее, что `DataContext` больше не отслеживает их состояние.  Сущности, отправляемые клиентом обратно для обновлений, следует повторно присоединить к контексту данных, прежде чем [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сможет отправить изменения в базу данных.  Если для проверок оптимистической блокировки требуются исходные значения и\/или метки времени, клиент должен предоставить их обратно на средний уровень.  
+ <span data-ttu-id="3fce2-108">На среднем уровне сущности создаются при помощи контекста данных, который отслеживает их состояние и управляет отложенной загрузкой из базы данных и передачей изменений в базу данных.</span><span class="sxs-lookup"><span data-stu-id="3fce2-108">On the middle tier, entities are created by the data context, which tracks their state, and manages deferred loading from and submission of changes to the database.</span></span> <span data-ttu-id="3fce2-109">Эти сущности присоединены к `DataContext`.</span><span class="sxs-lookup"><span data-stu-id="3fce2-109">These entities are "attached" to the `DataContext`.</span></span> <span data-ttu-id="3fce2-110">Однако после отправки сущностей на другой уровень с помощью сериализации происходит их отсоединение, означающее, что `DataContext` больше не отслеживает их состояние.</span><span class="sxs-lookup"><span data-stu-id="3fce2-110">However, after the entities are sent to another tier through serialization, they become detached, which means the `DataContext` is no longer tracking their state.</span></span> <span data-ttu-id="3fce2-111">Сущности, отправляемые клиентом обратно для обновлений, следует повторно присоединить к контексту данных, прежде чем [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сможет отправить изменения в базу данных.</span><span class="sxs-lookup"><span data-stu-id="3fce2-111">Entities that the client sends back for updates must be reattached to the data context before [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can submit the changes to the database.</span></span> <span data-ttu-id="3fce2-112">Если для проверок оптимистической блокировки требуются исходные значения и/или метки времени, клиент должен предоставить их обратно на средний уровень.</span><span class="sxs-lookup"><span data-stu-id="3fce2-112">The client is responsible for providing original values and/or timestamps back to the middle tier if those are required for optimistic concurrency checks.</span></span>  
   
- В приложениях ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> управляет большей частью данного сложного процесса.  Дополнительные сведения см. в разделе [NIB: LinqDataSource Web Server Control Overview](http://msdn.microsoft.com/ru-ru/104cfc3f-7385-47d3-8a51-830dfa791136).  
+ <span data-ttu-id="3fce2-113">В приложениях ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> управляет большей частью данного сложного процесса.</span><span class="sxs-lookup"><span data-stu-id="3fce2-113">In ASP.NET applications, the <xref:System.Web.UI.WebControls.LinqDataSource> manages most of this complexity.</span></span> <span data-ttu-id="3fce2-114">Дополнительные сведения см. в разделе [NIB: Обзор элемента управления веб-сервера LinqDataSource](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136).</span><span class="sxs-lookup"><span data-stu-id="3fce2-114">For more information, see [NIB: LinqDataSource Web Server Control Overview](http://msdn.microsoft.com/en-us/104cfc3f-7385-47d3-8a51-830dfa791136).</span></span>  
   
-## Дополнительные ресурсы  
- Дополнительные сведения о развертывании многоуровневого приложения, использующего [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], см. в следующих разделах.  
+## <a name="additional-resources"></a><span data-ttu-id="3fce2-115">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="3fce2-115">Additional Resources</span></span>  
+ <span data-ttu-id="3fce2-116">Дополнительные сведения о развертывании многоуровневого приложения, использующего [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], см. в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="3fce2-116">For more information about how to implement n-tier applications that use [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], see the following topics:</span></span>  
   
--   [N\-уровневое использование LINQ to SQL с ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)  
+-   [<span data-ttu-id="3fce2-117">LINQ to SQL N-уровневые с ASP.NET</span><span class="sxs-lookup"><span data-stu-id="3fce2-117">LINQ to SQL N-Tier with ASP.NET</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)  
   
--   [Технология LINQ to SQL в многоуровневых приложениях с веб\-службами](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
+-   [<span data-ttu-id="3fce2-118">LINQ to SQL N-уровневые веб-службы</span><span class="sxs-lookup"><span data-stu-id="3fce2-118">LINQ to SQL N-Tier with Web Services</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
   
--   [LINQ to SQL и тесно связанные клиент\-серверные приложения](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-with-tightly-coupled-client-server-applications.md)  
+-   [<span data-ttu-id="3fce2-119">LINQ to SQL и тесно связанные клиентские / серверные приложения</span><span class="sxs-lookup"><span data-stu-id="3fce2-119">LINQ to SQL with Tightly-Coupled Client-Server Applications</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-with-tightly-coupled-client-server-applications.md)  
   
--   [Реализация многоуровневой бизнес\-логики](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)  
+-   [<span data-ttu-id="3fce2-120">Реализация N-уровневой бизнес-логики</span><span class="sxs-lookup"><span data-stu-id="3fce2-120">Implementing N-Tier Business Logic</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)  
   
--   [Получение данных и операции CUD в многоуровневых приложениях \(LINQ to SQL\)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)  
+-   [<span data-ttu-id="3fce2-121">Извлечение данных и операции CUD в N-уровневых приложениях (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="3fce2-121">Data Retrieval and CUD Operations in N-Tier Applications (LINQ to SQL)</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)  
   
- Дополнительные сведения о многоуровневых приложениях, использующих ADO.NET DataSets, см в разделе [Работа с наборами данных в N\-уровневых приложениях](../Topic/Work%20with%20datasets%20in%20n-tier%20applications.md).  
+ <span data-ttu-id="3fce2-122">Дополнительные сведения о многоуровневых приложениях, см. в разделе [работы с наборами данных в n уровневых приложениях](http://msdn.microsoft.com/library/f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20).</span><span class="sxs-lookup"><span data-stu-id="3fce2-122">For more information about n-tier applications that use ADO.NET DataSets, see [Work with datasets in n-tier applications](http://msdn.microsoft.com/library/f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20).</span></span>  
   
-## См. также  
- [Дополнительные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="3fce2-123">См. также</span><span class="sxs-lookup"><span data-stu-id="3fce2-123">See Also</span></span>  
+ [<span data-ttu-id="3fce2-124">Общие сведения</span><span class="sxs-lookup"><span data-stu-id="3fce2-124">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

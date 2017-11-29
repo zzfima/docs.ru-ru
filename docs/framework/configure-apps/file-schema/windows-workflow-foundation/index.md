@@ -8,23 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e83b85d970f36745bb1a0bcf04253c678764805e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="windows-workflow-foundation-configuration-schema"></a>Схема конфигурации Windows Workflow Foundation
-Элементы конфигурации [!INCLUDE[wf](../../../../../includes/wf-md.md)] служат для настройки приложений рабочих процессов. Помимо прочего, для приложения рабочего процесса можно настроить отслеживание и трассировку. Дополнительные сведения о трассировке и отслеживании см. в разделе [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Для служб рабочего процесса можно также настроить элементы конфигурации [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Дополнительные сведения о [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] см. в разделе [Схема конфигурации WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+# <a name="windows-workflow-foundation-configuration-schema"></a><span data-ttu-id="35bd2-102">Схема конфигурации Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="35bd2-102">Windows Workflow Foundation Configuration Schema</span></span>
+<span data-ttu-id="35bd2-103">Элементы конфигурации [!INCLUDE[wf](../../../../../includes/wf-md.md)] служат для настройки приложений рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="35bd2-103">[!INCLUDE[wf](../../../../../includes/wf-md.md)] configuration elements enable you to configure workflow applications.</span></span> <span data-ttu-id="35bd2-104">Помимо прочего, для приложения рабочего процесса можно настроить отслеживание и трассировку.</span><span class="sxs-lookup"><span data-stu-id="35bd2-104">For a workflow application, you can configure among other things, tracking and tracing.</span></span> <span data-ttu-id="35bd2-105">Дополнительные сведения о трассировке и отслеживании см. в разделе [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="35bd2-105">For more information about tracking and tracing, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).</span></span> <span data-ttu-id="35bd2-106">Для служб рабочего процесса можно также настроить элементы конфигурации [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="35bd2-106">For workflow services, you can also use [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] configuration elements.</span></span> <span data-ttu-id="35bd2-107">Дополнительные сведения о [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] см. в разделе [Схема конфигурации WCF](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).</span><span class="sxs-lookup"><span data-stu-id="35bd2-107">For more details about [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], see [WCF Configuration Schema](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md).</span></span>  
   
- Поскольку файлы конфигурации имеют формат XML, для их изменения вручную с помощью текстового редактора необходимо уметь работать с XML-кодом. В противном случае возможно возникновение проблем, таких как отсутствие тега или атрибута элемента XML. Это обусловлено тем, что в тегах и атрибутах элементов XML учитывается регистр символов.  
+ <span data-ttu-id="35bd2-108">Поскольку файлы конфигурации имеют формат XML, для их изменения вручную с помощью текстового редактора необходимо уметь работать с XML-кодом.</span><span class="sxs-lookup"><span data-stu-id="35bd2-108">Because configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="35bd2-109">В противном случае возможно возникновение проблем, таких как отсутствие тега или атрибута элемента XML.</span><span class="sxs-lookup"><span data-stu-id="35bd2-109">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="35bd2-110">Это обусловлено тем, что в тегах и атрибутах элементов XML учитывается регистр символов.</span><span class="sxs-lookup"><span data-stu-id="35bd2-110">This is because XML element tags and attributes are case-sensitive.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/system-servicemodel-of-workflow.md)  
- Описывается элемент **ServiceModel**.
-
+## <a name="in-this-section"></a><span data-ttu-id="35bd2-111">Содержание</span><span class="sxs-lookup"><span data-stu-id="35bd2-111">In This Section</span></span>  
+ [<span data-ttu-id="35bd2-112">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="35bd2-112">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/system-servicemodel-of-workflow.md)  
+ <span data-ttu-id="35bd2-113">Описывается элемент **ServiceModel**.</span><span class="sxs-lookup"><span data-stu-id="35bd2-113">Describes the **ServiceModel** element.</span></span>

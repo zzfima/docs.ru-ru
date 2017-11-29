@@ -7,53 +7,46 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f446e20f37a83e9effd2a378ce576640bca99763
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 696b1d3dd7312b52c28f11f64f007c29fb8a94b5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>О пространстве имен System.Net.PeerToPeer.Collaboration
-Пространство имен <xref:System.Net.PeerToPeer.Collaboration> предоставляет классы и API, которые применяются для реализации функций однорангового взаимодействия с использованием инфраструктуры одноранговой совместной работы.  
+# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a><span data-ttu-id="34648-102">О пространстве имен System.Net.PeerToPeer.Collaboration</span><span class="sxs-lookup"><span data-stu-id="34648-102">About the System.Net.PeerToPeer.Collaboration Namespace</span></span>
+<span data-ttu-id="34648-103">Пространство имен <xref:System.Net.PeerToPeer.Collaboration> предоставляет классы и API, которые применяются для реализации функций однорангового взаимодействия с использованием инфраструктуры одноранговой совместной работы.</span><span class="sxs-lookup"><span data-stu-id="34648-103">The <xref:System.Net.PeerToPeer.Collaboration> namespace provides classes and APIs that are used to implement peer collaboration activities using the Peer-to-Peer Collaboration Infrastructure.</span></span>  
   
-## <a name="classes"></a>Классы  
- Ниже перечислены основные классы, используемые для реализации возможностей одноранговой совместной работы:  
+## <a name="classes"></a><span data-ttu-id="34648-104">Классы</span><span class="sxs-lookup"><span data-stu-id="34648-104">Classes</span></span>  
+ <span data-ttu-id="34648-105">Ниже перечислены основные классы, используемые для реализации возможностей одноранговой совместной работы:</span><span class="sxs-lookup"><span data-stu-id="34648-105">The main classes used in the implementation of a Peer-to-Peer Collaboration activity are:</span></span>  
   
--   Класс <xref:System.Net.PeerToPeer.Collaboration.ContactManager> используется для хранения одноранговых контактов.  
+-   <span data-ttu-id="34648-106">Класс <xref:System.Net.PeerToPeer.Collaboration.ContactManager> используется для хранения одноранговых контактов.</span><span class="sxs-lookup"><span data-stu-id="34648-106">The <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, which can be used to store peer contacts.</span></span>  
   
--   Класс <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> реализует возможности совместной работы, например игры, клиенты чата или решение для проведения конференций.  
+-   <span data-ttu-id="34648-107">Класс <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> реализует возможности совместной работы, например игры, клиенты чата или решение для проведения конференций.</span><span class="sxs-lookup"><span data-stu-id="34648-107">The <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> in which to collaborate, such as a game, chat client, or conferencing solution.</span></span>  
   
--   Одноранговые узлы, которые будут участвовать в совместной работе.  Такие одноранговые узлы могут быть представлены как объекты <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> или <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.  
+-   <span data-ttu-id="34648-108">Одноранговые узлы, которые будут участвовать в совместной работе.</span><span class="sxs-lookup"><span data-stu-id="34648-108">The peers that will be collaborating in an activity.</span></span>  <span data-ttu-id="34648-109">Такие одноранговые узлы могут быть представлены как объекты <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> или <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.</span><span class="sxs-lookup"><span data-stu-id="34648-109">These peers can be represented as <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, or <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint> objects.</span></span>  
   
--   Статический класс <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> определяет доступные приложения и одноранговые узлы, которые участвуют в них.  
+-   <span data-ttu-id="34648-110">Статический класс <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> определяет доступные приложения и одноранговые узлы, которые участвуют в них.</span><span class="sxs-lookup"><span data-stu-id="34648-110">The static <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> class itself, which specifies which applications are available and which peers are participating in them.</span></span>  
   
- Методы <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> используются для приглашения одноранговых узлов в сеанс совместной работы.  Вызывающий одноранговый узел может подписаться на события другого однорангового узла, сигнализирующие об обновлениях приложения, объекта или сведений о присутствии в рамках сеанса совместной работы. Классы сведения о присутствии указывают, доступен ли объект <xref:System.Net.PeerToPeer.Collaboration.Peer> для совместной работы. Класс <xref:System.Net.PeerToPeer.Collaboration.PeerScope> указывает уровень разрешений на участие для однорангового узла: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (глобальная сеть), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe> (подсеть) или <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.  
+ <span data-ttu-id="34648-111">Методы <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> используются для приглашения одноранговых узлов в сеанс совместной работы.</span><span class="sxs-lookup"><span data-stu-id="34648-111">The <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> methods are used to invite peers to a collaboration session.</span></span>  <span data-ttu-id="34648-112">Вызывающий одноранговый узел может подписаться на события другого однорангового узла, сигнализирующие об обновлениях приложения, объекта или сведений о присутствии в рамках сеанса совместной работы.</span><span class="sxs-lookup"><span data-stu-id="34648-112">A calling peer can subscribe to another peer for events that signal updates to application, object, or presence information affiliated with the collaboration session.</span></span> <span data-ttu-id="34648-113">Классы сведения о присутствии указывают, доступен ли объект <xref:System.Net.PeerToPeer.Collaboration.Peer> для совместной работы. Класс <xref:System.Net.PeerToPeer.Collaboration.PeerScope> указывает уровень разрешений на участие для однорангового узла: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (глобальная сеть), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe> (подсеть) или <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.</span><span class="sxs-lookup"><span data-stu-id="34648-113">Presence classes specify whether a <xref:System.Net.PeerToPeer.Collaboration.Peer> is available for collaboration, and the <xref:System.Net.PeerToPeer.Collaboration.PeerScope> class is used to specify how much participation is allowed for a peer:  <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (global), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>, (subnet) or <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.</span></span>  
   
- Сеанс совместной работы состоит из четырех шагов:  
+ <span data-ttu-id="34648-114">Сеанс совместной работы состоит из четырех шагов:</span><span class="sxs-lookup"><span data-stu-id="34648-114">A collaboration session is comprised of four steps:</span></span>  
   
--   Обнаружение. Обнаружение или публикация приложений, одноранговых узлов и сведений о присутствии.  Например, поиск других пользователей локальной подсети, у которых установлены те же игры.  
+-   <span data-ttu-id="34648-115">Обнаружение.</span><span class="sxs-lookup"><span data-stu-id="34648-115">Discovery.</span></span> <span data-ttu-id="34648-116">Обнаружение или публикация приложений, одноранговых узлов и сведений о присутствии.</span><span class="sxs-lookup"><span data-stu-id="34648-116">Discover or publish applications, peers, and presence information.</span></span>  <span data-ttu-id="34648-117">Например, поиск других пользователей локальной подсети, у которых установлены те же игры.</span><span class="sxs-lookup"><span data-stu-id="34648-117">For instance, find other people on the local subnet that have the same games installed.</span></span>  
   
--   Приглашение. Отправка и принятие защищенных приглашений, посредством которых удаленные одноранговые узлы могут начинать сеансы <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> или присоединяться к ним.  
+-   <span data-ttu-id="34648-118">Приглашение.</span><span class="sxs-lookup"><span data-stu-id="34648-118">Invitation.</span></span> <span data-ttu-id="34648-119">Отправка и принятие защищенных приглашений, посредством которых удаленные одноранговые узлы могут начинать сеансы <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> или присоединяться к ним.</span><span class="sxs-lookup"><span data-stu-id="34648-119">Send and accept secure invitations for remote peer(s) to start or join <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> sessions.</span></span>  
   
--   Управление контактами. Добавление обнаруженных одноранговых узлов в качестве контактов в <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+-   <span data-ttu-id="34648-120">Управление контактами.</span><span class="sxs-lookup"><span data-stu-id="34648-120">Contact Management.</span></span> <span data-ttu-id="34648-121">Добавление обнаруженных одноранговых узлов в качестве контактов в <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.</span><span class="sxs-lookup"><span data-stu-id="34648-121">Add discovered peers as a contact to a <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.</span></span>  
   
--   Взаимодействие. Организация многостороннего взаимодействия с использованием API <xref:System.Net>, API <xref:System.Net.PeerToPeer> или классов одноранговых каналов платформы Windows Communication Foundation.  
+-   <span data-ttu-id="34648-122">Взаимодействие.</span><span class="sxs-lookup"><span data-stu-id="34648-122">Communication.</span></span> <span data-ttu-id="34648-123">Организация многостороннего взаимодействия с использованием API <xref:System.Net>, API <xref:System.Net.PeerToPeer> или классов одноранговых каналов платформы Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="34648-123">When communication is established, use the <xref:System.Net> APIs, the <xref:System.Net.PeerToPeer> API, or the Windows Communication Foundation Peer Channel classes for multiparty communications.</span></span>  
   
- Например, ведущий одноранговый узел запускает сеанс совместной работы и использует метод <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A>, чтобы добавить удаленный узел и один из своих локальных одноранговых узлов в собственный диспетчер контактов.  Эти три пользователя будут участвовать в собственном закрытом сеансе совместной работы.  
+ <span data-ttu-id="34648-124">Например, ведущий одноранговый узел запускает сеанс совместной работы и использует метод <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A>, чтобы добавить удаленный узел и один из своих локальных одноранговых узлов в собственный диспетчер контактов.</span><span class="sxs-lookup"><span data-stu-id="34648-124">For example, the host peer starts a collaboration session, and utilizes the <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> method to add a remote peer and one of its local peers to the Contact Manager of the host peer.</span></span>  <span data-ttu-id="34648-125">Эти три пользователя будут участвовать в собственном закрытом сеансе совместной работы.</span><span class="sxs-lookup"><span data-stu-id="34648-125">The three users will then participate in their own private collaboration session.</span></span>  
   
- Распространенные одноранговые приложения: конференции, совместная работа с заметками или досками, приложения чата без сервера, интерактивная реклама и интернет-игры.  
+ <span data-ttu-id="34648-126">Распространенные одноранговые приложения: конференции, совместная работа с заметками или досками, приложения чата без сервера, интерактивная реклама и интернет-игры.</span><span class="sxs-lookup"><span data-stu-id="34648-126">Typical P2P applications are: conference calls for collaborative note-taking or whiteboarding, serverless chat applications, interactive advertisements, and online gaming sessions.</span></span>  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a><span data-ttu-id="34648-127">См. также</span><span class="sxs-lookup"><span data-stu-id="34648-127">See Also</span></span>  
  <xref:System.Net.PeerToPeer.Collaboration>
-

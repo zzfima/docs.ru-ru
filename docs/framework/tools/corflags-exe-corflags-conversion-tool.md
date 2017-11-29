@@ -5,70 +5,62 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ca3e9dbe5578623ccc67898c6f08213c31ad8e23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80fb48fc86d3010020a0a8a79bb2b4b7a6275368
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (средство преобразования CorFlags)
-Средство преобразования CorFlags позволяет настраивать раздел CorFlags в заголовке переносимого исполняемого образа.  
+# <a name="corflagsexe-corflags-conversion-tool"></a><span data-ttu-id="6c732-102">CorFlags.exe (средство преобразования CorFlags)</span><span class="sxs-lookup"><span data-stu-id="6c732-102">CorFlags.exe (CorFlags Conversion Tool)</span></span>
+<span data-ttu-id="6c732-103">Средство преобразования CorFlags позволяет настраивать раздел CorFlags в заголовке переносимого исполняемого образа.</span><span class="sxs-lookup"><span data-stu-id="6c732-103">The CorFlags Conversion tool allows you to configure the CorFlags section of the header of a portable executable image.</span></span>  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="6c732-104">Эта программа автоматически устанавливается вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="6c732-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="6c732-105">Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7).</span><span class="sxs-lookup"><span data-stu-id="6c732-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="6c732-106">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="6c732-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующее.  
+ <span data-ttu-id="6c732-107">В командной строке введите следующее.</span><span class="sxs-lookup"><span data-stu-id="6c732-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="6c732-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c732-108">Syntax</span></span>  
   
 ```  
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="6c732-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="6c732-109">Parameters</span></span>  
   
-|Обязательный параметр|Описание|  
+|<span data-ttu-id="6c732-110">Обязательный параметр</span><span class="sxs-lookup"><span data-stu-id="6c732-110">Required parameter</span></span>|<span data-ttu-id="6c732-111">Описание</span><span class="sxs-lookup"><span data-stu-id="6c732-111">Description</span></span>|  
 |------------------------|-----------------|  
-|`assembly`|Имя сборки, для которой требуется настроить раздел CorFlags.|  
+|`assembly`|<span data-ttu-id="6c732-112">Имя сборки, для которой требуется настроить раздел CorFlags.</span><span class="sxs-lookup"><span data-stu-id="6c732-112">The name of the assembly for which to configure the CorFlags.</span></span>|  
   
-|Параметр|Описание|  
+|<span data-ttu-id="6c732-113">Параметр</span><span class="sxs-lookup"><span data-stu-id="6c732-113">Option</span></span>|<span data-ttu-id="6c732-114">Описание</span><span class="sxs-lookup"><span data-stu-id="6c732-114">Description</span></span>|  
 |------------|-----------------|  
-|**/32BIT[REQ]+**|Устанавливает флаг 32BITREQUIRED.|  
-|**/32BIT[REQ]-**|Снимает флаг 32BITREQUIRED.|  
-|**/32BITPREF+**|Устанавливает флаг 32BITPREFERRED. Приложение выполняется как 32-разрядный процесс даже на 64-разрядных платформах. Устанавливайте этот флаг только в EXE-файлах. Если флаг установлен для библиотеки DLL, она не загружается в 64-разрядных процессах и создается исключение <xref:System.BadImageFormatException>. Файл EXE с этим флагом можно загрузить в 64-разрядный процесс.<br /><br /> Новый параметр [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|**/32BITPREF-**|Снимает флаг 32BITPREFERRED.<br /><br /> Новый параметр [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|**/?**|Отображает синтаксис команд и параметров программы.|  
-|**/Force**|Выполняет принудительное обновление, даже если сборка имеет строгое имя. **Важно!** При обновлении сборки со строгим именем перед выполнением ее кода необходимо снова подписать сборку.|  
-|**/help**|Отображает синтаксис команд и параметров программы.|  
-|**/ILONLY+**|Устанавливает флаг ILONLY.|  
-|**/ILONLY-**|Снимает флаг ILONLY.|  
-|**/nologo**|Отключает отображение эмблемы Майкрософт при запуске.|  
-|**/RevertCLRHeader**|Задает версии заголовка CLR значение 2.0.|  
-|**/ UpgradeCLRHeader**|Обновляет версию заголовка CLR до версии 2.5. **Примечание.** Для оптимального выполнения сборок они должны иметь версию заголовка CLR 2.5 или выше.|  
+|<span data-ttu-id="6c732-115">**/32BIT[REQ]+**</span><span class="sxs-lookup"><span data-stu-id="6c732-115">**/32BIT[REQ]+**</span></span>|<span data-ttu-id="6c732-116">Устанавливает флаг 32BITREQUIRED.</span><span class="sxs-lookup"><span data-stu-id="6c732-116">Sets the 32BITREQUIRED flag.</span></span>|  
+|<span data-ttu-id="6c732-117">**/32BIT[REQ]-**</span><span class="sxs-lookup"><span data-stu-id="6c732-117">**/32BIT[REQ]-**</span></span>|<span data-ttu-id="6c732-118">Снимает флаг 32BITREQUIRED.</span><span class="sxs-lookup"><span data-stu-id="6c732-118">Clears the 32BITREQUIRED flag.</span></span>|  
+|<span data-ttu-id="6c732-119">**/32BITPREF+**</span><span class="sxs-lookup"><span data-stu-id="6c732-119">**/32BITPREF+**</span></span>|<span data-ttu-id="6c732-120">Устанавливает флаг 32BITPREFERRED.</span><span class="sxs-lookup"><span data-stu-id="6c732-120">Sets the 32BITPREFERRED flag.</span></span> <span data-ttu-id="6c732-121">Приложение выполняется как 32-разрядный процесс даже на 64-разрядных платформах.</span><span class="sxs-lookup"><span data-stu-id="6c732-121">The app runs as a 32-bit process even on 64-bit platforms.</span></span> <span data-ttu-id="6c732-122">Устанавливайте этот флаг только в EXE-файлах.</span><span class="sxs-lookup"><span data-stu-id="6c732-122">Set this flag only on EXE files.</span></span> <span data-ttu-id="6c732-123">Если флаг установлен для библиотеки DLL, она не загружается в 64-разрядных процессах и создается исключение <xref:System.BadImageFormatException>.</span><span class="sxs-lookup"><span data-stu-id="6c732-123">If the flag is set on a DLL, the DLL fails to load in 64-bit processes, and a <xref:System.BadImageFormatException> exception is thrown.</span></span> <span data-ttu-id="6c732-124">Файл EXE с этим флагом можно загрузить в 64-разрядный процесс.</span><span class="sxs-lookup"><span data-stu-id="6c732-124">An EXE file with this flag can be loaded into a 64-bit process.</span></span><br /><br /> <span data-ttu-id="6c732-125">Новый параметр [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6c732-125">New in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>|  
+|<span data-ttu-id="6c732-126">**/32BITPREF-**</span><span class="sxs-lookup"><span data-stu-id="6c732-126">**/32BITPREF-**</span></span>|<span data-ttu-id="6c732-127">Снимает флаг 32BITPREFERRED.</span><span class="sxs-lookup"><span data-stu-id="6c732-127">Clears the 32BITPREFERRED flag.</span></span><br /><br /> <span data-ttu-id="6c732-128">Новый параметр [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6c732-128">New in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>|  
+|<span data-ttu-id="6c732-129">**/?**</span><span class="sxs-lookup"><span data-stu-id="6c732-129">**/?**</span></span>|<span data-ttu-id="6c732-130">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="6c732-130">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="6c732-131">**/Force**</span><span class="sxs-lookup"><span data-stu-id="6c732-131">**/Force**</span></span>|<span data-ttu-id="6c732-132">Выполняет принудительное обновление, даже если сборка имеет строгое имя.</span><span class="sxs-lookup"><span data-stu-id="6c732-132">Forces an update even if the assembly is strong-named.</span></span> <span data-ttu-id="6c732-133">**Важно!** При обновлении сборки со строгим именем перед выполнением ее кода необходимо снова подписать сборку.</span><span class="sxs-lookup"><span data-stu-id="6c732-133">**Important:**  If you update a strong-named assembly, you must sign it again before executing its code.</span></span>|  
+|<span data-ttu-id="6c732-134">**/help**</span><span class="sxs-lookup"><span data-stu-id="6c732-134">**/help**</span></span>|<span data-ttu-id="6c732-135">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="6c732-135">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="6c732-136">**/ILONLY+**</span><span class="sxs-lookup"><span data-stu-id="6c732-136">**/ILONLY+**</span></span>|<span data-ttu-id="6c732-137">Устанавливает флаг ILONLY.</span><span class="sxs-lookup"><span data-stu-id="6c732-137">Sets the ILONLY flag.</span></span>|  
+|<span data-ttu-id="6c732-138">**/ILONLY-**</span><span class="sxs-lookup"><span data-stu-id="6c732-138">**/ILONLY-**</span></span>|<span data-ttu-id="6c732-139">Снимает флаг ILONLY.</span><span class="sxs-lookup"><span data-stu-id="6c732-139">Clears the ILONLY flag.</span></span>|  
+|<span data-ttu-id="6c732-140">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="6c732-140">**/nologo**</span></span>|<span data-ttu-id="6c732-141">Отключает отображение эмблемы Майкрософт при запуске.</span><span class="sxs-lookup"><span data-stu-id="6c732-141">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="6c732-142">**/RevertCLRHeader**</span><span class="sxs-lookup"><span data-stu-id="6c732-142">**/RevertCLRHeader**</span></span>|<span data-ttu-id="6c732-143">Задает версии заголовка CLR значение 2.0.</span><span class="sxs-lookup"><span data-stu-id="6c732-143">Reverts the CLR header version to 2.0.</span></span>|  
+|<span data-ttu-id="6c732-144">**/ UpgradeCLRHeader**</span><span class="sxs-lookup"><span data-stu-id="6c732-144">**/UpgradeCLRHeader**</span></span>|<span data-ttu-id="6c732-145">Обновляет версию заголовка CLR до версии 2.5.</span><span class="sxs-lookup"><span data-stu-id="6c732-145">Upgrades the CLR header version to 2.5.</span></span> <span data-ttu-id="6c732-146">**Примечание.** Для оптимального выполнения сборок они должны иметь версию заголовка CLR 2.5 или выше.</span><span class="sxs-lookup"><span data-stu-id="6c732-146">**Note:**  Assemblies must have a CLR header version of 2.5 or greater to run natively.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Если другие параметры не заданы, средство преобразования CorFlags отображает флаги заданной сборки.  
+## <a name="remarks"></a><span data-ttu-id="6c732-147">Примечания</span><span class="sxs-lookup"><span data-stu-id="6c732-147">Remarks</span></span>  
+ <span data-ttu-id="6c732-148">Если другие параметры не заданы, средство преобразования CorFlags отображает флаги заданной сборки.</span><span class="sxs-lookup"><span data-stu-id="6c732-148">If no options are specified, the CorFlags Conversion tool displays the flags for the specified assembly.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Инструменты](../../../docs/framework/tools/index.md)   
- [64-разрядные приложения](../../../docs/framework/64-bit-apps.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="6c732-149">См. также</span><span class="sxs-lookup"><span data-stu-id="6c732-149">See Also</span></span>  
+ [<span data-ttu-id="6c732-150">Инструменты</span><span class="sxs-lookup"><span data-stu-id="6c732-150">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="6c732-151">64-разрядные приложения</span><span class="sxs-lookup"><span data-stu-id="6c732-151">64-bit Applications</span></span>](../../../docs/framework/64-bit-apps.md)  
+ [<span data-ttu-id="6c732-152">Командные строки</span><span class="sxs-lookup"><span data-stu-id="6c732-152">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

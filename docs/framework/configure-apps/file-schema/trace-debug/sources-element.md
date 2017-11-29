@@ -1,70 +1,72 @@
 ---
-title: "Элемент &lt;sources&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#sources"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sources> - элемент"
-  - "sources - элемент"
-  - "источники трассировки"
+title: "&lt;источники&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#sources
+helpviewer_keywords:
+- sources element
+- trace sources
+- <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 58e9ff8787916132406a7e63aff511c9fb221b73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;sources&gt;
-Задает источники трассировки, от которых исходят трассировочные сообщения.  
+# <a name="ltsourcesgt-element"></a><span data-ttu-id="ff401-102">&lt;источники&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="ff401-102">&lt;sources&gt; Element</span></span>
+<span data-ttu-id="ff401-103">Задает источники трассировки, инициирующие сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="ff401-103">Specifies trace sources that initiate tracing messages.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="ff401-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ff401-104">\<configuration></span></span>  
+<span data-ttu-id="ff401-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="ff401-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="ff401-106">\<источники ></span><span class="sxs-lookup"><span data-stu-id="ff401-106">\<sources></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ff401-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ff401-107">Syntax</span></span>  
+  
+```xml  
 <sources>  
    <source>...</source>  
 </sources>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ff401-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="ff401-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ff401-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="ff401-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="ff401-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="ff401-110">Attributes</span></span>  
+ <span data-ttu-id="ff401-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="ff401-111">None.</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="ff401-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="ff401-112">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Обязательный элемент.<br /><br /> Источник трассировки, инициирующий сообщения трассировки.|  
+|<span data-ttu-id="ff401-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="ff401-113">Element</span></span>|<span data-ttu-id="ff401-114">Описание</span><span class="sxs-lookup"><span data-stu-id="ff401-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ff401-115">\<source></span><span class="sxs-lookup"><span data-stu-id="ff401-115">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="ff401-116">Обязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="ff401-116">Required element.</span></span><br /><br /> <span data-ttu-id="ff401-117">Содержит источник трассировки, который инициирует сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="ff401-117">Specifies a trace source that initiates tracing messages.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="ff401-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="ff401-118">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
+|<span data-ttu-id="ff401-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="ff401-119">Element</span></span>|<span data-ttu-id="ff401-120">Описание</span><span class="sxs-lookup"><span data-stu-id="ff401-120">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ff401-121">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ff401-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="ff401-122">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="ff401-122">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## Заметки  
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+## <a name="remarks"></a><span data-ttu-id="ff401-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="ff401-123">Remarks</span></span>  
+ <span data-ttu-id="ff401-124">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="ff401-124">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Пример  
- В следующем примере показано, как использовать элемент `<sources>`  для добавления источника трассировки `mySource` и установки уровня переключателя источника с именем `sourceSwitch`.  Добавляется прослушиватель трассировки консоли, выводящий трассировочную информацию на консоль.  
+## <a name="example"></a><span data-ttu-id="ff401-125">Пример</span><span class="sxs-lookup"><span data-stu-id="ff401-125">Example</span></span>  
+ <span data-ttu-id="ff401-126">В следующем примере показано, как использовать `<sources>` элемента для добавления источника трассировки `mySource` и задать уровень для переключателя источника с именем `sourceSwitch`.</span><span class="sxs-lookup"><span data-stu-id="ff401-126">The following example shows how to use the `<sources>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="ff401-127">Добавляется прослушиватель трассировки консоли, который записывает данные трассировки на консоль.</span><span class="sxs-lookup"><span data-stu-id="ff401-127">A console trace listener is added that writes trace information to the console.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
@@ -87,12 +89,12 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a><span data-ttu-id="ff401-128">См. также</span><span class="sxs-lookup"><span data-stu-id="ff401-128">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ [<span data-ttu-id="ff401-129">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="ff401-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="ff401-130">\<source></span><span class="sxs-lookup"><span data-stu-id="ff401-130">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

@@ -1,46 +1,49 @@
 ---
-title: "Сводка процесса вывода схемы DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Общие сведения о процессе определения схемы набора данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 15469e917129db7668df17f22fb71b166993d4fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сводка процесса вывода схемы DataSet
-Процесс вывода схемы из XML\-документа вначале определяет, какие элементы будут выведены как таблицы.  Из оставшегося XML процесс вывода схемы определяет столбцы этих таблиц.  Для вложенных таблиц процесс вывода формирует вложенные объекты <xref:System.Data.DataRelation> и <xref:System.Data.ForeignKeyConstraint>.  
+# <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="abf35-102">Общие сведения о процессе определения схемы набора данных</span><span class="sxs-lookup"><span data-stu-id="abf35-102">Summary of the DataSet Schema Inference Process</span></span>
+<span data-ttu-id="abf35-103">Процесс вывода схемы из XML-документа вначале определяет, какие элементы будут выведены как таблицы.</span><span class="sxs-lookup"><span data-stu-id="abf35-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="abf35-104">Из оставшегося XML процесс вывода схемы определяет столбцы этих таблиц.</span><span class="sxs-lookup"><span data-stu-id="abf35-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="abf35-105">Для вложенных таблиц процесс вывода формирует вложенные объекты <xref:System.Data.DataRelation> и <xref:System.Data.ForeignKeyConstraint>.</span><span class="sxs-lookup"><span data-stu-id="abf35-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  
   
- Далее представлена краткая сводка правил вывода.  
+ <span data-ttu-id="abf35-106">Далее представлена краткая сводка правил вывода.</span><span class="sxs-lookup"><span data-stu-id="abf35-106">Following is a brief summary of inference rules:</span></span>  
   
--   Элементы с атрибутами выводятся как таблицы.  
+-   <span data-ttu-id="abf35-107">Элементы с атрибутами выводятся как таблицы.</span><span class="sxs-lookup"><span data-stu-id="abf35-107">Elements that have attributes are inferred as tables.</span></span>  
   
--   Элементы, имеющие дочерние элементы, выводятся как таблицы.  
+-   <span data-ttu-id="abf35-108">Элементы, имеющие дочерние элементы, выводятся как таблицы.</span><span class="sxs-lookup"><span data-stu-id="abf35-108">Elements that have child elements are inferred as tables.</span></span>  
   
--   Повторяющиеся элементы выводятся как одна таблица.  
+-   <span data-ttu-id="abf35-109">Повторяющиеся элементы выводятся как одна таблица.</span><span class="sxs-lookup"><span data-stu-id="abf35-109">Elements that repeat are inferred as a single table.</span></span>  
   
--   Если элемент документа \(корневой элемент\) не имеет ни атрибутов, ни дочерних элементов, которые выводились бы как столбцы, он выводится как <xref:System.Data.DataSet>.  В противном случае элемент документа выводится как таблица.  
+-   <span data-ttu-id="abf35-110">Если элемент документа (корневой элемент) не имеет ни атрибутов, ни дочерних элементов, которые выводились бы как столбцы, он выводится как <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="abf35-110">If the document, or root, element has no attributes, and no child elements that would be inferred as columns, it is inferred as a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="abf35-111">В противном случае элемент документа выводится как таблица.</span><span class="sxs-lookup"><span data-stu-id="abf35-111">Otherwise, the document element is inferred as a table.</span></span>  
   
--   Атрибуты выводятся как столбцы.  
+-   <span data-ttu-id="abf35-112">Атрибуты выводятся как столбцы.</span><span class="sxs-lookup"><span data-stu-id="abf35-112">Attributes are inferred as columns.</span></span>  
   
--   Элементы, которые не повторяются и не имеют ни атрибутов, ни дочерних элементов, выводятся как столбцы.  
+-   <span data-ttu-id="abf35-113">Элементы, которые не повторяются и не имеют ни атрибутов, ни дочерних элементов, выводятся как столбцы.</span><span class="sxs-lookup"><span data-stu-id="abf35-113">Elements that have no attributes or child elements, and that do not repeat, are inferred as columns.</span></span>  
   
--   Для элементов, которые выводятся как таблицы, вложенные в другие элементы, которые также выводятся как таблицы, между двумя таблицами создается вложенный элемент **DataRelation**.  Новый столбец первичного ключа с именем **TableName\_Id** добавляется к обеим таблицам и используется элементом **DataRelation**.  Между двумя таблицами создается элемент **ForeignKeyConstraint** с использованием столбца **TableName\_Id**.  
+-   <span data-ttu-id="abf35-114">Для элементов, которые выводятся как таблицы, вложенные в другие элементы, которые также выводятся как таблицы, вложенный **DataRelation** создается между двумя таблицами.</span><span class="sxs-lookup"><span data-stu-id="abf35-114">For elements that are inferred as nested tables within other elements that are also inferred as tables, a nested **DataRelation** is created between the two tables.</span></span> <span data-ttu-id="abf35-115">Новый столбец первичного ключа с именем **TableName_Id** добавляется к обеим таблицам и используемые **DataRelation**.</span><span class="sxs-lookup"><span data-stu-id="abf35-115">A new, primary key column named **TableName_Id** is added to both tables and used by the **DataRelation**.</span></span> <span data-ttu-id="abf35-116">Объект **ForeignKeyConstraint** создается между двумя таблицами с помощью **TableName_Id** столбца.</span><span class="sxs-lookup"><span data-stu-id="abf35-116">A **ForeignKeyConstraint** is created between the two tables using the **TableName_Id** column.</span></span>  
   
--   Для элементов, которые выводятся как таблицы и содержат текст, но не имеют дочерних элементов, создается новый столбец с именем **TableName\_Text** для текста каждого из таких элементов.  Если элемент выводится как таблица и имеет текст, но при этом имеет дочерние элементы, текст пропускается.  
+-   <span data-ttu-id="abf35-117">Для элементов, которые выводятся как таблицы и содержит текст, но не имеют дочерних элементов, новый столбец с именем **TableName_Text** создается для каждого из элементов текста.</span><span class="sxs-lookup"><span data-stu-id="abf35-117">For elements that are inferred as tables and that contain text but have no child elements, a new column named **TableName_Text** is created for the text of each of the elements.</span></span> <span data-ttu-id="abf35-118">Если элемент выводится как таблица и имеет текст, но при этом имеет дочерние элементы, текст пропускается.</span><span class="sxs-lookup"><span data-stu-id="abf35-118">If an element is inferred as a table and has text, but also has child elements, the text is ignored.</span></span>  
   
-## См. также  
- [Вывод реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="abf35-119">См. также</span><span class="sxs-lookup"><span data-stu-id="abf35-119">See Also</span></span>  
+ [<span data-ttu-id="abf35-120">Определение реляционной структуры набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="abf35-120">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="abf35-121">Загрузка набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="abf35-121">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="abf35-122">Загрузка сведений о схеме набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="abf35-122">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="abf35-123">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="abf35-123">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="abf35-124">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="abf35-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="abf35-125">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="abf35-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

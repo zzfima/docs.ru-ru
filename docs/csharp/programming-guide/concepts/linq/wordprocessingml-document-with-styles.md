@@ -1,39 +1,35 @@
 ---
 title: "Документ WordprocessingML со стилями3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 7a551d43114c5896e40230265447eeedb7fca2b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 476f6cbd7b29f77ffad6d5a072297f94452ffff4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="wordprocessingml-document-with-styles"></a>Документ WordprocessingML со стилями
-Более сложные документы WordprocessingML обладают абзацами, которые форматированы по стилям.  
+# <a name="wordprocessingml-document-with-styles"></a><span data-ttu-id="a27d6-102">Документ WordprocessingML со стилями</span><span class="sxs-lookup"><span data-stu-id="a27d6-102">WordprocessingML Document with Styles</span></span>
+<span data-ttu-id="a27d6-103">Более сложные документы WordprocessingML обладают абзацами, которые форматированы по стилям.</span><span class="sxs-lookup"><span data-stu-id="a27d6-103">More complicated WordprocessingML documents have paragraphs that are formatted with styles.</span></span>  
   
- Необходимо сказать о составных частях документов WordprocessingML. Документы WordprocessingML размещаются в пакетах. Пакеты состоят из нескольких частей (в контексте пакетов их части обладают явным значением, в сущности части - это файлы, которые заархивированы в один ZIP-файл и таким образом составляют пакет). Если документ содержит абзацы, отформатированные с помощью стилей, то также будет присутствовать часть документа, которая содержит абзацы с примененными к ним стилями. Также будет присутствовать часть стилей, в которой содержатся стили, используемые в документе.  
+ <span data-ttu-id="a27d6-104">Необходимо сказать о составных частях документов WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="a27d6-104">A few notes about the makeup of WordprocessingML documents are helpful.</span></span> <span data-ttu-id="a27d6-105">Документы WordprocessingML размещаются в пакетах.</span><span class="sxs-lookup"><span data-stu-id="a27d6-105">WordprocessingML documents are stored in packages.</span></span> <span data-ttu-id="a27d6-106">Пакеты состоят из нескольких частей (в контексте пакетов их части обладают явным значением, в сущности части - это файлы, которые заархивированы в один ZIP-файл и таким образом составляют пакет).</span><span class="sxs-lookup"><span data-stu-id="a27d6-106">Packages have multiple parts (parts have an explicit meaning when used in the context of packages; essentially, parts are files that are zipped together to comprise a package).</span></span> <span data-ttu-id="a27d6-107">Если документ содержит абзацы, отформатированные с помощью стилей, то также будет присутствовать часть документа, которая содержит абзацы с примененными к ним стилями.</span><span class="sxs-lookup"><span data-stu-id="a27d6-107">If a document contains paragraphs that are formatted with styles, there will be a document part that contains paragraphs that have styles applied to them.</span></span> <span data-ttu-id="a27d6-108">Также будет присутствовать часть стилей, в которой содержатся стили, используемые в документе.</span><span class="sxs-lookup"><span data-stu-id="a27d6-108">There will also be a style part that contains the styles that are referred to by the document.</span></span>  
   
- При доступе к пакетам очень важно использовать для этого связи между частями, а не произвольный путь. Этот вопрос не рассматривается в учебнике "Обработка содержимого документа WordprocessingML", однако примеры программ, включенные в этот учебник, демонстрируют правильный подход.  
+ <span data-ttu-id="a27d6-109">При доступе к пакетам очень важно использовать для этого связи между частями, а не произвольный путь.</span><span class="sxs-lookup"><span data-stu-id="a27d6-109">When accessing packages, it is important that you do so through the relationships between parts, rather than using an arbitrary path.</span></span> <span data-ttu-id="a27d6-110">Этот вопрос не рассматривается в учебнике "Обработка содержимого документа WordprocessingML", однако примеры программ, включенные в этот учебник, демонстрируют правильный подход.</span><span class="sxs-lookup"><span data-stu-id="a27d6-110">This issue is beyond the scope of the Manipulating Content in a WordprocessingML Document tutorial, but the example programs that are included in this tutorial demonstrate the correct approach.</span></span>  
   
-## <a name="a-document-that-uses-styles"></a>Документ, в котором используются стили  
- Пример WordML, приводимый в разделе [Форма документов WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md), очень простой. Следующий документ более сложный: он содержит абзацы, отформатированные с использованием стилей. Самый простой способ увидеть XML, который составляет XML-документ Office Open, состоит в том, чтобы запустить [Пример, выводящий части документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+## <a name="a-document-that-uses-styles"></a><span data-ttu-id="a27d6-111">Документ, в котором используются стили</span><span class="sxs-lookup"><span data-stu-id="a27d6-111">A Document that Uses Styles</span></span>  
+ <span data-ttu-id="a27d6-112">Пример WordML, приводимый в разделе [Форма документов WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md), очень простой.</span><span class="sxs-lookup"><span data-stu-id="a27d6-112">The WordML example presented in the [Shape of WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) topic is a very simple one.</span></span> <span data-ttu-id="a27d6-113">Следующий документ более сложный: он содержит абзацы, отформатированные с использованием стилей.</span><span class="sxs-lookup"><span data-stu-id="a27d6-113">The following document is more complicated: It has paragraphs that are formatted with styles.</span></span> <span data-ttu-id="a27d6-114">Самый простой способ увидеть XML, который составляет XML-документ Office Open, состоит в том, чтобы запустить [Пример, выводящий части документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).</span><span class="sxs-lookup"><span data-stu-id="a27d6-114">The easiest way to see the XML that makes up an Office Open XML document is to run the [Example that Outputs Office Open XML Document Parts (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).</span></span>  
   
- В следующем документе первый абзац имеет стиль `Heading1`. Имеется несколько абзацев со стилем по умолчанию. Также имеется несколько абзацев со стилем `Code`. Благодаря этой относительной сложности синтаксический анализ этого документа при помощи LINQ to XML более интересен.  
+ <span data-ttu-id="a27d6-115">В следующем документе первый абзац имеет стиль `Heading1`.</span><span class="sxs-lookup"><span data-stu-id="a27d6-115">In the following document, the first paragraph has the style `Heading1`.</span></span> <span data-ttu-id="a27d6-116">Имеется несколько абзацев со стилем по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="a27d6-116">There are a number of paragraphs that have the default style.</span></span> <span data-ttu-id="a27d6-117">Также имеется несколько абзацев со стилем `Code`.</span><span class="sxs-lookup"><span data-stu-id="a27d6-117">There are also a number of paragraphs that have the style `Code`.</span></span> <span data-ttu-id="a27d6-118">Благодаря этой относительной сложности синтаксический анализ этого документа при помощи LINQ to XML более интересен.</span><span class="sxs-lookup"><span data-stu-id="a27d6-118">Because of this relative complexity, this is a more interesting document to parse with LINQ to XML.</span></span>  
   
- В абзацах, стиль которых отличен от стиля по умолчанию, элементы абзацев обладают дочерним элементом `w:pPr`, который в свою очередь также обладает дочерним элементом `w:pStyle`. У этого элемента имеется атрибут `w:val`, который содержит имя стиля. Если абзац имеет стиль по умолчанию, это означает, что у него отсутствует дочерний элемент `w:p.Pr`.  
+ <span data-ttu-id="a27d6-119">В абзацах, стиль которых отличен от стиля по умолчанию, элементы абзацев обладают дочерним элементом `w:pPr`, который в свою очередь также обладает дочерним элементом `w:pStyle`.</span><span class="sxs-lookup"><span data-stu-id="a27d6-119">In those paragraphs with non-default styles, the paragraph elements have a child element named `w:pPr`, which in turn has a child element `w:pStyle`.</span></span> <span data-ttu-id="a27d6-120">У этого элемента имеется атрибут `w:val`, который содержит имя стиля.</span><span class="sxs-lookup"><span data-stu-id="a27d6-120">That element has an attribute, `w:val`, which contains the style name.</span></span> <span data-ttu-id="a27d6-121">Если абзац имеет стиль по умолчанию, это означает, что у него отсутствует дочерний элемент `w:p.Pr`.</span><span class="sxs-lookup"><span data-stu-id="a27d6-121">If the paragraph has the default style, it means that the paragraph element does not have a `w:p.Pr` child element.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -149,6 +145,5 @@ ms.lasthandoff: 07/28/2017
 </w:document>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сведения о документах WordprocessingML в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
-
+## <a name="see-also"></a><span data-ttu-id="a27d6-122">См. также</span><span class="sxs-lookup"><span data-stu-id="a27d6-122">See Also</span></span>  
+ [<span data-ttu-id="a27d6-123">Сведения о документах WordprocessingML в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a27d6-123">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -8,26 +8,23 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a6d3fbb7fe336487553a70f40478a022e6b5552
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cbf6b6eab3502f8f04f33f6f11d5d071e3406a7a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола
-В этом примере показано, как получить объект WebResponse, соответствующий объекту WebRequest, для определенного протокола.  
+# <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a><span data-ttu-id="b21ea-102">Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола</span><span class="sxs-lookup"><span data-stu-id="b21ea-102">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>
+<span data-ttu-id="b21ea-103">В этом примере показано, как получить объект WebResponse, соответствующий объекту WebRequest, для определенного протокола.</span><span class="sxs-lookup"><span data-stu-id="b21ea-103">This example shows how to retrieve a protocol-specific WebResponse that matches a WebRequest.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="b21ea-104">Пример</span><span class="sxs-lookup"><span data-stu-id="b21ea-104">Example</span></span>  
   
 ```csharp  
 WebRequest req = WebRequest.Create("http://www.contoso.com/");  
@@ -39,11 +36,10 @@ Dim req As WebRequest = WebRequest.Create("http://www.contoso.com")
 Dim resp As WebResponse = req.GetResponse()  
 ```  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="b21ea-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b21ea-105">Compiling the Code</span></span>  
+ <span data-ttu-id="b21ea-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="b21ea-106">This example requires:</span></span>  
   
--   Ссылки на пространство имен **System.Net**.  
+-   <span data-ttu-id="b21ea-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="b21ea-107">References to the **System.Net** namespace.</span></span>  
   
-## См. также  
- [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="b21ea-108">См. также</span><span class="sxs-lookup"><span data-stu-id="b21ea-108">See Also</span></span>  
+ [<span data-ttu-id="b21ea-109">Запрос данных</span><span class="sxs-lookup"><span data-stu-id="b21ea-109">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

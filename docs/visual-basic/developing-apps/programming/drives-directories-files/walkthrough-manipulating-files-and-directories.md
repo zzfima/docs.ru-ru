@@ -1,193 +1,174 @@
 ---
 title: "Операции с файлами и каталогами в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, reading text
-- reading files, text
+- files [Visual Basic], reading text
+- reading files [Visual Basic], text
 - I/O [Visual Basic], walkthroughs
 - text, writing to files
 - text, reading from files
-- reading text from files, walkthroughs
+- reading text from files [Visual Basic], walkthroughs
 - Visual Basic code, file access
-- files, writing text
+- files [Visual Basic], writing text
 - I/O [Visual Basic], writing text to files
 - file access, walkthroughs
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Пошаговое руководство. Операции с файлами и каталогами в Visual Basic
-В этом пошаговом руководстве приводятся основные сведения о файловом вводе-выводе в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. В нем описывается создание небольшого приложения, перечисляющего текстовые файлы в каталоге и анализирующего их. Для каждого выбранного текстового файла приложение предоставляет атрибуты файла и первую строку содержимого. Кроме того, предоставляется возможность записать информацию в файл журнала.  
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a><span data-ttu-id="868aa-102">Пошаговое руководство. Операции с файлами и каталогами в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="868aa-102">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>
+<span data-ttu-id="868aa-103">В этом пошаговом руководстве приводятся основные сведения о файловом вводе-выводе в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="868aa-103">This walkthrough provides an introduction to the fundamentals of file I/O in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="868aa-104">В нем описывается создание небольшого приложения, перечисляющего текстовые файлы в каталоге и анализирующего их.</span><span class="sxs-lookup"><span data-stu-id="868aa-104">It describes how to create a small application that lists and examines text files in a directory.</span></span> <span data-ttu-id="868aa-105">Для каждого выбранного текстового файла приложение предоставляет атрибуты файла и первую строку содержимого.</span><span class="sxs-lookup"><span data-stu-id="868aa-105">For each selected text file, the application provides file attributes and the first line of content.</span></span> <span data-ttu-id="868aa-106">Кроме того, предоставляется возможность записать информацию в файл журнала.</span><span class="sxs-lookup"><span data-stu-id="868aa-106">There is an option to write information to a log file.</span></span>  
   
- В этом пошаговом руководстве используются члены `My.Computer.FileSystem Object`, доступные в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>. В конце пошагового руководства приводится эквивалентный пример, в котором используются классы пространства имен <xref:System.IO>.  
+ <span data-ttu-id="868aa-107">В этом пошаговом руководстве используются члены `My.Computer.FileSystem Object`, доступные в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="868aa-107">This walkthrough uses members of the `My.Computer.FileSystem Object`, which are available in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="868aa-108">Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span><span class="sxs-lookup"><span data-stu-id="868aa-108">See <xref:Microsoft.VisualBasic.FileIO.FileSystem> for more information.</span></span> <span data-ttu-id="868aa-109">В конце пошагового руководства приводится эквивалентный пример, в котором используются классы пространства имен <xref:System.IO>.</span><span class="sxs-lookup"><span data-stu-id="868aa-109">At the end of the walkthrough, an equivalent example is provided that uses classes from the <xref:System.IO> namespace.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-the-project"></a>Создание проекта  
+### <a name="to-create-the-project"></a><span data-ttu-id="868aa-110">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="868aa-110">To create the project</span></span>  
   
-1.  В меню **Файл** выберите пункт **Создать проект**.  
+1.  <span data-ttu-id="868aa-111">В меню **Файл** выберите пункт **Создать проект**.</span><span class="sxs-lookup"><span data-stu-id="868aa-111">On the **File** menu, click **New Project**.</span></span>  
   
-     Откроется диалоговое окно **Новый проект** .  
+     <span data-ttu-id="868aa-112">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="868aa-112">The **New Project** dialog box appears.</span></span>  
   
-2.  В области **Установленные шаблоны** разверните узел **Visual Basic** и выберите элемент **Windows**. В середине области **Шаблоны** щелкните **Приложение Windows Forms**.  
+2.  <span data-ttu-id="868aa-113">В области **Установленные шаблоны** разверните узел **Visual Basic** и выберите элемент **Windows**.</span><span class="sxs-lookup"><span data-stu-id="868aa-113">In the **Installed Templates** pane, expand **Visual Basic**, and then click **Windows**.</span></span> <span data-ttu-id="868aa-114">В середине области **Шаблоны** щелкните **Приложение Windows Forms**.</span><span class="sxs-lookup"><span data-stu-id="868aa-114">In the **Templates** pane in the middle, click **Windows Forms Application**.</span></span>  
   
-3.  В поле **Имя** введите `FileExplorer`, чтобы задать имя проекта, а затем нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="868aa-115">В поле **Имя** введите `FileExplorer`, чтобы задать имя проекта, а затем нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="868aa-115">In the **Name** box, type `FileExplorer` to set the project name, and then click **OK**.</span></span>  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] добавит проект в **обозреватель решений**, после чего откроется конструктор Windows Forms.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="868aa-116"> добавит проект в **обозреватель решений**, после чего откроется конструктор Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="868aa-116"> adds the project to **Solution Explorer**, and the Windows Forms Designer opens.</span></span>  
   
-4.  Добавьте в форму элементы управления из приведенной ниже таблицы и установите для их свойств соответствующие значения.  
+4.  <span data-ttu-id="868aa-117">Добавьте в форму элементы управления из приведенной ниже таблицы и установите для их свойств соответствующие значения.</span><span class="sxs-lookup"><span data-stu-id="868aa-117">Add the controls in the following table to the form, and set the corresponding values for their properties.</span></span>  
   
-    |Control|Свойство|Значение|  
+    |<span data-ttu-id="868aa-118">Control</span><span class="sxs-lookup"><span data-stu-id="868aa-118">Control</span></span>|<span data-ttu-id="868aa-119">Свойство</span><span class="sxs-lookup"><span data-stu-id="868aa-119">Property</span></span>|<span data-ttu-id="868aa-120">Значение</span><span class="sxs-lookup"><span data-stu-id="868aa-120">Value</span></span>|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Имя**|`filesListBox`|  
-    |**Button**|**Имя**<br /><br /> **Текст**|`browseButton`<br /><br /> **Обзор**|  
-    |**Button**|**Имя**<br /><br /> **Текст**|`examineButton`<br /><br /> **Исследовать**|  
-    |**CheckBox**|**Имя**<br /><br /> **Текст**|`saveCheckBox`<br /><br /> **Сохранить результаты**|  
-    |**FolderBrowserDialog**|**Имя**|`FolderBrowserDialog1`|  
+    |<span data-ttu-id="868aa-121">**ListBox**</span><span class="sxs-lookup"><span data-stu-id="868aa-121">**ListBox**</span></span>|<span data-ttu-id="868aa-122">**Имя**</span><span class="sxs-lookup"><span data-stu-id="868aa-122">**Name**</span></span>|`filesListBox`|  
+    |<span data-ttu-id="868aa-123">**Button**</span><span class="sxs-lookup"><span data-stu-id="868aa-123">**Button**</span></span>|<span data-ttu-id="868aa-124">**Имя**</span><span class="sxs-lookup"><span data-stu-id="868aa-124">**Name**</span></span><br /><br /> <span data-ttu-id="868aa-125">**Текст**</span><span class="sxs-lookup"><span data-stu-id="868aa-125">**Text**</span></span>|`browseButton`<br /><br /> <span data-ttu-id="868aa-126">**Обзор**</span><span class="sxs-lookup"><span data-stu-id="868aa-126">**Browse**</span></span>|  
+    |<span data-ttu-id="868aa-127">**Button**</span><span class="sxs-lookup"><span data-stu-id="868aa-127">**Button**</span></span>|<span data-ttu-id="868aa-128">**Имя**</span><span class="sxs-lookup"><span data-stu-id="868aa-128">**Name**</span></span><br /><br /> <span data-ttu-id="868aa-129">**Текст**</span><span class="sxs-lookup"><span data-stu-id="868aa-129">**Text**</span></span>|`examineButton`<br /><br /> <span data-ttu-id="868aa-130">**Исследовать**</span><span class="sxs-lookup"><span data-stu-id="868aa-130">**Examine**</span></span>|  
+    |<span data-ttu-id="868aa-131">**CheckBox**</span><span class="sxs-lookup"><span data-stu-id="868aa-131">**CheckBox**</span></span>|<span data-ttu-id="868aa-132">**Имя**</span><span class="sxs-lookup"><span data-stu-id="868aa-132">**Name**</span></span><br /><br /> <span data-ttu-id="868aa-133">**Текст**</span><span class="sxs-lookup"><span data-stu-id="868aa-133">**Text**</span></span>|`saveCheckBox`<br /><br /> <span data-ttu-id="868aa-134">**Сохранить результаты**</span><span class="sxs-lookup"><span data-stu-id="868aa-134">**Save Results**</span></span>|  
+    |<span data-ttu-id="868aa-135">**FolderBrowserDialog**</span><span class="sxs-lookup"><span data-stu-id="868aa-135">**FolderBrowserDialog**</span></span>|<span data-ttu-id="868aa-136">**Имя**</span><span class="sxs-lookup"><span data-stu-id="868aa-136">**Name**</span></span>|`FolderBrowserDialog1`|  
   
-### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Выбор папки и перечисление файлов в ней  
+### <a name="to-select-a-folder-and-list-files-in-a-folder"></a><span data-ttu-id="868aa-137">Выбор папки и перечисление файлов в ней</span><span class="sxs-lookup"><span data-stu-id="868aa-137">To select a folder, and list files in a folder</span></span>  
   
-1.  Создайте обработчик событий нажатия `Click` для кнопки `browseButton`, дважды щелкнув этот элемент управления в форме. Откроется редактор кода.  
+1.  <span data-ttu-id="868aa-138">Создайте обработчик событий нажатия `Click` для кнопки `browseButton`, дважды щелкнув этот элемент управления в форме.</span><span class="sxs-lookup"><span data-stu-id="868aa-138">Create a `Click` event handler for `browseButton` by double-clicking the control on the form.</span></span> <span data-ttu-id="868aa-139">Откроется редактор кода.</span><span class="sxs-lookup"><span data-stu-id="868aa-139">The Code Editor opens.</span></span>  
   
-2.  Добавьте следующий код в обработчик событий `Click`.  
+2.  <span data-ttu-id="868aa-140">Добавьте следующий код в обработчик событий `Click`.</span><span class="sxs-lookup"><span data-stu-id="868aa-140">Add the following code to the `Click` event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     Вызов `FolderBrowserDialog1.ShowDialog` открывает диалоговое окно **Выбор папки**. Когда пользователь нажимает **OK**, свойство <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> передается как аргумент методу `ListFiles`, который добавляется в следующем шаге.  
+     <span data-ttu-id="868aa-141">Вызов `FolderBrowserDialog1.ShowDialog` открывает диалоговое окно **Выбор папки**.</span><span class="sxs-lookup"><span data-stu-id="868aa-141">The `FolderBrowserDialog1.ShowDialog` call opens the **Browse For Folder** dialog box.</span></span> <span data-ttu-id="868aa-142">Когда пользователь нажимает **OK**, свойство <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> передается как аргумент методу `ListFiles`, который добавляется в следующем шаге.</span><span class="sxs-lookup"><span data-stu-id="868aa-142">After the user clicks **OK**, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is sent as an argument to the `ListFiles` method, which is added in the next step.</span></span>  
   
-3.  Добавьте приведенный ниже метод `ListFiles`.  
+3.  <span data-ttu-id="868aa-143">Добавьте приведенный ниже метод `ListFiles`.</span><span class="sxs-lookup"><span data-stu-id="868aa-143">Add the following `ListFiles` method.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
-     Этот код сперва очищает элемент **ListBox**.  
+     <span data-ttu-id="868aa-144">Этот код сперва очищает элемент **ListBox**.</span><span class="sxs-lookup"><span data-stu-id="868aa-144">This code first clears the **ListBox**.</span></span>  
   
-     Затем метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> возвращает коллекцию строк — по одной для каждого файла в каталоге. Метод `GetFiles` принимает аргумент шаблона поиска, чтобы извлечь файлы, соответствующие определенному шаблону. В этом примере возвращаются только файлы с расширением TXT.  
+     <span data-ttu-id="868aa-145">Затем метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> возвращает коллекцию строк — по одной для каждого файла в каталоге.</span><span class="sxs-lookup"><span data-stu-id="868aa-145">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> method then retrieves a collection of strings, one for each file in the directory.</span></span> <span data-ttu-id="868aa-146">Метод `GetFiles` принимает аргумент шаблона поиска, чтобы извлечь файлы, соответствующие определенному шаблону.</span><span class="sxs-lookup"><span data-stu-id="868aa-146">The `GetFiles` method accepts a search pattern argument to retrieve files that match a particular pattern.</span></span> <span data-ttu-id="868aa-147">В этом примере возвращаются только файлы с расширением TXT.</span><span class="sxs-lookup"><span data-stu-id="868aa-147">In this example, only files that have the extension .txt are returned.</span></span>  
   
-     Строки, возвращаемые методом `GetFiles`, затем добавляются в элемент управления **ListBox**.  
+     <span data-ttu-id="868aa-148">Строки, возвращаемые методом `GetFiles`, затем добавляются в элемент управления **ListBox**.</span><span class="sxs-lookup"><span data-stu-id="868aa-148">The strings that are returned by the `GetFiles` method are then added to the **ListBox**.</span></span>  
   
-4.  Запустите приложение. Нажмите кнопку **Обзор**. В диалоговом окне **Выбор папки** перейдите в папку, содержащую TXT-файлы, выберите папку и нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="868aa-149">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="868aa-149">Run the application.</span></span> <span data-ttu-id="868aa-150">Нажмите кнопку **Обзор**.</span><span class="sxs-lookup"><span data-stu-id="868aa-150">Click the **Browse** button.</span></span> <span data-ttu-id="868aa-151">В диалоговом окне **Выбор папки** перейдите в папку, содержащую TXT-файлы, выберите папку и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="868aa-151">In the **Browse For Folder** dialog box, browse to a folder that contains .txt files, and then select the folder and click **OK**.</span></span>  
   
-     Элемент `ListBox` содержит список TXT-файлов в выбранной папке.  
+     <span data-ttu-id="868aa-152">Элемент `ListBox` содержит список TXT-файлов в выбранной папке.</span><span class="sxs-lookup"><span data-stu-id="868aa-152">The `ListBox` contains a list of .txt files in the selected folder.</span></span>  
   
-5.  Остановите работу приложения.  
+5.  <span data-ttu-id="868aa-153">Остановите работу приложения.</span><span class="sxs-lookup"><span data-stu-id="868aa-153">Stop running the application.</span></span>  
   
-### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>Получение атрибутов файла и содержимого текстового файла  
+### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a><span data-ttu-id="868aa-154">Получение атрибутов файла и содержимого текстового файла</span><span class="sxs-lookup"><span data-stu-id="868aa-154">To obtain attributes of a file, and content from a text file</span></span>  
   
-1.  Создайте обработчик событий нажатия `Click` для кнопки `examineButton`, дважды щелкнув этот элемент управления в форме.  
+1.  <span data-ttu-id="868aa-155">Создайте обработчик событий нажатия `Click` для кнопки `examineButton`, дважды щелкнув этот элемент управления в форме.</span><span class="sxs-lookup"><span data-stu-id="868aa-155">Create a `Click` event handler for `examineButton` by double-clicking the control on the form.</span></span>  
   
-2.  Добавьте следующий код в обработчик событий `Click`.  
+2.  <span data-ttu-id="868aa-156">Добавьте следующий код в обработчик событий `Click`.</span><span class="sxs-lookup"><span data-stu-id="868aa-156">Add the following code to the `Click` event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
-     Этот код проверяет, выбран ли элемент в элементе `ListBox`. Затем он получает запись пути к файлу из элемента `ListBox`. Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> позволяет проверить, существует ли файл.  
+     <span data-ttu-id="868aa-157">Этот код проверяет, выбран ли элемент в элементе `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="868aa-157">The code verifies that an item is selected in the `ListBox`.</span></span> <span data-ttu-id="868aa-158">Затем он получает запись пути к файлу из элемента `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="868aa-158">It then obtains the file path entry from the `ListBox`.</span></span> <span data-ttu-id="868aa-159">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> позволяет проверить, существует ли файл.</span><span class="sxs-lookup"><span data-stu-id="868aa-159">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> method is used to check whether the file still exists.</span></span>  
   
-     Путь к файлу передается как аргумент методу `GetTextForOutput`, который добавляется в следующем шаге. Этот метод возвращает строку, содержащую информацию о файле. Информация о файле отображается в элементе **MessageBox**.  
+     <span data-ttu-id="868aa-160">Путь к файлу передается как аргумент методу `GetTextForOutput`, который добавляется в следующем шаге.</span><span class="sxs-lookup"><span data-stu-id="868aa-160">The file path is sent as an argument to the `GetTextForOutput` method, which is added in the next step.</span></span> <span data-ttu-id="868aa-161">Этот метод возвращает строку, содержащую информацию о файле.</span><span class="sxs-lookup"><span data-stu-id="868aa-161">This method returns a string that contains file information.</span></span> <span data-ttu-id="868aa-162">Информация о файле отображается в элементе **MessageBox**.</span><span class="sxs-lookup"><span data-stu-id="868aa-162">The file information appears in a **MessageBox**.</span></span>  
   
-3.  Добавьте приведенный ниже метод `GetTextForOutput`.  
+3.  <span data-ttu-id="868aa-163">Добавьте приведенный ниже метод `GetTextForOutput`.</span><span class="sxs-lookup"><span data-stu-id="868aa-163">Add the following `GetTextForOutput` method.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> используется в коде для получения параметров файла. Параметры файла добавляются в <xref:System.Text.StringBuilder>.  
+     <span data-ttu-id="868aa-164">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> используется в коде для получения параметров файла.</span><span class="sxs-lookup"><span data-stu-id="868aa-164">The code uses the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method to obtain file parameters.</span></span> <span data-ttu-id="868aa-165">Параметры файла добавляются в <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="868aa-165">The file parameters are added to a <xref:System.Text.StringBuilder>.</span></span>  
   
-     Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> считывает содержимое файла в <xref:System.IO.StreamReader>. Первая строка содержимого файла извлекается из `StreamReader` и добавляется в `StringBuilder`.  
+     <span data-ttu-id="868aa-166">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> считывает содержимое файла в <xref:System.IO.StreamReader>.</span><span class="sxs-lookup"><span data-stu-id="868aa-166">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> method reads the file contents into a <xref:System.IO.StreamReader>.</span></span> <span data-ttu-id="868aa-167">Первая строка содержимого файла извлекается из `StreamReader` и добавляется в `StringBuilder`.</span><span class="sxs-lookup"><span data-stu-id="868aa-167">The first line of the contents is obtained from the `StreamReader` and is added to the `StringBuilder`.</span></span>  
   
-4.  Запустите приложение. Нажмите кнопку **Обзор** и перейдите в папку с TXT-файлами. Нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="868aa-168">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="868aa-168">Run the application.</span></span> <span data-ttu-id="868aa-169">Нажмите кнопку **Обзор** и перейдите в папку с TXT-файлами.</span><span class="sxs-lookup"><span data-stu-id="868aa-169">Click **Browse**, and browse to a folder that contains .txt files.</span></span> <span data-ttu-id="868aa-170">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="868aa-170">Click **OK**.</span></span>  
   
-     Выберите файл в элементе `ListBox` и щелкните **Исследовать**. В окне `MessageBox` будет выведена информация о файле.  
+     <span data-ttu-id="868aa-171">Выберите файл в элементе `ListBox` и щелкните **Исследовать**.</span><span class="sxs-lookup"><span data-stu-id="868aa-171">Select a file in the `ListBox`, and then click **Examine**.</span></span> <span data-ttu-id="868aa-172">В окне `MessageBox` будет выведена информация о файле.</span><span class="sxs-lookup"><span data-stu-id="868aa-172">A `MessageBox` shows the file information.</span></span>  
   
-5.  Остановите работу приложения.  
+5.  <span data-ttu-id="868aa-173">Остановите работу приложения.</span><span class="sxs-lookup"><span data-stu-id="868aa-173">Stop running the application.</span></span>  
   
-### <a name="to-add-a-log-entry"></a>Добавление записи в журнал  
+### <a name="to-add-a-log-entry"></a><span data-ttu-id="868aa-174">Добавление записи в журнал</span><span class="sxs-lookup"><span data-stu-id="868aa-174">To add a log entry</span></span>  
   
-1.  В конец обработчика событий `examineButton_Click` добавьте приведенный ниже код.  
+1.  <span data-ttu-id="868aa-175">В конец обработчика событий `examineButton_Click` добавьте приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="868aa-175">Add the following code to the end of the `examineButton_Click` event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
   
-     Код задает путь к файлу журнала, чтобы файл журнала помещался в тот же каталог, где находится выбранный файл. Запись журнала должна содержать текущие дату и время, а далее информацию о файле.  
+     <span data-ttu-id="868aa-176">Код задает путь к файлу журнала, чтобы файл журнала помещался в тот же каталог, где находится выбранный файл.</span><span class="sxs-lookup"><span data-stu-id="868aa-176">The code sets the log file path to put the log file in the same directory as that of the selected file.</span></span> <span data-ttu-id="868aa-177">Запись журнала должна содержать текущие дату и время, а далее информацию о файле.</span><span class="sxs-lookup"><span data-stu-id="868aa-177">The text of the log entry is set to the current date and time followed by the file information.</span></span>  
   
-     Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, которому передается аргумент `append` со значением `True`, используется для создания записи в журнале.  
+     <span data-ttu-id="868aa-178">Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, которому передается аргумент `append` со значением `True`, используется для создания записи в журнале.</span><span class="sxs-lookup"><span data-stu-id="868aa-178">The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method, with the `append` argument set to `True`, is used to create the log entry.</span></span>  
   
-2.  Запустите приложение. Перейдите к текстовому файлу, выберите его в элементе `ListBox`, установите флажок **Сохранить результаты** и щелкните **Исследовать**. Проверьте, добавлена ли запись в файл `log.txt`.  
+2.  <span data-ttu-id="868aa-179">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="868aa-179">Run the application.</span></span> <span data-ttu-id="868aa-180">Перейдите к текстовому файлу, выберите его в элементе `ListBox`, установите флажок **Сохранить результаты** и щелкните **Исследовать**.</span><span class="sxs-lookup"><span data-stu-id="868aa-180">Browse to a text file, select it in the `ListBox`, select the **Save Results** check box, and then click **Examine**.</span></span> <span data-ttu-id="868aa-181">Проверьте, добавлена ли запись в файл `log.txt`.</span><span class="sxs-lookup"><span data-stu-id="868aa-181">Verify that the log entry is written to the `log.txt` file.</span></span>  
   
-3.  Остановите работу приложения.  
+3.  <span data-ttu-id="868aa-182">Остановите работу приложения.</span><span class="sxs-lookup"><span data-stu-id="868aa-182">Stop running the application.</span></span>  
   
-### <a name="to-use-the-current-directory"></a>Использование текущего каталога  
+### <a name="to-use-the-current-directory"></a><span data-ttu-id="868aa-183">Использование текущего каталога</span><span class="sxs-lookup"><span data-stu-id="868aa-183">To use the current directory</span></span>  
   
-1.  Создайте обработчик событий для события `Form1_Load`, дважды щелкнув форму.  
+1.  <span data-ttu-id="868aa-184">Создайте обработчик событий для события `Form1_Load`, дважды щелкнув форму.</span><span class="sxs-lookup"><span data-stu-id="868aa-184">Create an event handler for `Form1_Load` by double-clicking the form.</span></span>  
   
-2.  Добавьте в обработчик событий приведенный ниже код.  
+2.  <span data-ttu-id="868aa-185">Добавьте в обработчик событий приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="868aa-185">Add the following code to the event handler.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
   
-     Этот код задает текущий каталог в качестве каталога по умолчанию для обозревателя папок.  
+     <span data-ttu-id="868aa-186">Этот код задает текущий каталог в качестве каталога по умолчанию для обозревателя папок.</span><span class="sxs-lookup"><span data-stu-id="868aa-186">This code sets the default directory of the folder browser to the current directory.</span></span>  
   
-3.  Запустите приложение. При первом нажатии кнопки **Обзор** открывается диалоговое окно **Выбор папки** с текущим каталогом.  
+3.  <span data-ttu-id="868aa-187">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="868aa-187">Run the application.</span></span> <span data-ttu-id="868aa-188">При первом нажатии кнопки **Обзор** открывается диалоговое окно **Выбор папки** с текущим каталогом.</span><span class="sxs-lookup"><span data-stu-id="868aa-188">When you click **Browse** the first time, the **Browse For Folder** dialog box opens to the current directory.</span></span>  
   
-4.  Остановите работу приложения.  
+4.  <span data-ttu-id="868aa-189">Остановите работу приложения.</span><span class="sxs-lookup"><span data-stu-id="868aa-189">Stop running the application.</span></span>  
   
-### <a name="to-selectively-enable-controls"></a>Выборочное включение элементов управления  
+### <a name="to-selectively-enable-controls"></a><span data-ttu-id="868aa-190">Выборочное включение элементов управления</span><span class="sxs-lookup"><span data-stu-id="868aa-190">To selectively enable controls</span></span>  
   
-1.  Добавьте приведенный ниже метод `SetEnabled`.  
+1.  <span data-ttu-id="868aa-191">Добавьте приведенный ниже метод `SetEnabled`.</span><span class="sxs-lookup"><span data-stu-id="868aa-191">Add the following `SetEnabled` method.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
   
-     Метод `SetEnabled` включает и отключает элементы управления в зависимости от того, выбран ли элемент в элементе `ListBox`.  
+     <span data-ttu-id="868aa-192">Метод `SetEnabled` включает и отключает элементы управления в зависимости от того, выбран ли элемент в элементе `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="868aa-192">The `SetEnabled` method enables or disables controls depending on whether an item is selected in the `ListBox`.</span></span>  
   
-2.  Создайте обработчик событий `SelectedIndexChanged` для элемента `filesListBox`, дважды щелкнув элемент управления `ListBox` в форме.  
+2.  <span data-ttu-id="868aa-193">Создайте обработчик событий `SelectedIndexChanged` для элемента `filesListBox`, дважды щелкнув элемент управления `ListBox` в форме.</span><span class="sxs-lookup"><span data-stu-id="868aa-193">Create a `SelectedIndexChanged` event handler for `filesListBox` by double-clicking the `ListBox` control on the form.</span></span>  
   
-3.  Добавьте вызов метода `SetEnabled` в новый обработчик событий `filesListBox_SelectedIndexChanged`.  
+3.  <span data-ttu-id="868aa-194">Добавьте вызов метода `SetEnabled` в новый обработчик событий `filesListBox_SelectedIndexChanged`.</span><span class="sxs-lookup"><span data-stu-id="868aa-194">Add a call to `SetEnabled` in the new `filesListBox_SelectedIndexChanged` event handler.</span></span>  
   
-4.  Добавьте вызов метода `SetEnabled` в конце обработчика событий `browseButton_Click`.  
+4.  <span data-ttu-id="868aa-195">Добавьте вызов метода `SetEnabled` в конце обработчика событий `browseButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="868aa-195">Add a call to `SetEnabled` at the end of the `browseButton_Click` event handler.</span></span>  
   
-5.  Добавьте вызов метода `SetEnabled` в конце обработчика событий `Form1_Load`.  
+5.  <span data-ttu-id="868aa-196">Добавьте вызов метода `SetEnabled` в конце обработчика событий `Form1_Load`.</span><span class="sxs-lookup"><span data-stu-id="868aa-196">Add a call to `SetEnabled` at the end of the `Form1_Load` event handler.</span></span>  
   
-6.  Запустите приложение. Флажок **Сохранить результаты** и кнопка **Исследовать** отключены, если элемент не выбран в элементе `ListBox`.  
+6.  <span data-ttu-id="868aa-197">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="868aa-197">Run the application.</span></span> <span data-ttu-id="868aa-198">Флажок **Сохранить результаты** и кнопка **Исследовать** отключены, если элемент не выбран в элементе `ListBox`.</span><span class="sxs-lookup"><span data-stu-id="868aa-198">The **Save Results** check box and the **Examine** button are disabled if an item is not selected in the `ListBox`.</span></span>  
   
-## <a name="full-example-using-mycomputerfilesystem"></a>Полный пример с использованием My.Computer.FileSystem  
- Ниже приведен полный пример.  
+## <a name="full-example-using-mycomputerfilesystem"></a><span data-ttu-id="868aa-199">Полный пример с использованием My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="868aa-199">Full example using My.Computer.FileSystem</span></span>  
+ <span data-ttu-id="868aa-200">Ниже приведен полный пример.</span><span class="sxs-lookup"><span data-stu-id="868aa-200">Following is the complete example.</span></span>  
   
  [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
-## <a name="full-example-using-systemio"></a>Полный пример с использованием System.IO  
- Следующий пример выполняет те же действия, используя классы из пространства имен <xref:System.IO> вместо объектов `My.Computer.FileSystem`.  
+## <a name="full-example-using-systemio"></a><span data-ttu-id="868aa-201">Полный пример с использованием System.IO</span><span class="sxs-lookup"><span data-stu-id="868aa-201">Full example using System.IO</span></span>  
+ <span data-ttu-id="868aa-202">Следующий пример выполняет те же действия, используя классы из пространства имен <xref:System.IO> вместо объектов `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="868aa-202">The following equivalent example uses classes from the <xref:System.IO> namespace instead of using `My.Computer.FileSystem` objects.</span></span>  
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   
- [Пошаговое руководство. Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
-
+## <a name="see-also"></a><span data-ttu-id="868aa-203">См. также</span><span class="sxs-lookup"><span data-stu-id="868aa-203">See Also</span></span>  
+ <xref:System.IO>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
+ [<span data-ttu-id="868aa-204">Пошаговое руководство. Управление файлами с помощью методов .NET Framework</span><span class="sxs-lookup"><span data-stu-id="868aa-204">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

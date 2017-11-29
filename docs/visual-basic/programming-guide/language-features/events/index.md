@@ -1,136 +1,117 @@
 ---
 title: "События (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="events-visual-basic"></a>События (Visual Basic)
-Возможно, вы воспринимаете проект [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] как набор процедур, выполняемых в определенной последовательности. Но на практике большинство программ управляются событиями, то есть поток выполнения определяется внешними воздействиями, которые называются *событиями*.  
+# <a name="events-visual-basic"></a><span data-ttu-id="3cb80-102">События (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3cb80-102">Events (Visual Basic)</span></span>
+<span data-ttu-id="3cb80-103">Возможно, вы воспринимаете проект [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] как набор процедур, выполняемых в определенной последовательности. Но на практике большинство программ управляются событиями, то есть поток выполнения определяется внешними воздействиями, которые называются *событиями*.</span><span class="sxs-lookup"><span data-stu-id="3cb80-103">While you might visualize a [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] project as a series of procedures that execute in a sequence, in reality, most programs are event driven—meaning the flow of execution is determined by external occurrences called *events*.</span></span>  
   
- Событие — это сигнал, который сообщает приложению, что произошло нечто важное. Например, когда пользователь щелкает элемент управления на форме, эта форма инициирует событие `Click` и вызывает процедуру обработки события. События позволяют отдельным задачам взаимодействовать друг с другом. Давайте представим, что приложение выполняет задачу по сортировке в отдельном процессе. Если пользователь отменит эту сортировку, приложение отправит событие отмены, по которому процесс сортировки завершит свою работу.  
+ <span data-ttu-id="3cb80-104">Событие — это сигнал, который сообщает приложению, что произошло нечто важное.</span><span class="sxs-lookup"><span data-stu-id="3cb80-104">An event is a signal that informs an application that something important has occurred.</span></span> <span data-ttu-id="3cb80-105">Например, когда пользователь щелкает элемент управления на форме, эта форма инициирует событие `Click` и вызывает процедуру обработки события.</span><span class="sxs-lookup"><span data-stu-id="3cb80-105">For example, when a user clicks a control on a form, the form can raise a `Click` event and call a procedure that handles the event.</span></span> <span data-ttu-id="3cb80-106">События позволяют отдельным задачам взаимодействовать друг с другом.</span><span class="sxs-lookup"><span data-stu-id="3cb80-106">Events also allow separate tasks to communicate.</span></span> <span data-ttu-id="3cb80-107">Давайте представим, что приложение выполняет задачу по сортировке в отдельном процессе.</span><span class="sxs-lookup"><span data-stu-id="3cb80-107">Say, for example, that your application performs a sort task separately from the main application.</span></span> <span data-ttu-id="3cb80-108">Если пользователь отменит эту сортировку, приложение отправит событие отмены, по которому процесс сортировки завершит свою работу.</span><span class="sxs-lookup"><span data-stu-id="3cb80-108">If a user cancels the sort, your application can send a cancel event instructing the sort process to stop.</span></span>  
   
-## <a name="event-terms-and-concepts"></a>Термины и основные понятия для событий  
- В этом разделе описываются термины и основные понятия, используемые в отношении событий в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+## <a name="event-terms-and-concepts"></a><span data-ttu-id="3cb80-109">Термины и основные понятия для событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-109">Event Terms and Concepts</span></span>  
+ <span data-ttu-id="3cb80-110">В этом разделе описываются термины и основные понятия, используемые в отношении событий в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3cb80-110">This section describes the terms and concepts used with events in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-### <a name="declaring-events"></a>Объявление событий  
- События объявляются внутри классов, структур, модулей и интерфейсов с помощью ключевого слова `Event`, как показано в следующем примере:  
+### <a name="declaring-events"></a><span data-ttu-id="3cb80-111">Объявление событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-111">Declaring Events</span></span>  
+ <span data-ttu-id="3cb80-112">События объявляются внутри классов, структур, модулей и интерфейсов с помощью ключевого слова `Event`, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="3cb80-112">You declare events within classes, structures, modules, and interfaces using the `Event` keyword, as in the following example:</span></span>  
   
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
-### <a name="raising-events"></a>Создание событий  
- Событие действует как сообщение о том, что произошло нечто важное. Рассылка такого сообщения называется *созданием* события. В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] события создаются инструкцией `RaiseEvent`, как показано в следующем примере:  
+### <a name="raising-events"></a><span data-ttu-id="3cb80-113">Создание событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-113">Raising Events</span></span>  
+ <span data-ttu-id="3cb80-114">Событие действует как сообщение о том, что произошло нечто важное.</span><span class="sxs-lookup"><span data-stu-id="3cb80-114">An event is like a message announcing that something important has occurred.</span></span> <span data-ttu-id="3cb80-115">Рассылка такого сообщения называется *созданием* события.</span><span class="sxs-lookup"><span data-stu-id="3cb80-115">The act of broadcasting the message is called *raising* the event.</span></span> <span data-ttu-id="3cb80-116">В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] события создаются инструкцией `RaiseEvent`, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="3cb80-116">In [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], you raise events with the `RaiseEvent` statement, as in the following example:</span></span>  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
- События должны создаваться в пределах области действия класса, модуля или структуры, в которых они объявлены. Например, производный класс не может создавать события, унаследованные от базового класса.  
+ <span data-ttu-id="3cb80-117">События должны создаваться в пределах области действия класса, модуля или структуры, в которых они объявлены.</span><span class="sxs-lookup"><span data-stu-id="3cb80-117">Events must be raised within the scope of the class, module, or structure where they are declared.</span></span> <span data-ttu-id="3cb80-118">Например, производный класс не может создавать события, унаследованные от базового класса.</span><span class="sxs-lookup"><span data-stu-id="3cb80-118">For example, a derived class cannot raise events inherited from a base class.</span></span>  
   
-### <a name="event-senders"></a>Отправители событий  
- Любой объект, способный создать событие, считается *отправителем события* или *источником события*. Например, отправителями событий могут являться формы, элементы управления и пользовательские объекты.  
+### <a name="event-senders"></a><span data-ttu-id="3cb80-119">Отправители событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-119">Event Senders</span></span>  
+ <span data-ttu-id="3cb80-120">Любой объект, способный создать событие, считается *отправителем события* или *источником события*.</span><span class="sxs-lookup"><span data-stu-id="3cb80-120">Any object capable of raising an event is an *event sender*, also known as an *event source*.</span></span> <span data-ttu-id="3cb80-121">Например, отправителями событий могут являться формы, элементы управления и пользовательские объекты.</span><span class="sxs-lookup"><span data-stu-id="3cb80-121">Forms, controls, and user-defined objects are examples of event senders.</span></span>  
   
-### <a name="event-handlers"></a>Обработчики событий  
- *Обработчики событий* — это процедуры, вызываемые при создании определенного события. В качестве обработчика событий можно использовать любую допустимую подпрограмму с подходящей сигнатурой. Но в качестве обработчика событий нельзя использовать функцию, поскольку она не может возвращать значение источнику события.  
+### <a name="event-handlers"></a><span data-ttu-id="3cb80-122">Обработчики событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-122">Event Handlers</span></span>  
+ <span data-ttu-id="3cb80-123">*Обработчики событий* — это процедуры, вызываемые при создании определенного события.</span><span class="sxs-lookup"><span data-stu-id="3cb80-123">*Event handlers* are procedures that are called when a corresponding event occurs.</span></span> <span data-ttu-id="3cb80-124">В качестве обработчика событий можно использовать любую допустимую подпрограмму с подходящей сигнатурой.</span><span class="sxs-lookup"><span data-stu-id="3cb80-124">You can use any valid subroutine with a matching signature as an event handler.</span></span> <span data-ttu-id="3cb80-125">Но в качестве обработчика событий нельзя использовать функцию, поскольку она не может возвращать значение источнику события.</span><span class="sxs-lookup"><span data-stu-id="3cb80-125">You cannot use a function as an event handler, however, because it cannot return a value to the event source.</span></span>  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] использует для обработчиков событий стандартное соглашение об именовании: имя обработчика включает имя отправителя события, символ подчеркивания и имя самого события. Например, событие `Click` для кнопки с именем `button1` будет называться `Sub button1_Click`.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="3cb80-126"> использует для обработчиков событий стандартное соглашение об именовании: имя обработчика включает имя отправителя события, символ подчеркивания и имя самого события.</span><span class="sxs-lookup"><span data-stu-id="3cb80-126"> uses a standard naming convention for event handlers that combines the name of the event sender, an underscore, and the name of the event.</span></span> <span data-ttu-id="3cb80-127">Например, событие `Click` для кнопки с именем `button1` будет называться `Sub button1_Click`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-127">For example, the `Click` event of a button named `button1` would be named `Sub button1_Click`.</span></span>  
   
 > [!NOTE]
->  Мы рекомендуем придерживаться этого соглашения об именовании при создании обработчиков событий и для пользовательских событий. Но это не обязательное условие, вы можете использовать любое допустимое имя процедуры.  
+>  <span data-ttu-id="3cb80-128">Мы рекомендуем придерживаться этого соглашения об именовании при создании обработчиков событий и для пользовательских событий. Но это не обязательное условие, вы можете использовать любое допустимое имя процедуры.</span><span class="sxs-lookup"><span data-stu-id="3cb80-128">We recommend that you use this naming convention when defining event handlers for your own events, but it is not required; you can use any valid subroutine name.</span></span>  
   
-## <a name="associating-events-with-event-handlers"></a>Связывание событий с обработчиками событий  
- Чтобы обработчик событий мог выполнять свою функцию, его следует связать с соответствующим событием с помощью инструкции `Handles` или `AddHandler`.  
+## <a name="associating-events-with-event-handlers"></a><span data-ttu-id="3cb80-129">Связывание событий с обработчиками событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-129">Associating Events with Event Handlers</span></span>  
+ <span data-ttu-id="3cb80-130">Чтобы обработчик событий мог выполнять свою функцию, его следует связать с соответствующим событием с помощью инструкции `Handles` или `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-130">Before an event handler becomes usable, you must first associate it with an event by using either the `Handles` or `AddHandler` statement.</span></span>  
   
-### <a name="withevents-and-the-handles-clause"></a>Оператор WithEvents и предложение Handles  
- Инструкция `WithEvents` и предложение `Handles` предоставляют декларативный способ указания обработчиков событий. Если объект объявлен с ключевым словом `WithEvents`, созданные им события могут обрабатываться любой процедурой с инструкцией `Handles` для этого события, как показано в следующем примере:  
+### <a name="withevents-and-the-handles-clause"></a><span data-ttu-id="3cb80-131">Оператор WithEvents и предложение Handles</span><span class="sxs-lookup"><span data-stu-id="3cb80-131">WithEvents and the Handles Clause</span></span>  
+ <span data-ttu-id="3cb80-132">Инструкция `WithEvents` и предложение `Handles` предоставляют декларативный способ указания обработчиков событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-132">The `WithEvents` statement and `Handles` clause provide a declarative way of specifying event handlers.</span></span> <span data-ttu-id="3cb80-133">Если объект объявлен с ключевым словом `WithEvents`, созданные им события могут обрабатываться любой процедурой с инструкцией `Handles` для этого события, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="3cb80-133">An event raised by an object declared with the `WithEvents` keyword can be handled by any procedure with a `Handles` statement for that event, as shown in the following example:</span></span>  
   
  [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_3.vb)]  
   
- Инструкция `WithEvents` и предложение `Handles` часто являются наилучшим решением для обработки событий, так как декларативный синтаксис позволяет легко создавать, читать и отлаживать код программы. Но использование переменных `WithEvents` имеет ряд ограничений.  
+ <span data-ttu-id="3cb80-134">Инструкция `WithEvents` и предложение `Handles` часто являются наилучшим решением для обработки событий, так как декларативный синтаксис позволяет легко создавать, читать и отлаживать код программы.</span><span class="sxs-lookup"><span data-stu-id="3cb80-134">The `WithEvents` statement and the `Handles` clause are often the best choice for event handlers because the declarative syntax they use makes event handling easier to code, read and debug.</span></span> <span data-ttu-id="3cb80-135">Но использование переменных `WithEvents` имеет ряд ограничений.</span><span class="sxs-lookup"><span data-stu-id="3cb80-135">However, be aware of the following limitations on the use of `WithEvents` variables:</span></span>  
   
--   Нельзя использовать переменную `WithEvents` в качестве переменной объекта. То есть вы не можете объявить ее как `Object`. При объявлении переменной необходимо указать имя класса.  
+-   <span data-ttu-id="3cb80-136">Нельзя использовать переменную `WithEvents` в качестве переменной объекта.</span><span class="sxs-lookup"><span data-stu-id="3cb80-136">You cannot use a `WithEvents` variable as an object variable.</span></span> <span data-ttu-id="3cb80-137">То есть вы не можете объявить ее как `Object`. При объявлении переменной необходимо указать имя класса.</span><span class="sxs-lookup"><span data-stu-id="3cb80-137">That is, you cannot declare it as `Object`—you must specify the class name when you declare the variable.</span></span>  
   
--   Поскольку общие события не связываются с экземплярами класса, вы не можете использовать `WithEvents` для декларативной обработки общих событий. Аналогично, нельзя использовать `WithEvents` или `Handles` для обработки событий от `Structure`. В обоих случаях для обработки таких событий можно использовать инструкцию `AddHandler`.  
+-   <span data-ttu-id="3cb80-138">Поскольку общие события не связаны с экземплярами класса, нельзя использовать `WithEvents` для декларативной обработки общих событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-138">Because shared events are not tied to class instances, you cannot use `WithEvents` to declaratively handle shared events.</span></span> <span data-ttu-id="3cb80-139">Аналогично, нельзя использовать `WithEvents` или `Handles` для обработки событий от `Structure`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-139">Similarly, you cannot use `WithEvents` or `Handles` to handle events from a `Structure`.</span></span> <span data-ttu-id="3cb80-140">В обоих случаях для обработки таких событий можно использовать инструкцию `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-140">In both cases, you can use the `AddHandler` statement to handle those events.</span></span>  
   
--   Вы не можете создавать массивы переменных типа `WithEvents`.  
+-   <span data-ttu-id="3cb80-141">Вы не можете создавать массивы переменных типа `WithEvents`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-141">You cannot create arrays of `WithEvents` variables.</span></span>  
   
- Переменные `WithEvents` позволяют одному обработчику событий обрабатывать один или несколько видов событий. Также можно создать несколько обработчиков для одного вида событий.  
+ <span data-ttu-id="3cb80-142">Переменные `WithEvents` позволяют одному обработчику событий обрабатывать один или несколько видов событий. Также можно создать несколько обработчиков для одного вида событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-142">`WithEvents` variables allow a single event handler to handle one or more kind of event, or one or more event handlers to handle the same kind of event.</span></span>  
   
- Предложение `Handles` является стандартным способом связывания события с обработчиком событий, но оно ограничено тем, что может связывать события с обработчиками событий только во время компиляции.  
+ <span data-ttu-id="3cb80-143">Предложение `Handles` является стандартным способом связывания события с обработчиком событий, но оно ограничено тем, что может связывать события с обработчиками событий только во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="3cb80-143">Although the `Handles` clause is the standard way of associating an event with an event handler, it is limited to associating events with event handlers at compile time.</span></span>  
   
- В некоторых случаях, например при работе с событиями форм или элементов управления, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] автоматически создает пустой обработчик событий в качестве заглушки и связывает его с событием. Например, если вы дважды щелкнете кнопку в форме в режиме конструктора, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] создаст пустой обработчик событий и переменную `WithEvents` для кнопки, как показано в следующем коде:  
+ <span data-ttu-id="3cb80-144">В некоторых случаях, например при работе с событиями форм или элементов управления, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] автоматически создает пустой обработчик событий в качестве заглушки и связывает его с событием.</span><span class="sxs-lookup"><span data-stu-id="3cb80-144">In some cases, such as with events associated with forms or controls, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatically stubs out an empty event handler and associates it with an event.</span></span> <span data-ttu-id="3cb80-145">Например, если вы дважды щелкнете кнопку в форме в режиме конструктора, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] создаст пустой обработчик событий и переменную `WithEvents` для кнопки, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="3cb80-145">For example, when you double-click a command button on a form in design mode, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] creates an empty event handler and a `WithEvents` variable for the command button, as in the following code:</span></span>  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
-### <a name="addhandler-and-removehandler"></a>AddHandler и RemoveHandler  
- Инструкция `AddHandler` похожа на предложение `Handles`, поскольку тоже позволяет задавать обработчик событий. Но `AddHandler` в сочетании с `RemoveHandler` обеспечивает большую гибкость, чем предложение `Handles`. Она позволяет динамически добавлять, удалять и изменять обработчики событий, связанные с событием. Если вы хотите обрабатывать общие события или события от структуры, необходимо использовать `AddHandler`.  
+### <a name="addhandler-and-removehandler"></a><span data-ttu-id="3cb80-146">AddHandler и RemoveHandler</span><span class="sxs-lookup"><span data-stu-id="3cb80-146">AddHandler and RemoveHandler</span></span>  
+ <span data-ttu-id="3cb80-147">Инструкция `AddHandler` похожа на предложение `Handles`, поскольку тоже позволяет задавать обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-147">The `AddHandler` statement is similar to the `Handles` clause in that both allow you to specify an event handler.</span></span> <span data-ttu-id="3cb80-148">Но `AddHandler` в сочетании с `RemoveHandler` обеспечивает большую гибкость, чем предложение `Handles`. Она позволяет динамически добавлять, удалять и изменять обработчики событий, связанные с событием.</span><span class="sxs-lookup"><span data-stu-id="3cb80-148">However, `AddHandler`, used with `RemoveHandler`, provides greater flexibility than the `Handles` clause, allowing you to dynamically add, remove, and change the event handler associated with an event.</span></span> <span data-ttu-id="3cb80-149">Если вы хотите обрабатывать общие события или события от структуры, необходимо использовать `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-149">If you want to handle shared events or events from a structure, you must use `AddHandler`.</span></span>  
   
- `AddHandler` принимает два аргумента: имя события, которое предоставляет отправитель события, например элемент управления, и выражение, определяющее делегат. Класс делегата при использовании `AddHandler` не обязательно указывать явно, поскольку инструкция `AddressOf` всегда возвращает ссылку на делегат. Следующий пример связывает обработчик событий с событием, создаваемым объектом:  
+ <span data-ttu-id="3cb80-150">`AddHandler` принимает два аргумента: имя события, которое предоставляет отправитель события, например элемент управления, и выражение, определяющее делегат.</span><span class="sxs-lookup"><span data-stu-id="3cb80-150">`AddHandler` takes two arguments: the name of an event from an event sender such as a control, and an expression that evaluates to a delegate.</span></span> <span data-ttu-id="3cb80-151">Класс делегата при использовании `AddHandler` не обязательно указывать явно, поскольку инструкция `AddressOf` всегда возвращает ссылку на делегат.</span><span class="sxs-lookup"><span data-stu-id="3cb80-151">You do not need to explicitly specify the delegate class when using `AddHandler`, since the `AddressOf` statement always returns a reference to the delegate.</span></span> <span data-ttu-id="3cb80-152">Следующий пример связывает обработчик событий с событием, создаваемым объектом:</span><span class="sxs-lookup"><span data-stu-id="3cb80-152">The following example associates an event handler with an event raised by an object:</span></span>  
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
- Инструкция `RemoveHandler`, которая отсоединяет событие от обработчика событий, использует такой же синтаксис, как `AddHandler`. Пример:  
+ <span data-ttu-id="3cb80-153">Инструкция `RemoveHandler`, которая отсоединяет событие от обработчика событий, использует такой же синтаксис, как `AddHandler`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-153">`RemoveHandler`, which disconnects an event from an event handler, uses the same syntax as `AddHandler`.</span></span> <span data-ttu-id="3cb80-154">Пример:</span><span class="sxs-lookup"><span data-stu-id="3cb80-154">For example:</span></span>  
   
  [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
- В следующем примере обработчик событий связывается с событием, а затем создается событие. Обработчик событий перехватывает это событие и выводит сообщение.  
+ <span data-ttu-id="3cb80-155">В следующем примере обработчик событий связывается с событием, а затем создается событие.</span><span class="sxs-lookup"><span data-stu-id="3cb80-155">In the following example, an event handler is associated with an event, and the event is raised.</span></span> <span data-ttu-id="3cb80-156">Обработчик событий перехватывает это событие и выводит сообщение.</span><span class="sxs-lookup"><span data-stu-id="3cb80-156">The event handler catches the event and displays a message.</span></span>  
   
- Затем первый обработчик событий удаляется, а с этим событием связывается другой обработчик событий. Теперь событие создается снова и отображается другое сообщение.  
+ <span data-ttu-id="3cb80-157">Затем первый обработчик событий удаляется, а с этим событием связывается другой обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-157">Then the first event handler is removed and a different event handler is associated with the event.</span></span> <span data-ttu-id="3cb80-158">Теперь событие создается снова и отображается другое сообщение.</span><span class="sxs-lookup"><span data-stu-id="3cb80-158">When the event is raised again, a different message is displayed.</span></span>  
   
- Наконец, второй обработчик событий удаляется и событие создается в третий раз. Поскольку теперь нет обработчиков событий, связанных с этим событием, никакие действия не выполняются.  
+ <span data-ttu-id="3cb80-159">Наконец, второй обработчик событий удаляется и событие создается в третий раз.</span><span class="sxs-lookup"><span data-stu-id="3cb80-159">Finally, the second event handler is removed and the event is raised for a third time.</span></span> <span data-ttu-id="3cb80-160">Поскольку теперь нет обработчиков событий, связанных с этим событием, никакие действия не выполняются.</span><span class="sxs-lookup"><span data-stu-id="3cb80-160">Because there is no longer an event handler associated with the event, no action is taken.</span></span>  
   
  [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
   
-## <a name="handling-events-inherited-from-a-base-class"></a>Обработка событий, наследуемых от базового класса  
- *Производные классы*, которые наследуют характеристики из базового класса, могут обрабатывать события, создаваемые этим базовым классом, используя инструкцию `Handles``MyBase`.  
+## <a name="handling-events-inherited-from-a-base-class"></a><span data-ttu-id="3cb80-161">Обработка событий, наследуемых от базового класса</span><span class="sxs-lookup"><span data-stu-id="3cb80-161">Handling Events Inherited from a Base Class</span></span>  
+ <span data-ttu-id="3cb80-162">*Производные классы*, которые наследуют характеристики из базового класса, могут обрабатывать события, создаваемые этим базовым классом, используя инструкцию `Handles``MyBase`.</span><span class="sxs-lookup"><span data-stu-id="3cb80-162">*Derived classes*—classes that inherit characteristics from a base class—can handle events raised by their base class using the `Handles``MyBase` statement.</span></span>  
   
-#### <a name="to-handle-events-from-a-base-class"></a>Обработка событий из базового класса  
+#### <a name="to-handle-events-from-a-base-class"></a><span data-ttu-id="3cb80-163">Обработка событий из базового класса</span><span class="sxs-lookup"><span data-stu-id="3cb80-163">To handle events from a base class</span></span>  
   
--   Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать. Например:  
+-   <span data-ttu-id="3cb80-164">Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать.</span><span class="sxs-lookup"><span data-stu-id="3cb80-164">Declare an event handler in the derived class by adding a `Handles MyBase.`*eventname* statement to the declaration line of your event-handler procedure, where *eventname* is the name of the event in the base class you are handling.</span></span> <span data-ttu-id="3cb80-165">Пример:</span><span class="sxs-lookup"><span data-stu-id="3cb80-165">For example:</span></span>  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a><span data-ttu-id="3cb80-166">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="3cb80-166">Related Sections</span></span>  
   
-|Заголовок|Описание|  
+|<span data-ttu-id="3cb80-167">Заголовок</span><span class="sxs-lookup"><span data-stu-id="3cb80-167">Title</span></span>|<span data-ttu-id="3cb80-168">Описание</span><span class="sxs-lookup"><span data-stu-id="3cb80-168">Description</span></span>|  
 |-----------|-----------------|  
-|[Пошаговое руководство. Объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Предоставляет пошаговую инструкцию для объявления и создания событий класса.|  
-|[Пошаговое руководство. Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Описывает способ создания процедуры обработчика событий.|  
-|[Практическое руководство. Объявление пользовательских событий для предотвращения блокировки](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Показывает, как определить пользовательское событие, которое позволяет асинхронно вызывать обработчики событий.|  
-|[Практическое руководство. Объявление пользовательских событий для экономии памяти](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Показывает, как определить пользовательское событие, которое использует память только при обработке события.|  
-|[Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Перечисляет распространенные проблемы, возникающие для обработчиков событий в наследуемых компонентах.|  
-|[События](../../../../standard/events/index.md)|Предоставляет обзор модели событий в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Описывает, как работать с событиями, связанными с объектами Windows Forms.|  
-|[Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Предоставляет обзор делегатов в Visual Basic.|
-
+|[<span data-ttu-id="3cb80-169">Пошаговое руководство. Объявление и создание событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-169">Walkthrough: Declaring and Raising Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|<span data-ttu-id="3cb80-170">Предоставляет пошаговую инструкцию для объявления и создания событий класса.</span><span class="sxs-lookup"><span data-stu-id="3cb80-170">Provides a step-by-step description of how to declare and raise events for a class.</span></span>|  
+|[<span data-ttu-id="3cb80-171">Пошаговое руководство. Обработка событий</span><span class="sxs-lookup"><span data-stu-id="3cb80-171">Walkthrough: Handling Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|<span data-ttu-id="3cb80-172">Описывает способ создания процедуры обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-172">Demonstrates how to write an event-handler procedure.</span></span>|  
+|[<span data-ttu-id="3cb80-173">Практическое руководство. Объявление пользовательских событий для предотвращения блокировки</span><span class="sxs-lookup"><span data-stu-id="3cb80-173">How to: Declare Custom Events To Avoid Blocking</span></span>](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|<span data-ttu-id="3cb80-174">Показывает, как определить пользовательское событие, которое позволяет асинхронно вызывать обработчики событий.</span><span class="sxs-lookup"><span data-stu-id="3cb80-174">Demonstrates how to define a custom event that allows its event handlers to be called asynchronously.</span></span>|  
+|[<span data-ttu-id="3cb80-175">Практическое руководство. Объявление пользовательских событий для экономии памяти</span><span class="sxs-lookup"><span data-stu-id="3cb80-175">How to: Declare Custom Events To Conserve Memory</span></span>](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|<span data-ttu-id="3cb80-176">Показывает, как определить пользовательское событие, которое использует память только при обработке события.</span><span class="sxs-lookup"><span data-stu-id="3cb80-176">Demonstrates how to define a custom event that uses memory only when the event is handled.</span></span>|  
+|[<span data-ttu-id="3cb80-177">Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3cb80-177">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|<span data-ttu-id="3cb80-178">Перечисляет распространенные проблемы, возникающие для обработчиков событий в наследуемых компонентах.</span><span class="sxs-lookup"><span data-stu-id="3cb80-178">Lists common issues that arise with event handlers in inherited components.</span></span>|  
+|[<span data-ttu-id="3cb80-179">События</span><span class="sxs-lookup"><span data-stu-id="3cb80-179">Events</span></span>](../../../../standard/events/index.md)|<span data-ttu-id="3cb80-180">Предоставляет обзор модели событий в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3cb80-180">Provides an overview of the event model in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="3cb80-181">Создание обработчиков событий в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3cb80-181">Creating Event Handlers in Windows Forms</span></span>](https://msdn.microsoft.com/library/dacysss4.aspx)|<span data-ttu-id="3cb80-182">Описывает, как работать с событиями, связанными с объектами Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="3cb80-182">Describes how to work with events associated with Windows Forms objects.</span></span>|  
+|[<span data-ttu-id="3cb80-183">Делегаты</span><span class="sxs-lookup"><span data-stu-id="3cb80-183">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|<span data-ttu-id="3cb80-184">Предоставляет обзор делегатов в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3cb80-184">Provides an overview of delegates in Visual Basic.</span></span>|

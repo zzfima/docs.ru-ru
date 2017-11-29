@@ -1,95 +1,98 @@
 ---
-title: "Асинхронные сценарии с использованием HTTP, TCP или именованного канала | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Асинхронные сценарии с использованием HTTP, TCP или именованного канала"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c697069aad590013ff360eb6ee4cba39468b89d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Асинхронные сценарии с использованием HTTP, TCP или именованного канала
-В этом разделе описываются действия и перенаправления для различных асинхронных сценариев типа запрос\-ответ \(с многопотоковыми запросами с использованием HTTP, TCP или именованного канала\).  
+# <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="d10d4-102">Асинхронные сценарии с использованием HTTP, TCP или именованного канала</span><span class="sxs-lookup"><span data-stu-id="d10d4-102">Asynchronous Scenarios using HTTP, TCP, or Named-Pipe</span></span>
+<span data-ttu-id="d10d4-103">В этом разделе описываются действия и перенаправления для различных асинхронных сценариев типа запрос-ответ (с многопотоковыми запросами с использованием HTTP, TCP или именованного канала).</span><span class="sxs-lookup"><span data-stu-id="d10d4-103">This topic describes the activities and transfers for different asynchronous request/reply scenarios, with multithreaded requests using HTTP, TCP, or named pipe.</span></span>  
   
-## Асинхронный запрос\-ответ без ошибок  
- В этом разделе описываются действия и перенаправления для асинхронного сценария типа запрос\-ответ \(с многопотоковым клиентом\).  
+## <a name="asynchronous-requestreply-without-errors"></a><span data-ttu-id="d10d4-104">Асинхронный запрос-ответ без ошибок</span><span class="sxs-lookup"><span data-stu-id="d10d4-104">Asynchronous Request/Reply without Errors</span></span>  
+ <span data-ttu-id="d10d4-105">В этом разделе описываются действия и перенаправления для асинхронного сценария типа запрос-ответ (с многопотоковым клиентом).</span><span class="sxs-lookup"><span data-stu-id="d10d4-105">This section describes the activities and transfers for an asynchronous request/reply scenario, with multithreaded clients.</span></span>  
   
- Действие вызывающего завершается, когда возвращается значение `beginCall` и `endCall`.При осуществлении обратного вызова возвращается обратный вызов.  
+ <span data-ttu-id="d10d4-106">Действие вызывающего завершается, когда возвращается значение `beginCall` и `endCall`.</span><span class="sxs-lookup"><span data-stu-id="d10d4-106">The caller activity terminates when `beginCall` returns, and `endCall` returns.</span></span> <span data-ttu-id="d10d4-107">При осуществлении обратного вызова возвращается обратный вызов.</span><span class="sxs-lookup"><span data-stu-id="d10d4-107">If a callback is called, the callback returns.</span></span>  
   
- Вызываемое действие завершится, когда возвращается значение `beginCall` и `endCall` или когда возвращается обратный вызов, если он был вызван из данного действия.  
+ <span data-ttu-id="d10d4-108">Вызываемое действие завершится, когда возвращается значение `beginCall` и `endCall` или когда возвращается обратный вызов, если он был вызван из данного действия.</span><span class="sxs-lookup"><span data-stu-id="d10d4-108">The called activity terminates when `beginCall` returns, `endCall` returns, or when the callback returns if it was called from that activity.</span></span>  
   
-### Асинхронный клиент без обратного вызова  
+### <a name="asynchronous-client-without-callback"></a><span data-ttu-id="d10d4-109">Асинхронный клиент без обратного вызова</span><span class="sxs-lookup"><span data-stu-id="d10d4-109">Asynchronous Client without Callback</span></span>  
   
-#### Распространение включено для обеих сторон \(с использованием HTTP\)  
- ![Асинхронные сценарии](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")  
+#### <a name="propagation-is-enabled-on-both-sides-using-http"></a><span data-ttu-id="d10d4-110">Распространение включено для обеих сторон (с использованием HTTP)</span><span class="sxs-lookup"><span data-stu-id="d10d4-110">Propagation is Enabled on Both Sides, using HTTP</span></span>  
+ <span data-ttu-id="d10d4-111">![Асинхронные сценарии](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")</span><span class="sxs-lookup"><span data-stu-id="d10d4-111">![Asynchronous scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")</span></span>  
   
- Рис. 1.Асинхронный клиент, без обратного вызова, атрибут `propagateActivity`\=`true` для обеих сторон, с использованием HTTP  
+ <span data-ttu-id="d10d4-112">Рисунок 1.</span><span class="sxs-lookup"><span data-stu-id="d10d4-112">Figure 1.</span></span> <span data-ttu-id="d10d4-113">Асинхронный клиент, без обратного вызова `propagateActivity` = `true` на обеих сторонах HTTP</span><span class="sxs-lookup"><span data-stu-id="d10d4-113">Asynchronous client, no callback, `propagateActivity`=`true` on both sides, HTTP</span></span>  
   
- Если атрибут `propagateActivity`\=`true`, действие ProcessMessage указывает, какое действие ProcessAction должно быть передано.  
+ <span data-ttu-id="d10d4-114">Если `propagateActivity` = `true`, действие ProcessMessage указывает, какое действие ProcessAction для передачи.</span><span class="sxs-lookup"><span data-stu-id="d10d4-114">If `propagateActivity`=`true`, ProcessMessage indicates which ProcessAction activity to transfer to.</span></span>  
   
- Для сценариев, основанных на HTTP, для первого отправляемого сообщения вызывается действие ReceiveBytes, которое сохраняется на время существования запроса.  
+ <span data-ttu-id="d10d4-115">Для сценариев, основанных на HTTP, для первого отправляемого сообщения вызывается действие ReceiveBytes, которое сохраняется на время существования запроса.</span><span class="sxs-lookup"><span data-stu-id="d10d4-115">For HTTP-based scenarios, ReceiveBytes is invoked on the first message to send, and exists for the lifetime of the request.</span></span>  
   
-#### Распространение отключено для обеих сторон \(с использованием HTTP\)  
- Если атрибут `propagateActivity`\=`false` для обеих сторон, действие ProcessMessage не указывает, какое действие ProcessAction должно быть передано.Таким образом, вызывается новое временное действие ProcessAction с новым идентификатором.Если асинхронный ответ соответствует запросу в коде ServiceModel, идентификатор действия может быть получен из локального контекста.Фактическое действие ProcessAction может быть передано с данным идентификатором.  
+#### <a name="propagation-is-disabled-on-either-sides-using-http"></a><span data-ttu-id="d10d4-116">Распространение отключено для обеих сторон (с использованием HTTP)</span><span class="sxs-lookup"><span data-stu-id="d10d4-116">Propagation is Disabled on Either Sides, using HTTP</span></span>  
+ <span data-ttu-id="d10d4-117">Если `propagateActivity` = `false` для обеих сторон, действие ProcessMessage указывает, какое действие ProcessAction для передачи.</span><span class="sxs-lookup"><span data-stu-id="d10d4-117">If `propagateActivity`=`false` on either side, ProcessMessage does not indicate which ProcessAction activity to transfer to.</span></span> <span data-ttu-id="d10d4-118">Таким образом, вызывается новое временное действие ProcessAction с новым идентификатором.</span><span class="sxs-lookup"><span data-stu-id="d10d4-118">Therefore, a new temporary ProcessAction activity with a new ID is invoked.</span></span> <span data-ttu-id="d10d4-119">Если асинхронный ответ соответствует запросу в коде ServiceModel, идентификатор действия может быть получен из локального контекста.</span><span class="sxs-lookup"><span data-stu-id="d10d4-119">When the asynchronous response is matched to the request in ServiceModel code, the Activity ID can be retrieved from the local context.</span></span> <span data-ttu-id="d10d4-120">Фактическое действие ProcessAction может быть передано с данным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="d10d4-120">The actual ProcessAction activity can be transferred to with that ID.</span></span>  
   
- ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47;именованных каналов](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ <span data-ttu-id="d10d4-121">![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; Именованный канал](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")</span><span class="sxs-lookup"><span data-stu-id="d10d4-121">![Asynchronous scenarios using HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")</span></span>  
   
- Рис. 2.Асинхронный клиент, без обратного вызова, атрибут `propagateActivity`\=`false` для любой из сторон, с использованием HTTP  
+ <span data-ttu-id="d10d4-122">Рис. 2.</span><span class="sxs-lookup"><span data-stu-id="d10d4-122">Figure 2.</span></span> <span data-ttu-id="d10d4-123">Асинхронный клиент, без обратного вызова `propagateActivity` = `false` для обеих сторон, HTTP</span><span class="sxs-lookup"><span data-stu-id="d10d4-123">Asynchronous client, no callback, `propagateActivity`=`false` on either side, HTTP</span></span>  
   
- Для сценариев, основанных на HTTP, для первого отправляемого сообщения вызывается действие ReceiveBytes, которое сохраняется на время существования запроса.  
+ <span data-ttu-id="d10d4-124">Для сценариев, основанных на HTTP, для первого отправляемого сообщения вызывается действие ReceiveBytes, которое сохраняется на время существования запроса.</span><span class="sxs-lookup"><span data-stu-id="d10d4-124">For HTTP-based scenarios, ReceiveBytes is invoked on the first message to send, and exists for the lifetime of the request.</span></span>  
   
- Действие Process Action создается на асинхронном клиенте, когда атрибут `propagateActivity`\=`false` на стороне вызывающего или вызываемого или когда ответное сообщение не содержит заголовок действия.  
+ <span data-ttu-id="d10d4-125">Действие Process Action создается на асинхронном клиенте при `propagateActivity` = `false` в вызывающей или вызываемой и, когда сообщение-ответ не содержит заголовка Action.</span><span class="sxs-lookup"><span data-stu-id="d10d4-125">A Process Action activity is created on an asynchronous client when `propagateActivity`=`false` at the caller or callee, and when the response message does not include an Action header.</span></span>  
   
-#### Распространение включено для обеих сторон \(с использованием TCP или именованного канала\)  
- ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47;именованных каналов](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+#### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a><span data-ttu-id="d10d4-126">Распространение включено для обеих сторон (с использованием TCP или именованного канала)</span><span class="sxs-lookup"><span data-stu-id="d10d4-126">Propagation is Enabled on Both Sides, using TCP or Named Pipe</span></span>  
+ <span data-ttu-id="d10d4-127">![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; Именованный канал](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")</span><span class="sxs-lookup"><span data-stu-id="d10d4-127">![Asynchronous scenarios using HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")</span></span>  
   
- Рис. 3.Асинхронный клиент, без обратного вызова, атрибут `propagateActivity`\=`true` для обеих сторон, с использованием именованного канала или TCP  
+ <span data-ttu-id="d10d4-128">Рис. 3.</span><span class="sxs-lookup"><span data-stu-id="d10d4-128">Figure 3.</span></span> <span data-ttu-id="d10d4-129">Асинхронный клиент, без обратного вызова `propagateActivity` = `true` на обеих сторонах именованного канала или TCP</span><span class="sxs-lookup"><span data-stu-id="d10d4-129">Asynchronous client, no callback, `propagateActivity`=`true` on both sides, Named-Pipe/TCP</span></span>  
   
- Для сценария, основанного на именованном канале или TCP, действие ReceiveBytes вызывается при открытии клиента и сохраняется на время существования подключения.  
+ <span data-ttu-id="d10d4-130">Для сценария, основанного на именованном канале или TCP, действие ReceiveBytes вызывается при открытии клиента и сохраняется на время существования подключения.</span><span class="sxs-lookup"><span data-stu-id="d10d4-130">For a Named-Pipe or TCP-based scenario, ReceiveBytes is invoked when the client is opened, and exists for the lifetime of the connection.</span></span>  
   
- Аналогично рисунку 1, если атрибут `propagateActivity`\=`true`, действие ProcessMessage указывает, какое действие ProcessAction должно быть передано.  
+ <span data-ttu-id="d10d4-131">Аналогично рисунку 1, если `propagateActivity` = `true`, действие ProcessMessage указывает, какое действие ProcessAction для передачи.</span><span class="sxs-lookup"><span data-stu-id="d10d4-131">Similar to Figure 1, if `propagateActivity`=`true`, ProcessMessage indicates which ProcessAction activity to transfer to.</span></span>  
   
-#### Распространение отключено для обеих сторон \(с использованием TCP или именованного канала\)  
- Для сценария, основанного на именованном канале или TCP, действие ReceiveBytes вызывается при открытии клиента и сохраняется на время существования подключения.  
+#### <a name="propagation-is-disabled-on-either-sides-using-tcp-or-named-pipe"></a><span data-ttu-id="d10d4-132">Распространение отключено для обеих сторон (с использованием TCP или именованного канала)</span><span class="sxs-lookup"><span data-stu-id="d10d4-132">Propagation is Disabled on Either Sides, using TCP or Named Pipe</span></span>  
+ <span data-ttu-id="d10d4-133">Для сценария, основанного на именованном канале или TCP, действие ReceiveBytes вызывается при открытии клиента и сохраняется на время существования подключения.</span><span class="sxs-lookup"><span data-stu-id="d10d4-133">For a Named-Pipe or TCP-based scenario, ReceiveBytes is invoked when the client is opened, and exists for the lifetime of the connection.</span></span>  
   
- Аналогично рисунку 2, если атрибут `propagateActivity`\=`false` для обеих сторон, действие ProcessMessage не указывает, какое действие ProcessAction должно быть передано.Таким образом, вызывается новое временное действие ProcessAction с новым идентификатором.Если асинхронный ответ соответствует запросу в коде ServiceModel, идентификатор действия может быть получен из локального контекста.Фактическое действие ProcessAction может быть передано с данным идентификатором.  
+ <span data-ttu-id="d10d4-134">Аналогично Fig.2, если `propagateActivity` = `false` для обеих сторон, действие ProcessMessage указывает, какое действие ProcessAction для передачи.</span><span class="sxs-lookup"><span data-stu-id="d10d4-134">Similar to Fig.2, If `propagateActivity`=`false` on either side, ProcessMessage does not indicate which ProcessAction activity to transfer to.</span></span> <span data-ttu-id="d10d4-135">Таким образом, вызывается новое временное действие ProcessAction с новым идентификатором.</span><span class="sxs-lookup"><span data-stu-id="d10d4-135">Therefore, a new temporary ProcessAction activity with a new ID is invoked.</span></span> <span data-ttu-id="d10d4-136">Если асинхронный ответ соответствует запросу в коде ServiceModel, идентификатор действия может быть получен из локального контекста.</span><span class="sxs-lookup"><span data-stu-id="d10d4-136">When the asynchronous response is matched to the request in ServiceModel code, the Activity ID can be retrieved from the local context.</span></span> <span data-ttu-id="d10d4-137">Фактическое действие ProcessAction может быть передано с данным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="d10d4-137">The actual ProcessAction activity can be transferred to with that ID.</span></span>  
   
- ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47;именованных каналов](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ <span data-ttu-id="d10d4-138">![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; Именованные каналы](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")</span><span class="sxs-lookup"><span data-stu-id="d10d4-138">![Asynchronous scenarios using HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")</span></span>  
   
- Рис. 4.Асинхронный клиент, без обратного вызова, атрибут `propagateActivity`\=`false` для любой из сторон, с использованием именованного канала или TCP  
+ <span data-ttu-id="d10d4-139">Рис. 4.</span><span class="sxs-lookup"><span data-stu-id="d10d4-139">Figure 4.</span></span> <span data-ttu-id="d10d4-140">Асинхронный клиент, без обратного вызова `propagateActivity` = `false` на обеих сторонах именованного канала или TCP</span><span class="sxs-lookup"><span data-stu-id="d10d4-140">Asynchronous client, no callback, `propagateActivity`=`false` on either side, Named-Pipe/TCP</span></span>  
   
-### Асинхронный клиент с обратным вызовом  
- В данном сценарии добавляются действия G и A’ для обратного вызова и `endCall`, а также их передачи в обратном вызове и вне его.  
+### <a name="asynchronous-client-with-callback"></a><span data-ttu-id="d10d4-141">Асинхронный клиент с обратным вызовом</span><span class="sxs-lookup"><span data-stu-id="d10d4-141">Asynchronous client with Callback</span></span>  
+ <span data-ttu-id="d10d4-142">В данном сценарии добавляются действия G и A’ для обратного вызова и `endCall`, а также их передачи в обратном вызове и вне его.</span><span class="sxs-lookup"><span data-stu-id="d10d4-142">This scenario adds activities G and A’, for the callback and `endCall`, and their transfers in/out.</span></span>  
   
- В этом разделе показано только использование HTTP с атрибутом `propragateActivity`\=`true`.Однако дополнительные действия и передачи также применимы к другим случаям \(а именно `propagateActivity`\=`false`, с использованием TCP или именованного канала\).  
+ <span data-ttu-id="d10d4-143">В этом разделе показано только использование HTTP с `propragateActivity` = `true`.</span><span class="sxs-lookup"><span data-stu-id="d10d4-143">This section only demonstrates using HTTP with `propragateActivity`=`true`.</span></span> <span data-ttu-id="d10d4-144">Однако дополнительные действия и передачи также применимы к другим случаям (то есть `propagateActivity` = `false`, с использованием TCP или именованного канала).</span><span class="sxs-lookup"><span data-stu-id="d10d4-144">However, the additional activities and transfers also apply to the other cases (that is, `propagateActivity`=`false`, using TCP or Named-Pipe).</span></span>  
   
- Обратный вызов создает новое действие \(G\), когда клиент вызывает пользовательский код для уведомления о готовности результатов.Затем пользовательский код вызывает `endCall` в обратном вызове \(как показано на рисунке 5\) или вне обратного вызова \(рисунок 6\).Поскольку неизвестно, из какого действия пользователя вызывается `endCall`, это действие помечается буквой `A’`.Действие A’ может быть одинаковым или отличаться от действия A.  
+ <span data-ttu-id="d10d4-145">Обратный вызов создает новое действие (G), когда клиент вызывает пользовательский код для уведомления о готовности результатов.</span><span class="sxs-lookup"><span data-stu-id="d10d4-145">The callback creates a new activity (G) when the client calls user code to notify that results are ready.</span></span> <span data-ttu-id="d10d4-146">Затем пользовательский код вызывает `endCall` в обратном вызове (как показано на рисунке 5) или вне обратного вызова (рисунок 6).</span><span class="sxs-lookup"><span data-stu-id="d10d4-146">User code then calls `endCall` within the callback (as shown in Figure 5) or outside the callback (Figure 6).</span></span> <span data-ttu-id="d10d4-147">Так как не известно, какие действия пользователь `endCall` , вызывается из, это действие называется `A’`.</span><span class="sxs-lookup"><span data-stu-id="d10d4-147">Because it is not known which user activity `endCall` is being called from, this activity is labeled `A’`.</span></span> <span data-ttu-id="d10d4-148">Действие A’ может быть одинаковым или отличаться от действия A.</span><span class="sxs-lookup"><span data-stu-id="d10d4-148">It is possible that A’ can be identical to or different from A.</span></span>  
   
- ![Асинхронные сценарии](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")  
+ <span data-ttu-id="d10d4-149">![Асинхронные сценарии](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")</span><span class="sxs-lookup"><span data-stu-id="d10d4-149">![Asynchronous scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")</span></span>  
   
- Рис. 5.Асинхронный клиент с обратным вызовом, `endCall` в обратном вызове  
+ <span data-ttu-id="d10d4-150">Рис. 5.</span><span class="sxs-lookup"><span data-stu-id="d10d4-150">Figure 5.</span></span> <span data-ttu-id="d10d4-151">Асинхронный клиент с обратным вызовом, `endCall` в обратном вызове</span><span class="sxs-lookup"><span data-stu-id="d10d4-151">Asynchronous client with callback, `endCall` in Callback</span></span>  
   
- ![Асинхронные сценарии](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback2.gif "AsyncCallback2")  
+ <span data-ttu-id="d10d4-152">![Асинхронные сценарии](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback2.gif "AsyncCallback2")</span><span class="sxs-lookup"><span data-stu-id="d10d4-152">![Asynchronous Scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback2.gif "AsyncCallback2")</span></span>  
   
- Рис. 6.Асинхронный клиент с обратным вызовом, `endCall` вне обратного вызова  
+ <span data-ttu-id="d10d4-153">Рис. 6.</span><span class="sxs-lookup"><span data-stu-id="d10d4-153">Figure 6.</span></span> <span data-ttu-id="d10d4-154">Асинхронный клиент с обратным вызовом, `endCall` вне обратного вызова</span><span class="sxs-lookup"><span data-stu-id="d10d4-154">Asynchronous client with callback, `endCall` outside of Callback</span></span>  
   
-### Асинхронный сервер с обратным вызовом  
- ![Асинхронные сценарии с использованием HTTP&#47;TCP&#47;именованных каналов](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+### <a name="asynchronous-server-with-callback"></a><span data-ttu-id="d10d4-155">Асинхронный сервер с обратным вызовом</span><span class="sxs-lookup"><span data-stu-id="d10d4-155">Asynchronous Server with Callback</span></span>  
+ <span data-ttu-id="d10d4-156">![Асинхронные сценарии с использованием HTTP &#47; TCP &#47; С именем &#45; Канал](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")</span><span class="sxs-lookup"><span data-stu-id="d10d4-156">![Asynchronous scenarios using HTTP&#47;TCP&#47; Named&#45;Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")</span></span>  
   
- Рис. 7.Асинхронный сервер с обратным вызовом  
+ <span data-ttu-id="d10d4-157">Рис. 7.</span><span class="sxs-lookup"><span data-stu-id="d10d4-157">Figure 7.</span></span> <span data-ttu-id="d10d4-158">Асинхронный сервер с обратным вызовом</span><span class="sxs-lookup"><span data-stu-id="d10d4-158">Asynchronous server, with callback</span></span>  
   
- Стек каналов выполняет обратный вызов клиента при получении сообщения: трассировки для данной обработки выдаются в самом действии ProcessRequest.  
+ <span data-ttu-id="d10d4-159">Стек каналов выполняет обратный вызов клиента при получении сообщения: трассировки для данной обработки выдаются в самом действии ProcessRequest.</span><span class="sxs-lookup"><span data-stu-id="d10d4-159">The channel stack calls back the client on Message Receive: traces for this processing are emitted in the ProcessRequest activity itself.</span></span>  
   
-## Асинхронный запрос\-ответ с ошибками  
- Во время `endCall` получаются сообщения об ошибке.В противном случае действия и передачи аналогичны предыдущим сценариям.  
+## <a name="asynchronous-requestreply-with-errors"></a><span data-ttu-id="d10d4-160">Асинхронный запрос-ответ с ошибками</span><span class="sxs-lookup"><span data-stu-id="d10d4-160">Asynchronous Request/Reply with Errors</span></span>  
+ <span data-ttu-id="d10d4-161">Во время `endCall` получаются сообщения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="d10d4-161">Fault message errors are received during `endCall`.</span></span> <span data-ttu-id="d10d4-162">В противном случае действия и передачи аналогичны предыдущим сценариям.</span><span class="sxs-lookup"><span data-stu-id="d10d4-162">Otherwise, activities and transfers are similar to previous scenarios.</span></span>  
   
-## Асинхронная односторонняя связь с ошибками или без них  
- Ответ отсутствует или клиенту возвращается ошибка.
+## <a name="asynchronous-one-way-with-or-without-errors"></a><span data-ttu-id="d10d4-163">Асинхронная односторонняя связь с ошибками или без них</span><span class="sxs-lookup"><span data-stu-id="d10d4-163">Asynchronous One-Way with or without Errors</span></span>  
+ <span data-ttu-id="d10d4-164">Ответ отсутствует или клиенту возвращается ошибка.</span><span class="sxs-lookup"><span data-stu-id="d10d4-164">No response or fault is returned to the client.</span></span>

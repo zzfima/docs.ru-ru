@@ -1,44 +1,47 @@
 ---
-title: "Типы данных и функции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Типы данных и функции"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 809fc9290070deb304c44018102874d6a56fdd11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Типы данных и функции
-Перечисленные в следующей таблице разделы описывают поддержку в LINQ to SQL элементов, конструкций и приведения среды CLR.  Поддерживаемые элементы и конструкции доступны для использования в запросах LINQ to SQL.  
+# <a name="data-types-and-functions"></a><span data-ttu-id="5f087-102">Типы данных и функции</span><span class="sxs-lookup"><span data-stu-id="5f087-102">Data Types and Functions</span></span>
+<span data-ttu-id="5f087-103">Перечисленные в следующей таблице разделы описывают поддержку в LINQ to SQL элементов, конструкций и приведения среды CLR.</span><span class="sxs-lookup"><span data-stu-id="5f087-103">The topics listed in the following table describe LINQ to SQL support for members, constructs, and casts of the common language runtime (CLR).</span></span> <span data-ttu-id="5f087-104">Поддерживаемые элементы и конструкции доступны для использования в запросах LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="5f087-104">Supported members and constructs are available to use in your LINQ to SQL queries.</span></span>  
   
- Если в таблице элемент отмечен как неподдерживаемый, то LINQ to SQL не может перевести этот элемент, конструкцию или приведение типов среды CLR для выполнения на SQL Server.  Их по\-прежнему можно использовать в коде, но вычислять их следует или до преобразования запроса в Transact\-SQL, или после получения результатов из базы данных.  
+ <span data-ttu-id="5f087-105">Если в таблице элемент отмечен как неподдерживаемый, то LINQ to SQL не может перевести этот элемент, конструкцию или приведение типов среды CLR для выполнения на SQL Server.</span><span class="sxs-lookup"><span data-stu-id="5f087-105">An unsupported item in the table means that LINQ to SQL cannot translate the CLR member, construct, or cast for execution on the SQL Server.</span></span> <span data-ttu-id="5f087-106">Их по-прежнему можно использовать в коде, но вычислять их следует или до преобразования запроса в Transact-SQL, или после получения результатов из базы данных.</span><span class="sxs-lookup"><span data-stu-id="5f087-106">You may still be able to use them in your code, but they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-|Раздел|Описание|  
-|------------|--------------|  
-|[Сопоставление типов SQL и CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Содержит таблицу с подробными сведениями о сопоставлении между типами CLR и типами SQL Server.|  
-|[Основные типы данных](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Логические типы данных](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Семантика NULL](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Приведены ссылки на разделы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], посвященные обсуждению значений NULL и связанных с ними вопросов.|  
-|[Числовые операторы и операторы сравнения](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Операторы последовательности](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Методы System.Convert](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Методы System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|Описана поддержка в LINQ to SQL элементов структуры <xref:System.DateTime?displayProperty=fullName>.|  
-|[Методы System.DateTimeOffset](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|Описана поддержка в LINQ to SQL элементов структуры <xref:System.DateTimeOffset?displayProperty=fullName>.|  
-|[Методы System.Math](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Методы System.Object ](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Методы System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
-|[Методы System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Описана поддержка в LINQ to SQL элементов структуры <xref:System.TimeSpan?displayProperty=fullName>.|  
-|[Неподдерживаемые функции](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Описаны функции, которые не поддерживаются в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|<span data-ttu-id="5f087-107">Раздел</span><span class="sxs-lookup"><span data-stu-id="5f087-107">Topic</span></span>|<span data-ttu-id="5f087-108">Описание</span><span class="sxs-lookup"><span data-stu-id="5f087-108">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="5f087-109">Сопоставление типов SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="5f087-109">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|<span data-ttu-id="5f087-110">Содержит таблицу с подробными сведениями о сопоставлении между типами CLR и типами SQL Server.</span><span class="sxs-lookup"><span data-stu-id="5f087-110">Provides a detailed matrix of mappings between CLR types and SQL Server types.</span></span>|  
+|[<span data-ttu-id="5f087-111">Базовые типы данных</span><span class="sxs-lookup"><span data-stu-id="5f087-111">Basic Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|<span data-ttu-id="5f087-112">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-112">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-113">Логические типы данных</span><span class="sxs-lookup"><span data-stu-id="5f087-113">Boolean Data Types</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|<span data-ttu-id="5f087-114">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-114">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-115">Null-семантика</span><span class="sxs-lookup"><span data-stu-id="5f087-115">Null Semantics</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|<span data-ttu-id="5f087-116">Приведены ссылки на разделы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], посвященные обсуждению значений NULL и связанных с ними вопросов.</span><span class="sxs-lookup"><span data-stu-id="5f087-116">Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] topics that discuss null and nullable issues.</span></span>|  
+|[<span data-ttu-id="5f087-117">Числовые операторы и операторы сравнения</span><span class="sxs-lookup"><span data-stu-id="5f087-117">Numeric and Comparison Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|<span data-ttu-id="5f087-118">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-118">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-119">Операторы последовательности</span><span class="sxs-lookup"><span data-stu-id="5f087-119">Sequence Operators</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|<span data-ttu-id="5f087-120">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-120">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-121">Методы System.Convert</span><span class="sxs-lookup"><span data-stu-id="5f087-121">System.Convert Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|<span data-ttu-id="5f087-122">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-122">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-123">Методы System.DateTime</span><span class="sxs-lookup"><span data-stu-id="5f087-123">System.DateTime Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|<span data-ttu-id="5f087-124">Описана поддержка в LINQ to SQL элементов структуры <xref:System.DateTime?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5f087-124">Describes LINQ to SQL support for members of the <xref:System.DateTime?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="5f087-125">Методы System.DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="5f087-125">System.DateTimeOffset Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|<span data-ttu-id="5f087-126">Описана поддержка в LINQ to SQL элементов структуры <xref:System.DateTimeOffset?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5f087-126">Describes LINQ to SQL support for members of the <xref:System.DateTimeOffset?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="5f087-127">Методы System.Math</span><span class="sxs-lookup"><span data-stu-id="5f087-127">System.Math Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|<span data-ttu-id="5f087-128">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-128">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-129">Методы System.Object</span><span class="sxs-lookup"><span data-stu-id="5f087-129">System.Object Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|<span data-ttu-id="5f087-130">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-130">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-131">Методы System.String</span><span class="sxs-lookup"><span data-stu-id="5f087-131">System.String Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|<span data-ttu-id="5f087-132">Обобщены различия в поведении относительно платформы [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-132">Summarizes differences in behavior from the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|[<span data-ttu-id="5f087-133">Методы System.TimeSpan</span><span class="sxs-lookup"><span data-stu-id="5f087-133">System.TimeSpan Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|<span data-ttu-id="5f087-134">Описана поддержка в LINQ to SQL элементов структуры <xref:System.TimeSpan?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5f087-134">Describes LINQ to SQL support for members of the <xref:System.TimeSpan?displayProperty=nameWithType> structure.</span></span>|  
+|[<span data-ttu-id="5f087-135">Неподдерживаемые функции</span><span class="sxs-lookup"><span data-stu-id="5f087-135">Unsupported Functionality</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|<span data-ttu-id="5f087-136">Описаны функции, которые не поддерживаются в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5f087-136">Describes functionality that is not supported in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
   
-## См. также  
- [Несоответствия типов SQL\-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)   
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [.NET Framework Class Library in Visual Studio](http://msdn.microsoft.com/ru-ru/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a><span data-ttu-id="5f087-137">См. также</span><span class="sxs-lookup"><span data-stu-id="5f087-137">See Also</span></span>  
+ [<span data-ttu-id="5f087-138">Несоответствия типов SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="5f087-138">SQL-CLR Type Mismatches</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [<span data-ttu-id="5f087-139">Ссылки</span><span class="sxs-lookup"><span data-stu-id="5f087-139">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="5f087-140">Библиотека классов .NET framework в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="5f087-140">.NET Framework Class Library in Visual Studio</span></span>](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)

@@ -1,35 +1,26 @@
 ---
 title: "Использование XSLT для преобразования дерева XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0abd857def00bd1e96332cd635d49aa50b2b873b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6ec4a04bebd39ecb6a90dfc48729fa8696a2ab5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a>Использование XSLT для преобразования дерева XML (C#)
-Можно создавать XML-дерево, <xref:System.Xml.XmlReader> из XML-дерева, новый документ и <xref:System.Xml.XmlWriter>, который будет заносить информацию в новый документ. После этого можно вызвать преобразование XSLT, передавая <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> этой трансформации. После успешного завершения преобразования новое XML-дерево заполняется ее результатами.  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="ac124-102">Использование XSLT для преобразования дерева XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ac124-102">Using XSLT to Transform an XML Tree (C#)</span></span>
+<span data-ttu-id="ac124-103">Можно создавать XML-дерево, <xref:System.Xml.XmlReader> из XML-дерева, новый документ и <xref:System.Xml.XmlWriter>, который будет заносить информацию в новый документ.</span><span class="sxs-lookup"><span data-stu-id="ac124-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="ac124-104">После этого можно вызвать преобразование XSLT, передавая <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> этой трансформации.</span><span class="sxs-lookup"><span data-stu-id="ac124-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="ac124-105">После успешного завершения преобразования новое XML-дерево заполняется ее результатами.</span><span class="sxs-lookup"><span data-stu-id="ac124-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="ac124-106">Пример</span><span class="sxs-lookup"><span data-stu-id="ac124-106">Example</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -66,7 +57,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="ac124-107">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="ac124-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -75,8 +66,7 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
- [Расширенные методы программирования LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="ac124-108">См. также</span><span class="sxs-lookup"><span data-stu-id="ac124-108">See Also</span></span>  
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="ac124-109">Расширенные методы программирования LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ac124-109">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

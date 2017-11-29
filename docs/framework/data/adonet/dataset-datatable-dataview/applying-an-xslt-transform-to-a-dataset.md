@@ -1,27 +1,33 @@
 ---
-title: "Применение XSLT-преобразования к набору данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Применение преобразования XSLT к набору данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Применение XSLT-преобразования к набору данных
-Метод WriteXml набора данных <xref:System.Data.DataSet> позволяет записывать содержимое набора DataSet в виде XML\-данных.  После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT\-преобразования \(XSLT\).  Однако синхронизация DataSet с документом <xref:System.Xml.XmlDataDocument> позволяет применить таблицу стилей XSLT к содержимому DataSet, не записывая его в виде XML\-данных с помощью метода WriteXml.  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="0577a-102">Применение преобразования XSLT к набору данных</span><span class="sxs-lookup"><span data-stu-id="0577a-102">Applying an XSLT Transform to a DataSet</span></span>
+<span data-ttu-id="0577a-103">**WriteXml** метод <xref:System.Data.DataSet> дает возможность создавать содержимое **DataSet** как XML-данных.</span><span class="sxs-lookup"><span data-stu-id="0577a-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="0577a-104">После этого типичной задачей является преобразование этого XML в другой формат с помощью XSLT-преобразования (XSLT).</span><span class="sxs-lookup"><span data-stu-id="0577a-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="0577a-105">Однако синхронизация **набора данных** с <xref:System.Xml.XmlDataDocument> позволяет применять таблицы стилей XSLT к содержимому **DataSet** без необходимости сначала записи содержимого  **Набор данных** как XML-данных с помощью **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="0577a-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- В следующем примере набор данных DataSet заполняется таблицами и связями, синхронизируется с документом XmlDataDocument, и часть набора данных DataSet записывается как HTML\-файл с помощью таблицы стилей XSLT.  Ниже приведено содержимое таблицы стилей XSLT.  
+ <span data-ttu-id="0577a-106">В следующем примере происходит заполнение **DataSet** с таблиц и связей, синхронизируется **DataSet** с **XmlDataDocument**и записывает часть  **Набор данных** HTML-файл с помощью таблицы стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="0577a-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="0577a-107">Ниже приведено содержимое таблицы стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="0577a-107">Following are the contents of the XSLT stylesheet.</span></span>  
   
-```  
+```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
   
 <xsl:template match="CustomerOrders">  
@@ -60,10 +66,10 @@ caps.handback.revision: 4
 </xsl:stylesheet>  
 ```  
   
- Следующий код заполняет набор данных DataSet и применяет таблицу стилей XSLT.  
+ <span data-ttu-id="0577a-108">В следующем примере кода заливки **набора данных** и применяет таблицу стилей XSLT.</span><span class="sxs-lookup"><span data-stu-id="0577a-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
->  Если таблица стилей XSLT применяется к набору данных, содержащему связи, то для того, чтобы добиться высокой производительности, следует задать свойству Nested объекта <xref:System.Data.DataRelation> значение true для каждой вложенной связи.  Это позволяет использовать таблицы стилей XSLT, реализующие естественную нисходящую обработку для перемещения по иерархии и преобразования данных, в отличие от ресурсоемких осей расположения XPath \(например, предшествующий одноуровневый элемент и следующий элемент того же уровня в тестовых выражениях узла таблицы стилей\).  Дополнительные сведения о вложенных связях см. в разделе [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  <span data-ttu-id="0577a-109">В случае применения стилей XSLT для **DataSet** , который содержит отношения, достичь наилучшей производительности при установке **Nested** свойство <xref:System.Data.DataRelation> для **true**для каждого вложенного отношения.</span><span class="sxs-lookup"><span data-stu-id="0577a-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="0577a-110">Это позволяет использовать таблицы стилей XSLT, реализующие естественную нисходящую обработку для перемещения по иерархии и преобразования данных, в отличие от ресурсоемких осей расположения XPath (например, предшествующий одноуровневый элемент и следующий элемент того же уровня в тестовых выражениях узла таблицы стилей).</span><span class="sxs-lookup"><span data-stu-id="0577a-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="0577a-111">Дополнительные сведения о вложенных отношениях см. в разделе [вложение отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="0577a-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -127,6 +133,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## См. также  
- [Синхронизация DataSet и XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="0577a-112">См. также</span><span class="sxs-lookup"><span data-stu-id="0577a-112">See Also</span></span>  
+ [<span data-ttu-id="0577a-113">Набор данных и XmlDataDocument синхронизации</span><span class="sxs-lookup"><span data-stu-id="0577a-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [<span data-ttu-id="0577a-114">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0577a-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

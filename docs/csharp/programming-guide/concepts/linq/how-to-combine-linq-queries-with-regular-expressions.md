@@ -1,35 +1,26 @@
 ---
 title: "Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 36e609944d1eaf95c0573ef4b63f2bf6c573932b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0acf66885765148b668897716d6fe1f8ad0a2fcf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)
-В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="a9afd-102">Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)</span><span class="sxs-lookup"><span data-stu-id="a9afd-102">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>
+<span data-ttu-id="a9afd-103">В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках.</span><span class="sxs-lookup"><span data-stu-id="a9afd-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="a9afd-104">Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.</span><span class="sxs-lookup"><span data-stu-id="a9afd-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="a9afd-105">Пример</span><span class="sxs-lookup"><span data-stu-id="a9afd-105">Example</span></span>  
   
 ```csharp  
 class QueryWithRegEx  
@@ -110,12 +101,11 @@ class QueryWithRegEx
 }  
 ```  
   
- Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`. В этом примере в результатах создается только значение каждого совпадения. Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции. Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.  
+ <span data-ttu-id="a9afd-106">Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`.</span><span class="sxs-lookup"><span data-stu-id="a9afd-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="a9afd-107">В этом примере в результатах создается только значение каждого совпадения.</span><span class="sxs-lookup"><span data-stu-id="a9afd-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="a9afd-108">Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции.</span><span class="sxs-lookup"><span data-stu-id="a9afd-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="a9afd-109">Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.</span><span class="sxs-lookup"><span data-stu-id="a9afd-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="a9afd-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="a9afd-110">Compiling the Code</span></span>  
+ <span data-ttu-id="a9afd-111">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="a9afd-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="a9afd-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a9afd-112">See Also</span></span>  
+ [<span data-ttu-id="a9afd-113">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="a9afd-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="a9afd-114">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="a9afd-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

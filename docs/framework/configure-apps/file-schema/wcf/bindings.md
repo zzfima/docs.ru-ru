@@ -1,55 +1,58 @@
 ---
-title: "&lt;привязки&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;привязки&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ed672ee918ad969feb8be6d20c9206e6b5d12278
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;привязки&gt;
-В этом разделе содержится коллекция стандартных и пользовательских привязок.  Каждый элемент коллекции представляет собой элемент `binding`, который может быть идентифицирован по своему уникальному имени `name`.  Службы используют привязки, связывая их с помощью параметра `name`.  Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена.  Дополнительные сведения о конфигурации по умолчанию и о безымянных привязках и поведениях см. в разделах [Упрощенная конфигурация](../../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="ltbindingsgt"></a><span data-ttu-id="4646b-102">&lt;привязки&gt;</span><span class="sxs-lookup"><span data-stu-id="4646b-102">&lt;bindings&gt;</span></span>
+<span data-ttu-id="4646b-103">В этом разделе содержится коллекция стандартных и пользовательских привязок.</span><span class="sxs-lookup"><span data-stu-id="4646b-103">This section holds a collection of standard and custom bindings.</span></span> <span data-ttu-id="4646b-104">Каждый элемент коллекции представляет собой элемент `binding`, который может быть идентифицирован по своему уникальному имени `name`.</span><span class="sxs-lookup"><span data-stu-id="4646b-104">Each entry is a `binding` element that can be identified by its unique `name`.</span></span> <span data-ttu-id="4646b-105">Службы используют привязки, связывая их с помощью параметра `name`.</span><span class="sxs-lookup"><span data-stu-id="4646b-105">Services use bindings by linking them using the `name`.</span></span> <span data-ttu-id="4646b-106">Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена.</span><span class="sxs-lookup"><span data-stu-id="4646b-106">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="4646b-107">Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="4646b-107">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## Привязка, предоставляемая системой  
- Привязки, предоставляемые системой, скрывают сложность стека обмена сообщениями WCF.  Приложениям, использующим предоставляемые системой привязки, не требуется полный контроль над стеком.  Атрибутами в каждой привязке, предоставляемой системой, являются атрибуты, наиболее подходящие для области применения привязки.  
+## <a name="system-provided-binding"></a><span data-ttu-id="4646b-108">Привязка, предоставляемая системой</span><span class="sxs-lookup"><span data-stu-id="4646b-108">System-Provided Binding</span></span>  
+ <span data-ttu-id="4646b-109">Привязки, предоставляемые системой, скрывают сложность стека обмена сообщениями WCF.</span><span class="sxs-lookup"><span data-stu-id="4646b-109">System-provided bindings hide the complexity of the WCF messaging stack.</span></span> <span data-ttu-id="4646b-110">Приложениям, использующим предоставляемые системой привязки, не требуется полный контроль над стеком.</span><span class="sxs-lookup"><span data-stu-id="4646b-110">Applications using system-provided bindings do not require full control over the stack.</span></span> <span data-ttu-id="4646b-111">Атрибутами в каждой привязке, предоставляемой системой, являются атрибуты, наиболее подходящие для области применения привязки.</span><span class="sxs-lookup"><span data-stu-id="4646b-111">The attributes exposed on each system-provided binding are the ones most appropriate for the usage scenario the binding addresses.</span></span>  
   
- В разделе конфигурации для каждой привязки, предоставляемой системой, можно определить несколько конфигураций, используемых для настройки привязки.  Каждая конфигурация идентифицируется по уникальному имени.  
+ <span data-ttu-id="4646b-112">В разделе конфигурации для каждой привязки, предоставляемой системой, можно определить несколько конфигураций, используемых для настройки привязки.</span><span class="sxs-lookup"><span data-stu-id="4646b-112">The configuration section for each system-provided binding can define several configurations used to configure the binding.</span></span> <span data-ttu-id="4646b-113">Каждая конфигурация идентифицируется по уникальному имени.</span><span class="sxs-lookup"><span data-stu-id="4646b-113">Each configuration is identified by a unique name.</span></span>  
   
- К привязке, предоставляемой системой, невозможно добавить элементы или атрибуты.  Чтобы получить такую возможность, необходимо реализовать пользовательскую привязку в соответствии с инструкциями в разделе «Пользовательская привязка».  Можно определить пользовательскую привязку, которая полностью повторяет предоставляемую системой привязку и добавляет несколько параметров, контроль над которыми нужен пользовательскому приложению.  
+ <span data-ttu-id="4646b-114">К привязке, предоставляемой системой, невозможно добавить элементы или атрибуты.</span><span class="sxs-lookup"><span data-stu-id="4646b-114">It is not possible to add elements or attributes to a system-provided binding.</span></span> <span data-ttu-id="4646b-115">Чтобы получить такую возможность, необходимо реализовать пользовательскую привязку в соответствии с инструкциями в разделе «Пользовательская привязка».</span><span class="sxs-lookup"><span data-stu-id="4646b-115">To do so, you should implement a custom binding as described in the "Custom Binding" section of this topic.</span></span> <span data-ttu-id="4646b-116">Можно определить пользовательскую привязку, которая полностью повторяет предоставляемую системой привязку и добавляет несколько параметров, контроль над которыми нужен пользовательскому приложению.</span><span class="sxs-lookup"><span data-stu-id="4646b-116">It is possible to define a custom binding that mimics a system-provided binding perfectly and adds a few settings the user application wants to have control over.</span></span>  
   
- Список предоставляемых системой привязок см. в разделе [Привязки, предоставляемые системой](../../../../../docs/framework/wcf/system-provided-bindings.md).  
+ <span data-ttu-id="4646b-117">Список привязок, предоставляемых системой см. в разделе [привязка, предоставляемая системой](../../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="4646b-117">For a list of system-provided bindings, see [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>  
   
-## Пользовательская привязка  
- Пользовательские привязки предоставляют полный контроль над стеком обмена сообщениями WCF.  Отдельная привязка определяет стек обмена сообщениями, задавая элементы конфигурации для элементов стека в том порядке, в котором они присутствуют в стеке.  Каждый элемент определяет и задает параметры одного элемента стека.  В каждой пользовательской привязке должен быть один и только один элемент `transport`.  Без этого элемента стек обмена сообщениями является неполным.  
+## <a name="custom-binding"></a><span data-ttu-id="4646b-118">Пользовательская привязка</span><span class="sxs-lookup"><span data-stu-id="4646b-118">Custom Binding</span></span>  
+ <span data-ttu-id="4646b-119">Пользовательские привязки предоставляют полный контроль над стеком обмена сообщениями WCF.</span><span class="sxs-lookup"><span data-stu-id="4646b-119">Custom bindings provide full control over the WCF messaging stack.</span></span> <span data-ttu-id="4646b-120">Отдельная привязка определяет стек обмена сообщениями, задавая элементы конфигурации для элементов стека в том порядке, в котором они присутствуют в стеке.</span><span class="sxs-lookup"><span data-stu-id="4646b-120">An individual binding defines the message stack by specifying the configuration elements for the stack elements in the order they appear on the stack.</span></span> <span data-ttu-id="4646b-121">Каждый элемент определяет и задает параметры одного элемента стека.</span><span class="sxs-lookup"><span data-stu-id="4646b-121">Each element defines and configures the one element of the stack.</span></span> <span data-ttu-id="4646b-122">В каждой пользовательской привязке должен быть один и только один элемент `transport`.</span><span class="sxs-lookup"><span data-stu-id="4646b-122">There must be one and only one `transport` element in each custom binding.</span></span> <span data-ttu-id="4646b-123">Без этого элемента стек обмена сообщениями является неполным.</span><span class="sxs-lookup"><span data-stu-id="4646b-123">Without this element, the messaging stack is incomplete.</span></span>  
   
- Важен порядок, в котором элементы присутствуют в стеке, поскольку именно в этом порядке к сообщению применяются операции.  Необходим следующий порядок элементов стека:  
+ <span data-ttu-id="4646b-124">Важен порядок, в котором элементы присутствуют в стеке, поскольку именно в этом порядке к сообщению применяются операции.</span><span class="sxs-lookup"><span data-stu-id="4646b-124">The order in which elements appear in the stack matters, because it is the order in which operations are applied to the message.</span></span> <span data-ttu-id="4646b-125">Необходим следующий порядок элементов стека:</span><span class="sxs-lookup"><span data-stu-id="4646b-125">The required order of stack elements is the following:</span></span>  
   
-1.  Транзакции \(необязательный\)  
+1.  <span data-ttu-id="4646b-126">Транзакции (необязательный)</span><span class="sxs-lookup"><span data-stu-id="4646b-126">Transactions (optional)</span></span>  
   
-2.  Надежный обмен сообщениями \(необязательный\)  
+2.  <span data-ttu-id="4646b-127">Надежный обмен сообщениями (необязательный)</span><span class="sxs-lookup"><span data-stu-id="4646b-127">Reliable Messaging (optional)</span></span>  
   
-3.  Безопасность \(необязательный\)  
+3.  <span data-ttu-id="4646b-128">Безопасность (необязательный)</span><span class="sxs-lookup"><span data-stu-id="4646b-128">Security (optional)</span></span>  
   
-4.  Кодировщик  
+4.  <span data-ttu-id="4646b-129">Кодировщик</span><span class="sxs-lookup"><span data-stu-id="4646b-129">Encoder</span></span>  
   
-5.  Transport  
+5.  <span data-ttu-id="4646b-130">Transport</span><span class="sxs-lookup"><span data-stu-id="4646b-130">Transport</span></span>  
   
- Пользовательские привязки идентифицируются по атрибуту `name`.  Дополнительные сведения о пользовательских привязках см. в разделе [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ <span data-ttu-id="4646b-131">Пользовательские привязки идентифицируются по атрибуту `name`.</span><span class="sxs-lookup"><span data-stu-id="4646b-131">Custom bindings are identified by their `name` attribute.</span></span> <span data-ttu-id="4646b-132">Дополнительные сведения о пользовательских привязок см. в разделе [пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="4646b-132">For more information on custom bindings, see [Custom Bindings](../../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.BindingsSection>   
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="4646b-133">См. также</span><span class="sxs-lookup"><span data-stu-id="4646b-133">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.BindingsSection>  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ [<span data-ttu-id="4646b-134">Привязки</span><span class="sxs-lookup"><span data-stu-id="4646b-134">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="4646b-135">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="4646b-135">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="4646b-136">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="4646b-136">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="4646b-137">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="4646b-137">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

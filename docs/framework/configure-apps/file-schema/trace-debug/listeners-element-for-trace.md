@@ -1,37 +1,39 @@
 ---
-title: "Элемент &lt;listeners&gt; для &lt;trace&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<listeners> - элемент"
-  - "listeners - элемент"
+title: "&lt;прослушиватели&gt; элемент для &lt;трассировки&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
+helpviewer_keywords:
+- <listeners> element
+- listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 97d6673fddb20e99454bf97c87254049b82f0000
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;listeners&gt; для &lt;trace&gt;
-Задает прослушиватель, собирающий, хранящий и маршрутизирующий сообщения.  Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.  
+# <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="05bc0-102">&lt;прослушиватели&gt; элемент для &lt;трассировки&gt;</span><span class="sxs-lookup"><span data-stu-id="05bc0-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
+<span data-ttu-id="05bc0-103">Задает прослушиватель, собирающий, хранилища и маршрутизирует сообщения.</span><span class="sxs-lookup"><span data-stu-id="05bc0-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="05bc0-104">Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.</span><span class="sxs-lookup"><span data-stu-id="05bc0-104">Listeners direct the tracing output to an appropriate target.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="05bc0-105">\<Конфигурация > элемент</span><span class="sxs-lookup"><span data-stu-id="05bc0-105">\<configuration> Element</span></span>  
+<span data-ttu-id="05bc0-106">\<System.Diagnostics > элемент</span><span class="sxs-lookup"><span data-stu-id="05bc0-106">\<system.diagnostics> Element</span></span>  
+<span data-ttu-id="05bc0-107">\<трассировки > элемент</span><span class="sxs-lookup"><span data-stu-id="05bc0-107">\<trace> Element</span></span>  
+<span data-ttu-id="05bc0-108">\<прослушиватели > элемент для \<трассировки ></span><span class="sxs-lookup"><span data-stu-id="05bc0-108">\<listeners> Element for \<trace></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="05bc0-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="05bc0-109">Syntax</span></span>  
+  
+```xml  
 <listeners>   
   <add>...</add>  
   <clear/>  
@@ -39,38 +41,38 @@ caps.handback.revision: 17
 </listeners>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="05bc0-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="05bc0-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="05bc0-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="05bc0-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="05bc0-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="05bc0-112">Attributes</span></span>  
+ <span data-ttu-id="05bc0-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="05bc0-113">None.</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="05bc0-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="05bc0-114">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Очищает коллекцию `Listeners` для трассировки.|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Удаляет прослушиватель из коллекции `Listeners`.|  
+|<span data-ttu-id="05bc0-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="05bc0-115">Element</span></span>|<span data-ttu-id="05bc0-116">Описание</span><span class="sxs-lookup"><span data-stu-id="05bc0-116">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="05bc0-117">\<add></span><span class="sxs-lookup"><span data-stu-id="05bc0-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="05bc0-118">Добавляет прослушиватель в коллекцию `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="05bc0-118">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="05bc0-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="05bc0-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="05bc0-120">Очищает коллекцию `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="05bc0-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="05bc0-121">\<remove></span><span class="sxs-lookup"><span data-stu-id="05bc0-121">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="05bc0-122">Удаление прослушивателя из `Listeners` коллекции.</span><span class="sxs-lookup"><span data-stu-id="05bc0-122">Removes a listener from the `Listeners` collection.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="05bc0-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="05bc0-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Определяет корневой элемент для раздела конфигурации ASP.NET.|  
-|`trace`|Содержит прослушиватели, собирающие, хранящие и маршрутизирующие сообщения трассировки.|  
+|<span data-ttu-id="05bc0-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="05bc0-124">Element</span></span>|<span data-ttu-id="05bc0-125">Описание</span><span class="sxs-lookup"><span data-stu-id="05bc0-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="05bc0-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="05bc0-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="05bc0-127">Задает корневой элемент для раздела конфигурации ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="05bc0-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`trace`|<span data-ttu-id="05bc0-128">Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="05bc0-128">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## Заметки  
- Классы <xref:System.Diagnostics.Debug> и <xref:System.Diagnostics.Trace> совместно используют коллекцию **Listeners**.  Если в одном из этих классов в коллекцию добавляется объект прослушивателя, то этот прослушиватель используется и в другом классе.  Классы прослушивателей, поставляемые с .NET Framework, являются производными от класса <xref:System.Diagnostics.TraceListener>.  
+## <a name="remarks"></a><span data-ttu-id="05bc0-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="05bc0-129">Remarks</span></span>  
+ <span data-ttu-id="05bc0-130"><xref:System.Diagnostics.Debug> И <xref:System.Diagnostics.Trace> классы одного и того же **прослушиватели** коллекции.</span><span class="sxs-lookup"><span data-stu-id="05bc0-130">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="05bc0-131">Если добавить объект прослушивателя в коллекцию в один из этих классов, прослушивателю же используется в другом классе.</span><span class="sxs-lookup"><span data-stu-id="05bc0-131">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="05bc0-132">Классы слушателя поставляются с платформой .NET Framework являются производными от <xref:System.Diagnostics.TraceListener> класса.</span><span class="sxs-lookup"><span data-stu-id="05bc0-132">The listener classes shipped with the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
-## Файл конфигурации  
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+## <a name="configuration-file"></a><span data-ttu-id="05bc0-133">Файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="05bc0-133">Configuration File</span></span>  
+ <span data-ttu-id="05bc0-134">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="05bc0-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Пример  
- В следующем примере показано, как использовать элемент **\<listeners\>** для добавления прослушивателей `MyListener` и `MyEventListener` коллекцию **Listeners**.  `MyListener` создает файл `MyListener.log` и записывает в него результат.  `MyEventListener` создает запись в журнале событий.  
+## <a name="example"></a><span data-ttu-id="05bc0-135">Пример</span><span class="sxs-lookup"><span data-stu-id="05bc0-135">Example</span></span>  
+ <span data-ttu-id="05bc0-136">В следующем примере показано, как использовать  **\<прослушиватели >** элемент для добавления прослушивателей `MyListener` и `MyEventListener` для **прослушиватели** коллекции.</span><span class="sxs-lookup"><span data-stu-id="05bc0-136">The following example shows how to use the **\<listeners>** element to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="05bc0-137">`MyListener`Создает файл с именем `MyListener.log` и записывает выходные данные в файл.</span><span class="sxs-lookup"><span data-stu-id="05bc0-137">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="05bc0-138">`MyEventListener`создает запись в журнале событий.</span><span class="sxs-lookup"><span data-stu-id="05bc0-138">`MyEventListener` creates an entry in the event log.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <trace autoflush="true" indentsize="0">  
@@ -91,6 +93,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceListener>   
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="05bc0-139">См. также</span><span class="sxs-lookup"><span data-stu-id="05bc0-139">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="05bc0-140">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="05bc0-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

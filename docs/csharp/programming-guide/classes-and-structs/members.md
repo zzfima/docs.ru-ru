@@ -1,69 +1,50 @@
 ---
 title: "Члены (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="members-c-programming-guide"></a>Члены (Руководство по программированию на C#)
-В классах и структурах есть члены, представляющие их данные и поведение. Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса. Закрытые члены в базовых классах наследуются, но недоступны из производных классов.  
+# <a name="members-c-programming-guide"></a><span data-ttu-id="6d5d4-102">Члены (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="6d5d4-102">Members (C# Programming Guide)</span></span>
+<span data-ttu-id="6d5d4-103">В классах и структурах есть члены, представляющие их данные и поведение.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="6d5d4-104">Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="6d5d4-105">Закрытые члены в базовых классах наследуются, но недоступны из производных классов.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  
   
- В следующей таблице перечислены виды членов, которые содержатся в классе или в структуре.  
+ <span data-ttu-id="6d5d4-106">В следующей таблице перечислены виды членов, которые содержатся в классе или в структуре.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-106">The following table lists the kinds of members a class or struct may contain:</span></span>  
   
-|Член|Описание|  
+|<span data-ttu-id="6d5d4-107">Член</span><span class="sxs-lookup"><span data-stu-id="6d5d4-107">Member</span></span>|<span data-ttu-id="6d5d4-108">Описание</span><span class="sxs-lookup"><span data-stu-id="6d5d4-108">Description</span></span>|  
 |------------|-----------------|  
-|[Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)|Поля являются переменными, объявленными в области класса. Поле может иметь встроенный числовой тип или быть экземпляром другого класса. Например, в классе календаря может быть поле, содержащее текущую дату.|  
-|[Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)|Константы — это поля или свойства, значения которых устанавливаются во время компиляции и не изменяются.|  
-|[Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)|Свойства — это методы класса. Доступ к ним осуществляется так же, как если бы они были полями этого класса. Свойство может защитить поле класса от изменений (независимо от объекта).|  
-|[Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)|Методы определяют действия, которые может выполнить класс. Методы могут принимать параметры, предоставляющие входные данные, и возвращать выходные данные посредством параметров. Методы могут также возвращать значения напрямую, без использования параметров.|  
-|[События](../../../csharp/programming-guide/events/index.md)|События предоставляют другим объектам уведомления о различных случаях, таких как нажатие кнопки или успешное выполнение метода. События определяются и переключаются с помощью делегатов.|  
-|[Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Перегруженные операторы считаются членами класса. При перегрузке оператора его следует определять как открытый статический метод в классе. Предопределенные операторы (`+`, `*`, `<` и т. д.) не считаются членами. Дополнительные сведения см. в разделе [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).|  
-|[Индексаторы](../../../csharp/programming-guide/indexers/index.md)|Индексаторы позволяют индексировать объекты аналогично массивам.|  
-|[Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Конструкторы — это методы, которые вызываются при создании объекта. Зачастую они используются для инициализации данных объекта.|  
-|[Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Методы завершения очень редко используются в C#. Они являются методами, вызываемыми средой выполнения, когда объект нужно удалить из памяти. Они обычно применяются для правильной обработки ресурсов, которые должны быть высвобождены.|  
-|[Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Вложенными типами являются типы, объявленные в другом типе. Вложенные типы часто применяются для описания объектов, использующихся только типами, в которых эти объекты находятся.|  
+|[<span data-ttu-id="6d5d4-109">Поля</span><span class="sxs-lookup"><span data-stu-id="6d5d4-109">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="6d5d4-110">Поля являются переменными, объявленными в области класса.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-110">Fields are variables declared at class scope.</span></span> <span data-ttu-id="6d5d4-111">Поле может иметь встроенный числовой тип или быть экземпляром другого класса.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-111">A field may be a built-in numeric type or an instance of another class.</span></span> <span data-ttu-id="6d5d4-112">Например, в классе календаря может быть поле, содержащее текущую дату.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-112">For example, a calendar class may have a field that contains the current date.</span></span>|  
+|[<span data-ttu-id="6d5d4-113">Константы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-113">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="6d5d4-114">Константы — это поля или свойства, значения которых устанавливаются во время компиляции и не изменяются.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-114">Constants are fields or properties whose value is set at compile time and cannot be changed.</span></span>|  
+|[<span data-ttu-id="6d5d4-115">Свойства</span><span class="sxs-lookup"><span data-stu-id="6d5d4-115">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="6d5d4-116">Свойства — это методы класса. Доступ к ним осуществляется так же, как если бы они были полями этого класса.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-116">Properties are methods on a class that are accessed as if they were fields on that class.</span></span> <span data-ttu-id="6d5d4-117">Свойство может защитить поле класса от изменений (независимо от объекта).</span><span class="sxs-lookup"><span data-stu-id="6d5d4-117">A property can provide protection for a class field to keep it from being changed without the knowledge of the object.</span></span>|  
+|[<span data-ttu-id="6d5d4-118">Методы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-118">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="6d5d4-119">Методы определяют действия, которые может выполнить класс.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-119">Methods define the actions that a class can perform.</span></span> <span data-ttu-id="6d5d4-120">Методы могут принимать параметры, предоставляющие входные данные, и возвращать выходные данные посредством параметров.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-120">Methods can take parameters that provide input data, and can return output data through parameters.</span></span> <span data-ttu-id="6d5d4-121">Методы могут также возвращать значения напрямую, без использования параметров.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-121">Methods can also return a value directly, without using a parameter.</span></span>|  
+|[<span data-ttu-id="6d5d4-122">События</span><span class="sxs-lookup"><span data-stu-id="6d5d4-122">Events</span></span>](../../../csharp/programming-guide/events/index.md)|<span data-ttu-id="6d5d4-123">События предоставляют другим объектам уведомления о различных случаях, таких как нажатие кнопки или успешное выполнение метода.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-123">Events provide notifications about occurrences, such as button clicks or the successful completion of a method, to other objects.</span></span> <span data-ttu-id="6d5d4-124">События определяются и переключаются с помощью делегатов.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-124">Events are defined and triggered by using delegates.</span></span>|  
+|[<span data-ttu-id="6d5d4-125">Операторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-125">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="6d5d4-126">Перегруженные операторы считаются членами класса.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-126">Overloaded operators are considered class members.</span></span> <span data-ttu-id="6d5d4-127">При перегрузке оператора его следует определять как открытый статический метод в классе.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-127">When you overload an operator, you define it as a public static method in a class.</span></span> <span data-ttu-id="6d5d4-128">Предопределенные операторы (`+`, `*`, `<` и т. д.) не считаются членами.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-128">The predefined operators (`+`, `*`, `<`, and so on) are not considered members.</span></span> <span data-ttu-id="6d5d4-129">Дополнительные сведения см. в разделе [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span><span class="sxs-lookup"><span data-stu-id="6d5d4-129">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>|  
+|[<span data-ttu-id="6d5d4-130">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-130">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)|<span data-ttu-id="6d5d4-131">Индексаторы позволяют индексировать объекты аналогично массивам.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-131">Indexers enable an object to be indexed in a manner similar to arrays.</span></span>|  
+|[<span data-ttu-id="6d5d4-132">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-132">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="6d5d4-133">Конструкторы — это методы, которые вызываются при создании объекта.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-133">Constructors are methods that are called when the object is first created.</span></span> <span data-ttu-id="6d5d4-134">Зачастую они используются для инициализации данных объекта.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-134">They are often used to initialize the data of an object.</span></span>|  
+|[<span data-ttu-id="6d5d4-135">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="6d5d4-135">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)|<span data-ttu-id="6d5d4-136">Методы завершения очень редко используются в C#.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-136">Finalizers are used very rarely in C#.</span></span> <span data-ttu-id="6d5d4-137">Они являются методами, вызываемыми средой выполнения, когда объект нужно удалить из памяти.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-137">They are methods that are called by the runtime execution engine when the object is about to be removed from memory.</span></span> <span data-ttu-id="6d5d4-138">Они обычно применяются для правильной обработки ресурсов, которые должны быть высвобождены.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-138">They are generally used to make sure that any resources which must be released are handled appropriately.</span></span>|  
+|[<span data-ttu-id="6d5d4-139">Вложенные типы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-139">Nested Types</span></span>](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|<span data-ttu-id="6d5d4-140">Вложенными типами являются типы, объявленные в другом типе.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-140">Nested types are types declared within another type.</span></span> <span data-ttu-id="6d5d4-141">Вложенные типы часто применяются для описания объектов, использующихся только типами, в которых эти объекты находятся.</span><span class="sxs-lookup"><span data-stu-id="6d5d4-141">Nested types are often used to describe objects that are used only by the types that contain them.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Methods (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Методы (руководство по программированию на C#)  
- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [События](../../../csharp/programming-guide/events/index.md)   
- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
- [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-
+## <a name="see-also"></a><span data-ttu-id="6d5d4-142">См. также</span><span class="sxs-lookup"><span data-stu-id="6d5d4-142">See Also</span></span>  
+ [<span data-ttu-id="6d5d4-143">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="6d5d4-143">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="6d5d4-144">Классы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-144">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [<span data-ttu-id="6d5d4-145">Методы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-145">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="6d5d4-146">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-146">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="6d5d4-147">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="6d5d4-147">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="6d5d4-148">Свойства</span><span class="sxs-lookup"><span data-stu-id="6d5d4-148">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [<span data-ttu-id="6d5d4-149">Поля</span><span class="sxs-lookup"><span data-stu-id="6d5d4-149">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [<span data-ttu-id="6d5d4-150">Индексаторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-150">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
+ [<span data-ttu-id="6d5d4-151">События</span><span class="sxs-lookup"><span data-stu-id="6d5d4-151">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="6d5d4-152">Вложенные типы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-152">Nested Types</span></span>](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [<span data-ttu-id="6d5d4-153">Операторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-153">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+ [<span data-ttu-id="6d5d4-154">Перегружаемые операторы</span><span class="sxs-lookup"><span data-stu-id="6d5d4-154">Overloadable Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

@@ -1,46 +1,27 @@
 ---
 title: "unsafe (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - unsafe_CSharpKeyword
 - unsafe
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- unsafe keyword [C#]
+helpviewer_keywords: unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1fffbe36e39d279b2364b178188381a403c8ff86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ceba9e518caf6618cf2f457b930ce08f18273d8c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="unsafe-c-reference"></a>unsafe (Справочник по C#)
-Ключевое слово `unsafe` обозначает небезопасный контекст, необходимый для выполнения любых операций с применением указателей. Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
+# <a name="unsafe-c-reference"></a><span data-ttu-id="de759-102">unsafe (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="de759-102">unsafe (C# Reference)</span></span>
+<span data-ttu-id="de759-103">Ключевое слово `unsafe` обозначает небезопасный контекст, необходимый для выполнения любых операций с применением указателей.</span><span class="sxs-lookup"><span data-stu-id="de759-103">The `unsafe` keyword denotes an unsafe context, which is required for any operation involving pointers.</span></span> <span data-ttu-id="de759-104">Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span><span class="sxs-lookup"><span data-stu-id="de759-104">For more information, see [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md).</span></span>  
   
- В объявлении типа или члена типа можно использовать модификатор `unsafe`. Все текстовое пространство типа или члена типа считается небезопасным контекстом. Например, следующий метод объявлен с модификатором `unsafe`:  
+ <span data-ttu-id="de759-105">В объявлении типа или члена типа можно использовать модификатор `unsafe`.</span><span class="sxs-lookup"><span data-stu-id="de759-105">You can use the `unsafe` modifier in the declaration of a type or a member.</span></span> <span data-ttu-id="de759-106">Все текстовое пространство типа или члена типа считается небезопасным контекстом.</span><span class="sxs-lookup"><span data-stu-id="de759-106">The entire textual extent of the type or member is therefore considered an unsafe context.</span></span> <span data-ttu-id="de759-107">Например, следующий метод объявлен с модификатором `unsafe`:</span><span class="sxs-lookup"><span data-stu-id="de759-107">For example, the following is a method declared with the `unsafe` modifier:</span></span>  
   
 ```  
       unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
@@ -49,13 +30,13 @@ ms.lasthandoff: 09/25/2017
 }  
 ```  
   
- Область небезопасного контекста простирается от списка параметров до конца метода, поэтому в списке параметров можно также использовать указатели:  
+ <span data-ttu-id="de759-108">Область небезопасного контекста простирается от списка параметров до конца метода, поэтому в списке параметров можно также использовать указатели:</span><span class="sxs-lookup"><span data-stu-id="de759-108">The scope of the unsafe context extends from the parameter list to the end of the method, so pointers can also be used in the parameter list:</span></span>  
   
 ```  
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
 ```  
   
- Кроме того, небезопасный блок позволяет добавлять небезопасный код в блок. Пример:  
+ <span data-ttu-id="de759-109">Кроме того, небезопасный блок позволяет добавлять небезопасный код в блок.</span><span class="sxs-lookup"><span data-stu-id="de759-109">You can also use an unsafe block to enable the use of an unsafe code inside this block.</span></span> <span data-ttu-id="de759-110">Пример:</span><span class="sxs-lookup"><span data-stu-id="de759-110">For example:</span></span>  
   
 ```  
       unsafe  
@@ -64,19 +45,18 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 }  
 ```  
   
- Для компиляции небезопасного кода необходимо задать параметр компилятора [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md). Небезопасный код не проверяется средой CLR.  
+ <span data-ttu-id="de759-111">Для компиляции небезопасного кода необходимо задать параметр компилятора [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="de759-111">To compile unsafe code, you must specify the [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md) compiler option.</span></span> <span data-ttu-id="de759-112">Небезопасный код не проверяется средой CLR.</span><span class="sxs-lookup"><span data-stu-id="de759-112">Unsafe code is not verifiable by the common language runtime.</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
+## <a name="example"></a><span data-ttu-id="de759-113">Пример</span><span class="sxs-lookup"><span data-stu-id="de759-113">Example</span></span>  
+ [!code-csharp[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="de759-114">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="de759-114">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Буферы фиксированного размера](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
-
+## <a name="see-also"></a><span data-ttu-id="de759-115">См. также</span><span class="sxs-lookup"><span data-stu-id="de759-115">See Also</span></span>  
+ [<span data-ttu-id="de759-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="de759-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="de759-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="de759-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="de759-118">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="de759-118">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="de759-119">Оператор fixed</span><span class="sxs-lookup"><span data-stu-id="de759-119">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [<span data-ttu-id="de759-120">Небезопасный код и указатели</span><span class="sxs-lookup"><span data-stu-id="de759-120">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [<span data-ttu-id="de759-121">Буферы фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="de759-121">Fixed Size Buffers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

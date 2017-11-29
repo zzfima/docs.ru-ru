@@ -1,48 +1,46 @@
 ---
-title: "-- (комментарий) (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "-- (комментарий) (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5d9de735-2099-47f1-b7e7-60856f494924
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1961542e615bbbd99bbc517bdd7d649be3f3ef07
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# -- (комментарий) (Entity SQL)
-Запросы [!INCLUDE[esql](../../../../../../includes/esql-md.md)] могут содержать комментарии. Строка комментария начинается с двух дефисов \(`--`\).  
+# <a name="---comment-entity-sql"></a><span data-ttu-id="63931-102">-- (комментарий) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="63931-102">-- (Comment) (Entity SQL)</span></span>
+<span data-ttu-id="63931-103">Запросы[!INCLUDE[esql](../../../../../../includes/esql-md.md)] могут содержать комментарии.</span><span class="sxs-lookup"><span data-stu-id="63931-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries can contain comments.</span></span> <span data-ttu-id="63931-104">Строка комментария начинается с двух дефисов (`--`).</span><span class="sxs-lookup"><span data-stu-id="63931-104">Two dashes (`--`) start a comment line.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="63931-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="63931-105">Syntax</span></span>  
   
 ```  
-  
 -- text_of_comment  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a><span data-ttu-id="63931-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="63931-106">Arguments</span></span>  
  `text_of_comment`  
- Строка символов, содержащая текст комментария.  
+ <span data-ttu-id="63931-107">Строка символов, содержащая текст комментария.</span><span class="sxs-lookup"><span data-stu-id="63931-107">Is the character string that contains the text of the comment.</span></span>  
   
-## Пример  
- Следующий запрос Entity SQL демонстрирует использование комментариев. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+## <a name="example"></a><span data-ttu-id="63931-108">Пример</span><span class="sxs-lookup"><span data-stu-id="63931-108">Example</span></span>  
+ <span data-ttu-id="63931-109">Следующий запрос Entity SQL демонстрирует использование комментариев.</span><span class="sxs-lookup"><span data-stu-id="63931-109">The following Entity SQL query demonstrates how to use comments.</span></span> <span data-ttu-id="63931-110">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="63931-110">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="63931-111">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="63931-111">To compile and run this query, follow these steps:</span></span>  
   
-1.  Выполните процедуру из статьи [Как выполнить запрос, возвращающий результаты типа StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="63931-112">Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="63931-112">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="63931-113">Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="63931-113">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#COMMENT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#comment)]  
   
-## См. также  
- [Общие сведения о языке Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)   
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="63931-114">См. также</span><span class="sxs-lookup"><span data-stu-id="63931-114">See Also</span></span>  
+ [<span data-ttu-id="63931-115">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="63931-115">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="63931-116">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="63931-116">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

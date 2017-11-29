@@ -1,90 +1,70 @@
 ---
 title: "Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- file I/O classes
+helpviewer_keywords: file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: abb2291ce797f3630eebd24e563994a2d86242bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
-В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
+# <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a><span data-ttu-id="ec105-102">Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec105-102">Classes Used in .NET Framework File I/O and the File System (Visual Basic)</span></span>
+<span data-ttu-id="ec105-103">В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.</span><span class="sxs-lookup"><span data-stu-id="ec105-103">The following tables list the classes commonly used for .NET Framework file I/O, categorized into file I/O classes, classes used for creating streams, and classes used to read and write to streams.</span></span>  
   
- Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08).  
+ <span data-ttu-id="ec105-104">Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08).</span><span class="sxs-lookup"><span data-stu-id="ec105-104">To enter the [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] documentation and find a more comprehensive listing, see [Class Library Overview](https://msdn.microsoft.com/library/hfa3fa08).</span></span>  
   
-## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
- В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
+## <a name="basic-io-classes-for-files-drives-and-directories"></a><span data-ttu-id="ec105-105">Основные классы ввода-вывода для файлов, каталогов и дисков</span><span class="sxs-lookup"><span data-stu-id="ec105-105">Basic I/O Classes for Files, Drives, and Directories</span></span>  
+ <span data-ttu-id="ec105-106">В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="ec105-106">The following table lists and describes the main classes used for file I/O.</span></span>  
   
-|Класс|Описание|  
+|<span data-ttu-id="ec105-107">Класс</span><span class="sxs-lookup"><span data-stu-id="ec105-107">Class</span></span>|<span data-ttu-id="ec105-108">Описание</span><span class="sxs-lookup"><span data-stu-id="ec105-108">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.IO.Directory?displayProperty=nameWithType>|Предоставляет статические методы для создания, перемещения и перечисления в каталогах и подкаталогах.|  
-|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Предоставляет методы экземпляра для создания, перемещения и перечисления в каталогах и подкаталогах.|  
-|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Предоставляет методы экземпляра для создания, перемещения и перечисления по дискам.|  
-|<xref:System.IO.File?displayProperty=nameWithType>|Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия файлов, а также помогает при создании объектов `FileStream`.|  
-|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Определяет константы для доступа к файлу для чтения, записи или чтения и записи.|  
-|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|Предоставляет атрибуты для файлов и каталогов, например `Archive`, `Hidden` и `ReadOnly`.|  
-|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия файлов, а также помогает при создании объектов `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|Управляет процессом открытия файла. Этот параметр задается во многих конструкторах объектов `FileStream` и `IsolatedStorageFileStream`, а также в методах `Open` объектов <xref:System.IO.File> и <xref:System.IO.FileInfo>.|  
-|<xref:System.IO.FileShare?displayProperty=nameWithType>|Определяет константы для управления типом доступа других файловых потоков к этому же файлу.|  
-|<xref:System.IO.Path?displayProperty=nameWithType>|Предоставляет методы и свойства для обработки строк каталога.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Управляет доступом к файлам и папкам, определяя разрешения <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> и <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
+|<xref:System.IO.Directory?displayProperty=nameWithType>|<span data-ttu-id="ec105-109">Предоставляет статические методы для создания, перемещения и перечисления в каталогах и подкаталогах.</span><span class="sxs-lookup"><span data-stu-id="ec105-109">Provides static methods for creating, moving, and enumerating through directories and subdirectories.</span></span>|  
+|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|<span data-ttu-id="ec105-110">Предоставляет методы экземпляра для создания, перемещения и перечисления в каталогах и подкаталогах.</span><span class="sxs-lookup"><span data-stu-id="ec105-110">Provides instance methods for creating, moving, and enumerating through directories and subdirectories.</span></span>|  
+|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|<span data-ttu-id="ec105-111">Предоставляет методы экземпляра для создания, перемещения и перечисления по дискам.</span><span class="sxs-lookup"><span data-stu-id="ec105-111">Provides instance methods for creating, moving, and enumerating through drives.</span></span>|  
+|<xref:System.IO.File?displayProperty=nameWithType>|<span data-ttu-id="ec105-112">Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия файлов, а также помогает при создании объектов `FileStream`.</span><span class="sxs-lookup"><span data-stu-id="ec105-112">Provides static methods for creating, copying, deleting, moving, and opening files, and aids in the creation of a `FileStream`.</span></span>|  
+|<xref:System.IO.FileAccess?displayProperty=nameWithType>|<span data-ttu-id="ec105-113">Определяет константы для доступа к файлу для чтения, записи или чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="ec105-113">Defines constants for read, write, or read/write access to a file.</span></span>|  
+|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|<span data-ttu-id="ec105-114">Предоставляет атрибуты для файлов и каталогов, например `Archive`, `Hidden` и `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="ec105-114">Provides attributes for files and directories such as `Archive`, `Hidden`, and `ReadOnly`.</span></span>|  
+|<xref:System.IO.FileInfo?displayProperty=nameWithType>|<span data-ttu-id="ec105-115">Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия файлов, а также помогает при создании объектов `FileStream`.</span><span class="sxs-lookup"><span data-stu-id="ec105-115">Provides static methods for creating, copying, deleting, moving, and opening files, and aids in the creation of a `FileStream`.</span></span>|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|<span data-ttu-id="ec105-116">Управляет процессом открытия файла.</span><span class="sxs-lookup"><span data-stu-id="ec105-116">Controls how a file is opened.</span></span> <span data-ttu-id="ec105-117">Этот параметр задается во многих конструкторах объектов `FileStream` и `IsolatedStorageFileStream`, а также в методах `Open` объектов <xref:System.IO.File> и <xref:System.IO.FileInfo>.</span><span class="sxs-lookup"><span data-stu-id="ec105-117">This parameter is specified in many of the constructors for `FileStream` and `IsolatedStorageFileStream`, and for the `Open` methods of <xref:System.IO.File> and <xref:System.IO.FileInfo>.</span></span>|  
+|<xref:System.IO.FileShare?displayProperty=nameWithType>|<span data-ttu-id="ec105-118">Определяет константы для управления типом доступа других файловых потоков к этому же файлу.</span><span class="sxs-lookup"><span data-stu-id="ec105-118">Defines constants for controlling the type of access other file streams can have to the same file.</span></span>|  
+|<xref:System.IO.Path?displayProperty=nameWithType>|<span data-ttu-id="ec105-119">Предоставляет методы и свойства для обработки строк каталога.</span><span class="sxs-lookup"><span data-stu-id="ec105-119">Provides methods and properties for processing directory strings.</span></span>|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|<span data-ttu-id="ec105-120">Управляет доступом к файлам и папкам, определяя разрешения <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> и <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.</span><span class="sxs-lookup"><span data-stu-id="ec105-120">Controls the access of files and folders by defining <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> and <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> permissions.</span></span>|  
   
-## <a name="classes-used-to-create-streams"></a>Классы, используемые для создания потоков  
- В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
+## <a name="classes-used-to-create-streams"></a><span data-ttu-id="ec105-121">Классы, используемые для создания потоков</span><span class="sxs-lookup"><span data-stu-id="ec105-121">Classes Used to Create Streams</span></span>  
+ <span data-ttu-id="ec105-122">В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.</span><span class="sxs-lookup"><span data-stu-id="ec105-122">The following table lists and describes the main classes used to create streams.</span></span>  
   
-|Класс|Описание|  
+|<span data-ttu-id="ec105-123">Класс</span><span class="sxs-lookup"><span data-stu-id="ec105-123">Class</span></span>|<span data-ttu-id="ec105-124">Описание</span><span class="sxs-lookup"><span data-stu-id="ec105-124">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Добавляет уровень буферизации в операциях чтения и записи в другие потоки.|  
-|<xref:System.IO.FileStream?displayProperty=nameWithType>|Поддерживает произвольный доступ к файлам с помощью метода <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> по умолчанию открывает файлы синхронно, но поддерживает и асинхронные операции.|  
-|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Создает поток, резервное хранилище которого находится в памяти, а не в файле.|  
-|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Обеспечивает базовый поток данных для доступа к сети.|  
-|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Определяет поток, который связывает потоки данных с криптографическими преобразованиями.|  
+|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|<span data-ttu-id="ec105-125">Добавляет уровень буферизации в операциях чтения и записи в другие потоки.</span><span class="sxs-lookup"><span data-stu-id="ec105-125">Adds a buffering layer to read and write operations on another stream.</span></span>|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|<span data-ttu-id="ec105-126">Поддерживает произвольный доступ к файлам с помощью метода <xref:System.IO.FileStream.Seek%2A>.</span><span class="sxs-lookup"><span data-stu-id="ec105-126">Supports random access to files through its <xref:System.IO.FileStream.Seek%2A> method.</span></span> <span data-ttu-id="ec105-127"><xref:System.IO.FileStream> по умолчанию открывает файлы синхронно, но поддерживает и асинхронные операции.</span><span class="sxs-lookup"><span data-stu-id="ec105-127"><xref:System.IO.FileStream> opens files synchronously by default but also supports asynchronous operation.</span></span>|  
+|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|<span data-ttu-id="ec105-128">Создает поток, резервное хранилище которого находится в памяти, а не в файле.</span><span class="sxs-lookup"><span data-stu-id="ec105-128">Creates a stream whose backing store is memory, rather than a file.</span></span>|  
+|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|<span data-ttu-id="ec105-129">Обеспечивает базовый поток данных для доступа к сети.</span><span class="sxs-lookup"><span data-stu-id="ec105-129">Provides the underlying stream of data for network access.</span></span>|  
+|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|<span data-ttu-id="ec105-130">Определяет поток, который связывает потоки данных с криптографическими преобразованиями.</span><span class="sxs-lookup"><span data-stu-id="ec105-130">Defines a stream that links data streams to cryptographic transformations.</span></span>|  
   
-## <a name="classes-used-to-read-from-and-write-to-streams"></a>Классы, используемые для чтения из потоков и записи в них  
- В приведенной ниже таблице описаны некоторые классы, используемые для чтения из файлов и записи в них с помощью потоков.  
+## <a name="classes-used-to-read-from-and-write-to-streams"></a><span data-ttu-id="ec105-131">Классы, используемые для чтения из потоков и записи в них</span><span class="sxs-lookup"><span data-stu-id="ec105-131">Classes Used to Read from and Write to Streams</span></span>  
+ <span data-ttu-id="ec105-132">В приведенной ниже таблице описаны некоторые классы, используемые для чтения из файлов и записи в них с помощью потоков.</span><span class="sxs-lookup"><span data-stu-id="ec105-132">The following table shows the specific classes used for reading from and writing to files with streams.</span></span>  
   
-|**Класс**|**Описание**|  
+|<span data-ttu-id="ec105-133">**Класс**</span><span class="sxs-lookup"><span data-stu-id="ec105-133">**Class**</span></span>|<span data-ttu-id="ec105-134">**Описание**</span><span class="sxs-lookup"><span data-stu-id="ec105-134">**Description**</span></span>|  
 |---------------|---------------------|  
-|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Считывает кодированные строки и примитивные типы данных из <xref:System.IO.FileStream>.|  
-|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Записывает кодированные строки и примитивные типы данных в <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Считывает символы из <xref:System.IO.FileStream>, преобразуя символы в байты и наоборот с помощью <xref:System.IO.StreamReader.CurrentEncoding%2A>. <xref:System.IO.StreamReader> имеет конструктор, который пытается выяснить правильный <xref:System.IO.StreamReader.CurrentEncoding%2A> для заданного потока, оценивая наличие преамбулы для конкретного <xref:System.IO.StreamReader.CurrentEncoding%2A>, например метки порядка байтов.|  
-|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Записывает символы в `FileStream`, преобразуя символы в байты с помощью <xref:System.IO.StreamWriter.Encoding%2A>.|  
-|<xref:System.IO.StringReader?displayProperty=nameWithType>|Считывает символы из `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
-|<xref:System.IO.StringWriter?displayProperty=nameWithType>|Записывает символы в `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
+|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|<span data-ttu-id="ec105-135">Считывает кодированные строки и примитивные типы данных из <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="ec105-135">Reads encoded strings and primitive data types from a <xref:System.IO.FileStream>.</span></span>|  
+|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|<span data-ttu-id="ec105-136">Записывает кодированные строки и примитивные типы данных в <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="ec105-136">Writes encoded strings and primitive data types to a <xref:System.IO.FileStream>.</span></span>|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|<span data-ttu-id="ec105-137">Считывает символы из <xref:System.IO.FileStream>, преобразуя символы в байты и наоборот с помощью <xref:System.IO.StreamReader.CurrentEncoding%2A>.</span><span class="sxs-lookup"><span data-stu-id="ec105-137">Reads characters from a <xref:System.IO.FileStream>, using <xref:System.IO.StreamReader.CurrentEncoding%2A> to convert characters to and from bytes.</span></span> <span data-ttu-id="ec105-138"><xref:System.IO.StreamReader> имеет конструктор, который пытается выяснить правильный <xref:System.IO.StreamReader.CurrentEncoding%2A> для заданного потока, оценивая наличие преамбулы для конкретного <xref:System.IO.StreamReader.CurrentEncoding%2A>, например метки порядка байтов.</span><span class="sxs-lookup"><span data-stu-id="ec105-138"><xref:System.IO.StreamReader> has a constructor that attempts to ascertain the correct <xref:System.IO.StreamReader.CurrentEncoding%2A> for a given stream, based on the presence of a <xref:System.IO.StreamReader.CurrentEncoding%2A>-specific preamble, such as a byte order mark.</span></span>|  
+|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|<span data-ttu-id="ec105-139">Записывает символы в `FileStream`, преобразуя символы в байты с помощью <xref:System.IO.StreamWriter.Encoding%2A>.</span><span class="sxs-lookup"><span data-stu-id="ec105-139">Writes characters to a `FileStream`, using <xref:System.IO.StreamWriter.Encoding%2A> to convert characters to bytes.</span></span>|  
+|<xref:System.IO.StringReader?displayProperty=nameWithType>|<span data-ttu-id="ec105-140">Считывает символы из `String`.</span><span class="sxs-lookup"><span data-stu-id="ec105-140">Reads characters from a `String`.</span></span> <span data-ttu-id="ec105-141">Вывод может быть либо потоком в любой кодировке, либо `String`.</span><span class="sxs-lookup"><span data-stu-id="ec105-141">Output can be either a stream in any encoding or a `String`.</span></span>|  
+|<xref:System.IO.StringWriter?displayProperty=nameWithType>|<span data-ttu-id="ec105-142">Записывает символы в `String`.</span><span class="sxs-lookup"><span data-stu-id="ec105-142">Writes characters to a `String`.</span></span> <span data-ttu-id="ec105-143">Вывод может быть либо потоком в любой кодировке, либо `String`.</span><span class="sxs-lookup"><span data-stu-id="ec105-143">Output can be either a stream in any encoding or a `String`.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Составление потоков](https://msdn.microsoft.com/library/e4y2dch9)   
- [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)   
- [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)   
- [Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
-
+## <a name="see-also"></a><span data-ttu-id="ec105-144">См. также</span><span class="sxs-lookup"><span data-stu-id="ec105-144">See Also</span></span>  
+ [<span data-ttu-id="ec105-145">Составление потоков</span><span class="sxs-lookup"><span data-stu-id="ec105-145">Composing Streams</span></span>](https://msdn.microsoft.com/library/e4y2dch9)  
+ [<span data-ttu-id="ec105-146">Файловый и потоковый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="ec105-146">File and Stream I/O</span></span>](https://msdn.microsoft.com/library/k3352a4t)  
+ [<span data-ttu-id="ec105-147">Асинхронный файловый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="ec105-147">Asynchronous File I/O</span></span>](https://msdn.microsoft.com/library/kztecsys)  
+ [<span data-ttu-id="ec105-148">Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ec105-148">Basics of .NET Framework File I/O and the File System (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

@@ -1,35 +1,31 @@
 ---
 title: "Практическое руководство. Изменение документа в формате Office Open XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>Практическое руководство. Изменение документа в формате Office Open XML (C#)
-В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
+# <a name="how-to-modify-an-office-open-xml-document-c"></a><span data-ttu-id="c2bee-102">Практическое руководство. Изменение документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="c2bee-102">How to: Modify an Office Open XML Document (C#)</span></span>
+<span data-ttu-id="c2bee-103">В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.</span><span class="sxs-lookup"><span data-stu-id="c2bee-103">This topic presents an example that opens an Office Open XML document, modifies it, and saves it.</span></span>  
   
- Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ <span data-ttu-id="c2bee-104">Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span><span class="sxs-lookup"><span data-stu-id="c2bee-104">For more information on Office Open XML, see [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере осуществляется поиск первого абзаца документа. В примере происходит получение текста из этого абзаца, а затем все текстовые прогоны в абзаце удаляются. Создается новый текстовый прогон, состоящий из текста первого абзаца, преобразованного в верхний регистр. Затем измененный XML сериализуется в пакет Open XML и закрывается.  
+## <a name="example"></a><span data-ttu-id="c2bee-105">Пример</span><span class="sxs-lookup"><span data-stu-id="c2bee-105">Example</span></span>  
+ <span data-ttu-id="c2bee-106">В этом примере осуществляется поиск первого абзаца документа.</span><span class="sxs-lookup"><span data-stu-id="c2bee-106">This example finds the first paragraph element in the document.</span></span> <span data-ttu-id="c2bee-107">В примере происходит получение текста из этого абзаца, а затем все текстовые прогоны в абзаце удаляются.</span><span class="sxs-lookup"><span data-stu-id="c2bee-107">It retrieves the text from the paragraph, and then deletes all text runs in the paragraph.</span></span> <span data-ttu-id="c2bee-108">Создается новый текстовый прогон, состоящий из текста первого абзаца, преобразованного в верхний регистр.</span><span class="sxs-lookup"><span data-stu-id="c2bee-108">It creates a new text run that consists of the first paragraph text that has been converted to upper case.</span></span> <span data-ttu-id="c2bee-109">Затем измененный XML сериализуется в пакет Open XML и закрывается.</span><span class="sxs-lookup"><span data-stu-id="c2bee-109">It then serializes the changed XML into the Open XML package and closes it.</span></span>  
   
- В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.  
+ <span data-ttu-id="c2bee-110">В этом примере используются классы, находящиеся в сборке WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="c2bee-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="c2bee-111">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c2bee-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -151,14 +147,13 @@ class Program
 }  
 ```  
   
- Если открыть файл `SampleDoc.docx` после выполнения этой программы, можно будет увидеть, что программа преобразовала первый абзац в документе в верхний регистр.  
+ <span data-ttu-id="c2bee-112">Если открыть файл `SampleDoc.docx` после выполнения этой программы, можно будет увидеть, что программа преобразовала первый абзац в документе в верхний регистр.</span><span class="sxs-lookup"><span data-stu-id="c2bee-112">If you open `SampleDoc.docx` after running this program, you can see that this program converted the first paragraph in the document to upper case.</span></span>  
   
- При запуске с образцом документа Open XML, описанным в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), этот пример выводит следующие результаты:  
+ <span data-ttu-id="c2bee-113">При запуске с образцом документа Open XML, описанным в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), этот пример выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="c2bee-113">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="c2bee-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c2bee-114">See Also</span></span>  
+ [<span data-ttu-id="c2bee-115">Дополнительные способы создания запросов (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c2bee-115">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

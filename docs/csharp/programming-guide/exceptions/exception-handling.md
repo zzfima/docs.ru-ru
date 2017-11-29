@@ -1,88 +1,69 @@
 ---
 title: "Обработка исключений (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dfdd8b8bdd89e4253dfc1afebc1e78140b121dd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ab03e00a6b62d0c737c90fdb489be2a78f7ab6af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="exception-handling-c-programming-guide"></a>Обработка исключений (Руководство по программированию на C#)
-Блок [try](../../../csharp/language-reference/keywords/try-catch.md) используется программистами C# для разбиения на разделы кода, который может затрагиваться исключением. Связанные с ним блоки [catch](../../../csharp/language-reference/keywords/try-catch.md) используются для обработки возможных исключений. Блок [finally](../../../csharp/language-reference/keywords/try-finally.md) содержит код, выполняемый вне зависимости от того, вызывается ли исключение в блоке `try`, например для освобождения ресурсов, выделенных в блоке `try`. Блоку `try` требуется один или несколько связанных блоков `catch` или блок `finally` (либо и то, и другое).  
+# <a name="exception-handling-c-programming-guide"></a><span data-ttu-id="583d8-102">Обработка исключений (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="583d8-102">Exception Handling (C# Programming Guide)</span></span>
+<span data-ttu-id="583d8-103">Блок [try](../../../csharp/language-reference/keywords/try-catch.md) используется программистами C# для разбиения на разделы кода, который может затрагиваться исключением.</span><span class="sxs-lookup"><span data-stu-id="583d8-103">A [try](../../../csharp/language-reference/keywords/try-catch.md) block is used by C# programmers to partition code that might be affected by an exception.</span></span> <span data-ttu-id="583d8-104">Связанные с ним блоки [catch](../../../csharp/language-reference/keywords/try-catch.md) используются для обработки возможных исключений.</span><span class="sxs-lookup"><span data-stu-id="583d8-104">Associated [catch](../../../csharp/language-reference/keywords/try-catch.md) blocks are used to handle any resulting exceptions.</span></span> <span data-ttu-id="583d8-105">Блок [finally](../../../csharp/language-reference/keywords/try-finally.md) содержит код, выполняемый вне зависимости от того, вызывается ли исключение в блоке `try`, например для освобождения ресурсов, выделенных в блоке `try`.</span><span class="sxs-lookup"><span data-stu-id="583d8-105">A [finally](../../../csharp/language-reference/keywords/try-finally.md) block contains code that is run regardless of whether or not an exception is thrown in the `try` block, such as releasing resources that are allocated in the `try` block.</span></span> <span data-ttu-id="583d8-106">Блоку `try` требуется один или несколько связанных блоков `catch` или блок `finally` (либо и то, и другое).</span><span class="sxs-lookup"><span data-stu-id="583d8-106">A `try` block requires one or more associated `catch` blocks, or a `finally` block, or both.</span></span>  
   
- В приведенных ниже примерах показаны операторы `try-catch`, `try-finally` и `try-catch-finally`.  
+ <span data-ttu-id="583d8-107">В приведенных ниже примерах показаны операторы `try-catch`, `try-finally` и `try-catch-finally`.</span><span class="sxs-lookup"><span data-stu-id="583d8-107">The following examples show a `try-catch` statement, a `try-finally` statement, and a `try-catch-finally` statement.</span></span>  
   
- [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
   
- [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
   
- [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
   
- Блок `try` без блока `catch` или блока `finally` вызовет ошибку компилятора.  
+ <span data-ttu-id="583d8-108">Блок `try` без блока `catch` или блока `finally` вызовет ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="583d8-108">A `try` block without a `catch` or `finally` block causes a compiler error.</span></span>  
   
-## <a name="catch-blocks"></a>Блоки catch  
- Блок `catch` может определять тип перехватываемого исключения. Спецификация типа называется *фильтром исключений*. Тип исключения должен быть производным от <xref:System.Exception>. Как правило, не следует задавать <xref:System.Exception> в качестве фильтра исключений, кроме случаев, когда известно, как обрабатывать все исключения, которые могут быть вызваны в блоке `try`, или когда оператор [throw](../../../csharp/language-reference/keywords/throw.md) добавлен в конце блока `catch`.  
+## <a name="catch-blocks"></a><span data-ttu-id="583d8-109">Блоки catch</span><span class="sxs-lookup"><span data-stu-id="583d8-109">Catch Blocks</span></span>  
+ <span data-ttu-id="583d8-110">Блок `catch` может определять тип перехватываемого исключения.</span><span class="sxs-lookup"><span data-stu-id="583d8-110">A `catch` block can specify the type of exception to catch.</span></span> <span data-ttu-id="583d8-111">Спецификация типа называется *фильтром исключений*.</span><span class="sxs-lookup"><span data-stu-id="583d8-111">The type specification is called an *exception filter*.</span></span> <span data-ttu-id="583d8-112">Тип исключения должен быть производным от <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="583d8-112">The exception type should be derived from <xref:System.Exception>.</span></span> <span data-ttu-id="583d8-113">Как правило, не следует задавать <xref:System.Exception> в качестве фильтра исключений, кроме случаев, когда известно, как обрабатывать все исключения, которые могут быть вызваны в блоке `try`, или когда оператор [throw](../../../csharp/language-reference/keywords/throw.md) добавлен в конце блока `catch`.</span><span class="sxs-lookup"><span data-stu-id="583d8-113">In general, do not specify <xref:System.Exception> as the exception filter unless either you know how to handle all exceptions that might be thrown in the `try` block, or you have included a [throw](../../../csharp/language-reference/keywords/throw.md) statement at the end of your `catch` block.</span></span>  
   
- Несколько блоков `catch` с различными фильтрами исключений могут быть соединены друг с другом. Блоки `catch` проверяются сверху вниз в коде, однако для каждого вызванного исключения выполняется только один блок `catch`. Выполняется первый блок `catch`, в котором указан точный тип или базовый класс вызванного исключения. Если нет блока `catch`, в котором определен соответствующий фильтр исключений, выбирается блок `catch`, в котором не выбран фильтр, если таковой имеется в операторе. Важно, чтобы первыми были размещены блоки `catch` с самыми конкретными (т. е. самыми производными) типами исключений.  
+ <span data-ttu-id="583d8-114">Несколько блоков `catch` с различными фильтрами исключений могут быть соединены друг с другом.</span><span class="sxs-lookup"><span data-stu-id="583d8-114">Multiple `catch` blocks with different exception filters can be chained together.</span></span> <span data-ttu-id="583d8-115">Блоки `catch` проверяются сверху вниз в коде, однако для каждого вызванного исключения выполняется только один блок `catch`.</span><span class="sxs-lookup"><span data-stu-id="583d8-115">The `catch` blocks are evaluated from top to bottom in your code, but only one `catch` block is executed for each exception that is thrown.</span></span> <span data-ttu-id="583d8-116">Выполняется первый блок `catch`, в котором указан точный тип или базовый класс вызванного исключения.</span><span class="sxs-lookup"><span data-stu-id="583d8-116">The first `catch` block that specifies the exact type or a base class of the thrown exception is executed.</span></span> <span data-ttu-id="583d8-117">Если нет блока `catch`, в котором определен соответствующий фильтр исключений, выбирается блок `catch`, в котором не выбран фильтр, если таковой имеется в операторе.</span><span class="sxs-lookup"><span data-stu-id="583d8-117">If no `catch` block specifies a matching exception filter, a `catch` block that does not have a filter is selected, if one is present in the statement.</span></span> <span data-ttu-id="583d8-118">Важно, чтобы первыми были размещены блоки `catch` с самыми конкретными (т. е. самыми производными) типами исключений.</span><span class="sxs-lookup"><span data-stu-id="583d8-118">It is important to position `catch` blocks with the most specific (that is, the most derived) exception types first.</span></span>  
   
- Исключения следует перехватывать при выполнении указанных ниже условий.  
+ <span data-ttu-id="583d8-119">Исключения следует перехватывать при выполнении указанных ниже условий.</span><span class="sxs-lookup"><span data-stu-id="583d8-119">You should catch exceptions when the following conditions are true:</span></span>  
   
--   Вы ясно понимаете возможные причины вызова исключения и можете выполнить восстановление, например, предложив пользователю ввести новое имя файла при перехвате объекта <xref:System.IO.FileNotFoundException>.  
+-   <span data-ttu-id="583d8-120">Вы ясно понимаете возможные причины вызова исключения и можете выполнить восстановление, например, предложив пользователю ввести новое имя файла при перехвате объекта <xref:System.IO.FileNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="583d8-120">You have a good understanding of why the exception might be thrown, and you can implement a specific recovery, such as prompting the user to enter a new file name when you catch a <xref:System.IO.FileNotFoundException> object.</span></span>  
   
--   Вы можете создать и вызвать новое, более конкретное исключение.  
+-   <span data-ttu-id="583d8-121">Вы можете создать и вызвать новое, более конкретное исключение.</span><span class="sxs-lookup"><span data-stu-id="583d8-121">You can create and throw a new, more specific exception.</span></span>  
   
-     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
+     [!code-csharp[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
   
--   Требуется частично обработать исключение перед передачей его на дополнительную обработку. В приведенном ниже примере блок `catch` используется для добавления записи в журнал ошибок перед повторным вызовом исключения.  
+-   <span data-ttu-id="583d8-122">Требуется частично обработать исключение перед передачей его на дополнительную обработку.</span><span class="sxs-lookup"><span data-stu-id="583d8-122">You want to partially handle an exception before passing it on for additional handling.</span></span> <span data-ttu-id="583d8-123">В приведенном ниже примере блок `catch` используется для добавления записи в журнал ошибок перед повторным вызовом исключения.</span><span class="sxs-lookup"><span data-stu-id="583d8-123">In the following example, a `catch` block is used to add an entry to an error log before re-throwing the exception.</span></span>  
   
-     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
+     [!code-csharp[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
   
-## <a name="finally-blocks"></a>Блоки "Finally"  
- Блок `finally` позволяет удалить действия, выполненные в блоке `try`. При наличии блока `finally` он выполняется последним, после блока `try` и всех выполняемых блоков `catch`. Блок `finally` выполняется всегда вне зависимости от возникновения исключения или обнаружения блока `catch`, соответствующего типу исключения.  
+## <a name="finally-blocks"></a><span data-ttu-id="583d8-124">Блоки "Finally"</span><span class="sxs-lookup"><span data-stu-id="583d8-124">Finally Blocks</span></span>  
+ <span data-ttu-id="583d8-125">Блок `finally` позволяет удалить действия, выполненные в блоке `try`.</span><span class="sxs-lookup"><span data-stu-id="583d8-125">A `finally` block enables you to clean up actions that are performed in a `try` block.</span></span> <span data-ttu-id="583d8-126">При наличии блока `finally` он выполняется последним, после блока `try` и всех выполняемых блоков `catch`.</span><span class="sxs-lookup"><span data-stu-id="583d8-126">If present, the `finally` block executes last, after the `try` block and any matched `catch` block.</span></span> <span data-ttu-id="583d8-127">Блок `finally` выполняется всегда вне зависимости от возникновения исключения или обнаружения блока `catch`, соответствующего типу исключения.</span><span class="sxs-lookup"><span data-stu-id="583d8-127">A `finally` block always runs, regardless of whether an exception is thrown or a `catch` block matching the exception type is found.</span></span>  
   
- Блок `finally` можно использовать для высвобождения ресурсов, например потоков данных, подключений к базам данных, графических дескрипторов, не ожидая финализации объектов сборщиком мусора во время выполнения. Дополнительные сведения см. в разделе [Оператор using](../../../csharp/language-reference/keywords/using-statement.md).  
+ <span data-ttu-id="583d8-128">Блок `finally` можно использовать для высвобождения ресурсов, например потоков данных, подключений к базам данных, графических дескрипторов, не ожидая финализации объектов сборщиком мусора во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="583d8-128">The `finally` block can be used to release resources such as file streams, database connections, and graphics handles without waiting for the garbage collector in the runtime to finalize the objects.</span></span> <span data-ttu-id="583d8-129">Дополнительные сведения см. в разделе [Оператор using](../../../csharp/language-reference/keywords/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="583d8-129">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md) for more information.</span></span>  
   
- В приведенном ниже примере с помощью блока `finally` закрывается файл, открытый в блоке `try`. Обратите внимание, что состояние дескриптора файла проверяется до закрытия файла. Если блок `try` не может открыть этот файл, дескриптор файла по-прежнему имеет значение `null`, и блок `finally` не пытается закрыть его. Кроме того, если файл успешно открыт в блоке `try`, блок `finally` закрывает открытый файл.  
+ <span data-ttu-id="583d8-130">В приведенном ниже примере с помощью блока `finally` закрывается файл, открытый в блоке `try`.</span><span class="sxs-lookup"><span data-stu-id="583d8-130">In the following example, the `finally` block is used to close a file that is opened in the `try` block.</span></span> <span data-ttu-id="583d8-131">Обратите внимание, что состояние дескриптора файла проверяется до закрытия файла.</span><span class="sxs-lookup"><span data-stu-id="583d8-131">Notice that the state of the file handle is checked before the file is closed.</span></span> <span data-ttu-id="583d8-132">Если блок `try` не может открыть этот файл, дескриптор файла по-прежнему имеет значение `null`, и блок `finally` не пытается закрыть его.</span><span class="sxs-lookup"><span data-stu-id="583d8-132">If the `try` block cannot open the file, the file handle still has the value `null` and the `finally` block does not try to close it.</span></span> <span data-ttu-id="583d8-133">Кроме того, если файл успешно открыт в блоке `try`, блок `finally` закрывает открытый файл.</span><span class="sxs-lookup"><span data-stu-id="583d8-133">Alternatively, if the file is opened successfully in the `try` block, the `finally` block closes the open file.</span></span>  
   
- [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
+ [!code-csharp[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="583d8-134">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="583d8-134">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
- [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)
-
+## <a name="see-also"></a><span data-ttu-id="583d8-135">См. также</span><span class="sxs-lookup"><span data-stu-id="583d8-135">See Also</span></span>  
+ [<span data-ttu-id="583d8-136">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="583d8-136">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="583d8-137">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="583d8-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="583d8-138">Исключения и обработка исключений</span><span class="sxs-lookup"><span data-stu-id="583d8-138">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)  
+ [<span data-ttu-id="583d8-139">try-catch</span><span class="sxs-lookup"><span data-stu-id="583d8-139">try-catch</span></span>](../../../csharp/language-reference/keywords/try-catch.md)  
+ [<span data-ttu-id="583d8-140">try-finally</span><span class="sxs-lookup"><span data-stu-id="583d8-140">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
+ [<span data-ttu-id="583d8-141">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="583d8-141">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+ [<span data-ttu-id="583d8-142">Оператор using</span><span class="sxs-lookup"><span data-stu-id="583d8-142">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)

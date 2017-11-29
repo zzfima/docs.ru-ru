@@ -1,27 +1,33 @@
 ---
-title: "Добавление заметок к типизированным объектам DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание примечаний к типизированным наборам данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d3965ced44bae21feef3d01d49149387fce4fa46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Добавление заметок к типизированным объектам DataSet
-Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы.  Если изменить имена элементов в базовой схеме, типизированные объекты **DataSet** будут ссылаться на объекты, не существующие в источнике данных, а также потеряют ссылки на объекты, которые имеются в источнике данных.  
+# <a name="annotating-typed-datasets"></a><span data-ttu-id="e18d7-102">Создание примечаний к типизированным наборам данных</span><span class="sxs-lookup"><span data-stu-id="e18d7-102">Annotating Typed DataSets</span></span>
+<span data-ttu-id="e18d7-103">Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы.</span><span class="sxs-lookup"><span data-stu-id="e18d7-103">Annotations enable you to modify the names of the elements in your typed <xref:System.Data.DataSet> without modifying the underlying schema.</span></span> <span data-ttu-id="e18d7-104">Изменить имена элементов в базовой схеме, типизированные **набора данных** для ссылки на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="e18d7-104">Modifying the names of the elements in your underlying schema would cause the typed **DataSet** to refer to objects that do not exist in the data source, as well as lose a reference to the objects that do exist in the data source.</span></span>  
   
- Используя заметки, можно изменить имена объектов в типизированных объектах **DataSet** на более понятные. Это упрощает чтение кода и облегчает клиентам использование типизированного объекта **DataSet**. При этом не затрагивается базовая схема.  Например, наличие следующего элемента схемы для таблицы **Customers** базы данных **Northwind** может привести к появлению имени **DataRow** объекта **CustomersRow** и <xref:System.Data.DataRowCollection> с именем **Customers**.  
+ <span data-ttu-id="e18d7-105">Используя заметки, можно изменить имена объектов в типизированных объектах **DataSet** с более понятные имена, что делает код более удобочитаемым и типизированного **DataSet** облегчает клиентам использовать, предоставляя Базовая схема без изменений.</span><span class="sxs-lookup"><span data-stu-id="e18d7-105">Using annotations, you can customize the names of objects in your typed **DataSet** with more meaningful names, making code more readable and your typed **DataSet** easier for clients to use, while leaving underlying schema intact.</span></span> <span data-ttu-id="e18d7-106">Например, следующий элемент схемы для **клиентов** таблицу **Northwind** базы данных приведет к появлению **DataRow** объект имени  **CustomersRow** и <xref:System.Data.DataRowCollection> с именем **клиентов**.</span><span class="sxs-lookup"><span data-stu-id="e18d7-106">For example, the following schema element for the **Customers** table of the **Northwind** database would result in a **DataRow** object name of **CustomersRow** and a <xref:System.Data.DataRowCollection> named **Customers**.</span></span>  
   
-```  
+```xml  
 <xs:element name="Customers">  
   <xs:complexType>  
     <xs:sequence>  
@@ -31,9 +37,9 @@ caps.handback.revision: 6
 </xs:element>  
 ```  
   
- Для **DataRowCollection** имя **Заказчики** имеет значение в клиентском коде, но имя **DataRow** для **CustomersRow** может сбить с толку, т.к. это один объект.  Кроме того, в обычных сценариях ссылка на объект производится без идентификатора **Row**, и он просто указывается как объект **Customer**.  В качестве решения можно добавить заметки к схеме и определить новые имена для объектов **DataRow** и **DataRowCollection**.  Далее приводится версия предыдущей схемы с добавленными заметками.  
+ <span data-ttu-id="e18d7-107">Объект **DataRowCollection** имя **клиентов** имеет смысл в клиентском коде, но **DataRow** имя **CustomersRow** может ввести в заблуждение так как один объект.</span><span class="sxs-lookup"><span data-stu-id="e18d7-107">A **DataRowCollection** name of **Customers** is meaningful in client code, but a **DataRow** name of **CustomersRow** is misleading because it is a single object.</span></span> <span data-ttu-id="e18d7-108">Кроме того, общие сценарии, объект обычно указывается без **строки** идентификатор и вместо этого будет просто обращаться как к **клиента** объекта.</span><span class="sxs-lookup"><span data-stu-id="e18d7-108">Also, in common scenarios, the object would be referred to without the **Row** identifier and instead would be simply referred to as a **Customer** object.</span></span> <span data-ttu-id="e18d7-109">Решение — добавить заметки к схеме и определить новые имена для **DataRow** и **DataRowCollection** объектов.</span><span class="sxs-lookup"><span data-stu-id="e18d7-109">The solution is to annotate the schema and identify new names for the **DataRow** and **DataRowCollection** objects.</span></span> <span data-ttu-id="e18d7-110">Далее приводится версия предыдущей схемы с добавленными заметками.</span><span class="sxs-lookup"><span data-stu-id="e18d7-110">Following is the annotated version of the previous schema.</span></span>  
   
-```  
+```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
   <xs:complexType>  
     <xs:sequence>  
@@ -43,50 +49,50 @@ caps.handback.revision: 6
 </xs:element>  
 ```  
   
- Задание значения **typedName** для **Customer** приведет к появлению имени объекта **DataRow** для **Customer**.  Заданием **typedPlural** для **Customers** сохраняется имя **DataRowCollection** для **Customers**.  
+ <span data-ttu-id="e18d7-111">Указание **typedName** значение **клиента** приведет к **DataRow** объект имени **клиента**.</span><span class="sxs-lookup"><span data-stu-id="e18d7-111">Specifying a **typedName** value of **Customer** will result in a **DataRow** object name of **Customer**.</span></span> <span data-ttu-id="e18d7-112">Указание **typedPlural** значение **клиентов** сохраняет **DataRowCollection** имя **клиентов**.</span><span class="sxs-lookup"><span data-stu-id="e18d7-112">Specifying a **typedPlural** value of **Customers** preserves the **DataRowCollection** name of **Customers**.</span></span>  
   
- В следующей таблице показаны доступные для использования заметки.  
+ <span data-ttu-id="e18d7-113">В следующей таблице показаны доступные для использования заметки.</span><span class="sxs-lookup"><span data-stu-id="e18d7-113">The following table shows the annotations available for use.</span></span>  
   
-|Комментарий|Описание|  
-|-----------------|--------------|  
-|**typedName**|Имя объекта.|  
-|**typedPlural**|Имя коллекции объектов.|  
-|**typedParent**|Имя объекта при ссылке на родительскую связь.|  
-|**typedChildren**|Имя метода, возвращающего объекты по дочерней связи.|  
-|**nullValue**|Значение для того случая, если базовым значением является **DBNull**.  См. следующую таблицу для заметок **nullValue**.  По умолчанию используется **\_throw**.|  
+|<span data-ttu-id="e18d7-114">Комментарий</span><span class="sxs-lookup"><span data-stu-id="e18d7-114">Annotation</span></span>|<span data-ttu-id="e18d7-115">Описание</span><span class="sxs-lookup"><span data-stu-id="e18d7-115">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="e18d7-116">**typedName**</span><span class="sxs-lookup"><span data-stu-id="e18d7-116">**typedName**</span></span>|<span data-ttu-id="e18d7-117">Имя объекта.</span><span class="sxs-lookup"><span data-stu-id="e18d7-117">Name of the object.</span></span>|  
+|<span data-ttu-id="e18d7-118">**typedPlural**</span><span class="sxs-lookup"><span data-stu-id="e18d7-118">**typedPlural**</span></span>|<span data-ttu-id="e18d7-119">Имя коллекции объектов.</span><span class="sxs-lookup"><span data-stu-id="e18d7-119">Name of a collection of objects.</span></span>|  
+|<span data-ttu-id="e18d7-120">**typedParent**</span><span class="sxs-lookup"><span data-stu-id="e18d7-120">**typedParent**</span></span>|<span data-ttu-id="e18d7-121">Имя объекта при ссылке на родительскую связь.</span><span class="sxs-lookup"><span data-stu-id="e18d7-121">Name of the object when referred to in a parent relationship.</span></span>|  
+|<span data-ttu-id="e18d7-122">**typedChildren**</span><span class="sxs-lookup"><span data-stu-id="e18d7-122">**typedChildren**</span></span>|<span data-ttu-id="e18d7-123">Имя метода, возвращающего объекты по дочерней связи.</span><span class="sxs-lookup"><span data-stu-id="e18d7-123">Name of the method to return objects from a child relationship.</span></span>|  
+|<span data-ttu-id="e18d7-124">**nullValue**</span><span class="sxs-lookup"><span data-stu-id="e18d7-124">**nullValue**</span></span>|<span data-ttu-id="e18d7-125">Значение, если базовое значение ― **DBNull**.</span><span class="sxs-lookup"><span data-stu-id="e18d7-125">Value if the underlying value is **DBNull**.</span></span> <span data-ttu-id="e18d7-126">См. следующую таблицу для **nullValue** заметок.</span><span class="sxs-lookup"><span data-stu-id="e18d7-126">See the following table for **nullValue** annotations.</span></span> <span data-ttu-id="e18d7-127">Значение по умолчанию — **_throw**.</span><span class="sxs-lookup"><span data-stu-id="e18d7-127">The default is **_throw**.</span></span>|  
   
- В следующей таблице представлены значения, которые могут быть заданы для заметки **nullValue**.  
+ <span data-ttu-id="e18d7-128">В следующей таблице показаны значения, которые могут быть указаны для **nullValue** заметки.</span><span class="sxs-lookup"><span data-stu-id="e18d7-128">The following table shows the values that can be specified for the **nullValue** annotation.</span></span>  
   
-|Значение nullValue|Описание|  
-|------------------------|--------------|  
-|*Заменяющее значение*|Задает возвращаемое значение.  Возвращаемое значение должно соответствовать типу элемента.  Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.|  
-|**\_throw**|Создание исключения.  Это значение по умолчанию.|  
-|**\_null**|Возвращает ссылку null или создает исключение, если встречается примитивный тип.|  
-|**\_empty**|Для строк возвращает **String.Empty**, в противном случае возвращает объект, созданный из пустого конструктора.  Если встречается примитивный тип, вызывает исключение.|  
+|<span data-ttu-id="e18d7-129">Значение nullValue</span><span class="sxs-lookup"><span data-stu-id="e18d7-129">nullValue Value</span></span>|<span data-ttu-id="e18d7-130">Описание</span><span class="sxs-lookup"><span data-stu-id="e18d7-130">Description</span></span>|  
+|---------------------|-----------------|  
+|<span data-ttu-id="e18d7-131">*Заменяющее значение*</span><span class="sxs-lookup"><span data-stu-id="e18d7-131">*Replacement Value*</span></span>|<span data-ttu-id="e18d7-132">Задает возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="e18d7-132">Specify a value to be returned.</span></span> <span data-ttu-id="e18d7-133">Возвращаемое значение должно соответствовать типу элемента.</span><span class="sxs-lookup"><span data-stu-id="e18d7-133">The returned value must match the type of the element.</span></span> <span data-ttu-id="e18d7-134">Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.</span><span class="sxs-lookup"><span data-stu-id="e18d7-134">For example, use `nullValue="0"` to return 0 for null integer fields.</span></span>|  
+|<span data-ttu-id="e18d7-135">**_throw**</span><span class="sxs-lookup"><span data-stu-id="e18d7-135">**_throw**</span></span>|<span data-ttu-id="e18d7-136">Создание исключения.</span><span class="sxs-lookup"><span data-stu-id="e18d7-136">Throw an exception.</span></span> <span data-ttu-id="e18d7-137">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e18d7-137">This is the default.</span></span>|  
+|<span data-ttu-id="e18d7-138">**_null**</span><span class="sxs-lookup"><span data-stu-id="e18d7-138">**_null**</span></span>|<span data-ttu-id="e18d7-139">Возвращает ссылку null или создает исключение, если встречается примитивный тип.</span><span class="sxs-lookup"><span data-stu-id="e18d7-139">Return a null reference or throw an exception if a primitive type is encountered.</span></span>|  
+|<span data-ttu-id="e18d7-140">**_empty**</span><span class="sxs-lookup"><span data-stu-id="e18d7-140">**_empty**</span></span>|<span data-ttu-id="e18d7-141">Для строк возвращает **String.Empty**, в противном случае возвращает объект, созданный из пустого конструктора.</span><span class="sxs-lookup"><span data-stu-id="e18d7-141">For strings, return **String.Empty**, otherwise return an object created from an empty constructor.</span></span> <span data-ttu-id="e18d7-142">Если встречается примитивный тип, вызывает исключение.</span><span class="sxs-lookup"><span data-stu-id="e18d7-142">If a primitive type is encountered, throw an exception.</span></span>|  
   
- В следующей таблице показаны значения по умолчанию для объектов в типизированном **DataSet** и доступные заметки.  
+ <span data-ttu-id="e18d7-143">В следующей таблице показаны значения по умолчанию для объектов в типизированном **набора данных** и доступные заметки.</span><span class="sxs-lookup"><span data-stu-id="e18d7-143">The following table shows default values for objects in a typed **DataSet** and the available annotations.</span></span>  
   
-|Объект\/Метод\/Событие|По умолчанию|Комментарий|  
-|----------------------------|------------------|-----------------|  
-|**DataTable**|TableNameDataTable|typedPlural|  
-|Методы **DataTable**|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
-|**DataRowCollection**|TableName|typedPlural|  
-|**DataRow**|TableNameRow|typedName|  
-|**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Свойство**|PropertyName|typedName|  
-|Метод доступа **Child**|GetChildTableNameRows|typedChildren|  
-|Метод доступа **Parent**|TableNameRow|typedParent|  
-|События **DataSet**|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|<span data-ttu-id="e18d7-144">Объект/Метод/Событие</span><span class="sxs-lookup"><span data-stu-id="e18d7-144">Object/Method/Event</span></span>|<span data-ttu-id="e18d7-145">По умолчанию</span><span class="sxs-lookup"><span data-stu-id="e18d7-145">Default</span></span>|<span data-ttu-id="e18d7-146">Комментарий</span><span class="sxs-lookup"><span data-stu-id="e18d7-146">Annotation</span></span>|  
+|---------------------------|-------------|----------------|  
+|<span data-ttu-id="e18d7-147">**Таблицы данных**</span><span class="sxs-lookup"><span data-stu-id="e18d7-147">**DataTable**</span></span>|<span data-ttu-id="e18d7-148">TableNameDataTable</span><span class="sxs-lookup"><span data-stu-id="e18d7-148">TableNameDataTable</span></span>|<span data-ttu-id="e18d7-149">typedPlural</span><span class="sxs-lookup"><span data-stu-id="e18d7-149">typedPlural</span></span>|  
+|<span data-ttu-id="e18d7-150">**DataTable** методы</span><span class="sxs-lookup"><span data-stu-id="e18d7-150">**DataTable** Methods</span></span>|<span data-ttu-id="e18d7-151">NewTableNameRow</span><span class="sxs-lookup"><span data-stu-id="e18d7-151">NewTableNameRow</span></span><br /><br /> <span data-ttu-id="e18d7-152">AddTableNameRow</span><span class="sxs-lookup"><span data-stu-id="e18d7-152">AddTableNameRow</span></span><br /><br /> <span data-ttu-id="e18d7-153">DeleteTableNameRow</span><span class="sxs-lookup"><span data-stu-id="e18d7-153">DeleteTableNameRow</span></span>|<span data-ttu-id="e18d7-154">typedName</span><span class="sxs-lookup"><span data-stu-id="e18d7-154">typedName</span></span>|  
+|<span data-ttu-id="e18d7-155">**DataRowCollection**</span><span class="sxs-lookup"><span data-stu-id="e18d7-155">**DataRowCollection**</span></span>|<span data-ttu-id="e18d7-156">TableName</span><span class="sxs-lookup"><span data-stu-id="e18d7-156">TableName</span></span>|<span data-ttu-id="e18d7-157">typedPlural</span><span class="sxs-lookup"><span data-stu-id="e18d7-157">typedPlural</span></span>|  
+|<span data-ttu-id="e18d7-158">**DataRow**</span><span class="sxs-lookup"><span data-stu-id="e18d7-158">**DataRow**</span></span>|<span data-ttu-id="e18d7-159">TableNameRow</span><span class="sxs-lookup"><span data-stu-id="e18d7-159">TableNameRow</span></span>|<span data-ttu-id="e18d7-160">typedName</span><span class="sxs-lookup"><span data-stu-id="e18d7-160">typedName</span></span>|  
+|<span data-ttu-id="e18d7-161">**DataColumn**</span><span class="sxs-lookup"><span data-stu-id="e18d7-161">**DataColumn**</span></span>|<span data-ttu-id="e18d7-162">DataTable.ColumnNameColumn</span><span class="sxs-lookup"><span data-stu-id="e18d7-162">DataTable.ColumnNameColumn</span></span><br /><br /> <span data-ttu-id="e18d7-163">DataRow.ColumnName</span><span class="sxs-lookup"><span data-stu-id="e18d7-163">DataRow.ColumnName</span></span>|<span data-ttu-id="e18d7-164">typedName</span><span class="sxs-lookup"><span data-stu-id="e18d7-164">typedName</span></span>|  
+|<span data-ttu-id="e18d7-165">**Свойство**</span><span class="sxs-lookup"><span data-stu-id="e18d7-165">**Property**</span></span>|<span data-ttu-id="e18d7-166">PropertyName</span><span class="sxs-lookup"><span data-stu-id="e18d7-166">PropertyName</span></span>|<span data-ttu-id="e18d7-167">typedName</span><span class="sxs-lookup"><span data-stu-id="e18d7-167">typedName</span></span>|  
+|<span data-ttu-id="e18d7-168">**Дочерние** метода доступа</span><span class="sxs-lookup"><span data-stu-id="e18d7-168">**Child** Accessor</span></span>|<span data-ttu-id="e18d7-169">GetChildTableNameRows</span><span class="sxs-lookup"><span data-stu-id="e18d7-169">GetChildTableNameRows</span></span>|<span data-ttu-id="e18d7-170">typedChildren</span><span class="sxs-lookup"><span data-stu-id="e18d7-170">typedChildren</span></span>|  
+|<span data-ttu-id="e18d7-171">**Родительский** метода доступа</span><span class="sxs-lookup"><span data-stu-id="e18d7-171">**Parent** Accessor</span></span>|<span data-ttu-id="e18d7-172">TableNameRow</span><span class="sxs-lookup"><span data-stu-id="e18d7-172">TableNameRow</span></span>|<span data-ttu-id="e18d7-173">typedParent</span><span class="sxs-lookup"><span data-stu-id="e18d7-173">typedParent</span></span>|  
+|<span data-ttu-id="e18d7-174">**Набор данных** события</span><span class="sxs-lookup"><span data-stu-id="e18d7-174">**DataSet** Events</span></span>|<span data-ttu-id="e18d7-175">TableNameRowChangeEvent</span><span class="sxs-lookup"><span data-stu-id="e18d7-175">TableNameRowChangeEvent</span></span><br /><br /> <span data-ttu-id="e18d7-176">TableNameRowChangeEventHandler</span><span class="sxs-lookup"><span data-stu-id="e18d7-176">TableNameRowChangeEventHandler</span></span>|<span data-ttu-id="e18d7-177">typedName</span><span class="sxs-lookup"><span data-stu-id="e18d7-177">typedName</span></span>|  
   
- Чтобы использовать типизированные заметки **DataSet**, необходимо включить следующую ссылку **xmlns** в схему XSD.  \(Сведения о создании xsd из таблиц базы данных см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Работа с наборами данных в Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)\).  
+ <span data-ttu-id="e18d7-178">Чтобы использовать типизированные **DataSet** заметки, необходимо включить следующие **xmlns** ссылка в вашей языка определения схемы XML.</span><span class="sxs-lookup"><span data-stu-id="e18d7-178">To use typed **DataSet** annotations, you must include the following **xmlns** reference in your XML Schema definition language (XSD) schema.</span></span> <span data-ttu-id="e18d7-179">(Чтобы сформировать xsd из таблиц базы данных, в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span><span class="sxs-lookup"><span data-stu-id="e18d7-179">(To create an xsd from database tables, see <xref:System.Data.DataSet.WriteXmlSchema%2A> or [Working with Datasets in Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).</span></span>  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Далее приводится образец схемы с добавленными заметками, которая предоставляет таблицу **Customers** базы данных **Northwind** с включенной ссылкой на таблицу **Orders**.  
+ <span data-ttu-id="e18d7-180">Ниже приведен пример аннотированной схемы, которая предоставляет **клиентов** таблицу **Northwind** базы данных с отношением для **заказов** таблица, включенная.</span><span class="sxs-lookup"><span data-stu-id="e18d7-180">The following is a sample annotated schema that exposes the **Customers** table of the **Northwind** database with a relation to the **Orders** table included.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <xs:schema id="CustomerDataSet"   
       xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
@@ -96,34 +102,29 @@ xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"
   <xs:element name="CustomerDataSet" msdata:IsDataSet="true">  
     <xs:complexType>  
       <xs:choice maxOccurs="unbounded">  
-        <xs:element name="Customers" codegen:typedName="Customer"  
-codegen:typedPlural="Customers">  
+        <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
           <xs:complexType>  
             <xs:sequence>  
               <xs:element name="CustomerID"  
 codegen:typedName="CustomerID" type="xs:string" minOccurs="0" />  
               <xs:element name="CompanyName"  
 codegen:typedName="CompanyName" type="xs:string" minOccurs="0" />  
-              <xs:element name="Phone" codegen:typedName="Phone"  
-codegen:nullValue="" type="xs:string" minOccurs="0" />  
+              <xs:element name="Phone" codegen:typedName="Phone" codegen:nullValue="" type="xs:string" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
         </xs:element>  
-        <xs:element name="Orders" codegen:typedName="Order"  
-codegen:typedPlural="Orders">  
+        <xs:element name="Orders" codegen:typedName="Order" codegen:typedPlural="Orders">  
           <xs:complexType>  
             <xs:sequence>  
               <xs:element name="OrderID" codegen:typedName="OrderID"  
 type="xs:int" minOccurs="0" />  
               <xs:element name="CustomerID"  
-codegen:typedName="CustomerID"  
-                 codegen:nullValue="" type="xs:string" minOccurs="0" />  
+codegen:typedName="CustomerID"                  codegen:nullValue="" type="xs:string" minOccurs="0" />  
               <xs:element name="EmployeeID"  
 codegen:typedName="EmployeeID" codegen:nullValue="0"   
 type="xs:int" minOccurs="0" />  
               <xs:element name="OrderAdapter"  
-codegen:typedName="OrderAdapter"  
-codegen:nullValue="1980-01-01T00:00:00"   
+codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"   
 type="xs:dateTime" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
@@ -143,7 +144,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- В следующем примере кода используется **DataSet** со строгой типизацией, созданный из образца схемы.  Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Customers** и другой <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения таблицы **Orders**.  Набор данных **DataSet** со строгой типизацией определяет **DataRelations**.  
+ <span data-ttu-id="e18d7-181">В следующем примере кода используется строго типизированный **DataSet** созданный из образца схемы.</span><span class="sxs-lookup"><span data-stu-id="e18d7-181">The following code example uses a strongly typed **DataSet** created from the sample schema.</span></span> <span data-ttu-id="e18d7-182">Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения **клиентов** таблицу, а другую <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения **заказов** таблицы.</span><span class="sxs-lookup"><span data-stu-id="e18d7-182">It uses one <xref:System.Data.SqlClient.SqlDataAdapter> to populate the **Customers** table and another <xref:System.Data.SqlClient.SqlDataAdapter> to populate the **Orders** table.</span></span> <span data-ttu-id="e18d7-183">Строго типизированные **DataSet** определяет **отношений DataRelation**.</span><span class="sxs-lookup"><span data-stu-id="e18d7-183">The strongly typed **DataSet** defines the **DataRelations**.</span></span>  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -188,7 +189,6 @@ Private Shared Sub OnCustomerChanged( _
     sender As Object, e As CustomerDataSet.CustomerChangeEvent)  
   
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -232,9 +232,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## См. также  
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataSet>   
- [Типизированные объекты DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e18d7-184">См. также</span><span class="sxs-lookup"><span data-stu-id="e18d7-184">See Also</span></span>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataSet>  
+ [<span data-ttu-id="e18d7-185">Типизированные наборы данных</span><span class="sxs-lookup"><span data-stu-id="e18d7-185">Typed DataSets</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
+ [<span data-ttu-id="e18d7-186">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="e18d7-186">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="e18d7-187">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e18d7-187">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,29 +1,35 @@
 ---
-title: "Добавление объектов DataRelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление отношений DataRelation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31494ee9ac6fc8efc9a041f5d56dbba4a4bddad1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Добавление объектов DataRelation
-В наборе <xref:System.Data.DataSet> с несколькими объектами <xref:System.Data.DataTable> можно использовать объекты <xref:System.Data.DataRelation> для связи таблиц друг с другом, для перехода по таблицам, а также для возвращения дочерних или родительских строк из связанной таблицы.  
+# <a name="adding-datarelations"></a><span data-ttu-id="68790-102">Добавление отношений DataRelation</span><span class="sxs-lookup"><span data-stu-id="68790-102">Adding DataRelations</span></span>
+<span data-ttu-id="68790-103">В наборе <xref:System.Data.DataSet> с несколькими объектами <xref:System.Data.DataTable> можно использовать объекты <xref:System.Data.DataRelation> для связи таблиц друг с другом, для перехода по таблицам, а также для возвращения дочерних или родительских строк из связанной таблицы.</span><span class="sxs-lookup"><span data-stu-id="68790-103">In a <xref:System.Data.DataSet> with multiple <xref:System.Data.DataTable> objects, you can use <xref:System.Data.DataRelation> objects to relate one table to another, to navigate through the tables, and to return child or parent rows from a related table.</span></span>  
   
- Для создания объекта **DataRelation** требуются следующие аргументы: имя создаваемого объекта **DataRelation** и массив из одной или нескольких ссылок <xref:System.Data.DataColumn> на столбцы, которые выступают в роли родительских или дочерних столбцов в этой связи.  После создания объекта **DataRelation** его можно использовать, чтобы переходить между таблицами, а также получать значения.  
+ <span data-ttu-id="68790-104">Аргументы, необходимые для создания **DataRelation** : имя **DataRelation** создается и массив из одного или нескольких <xref:System.Data.DataColumn> ссылки на столбцы, которые выступают в роли родительских и дочерних столбцы в связи.</span><span class="sxs-lookup"><span data-stu-id="68790-104">The arguments required to create a **DataRelation** are a name for the **DataRelation** being created, and an array of one or more <xref:System.Data.DataColumn> references to the columns that serve as the parent and child columns in the relationship.</span></span> <span data-ttu-id="68790-105">После создания **DataRelation**, его можно использовать для перехода между таблицами и для извлечения значений.</span><span class="sxs-lookup"><span data-stu-id="68790-105">After you have created a **DataRelation**, you can use it to navigate between tables and to retrieve values.</span></span>  
   
- По умолчанию при добавлении объекта **DataRelation** в объект <xref:System.Data.DataSet> в родительскую таблицу добавляется <xref:System.Data.UniqueConstraint>, а в дочернюю \- <xref:System.Data.ForeignKeyConstraint>.  Дополнительные сведения об этих ограничениях по умолчанию см. в разделе [Ограничения DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ <span data-ttu-id="68790-106">Добавление **DataRelation** для <xref:System.Data.DataSet> по умолчанию, добавляет <xref:System.Data.UniqueConstraint> с родительской таблицей и <xref:System.Data.ForeignKeyConstraint> к дочерней таблице.</span><span class="sxs-lookup"><span data-stu-id="68790-106">Adding a **DataRelation** to a <xref:System.Data.DataSet> adds, by default, a <xref:System.Data.UniqueConstraint> to the parent table and a <xref:System.Data.ForeignKeyConstraint> to the child table.</span></span> <span data-ttu-id="68790-107">Дополнительные сведения об этих ограничениях по умолчанию см. в разделе [ограничения таблиц данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span><span class="sxs-lookup"><span data-stu-id="68790-107">For more information about these default constraints, see [DataTable Constraints](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span></span>  
   
- В следующем примере кода с помощью двух объектов <xref:System.Data.DataTable> в объекте <xref:System.Data.DataSet> создается объект **DataRelation**.  Каждая таблица <xref:System.Data.DataTable> содержит столбец **CustID**, который играет роль связи между двумя объектами <xref:System.Data.DataTable>.  В этом примере один объект **DataRelation** добавляется в коллекцию **Relations** объекта <xref:System.Data.DataSet>.  Первый аргумент в этом примере задает имя создаваемого объекта **DataRelation**.  Второй аргумент задает родительский столбец **DataColumn**, а третий аргумент задает дочерний столбец **DataColumn**.  
+ <span data-ttu-id="68790-108">В следующем примере кода создается **DataRelation** с использованием двух <xref:System.Data.DataTable> объекты в <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="68790-108">The following code example creates a **DataRelation** using two <xref:System.Data.DataTable> objects in a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="68790-109">Каждый <xref:System.Data.DataTable> содержит столбец с именем **CustID**, который используется в качестве связи между двумя <xref:System.Data.DataTable> объектов.</span><span class="sxs-lookup"><span data-stu-id="68790-109">Each <xref:System.Data.DataTable> contains a column named **CustID**, which serves as a link between the two <xref:System.Data.DataTable> objects.</span></span> <span data-ttu-id="68790-110">В этом примере добавляется один **DataRelation** для **отношений** коллекцию <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="68790-110">The example adds a single **DataRelation** to the **Relations** collection of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="68790-111">В примере первый аргумент указывает имя **DataRelation** создается.</span><span class="sxs-lookup"><span data-stu-id="68790-111">The first argument in the example specifies the name of the **DataRelation** being created.</span></span> <span data-ttu-id="68790-112">Второй аргумент задает родительский **DataColumn** и третий аргумент задает дочерний **DataColumn**.</span><span class="sxs-lookup"><span data-stu-id="68790-112">The second argument sets the parent **DataColumn** and the third argument sets the child **DataColumn**.</span></span>  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -37,8 +43,8 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- Объект **DataRelation** также имеет свойство **Nested**, которое при значении **true** делает строки из дочерней таблицы вложенными в связанную строку родительской таблицы, если они написаны как элементы XML при помощи <xref:System.Data.DataSet.WriteXml%2A>.  Для получения дополнительной информации см. [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ <span data-ttu-id="68790-113">Объект **DataRelation** также имеет **Nested** свойства, если задано значение **true**, делает строки из дочерней таблицы вложенными в связанную строку родительской таблицы Если они написаны как элементы XML при помощи <xref:System.Data.DataSet.WriteXml%2A> .</span><span class="sxs-lookup"><span data-stu-id="68790-113">A **DataRelation** also has a **Nested** property which, when set to **true**, causes the rows from the child table to be nested within the associated row from the parent table when written as XML elements using <xref:System.Data.DataSet.WriteXml%2A> .</span></span> <span data-ttu-id="68790-114">Дополнительные сведения см. в статье [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="68790-114">For more information, see [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).</span></span>  
   
-## См. также  
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="68790-115">См. также</span><span class="sxs-lookup"><span data-stu-id="68790-115">See Also</span></span>  
+ [<span data-ttu-id="68790-116">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="68790-116">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="68790-117">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="68790-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

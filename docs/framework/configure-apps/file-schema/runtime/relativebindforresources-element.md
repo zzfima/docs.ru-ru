@@ -1,83 +1,85 @@
 ---
-title: "Элемент &lt;relativeBindForResources&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Элемент <relativeBindForResources>"
-  - "Элемент RelativeBindForResources"
+title: "&lt;relativeBindForResources&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RelativeBindForResources element
+- <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ffd5b62e0759b3a4f97e105e884912a41f0117de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;relativeBindForResources&gt;
-Оптимизирует поиск вспомогательных сборок.  
+# <a name="ltrelativebindforresourcesgt-element"></a><span data-ttu-id="04eb8-102">&lt;relativeBindForResources&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="04eb8-102">&lt;relativeBindForResources&gt; Element</span></span>
+<span data-ttu-id="04eb8-103">Оптимизирует поиск вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="04eb8-103">Optimizes the probe for satellite assemblies.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="04eb8-104">\<Конфигурация > элемент</span><span class="sxs-lookup"><span data-stu-id="04eb8-104">\<configuration> Element</span></span>  
+<span data-ttu-id="04eb8-105">\<Среда выполнения > элемент</span><span class="sxs-lookup"><span data-stu-id="04eb8-105">\<runtime> Element</span></span>  
+<span data-ttu-id="04eb8-106">\<relativeBindForResources > элемент</span><span class="sxs-lookup"><span data-stu-id="04eb8-106">\<relativeBindForResources> Element</span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="04eb8-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="04eb8-107">Syntax</span></span>  
+  
+```xml
 <relativeBindForResources    
    enabled="true|false" />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="04eb8-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="04eb8-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="04eb8-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="04eb8-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="04eb8-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="04eb8-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Определяет оптимизирует ли среда CLR поиск вспомогательных сборок.|  
+|<span data-ttu-id="04eb8-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="04eb8-111">Attribute</span></span>|<span data-ttu-id="04eb8-112">Описание</span><span class="sxs-lookup"><span data-stu-id="04eb8-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="04eb8-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="04eb8-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="04eb8-114">Указывает, является ли среда оптимизирует поиск вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="04eb8-114">Specifies whether the common language runtime optimizes the probe for satellite assemblies.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="04eb8-115">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="04eb8-115">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|Среда выполнения не оптимизирует поиск вспомогательных сборок.  Это значение по умолчанию.|  
-|`true`|Среда выполнения оптимизирует поиск вспомогательных сборок.|  
+|<span data-ttu-id="04eb8-116">Значение</span><span class="sxs-lookup"><span data-stu-id="04eb8-116">Value</span></span>|<span data-ttu-id="04eb8-117">Описание</span><span class="sxs-lookup"><span data-stu-id="04eb8-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="04eb8-118">Среда выполнения не Оптимизируйте поиск вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="04eb8-118">The runtime does not optimize the probe for satellite assemblies.</span></span> <span data-ttu-id="04eb8-119">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="04eb8-119">This is the default value.</span></span>|  
+|`true`|<span data-ttu-id="04eb8-120">Среда выполнения оптимизирует поиск вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="04eb8-120">The runtime optimizes the probe for satellite assemblies.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="04eb8-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="04eb8-121">Child Elements</span></span>  
+ <span data-ttu-id="04eb8-122">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="04eb8-122">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="04eb8-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="04eb8-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
+|<span data-ttu-id="04eb8-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="04eb8-124">Element</span></span>|<span data-ttu-id="04eb8-125">Описание</span><span class="sxs-lookup"><span data-stu-id="04eb8-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="04eb8-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="04eb8-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="04eb8-127">Содержит сведения о параметрах инициализации среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="04eb8-127">Contains information about runtime initialization options.</span></span>|  
   
-## Заметки  
- Как правило, диспетчер ресурсов выполняет поиск ресурсов, как задокументировано в разделе [Упаковка и развертывание ресурсов](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  Это означает, что если диспетчер ресурсов ищет определенную локализованную версию ресурса, он может выполнить поиск в глобальном кэше сборок, в папке языка и региональных параметров приложения, запросить вспомогательные сборки у установщика Windows и инициировать событие <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  Элемент `<relativeBindForResources>` оптимизирует способ, которым диспетчер ресурсов выполняет поиск вспомогательных сборок.  Он может повысить производительность поиска ресурсов в следующих случаях:  
+## <a name="remarks"></a><span data-ttu-id="04eb8-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="04eb8-128">Remarks</span></span>  
+ <span data-ttu-id="04eb8-129">Как правило, диспетчер ресурсов проверяет наличие ресурсов, как описано в [упаковка и развертывание ресурсов](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="04eb8-129">In general, Resource Manager probes for resources, as documented in the [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) topic.</span></span> <span data-ttu-id="04eb8-130">Это означает, что при Resource Manager проверяет наличие определенного локализованную версию ресурса, он может поиск в глобальном кэше сборок, поиск вспомогательных сборок в папке для определенного языка и региональных параметров в запросе базу кода приложения установщика Windows и вызова <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> события.</span><span class="sxs-lookup"><span data-stu-id="04eb8-130">This means that when Resource Manager probes for a particular localized version of a resource, it may look in the global assembly cache, look in a culture-specific folder in the application's code base, query Windows Installer for satellite assemblies, and raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="04eb8-131">`<relativeBindForResources>` Элемент оптимизирует процесс, в котором диспетчер ресурсов выполняет поиск вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="04eb8-131">The `<relativeBindForResources>` element optimizes the way in which Resource Manager probes for satellite assemblies.</span></span> <span data-ttu-id="04eb8-132">Это может повысить производительность при поиске ресурсов при следующих условиях:</span><span class="sxs-lookup"><span data-stu-id="04eb8-132">It can improve performance when probing for resources under the following conditions:</span></span>  
   
--   Когда вспомогательная сборка развертывается в ту же папку, что и сборка кода.  Другими словами, если сборка кода устанавливается в глобальном кэше сборок, вспомогательные сборки необходимо установить туда же.  Если сборка кода задается в папке приложения, вспомогательные сборки должны быть установлены в папке языка и региональных параметров приложения.  
+-   <span data-ttu-id="04eb8-133">При развертывании вспомогательную сборку в том же расположении, что и сборка кода.</span><span class="sxs-lookup"><span data-stu-id="04eb8-133">When the satellite assembly is deployed in the same location as the code assembly.</span></span> <span data-ttu-id="04eb8-134">Другими словами Если код сборки, которая установлена в глобальном кэше сборок, вспомогательные сборки также должны быть установлены существует.</span><span class="sxs-lookup"><span data-stu-id="04eb8-134">In other words, if the code assembly is installed in the global assembly cache, the satellite assemblies must also be installed there.</span></span> <span data-ttu-id="04eb8-135">Если сборка кода устанавливается в базу кода приложения, вспомогательных сборок также устанавливается в папке для определенного языка и региональных параметров в базе кода.</span><span class="sxs-lookup"><span data-stu-id="04eb8-135">If the code assembly is installed in the application's code base, the satellite assemblies must also be installed in a culture-specific folder in the code base.</span></span>  
   
--   Когда установщик Windows не используется или редко используется только по требованию для установки вспомогательных сборок.  
+-   <span data-ttu-id="04eb8-136">Когда установщика Windows не используется или редко используется для установки вспомогательных сборок по требованию.</span><span class="sxs-lookup"><span data-stu-id="04eb8-136">When Windows Installer is not used or is used only rarely for on-demand installation of satellite assemblies.</span></span>  
   
--   Когда код приложения не обрабатывает событие <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   <span data-ttu-id="04eb8-137">Когда код приложения не может обрабатывать <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> событий.</span><span class="sxs-lookup"><span data-stu-id="04eb8-137">When application code does not handle the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
- Установка атрибута `enabled` элемента `<relativeBindForResources>` в `true` оптимизирует диспетчер ресурсов для поиска вспомогательных сборок следующим образом:  
+ <span data-ttu-id="04eb8-138">Установка `enabled` атрибут `<relativeBindForResources>` элемент `true` оптимизирует пробы диспетчера ресурсов для вспомогательных сборок следующим образом:</span><span class="sxs-lookup"><span data-stu-id="04eb8-138">Setting the `enabled` attribute of the `<relativeBindForResources>` element to `true` optimizes Resource Manager's probe for satellite assemblies as follows:</span></span>  
   
--   Среда выполнения использует расположение родительской сборки кода для проверки вспомогательной сборки.  
+-   <span data-ttu-id="04eb8-139">Она использует расположение родительской сборки кода для проверки для вспомогательной сборки.</span><span class="sxs-lookup"><span data-stu-id="04eb8-139">It uses the location of the parent code assembly to probe for the satellite assembly.</span></span>  
   
--   Не запрашивает вспомогательные сборки у установщика Windows.  
+-   <span data-ttu-id="04eb8-140">Он не запрашивает установщик Windows для вспомогательных сборок.</span><span class="sxs-lookup"><span data-stu-id="04eb8-140">It does not query Windows Installer for satellite assemblies.</span></span>  
   
--   Эта процедура не вызывает событие <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName>.  
+-   <span data-ttu-id="04eb8-141">Не вызывалось <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> событий.</span><span class="sxs-lookup"><span data-stu-id="04eb8-141">It does not raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
-## См. также  
- [Упаковка и развертывание ресурсов](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="04eb8-142">См. также</span><span class="sxs-lookup"><span data-stu-id="04eb8-142">See Also</span></span>  
+ [<span data-ttu-id="04eb8-143">Упаковка и развертывание ресурсов</span><span class="sxs-lookup"><span data-stu-id="04eb8-143">Packaging and Deploying Resources</span></span>](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [<span data-ttu-id="04eb8-144">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="04eb8-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="04eb8-145">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="04eb8-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

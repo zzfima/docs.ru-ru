@@ -1,46 +1,28 @@
 ---
 title: "Практическое руководство. Реализация событий интерфейса (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 944b894e7e5f305d35d4db96d7426bf05322ca54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8f8460674aa59170cf75eb2fa93e9d232df07e5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Практическое руководство. Реализация событий интерфейса (Руководство по программированию в C#)
-[Интерфейс](../../../csharp/language-reference/keywords/interface.md) может объявлять [события](../../../csharp/language-reference/keywords/event.md). Следующий пример демонстрирует реализацию событий интерфейса в классе. По сути правила остаются таким же, как при реализации любого метода или свойства интерфейса.  
+# <a name="how-to-implement-interface-events-c-programming-guide"></a><span data-ttu-id="c1d5e-102">Практическое руководство. Реализация событий интерфейса (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="c1d5e-102">How to: Implement Interface Events (C# Programming Guide)</span></span>
+<span data-ttu-id="c1d5e-103">[Интерфейс](../../../csharp/language-reference/keywords/interface.md) может объявлять [события](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="c1d5e-103">An [interface](../../../csharp/language-reference/keywords/interface.md) can declare an [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="c1d5e-104">Следующий пример демонстрирует реализацию событий интерфейса в классе.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-104">The following example shows how to implement interface events in a class.</span></span> <span data-ttu-id="c1d5e-105">По сути правила остаются таким же, как при реализации любого метода или свойства интерфейса.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-105">Basically the rules are the same as when you implement any interface method or property.</span></span>  
   
-### <a name="to-implement-interface-events-in-a-class"></a>Реализация событий интерфейса в классе  
+### <a name="to-implement-interface-events-in-a-class"></a><span data-ttu-id="c1d5e-106">Реализация событий интерфейса в классе</span><span class="sxs-lookup"><span data-stu-id="c1d5e-106">To implement interface events in a class</span></span>  
   
--   Объявите событие в классе и вызовите его, когда потребуется.  
+-   <span data-ttu-id="c1d5e-107">Объявите событие в классе и вызовите его, когда потребуется.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-107">Declare the event in your class and then invoke it in the appropriate areas.</span></span>  
   
     ```  
     namespace ImplementInterfaceEvents  
@@ -76,17 +58,16 @@ ms.lasthandoff: 07/28/2017
     }  
     ```  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует обработку менее распространенной ситуации, в которой класс наследует от двух или более интерфейсов, каждый из которых имеет событие с одним и тем же именем. Вам придется предоставить явную реализацию интерфейса по крайней мере для одного из этих событий. Когда вы создаете для события явную реализацию интерфейса, нужно добавить еще и методы доступа `add` и `remove`. Обычно они предоставляются компилятором, но в этой ситуации компилятор не сможет предоставить их.  
+## <a name="example"></a><span data-ttu-id="c1d5e-108">Пример</span><span class="sxs-lookup"><span data-stu-id="c1d5e-108">Example</span></span>  
+ <span data-ttu-id="c1d5e-109">Следующий пример демонстрирует обработку менее распространенной ситуации, в которой класс наследует от двух или более интерфейсов, каждый из которых имеет событие с одним и тем же именем.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-109">The following example shows how to handle the less-common situation in which your class inherits from two or more interfaces and each interface has an event with the same name.</span></span> <span data-ttu-id="c1d5e-110">Вам придется предоставить явную реализацию интерфейса по крайней мере для одного из этих событий.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-110">In this situation, you must provide an explicit interface implementation for at least one of the events.</span></span> <span data-ttu-id="c1d5e-111">Когда вы создаете для события явную реализацию интерфейса, нужно добавить еще и методы доступа `add` и `remove`.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-111">When you write an explicit interface implementation for an event, you must also write the `add` and `remove` event accessors.</span></span> <span data-ttu-id="c1d5e-112">Обычно они предоставляются компилятором, но в этой ситуации компилятор не сможет предоставить их.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-112">Normally these are provided by the compiler, but in this case the compiler cannot provide them.</span></span>  
   
- Предоставляя собственные методы доступа, вы можете указать одно или разные события вашего класса, которые соответствуют этим двум событиям. Например, если события должны инициироваться в разное время в соответствии со спецификациями интерфейса, можно связать каждое из них с отдельной реализацией в классе. В следующем примере подписчики определяют, какое из событий `OnDraw` они получат, указывая ссылку на фигуру `IShape` или `IDrawingObject`.  
+ <span data-ttu-id="c1d5e-113">Предоставляя собственные методы доступа, вы можете указать одно или разные события вашего класса, которые соответствуют этим двум событиям.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-113">By providing your own accessors, you can specify whether the two events are represented by the same event in your class, or by different events.</span></span> <span data-ttu-id="c1d5e-114">Например, если события должны инициироваться в разное время в соответствии со спецификациями интерфейса, можно связать каждое из них с отдельной реализацией в классе.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-114">For example, if the events should be raised at different times according to the interface specifications, you can associate each event with a separate implementation in your class.</span></span> <span data-ttu-id="c1d5e-115">В следующем примере подписчики определяют, какое из событий `OnDraw` они получат, указывая ссылку на фигуру `IShape` или `IDrawingObject`.</span><span class="sxs-lookup"><span data-stu-id="c1d5e-115">In the following example, subscribers determine which `OnDraw` event they will receive by casting the shape reference to either an `IShape` or an `IDrawingObject`.</span></span>  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
+ [!code-csharp[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [События](../../../csharp/programming-guide/events/index.md)   
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)   
- [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)   
- [Практическое руководство. Создание событий базового класса в производных классах](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
-
+## <a name="see-also"></a><span data-ttu-id="c1d5e-116">См. также</span><span class="sxs-lookup"><span data-stu-id="c1d5e-116">See Also</span></span>  
+ [<span data-ttu-id="c1d5e-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c1d5e-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c1d5e-118">События</span><span class="sxs-lookup"><span data-stu-id="c1d5e-118">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
+ [<span data-ttu-id="c1d5e-119">Делегаты</span><span class="sxs-lookup"><span data-stu-id="c1d5e-119">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
+ [<span data-ttu-id="c1d5e-120">Явная реализация интерфейса</span><span class="sxs-lookup"><span data-stu-id="c1d5e-120">Explicit Interface Implementation</span></span>](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+ [<span data-ttu-id="c1d5e-121">Практическое руководство. Создание событий базового класса в производных классах</span><span class="sxs-lookup"><span data-stu-id="c1d5e-121">How to: Raise Base Class Events in Derived Classes</span></span>](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

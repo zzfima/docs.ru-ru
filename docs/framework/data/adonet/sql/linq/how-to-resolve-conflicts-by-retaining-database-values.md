@@ -1,48 +1,54 @@
 ---
-title: "Как разрешать конфликты параллелизма путем сохранения значений базы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Разрешение конфликтов за счет сохранения значений баз данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1c2abc3f5ddd2daf9befc93e4469bd0e785fa6f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как разрешать конфликты параллелизма путем сохранения значений базы данных
-Чтобы согласовать различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode> для сохранения значений, найденных в базе данных.  Текущие значения в объектной модели при этом перезаписываются.  Для получения дополнительной информации см. [Оптимистичный параллелизм. Общие сведения](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a><span data-ttu-id="642a3-102">Практическое руководство. Разрешение конфликтов за счет сохранения значений баз данных</span><span class="sxs-lookup"><span data-stu-id="642a3-102">How to: Resolve Conflicts by Retaining Database Values</span></span>
+<span data-ttu-id="642a3-103">Чтобы согласовать различия между ожидаемыми и фактическими значениями базы данных до повторной отправки изменений, можно воспользоваться <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> для сохранения значений, найденных в базе данных.</span><span class="sxs-lookup"><span data-stu-id="642a3-103">To reconcile differences between expected and actual database values before you try to resubmit your changes, you can use <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> to retain the values found in the database.</span></span> <span data-ttu-id="642a3-104">Текущие значения в объектной модели при этом перезаписываются.</span><span class="sxs-lookup"><span data-stu-id="642a3-104">The current values in the object model are then overwritten.</span></span> <span data-ttu-id="642a3-105">Дополнительные сведения см. в разделе [оптимистичного параллелизма: Обзор](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="642a3-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
   
 > [!NOTE]
->  Во всех случаях запись на клиенте сначала обновляется путем извлечения обновленных данных из базы данных.  Это действие гарантирует успешное выполнение следующей попытки обновления при тех же проверках параллелизма.  
+>  <span data-ttu-id="642a3-106">Во всех случаях запись на клиенте сначала обновляется путем извлечения обновленных данных из базы данных.</span><span class="sxs-lookup"><span data-stu-id="642a3-106">In all cases, the record on the client is first refreshed by retrieving the updated data from the database.</span></span> <span data-ttu-id="642a3-107">Это действие гарантирует успешное выполнение следующей попытки обновления при тех же проверках параллелизма.</span><span class="sxs-lookup"><span data-stu-id="642a3-107">This action makes sure that the next update try will not fail on the same concurrency checks.</span></span>  
   
-## Пример  
- В данном сценарии, когда Пользователь1 пытается отправить изменения, возникает исключение <xref:System.Data.Linq.ChangeConflictException>, поскольку Пользователь2 в это время изменил столбцы "Помощник" и "Отдел".  Эта ситуация представлена в следующей таблице.  
+## <a name="example"></a><span data-ttu-id="642a3-108">Пример</span><span class="sxs-lookup"><span data-stu-id="642a3-108">Example</span></span>  
+ <span data-ttu-id="642a3-109">В данном сценарии, когда Пользователь1 пытается отправить изменения, возникает исключение <xref:System.Data.Linq.ChangeConflictException>, поскольку Пользователь2 в это время изменил столбцы "Помощник" и "Отдел".</span><span class="sxs-lookup"><span data-stu-id="642a3-109">In this scenario, a <xref:System.Data.Linq.ChangeConflictException> exception is thrown when User1 tries to submit changes, because User2 has in the meantime changed the Assistant and Department columns.</span></span> <span data-ttu-id="642a3-110">Эта ситуация представлена в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="642a3-110">The following table shows the situation.</span></span>  
   
-||Диспетчер|Помощник|Отдел|  
-|------|---------------|--------------|-----------|  
-|Исходное состояние базы данных при отправке запросов Пользователем1 и Пользователем2.|Алексеи|Мария|Продажи|  
-|Пользователь1 готовится отправить изменения.|Алексей||Маркетинг|  
-|Пользователь2 уже отправил изменения.||Инна|Служба|  
+||<span data-ttu-id="642a3-111">Диспетчер</span><span class="sxs-lookup"><span data-stu-id="642a3-111">Manager</span></span>|<span data-ttu-id="642a3-112">Помощник</span><span class="sxs-lookup"><span data-stu-id="642a3-112">Assistant</span></span>|<span data-ttu-id="642a3-113">Отдел</span><span class="sxs-lookup"><span data-stu-id="642a3-113">Department</span></span>|  
+|------|-------------|---------------|----------------|  
+|<span data-ttu-id="642a3-114">Исходное состояние базы данных при отправке запросов Пользователем1 и Пользователем2.</span><span class="sxs-lookup"><span data-stu-id="642a3-114">Original database state when queried by User1 and User2.</span></span>|<span data-ttu-id="642a3-115">Алексеи</span><span class="sxs-lookup"><span data-stu-id="642a3-115">Alfreds</span></span>|<span data-ttu-id="642a3-116">Мария</span><span class="sxs-lookup"><span data-stu-id="642a3-116">Maria</span></span>|<span data-ttu-id="642a3-117">Продажи</span><span class="sxs-lookup"><span data-stu-id="642a3-117">Sales</span></span>|  
+|<span data-ttu-id="642a3-118">Пользователь1 готовится отправить изменения.</span><span class="sxs-lookup"><span data-stu-id="642a3-118">User1 prepares to submit these changes.</span></span>|<span data-ttu-id="642a3-119">Алексей</span><span class="sxs-lookup"><span data-stu-id="642a3-119">Alfred</span></span>||<span data-ttu-id="642a3-120">Маркетинг</span><span class="sxs-lookup"><span data-stu-id="642a3-120">Marketing</span></span>|  
+|<span data-ttu-id="642a3-121">Пользователь2 уже отправил изменения.</span><span class="sxs-lookup"><span data-stu-id="642a3-121">User2 has already submitted these changes.</span></span>||<span data-ttu-id="642a3-122">Инна</span><span class="sxs-lookup"><span data-stu-id="642a3-122">Mary</span></span>|<span data-ttu-id="642a3-123">Служба</span><span class="sxs-lookup"><span data-stu-id="642a3-123">Service</span></span>|  
   
- Пользователь1 решает устранить этот конфликт путем перезаписи текущих значений из объектной модели более новыми значениями базы данных.  
+ <span data-ttu-id="642a3-124">Пользователь1 решает устранить этот конфликт путем перезаписи текущих значений из объектной модели более новыми значениями базы данных.</span><span class="sxs-lookup"><span data-stu-id="642a3-124">User1 decides to resolve this conflict by having the newer database values overwrite the current values in the object model.</span></span>  
   
- При устранении Пользователем1 конфликта с помощью <xref:System.Data.Linq.RefreshMode> результат в базе данных будет соответствовать данным в следующей таблице.  
+ <span data-ttu-id="642a3-125">При устранении Пользователем1 конфликта с помощью <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> результат в базе данных будет соответствовать данным в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="642a3-125">When User1 resolves the conflict by using <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>, the result in the database is as follows in the table:</span></span>  
   
-||Диспетчер|Помощник|Отдел|  
-|------|---------------|--------------|-----------|  
-|Новое состояние после устранения конфликта.|Алексеи<br /><br /> \(исходное значение\)|Инна<br /><br /> \(от Пользователя2\)|Служба<br /><br /> \(от Пользователя2\)|  
+||<span data-ttu-id="642a3-126">Диспетчер</span><span class="sxs-lookup"><span data-stu-id="642a3-126">Manager</span></span>|<span data-ttu-id="642a3-127">Помощник</span><span class="sxs-lookup"><span data-stu-id="642a3-127">Assistant</span></span>|<span data-ttu-id="642a3-128">Отдел</span><span class="sxs-lookup"><span data-stu-id="642a3-128">Department</span></span>|  
+|------|-------------|---------------|----------------|  
+|<span data-ttu-id="642a3-129">Новое состояние после устранения конфликта.</span><span class="sxs-lookup"><span data-stu-id="642a3-129">New state after conflict resolution.</span></span>|<span data-ttu-id="642a3-130">Алексеи</span><span class="sxs-lookup"><span data-stu-id="642a3-130">Alfreds</span></span><br /><br /> <span data-ttu-id="642a3-131">(исходное значение)</span><span class="sxs-lookup"><span data-stu-id="642a3-131">(original)</span></span>|<span data-ttu-id="642a3-132">Инна</span><span class="sxs-lookup"><span data-stu-id="642a3-132">Mary</span></span><br /><br /> <span data-ttu-id="642a3-133">(от Пользователя2)</span><span class="sxs-lookup"><span data-stu-id="642a3-133">(from User2)</span></span>|<span data-ttu-id="642a3-134">Служба</span><span class="sxs-lookup"><span data-stu-id="642a3-134">Service</span></span><br /><br /> <span data-ttu-id="642a3-135">(от Пользователя2)</span><span class="sxs-lookup"><span data-stu-id="642a3-135">(from User2)</span></span>|  
   
- В следующем примере кода показано, как перезаписать текущие значения из объектной модели значениями базы данных  \(проверка или пользовательская обработка конфликтов отдельных членов не выполняется\).  
+ <span data-ttu-id="642a3-136">В следующем примере кода показано, как перезаписать текущие значения из объектной модели значениями базы данных</span><span class="sxs-lookup"><span data-stu-id="642a3-136">The following example code shows how to overwrite current values in the object model with the database values.</span></span> <span data-ttu-id="642a3-137">(проверка или пользовательская обработка конфликтов отдельных членов не выполняется).</span><span class="sxs-lookup"><span data-stu-id="642a3-137">(No inspection or custom handling of individual member conflicts occurs.)</span></span>  
   
  [!code-csharp[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.refreshmode/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
-## См. также  
- [Как управлять конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="642a3-138">См. также</span><span class="sxs-lookup"><span data-stu-id="642a3-138">See Also</span></span>  
+ [<span data-ttu-id="642a3-139">Как: управление конфликтами изменений</span><span class="sxs-lookup"><span data-stu-id="642a3-139">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

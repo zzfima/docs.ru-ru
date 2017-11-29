@@ -1,99 +1,102 @@
 ---
-title: "Оптимистичный параллелизм. Общие сведения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Общие сведения об оптимистической блокировке"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 52e83f443c0ae74587b4585beb51ddbeb093486a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Оптимистичный параллелизм. Общие сведения
-Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает средства управления оптимистическим параллелизмом.  В следующей таблице описываются термины, применяемые к оптимистическому параллелизму в документации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+# <a name="optimistic-concurrency-overview"></a><span data-ttu-id="54873-102">Общие сведения об оптимистической блокировке</span><span class="sxs-lookup"><span data-stu-id="54873-102">Optimistic Concurrency: Overview</span></span>
+<span data-ttu-id="54873-103">Технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает средства управления оптимистическим параллелизмом.</span><span class="sxs-lookup"><span data-stu-id="54873-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports optimistic concurrency control.</span></span> <span data-ttu-id="54873-104">В следующей таблице описаны термины, применяемые к оптимистическому параллелизму в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] документации:</span><span class="sxs-lookup"><span data-stu-id="54873-104">The following table describes terms that apply to optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation:</span></span>  
   
-|Термины|Описание|  
-|-------------|--------------|  
-|параллельность|Ситуация, при которой несколько пользователей одновременно пытаются обновить одну строку базы данных.|  
-|конфликт параллелизма|Ситуация, при которой несколько пользователей одновременно пытаются отправить конфликтующие значения в один или несколько столбцов строки.|  
-|управление параллелизмом|Метод, используемый для разрешения конфликтов параллелизма.|  
-|оптимистический контроль параллелизма|Метод, при котором, прежде чем разрешить отправку изменений, определяется, не были ли изменены значения в строке другими транзакциями.<br /><br /> Этот метод противоположен *пессимистическому управлению параллелизмом*, при котором запись блокируется для предотвращения конфликтов параллелизма.<br /><br /> *Оптимистическим* этот метод управления называется потому, что вероятность вмешательства одной транзакции в работу другой здесь считается очень маленькой.|  
-|разрешение конфликтов|Процесс обновления конфликтующего элемента путем повторного запроса к базе данных и последующего согласования различий.<br /><br /> При обновлении объекта средство отслеживания изменений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] содержит следующие данные:<br /><br /> -   значения, изначально извлеченные из базы данных и использовавшиеся для проверки обновления;<br />-   новые значения базы данных, полученные из последующего запроса.<br /><br /> После этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет, является ли объект конфликтующим \(то есть изменилось ли одно или несколько значений его членов\).  Если объект является конфликтующим, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] далее определяет, какие его члены конфликтуют.<br /><br /> Каждый конфликт члена, обнаруженный [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], добавляется в список конфликтов.|  
+|<span data-ttu-id="54873-105">Термины</span><span class="sxs-lookup"><span data-stu-id="54873-105">Terms</span></span>|<span data-ttu-id="54873-106">Описание</span><span class="sxs-lookup"><span data-stu-id="54873-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="54873-107">параллельность</span><span class="sxs-lookup"><span data-stu-id="54873-107">concurrency</span></span>|<span data-ttu-id="54873-108">Ситуация, при которой несколько пользователей одновременно пытаются обновить одну строку базы данных.</span><span class="sxs-lookup"><span data-stu-id="54873-108">The situation in which two or more users at the same time try to update the same database row.</span></span>|  
+|<span data-ttu-id="54873-109">конфликт параллелизма</span><span class="sxs-lookup"><span data-stu-id="54873-109">concurrency conflict</span></span>|<span data-ttu-id="54873-110">Ситуация, при которой несколько пользователей одновременно пытаются отправить конфликтующие значения в один или несколько столбцов строки.</span><span class="sxs-lookup"><span data-stu-id="54873-110">The situation in which two or more users at the same time try to submit conflicting values to one or more columns of a row.</span></span>|  
+|<span data-ttu-id="54873-111">управление параллелизмом</span><span class="sxs-lookup"><span data-stu-id="54873-111">concurrency control</span></span>|<span data-ttu-id="54873-112">Метод, используемый для разрешения конфликтов параллелизма.</span><span class="sxs-lookup"><span data-stu-id="54873-112">The technique used to resolve concurrency conflicts.</span></span>|  
+|<span data-ttu-id="54873-113">оптимистический контроль параллелизма</span><span class="sxs-lookup"><span data-stu-id="54873-113">optimistic concurrency control</span></span>|<span data-ttu-id="54873-114">Метод, при котором, прежде чем разрешить отправку изменений, определяется, не были ли изменены значения в строке другими транзакциями.</span><span class="sxs-lookup"><span data-stu-id="54873-114">The technique that first investigates whether other transactions have changed values in a row before permitting changes to be submitted.</span></span><br /><br /> <span data-ttu-id="54873-115">Этот метод противоположен *управление пессимистичным параллелизмом*, котором запись блокируется для предотвращения конфликтов параллелизма.</span><span class="sxs-lookup"><span data-stu-id="54873-115">Contrast with *pessimistic concurrency control*, which locks the record to avoid concurrency conflicts.</span></span><br /><br /> <span data-ttu-id="54873-116">*Оптимистический* управления называется потому, что вероятность конфликта с другим работать маловероятно, что одна транзакция здесь.</span><span class="sxs-lookup"><span data-stu-id="54873-116">*Optimistic* control is so termed because it considers the chances of one transaction interfering with another to be unlikely.</span></span>|  
+|<span data-ttu-id="54873-117">разрешение конфликтов</span><span class="sxs-lookup"><span data-stu-id="54873-117">conflict resolution</span></span>|<span data-ttu-id="54873-118">Процесс обновления конфликтующего элемента путем повторного запроса к базе данных и последующего согласования различий.</span><span class="sxs-lookup"><span data-stu-id="54873-118">The process of refreshing a conflicting item by querying the database again and then reconciling differences.</span></span><br /><br /> <span data-ttu-id="54873-119">При обновлении объекта средство отслеживания изменений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] содержит следующие данные:</span><span class="sxs-lookup"><span data-stu-id="54873-119">When an object is refreshed, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] change tracker holds the following data:</span></span><br /><br /> <span data-ttu-id="54873-120">-Проверьте значения первоначально берутся из базы данных и используется для обновления.</span><span class="sxs-lookup"><span data-stu-id="54873-120">-   The values originally taken from the database and used for the update check.</span></span><br /><span data-ttu-id="54873-121">-Новые базы данных значения из последующего запроса.</span><span class="sxs-lookup"><span data-stu-id="54873-121">-   The new database values from the subsequent query.</span></span><br /><br /> <span data-ttu-id="54873-122">После этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет, является ли объект конфликтующим (то есть изменилось ли одно или несколько значений его членов).</span><span class="sxs-lookup"><span data-stu-id="54873-122">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] then determines whether the object is in conflict (that is, whether one or more of its member values has changed).</span></span> <span data-ttu-id="54873-123">Если объект является конфликтующим, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] далее определяет, какие его члены конфликтуют.</span><span class="sxs-lookup"><span data-stu-id="54873-123">If the object is in conflict, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] next determines which of its members are in conflict.</span></span><br /><br /> <span data-ttu-id="54873-124">Каждый конфликт члена, обнаруженный [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], добавляется в список конфликтов.</span><span class="sxs-lookup"><span data-stu-id="54873-124">Any member conflict that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] discovers is added to a conflict list.</span></span>|  
   
- В объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *оптимистический конфликт параллелизма* происходит в том случае, если выполняются оба перечисленных ниже условия.  
+ <span data-ttu-id="54873-125">В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели *оптимистический конфликт параллелизма* возникает, если выполняются оба из следующих условий:</span><span class="sxs-lookup"><span data-stu-id="54873-125">In the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model, an *optimistic concurrency conflict* occurs when both of the following conditions are true:</span></span>  
   
--   Клиент пытается отправить изменения в базу данных.  
+-   <span data-ttu-id="54873-126">Клиент пытается отправить изменения в базу данных.</span><span class="sxs-lookup"><span data-stu-id="54873-126">The client tries to submit changes to the database.</span></span>  
   
--   Одно или несколько значений проверки обновлений было обновлено в базе данных с момента последнего чтения этих значений клиентом.  
+-   <span data-ttu-id="54873-127">Одно или несколько значений проверки обновлений было обновлено в базе данных с момента последнего чтения этих значений клиентом.</span><span class="sxs-lookup"><span data-stu-id="54873-127">One or more update-check values have been updated in the database since the client last read them.</span></span>  
   
- Процесс разрешения этого конфликта включает обнаружение конфликтующих членов и принятие решения о том, какие действия следует к ним применить.  
+ <span data-ttu-id="54873-128">Процесс разрешения этого конфликта включает обнаружение конфликтующих членов и принятие решения о том, какие действия следует к ним применить.</span><span class="sxs-lookup"><span data-stu-id="54873-128">Resolution of this conflict includes discovering which members of the object are in conflict, and then deciding what you want to do about it.</span></span>  
   
 > [!NOTE]
->  В проверках оптимистического параллелизма участвуют только те члены, которые сопоставлены свойству <xref:System.Data.Linq.Mapping.UpdateCheck> или <xref:System.Data.Linq.Mapping.UpdateCheck>.  Для членов, сопоставленных свойству <xref:System.Data.Linq.Mapping.UpdateCheck>, никаких проверок не производится.  Для получения дополнительной информации см. <xref:System.Data.Linq.Mapping.UpdateCheck>.  
+>  <span data-ttu-id="54873-129">В проверках оптимистического параллелизма участвуют только те члены, которые сопоставлены свойству <xref:System.Data.Linq.Mapping.UpdateCheck.Always> или <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged>.</span><span class="sxs-lookup"><span data-stu-id="54873-129">Only members mapped as <xref:System.Data.Linq.Mapping.UpdateCheck.Always> or <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> participate in optimistic concurrency checks.</span></span> <span data-ttu-id="54873-130">Для членов, сопоставленных свойству <xref:System.Data.Linq.Mapping.UpdateCheck.Never>, никаких проверок не производится.</span><span class="sxs-lookup"><span data-stu-id="54873-130">No check is performed for members marked <xref:System.Data.Linq.Mapping.UpdateCheck.Never>.</span></span> <span data-ttu-id="54873-131">Для получения дополнительной информации см. <xref:System.Data.Linq.Mapping.UpdateCheck>.</span><span class="sxs-lookup"><span data-stu-id="54873-131">For more information, see <xref:System.Data.Linq.Mapping.UpdateCheck>.</span></span>  
   
-## Пример  
- Рассмотрим в качестве примера следующий сценарий, в котором Пользователь1 начинает подготовку к обновлению, запрашивая строку в базе данных.  Пользователь1 получает строку со значениями "Алексеи", "Мария" и "Продажи".  
+## <a name="example"></a><span data-ttu-id="54873-132">Пример</span><span class="sxs-lookup"><span data-stu-id="54873-132">Example</span></span>  
+ <span data-ttu-id="54873-133">Рассмотрим в качестве примера следующий сценарий, в котором Пользователь1 начинает подготовку к обновлению, запрашивая строку в базе данных.</span><span class="sxs-lookup"><span data-stu-id="54873-133">For example, in the following scenario, User1 starts to prepare an update by querying the database for a row.</span></span> <span data-ttu-id="54873-134">Пользователь1 получает строку со значениями "Алексеи", "Мария" и "Продажи".</span><span class="sxs-lookup"><span data-stu-id="54873-134">User1 receives a row with values of Alfreds, Maria, and Sales.</span></span>  
   
- Пользователь1 хочет изменить значение в столбце "Менеджер" на "Алексей", а значение в столбце "Отдел" на "Маркетинг".  Прежде чем Пользователь1 смог отправить эти изменения, Пользователь2 отправил изменения в эту базу данных.  Поэтому теперь значение в столбце "Помощник" изменилось на "Инна", а значение в столбце "Отдел" изменилось на "Обслуживание".  
+ <span data-ttu-id="54873-135">Пользователь1 хочет изменить значение в столбце "Менеджер" на "Алексей", а значение в столбце "Отдел" на "Маркетинг".</span><span class="sxs-lookup"><span data-stu-id="54873-135">User1 wants to change the value of the Manager column to Alfred and the value of the Department column to Marketing.</span></span> <span data-ttu-id="54873-136">Прежде чем Пользователь1 смог отправить эти изменения, Пользователь2 отправил изменения в эту базу данных.</span><span class="sxs-lookup"><span data-stu-id="54873-136">Before User1 can submit those changes, User2 has submitted changes to the database.</span></span> <span data-ttu-id="54873-137">Поэтому теперь значение в столбце "Помощник" изменилось на "Инна", а значение в столбце "Отдел" изменилось на "Обслуживание".</span><span class="sxs-lookup"><span data-stu-id="54873-137">So now the value of the Assistant column has been changed to Mary and the value of the Department column to Service.</span></span>  
   
- Когда пользователь Пользователь1 пытается отправить изменения, происходит сбой при отправке и возникает исключение <xref:System.Data.Linq.ChangeConflictException>.  Этот результат происходит по той причине, что значения базы данных для столбцов "Помощник" и "Отдел" не совпадают с ожидаемыми значениями.  Члены, представляющие столбцы "Помощник" и "Отдел", являются конфликтующими.  Эта ситуация обобщается в следующей таблице.  
+ <span data-ttu-id="54873-138">Когда пользователь Пользователь1 пытается отправить изменения, происходит сбой при отправке и возникает исключение <xref:System.Data.Linq.ChangeConflictException>.</span><span class="sxs-lookup"><span data-stu-id="54873-138">When User1 now tries to submit changes, the submission fails and a <xref:System.Data.Linq.ChangeConflictException> exception is thrown.</span></span> <span data-ttu-id="54873-139">Этот результат происходит по той причине, что значения базы данных для столбцов "Помощник" и "Отдел" не совпадают с ожидаемыми значениями.</span><span class="sxs-lookup"><span data-stu-id="54873-139">This result occurs because the database values for the Assistant column and the Department column are not those that were expected.</span></span> <span data-ttu-id="54873-140">Члены, представляющие столбцы "Помощник" и "Отдел", являются конфликтующими.</span><span class="sxs-lookup"><span data-stu-id="54873-140">Members representing the Assistant and Department columns are in conflict.</span></span> <span data-ttu-id="54873-141">Эта ситуация обобщается в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="54873-141">The following table summarizes the situation.</span></span>  
   
-||Диспетчер|Помощник|Отдел|  
-|------|---------------|--------------|-----------|  
-|Исходное состояние|Алексеи|Мария|Продажи|  
-|Пользователь1|Алексей||Маркетинг|  
-|Пользователь2||Инна|Служба|  
+||<span data-ttu-id="54873-142">Диспетчер</span><span class="sxs-lookup"><span data-stu-id="54873-142">Manager</span></span>|<span data-ttu-id="54873-143">Помощник</span><span class="sxs-lookup"><span data-stu-id="54873-143">Assistant</span></span>|<span data-ttu-id="54873-144">Отдел</span><span class="sxs-lookup"><span data-stu-id="54873-144">Department</span></span>|  
+|------|-------------|---------------|----------------|  
+|<span data-ttu-id="54873-145">Исходное состояние</span><span class="sxs-lookup"><span data-stu-id="54873-145">Original state</span></span>|<span data-ttu-id="54873-146">Алексеи</span><span class="sxs-lookup"><span data-stu-id="54873-146">Alfreds</span></span>|<span data-ttu-id="54873-147">Мария</span><span class="sxs-lookup"><span data-stu-id="54873-147">Maria</span></span>|<span data-ttu-id="54873-148">Продажи</span><span class="sxs-lookup"><span data-stu-id="54873-148">Sales</span></span>|  
+|<span data-ttu-id="54873-149">Пользователь1</span><span class="sxs-lookup"><span data-stu-id="54873-149">User1</span></span>|<span data-ttu-id="54873-150">Алексей</span><span class="sxs-lookup"><span data-stu-id="54873-150">Alfred</span></span>||<span data-ttu-id="54873-151">Маркетинг</span><span class="sxs-lookup"><span data-stu-id="54873-151">Marketing</span></span>|  
+|<span data-ttu-id="54873-152">Пользователь2</span><span class="sxs-lookup"><span data-stu-id="54873-152">User2</span></span>||<span data-ttu-id="54873-153">Инна</span><span class="sxs-lookup"><span data-stu-id="54873-153">Mary</span></span>|<span data-ttu-id="54873-154">Служба</span><span class="sxs-lookup"><span data-stu-id="54873-154">Service</span></span>|  
   
- Подобные конфликты можно разрешать различными способами.  Для получения дополнительной информации см. [Как управлять конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ <span data-ttu-id="54873-155">Подобные конфликты можно разрешать различными способами.</span><span class="sxs-lookup"><span data-stu-id="54873-155">You can resolve conflicts such as this in different ways.</span></span> <span data-ttu-id="54873-156">Дополнительные сведения см. в разделе [как: управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="54873-156">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
   
-## Контрольный список обнаружения и разрешения конфликтов  
- Конфликты можно обнаруживать и разрешать на любом уровне детализации.  С одной стороны, можно разрешить все конфликты одним из трех способов \(см. <xref:System.Data.Linq.RefreshMode>\) без каких\-либо дополнительных действий.  С другой стороны, можно указать конкретное действие для каждого типа конфликта и для каждого конфликтующего члена.  
+## <a name="conflict-detection-and-resolution-checklist"></a><span data-ttu-id="54873-157">Контрольный список обнаружения и разрешения конфликтов</span><span class="sxs-lookup"><span data-stu-id="54873-157">Conflict Detection and Resolution Checklist</span></span>  
+ <span data-ttu-id="54873-158">Конфликты можно обнаруживать и разрешать на любом уровне детализации.</span><span class="sxs-lookup"><span data-stu-id="54873-158">You can detect and resolve conflicts at any level of detail.</span></span> <span data-ttu-id="54873-159">С одной стороны, можно разрешить все конфликты одним из трех способов (см. <xref:System.Data.Linq.RefreshMode>) без каких-либо дополнительных действий.</span><span class="sxs-lookup"><span data-stu-id="54873-159">At one extreme, you can resolve all conflicts in one of three ways (see <xref:System.Data.Linq.RefreshMode>) without additional consideration.</span></span> <span data-ttu-id="54873-160">С другой стороны, можно указать конкретное действие для каждого типа конфликта и для каждого конфликтующего члена.</span><span class="sxs-lookup"><span data-stu-id="54873-160">At the other extreme, you can designate a specific action for each type of conflict on every member in conflict.</span></span>  
   
--   Укажите или проверьте параметры <xref:System.Data.Linq.Mapping.UpdateCheck> в объектной модели.  
+-   <span data-ttu-id="54873-161">Укажите или проверьте параметры <xref:System.Data.Linq.Mapping.UpdateCheck> в объектной модели.</span><span class="sxs-lookup"><span data-stu-id="54873-161">Specify or revise <xref:System.Data.Linq.Mapping.UpdateCheck> options in your object model.</span></span>  
   
-     Для получения дополнительной информации см. [Как указать, для каких элементов тестируется возникновение конфликтов параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+     <span data-ttu-id="54873-162">Дополнительные сведения см. в разделе [как: укажите каких элементов проверяются на наличие конфликтов параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span><span class="sxs-lookup"><span data-stu-id="54873-162">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).</span></span>  
   
--   В блоке "try\/catch" вызова метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A> укажите, в какой точке должны вызываться исключения.  
+-   <span data-ttu-id="54873-163">В блоке "try/catch" вызова метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A> укажите, в какой точке должны вызываться исключения.</span><span class="sxs-lookup"><span data-stu-id="54873-163">In the try/catch block of your call to <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, specify at what point you want exceptions to be thrown.</span></span>  
   
-     Для получения дополнительной информации см. [Как указать, когда возникают исключения параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+     <span data-ttu-id="54873-164">Дополнительные сведения см. в разделе [как: указать, когда возникают исключения параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span><span class="sxs-lookup"><span data-stu-id="54873-164">For more information, see [How to: Specify When Concurrency Exceptions are Thrown](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span></span>  
   
--   Определите уровень детализации извлекаемых сведений о конфликте и вставьте соответствующий код в блок "try\/catch".  
+-   <span data-ttu-id="54873-165">Определите уровень детализации извлекаемых сведений о конфликте и вставьте соответствующий код в блок "try/catch".</span><span class="sxs-lookup"><span data-stu-id="54873-165">Determine how much conflict detail you want to retrieve, and include code in your try/catch block accordingly.</span></span>  
   
-     Дополнительные сведения см. в разделах [Как получить сведения о конфликтах сущностей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) и [Как получить сведения о конфликтах элементов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
+     <span data-ttu-id="54873-166">Дополнительные сведения см. в разделе [как: получение сведений о конфликте сущностей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) и [как: получение сведений о конфликте членов](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span><span class="sxs-lookup"><span data-stu-id="54873-166">For more information, see [How to: Retrieve Entity Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) and [How to: Retrieve Member Conflict Information](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).</span></span>  
   
--   Вставьте в блок `try`\/`catch` код, который определяет способ разрешения различных обнаруженных конфликтов.  
+-   <span data-ttu-id="54873-167">Включить в вашей `try` / `catch` кода способ разрешения различных обнаруженных конфликтов.</span><span class="sxs-lookup"><span data-stu-id="54873-167">Include in your `try`/`catch` code how you want to resolve the various conflicts you discover.</span></span>  
   
-     Дополнительные сведения см. в разделах [Как разрешать конфликты параллелизма путем сохранения значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Как разрешать конфликты параллелизма методом перезаписи значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md) и [Как разрешать конфликты путем слияния значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
+     <span data-ttu-id="54873-168">Дополнительные сведения см. в разделе [как: разрешение конфликтов с сохранением значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [как: разрешение конфликтов путем перезаписи значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), и [как: разрешение конфликтов, объединение значениями из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span><span class="sxs-lookup"><span data-stu-id="54873-168">For more information, see [How to: Resolve Conflicts by Retaining Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [How to: Resolve Conflicts by Overwriting Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), and [How to: Resolve Conflicts by Merging with Database Values](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).</span></span>  
   
-## Типы LINQ to SQL, поддерживающие обнаружение и разрешение конфликтов  
- Ниже перечислены классы и функции, поддерживающие разрешение конфликтов при оптимистическом параллелизме в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a><span data-ttu-id="54873-169">Типы LINQ to SQL, поддерживающие обнаружение и разрешение конфликтов</span><span class="sxs-lookup"><span data-stu-id="54873-169">LINQ to SQL Types That Support Conflict Discovery and Resolution</span></span>  
+ <span data-ttu-id="54873-170">Ниже перечислены классы и функции, поддерживающие разрешение конфликтов при оптимистическом параллелизме в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="54873-170">Classes and features to support the resolution of conflicts in optimistic concurrency in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] include the following:</span></span>  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=fullName>  
+-   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=fullName>  
+-   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=fullName>  
+-   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=fullName>  
+-   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## См. также  
- [Как управлять конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="54873-171">См. также</span><span class="sxs-lookup"><span data-stu-id="54873-171">See Also</span></span>  
+ [<span data-ttu-id="54873-172">Как: управление конфликтами изменений</span><span class="sxs-lookup"><span data-stu-id="54873-172">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

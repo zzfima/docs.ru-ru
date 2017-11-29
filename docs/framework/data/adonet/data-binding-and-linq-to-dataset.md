@@ -1,46 +1,49 @@
 ---
-title: "Связывание с данными и LINQ to DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Привязка данных и LINQ to DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3b097f9bca790d1f19da9d75f834c6277507d8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Связывание с данными и LINQ to DataSet
-*Привязка данных* \- это процесс установления соединения между интерфейсом приложения и бизнес\-логикой.  Если для привязки заданы правильные настройки, а изменения значений данных сопровождаются правильными уведомлениями, привязанные к данным элементы автоматически отражают изменения.  Объект <xref:System.Data.DataSet> \- это находящееся в памяти представление данных, обеспечивающее согласованную реляционную программную модель, независимо от источника содержащихся в нем данных.  Объект <xref:System.Data.DataView> в ADO.NET 2.0 позволяет сортировать и фильтровать данные, хранящиеся в таблице <xref:System.Data.DataTable>.  Эта функциональность часто используется в приложениях связывания данных.  С помощью объекта <xref:System.Data.DataView> можно представлять данные в таблице с различными порядками сортировки, а также фильтровать данные по состоянию строки или на основе критерия фильтра.  Дополнительные сведения об объекте <xref:System.Data.DataView> см. в разделе [Объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+# <a name="data-binding-and-linq-to-dataset"></a><span data-ttu-id="82034-102">Привязка данных и LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="82034-102">Data Binding and LINQ to DataSet</span></span>
+<span data-ttu-id="82034-103">*Привязка данных* — это процесс установления соединения между Интерфейсом приложения и бизнес-логики.</span><span class="sxs-lookup"><span data-stu-id="82034-103">*Data binding* is the process that establishes a connection between the application UI and business logic.</span></span> <span data-ttu-id="82034-104">Если для привязки заданы правильные настройки, а изменения значений данных сопровождаются правильными уведомлениями, привязанные к данным элементы автоматически отражают изменения.</span><span class="sxs-lookup"><span data-stu-id="82034-104">If the binding has the correct settings and the data provides the proper notifications, when the data changes its value, the elements that are bound to the data reflect changes automatically.</span></span> <span data-ttu-id="82034-105">Объект <xref:System.Data.DataSet> - это находящееся в памяти представление данных, обеспечивающее согласованную реляционную программную модель, независимо от источника содержащихся в нем данных.</span><span class="sxs-lookup"><span data-stu-id="82034-105">The <xref:System.Data.DataSet> is an in- memory representation of data that provides a consistent relational programming model, regardless of the source of the data it contains.</span></span> <span data-ttu-id="82034-106">Объект <xref:System.Data.DataView> в ADO.NET 2.0 позволяет сортировать и фильтровать данные, хранящиеся в таблице <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="82034-106">The ADO.NET 2.0 <xref:System.Data.DataView> enables you to sort and filter the data stored in a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="82034-107">Эта функциональность часто используется в приложениях связывания данных.</span><span class="sxs-lookup"><span data-stu-id="82034-107">This functionality is often used in data-binding applications.</span></span> <span data-ttu-id="82034-108">С помощью объекта <xref:System.Data.DataView> можно представлять данные в таблице с различными порядками сортировки, а также фильтровать данные по состоянию строки или на основе критерия фильтра.</span><span class="sxs-lookup"><span data-stu-id="82034-108">By using a <xref:System.Data.DataView>, you can expose the data in a table with different sort orders, and you can filter the data by row state or based on a filter expression.</span></span> <span data-ttu-id="82034-109">Дополнительные сведения о <xref:System.Data.DataView> см. в разделе [объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span><span class="sxs-lookup"><span data-stu-id="82034-109">For more information about the <xref:System.Data.DataView> object, see [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span></span>  
   
- Технология [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] позволяет создавать сложные и мощные запросы к объектам <xref:System.Data.DataSet> с помощью [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)].  Однако запрос [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] возвращает перечисление объектов <xref:System.Data.DataRow>, которое непросто использовать в сценариях привязки. Для упрощения привязки можно создать на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] объект <xref:System.Data.DataView>.  Этот объект <xref:System.Data.DataView> использует параметры фильтрации и сортировки, указанные в запросе, но лучше приспособлен для привязки данных.  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] расширяет возможности объекта <xref:System.Data.DataView>, предоставляя фильтрацию и сортировку [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] на основе выражений, что позволяет выполнять более сложные и мощные операции фильтрации и сортировки, чем фильтрация и сортировка на основе строк.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="82034-110">позволяет разработчикам создавать сложные и мощные запросы через <xref:System.Data.DataSet> с помощью [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="82034-110"> allows developers to create complex, powerful queries over a <xref:System.Data.DataSet> by using [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)].</span></span> <span data-ttu-id="82034-111">Тем не менее [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запрос возвращает перечисление <xref:System.Data.DataRow> объекты, которые легко не используется в сценарии привязки.</span><span class="sxs-lookup"><span data-stu-id="82034-111">However, a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query returns an enumeration of <xref:System.Data.DataRow> objects, which is not easily used in a binding scenario.</span></span> <span data-ttu-id="82034-112">Чтобы упростить привязку, можно создать <xref:System.Data.DataView> из [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса.</span><span class="sxs-lookup"><span data-stu-id="82034-112">To make binding easier, you can create a <xref:System.Data.DataView> from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] query.</span></span> <span data-ttu-id="82034-113">Это <xref:System.Data.DataView> использует параметры фильтрации и сортировки, указанные в запросе, но лучше приспособлен для привязки данных.</span><span class="sxs-lookup"><span data-stu-id="82034-113">This <xref:System.Data.DataView> uses the filtering and sorting specified in the query, but is better suited for data binding.</span></span> [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]<span data-ttu-id="82034-114">расширяет функциональность <xref:System.Data.DataView> , предоставляя [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] основано на выражении фильтрации и сортировки, что позволяет гораздо более сложные и мощные операции сортировки и фильтрации чем строк фильтрации и сортировки.</span><span class="sxs-lookup"><span data-stu-id="82034-114"> extends the functionality of the <xref:System.Data.DataView> by providing [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expression-based filtering and sorting, which allows for much more complex and powerful filtering and sorting operations than string-based filtering and sorting.</span></span>  
   
- Обратите внимание, что объект <xref:System.Data.DataView> представляет непосредственно запрос, а не представление на основе запроса.  Объект <xref:System.Data.DataView> привязывается к элементу управления в пользовательском интерфейсе, так же как и <xref:System.Windows.Forms.DataGrid> или <xref:System.Windows.Forms.DataGridView>, обеспечивая простую модель привязки данных.  Объект <xref:System.Data.DataView> можно также создать на основе объекта <xref:System.Data.DataTable>, задав представление таблицы по умолчанию.  
+ <span data-ttu-id="82034-115">Обратите внимание, что объект <xref:System.Data.DataView> представляет непосредственно запрос, а не представление на основе запроса.</span><span class="sxs-lookup"><span data-stu-id="82034-115">Note that the <xref:System.Data.DataView> represents the query itself and is not a view on top of the query.</span></span> <span data-ttu-id="82034-116">Объект <xref:System.Data.DataView> привязывается к элементу управления в пользовательском интерфейсе, так же как и <xref:System.Windows.Forms.DataGrid> или <xref:System.Windows.Forms.DataGridView>, обеспечивая простую модель привязки данных.</span><span class="sxs-lookup"><span data-stu-id="82034-116">The <xref:System.Data.DataView> is bound to a UI control, such as a <xref:System.Windows.Forms.DataGrid> or a <xref:System.Windows.Forms.DataGridView>, providing a simple data binding model.</span></span> <span data-ttu-id="82034-117">Объект <xref:System.Data.DataView> можно также создать на основе объекта <xref:System.Data.DataTable>, задав представление таблицы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="82034-117">A <xref:System.Data.DataView> can also be created from a <xref:System.Data.DataTable>, providing a default view of that table.</span></span>  
   
-## Содержание  
- [Создание объекта DataView](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
- Содержит сведения о создании объекта <xref:System.Data.DataView>.  
+## <a name="in-this-section"></a><span data-ttu-id="82034-118">Содержание</span><span class="sxs-lookup"><span data-stu-id="82034-118">In This Section</span></span>  
+ [<span data-ttu-id="82034-119">Создание объекта DataView</span><span class="sxs-lookup"><span data-stu-id="82034-119">Creating a DataView Object</span></span>](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
+ <span data-ttu-id="82034-120">Содержит сведения о создании объекта <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="82034-120">Provides information about creating a <xref:System.Data.DataView>.</span></span>  
   
- [Фильтрация с помощью DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- Описывает фильтрацию с помощью объекта <xref:System.Data.DataView>.  
+ [<span data-ttu-id="82034-121">Фильтрация с использованием объекта DataView</span><span class="sxs-lookup"><span data-stu-id="82034-121">Filtering with DataView</span></span>](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ <span data-ttu-id="82034-122">Описывает фильтрацию с помощью объекта <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="82034-122">Describes how to filter with the <xref:System.Data.DataView>.</span></span>  
   
- [Сортировка с помощью DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
- Описывает сортировку с помощью объекта <xref:System.Data.DataView>.  
+ [<span data-ttu-id="82034-123">Сортировка с использованием объекта DataView</span><span class="sxs-lookup"><span data-stu-id="82034-123">Sorting with DataView</span></span>](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
+ <span data-ttu-id="82034-124">Описывает сортировку с помощью объекта <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="82034-124">Describes how to sort with the <xref:System.Data.DataView>.</span></span>  
   
- [Запрос к коллекции DataRowView в DataView](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
- Содержит сведения о запросах к коллекции <xref:System.Data.DataRowView>, предоставляемой объектом <xref:System.Data.DataView>.  
+ [<span data-ttu-id="82034-125">Запрос к коллекции DataRowView в объекте DataView</span><span class="sxs-lookup"><span data-stu-id="82034-125">Querying the DataRowView Collection in a DataView</span></span>](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
+ <span data-ttu-id="82034-126">Содержит сведения о запросах к коллекции <xref:System.Data.DataRowView>, предоставляемой объектом <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="82034-126">Provides information about querying the <xref:System.Data.DataRowView> collection exposed by <xref:System.Data.DataView>.</span></span>  
   
- [Производительность DataView](../../../../docs/framework/data/adonet/dataview-performance.md)  
- Содержит сведения об объекте <xref:System.Data.DataView> и производительности.  
+ [<span data-ttu-id="82034-127">Производительность объекта DataView</span><span class="sxs-lookup"><span data-stu-id="82034-127">DataView Performance</span></span>](../../../../docs/framework/data/adonet/dataview-performance.md)  
+ <span data-ttu-id="82034-128">Содержит сведения об объекте <xref:System.Data.DataView> и производительности.</span><span class="sxs-lookup"><span data-stu-id="82034-128">Provides information about <xref:System.Data.DataView> and performance.</span></span>  
   
- [Как привязать объект DataView к элементу управления Windows Forms DataGridView](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
- Содержит описание процесса привязки объекта <xref:System.Data.DataView> к элементу управления <xref:System.Windows.Forms.DataGridView>.  
+ [<span data-ttu-id="82034-129">Как: связывание объекта DataView с элементом управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82034-129">How to: Bind a DataView Object to a Windows Forms DataGridView Control</span></span>](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ <span data-ttu-id="82034-130">Содержит описание процесса привязки объекта <xref:System.Data.DataView> к элементу управления <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="82034-130">Describes how to bind a <xref:System.Data.DataView> object to a <xref:System.Windows.Forms.DataGridView>.</span></span>  
   
-## См. также  
- [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="82034-131">См. также</span><span class="sxs-lookup"><span data-stu-id="82034-131">See Also</span></span>  
+ [<span data-ttu-id="82034-132">Руководство по программированию</span><span class="sxs-lookup"><span data-stu-id="82034-132">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

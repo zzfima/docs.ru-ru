@@ -1,31 +1,38 @@
 ---
-title: "&lt;behavior&gt; для &lt;serviceBehaviors&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;behavior&gt; для &lt;serviceBehaviors&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a472f2dd3947088eaf676c4ae38946560652c9e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;behavior&gt; для &lt;serviceBehaviors&gt;
-Элемент `behavior` содержит коллекцию параметров для поведения службы.  Каждое поведение индексируется по атрибуту `name`.  Службы могут связаться с каждым поведением посредством этого имени, используя атрибут `behaviorConfiguration` элемента [\<конечная точка\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md).  Это позволяет конечным точкам иметь общие конфигурации поведений без переопределения параметров.  Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена.  Дополнительные сведения о конфигурации по умолчанию и о безымянных привязках и поведениях см. в разделах [Упрощенная конфигурация](../../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+# <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a><span data-ttu-id="20c9a-102">&lt;behavior&gt; для &lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="20c9a-102">&lt;behavior&gt; of &lt;serviceBehaviors&gt;</span></span>
+<span data-ttu-id="20c9a-103">Элемент `behavior` содержит коллекцию параметров для поведения службы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-103">The `behavior` element contains a collection of settings for the behavior of a service.</span></span> <span data-ttu-id="20c9a-104">Каждое поведение индексируется по атрибуту `name`.</span><span class="sxs-lookup"><span data-stu-id="20c9a-104">Each behavior is indexed by its `name`.</span></span> <span data-ttu-id="20c9a-105">Службы можно связать с каждым поведением посредством этого имени, используя `behaviorConfiguration` атрибут [ \<endpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="20c9a-105">Services can link to each behavior through this name using the `behaviorConfiguration` attribute of the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="20c9a-106">Это позволяет конечным точкам иметь общие конфигурации поведений без переопределения параметров.</span><span class="sxs-lookup"><span data-stu-id="20c9a-106">This allows endpoints to share common behavior configurations without redefining the settings.</span></span> <span data-ttu-id="20c9a-107">Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена.</span><span class="sxs-lookup"><span data-stu-id="20c9a-107">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="20c9a-108">Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="20c9a-108">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
 > [!NOTE]
->  Элементы поведения, специфичные для действий рабочих процессов Windows, такие как [\<sendMessageChannelCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md), задокументированы на странице [\<behavior\> для \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md).  
+>  <span data-ttu-id="20c9a-109">Элементы поведения, характерные для действий рабочего процесса Windows, таких как [ \<sendMessageChannelCache >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md) элемент, описаны в [ \<поведение > из \< serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) страницы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-109">Behavior elements specific to Windows Workflow activities, such as the [\<sendMessageChannelCache>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md) element, are documented in the [\<behavior> of \<serviceBehaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) page.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="20c9a-110">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="20c9a-110">\<system.ServiceModel></span></span>  
+<span data-ttu-id="20c9a-111">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="20c9a-111">\<behaviors></span></span>  
+<span data-ttu-id="20c9a-112">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="20c9a-112">\<serviceBehaviors></span></span>  
+<span data-ttu-id="20c9a-113">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="20c9a-113">\<behavior></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="20c9a-114">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="20c9a-114">Syntax</span></span>  
   
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <serviceBehaviors>  
@@ -35,36 +42,36 @@ caps.handback.revision: 10
 </system.ServiceModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="20c9a-115">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="20c9a-115">Attributes and Elements</span></span>  
+ <span data-ttu-id="20c9a-116">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-116">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="20c9a-117">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="20c9a-117">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|имя|Уникальная строка, содержащая имя конфигурации поведения.  Это значение является заданной пользователем строкой, которая должна быть уникальной, поскольку она действует как строка идентификации для элемента.  Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена.  Дополнительные сведения о конфигурации по умолчанию и о безымянных привязках и поведениях см. в разделах [Упрощенная конфигурация](../../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|<span data-ttu-id="20c9a-118">Атрибут</span><span class="sxs-lookup"><span data-stu-id="20c9a-118">Attribute</span></span>|<span data-ttu-id="20c9a-119">Описание</span><span class="sxs-lookup"><span data-stu-id="20c9a-119">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="20c9a-120">имя</span><span class="sxs-lookup"><span data-stu-id="20c9a-120">name</span></span>|<span data-ttu-id="20c9a-121">Уникальная строка, содержащая имя конфигурации поведения.</span><span class="sxs-lookup"><span data-stu-id="20c9a-121">A unique string that contains the configuration name of the behavior.</span></span> <span data-ttu-id="20c9a-122">Это значение является заданной пользователем строкой, которая должна быть уникальной, поскольку она действует как строка идентификации для элемента.</span><span class="sxs-lookup"><span data-stu-id="20c9a-122">This value is a user-defined string that must be unique, since it acts as the identification string for the element.</span></span> <span data-ttu-id="20c9a-123">Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена.</span><span class="sxs-lookup"><span data-stu-id="20c9a-123">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="20c9a-124">Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="20c9a-124">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="20c9a-125">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="20c9a-125">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)|Содержит данные конфигурации для DataContractSerializer.|  
-|[\<persistenceProvider\>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistenceprovider.md)|Задает тип используемой реализации поставщика сохраняемости, а также время ожидания операций сохраняемости.|  
-|[\<маршрутизация\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md)|Обеспечивает доступ к службе маршрутизации во время выполнения, чтобы вносить динамические изменения в конфигурацию маршрутизации.|  
-|[\<serviceAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthenticationmanager.md)|Обеспечивает элемент конфигурации рабочего процесса, который устанавливает на уровне службы действительность передачи, сообщения или инициатора.|  
-|[\<serviceAuthorization\>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)|Задает параметры авторизации доступа к операциям службы.|  
-|[\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
-|[\<serviceDebug\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|Задает функции по отладке и функции справки для службы [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].|  
-|[\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|Указывает возможность обнаружения конечных точек службы.|  
-|[\<serviceMetadata\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|Задает публикацию метаданных службы и связанных сведений.|  
-|[\<serviceSecurityAudit\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.|  
-|[\<serviceThrottling\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|Определяет механизм регулирования для службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
-|[\<serviceTimeouts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|Задает время ожидания для службы.|  
-|[\<workflowRuntime\>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Задает параметры для экземпляра WorkflowRuntime, связанные с размещением служб [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], основанных на рабочих процессах.|  
-|[\<useRequestHeadersForMetadataAddress\>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Включает получение сведений об адресе метаданных из заголовков сообщений запросов.|  
+|<span data-ttu-id="20c9a-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="20c9a-126">Element</span></span>|<span data-ttu-id="20c9a-127">Описание</span><span class="sxs-lookup"><span data-stu-id="20c9a-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="20c9a-128">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="20c9a-128">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)|<span data-ttu-id="20c9a-129">Содержит данные конфигурации для DataContractSerializer.</span><span class="sxs-lookup"><span data-stu-id="20c9a-129">Contains configuration data for the DataContractSerializer.</span></span>|  
+|[<span data-ttu-id="20c9a-130">\<persistenceProvider ></span><span class="sxs-lookup"><span data-stu-id="20c9a-130">\<persistenceProvider></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistenceprovider.md)|<span data-ttu-id="20c9a-131">Задает тип используемой реализации поставщика сохраняемости, а также время ожидания операций сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="20c9a-131">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>|  
+|[<span data-ttu-id="20c9a-132">\<Маршрутизация ></span><span class="sxs-lookup"><span data-stu-id="20c9a-132">\<routing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md)|<span data-ttu-id="20c9a-133">Обеспечивает доступ к службе маршрутизации во время выполнения, чтобы вносить динамические изменения в конфигурацию маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="20c9a-133">Provides run-time access to the routing service to allow dynamic modification of the routing configuration.</span></span>|  
+|[<span data-ttu-id="20c9a-134">\<serviceAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="20c9a-134">\<serviceAuthenticationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthenticationmanager.md)|<span data-ttu-id="20c9a-135">Обеспечивает элемент конфигурации рабочего процесса, который устанавливает на уровне службы действительность передачи, сообщения или инициатора.</span><span class="sxs-lookup"><span data-stu-id="20c9a-135">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator..</span></span>|  
+|[<span data-ttu-id="20c9a-136">\<serviceAuthorization ></span><span class="sxs-lookup"><span data-stu-id="20c9a-136">\<serviceAuthorization></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)|<span data-ttu-id="20c9a-137">Задает параметры авторизации доступа к операциям службы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-137">Specifies settings that authorize access to service operations.</span></span>|  
+|[<span data-ttu-id="20c9a-138">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="20c9a-138">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="20c9a-139">Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="20c9a-139">Specifies the credential to be used in authenticating the service and the client credential validation-related settings.</span></span>|  
+|[<span data-ttu-id="20c9a-140">\<serviceDebug ></span><span class="sxs-lookup"><span data-stu-id="20c9a-140">\<serviceDebug></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)|<span data-ttu-id="20c9a-141">Задает функции по отладке и функции справки для службы [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="20c9a-141">Specifies debugging and help information features for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service.</span></span>|  
+|[<span data-ttu-id="20c9a-142">\<serviceDiscovery ></span><span class="sxs-lookup"><span data-stu-id="20c9a-142">\<serviceDiscovery></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|<span data-ttu-id="20c9a-143">Указывает возможность обнаружения конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-143">Specifies the discoverability of service endpoints.</span></span>|  
+|[<span data-ttu-id="20c9a-144">\<serviceMetadata ></span><span class="sxs-lookup"><span data-stu-id="20c9a-144">\<serviceMetadata></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|<span data-ttu-id="20c9a-145">Задает публикацию метаданных службы и связанных сведений.</span><span class="sxs-lookup"><span data-stu-id="20c9a-145">Specifies the publication of service metadata and associated information.</span></span>|  
+|[<span data-ttu-id="20c9a-146">\<serviceSecurityAudit ></span><span class="sxs-lookup"><span data-stu-id="20c9a-146">\<serviceSecurityAudit></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|<span data-ttu-id="20c9a-147">Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.</span><span class="sxs-lookup"><span data-stu-id="20c9a-147">Specifies settings that enable auditing of security events during service operations.</span></span>|  
+|[<span data-ttu-id="20c9a-148">\<serviceThrottling ></span><span class="sxs-lookup"><span data-stu-id="20c9a-148">\<serviceThrottling></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|<span data-ttu-id="20c9a-149">Определяет механизм регулирования для службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="20c9a-149">Specifies the throttling mechanism of a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span>|  
+|[<span data-ttu-id="20c9a-150">\<serviceTimeouts ></span><span class="sxs-lookup"><span data-stu-id="20c9a-150">\<serviceTimeouts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|<span data-ttu-id="20c9a-151">Задает время ожидания для службы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-151">Specifies the timeout for a service.</span></span>|  
+|[<span data-ttu-id="20c9a-152">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="20c9a-152">\<workflowRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|<span data-ttu-id="20c9a-153">Задает параметры для экземпляра WorkflowRuntime, связанные с размещением служб [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], основанных на рабочих процессах.</span><span class="sxs-lookup"><span data-stu-id="20c9a-153">Specifies settings for an instance of WorkflowRuntime for hosting workflow-based [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services.</span></span>|  
+|[<span data-ttu-id="20c9a-154">\<useRequestHeadersForMetadataAddress ></span><span class="sxs-lookup"><span data-stu-id="20c9a-154">\<useRequestHeadersForMetadataAddress></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|<span data-ttu-id="20c9a-155">Включает получение сведений об адресе метаданных из заголовков сообщений запросов.</span><span class="sxs-lookup"><span data-stu-id="20c9a-155">Enables the retrieval of metadata address information from the request message headers.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="20c9a-156">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="20c9a-156">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|Коллекция элементов поведений службы.|
+|<span data-ttu-id="20c9a-157">Элемент</span><span class="sxs-lookup"><span data-stu-id="20c9a-157">Element</span></span>|<span data-ttu-id="20c9a-158">Описание</span><span class="sxs-lookup"><span data-stu-id="20c9a-158">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="20c9a-159">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="20c9a-159">\<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|<span data-ttu-id="20c9a-160">Коллекция элементов поведений службы.</span><span class="sxs-lookup"><span data-stu-id="20c9a-160">A collection of service behavior elements.</span></span>|

@@ -1,51 +1,41 @@
 ---
 title: "Операции с элементами (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 55081e66419624c2c4930a254d3d464007477766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da747e884960c89fabc45d3761da92f913d66362
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="element-operations-c"></a>Операции с элементами (C#)
-Операции с элементами возвращают один определенный элемент из последовательности.  
+# <a name="element-operations-c"></a><span data-ttu-id="def45-102">Операции с элементами (C#)</span><span class="sxs-lookup"><span data-stu-id="def45-102">Element Operations (C#)</span></span>
+<span data-ttu-id="def45-103">Операции с элементами возвращают один определенный элемент из последовательности.</span><span class="sxs-lookup"><span data-stu-id="def45-103">Element operations return a single, specific element from a sequence.</span></span>  
   
- В следующем разделе перечислены методы стандартных операторов запросов, которые выполняют операции с элементами.  
+ <span data-ttu-id="def45-104">В следующем разделе перечислены методы стандартных операторов запросов, которые выполняют операции с элементами.</span><span class="sxs-lookup"><span data-stu-id="def45-104">The standard query operator methods that perform element operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Методы  
+## <a name="methods"></a><span data-ttu-id="def45-105">Методы</span><span class="sxs-lookup"><span data-stu-id="def45-105">Methods</span></span>  
   
-|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|<span data-ttu-id="def45-106">Имя метода</span><span class="sxs-lookup"><span data-stu-id="def45-106">Method Name</span></span>|<span data-ttu-id="def45-107">Описание</span><span class="sxs-lookup"><span data-stu-id="def45-107">Description</span></span>|<span data-ttu-id="def45-108">Синтаксис выражения запроса C#</span><span class="sxs-lookup"><span data-stu-id="def45-108">C# Query Expression Syntax</span></span>|<span data-ttu-id="def45-109">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="def45-109">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|ElementAt|Возвращает элемент коллекции с указанным индексом.|Неприменимо.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
-|ElementAtOrDefault|Возвращает элемент коллекции с указанным индексом или значение по умолчанию, если индекс выходит за пределы допустимого диапазона.|Неприменимо.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
-|First|Возвращает первый элемент коллекции или первый элемент, удовлетворяющий условию.|Неприменимо.|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
-|FirstOrDefault|Возвращает первый элемент коллекции или первый элемент, удовлетворяющий условию. Если такой элемент не существует, возвращает значение по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
-|Последняя|Возвращает последний элемент коллекции или последний элемент, удовлетворяющий условию.|Неприменимо.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
-|LastOrDefault|Возвращает последний элемент коллекции или последний элемент, удовлетворяющий условию. Если такой элемент не существует, возвращает значение по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|Возвращает единственный элемент коллекции или единственный элемент, удовлетворяющий условию.|Неприменимо.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|Возвращает единственный элемент коллекции или единственный элемент, удовлетворяющий условию. Если такой элемент отсутствует или коллекция содержит не один такой элемент, возвращает значение по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-110">ElementAt</span><span class="sxs-lookup"><span data-stu-id="def45-110">ElementAt</span></span>|<span data-ttu-id="def45-111">Возвращает элемент коллекции с указанным индексом.</span><span class="sxs-lookup"><span data-stu-id="def45-111">Returns the element at a specified index in a collection.</span></span>|<span data-ttu-id="def45-112">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-113">ElementAtOrDefault</span><span class="sxs-lookup"><span data-stu-id="def45-113">ElementAtOrDefault</span></span>|<span data-ttu-id="def45-114">Возвращает элемент коллекции с указанным индексом или значение по умолчанию, если индекс выходит за пределы допустимого диапазона.</span><span class="sxs-lookup"><span data-stu-id="def45-114">Returns the element at a specified index in a collection or a default value if the index is out of range.</span></span>|<span data-ttu-id="def45-115">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-115">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-116">First</span><span class="sxs-lookup"><span data-stu-id="def45-116">First</span></span>|<span data-ttu-id="def45-117">Возвращает первый элемент коллекции или первый элемент, удовлетворяющий условию.</span><span class="sxs-lookup"><span data-stu-id="def45-117">Returns the first element of a collection, or the first element that satisfies a condition.</span></span>|<span data-ttu-id="def45-118">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-119">FirstOrDefault</span><span class="sxs-lookup"><span data-stu-id="def45-119">FirstOrDefault</span></span>|<span data-ttu-id="def45-120">Возвращает первый элемент коллекции или первый элемент, удовлетворяющий условию.</span><span class="sxs-lookup"><span data-stu-id="def45-120">Returns the first element of a collection, or the first element that satisfies a condition.</span></span> <span data-ttu-id="def45-121">Если такой элемент не существует, возвращает значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="def45-121">Returns a default value if no such element exists.</span></span>|<span data-ttu-id="def45-122">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-122">Not applicable.</span></span>|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-123">Последняя</span><span class="sxs-lookup"><span data-stu-id="def45-123">Last</span></span>|<span data-ttu-id="def45-124">Возвращает последний элемент коллекции или последний элемент, удовлетворяющий условию.</span><span class="sxs-lookup"><span data-stu-id="def45-124">Returns the last element of a collection, or the last element that satisfies a condition.</span></span>|<span data-ttu-id="def45-125">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-125">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-126">LastOrDefault</span><span class="sxs-lookup"><span data-stu-id="def45-126">LastOrDefault</span></span>|<span data-ttu-id="def45-127">Возвращает последний элемент коллекции или последний элемент, удовлетворяющий условию.</span><span class="sxs-lookup"><span data-stu-id="def45-127">Returns the last element of a collection, or the last element that satisfies a condition.</span></span> <span data-ttu-id="def45-128">Если такой элемент не существует, возвращает значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="def45-128">Returns a default value if no such element exists.</span></span>|<span data-ttu-id="def45-129">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-130">Single</span><span class="sxs-lookup"><span data-stu-id="def45-130">Single</span></span>|<span data-ttu-id="def45-131">Возвращает единственный элемент коллекции или единственный элемент, удовлетворяющий условию.</span><span class="sxs-lookup"><span data-stu-id="def45-131">Returns the only element of a collection, or the only element that satisfies a condition.</span></span>|<span data-ttu-id="def45-132">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-132">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="def45-133">SingleOrDefault</span><span class="sxs-lookup"><span data-stu-id="def45-133">SingleOrDefault</span></span>|<span data-ttu-id="def45-134">Возвращает единственный элемент коллекции или единственный элемент, удовлетворяющий условию.</span><span class="sxs-lookup"><span data-stu-id="def45-134">Returns the only element of a collection, or the only element that satisfies a condition.</span></span> <span data-ttu-id="def45-135">Если такой элемент отсутствует или коллекция содержит не один такой элемент, возвращает значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="def45-135">Returns a default value if no such element exists or the collection does not contain exactly one element.</span></span>|<span data-ttu-id="def45-136">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="def45-136">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="def45-137">См. также</span><span class="sxs-lookup"><span data-stu-id="def45-137">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="def45-138">Общие сведения о стандартных операторах запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="def45-138">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="def45-139">Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="def45-139">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

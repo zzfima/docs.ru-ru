@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - tracing [.NET Framework], trace and debug settings schema
 - configuration schema [.NET Framework], trace and debug settings
@@ -24,49 +18,47 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c74874519d992985c49b49542c0c7fb63e8557b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 97c96fbb1abf969d902159709ca0e738f475fab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="trace-and-debug-settings-schema"></a>Схема параметров трассировки и отладки
-Параметры трассировки и отладки определяют прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.  
+# <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="f98ec-102">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="f98ec-102">Trace and Debug Settings Schema</span></span>
+<span data-ttu-id="f98ec-103">Параметры трассировки и отладки определяют прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  
   
- В приведенной ниже таблице описывается назначение каждого элемента параметров трассировки и отладки.  
+ <span data-ttu-id="f98ec-104">В приведенной ниже таблице описывается назначение каждого элемента параметров трассировки и отладки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-104">The following table describes the function of each trace and debug settings element.</span></span>  
   
-|Элемент|Описание|  
+|<span data-ttu-id="f98ec-105">Элемент</span><span class="sxs-lookup"><span data-stu-id="f98ec-105">Element</span></span>|<span data-ttu-id="f98ec-106">Описание</span><span class="sxs-lookup"><span data-stu-id="f98ec-106">Description</span></span>|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|Добавляет прослушиватель в коллекцию `sharedListeners`.|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Задает уровень, на котором установлен ключ трассировки.|  
-|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>. Кроме того, задает имя файла, в который записываются сообщения.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Очищает коллекцию `Listeners` для источника трассировки.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Очищает коллекцию `Listeners` для трассировки.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Добавляет фильтр к прослушивателю в коллекции `Listeners` для трассировки.|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Определяет прослушиватели в коллекции `Listeners` для источника трассировки.|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Определяет прослушиватели в коллекции `Listeners` для трассировки.|  
-|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Задает размер глобальной памяти, совместно используемой счетчиками производительности.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Удаляет прослушиватель из коллекции `Listeners` для трассировки.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Удаляет прослушиватель из коллекции `Listeners` для источника трассировки.|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Содержит источник трассировки, который инициирует сообщения трассировки.|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Содержит ключи трассировки и уровень, на котором они установлены.|  
-|[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
-|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.|  
+|[<span data-ttu-id="f98ec-107">\<add></span><span class="sxs-lookup"><span data-stu-id="f98ec-107">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="f98ec-108">Добавляет прослушиватель в коллекцию `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-108">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="f98ec-109">\<add></span><span class="sxs-lookup"><span data-stu-id="f98ec-109">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="f98ec-110">Добавляет прослушиватель в коллекцию `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="f98ec-110">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="f98ec-111">\<add></span><span class="sxs-lookup"><span data-stu-id="f98ec-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|<span data-ttu-id="f98ec-112">Добавляет прослушиватель в коллекцию `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="f98ec-112">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="f98ec-113">\<add></span><span class="sxs-lookup"><span data-stu-id="f98ec-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="f98ec-114">Задает уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-114">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="f98ec-115">\<assert></span><span class="sxs-lookup"><span data-stu-id="f98ec-115">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="f98ec-116">Определяет, должно ли выводиться окно сообщения при вызове метода <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Кроме того, задает имя файла, в который записываются сообщения.</span><span class="sxs-lookup"><span data-stu-id="f98ec-116">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="f98ec-117">\<clear></span><span class="sxs-lookup"><span data-stu-id="f98ec-117">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="f98ec-118">Очищает коллекцию `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-118">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="f98ec-119">\<clear></span><span class="sxs-lookup"><span data-stu-id="f98ec-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="f98ec-120">Очищает коллекцию `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="f98ec-121">\<filter></span><span class="sxs-lookup"><span data-stu-id="f98ec-121">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="f98ec-122">Добавляет фильтр к прослушивателю в коллекции `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-122">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="f98ec-123">\<filter></span><span class="sxs-lookup"><span data-stu-id="f98ec-123">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="f98ec-124">Добавляет фильтр к прослушивателю в коллекции `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-124">Adds a filter to a listener in the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="f98ec-125">\<filter></span><span class="sxs-lookup"><span data-stu-id="f98ec-125">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="f98ec-126">Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="f98ec-126">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="f98ec-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="f98ec-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="f98ec-128">Определяет прослушиватели в коллекции `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-128">Specifies listeners for the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="f98ec-129">\<listeners></span><span class="sxs-lookup"><span data-stu-id="f98ec-129">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="f98ec-130">Определяет прослушиватели в коллекции `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-130">Specifies listeners for the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="f98ec-131">\<performanceCounters></span><span class="sxs-lookup"><span data-stu-id="f98ec-131">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="f98ec-132">Задает размер глобальной памяти, совместно используемой счетчиками производительности.</span><span class="sxs-lookup"><span data-stu-id="f98ec-132">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="f98ec-133">\<remove></span><span class="sxs-lookup"><span data-stu-id="f98ec-133">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="f98ec-134">Удаляет прослушиватель из коллекции `Listeners` для трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-134">Removes a listener from the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="f98ec-135">\<remove></span><span class="sxs-lookup"><span data-stu-id="f98ec-135">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="f98ec-136">Удаляет прослушиватель из коллекции `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-136">Removes a listener from the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="f98ec-137">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="f98ec-137">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="f98ec-138">Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-138">Contains listeners that any source or trace element can reference.</span></span>|  
+|[<span data-ttu-id="f98ec-139">\<sources></span><span class="sxs-lookup"><span data-stu-id="f98ec-139">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="f98ec-140">Содержит источники трассировки, которые инициируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="f98ec-141">\<source></span><span class="sxs-lookup"><span data-stu-id="f98ec-141">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="f98ec-142">Содержит источник трассировки, который инициирует сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-142">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="f98ec-143">\<switches></span><span class="sxs-lookup"><span data-stu-id="f98ec-143">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="f98ec-144">Содержит ключи трассировки и уровень, на котором они установлены.</span><span class="sxs-lookup"><span data-stu-id="f98ec-144">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="f98ec-145">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="f98ec-145">\<system.diagnostics></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|<span data-ttu-id="f98ec-146">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-146">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="f98ec-147">\<trace></span><span class="sxs-lookup"><span data-stu-id="f98ec-147">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="f98ec-148">Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="f98ec-148">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.Debug>   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="f98ec-149">См. также</span><span class="sxs-lookup"><span data-stu-id="f98ec-149">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="f98ec-150">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="f98ec-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

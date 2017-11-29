@@ -1,58 +1,61 @@
 ---
-title: "Агрегатные запросы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Статистические запросы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: cb1f26ec1fb8e5344946938206bb2418eeb6cd2d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Агрегатные запросы
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает агрегатные операторы `Average`, `Count`, `Max`, `Min` и `Sum`.  Обратите внимание на следующие характеристики агрегатных операторов в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+# <a name="aggregate-queries"></a><span data-ttu-id="a4aaa-102">Статистические запросы</span><span class="sxs-lookup"><span data-stu-id="a4aaa-102">Aggregate Queries</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="a4aaa-103"> поддерживает агрегатные операторы `Average`, `Count`, `Max`, `Min` и `Sum`.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-103"> supports the `Average`, `Count`, `Max`, `Min`, and `Sum` aggregate operators.</span></span> <span data-ttu-id="a4aaa-104">Обратите внимание на следующие характеристики агрегатных операторов в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4aaa-104">Note the following characteristics of aggregate operators in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:</span></span>  
   
--   Агрегатные запросы выполняются немедленно.  
+-   <span data-ttu-id="a4aaa-105">Агрегатные запросы выполняются немедленно.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-105">Aggregate queries are executed immediately.</span></span>  
   
-     Для получения дополнительной информации см. [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md).  
+     <span data-ttu-id="a4aaa-106">Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="a4aaa-106">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
--   Агрегатные запросы обычно возвращают число, а не коллекцию.  
+-   <span data-ttu-id="a4aaa-107">Агрегатные запросы обычно возвращают число, а не коллекцию.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-107">Aggregate queries typically return a number instead of a collection.</span></span>  
   
-     Для получения дополнительной информации см. [Aggregation Operations](../../../../../../ocs/visual-basic/programming-guide/concepts/linq/aggregation-operations.md).  
+     <span data-ttu-id="a4aaa-108">Дополнительные сведения см. в разделе [операции статистической обработки](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).</span><span class="sxs-lookup"><span data-stu-id="a4aaa-108">For more information, see [Aggregation Operations](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).</span></span>  
   
--   В анонимном типе вызвать агрегаты нельзя.  
+-   <span data-ttu-id="a4aaa-109">В анонимном типе вызвать агрегаты нельзя.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-109">You cannot call aggregates against anonymous types.</span></span>  
   
- В следующих разделах используются примеры из учебной базы данных Northwind.  Для получения дополнительной информации см. [Загрузка образцов баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ <span data-ttu-id="a4aaa-110">В следующих разделах используются примеры из учебной базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-110">The examples in the following topics derive from the Northwind sample database.</span></span> <span data-ttu-id="a4aaa-111">Дополнительные сведения см. в разделе [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="a4aaa-111">For more information, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span>  
   
-## В этом подразделе  
- [Возврат среднего значения из числовой последовательности ](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
- Демонстрируется использование оператора <xref:System.Linq.Enumerable.Average%2A>.  
+## <a name="in-this-section"></a><span data-ttu-id="a4aaa-112">Содержание</span><span class="sxs-lookup"><span data-stu-id="a4aaa-112">In This Section</span></span>  
+ [<span data-ttu-id="a4aaa-113">Возврат среднего значения из числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="a4aaa-113">Return the Average Value From a Numeric Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  
+ <span data-ttu-id="a4aaa-114">Демонстрируется использование оператора <xref:System.Linq.Enumerable.Average%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-114">Demonstrates how to use the <xref:System.Linq.Enumerable.Average%2A> operator.</span></span>  
   
- [Подсчет числа элементов в последовательности](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
- Демонстрируется использование оператора <xref:System.Linq.Enumerable.Count%2A>.  
+ [<span data-ttu-id="a4aaa-115">Число элементов последовательности</span><span class="sxs-lookup"><span data-stu-id="a4aaa-115">Count the Number of Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/count-the-number-of-elements-in-a-sequence.md)  
+ <span data-ttu-id="a4aaa-116">Демонстрируется использование оператора <xref:System.Linq.Enumerable.Count%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-116">Demonstrates how to use the <xref:System.Linq.Enumerable.Count%2A> operator.</span></span>  
   
- [Нахождение наибольшего значения в числовой последовательности](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
- Демонстрируется использование оператора <xref:System.Linq.Enumerable.Max%2A>.  
+ [<span data-ttu-id="a4aaa-117">Нахождение максимального значения в числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="a4aaa-117">Find the Maximum Value in a Numeric Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/find-the-maximum-value-in-a-numeric-sequence.md)  
+ <span data-ttu-id="a4aaa-118">Демонстрируется использование оператора <xref:System.Linq.Enumerable.Max%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-118">Demonstrates how to use the <xref:System.Linq.Enumerable.Max%2A> operator.</span></span>  
   
- [Нахождение наименьшего значения в числовой последовательности](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
- Демонстрируется использование оператора <xref:System.Linq.Enumerable.Min%2A>.  
+ [<span data-ttu-id="a4aaa-119">Найти минимальное значение в числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="a4aaa-119">Find the Minimum Value in a Numeric Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/find-the-minimum-value-in-a-numeric-sequence.md)  
+ <span data-ttu-id="a4aaa-120">Демонстрируется использование оператора <xref:System.Linq.Enumerable.Min%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-120">Demonstrates how to use the <xref:System.Linq.Enumerable.Min%2A> operator.</span></span>  
   
- [Вычисление суммы значений числовой последовательности](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
- Демонстрируется использование оператора <xref:System.Linq.Enumerable.Sum%2A>.  
+ [<span data-ttu-id="a4aaa-121">Вычисление суммы значений в числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="a4aaa-121">Compute the Sum of Values in a Numeric Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)  
+ <span data-ttu-id="a4aaa-122">Демонстрируется использование оператора <xref:System.Linq.Enumerable.Sum%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-122">Demonstrates how to use the <xref:System.Linq.Enumerable.Sum%2A> operator.</span></span>  
   
-## Связанные подразделы  
- [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- Содержит ссылки на запросы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в Visual Basic и C\#.  
+## <a name="related-sections"></a><span data-ttu-id="a4aaa-123">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a4aaa-123">Related Sections</span></span>  
+ [<span data-ttu-id="a4aaa-124">Примеры запросов</span><span class="sxs-lookup"><span data-stu-id="a4aaa-124">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ <span data-ttu-id="a4aaa-125">Содержит ссылки на запросы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в Visual Basic и C#.</span><span class="sxs-lookup"><span data-stu-id="a4aaa-125">Provides links to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries in Visual Basic and C#.</span></span>  
   
- [Основные понятия о запросах](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- Содержит ссылки на разделы, в которых объясняются принципы разработки запросов [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ [<span data-ttu-id="a4aaa-126">Основные принципы запросов</span><span class="sxs-lookup"><span data-stu-id="a4aaa-126">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ <span data-ttu-id="a4aaa-127">Содержит ссылки на разделы, в которых объясняются принципы разработки запросов [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4aaa-127">Provides links to topics that explain concepts for designing [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md)  
- Содержит описание принципов работы запросов в [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].
+ [<span data-ttu-id="a4aaa-128">Введение в запросы LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="a4aaa-128">Introduction to LINQ Queries (C#)</span></span>](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ <span data-ttu-id="a4aaa-129">Содержит описание принципов работы запросов в [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a4aaa-129">Explains how queries work in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].</span></span>

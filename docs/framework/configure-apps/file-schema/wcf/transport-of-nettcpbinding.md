@@ -1,34 +1,43 @@
 ---
-title: "&lt;transport&gt; для &lt;netTcpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;transport&gt; для &lt;netTcpBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: adec2ce082f063f5d3f2cff2c1c428a770aeb76d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transport&gt; для &lt;netTcpBinding&gt;
-Определяет тип требований безопасности на уровне сообщений для конечной точки, настроенной с [\<netTcpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+# <a name="lttransportgt-of-ltnettcpbindinggt"></a><span data-ttu-id="d81aa-102">&lt;transport&gt; для &lt;netTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d81aa-102">&lt;transport&gt; of &lt;netTcpBinding&gt;</span></span>
+<span data-ttu-id="d81aa-103">Определяет тип требований безопасности уровня сообщений для конечной точки, настроенной с [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d81aa-103">Defines the type of message-level security requirements for an endpoint configured with the [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="d81aa-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d81aa-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d81aa-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="d81aa-105">\<bindings></span></span>  
+<span data-ttu-id="d81aa-106">\<netTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="d81aa-106">\<netTcpBinding></span></span>  
+<span data-ttu-id="d81aa-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="d81aa-107">\<binding></span></span>  
+<span data-ttu-id="d81aa-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="d81aa-108">\<security></span></span>  
+<span data-ttu-id="d81aa-109">\<Транспорт ></span><span class="sxs-lookup"><span data-stu-id="d81aa-109">\<transport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="d81aa-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d81aa-110">Syntax</span></span>  
+  
+```xml  
 <netTcpBinding>  
     <binding>  
         <security  
          mode="None|Transport|Message|TransportWithMessageCredential">  
             <transport clientCredentialType="None|Windows|Certificate"  
-             protectionLevel="None|Sign|EncryptAndSign"  
-             sslProtocols="Ssl3|Tls|Tls11|Tls12">  
+             protectionLevel="None|Sign|EncryptAndSign"             sslProtocols="Tls|Tls11|Tls12">  
                 <extendedProtectionPolicy  
                      policyEnforcement="Never|WhenSupported|Always"  
                      protectionScenario="TransportSelected|TrustedProxy">  
@@ -40,53 +49,53 @@ caps.handback.revision: 16
 </netTcpBinding>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описываются атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d81aa-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="d81aa-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="d81aa-112">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="d81aa-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="d81aa-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="d81aa-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|clientCredentialType|Необязательно.  Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.<br /><br /> -   Значение по умолчанию — `Windows`.<br />-   Это атрибут типа <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Необязательно.  Определяет безопасность на уровне транспорта TCP.  Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче.  Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.<br /><br /> Значение по умолчанию — `EncryptAndSign`.|  
-|sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются.  Значение по умолчанию — Ssl3&#124;Tls&#124;Tls11&#124;Tls12.|  
-|policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtectionPolicy>.<br /><br /> 1.  Never \- политика никогда не применяется \(расширенная защита отключена\).<br />2.  WhenSupported \- политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always \- политика применяется всегда.  Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
+|<span data-ttu-id="d81aa-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="d81aa-114">Attribute</span></span>|<span data-ttu-id="d81aa-115">Описание</span><span class="sxs-lookup"><span data-stu-id="d81aa-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="d81aa-116">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="d81aa-116">clientCredentialType</span></span>|<span data-ttu-id="d81aa-117">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d81aa-117">Optional.</span></span> <span data-ttu-id="d81aa-118">Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.</span><span class="sxs-lookup"><span data-stu-id="d81aa-118">Specifies the type of credential to be used when performing client authentication using Transport security.</span></span><br /><br /> <span data-ttu-id="d81aa-119">Значение по умолчанию — `Windows`.</span><span class="sxs-lookup"><span data-stu-id="d81aa-119">-   The default value is `Windows`.</span></span><br /><span data-ttu-id="d81aa-120">-Этот атрибут имеет тип <xref:System.ServiceModel.TcpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="d81aa-120">-   This attribute is of type <xref:System.ServiceModel.TcpClientCredentialType>.</span></span>|  
+|<span data-ttu-id="d81aa-121">protectionLevel</span><span class="sxs-lookup"><span data-stu-id="d81aa-121">protectionLevel</span></span>|<span data-ttu-id="d81aa-122">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="d81aa-122">Optional.</span></span> <span data-ttu-id="d81aa-123">Определяет безопасность на уровне транспорта TCP.</span><span class="sxs-lookup"><span data-stu-id="d81aa-123">Defines security at the level of the TCP transport.</span></span> <span data-ttu-id="d81aa-124">Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче.</span><span class="sxs-lookup"><span data-stu-id="d81aa-124">Signing messages mitigates the risk of a third party tampering with the message while it is being transferred.</span></span> <span data-ttu-id="d81aa-125">Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.</span><span class="sxs-lookup"><span data-stu-id="d81aa-125">Encryption provides data-level privacy during transport.</span></span><br /><br /> <span data-ttu-id="d81aa-126">Значение по умолчанию — `EncryptAndSign`.</span><span class="sxs-lookup"><span data-stu-id="d81aa-126">The default value is `EncryptAndSign`.</span></span>|  
+|<span data-ttu-id="d81aa-127">sslProtocols</span><span class="sxs-lookup"><span data-stu-id="d81aa-127">sslProtocols</span></span>|<span data-ttu-id="d81aa-128">Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="d81aa-128">A SslProtocols enum flag value that specifies which SslProtocols are supported.</span></span> <span data-ttu-id="d81aa-129">Значение по умолчанию — Tls &#124; Tls11 &#124; Tls12.</span><span class="sxs-lookup"><span data-stu-id="d81aa-129">The default is Tls&#124;Tls11&#124;Tls12.</span></span>|  
+|<span data-ttu-id="d81aa-130">policyEnforcement</span><span class="sxs-lookup"><span data-stu-id="d81aa-130">policyEnforcement</span></span>|<span data-ttu-id="d81aa-131">Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.</span><span class="sxs-lookup"><span data-stu-id="d81aa-131">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="d81aa-132">1.  Never - политика никогда не применяется (расширенная защита отключена).</span><span class="sxs-lookup"><span data-stu-id="d81aa-132">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="d81aa-133">2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.</span><span class="sxs-lookup"><span data-stu-id="d81aa-133">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="d81aa-134">3.  Always - политика применяется всегда.</span><span class="sxs-lookup"><span data-stu-id="d81aa-134">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="d81aa-135">Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.</span><span class="sxs-lookup"><span data-stu-id="d81aa-135">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
   
-## Атрибут clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="d81aa-136">Атрибут clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="d81aa-136">clientCredentialType Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|Нет|Анонимный клиент.  Это требует сертификата для службы.|  
-|Windows|Задает проверку подлинности Windows для клиента с использованием согласования SP \(согласование Kerberos\).|  
-|Сертификат|Проверка подлинности клиента выполняется с использованием сертификата.  Это требует согласования SSL и сертификата для службы.|  
+|<span data-ttu-id="d81aa-137">Значение</span><span class="sxs-lookup"><span data-stu-id="d81aa-137">Value</span></span>|<span data-ttu-id="d81aa-138">Описание</span><span class="sxs-lookup"><span data-stu-id="d81aa-138">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="d81aa-139">Нет</span><span class="sxs-lookup"><span data-stu-id="d81aa-139">None</span></span>|<span data-ttu-id="d81aa-140">Анонимный клиент.</span><span class="sxs-lookup"><span data-stu-id="d81aa-140">The client is anonymous.</span></span> <span data-ttu-id="d81aa-141">Это требует сертификата для службы.</span><span class="sxs-lookup"><span data-stu-id="d81aa-141">This requires a certificate for the service.</span></span>|  
+|<span data-ttu-id="d81aa-142">Windows</span><span class="sxs-lookup"><span data-stu-id="d81aa-142">Windows</span></span>|<span data-ttu-id="d81aa-143">Задает проверку подлинности Windows для клиента с использованием согласования SP (согласование Kerberos).</span><span class="sxs-lookup"><span data-stu-id="d81aa-143">Specifies Windows authentication of the client using SP Negotiation (Kerberos negotiation).</span></span>|  
+|<span data-ttu-id="d81aa-144">Сертификат</span><span class="sxs-lookup"><span data-stu-id="d81aa-144">Certificate</span></span>|<span data-ttu-id="d81aa-145">Проверка подлинности клиента выполняется с использованием сертификата.</span><span class="sxs-lookup"><span data-stu-id="d81aa-145">The client is authenticated using a certificate.</span></span> <span data-ttu-id="d81aa-146">Это требует согласования SSL и сертификата для службы.</span><span class="sxs-lookup"><span data-stu-id="d81aa-146">This uses SSL Negotiation and requires a certificate for the service.</span></span>|  
   
-## Атрибут protectionLevel  
+## <a name="protectionlevel-attribute"></a><span data-ttu-id="d81aa-147">Атрибут protectionLevel</span><span class="sxs-lookup"><span data-stu-id="d81aa-147">protectionLevel Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|Нет|Нет защиты.|  
-|Sign|Сообщения подписываются.|  
-|EncryptAndSign|-   Сообщения шифруются и подписываются.|  
+|<span data-ttu-id="d81aa-148">Значение</span><span class="sxs-lookup"><span data-stu-id="d81aa-148">Value</span></span>|<span data-ttu-id="d81aa-149">Описание</span><span class="sxs-lookup"><span data-stu-id="d81aa-149">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="d81aa-150">Нет</span><span class="sxs-lookup"><span data-stu-id="d81aa-150">None</span></span>|<span data-ttu-id="d81aa-151">Нет защиты.</span><span class="sxs-lookup"><span data-stu-id="d81aa-151">No protection.</span></span>|  
+|<span data-ttu-id="d81aa-152">Sign</span><span class="sxs-lookup"><span data-stu-id="d81aa-152">Sign</span></span>|<span data-ttu-id="d81aa-153">Сообщения подписываются.</span><span class="sxs-lookup"><span data-stu-id="d81aa-153">Messages are signed.</span></span>|  
+|<span data-ttu-id="d81aa-154">EncryptAndSign</span><span class="sxs-lookup"><span data-stu-id="d81aa-154">EncryptAndSign</span></span>|<span data-ttu-id="d81aa-155">-Сообщения шифруются и подписываются.</span><span class="sxs-lookup"><span data-stu-id="d81aa-155">-   Messages are encrypted and signed.</span></span>|  
   
-### Дочерние элементы  
- Нет  
+### <a name="child-elements"></a><span data-ttu-id="d81aa-156">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="d81aa-156">Child Elements</span></span>  
+ <span data-ttu-id="d81aa-157">Нет</span><span class="sxs-lookup"><span data-stu-id="d81aa-157">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="d81aa-158">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="d81aa-158">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<безопасность\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Задает возможности безопасности [\<netTcpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|<span data-ttu-id="d81aa-159">Элемент</span><span class="sxs-lookup"><span data-stu-id="d81aa-159">Element</span></span>|<span data-ttu-id="d81aa-160">Описание</span><span class="sxs-lookup"><span data-stu-id="d81aa-160">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="d81aa-161">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="d81aa-161">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|<span data-ttu-id="d81aa-162">Задает возможности безопасности [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="d81aa-162">Specifies the security capabilities of the [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>|  
   
-## Заметки  
- Безопасность транспорта используется для обеспечения целостности и конфиденциальности сообщений SOAP и для взаимной проверки подлинности.  Если этот режим безопасности выбран для какой\-либо привязки, стек каналов настраивается с использованием безопасного транспорта, а сообщения SOAP защищаются с использованием безопасности транспорта, например Windows \(Negotiate\) или SSL по TCP.  
+## <a name="remarks"></a><span data-ttu-id="d81aa-163">Примечания</span><span class="sxs-lookup"><span data-stu-id="d81aa-163">Remarks</span></span>  
+ <span data-ttu-id="d81aa-164">Безопасность транспорта используется для обеспечения целостности и конфиденциальности сообщений SOAP и для взаимной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="d81aa-164">Use Transport security for integrity and confidentiality of the SOAP message and for mutual authentication.</span></span> <span data-ttu-id="d81aa-165">Если этот режим безопасности выбран для какой-либо привязки, стек каналов настраивается с использованием безопасного транспорта, а сообщения SOAP защищаются с использованием безопасности транспорта, например Windows (Negotiate) или SSL по TCP.</span><span class="sxs-lookup"><span data-stu-id="d81aa-165">If this security mode is selected on a binding, the channel stack is configured using a secure transport and the SOAP messages are secured using transport security such as Windows (Negotiate) or SSL over TCP.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.TcpTransportSecurity>   
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.NetTcpTransportSecurityElement>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="d81aa-166">См. также</span><span class="sxs-lookup"><span data-stu-id="d81aa-166">See Also</span></span>  
+ <xref:System.ServiceModel.TcpTransportSecurity>  
+ <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
+ [<span data-ttu-id="d81aa-167">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="d81aa-167">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="d81aa-168">Привязки</span><span class="sxs-lookup"><span data-stu-id="d81aa-168">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="d81aa-169">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="d81aa-169">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="d81aa-170">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="d81aa-170">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="d81aa-171">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="d81aa-171">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

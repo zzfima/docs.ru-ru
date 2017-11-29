@@ -5,73 +5,66 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - platform invoke, marshaling data
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="marshaling-data-with-platform-invoke"></a>Маршалинг данных при вызове неуправляемого кода
-Для вызова функций, экспортированных из неуправляемой библиотеки, приложению .NET Framework требуется прототип функции в управляемом коде, представляющий неуправляемую функцию. Чтобы создать прототип, который допускает вызов неуправляемого кода для правильного маршалинга данных, необходимо выполнить указанные ниже действия.  
+# <a name="marshaling-data-with-platform-invoke"></a><span data-ttu-id="01fca-102">Маршалинг данных при вызове неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="01fca-102">Marshaling Data with Platform Invoke</span></span>
+<span data-ttu-id="01fca-103">Для вызова функций, экспортированных из неуправляемой библиотеки, приложению .NET Framework требуется прототип функции в управляемом коде, представляющий неуправляемую функцию.</span><span class="sxs-lookup"><span data-stu-id="01fca-103">To call functions exported from an unmanaged library, a .NET Framework application requires a function prototype in managed code that represents the unmanaged function.</span></span> <span data-ttu-id="01fca-104">Чтобы создать прототип, который допускает вызов неуправляемого кода для правильного маршалинга данных, необходимо выполнить указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="01fca-104">To create a prototype that enables platform invoke to marshal data correctly, you must do the following:</span></span>  
   
--   Примените атрибут <xref:System.Runtime.InteropServices.DllImportAttribute> к статической функции или методу в управляемом коде.  
+-   <span data-ttu-id="01fca-105">Примените атрибут <xref:System.Runtime.InteropServices.DllImportAttribute> к статической функции или методу в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="01fca-105">Apply the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute to the static function or method in managed code.</span></span>  
   
--   Замените неуправляемые типы данных на управляемые.  
+-   <span data-ttu-id="01fca-106">Замените неуправляемые типы данных на управляемые.</span><span class="sxs-lookup"><span data-stu-id="01fca-106">Substitute managed data types for unmanaged data types.</span></span>  
   
- Чтобы создать эквивалентный управляемый прототип путем применения атрибута с необязательными полями и замены неуправляемых типов данных на управляемые, можно использовать документацию, предоставляемую с неуправляемой функцией. Инструкции по применению атрибута **DllImportAttribute** см. в разделе [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).  
+ <span data-ttu-id="01fca-107">Чтобы создать эквивалентный управляемый прототип путем применения атрибута с необязательными полями и замены неуправляемых типов данных на управляемые, можно использовать документацию, предоставляемую с неуправляемой функцией.</span><span class="sxs-lookup"><span data-stu-id="01fca-107">You can use the documentation supplied with an unmanaged function to construct an equivalent managed prototype by applying the attribute with its optional fields and substituting managed data types for unmanaged types.</span></span> <span data-ttu-id="01fca-108">Инструкции по применению атрибута **DllImportAttribute** см. в разделе [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).</span><span class="sxs-lookup"><span data-stu-id="01fca-108">For instructions about how to apply the **DllImportAttribute**, see [Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).</span></span>  
   
- В этом разделе содержатся примеры, демонстрирующие способы создания прототипов управляемых функций для передачи аргументов и получения значений от функций, экспортируемых из неуправляемых библиотек. В примерах также демонстрируется использование атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute> и класса <xref:System.Runtime.InteropServices.Marshal> для явного маршалинга данных.  
+ <span data-ttu-id="01fca-109">В этом разделе содержатся примеры, демонстрирующие способы создания прототипов управляемых функций для передачи аргументов и получения значений от функций, экспортируемых из неуправляемых библиотек.</span><span class="sxs-lookup"><span data-stu-id="01fca-109">This section provides samples that demonstrate how to create managed function prototypes for passing arguments to and receiving return values from functions exported by unmanaged libraries.</span></span> <span data-ttu-id="01fca-110">В примерах также демонстрируется использование атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute> и класса <xref:System.Runtime.InteropServices.Marshal> для явного маршалинга данных.</span><span class="sxs-lookup"><span data-stu-id="01fca-110">The samples also demonstrate when to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute and the <xref:System.Runtime.InteropServices.Marshal> class to explicitly marshal data.</span></span>  
   
-## <a name="platform-invoke-data-types"></a>Типы данных в вызове неуправляемого кода  
- Ниже перечислены типы данных, используемые в функциях Win32 API (перечислены в файле Wtypes.h) и в функциях в стиле C. Многие неуправляемые библиотеки содержат функции, передающие эти типы данных в качестве параметров и возвращаемых значений. В третьем столбце представлены соответствующие встроенные типы значений .NET Framework или классы, используемые в управляемом коде. В некоторых случаях типы, перечисленные в таблице, можно заменить на типы того же размера.  
+## <a name="platform-invoke-data-types"></a><span data-ttu-id="01fca-111">Типы данных в вызове неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="01fca-111">Platform invoke data types</span></span>  
+ <span data-ttu-id="01fca-112">Ниже перечислены типы данных, используемые в функциях Win32 API (перечислены в файле Wtypes.h) и в функциях в стиле C.</span><span class="sxs-lookup"><span data-stu-id="01fca-112">The following table lists data types used in the Win32 API (listed in Wtypes.h) and C-style functions.</span></span> <span data-ttu-id="01fca-113">Многие неуправляемые библиотеки содержат функции, передающие эти типы данных в качестве параметров и возвращаемых значений.</span><span class="sxs-lookup"><span data-stu-id="01fca-113">Many unmanaged libraries contain functions that pass these data types as parameters and return values.</span></span> <span data-ttu-id="01fca-114">В третьем столбце представлены соответствующие встроенные типы значений .NET Framework или классы, используемые в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="01fca-114">The third column lists the corresponding .NET Framework built-in value type or class that you use in managed code.</span></span> <span data-ttu-id="01fca-115">В некоторых случаях типы, перечисленные в таблице, можно заменить на типы того же размера.</span><span class="sxs-lookup"><span data-stu-id="01fca-115">In some cases, you can substitute a type of the same size for the type listed in the table.</span></span>  
   
-|Неуправляемый тип в Wtypes.h|Неуправляемый тип языка C|Имя управляемого класса|Описание|  
+|<span data-ttu-id="01fca-116">Неуправляемый тип в Wtypes.h</span><span class="sxs-lookup"><span data-stu-id="01fca-116">Unmanaged type in Wtypes.h</span></span>|<span data-ttu-id="01fca-117">Неуправляемый тип языка C</span><span class="sxs-lookup"><span data-stu-id="01fca-117">Unmanaged C language type</span></span>|<span data-ttu-id="01fca-118">Имя управляемого класса</span><span class="sxs-lookup"><span data-stu-id="01fca-118">Managed class name</span></span>|<span data-ttu-id="01fca-119">Описание</span><span class="sxs-lookup"><span data-stu-id="01fca-119">Description</span></span>|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8 бит|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16 бит|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16 бит|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32 бита|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32 бита|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32 бита|  
-|**BOOL**|**long**|<xref:System.Byte>|32 бита|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 бита|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32 бита|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|В кодировке ANSI.|  
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=fullName>|В кодировке Юникод.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> или <xref:System.Text.StringBuilder?displayProperty=fullName>|В кодировке ANSI.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> или <xref:System.Text.StringBuilder?displayProperty=fullName>|В кодировке ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=fullName> или <xref:System.Text.StringBuilder?displayProperty=fullName>|В кодировке Юникод.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=fullName> или <xref:System.Text.StringBuilder?displayProperty=fullName>|В кодировке Юникод.|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32 бита|  
-|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=fullName>|64 бита|  
+|<span data-ttu-id="01fca-120">**HANDLE**</span><span class="sxs-lookup"><span data-stu-id="01fca-120">**HANDLE**</span></span>|<span data-ttu-id="01fca-121">**void\***</span><span class="sxs-lookup"><span data-stu-id="01fca-121">**void\***</span></span>|<xref:System.IntPtr?displayProperty=nameWithType>|<span data-ttu-id="01fca-122">32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.</span><span class="sxs-lookup"><span data-stu-id="01fca-122">32 bits on 32-bit Windows operating systems, 64 bits on 64-bit Windows operating systems.</span></span>|  
+|<span data-ttu-id="01fca-123">**BYTE**</span><span class="sxs-lookup"><span data-stu-id="01fca-123">**BYTE**</span></span>|<span data-ttu-id="01fca-124">**unsigned char**</span><span class="sxs-lookup"><span data-stu-id="01fca-124">**unsigned char**</span></span>|<xref:System.Byte?displayProperty=nameWithType>|<span data-ttu-id="01fca-125">8 бит</span><span class="sxs-lookup"><span data-stu-id="01fca-125">8 bits</span></span>|  
+|<span data-ttu-id="01fca-126">**SHORT**</span><span class="sxs-lookup"><span data-stu-id="01fca-126">**SHORT**</span></span>|<span data-ttu-id="01fca-127">**short**</span><span class="sxs-lookup"><span data-stu-id="01fca-127">**short**</span></span>|<xref:System.Int16?displayProperty=nameWithType>|<span data-ttu-id="01fca-128">16 бит</span><span class="sxs-lookup"><span data-stu-id="01fca-128">16 bits</span></span>|  
+|<span data-ttu-id="01fca-129">**WORD**</span><span class="sxs-lookup"><span data-stu-id="01fca-129">**WORD**</span></span>|<span data-ttu-id="01fca-130">**unsigned short**</span><span class="sxs-lookup"><span data-stu-id="01fca-130">**unsigned short**</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|<span data-ttu-id="01fca-131">16 бит</span><span class="sxs-lookup"><span data-stu-id="01fca-131">16 bits</span></span>|  
+|<span data-ttu-id="01fca-132">**INT**</span><span class="sxs-lookup"><span data-stu-id="01fca-132">**INT**</span></span>|<span data-ttu-id="01fca-133">**int**</span><span class="sxs-lookup"><span data-stu-id="01fca-133">**int**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="01fca-134">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-134">32 bits</span></span>|  
+|<span data-ttu-id="01fca-135">**UINT**</span><span class="sxs-lookup"><span data-stu-id="01fca-135">**UINT**</span></span>|<span data-ttu-id="01fca-136">**unsigned int**</span><span class="sxs-lookup"><span data-stu-id="01fca-136">**unsigned int**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="01fca-137">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-137">32 bits</span></span>|  
+|<span data-ttu-id="01fca-138">**LONG**</span><span class="sxs-lookup"><span data-stu-id="01fca-138">**LONG**</span></span>|<span data-ttu-id="01fca-139">**long**</span><span class="sxs-lookup"><span data-stu-id="01fca-139">**long**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="01fca-140">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-140">32 bits</span></span>|  
+|<span data-ttu-id="01fca-141">**BOOL**</span><span class="sxs-lookup"><span data-stu-id="01fca-141">**BOOL**</span></span>|<span data-ttu-id="01fca-142">**long**</span><span class="sxs-lookup"><span data-stu-id="01fca-142">**long**</span></span>|<xref:System.Byte>|<span data-ttu-id="01fca-143">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-143">32 bits</span></span>|  
+|<span data-ttu-id="01fca-144">**DWORD**</span><span class="sxs-lookup"><span data-stu-id="01fca-144">**DWORD**</span></span>|<span data-ttu-id="01fca-145">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="01fca-145">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="01fca-146">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-146">32 bits</span></span>|  
+|<span data-ttu-id="01fca-147">**ULONG**</span><span class="sxs-lookup"><span data-stu-id="01fca-147">**ULONG**</span></span>|<span data-ttu-id="01fca-148">**unsigned long**</span><span class="sxs-lookup"><span data-stu-id="01fca-148">**unsigned long**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="01fca-149">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-149">32 bits</span></span>|  
+|<span data-ttu-id="01fca-150">**CHAR**</span><span class="sxs-lookup"><span data-stu-id="01fca-150">**CHAR**</span></span>|<span data-ttu-id="01fca-151">**char**</span><span class="sxs-lookup"><span data-stu-id="01fca-151">**char**</span></span>|<xref:System.Char?displayProperty=nameWithType>|<span data-ttu-id="01fca-152">В кодировке ANSI.</span><span class="sxs-lookup"><span data-stu-id="01fca-152">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="01fca-153">**WCHAR**</span><span class="sxs-lookup"><span data-stu-id="01fca-153">**WCHAR**</span></span>|<span data-ttu-id="01fca-154">**wchar_t**</span><span class="sxs-lookup"><span data-stu-id="01fca-154">**wchar_t**</span></span>|<xref:System.Char?displayProperty=nameWithType>|<span data-ttu-id="01fca-155">В кодировке Юникод.</span><span class="sxs-lookup"><span data-stu-id="01fca-155">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="01fca-156">**LPSTR**</span><span class="sxs-lookup"><span data-stu-id="01fca-156">**LPSTR**</span></span>|<span data-ttu-id="01fca-157">**char\***</span><span class="sxs-lookup"><span data-stu-id="01fca-157">**char\***</span></span>|<span data-ttu-id="01fca-158"><xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="01fca-158"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="01fca-159">В кодировке ANSI.</span><span class="sxs-lookup"><span data-stu-id="01fca-159">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="01fca-160">**LPCSTR**</span><span class="sxs-lookup"><span data-stu-id="01fca-160">**LPCSTR**</span></span>|<span data-ttu-id="01fca-161">**Const char\***</span><span class="sxs-lookup"><span data-stu-id="01fca-161">**Const char\***</span></span>|<span data-ttu-id="01fca-162"><xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="01fca-162"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="01fca-163">В кодировке ANSI.</span><span class="sxs-lookup"><span data-stu-id="01fca-163">Decorate with ANSI.</span></span>|  
+|<span data-ttu-id="01fca-164">**LPWSTR**</span><span class="sxs-lookup"><span data-stu-id="01fca-164">**LPWSTR**</span></span>|<span data-ttu-id="01fca-165">**wchar_t\***</span><span class="sxs-lookup"><span data-stu-id="01fca-165">**wchar_t\***</span></span>|<span data-ttu-id="01fca-166"><xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="01fca-166"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="01fca-167">В кодировке Юникод.</span><span class="sxs-lookup"><span data-stu-id="01fca-167">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="01fca-168">**LPCWSTR**</span><span class="sxs-lookup"><span data-stu-id="01fca-168">**LPCWSTR**</span></span>|<span data-ttu-id="01fca-169">**Const wchar_t\***</span><span class="sxs-lookup"><span data-stu-id="01fca-169">**Const wchar_t\***</span></span>|<span data-ttu-id="01fca-170"><xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="01fca-170"><xref:System.String?displayProperty=nameWithType> or <xref:System.Text.StringBuilder?displayProperty=nameWithType></span></span>|<span data-ttu-id="01fca-171">В кодировке Юникод.</span><span class="sxs-lookup"><span data-stu-id="01fca-171">Decorate with Unicode.</span></span>|  
+|<span data-ttu-id="01fca-172">**FLOAT**</span><span class="sxs-lookup"><span data-stu-id="01fca-172">**FLOAT**</span></span>|<span data-ttu-id="01fca-173">**Float**</span><span class="sxs-lookup"><span data-stu-id="01fca-173">**Float**</span></span>|<xref:System.Single?displayProperty=nameWithType>|<span data-ttu-id="01fca-174">32 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-174">32 bits</span></span>|  
+|<span data-ttu-id="01fca-175">**DOUBLE**</span><span class="sxs-lookup"><span data-stu-id="01fca-175">**DOUBLE**</span></span>|<span data-ttu-id="01fca-176">**Double**</span><span class="sxs-lookup"><span data-stu-id="01fca-176">**Double**</span></span>|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="01fca-177">64 бита</span><span class="sxs-lookup"><span data-stu-id="01fca-177">64 bits</span></span>|  
   
- Соответствующие типы в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# и C++ см. в разделе [Общие сведения о библиотеке классов .NET Framework](../../../docs/standard/class-library-overview.md).  
+ <span data-ttu-id="01fca-178">Соответствующие типы в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# и C++ см. в разделе [Общие сведения о библиотеке классов .NET Framework](../../../docs/standard/class-library-overview.md).</span><span class="sxs-lookup"><span data-stu-id="01fca-178">For corresponding types in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#, and C++, see the [Introduction to the .NET Framework Class Library](../../../docs/standard/class-library-overview.md).</span></span>  
   
-## <a name="pinvokelibdll"></a>PinvokeLib.dll  
- В примере кода ниже определяются функции библиотеки, предоставляемые Pinvoke.dll. Многие из примеров, описанных в этом разделе, вызывают эту библиотеку.  
+## <a name="pinvokelibdll"></a><span data-ttu-id="01fca-179">PinvokeLib.dll</span><span class="sxs-lookup"><span data-stu-id="01fca-179">PinvokeLib.dll</span></span>  
+ <span data-ttu-id="01fca-180">В примере кода ниже определяются функции библиотеки, предоставляемые Pinvoke.dll.</span><span class="sxs-lookup"><span data-stu-id="01fca-180">The following code defines the library functions provided by Pinvoke.dll.</span></span> <span data-ttu-id="01fca-181">Многие из примеров, описанных в этом разделе, вызывают эту библиотеку.</span><span class="sxs-lookup"><span data-stu-id="01fca-181">Many samples described in this section call this library.</span></span>  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a><span data-ttu-id="01fca-182">Пример</span><span class="sxs-lookup"><span data-stu-id="01fca-182">Example</span></span>  
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
-

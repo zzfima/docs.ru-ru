@@ -1,4 +1,4 @@
-# [Ковариация и контрвариантность](covariance-and-contravariance.md)
+# [Ковариация и контрвариантность](index.md)
 ## [Расхождение в универсальных интерфейсах](variance-in-generic-interfaces.md)
 ### [Создание вариативных универсальных интерфейсов](creating-variant-generic-interfaces.md)
 ### [Использование расхождения в интерфейсах для универсальных коллекций](using-variance-in-interfaces-for-generic-collections.md)

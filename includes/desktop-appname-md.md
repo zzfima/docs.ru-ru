@@ -1,1 +1,1 @@
-для настольных систем
+<span data-ttu-id="7a850-101">для настольных систем</span><span class="sxs-lookup"><span data-stu-id="7a850-101">desktop</span></span>

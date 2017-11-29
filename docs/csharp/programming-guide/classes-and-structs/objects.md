@@ -1,94 +1,75 @@
 ---
 title: "Объекты (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f8a8e283b42b27a40780068be42c03fc5047a511
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="objects-c-programming-guide"></a>Объекты (Руководство по программированию на C#)
-Определение класса или структуры подобно чертежу, на котором указаны действия, выполняемые типом. В сущности, объект является блоком памяти, выделенной и настроенной в соответствии с чертежом. Программа может создать множество объектов одного класса. Объекты также называют экземплярами. Они могут храниться либо в именованной переменной, либо в массиве или коллекции. Клиентский код — это код, использующий эти переменные для вызова методов и доступа к открытым свойствам объекта. В объектно-ориентированном языке, таком как C#, стандартная программа состоит из нескольких динамически взаимодействующих объектов.  
+# <a name="objects-c-programming-guide"></a><span data-ttu-id="033f6-102">Объекты (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="033f6-102">Objects (C# Programming Guide)</span></span>
+<span data-ttu-id="033f6-103">Определение класса или структуры подобно чертежу, на котором указаны действия, выполняемые типом.</span><span class="sxs-lookup"><span data-stu-id="033f6-103">A class or struct definition is like a blueprint that specifies what the type can do.</span></span> <span data-ttu-id="033f6-104">В сущности, объект является блоком памяти, выделенной и настроенной в соответствии с чертежом.</span><span class="sxs-lookup"><span data-stu-id="033f6-104">An object is basically a block of memory that has been allocated and configured according to the blueprint.</span></span> <span data-ttu-id="033f6-105">Программа может создать множество объектов одного класса.</span><span class="sxs-lookup"><span data-stu-id="033f6-105">A program may create many objects of the same class.</span></span> <span data-ttu-id="033f6-106">Объекты также называют экземплярами. Они могут храниться либо в именованной переменной, либо в массиве или коллекции.</span><span class="sxs-lookup"><span data-stu-id="033f6-106">Objects are also called instances, and they can be stored in either a named variable or in an array or collection.</span></span> <span data-ttu-id="033f6-107">Клиентский код — это код, использующий эти переменные для вызова методов и доступа к открытым свойствам объекта.</span><span class="sxs-lookup"><span data-stu-id="033f6-107">Client code is the code that uses these variables to call the methods and access the public properties of the object.</span></span> <span data-ttu-id="033f6-108">В объектно-ориентированном языке, таком как C#, стандартная программа состоит из нескольких динамически взаимодействующих объектов.</span><span class="sxs-lookup"><span data-stu-id="033f6-108">In an object-oriented language such as C#, a typical program consists of multiple objects interacting dynamically.</span></span>  
   
 > [!NOTE]
->  Поведение статических типов отличается от описанного здесь поведения. Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+>  <span data-ttu-id="033f6-109">Поведение статических типов отличается от описанного здесь поведения.</span><span class="sxs-lookup"><span data-stu-id="033f6-109">Static types behave differently than what is described here.</span></span> <span data-ttu-id="033f6-110">Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="033f6-110">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
-## <a name="struct-instances-vs-class-instances"></a>Экземпляры структуры и Экземпляры классов  
- Так как классы являются ссылочными типами, в переменной объекта класса хранится ссылка на адрес объекта в управляемой куче. Если первому объекту назначен второй объект того же типа, обе переменные ссылаются на объект, расположенный по данному адресу. Эта особенность обсуждается более подробно далее в этом разделе.  
+## <a name="struct-instances-vs-class-instances"></a><span data-ttu-id="033f6-111">Экземпляры структуры и Экземпляры классов</span><span class="sxs-lookup"><span data-stu-id="033f6-111">Struct Instances vs. Class Instances</span></span>  
+ <span data-ttu-id="033f6-112">Так как классы являются ссылочными типами, в переменной объекта класса хранится ссылка на адрес объекта в управляемой куче.</span><span class="sxs-lookup"><span data-stu-id="033f6-112">Because classes are reference types, a variable of a class object holds a reference to the address of the object on the managed heap.</span></span> <span data-ttu-id="033f6-113">Если первому объекту назначен второй объект того же типа, обе переменные ссылаются на объект, расположенный по данному адресу.</span><span class="sxs-lookup"><span data-stu-id="033f6-113">If a second object of the same type is assigned to the first object, then both variables refer to the object at that address.</span></span> <span data-ttu-id="033f6-114">Эта особенность обсуждается более подробно далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="033f6-114">This point is discussed in more detail later in this topic.</span></span>  
   
- Экземпляры классов создаются с помощью [оператора new](../../../csharp/language-reference/keywords/new-operator.md). В приведенном ниже примере `Person` является типом, а `person1` и `person 2` — экземплярами или объектами этого типа.  
+ <span data-ttu-id="033f6-115">Экземпляры классов создаются с помощью [оператора new](../../../csharp/language-reference/keywords/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="033f6-115">Instances of classes are created by using the [new operator](../../../csharp/language-reference/keywords/new-operator.md).</span></span> <span data-ttu-id="033f6-116">В приведенном ниже примере `Person` является типом, а `person1` и `person 2` — экземплярами или объектами этого типа.</span><span class="sxs-lookup"><span data-stu-id="033f6-116">In the following example, `Person` is the type and `person1` and `person 2` are instances, or objects, of that type.</span></span>  
   
- [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
- Так как структуры являются типами значений, в переменной объекта структуры хранится копия всего объекта. Экземпляры структур также можно создавать с помощью оператора `new`, однако он не является обязательным, как показано в следующем примере:  
+ <span data-ttu-id="033f6-117">Так как структуры являются типами значений, в переменной объекта структуры хранится копия всего объекта.</span><span class="sxs-lookup"><span data-stu-id="033f6-117">Because structs are value types, a variable of a struct object holds a copy of the entire object.</span></span> <span data-ttu-id="033f6-118">Экземпляры структур также можно создавать с помощью оператора `new`, однако он не является обязательным, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="033f6-118">Instances of structs can also be created by using the `new` operator, but this is not required, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- Память для `p1` и `p2` выделена в стеке потока. Эта память освобождается вместе с типом или методом, в котором она объявляется. Эта одна из причин того, почему структуры копируются при присваивании. Напротив, при выходе всех ссылок на объект из области действия среда CLR автоматически освобождает память (выполняет сборку мусора), выделенную для экземпляра класса. Возможность детерминированного уничтожения объекта класса, имеющаяся в C++, в данном случае отсутствует. Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).  
+ <span data-ttu-id="033f6-119">Память для `p1` и `p2` выделена в стеке потока.</span><span class="sxs-lookup"><span data-stu-id="033f6-119">The memory for both `p1` and `p2` is allocated on the thread stack.</span></span> <span data-ttu-id="033f6-120">Эта память освобождается вместе с типом или методом, в котором она объявляется.</span><span class="sxs-lookup"><span data-stu-id="033f6-120">That memory is reclaimed along with the type or method in which it is declared.</span></span> <span data-ttu-id="033f6-121">Эта одна из причин того, почему структуры копируются при присваивании.</span><span class="sxs-lookup"><span data-stu-id="033f6-121">This is one reason why structs are copied on assignment.</span></span> <span data-ttu-id="033f6-122">Напротив, при выходе всех ссылок на объект из области действия среда CLR автоматически освобождает память (выполняет сборку мусора), выделенную для экземпляра класса.</span><span class="sxs-lookup"><span data-stu-id="033f6-122">By contrast, the memory that is allocated for a class instance is automatically reclaimed (garbage collected) by the common language runtime when all references to the object have gone out of scope.</span></span> <span data-ttu-id="033f6-123">Возможность детерминированного уничтожения объекта класса, имеющаяся в C++, в данном случае отсутствует.</span><span class="sxs-lookup"><span data-stu-id="033f6-123">It is not possible to deterministically destroy a class object like you can in C++.</span></span> <span data-ttu-id="033f6-124">Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="033f6-124">For more information about garbage collection in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], see [Garbage Collection](../../../standard/garbage-collection/index.md).</span></span>  
   
 > [!NOTE]
->  В среде CLR процесс выделения и освобождения памяти в управляемой куче значительно оптимизирован. В большинстве случаев нет существенной разницы в затратах производительности на выделение экземпляра класса в куче и выделение экземпляра структуры в стеке.  
+>  <span data-ttu-id="033f6-125">В среде CLR процесс выделения и освобождения памяти в управляемой куче значительно оптимизирован.</span><span class="sxs-lookup"><span data-stu-id="033f6-125">The allocation and deallocation of memory on the managed heap is highly optimized in the common language runtime.</span></span> <span data-ttu-id="033f6-126">В большинстве случаев нет существенной разницы в затратах производительности на выделение экземпляра класса в куче и выделение экземпляра структуры в стеке.</span><span class="sxs-lookup"><span data-stu-id="033f6-126">In most cases there is no significant difference in the performance cost of allocating a class instance on the heap versus allocating a struct instance on the stack.</span></span>  
   
-## <a name="object-identity-vs-value-equality"></a>Идентификация объектов и равенство значений  
- Сравнивая два объекта на предмет равенства, сначала необходимо определить, нужно ли узнать, представляют ли две переменные один объект в памяти или значения одного или нескольких их полей являются равными. Если вы планируете сравнить значения, следует решить, являются ли объекты экземплярами типов значений (структурами) или ссылочными типами (классами, делегатами, массивами).  
+## <a name="object-identity-vs-value-equality"></a><span data-ttu-id="033f6-127">Идентификация объектов и равенство значений</span><span class="sxs-lookup"><span data-stu-id="033f6-127">Object Identity vs. Value Equality</span></span>  
+ <span data-ttu-id="033f6-128">Сравнивая два объекта на предмет равенства, сначала необходимо определить, нужно ли узнать, представляют ли две переменные один объект в памяти или значения одного или нескольких их полей являются равными.</span><span class="sxs-lookup"><span data-stu-id="033f6-128">When you compare two objects for equality, you must first distinguish whether you want to know whether the two variables represent the same object in memory, or whether the values of one or more of their fields are equivalent.</span></span> <span data-ttu-id="033f6-129">Если вы планируете сравнить значения, следует решить, являются ли объекты экземплярами типов значений (структурами) или ссылочными типами (классами, делегатами, массивами).</span><span class="sxs-lookup"><span data-stu-id="033f6-129">If you are intending to compare values, you must consider whether the objects are instances of value types (structs) or reference types (classes, delegates, arrays).</span></span>  
   
--   Чтобы определить, ссылаются ли два экземпляра класса на одно расположение в памяти (то есть имеют одинаковый *идентификатор*), воспользуйтесь статическим методом <xref:System.Object.Equals%2A>. (<xref:System.Object?displayProperty=fullName> является неявным базовым классом для всех типов значений и ссылочных типов, включая структуры и классы, определенные пользователем.)  
+-   <span data-ttu-id="033f6-130">Чтобы определить, ссылаются ли два экземпляра класса на одно расположение в памяти (то есть имеют одинаковый *идентификатор*), воспользуйтесь статическим методом <xref:System.Object.Equals%2A>.</span><span class="sxs-lookup"><span data-stu-id="033f6-130">To determine whether two class instances refer to the same location in memory (which means that they have the same *identity*), use the static <xref:System.Object.Equals%2A> method.</span></span> <span data-ttu-id="033f6-131">(<xref:System.Object?displayProperty=nameWithType> является неявным базовым классом для всех типов значений и ссылочных типов, включая структуры и классы, определенные пользователем.)</span><span class="sxs-lookup"><span data-stu-id="033f6-131">(<xref:System.Object?displayProperty=nameWithType> is the implicit base class for all value types and reference types, including user-defined structs and classes.)</span></span>  
   
--   Чтобы определить, имеют ли поля экземпляра в двух экземплярах структуры одинаковые значения, воспользуйтесь методом <xref:System.ValueType.Equals%2A?displayProperty=fullName>. Так как все структуры неявно наследуются от <xref:System.ValueType?displayProperty=fullName>, метод можно вызвать непосредственно в объекте, как показано в следующем примере:  
+-   <span data-ttu-id="033f6-132">Чтобы определить, имеют ли поля экземпляра в двух экземплярах структуры одинаковые значения, воспользуйтесь методом <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="033f6-132">To determine whether the instance fields in two struct instances have the same values, use the <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="033f6-133">Так как все структуры неявно наследуются от <xref:System.ValueType?displayProperty=nameWithType>, метод можно вызвать непосредственно в объекте, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="033f6-133">Because all structs implicitly inherit from <xref:System.ValueType?displayProperty=nameWithType>, you call the method directly on your object as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
- В реализации <xref:System.ValueType?displayProperty=fullName> `Equals` используется отражение, так как необходимо определить поля, имеющиеся в любой структуре. При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.  
+ <span data-ttu-id="033f6-134">В реализации <xref:System.ValueType?displayProperty=nameWithType> `Equals` используется отражение, так как необходимо определить поля, имеющиеся в любой структуре.</span><span class="sxs-lookup"><span data-stu-id="033f6-134">The <xref:System.ValueType?displayProperty=nameWithType> implementation of `Equals` uses reflection because it must be able to determine what the fields are in any struct.</span></span> <span data-ttu-id="033f6-135">При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.</span><span class="sxs-lookup"><span data-stu-id="033f6-135">When creating your own structs, override the `Equals` method to provide an efficient equality algorithm that is specific to your type.</span></span>  
   
--   Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-comparison-operator.md). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следует выполнять инструкции из разделов [Практическое руководство. Определение равенства значений для типа ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>.  
+-   <span data-ttu-id="033f6-136">Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-comparison-operator.md).</span><span class="sxs-lookup"><span data-stu-id="033f6-136">To determine whether the values of the fields in two class instances are equal, you might be able to use the <xref:System.Object.Equals%2A> method or the [== operator](../../../csharp/language-reference/operators/equality-comparison-operator.md).</span></span> <span data-ttu-id="033f6-137">Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа.</span><span class="sxs-lookup"><span data-stu-id="033f6-137">However, only use them if the class has overridden or overloaded them to provide a custom definition of what "equality" means for objects of that type.</span></span> <span data-ttu-id="033f6-138">Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>.</span><span class="sxs-lookup"><span data-stu-id="033f6-138">The class might also implement the <xref:System.IEquatable%601> interface or the <xref:System.Collections.Generic.IEqualityComparer%601> interface.</span></span> <span data-ttu-id="033f6-139">Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений.</span><span class="sxs-lookup"><span data-stu-id="033f6-139">Both interfaces provide methods that can be used to test value equality.</span></span> <span data-ttu-id="033f6-140">При создании собственных классов, переопределяющих `Equals`, следует выполнять инструкции из разделов [Практическое руководство. Определение равенства значений для типа ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="033f6-140">When designing your own classes that override `Equals`, make sure to follow the guidelines stated in [How to: Define Value Equality for a Type](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) and <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- Дополнительные сведения:  
+## <a name="related-sections"></a><span data-ttu-id="033f6-141">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="033f6-141">Related Sections</span></span>  
+ <span data-ttu-id="033f6-142">Дополнительные сведения:</span><span class="sxs-lookup"><span data-stu-id="033f6-142">For more information:</span></span>  
   
--   [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+-   [<span data-ttu-id="033f6-143">Классы</span><span class="sxs-lookup"><span data-stu-id="033f6-143">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+-   [<span data-ttu-id="033f6-144">Структуры</span><span class="sxs-lookup"><span data-stu-id="033f6-144">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+-   [<span data-ttu-id="033f6-145">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="033f6-145">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+-   [<span data-ttu-id="033f6-146">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="033f6-146">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [События](../../../csharp/programming-guide/events/index.md)  
+-   [<span data-ttu-id="033f6-147">События</span><span class="sxs-lookup"><span data-stu-id="033f6-147">Events</span></span>](../../../csharp/programming-guide/events/index.md)  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [object](../../../csharp/language-reference/keywords/object.md)   
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
- [Оператор new](../../../csharp/language-reference/keywords/new-operator.md)   
- [Система общих типов CTS](../../../standard/base-types/common-type-system.md)
-
+## <a name="see-also"></a><span data-ttu-id="033f6-148">См. также</span><span class="sxs-lookup"><span data-stu-id="033f6-148">See Also</span></span>  
+ [<span data-ttu-id="033f6-149">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="033f6-149">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="033f6-150">object</span><span class="sxs-lookup"><span data-stu-id="033f6-150">object</span></span>](../../../csharp/language-reference/keywords/object.md)  
+ [<span data-ttu-id="033f6-151">Наследование</span><span class="sxs-lookup"><span data-stu-id="033f6-151">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="033f6-152">class</span><span class="sxs-lookup"><span data-stu-id="033f6-152">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
+ [<span data-ttu-id="033f6-153">struct</span><span class="sxs-lookup"><span data-stu-id="033f6-153">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+ [<span data-ttu-id="033f6-154">Оператор new</span><span class="sxs-lookup"><span data-stu-id="033f6-154">new Operator</span></span>](../../../csharp/language-reference/keywords/new-operator.md)  
+ [<span data-ttu-id="033f6-155">Система общих типов CTS</span><span class="sxs-lookup"><span data-stu-id="033f6-155">Common Type System</span></span>](../../../standard/base-types/common-type-system.md)

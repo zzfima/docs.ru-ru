@@ -1,63 +1,62 @@
 ---
-title: "Кэширование плана запроса (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Кэширование плана запроса (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 814b4451d5e08d5f9df4d370b2127d971f3fdd1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Кэширование плана запроса (Entity SQL)
-При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен.  Если это так, то кэшированный план используется повторно вместо построения нового плана.  Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется.  Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров \(имен и типов\).  Все текстовые сравнения выполняются с учетом регистра.  
+# <a name="query-plan-caching-entity-sql"></a><span data-ttu-id="daabc-102">Кэширование плана запроса (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="daabc-102">Query Plan Caching (Entity SQL)</span></span>
+<span data-ttu-id="daabc-103">При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен.</span><span class="sxs-lookup"><span data-stu-id="daabc-103">Whenever an attempt to execute a query is made, the query pipeline looks up its query plan cache to see whether the exact query is already compiled and available.</span></span> <span data-ttu-id="daabc-104">Если это так, то кэшированный план используется повторно вместо построения нового плана.</span><span class="sxs-lookup"><span data-stu-id="daabc-104">If so, it reuses the cached plan rather than building a new one.</span></span> <span data-ttu-id="daabc-105">Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется.</span><span class="sxs-lookup"><span data-stu-id="daabc-105">If a match is not found in the query plan cache, the query is compiled and cached.</span></span> <span data-ttu-id="daabc-106">Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров (имен и типов).</span><span class="sxs-lookup"><span data-stu-id="daabc-106">A query is identified by its [!INCLUDE[esql](../../../../../../includes/esql-md.md)] text and parameter collection (names and types).</span></span> <span data-ttu-id="daabc-107">Все текстовые сравнения выполняются с учетом регистра.</span><span class="sxs-lookup"><span data-stu-id="daabc-107">All text comparisons are case-sensitive.</span></span>  
   
-## Конфигурация  
- Кэширование планов запросов можно настроить с помощью <xref:System.Data.EntityClient.EntityCommand>.  
+## <a name="configuration"></a><span data-ttu-id="daabc-108">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="daabc-108">Configuration</span></span>  
+ <span data-ttu-id="daabc-109">Кэширование планов запросов можно настроить с помощью <xref:System.Data.EntityClient.EntityCommand>.</span><span class="sxs-lookup"><span data-stu-id="daabc-109">Query plan caching is configurable through the <xref:System.Data.EntityClient.EntityCommand>.</span></span>  
   
- Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=fullName>, назначьте этому свойству значение `true` или `false`.  Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.  
+ <span data-ttu-id="daabc-110">Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, назначьте этому свойству значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="daabc-110">To enable or disable query plan caching through <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, set this property to `true` or `false`.</span></span> <span data-ttu-id="daabc-111">Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.</span><span class="sxs-lookup"><span data-stu-id="daabc-111">Disabling plan caching for individual dynamic queries that are unlikely to be used more then once improves performance.</span></span>  
   
- Можно включить кэширование планов запросов с помощью <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
+ <span data-ttu-id="daabc-112">Можно включить кэширование планов запросов с помощью <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.</span><span class="sxs-lookup"><span data-stu-id="daabc-112">You can enable query plan caching through <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.</span></span>  
   
-## Рекомендации  
- Как правило, следует избегать динамических запросов.  Динамический запрос в следующем примере уязвим для атак путем внедрения кода SQL, так как входные данные пользователя принимаются напрямую без проверки.  
+## <a name="recommended-practice"></a><span data-ttu-id="daabc-113">Рекомендации</span><span class="sxs-lookup"><span data-stu-id="daabc-113">Recommended Practice</span></span>  
+ <span data-ttu-id="daabc-114">Как правило, следует избегать динамических запросов.</span><span class="sxs-lookup"><span data-stu-id="daabc-114">Dynamic queries should be avoided, in general.</span></span> <span data-ttu-id="daabc-115">Динамический запрос в следующем примере уязвим для атак путем внедрения кода SQL, так как входные данные пользователя принимаются напрямую без проверки.</span><span class="sxs-lookup"><span data-stu-id="daabc-115">The following dynamic query example is vulnerable to SQL injection attacks, because it takes user input directly without any validation.</span></span>  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
- Если используются динамически формируемые запросы, подумайте об отключении кэширования плана запроса, чтобы избежать ненужного расходования памяти для записей кэша, которые вряд ли будут использоваться повторно.  
+ <span data-ttu-id="daabc-116">Если используются динамически формируемые запросы, подумайте об отключении кэширования плана запроса, чтобы избежать ненужного расходования памяти для записей кэша, которые вряд ли будут использоваться повторно.</span><span class="sxs-lookup"><span data-stu-id="daabc-116">If you do use dynamically generated queries, consider disabling query plan caching to avoid unnecessary memory consumption for cache entries that are unlikely to be reused.</span></span>  
   
- Кэширование планов запросов для статических запросов и параметризованных запросов может увеличить производительность.  Ниже приводится пример статического запроса:  
+ <span data-ttu-id="daabc-117">Кэширование планов запросов для статических запросов и параметризованных запросов может увеличить производительность.</span><span class="sxs-lookup"><span data-stu-id="daabc-117">Query plan caching on static queries and parameterized queries can provide performance benefits.</span></span> <span data-ttu-id="daabc-118">Ниже приводится пример статического запроса:</span><span class="sxs-lookup"><span data-stu-id="daabc-118">The following is an example of a static query:</span></span>  
   
 ```  
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
 ```  
   
- Для правильного сопоставления запросов кэшу планов запросов они должны соответствовать следующим требованиям.  
+ <span data-ttu-id="daabc-119">Для правильного сопоставления запросов кэшу планов запросов они должны соответствовать следующим требованиям.</span><span class="sxs-lookup"><span data-stu-id="daabc-119">For queries to be matched properly by the query plan cache, they should comply with the following requirements:</span></span>  
   
--   Текст запроса должен быть постоянным шаблоном, предпочтительно постоянной строкой или ресурсом.  
+-   <span data-ttu-id="daabc-120">Текст запроса должен быть постоянным шаблоном, предпочтительно постоянной строкой или ресурсом.</span><span class="sxs-lookup"><span data-stu-id="daabc-120">Query text should be a constant pattern, preferably a constant string or a resource.</span></span>  
   
--   Экземпляр <xref:System.Data.EntityClient.EntityParameter> или <xref:System.Data.Objects.ObjectParameter> должен быть использован всегда, когда нужно передать введенное пользователем значение.  
+-   <span data-ttu-id="daabc-121">Экземпляр <xref:System.Data.EntityClient.EntityParameter> или <xref:System.Data.Objects.ObjectParameter> должен быть использован всегда, когда нужно передать введенное пользователем значение.</span><span class="sxs-lookup"><span data-stu-id="daabc-121"><xref:System.Data.EntityClient.EntityParameter> or <xref:System.Data.Objects.ObjectParameter> should be used wherever a user-supplied value must be passed.</span></span>  
   
- Необходимо избегать следующих шаблонов запросов, которые напрасно занимают слоты в кэше планов запросов.  
+ <span data-ttu-id="daabc-122">Необходимо избегать следующих шаблонов запросов, которые напрасно занимают слоты в кэше планов запросов.</span><span class="sxs-lookup"><span data-stu-id="daabc-122">You should avoid the following query patterns, which unnecessarily consume slots in the query plan cache:</span></span>  
   
--   Изменение регистра символов в тексте.  
+-   <span data-ttu-id="daabc-123">Изменение регистра символов в тексте.</span><span class="sxs-lookup"><span data-stu-id="daabc-123">Changes to letter case in the text.</span></span>  
   
--   Изменение пробельных символов.  
+-   <span data-ttu-id="daabc-124">Изменение пробельных символов.</span><span class="sxs-lookup"><span data-stu-id="daabc-124">Changes to white space.</span></span>  
   
--   Изменение литеральных значений.  
+-   <span data-ttu-id="daabc-125">Изменение литеральных значений.</span><span class="sxs-lookup"><span data-stu-id="daabc-125">Changes to literal values.</span></span>  
   
--   Изменение текста внутри комментариев.  
+-   <span data-ttu-id="daabc-126">Изменение текста внутри комментариев.</span><span class="sxs-lookup"><span data-stu-id="daabc-126">Changes to text inside comments.</span></span>  
   
-## См. также  
- [Общие сведения о языке Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="daabc-127">См. также</span><span class="sxs-lookup"><span data-stu-id="daabc-127">See Also</span></span>  
+ [<span data-ttu-id="daabc-128">Общие сведения об Entity SQL</span><span class="sxs-lookup"><span data-stu-id="daabc-128">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

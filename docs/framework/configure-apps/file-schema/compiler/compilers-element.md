@@ -1,75 +1,77 @@
 ---
-title: "Элемент &lt;compilers&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<compilers> - элемент"
-  - "элементы конфигурации компилятора, <compilers> - элемент"
-  - "compilers - элемент"
+title: "&lt;компиляторы&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers
+helpviewer_keywords:
+- compiler configuration elements, <compilers> element
+- <compilers> element
+- compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: bea78fe5086a73e4cc588973764ac9bbef2fadc4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;compilers&gt;
-Контейнер для элементов конфигурации компилятора; содержит ноль или более элементов [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).  
+# <a name="ltcompilersgt-element"></a><span data-ttu-id="7eca4-102">&lt;компиляторы&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="7eca4-102">&lt;compilers&gt; Element</span></span>
+<span data-ttu-id="7eca4-103">Контейнер для элементов конфигурации компилятора; содержит ноль элементов [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) или несколько.</span><span class="sxs-lookup"><span data-stu-id="7eca4-103">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="7eca4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7eca4-104">\<configuration></span></span>  
+<span data-ttu-id="7eca4-105">\<System.CodeDom ></span><span class="sxs-lookup"><span data-stu-id="7eca4-105">\<system.codedom></span></span>  
+<span data-ttu-id="7eca4-106">\<компиляторы > элемент</span><span class="sxs-lookup"><span data-stu-id="7eca4-106">\<compilers> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7eca4-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7eca4-107">Syntax</span></span>  
+  
+```xml  
 <compilers>  
   <compiler ... />  
 </compilers>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7eca4-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7eca4-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7eca4-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7eca4-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="7eca4-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7eca4-110">Attributes</span></span>  
+ <span data-ttu-id="7eca4-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="7eca4-111">None.</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="7eca4-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7eca4-112">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Элемент \<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Задает атрибуты конфигурации компилятора для поставщика языка.|  
+|<span data-ttu-id="7eca4-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="7eca4-113">Element</span></span>|<span data-ttu-id="7eca4-114">Описание</span><span class="sxs-lookup"><span data-stu-id="7eca4-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7eca4-115">Элемент \<compiler></span><span class="sxs-lookup"><span data-stu-id="7eca4-115">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="7eca4-116">Задает атрибуты конфигурации компилятора для поставщика языка.</span><span class="sxs-lookup"><span data-stu-id="7eca4-116">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="7eca4-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7eca4-117">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Элемент \<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|[Элемент \<system.codedom\>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Задает параметры конфигурации компилятора для доступных поставщиков языков.|  
+|<span data-ttu-id="7eca4-118">Элемент</span><span class="sxs-lookup"><span data-stu-id="7eca4-118">Element</span></span>|<span data-ttu-id="7eca4-119">Описание</span><span class="sxs-lookup"><span data-stu-id="7eca4-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7eca4-120">Элемент \<configuration></span><span class="sxs-lookup"><span data-stu-id="7eca4-120">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="7eca4-121">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7eca4-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="7eca4-122">\<System.CodeDom > элемент</span><span class="sxs-lookup"><span data-stu-id="7eca4-122">\<system.codedom> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="7eca4-123">Задает параметры конфигурации компилятора для доступных поставщиков языков.</span><span class="sxs-lookup"><span data-stu-id="7eca4-123">Specifies compiler configuration settings for available language providers.</span></span>|  
   
-## Заметки  
- Элемент [\<compilers\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) содержит параметры конфигурации компилятора для поставщиков языков на компьютере.  Каждый элемент [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) задает атрибуты конфигурации компилятора для конкретного поставщика языка.  
+## <a name="remarks"></a><span data-ttu-id="7eca4-124">Примечания</span><span class="sxs-lookup"><span data-stu-id="7eca4-124">Remarks</span></span>  
+ <span data-ttu-id="7eca4-125">[ \<Компиляторы >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) элемент содержит параметры конфигурации компилятора для поставщиков языков на компьютере.</span><span class="sxs-lookup"><span data-stu-id="7eca4-125">The [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) element contains the compiler configuration settings for language providers on a computer.</span></span> <span data-ttu-id="7eca4-126">Каждый [ \<компилятора >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) элемент задает атрибуты конфигурации компилятора для конкретного поставщика языка.</span><span class="sxs-lookup"><span data-stu-id="7eca4-126">Each [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) element specifies the compiler configuration attributes for a specific language provider.</span></span>  
   
- В .NET Framework исходные настройки компилятора и поставщика языка определены в файле конфигурации компьютера \(Machine.config\).  Разработчики и поставщики компиляторов могут добавлять настройки конфигурации для новой реализации <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>.  Для программного перечисления параметров конфигурации поставщика языка и компилятора на компьютере следует использовать метод <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName>.  
+ <span data-ttu-id="7eca4-127">Платформа .NET Framework определяет начальное компилятора и языковые параметры поставщика в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7eca4-127">The .NET Framework defines the initial compiler and language provider settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="7eca4-128">Разработчики и поставщики компиляторов могут добавлять параметры конфигурации для новой реализации <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7eca4-128">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementation.</span></span> <span data-ttu-id="7eca4-129">С помощью метода <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> можно осуществлять программное перечисление параметров конфигурации для поставщиков языков и компиляторов на компьютере.</span><span class="sxs-lookup"><span data-stu-id="7eca4-129">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
-## Файл конфигурации  
- Этот элемент может быть использован в файле конфигурации компьютера и в файле конфигурации приложения.  
+## <a name="configuration-file"></a><span data-ttu-id="7eca4-130">Файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="7eca4-130">Configuration File</span></span>  
+ <span data-ttu-id="7eca4-131">Этот элемент может использоваться в файле конфигурации компьютера и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="7eca4-131">This element can be used in the machine configuration file and the application configuration file.</span></span>  
   
-## Пример  
- В следующем примере показан типичный элемент конфигурации компилятора.  
+## <a name="example"></a><span data-ttu-id="7eca4-132">Пример</span><span class="sxs-lookup"><span data-stu-id="7eca4-132">Example</span></span>  
+ <span data-ttu-id="7eca4-133">В приведенном ниже примере показан типичный элемент конфигурации компилятора.</span><span class="sxs-lookup"><span data-stu-id="7eca4-133">The following example illustrates a typical compiler configuration element.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.codedom>  
      <compilers>  
@@ -85,9 +87,9 @@ caps.handback.revision: 14
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.CodeDom.Compiler.CompilerInfo>   
- <xref:System.CodeDom.Compiler.CodeDomProvider>   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров поставщиков языков и компиляторов](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)   
- [Элемент \<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+## <a name="see-also"></a><span data-ttu-id="7eca4-134">См. также</span><span class="sxs-lookup"><span data-stu-id="7eca4-134">See Also</span></span>  
+ <xref:System.CodeDom.Compiler.CompilerInfo>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider>  
+ [<span data-ttu-id="7eca4-135">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="7eca4-135">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="7eca4-136">Схема параметров компилятора и поставщика языков</span><span class="sxs-lookup"><span data-stu-id="7eca4-136">Compiler and Language Provider Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+ [<span data-ttu-id="7eca4-137">Элемент \<compiler></span><span class="sxs-lookup"><span data-stu-id="7eca4-137">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

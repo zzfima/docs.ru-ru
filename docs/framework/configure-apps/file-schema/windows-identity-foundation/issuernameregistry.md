@@ -1,82 +1,91 @@
 ---
-title: "&lt;issuerNameRegistry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;issuerNameRegistry&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0c0552e06564e09832cf78afeb8f183a0a0dc94c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;issuerNameRegistry&gt;
-Настройка реестра имя поставщика, используемый в коллекцию обработчиков маркеров обработчики.  
+# <a name="ltissuernameregistrygt"></a><span data-ttu-id="40945-102">&lt;issuerNameRegistry&gt;</span><span class="sxs-lookup"><span data-stu-id="40945-102">&lt;issuerNameRegistry&gt;</span></span>
+<span data-ttu-id="40945-103">Настройка реестра имя издателя, используемая обработчиков в коллекцию обработчиков токенов.</span><span class="sxs-lookup"><span data-stu-id="40945-103">Configures the issuer name registry that is used by handlers in the token handler collection.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="40945-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="40945-104">\<system.identityModel></span></span>  
+<span data-ttu-id="40945-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="40945-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="40945-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="40945-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="40945-107">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="40945-107">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="40945-108">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="40945-108">\<issuerNameRegistry></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="40945-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40945-109">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <issuerNameRegistry type=xs:string>  
-          <optionalCustomConfigurationElements />  
-        </issuerNameRegistry>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <issuerNameRegistry type=xs:string>  
+          <optionalCustomConfigurationElements />  
+        </issuerNameRegistry>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="40945-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="40945-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="40945-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="40945-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="40945-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="40945-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|type|Тип, производный от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса.  Дополнительные сведения об указании пользовательского `type`, см. [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|<span data-ttu-id="40945-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="40945-113">Attribute</span></span>|<span data-ttu-id="40945-114">Описание</span><span class="sxs-lookup"><span data-stu-id="40945-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="40945-115">type</span><span class="sxs-lookup"><span data-stu-id="40945-115">type</span></span>|<span data-ttu-id="40945-116">Тип, который является производным от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса.</span><span class="sxs-lookup"><span data-stu-id="40945-116">A type that derives from the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class.</span></span> <span data-ttu-id="40945-117">Дополнительные сведения о том, как задать пользовательский `type`, в разделе [ссылок на пользовательские типы].</span><span class="sxs-lookup"><span data-stu-id="40945-117">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="40945-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="40945-118">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|При `type` атрибут указывает имя реестра на основе конфигурации поставщика \( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класс\), [\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) элемент должен быть указан.  [\<trustedIssuers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Может принимать элемент `<add>`, `<clear>`, или `<remove>` элементы, как дочерние элементы.|  
+|<span data-ttu-id="40945-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="40945-119">Element</span></span>|<span data-ttu-id="40945-120">Описание</span><span class="sxs-lookup"><span data-stu-id="40945-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="40945-121">\<trustedIssuers ></span><span class="sxs-lookup"><span data-stu-id="40945-121">\<trustedIssuers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|<span data-ttu-id="40945-122">Когда `type` атрибут задает имя издателя на основе конфигурации реестра ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса), [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) должен быть указан элемент.</span><span class="sxs-lookup"><span data-stu-id="40945-122">When the `type` attribute specifies the configuration-based issuer name registry (the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class), the [\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element must be specified.</span></span> <span data-ttu-id="40945-123">[ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) элемент может занять `<add>`, `<clear>`, или `<remove>` элементы в виде дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="40945-123">The [\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) element can take `<add>`, `<clear>`, or `<remove>` elements as child elements.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="40945-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="40945-124">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Содержит настройки для коллекции безопасности обработчиков маркеров.|  
+|<span data-ttu-id="40945-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="40945-125">Element</span></span>|<span data-ttu-id="40945-126">Описание</span><span class="sxs-lookup"><span data-stu-id="40945-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="40945-127">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="40945-127">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="40945-128">Обеспечивает настройку для коллекции безопасности обработчиков маркеров.</span><span class="sxs-lookup"><span data-stu-id="40945-128">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## Заметки  
- Все маркеры поставщика проверяются с помощью реестра имя поставщика.  Это объект, производный от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса.  В реестре имя поставщика используется для связывания мнемонический имя криптографического материала, необходимые для проверки подписей маркеров, создаваемых соответствующего поставщика.  Реестр имен поставщиков поддерживает список поставщиков, которые являются доверенными доверяющей стороной \(RP\) приложения.  Тип реестра имя поставщика задается с помощью `type` атрибут.  `<issuerNameRegistry>` Элемент может иметь дочерние элементы, которые обеспечивают настройку для указанного типа.  Предоставляет логику, которая обрабатывает эти дочерние элементы путем переопределения <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> метод.  
+## <a name="remarks"></a><span data-ttu-id="40945-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="40945-129">Remarks</span></span>  
+ <span data-ttu-id="40945-130">Все маркеры издателей проверяются с помощью реестра имя издателя.</span><span class="sxs-lookup"><span data-stu-id="40945-130">All issuer tokens are validated using an issuer name registry.</span></span> <span data-ttu-id="40945-131">Это объект, который является производным от <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класса.</span><span class="sxs-lookup"><span data-stu-id="40945-131">This is an object that derives from the <xref:System.IdentityModel.Tokens.IssuerNameRegistry> class.</span></span> <span data-ttu-id="40945-132">Реестр имен поставщиков позволяет связать имя, назначенный криптографические материалы, необходимые для проверки подписи токенов, созданных соответствующего поставщика.</span><span class="sxs-lookup"><span data-stu-id="40945-132">The issuer name registry is used to associate a mnemonic name to the cryptographic material that is needed to verify the signatures of tokens produced by the corresponding issuer.</span></span> <span data-ttu-id="40945-133">Реестр имен поставщиков ведет список издателей, которым доверяют приложения проверяющей стороны (RP).</span><span class="sxs-lookup"><span data-stu-id="40945-133">The issuer name registry maintains a list of issuers that are trusted by the relying party (RP) application.</span></span> <span data-ttu-id="40945-134">Тип реестра имя поставщика задается с помощью `type` атрибута.</span><span class="sxs-lookup"><span data-stu-id="40945-134">The type of the issuer name registry is specified using the `type` attribute.</span></span> <span data-ttu-id="40945-135">`<issuerNameRegistry>` Элемент может иметь один или несколько дочерних элементов, предоставляющих конфигурации для указанного типа.</span><span class="sxs-lookup"><span data-stu-id="40945-135">The `<issuerNameRegistry>` element can have one or more child elements that provide configuration for the specified type.</span></span> <span data-ttu-id="40945-136">Предоставляют логику, которая обрабатывает эти дочерние элементы, переопределив <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="40945-136">You provide the logic that processes these child elements by overriding the <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> method.</span></span>  
   
- WIF предоставляет один поставщик реестра введите имя изначально, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса.  Этот класс использует набор сертификатов доверенного поставщика, указанного в конфигурации.  Требуется дочерний элемент конфигурации, `<trustedIssuers>`, в которой настроен коллекцию сертификатов доверенного поставщика.  Доверенные сертификаты указаны с использованием ASN.1 кодировке формы отпечаток сертификата и при добавлении или удалении из коллекции с помощью `<add>`, `<clear>`, или `<remove>` элементов.  
+ <span data-ttu-id="40945-137">WIF предоставляет одного издателя, имя типа реестра без дополнительной настройки <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса.</span><span class="sxs-lookup"><span data-stu-id="40945-137">WIF provides a single issuer name registry type out of the box, the <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> class.</span></span> <span data-ttu-id="40945-138">Этот класс используется набор доверенных издателей сертификатов, которые указаны в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="40945-138">This class uses a set of trusted issuer certificates that are specified in configuration.</span></span> <span data-ttu-id="40945-139">Требуется дочерний элемент конфигурации, `<trustedIssuers>`, в которой настроено в коллекцию сертификатов доверенных издателей.</span><span class="sxs-lookup"><span data-stu-id="40945-139">It requires a child configuration element, `<trustedIssuers>`, under which the collection of trusted issuer certificates is configured.</span></span> <span data-ttu-id="40945-140">Доверенные сертификаты указываются с помощью ASN.1 отпечаток сертификата в кодировке и добавления или удаления из коллекции с помощью `<add>`, `<clear>`, или `<remove>` элементы.</span><span class="sxs-lookup"><span data-stu-id="40945-140">Trusted certificates are specified using the ASN.1 encoded form of the certificate thumbprint and are added or removed from the collection by using `<add>`, `<clear>`, or `<remove>` elements.</span></span>  
   
- `<issuerNameRegistry>` Представленного элементом <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> класса.  
+ <span data-ttu-id="40945-141">`<issuerNameRegistry>` Представлен <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> класса.</span><span class="sxs-lookup"><span data-stu-id="40945-141">The `<issuerNameRegistry>` element is represented by the <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> class.</span></span>  
   
 > [!NOTE]
->  Указание `<issuerNameRegistry>` элемент как дочерний элемент [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по\-прежнему поддерживается для обратной совместимости.  Параметры на `<securityTokenHandlerConfiguration>` элементов заменяют на `<identityConfiguration>` элемент.  
+>  <span data-ttu-id="40945-142">Указание `<issuerNameRegistry>` элемент как дочерний элемент элемента [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по-прежнему поддерживается для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="40945-142">Specifying the `<issuerNameRegistry>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="40945-143">Параметры на `<securityTokenHandlerConfiguration>` элемент переопределяют на `<identityConfiguration>` элемент.</span><span class="sxs-lookup"><span data-stu-id="40945-143">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## Пример  
- Следующий код XML показано, как указать поставщика на основе конфигурации реестра имя.  
+## <a name="example"></a><span data-ttu-id="40945-144">Пример</span><span class="sxs-lookup"><span data-stu-id="40945-144">Example</span></span>  
+ <span data-ttu-id="40945-145">Следующий код XML показано, как указать поставщика конфигурации на основе реестра имя.</span><span class="sxs-lookup"><span data-stu-id="40945-145">The following XML shows how to specify the configuration based issuer name registry.</span></span>  
   
-```  
+```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  
   <trustedIssuers>  
     <add thumbprint="9B74CB … 1EF40D0" name="LocalSTS" />  
   </trustedIssuers>  
 </issuerNameRegistry>  
-  
 ```  
   
-## См. также  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>   
+## <a name="see-also"></a><span data-ttu-id="40945-146">См. также</span><span class="sxs-lookup"><span data-stu-id="40945-146">See Also</span></span>  
+ <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
  <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

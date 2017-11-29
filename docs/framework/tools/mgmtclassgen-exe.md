@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CIM types
 - Management Strongly Typed Class Generator
@@ -21,98 +18,97 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0f3e01e54cb60c7da1a57940246c5402ba635778
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f83136265c4002f3ea4872b370b856bfacf4db3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (генератор строго типизированных классов управления)
-Генератор классов управления со строгим типом позволяет быстро создавать управляемые классы с ранней привязкой для указанного класса инструментария управления Windows (WMI). Создаваемый класс упрощает код, необходимый для доступа к экземпляру класса WMI.  
+# <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a><span data-ttu-id="f4049-102">Mgmtclassgen.exe (генератор строго типизированных классов управления)</span><span class="sxs-lookup"><span data-stu-id="f4049-102">Mgmtclassgen.exe (Management Strongly Typed Class Generator)</span></span>
+<span data-ttu-id="f4049-103">Генератор классов управления со строгим типом позволяет быстро создавать управляемые классы с ранней привязкой для указанного класса инструментария управления Windows (WMI).</span><span class="sxs-lookup"><span data-stu-id="f4049-103">The Management Strongly Typed Class Generator tool enables you to quickly generate an early-bound managed class for a specified Windows Management Instrumentation (WMI) class.</span></span> <span data-ttu-id="f4049-104">Создаваемый класс упрощает код, необходимый для доступа к экземпляру класса WMI.</span><span class="sxs-lookup"><span data-stu-id="f4049-104">The generated class simplifies the code you must write to access an instance of the WMI class.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="f4049-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f4049-105">Syntax</span></span>  
   
 ```  
 mgmtclassgen   
 WMIClass [options]   
 ```  
   
-|Аргумент|Описание|  
+|<span data-ttu-id="f4049-106">Аргумент</span><span class="sxs-lookup"><span data-stu-id="f4049-106">Argument</span></span>|<span data-ttu-id="f4049-107">Описание</span><span class="sxs-lookup"><span data-stu-id="f4049-107">Description</span></span>|  
 |--------------|-----------------|  
-|*WMIClass*|Класс WMI, для которого создается управляемый класс с ранней привязкой.|  
+|<span data-ttu-id="f4049-108">*WMIClass*</span><span class="sxs-lookup"><span data-stu-id="f4049-108">*WMIClass*</span></span>|<span data-ttu-id="f4049-109">Класс WMI, для которого создается управляемый класс с ранней привязкой.</span><span class="sxs-lookup"><span data-stu-id="f4049-109">The Windows Management Instrumentation class for which to generate an early-bound managed class.</span></span>|  
   
-|Параметр|Описание|  
+|<span data-ttu-id="f4049-110">Параметр</span><span class="sxs-lookup"><span data-stu-id="f4049-110">Option</span></span>|<span data-ttu-id="f4049-111">Описание</span><span class="sxs-lookup"><span data-stu-id="f4049-111">Description</span></span>|  
 |------------|-----------------|  
-|**/l**  *язык*|Задает язык, на котором создается управляемый класс с ранней привязкой. В качестве аргумента, задающего язык, можно указать **CS** (C#, используется по умолчанию), **VB** (Visual Basic), **MC** (C++) или **VS** (JScript).|  
-|**/m**  *компьютер*|Задает компьютер, к которому следует подключиться и на котором находится соответствующий класс WMI. По умолчанию это локальный компьютер.|  
-|**/n**  *путь*|Задает путь к пространству имен WMI, в котором содержится класс WMI. Если этот параметр не указан, программа создает код для *WMIClass* в пространстве имен по умолчанию **Root\cimv2**.|  
-|**/o** *пространство_имен_класса*|Задает пространство имен .NET, в котором создается класс управляемого кода. Если этот параметр не указан, программа создает пространство имен, используя пространство имен WMI и префикс схемы. Префикс схемы представляет собой часть имени класса перед знаком подчеркивания. Например, для класса **Win32_OperatingSystem** в пространстве имен **Root\cimv2** программа создает класс в пространстве имен **ROOT.CIMV2.Win32**.|  
-|**/p**  *путь_к_файлу*|Задает путь к файлу, в который будет записан созданный код. Если этот параметр не задан, программа создаст файл в текущем каталоге. Имена класса и файла, в котором он будет храниться, присваиваются на основе аргумента *WMIClass*. Имена класса и файла будут совпадать с именем *WMIClass*. Если *WMIClass* содержит знак подчеркивания, будет использована часть имени класса после этого знака. Например, если *WMIClass* имеет вид **Win32_LogicalDisk**, созданным классу и файлу будет присвоено имя "logicaldisk". Если файл с таким именем уже существует, новый файл будет записан поверх старого.|  
-|**/pw**  *пароль*|Задает пароль, используемый для подключения к компьютеру, заданному в параметре **/m**.|  
-|**/u**  *имя_пользователя*|Задает имя пользователя, используемое для подключения к компьютеру, заданному в параметре **/m**.|  
-|**/?**|Отображает синтаксис команд и параметров программы.|  
+|<span data-ttu-id="f4049-112">**/l**  *язык*</span><span class="sxs-lookup"><span data-stu-id="f4049-112">**/l**  *language*</span></span>|<span data-ttu-id="f4049-113">Задает язык, на котором создается управляемый класс с ранней привязкой.</span><span class="sxs-lookup"><span data-stu-id="f4049-113">Specifies the language in which to generate the early-bound managed class.</span></span> <span data-ttu-id="f4049-114">В качестве аргумента, задающего язык, можно указать **CS** (C#, используется по умолчанию), **VB** (Visual Basic), **MC** (C++) или **VS** (JScript).</span><span class="sxs-lookup"><span data-stu-id="f4049-114">You can specify **CS** (C#; default), **VB** (Visual Basic),  **MC** (C++), or **JS** (JScript) as the language argument.</span></span>|  
+|<span data-ttu-id="f4049-115">**/m**  *компьютер*</span><span class="sxs-lookup"><span data-stu-id="f4049-115">**/m**  *machine*</span></span>|<span data-ttu-id="f4049-116">Задает компьютер, к которому следует подключиться и на котором находится соответствующий класс WMI.</span><span class="sxs-lookup"><span data-stu-id="f4049-116">Specifies the computer to connect to, where the WMI class resides.</span></span> <span data-ttu-id="f4049-117">По умолчанию это локальный компьютер.</span><span class="sxs-lookup"><span data-stu-id="f4049-117">The default is the local computer.</span></span>|  
+|<span data-ttu-id="f4049-118">**/n**  *путь*</span><span class="sxs-lookup"><span data-stu-id="f4049-118">**/n**  *path*</span></span>|<span data-ttu-id="f4049-119">Задает путь к пространству имен WMI, в котором содержится класс WMI.</span><span class="sxs-lookup"><span data-stu-id="f4049-119">Specifies the path to the WMI namespace that contains the WMI class.</span></span> <span data-ttu-id="f4049-120">Если этот параметр не указан, программа создает код для *WMIClass* в пространстве имен по умолчанию **Root\cimv2**.</span><span class="sxs-lookup"><span data-stu-id="f4049-120">If you do not specify this option, the tool generates code for *WMIClass* in the default **Root\cimv2** namespace.</span></span>|  
+|<span data-ttu-id="f4049-121">**/o** *пространство_имен_класса*</span><span class="sxs-lookup"><span data-stu-id="f4049-121">**/o**  *classnamespace*</span></span>|<span data-ttu-id="f4049-122">Задает пространство имен .NET, в котором создается класс управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="f4049-122">Specifies the .NET namespace in which to generate the managed code class.</span></span> <span data-ttu-id="f4049-123">Если этот параметр не указан, программа создает пространство имен, используя пространство имен WMI и префикс схемы.</span><span class="sxs-lookup"><span data-stu-id="f4049-123">If you do not specify this option, the tool generates the namespace using the WMI namespace and the schema prefix.</span></span> <span data-ttu-id="f4049-124">Префикс схемы представляет собой часть имени класса перед знаком подчеркивания.</span><span class="sxs-lookup"><span data-stu-id="f4049-124">The schema prefix is the part of the class name preceding the underscore character.</span></span> <span data-ttu-id="f4049-125">Например, для класса **Win32_OperatingSystem** в пространстве имен **Root\cimv2** программа создает класс в пространстве имен **ROOT.CIMV2.Win32**.</span><span class="sxs-lookup"><span data-stu-id="f4049-125">For example, for the **Win32_OperatingSystem** class in the **Root\cimv2** namespace, the tool would generate the class in **ROOT.CIMV2.Win32**.</span></span>|  
+|<span data-ttu-id="f4049-126">**/p**  *путь_к_файлу*</span><span class="sxs-lookup"><span data-stu-id="f4049-126">**/p**  *filepath*</span></span>|<span data-ttu-id="f4049-127">Задает путь к файлу, в который будет записан созданный код.</span><span class="sxs-lookup"><span data-stu-id="f4049-127">Specifies the path to the file in which to save the generated code.</span></span> <span data-ttu-id="f4049-128">Если этот параметр не задан, программа создаст файл в текущем каталоге.</span><span class="sxs-lookup"><span data-stu-id="f4049-128">If you do not specify this option, the tool creates the file in the current directory.</span></span> <span data-ttu-id="f4049-129">Имена класса и файла, в котором он будет храниться, присваиваются на основе аргумента *WMIClass*.</span><span class="sxs-lookup"><span data-stu-id="f4049-129">It names the class and file in which it generates the class using the *WMIClass* argument.</span></span> <span data-ttu-id="f4049-130">Имена класса и файла будут совпадать с именем *WMIClass*.</span><span class="sxs-lookup"><span data-stu-id="f4049-130">The name of the class and the file are the same as the name of the *WMIClass.*</span></span> <span data-ttu-id="f4049-131">Если *WMIClass* содержит знак подчеркивания, будет использована часть имени класса после этого знака.</span><span class="sxs-lookup"><span data-stu-id="f4049-131">If *WMIClass* contains an underscore character, the tool uses the part of the class name following the underscore character.</span></span> <span data-ttu-id="f4049-132">Например, если *WMIClass* имеет вид **Win32_LogicalDisk**, созданным классу и файлу будет присвоено имя "logicaldisk".</span><span class="sxs-lookup"><span data-stu-id="f4049-132">For example, if the *WMIClass* name is in the format **Win32_LogicalDisk**, the generated class and file is named "logicaldisk".</span></span> <span data-ttu-id="f4049-133">Если файл с таким именем уже существует, новый файл будет записан поверх старого.</span><span class="sxs-lookup"><span data-stu-id="f4049-133">If a file already exists, the tool overwrites the existing file.</span></span>|  
+|<span data-ttu-id="f4049-134">**/pw**  *пароль*</span><span class="sxs-lookup"><span data-stu-id="f4049-134">**/pw**  *password*</span></span>|<span data-ttu-id="f4049-135">Задает пароль, используемый для подключения к компьютеру, заданному в параметре **/m**.</span><span class="sxs-lookup"><span data-stu-id="f4049-135">Specifies the password to use when logging on to a computer specified by the **/m** option.</span></span>|  
+|<span data-ttu-id="f4049-136">**/u**  *имя_пользователя*</span><span class="sxs-lookup"><span data-stu-id="f4049-136">**/u**  *user name*</span></span>|<span data-ttu-id="f4049-137">Задает имя пользователя, используемое для подключения к компьютеру, заданному в параметре **/m**.</span><span class="sxs-lookup"><span data-stu-id="f4049-137">Specifies the user name to use when logging on to a computer specified by the **/m** option.</span></span>|  
+|<span data-ttu-id="f4049-138">**/?**</span><span class="sxs-lookup"><span data-stu-id="f4049-138">**/?**</span></span>|<span data-ttu-id="f4049-139">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="f4049-139">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Программа Mgmtclassgen.exe использует метод <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>. Поэтому для генерации кода на управляемом языке, отличном от C#, Visual Basic и JScript, можно использовать любой нестандартный поставщик кода.  
+## <a name="remarks"></a><span data-ttu-id="f4049-140">Примечания</span><span class="sxs-lookup"><span data-stu-id="f4049-140">Remarks</span></span>  
+ <span data-ttu-id="f4049-141">Программа Mgmtclassgen.exe использует метод <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4049-141">Mgmtclassgen.exe uses the <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="f4049-142">Поэтому для генерации кода на управляемом языке, отличном от C#, Visual Basic и JScript, можно использовать любой нестандартный поставщик кода.</span><span class="sxs-lookup"><span data-stu-id="f4049-142">Therefore, you can use any custom code provider to generate code in managed languages other than C#, Visual Basic, and JScript.</span></span>  
   
- Следует заметить, что создаваемые классы связаны со схемой, для которой они были созданы. Если базовая схема изменяется, для отображения внесенных изменений в схеме класс следует создать повторно.  
+ <span data-ttu-id="f4049-143">Следует заметить, что создаваемые классы связаны со схемой, для которой они были созданы.</span><span class="sxs-lookup"><span data-stu-id="f4049-143">Note that generated classes are bound to the schema for which they are generated.</span></span> <span data-ttu-id="f4049-144">Если базовая схема изменяется, для отображения внесенных изменений в схеме класс следует создать повторно.</span><span class="sxs-lookup"><span data-stu-id="f4049-144">If the underlying schema changes, you must regenerate the class if you want it to reflect changes to the schema.</span></span>  
   
- В следующей таблице приводится соответствие типов модели CIM WMI и типов данных в создаваемых классах.  
+ <span data-ttu-id="f4049-145">В следующей таблице приводится соответствие типов модели CIM WMI и типов данных в создаваемых классах.</span><span class="sxs-lookup"><span data-stu-id="f4049-145">The following table shows how WMI Common Information Model (CIM) types map to data types in a generated class:</span></span>  
   
-|Тип CIM|Тип данных создаваемого класса|  
+|<span data-ttu-id="f4049-146">Тип CIM</span><span class="sxs-lookup"><span data-stu-id="f4049-146">CIM type</span></span>|<span data-ttu-id="f4049-147">Тип данных создаваемого класса</span><span class="sxs-lookup"><span data-stu-id="f4049-147">Data type in the generated class</span></span>|  
 |--------------|--------------------------------------|  
-|CIM_SINT8|**SByte**|  
-|CIM_UINT8|**Byte**|  
-|CIM_SINT16|**Int16**|  
-|CIM_UINT16|**UInt16**|  
-|CIM_SINT32|**Int32**|  
-|SIM_UINT32|**UInt32**|  
-|CIM_SINT64|**Int64**|  
-|CIM_UINT64|**UInt64**|  
-|CIM_REAL32|**Single**|  
-|CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Boolean**|  
-|CIM_String|**String**|  
-|CIM_DATETIME|**DateTime** или **TimeSpan**|  
-|CIM_REFERENCE|**ManagementPath**|  
-|CIM_CHAR16|**Char**|  
-|CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Объект**|  
-|CIM_ARRAY|Массив указанных выше объектов|  
+|<span data-ttu-id="f4049-148">CIM_SINT8</span><span class="sxs-lookup"><span data-stu-id="f4049-148">CIM_SINT8</span></span>|<span data-ttu-id="f4049-149">**SByte**</span><span class="sxs-lookup"><span data-stu-id="f4049-149">**SByte**</span></span>|  
+|<span data-ttu-id="f4049-150">CIM_UINT8</span><span class="sxs-lookup"><span data-stu-id="f4049-150">CIM_UINT8</span></span>|<span data-ttu-id="f4049-151">**Byte**</span><span class="sxs-lookup"><span data-stu-id="f4049-151">**Byte**</span></span>|  
+|<span data-ttu-id="f4049-152">CIM_SINT16</span><span class="sxs-lookup"><span data-stu-id="f4049-152">CIM_SINT16</span></span>|<span data-ttu-id="f4049-153">**Int16**</span><span class="sxs-lookup"><span data-stu-id="f4049-153">**Int16**</span></span>|  
+|<span data-ttu-id="f4049-154">CIM_UINT16</span><span class="sxs-lookup"><span data-stu-id="f4049-154">CIM_UINT16</span></span>|<span data-ttu-id="f4049-155">**UInt16**</span><span class="sxs-lookup"><span data-stu-id="f4049-155">**UInt16**</span></span>|  
+|<span data-ttu-id="f4049-156">CIM_SINT32</span><span class="sxs-lookup"><span data-stu-id="f4049-156">CIM_SINT32</span></span>|<span data-ttu-id="f4049-157">**Int32**</span><span class="sxs-lookup"><span data-stu-id="f4049-157">**Int32**</span></span>|  
+|<span data-ttu-id="f4049-158">SIM_UINT32</span><span class="sxs-lookup"><span data-stu-id="f4049-158">SIM_UINT32</span></span>|<span data-ttu-id="f4049-159">**UInt32**</span><span class="sxs-lookup"><span data-stu-id="f4049-159">**UInt32**</span></span>|  
+|<span data-ttu-id="f4049-160">CIM_SINT64</span><span class="sxs-lookup"><span data-stu-id="f4049-160">CIM_SINT64</span></span>|<span data-ttu-id="f4049-161">**Int64**</span><span class="sxs-lookup"><span data-stu-id="f4049-161">**Int64**</span></span>|  
+|<span data-ttu-id="f4049-162">CIM_UINT64</span><span class="sxs-lookup"><span data-stu-id="f4049-162">CIM_UINT64</span></span>|<span data-ttu-id="f4049-163">**UInt64**</span><span class="sxs-lookup"><span data-stu-id="f4049-163">**UInt64**</span></span>|  
+|<span data-ttu-id="f4049-164">CIM_REAL32</span><span class="sxs-lookup"><span data-stu-id="f4049-164">CIM_REAL32</span></span>|<span data-ttu-id="f4049-165">**Single**</span><span class="sxs-lookup"><span data-stu-id="f4049-165">**Single**</span></span>|  
+|<span data-ttu-id="f4049-166">CIM_REAL64</span><span class="sxs-lookup"><span data-stu-id="f4049-166">CIM_REAL64</span></span>|<span data-ttu-id="f4049-167">**Double**</span><span class="sxs-lookup"><span data-stu-id="f4049-167">**Double**</span></span>|  
+|<span data-ttu-id="f4049-168">CIM_BOOLEAN</span><span class="sxs-lookup"><span data-stu-id="f4049-168">CIM_BOOLEAN</span></span>|<span data-ttu-id="f4049-169">**Boolean**</span><span class="sxs-lookup"><span data-stu-id="f4049-169">**Boolean**</span></span>|  
+|<span data-ttu-id="f4049-170">CIM_String</span><span class="sxs-lookup"><span data-stu-id="f4049-170">CIM_String</span></span>|<span data-ttu-id="f4049-171">**String**</span><span class="sxs-lookup"><span data-stu-id="f4049-171">**String**</span></span>|  
+|<span data-ttu-id="f4049-172">CIM_DATETIME</span><span class="sxs-lookup"><span data-stu-id="f4049-172">CIM_DATETIME</span></span>|<span data-ttu-id="f4049-173">**DateTime** или **TimeSpan**</span><span class="sxs-lookup"><span data-stu-id="f4049-173">**DateTime** or **TimeSpan**</span></span>|  
+|<span data-ttu-id="f4049-174">CIM_REFERENCE</span><span class="sxs-lookup"><span data-stu-id="f4049-174">CIM_REFERENCE</span></span>|<span data-ttu-id="f4049-175">**ManagementPath**</span><span class="sxs-lookup"><span data-stu-id="f4049-175">**ManagementPath**</span></span>|  
+|<span data-ttu-id="f4049-176">CIM_CHAR16</span><span class="sxs-lookup"><span data-stu-id="f4049-176">CIM_CHAR16</span></span>|<span data-ttu-id="f4049-177">**Char**</span><span class="sxs-lookup"><span data-stu-id="f4049-177">**Char**</span></span>|  
+|<span data-ttu-id="f4049-178">CIM_OBJECT</span><span class="sxs-lookup"><span data-stu-id="f4049-178">CIM_OBJECT</span></span>|<span data-ttu-id="f4049-179">**ManagementBaseObject**</span><span class="sxs-lookup"><span data-stu-id="f4049-179">**ManagementBaseObject**</span></span>|  
+|<span data-ttu-id="f4049-180">CIM_IUNKNOWN</span><span class="sxs-lookup"><span data-stu-id="f4049-180">CIM_IUNKNOWN</span></span>|<span data-ttu-id="f4049-181">**Объект**</span><span class="sxs-lookup"><span data-stu-id="f4049-181">**Object**</span></span>|  
+|<span data-ttu-id="f4049-182">CIM_ARRAY</span><span class="sxs-lookup"><span data-stu-id="f4049-182">CIM_ARRAY</span></span>|<span data-ttu-id="f4049-183">Массив указанных выше объектов</span><span class="sxs-lookup"><span data-stu-id="f4049-183">Array of the above mentioned objects</span></span>|  
   
- Отметим следующие особенности процесса создания классов WMI.  
+ <span data-ttu-id="f4049-184">Отметим следующие особенности процесса создания классов WMI.</span><span class="sxs-lookup"><span data-stu-id="f4049-184">Note the following behaviors when you generate a WMI class:</span></span>  
   
--   Стандартное открытое свойство или метод может иметь имя, совпадающее с именем существующего свойства или метода. В этом случае программа изменит имя свойства или метода в создаваемом классе, чтобы избежать конфликта имен.  
+-   <span data-ttu-id="f4049-185">Стандартное открытое свойство или метод может иметь имя, совпадающее с именем существующего свойства или метода.</span><span class="sxs-lookup"><span data-stu-id="f4049-185">It is possible for a standard public property or method to have the same name as an existing property or method.</span></span> <span data-ttu-id="f4049-186">В этом случае программа изменит имя свойства или метода в создаваемом классе, чтобы избежать конфликта имен.</span><span class="sxs-lookup"><span data-stu-id="f4049-186">If this occurs, the tool changes the name of the property or method in the generated class to avoid naming conflicts.</span></span>  
   
--   Свойство или метод создаваемого класса может иметь имя, совпадающее с зарезервированным ключевым словом используемого языка программирования. В этом случае программа изменит имя свойства или метода в создаваемом классе, чтобы избежать конфликта имен.  
+-   <span data-ttu-id="f4049-187">Свойство или метод создаваемого класса может иметь имя, совпадающее с зарезервированным ключевым словом используемого языка программирования.</span><span class="sxs-lookup"><span data-stu-id="f4049-187">It is possible for the name of a property or method in a generated class to be a keyword in the target programming language.</span></span> <span data-ttu-id="f4049-188">В этом случае программа изменит имя свойства или метода в создаваемом классе, чтобы избежать конфликта имен.</span><span class="sxs-lookup"><span data-stu-id="f4049-188">If this occurs, the tool changes the name of the property or method in the generated class to avoid naming conflicts.</span></span>  
   
--   В WMI квалификаторами называются модификаторы, которые содержат информацию, описывающую класс, экземпляр, свойство или метод. В WMI для описания свойств создаваемого класса используются стандартные квалификаторы, такие как **Read**, **Write** и **Key**. Например, свойство, измененное квалификатором **Read**, определяется только совместно со свойством метода доступа **get** в создаваемом классе. Так как свойство, помеченное квалификатором **Read**, предназначено только для чтения, метод доступа **set** не определяется.  
+-   <span data-ttu-id="f4049-189">В WMI квалификаторами называются модификаторы, которые содержат информацию, описывающую класс, экземпляр, свойство или метод.</span><span class="sxs-lookup"><span data-stu-id="f4049-189">In WMI, qualifiers are modifiers that contain information to describe a class, instance, property, or method.</span></span> <span data-ttu-id="f4049-190">В WMI для описания свойств создаваемого класса используются стандартные квалификаторы, такие как **Read**, **Write** и **Key**.</span><span class="sxs-lookup"><span data-stu-id="f4049-190">WMI uses standard qualifiers such as **Read**, **Write**, and **Key** to describe a property in a generated class.</span></span> <span data-ttu-id="f4049-191">Например, свойство, измененное квалификатором **Read**, определяется только совместно со свойством метода доступа **get** в создаваемом классе.</span><span class="sxs-lookup"><span data-stu-id="f4049-191">For example, a property that is modified with a **Read** qualifier is defined only with a property **get** accessor in the generated class.</span></span> <span data-ttu-id="f4049-192">Так как свойство, помеченное квалификатором **Read**, предназначено только для чтения, метод доступа **set** не определяется.</span><span class="sxs-lookup"><span data-stu-id="f4049-192">Because a property marked with the **Read** qualifier is intended to be read-only, a **set** accessor is not defined.</span></span>  
   
--   Числовое свойство можно изменить с помощью квалификаторов **Values** и **ValueMaps**, которые указывают, что свойство может принимать только указанные допустимые значения. Перечисление создается на основе квалификаторов **Values** и **ValueMaps**, а свойство сопоставляется с этим перечислением.  
+-   <span data-ttu-id="f4049-193">Числовое свойство можно изменить с помощью квалификаторов **Values** и **ValueMaps**, которые указывают, что свойство может принимать только указанные допустимые значения.</span><span class="sxs-lookup"><span data-stu-id="f4049-193">A numeric property can be modified by the **Values** and **ValueMaps** qualifiers to indicate that the property can be set only to specified permissible values.</span></span> <span data-ttu-id="f4049-194">Перечисление создается на основе квалификаторов **Values** и **ValueMaps**, а свойство сопоставляется с этим перечислением.</span><span class="sxs-lookup"><span data-stu-id="f4049-194">An enumeration is generated with these **Values** and **ValueMaps** and the property is mapped to the enumeration.</span></span>  
   
--   Класс, который может иметь только один экземпляр, в WMI называется одноэлементным. Таким образом, конструктор одноэлементного класса по умолчанию инициализирует класс в единственном экземпляре.  
+-   <span data-ttu-id="f4049-195">Класс, который может иметь только один экземпляр, в WMI называется одноэлементным.</span><span class="sxs-lookup"><span data-stu-id="f4049-195">The WMI uses the term singleton to describe a class that can have only one instance.</span></span> <span data-ttu-id="f4049-196">Таким образом, конструктор одноэлементного класса по умолчанию инициализирует класс в единственном экземпляре.</span><span class="sxs-lookup"><span data-stu-id="f4049-196">Therefore, the default constructor for a singleton class will initialize the class to the only instance of the class.</span></span>  
   
--   У класса WMI могут быть свойства, которые являются объектами. При создании класса со строгим типом для данного типа класса WMI следует по возможности создавать классы со строгими типами для типов свойств внедренных объектов. Благодаря этому станет возможен доступ к внедренным объектам в режиме строгой типизации. Следует заметить, что создаваемый код не всегда может определить тип внедренного объекта. В этом случае в созданном коде будет создан комментарий с уведомлением об этой ситуации. Обнаружив такое уведомление, можно изменить созданный код, приписав свойство другому созданному классу.  
+-   <span data-ttu-id="f4049-197">У класса WMI могут быть свойства, которые являются объектами.</span><span class="sxs-lookup"><span data-stu-id="f4049-197">A WMI class can have properties that are objects.</span></span> <span data-ttu-id="f4049-198">При создании класса со строгим типом для данного типа класса WMI следует по возможности создавать классы со строгими типами для типов свойств внедренных объектов.</span><span class="sxs-lookup"><span data-stu-id="f4049-198">When you generate a strongly-typed class for this type of WMI class, you should consider generating strongly-typed classes for the types of the embedded object properties.</span></span> <span data-ttu-id="f4049-199">Благодаря этому станет возможен доступ к внедренным объектам в режиме строгой типизации.</span><span class="sxs-lookup"><span data-stu-id="f4049-199">This will allow you to access the embedded objects in a strongly-typed manner.</span></span> <span data-ttu-id="f4049-200">Следует заметить, что создаваемый код не всегда может определить тип внедренного объекта.</span><span class="sxs-lookup"><span data-stu-id="f4049-200">Note that the generated code might not be able to detect the type of the embedded object.</span></span> <span data-ttu-id="f4049-201">В этом случае в созданном коде будет создан комментарий с уведомлением об этой ситуации.</span><span class="sxs-lookup"><span data-stu-id="f4049-201">In this case, a comment will be created in the generated code to notify you of this issue.</span></span> <span data-ttu-id="f4049-202">Обнаружив такое уведомление, можно изменить созданный код, приписав свойство другому созданному классу.</span><span class="sxs-lookup"><span data-stu-id="f4049-202">You can then modify the generated code to type the property to the other generated class.</span></span>  
   
--   В WMI значение данных типа CIM_DATETIME может быть представлено как в виде определенной даты и времени, так и в виде временного интервала. Если значение данных представляет собой время и дату, в созданном классе ему будет соответствовать тип данных **DateTime**. Если значение данных представляет собой временной интервал, в созданном классе ему будет соответствовать тип данных **TimeSpan**.  
+-   <span data-ttu-id="f4049-203">В WMI значение данных типа CIM_DATETIME может быть представлено как в виде определенной даты и времени, так и в виде временного интервала.</span><span class="sxs-lookup"><span data-stu-id="f4049-203">In WMI, the data value of the CIM_DATETIME data type can represent either a specific date and time or a time interval.</span></span> <span data-ttu-id="f4049-204">Если значение данных представляет собой время и дату, в созданном классе ему будет соответствовать тип данных **DateTime**.</span><span class="sxs-lookup"><span data-stu-id="f4049-204">If the data value represents a date and time, the data type in the generated class is **DateTime**.</span></span> <span data-ttu-id="f4049-205">Если значение данных представляет собой временной интервал, в созданном классе ему будет соответствовать тип данных **TimeSpan**.</span><span class="sxs-lookup"><span data-stu-id="f4049-205">If the data value represents a time interval, the data type in the generated class is **TimeSpan**.</span></span>  
   
- Управляемые классы со строгим типом можно создавать также с помощью Server Explorer Management Extension в Visual Studio .NET.  
+ <span data-ttu-id="f4049-206">Управляемые классы со строгим типом можно создавать также с помощью Server Explorer Management Extension в Visual Studio .NET.</span><span class="sxs-lookup"><span data-stu-id="f4049-206">You can alternately generate a strongly-typed class using the Server Explorer Management Extension in Visual Studio .NET.</span></span>  
   
- Дополнительные сведения о WMI см. в разделе **Инструментарий управления Windows** в документации по продукту Platform SDK.  
+ <span data-ttu-id="f4049-207">Дополнительные сведения о WMI см. в разделе **Инструментарий управления Windows** в документации по продукту Platform SDK.</span><span class="sxs-lookup"><span data-stu-id="f4049-207">For more information about WMI, see the **Windows Management Instrumentation** topic in the Platform SDK documentation.</span></span>  
   
-## <a name="examples"></a>Примеры  
- При выполнении следующей команды создается управляемый класс на языке C# для класса WMI **Win32_LogicalDisk** в пространстве имен **Root\cimv2**. Программа записывает управляемый класс в исходный файл, расположенный в "c:\disk.cs", в пространстве имен **ROOT.CIMV2.Win32**.  
+## <a name="examples"></a><span data-ttu-id="f4049-208">Примеры</span><span class="sxs-lookup"><span data-stu-id="f4049-208">Examples</span></span>  
+ <span data-ttu-id="f4049-209">При выполнении следующей команды создается управляемый класс на языке C# для класса WMI **Win32_LogicalDisk** в пространстве имен **Root\cimv2**.</span><span class="sxs-lookup"><span data-stu-id="f4049-209">The following command generates a managed class in C# code for the **Win32_LogicalDisk** WMI class in the **Root\cimv2** namespace.</span></span> <span data-ttu-id="f4049-210">Программа записывает управляемый класс в исходный файл, расположенный в "c:\disk.cs", в пространстве имен **ROOT.CIMV2.Win32**.</span><span class="sxs-lookup"><span data-stu-id="f4049-210">The tool writes the managed class to the source file at c:\disk.cs in the **ROOT.CIMV2.Win32** namespace.</span></span>  
   
 ```  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- В следующем примере кода показано, как использовать созданный класс в программе. Сначала экземпляр класса перечисляется, и к нему печатается путь. Затем создается экземпляр инициализируемого класса с экземпляром WMI. `Process` — это класс, созданный для **Win32_Process**, а `LogicalDisk` — это класс, созданный для **Win32_LogicalDisk** в пространстве имен **Root\cimv2**.  
+ <span data-ttu-id="f4049-211">В следующем примере кода показано, как использовать созданный класс в программе.</span><span class="sxs-lookup"><span data-stu-id="f4049-211">The following code example shows how to use a generated class programmatically.</span></span> <span data-ttu-id="f4049-212">Сначала экземпляр класса перечисляется, и к нему печатается путь.</span><span class="sxs-lookup"><span data-stu-id="f4049-212">First, an instance of the class is enumerated and the path is printed.</span></span> <span data-ttu-id="f4049-213">Затем создается экземпляр инициализируемого класса с экземпляром WMI.</span><span class="sxs-lookup"><span data-stu-id="f4049-213">Next, an instance of the generated class to be initialized is created with an instance of WMI.</span></span> <span data-ttu-id="f4049-214">`Process` — это класс, созданный для **Win32_Process**, а `LogicalDisk` — это класс, созданный для **Win32_LogicalDisk** в пространстве имен **Root\cimv2**.</span><span class="sxs-lookup"><span data-stu-id="f4049-214">`Process` is the class generated for **Win32_Process** and `LogicalDisk` is the class generated for **Win32_LogicalDisk** in the **Root\cimv2** namespace.</span></span>  
   
 ```vb  
 Imports System  
@@ -162,10 +158,9 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Management>   
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>   
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="f4049-215">См. также</span><span class="sxs-lookup"><span data-stu-id="f4049-215">See Also</span></span>  
+ <xref:System.Management>  
+ <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
+ [<span data-ttu-id="f4049-216">Инструменты</span><span class="sxs-lookup"><span data-stu-id="f4049-216">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="f4049-217">Командные строки</span><span class="sxs-lookup"><span data-stu-id="f4049-217">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

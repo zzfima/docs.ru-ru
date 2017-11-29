@@ -1,41 +1,41 @@
 ---
-title: "Построение клиентов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "клиенты [WCF]"
-  - "клиенты [WCF], построение"
+title: "Создание клиентов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clients [WCF], building
+- clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 098af2ba342b780f7af7479c640e1acc5d44e4cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Построение клиентов
-В подразделах этого раздела демонстрируется создание и использование клиента [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+# <a name="building-clients"></a><span data-ttu-id="a3cb6-102">Создание клиентов</span><span class="sxs-lookup"><span data-stu-id="a3cb6-102">Building Clients</span></span>
+<span data-ttu-id="a3cb6-103">В подразделах этого раздела демонстрируется создание и использование клиента [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a3cb6-103">The topics in this section demonstrate how to create and use a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] client.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о клиентах WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
- Общие сведения о клиентах [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и принципах их работы.  
+## <a name="in-this-section"></a><span data-ttu-id="a3cb6-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="a3cb6-104">In This Section</span></span>  
+ [<span data-ttu-id="a3cb6-105">Общие сведения о клиентах WCF</span><span class="sxs-lookup"><span data-stu-id="a3cb6-105">WCF Client Overview</span></span>](../../../docs/framework/wcf/wcf-client-overview.md)  
+ <span data-ttu-id="a3cb6-106">Общие сведения о клиентах [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] и принципах их работы.</span><span class="sxs-lookup"><span data-stu-id="a3cb6-106">Provides an overview of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients and how they work.</span></span>  
   
- [Обращение к службам с использованием клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Простой способ создания клиентского объекта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для использования в клиентском приложении.  
+ [<span data-ttu-id="a3cb6-107">Обращение к службам с помощью клиента WCF</span><span class="sxs-lookup"><span data-stu-id="a3cb6-107">Accessing Services Using a WCF Client</span></span>](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ <span data-ttu-id="a3cb6-108">Простой способ создания клиентского объекта [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] для использования в клиентском приложении.</span><span class="sxs-lookup"><span data-stu-id="a3cb6-108">Outlines the basic method of creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client object for use in a client application.</span></span>  
   
- [Обеспечение безопасности клиентов](../../../docs/framework/wcf/securing-clients.md)  
- Описание настройки параметров безопасности для клиентов [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="a3cb6-109">Защита клиентов</span><span class="sxs-lookup"><span data-stu-id="a3cb6-109">Securing Clients</span></span>](../../../docs/framework/wcf/securing-clients.md)  
+ <span data-ttu-id="a3cb6-110">Описание настройки параметров безопасности для клиентов [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a3cb6-110">Describes how to configure security for [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] clients.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="a3cb6-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a3cb6-111">Reference</span></span>  
  <xref:System.ServiceModel.ClientBase%601>  
   
  <xref:System.ServiceModel.DuplexClientBase%601>  
@@ -50,7 +50,7 @@ caps.handback.revision: 19
   
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-## Связанные подразделы  
- [Размещение служб](../../../docs/framework/wcf/hosting-services.md)  
+## <a name="related-sections"></a><span data-ttu-id="a3cb6-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a3cb6-112">Related Sections</span></span>  
+ [<span data-ttu-id="a3cb6-113">Размещение служб</span><span class="sxs-lookup"><span data-stu-id="a3cb6-113">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
   
- [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)
+ [<span data-ttu-id="a3cb6-114">Проектирование и реализация служб</span><span class="sxs-lookup"><span data-stu-id="a3cb6-114">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)

@@ -2,8 +2,7 @@
 title: "Типы перечислений (Руководство по программированию в C#)"
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,25 +10,24 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="enumeration-types-c-programming-guide"></a>Типы перечислений (Руководство по программированию в C#)
+# <a name="enumeration-types-c-programming-guide"></a><span data-ttu-id="bc5d6-102">Типы перечислений (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="bc5d6-102">Enumeration types (C# Programming Guide)</span></span>
 
-Тип перечисления (называемый также перечислением) предоставляет эффективный способ определения набора именованных целочисленных констант, который можно назначить переменной. Например, предположим, что нужно определить переменную, значение которого должно представлять день недели. Имеется только семь имеющих смысл значений, которые может принимать переменная. Для определения этих значений можно использовать тип перечисления, который объявлен с помощью ключевого слова [enum](../../csharp/language-reference/keywords/enum.md).
+<span data-ttu-id="bc5d6-103">Тип перечисления (называемый также перечислением) предоставляет эффективный способ определения набора именованных целочисленных констант, который можно назначить переменной.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-103">An enumeration type (also named an enumeration or an enum) provides an efficient way to define a set of named integral constants that may be assigned to a variable.</span></span> <span data-ttu-id="bc5d6-104">Например, предположим, что нужно определить переменную, значение которого должно представлять день недели.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-104">For example, assume that you have to define a variable whose value will represent a day of the week.</span></span> <span data-ttu-id="bc5d6-105">Имеется только семь имеющих смысл значений, которые может принимать переменная.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-105">There are only seven meaningful values which that variable will ever store.</span></span> <span data-ttu-id="bc5d6-106">Для определения этих значений можно использовать тип перечисления, который объявлен с помощью ключевого слова [enum](../../csharp/language-reference/keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="bc5d6-106">To define those values, you can use an enumeration type, which is declared by using the [enum](../../csharp/language-reference/keywords/enum.md) keyword.</span></span>
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-По умолчанию базовым типом каждого элемента перечисления является [int](../../csharp/language-reference/keywords/int.md). Можно задать другой целочисленный тип, используя двоеточие, как показано в предыдущем примере. Полный список возможных типов см. в разделе [enum (справочник по C#)](../../csharp/language-reference/keywords/enum.md).
+<span data-ttu-id="bc5d6-107">По умолчанию базовым типом каждого элемента перечисления является [int](../../csharp/language-reference/keywords/int.md). Можно задать другой целочисленный тип, используя двоеточие, как показано в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-107">By default the underlying type of each element in the enum is [int](../../csharp/language-reference/keywords/int.md). You can specify another integral numeric type by using a colon, as shown in the previous example.</span></span> <span data-ttu-id="bc5d6-108">Полный список возможных типов см. в разделе [enum (справочник по C#)](../../csharp/language-reference/keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="bc5d6-108">For a full list of possible types, see [enum (C# Reference)](../../csharp/language-reference/keywords/enum.md).</span></span>
 
-Чтобы проверить основные числовые значения путем приведения в базовый тип, как показано в следующем примере.
+<span data-ttu-id="bc5d6-109">Чтобы проверить основные числовые значения путем приведения в базовый тип, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-109">You can verify the underlying numeric values by casting  to the underlying type, as the following example shows.</span></span>
 
 ```csharp
 Day today = Day.Monday;
@@ -45,57 +43,56 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 // Dec is month number #11.
 ```
 
-Далее указаны преимущества использования enum вместо числового типа.
+<span data-ttu-id="bc5d6-110">Далее указаны преимущества использования enum вместо числового типа.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-110">The following are advantages of using an enum instead of a numeric type:</span></span>
 
-- Для клиентского кода ясно задается, какие значения допустимы для переменной.
+- <span data-ttu-id="bc5d6-111">Для клиентского кода ясно задается, какие значения допустимы для переменной.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-111">You clearly specify for client code which values are valid for the variable.</span></span>
 
-- В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IntelliSense выводит список определенных значений.
+- <span data-ttu-id="bc5d6-112">В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IntelliSense выводит список определенных значений.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-112">In [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], IntelliSense lists the defined values.</span></span>
 
-Если не указать значения этих элементов в списке перечислителя, значения будут автоматически увеличиваться на 1. В предыдущем примере `Day.Sunday` имеет значение 0, `Day.Monday` имеет значение 1 и т. д. Когда создается новый объект `Day`, он будет иметь значение по умолчанию `Day.Sunday` (0), только ему явно не присвоить значение. При создании перечисления выберите наиболее логичное используемое по умолчанию значение и присвойте ему значение нуль. В результате этого все перечисления, если при их создании им явно не задать значение, будут иметь по умолчанию это значение.
+<span data-ttu-id="bc5d6-113">Если не указать значения этих элементов в списке перечислителя, значения будут автоматически увеличиваться на 1.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-113">When you do not specify values for the elements in the enumerator list, the values are automatically incremented by 1.</span></span> <span data-ttu-id="bc5d6-114">В предыдущем примере `Day.Sunday` имеет значение 0, `Day.Monday` имеет значение 1 и т. д.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-114">In the previous example, `Day.Sunday` has a value of 0, `Day.Monday` has a value of 1, and so on.</span></span> <span data-ttu-id="bc5d6-115">Когда создается новый объект `Day`, он будет иметь значение по умолчанию `Day.Sunday` (0), только ему явно не присвоить значение.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-115">When you create a new `Day` object, it will have a default value of `Day.Sunday` (0) if you do not explicitly assign it a value.</span></span> <span data-ttu-id="bc5d6-116">При создании перечисления выберите наиболее логичное используемое по умолчанию значение и присвойте ему значение нуль.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-116">When you create an enum, select the most logical default value and give it a value of zero.</span></span> <span data-ttu-id="bc5d6-117">В результате этого все перечисления, если при их создании им явно не задать значение, будут иметь по умолчанию это значение.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-117">That will cause all enums to have that default value if they are not explicitly assigned a value when they are created.</span></span>
 
-Если переменная `meetingDay` имеет тип `Day`, ей можно (без явного приведения) присвоить только одно из значений, определенных в `Day`. И если день встречи изменяется, можно назначить новое значение из `Day` переменной `meetingDay`:
+<span data-ttu-id="bc5d6-118">Если переменная `meetingDay` имеет тип `Day`, ей можно (без явного приведения) присвоить только одно из значений, определенных в `Day`.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-118">If the variable `meetingDay` is of type `Day`, then (without an explicit cast) you can only assign it one of the values defined by `Day`.</span></span> <span data-ttu-id="bc5d6-119">И если день встречи изменяется, можно назначить новое значение из `Day` переменной `meetingDay`:</span><span class="sxs-lookup"><span data-stu-id="bc5d6-119">And if the meeting day changes, you can assign a new value from `Day` to `meetingDay`:</span></span>
 
 [!code-csharp[csProgGuideEnums#4](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#4)]
 
 > [!NOTE]
-> Переменной `meetingDay` можно присвоить любое произвольное целое значение. Например, эта строка кода не создает ошибку: `meetingDay = (Day) 42`. Но этого делать нельзя, поскольку неявно ожидается, что переменная перечисления принимает одно из значений, определяемых перечислением. Присвоение переменной типа перечисления произвольного значения связано с большим риском возникновения ошибок.
+> <span data-ttu-id="bc5d6-120">Переменной `meetingDay` можно присвоить любое произвольное целое значение.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-120">It's possible to assign any arbitrary integer value to `meetingDay`.</span></span> <span data-ttu-id="bc5d6-121">Например, эта строка кода не создает ошибку: `meetingDay = (Day) 42`.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-121">For example, this line of code does not produce an error: `meetingDay = (Day) 42`.</span></span> <span data-ttu-id="bc5d6-122">Но этого делать нельзя, поскольку неявно ожидается, что переменная перечисления принимает одно из значений, определяемых перечислением.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-122">However, you should not do this because the implicit expectation is that an enum variable will only hold one of the values defined by the enum.</span></span> <span data-ttu-id="bc5d6-123">Присвоение переменной типа перечисления произвольного значения связано с большим риском возникновения ошибок.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-123">To assign an arbitrary value to a variable of an enumeration type is to introduce a high risk for errors.</span></span>
 
-Элементам списка перечислителя типа перечисления можно присвоить любые значения, и можно также использовать вычисленные значения:
+<span data-ttu-id="bc5d6-124">Элементам списка перечислителя типа перечисления можно присвоить любые значения, и можно также использовать вычисленные значения:</span><span class="sxs-lookup"><span data-stu-id="bc5d6-124">You can assign any values to the elements in the enumerator list of an enumeration type, and you can also use computed values:</span></span>
 
 [!code-csharp[csProgGuideEnums#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#3)]
 
-## <a name="enumeration-types-as-bit-flags"></a>Типы перечислений как битовые флаги
+## <a name="enumeration-types-as-bit-flags"></a><span data-ttu-id="bc5d6-125">Типы перечислений как битовые флаги</span><span class="sxs-lookup"><span data-stu-id="bc5d6-125">Enumeration types as bit flags</span></span>
 
-Тип перечисления можно использовать для определения битовых флагов, благодаря чему экземпляр типа перечисления может хранить любую комбинацию значений, определенных в списке перечислителя. (Конечно, некоторые комбинации могут не иметь смысла или быть недопустимы в коде программы.)
+<span data-ttu-id="bc5d6-126">Тип перечисления можно использовать для определения битовых флагов, благодаря чему экземпляр типа перечисления может хранить любую комбинацию значений, определенных в списке перечислителя.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-126">You can use an enumeration type to define bit flags, which enables an instance of the enumeration type to store any combination of the values that are defined in the enumerator list.</span></span> <span data-ttu-id="bc5d6-127">(Конечно, некоторые комбинации могут не иметь смысла или быть недопустимы в коде программы.)</span><span class="sxs-lookup"><span data-stu-id="bc5d6-127">(Of course, some combinations may not be meaningful or allowed in your program code.)</span></span>
 
-Чтобы создать перечисление битовых флагов, нужно применить атрибут <xref:System.FlagsAttribute?displayProperty=fullName> и определить значения так, чтобы для них могли выполняться битовые операции `AND`, `OR`, `NOT` и `XOR`. В перечисление битовых флагов включите именованную константу с нулевым значением, что означает "флаги не установлены". Не придавайте флагу нулевое значение, если оно не означает "флаги не установлены".
+<span data-ttu-id="bc5d6-128">Чтобы создать перечисление битовых флагов, нужно применить атрибут <xref:System.FlagsAttribute?displayProperty=nameWithType> и определить значения так, чтобы для них могли выполняться битовые операции `AND`, `OR`, `NOT` и `XOR`.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-128">You create a bit flags enum by applying the <xref:System.FlagsAttribute?displayProperty=nameWithType> attribute and defining the values appropriately so that `AND`, `OR`, `NOT` and `XOR` bitwise operations can be performed on them.</span></span> <span data-ttu-id="bc5d6-129">В перечисление битовых флагов включите именованную константу с нулевым значением, что означает "флаги не установлены".</span><span class="sxs-lookup"><span data-stu-id="bc5d6-129">In a bit flags enum, include a named constant with a value of zero that means "no flags are set."</span></span> <span data-ttu-id="bc5d6-130">Не придавайте флагу нулевое значение, если оно не означает "флаги не установлены".</span><span class="sxs-lookup"><span data-stu-id="bc5d6-130">Do not give a flag a value of zero if it does not mean "no flags are set".</span></span>
 
-В следующем примере определена другая версия перечисления `Day`, которая называется `Days`. У `Days` имеется атрибут `Flags`, и каждому значению присваивается следующая степень числа 2. Это позволяет создать переменную `Days` со значением `Days.Tuesday | Days.Thursday`.
+<span data-ttu-id="bc5d6-131">В следующем примере определена другая версия перечисления `Day`, которая называется `Days`.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-131">In the following example, another version of the `Day` enum, which is named `Days`, is defined.</span></span> <span data-ttu-id="bc5d6-132">У `Days` имеется атрибут `Flags`, и каждому значению присваивается следующая степень числа 2.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-132">`Days` has the `Flags` attribute, and each value is assigned the next greater power of 2.</span></span> <span data-ttu-id="bc5d6-133">Это позволяет создать переменную `Days` со значением `Days.Tuesday | Days.Thursday`.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-133">This enables you to create a `Days` variable whose value is `Days.Tuesday | Days.Thursday`.</span></span>
 
 [!code-csharp[csProgGuideEnums#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#2)]
 
-Чтобы установить флаг на перечислении, используйте побитовый оператор `OR`, как показано в следующем примере:
+<span data-ttu-id="bc5d6-134">Чтобы установить флаг на перечислении, используйте побитовый оператор `OR`, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="bc5d6-134">To set a flag on an enum, use the bitwise `OR` operator as shown in the following example:</span></span>
 
 [!code-csharp[csProgGuideEnums#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#6)]
 
-Чтобы определить, установлен ли конкретный флаг, используйте побитовый оператор `AND`, как показано в следующем примере:
+<span data-ttu-id="bc5d6-135">Чтобы определить, установлен ли конкретный флаг, используйте побитовый оператор `AND`, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="bc5d6-135">To determine whether a specific flag is set, use a bitwise `AND` operation, as shown in the following example:</span></span>
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-Дополнительные сведения о том, что необходимо учитывать при определении типов перечислений при помощи атрибута <xref:System.FlagsAttribute?displayProperty=fullName>, см. в статье <xref:System.Enum?displayProperty=fullName>.
+<span data-ttu-id="bc5d6-136">Дополнительные сведения о том, что необходимо учитывать при определении типов перечислений при помощи атрибута <xref:System.FlagsAttribute?displayProperty=nameWithType>, см. в статье <xref:System.Enum?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-136">For more information about what to consider when you define enumeration types with the <xref:System.FlagsAttribute?displayProperty=nameWithType> attribute, see <xref:System.Enum?displayProperty=nameWithType>.</span></span>
 
-## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Использование методов System.Enum для получения и обработки значений перечисления
+## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a><span data-ttu-id="bc5d6-137">Использование методов System.Enum для получения и обработки значений перечисления</span><span class="sxs-lookup"><span data-stu-id="bc5d6-137">Using the System.Enum methods to discover and manipulate enum values</span></span>
 
-Все перечисления являются экземплярами типа <xref:System.Enum?displayProperty=fullName>. Нельзя унаследовать новые классы от класса <xref:System.Enum?displayProperty=fullName>, но можно использовать его методы для получения и изменения данных об экземпляре перечисления.
+<span data-ttu-id="bc5d6-138">Все перечисления являются экземплярами типа <xref:System.Enum?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-138">All enums are instances of the <xref:System.Enum?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="bc5d6-139">Нельзя унаследовать новые классы от класса <xref:System.Enum?displayProperty=nameWithType>, но можно использовать его методы для получения и изменения данных об экземпляре перечисления.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-139">You cannot derive new classes from <xref:System.Enum?displayProperty=nameWithType>, but you can use its methods to discover information about and manipulate values in an enum instance.</span></span>
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-Для получения дополнительной информации см. <xref:System.Enum?displayProperty=fullName>.
+<span data-ttu-id="bc5d6-140">Для получения дополнительной информации см. <xref:System.Enum?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-140">For more information, see <xref:System.Enum?displayProperty=nameWithType>.</span></span>
 
-Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+<span data-ttu-id="bc5d6-141">Можно также создать для перечисления новый метод, используя метод расширения.</span><span class="sxs-lookup"><span data-stu-id="bc5d6-141">You can also create a new method for an enum by using an extension method.</span></span> <span data-ttu-id="bc5d6-142">Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="bc5d6-142">For more information, see [How to: Create a New Method for an Enumeration](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).</span></span>
 
-## <a name="see-also"></a>См. также
- <xref:System.Enum?displayProperty=fullName>   
- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)   
- [enum](../../csharp/language-reference/keywords/enum.md)
-
+## <a name="see-also"></a><span data-ttu-id="bc5d6-143">См. также</span><span class="sxs-lookup"><span data-stu-id="bc5d6-143">See also</span></span>
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [<span data-ttu-id="bc5d6-144">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="bc5d6-144">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="bc5d6-145">enum</span><span class="sxs-lookup"><span data-stu-id="bc5d6-145">enum</span></span>](../../csharp/language-reference/keywords/enum.md)

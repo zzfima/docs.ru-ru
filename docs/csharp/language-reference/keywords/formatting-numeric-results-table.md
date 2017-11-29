@@ -1,62 +1,42 @@
 ---
 title: "Таблица форматирования числовых результатов (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 16976f5a59bd4eb0eca29553aff87d4fe0b1d247
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="formatting-numeric-results-table-c-reference"></a>Таблица форматирования числовых результатов (Справочник по C#)
-Для форматирования результатов можно воспользоваться методом <xref:System.String.Format%2A?displayProperty=fullName>, а также методом <xref:System.Console.Write%2A?displayProperty=fullName> или <xref:System.Console.WriteLine%2A?displayProperty=fullName>, вызывающим метод `String.Format`. Формат задается с помощью строк формата. В следующей таблице приведены поддерживаемые строки стандартных форматов. Строка формата принимает следующую форму: `Axx`, где `A` — описатель формата, а `xx` — описатель точности. Описатель формата управляет типом форматирования, применяемым к числовому значению, а описатель точности управляет количеством значащих цифр или десятичных знаков форматированного результата. Значение описателя точности находится в диапазоне от 0 до 99.  
+# <a name="formatting-numeric-results-table-c-reference"></a><span data-ttu-id="50a60-102">Таблица форматирования числовых результатов (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="50a60-102">Formatting Numeric Results Table (C# Reference)</span></span>
+<span data-ttu-id="50a60-103">Для форматирования результатов можно воспользоваться методом <xref:System.String.Format%2A?displayProperty=nameWithType>, а также методом <xref:System.Console.Write%2A?displayProperty=nameWithType> или <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, вызывающим метод `String.Format`.</span><span class="sxs-lookup"><span data-stu-id="50a60-103">You can format numeric results by using the <xref:System.String.Format%2A?displayProperty=nameWithType> method, or through the <xref:System.Console.Write%2A?displayProperty=nameWithType> or <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method, which calls `String.Format`.</span></span> <span data-ttu-id="50a60-104">Формат задается с помощью строк формата.</span><span class="sxs-lookup"><span data-stu-id="50a60-104">The format is specified by using format strings.</span></span> <span data-ttu-id="50a60-105">В следующей таблице приведены поддерживаемые строки стандартных форматов.</span><span class="sxs-lookup"><span data-stu-id="50a60-105">The following table contains the supported standard format strings.</span></span> <span data-ttu-id="50a60-106">Строка формата принимает следующую форму: `Axx`, где `A` — описатель формата, а `xx` — описатель точности.</span><span class="sxs-lookup"><span data-stu-id="50a60-106">The format string takes the following form: `Axx`, where `A` is the format specifier and `xx` is the precision specifier.</span></span> <span data-ttu-id="50a60-107">Описатель формата управляет типом форматирования, применяемым к числовому значению, а описатель точности управляет количеством значащих цифр или десятичных знаков форматированного результата.</span><span class="sxs-lookup"><span data-stu-id="50a60-107">The format specifier controls the type of formatting applied to the numeric value, and the precision specifier controls the number of significant digits or decimal places of the formatted output.</span></span> <span data-ttu-id="50a60-108">Значение описателя точности находится в диапазоне от 0 до 99.</span><span class="sxs-lookup"><span data-stu-id="50a60-108">The value of the precision specifier ranges from 0 to 99.</span></span>  
   
- Дополнительные сведения о строках стандартных и пользовательских форматов см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md). Дополнительные сведения о методе `String.Format` см. в разделе <xref:System.String.Format%2A?displayProperty=fullName>.  
+ <span data-ttu-id="50a60-109">Дополнительные сведения о строках стандартных и пользовательских форматов см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="50a60-109">For more information about standard and custom formatting strings, see [Formatting Types](../../../standard/base-types/formatting-types.md).</span></span> <span data-ttu-id="50a60-110">Дополнительные сведения о методе `String.Format` см. в разделе <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="50a60-110">For more information about the `String.Format` method, see <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span>  
   
-|Описатель формата|Описание|Примеры|Вывод|  
+|<span data-ttu-id="50a60-111">Описатель формата</span><span class="sxs-lookup"><span data-stu-id="50a60-111">Format Specifier</span></span>|<span data-ttu-id="50a60-112">Описание</span><span class="sxs-lookup"><span data-stu-id="50a60-112">Description</span></span>|<span data-ttu-id="50a60-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="50a60-113">Examples</span></span>|<span data-ttu-id="50a60-114">Вывод</span><span class="sxs-lookup"><span data-stu-id="50a60-114">Output</span></span>|  
 |----------------------|-----------------|--------------|------------|  
-|C или c|Валюта|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
-|D или d|Десятичное число|Console.Write("{0:D5}", 25);|00025|  
-|E или e|Экспоненциальный|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F или f|С фиксированной запятой|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G или g|Общие|Console.Write("{0:G}", 2.5);|2.5|  
-|N или n|Число|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X или x|Шестнадцатеричный|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
+|<span data-ttu-id="50a60-115">C или c</span><span class="sxs-lookup"><span data-stu-id="50a60-115">C or c</span></span>|<span data-ttu-id="50a60-116">Валюта</span><span class="sxs-lookup"><span data-stu-id="50a60-116">Currency</span></span>|<span data-ttu-id="50a60-117">Console.Write("{0:C}", 2.5);</span><span class="sxs-lookup"><span data-stu-id="50a60-117">Console.Write("{0:C}", 2.5);</span></span><br /><br /> <span data-ttu-id="50a60-118">Console.Write("{0:C}", -2.5);</span><span class="sxs-lookup"><span data-stu-id="50a60-118">Console.Write("{0:C}", -2.5);</span></span>|<span data-ttu-id="50a60-119">$2.50</span><span class="sxs-lookup"><span data-stu-id="50a60-119">$2.50</span></span><br /><br /> <span data-ttu-id="50a60-120">($2.50)</span><span class="sxs-lookup"><span data-stu-id="50a60-120">($2.50)</span></span>|  
+|<span data-ttu-id="50a60-121">D или d</span><span class="sxs-lookup"><span data-stu-id="50a60-121">D or d</span></span>|<span data-ttu-id="50a60-122">Десятичное число</span><span class="sxs-lookup"><span data-stu-id="50a60-122">Decimal</span></span>|<span data-ttu-id="50a60-123">Console.Write("{0:D5}", 25);</span><span class="sxs-lookup"><span data-stu-id="50a60-123">Console.Write("{0:D5}", 25);</span></span>|<span data-ttu-id="50a60-124">00025</span><span class="sxs-lookup"><span data-stu-id="50a60-124">00025</span></span>|  
+|<span data-ttu-id="50a60-125">E или e</span><span class="sxs-lookup"><span data-stu-id="50a60-125">E or e</span></span>|<span data-ttu-id="50a60-126">Экспоненциальный</span><span class="sxs-lookup"><span data-stu-id="50a60-126">Scientific</span></span>|<span data-ttu-id="50a60-127">Console.Write("{0:E}", 250000);</span><span class="sxs-lookup"><span data-stu-id="50a60-127">Console.Write("{0:E}", 250000);</span></span>|<span data-ttu-id="50a60-128">2.500000E+005</span><span class="sxs-lookup"><span data-stu-id="50a60-128">2.500000E+005</span></span>|  
+|<span data-ttu-id="50a60-129">F или f</span><span class="sxs-lookup"><span data-stu-id="50a60-129">F or f</span></span>|<span data-ttu-id="50a60-130">С фиксированной запятой</span><span class="sxs-lookup"><span data-stu-id="50a60-130">Fixed-point</span></span>|<span data-ttu-id="50a60-131">Console.Write("{0:F2}", 25);</span><span class="sxs-lookup"><span data-stu-id="50a60-131">Console.Write("{0:F2}", 25);</span></span><br /><br /> <span data-ttu-id="50a60-132">Console.Write("{0:F0}", 25);</span><span class="sxs-lookup"><span data-stu-id="50a60-132">Console.Write("{0:F0}", 25);</span></span>|<span data-ttu-id="50a60-133">25.00</span><span class="sxs-lookup"><span data-stu-id="50a60-133">25.00</span></span><br /><br /> <span data-ttu-id="50a60-134">25</span><span class="sxs-lookup"><span data-stu-id="50a60-134">25</span></span>|  
+|<span data-ttu-id="50a60-135">G или g</span><span class="sxs-lookup"><span data-stu-id="50a60-135">G or g</span></span>|<span data-ttu-id="50a60-136">Общие</span><span class="sxs-lookup"><span data-stu-id="50a60-136">General</span></span>|<span data-ttu-id="50a60-137">Console.Write("{0:G}", 2.5);</span><span class="sxs-lookup"><span data-stu-id="50a60-137">Console.Write("{0:G}", 2.5);</span></span>|<span data-ttu-id="50a60-138">2.5</span><span class="sxs-lookup"><span data-stu-id="50a60-138">2.5</span></span>|  
+|<span data-ttu-id="50a60-139">N или n</span><span class="sxs-lookup"><span data-stu-id="50a60-139">N or n</span></span>|<span data-ttu-id="50a60-140">Число</span><span class="sxs-lookup"><span data-stu-id="50a60-140">Number</span></span>|<span data-ttu-id="50a60-141">Console.Write("{0:N}", 2500000);</span><span class="sxs-lookup"><span data-stu-id="50a60-141">Console.Write("{0:N}", 2500000);</span></span>|<span data-ttu-id="50a60-142">2,500,000.00</span><span class="sxs-lookup"><span data-stu-id="50a60-142">2,500,000.00</span></span>|  
+|<span data-ttu-id="50a60-143">X или x</span><span class="sxs-lookup"><span data-stu-id="50a60-143">X or x</span></span>|<span data-ttu-id="50a60-144">Шестнадцатеричный</span><span class="sxs-lookup"><span data-stu-id="50a60-144">Hexadecimal</span></span>|<span data-ttu-id="50a60-145">Console.Write("{0:X}", 250);</span><span class="sxs-lookup"><span data-stu-id="50a60-145">Console.Write("{0:X}", 250);</span></span><br /><br /> <span data-ttu-id="50a60-146">Console.Write("{0:X}", 0xffff);</span><span class="sxs-lookup"><span data-stu-id="50a60-146">Console.Write("{0:X}", 0xffff);</span></span>|<span data-ttu-id="50a60-147">FA</span><span class="sxs-lookup"><span data-stu-id="50a60-147">FA</span></span><br /><br /> <span data-ttu-id="50a60-148">FFFF</span><span class="sxs-lookup"><span data-stu-id="50a60-148">FFFF</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)   
- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
- [string](../../../csharp/language-reference/keywords/string.md)
-
+## <a name="see-also"></a><span data-ttu-id="50a60-149">См. также</span><span class="sxs-lookup"><span data-stu-id="50a60-149">See Also</span></span>  
+ [<span data-ttu-id="50a60-150">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="50a60-150">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="50a60-151">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="50a60-151">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="50a60-152">Строки стандартных числовых форматов</span><span class="sxs-lookup"><span data-stu-id="50a60-152">Standard Numeric Format Strings</span></span>](../../../standard/base-types/standard-numeric-format-strings.md)  
+ [<span data-ttu-id="50a60-153">Справочные таблицы по типам</span><span class="sxs-lookup"><span data-stu-id="50a60-153">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+ [<span data-ttu-id="50a60-154">string</span><span class="sxs-lookup"><span data-stu-id="50a60-154">string</span></span>](../../../csharp/language-reference/keywords/string.md)

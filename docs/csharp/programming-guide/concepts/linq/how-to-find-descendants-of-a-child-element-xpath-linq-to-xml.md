@@ -1,35 +1,31 @@
 ---
 title: "Практическое руководство. Поиск потомков дочернего элемента (XPath-LINQ to XML) (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 873cfe6a725a932ac4616e7ccf0ea11e3f6479f5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b645290b6cac55e48be0b15a33307f53c08edd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск потомков дочернего элемента (XPath-LINQ to XML) (C#)
-В этом разделе рассказывается, как возвращать элементы-потомки дочерних элементов с определенным именем.  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="efe7f-102">Практическое руководство. Поиск потомков дочернего элемента (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="efe7f-102">How to: Find Descendants of a Child Element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="efe7f-103">В этом разделе рассказывается, как возвращать элементы-потомки дочерних элементов с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="efe7f-103">This topic shows how to get the descendant elements of a child element with a particular name.</span></span>  
   
- Выражение XPath:  
+ <span data-ttu-id="efe7f-104">Выражение XPath:</span><span class="sxs-lookup"><span data-stu-id="efe7f-104">The XPath expression is:</span></span>  
   
  `./Paragraph//Text/text()`  
   
-## <a name="example"></a>Пример  
- В этом примере имитируются проблемы извлечения текста из XML-представления документа текстового редактора. В нем сначала выделяются все элементы `Paragraph`, а затем в нем выделяются все элементы-потомки `Text` каждого элемента `Paragraph`. В этом примере элементы-потомки `Text` элемента `Comment` не выделяются.  
+## <a name="example"></a><span data-ttu-id="efe7f-105">Пример</span><span class="sxs-lookup"><span data-stu-id="efe7f-105">Example</span></span>  
+ <span data-ttu-id="efe7f-106">В этом примере имитируются проблемы извлечения текста из XML-представления документа текстового редактора.</span><span class="sxs-lookup"><span data-stu-id="efe7f-106">This example simulates the problems of extracting text from an XML representation of a word processing document.</span></span> <span data-ttu-id="efe7f-107">В нем сначала выделяются все элементы `Paragraph`, а затем в нем выделяются все элементы-потомки `Text` каждого элемента `Paragraph`.</span><span class="sxs-lookup"><span data-stu-id="efe7f-107">It first selects all `Paragraph` elements, and then it selects all `Text` descendant elements of each `Paragraph` element.</span></span> <span data-ttu-id="efe7f-108">В этом примере элементы-потомки `Text` элемента `Comment` не выделяются.</span><span class="sxs-lookup"><span data-stu-id="efe7f-108">This doesn't select the descendant `Text` elements of the `Comment` element.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -80,13 +76,12 @@ else
 Console.WriteLine(str2);  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="efe7f-109">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="efe7f-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-
+## <a name="see-also"></a><span data-ttu-id="efe7f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="efe7f-110">See Also</span></span>  
+ [<span data-ttu-id="efe7f-111">LINQ to XML для пользователей XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="efe7f-111">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,55 +1,43 @@
 ---
-title: "Схема разделов конфигурации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "схема конфигурации [платформа .NET Framework], пользовательские параметры в файлах конфигурации"
-  - "разделы конфигурации [платформа .NET Framework]"
-  - "параметры конфигурации [платформа .NET Framework], пользовательский"
-  - "пользовательские элементы"
-  - "элементы [платформа .NET Framework], пользовательские параметры в файлах конфигурации"
-  - "параметры конфигурации схемы"
+title: "Схема разделов конфигурации"
+ms.date: 05/02/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration settings [.NET Framework], custom
+- schema configuration settings
+- configuration sections [.NET Framework]
+- custom elements
+- configuration schema [.NET Framework], custom settings in configuration files
+- elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: guardrex
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c668cf3d2f2c0bcffda185cea01edfb9e55c6d6c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Схема разделов конфигурации
-Схема разделов конфигурации содержит элементы, задающие пользовательские параметры в файлах конфигурации.  
-  
- [\<configuration\>](../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-  
- [\<configSections\>](http://msdn.microsoft.com/ru-ru/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)  
-  
- [\<clear\>](http://msdn.microsoft.com/ru-ru/b0ce3c91-89fa-4bb5-a995-30e21a61036b)  
-  
- [\<remove\>](http://msdn.microsoft.com/ru-ru/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)  
-  
- [\<section\>](http://msdn.microsoft.com/ru-ru/51c9d658-c275-4ab2-aa66-c5d5b5289570)  
-  
- [\<sectionGroup\>](http://msdn.microsoft.com/ru-ru/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Элемент clear для элемента configSections \(схема общих параметров\)](http://msdn.microsoft.com/ru-ru/b0ce3c91-89fa-4bb5-a995-30e21a61036b)|Удаляет все ранее определенные разделы и группы разделов.|  
-|[Элемент configSections \(схема общих параметров\)](http://msdn.microsoft.com/ru-ru/8a5cbc84-0257-4c2e-80a9-a064fe7c896b)|Содержит раздел конфигурации и объявления пространств имен.|  
-|[Элемент remove для элемента configSections \(схема общих параметров\)](http://msdn.microsoft.com/ru-ru/6e2b2d45-113d-4d10-9f8e-0b15fc86bb98)|Удаляет предопределенный раздел или группу разделов.|  
-|[Элемент section для элемента configSections \(схема общих параметров\)](http://msdn.microsoft.com/ru-ru/51c9d658-c275-4ab2-aa66-c5d5b5289570)|Содержит объявление раздела конфигурации.|  
-|[Элемент sectionGroup для элемента configSections \(схема общих параметров\)](http://msdn.microsoft.com/ru-ru/45fbeb5c-26c7-4c68-b732-b3f1e62c53bf)|Определяет пространство имен для разделов конфигурации.|  
-  
-## См. также  
- [Схема файла конфигурации](../../../../docs/framework/configure-apps/file-schema/index.md)
+# <a name="configuration-sections-schema"></a><span data-ttu-id="55e33-102">Схема разделов конфигурации</span><span class="sxs-lookup"><span data-stu-id="55e33-102">Configuration sections schema</span></span>
+
+<span data-ttu-id="55e33-103">Схема разделов конфигурации содержит элементы, определяющие пользовательские параметры в файлах конфигурации.</span><span class="sxs-lookup"><span data-stu-id="55e33-103">The configuration sections schema contains elements that define custom settings in configuration files.</span></span> <span data-ttu-id="55e33-104">Общие сведения о файлах конфигурации и схемы см. в разделе [схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="55e33-104">For general information on configuration files and schemas, see [Configuration file schema for the .NET Framework](~/docs/framework/configure-apps/file-schema/index.md).</span></span>
+
+<span data-ttu-id="55e33-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="55e33-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="55e33-106">[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="55e33-106">[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) </span></span>  
+<span data-ttu-id="55e33-107">[**\<Очистить >**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="55e33-107">[**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) </span></span>  
+<span data-ttu-id="55e33-108">[**\<Удалите >**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span><span class="sxs-lookup"><span data-stu-id="55e33-108">[**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) </span></span>  
+<span data-ttu-id="55e33-109">[**\<раздел >**](~/docs/framework/configure-apps/file-schema/section-element.md) </span><span class="sxs-lookup"><span data-stu-id="55e33-109">[**\<section>**](~/docs/framework/configure-apps/file-schema/section-element.md) </span></span>  
+[<span data-ttu-id="55e33-110">**\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="55e33-110">**\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)
+
+|     | <span data-ttu-id="55e33-111">Описание</span><span class="sxs-lookup"><span data-stu-id="55e33-111">Description</span></span> |
+| --- | ----------- |
+| [<span data-ttu-id="55e33-112">**\<Очистить >** для  **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="55e33-112">**\<clear>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="55e33-113">Удаляет все ранее определенные разделы и группы разделов.</span><span class="sxs-lookup"><span data-stu-id="55e33-113">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="55e33-114">**\<clear>**</span><span class="sxs-lookup"><span data-stu-id="55e33-114">**\<clear>**</span></span>](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | <span data-ttu-id="55e33-115">Удаляет все ранее определенные разделы и группы разделов.</span><span class="sxs-lookup"><span data-stu-id="55e33-115">Clears all previously defined sections and section groups.</span></span> |
+| [<span data-ttu-id="55e33-116">**\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="55e33-116">**\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | <span data-ttu-id="55e33-117">Содержит раздел конфигурации и пространства имен объявления.</span><span class="sxs-lookup"><span data-stu-id="55e33-117">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="55e33-118">**\<Удалите >** для  **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="55e33-118">**\<remove>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | <span data-ttu-id="55e33-119">Удаляет предварительно определенный раздел или группу разделов.</span><span class="sxs-lookup"><span data-stu-id="55e33-119">Removes a predefined section or section group.</span></span> |
+| [<span data-ttu-id="55e33-120">**\<раздел >** для  **\<configSections >** и  **\<sectionGroup >**</span><span class="sxs-lookup"><span data-stu-id="55e33-120">**\<section>** for **\<configSections>** and **\<sectionGroup>**</span></span>](~/docs/framework/configure-apps/file-schema/section-element.md) | <span data-ttu-id="55e33-121">Содержит объявление раздела конфигурации.</span><span class="sxs-lookup"><span data-stu-id="55e33-121">Contains a configuration section declaration.</span></span> |
+| [<span data-ttu-id="55e33-122">**\<sectionGroup >** для  **\<configSections >**</span><span class="sxs-lookup"><span data-stu-id="55e33-122">**\<sectionGroup>** for **\<configSections>**</span></span>](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | <span data-ttu-id="55e33-123">Определяет пространство имен для разделов конфигурации.</span><span class="sxs-lookup"><span data-stu-id="55e33-123">Defines a namespace for configuration sections.</span></span> |

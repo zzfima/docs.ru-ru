@@ -1,77 +1,87 @@
 ---
-title: "&lt;samlSecurityTokenRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;samlSecurityTokenRequirement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e0d8d467c2636f5ce95cf5fed189ae00c3ca75fb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;samlSecurityTokenRequirement&gt;
-Предоставляет конфигурацию для класса <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> или производного класса из этих классов.  Представленный классом <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>.  
+# <a name="ltsamlsecuritytokenrequirementgt"></a><span data-ttu-id="87e42-102">&lt;samlSecurityTokenRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="87e42-102">&lt;samlSecurityTokenRequirement&gt;</span></span>
+<span data-ttu-id="87e42-103">Обеспечивает настройку для <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класса или производного класса от любого из этих классов.</span><span class="sxs-lookup"><span data-stu-id="87e42-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span> <span data-ttu-id="87e42-104">Представленный <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> класса.</span><span class="sxs-lookup"><span data-stu-id="87e42-104">Represented by the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> class.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="87e42-105">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="87e42-105">\<system.identityModel></span></span>  
+<span data-ttu-id="87e42-106">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="87e42-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="87e42-107">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="87e42-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="87e42-108">\<add></span><span class="sxs-lookup"><span data-stu-id="87e42-108">\<add></span></span>  
+<span data-ttu-id="87e42-109">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="87e42-109">\<samlSecurityTokenRequirement></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="87e42-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="87e42-110">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add>  
-        <samlSecurityTokenRequirement   
-            issuerCertificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
-            issuerCertificateRevocationMode="NoCheck||Offline||Online"  
-            issuerCertificateTrustedStoreLocation="CurrentLocation||LocalMachine"  
-            issuerCertificateValidator="Namespace.Class Assembly"  
-            mapToWindows=xs:boolean  
-          <nameClaimType value=xs:string />  
-          <roleClaimType value=xs:string />  
-        </samlSecurityTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add>  
+        <samlSecurityTokenRequirement   
+            issuerCertificateValidationMode="None||ChainTrust||PeerTrust||PeerOrChainTrust||Custom"  
+            issuerCertificateRevocationMode="NoCheck||Offline||Online"  
+            issuerCertificateTrustedStoreLocation="CurrentLocation||LocalMachine"  
+            issuerCertificateValidator="Namespace.Class Assembly"  
+            mapToWindows=xs:boolean  
+          <nameClaimType value=xs:string />  
+          <roleClaimType value=xs:string />  
+        </samlSecurityTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="87e42-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="87e42-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="87e42-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="87e42-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="87e42-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="87e42-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|mapToWindows|Указывает, должен ли обработчик токена сопоставления маркер проверки для учетной записи Windows с помощью входящего утверждения имени участника\-пользователя.  Значение по умолчанию \- "false".|  
-|issuerCertificateRevocationMode|Значение <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>, указывающее режим отзыва для сертификата X.509.  Значение по умолчанию "подключения".|  
-|issuerCertificateValidationMode|Значение <xref:System.ServiceModel.Security.X509CertificateValidationMode>, которое указывает режим, используемый для проверки сертификата X.509.  Значение по умолчанию "PeerOrChainTrust".|  
-|issuerCertificateTrustedStoreLocation|Значение <xref:System.Security.Cryptography.X509Certificates.StoreLocation>, определяющее хранилище сертификатов X.509.  Значение по умолчанию \-LocalMachine".|  
-|issuerCertificateValidator|Пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  Если атрибут `issuerCertificateValidationMode` "custom", то экземпляр этого типа используется для проверки сертификата издателя.|  
+|<span data-ttu-id="87e42-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="87e42-114">Attribute</span></span>|<span data-ttu-id="87e42-115">Описание</span><span class="sxs-lookup"><span data-stu-id="87e42-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="87e42-116">mapToWindows</span><span class="sxs-lookup"><span data-stu-id="87e42-116">mapToWindows</span></span>|<span data-ttu-id="87e42-117">Указывает ли обработчик маркеров следует сопоставить проверки токена с учетной записью Windows с помощью входящее утверждение имени участника-пользователя.</span><span class="sxs-lookup"><span data-stu-id="87e42-117">Specifies whether the token handler should map the validating token to a Windows account by using the incoming UPN claim.</span></span> <span data-ttu-id="87e42-118">Значение по умолчанию — «false».</span><span class="sxs-lookup"><span data-stu-id="87e42-118">The default is "false".</span></span>|  
+|<span data-ttu-id="87e42-119">issuerCertificateRevocationMode</span><span class="sxs-lookup"><span data-stu-id="87e42-119">issuerCertificateRevocationMode</span></span>|<span data-ttu-id="87e42-120"><xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Значение, указывающее режим отзыва для сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="87e42-120">An <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> value that specifies the revocation mode to use for the X.509 certificate.</span></span> <span data-ttu-id="87e42-121">Значение по умолчанию — «В сети».</span><span class="sxs-lookup"><span data-stu-id="87e42-121">The default value is "Online".</span></span>|  
+|<span data-ttu-id="87e42-122">issuerCertificateValidationMode</span><span class="sxs-lookup"><span data-stu-id="87e42-122">issuerCertificateValidationMode</span></span>|<span data-ttu-id="87e42-123"><xref:System.ServiceModel.Security.X509CertificateValidationMode> Значение, указывающее режим проверки для сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="87e42-123">An <xref:System.ServiceModel.Security.X509CertificateValidationMode> value that specifies the validation mode to use for the X.509 certificate.</span></span> <span data-ttu-id="87e42-124">Значение по умолчанию — «PeerOrChainTrust».</span><span class="sxs-lookup"><span data-stu-id="87e42-124">The default value is "PeerOrChainTrust".</span></span>|  
+|<span data-ttu-id="87e42-125">issuerCertificateTrustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="87e42-125">issuerCertificateTrustedStoreLocation</span></span>|<span data-ttu-id="87e42-126">Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее хранилище сертификатов X.509.</span><span class="sxs-lookup"><span data-stu-id="87e42-126">A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> value that specifies the X.509 certificate store.</span></span> <span data-ttu-id="87e42-127">Значение по умолчанию — «LocalMachine».</span><span class="sxs-lookup"><span data-stu-id="87e42-127">The default value is "LocalMachine".</span></span>|  
+|<span data-ttu-id="87e42-128">issuerCertificateValidator</span><span class="sxs-lookup"><span data-stu-id="87e42-128">issuerCertificateValidator</span></span>|<span data-ttu-id="87e42-129">Пользовательский тип, который является производным от <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span><span class="sxs-lookup"><span data-stu-id="87e42-129">A custom type that derives from <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span> <span data-ttu-id="87e42-130">Если `issuerCertificateValidationMode` атрибут «Custom», экземпляр этого типа используется для проверки сертификата издателя.</span><span class="sxs-lookup"><span data-stu-id="87e42-130">If the `issuerCertificateValidationMode` attribute is "Custom", an instance of this type is used for issuer certificate validation.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="87e42-131">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="87e42-131">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<nameClaimType\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/nameclaimtype.md)|Задает тип утверждения, которое указывает свойство <xref:System.Security.Principal.IIdentity.Name%2A>.|  
-|[\<roleClaimType\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/roleclaimtype.md)|Определяет утверждение, указывающее роль утверждений типа в коллекции объектов <xref:System.Security.Claims.ClaimsIdentity>, возвращаемых методом <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> обработчика токена.|  
+|<span data-ttu-id="87e42-132">Элемент</span><span class="sxs-lookup"><span data-stu-id="87e42-132">Element</span></span>|<span data-ttu-id="87e42-133">Описание</span><span class="sxs-lookup"><span data-stu-id="87e42-133">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="87e42-134">\<nameClaimType ></span><span class="sxs-lookup"><span data-stu-id="87e42-134">\<nameClaimType></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/nameclaimtype.md)|<span data-ttu-id="87e42-135">Задает тип утверждения, который задает <xref:System.Security.Principal.IIdentity.Name%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="87e42-135">Sets the claim type that specifies the <xref:System.Security.Principal.IIdentity.Name%2A> property.</span></span>|  
+|[<span data-ttu-id="87e42-136">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="87e42-136">\<roleClaimType></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/roleclaimtype.md)|<span data-ttu-id="87e42-137">Указывает тип утверждения, который определяет тип утверждения роли в коллекцию <xref:System.Security.Claims.ClaimsIdentity> объектов, возвращенных <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> метод обработчика токенов.</span><span class="sxs-lookup"><span data-stu-id="87e42-137">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="87e42-138">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="87e42-138">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет указанный обработчик маркеров безопасности в коллекцию обработчиков токена.|  
+|<span data-ttu-id="87e42-139">Элемент</span><span class="sxs-lookup"><span data-stu-id="87e42-139">Element</span></span>|<span data-ttu-id="87e42-140">Описание</span><span class="sxs-lookup"><span data-stu-id="87e42-140">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="87e42-141">\<add></span><span class="sxs-lookup"><span data-stu-id="87e42-141">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="87e42-142">Добавляет обработчик маркеров безопасности в коллекцию обработчиков токенов.</span><span class="sxs-lookup"><span data-stu-id="87e42-142">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## Заметки  
- Элемент `<samlSecurityTokenRequirement>` представленный классом <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектной модели и используется для настройки свойства `SamlSecurityTokenRequirement` на <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> или <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.  
+## <a name="remarks"></a><span data-ttu-id="87e42-143">Примечания</span><span class="sxs-lookup"><span data-stu-id="87e42-143">Remarks</span></span>  
+ <span data-ttu-id="87e42-144">`<samlSecurityTokenRequirement>` Представлен <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> класс в объектной модели и используется для настройки `SamlSecurityTokenRequirement` свойство <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> или <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.</span><span class="sxs-lookup"><span data-stu-id="87e42-144">The `<samlSecurityTokenRequirement>` element is represented by the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> class in the object model and is used to configure the `SamlSecurityTokenRequirement` property on a <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> or a <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="87e42-145">Пример</span><span class="sxs-lookup"><span data-stu-id="87e42-145">Example</span></span>  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
     <samlSecurityTokenRequirement issuerCertificateValidationMode="PeerOrChainTrust"  
                                   issuerCertificateRevocationMode="Online"  

@@ -1,53 +1,33 @@
 ---
 title: "Оператор == (справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- ==_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: ==_CSharpKeyword
 helpviewer_keywords:
 - == operator [C#]
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ca22846325968519a1f7625461867c0d83a1a9f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e3ba284bc700e943b108adfec89d14aba41851a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-c-reference"></a>Оператор == (справочник по C#)
-Для предопределенных типов значений оператор равенства (`==`) возвращает значение true, если значения его операндов равны, и `false` в любых остальных случаях. Для ссылочных типов (кроме [string](../../../csharp/language-reference/keywords/string.md)) оператор `==` возвращает `true`, если оба его операнда ссылаются на один и тот же объект. Для типа `string` оператор `==` сравнивает значения строк.  
+# <a name="-operator-c-reference"></a><span data-ttu-id="3e50d-102">Оператор == (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3e50d-102">== Operator (C# Reference)</span></span>
+<span data-ttu-id="3e50d-103">Для предопределенных типов значений оператор равенства (`==`) возвращает значение true, если значения его операндов равны, и `false` в любых остальных случаях.</span><span class="sxs-lookup"><span data-stu-id="3e50d-103">For predefined value types, the equality operator (`==`) returns true if the values of its operands are equal, `false` otherwise.</span></span> <span data-ttu-id="3e50d-104">Для ссылочных типов (кроме [string](../../../csharp/language-reference/keywords/string.md)) оператор `==` возвращает `true`, если оба его операнда ссылаются на один и тот же объект.</span><span class="sxs-lookup"><span data-stu-id="3e50d-104">For reference types other than [string](../../../csharp/language-reference/keywords/string.md), `==` returns `true` if its two operands refer to the same object.</span></span> <span data-ttu-id="3e50d-105">Для типа `string` оператор `==` сравнивает значения строк.</span><span class="sxs-lookup"><span data-stu-id="3e50d-105">For the `string` type, `==` compares the values of the strings.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Определяемые пользователем типы значений могут вызвать перегрузку оператора `==` (см. раздел [operator](../../../csharp/language-reference/keywords/operator.md)). Это справедливо и для определяемых пользователем ссылочных типов, хотя оператор `==` по умолчанию действует описанным выше способом и для предопределенных, и для определяемых пользователем ссылочных типов. В случае перегрузки `==` также необходимо перегружать [!=](../../../csharp/language-reference/operators/not-equal-operator.md). Операции с целыми типами обычно разрешены и для перечислений.  
+## <a name="remarks"></a><span data-ttu-id="3e50d-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="3e50d-106">Remarks</span></span>  
+ <span data-ttu-id="3e50d-107">Определяемые пользователем типы значений могут вызвать перегрузку оператора `==` (см. раздел [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="3e50d-107">User-defined value types can overload the `==` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="3e50d-108">Это справедливо и для определяемых пользователем ссылочных типов, хотя оператор `==` по умолчанию действует описанным выше способом и для предопределенных, и для определяемых пользователем ссылочных типов.</span><span class="sxs-lookup"><span data-stu-id="3e50d-108">So can user-defined reference types, although by default `==` behaves as described above for both predefined and user-defined reference types.</span></span> <span data-ttu-id="3e50d-109">В случае перегрузки `==` также необходимо перегружать [!=](../../../csharp/language-reference/operators/not-equal-operator.md).</span><span class="sxs-lookup"><span data-stu-id="3e50d-109">If `==` is overloaded, [!=](../../../csharp/language-reference/operators/not-equal-operator.md) must also be overloaded.</span></span> <span data-ttu-id="3e50d-110">Операции с целыми типами обычно разрешены и для перечислений.</span><span class="sxs-lookup"><span data-stu-id="3e50d-110">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="3e50d-111">Пример</span><span class="sxs-lookup"><span data-stu-id="3e50d-111">Example</span></span>  
+ [!code-csharp[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="3e50d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="3e50d-112">See Also</span></span>  
+ [<span data-ttu-id="3e50d-113">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="3e50d-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3e50d-114">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="3e50d-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3e50d-115">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="3e50d-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

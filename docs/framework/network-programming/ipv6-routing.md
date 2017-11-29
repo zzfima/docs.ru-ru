@@ -7,48 +7,41 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5cbd5188bb33fd6d38633ca4670689a94f110a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 21edbfee91a759b0b48f9dd6c0c9e900cdff93f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ipv6-routing"></a>Маршрутизация IPv6
-Гибкий механизм маршрутизации является преимуществом IPv6. Способ выделения идентификаторов сетей IPv4 требует от маршрутизаторов, находящихся в магистральных каналах в Интернете, поддержки больших таблиц маршрутизации. Эти маршрутизаторы должны знать все маршруты, чтобы пересылать пакеты, которые могут быть направлены на любой узел в Интернете. Благодаря возможности объединения адресов IPv6 обеспечивает гибкую адресацию и существенно сокращает размер таблиц маршрутизации. В этой новой архитектуре адресации промежуточные маршрутизаторы должны отслеживать локальную часть своей сети для правильной пересылки сообщений.  
+# <a name="ipv6-routing"></a><span data-ttu-id="e8c05-102">Маршрутизация IPv6</span><span class="sxs-lookup"><span data-stu-id="e8c05-102">IPv6 Routing</span></span>
+<span data-ttu-id="e8c05-103">Гибкий механизм маршрутизации является преимуществом IPv6.</span><span class="sxs-lookup"><span data-stu-id="e8c05-103">A flexible routing mechanism is a benefit of IPv6.</span></span> <span data-ttu-id="e8c05-104">Способ выделения идентификаторов сетей IPv4 требует от маршрутизаторов, находящихся в магистральных каналах в Интернете, поддержки больших таблиц маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="e8c05-104">Due to the way in which IPv4 network IDs were and are allocated, large routing tables need to be maintained by the routers that are on the Internet backbones.</span></span> <span data-ttu-id="e8c05-105">Эти маршрутизаторы должны знать все маршруты, чтобы пересылать пакеты, которые могут быть направлены на любой узел в Интернете.</span><span class="sxs-lookup"><span data-stu-id="e8c05-105">These routers must know all the routes in order to forward packets that are potentially directed to any node on the Internet.</span></span> <span data-ttu-id="e8c05-106">Благодаря возможности объединения адресов IPv6 обеспечивает гибкую адресацию и существенно сокращает размер таблиц маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="e8c05-106">With its ability to aggregate addresses, IPv6 allows flexible addressing and drastically reduces the size of routing tables.</span></span> <span data-ttu-id="e8c05-107">В этой новой архитектуре адресации промежуточные маршрутизаторы должны отслеживать локальную часть своей сети для правильной пересылки сообщений.</span><span class="sxs-lookup"><span data-stu-id="e8c05-107">In this new addressing architecture, intermediate routers must keep track only of the local portion of their network in order to forward the messages appropriately.</span></span>  
   
-## <a name="neighbor-discovery"></a>Обнаружение окружения  
- Ниже приведены некоторые функции, предоставляемые обнаружением окружения.  
+## <a name="neighbor-discovery"></a><span data-ttu-id="e8c05-108">Обнаружение окружения</span><span class="sxs-lookup"><span data-stu-id="e8c05-108">Neighbor Discovery</span></span>  
+ <span data-ttu-id="e8c05-109">Ниже приведены некоторые функции, предоставляемые обнаружением окружения.</span><span class="sxs-lookup"><span data-stu-id="e8c05-109">Some of the features provided by Neighbor Discovery are:</span></span>  
   
--   Обнаружение маршрутизаторов. Это позволяет узлам определять локальные маршрутизаторы.  
+-   <span data-ttu-id="e8c05-110">Обнаружение маршрутизаторов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-110">Router discovery.</span></span> <span data-ttu-id="e8c05-111">Это позволяет узлам определять локальные маршрутизаторы.</span><span class="sxs-lookup"><span data-stu-id="e8c05-111">This allows hosts to identify local routers.</span></span>  
   
--   Разрешение адресов. Это позволяет узлам разрешать для адрес канального уровня для соответствующего адреса следующего прыжка (замена протокола ARP).  
+-   <span data-ttu-id="e8c05-112">Разрешение адресов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-112">Address resolution.</span></span> <span data-ttu-id="e8c05-113">Это позволяет узлам разрешать для адрес канального уровня для соответствующего адреса следующего прыжка (замена протокола ARP).</span><span class="sxs-lookup"><span data-stu-id="e8c05-113">This allows nodes to resolve a link-layer address for a corresponding next-hop address (a replacement for Address Resolution Protocol [ARP]).</span></span>  
   
--   Автоматическая настройка адресов. Это позволяет узлам выполнять автоматическую настройку адресов локальных узлов и глобальных адресов.  
+-   <span data-ttu-id="e8c05-114">Автоматическая настройка адресов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-114">Address auto-configuration.</span></span> <span data-ttu-id="e8c05-115">Это позволяет узлам выполнять автоматическую настройку адресов локальных узлов и глобальных адресов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-115">This allows hosts to automatically configure site-local and global addresses.</span></span>  
   
- Обнаружение окружения использует ICMPv6-сообщения, которые включают:  
+ <span data-ttu-id="e8c05-116">Обнаружение окружения использует ICMPv6-сообщения, которые включают:</span><span class="sxs-lookup"><span data-stu-id="e8c05-116">Neighbor Discovery uses Internet Control Message Protocol for IPv6 (ICMPv6) messages that include:</span></span>  
   
--   Объявление маршрутизаторов. Отправляется маршрутизатором на псевдопериодической основе или в ответ на запрос маршрутизаторов. Маршрутизаторы IPv6 используют объявления маршрутизаторов для сообщения о своей доступности, для указания префиксов адресов и других параметров.  
+-   <span data-ttu-id="e8c05-117">Объявление маршрутизаторов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-117">Router advertisement.</span></span> <span data-ttu-id="e8c05-118">Отправляется маршрутизатором на псевдопериодической основе или в ответ на запрос маршрутизаторов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-118">Sent by a router on a pseudo-periodic basis or in response to a router solicitation.</span></span> <span data-ttu-id="e8c05-119">Маршрутизаторы IPv6 используют объявления маршрутизаторов для сообщения о своей доступности, для указания префиксов адресов и других параметров.</span><span class="sxs-lookup"><span data-stu-id="e8c05-119">IPv6 routers use router advertisements to advertise their availability, address prefixes, and other parameters.</span></span>  
   
--   Запрос маршрутизаторов. Отправляется узлом для запроса того, чтобы маршрутизаторы в канале немедленно отправили объявление маршрутизаторов.  
+-   <span data-ttu-id="e8c05-120">Запрос маршрутизаторов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-120">Router solicitation.</span></span> <span data-ttu-id="e8c05-121">Отправляется узлом для запроса того, чтобы маршрутизаторы в канале немедленно отправили объявление маршрутизаторов.</span><span class="sxs-lookup"><span data-stu-id="e8c05-121">Sent by a host to request that routers on the link send a router advertisement immediately.</span></span>  
   
--   Запрос поиска соседей. Отправляется узлами для разрешения адресов, обнаружения повторяющихся адресов или для проверки доступности соседей.  
+-   <span data-ttu-id="e8c05-122">Запрос поиска соседей.</span><span class="sxs-lookup"><span data-stu-id="e8c05-122">Neighbor solicitation.</span></span> <span data-ttu-id="e8c05-123">Отправляется узлами для разрешения адресов, обнаружения повторяющихся адресов или для проверки доступности соседей.</span><span class="sxs-lookup"><span data-stu-id="e8c05-123">Sent by nodes for address resolution, duplicate address detection, or to verify that a neighbor is still reachable.</span></span>  
   
--   Объявление соседей. Рассылается узлами в ответ на запрос поиска соседей или для предупреждения соседей об изменении адреса канального уровня.  
+-   <span data-ttu-id="e8c05-124">Объявление соседей.</span><span class="sxs-lookup"><span data-stu-id="e8c05-124">Neighbor advertisement.</span></span> <span data-ttu-id="e8c05-125">Рассылается узлами в ответ на запрос поиска соседей или для предупреждения соседей об изменении адреса канального уровня.</span><span class="sxs-lookup"><span data-stu-id="e8c05-125">Sent by nodes to respond to a neighbor solicitation or to notify neighbors of a change in link-layer address.</span></span>  
   
--   Перенаправление. Отправляется маршрутизаторами, чтобы указать лучший адрес следующего прыжка для конкретного назначения для отправляющего узла.  
+-   <span data-ttu-id="e8c05-126">Перенаправление.</span><span class="sxs-lookup"><span data-stu-id="e8c05-126">Redirect.</span></span> <span data-ttu-id="e8c05-127">Отправляется маршрутизаторами, чтобы указать лучший адрес следующего прыжка для конкретного назначения для отправляющего узла.</span><span class="sxs-lookup"><span data-stu-id="e8c05-127">Sent by routers to indicate a better next-hop address to a particular destination for a sending node.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [Сокеты](../../../docs/framework/network-programming/sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="e8c05-128">См. также</span><span class="sxs-lookup"><span data-stu-id="e8c05-128">See Also</span></span>  
+ [<span data-ttu-id="e8c05-129">Протокол IP версии 6</span><span class="sxs-lookup"><span data-stu-id="e8c05-129">Internet Protocol Version 6</span></span>](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [<span data-ttu-id="e8c05-130">Сокеты</span><span class="sxs-lookup"><span data-stu-id="e8c05-130">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)

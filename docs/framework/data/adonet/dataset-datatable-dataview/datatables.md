@@ -1,66 +1,69 @@
 ---
-title: "DataTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataTables
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# DataTables
-Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений.  В ADO.NET объекты <xref:System.Data.DataTable> используются для представления таблиц в наборе данных **DataSet**.  Таблица данных **DataTable** представляет одну таблицу с реляционными данными, размещенными в памяти. Данные локально расположены в приложении на основе .NET, но могут заполняться из источника данных, например Microsoft SQL Server, с помощью **DataAdapter**. Дополнительные сведения см. в разделе [Заполнение набора данных с помощью адаптера данных DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
+# <a name="datatables"></a><span data-ttu-id="b4aeb-102">DataTables</span><span class="sxs-lookup"><span data-stu-id="b4aeb-102">DataTables</span></span>
+<span data-ttu-id="b4aeb-103">Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-103">A <xref:System.Data.DataSet> is made up of a collection of tables, relationships, and constraints.</span></span> <span data-ttu-id="b4aeb-104">В ADO.NET <xref:System.Data.DataTable> объекты используются для представления таблиц в **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-104">In ADO.NET, <xref:System.Data.DataTable> objects are used to represent the tables in a **DataSet**.</span></span> <span data-ttu-id="b4aeb-105">Объект **DataTable** представляет одну таблицу находящихся в памяти реляционных данных; является локальным для данных. NET-приложение в котором он находится, но могут быть заполнены из источника данных, например Microsoft SQL Server с помощью **DataAdapter** Дополнительные сведения см. в разделе [заполнение DataSet из объекта DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .</span><span class="sxs-lookup"><span data-stu-id="b4aeb-105">A **DataTable** represents one table of in-memory relational data; the data is local to the .NET-based application in which it resides, but can be populated from a data source such as Microsoft SQL Server using a **DataAdapter** For more information, see [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).</span></span>  
   
- Класс **DataTable** является элементом пространства имен **System.Data** внутри библиотеки классов платформы .NET Framework.  Можно создавать и использовать **DataTable** независимо или в качестве элемента **DataSet**, и объекты **DataTable** также можно использовать совместно с другими объектами платформы .NET Framework, включая <xref:System.Data.DataView>.  Доступ к коллекции таблиц в **DataSet** обеспечивается с помощью свойства **Tables** объекта **DataSet**.  
+ <span data-ttu-id="b4aeb-106">**DataTable** входит класс **System.Data** пространство имен в библиотеке классов .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-106">The **DataTable** class is a member of the **System.Data** namespace within the .NET Framework class library.</span></span> <span data-ttu-id="b4aeb-107">Можно создать и использовать **DataTable** отдельно или как член **DataSet**, и **DataTable** объекты могут также использоваться в сочетании с другими объектами .NET Framework включая <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-107">You can create and use a **DataTable** independently or as a member of a **DataSet**, and **DataTable** objects can also be used in conjunction with other .NET Framework objects, including the <xref:System.Data.DataView>.</span></span> <span data-ttu-id="b4aeb-108">Можно получить доступ к коллекции таблиц в **DataSet** через **таблиц** свойство **набора данных** объекта.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-108">You access the collection of tables in a **DataSet** through the **Tables** property of the **DataSet** object.</span></span>  
   
- Схема или структура таблицы представляется столбцами и ограничениями.  Схема **DataTable** определяется с помощью объектов <xref:System.Data.DataColumn>, а также объектов <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint>.  Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.  
+ <span data-ttu-id="b4aeb-109">Схема или структура таблицы представляется столбцами и ограничениями.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-109">The schema, or structure of a table is represented by columns and constraints.</span></span> <span data-ttu-id="b4aeb-110">Определения схемы **DataTable** с помощью <xref:System.Data.DataColumn> объектов в том числе в <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint> объектов.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-110">You define the schema of a **DataTable** using <xref:System.Data.DataColumn> objects as well as <xref:System.Data.ForeignKeyConstraint> and <xref:System.Data.UniqueConstraint> objects.</span></span> <span data-ttu-id="b4aeb-111">Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-111">The columns in a table can map to columns in a data source, contain calculated values from expressions, automatically increment their values, or contain primary key values.</span></span>  
   
- Кроме схемы, объект **DataTable** должен также иметь строки, в которых хранятся и упорядочиваются данные.  Класс <xref:System.Data.DataRow> представляет фактические данные, содержащиеся в таблице.  Объект **DataRow**, а также его свойства и методы используются для извлечения, оценки и обработки данных таблицы.  После доступа к данным строки и их изменения объект **DataRow** сохраняет и текущее, и исходное состояние.  
+ <span data-ttu-id="b4aeb-112">Кроме схемы **DataTable** должен также иметь строки, содержащие и данные о заказах.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-112">In addition to a schema, a **DataTable** must also have rows to contain and order data.</span></span> <span data-ttu-id="b4aeb-113">Класс <xref:System.Data.DataRow> представляет фактические данные, содержащиеся в таблице.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-113">The <xref:System.Data.DataRow> class represents the actual data contained in a table.</span></span> <span data-ttu-id="b4aeb-114">Вы используете **DataRow** и его свойства и методы для извлечения, оценки и обработки данных в таблице.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-114">You use the **DataRow** and its properties and methods to retrieve, evaluate, and manipulate the data in a table.</span></span> <span data-ttu-id="b4aeb-115">Как открывать и изменять данные в строке, **DataRow** сохраняет свое текущее и исходное состояние.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-115">As you access and change the data within a row, the **DataRow** object maintains both its current and original state.</span></span>  
   
- С помощью одного или нескольких связанных столбцов таблицы между таблицами можно создавать связи типа «родители\-потомки».  Связь между объектами **DataTable** создается с помощью <xref:System.Data.DataRelation>.  Объекты **DataRelation** можно использовать для возврата связанных дочерних или родительских строк определенной строки.  Для получения дополнительной информации см. [Добавление объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ <span data-ttu-id="b4aeb-116">С помощью одного или нескольких связанных столбцов таблицы между таблицами можно создавать связи типа «родители-потомки».</span><span class="sxs-lookup"><span data-stu-id="b4aeb-116">You can create parent-child relationships between tables using one or more related columns in the tables.</span></span> <span data-ttu-id="b4aeb-117">Создать связь между **DataTable** объектов с помощью <xref:System.Data.DataRelation>.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-117">You create a relationship between **DataTable** objects using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="b4aeb-118">**DataRelation** объекты могут затем использоваться для возврата связанных дочерних или родительских строк определенной строки.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-118">**DataRelation** objects can then be used to return the related child or parent rows of a particular row.</span></span> <span data-ttu-id="b4aeb-119">Дополнительные сведения см. в разделе [Добавление отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="b4aeb-119">For more information, see [Adding DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).</span></span>  
   
-## В этом подразделе  
- [Создание DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
- Объясняет, как создавать **DataTable** и добавлять ее в **DataSet**.  
+## <a name="in-this-section"></a><span data-ttu-id="b4aeb-120">Содержание</span><span class="sxs-lookup"><span data-stu-id="b4aeb-120">In This Section</span></span>  
+ [<span data-ttu-id="b4aeb-121">Создание таблицы данных</span><span class="sxs-lookup"><span data-stu-id="b4aeb-121">Creating a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ <span data-ttu-id="b4aeb-122">Описание способов создания **DataTable** и добавьте его в **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-122">Explains how to create a **DataTable** and add it to a **DataSet**.</span></span>  
   
- [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- Содержит сведения о создании и использовании объектов и ограничений **DataColumn**.  
+ [<span data-ttu-id="b4aeb-123">Определение схемы таблицы данных</span><span class="sxs-lookup"><span data-stu-id="b4aeb-123">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ <span data-ttu-id="b4aeb-124">Содержит сведения о создании и использовании **DataColumn** объектов и ограничений.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-124">Provides information about creating and using **DataColumn** objects and constraints.</span></span>  
   
- [Обработка данных в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- Описывает, как добавлять, изменять и удалять данные таблицы.  Объясняет, как использовать события **DataTable** для изучения изменений данных таблицы.  
+ [<span data-ttu-id="b4aeb-125">Обработка данных в объект DataTable</span><span class="sxs-lookup"><span data-stu-id="b4aeb-125">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ <span data-ttu-id="b4aeb-126">Описывает, как добавлять, изменять и удалять данные таблицы.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-126">Explains how to add, modify, and delete data in a table.</span></span> <span data-ttu-id="b4aeb-127">Описание способов использования **DataTable** событий для изучения изменений данных в таблице.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-127">Explains how to use **DataTable** events to examine changes to data in the table.</span></span>  
   
- [Обработка событий DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- Приводит сведения о событиях, которые можно использовать с объектом **DataTable**, включая события, связанные с изменением значений столбцов и добавлением или удалением строк.  
+ [<span data-ttu-id="b4aeb-128">Обработка событий таблиц данных</span><span class="sxs-lookup"><span data-stu-id="b4aeb-128">Handling DataTable Events</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ <span data-ttu-id="b4aeb-129">Предоставляет сведения о событиях, доступных для использования с **DataTable**, включая события, связанные с изменением значений столбцов и добавлением или удалением строк.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-129">Provides information about the events available for use with a **DataTable**, including events when column values are modified and rows are added or deleted.</span></span>  
   
-## Связанные подразделы  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- Описывает архитектуру и компоненты ADO.NET, а также их использование для получения доступа к существующим источникам данных и управления данными приложения.  
+## <a name="related-sections"></a><span data-ttu-id="b4aeb-130">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="b4aeb-130">Related Sections</span></span>  
+ [<span data-ttu-id="b4aeb-131">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b4aeb-131">ADO.NET</span></span>](../../../../../docs/framework/data/adonet/index.md)  
+ <span data-ttu-id="b4aeb-132">Описывает архитектуру и компоненты ADO.NET, а также их использование для получения доступа к существующим источникам данных и управления данными приложения.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-132">Describes the ADO.NET architecture and components, and how to use them to access existing data sources and manage application data.</span></span>  
   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Содержит сведения о классе **DataSet** ADO.NET, в том числе о способе создания связей между таблицами.  
+ [<span data-ttu-id="b4aeb-133">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="b4aeb-133">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="b4aeb-134">Предоставляет сведения о ADO.NET **DataSet** включая создание связей между таблицами.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-134">Provides information about the ADO.NET **DataSet** including how to create relationships between tables.</span></span>  
   
- [Класс Constraint](frlrfSystemDataConstraintClassTopic)  
- Предоставляет справочные сведения об объекте **Constraint**.  
+ <xref:System.Data.Constraint>  
+ <span data-ttu-id="b4aeb-135">Содержит справочные сведения о **ограничение** объекта.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-135">Provides reference information about the **Constraint** object.</span></span>  
   
- [Класс DataColumn](frlrfSystemDataDataColumnClassTopic)  
- Содержит справочные сведения об объекте **DataColumn**.  
+ <xref:System.Data.DataColumn>  
+ <span data-ttu-id="b4aeb-136">Содержит справочные сведения о **DataColumn** объекта.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-136">Provides reference information about the **DataColumn** object.</span></span>  
   
- [Класс DataSet](frlrfSystemDataDataSetClassTopic)  
- Содержит справочные сведения об объекте **DataSet**.  
+ <xref:System.Data.DataSet>  
+ <span data-ttu-id="b4aeb-137">Содержит справочные сведения о **DataSet** объекта.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-137">Provides reference information about the **DataSet** object.</span></span>  
   
- [Класс DataTable](frlrfSystemDataDataTableClassTopic)  
- Содержит справочные сведения об объекте **DataTable**.  
+ <xref:System.Data.DataTable>  
+ <span data-ttu-id="b4aeb-138">Содержит справочные сведения о **DataTable** объекта.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-138">Provides reference information about the **DataTable** object.</span></span>  
   
- [Общие сведения о библиотеке классов](../../../../../docs/standard/class-library-overview.md)  
- Содержит общие сведения о библиотеке классов платформы .NET Framework, включая пространство имен **System**, а также пространство имен второго уровня, **System.Data**.  
+ [<span data-ttu-id="b4aeb-139">Общие сведения о библиотеке классов</span><span class="sxs-lookup"><span data-stu-id="b4aeb-139">Class Library Overview</span></span>](../../../../../docs/standard/class-library-overview.md)  
+ <span data-ttu-id="b4aeb-140">Общие сведения о библиотеке классов .NET Framework, включая **системы** пространства имен и пространство имен второго уровня **System.Data**.</span><span class="sxs-lookup"><span data-stu-id="b4aeb-140">Provides an overview of the .NET Framework class library, including the **System** namespace as well as its second-level namespace, **System.Data**.</span></span>  
   
-## См. также  
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b4aeb-141">См. также</span><span class="sxs-lookup"><span data-stu-id="b4aeb-141">See Also</span></span>  
+ [<span data-ttu-id="b4aeb-142">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b4aeb-142">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

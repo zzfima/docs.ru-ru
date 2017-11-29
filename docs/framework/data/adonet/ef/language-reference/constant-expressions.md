@@ -1,34 +1,36 @@
 ---
-title: "Константные выражения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Постоянные выражения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9d98a7be-b110-4edb-8eba-bed10f250b6d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 759805b2970aa760e4bce882789efbc947303573
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Константные выражения
-Константное выражение состоит из постоянного значения.  Постоянные значения непосредственно преобразуются в константные выражения дерева команд и не преобразуются на клиенте.  К ним относятся выражения, результатом которых является постоянное значение.  Поэтому для всех выражений с константами следует ожидать поведения источника данных.  Это поведение может отличаться от поведения среды CLR.  
+# <a name="constant-expressions"></a><span data-ttu-id="f9403-102">Постоянные выражения</span><span class="sxs-lookup"><span data-stu-id="f9403-102">Constant Expressions</span></span>
+<span data-ttu-id="f9403-103">Константное выражение состоит из постоянного значения.</span><span class="sxs-lookup"><span data-stu-id="f9403-103">A constant expression consists of a constant value.</span></span> <span data-ttu-id="f9403-104">Постоянные значения непосредственно преобразуются в константные выражения дерева команд и не преобразуются на клиенте.</span><span class="sxs-lookup"><span data-stu-id="f9403-104">Constant values are directly converted to constant command tree expressions, without any translation on the client.</span></span> <span data-ttu-id="f9403-105">К ним относятся выражения, результатом которых является постоянное значение.</span><span class="sxs-lookup"><span data-stu-id="f9403-105">This includes expressions that result in a constant value.</span></span> <span data-ttu-id="f9403-106">Поэтому для всех выражений с константами следует ожидать поведения источника данных.</span><span class="sxs-lookup"><span data-stu-id="f9403-106">Therefore, data source behavior should be expected for all expressions involving constants.</span></span> <span data-ttu-id="f9403-107">Это поведение может отличаться от поведения среды CLR.</span><span class="sxs-lookup"><span data-stu-id="f9403-107">This can result in behavior that differs from CLR behavior.</span></span>  
   
- В следующем примере показано константное выражение, вычисляемое на сервере.  
+ <span data-ttu-id="f9403-108">В следующем примере показано константное выражение, вычисляемое на сервере.</span><span class="sxs-lookup"><span data-stu-id="f9403-108">The following example shows a constant expression that is evaluated on the server.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constantexpression)]
  [!code-vb[DP L2E Conceptual Examples#ConstantExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constantexpression)]  
   
- Технология [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] не поддерживает использование пользовательского класса в качестве константы.  Однако ссылка на свойство пользовательского класса считается константой; она будет преобразована в константное выражение дерева команд и выполнена в источнике данных.  
+ <span data-ttu-id="f9403-109">Технология [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] не поддерживает использование пользовательского класса в качестве константы.</span><span class="sxs-lookup"><span data-stu-id="f9403-109">[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] does not support using a user class as a constant.</span></span> <span data-ttu-id="f9403-110">Однако ссылка на свойство пользовательского класса считается константой; она будет преобразована в константное выражение дерева команд и выполнена в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="f9403-110">However, a property reference on a user class is considered a constant, and will be converted to a command tree constant expression and executed on the data source.</span></span>  
   
-## См. также  
- [Выражения в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a><span data-ttu-id="f9403-111">См. также</span><span class="sxs-lookup"><span data-stu-id="f9403-111">See Also</span></span>  
+ [<span data-ttu-id="f9403-112">Выражения в запросах LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="f9403-112">Expressions in LINQ to Entities Queries</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

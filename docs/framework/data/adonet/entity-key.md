@@ -1,51 +1,54 @@
 ---
-title: "ключ сущности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ключ сущности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d0d7df7ff1a0e8e732688e10befb4bffa86599d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# ключ сущности
-*Ключ сущности* является [свойством](../../../../docs/framework/data/adonet/property.md) или набором свойств [типа сущности](../../../../docs/framework/data/adonet/entity-type.md), которые используются для определения удостоверения.  Свойства, составляющие ключ сущности, выбираются во время разработки.  Значения свойств ключа сущности должны уникально определять экземпляр типа сущности внутри [набора сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения.  Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  
+# <a name="entity-key"></a><span data-ttu-id="7cc11-102">ключ сущности</span><span class="sxs-lookup"><span data-stu-id="7cc11-102">entity key</span></span>
+<span data-ttu-id="7cc11-103">*Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для установления личности.</span><span class="sxs-lookup"><span data-stu-id="7cc11-103">An *entity key* is a [property](../../../../docs/framework/data/adonet/property.md) or a set of properties of an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that are used to determine identity.</span></span> <span data-ttu-id="7cc11-104">Свойства, составляющие ключ сущности, выбираются во время разработки.</span><span class="sxs-lookup"><span data-stu-id="7cc11-104">The properties that make up an entity key are chosen at design time.</span></span> <span data-ttu-id="7cc11-105">Значения свойств ключа сущности должен однозначно идентифицировать экземпляр типа сущности внутри [набора сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="7cc11-105">The values of entity key properties must uniquely identify an entity type instance within an [entity set](../../../../docs/framework/data/adonet/entity-set.md) at run time.</span></span> <span data-ttu-id="7cc11-106">Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.</span><span class="sxs-lookup"><span data-stu-id="7cc11-106">The properties that make up an entity key should be chosen to guarantee uniqueness of instances in an entity set.</span></span>  
   
- Ниже приводятся требования к набору свойств, входящих в ключ сущности.  
+ <span data-ttu-id="7cc11-107">Ниже приводятся требования к набору свойств, входящих в ключ сущности.</span><span class="sxs-lookup"><span data-stu-id="7cc11-107">The following are the requirements for a set of properties to be an entity key:</span></span>  
   
--   Два ключа сущностей не могут быть идентичными в одном наборе сущностей.  То есть для любых двух сущностей внутри набора сущностей значения для всех свойств, составляющих ключ, не могут быть одинаковыми.  Тем не менее, некоторые \(но не все\) значения, составляющие ключ сущности, могут быть одинаковыми.  
+-   <span data-ttu-id="7cc11-108">Два ключа сущностей не могут быть идентичными в одном наборе сущностей.</span><span class="sxs-lookup"><span data-stu-id="7cc11-108">No two entity keys within an entity set can be identical.</span></span> <span data-ttu-id="7cc11-109">То есть для любых двух сущностей внутри набора сущностей значения для всех свойств, составляющих ключ, не могут быть одинаковыми.</span><span class="sxs-lookup"><span data-stu-id="7cc11-109">That is, for any two entities within an entity set, the values for all of the properties that constitute a key cannot be the same.</span></span> <span data-ttu-id="7cc11-110">Тем не менее, некоторые (но не все) значения, составляющие ключ сущности, могут быть одинаковыми.</span><span class="sxs-lookup"><span data-stu-id="7cc11-110">However, some (but not all) of the values that make up an entity key can be the same.</span></span>  
   
--   Ключ сущности должен состоять из набора не допускающих значение NULL и неизменяемых [свойств примитивного типа](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+-   <span data-ttu-id="7cc11-111">Ключ сущности должен состоять из набора не допускает значение NULL, неизменяемый, [свойств примитивного типа](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="7cc11-111">An entity key must consist of a set of non-nullable, immutable, [primitive type properties](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span></span>  
   
--   Свойства, составляющие ключ сущности для данного типа сущности, не могут быть изменены.  Для одного типа сущности возможен только один ключ сущности; суррогатные ключи не поддерживаются.  
+-   <span data-ttu-id="7cc11-112">Свойства, составляющие ключ сущности для данного типа сущности, не могут быть изменены.</span><span class="sxs-lookup"><span data-stu-id="7cc11-112">The properties that make up an entity key for a given entity type cannot change.</span></span> <span data-ttu-id="7cc11-113">Для одного типа сущности возможен только один ключ сущности; суррогатные ключи не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="7cc11-113">You cannot allow more than one possible entity key for a given entity type; surrogate keys are not supported.</span></span>  
   
--   Если сущность участвует в иерархии наследования, корневая сущность должна содержать все свойства, составляющие ключ сущности, а ключ сущности должен быть определен в типе корневой сущности.  Для получения дополнительной информации см. [Модель EDM: наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+-   <span data-ttu-id="7cc11-114">Если сущность участвует в иерархии наследования, корневая сущность должна содержать все свойства, составляющие ключ сущности, а ключ сущности должен быть определен в типе корневой сущности.</span><span class="sxs-lookup"><span data-stu-id="7cc11-114">When an entity is involved in an inheritance hierarchy, the root entity must contain all the properties that make up the entity key, and the entity key must be defined on the root entity type.</span></span> <span data-ttu-id="7cc11-115">Дополнительные сведения см. в разделе [модель EDM: наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="7cc11-115">For more information, see [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).</span></span>  
   
-## Пример  
- На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`.  Свойства каждого типа сущности, составляющие его ключ сущности, обозначаются знаком «\(Ключ\)».  Обратите внимание, что тип сущности `Author` имеет ключ сущности, состоящий из двух свойств \- `Name` и `Address`.  
+## <a name="example"></a><span data-ttu-id="7cc11-116">Пример</span><span class="sxs-lookup"><span data-stu-id="7cc11-116">Example</span></span>  
+ <span data-ttu-id="7cc11-117">На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`.</span><span class="sxs-lookup"><span data-stu-id="7cc11-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span> <span data-ttu-id="7cc11-118">Свойства каждого типа сущности, составляющие его ключ сущности, обозначаются знаком «(Ключ)».</span><span class="sxs-lookup"><span data-stu-id="7cc11-118">The properties of each entity type that make up its entity key are denoted with "(Key)".</span></span> <span data-ttu-id="7cc11-119">Обратите внимание, что тип сущности `Author` имеет ключ сущности, состоящий из двух свойств - `Name` и `Address`.</span><span class="sxs-lookup"><span data-stu-id="7cc11-119">Note that the `Author` entity type has an entity key that consists of two properties, `Name` and `Address`.</span></span>  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="7cc11-120">![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="7cc11-120">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- Платформа [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык DSL, называемый языком CSDL \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\), для определения концептуальных моделей.  Ниже язык определения концептуальной схемы определяет тип сущности `Book`, который ранее приводился в схеме.  Обратите внимание, что ключ сущности определяется ссылкой на свойство `ISBN` типа сущности.  
+ <span data-ttu-id="7cc11-121">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей.</span><span class="sxs-lookup"><span data-stu-id="7cc11-121">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="7cc11-122">Ниже язык определения концептуальной схемы определяет тип сущности `Book`, который ранее приводился в схеме.</span><span class="sxs-lookup"><span data-stu-id="7cc11-122">The CSDL below defines the `Book` entity type shown in the diagram above.</span></span> <span data-ttu-id="7cc11-123">Обратите внимание, что ключ сущности определяется ссылкой на свойство `ISBN` типа сущности.</span><span class="sxs-lookup"><span data-stu-id="7cc11-123">Note that the entity key is defined by referencing the `ISBN` property of the entity type.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
- Свойство `ISBN` хорошо подойдет для использования в качестве ключа сущности, поскольку международный стандартный номер книги \(ISBN\) уникально определяет книгу.  
+ <span data-ttu-id="7cc11-124">Свойство `ISBN` хорошо подойдет для использования в качестве ключа сущности, поскольку международный стандартный номер книги (ISBN) уникально определяет книгу.</span><span class="sxs-lookup"><span data-stu-id="7cc11-124">The `ISBN` property is a good choice for the entity key because an International Standard Book Number (ISBN) uniquely identifies a book.</span></span>  
   
- Ниже язык определения концептуальной схемы определяет тип сущности `Author`, который ранее приводился в схеме.  Обратите внимание, что ключ сущности состоит из двух свойств \- `Name` и `Address`.  
+ <span data-ttu-id="7cc11-125">Ниже язык определения концептуальной схемы определяет тип сущности `Author`, который ранее приводился в схеме.</span><span class="sxs-lookup"><span data-stu-id="7cc11-125">The CSDL below defines the `Author` entity type shown in the diagram above.</span></span> <span data-ttu-id="7cc11-126">Обратите внимание, что ключ сущности состоит из двух свойств - `Name` и `Address`.</span><span class="sxs-lookup"><span data-stu-id="7cc11-126">Note that the entity key consists of two properties, `Name` and `Address`.</span></span>  
   
  [!code-xml[EDM_Example_Model#CompositeKeyExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#compositekeyexample)]  
   
- Использование в качестве ключа сущности параметров `Name` и `Address` является неплохим выбором, поскольку маловероятно, что у двух авторов с одинаковыми именами будет один и тот же адрес.  Однако такой выбор ключа сущности не гарантирует уникальность ключей сущности в наборе сущностей.  В данном случае рекомендуется добавить свойство, такое как `AuthorId`, которое может быть использовано для уникальной идентификации автора.  
+ <span data-ttu-id="7cc11-127">Использование в качестве ключа сущности параметров `Name` и `Address` является неплохим выбором, поскольку маловероятно, что у двух авторов с одинаковыми именами будет один и тот же адрес.</span><span class="sxs-lookup"><span data-stu-id="7cc11-127">Using `Name` and `Address` for the entity key is a reasonable choice, because two authors of the same name are unlikely to live at the same address.</span></span> <span data-ttu-id="7cc11-128">Однако такой выбор ключа сущности не гарантирует уникальность ключей сущности в наборе сущностей.</span><span class="sxs-lookup"><span data-stu-id="7cc11-128">However, this choice for an entity key does not absolutely guarantee unique entity keys in an entity set.</span></span> <span data-ttu-id="7cc11-129">В данном случае рекомендуется добавить свойство, такое как `AuthorId`, которое может быть использовано для уникальной идентификации автора.</span><span class="sxs-lookup"><span data-stu-id="7cc11-129">Adding a property, such as `AuthorId`, that could be used to uniquely identify an author would be recommended in this case.</span></span>  
   
-## См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="7cc11-130">См. также</span><span class="sxs-lookup"><span data-stu-id="7cc11-130">See Also</span></span>  
+ [<span data-ttu-id="7cc11-131">Основные понятия модели данных сущности</span><span class="sxs-lookup"><span data-stu-id="7cc11-131">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="7cc11-132">Модель EDM</span><span class="sxs-lookup"><span data-stu-id="7cc11-132">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

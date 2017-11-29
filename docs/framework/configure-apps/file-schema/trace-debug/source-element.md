@@ -1,76 +1,73 @@
 ---
-title: "Элемент &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> - элемент"
-  - "source - элемент"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: "&lt;источник&gt; элемент"
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;source&gt;
-Источник трассировки, инициирующий сообщения трассировки.  
+# <a name="ltsourcegt-element"></a><span data-ttu-id="9d61f-102">&lt;источник&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="9d61f-102">&lt;source&gt; Element</span></span>
+<span data-ttu-id="9d61f-103">Содержит источник трассировки, который инициирует сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="9d61f-103">Specifies a trace source that initiates tracing messages.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="9d61f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="9d61f-104">\<configuration></span></span>  
+<span data-ttu-id="9d61f-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="9d61f-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="9d61f-106">\<источники ></span><span class="sxs-lookup"><span data-stu-id="9d61f-106">\<sources></span></span>  
+<span data-ttu-id="9d61f-107">\<Источник ></span><span class="sxs-lookup"><span data-stu-id="9d61f-107">\<source></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="9d61f-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9d61f-108">Syntax</span></span>  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9d61f-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9d61f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="9d61f-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9d61f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="9d61f-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9d61f-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`name`|Необязательный атрибут.<br /><br /> Задает имя источника трассировки.|  
-|`switchName`|Необязательный атрибут.<br /><br /> Задает имя экземпляра переключателя трассировки в приложении.  Если переключатель не идентифицирован в элементе `<switches>`, это значение задает уровень для переключателя.|  
-|`switchType`|Необязательный атрибут.<br /><br /> Задает тип переключателя трассировки.  Если этот атрибут указан, тип должен представлять собой действительное имя класса и не может быть пустой строкой.|  
-|`extraAttribute`|Необязательный атрибут.<br /><br /> Задает значение атрибута конкретного источника трассировки, идентифицируемого методом <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> данного источника.|  
+|<span data-ttu-id="9d61f-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="9d61f-112">Attribute</span></span>|<span data-ttu-id="9d61f-113">Описание</span><span class="sxs-lookup"><span data-stu-id="9d61f-113">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="9d61f-114">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9d61f-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="9d61f-115">Задает имя источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="9d61f-115">Specifies the name of the trace source.</span></span>|  
+|`switchName`|<span data-ttu-id="9d61f-116">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9d61f-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="9d61f-117">Задает имя экземпляра коммутатора трассировки в приложении.</span><span class="sxs-lookup"><span data-stu-id="9d61f-117">Specifies the name of a trace switch instance in the application.</span></span> <span data-ttu-id="9d61f-118">Если параметр не указан в `<switches>` элемент, значение задает уровень для переключателя.</span><span class="sxs-lookup"><span data-stu-id="9d61f-118">If the switch is not identified in a `<switches>` element, the value specifies the level for the switch.</span></span>|  
+|`switchType`|<span data-ttu-id="9d61f-119">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9d61f-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="9d61f-120">Указывает тип переключателя трассировки.</span><span class="sxs-lookup"><span data-stu-id="9d61f-120">Specifies the type of the trace switch.</span></span> <span data-ttu-id="9d61f-121">Если он имеется, тип должен быть допустимым именем класса и не может быть пустой строкой.</span><span class="sxs-lookup"><span data-stu-id="9d61f-121">If present, the type must be a valid class name and cannot be an empty string.</span></span>|  
+|`extraAttribute`|<span data-ttu-id="9d61f-122">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="9d61f-122">Optional attribute.</span></span><br /><br /> <span data-ttu-id="9d61f-123">Указывает значение для атрибута каждого источника трассировки, определяется <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> метода для этого источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="9d61f-123">Specifies the value for a trace source-specific attribute identified by the <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> method for that trace source.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="9d61f-124">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9d61f-124">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Содержит прослушиватели, собирающие, хранящие и маршрутизирующие сообщения.|  
+|<span data-ttu-id="9d61f-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="9d61f-125">Element</span></span>|<span data-ttu-id="9d61f-126">Описание</span><span class="sxs-lookup"><span data-stu-id="9d61f-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="9d61f-127">\<listeners></span><span class="sxs-lookup"><span data-stu-id="9d61f-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="9d61f-128">Содержит прослушиватели для сбора, хранения и маршрутизации сообщений.</span><span class="sxs-lookup"><span data-stu-id="9d61f-128">Contains listeners that collect, store, and route messages.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="9d61f-129">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9d61f-129">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
-|`sources`|Элемент, содержащий источники трассировки, инициирующие трассировочные сообщения.|  
+|<span data-ttu-id="9d61f-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="9d61f-130">Element</span></span>|<span data-ttu-id="9d61f-131">Описание</span><span class="sxs-lookup"><span data-stu-id="9d61f-131">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="9d61f-132">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9d61f-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="9d61f-133">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="9d61f-133">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="9d61f-134">Содержит источники трассировки, которые инициируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="9d61f-134">Contains trace sources that initiate tracing messages.</span></span>|  
   
-## Заметки  
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+## <a name="remarks"></a><span data-ttu-id="9d61f-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="9d61f-135">Remarks</span></span>  
+ <span data-ttu-id="9d61f-136">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="9d61f-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Пример  
- В следующем примере показано, как использовать элемент `<source>`  для добавления источника трассировки `mySource` и установки уровня переключателя источника с именем `sourceSwitch`.  Добавляется прослушиватель трассировки консоли, выводящий трассировочную информацию на консоль.  
+## <a name="example"></a><span data-ttu-id="9d61f-137">Пример</span><span class="sxs-lookup"><span data-stu-id="9d61f-137">Example</span></span>  
+ <span data-ttu-id="9d61f-138">В следующем примере показано, как использовать `<source>` элемента для добавления источника трассировки `mySource` и задать уровень для переключателя источника с именем `sourceSwitch`.</span><span class="sxs-lookup"><span data-stu-id="9d61f-138">The following example shows how to use the `<source>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="9d61f-139">Добавляется прослушиватель трассировки консоли, который записывает данные трассировки на консоль.</span><span class="sxs-lookup"><span data-stu-id="9d61f-139">A console trace listener is added that writes trace information to the console.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a><span data-ttu-id="9d61f-140">См. также</span><span class="sxs-lookup"><span data-stu-id="9d61f-140">See Also</span></span>  
+ [<span data-ttu-id="9d61f-141">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="9d61f-141">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="9d61f-142">Переключатели трассировки</span><span class="sxs-lookup"><span data-stu-id="9d61f-142">Trace Switches</span></span>](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

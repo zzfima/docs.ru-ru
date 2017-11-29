@@ -1,89 +1,70 @@
 ---
 title: "Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, parsing
-- text files, tasks
-- reading text files, comma-delimited
-- text files, reading
+- files [Visual Basic], parsing
+- text files [Visual Basic], tasks
+- reading text files [Visual Basic], comma-delimited
+- text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd88762179d9760bcce37b4c500a2bb118e09173
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ae6a3f315a8e433386319d1aa1a7f48726a19bb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми в Visual Basic
-Объект `TextFieldParser` позволяет легко и эффективно анализировать структурированные текстовые файлы, например файлы журналов. Свойство `TextFieldType` определяет, является ли файл файлом с разделителями или с полями фиксированной ширины текста.  
+# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a><span data-ttu-id="758d2-102">Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="758d2-102">How to: read from comma-delimited text files in Visual Basic</span></span>
+<span data-ttu-id="758d2-103">Объект `TextFieldParser` позволяет легко и эффективно анализировать структурированные текстовые файлы, например файлы журналов.</span><span class="sxs-lookup"><span data-stu-id="758d2-103">The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="758d2-104">Свойство `TextFieldType` определяет, является ли файл файлом с разделителями или с полями фиксированной ширины текста.</span><span class="sxs-lookup"><span data-stu-id="758d2-104">The `TextFieldType` property defines whether it is a delimited file or one with fixed-width fields of text.</span></span>  
   
-### <a name="to-parse-a-comma-delimited-text-file"></a>Анализ текстового файла с разделителями-запятыми  
+### <a name="to-parse-a-comma-delimited-text-file"></a><span data-ttu-id="758d2-105">Анализ текстового файла с разделителями-запятыми</span><span class="sxs-lookup"><span data-stu-id="758d2-105">To parse a comma delimited text file</span></span>  
   
-1.  Создайте объект `TextFieldParser`. Следующий код создает объект `TextFieldParser` с именем `MyReader` и открывает файл `test.txt`.  
+1.  <span data-ttu-id="758d2-106">Создайте объект `TextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="758d2-106">Create a new `TextFieldParser`.</span></span> <span data-ttu-id="758d2-107">Следующий код создает объект `TextFieldParser` с именем `MyReader` и открывает файл `test.txt`.</span><span class="sxs-lookup"><span data-stu-id="758d2-107">The following code creates the `TextFieldParser` named `MyReader` and opens the file `test.txt`.</span></span>  
   
      [!code-vb[VbFileIORead#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_1.vb)]  
   
-2.  Определение тип `TextField` и разделитель. Следующий код определяет для свойства `TextFieldType` значение `Delimited`, а для разделителя — ",".  
+2.  <span data-ttu-id="758d2-108">Определение тип `TextField` и разделитель.</span><span class="sxs-lookup"><span data-stu-id="758d2-108">Define the `TextField` type and delimiter.</span></span> <span data-ttu-id="758d2-109">Следующий код определяет для свойства `TextFieldType` значение `Delimited`, а для разделителя — ",".</span><span class="sxs-lookup"><span data-stu-id="758d2-109">The following code defines the `TextFieldType` property as `Delimited` and the delimiter as ",".</span></span>  
   
      [!code-vb[VbFileIORead#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_2.vb)]  
   
-3.  Просмотрите поля в файле. Если какие-либо строки повреждены, выведите сообщение об ошибке и продолжите анализ. Следующий код выполняет цикл по файлу, отображая каждое поле по очереди и сообщая обо всех полях с неправильным форматированием.  
+3.  <span data-ttu-id="758d2-110">Просмотрите поля в файле.</span><span class="sxs-lookup"><span data-stu-id="758d2-110">Loop through the fields in the file.</span></span> <span data-ttu-id="758d2-111">Если какие-либо строки повреждены, выведите сообщение об ошибке и продолжите анализ.</span><span class="sxs-lookup"><span data-stu-id="758d2-111">If any lines are corrupt, report an error and continue parsing.</span></span> <span data-ttu-id="758d2-112">Следующий код выполняет цикл по файлу, отображая каждое поле по очереди и сообщая обо всех полях с неправильным форматированием.</span><span class="sxs-lookup"><span data-stu-id="758d2-112">The following code loops through the file, displaying each field in turn and reporting any fields that are formatted incorrectly.</span></span>  
   
      [!code-vb[VbFileIORead#17](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_3.vb)]  
   
-4.  Закройте блоки `While` и `Using` операторами `End While` и `End Using`.  
+4.  <span data-ttu-id="758d2-113">Закройте блоки `While` и `Using` операторами `End While` и `End Using`.</span><span class="sxs-lookup"><span data-stu-id="758d2-113">Close the `While` and `Using` blocks with `End While` and `End Using`.</span></span>  
   
      [!code-vb[VbFileIORead#18](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_4.vb)]  
   
-## <a name="example"></a>Пример  
- В этом примере производится чтение данных из файла `test.txt`.  
+## <a name="example"></a><span data-ttu-id="758d2-114">Пример</span><span class="sxs-lookup"><span data-stu-id="758d2-114">Example</span></span>  
+ <span data-ttu-id="758d2-115">В этом примере производится чтение данных из файла `test.txt`.</span><span class="sxs-lookup"><span data-stu-id="758d2-115">This example reads from the file `test.txt`.</span></span>  
   
  [!code-vb[VbFileIORead#19](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_5.vb)]  
   
-## <a name="robust-programming"></a>Отказоустойчивость  
- При следующих условиях возможно возникновение исключения:  
+## <a name="robust-programming"></a><span data-ttu-id="758d2-116">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="758d2-116">Robust programming</span></span>  
+ <span data-ttu-id="758d2-117">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="758d2-117">The following conditions may cause an exception:</span></span>  
   
--   Строка не может быть проанализирована с использованием указанного формата (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Сообщение исключения содержит строку, вызвавшую исключение, а свойство <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> содержит текст, который содержится в этой строке.  
+-   <span data-ttu-id="758d2-118">Строка не может быть проанализирована с использованием указанного формата (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="758d2-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="758d2-119">Сообщение исключения содержит строку, вызвавшую исключение, а свойство <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> содержит текст, который содержится в этой строке.</span><span class="sxs-lookup"><span data-stu-id="758d2-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned the text contained in the line.</span></span>  
   
--   Указанный файл не существует (<xref:System.IO.FileNotFoundException>).  
+-   <span data-ttu-id="758d2-120">Указанный файл не существует (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="758d2-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   Ситуация частичного доверия, в которой пользователь не имеет достаточных разрешений для доступа к файлу. (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="758d2-121">Ситуация частичного доверия, в которой пользователь не имеет достаточных разрешений для доступа к файлу.</span><span class="sxs-lookup"><span data-stu-id="758d2-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="758d2-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="758d2-122">(<xref:System.Security.SecurityException>).</span></span>  
   
--   Слишком длинный путь (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="758d2-123">Слишком длинный путь (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="758d2-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   У пользователя нет необходимых разрешений для доступа к файлу (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="758d2-124">У пользователя нет необходимых разрешений для доступа к файлу (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="758d2-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   
- [Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
- [Практическое руководство. Чтение из текстовых файлов различных форматов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
- [Анализ текстовых файлов с помощью объекта TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)   
- [Пошаговое руководство. Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)   
- [Исправление неполадок, связанных с чтением из текстовых файлов и записью в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-
+## <a name="see-also"></a><span data-ttu-id="758d2-125">См. также</span><span class="sxs-lookup"><span data-stu-id="758d2-125">See also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>  
+ [<span data-ttu-id="758d2-126">Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="758d2-126">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [<span data-ttu-id="758d2-127">Практическое руководство. Чтение из текстовых файлов различных форматов</span><span class="sxs-lookup"><span data-stu-id="758d2-127">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [<span data-ttu-id="758d2-128">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="758d2-128">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [<span data-ttu-id="758d2-129">Пошаговое руководство. Операции с файлами и каталогами в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="758d2-129">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [<span data-ttu-id="758d2-130">Исправление неполадок, связанных с чтением из текстовых файлов и записью в такие файлы</span><span class="sxs-lookup"><span data-stu-id="758d2-130">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

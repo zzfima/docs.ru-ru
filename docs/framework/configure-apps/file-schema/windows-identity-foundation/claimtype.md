@@ -1,51 +1,60 @@
 ---
-title: "&lt;claimType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c4ee8833578b082f25c427b13d77072d1954197f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimType&gt;
-Указывает один необязательные или обязательные утверждение входящих токенов безопасности.  
+# <a name="ltclaimtypegt"></a><span data-ttu-id="280e5-102">&lt;claimType&gt;</span><span class="sxs-lookup"><span data-stu-id="280e5-102">&lt;claimType&gt;</span></span>
+<span data-ttu-id="280e5-103">Указывает один обязательный или необязательный утверждений входящие маркеры безопасности.</span><span class="sxs-lookup"><span data-stu-id="280e5-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="280e5-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="280e5-104">\<system.identityModel></span></span>  
+<span data-ttu-id="280e5-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="280e5-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="280e5-106">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="280e5-106">\<claimTypeRequired></span></span>  
+<span data-ttu-id="280e5-107">\<claimType ></span><span class="sxs-lookup"><span data-stu-id="280e5-107">\<claimType></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="280e5-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="280e5-108">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimTypeRequired>  
-      <claimType type=URI optional=xs:boolean >  
-      </claimType>  
-    </claimTypeRequired>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimTypeRequired>  
+      <claimType type=URI optional=xs:boolean >  
+      </claimType>  
+    </claimTypeRequired>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="280e5-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="280e5-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="280e5-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="280e5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="280e5-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="280e5-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|type|Тип утверждения.  Обычно URI.  Обязательный.|  
-|optional|Логическое значение, указывающее, является ли тип утверждения необязательно.  Необязательный.|  
+|<span data-ttu-id="280e5-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="280e5-112">Attribute</span></span>|<span data-ttu-id="280e5-113">Описание</span><span class="sxs-lookup"><span data-stu-id="280e5-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="280e5-114">type</span><span class="sxs-lookup"><span data-stu-id="280e5-114">type</span></span>|<span data-ttu-id="280e5-115">Тип утверждения.</span><span class="sxs-lookup"><span data-stu-id="280e5-115">The claim type.</span></span> <span data-ttu-id="280e5-116">Обычно URI.</span><span class="sxs-lookup"><span data-stu-id="280e5-116">Typically a URI.</span></span> <span data-ttu-id="280e5-117">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="280e5-117">Required.</span></span>|  
+|<span data-ttu-id="280e5-118">необязательные</span><span class="sxs-lookup"><span data-stu-id="280e5-118">optional</span></span>|<span data-ttu-id="280e5-119">Логическое значение, указывающее, является ли тип утверждения является необязательным.</span><span class="sxs-lookup"><span data-stu-id="280e5-119">A boolean value that specifies whether the claim type is optional.</span></span> <span data-ttu-id="280e5-120">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="280e5-120">Optional.</span></span>|  
   
-### Дочерние элементы  
- None  
+### <a name="child-elements"></a><span data-ttu-id="280e5-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="280e5-121">Child Elements</span></span>  
+ <span data-ttu-id="280e5-122">Нет</span><span class="sxs-lookup"><span data-stu-id="280e5-122">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="280e5-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="280e5-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Определяет набор необходимых утверждений для входящих токенов безопасности.|
+|<span data-ttu-id="280e5-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="280e5-124">Element</span></span>|<span data-ttu-id="280e5-125">Описание</span><span class="sxs-lookup"><span data-stu-id="280e5-125">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="280e5-126">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="280e5-126">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="280e5-127">Указывает набор утверждений, необходимых для входящих токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="280e5-127">Specifies the set of required claims for incoming security tokens.</span></span>|

@@ -1,64 +1,67 @@
 ---
-title: "Примеры LINQ to DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Примеры LINQ to DataSet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Примеры LINQ to DataSet
-В этом разделе приводятся примеры программирования [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], в которых используются стандартные операторы запросов.  Используемый в примерах объект <xref:System.Data.DataSet> заполняется с помощью метода `FillDataSet`, описанного в разделе [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Дополнительные сведения см. в разделе [Standard Query Operators Overview](../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+# <a name="linq-to-dataset-examples"></a><span data-ttu-id="7de13-102">Примеры LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="7de13-102">LINQ to DataSet Examples</span></span>
+<span data-ttu-id="7de13-103">В этом разделе содержатся [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] программирования примеры использования стандартных операторов запроса.</span><span class="sxs-lookup"><span data-stu-id="7de13-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="7de13-104"><xref:System.Data.DataSet> Используется в этих примерах заполняется с помощью `FillDataSet` метод, который указывается в [загрузка данных в наборе данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="7de13-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="7de13-105">Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span><span class="sxs-lookup"><span data-stu-id="7de13-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
-## В этом подразделе  
- [Примеры выражений запросов](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
- Содержит следующие примеры.  
+## <a name="in-this-section"></a><span data-ttu-id="7de13-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="7de13-106">In This Section</span></span>  
+ [<span data-ttu-id="7de13-107">Примеры выражений запроса</span><span class="sxs-lookup"><span data-stu-id="7de13-107">Query Expression Examples</span></span>](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ <span data-ttu-id="7de13-108">Содержит следующие примеры.</span><span class="sxs-lookup"><span data-stu-id="7de13-108">Contains the following examples:</span></span>  
   
--   [Проекция](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+-   [<span data-ttu-id="7de13-109">Проекции</span><span class="sxs-lookup"><span data-stu-id="7de13-109">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
--   [ограничение](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+-   [<span data-ttu-id="7de13-110">Ограничение</span><span class="sxs-lookup"><span data-stu-id="7de13-110">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
--   [Cекционирование](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+-   [<span data-ttu-id="7de13-111">Секционирование</span><span class="sxs-lookup"><span data-stu-id="7de13-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [Упорядочение](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="7de13-112">Упорядочение</span><span class="sxs-lookup"><span data-stu-id="7de13-112">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Операторы работы с элементами](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="7de13-113">Операторы элементов</span><span class="sxs-lookup"><span data-stu-id="7de13-113">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [Статистические операторы](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="7de13-114">Статистические операторы</span><span class="sxs-lookup"><span data-stu-id="7de13-114">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [операторы соединения](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+-   [<span data-ttu-id="7de13-115">Операторы соединения</span><span class="sxs-lookup"><span data-stu-id="7de13-115">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [Примеры запросов на основе методов](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
- Содержит следующие примеры.  
+ [<span data-ttu-id="7de13-116">Примеры запросов на основе методов</span><span class="sxs-lookup"><span data-stu-id="7de13-116">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ <span data-ttu-id="7de13-117">Содержит следующие примеры.</span><span class="sxs-lookup"><span data-stu-id="7de13-117">Contains the following examples:</span></span>  
   
--   [Проекция](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+-   [<span data-ttu-id="7de13-118">Проекции</span><span class="sxs-lookup"><span data-stu-id="7de13-118">Projection</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
--   [Секционирование](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+-   [<span data-ttu-id="7de13-119">Секционирование</span><span class="sxs-lookup"><span data-stu-id="7de13-119">Partitioning</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [Упорядочение](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="7de13-120">Упорядочение</span><span class="sxs-lookup"><span data-stu-id="7de13-120">Ordering</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Операторы работы с наборами](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [<span data-ttu-id="7de13-121">Операторы наборов</span><span class="sxs-lookup"><span data-stu-id="7de13-121">Set Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
--   [операторы преобразования](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+-   [<span data-ttu-id="7de13-122">Операторы преобразования</span><span class="sxs-lookup"><span data-stu-id="7de13-122">Conversion Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
--   [Операторы работы с элементами](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="7de13-123">Операторы элементов</span><span class="sxs-lookup"><span data-stu-id="7de13-123">Element Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [Статистические операторы](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="7de13-124">Статистические операторы</span><span class="sxs-lookup"><span data-stu-id="7de13-124">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [Соединение](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+-   [<span data-ttu-id="7de13-125">Join</span><span class="sxs-lookup"><span data-stu-id="7de13-125">Join</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [Примеры операторов, специфичных для DataSet](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- Содержит примеры, в которых показано, как использовать метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> и класс <xref:System.Data.DataRowComparer>.  
+ [<span data-ttu-id="7de13-126">Примеры операторов, специфичных для набора данных</span><span class="sxs-lookup"><span data-stu-id="7de13-126">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ <span data-ttu-id="7de13-127">Содержит примеры, в которых показано, как использовать метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> и класс <xref:System.Data.DataRowComparer>.</span><span class="sxs-lookup"><span data-stu-id="7de13-127">Contains examples that demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
   
-## См. также  
- [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)   
- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="7de13-128">См. также</span><span class="sxs-lookup"><span data-stu-id="7de13-128">See Also</span></span>  
+ [<span data-ttu-id="7de13-129">Руководство по программированию</span><span class="sxs-lookup"><span data-stu-id="7de13-129">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="7de13-130">Для загрузки данных в набор данных</span><span class="sxs-lookup"><span data-stu-id="7de13-130">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

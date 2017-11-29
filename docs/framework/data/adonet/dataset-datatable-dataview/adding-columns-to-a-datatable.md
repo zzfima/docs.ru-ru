@@ -1,27 +1,33 @@
 ---
-title: "Добавление столбцов к DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Добавление столбцов в таблицу данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6107c21ed04c9c39d69c5c784244d8f6bf9560e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Добавление столбцов к DataTable
-<xref:System.Data.DataTable> содержит коллекцию объектов <xref:System.Data.DataColumn>, на которые ссылается свойство **Columns** таблицы.  Эта коллекция столбцов наряду с ограничениями определяет схему, или структуру, таблицы.  
+# <a name="adding-columns-to-a-datatable"></a><span data-ttu-id="5dc84-102">Добавление столбцов в таблицу данных</span><span class="sxs-lookup"><span data-stu-id="5dc84-102">Adding Columns to a DataTable</span></span>
+<span data-ttu-id="5dc84-103">Объект <xref:System.Data.DataTable> содержит коллекцию <xref:System.Data.DataColumn> объекты, упоминаемые **столбцы** свойство таблицы.</span><span class="sxs-lookup"><span data-stu-id="5dc84-103">A <xref:System.Data.DataTable> contains a collection of <xref:System.Data.DataColumn> objects referenced by the **Columns** property of the table.</span></span> <span data-ttu-id="5dc84-104">Эта коллекция столбцов наряду с ограничениями определяет схему, или структуру, таблицы.</span><span class="sxs-lookup"><span data-stu-id="5dc84-104">This collection of columns, along with any constraints, defines the schema, or structure, of the table.</span></span>  
   
- Создаются объекты **DataColumn** в таблице, используя конструктор **DataColumn** или вызывая метод **Add** свойства **Columns** таблицы, которая является объектом <xref:System.Data.DataColumnCollection>.  Метод **Add** принимает необязательные аргументы **ColumnName**, **DataType** и **Expression** и создает новый **DataColumn** как член коллекции.  Он также принимает существующий объект **DataColumn** и добавляет его в коллекцию, а также возвращает ссылку на добавленный **DataColumn**, если требуется.  Так как объекты **DataTable** не являются специфичными для какого\-либо источника данных, типы .NET Framework используются при задании типов данных для **DataColumn**.  
+ <span data-ttu-id="5dc84-105">Вы создаете **DataColumn** объектов в пределах таблицы с помощью **DataColumn** конструктор, или путем вызова **добавить** метод **столбцы**свойство таблицы, которое является <xref:System.Data.DataColumnCollection>.</span><span class="sxs-lookup"><span data-stu-id="5dc84-105">You create **DataColumn** objects within a table by using the **DataColumn** constructor, or by calling the **Add** method of the **Columns** property of the table, which is a <xref:System.Data.DataColumnCollection>.</span></span> <span data-ttu-id="5dc84-106">**Добавить** принимает необязательные **ColumnName**, **DataType**, и **выражение** аргументы и создает новый  **DataColumn** как член коллекции.</span><span class="sxs-lookup"><span data-stu-id="5dc84-106">The **Add** method accepts optional **ColumnName**, **DataType**, and **Expression** arguments and creates a new **DataColumn** as a member of the collection.</span></span> <span data-ttu-id="5dc84-107">Он также принимает существующий **DataColumn** и добавляет его в коллекцию и возвращает ссылку на добавленный **DataColumn** по запросу.</span><span class="sxs-lookup"><span data-stu-id="5dc84-107">It also accepts an existing **DataColumn** object and adds it to the collection, and returns a reference to the added **DataColumn** if requested.</span></span> <span data-ttu-id="5dc84-108">Поскольку **DataTable** объекты не относятся к любому источнику данных, типы .NET Framework используются при задании типа данных **DataColumn**.</span><span class="sxs-lookup"><span data-stu-id="5dc84-108">Because **DataTable** objects are not specific to any data source, .NET Framework types are used when specifying the data type of a **DataColumn**.</span></span>  
   
- В следующем примере добавляются четыре столбца к объекту **DataTable**.  
+ <span data-ttu-id="5dc84-109">В следующем примере добавляется четыре столбца, чтобы **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="5dc84-109">The following example adds four columns to a **DataTable**.</span></span>  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -34,7 +40,6 @@ workCol.Unique = true
 workTable.Columns.Add("CustLName", Type.GetType("System.String"))  
 workTable.Columns.Add("CustFName", Type.GetType("System.String"))  
 workTable.Columns.Add("Purchases", Type.GetType("System.Double"))  
-  
 ```  
   
 ```csharp  
@@ -49,17 +54,17 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- Обратите внимание, что в данном примере свойства для столбца **CustID** установлены так, что не позволяют значениям **DBNull** и значениям ограничений быть уникальными.  Но если столбец **CustID** определяется как столбец первичного ключа таблицы, свойство **AllowDBNull** будет автоматически установлено в **false**, а свойство **Unique** будет автоматически установлено в **true**.  Для получения дополнительной информации см. [Определение первичных ключей](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ <span data-ttu-id="5dc84-110">В примере обратите внимание, что свойства **CustID** задаются запрещено **DBNull** значения и значениям ограничений быть уникальными.</span><span class="sxs-lookup"><span data-stu-id="5dc84-110">In the example, notice that the properties for the **CustID** column are set to not allow **DBNull** values and to constrain values to be unique.</span></span> <span data-ttu-id="5dc84-111">Тем не менее если определить **CustID** столбец как столбец первичного ключа таблицы, **AllowDBNull** свойство будет автоматически присвоено **false** и **Unique** свойство будет автоматически присвоено **true**.</span><span class="sxs-lookup"><span data-stu-id="5dc84-111">However, if you define the **CustID** column as the primary key column of the table, the **AllowDBNull** property will automatically be set to **false** and the **Unique** property will automatically be set to **true**.</span></span> <span data-ttu-id="5dc84-112">Дополнительные сведения см. в разделе [Определение первичных ключей](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).</span><span class="sxs-lookup"><span data-stu-id="5dc84-112">For more information, see [Defining Primary Keys](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).</span></span>  
   
 > [!CAUTION]
->  Если для столбца не предоставляется имя, ему присваивается имя по умолчанию Column*N* с увеличивающимся суффиксом N, начиная с «Column1», когда столбец добавляется в **DataColumnCollection**.  При предоставлении имени столбца мы рекомендуем избегать такого соглашения об именах, как «Column*N*», т. к. предоставляемое имя может вступить в конфликт с существующим именем по умолчанию столбца в **DataColumnCollection**.  Если указанное имя уже существует, вызывается исключение.  
+>  <span data-ttu-id="5dc84-113">Если для столбца не указано имя столбца, столбца присваивается имя по умолчанию столбца*N,* начиная с «Column1», когда он добавляется в **DataColumnCollection**.</span><span class="sxs-lookup"><span data-stu-id="5dc84-113">If a column name is not supplied for a column, the column is given an incremental default name of Column*N,* starting with "Column1", when it is added to the **DataColumnCollection**.</span></span> <span data-ttu-id="5dc84-114">Мы рекомендуем избегать именования «столбец*N*» при задании имени столбца, так как предоставляемое имя может конфликтовать с существующим именем столбца по умолчанию в **DataColumnCollection**.</span><span class="sxs-lookup"><span data-stu-id="5dc84-114">We recommend that you avoid the naming convention of "Column*N*" when you supply a column name, because the name you supply may conflict with an existing default column name in the **DataColumnCollection**.</span></span> <span data-ttu-id="5dc84-115">Если указанное имя уже существует, вызывается исключение.</span><span class="sxs-lookup"><span data-stu-id="5dc84-115">If the supplied name already exists, an exception is thrown.</span></span>  
   
- Если элемент <xref:System.Xml.XLinq.XElement> используется в качестве <xref:System.Data.DataColumn.DataType%2A> объекта <xref:System.Data.DataColumn> в <xref:System.Data.DataTable>, то XML\-сериализация не будет работать при считывании данных.  Например, если документ <xref:System.Xml.XmlDocument> записывается методом `DataTable.WriteXml`, то во время сериализации в XML\-код создается дополнительный родительский узел в элементе <xref:System.Xml.XLinq.XElement>.  Чтобы избежать этой проблемы, используйте тип <xref:System.Data.SqlTypes.SqlXml> вместо <xref:System.Xml.XLinq.XElement>.  Методы `ReadXml` и `WriteXml` правильно работают с <xref:System.Data.SqlTypes.SqlXml>.  
+ <span data-ttu-id="5dc84-116">Если элемент <xref:System.Xml.Linq.XElement> используется в качестве <xref:System.Data.DataColumn.DataType%2A> объекта <xref:System.Data.DataColumn> в <xref:System.Data.DataTable>, то XML-сериализация не будет работать при считывании данных.</span><span class="sxs-lookup"><span data-stu-id="5dc84-116">If you are using <xref:System.Xml.Linq.XElement> as the <xref:System.Data.DataColumn.DataType%2A> of a <xref:System.Data.DataColumn> in the <xref:System.Data.DataTable>, XML serialization will not work when you read in data.</span></span> <span data-ttu-id="5dc84-117">Например, если документ <xref:System.Xml.XmlDocument> записывается методом `DataTable.WriteXml`, то во время сериализации в XML-код создается дополнительный родительский узел в элементе <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5dc84-117">For example, if you write out a <xref:System.Xml.XmlDocument> by using the `DataTable.WriteXml` method, upon serialization to XML there is an additional parent node in the <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="5dc84-118">Чтобы избежать этой проблемы, используйте тип <xref:System.Data.SqlTypes.SqlXml> вместо <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5dc84-118">To work around this problem, use the <xref:System.Data.SqlTypes.SqlXml> type instead of <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="5dc84-119">Методы `ReadXml` и `WriteXml` правильно работают с <xref:System.Data.SqlTypes.SqlXml>.</span><span class="sxs-lookup"><span data-stu-id="5dc84-119">`ReadXml` and `WriteXml` work correctly with <xref:System.Data.SqlTypes.SqlXml>.</span></span>  
   
-## См. также  
- <xref:System.Data.DataColumn>   
- <xref:System.Data.DataColumnCollection>   
- <xref:System.Data.DataTable>   
- [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="5dc84-120">См. также</span><span class="sxs-lookup"><span data-stu-id="5dc84-120">See Also</span></span>  
+ <xref:System.Data.DataColumn>  
+ <xref:System.Data.DataColumnCollection>  
+ <xref:System.Data.DataTable>  
+ [<span data-ttu-id="5dc84-121">Определение схемы таблицы данных</span><span class="sxs-lookup"><span data-stu-id="5dc84-121">DataTable Schema Definition</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [<span data-ttu-id="5dc84-122">DataTables</span><span class="sxs-lookup"><span data-stu-id="5dc84-122">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="5dc84-123">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5dc84-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

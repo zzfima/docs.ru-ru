@@ -1,46 +1,49 @@
 ---
-title: "тип ассоциации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "тип ассоциации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 476a92979ff0dc6292e64ce5514cc600a9dee50a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# тип ассоциации
-*Тип ассоциации* \(также называемый ассоциацией\) \- это фундаментальный блок построения для описания связей в модели EDM.  В концептуальной модели ассоциация представляет собой связь между двумя [типами сущностей](../../../../docs/framework/data/adonet/entity-type.md) \(такими как `Customer` и `Order`\).  В приложении экземпляр ассоциации представляет собой специфическую ассоциацию \(такую как ассоциация между экземпляром `Customer` и экземпляром `Order`\).  Экземпляры ассоциации логически сгруппированы в [набор ассоциаций](../../../../docs/framework/data/adonet/association-set.md).  
+# <a name="association-type"></a><span data-ttu-id="7b4fa-102">тип ассоциации</span><span class="sxs-lookup"><span data-stu-id="7b4fa-102">association type</span></span>
+<span data-ttu-id="7b4fa-103">*Тип ассоциации* (также называемый ассоциацией) это фундаментальный блок построения для описания связей в модели данных сущности (EDM).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-103">An *association type* (also called an association) is the fundamental building block for describing relationships in the Entity Data Model (EDM).</span></span> <span data-ttu-id="7b4fa-104">В концептуальной модели ассоциация представляет собой связь между двумя [типов сущностей](../../../../docs/framework/data/adonet/entity-type.md) (такие как `Customer` и `Order`).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-104">In a conceptual model, an association represents a relationship between two [entity types](../../../../docs/framework/data/adonet/entity-type.md) (such as `Customer` and `Order`).</span></span> <span data-ttu-id="7b4fa-105">В приложении экземпляр ассоциации представляет собой специфическую ассоциацию (такую как ассоциация между экземпляром `Customer` и экземпляром `Order`).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-105">In an application, an instance of an association represents a specific association (such as an association between an instance of `Customer` and an instance of `Order`).</span></span> <span data-ttu-id="7b4fa-106">Экземпляры ассоциации логически сгруппированы в [набора ассоциаций](../../../../docs/framework/data/adonet/association-set.md).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-106">Association instances are logically grouped in an [association set](../../../../docs/framework/data/adonet/association-set.md).</span></span>  
   
- Определение ассоциации содержит следующую информацию.  
+ <span data-ttu-id="7b4fa-107">Определение ассоциации содержит следующую информацию.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-107">An association definition contains the following information:</span></span>  
   
--   Уникальное имя.  \(Обязательный атрибут\).  
+-   <span data-ttu-id="7b4fa-108">Уникальное имя.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-108">A unique name.</span></span> <span data-ttu-id="7b4fa-109">(Обязательный атрибут).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-109">(Required)</span></span>  
   
--   Две [конечные точки ассоциаций](../../../../docs/framework/data/adonet/association-end.md), по одной на каждый из типов сущностей в связи.  \(Обязательный атрибут\).  
+-   <span data-ttu-id="7b4fa-110">Два [ассоциации](../../../../docs/framework/data/adonet/association-end.md), один для каждого типа сущности в связи.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-110">Two [association ends](../../../../docs/framework/data/adonet/association-end.md), one for each entity type in the relationship.</span></span> <span data-ttu-id="7b4fa-111">(Обязательный атрибут).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-111">(Required)</span></span>  
   
     > [!NOTE]
-    >  Ассоциация не может представлять связь между более чем двумя типами сущностей.  Ассоциация может, тем не менее, определять связь с самим собой посредством указания одного и того же типа сущности для каждой из его конечных точек ассоциаций.  
+    >  <span data-ttu-id="7b4fa-112">Ассоциация не может представлять связь между более чем двумя типами сущностей.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-112">An association cannot represent a relationship among more than two entity types.</span></span> <span data-ttu-id="7b4fa-113">Ассоциация может, тем не менее, определять связь с самим собой посредством указания одного и того же типа сущности для каждой из его конечных точек ассоциаций.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-113">An association can, however, define a self-relationship by specifying the same entity type for each of its association ends.</span></span>  
   
--   [Ограничение ссылочной целостности](../../../../docs/framework/data/adonet/referential-integrity-constraint.md).  \(Необязательный параметр\).  
+-   <span data-ttu-id="7b4fa-114">Объект [ограничение ссылочной целостности](../../../../docs/framework/data/adonet/referential-integrity-constraint.md).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-114">A [referential integrity constraint](../../../../docs/framework/data/adonet/referential-integrity-constraint.md).</span></span> <span data-ttu-id="7b4fa-115">(Необязательный параметр).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-115">(Optional)</span></span>  
   
- Каждая конечная точка ассоциации должна определять [кратность конечной точки ассоциации](../../../../docs/framework/data/adonet/association-end-multiplicity.md), которая указывает число экземпляров типа сущности, могущих присутствовать на одной конечной точке ассоциации.  Кратность конечной точки ассоциации может иметь значение «один» \(1\), «нуль или один» \(0..1\) или «много» \(\*\).  Экземпляры типа сущности одной конечной точки ассоциации доступны посредством [свойств навигации](../../../../docs/framework/data/adonet/navigation-property.md) или внешних ключей, если они экспонируются в типе сущности.  Дополнительные сведения см. в разделе [Модель EDM: внешние ключи](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ <span data-ttu-id="7b4fa-116">Каждая конечная точка ассоциации необходимо указать [кратность конечной точки ассоциации](../../../../docs/framework/data/adonet/association-end-multiplicity.md) , указывающее количество экземпляров типа сущности, которые могут быть на одном конце связи.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-116">Each association end must specify an [association end multiplicity](../../../../docs/framework/data/adonet/association-end-multiplicity.md) that indicates the number of entity type instances that can be at one end of the association.</span></span> <span data-ttu-id="7b4fa-117">Кратность конечной точки ассоциации может иметь значение «один» (1), «нуль или один» (0..1) или «много» (*).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-117">An association end multiplicity can have a value of one (1), zero or one (0..1), or many (*).</span></span> <span data-ttu-id="7b4fa-118">Экземпляры типа сущности на одном конце связи может осуществляться через [свойства навигации](../../../../docs/framework/data/adonet/navigation-property.md) или внешних ключей, если они предоставляются в типе сущности.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-118">Entity type instances at one end of an association can be accessed through [navigation properties](../../../../docs/framework/data/adonet/navigation-property.md) or foreign keys if they are exposed on an entity type.</span></span> <span data-ttu-id="7b4fa-119">Дополнительные сведения см. в разделе [модель EDM: внешние ключи](../../../../docs/framework/data/adonet/foreign-key-property.md).</span><span class="sxs-lookup"><span data-stu-id="7b4fa-119">For more information, see [Entity Data Model: Foreign Keys](../../../../docs/framework/data/adonet/foreign-key-property.md).</span></span>  
   
-## Пример  
- На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `PublishedBy` и `WrittenBy`.  Конечные точки ассоциации для ассоциации `PublishedBy` \- это типы сущности `Book` и `Publisher`.  Кратность конечной точки `Publisher` \- «один» \(1\), а кратность конечной точки `Book` \- «много» \(\*\), что означает, что издатель публикует много книг, а одна книга публикуется одним издателем.  
+## <a name="example"></a><span data-ttu-id="7b4fa-120">Пример</span><span class="sxs-lookup"><span data-stu-id="7b4fa-120">Example</span></span>  
+ <span data-ttu-id="7b4fa-121">На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `PublishedBy` и `WrittenBy`.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-121">The diagram below shows a conceptual model with two associations: `PublishedBy` and `WrittenBy`.</span></span> <span data-ttu-id="7b4fa-122">Конечные точки ассоциации для ассоциации `PublishedBy` - это типы сущности `Book` и `Publisher`.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-122">The association ends for the `PublishedBy` association are the `Book` and `Publisher` entity types.</span></span> <span data-ttu-id="7b4fa-123">Кратность конечной точки `Publisher` - «один» (1), а кратность конечной точки `Book` - «много» (*), что означает, что издатель публикует много книг, а одна книга публикуется одним издателем.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-123">The multiplicity of the `Publisher` end is one (1) and the multiplicity of the `Book` end is many (*), indicating that a publisher publishes many books and a book is published by one publisher.</span></span>  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="7b4fa-124">![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="7b4fa-124">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- Платформа [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык DSL, называемый языком CSDL \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\), для определения концептуальных моделей.  Далее язык CSDL определяет ассоциацию `PublishedBy`, которая ранее приводилась в схеме.  
+ <span data-ttu-id="7b4fa-125">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-125">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="7b4fa-126">Далее язык CSDL определяет ассоциацию `PublishedBy`, которая ранее приводилась в схеме.</span><span class="sxs-lookup"><span data-stu-id="7b4fa-126">The following CSDL defines the `PublishedBy` association shown in the diagram above:</span></span>  
   
  [!code-xml[EDM_Example_Model#AssociationExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#associationexample)]  
   
-## См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="7b4fa-127">См. также</span><span class="sxs-lookup"><span data-stu-id="7b4fa-127">See Also</span></span>  
+ [<span data-ttu-id="7b4fa-128">Основные понятия модели данных сущности</span><span class="sxs-lookup"><span data-stu-id="7b4fa-128">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="7b4fa-129">Модель EDM</span><span class="sxs-lookup"><span data-stu-id="7b4fa-129">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
