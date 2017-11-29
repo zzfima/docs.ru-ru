@@ -1,74 +1,80 @@
 ---
-title: "Практическое руководство. Создание оформления текста | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "тип направляющей"
-  - "шрифты, направляющая"
-  - "шрифты, надчеркивание"
-  - "шрифты, зачеркивание"
-  - "шрифты, подчеркивание"
-  - "тип надчеркивания"
-  - "тип зачеркивания"
-  - "текст, декорирование"
-  - "оформление, оформление текста"
-  - "тип подчеркивания"
+title: "Практическое руководство. Создание оформления текста"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [WPF], baseline
+- text [WPF], decorations
+- fonts [WPF], underline
+- fonts [WPF], overline
+- strikethrough type [WPF]
+- fonts [WPF], strikethrough
+- overline type [WPF]
+- underline type [WPF]
+- typography [WPF], text decorations
+- baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e9229ce86dbe640c4eb960c455dd049ff40b38d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание оформления текста
-Объект <xref:System.Windows.TextDecoration> является визуальным декоративным элементом, который можно добавить в текст.  Имеется четыре типа оформления текста: подчеркивание, базовый план, зачеркивание и надчеркивание.  В следующем примере показано расположение элементов оформления текста относительно текста.  
+# <a name="how-to-create-a-text-decoration"></a>Практическое руководство. Создание оформления текста
+Объект <xref:System.Windows.TextDecoration> объект является визуальным декоративным элементом, можно добавить в текст. Существует четыре типа оформления текста: подчеркивание, базовых показателей, зачеркивания и надчеркивания. В следующем примере показано расположений украшений текста относительно текста.  
   
- ![Схема расположений украшений текста](../../../../docs/framework/wpf/advanced/media/textdecoration01.png "TextDecoration01")  
+ ![Схема расположений украшений текста](../../../../docs/framework/wpf/advanced/media/textdecoration01.gif "TextDecoration01")  
 Пример типов оформления текста  
   
- Чтобы добавить оформление текста в текст, создайте объект <xref:System.Windows.TextDecoration> и измените его свойства.  Использование свойства <xref:System.Windows.TextDecoration.Location%2A> позволяет указать, где размещается оформление текста, например, подчеркивание.  Использование свойства <xref:System.Windows.TextDecoration.Pen%2A> позволяет определить внешний вид оформления текста, например, сплошная заливка или градиент.  Если не указано значение свойства <xref:System.Windows.TextDecoration.Pen%2A>, оформление будет по умолчанию того же цвета, что и текст.  Определив объект <xref:System.Windows.TextDecoration>, добавьте его в коллекцию <xref:System.Windows.TextDecorations> нужного объекта текста.  
+ Чтобы добавить оформление текста в текст, создайте <xref:System.Windows.TextDecoration> объекта и измените его свойства. Используйте <xref:System.Windows.TextDecoration.Location%2A> свойство, чтобы указать, где отображается оформления текста, такие как подчеркивание. Используйте <xref:System.Windows.TextDecoration.Pen%2A> свойство для определения внешнего вида оформления текста, например сплошной заливки или цвет градиента. Если не указать значение для <xref:System.Windows.TextDecoration.Pen%2A> свойства, оформление будет по умолчанию совпадает с цветом текста. После того как определен <xref:System.Windows.TextDecoration> объекта, добавьте ее в <xref:System.Windows.TextDecorations> коллекцию нужного объекта текста.  
   
- В следующем примере показано оформление текста с помощью кисти линейного градиента и штрихового пера.  
+ Следующий пример показывает оформление текста с линейной градиентной кисти и пунктирного пера.  
   
  ![Украшение текста с подчеркиванием линейным градиентом](../../../../docs/framework/wpf/advanced/media/textdecoration02.png "TextDecoration02")  
-Пример подчеркивания линейной градиентной кистью и штриховым пером  
+Пример подчеркивания со стилем линейной градиентной кисти и пунктирного пера  
   
- Объект <xref:System.Windows.Documents.Hyperlink> является элементом содержимого нефиксированного формата встроенного уровня, позволяющим размещать гиперссылки в содержимом нефиксированного формата.  По умолчанию <xref:System.Windows.Documents.Hyperlink> использует объект <xref:System.Windows.TextDecoration> для отображения подчеркивания.  Объекты <xref:System.Windows.TextDecoration> могут уменьшить производительность при создании, особенно при большом количестве объектов <xref:System.Windows.Documents.Hyperlink>.  При частом использовании гиперссылок <xref:System.Windows.Documents.Hyperlink>, можно отображать подчеркивание только при возникновении события, например, <xref:System.Windows.ContentElement.MouseEnter>.  
+ <xref:System.Windows.Documents.Hyperlink> Объект является элемент содержимого потока встроенного уровня, позволяющий размещать гиперссылки в содержимом потока. По умолчанию <xref:System.Windows.Documents.Hyperlink> использует <xref:System.Windows.TextDecoration> объекта для отображения подчеркивания. <xref:System.Windows.TextDecoration>объекты могут быть производительность при создании, особенно в том случае, если имеется много <xref:System.Windows.Documents.Hyperlink> объектов. Если предусматривают широкое использование <xref:System.Windows.Documents.Hyperlink> элементов, может потребоваться отображать подчеркивание только при возникновении события, такие как <xref:System.Windows.ContentElement.MouseEnter> событий.  
   
- В следующем примере подчеркивание ссылки "Моя страница MSN" является динамическим — оно появляется только при возникновении события <xref:System.Windows.ContentElement.MouseEnter>.  
+ В следующем примере подчеркивание ссылки «Мой MSN» является динамическим — оно появляется только при <xref:System.Windows.ContentElement.MouseEnter> события.  
   
  ![Гиперссылки, отображающие TextDecorations](../../../../docs/framework/wpf/advanced/media/textdecoration03.png "TextDecoration03")  
-Гиперссылки, определенные с помощью TextDecorations  
+Гиперссылки, определенные с TextDecorations  
   
  Дополнительные сведения см. в разделе [Определение того, подчеркнута ли ссылка](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
-## Пример  
- В следующем примере кода для оформления текста подчеркиванием используется значение шрифта по умолчанию.  
+## <a name="example"></a>Пример  
+ В следующем примере кода подчеркивание текста используется значение шрифта по умолчанию.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets1)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets1)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets1)]  
   
- В следующем примере кода подчеркивание текста создается с помощью сплошной цветной кисти.  
+ В следующем примере кода подчеркивание текста создается с помощью кисти сплошной цвет пера.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets2)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets2)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets2)]  
   
  В следующем примере кода подчеркивание текста создается с помощью кисти линейного градиента для пунктирного пера.  
   
  [!code-csharp[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml.cs#textdecorationsnippets3)]
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
- [!code-xml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
+ [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## См. также  
- <xref:System.Windows.TextDecoration>   
- <xref:System.Windows.Documents.Hyperlink>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.TextDecoration>  
+ <xref:System.Windows.Documents.Hyperlink>  
  [Определение того, подчеркнута ли ссылка](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)

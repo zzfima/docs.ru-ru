@@ -1,39 +1,40 @@
 ---
-title: "How To: Add Multiple Sets of Settings To Your Application in C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "application settings [Windows Forms], multiple sets"
-  - "application settings [Windows Forms], C#"
+title: "Практическое руководство. Добавление несколько наборов параметров в приложение на C#"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], multiple sets
+- application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ec541a8f83990eec79226be7fb4880ef8dda639d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How To: Add Multiple Sets of Settings To Your Application in C# #
-В некоторых случаях может потребоваться иметь несколько наборов параметров для одного приложения.  Например, при разработке приложения, в котором ожидается частое изменение определенной группы параметров, эту группу стоит выделить в отдельный файл, который можно заменить, не изменяя другие параметры.  Visual Studio позволяет добавлять несколько наборов параметров в проект.  Доступ к дополнительным наборам параметров может осуществляться с помощью объекта "Properties.Settings".  
+# <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Практическое руководство. Добавление несколько наборов параметров в приложение на C# #
+В некоторых случаях может потребоваться иметь несколько наборов параметров в приложение. Например если вы разрабатываете приложения там, где ожидается определенная группа параметров для часто меняются, можно порекомендовать разделяйте их все в одном файле, чтобы его можно заменить, изменяя другие параметры. Visual Studio позволяет добавлять несколько наборов параметров в проект. Дополнительные наборы параметров может осуществляться с помощью объекта "Properties.Settings".  
   
-### Чтобы добавить дополнительный набор параметров в приложение, выполните следующие действия.  
+### <a name="to-add-an-additional-set-of-setting-to-your-application"></a>Чтобы добавить дополнительный набор параметров в приложение  
   
-1.  В меню **Проект** выберите **Добавить новый элемент**.  Откроется диалоговое окно **Добавление нового элемента**.  
+1.  В меню **Проект** выберите команду **Добавить новый элемент**. Откроется диалоговое окно **Добавление нового элемента**.  
   
-2.  В диалоговом окне **Добавление нового элемента** выберите **Файл параметров**, введите имя для файла и нажмите кнопку **Добавить**, чтобы добавить новый файл параметров к решению.  
+2.  В **Добавление нового элемента** выберите **файл параметров**, введите имя для файла и нажмите кнопку **добавить** для добавления в решение новый файл параметров.  
   
-3.  В **Обозревателе решений** перетащите новый файл параметров в папку **Свойства**.  Это позволяет получить доступ к новым параметрам в коде.  
+3.  В **обозревателе решений**, перетащите новый файл параметров в **свойства** папки. Благодаря этому новые параметры будут доступны в коде.  
   
-4.  Добавляйте и используйте параметры из этого файла, как при работе с любым другим файлом параметров.  Доступ к этой группе параметров можно получить с помощью объекта "Properties.Settings".  
+4.  Добавить и использовать параметры в этом файле, как и любой другой файл параметров. Эта группа параметров с помощью объекта Properties.Settings доступны.  
   
-## См. также  
- [Using Application Settings and User Settings](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)   
+## <a name="see-also"></a>См. также  
+ [Использование параметров приложения и параметров пользователя](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

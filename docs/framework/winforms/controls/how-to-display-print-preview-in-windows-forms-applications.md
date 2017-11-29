@@ -1,44 +1,49 @@
 ---
-title: "Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], предварительный просмотр"
-  - "предварительный просмотр, отображение"
-  - "печать [Windows Forms], предварительный просмотр"
+title: "Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print preview [Windows Forms], displaying
+- printing [Windows Forms], print preview
+- examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e705575b8c3acdcc3d92b985c59b60e7310dce7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms
-Элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> используется для отображения документа до того, как он будет напечатан.  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Практическое руководство. Предварительный просмотр при печати в приложениях Windows Forms
+Можно использовать <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления, чтобы разрешить пользователям часто отображение документа, прежде чем он станет для печати.  
   
- Для этого необходимо указать экземпляр класса <xref:System.Drawing.Printing.PrintDocument>, представляющий документ, который должен быть напечатан.  Дополнительные сведения об использовании предварительного просмотра с компонентом <xref:System.Drawing.Printing.PrintDocument> см. в разделе [Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ Чтобы сделать это, необходимо указать экземпляр <xref:System.Drawing.Printing.PrintDocument> класса; это документ для печати. Дополнительные сведения об использовании предварительного просмотра с <xref:System.Drawing.Printing.PrintDocument> компонента, в разделе [как: печать в Windows Forms с помощью предварительный](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
->  Чтобы использовать элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> во время выполнения, пользователи должны иметь установленный на компьютере локальный или сетевой принтер, так как это отчасти необходимо для определения компонентом <xref:System.Windows.Forms.PrintPreviewDialog>, как будет выглядеть документ при печати.  
+>  Для использования <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления во время выполнения пользователи должны иметь установленный на своем компьютере, локально или через сеть, принтер, как это отчасти как <xref:System.Windows.Forms.PrintPreviewDialog> компонент определяет, как будет выглядеть при печати документа.  
   
- Элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> использует класс <xref:System.Drawing.Printing.PrinterSettings>.  Кроме того, элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> использует класс <xref:System.Drawing.Printing.PageSettings>, так же как и компонент <xref:System.Windows.Forms.PrintPreviewDialog>.  Документ для печати, указанный в свойстве <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> элемента управления <xref:System.Windows.Forms.PrintPreviewDialog>, взаимодействует с экземплярами классов <xref:System.Drawing.Printing.PrinterSettings> и <xref:System.Drawing.Printing.PageSettings>, которые используются для отображения документа в окне предварительного просмотра.  
+ <xref:System.Windows.Forms.PrintPreviewDialog> Управления использует <xref:System.Drawing.Printing.PrinterSettings> класса. Кроме того <xref:System.Windows.Forms.PrintPreviewDialog> управления использует <xref:System.Drawing.Printing.PageSettings> класса, так же как и <xref:System.Windows.Forms.PrintPreviewDialog> компонент. Печать документа, указанного в <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> взаимодействует с экземплярами обоих <xref:System.Drawing.Printing.PrinterSettings> и <xref:System.Drawing.Printing.PageSettings> классов и они используются для отображения документа в окне предварительного просмотра.  
   
-### Просмотр страниц с помощью элемента управления PrintPreviewDialog  
+### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Просмотр страниц с помощью элемента управления PrintPreviewDialog  
   
--   Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна, указав используемый компонент <xref:System.Drawing.Printing.PrintDocument>.  
+-   Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна, указав используемый <xref:System.Drawing.Printing.PrintDocument> .  
   
-     В следующем примере кода обработчик событий <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button> открывает экземпляр элемента управления <xref:System.Windows.Forms.PrintPreviewDialog>.  Документ, который требуется распечатать, указан с помощью свойства <xref:System.Windows.Forms.PrintDialog.Document%2A>.  В приведенном ниже примере не указан документ, который требуется распечатать.  
+     В следующем примере кода <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает экземпляр <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления. Печать документа указывается в <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство. В следующем примере указано ни одного печати документа.  
   
-     В примере предполагается, что на форме существует элемент управления <xref:System.Windows.Forms.Button>, компонент <xref:System.Drawing.Printing.PrintDocument> с именем`myDocument` и элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>.  
+     В этом примере предполагается, что имеет форму <xref:System.Windows.Forms.Button> управления <xref:System.Drawing.Printing.PrintDocument> компонент с именем `myDocument`и <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -49,7 +54,6 @@ caps.handback.revision: 19
        PrintPreviewDialog1.Document = myDocument  
        PrintPreviewDialog1.ShowDialog()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ caps.handback.revision: 19
        printPreviewDialog1.Document = myDocument;  
        printPreviewDialog1.ShowDialog();  
     }  
-  
     ```  
   
     ```cpp  
@@ -77,11 +80,10 @@ caps.handback.revision: 19
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Добавьте в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -89,8 +91,8 @@ caps.handback.revision: 19
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## См. также  
- [Компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)   
- [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
+## <a name="see-also"></a>См. также  
+ [Компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

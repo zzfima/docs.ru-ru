@@ -1,40 +1,42 @@
 ---
-title: "Практическое руководство. Доступ к службам с дуплексным контрактом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "дуплексные контракты [WCF]"
+title: "Практическое руководство. Доступ к службам с дуплексным контрактом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e4c273e674fb7cb0f2801d9858d598baab5973a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Доступ к службам с дуплексным контрактом
-Одной из особенностей [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] является возможность создать службу, использующую дуплексный шаблон обмена сообщениями.Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова.В этом разделе приведены основные этапы создания клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в классе клиента, который реализует интерфейс обратного вызова.  
+# <a name="how-to-access-services-with-a-duplex-contract"></a>Практическое руководство. Доступ к службам с дуплексным контрактом
+Одной из особенностей [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] является возможность создать службу, использующую дуплексный шаблон обмена сообщениями. Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова. В этом разделе приведены основные этапы создания клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в классе клиента, который реализует интерфейс обратного вызова.  
   
- Двойная привязка предоставляет службе IP\-адрес клиента.Клиент должен использовать механизм безопасности, чтобы обеспечить подключение только к доверенным службам.  
+ Двойная привязка предоставляет службе IP-адрес клиента. Клиент должен использовать механизм безопасности, чтобы обеспечить подключение только к доверенным службам.  
   
- Инструкции по созданию простой службы и клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] см. в разделе [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md).  
+ Учебник по созданию базового [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы и клиента см. в разделе [учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md).  
   
-### Доступ к дуплексной службе  
+### <a name="to-access-a-duplex-service"></a>Доступ к дуплексной службе  
   
-1.  Создайте службу, содержащую два интерфейса.Первый интерфейс предназначен для службы, второй — для обратного вызова.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о создании дуплексной службы см. в разделе [Как создавать дуплексный контракт](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+1.  Создайте службу, содержащую два интерфейса. Первый интерфейс предназначен для службы, второй - для обратного вызова. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание дуплексной службы. в разделе [как: создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 2.  Запустите службу.  
   
-3.  С помощью [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создайте контракты \(интерфейсы\) для клиента.Сведения о том, как это сделать, см. в разделе [Как создать клиент](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+3.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания контрактов (интерфейсы) для клиента. Сведения о том, как это сделать в разделе [как: создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 4.  Реализуйте в классе клиента интерфейс обратного вызова, как показано в следующем примере.  
   
@@ -62,10 +64,9 @@ caps.handback.revision: 18
             Console.Writeline("Equation({0})", equation)  
         End Sub  
     End Class  
-  
     ```  
   
-5.  Создайте экземпляр класса <xref:System.ServiceModel.InstanceContext>.Конструктору требуется экземпляр класса клиента.  
+5.  Создайте экземпляр класса <xref:System.ServiceModel.InstanceContext>. Конструктору требуется экземпляр класса клиента.  
   
     ```csharp  
     InstanceContext site = new InstanceContext(new CallbackHandler());  
@@ -75,7 +76,7 @@ caps.handback.revision: 18
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  Создайте экземпляр клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], используя конструктор, которому требуется объект <xref:System.ServiceModel.InstanceContext>.Вторым параметром конструктора является имя конечной точки, определенное в файле конфигурации.  
+6.  Создайте экземпляр клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], используя конструктор, которому требуется объект <xref:System.ServiceModel.InstanceContext>. Вторым параметром конструктора является имя конечной точки, определенное в файле конфигурации.  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -88,17 +89,17 @@ caps.handback.revision: 18
   
 7.  Вызовите требуемые методы клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере кода показано, как создать класс клиента, обращающийся к дуплексному контракту.  
   
  [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
  [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]  
   
-## Безопасность платформы .NET Framework  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
   
-## См. также  
- [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)   
- [Как создавать дуплексный контракт](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [Как создать клиент](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Практическое руководство. Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+## <a name="see-also"></a>См. также  
+ [Руководство по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Как: создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [Практическое руководство. Создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Как: использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

@@ -1,81 +1,79 @@
 ---
-title: "Оператор GoTo | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.GoTo"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ветвление"
-  - "ветвление, conditional"
-  - "ветвление, безусловный"
-  - "условные операторы, GoTo - оператор"
-  - "поток управления, ветвление"
-  - "GoTo - оператор"
-  - "GoTo - оператор, синтаксис"
-  - "безусловное ветвление"
+title: "Оператор GoTo"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.GoTo
+helpviewer_keywords:
+- GoTo statement [Visual Basic]
+- control flow [Visual Basic], branching
+- unconditional branching [Visual Basic]
+- branching [Visual Basic]
+- branching [Visual Basic], unconditional
+- branching [Visual Basic], conditional
+- conditional statements [Visual Basic], GoTo statement
+- GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор GoTo
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Безусловно передает управление в указанную строку процедуры.  
+# <a name="goto-statement"></a>Оператор GoTo
+Осуществляет безусловный переход на указанную строку в процедуре.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 GoTo line  
 ```  
   
-## Часть  
+## <a name="part"></a>Отделение  
  `line`  
- Обязательный.  Метка строки.  
+ Обязательный. Метка строки.  
   
-## Заметки  
- Оператор `GoTo` может передавать управление только в строки процедуры, в которой он находится.  Строка должна иметь метку строки, на которую может сослаться `GoTo`.  Дополнительные сведения см. в разделе [Практическое руководство. Операторы меток](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+## <a name="remarks"></a>Примечания  
+ `GoTo` Оператор может выполнять переход только к строкам в процедуре, в котором он отображается. Строка должна содержать строку, метка `GoTo` могут ссылаться на. Дополнительные сведения см. в разделе [как: метка инструкции](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  Операторы `GoTo` могут осложнить читаемость и отладку кода.  По возможности используйте управляющую структуру.  Дополнительные сведения см. в разделе [Управление ходом выполнения](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo`операторы могут сделать код трудными для понимания и обслуживания. По возможности используйте структуру управления. Дополнительные сведения см. в разделе [поток управления](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- Нельзя использовать оператор `GoTo` для передачи управления из кода вне конструкции `For`...`Next`, `For Each`...`Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With` или `Using` ... `End Using` на метку внутри этой конструкции.  
+ Нельзя использовать `GoTo` инструкции для выхода из блоков `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, или `Using`... `End Using` метку внутри этой конструкции.  
   
-## Конструкции Try и ветвления  
- В пределах конструкции `Try`...`Catch`...`Finally` применяются следующие правила для ветвления с помощью оператора `GoTo`.  
+## <a name="branching-and-try-constructions"></a>Конструкции Try и ветвления  
+ В рамках `Try`... `Catch`... `Finally` конструкция, применяются следующие правила для ветвления с `GoTo` инструкции.  
   
 |Блок или область|Ветвление внутрь извне|Ветвление вовне|  
-|----------------------|----------------------------|---------------------|  
-|Блок `Try`|Только из блока `Catch` той же конструкции<sup>1</sup>|Только вовне всей конструкции|  
-|Блок `Catch`|Никогда не разрешено|Только вовне всей конструкции или в блок `Try` той же конструкции<sup>1</sup>|  
-|Блок `Finally`|Никогда не разрешено|Никогда не разрешено|  
+|---------------------|-------------------------------|-------------------------------|  
+|`Try`блок|Только из `Catch` блок конструирование же <sup>1</sup>|Только вовне всей конструкции|  
+|`Catch`блок|Никогда не допускается|Только вовне всей конструкции или `Try` блок конструирование же <sup>1</sup>|  
+|`Finally`блок|Никогда не допускается|Никогда не допускается|  
   
- <sup>1</sup> Если одна конструкция `Try`... `Catch`... `Finally` вложена в другую, блок `Catch` может передавать управление в блок `Try` на своем уровне вложенности, но не в любой другой блок `Try`.  Вложенная конструкция `Try`... `Catch`... `Finally` должна полностью содержаться в блоке `Try` или `Catch` той конструкции, в которую вложена.  
+ <sup>1</sup> Если один `Try`... `Catch`... `Finally` вложена в другую, `Catch` блок можно ветвление в `Try` блок в свой собственный уровень вложенности, но не в любой другой `Try` блока. Вложенный `Try`... `Catch`... `Finally` конструкции, которые должны содержаться в полностью `Try` или `Catch` блок конструирование, в течение которого он является вложенным.  
   
- На следующем рисунке показана одна конструкция `Try`, вложенная в другую.  Различные ветви между блоками двух конструкций помечаются как допустимые или нет.  
+ На следующем рисунке показано одно `Try` конструкции, вложенным в другой. Различные ветви между блоками двух конструкций обозначены как допустимое или недопустимое.  
   
  ![Графическая схема ветвления в конструкциях Try](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
 Допустимые и недопустимые ветви в конструкциях Try  
   
-## Пример  
- В следующем примере используется оператор `GoTo` для передачи управления на метки в процедуре.  
+## <a name="example"></a>Пример  
+ В следующем примере используется `GoTo` инструкции в ветвь на метки в процедуре.  
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## См. также  
- [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)   
- [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Оператор Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
  [Оператор With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

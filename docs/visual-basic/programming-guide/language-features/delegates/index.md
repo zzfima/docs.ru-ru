@@ -1,45 +1,27 @@
 ---
 title: "Делегаты (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0b65f2d74064542177790e513eb2452274743b51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="delegates-visual-basic"></a>Делегаты (Visual Basic)
-Делегаты являются объектами, которые ссылаются на методы. Иногда их описывают как *типобезопасные указатели функций*, поскольку они похожи на указатели функций, используемые в других языках программирования. Но в отличие от указателей на функцию, делегаты [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] являются ссылочным типом и основаны на классе <xref:System.Delegate?displayProperty=fullName>. Делегаты могут ссылаться на оба вида общих методов — на методы, которые могут вызываться без определенного экземпляра класса, и на методы экземпляра.  
+Делегаты являются объектами, которые ссылаются на методы. Иногда их описывают как *типобезопасные указатели функций*, поскольку они похожи на указатели функций, используемые в других языках программирования. Но в отличие от указателей на функцию, делегаты [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] являются ссылочным типом и основаны на классе <xref:System.Delegate?displayProperty=nameWithType>. Делегаты могут ссылаться на оба вида общих методов — на методы, которые могут вызываться без определенного экземпляра класса, и на методы экземпляра.  
   
 ## <a name="delegates-and-events"></a>Делегаты и события  
  Делегаты полезны в тех ситуациях, когда требуется промежуточное звено между вызывающей и вызываемой процедурами. Например, вы хотите создать объект, который создает события и в зависимости от обстоятельств может вызывать разные обработчики событий. К сожалению, этот объект не может знать заранее, какой обработчик событий обрабатывает конкретное событие. В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] вы можете динамически связывать обработчики событий с событиями. Для этого при вызове инструкции `AddHandler` создается делегат. Во время выполнения делегат передает вызовы в соответствующий обработчик событий.  
@@ -91,4 +73,3 @@ ms.lasthandoff: 07/28/2017
 |[How to: Pass Procedures to Another Procedure in Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md) (Практическое руководство. Передача процедур другой процедуре в Visual Basic)|Демонстрирует использование делегатов для передачи одной процедуры в другую процедуру.|  
 |[Неявное преобразование делегата](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|Описывает, как можно назначить делегаты или обработчики для подпрограмм и функций, если их сигнатуры не совпадают|  
 |[События](../../../../visual-basic/programming-guide/language-features/events/index.md)|Предоставляет обзор событий в Visual Basic.|
-

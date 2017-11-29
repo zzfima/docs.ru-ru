@@ -1,42 +1,45 @@
 ---
-title: "Общие сведения об элементе управления TextBox (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "текстовые поля, добавление"
-  - "TextBox - элемент управления [Windows Forms], сведения об элементах управления TextBox"
+title: "Общие сведения об элементе управления TextBox (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: TextBox
+helpviewer_keywords:
+- TextBox control [Windows Forms], about TextBox controls
+- text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e8c75392f12b87c7495b1fcdf5419f2463067161
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления TextBox (Windows Forms)
-Текстовые поля форм Windows Forms используются для приема данных, вводимых пользователем, или для отображения текста.  Элемент управления <xref:System.Windows.Forms.TextBox> обычно используется для редактируемого текста, хотя его можно также сделать доступным только для чтения.  В текстовых полях можно выводить несколько строк текста, размещать текст в соответствии с размером элемента управления и применять основные элементы форматирования.  В элементе управления <xref:System.Windows.Forms.TextBox> можно вводить или отображать текст только в одном формате.  Для отображения текста в различных форматах следует использовать элемент управления <xref:System.Windows.Forms.RichTextBox>.  Дополнительные сведения см. в разделе [Общие сведения об элементе управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  
+# <a name="textbox-control-overview-windows-forms"></a>Общие сведения об элементе управления TextBox (Windows Forms)
+Windows Forms текстовые поля используются для получения входных данных от пользователя или для отображения текста. <xref:System.Windows.Forms.TextBox> Управления обычно используется для редактируемого текста, хотя его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. <xref:System.Windows.Forms.TextBox> Элемент управления предоставляет единый формат стиля или ввести в элемент управления отображать текст. Чтобы отобразить несколько типов форматированного текста, используйте <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Обзор элемента управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  
   
-## Работа с элементом управления TextBox  
- Текст, отображаемый в элементе управления, содержится в свойстве <xref:System.Windows.Forms.TextBox.Text%2A>.  По умолчанию в текстовом поле можно ввести до 2048 знаков.  Если свойству <xref:System.Windows.Forms.TextBox.Multiline%2A> присвоить значение `true`, это позволит вводить до 32 килобайт текста.  Свойство <xref:System.Windows.Forms.TextBox.Text%2A> может быть установлено в окне "Свойства" во время разработки, программными средствами во время выполнения или в результате ввода данных пользователем во время выполнения.  Текущее содержимое текстового поля может быть получено во время выполнения путем считывания значения свойства <xref:System.Windows.Forms.TextBox.Text%2A>.  
+## <a name="working-with-the-textbox-control"></a>Работа с элементом управления TextBox  
+ Текст, отображаемый элементом управления, содержащихся в <xref:System.Windows.Forms.TextBox.Text%2A> свойство. По умолчанию можно ввести не более 2048 символов в текстовом поле. Если задать <xref:System.Windows.Forms.TextBox.Multiline%2A> свойства `true`, можно ввести текст до 32 КБ. <xref:System.Windows.Forms.TextBox.Text%2A> Свойство можно задать во время разработки в окне "Свойства" во время выполнения в коде, или вводимыми пользователем во время выполнения. Текущее содержимое текстового поля могут быть получены во время выполнения путем чтения <xref:System.Windows.Forms.TextBox.Text%2A> свойство.  
   
- В следующем примере кода текст помещается в элемент управления во время выполнения.  Процедура`InitializeMyControl` не выполняется автоматически; она должна быть вызвана.  
+ В следующем примере кода задает текст в элементе управления во время выполнения. `InitializeMyControl` Процедура не выполняется автоматически; он должен быть вызван.  
   
 ```vb  
 Private Sub InitializeMyControl()  
    ' Put some text into the control first.  
    TextBox1.Text = "This is a TextBox control."  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -44,7 +47,6 @@ private void InitializeMyControl() {
    // Put some text into the control first.  
    textBox1.Text = "This is a TextBox control.";  
 }  
-  
 ```  
   
 ```cpp  
@@ -56,12 +58,12 @@ private:
    }  
 ```  
   
-## См. также  
- <xref:System.Windows.Forms.TextBox>   
- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Практическое руководство. Создание текстового поля только для чтения](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Практическое руководство. Добавление кавычек в строку](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.TextBox>  
+ [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Практическое руководство. Создание текстового поля только для чтения](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Практическое руководство. Добавление кавычек в строку](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

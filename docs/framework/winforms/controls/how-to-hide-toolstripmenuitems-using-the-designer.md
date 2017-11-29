@@ -1,53 +1,54 @@
 ---
-title: "Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пункты меню, скрытие"
-  - "MenuStrip - элемент управления [Windows Forms], скрытие элементов меню в конструкторе"
-  - "ToolStripMenuItem - элементы, скрытие элементов меню в конструкторе"
+title: "Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], hiding menu items in designer
+- MenuStrip control [Windows Forms], hiding menu items in designer
+- menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9549fa11b3f019dce3cc77d5f6d1d08a8485f0cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора
-Скрытие пунктов меню позволяет управлять пользовательским интерфейсом приложения и ограничивать использование команд пользователями.  Во многих случаях, когда все пункты меню становятся недоступными, необходимо скрыть меню целиком.  Это позволит пользователю меньше отвлекаться.  Более того, можно одновременно скрыть и отключить меню или пункт меню, поскольку скрытие меню не запрещает доступ пользователя к командам меню с помощью сочетаний клавиш.  Дополнительные сведения об отключении пунктов меню см. в разделе [Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md).  
+# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора
+Скрытие пунктов меню — способ управления пользовательского интерфейса (UI) приложения и ограничивать использование команд пользователями. Часто необходимо скрыть меню целиком, когда все элементы меню недоступны. Это меньше отвлекаться для пользователя. Кроме того может потребоваться скрыть и отключить меню или пункта меню, как скрытие не запрещает пользователю доступ к команде меню с помощью сочетания клавиш. Дополнительные сведения об отключении пунктов меню см. в разделе [как: отключение объектов ToolStripMenuItem с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы скрыть меню верхнего уровня и его вложенные меню, выполните следующие действия.  
+### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>Чтобы скрыть меню верхнего уровня и пунктов подменю  
   
-1.  Выберите пункт меню верхнего уровня и установите для его свойства <xref:System.Windows.Forms.ToolStripItem.Visible%2A> или <xref:System.Windows.Forms.ToolStripItem.Available%2A> значение `false`.  
+1.  Выберите пункт меню верхнего уровня и задайте его <xref:System.Windows.Forms.ToolStripItem.Visible%2A> или <xref:System.Windows.Forms.ToolStripItem.Available%2A> свойства `false`.  
   
-     При скрытии пункта меню верхнего уровня все пункты меню внутри этого меню также будут скрыты.  Если после присвоения свойству <xref:System.Windows.Forms.ToolStripItem.Visible%2A> значения `false` щелкнуть в любом месте за пределами элемента управления <xref:System.Windows.Forms.MenuStrip>, пункт меню верхнего уровня и его вложенные элементы исчезнут из формы, наглядно продемонстрировав результат этого действия.  Чтобы отобразить скрытое меню верхнего уровня в процессе разработки, щелкните элемент <xref:System.Windows.Forms.MenuStrip> в **области компонентов**, в окне **Структура документа** или в верхней части сетки свойств.  
+     При скрытии пункт меню верхнего уровня все пункты меню внутри этого меню также скрыты. Если щелкнуть в любом месте за пределами <xref:System.Windows.Forms.MenuStrip> после установки <xref:System.Windows.Forms.ToolStripItem.Visible%2A> для `false`, целиком меню верхнего уровня и пунктов подменю исчезнут из формы, наглядно продемонстрировав результат выполнения этого действия. Для отображения скрытых меню верхнего уровня элемента во время разработки, нажмите кнопку <xref:System.Windows.Forms.MenuStrip> в **область компонентов**в **Структура документа**, или в верхней части сетки свойств.  
   
 > [!NOTE]
->  Скрытие всего меню полностью выполняется нечасто, за исключением дочерних меню интерфейса MDI в сценарии слияния.  
+>  Редко будут скрыты всего меню, за исключением нескольких документа дочерних меню интерфейса MDI в сценарии слияния.  
   
-### Чтобы скрыть элемент вложенного меню, выполните следующие действия:  
+### <a name="to-hide-a-submenu-item"></a>Чтобы скрыть элемент вложенного меню  
   
-1.  Выберите элемент вложенного меню и установите для его свойства <xref:System.Windows.Forms.ToolStripItem.Visible%2A> значение `false`.  
+1.  Выберите элемент вложенного меню и задать его <xref:System.Windows.Forms.ToolStripItem.Visible%2A> свойства `false`.  
   
-     При скрытии элемента вложенного меню он остается видимым в форме в процессе разработки, что позволяет в дальнейшем легко его выбрать.  Он будет скрыт во время выполнения.  
+     Если скрыть элемент вложенного меню остается видимым в форме во время разработки, то можно легко выделить для дальнейшей работы. Он будет скрыт во время выполнения.  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStripItem.Visible%2A>   
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>   
- <xref:System.Windows.Forms.ToolStripItem.Available%2A>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>   
- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ToolStripItem.Visible%2A>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>  
+ <xref:System.Windows.Forms.ToolStripItem.Available%2A>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>  
+ [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
  [Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)

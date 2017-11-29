@@ -1,25 +1,28 @@
 ---
-title: "Пример автономного веб-канала диагностики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пример автономного веб-канала диагностики"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c95a2e1e1790633df77e7c4ecd6603e68321e478
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример автономного веб-канала диагностики
-В этом примере показано, как создавать канал синдикации RSS\/Atom с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  Это основная программа "Здравствуй, мир", которая демонстрирует основные возможности объектной модели и способы ее настройки для службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="stand-alone-diagnostics-feed-sample"></a>Пример автономного веб-канала диагностики
+В этом примере показано, как создавать канал синдикации RSS/Atom с помощью [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Это основная программа "Здравствуй, мир", которая демонстрирует основные возможности объектной модели и способы ее настройки для службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] моделирует веб\-каналы синдикации как операции службы, возвращающие особый тип данных, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>.  Экземпляры <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> могут сериализовать веб\-канал в форматы RSS 2.0 и Atom 1.0.  В следующем примере кода показан использованный контракт.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] моделирует веб-каналы синдикации как операции службы, возвращающие особый тип данных, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Экземпляры <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> могут сериализовать веб-канал в форматы RSS 2.0 и Atom 1.0. В следующем примере кода показан использованный контракт.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -41,7 +44,7 @@ caps.handback.revision: 26
   
  Операция `GetProcesses` аннотируется атрибутом <xref:System.ServiceModel.Web.WebGetAttribute>, который позволяет контролировать, как [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] отправляет запросы HTTP GET в операции службы, и указывать формат отправляемых сообщений.  
   
- Как и любая другая служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] веб\-каналы синдикации могут быть резидентными для любого управляемого приложения.  Для правильной работы служб синдикации требуются особая привязка \(<xref:System.ServiceModel.WebHttpBinding>\) и специальное поведение конечной точки \(<xref:System.ServiceModel.Description.WebHttpBehavior>\).  Новый класс <xref:System.ServiceModel.Web.WebServiceHost> обеспечивает удобный программный интерфейс для создания таких конечных точек без особой конфигурации.  
+ Как и любая другая служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] веб-каналы синдикации могут быть резидентными для любого управляемого приложения. Для правильной работы служб синдикации требуются особая привязка (<xref:System.ServiceModel.WebHttpBinding>) и специальное поведение конечной точки (<xref:System.ServiceModel.Description.WebHttpBehavior>). Новый класс <xref:System.ServiceModel.Web.WebServiceHost> обеспечивает удобный программный интерфейс для создания таких конечных точек без особой конфигурации.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -50,15 +53,15 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
             //using the proper binding (the WebHttpBinding) and endpoint behavior (the WebHttpBehavior)  
 ```  
   
- В качестве альтернативного варианта можно использовать <xref:System.ServiceModel.Activation.WebServiceHostFactory> из размещенного в службах IIS файла SVC, чтобы обеспечить аналогичную функциональность \(этот метод не показан в примере коде\).  
+ В качестве альтернативного варианта можно использовать <xref:System.ServiceModel.Activation.WebServiceHostFactory> из размещенного в службах IIS файла SVC, чтобы обеспечить аналогичную функциональность (этот метод не показан в примере коде).  
   
 ```  
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Поскольку эта служба получает запросы с использованием стандартного метода HTTP GET, для доступа к службе можно использовать любой клиент, поддерживающий RSS или ATOM.  Например, можно просмотреть выходные данные этой службы, перейдя по адресу http:\/\/localhost:8000\/diagnostics\/feed\/?format\=atom or http:\/\/localhost:8000\/diagnostics\/feed\/?format\=rss в таком браузере с поддержкой RSS, как Internet Explorer 7.  
+ Поскольку эта служба получает запросы с использованием стандартного метода HTTP GET, для доступа к службе можно использовать любой клиент, поддерживающий RSS или ATOM. Например, можно просмотреть выходные данные этой службы, перейдя по адресу http://localhost:8000/diagnostics/feed/?format=atom or http://localhost:8000/diagnostics/feed/?format=rss в таком браузере с поддержкой RSS, как Internet Explorer 7.  
   
- Для чтения синдицированных данных и их обработки с помощью императивного кода также можно использовать [Сопоставление объектной модели синдикации WCF моделям Atom и RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md).  
+ Можно также использовать [как WCF синдикации объект модели сопоставляется Atom и RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) для чтения сводные данные и обработать его с помощью императивного кода.  
   
 ```  
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",  
@@ -81,25 +84,25 @@ foreach (SyndicationItem i in feed.Items)
 }  
 ```  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Обеспечьте правильное разрешение регистрации адреса для HTTP и HTTPS на компьютере согласно инструкциям по настройке в [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что разрешение регистрации правой адреса для HTTP и HTTPS на компьютере, как описано в set up инструкциям [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Постройте решение.  
   
 3.  Запустите консольное приложение.  
   
-4.  Во время работы консольного приложения перейдите по адресу http:\/\/localhost:8000\/diagnostics\/feed\/?format\=atom или http:\/\/localhost:8000\/diagnostics\/feed\/?format\=rss с помощью браузера с поддержкой RSS.  
+4.  Во время работы консольного приложения перейдите по адресу http://localhost:8000/diagnostics/feed/?format=atom или http://localhost:8000/diagnostics/feed/?format=rss с помощью браузера с поддержкой RSS.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## См. также  
- [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a>См. также  
+ [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

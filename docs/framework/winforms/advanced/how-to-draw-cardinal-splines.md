@@ -1,58 +1,64 @@
 ---
-title: "Практическое руководство. Рисование фундаментальных сплайнов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "фундаментальные сплайны, рисование"
-  - "рисование, фундаментальные сплайны"
-  - "графика, фундаментальные сплайны"
+title: "Практическое руководство. Рисование фундаментальных сплайнов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cardinal splines [Windows Forms], drawing
+- drawing [Windows Forms], cardinal splines
+- graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c47ff269cb1c367abee0be197fdc80485fb37b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование фундаментальных сплайнов
-Фундаментальный сплайн представляет собой гладкую кривую, проходящую через заданные точки.  Чтобы нарисовать фундаментальный сплайн, создайте объект <xref:System.Drawing.Graphics> и передайте адрес массива точек методу <xref:System.Drawing.Graphics.DrawCurve%2A>.  
+# <a name="how-to-draw-cardinal-splines"></a>Практическое руководство. Рисование фундаментальных сплайнов
+Фундаментальный сплайн представляет кривую, проходящую через заданные точки. Чтобы нарисовать фундаментальный сплайн, создайте <xref:System.Drawing.Graphics> и передать массив указывает на адрес <xref:System.Drawing.Graphics.DrawCurve%2A> метод.  
   
-### Рисование фундаментального сплайна в форме колокола  
+### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Рисование колоколообразной фундаментальный сплайн  
   
--   В следующем примере рисуется фундаментальный сплайн в форме колокола, проходящий через пять заданных точек.  Кривая и пять указанных точек представлены на приведенном ниже рисунке.  
+-   Следующий пример выводит колоколообразной фундаментальный сплайн, проходящий через пять заданных точек. Кривая и пять точек на следующем рисунке.  
+  
+     ![Фундаментальный сплайн](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
-### Рисование замкнутого фундаментального сплайна  
+### <a name="drawing-a-closed-cardinal-spline"></a>Рисование замкнутый фундаментальный сплайн  
   
--   Чтобы нарисовать замкнутый фундаментальный сплайн, можно использовать метод <xref:System.Drawing.Graphics.DrawClosedCurve%2A> класса <xref:System.Drawing.Graphics>.  В замкнутом фундаментальном сплайне линия продолжается за последнюю точку и соединяет ее с первой точкой массива.  В следующем примере рисуется замкнутый фундаментальный сплайн, проходящий через шесть заданных точек.  На следующем рисунке представлены замкнутый сплайн и шесть заданных точек.  
+-   Используйте <xref:System.Drawing.Graphics.DrawClosedCurve%2A> метод <xref:System.Drawing.Graphics> для отрисовки замкнутый фундаментальный сплайн. В замкнутой фундаментальной сплайновой кривой продолжается за последнюю точку в массиве и подключается с первой точки в массиве. В следующем примере рисуется замкнутый фундаментальный сплайн, проходящий через шесть заданных точек. На следующем рисунке замкнутый сплайн и шесть точек.  
   
  ![Фундаментальный сплайн](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### Изменение изгиба фундаментального сплайна  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a>Изменение изгиба фундаментальный сплайн  
   
--   Чтобы изменить изгиб фундаментального сплайна, необходимо передать методу <xref:System.Drawing.Graphics.DrawCurve%2A> нужное значение параметра натяжения.  В следующем примере показано, как можно нарисовать три фундаментальных сплайна, которые проходят через один и тот же набор точек.  На следующем рисунке представлены три сплайна вместе с соответствующими значениями параметра натяжения.  Обратите внимание, что в случае, когда параметр натяжения равен 0, точки соединяются прямыми линиями.  
+-   Изменение способа изгиб фундаментальный сплайн, передавая значение параметра натяжения <xref:System.Drawing.Graphics.DrawCurve%2A> метод. В следующем примере рисуется три фундаментальные сплайны, которые проходят через один и тот же набор точек. Ниже представлены три сплайна вместе с соответствующими значениями параметра натяжения. Обратите внимание, что в случае, когда параметр натяжения равен 0, точки соединяются прямых линий.  
   
  ![Фундаментальный сплайн](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример предназначен для работы с Windows Forms, и требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчика событий.  
   
-## См. также  
- [Прямые и кривые линии и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
+## <a name="see-also"></a>См. также  
+ [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [Построение и рисование кривых](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

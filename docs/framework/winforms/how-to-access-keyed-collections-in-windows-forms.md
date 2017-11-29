@@ -1,28 +1,32 @@
 ---
-title: "How to: Access Keyed Collections in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "keyed collections [Windows Forms]"
-  - "collections, accessing with keys"
+title: "Практическое руководство. Доступ к коллекциям с ключом в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- keyed collections [Windows Forms]
+- collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2bca9b56f37c815bfa9f1520467ae0ae864c14ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Access Keyed Collections in Windows Forms
--   Доступ к отдельным элементам коллекции можно получить с помощью ключа.  Эта функция добавлена для многих классов коллекций, которые обычно используются приложениями Windows Forms.  Ниже перечислены некоторые из классов коллекций, имеющих доступные с помощью ключа коллекции.  
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Практическое руководство. Доступ к коллекциям с ключом в Windows Forms
+-   Отдельные элементы коллекции доступны по ключу. Эта функция будет добавлен во многих классах коллекций, которые обычно используются приложениями Windows Forms. Ниже перечислены некоторые из классов коллекций, которые имеют доступ коллекции с ключом.  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
@@ -34,29 +38,29 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Forms.TreeNodeCollection>  
   
- Ключ, связанный с элементом коллекции, обычно является именем элемента.  В следующих процедурах показано, как использовать классы коллекций для выполнения общих задач.  
+ Ключ, связанный с элементом в коллекции, обычно является имя элемента. Следующие процедуры показывают, как использовать классы коллекций для выполнения стандартных задач.  
   
-### Чтобы найти и передать фокус вложенному элементу управления в коллекции элементов управления, выполните следующие действия.  
+### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>Чтобы найти и передать фокус вложенному элементу управления в коллекции элементов управления  
   
--   Используйте методы <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> и <xref:System.Windows.Forms.Control.Focus%2A>, чтобы указать имя элемента управления для поиска и передачи фокуса.  
+-   Используйте <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> и <xref:System.Windows.Forms.Control.Focus%2A> методов, чтобы указать имя элемента управления, чтобы найти и передать фокус.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
-### Для доступа к изображению в коллекции изображений, выполните следующие действия.  
+### <a name="to-access-an-image-in-an-image-collection"></a>Для доступа к изображению в коллекции изображений  
   
--   Используйте свойство <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> для указания имени изображения, к которому требуется получить доступ.  
+-   Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> свойство, чтобы указать имя образа, которым требуется доступ.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
-### Чтобы установить вкладку в качестве выбранной вкладки, выполните следующие действия.  
+### <a name="to-set-a-tab-page-as-the-selected-tab"></a>Чтобы задать страницу вкладки в качестве выбранной вкладки  
   
--   Используйте свойство <xref:System.Windows.Forms.TabControl.SelectedTab%2A> вместе со свойством <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> для указания имени вкладки, которую следует установить в качестве выбранной.  
+-   Используйте <xref:System.Windows.Forms.TabControl.SelectedTab%2A> свойство вместе с <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> свойство, чтобы указать имя вкладки, которую следует задать в качестве выбранной вкладки.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## См. также  
- [Getting Started with Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

@@ -1,40 +1,41 @@
 ---
-title: "Влияние изменения внешнего вида базовой формы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "базовые формы"
-  - "наследование, формы"
-  - "наследуемые формы, изменения в базовой форме"
-  - "родительские формы"
-  - "Windows Forms, вид базовой формы"
+title: "Влияние изменения внешнего вида базовой формы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parent forms [Windows Forms]
+- inherited forms [Windows Forms], modifications to base form
+- Windows Forms, base form appearance
+- base forms
+- inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1e0eb19946ef2231b5a58df4b8d0b2e40e8e99f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Влияние изменения внешнего вида базовой формы
-В процессе разработки приложения часто необходимо изменять внешний вид базовой формы, от которой наследуются другие формы проекта \(или других проектов\).  
+# <a name="effects-of-modifying-a-base-form39s-appearance"></a>Влияние изменения внешнего вида базовой формы
+В процессе разработки приложения часто может потребоваться изменить внешний вид базовой формы, от которой наследуются другие формы проекта (или других проектов).  
   
- В режиме разработки изменения внешнего вида базовой формы \(установка свойств или добавление и удаление элементов управления\) отражаются на наследуемых формах после окончания разработки проекта, содержащего базовую форму.  Просто сохранить изменения в базовой форме недостаточно.  Чтобы построить проект, в меню **Построение** выберите команду **Построить**.  
+ Во время разработки изменения внешнего вида базовой формы (будь то значения свойств либо добавление и удаление элементов управления) отражаются на наследуемых формах при построении проекта, содержащего базовую форму. Просто сохранить изменения в базовой форме будет недостаточно. Для сборки проекта выберите в меню **Сборка** пункт **Собрать**.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
- Изменения, сделанные в базовой форме во время выполнения, не влияют на наследуемые формы, если уже созданы их экземпляры.  
+ Изменения, внесенные в базовую форму во время выполнения, не влияют на наследуемые формы, экземпляры которых уже созданы.  
   
-## См. также  
- [базовые](../Topic/base%20\(C%23%20Reference\).md)   
- [Практическое руководство. Наследование форм Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ [base](~/docs/csharp/language-reference/keywords/base.md)  
+ [Практическое руководство. Наследование форм Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
  [Визуальное наследование в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

@@ -1,41 +1,46 @@
 ---
-title: "Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "каталоги [Windows Forms], выбор"
-  - "каталоги [Windows Forms], выбор"
-  - "FolderBrowserDialog - компонент [Windows Forms], выбор каталогов"
-  - "папки [Windows Forms], выбор"
-  - "папки [Windows Forms], выбор"
+title: "Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- directories [Windows Forms], choosing
+- FolderBrowserDialog component [Windows Forms], choosing directories
+- folders [Windows Forms], selecting
+- folders [Windows Forms], choosing
+- directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0824fb70fa67628326af38ff7fb5e6c097a0378c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms
-В создаваемых приложениях Windows пользователям часто приходится выбирать папку, обычно для сохранения набора файлов.  С помощью компонента Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> эта задача легко решается.  
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Практическое руководство. Выбор папки с помощью компонента FolderBrowserDialog в Windows Forms
+Часто в создаваемых приложениях Windows требуется предлагать пользователю выбрать папку, как правило, для сохранения набора файлов. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> компонент позволяет эта задача легко решается.  
   
-### Выбор папок с помощью компонента FolderBrowserDialog  
+### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Выбор папки с помощью компонента FolderBrowserDialog  
   
-1.  В процедуре проверьте свойство <xref:System.Windows.Forms.Form.DialogResult%2A> компонента <xref:System.Windows.Forms.FolderBrowserDialog>, чтобы узнать, как было закрыто диалоговое окно и получить значение свойства <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> компонента <xref:System.Windows.Forms.FolderBrowserDialog>.  
+1.  В процедуре, проверьте <xref:System.Windows.Forms.FolderBrowserDialog> компонента <xref:System.Windows.Forms.Form.DialogResult%2A> свойство, чтобы посмотреть, как окно было закрыто и получить значение <xref:System.Windows.Forms.FolderBrowserDialog> компонента <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> свойство.  
   
-2.  Если необходимо задать папку самого верхнего уровня, которая будет отображаться в дереве этого диалогового окна, задайте свойство <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>, которое выбирает член перечисления [SpecialFolder](frlrfSystemEnvironmentSpecialFolderClassTopic).  
+2.  Если требуется набор верхнего уровня папки, которая будет отображаться в представлении дерева в диалоговом окне задайте <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> свойства, которое принимает членом <xref:System.Environment.SpecialFolder> перечисления.  
   
-3.  Кроме того, можно задать свойство <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>, которое указывает строку текста, появляющуюся вверху дерева обозревателя папок.  
+3.  Кроме того, можно задать <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> свойство, которое указывает строку текста, который отображается в верхней части дерева папки в браузере.  
   
-     В приведенном ниже примере компонент <xref:System.Windows.Forms.FolderBrowserDialog> используется для выбора папки в случае, подобном тому, когда при создании проекта в Visual Studio пользователя просят выбрать папку для сохранения в ней проекта.  В данном примере имя папки затем отображается в элементе управления <xref:System.Windows.Forms.TextBox> этой формы.  Прекрасное решение — поместить расположение в область, доступную для изменения, например элемент управления <xref:System.Windows.Forms.TextBox>, чтобы пользователь имел возможность изменить свой выбор в случае ошибки или других проблем.  В этом примере предполагается форма с компонентом <xref:System.Windows.Forms.FolderBrowserDialog> и элементом управления <xref:System.Windows.Forms.TextBox>.  
+     В следующем примере <xref:System.Windows.Forms.FolderBrowserDialog> компонент используется для выбора папки аналогично при создании проекта в Visual Studio и будет предложено выбрать папку для сохранения в ней. В этом примере имя папки затем отображается в <xref:System.Windows.Forms.TextBox> элемента управления в форме. Рекомендуется поместить расположение в область редактирования, такие как <xref:System.Windows.Forms.TextBox> таким образом, пользователь может изменить свой выбор в случае ошибки или других проблем. В этом примере предполагается наличие формы с <xref:System.Windows.Forms.FolderBrowserDialog> компонента и <xref:System.Windows.Forms.TextBox> элемента управления.  
   
     ```vb  
     Public Sub ChooseFolder()  
@@ -43,7 +48,6 @@ caps.handback.revision: 10
             TextBox1.Text = FolderBrowserDialog1.SelectedPath  
         End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ caps.handback.revision: 10
             textBox1.Text = folderBrowserDialog1.SelectedPath;  
         }  
     }  
-  
     ```  
   
     ```cpp  
@@ -69,11 +72,11 @@ caps.handback.revision: 10
     ```  
   
     > [!IMPORTANT]
-    >  Для использования этого класса сборка требует уровня привилегий, предоставляемого свойством [FileIOPermissionAttribute.PathDiscoveryProperty](frlrfSystemSecurityPermissionsFileIOPermissionAttributeClassPathDiscoveryTopic), являющимся частью перечисления <xref:System.Security.Permissions.FileIOPermissionAccess>.  Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из\-за недостатка привилегий.  Дополнительные сведения см. в разделе [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  С помощью этого класса, сборка требует уровня прав доступа, предоставленных <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> свойство, которое входит в состав объекта <xref:System.Security.Permissions.FileIOPermissionAccess> перечисления. При выполнении в контексте частичного доверия процесс может выдавать исключение из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
   
- Сведения о сохранении файлов см. в разделе [Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Сведения о том, как сохранять файлы, см. в разделе [Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
   
-## См. также  
- <xref:System.Windows.Forms.FolderBrowserDialog>   
- [Общие сведения о компоненте FolderBrowserDialog \(Windows Forms\)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.FolderBrowserDialog>  
+ [Общие сведения о компоненте FolderBrowserDialog (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  [Компонент FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

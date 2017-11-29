@@ -1,33 +1,25 @@
 ---
-title: "Создание настраиваемых атрибутов (Visual Basic) | Документы Microsoft"
+title: "Создание настраиваемых атрибутов (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa97a591fdbdfab931a8b5e4f70ec3c00762332
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7a24553ae4cc2186e805d76ddb37f38c0322aeac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Создание настраиваемых атрибутов (Visual Basic)
-Можно создать собственные настраиваемые атрибуты, определив класс атрибута, прямо или косвенно наследует класс <xref:System.Attribute>, делает определение определений атрибутов в метаданных и быстро.</xref:System.Attribute> Предположим, что требуется тег типов с именем программиста, который разработал его. Можно определить пользовательский `Author` класса атрибута:  
+Собственные настраиваемые атрибуты можно создать, определив класс атрибута, то есть класс, прямо или косвенно наследующий от <xref:System.Attribute>, который упрощает задание определений атрибутов в метаданных. Предположим, что требуется пометить тип тегом с именем программиста, который его разработал. Вы можете определить класс настраиваемых атрибутов `Author`:  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.Class Or   
@@ -43,7 +35,7 @@ Public Class Author
 End Class  
 ```  
   
- Имя класса — имя атрибута `Author`. Он является производным от `System.Attribute`, поэтому класс настраиваемых атрибутов. Параметры конструктора являются позиционными параметрами настраиваемого атрибута. В этом примере `name` является позиционным параметром. Все открытые поля чтения и записи или свойства являются именованными параметрами. В этом случае `version` только именем параметра. Обратите внимание на использование `AttributeUsage` атрибута `Author` атрибут допустим только для класса и `Structure` объявления.  
+ Имя класса — это имя атрибута, `Author`. Он является производным от `System.Attribute`, поэтому это класс настраиваемых атрибутов. Параметры конструктора являются позиционными параметрами настраиваемого атрибута. В этом примере `name` является позиционным параметром. Все открытые поля или свойства, доступные для чтения и записи, являются именованными параметрами. В этом случае `version` — единственный именованный параметр. Обратите внимание на использование атрибута `AttributeUsage`, делающего атрибут `Author` допустимым только для класса и объявлений `Structure`.  
   
  Этот атрибут можно использовать следующим образом:  
   
@@ -54,7 +46,7 @@ Class SampleClass
 End Class  
 ```  
   
- `AttributeUsage`имеет именованный параметр, `AllowMultiple`, с помощью которой можно изменять пользовательский атрибут однократного использования или multiuse. В следующем примере кода создается многократно используемый атрибут.  
+ `AttributeUsage` имеет именованный параметр, `AllowMultiple`, с помощью которого можно задавать для настраиваемого атрибута однократное или многократное использование. В следующем примере кода создается многократно используемый атрибут.  
   
 ```vb  
 ' multiuse attribute  
@@ -65,7 +57,7 @@ Public Class Author
     Inherits System.Attribute  
 ```  
   
- В следующем примере несколько атрибутов одного типа применяются к классу.  
+ В следующем примере кода несколько атрибутов одного типа применяются к классу.  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1),   
@@ -77,13 +69,13 @@ End Class
 ```  
   
 > [!NOTE]
->  Если класс атрибута содержит свойство, что свойство должно быть чтения и записи.  
+>  Если класс атрибутов содержит свойство, это свойство должно быть доступно для чтения и записи.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection></xref:System.Reflection>   
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Написание настраиваемых атрибутов](http://msdn.microsoft.com/library/97216f69-bde8-49fd-ac40-f18c500ef5dc)   
- [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Доступ к атрибутам с помощью отражения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
+ <xref:System.Reflection>  
+ [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Написание настраиваемых атрибутов](../../../../standard/attributes/writing-custom-attributes.md)  
+ [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
+ [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))  
  [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

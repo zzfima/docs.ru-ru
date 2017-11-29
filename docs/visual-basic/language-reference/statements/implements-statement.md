@@ -1,33 +1,32 @@
 ---
-title: "Оператор Implements | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Implements"
-  - "Implements"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Implements - оператор"
-  - "Implements - оператор, синтаксис"
-  - "реализация интерфейсов, Implements - оператор"
+title: "Оператор Implements"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Implements
+- Implements
+helpviewer_keywords:
+- Implements statement [Visual Basic], syntax
+- Implements statement [Visual Basic]
+- interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1103305ffbf5425d9a6a6a09695437968642710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Implements
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Задает один или несколько интерфейсов или членов интерфейса, реализуемых в определении класса или структуры, в которых появляется этот оператор.  
+# <a name="implements-statement"></a>Оператор Implements
+Указывает один или несколько интерфейсов, или членов интерфейса, которые должны быть реализованы в классе или определение структуры, в котором он отображается.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Implements interfacename [, ...]  
@@ -35,35 +34,35 @@ Implements interfacename [, ...]
 Implements interfacename.interfacemember [, ...]  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `interfacename`  
- Обязательный.  Интерфейс, свойства, методы и события которого должны реализовываться соответствующими членами в классе или структуре.  
+ Обязательный. Интерфейс, свойства, процедуры и события, должны быть реализованы соответствующие элементы в классе или структуре.  
   
  `interfacemember`  
- Обязательный.  Реализуемый член интерфейса.  
+ Обязательный. Член интерфейса, который реализуется.  
   
-## Заметки  
- Интерфейс — это коллекция прототипов, которые представляют собой инкапсулированные интерфейсом члены \(свойства, методы и события\).  Интерфейсы содержат только объявления членов. Классы и структуры реализуют эти члены.  Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+## <a name="remarks"></a>Примечания  
+ Интерфейс — это коллекция прототипов, представляющих члены (свойства, процедуры и события) инкапсулирует интерфейс. Интерфейсы содержат только объявления членов. классы и структуры реализуют эти члены. Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Оператор `Implements` должен следовать непосредственно за операторами `Class` или `Structure`.  
+ `Implements` Инструкции следует непосредственно за `Class` или `Structure` инструкции.  
   
- Для реализации интерфейса необходимо реализовать все члены, объявленные в интерфейсе.  Пропуск какого\-либо члена считается синтаксической ошибкой.  Для реализации отдельного члена необходимо указать ключевое слово [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)\(которое отличается от оператора `Implements`\) при объявлении члена в классе или структуре.  Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ При реализации интерфейса необходимо реализовать все члены, объявленные в интерфейсе. Пропуск любого элемента считается синтаксическую ошибку. Чтобы реализовать отдельные члены, необходимо указать [реализует](../../../visual-basic/language-reference/statements/implements-clause.md) ключевое слово (отделен от `Implements` инструкции) при объявлении члена в классе или структуре. Дополнительные сведения см. в разделе [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Классы могут использовать реализации свойств и методов с уровнем доступа [Private](../../../visual-basic/language-reference/modifiers/private.md), однако эти члены доступны только путем приведения экземпляра реализующего класса к переменной типа интерфейса.  
+ Классы могут использовать [закрытый](../../../visual-basic/language-reference/modifiers/private.md) реализации свойства и процедуры, однако эти члены доступны только путем приведения экземпляра реализующего класса в переменной, объявленной как типа интерфейса.  
   
-## Пример  
- В следующем примере показано использование оператора `Implements` для реализации членов интерфейса.  Этот оператор определяет интерфейс `ICustomerInfo` с событием, свойством и процедурой.  Класс `customerInfo` реализует все члены, определенные в интерфейсе.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать `Implements` инструкции для реализации членов интерфейса. Он определяет интерфейс с именем `ICustomerInfo` с событием, свойства и процедуры. Класс `customerInfo` реализует все члены, определенные в интерфейсе.  
   
  [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
- Обратите внимание, что класс `customerInfo` использует оператор `Implements` в отдельной строке исходного кода, чтобы указать, что класс реализует все члены интерфейса `ICustomerInfo`.  Затем, чтобы указать, что он реализует член интерфейса, каждый член класса использует ключевое слово `Implements` как часть объявления этого члена.  
+ Обратите внимание, что класс `customerInfo` использует `Implements` инструкции на отдельной строке исходного кода, чтобы указать, что класс реализует все члены `ICustomerInfo` интерфейса. Затем каждый член класса использует `Implements` ключевое слово как часть объявления, чтобы указать, что он реализует член этого интерфейса.  
   
-## Пример  
- Следующие две процедуры показывают, как можно использовать интерфейс, реализованный в предыдущем примере.  Для поверки реализации интерфейса добавьте эти процедуры в проект и вызовите процедуру `testImplements`.  
+## <a name="example"></a>Пример  
+ В следующих двух процедурах показано, как можно использовать интерфейс, реализованный в предыдущем примере. Чтобы проверить реализацию, добавьте эти процедуры в проекте и вызовите `testImplements` процедуры.  
   
  [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
-## См. также  
- [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   
- [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)   
+## <a name="see-also"></a>См. также  
+ [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)  
+ [Оператор Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
  [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

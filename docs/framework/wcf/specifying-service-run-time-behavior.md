@@ -1,35 +1,41 @@
 ---
-title: "Указание поведения службы во время выполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Указание поведения службы во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f37259a971ab20cf68776ac9889615929996ad00
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Указание поведения службы во время выполнения
-После создания \([Создание контрактов служб](../../../docs/framework/wcf/designing-service-contracts.md)\) и реализации \([Реализация контрактов служб](../../../docs/framework/wcf/implementing-service-contracts.md)\) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно.[!INCLUDE[crabout](../../../includes/crabout-md.md)] настройке приложения службы см. в разделе [Настройка служб](../../../docs/framework/wcf/configuring-services.md).  
+# <a name="specifying-service-run-time-behavior"></a>Указание поведения службы во время выполнения
+После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. [!INCLUDE[crabout](../../../includes/crabout-md.md)] настройке приложения службы см. в разделе [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
   
-## Обзор  
+## <a name="overview"></a>Обзор  
  Контракт определяет входные данные, выходные данные, типы данных и возможности службы этого типа. При реализации контракта службы создается класс, которой, при настройке с привязкой к адресу, выполняет реализуемый им контракт. Сведения о контракте, привязке и адресе известны клиенту; без этих сведений клиент не может пользоваться службой.  
   
- Однако конкретные сведения об операциях, такие как сведения о потоках или управлении экземплярами, не видны клиентам. После реализации контракта службы можно настроить большое количество характеристик операций с помощью *поведений*. Поведения \- это объекты, изменяющие среду выполнения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] путем настройки ее свойств или путем добавления пользовательского типа в среду выполнения.[!INCLUDE[crabout](../../../includes/crabout-md.md)] изменении среды выполнения путем создания пользовательских поведений см. в разделе [Расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Однако конкретные сведения об операциях, такие как сведения о потоках или управлении экземплярами, не видны клиентам. После реализации контракта службы можно настроить большое количество характеристик операций с помощью *поведений*. Поведения - это объекты, изменяющие среду выполнения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] путем настройки ее свойств или путем добавления пользовательского типа в среду выполнения. [!INCLUDE[crabout](../../../includes/crabout-md.md)] изменении среды выполнения путем создания пользовательских поведений см. в разделе [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
   
- Атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=fullName> и <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=fullName> являются наиболее широко используемыми поведениями, раскрывающими наиболее часто запрашиваемые функции операции. Так как они являются атрибутами, они применяются к реализации службы или операции. Другие поведения, такие как <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=fullName> и <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=fullName>, обычно применяются с помощью файла конфигурации приложения, хотя их можно использовать и программно.  
+ Атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> и <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> являются наиболее широко используемыми поведениями, раскрывающими наиболее часто запрашиваемые функции операции. Так как они являются атрибутами, они применяются к реализации службы или операции. Другие поведения, такие как <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, обычно применяются с помощью файла конфигурации приложения, хотя их можно использовать и программно.  
   
- В этом разделе приводятся общие сведения об атрибутах <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute>, описываются различные области, в которых могут работать поведения, и приводится краткое описание многих предоставляемых системой поведений в различных областях, которые могут представлять интерес для разработчиков [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ В этом разделе приводятся общие сведения об атрибутах <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> , описываются различные области, в которых могут работать поведения, и приводится краткое описание многих предоставляемых системой поведений в различных областях, которые могут представлять интерес для разработчиков [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   
-## Атрибуты ServiceBehaviorAttribute и OperationBehaviorAttribute  
- Наиболее важными поведениями являются атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute>, которые можно использовать для управления указанными ниже характеристиками.  
+## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>Атрибуты ServiceBehaviorAttribute и OperationBehaviorAttribute  
+ Наиболее важными поведениями являются атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> , которые можно использовать для управления указанными ниже характеристиками.  
   
 -   Время существования экземпляра  
   
@@ -49,45 +55,45 @@ caps.handback.revision: 12
   
 -   Олицетворение  
   
--   Для использования этих атрибутов пометьте реализацию службы или операции атрибутом, подходящим для определенной области и набора свойств. Например, в следующем примере кода показана реализация операции, в которой с помощью свойства <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=fullName> задается требование, чтобы вызывающая сторона этой операции поддерживала олицетворение.  
+-   Для использования этих атрибутов пометьте реализацию службы или операции атрибутом, подходящим для определенной области и набора свойств. Например, в следующем примере кода показана реализация операции, в которой с помощью свойства <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> задается требование, чтобы вызывающая сторона этой операции поддерживала олицетворение.  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
   
  Многие свойства требуют дополнительной поддержки со стороны привязки. Например, операция, которой требуется транзакция от клиента, должна быть настроена для использования привязки, поддерживающей поток транзакций.  
   
-### Широко известные одноэлементные службы  
- Атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> можно использовать для управления определенными временами существования, как <xref:System.ServiceModel.InstanceContext>, так и объектов службы, реализующих операции.  
+### <a name="well-known-singleton-services"></a>Широко известные одноэлементные службы  
+ Атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> можно использовать для управления определенными временами существования, как <xref:System.ServiceModel.InstanceContext> , так и объектов службы, реализующих операции.  
   
- Например, свойство <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=fullName> управляет частотой высвобождения <xref:System.ServiceModel.InstanceContext>, а свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=fullName> и <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=fullName> управляют моментом высвобождения объекта службы.  
+ Например, свойство <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> управляет частотой высвобождения <xref:System.ServiceModel.InstanceContext>, а свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> и <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> управляют моментом высвобождения объекта службы.  
   
- Однако можно также самому создать объект службы, а затем создать основное приложение службы, используя этот объект. Для этого необходимо задать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=fullName> значение <xref:System.ServiceModel.InstanceContextMode> \- в противном случае при открытии основного приложения службы возникает исключение.  
+ Однако можно также самому создать объект службы, а затем создать основное приложение службы, используя этот объект. Для этого необходимо задать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> значение <xref:System.ServiceModel.InstanceContextMode.Single> - в противном случае при открытии основного приложения службы возникает исключение.  
   
- Для создания такой службы используйте конструктор [ServiceHost.ServiceHost\(Object, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=fullName>. Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=fullName>, если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор \(например, если он не реализует открытый конструктор по умолчанию, не имеющий параметров\).  
+ Для создания такой службы используйте конструктор <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType>. Он обеспечивает альтернативу реализации пользовательского <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>, если требуется предоставить определенный экземпляр объекта для использования одноэлементной службой. Этот перегружаемый метод можно использовать, когда тип реализации службы не позволяет легко использовать конструктор (например, если он не реализует открытый конструктор по умолчанию, не имеющий параметров).  
   
- Обратите внимание, что когда этому конструктору передается объект, некоторые функции [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], связанные с созданием экземпляров, работают по\-другому. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=fullName> не выполняет никаких действий, если предоставлен экземпляр хорошо известного объекта. Аналогичным образом игнорируются все другие механизмы освобождения экземпляров. Класс <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=fullName> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode?displayProperty=fullName> для всех операций.  
+ Обратите внимание, что когда этому конструктору передается объект, некоторые функции [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , связанные с созданием экземпляров, работают по-другому. Например, вызов <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> не выполняет никаких действий, если предоставлен экземпляр хорошо известного объекта. Аналогичным образом игнорируются все другие механизмы освобождения экземпляров. Класс <xref:System.ServiceModel.ServiceHost> всегда ведет себя таким образом, как если бы для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> было задано значение <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> для всех операций.  
   
-## Другие поведения службы, конечной точки, контракта и операции  
- Поведения службы, такие как атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute>, действуют во всей службе. Например, если для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=fullName> задано значение <xref:System.ServiceModel.ConcurrencyMode?displayProperty=fullName>, необходимо самостоятельно обрабатывать вопросы синхронизации потоков внутри каждой операции службы. Поведения конечной точки действуют на уровне конечной точки; многие из предоставляемых системой поведений конечных точек предназначены для функциональных возможностей клиентов. Поведения контракта действуют на уровне контракта, а поведения операции изменяют доставку операции.  
+## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Другие поведения службы, конечной точки, контракта и операции  
+ Поведения службы, такие как атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> , действуют во всей службе. Например, если для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> задано значение <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>, необходимо самостоятельно обрабатывать вопросы синхронизации потоков внутри каждой операции службы. Поведения конечной точки действуют на уровне конечной точки; многие из предоставляемых системой поведений конечных точек предназначены для функциональных возможностей клиентов. Поведения контракта действуют на уровне контракта, а поведения операции изменяют доставку операции.  
   
- Многие из этих поведений реализованы атрибутами, и их можно использовать так же, как и атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> \- применяя их к определенной реализации класса службы или операции. Другие поведения, такие как объекты <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и <xref:System.ServiceModel.Description.ServiceDebugBehavior>, обычно применяются с помощью файла конфигурации приложения, хотя их можно также использовать программно.  
+ Многие из этих поведений реализованы атрибутами, и их можно использовать так же, как и атрибуты <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> - применяя их к определенной реализации класса службы или операции. Другие поведения, такие как объекты <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и <xref:System.ServiceModel.Description.ServiceDebugBehavior> , обычно применяются с помощью файла конфигурации приложения, хотя их можно также использовать программно.  
   
- Например, публикация метаданных настраивается с помощью объекта <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. В следующем файле конфигурации приложения показано наиболее часто встречающееся применение.  
+ Например, публикация метаданных настраивается с помощью объекта <xref:System.ServiceModel.Description.ServiceMetadataBehavior> . В следующем файле конфигурации приложения показано наиболее часто встречающееся применение.  
   
  [!code-csharp[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.cs#1)]  
   
  В следующих разделах рассматриваются многие из наиболее полезных предоставляемых системой поведений, которые можно использовать для изменения доставки среды выполнения службы или клиента. Порядок использования каждого из них см. в разделе, указанном в ссылке.  
   
-### Поведения служб  
+### <a name="service-behaviors"></a>Поведения служб  
  Следующие поведения работают на уровне служб.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Применяется к службе [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], чтобы указать, можно ли запустить эту службу в режиме совместимости [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Применяется к службе [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , чтобы указать, можно ли запустить эту службу в режиме совместимости [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
   
 -   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Управляет тем, как служба авторизует запросы клиентов.  
   
 -   <xref:System.ServiceModel.Description.ServiceCredentials>. Настраивает учетные данные службы. Этот класс используется для указания учетных данных для службы, таких как сертификат X.509.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Включает функции отладки и справки для службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Включает функции отладки и справки для службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   
 -   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Контролирует публикацию метаданных службы и связанной с ними информации.  
   
@@ -95,35 +101,35 @@ caps.handback.revision: 12
   
 -   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Настраивает параметры производительности времени выполнения, которые позволяют настроить производительность службы.  
   
-### Поведения конечных точек  
+### <a name="endpoint-behaviors"></a>Поведения конечных точек  
  Следующие поведения работают на уровне конечных точек. Многие из этих поведений используются в клиентских приложениях.  
   
 -   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Настраивает реализацию службы обратного вызова в дуплексном клиентском приложении.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Включает отладку службы для объекта обратного вызова [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Включает отладку службы для объекта обратного вызова [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
   
 -   <xref:System.ServiceModel.Description.ClientCredentials>. Позволяет пользователю настроить учетные данные клиента и службы, а также параметры проверки подлинности учетных данных службы для использования в клиенте.  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>. Используется клиентами, чтобы указать универсальный код ресурса \(URI\), для которого необходимо создать канал транспорта.  
+-   <xref:System.ServiceModel.Description.ClientViaBehavior>. Используется клиентами, чтобы указать универсальный код ресурса (URI), для которого необходимо создать канал транспорта.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Указывает [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отключить обработку `MustUnderstand`.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Указывает [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отключить обработку `MustUnderstand` .  
   
 -   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Указывает, что в среде выполнения для каналов должен использоваться синхронный процесс получения.  
   
 -   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Оптимизирует операции получения для транспорта, поддерживающего транзакционные получения.  
   
-### Поведения контрактов  
+### <a name="contract-behaviors"></a>Поведения контрактов  
  <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Задает требования к функциям, которые должны поддерживаться привязками для реализации службы или клиента.  
   
-### Поведения операций  
+### <a name="operation-behaviors"></a>Поведения операций  
  Указанные ниже поведения операций задают элементы управления сериализацией и транзакциями для операций.  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Представляет поведение времени выполнения <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Представляет поведение времени выполнения <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Контролирует поведение времени выполнения для `XmlSerializer` и связывает его с операцией.  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Задает уровень, на котором операция службы принимает заголовок транзакции.  
   
-## См. также  
- [Настройка служб](../../../docs/framework/wcf/configuring-services.md)   
- [Практическое руководство. Управление созданием экземпляров служб](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>См. также  
+ [Настройка служб](../../../docs/framework/wcf/configuring-services.md)  
+ [Как: управление созданием экземпляров служб](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

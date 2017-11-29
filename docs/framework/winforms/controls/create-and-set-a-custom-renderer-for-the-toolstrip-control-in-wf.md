@@ -1,41 +1,45 @@
 ---
-title: "Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], панели инструментов"
-  - "панели инструментов [Windows Forms], отрисовка"
-  - "ToolStrip - элемент управления [Windows Forms], пользовательская отрисовка"
-  - "ToolStrip - элемент управления [Windows Forms], отрисовка"
+title: "Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], custom rendering
+- toolbars [Windows Forms], rendering
+- examples [Windows Forms], toolbars
+- ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f63ff0a7336ae80ce5652cf3e4c6c7dd409882a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms
-Элементы управления <xref:System.Windows.Forms.ToolStrip> обеспечивают удобную поддержку тем и стилей.  Присвоив свойству <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> или <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName> пользовательское средство отрисовки, можно настроить внешний вид и поведение произвольным образом.  
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms
+<xref:System.Windows.Forms.ToolStrip>элементы управления обеспечивают удобную поддержку тем и стилей. Полностью настраиваемый внешний вид и поведение (Вид) можно добиться путем задания либо <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойство или <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойства пользовательского средства отрисовки.  
   
- Можно назначить средства отрисовки каждому отдельному элементу <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip> или <xref:System.Windows.Forms.StatusStrip>, либо можно задать средство отрисовки для всех объектов с помощью свойства <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>, указав <xref:System.Windows.Forms.ToolStripRenderMode?displayProperty=fullName> в качестве значения свойства <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=fullName>.  
+ Модули подготовки отчетов можно назначить для каждого отдельного <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, или <xref:System.Windows.Forms.StatusStrip> управления, или же можно использовать <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> влияют на все объекты, задав свойству <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> свойства <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Свойство <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> возвращает значение <xref:System.Windows.Forms.ToolStripRenderMode>, только если значение свойства <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName> отлично от `null`.  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>Возвращает <xref:System.Windows.Forms.ToolStripRenderMode.Custom> только тогда, когда значение <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> не `null`.  
   
-### Создание пользовательского средства отрисовки  
+### <a name="to-create-a-custom-renderer"></a>Создание пользовательского средства отрисовки  
   
-1.  Создайте расширение класса <xref:System.Windows.Forms.ToolStripRenderer>.  
+1.  Расширить <xref:System.Windows.Forms.ToolStripRenderer> класса.  
   
-2.  Создайте пользовательское средство отрисовки путем переопределения соответствующих членов *On…*.  
+2.  Реализуйте требуемого пользовательское средство отрисовки путем переопределения соответствующих *на...* члены  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -47,12 +51,9 @@ caps.handback.revision: 16
             MyBase.OnRenderItemText(e)  
         End Sub  
     End Class  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     public class RedTextRenderer : _  
         System.Windows.Forms.ToolStripRenderer  
     {  
@@ -64,45 +65,36 @@ caps.handback.revision: 16
            base.OnRenderItemText(e);  
         }  
     }  
-  
     ```  
   
-### Установка настраиваемого средства отрисвоки в качестве текущего  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Чтобы задать пользовательское средство отрисовки для текущего модуля подготовки отчетов  
   
-1.  Чтобы применить пользовательское средство отрисовки к отдельному элементу управления <xref:System.Windows.Forms.ToolStrip>, задайте средство отрисовки в качестве значения свойства <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=fullName>.  
+1.  Чтобы задать пользовательское средство отрисовки для одного <xref:System.Windows.Forms.ToolStrip>, задайте <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойства пользовательского средства отрисовки.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     toolStrip1.Renderer = new RedTextRenderer();  
-  
     ```  
   
-2.  Чтобы применить пользовательское средство отрисовки ко всем классам <xref:System.Windows.Forms.ToolStrip>, используемым в приложении, задайте средство отрисовки в качестве значения свойства <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=fullName>, а свойству <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> присвойте значение <xref:System.Windows.Forms.ToolStripRenderMode>.  
+2.  Или задать пользовательское средство отрисовки для всех <xref:System.Windows.Forms.ToolStrip> классы, содержащиеся в приложении: задать <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойство пользовательского средства отрисовки и установите <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> свойства <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  
     ToolStripManager.Renderer = New RedTextRenderer()  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode;  
     ToolStripManager.Renderer = new RedTextRenderer();  
-  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>   
- <xref:System.Windows.Forms.ToolStripRenderer>   
- <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>   
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>  
+ <xref:System.Windows.Forms.ToolStripRenderer>  
+ <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>  
+ [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

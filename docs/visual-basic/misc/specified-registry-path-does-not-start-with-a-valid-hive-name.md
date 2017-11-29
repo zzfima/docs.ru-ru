@@ -1,17 +1,20 @@
 ---
-title: "Указанный путь реестра не начинается с имени допустимого куста | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Указанный путь реестра не начинается с имени допустимого куста"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 19f583b8e097854f279ebe1993e4eb7de4950941
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Указанный путь реестра не начинается с имени допустимого куста
+# <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>Указанный путь реестра не начинается с имени допустимого куста
 Указанный путь реестра не начинается с имени допустимого куста. Допустимыми именами кустов являются:  
   
 -   `HKEY_CLASSES_ROOT`  
@@ -28,11 +31,11 @@ caps.handback.revision: 10
   
 -   `HKEY_USERS`  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 -   Убедитесь, что указано допустимое имя куста.  
   
-## См. также  
- [Обработка строк](../Topic/Manipulating%20Strings%20in%20the%20.NET%20Framework.md)   
- [Типичные операции с реестром \(Visual Basic\)](http://msdn.microsoft.com/ru-ru/0bde9f77-b38b-4c76-bac2-ff6cda3087c4)   
+## <a name="see-also"></a>См. также  
+ [Операции со строками](../../standard/base-types/manipulating-strings.md)  
+ [Типичные операции с реестром (Visual Basic)](http://msdn.microsoft.com/en-us/0bde9f77-b38b-4c76-bac2-ff6cda3087c4)  
  [Объект My.Computer.Registry](../../visual-basic/language-reference/objects/my-computer-registry-object.md)

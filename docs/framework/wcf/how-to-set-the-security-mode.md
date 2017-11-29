@@ -1,35 +1,41 @@
 ---
-title: "Как задать режим безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойство Mode"
-  - "WCF, безопасность"
-  - "WCF, режим безопасности"
+title: "Практическое руководство. Задание режима безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Mode property
+- WCF, security mode
+- WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-caps.latest.revision: 22
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как задать режим безопасности
-В механизме безопасности [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусмотрено три наиболее распространенных режима безопасности, которые используются в большинстве предварительно определенных привязок: транспорт, сообщение, и "транспорт с учетными данными сообщения". Два дополнительных режима характерны для двух привязок: режим "Только учетные данные транспорта", используемый в <xref:System.ServiceModel.BasicHttpBinding>, режим "Оба", используемый в <xref:System.ServiceModel.NetMsmqBinding>.Однако в этом разделе основное внимание уделяется трем наиболее распространенным режимам безопасности: <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.SecurityMode> и <xref:System.ServiceModel.SecurityMode>.  
+# <a name="how-to-set-the-security-mode"></a>Практическое руководство. Задание режима безопасности
+В механизме безопасности [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусмотрено три наиболее распространенных режима безопасности, которые используются в большинстве предварительно определенных привязок: транспорт, сообщение, и "транспорт с учетными данными сообщения". Два дополнительных режима характерны для двух привязок: режим "Только учетные данные транспорта", используемый в <xref:System.ServiceModel.BasicHttpBinding>, режим "Оба", используемый в <xref:System.ServiceModel.NetMsmqBinding>. Однако в этом разделе основное внимание уделяется трем наиболее распространенным режимам безопасности: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> и <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
- Обратите внимание, что не все предварительно определенные привязки поддерживают все указанные режимы.В этом разделе режим задается с помощью классов <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>; также в этом разделе показан порядок задания режима как программно, так и с помощью конфигурации.  
+ Обратите внимание, что не все предварительно определенные привязки поддерживают все указанные режимы. В этом разделе режим задается с помощью классов <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>; также в этом разделе показан порядок задания режима как программно, так и с помощью конфигурации.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] о безопасности см. в разделах [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)[Защита служб](../../../docs/framework/wcf/securing-services.md) и [Защита служб и клиентов](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] режиме транспорта и сообщений см. в разделах [Безопасность транспорта](../../../docs/framework/wcf/feature-details/transport-security.md) и [Безопасность обмена сообщениями](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ [!INCLUDE[crabout](../../../includes/crdefault-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)] безопасности, в разделе [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md), [Защита служб](../../../docs/framework/wcf/securing-services.md), и [Защита служб и клиентов](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]транспорта режим и сообщения см. в разделе [безопасность транспорта](../../../docs/framework/wcf/feature-details/transport-security.md) и [безопасность сообщений](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
-### Задание режима безопасности в коде  
+### <a name="to-set-the-security-mode-in-code"></a>Задание режима безопасности в коде  
   
-1.  Создайте экземпляр используемого класса привязки.Список предварительно определенных привязок см. в разделе [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md).В данном примере создается экземпляр класса <xref:System.ServiceModel.WSHttpBinding>.  
+1.  Создайте экземпляр используемого класса привязки. Список предварительно определенных привязок см. в разделе [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md). В данном примере создается экземпляр класса <xref:System.ServiceModel.WSHttpBinding>.  
   
 2.  Задайте свойство `Mode` объекта, возвращаемого свойством `Security`.  
   
@@ -51,36 +57,36 @@ caps.handback.revision: 22
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
   
-## Задание свойства ClientCredentialType  
- Задание одного из трех значений режима определяет способ задания свойства `ClientCredentialType`.Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> задание режима `Transport` означает, что необходимо присвоить свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> класса <xref:System.ServiceModel.HttpTransportSecurity> соответствующее значение.  
+## <a name="setting-the-clientcredentialtype-property"></a>Задание свойства ClientCredentialType  
+ Задание одного из трех значений режима определяет способ задания свойства `ClientCredentialType`. Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> задание режима `Transport` означает, что необходимо присвоить свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> класса <xref:System.ServiceModel.HttpTransportSecurity> соответствующее значение.  
   
-#### Задание свойства ClientCredentialType для режима Transport  
+#### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Задание свойства ClientCredentialType для режима Transport  
   
 1.  Создайте экземпляр привязки.  
   
 2.  Задайте для свойства `Mode` значение `Transport`.  
   
-3.  Присвойте свойству `ClientCredential` соответствующее значение.В следующем примере кода показано, как присвоить свойству значение `Windows`.  
+3.  Присвойте свойству `ClientCredential` соответствующее значение. В следующем примере кода показано, как присвоить свойству значение `Windows`.  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
-#### Задание свойства ClientCredentialType для режима Message  
+#### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>Задание свойства ClientCredentialType для режима Message  
   
 1.  Создайте экземпляр привязки.  
   
 2.  Задайте для свойства `Mode` значение `Message`.  
   
-3.  Присвойте свойству `ClientCredential` соответствующее значение.В следующем примере кода показано, как присвоить свойству значение `Certificate`.  
+3.  Присвойте свойству `ClientCredential` соответствующее значение. В следующем примере кода показано, как присвоить свойству значение `Certificate`.  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
-#### Задание режима и свойства ClientCredentialType в конфигурации  
+#### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Задание режима и свойства ClientCredentialType в конфигурации  
   
-1.  Добавьте соответствующий элемент привязки в элемент [\<привязки\>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) файла конфигурации.В следующем примере добавляется элемент [\<wsHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+1.  Добавить элемент привязки [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента файла конфигурации. В следующем примере добавляется [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемента.  
   
-2.  Добавьте элемент `<binding>` и присвойте его атрибуту `name` соответствующее значение.  
+2.  Добавить `<binding>` и присвойте его `name` соответствующее значение атрибута.  
   
 3.  Добавьте элемент `<security>` и присвойте атрибуту `mode` значение `Message`, `Transport` или `TransportWithMessageCredential`.  
   
@@ -88,7 +94,7 @@ caps.handback.revision: 22
   
      В следующем примере задается режим "`Transport"`, а затем атрибуту `clientCredentialType` элемента `<transport>` присваивается значение "`Windows"`.  
   
-    ```  
+    ```xml  
     <wsHttpBinding>  
     <binding name="TransportSecurity">  
         <security mode="Transport" />  
@@ -98,9 +104,9 @@ caps.handback.revision: 22
     </wsHttpBinding >  
     ```  
   
-     Можно также задать для атрибута `security mode` значение "`Message"`, а затем указать элемент `<"message">`.В этом примере атрибуту `clientCredentialType` присваивается значение "`Certificate"`.  
+     Можно также задать для атрибута `security mode` значение "`Message"`, а затем указать элемент `<"message">`. В этом примере атрибуту `clientCredentialType` присваивается значение "`Certificate"`.  
   
-    ```  
+    ```xml  
     <wsHttpBinding>  
     <binding name="MessageSecurity">  
         <security mode="Message" />  
@@ -110,20 +116,20 @@ caps.handback.revision: 22
     </wsHttpBinding >  
     ```  
   
-     Значение <xref:System.ServiceModel.BasicHttpSecurityMode> используется в особых случаях; подробнее см. ниже.  
+     Значение <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> используется в особых случаях; подробнее см. ниже.  
   
-### Использование режима TransportWithMessageCredential  
- При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне.Например, протокол HTTP использует SSL по HTTP \(HTTPS\).Поэтому задание свойства `ClientCredentialType` любого объекта безопасности транспорта \(такого как <xref:System.ServiceModel.HttpTransportSecurity>\) игнорируется.Другими словами, вы можете задать только свойство `ClientCredentialType` объекта безопасности сообщения \(для привязки `WSHttpBinding` это объект <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>\).  
+### <a name="using-transportwithmessagecredential"></a>Использование режима TransportWithMessageCredential  
+ При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне. Например, протокол HTTP использует SSL по HTTP (HTTPS). Поэтому задание свойства `ClientCredentialType` любого объекта безопасности транспорта (такого как <xref:System.ServiceModel.HttpTransportSecurity>) игнорируется.  Другими словами, можно задать только свойство `ClientCredentialType` объекта безопасности сообщения (для привязки `WSHttpBinding` это объект <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Как использовать средства обеспечения безопасности транспорта и учетные данные сообщения](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Как: использование безопасности транспорта и учетных данных сообщения](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
-## См. также  
- [Практическое руководство. Настройка порта с использованием SSL\-сертификата](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)   
- [Как использовать средства обеспечения безопасности транспорта и учетные данные сообщения](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)   
- [Безопасность транспорта](../../../docs/framework/wcf/feature-details/transport-security.md)   
- [Безопасность обмена сообщениями](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)   
- [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md)   
- [\<безопасность\>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)   
- [\<безопасность\>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)   
- [\<безопасность\>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+## <a name="see-also"></a>См. также  
+ [Как: Настройка порта с SSL-сертификата](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Как: использование безопасности транспорта и учетных данных сообщения](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Безопасность транспорта](../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [Безопасность сообщений](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md)  
+ [\<Безопасность >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
+ [\<Безопасность >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
+ [\<Безопасность >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

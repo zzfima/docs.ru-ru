@@ -1,57 +1,61 @@
 ---
-title: "Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "изображения [Windows Forms], управление качеством"
-  - "изображения [Windows Forms], масштабирование"
-  - "режим интерполяции, управление качеством изображения"
+title: "Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- interpolation mode [Windows Forms], controlling image quality
+- images [Windows Forms], scaling
+- images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10a0ef4e7fd8514245a7659dd515d8f363a716ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании
-Режим интерполяции объекта <xref:System.Drawing.Graphics> влияет на способ, с помощью которого [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] масштабирует \(растягивает и сжимает\) изображения.  Перечисление <xref:System.Drawing.Drawing2D.InterpolationMode> определяет различные режимы интерполяции, некоторые из которых приведены в следующем списке:  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании
+Режим интерполяции <xref:System.Drawing.Graphics> влияет на способ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] масштабирует (растягивает и сжимает) изображения. <xref:System.Drawing.Drawing2D.InterpolationMode> Перечисление определяет различные режимы интерполяции, некоторые из которых приведены в следующем списке:  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode>  
+-   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- Чтобы растянуть изображение, каждый пиксель этого исходного изображения должен быть сопоставлен группе пикселей увеличенного изображения.  Чтобы сжать изображение, группы пикселей этого исходного изображения должны быть сопоставлены отдельным пикселям уменьшенного изображения.  Качество масштабированного изображения определяется алгоритмами, используемыми для осуществления этих сопоставлений.  Алгоритмы, создающие более качественные масштабированные изображения, обычно требуют больших затрат машинного времени.  Из методов интерполяции, приведенных в предыдущем списке, <xref:System.Drawing.Drawing2D.InterpolationMode> обеспечивает наихудшее качество, а <xref:System.Drawing.Drawing2D.InterpolationMode> — наилучшее.  
+ Растянуть изображение, каждая точка исходного изображения должно быть сопоставлено в группу точек увеличенного изображения. Сжать изображение, группы точек исходное изображение должно быть сопоставлено отдельным точкам уменьшенного изображения. Эффективность алгоритмы, которые выполняют эти сопоставления определяет качество масштабированного изображения. Алгоритмы, создающие масштабированные изображения более высокого качества, как правило, требуют большего времени обработки. В предыдущем списке <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> режим низкое качество и <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> режим высочайшее качество.  
   
- Чтобы установить режим интерполяции, присвойте один из членов перечисления <xref:System.Drawing.Drawing2D.InterpolationMode> свойству <xref:System.Drawing.Graphics.InterpolationMode%2A> объекта <xref:System.Drawing.Graphics>.  
+ Чтобы задать режим интерполяции, назначить один из членов <xref:System.Drawing.Drawing2D.InterpolationMode> перечисления <xref:System.Drawing.Graphics.InterpolationMode%2A> свойство <xref:System.Drawing.Graphics> объекта.  
   
-## Пример  
- В следующем примере рисуется изображение, которое затем сжимается с использованием трех различных способов интерполяции.  
+## <a name="example"></a>Пример  
+ В следующем примере изображение рисуется и затем сжимается с использованием трех различных способов интерполяции.  
   
- На следующем рисунке показаны как исходное изображение, так и три варианта уменьшенного изображения.  
+ Ниже показан исходный образ и три меньшего размера изображения.  
   
  ![Изображение с отличными параметрами вставки](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>См. также  
+ [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

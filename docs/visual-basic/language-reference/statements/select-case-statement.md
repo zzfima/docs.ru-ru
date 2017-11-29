@@ -1,99 +1,97 @@
 ---
-title: "Оператор Select...Case (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Select"
-  - "vb.Case"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ветвление, conditional"
-  - "Case Else - оператор, Select...Case"
-  - "Case - оператор"
-  - "Case - оператор, Select...Case"
-  - "условные операторы, Select Case"
-  - "поток управления, ветвление"
-  - "Else - ключевое слово [Visual Basic], в Select...Case - операторы"
-  - "End - ключевое слово, Select...Case - операторы"
-  - "выполнение, conditional"
-  - "Is - оператор [Visual Basic], в Select...Case - операторы"
-  - "Select Case - оператор, Select...Case"
-  - "Select - оператор"
-  - "Select - оператор, Select...Case"
-  - "Select...Case - операторы"
-  - "To - ключевое слово, в Select...Case - операторы"
+title: "Оператор Select...Case (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Select
+- vb.Case
+helpviewer_keywords:
+- Select statement [Visual Basic]
+- Case statement [Visual Basic]
+- Select...Case statements
+- conditional statements [Visual Basic], Select Case
+- control flow [Visual Basic], branching
+- Else keyword [Visual Basic], in Select...Case statements
+- execution [Visual Basic], conditional
+- To keyword [Visual Basic], in Select...Case statements
+- Select Case statement [Visual Basic], Select...Case
+- Select statement [Visual Basic], Select...Case
+- Is operator [Visual Basic], in Select...Case statements
+- branching [Visual Basic], conditional
+- Case Else statement [Visual Basic], Select...Case
+- End keyword [Visual Basic], Select Case statements
+- Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Select...Case (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Выполняет один из блоков операторов в зависимости от значения выражения.  
+# <a name="selectcase-statement-visual-basic"></a>Оператор Select...Case (Visual Basic)
+Запускает один из нескольких групп операторов в зависимости от значения выражения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-Select [ Case ] testexpression  
-    [ Case expressionlist  
-        [ statements ] ]  
-    [ Case Else  
-        [ elsestatements ] ]  
+Select [ Case ] testexpression  
+    [ Case expressionlist  
+        [ statements ] ]  
+    [ Case Else  
+        [ elsestatements ] ]  
 End Select  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`testexpression`|Обязательный.  Выражение.  Должен быть равен одному их простых типов данных \(`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong` и `UShort`\).|  
-|`expressionlist`|Обязателен в операторе `Case`.  Список возможных значений для `testexpression`.  Несколько выражений разделяются запятыми.  Каждое условие может принимать следующие формы:<br /><br /> -   *expression1* `To` *expression2*<br />-   `Is` \] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> Используйте зарезервированное слово `To`, чтобы указать диапазон значений для `testexpression`.  Значение `expression1` должно быть меньше или равно значению `expression2`.<br /><br /> Используйте зарезервированное слово `Is` с оператором сравнения \(`=`, `<>`, `<`, `<=`, `>` или `>=`\) для ограничения возможных значений `testexpression`.  Если зарезервированное слово `Is` отсутствует, оно автоматически вставляется перед *comparisonoperator*.<br /><br /> Вид, в котором предоставляется только `expression`, рассматривается как особый случай использования `Is`, где *comparisonoperator* — знак равенства \(`=`\).  Данная форма вычисляется как `testexpression` \= `expression`.<br /><br /> Выражения в `expressionlist` могут иметь любой тип данных, если они неявно преобразуемы в тип данных, к которому относится `testexpression` и соответствующий элемент `comparisonoperator` подходит для двух используемых с ним типов данных.|  
-|`statements`|Необязательный.  Один или несколько операторов, следующих за `Case`, которые запускаются, если `testexpression` соответствует любому предложению в `expressionlist`.|  
-|`elsestatements`|Необязательный.  Один или несколько операторов, следующих за `Case Else`, которые выполняются, если `testexpression` не соответствует ни одному из предложений в `expressionlist` всех операторов `Case`.|  
-|`End Select`|Завершает определение конструкции `Select`...`Case`.|  
+|---|---|  
+|`testexpression`|Обязательный. Выражение. Необходимо иметь один из простейших типов данных (`Boolean`, `Byte`, `Char`, `Date`, `Double`, `Decimal`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, и `UShort`).|  
+|`expressionlist`|Требуется в `Case` инструкции. Список предложений выражение, представляющее совпадают со значениями для `testexpression`. Несколько предложений выражения разделяются запятыми. Каждое условие может принимать одно из следующих форм:<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ] *comparisonoperator* *выражение*<br />-   *выражение*<br /><br /> Используйте `To` ключевое слово, чтобы задать границы диапазона совпадения значений для `testexpression`. Значение `expression1` должно быть меньше или равно значению `expression2`.<br /><br /> Используйте `Is` ключевое слово с помощью оператора сравнения (`=`, `<>`, `<`, `<=`, `>`, или `>=`) для определения ограничения возможных значений для `testexpression`. Если `Is` ключевое слово не предоставляется, то он автоматически вставляется перед *comparisonoperator*.<br /><br /> Формы, указав только `expression` рассматривается как особый случай `Is` форме where *comparisonoperator* является знак равенства (`=`). Эта форма вычисляется как `testexpression`  =  `expression`.<br /><br /> Выражения в `expressionlist` может быть любого типа данных, если они неявно преобразуются в тип `testexpression` и соответствующий `comparisonoperator` является допустимым для двух типов, он используется с.|  
+|`statements`|Необязательно. Один или несколько следующих инструкций `Case` , если выполнения `testexpression` соответствует любое предложение в `expressionlist`.|  
+|`elsestatements`|Необязательно. Один или несколько следующих инструкций `Case Else` , если выполнения `testexpression` не соответствует любое предложение в `expressionlist` любого `Case` инструкции.|  
+|`End Select`|Завершает определение `Select`... `Case` построения.|  
   
-## Заметки  
- Если `testexpression` соответствует любому `Case` предложения `expressionlist`, операторы, следующие за инструкцией `Case` переводят к следующему оператору `Case`, `Case Else` или `End Select`.  Затем управление передается оператору, следующему за оператором `End Select`.  Если `testexpression` соответствует предложению `expressionlist` более чем в одном условии `Case`, выполнятся только операторы, следующие за первым сопоставлением.  
+## <a name="remarks"></a>Примечания  
+ Если `testexpression` соответствует любому `Case` `expressionlist` предложение, инструкции, следующие за, `Case` запущена инструкция до следующего `Case`, `Case Else`, или `End Select` инструкции. Затем управление передается оператору, следующему `End Select`. Если `testexpression` соответствует `expressionlist` предложение в нескольких `Case` предложение, выполнить инструкции, следующие за первое совпадение.  
   
- Оператор `Case Else` используется для выполнения `elsestatements`, если не найдено ни одного соответствия между `testexpression` и `expressionlist` в любом из других операторов `Case`.  Рекомендуется \(хотя это не обязательно\) иметь оператор `Case Else` в конструкции `Select Case` для обработки непредвиденных значений `testexpression`.  Если отсутствует оператор `Case`, для которого предложение `expressionlist` сопоставляется `testexpression` и отсутствует `Case Else`, то управление будет передано следующему оператору `End Select`.  
+ `Case Else` Оператор используется для представления `elsestatements` для запуска, если совпадение не найдено между `testexpression` и `expressionlist` предложения в любой другой `Case` инструкции. Несмотря на то, что не обязательно, рекомендуется иметь `Case Else` инструкции в вашей `Select Case` построения для обработки непредвиденных `testexpression` значения. Если не `Case` `expressionlist` предложение соответствует `testexpression` и не `Case Else` инструкции, управление передается оператору, следующему `End Select`.  
   
- В каждом предложении `Case` можно использовать несколько выражений и диапазонов.  Например, допустима следующая строка:  
+ Можно использовать несколько выражений и диапазонов в каждом `Case` предложения. Например следующая строка является допустимым.  
   
  `Case 1 To 4, 7 To 9, 11, 13, Is > maxNumber`  
   
 > [!NOTE]
->  Ключевое слово `Is`, используемое в операторах `Case` и `Case Else` отличается от [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md), который используется для сравнения ссылок объекта.  
+>  `Is` Используется ключевое слово `Case` и `Case Else` инструкции не является таким же, как [оператор Is](../../../visual-basic/language-reference/operators/is-operator.md), который используется для сравнения объекта ссылки.  
   
- Можно указывать диапазоны и несколько выражений для строк.  В следующем примере `Case` пропускает любую строку, которая равна "apples", имеет значение между "nuts" и "soup" в алфавитном порядке или содержит точно такие же значения, как текущее значение `testItem`.  
+ Можно указать диапазоны и несколько выражений для строк. В следующем примере `Case` соответствует любой строке, которая равна «apples», имеет значение между «nuts» и «soup» в алфавитном порядке или содержит точно совпадает со значением текущего значения `testItem`.  
   
  `Case "apples", "nuts" To "soup", testItem`  
   
- Параметр `Option Compare` может повлиять на сравнение.  В `Option Compare Text` строки "Apples" и "apples" при сравнении воспринимаются как одинаковые, а при `Option Compare Binary` — нет.  
+ Параметр `Option Compare` может влиять на сравнения строк. В разделе `Option Compare Text`, строки «Яблоки» и «яблоки» считаются равными, но в разделе `Option Compare Binary`, это не так.  
   
 > [!NOTE]
->  Оператор `Case` с несколькими предложениями может демонстрировать поведение, называемое *short\-circuiting*.  Visual Basic вычисляет предложения слева направо, и если одно из них совпадает с `testexpression`, то оставшиеся предложения не обрабатываются.  Укорачивание может повысить производительность, однако оно может привести к непредсказуемым результатам, если ожидалось, что оцениваться будет каждое выражение в `expressionlist`.  Дополнительные сведения об укорачивании содержатся в разделе [Логические выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
+>  Объект `Case` инструкции с несколькими предложениями может демонстрировать поведение, известный как *сокращенного вычисления*. Visual Basic вычисляет предложения слева направо и если он найдено соответствие с `testexpression`, оставшиеся предложения не обрабатываются. Сокращенные вычисления могут повысить производительность, но он может привести к непредвиденным результатам, если ожидалось, что каждое выражение в `expressionlist` для оценки. Дополнительные сведения о сокращенное вычисление в разделе [логические выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md).  
   
- Если код в пределах блока операторов `Case` или `Case Else` не требует выполнения любых дополнительных операторов в блоке, можно выйти из блока с помощью оператора `Exit Select`.  Это позволяет немедленно передать управление оператору, следующему за оператором `End Select`.  
+ Если код внутри `Case` или `Case Else` блок инструкций необходимо выполнения любых дополнительных инструкций в блоке, можно выйти из блока с помощью `Exit Select` инструкции. Управление передается оператору, следующему `End Select`.  
   
- Конструкции `Select Case` могут быть вложенными.  Каждая вложенная конструкция `Select Case` должна иметь соответствующий оператор `End Select` и должна целиком содержаться внутри одного оператора `Case` или `Case Else` внешнего блока конструкции `Select Case` в которой она является вложенной.  
+ `Select Case`конструкции могут быть вложенными. Каждая вложенная `Select Case` конструкция должна иметь соответствующий `End Select` инструкции и должны полностью содержаться в одном `Case` или `Case Else` блок операторов внешнего `Select Case` построения, в течение которого он является вложенным.  
   
-## Пример  
- В следующем примере используется оператор `Select Case` для записи строки, соответствующей значению переменной `number`.  Второй оператор `Case` содержит значение, соответствующее текущему значению `number`, поэтому выполняется оператор, выводящий строку "Between 6 and 8, inclusive".  
+## <a name="example"></a>Пример  
+ В следующем примере используется `Select Case` конструкции для записи строки, соответствующей значению переменной `number`. Второй `Case` инструкция содержит значение, соответствующее значение текущей `number`, поэтому инструкция, которая записывает «между 6 и 8, inclusive» работает.  
   
  [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   
- [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)   
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.Interaction.Choose%2A>  
+ [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
  [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)

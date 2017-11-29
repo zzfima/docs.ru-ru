@@ -1,37 +1,41 @@
 ---
-title: "Практическое руководство. Отслеживание изменения атрибутов форматирования текста в элементе управления RichTextBox в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], текстовые поля"
-  - "RichTextBox - элемент управления [Windows Forms], определение изменения шрифтов"
-  - "SelBold - свойство"
-  - "SelChange - событие"
-  - "текстовые поля, определение изменения шрифтов"
+title: "Практическое руководство. Отслеживание изменения атрибутов форматирования текста в элементе управления RichTextBox в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], determining font changes
+- text boxes [Windows Forms], determining font changes
+- SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0dc272e26124acf5c6bd5cf3030941c26c021c49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отслеживание изменения атрибутов форматирования текста в элементе управления RichTextBox в Windows Forms
-Как правило, элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> используется для форматирования текста с применением таких атрибутов, как параметры шрифта или стиль абзаца.  В приложениях часто требуется отслеживать изменения формата текста, чтобы учитывать их при отображении панели инструментов, как это делается во многих текстовых редакторах.  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отслеживание изменения атрибутов форматирования текста в элементе управления RichTextBox в Windows Forms
+Часто используются в Windows Forms <xref:System.Windows.Forms.RichTextBox> управления используется для форматирования текста с помощью атрибутов, таких как параметры шрифта или стиль абзаца. В приложении могут понадобиться для отслеживания изменений в целях отображения панели инструментов, как и множество текстовых приложений форматирования текста.  
   
-### Чтобы реагировать на изменения атрибутов форматирования, выполните следующие действия:  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>Для реагирования на изменения атрибутов форматирования  
   
-1.  Добавьте в обработчик событий <xref:System.Windows.Forms.RichTextBox.SelectionChanged> код, выполняющий определенные действия в зависимости от значения атрибута.  В приведенном ниже примере вид кнопки панели инструментов изменяется в зависимости от значения свойства <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>.  Кнопка панели инструментов изменится только после перемещения курсора внутри элемента управления.  
+1.  Напишите код в <xref:System.Windows.Forms.RichTextBox.SelectionChanged> обработчик событий может выполнять необходимые действия в зависимости от значения атрибута. В следующем примере изменяется внешний вид кнопки на панели инструментов в зависимости от значения <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> свойство. Кнопки панели инструментов будут обновлены только в том случае, когда курсор перемещается в элементе управления.  
   
-     В этом примере предполагается наличие формы с элементом управления <xref:System.Windows.Forms.RichTextBox> и элементом управления <xref:System.Windows.Forms.ToolBar>, содержащим кнопку.  Дополнительные сведения о панелях инструментов и их кнопках см. в разделе [Практическое руководство. Добавление кнопок в элемент управления ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).  
+     В приведенном ниже примере предполагается наличие формы с <xref:System.Windows.Forms.RichTextBox> управления и <xref:System.Windows.Forms.ToolBar> управления, который содержит кнопки панели инструментов. Дополнительные сведения о панели инструментов и кнопки панели инструментов см. в разделе [как: Добавление кнопок в элемент управления ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -45,7 +49,6 @@ caps.handback.revision: 11
            ToolBarButton1.Pushed = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -65,7 +68,6 @@ caps.handback.revision: 11
           toolBarButton1.Pushed = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -88,8 +90,8 @@ caps.handback.revision: 11
        }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.RichTextBox.SelectionChanged>   
- <xref:System.Windows.Forms.RichTextBox>   
- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.RichTextBox.SelectionChanged>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

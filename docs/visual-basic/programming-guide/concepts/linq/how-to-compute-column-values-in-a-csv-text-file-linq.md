@@ -1,37 +1,29 @@
 ---
-title: "Практическое руководство: вычисление значений столбцов в файле CSV (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36fbe64601ab66f7a87669fa4293f2e6d43d95c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d57376ca2741801d6aee858688f00cba245a225d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Практическое руководство: вычисление значений столбцов в файле CSV (LINQ) (Visual Basic)
-В этом примере показано выполнение статистических вычислений, таких как сумма, среднее, Min и Max на столбцы в CSV-файл. Пример принципы, показанные здесь могут применяться к другим типам структурированного текста.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Как: вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
+В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле. Приведенные в примере принципы могут применяться к другим типам структурированного текста.  
   
-### <a name="to-create-the-source-file"></a>Чтобы создать исходный файл  
+### <a name="to-create-the-source-file"></a>Создание исходного файла  
   
-1.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта. Предположим, что первый столбец представляет идентификатор учащегося, а последующие столбцы представляют результаты четырех экзаменов.  
+1.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта. Предположим, что первый столбец представляет идентификатор учащегося, а последующие столбцы — результаты четырех экзаменов.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -157,11 +149,11 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39  
 ```  
   
- Запрос работает с использованием <xref:System.String.Split%2A>метод преобразует каждую строку текста в массив.</xref:System.String.Split%2A> Каждый элемент массива представляет столбец. Наконец текст в каждом столбце преобразуется в свое числовое представление. Если файл является файлом-табуляцией, измените аргумент в `Split` метод `\t`.  
+ Запрос работает с использованием метода <xref:System.String.Split%2A> для преобразования каждой строки текста в массив. Каждый элемент массива представляет столбец. И наконец, текст в каждом столбце преобразуется в свое числовое представление. Если файл является файлом с разделением знаками табуляции, просто измените аргумент в методе `Split` на `\t`.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

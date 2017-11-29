@@ -1,36 +1,36 @@
 ---
-title: "Общие сведения о компоненте PageSetupDialog (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PageSetupDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Параметры страницы - диалоговое окно, отображение"
-  - "PageSetupDialog - компонент"
+title: "Общие сведения о компоненте PageSetupDialog (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PageSetupDialog
+helpviewer_keywords:
+- Page Setup dialog box [Windows Forms], displaying
+- PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 082dbff66c8a0f06635936011f802c99b88e41df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о компоненте PageSetupDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.PageSetupDialog> является стандартным диалоговым окном, используемым для задания сведений о странице для печати в приложениях Windows.  Этот компонент используется в приложении Windows в качестве простого решения для задания параметров настройки страницы вместо диалогового окна, настраиваемого самостоятельно.  Можно разрешить пользователям задавать параметры границ и полей, верхних и нижних колонтитулов, а также выбирать книжную или альбомную ориентацию.  Использование стандартных диалоговых окон Windows помогает создавать приложения, основные функциональные возможности которых хорошо знакомы пользователям.  
+# <a name="pagesetupdialog-component-overview-windows-forms"></a>Общие сведения о компоненте PageSetupDialog (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> компонент является предварительно настроенным диалоговым окном, используемым для задания сведений о странице для печати в приложениях Windows. Он используется в приложении Windows в качестве простого решения для задания параметров настройки страницы вместо настройки собственного диалогового. Можно разрешить пользователям задавать границ и полей, верхние и нижние колонтитулы и книжной и альбомной ориентации. Использование стандартных диалоговых окон Windows помогает создавать приложения, основные функциональные возможности которых хорошо знакомы пользователям.  
   
-## Ключевые свойства и методы  
- Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна во время выполнения.  Этот компонент имеет настраиваемые свойства, относящиеся либо к отдельной странице \(класс <xref:System.Drawing.Printing.PrintDocument>\), либо к любому документу \(класс <xref:System.Drawing.Printing.PageSettings>\).  Кроме того, с помощью компонента <xref:System.Windows.Forms.PageSetupDialog> можно определить параметры определенного принтера, хранящиеся в классе <xref:System.Drawing.Printing.PrinterSettings>.  
+## <a name="key-properties-and-methods"></a>Ключевые свойства и методы  
+ Используйте <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод для отображения диалогового окна во время выполнения. Этот компонент имеет свойства, можно задать, которые связаны с либо одной странице (<xref:System.Drawing.Printing.PrintDocument> класс) или любой документ (<xref:System.Drawing.Printing.PageSettings> класса). Кроме того <xref:System.Windows.Forms.PageSetupDialog> компонент может использоваться для определения параметров определенного принтера, которые хранятся в <xref:System.Drawing.Printing.PrinterSettings> класса.  
   
- Добавленный в форму компонент <xref:System.Windows.Forms.PageSetupDialog> появляется в нижней области конструктора Windows Forms.  
+ При добавлении в форму, <xref:System.Windows.Forms.PageSetupDialog> компонент появится в области в нижней части конструктора Windows Forms.  
   
-## См. также  
- <xref:System.Windows.Forms.PageSetupDialog>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.PageSetupDialog>  
  [Компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

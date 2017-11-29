@@ -1,45 +1,46 @@
 ---
-title: "Вопросы размещения элемента управления ActiveX в форме Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [Windows Forms], добавление"
-  - "элементы управления ActiveX [Windows Forms], размещение"
-  - "элементы управления Windows Forms, элементы управления ActiveX"
-  - "Windows Forms, элементы управления ActiveX"
-  - "Windows Forms, размещение элементов управления ActiveX"
+title: "Вопросы размещения элемента управления ActiveX в форме Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- ActiveX controls [Windows Forms], hosting
+- Windows Forms, ActiveX controls
+- Windows Forms, hosting ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ec828ca0b2bd8231d0baca72bf97bef566f2651
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вопросы размещения элемента управления ActiveX в форме Windows Forms
-Несмотря на то, что Windows Forms оптимизированы для работы с элементами управления Windows Forms, можно также использовать элементы управления ActiveX.  Ниже приведены вопросы, о которых следует помнить при планировании приложения, использующего элементы управления ActiveX.  
+# <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Вопросы размещения элемента управления ActiveX в форме Windows Forms
+Несмотря на то что формы Windows Forms оптимизированы для размещения элементов управления Windows Forms, в формах также можно использовать элементы управления ActiveX. При планировании приложения, использующего элементы управления ActiveX, необходимо учитывать следующие факторы:  
   
--   **Безопасность** Общеязыковая среда выполнения была усовершенствована в отношении управления доступом для кода.  Приложения, использующие Windows Forms, могут без проблем запускаться в полностью доверенных средах и, сохраняя большинство функциональных возможностей, — в частично доверенных средах.  Элементы управления Windows Forms легко воспринимаются браузером.  Напротив, элементы управления ActiveX в Windows Forms не могут использовать преимущества, которые появились в результате усовершенствования безопасности.  Для запуска элемента управления ActiveX требуется разрешение на запуск неуправляемого кода, которое устанавливается свойством <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=fullName>.  Дополнительные сведения о безопасности и разрешениях неуправляемого кода см. в разделе [Класс SecurityPermissionAttribute](frlrfSystemSecurityPermissionsSecurityPermissionAttributeClassTopic).  
+-   **Безопасность**. Среда CLR была усовершенствована с точки зрения безопасности доступа для кода. Приложения, использующие Windows Forms, могут выполняться в полностью доверенной среде без каких-либо проблем и в среде с частичным доверием с большинством функциональных возможностей. Элементы управления Windows Forms поддерживают размещение в браузере безо всяких сложностей. Тем не менее элементы управления ActiveX в Windows Forms не могут использовать преимущества этих улучшений безопасности. Запуск элемента ActiveX требует разрешение неуправляемого кода, который устанавливается с <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> свойство. Дополнительные сведения о безопасности и разрешениях неуправляемого кода см. в разделе <xref:System.Security.Permissions.SecurityPermissionAttribute>.  
   
--   **Совокупная стоимость владения** Элементы управления ActiveX, добавляемые в форму Windows Forms, развертываются полностью вместе с формой, что может существенно увеличить размер создаваемых файлов.  Помимо этого, при использовании элементов управления ActiveX в Windows Forms требуется записывать данные в реестр.  Такое поведение является более активным по отношению к компьютеру пользователя, чем поведение элементов управления Windows Forms, которые не нуждаются в этом.  
-  
-    > [!NOTE]
-    >  Для работы с элементами управления ActiveX требуется использование оболочки взаимодействия COM.  Дополнительные сведения см. в разделе [COM\-взаимодействие в Visual Basic и Visual C\#](../Topic/COM%20Interoperability%20in%20.NET%20Framework%20Applications%20\(Visual%20Basic\).md).  
+-   **Общая стоимость владения**. Элементы управления ActiveX, добавляемые в форму Windows Forms, развертываются с помощью этой формы полностью, что значительно увеличивает размер создаваемых файлов. Кроме того, для использования элементов управления ActiveX в формах Windows Forms требуется запись в реестр. Таким образом, они более активно вмешиваются в работу компьютера пользователя, чем элементы управления Windows Forms, которые этого не требуют.  
   
     > [!NOTE]
-    >  Если имя члена элемента управления ActiveX соответствует имени, определенному в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], то инструмент для импорта элемента управления ActiveX добавит префикс **Ctl** к имени члена при создании производного класса <xref:System.Windows.Forms.AxHost>.  Например, если у элемента управления ActiveX имеется член под именем **Layout**, он переименовывается в **CtlLayout** в классе, производном от AxHost, поскольку событие **Layout** определено в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+    >  Работа с элементами управления ActiveX требует использования оболочки COM-взаимодействия. Дополнительные сведения см. в разделе [COM-взаимодействие в Visual Basic и Visual C#](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
-## См. также  
- [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms.](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [Code Access Security](../../../../docs/framework/misc/code-access-security.md)   
- [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/ru-ru/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
+    > [!NOTE]
+    >  Если имя члена элемента управления ActiveX совпадает с именем, определенным в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], то программа импорта элементов управления ActiveX добавит префикс к имени члена **Ctl** при создании <xref:System.Windows.Forms.AxHost> производного класса. Например, если элемент управления ActiveX содержит член с именем **Layout**, в производном от AxHost классе он будет переименован в **CtlLayout**, так как в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] задано событие **Layout**.  
+  
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Управление доступом для кода](../../../../docs/framework/misc/code-access-security.md)  
+ [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)

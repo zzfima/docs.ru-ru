@@ -1,50 +1,53 @@
 ---
-title: "Практическое руководство. Добавление кавычек в строку (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "кавычки"
-  - "кавычки, добавление к строкам в текстовых полях"
-  - "TextBox - элемент управления [Windows Forms], отображение кавычек"
+title: "Практическое руководство. Добавление кавычек в строку (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- quotation marks
+- TextBox control [Windows Forms], displaying quotation marks
+- quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление кавычек в строку (Windows Forms)
-Иногда в строку текста необходимо вставить кавычки \(" "\).  Примеры.  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Практическое руководство. Добавление кавычек в строку (Windows Forms)
+Бывает, что в строку текста нужно вставить кавычки (" "). Например:  
   
- Она сказала: "Ты этого заслуживаешь\!"  
+ Она сказала: "Ты этого заслуживаешь!"  
   
- В качестве альтернативы можно использовать поле <xref:Microsoft.VisualBasic.ControlChars.Quote> в качестве константы.  
+ В качестве альтернативы можно также использовать <xref:Microsoft.VisualBasic.ControlChars.Quote> качестве константы.  
   
-### Вставка кавычек в строку кода  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Вставка кавычек в строку в коде  
   
-1.  В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] вставьте в строку подряд две пары кавычек.  В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] вставьте escape\-последовательность \\".  Например, для получения вышеуказанной строки используйте следующий код.  
+1.  В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] вставьте двойные кавычки в строку как внедренную кавычку. В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] вставьте escape-последовательность \\" как внедренную кавычку. Например, для создания представленной выше строки используйте следующий код.  
   
     ```vb  
     Private Sub InsertQuote()  
        TextBox1.Text = "She said, ""You deserve a treat!"" "  
     End Sub  
-  
     ```  
   
     ```csharp  
     private void InsertQuote(){  
        textBox1.Text = "She said, \"You deserve a treat!\" ";  
     }  
-  
     ```  
   
     ```cpp  
@@ -55,15 +58,14 @@ caps.handback.revision: 14
        }  
     ```  
   
-     \-или\-  
+     -или-  
   
-2.  Вставьте знак ASCII или Юникода, соответствующий кавычкам.  В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] используйте ASCII\-символ \(34\).  В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] используйте символ Юникода \(\\u0022\).  
+2.  Вставьте для получения кавычки символ ASCII или Юникод. В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] используйте символ ASCII (34). В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] используйте символ Юникод (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
        TextBox1.Text = "She said, " & Chr(34) & "You deserve a treat!" & Chr(34)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -73,22 +75,20 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]
-    >  В данном примере код \\u0022 не может использоваться, так как запрещается использовать универсальные имена для обозначения знаков из базового набора.  В противном случае произойдет ошибка C3851.  Дополнительные сведения см. в разделе [Ошибка компилятора C3851](../Topic/Compiler%20Error%20C3851.md).  
+    >  В данном примере использовать \u0022 нельзя, поскольку нельзя использовать универсальное имя символа, обозначающее символ в базовом наборе символов. В противном случае вы получите C3851. Дополнительные сведения см. в разделе [Ошибка компилятора C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     \-или\-  
+     -или-  
   
-3.  Можно определить константу для требуемого знака и использовать ее там, где необходимо.  
+3.  Также можно определить для символа константу и при необходимости использовать ее.  
   
     ```vb  
     Const quote As String = """"  
     TextBox1.Text = "She said, " & quote & "You deserve a treat!" & quote  
-  
     ```  
   
     ```csharp  
     const string quote = "\"";  
     textBox1.Text = "She said, " + quote +  "You deserve a treat!"+ quote ;  
-  
     ```  
   
     ```cpp  
@@ -98,13 +98,13 @@ caps.handback.revision: 14
        const_cast<String^>(quote));  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.TextBox>   
- <xref:Microsoft.VisualBasic.ControlChars.Quote>   
- [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Практическое руководство. Создание текстового поля только для чтения](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:Microsoft.VisualBasic.ControlChars.Quote>  
+ [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Практическое руководство. Создание текстового поля только для чтения](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
  [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

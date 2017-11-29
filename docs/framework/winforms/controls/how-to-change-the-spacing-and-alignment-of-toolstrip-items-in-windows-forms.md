@@ -1,106 +1,102 @@
 ---
-title: "Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], панели инструментов"
-  - "панели инструментов [Windows Forms], выравнивание элементов"
-  - "ToolStrip - элемент управления [Windows Forms], выравнивание элементов"
+title: "Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], aligning items
+- examples [Windows Forms], toolbars
+- toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42ae53e143942201359baebdfa8929647e7e35cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms
-Элемент управления <xref:System.Windows.Forms.ToolStrip> обеспечивает полную поддержку возможностей структуры, таких как изменение размеров, создание интервалов между элементами <xref:System.Windows.Forms.ToolStripItem>, размещение элементов управления на <xref:System.Windows.Forms.ToolStrip>, и создание интервалов между элементами управления и <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms
+<xref:System.Windows.Forms.ToolStrip> Управления полностью поддерживает возможности макета, такие как изменение размера, расстояние между <xref:System.Windows.Forms.ToolStripItem> элементов управления относительно друг друга, размещение элементов управления в <xref:System.Windows.Forms.ToolStrip>и интервалы между элементами управления <xref:System.Windows.Forms.ToolStrip>.  
   
- Так как свойство <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> имеет значение по умолчанию `true`, размеры элементов управления изменяются автоматически до тех пор, пока свойству <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> не будет присвоено значение `false`.  
+ Так как значение по умолчанию <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойство `true`, элементов управления изменяются автоматически, если не задать <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false`.  
   
-### Изменение размеров элемента управления ToolStripItem вручную  
+### <a name="to-manually-size-a-toolstripitem"></a>Чтобы вручную указать значения на элемент ToolStripItem  
   
-1.  Свойству <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> связанного элемента управления присвойте значение `false`.  
+1.  Задать <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false` для связанного элемента управления.  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
-  
     ```  
   
     ```csharp  
     toolStripButton1.AutoSize = false;  
-  
     ```  
   
-2.  Свойству <xref:System.Windows.Forms.ToolStripItem.Size%2A> связанного элемента управления <xref:System.Windows.Forms.ToolStripItem> присвойте любое значение.  
+2.  Задать <xref:System.Windows.Forms.ToolStripItem.Size%2A> нужным образом для связанного свойства <xref:System.Windows.Forms.ToolStripItem>.  
   
-### Установка интервалов элемента управления ToolStripItem  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a>Чтобы задать интервал ToolStripItem  
   
-1.  Укажите необходимые значения \(в пикселях\) для свойства <xref:System.Windows.Forms.ToolStripItem.Margin%2A> связанного элемента управления.  
+1.  Вставьте нужные значения в пикселях <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойств связанного элемента управления.  
   
-     Значения свойства <xref:System.Windows.Forms.ToolStripItem.Margin%2A> определяют интервал между элементом и соседствующими с ним элементами в следующем порядке: слева, сверху, справа и снизу.  
+     Значения <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства задайте интервал между элементом и соседними элементами в следующем порядке: слева, сверху, справа и нижней.  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
         (3, 0, 3, 0)  
-  
     ```  
   
     ```csharp  
     toolStripTextBox1.Margin = new System.Windows.Forms.Padding   
         (3, 0, 3, 0);  
-  
     ```  
   
-### Выравнивание элемента ToolStripItem по правому краю полосы ToolStrip  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>Чтобы выровнять ToolStripItem правую сторону элемента управления ToolStrip  
   
-1.  Свойству <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> связанного элемента управления присвойте значение <xref:System.Windows.Forms.ToolStripItemAlignment>.  По умолчанию свойство <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> имеет значение <xref:System.Windows.Forms.ToolStripItemAlignment>, и элементы управления выравниваются по левому краю полосы <xref:System.Windows.Forms.ToolStrip>.  
+1.  Задать <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> свойства <xref:System.Windows.Forms.ToolStripItemAlignment.Right> для связанного элемента управления. По умолчанию <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> равно <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, что элементы управления выравниваются по левому краю <xref:System.Windows.Forms.ToolStrip>.  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
         System.Windows.Forms.ToolStripItemAlignment.Right  
-  
     ```  
   
     ```csharp  
     toolStripSplitButton1.Alignment =   
         System.Windows.Forms.ToolStripItemAlignment.Right;  
-  
     ```  
   
-### Размещение элементов ToolStrip на полосе ToolStrip  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>Чтобы упорядочить элементы ToolStrip на панели инструментов  
   
--   Присвойте свойству <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> любое значение <xref:System.Windows.Forms.ToolStripLayoutStyle>.  
+-   Задать <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> значение из свойства <xref:System.Windows.Forms.ToolStripLayoutStyle> нужного.  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
         System.Windows.Forms.ToolStripLayoutStyle.Flow  
-  
     ```  
   
     ```csharp  
     toolStripDropDown1.LayoutStyle =   
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
-  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.Control.Layout>   
- <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>   
- <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>   
- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>   
- <xref:System.Windows.Forms.ToolStripItem.Placement%2A>   
- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>   
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.Control.Layout>  
+ <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>  
+ <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A>  
+ <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>  
+ <xref:System.Windows.Forms.ToolStripItem.Placement%2A>  
+ <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>  
+ [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

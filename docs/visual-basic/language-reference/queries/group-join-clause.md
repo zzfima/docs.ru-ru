@@ -1,35 +1,34 @@
 ---
-title: "Предложение Group Join (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryGroupJoinIn"
-  - "vb.QueryGroupJoinOn"
-  - "vb.QueryGroupJoin"
-  - "vb.QueryGroupJoinInto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Group Join - предложение"
-  - "Group Join - оператор"
-  - "запросы [Visual Basic], Group Join"
+title: "Предложение Group Join (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryGroupJoinIn
+- vb.QueryGroupJoinOn
+- vb.QueryGroupJoin
+- vb.QueryGroupJoinInto
+helpviewer_keywords:
+- Group Join clause [Visual Basic]
+- Group Join statement [Visual Basic]
+- queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c43b41336393b40684aee79f88c1e6999ebda674
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение Group Join (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объединяет две коллекции в одну иерархическую.  Операция объединения основана на совпадении ключей.  
+# <a name="group-join-clause-visual-basic"></a>Предложение Group Join (Visual Basic)
+Объединяет две коллекции в одну иерархическую коллекцию. Операция соединения основана на сопоставлении ключей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Group Join element [As type] In collection _  
@@ -37,38 +36,37 @@ Group Join element [As type] In collection _
   Into expressionList  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`element`|Обязательный.  Переменная управления для присоединяемой коллекции.|  
-|`type`|Необязательный.  Тип `element`.  Если не указан `type`, тип `element` получается из `collection`.|  
-|`collection`|Обязательный.  Коллекция для объединения с коллекцией, находящейся в левой части оператора `Group Join`.  Предложение `Group Join` может быть вложено в предложение `Join` или в другое предложение `Group Join`.|  
-|`key1` `Equals` `key2`|Обязательный.  Определяет ключи для объединяемых коллекций.  Необходимо использовать оператор `Equals` для сравнения ключей из объединяемых коллекций.  Можно комбинировать условия соединения с помощью оператора `And` для идентификации нескольких ключей.  Параметр `key1` должен быть из коллекции, которая находится в левой части оператора `Join`.  Параметр `key2` должен быть из коллекции, которая находится в правой части оператора `Join`.<br /><br /> Ключи, используемые в условии объединения, могут быть выражениями, включающими несколько элементов из коллекции.  Однако каждое ключевое выражение может содержать только элементы из соответствующей ему коллекции.|  
-|`expressionList`|Обязательный.  Одно или несколько выражений, определяющих способ создания групп элементов из коллекции.  Для определения имени члена для сгруппированных результатов используйте ключевое слово `Group` \(`<alias> = Group`\).  Можно также включить агрегатные функции, применимые к группе.|  
+|---|---|  
+|`element`|Обязательный. Переменная управления для присоединяемой коллекции.|  
+|`type`|Необязательно. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательный. Коллекция для объединения с коллекцией, которая находится слева от `Group Join` оператор. Объект `Group Join` предложения, которые могут быть вложены в `Join` предложения или в другом `Group Join` предложения.|  
+|`key1` `Equals` `key2`|Обязательный. Определяет ключи для соединяемых коллекций. Необходимо использовать `Equals` оператор для сравнения ключей из соединяемых коллекций. Можно комбинировать условия соединения с помощью `And` оператор для идентификации нескольких ключей. `key1` Параметр должен быть из коллекции в левой части `Join` оператор. `key2` Параметр должен быть из коллекции в правой части `Join` оператор.<br /><br /> Ключи, используемые в условии соединения может быть выражений, содержащих более одного элемента из коллекции. Однако каждое ключевое выражение может содержать только элементы из соответствующей ему коллекции.|  
+|`expressionList`|Обязательный. Одно или несколько выражений, определяющих способ создания групп элементов из коллекции. Чтобы определить имя элемента для результатов группирования, используйте `Group` ключевое слово (`<alias> = Group`). Вы также можете включать агрегатные функции для применения к группе.|  
   
-## Заметки  
- Предложение `Group Join` объединяет две коллекции, на основании совпадающих значений ключей из соединяемых коллекций.  Результирующая коллекция может содержать член, который ссылается на коллекцию элементов из второй коллекции, соответствующих значению ключа из первой коллекции.  Можно также указать агрегатные функции для применения к сгруппированным элементам из второй коллекции.  Дополнительные сведения об агрегатных функциях см. в разделе [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a>Примечания  
+ `Group Join` Предложение объединяет две коллекции на основании совпадающих значений ключей из соединяемых коллекций. Полученная в результате коллекция может содержать член, который ссылается на коллекцию элементов из второй коллекции, соответствующих значению ключа из первой коллекции. Можно также указать агрегатные функции для применения к сгруппированным элементам из второй коллекции. Сведения об агрегатных функциях см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Рассмотрим, например, коллекцию руководителей и коллекцию сотрудников.  Элементы из обеих коллекций имеют свойство ManagerID, определяющее сотрудников, подотчетных конкретному руководителю.  Результаты операции соединения будут содержать результат для каждого руководителя и сотрудника с совпадением по значению ManagerID.  Результаты операции `Group Join` будут содержать полный список руководителей.  Результат для каждого руководителя будет иметь член, ссылающийся на список соответствующих ему сотрудников.  
+ Рассмотрим, например, коллекция менеджеров и коллекции сотрудников. Элементы из обеих коллекций имеют свойство ManagerID, определяющее сотрудников, подчиняющихся тому конкретному руководителю. Результаты операции соединения будут содержать результат для каждого руководителя и сотрудника с соответствующим значением ManagerID. В результате `Group Join` операции будет содержать полный список руководителей. Каждый диспетчер результат будет иметь член, ссылающийся на список сотрудников, которые были соответствия для конкретного диспетчера.  
   
- Получаемая коллекция после операции `Group Join` может содержать любую комбинацию значений из коллекции, определенной в предложении `From`, и выражений, указанных в предложении `Into` предложения `Group Join`.  Дополнительные сведения о допустимых выражениях для предложения `Into` см. в разделе [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Коллекция, возникающие в результате `Group Join` операция может содержать любую комбинацию значений из коллекции, указанной в `From` предложения и выражений, указанных в `Into` предложения `Group Join` предложения. Дополнительные сведения о допустимых выражениях для `Into` предложение, в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Операция `Group Join` возвратит все результаты из коллекции, определенной на левой стороне оператора `Group Join`.  Это верно, даже если не найдено совпадений в присоединяемой коллекции.  Это аналогично `LEFT OUTER JOIN` в SQL.  
+ Объект `Group Join` операция вернет все результаты из коллекции в левой части `Group Join` оператор. Это верно, даже если не найдено совпадений в присоединяемой коллекции. Это аналогично `LEFT OUTER JOIN` в SQL.  
   
- Можно использовать предложение `Join` для объединения коллекций в одну коллекцию.  Это эквивалентно `INNER JOIN` в SQL.  
+ Можно использовать `Join` предложение для объединения коллекции в одну коллекцию. Это эквивалентно `INNER JOIN` в SQL.  
   
-## Пример  
- В следующем примере кода две коллекции объединяются с помощью предложения `Group Join`.  
+## <a name="example"></a>Пример  
+ В следующем примере кода две коллекции объединяются с помощью `Group Join` предложения.  
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## См. также  
- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)   
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Предложение Where](../../../visual-basic/language-reference/queries/where-clause.md)   
+## <a name="see-also"></a>См. также  
+ [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+ [Запросы](../../../visual-basic/language-reference/queries/queries.md)  
+ [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
  [Предложение Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
